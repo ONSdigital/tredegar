@@ -1,0 +1,10 @@
+language: java
+jdk:
+- openjdk7
+deploy:
+  provider: heroku
+  api_key:
+    secure: TgQdd6Crn3CUJpHfuKwPg8Y+VM5sm7gXBQ6Y/ERLvsq4sUP89n0cBJ29CYrScmrPzXac2JGhHAwjzlHquz+8ub6iQUcbVq6ZFxlJyNOph9EpnPdbKilhPVjuBMRBVXwW6lNVTZqLxHiE2VcGnFQOjwHi3K+QDu1inq2CriXBHyI=
+  app: tredegar
+  on:
+    repo: onsdigital/tredegar
