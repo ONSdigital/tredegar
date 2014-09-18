@@ -12,8 +12,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.GET;
 
-import org.elasticsearch.client.Client;
-
 import com.github.davidcarboni.restolino.interfaces.Endpoint;
 import com.github.onsdigital.util.ScanFileSystem;
 import com.github.onsdigital.util.SearchConnectionManager;
@@ -23,9 +21,10 @@ public class LoadIndex {
 	@GET
 	public void get(HttpServletRequest httpServletRequest,
 			HttpServletResponse httpServletResponse) throws IOException {
-		Client client = null;
+		SearchConnectionManager manager = new SearchConnectionManager(
+				"elasicsearch", "localhost", 9300);
 		try {
-			client = SearchConnectionManager.getClient();
+			manager.openConnection();
 
 			List<String> fileNames = getFileNames();
 			if (fileNames.isEmpty()) {
@@ -33,21 +32,22 @@ public class LoadIndex {
 						.println("No files located during system scan, nothing will be indexed");
 			}
 
-			indexDocuments(client, fileNames);
+			indexDocuments(manager, fileNames);
 
 		} finally {
-			SearchConnectionManager.close(client);
+			manager.closeConnection();
 		}
 
 	}
 
-	private void indexDocuments(Client client, List<String> fileNames)
-			throws IOException {
+	private void indexDocuments(SearchConnectionManager manager,
+			List<String> fileNames) throws IOException {
 		int idCounter = 0;
 		for (String fileName : fileNames) {
 			idCounter++;
-			client.prepareIndex("publication", "bulletin",
-					String.valueOf(idCounter))
+			manager.getClient()
+					.prepareIndex("publication", "bulletin",
+							String.valueOf(idCounter))
 					.setSource(
 							jsonBuilder().startObject()
 									.field("title", "title" + idCounter)

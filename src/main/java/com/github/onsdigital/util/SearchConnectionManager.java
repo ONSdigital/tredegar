@@ -8,21 +8,40 @@ import org.elasticsearch.common.transport.InetSocketTransportAddress;
 
 public class SearchConnectionManager {
 
-	@SuppressWarnings("resource")
-	public static Client getClient() {
-		Client client = null;
-		Settings settings = ImmutableSettings.settingsBuilder()
-				.put("cluster.name", "elasticsearch").build();
-		client = new TransportClient(settings)
-				.addTransportAddress(new InetSocketTransportAddress(
-						"localhost", 9300));
+	private final static String CLUSTER_NAME_PROPERTY = "cluster.name";
+	private final static String SNIFF_PROPERTY = "client.transport.sniff";
 
-		return client;
+	private Settings settings;
+	private Client client;
+	private String hostname;
+	private int port;
+
+	public SearchConnectionManager(String clusterName, String hostname, int port) {
+		this.settings = ImmutableSettings.settingsBuilder()
+				.put(CLUSTER_NAME_PROPERTY, clusterName)
+				.put(SNIFF_PROPERTY, true).build();
+		this.hostname = hostname;
+		this.port = port;
 	}
 
-	public static void close(Client client) {
+	@SuppressWarnings("resource")
+	public void openConnection() {
+		client = new TransportClient(settings)
+				.addTransportAddress(new InetSocketTransportAddress(hostname,
+						port));
+	}
+
+	public void closeConnection() {
 		if (client != null) {
 			client.close();
 		}
+	}
+
+	public Client getClient() {
+		return client;
+	}
+
+	public boolean isConnected() {
+		return client == null ? false : true;
 	}
 }
