@@ -41,4 +41,10 @@ public class ScanFileSystemTest {
 		final Path unknownRootDir = Paths.get(rootSearch);
 		ScanFileSystem.getFileNames(null, unknownRootDir);
 	}
+
+	@Test(expected = IllegalArgumentException.class)
+	public void testNullPathDir() throws Exception {
+		List<String> fileNames = new ArrayList<String>();
+		ScanFileSystem.getFileNames(fileNames, null);
+	}
 }
