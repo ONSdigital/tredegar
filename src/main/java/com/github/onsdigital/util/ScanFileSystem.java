@@ -23,8 +23,14 @@ public class ScanFileSystem {
 	 * @throws IOException
 	 *             if any file io operations fail
 	 */
-	public List<String> getFileNames(List<String> fileNames, Path dir)
+	public static List<String> getFileNames(List<String> fileNames, Path dir)
 			throws IOException {
+
+		if (fileNames == null || dir == null) {
+			throw new IllegalArgumentException(
+					"List of fileNames and Path dir cannot be null");
+		}
+
 		DirectoryStream<Path> stream = Files.newDirectoryStream(dir);
 		for (Path path : stream) {
 			if (path.toFile().isDirectory())
