@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.GET;
 
+import org.apache.commons.lang3.StringUtils;
 import org.elasticsearch.client.Client;
 
 import com.github.davidcarboni.restolino.interfaces.Endpoint;
@@ -25,7 +26,7 @@ public class LoadIndex {
 	public void get(HttpServletRequest httpServletRequest,
 			HttpServletResponse httpServletResponse) throws IOException {
 		SearchConnectionManager manager = new SearchConnectionManager(
-				"elasicsearch", "localhost", 9300);
+				"elasticsearch", "localhost", 9300);
 		try {
 			manager.openConnection();
 
@@ -62,8 +63,8 @@ public class LoadIndex {
 	private void buildAndSubmitJson(Client client, int idCounter,
 			String fileName, String index, String type) throws IOException {
 
-		client.prepareIndex(index, type,
-				String.valueOf(idCounter))
+		client.prepareIndex(StringUtils.lowerCase(index),
+				StringUtils.lowerCase(type), String.valueOf(idCounter))
 				.setSource(
 						jsonBuilder().startObject()
 								.field("title", "title" + idCounter)

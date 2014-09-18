@@ -13,7 +13,7 @@ public class LoadIndexHelper {
 	/** the string to start tokenizing from */
 	private static final String TAXONOMY = "taxonomy";
 	/** The folder to start loading from */
-	private static final String ROOT_SEARCH = "src/main/resources/" + TAXONOMY;
+	private static final String ROOT_SEARCH = "src/main/resources/files/" + TAXONOMY;
 
 	/**
 	 * Finds the place to start splitting tokens
