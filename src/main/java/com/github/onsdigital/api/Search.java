@@ -29,8 +29,8 @@ public class Search {
 			}
 			String type = request.getParameter("type");
 
-			ONSQueryBuilder queryBuilder = new ONSQueryBuilder()
-					.setIndex("publication").setType(type).setQuery(query);
+			ONSQueryBuilder queryBuilder = new ONSQueryBuilder("publication")
+					.setType(type).setQuery(query);
 			connectionManager.openConnection();
 
 			ElasticSearchUtil searchUtil = new ElasticSearchUtil(

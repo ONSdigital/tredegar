@@ -20,14 +20,14 @@ import com.github.onsdigital.common.ClosedConnectionException;
 /**
  * 
  * <p>
- * {@link ElasticSearchUtil} to connect to an elastic search cluster and perform
- * search & read operations based on indexes or types.
+ * {@link ElasticSearchUtil} connects to an elastic search cluster and perform
+ * search & read operations under indexes or types.
  * </p>
  * 
  * <p>
  * This class does not create an embedded non-data node. It simply creates a
- * transport client that can be disconnected and connected repeatedly which
- * sniffs available nodes. It is lightweight and still highly available
+ * transport client that which sniffs available nodes through connected node. It
+ * is lightweight and still highly available
  * </p>
  * 
  * <p>
@@ -44,11 +44,26 @@ public class ElasticSearchUtil {
 
 	private SearchConnectionManager connectionManager;
 
+	/**
+	 * @param connectionManager
+	 *            A {@link SearchConnectionManager} is required to perform
+	 *            search operations. Connection must be open to perform any
+	 *            search operation
+	 */
 	public ElasticSearchUtil(SearchConnectionManager connectionManager) {
 		this.connectionManager = connectionManager;
 
 	}
 
+	/**
+	 * 
+	 * Performs the search and returns documents as a list of maps that contains
+	 * key-value pairs
+	 * 
+	 * @param queryBuilder
+	 * @return documents as a list of maps that contains key-value pairs
+	 * @throws ClosedConnectionException
+	 */
 	public List<Map<String, Object>> search(ONSQueryBuilder queryBuilder) {
 		testConnection();
 		SearchResponse searchResponse = execute(queryBuilder);
