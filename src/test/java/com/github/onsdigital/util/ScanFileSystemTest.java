@@ -1,4 +1,4 @@
-package uk.co.methods.util;
+package com.github.onsdigital.util;
 
 import static org.junit.Assert.assertFalse;
 
