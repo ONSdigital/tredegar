@@ -1,10 +1,5 @@
 package com.github.onsdigital.util;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-
 import org.apache.commons.lang3.StringUtils;
 import org.elasticsearch.action.search.SearchRequestBuilder;
 import org.elasticsearch.action.search.SearchResponse;
@@ -13,8 +8,8 @@ import org.elasticsearch.index.query.BaseQueryBuilder;
 import org.elasticsearch.index.query.MatchAllQueryBuilder;
 import org.elasticsearch.index.query.MatchQueryBuilder;
 import org.elasticsearch.index.query.MultiMatchQueryBuilder;
-import org.elasticsearch.search.SearchHit;
 
+import com.github.onsdigital.bean.SearchResult;
 import com.github.onsdigital.common.ClosedConnectionException;
 
 /**
@@ -61,13 +56,13 @@ public class ElasticSearchUtil {
 	 * key-value pairs
 	 * 
 	 * @param queryBuilder
-	 * @return documents as a list of maps that contains key-value pairs
+	 * @return {@link SearchResult}
 	 * @throws ClosedConnectionException
 	 */
-	public List<Map<String, Object>> search(ONSQueryBuilder queryBuilder) {
+	public SearchResult search(ONSQueryBuilder queryBuilder) {
 		testConnection();
 		SearchResponse searchResponse = execute(queryBuilder);
-		return buildList(searchResponse);
+		return new SearchResult(searchResponse, queryBuilder.getSize());
 	}
 
 	private SearchResponse execute(ONSQueryBuilder queryBuilder) {
@@ -81,7 +76,7 @@ public class ElasticSearchUtil {
 			BaseQueryBuilder builder) {
 		SearchRequestBuilder requestBuilder = connectionManager.getClient()
 				.prepareSearch(queryBuilder.getIndex())
-				.setFrom(queryBuilder.getFrom())
+				.setFrom(calculateFrom(queryBuilder))
 				.setSize(queryBuilder.getSize())
 				.setSearchType(SearchType.DFS_QUERY_AND_FETCH)
 				.setQuery(builder.buildAsBytes());
@@ -91,6 +86,10 @@ public class ElasticSearchUtil {
 			requestBuilder.setTypes(type);
 		}
 		return requestBuilder;
+	}
+
+	private int calculateFrom(ONSQueryBuilder builder) {
+		return builder.getSize() * (builder.getPage() - 1);
 	}
 
 	private BaseQueryBuilder buildSearch(ONSQueryBuilder queryBuilder) {
@@ -103,20 +102,6 @@ public class ElasticSearchUtil {
 		return new MultiMatchQueryBuilder(queryBuilder.getQuery(),
 				queryBuilder.getFields())
 				.type(MatchQueryBuilder.Type.PHRASE_PREFIX);
-	}
-
-	private static List<Map<String, Object>> buildList(SearchResponse response) {
-		// list of hits
-		List<Map<String, Object>> results = new ArrayList<>();
-		SearchHit hit;
-
-		Iterator<SearchHit> iterator = response.getHits().iterator();
-		while (iterator.hasNext()) {
-			hit = iterator.next();
-			results.add(hit.getSource());
-		}
-
-		return results;
 	}
 
 	private void testConnection() {
