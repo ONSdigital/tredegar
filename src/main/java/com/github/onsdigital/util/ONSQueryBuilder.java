@@ -24,7 +24,7 @@ public class ONSQueryBuilder {
 	String query;
 	String index;
 	String type;
-	int from;
+	int page;
 	int size = 10;
 	String[] fields;
 
@@ -68,8 +68,8 @@ public class ONSQueryBuilder {
 		return this;
 	}
 
-	public int getFrom() {
-		return from;
+	public int getPage() {
+		return page;
 	}
 
 	/**
@@ -79,8 +79,8 @@ public class ONSQueryBuilder {
 	 * @param from
 	 * @return
 	 */
-	public ONSQueryBuilder setFrom(int from) {
-		this.from = from;
+	public ONSQueryBuilder setPage(int page) {
+		this.page = page;
 		return this;
 	}
 

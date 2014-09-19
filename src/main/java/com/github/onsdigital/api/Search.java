@@ -20,17 +20,20 @@ public class Search {
 	@GET
 	public Object get(HttpServletRequest request, HttpServletResponse response)
 			throws IOException {
+
+		return search(extractQuery(request), extractPage(request),
+				request.getParameter("type"));
+
+	}
+
+	private Object search(String query, int page, String type) {
 		SearchConnectionManager connectionManager = new SearchConnectionManager(
 				"elasticsearch", "localhost", 9300);
 		try {
-			String query = request.getParameter("q");
-			if (StringUtils.isEmpty(query)) {
-				throw new RuntimeException("No search query provided");
-			}
-			String type = request.getParameter("type");
 
-			ONSQueryBuilder queryBuilder = new ONSQueryBuilder("publication")
-					.setType(type).setQuery(query);
+			ONSQueryBuilder queryBuilder = new ONSQueryBuilder("ons")
+					.setType(type).setPage(page).setQuery(query)
+					.setFields("title", "path");
 			connectionManager.openConnection();
 
 			ElasticSearchUtil searchUtil = new ElasticSearchUtil(
@@ -40,6 +43,22 @@ public class Search {
 		} finally {
 			connectionManager.closeConnection();
 		}
+	}
 
+	private int extractPage(HttpServletRequest request) {
+		String page = request.getParameter("page");
+		if (StringUtils.isNotEmpty(page) && StringUtils.isNumeric(page)) {
+			int pageNumber = Integer.parseInt(page);
+			return pageNumber < 1 ? 1 : pageNumber;
+		}
+		return 1;
+	}
+
+	private String extractQuery(HttpServletRequest request) {
+		String query = request.getParameter("q");
+		if (StringUtils.isEmpty(query)) {
+			throw new RuntimeException("No search query provided");
+		}
+		return query;
 	}
 }
