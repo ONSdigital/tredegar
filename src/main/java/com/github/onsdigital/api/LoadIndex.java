@@ -4,6 +4,7 @@ import static org.elasticsearch.common.xcontent.XContentFactory.jsonBuilder;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -23,20 +24,17 @@ import com.github.onsdigital.util.SearchConnectionManager;
 public class LoadIndex {
 
 	@GET
-	public void get(HttpServletRequest httpServletRequest,
-			HttpServletResponse httpServletResponse) throws IOException {
-		SearchConnectionManager manager = new SearchConnectionManager(
-				"elasticsearch", "localhost", 9300);
+	public void get(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws IOException {
+		SearchConnectionManager manager = new SearchConnectionManager("elasticsearch", "localhost", 9300);
 		try {
 			manager.openConnection();
 
-			List<String> fileNames = LoadIndexHelper.getFileNames();
-			if (fileNames.isEmpty()) {
-				System.out
-						.println("No files located during system scan, nothing will be indexed");
+			List<String> absoluteFilePaths = LoadIndexHelper.getAbsoluteFilePaths();
+			if (absoluteFilePaths.isEmpty()) {
+				System.out.println("No files located during system scan, nothing will be indexed");
 			}
 
-			indexDocuments(manager, fileNames);
+			indexDocuments(manager, absoluteFilePaths);
 
 		} finally {
 			manager.closeConnection();
@@ -44,32 +42,25 @@ public class LoadIndex {
 
 	}
 
-	private void indexDocuments(SearchConnectionManager manager,
-			List<String> fileNames) throws IOException {
+	private void indexDocuments(SearchConnectionManager manager, List<String> absoluteFilePaths) throws IOException {
 
 		int idCounter = 0;
-		for (String fileName : fileNames) {
+		for (String absoluteFilePath : absoluteFilePaths) {
 			idCounter++;
 
-			String[] splitIndexArgs = LoadIndexHelper.getTaxonomy(fileName);
-			String index = splitIndexArgs[1];
-			String type = splitIndexArgs[2];
-
-			Client client = manager.getClient();
-			buildAndSubmitJson(client, idCounter, fileName, index, type);
+			buildAndSubmitJson(manager, LoadIndexHelper.getDocumentMap(absoluteFilePath), idCounter);
 		}
 	}
 
-	private void buildAndSubmitJson(Client client, int idCounter,
-			String fileName, String index, String type) throws IOException {
+	private void buildAndSubmitJson(SearchConnectionManager manager, Map<String, String> documentMap, int idCounter)
+			throws IOException {
 
-		client.prepareIndex(StringUtils.lowerCase(index),
-				StringUtils.lowerCase(type), String.valueOf(idCounter))
+		Client client = manager.getClient();
+		client.prepareIndex(StringUtils.lowerCase("ons"), StringUtils.lowerCase(documentMap.get("type")),
+				String.valueOf(idCounter))
 				.setSource(
-						jsonBuilder().startObject()
-								.field("title", "title" + idCounter)
-								.field("tags", "tags" + idCounter)
-								.field("theme", fileName).endObject())
-				.execute().actionGet();
+						jsonBuilder().startObject().field("title", documentMap.get("title"))
+								.field("url", documentMap.get("url")).field("path", documentMap.get("tags"))
+								.endObject()).execute().actionGet();
 	}
 }
