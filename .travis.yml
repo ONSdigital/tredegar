@@ -4,7 +4,7 @@ jdk:
 deploy:
   provider: heroku
   api_key:
-    secure: TgQdd6Crn3CUJpHfuKwPg8Y+VM5sm7gXBQ6Y/ERLvsq4sUP89n0cBJ29CYrScmrPzXac2JGhHAwjzlHquz+8ub6iQUcbVq6ZFxlJyNOph9EpnPdbKilhPVjuBMRBVXwW6lNVTZqLxHiE2VcGnFQOjwHi3K+QDu1inq2CriXBHyI=
-  app: tredegar
+    secure: JRKotKDN8Y2Xs57foWiVHw7QF44ie+eUaczOow9GsP0vH6nLJGn4w2dRd5gjQuluSAu+qouKQE64VSPcuah+159L6CLsQJRCGm1Ex9UHDkeMgs2hO29/Sz6xKqxCJn9w8QW16bFF1s0CVwSo72zyG7xk6JkhH+kFVi8XYa24Fz0=
+  app: onsdigital
   on:
     repo: ONSdigital/tredegar
