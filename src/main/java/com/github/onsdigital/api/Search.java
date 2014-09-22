@@ -5,10 +5,11 @@ import java.io.IOException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.GET;
+import javax.ws.rs.core.Context;
 
 import org.apache.commons.lang3.StringUtils;
 
-import com.github.davidcarboni.restolino.interfaces.Endpoint;
+import com.github.davidcarboni.restolino.framework.Endpoint;
 import com.github.onsdigital.util.ElasticSearchUtil;
 import com.github.onsdigital.util.ONSQueryBuilder;
 import com.github.onsdigital.util.SearchConnectionManager;
@@ -18,8 +19,8 @@ public class Search {
 	final static String jsonMime = "application/json";
 
 	@GET
-	public Object get(HttpServletRequest request, HttpServletResponse response)
-			throws IOException {
+	public Object get(@Context HttpServletRequest request,
+			@Context HttpServletResponse response) throws IOException {
 
 		return search(extractQuery(request), extractPage(request),
 				request.getParameter("type"));
