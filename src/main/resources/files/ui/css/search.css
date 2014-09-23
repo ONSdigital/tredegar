@@ -1,0 +1,20 @@
+dl {
+	color:#888888;
+	font-size: 0.85em;
+}
+dt {
+	float: left;
+	clear: left;
+	width: 60px;
+	text-align: left;
+	padding: 5px 35px 5px 0px;
+	border-bottom:1px solid #d6d6d6;
+}
+dt:after {
+	content: ":";
+}
+dd {
+	margin: 0 0 0 70px;
+	padding: 5px 0px;
+	border-bottom: 1px solid #d6d6d6;
+}
