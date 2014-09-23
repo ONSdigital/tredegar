@@ -5,7 +5,7 @@ export JAVA_OPTS="-Xdebug -Xrunjdwp:transport=dt_socket,address=8000,server=y,su
 # Restolino configuration
 export RESTOLINO_STATIC="src/main/resources/files"
 export RESTOLINO_CLASSES="target/classes"
-export PACKAGE_PREFIX=uk.co.methods
+export PACKAGE_PREFIX=com.github.onsdigital
 
 # Elasticsearch
 export BONSAI_URL=http://localhost:9200
