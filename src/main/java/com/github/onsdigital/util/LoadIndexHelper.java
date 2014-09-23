@@ -24,7 +24,8 @@ public class LoadIndexHelper {
 	private static final String BULLETINS = "bulletins";
 	private static final String DELIMITTER = "/";
 	private static final String TAXONOMY = "taxonomy/";
-	private static final String ROOT_SEARCH = "src/main/resources/files/" + TAXONOMY;
+	private static final String ROOT_SEARCH = "src/main/resources/files/";// +
+																			// TAXONOMY;
 
 	/**
 	 * Loads up the file names from a system scan
@@ -60,13 +61,15 @@ public class LoadIndexHelper {
 		int fileNameTokenIndex = splitPathLength - 1;
 		String title = splitPath[fileNameTokenIndex];
 
-		Map<String, String> documentMap = buildDocumentMap(absoluteFilePath, splitPath, type, title);
+		Map<String, String> documentMap = buildDocumentMap(absoluteFilePath,
+				splitPath, type, title);
 
 		return documentMap;
 	}
 
-	private static Map<String, String> buildDocumentMap(String absoluteFilePath, String[] splitPath,
-			String type, String title) {
+	private static Map<String, String> buildDocumentMap(
+			String absoluteFilePath, String[] splitPath, String type,
+			String title) {
 
 		Map<String, String> documentMap = new HashMap<String, String>();
 		documentMap.put(URL, absoluteFilePath);
@@ -79,8 +82,8 @@ public class LoadIndexHelper {
 	private static String getType(String[] splitPath, int typeTokenIndex) {
 
 		String type = splitPath[typeTokenIndex];
-		if (!type.equals(BULLETINS) && !type.equals(ARTICLES) && !type.equals(METHODOLOGY)
-				&& !type.equals(DATASETS)) {
+		if (!type.equals(BULLETINS) && !type.equals(ARTICLES)
+				&& !type.equals(METHODOLOGY) && !type.equals(DATASETS)) {
 			type = HOME;
 		}
 		return type;
