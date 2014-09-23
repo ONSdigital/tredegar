@@ -6,7 +6,7 @@ import com.github.davidcarboni.restolino.helpers.HomeRedirect;
 public class Index extends HomeRedirect implements Home {
 
 	public Index() {
-		super("/t1.html");
+		super("/index.html");
 	}
 
 }
