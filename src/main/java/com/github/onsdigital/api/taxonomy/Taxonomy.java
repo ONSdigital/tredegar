@@ -1,4 +1,4 @@
-package com.github.onsdigital.api;
+package com.github.onsdigital.api.taxonomy;
 
 import java.io.IOException;
 import java.net.URI;
@@ -10,10 +10,7 @@ import javax.ws.rs.core.Context;
 
 import org.apache.commons.lang3.StringUtils;
 
-import com.github.davidcarboni.restolino.framework.Endpoint;
-
-@Endpoint
-public class Taxonomy {
+public abstract class Taxonomy {
 
 	@GET
 	public void goToIndex(@Context HttpServletRequest request,
