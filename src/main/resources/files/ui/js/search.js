@@ -1,21 +1,34 @@
 var onssearch = {
-search : function(url, keyword, containerDiv) {
-		$.getJSON(url + "?q=" + keyword, function (data) {
- 		 console.log(data);
-			buildResultPage(data, containerDiv);			
+keyword: null,	
+div: null,
+search : function(containerDiv) {
+		keyword = this.keyword =   $.getUrlVar('q');
+		div = this.div = $("#" + containerDiv);
+		if (!keyword) {
+			clearDiv(div);
+			createDummyresults(div);
+			return;
+		}
+		
+		$.getJSON("search?q=" + keyword, function (data) {
+			buildResultPage(data, div);			
  		 });
 }
 }
 
-function buildResultPage(data, containerDiv) {
-		
-		var div =$("#" + containerDiv);
+function buildResultPage(data, div) {		
 		
 		if (data) {
+			console.log(data);
 			div.append("<p class=took> " +  data.numberOfResults + " results found in " + data.took + " milliseconds" );			
 			buildResultList(data.results, div);
 			buildPager(data.totalPages,div);				
 		}			
+}
+
+function clearDiv(div) {
+//Clear div content
+div.val('');
 }
 
 
@@ -39,8 +52,28 @@ function buildPager(numberOfPages, div) {
 	}
 }
 
+function printError(div) {
+	div.append("Enter a keyword for search");
+}
+
+function createDummyresults(div) {
+
+	var data={
+	took:10,
+	numberOfResults:1004,
+	totalPages:104,
+	results:new Array()
+	}
+	
+	for (i=0; i<10;i++) {
+	data.results[i] = { title: "Title" + i, tags: "Tag" + i } 	
+	}	
+	
+	buildResultPage(data,div);
+	
 
 
+}
 
 
 
