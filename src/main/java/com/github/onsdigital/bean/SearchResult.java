@@ -12,14 +12,19 @@ public class SearchResult {
 
 	private long took; // milliseconds
 	private long totalPages;
-	private long numbeOfResults; // total result number
+	private long numberOfResults; // total result number
 	private List<Map<String, Object>> results; // results
 
+	public SearchResult() {
+	
+	}
+	
+	
 	public SearchResult(SearchResponse response, int searchSize) {
 		results = new ArrayList<Map<String, Object>>();
-		this.numbeOfResults = response.getHits().getTotalHits();
+		this.numberOfResults = response.getHits().getTotalHits();
 		this.totalPages = (long) Math
-				.ceil(((double) numbeOfResults / searchSize));
+				.ceil(((double) numberOfResults / searchSize));
 		this.took = response.getTookInMillis();
 		addHits(response);
 	}
@@ -49,12 +54,12 @@ public class SearchResult {
 		this.totalPages = totalPages;
 	}
 
-	public long getNumberOfHits() {
-		return numbeOfResults;
+	public long getNumberOfResults() {
+		return numberOfResults;
 	}
 
-	public void setNumberOfHits(long numberOfHits) {
-		this.numbeOfResults = numberOfHits;
+	public void setNumberOfResults(long numberOfHits) {
+		this.numberOfResults = numberOfHits;
 	}
 
 	public List<Map<String, Object>> getResults() {
