@@ -8,6 +8,7 @@
 <link href="ui/css/search.css" rel="stylesheet">
 
 <script src="ui/js/lib/jquery.min.js" type="text/javascript" ></script>
+<script src="ui/js/main.js" type="text/javascript" ></script>
 <script src="ui/js/search.js" type="text/javascript" ></script>
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -28,32 +29,10 @@
 
 <script type="text/javascript">
 
-
- function searchResults() {        
-			onssearch.search("http://localhost:8080/dummysearch", "consumer", "searchResults");
- }
+function searchResults() {        
+			onssearch.search("searchResults");
+}
  
- // Adds a header row to the table and returns the set of columns.
- // Need to do union of keys from all records as some records may not contain
- // all records
- function addAllColumnHeaders(myList)
- {
-     var columnSet = [];
-     var headerTr$ = $('<tr/>');
- 
-     for (var i = 0 ; i < myList.length ; i++) {
-         var rowHash = myList[i];
-         for (var key in rowHash) {
-             if ($.inArray(key, columnSet) == -1){
-                 columnSet.push(key);
-                 headerTr$.append($('<th/>').html(key));
-             }
-         }
-     }
-     $("#results").append(headerTr$);
- 
-     return columnSet;
- }
 
 </script>
 
