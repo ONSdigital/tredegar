@@ -35,12 +35,15 @@ div.val('');
 
 function buildResultList(results, div) {
 
-	div.append("<dl class='result_list'>");	
+
+	var dl = $("<dl class='result_list'/>"); 
+	div.append(dl);
+		
 	for (i = 0; i < results.length; i++) { 
-   	 	div.append("<dt class='title'>" + results[i].title + "</dt>");
-			div.append("<dd class='tags'>" + results[i].tags +  "</dd>" );
+   	 	dl.append("<dt class='title'>" + results[i].title + "</dt>");
+			dl.append("<dd class= 'tags'>" + results[i].tags +  "</dd>" );
 	}	
-	div.append("</dl>");	
+		
 	
 }
 
