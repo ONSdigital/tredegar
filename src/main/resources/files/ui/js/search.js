@@ -18,6 +18,7 @@ search : function(containerDiv) {
 
 function buildResultPage(data, div) {		
 		
+		clearDiv(div);
 		if (data) {
 			console.log(data);
 			div.append("<p class=took> " +  data.numberOfResults + " results found in " + data.took + " milliseconds" );			
@@ -35,14 +36,11 @@ div.val('');
 function buildResultList(results, div) {
 
 	div.append("<dl class='result_list'>");	
-			
 	for (i = 0; i < results.length; i++) { 
    	 	div.append("<dt class='title'>" + results[i].title + "</dt>");
-			div.append("<dd class = 'tags'>" );
-			div.append(results[i].tags);
-			div.append("</dd>" );
+			div.append("<dd class='tags'>" + results[i].tags +  "</dd>" );
 	}	
-	div.append("<dl>");	
+	div.append("</dl>");	
 	
 }
 
