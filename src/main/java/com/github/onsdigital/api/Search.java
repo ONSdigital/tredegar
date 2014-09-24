@@ -57,9 +57,15 @@ public class Search {
 
 	private String extractQuery(HttpServletRequest request) {
 		String query = request.getParameter("q");
+
 		if (StringUtils.isEmpty(query)) {
-			throw new RuntimeException("No search query provided");
+			// check to see if this is part of search's autocomplete
+			query = request.getParameter("term");
+			if (StringUtils.isEmpty(query)) {
+				throw new RuntimeException("No search query provided");
+			}
 		}
+
 		return query;
 	}
 }
