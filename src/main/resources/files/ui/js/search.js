@@ -77,6 +77,10 @@ function buildPaginator(numberOfResults, holder, page) {
         displayedPages: 10,
         currentPage : page,
         edges: 0,
+        cssStyle: "pagination",
+        hideIfSinglePage : true,
+        hideNextOnLastPage : true,
+        hidePrevOnFirstPage : true,
 		onPageClick: function (pageNumber) {
 			onssearch.loadPage(pageNumber);		
 		}
@@ -90,7 +94,11 @@ function buildDummyPaginator(numberOfResults, holder, page) {
         itemsOnPage: 10,
         displayedPages: 10,
         currentPage : page,
-        edges: 0	
+        edges: 0,
+   		hideIfSinglePage : true,
+        hideNextOnLastPage : true,
+        hidePrevOnFirstPage : true,
+        cssStyle: "pagination"
         
     });
 }

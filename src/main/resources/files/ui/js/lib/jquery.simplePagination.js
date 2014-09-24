@@ -8,6 +8,13 @@
 * http://flaviusmatis.github.com/license.html
 */
 
+/*
+
+Extended & Modified by Bren for ONSAlpha Project
+
+*/
+
+
 (function($){
 
 	var methods = {
@@ -29,6 +36,9 @@
 				selectOnClick: true,
 				nextAtFront: false,
 				invertPageOrder: false,
+				hideIfSinglePage: false,
+				hidePrevOnFirstPage: false,
+				hideNextOnLastPage: false,
 				onPageClick: function(pageNumber, event) {
 					// Callback triggered when a page is clicked
 					// Page number is given as an optional parameter
@@ -157,18 +167,32 @@
 
 			methods.destroy.call(this);
 			
+			// No paginator for single page
+			if (o.pages <= 1 && o.hideIfSinglePage ) {
+				return;			
+			}			
+			
+			
 			tagName = (typeof this.prop === 'function') ? this.prop('tagName') : this.attr('tagName');
 
 			var $panel = tagName === 'UL' ? this : $('<ul></ul>').appendTo(this);
 
-			// Generate Prev link
+			// Generate Prev link, 
 			if (o.prevText) {
-				methods._appendItem.call(this, !o.invertPageOrder ? o.currentPage - 1 : o.currentPage + 1, {text: o.prevText, classes: 'prev'});
+				if (o.currentPage <= 0 && o.hidePrevOnFirstPage ) {
+					//hide previous link if first page (don't draw)
+				} else {
+					methods._appendItem.call(this, !o.invertPageOrder ? o.currentPage - 1 : o.currentPage + 1, {text: o.prevText, classes: 'previous'});
+				}
 			}
 
 			// Generate Next link (if option set for at front)
-			if (o.nextText && o.nextAtFront) {
+			if (o.nextText && o.nextAtFront ) {
+				if ((o.currentPage >= o.pages -1) && o.hideNextOnLastPage  ) {
+					//hide next link if last page(don't draw)
+				} else {
 				methods._appendItem.call(this, !o.invertPageOrder ? o.currentPage + 1 : o.currentPage - 1, {text: o.nextText, classes: 'next'});
+				}				
 			}
 
 			// Generate start edges
@@ -236,9 +260,13 @@
 				}
 			}
 
-			// Generate Next link (unless option is set for at front)
+			// Generate Next link (unless option is set for at front), hide next if last page
 			if (o.nextText && !o.nextAtFront) {
-				methods._appendItem.call(this, !o.invertPageOrder ? o.currentPage + 1 : o.currentPage - 1, {text: o.nextText, classes: 'next'});
+				if ((o.currentPage >= o.pages -1) && o.hideNextOnLastPage ) {
+					//hide next link if last page (don't draw)
+				} else {
+					methods._appendItem.call(this, !o.invertPageOrder ? o.currentPage + 1 : o.currentPage - 1, {text: o.nextText, classes: 'next'});
+				}
 			}
 		},
 
