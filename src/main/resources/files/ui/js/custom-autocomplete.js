@@ -38,8 +38,7 @@ $(function() {
 	    },
         select: function (event, ui) {
             window.open(ui.item.url);
-
-        }	    
+        }
     })
     .autocomplete( "instance" )._renderItem = function( dl, item ) {
       return $( "<dl>" )
