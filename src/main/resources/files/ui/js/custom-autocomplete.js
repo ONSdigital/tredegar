@@ -17,7 +17,7 @@ $.widget( "ui.autocomplete", $.ui.autocomplete, {
 $(function() {
 	$( "#homepageSearch" ).autocomplete({
       	source: function(request, response) {
-    	  	var URL = "http://localhost:8080/search";
+    	  	var URL = "/search";
     	  	$.getJSON(URL, request, function(data) {
 
     	  		var results = data.results;
