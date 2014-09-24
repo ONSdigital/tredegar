@@ -35,7 +35,7 @@ function searchResults() {
 			var query = $.getUrlVar('q');     
 			var anchor = $.getAnchor();
 			if (anchor) {
-			var page = anchor.slice(anchor.indexOf("-") + 1);	
+					var page = anchor.slice(anchor.indexOf("-") + 1);	
 			}
 			onssearch.search(query, "search", "paginator", page);
 }

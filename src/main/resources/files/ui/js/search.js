@@ -9,7 +9,7 @@ onssearch.search = function(query, contentHolderId, paginatorId, page) {
 		onssearch.page = page || 1;
 		
 		if (!query) {
-					createDummyresults(onssearch.contentHolder, onssearch.paginator);
+					createDummyresults(onssearch.contentHolder, onssearch.paginator, onssearch.page);
 					return;
 		}		
 		
@@ -113,7 +113,7 @@ function printError(div) {
 	div.append("Enter a keyword for search");
 }
 
-createDummyresults = function(contentHolder, paginator) {
+createDummyresults = function(contentHolder, paginator, page) {
 	
 	var data={
 	took:10,
@@ -128,7 +128,7 @@ createDummyresults = function(contentHolder, paginator) {
 	onssearch.data = data;
 	
 	buildResultList(data.results,onssearch.contentHolder);
-	buildDummyPaginator(data.numberOfResults,onssearch.paginator);
+	buildDummyPaginator(data.numberOfResults,onssearch.paginator, page);
 	
 }
 
