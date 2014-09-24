@@ -1,7 +1,4 @@
 $.widget( "ui.autocomplete", $.ui.autocomplete, {
-	options: {
-		maxItems: 9999
-	},
 	_renderMenu: function( ul, items ) {
 		var that = this,
 	    count = 0;
