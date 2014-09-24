@@ -23,9 +23,7 @@ public class LoadIndexHelper {
 	private static final String ARTICLES = "articles";
 	private static final String BULLETINS = "bulletins";
 	private static final String DELIMITTER = "/";
-	private static final String TAXONOMY = "taxonomy/";
-	private static final String ROOT_SEARCH = "src/main/resources/files/";// +
-																			// TAXONOMY;
+	private static final String ROOT_SEARCH = "src/main/resources/files/";
 
 	/**
 	 * Loads up the file names from a system scan
@@ -49,10 +47,10 @@ public class LoadIndexHelper {
 	 * @return the collection of key value pairs representing an indexable item
 	 */
 	public static Map<String, String> getDocumentMap(String absoluteFilePath) {
-		String[] pathAfterTaxonomy = absoluteFilePath.split(TAXONOMY);
-		String path = pathAfterTaxonomy[1];
+		String[] pathAfterTaxonomy = absoluteFilePath.split("files");
+		String url = pathAfterTaxonomy[1];
 
-		String[] splitPath = path.split(DELIMITTER);
+		String[] splitPath = url.split(DELIMITTER);
 		int splitPathLength = splitPath.length;
 		int typeTokenIndex = splitPathLength - 2;
 
@@ -61,18 +59,14 @@ public class LoadIndexHelper {
 		int fileNameTokenIndex = splitPathLength - 1;
 		String title = splitPath[fileNameTokenIndex];
 
-		Map<String, String> documentMap = buildDocumentMap(absoluteFilePath,
-				splitPath, type, title);
-
+		Map<String, String> documentMap = buildDocumentMap(url, splitPath, type, title);
 		return documentMap;
 	}
 
-	private static Map<String, String> buildDocumentMap(
-			String absoluteFilePath, String[] splitPath, String type,
-			String title) {
+	private static Map<String, String> buildDocumentMap(String url, String[] splitPath, String type, String title) {
 
 		Map<String, String> documentMap = new HashMap<String, String>();
-		documentMap.put(URL, absoluteFilePath);
+		documentMap.put(URL, url);
 		documentMap.put(TYPE, type);
 		documentMap.put(TITLE, title);
 		documentMap.put(TAGS, Arrays.toString(splitPath));

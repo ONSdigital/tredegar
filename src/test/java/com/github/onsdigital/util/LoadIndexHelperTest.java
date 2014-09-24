@@ -15,10 +15,15 @@ public class LoadIndexHelperTest {
 	private final static String FILE_EXTENSION = ".html";
 	private final static String CONTENT_TYPE = "bulletins";
 	private final static String DELIMITTER = "/";
-	private final static String PRE_BULLETINS_PATH = "/src/main/resources/files/taxonomy/economy/nationalaccounts/uksectoraccounts/";
+	private final static String RESOURCE_FILE_PATH = "/src/main/resources/files";
+	private final static String TAXONOMY_PATH = "/economy/nationalaccounts/uksectoraccounts/";
+	private final static String PRE_BULLETINS_PATH = RESOURCE_FILE_PATH + TAXONOMY_PATH;
 	private final static String CONTENT_TYPE_TEST_FILE = PRE_BULLETINS_PATH + CONTENT_TYPE + DELIMITTER + FILE_NAME
 			+ FILE_EXTENSION;
 	private final static String HOME_PAGE_TEST_FILE = PRE_BULLETINS_PATH + FILE_NAME + FILE_EXTENSION;
+	private final static String CONTENT_TYPE_URL = TAXONOMY_PATH + CONTENT_TYPE + DELIMITTER + FILE_NAME
+			+ FILE_EXTENSION;
+	private final static String HOME_PAGE_URL = TAXONOMY_PATH + FILE_NAME + FILE_EXTENSION;
 
 	@Test
 	public void testGetFileNames() throws IOException {
@@ -29,7 +34,7 @@ public class LoadIndexHelperTest {
 	@Test
 	public void testGetDocumentMapForContentType() {
 		Map<String, String> documentMap = LoadIndexHelper.getDocumentMap(CONTENT_TYPE_TEST_FILE);
-		assertEquals("url should math file structure", documentMap.get("url"), CONTENT_TYPE_TEST_FILE);
+		assertEquals("url should math file structure", documentMap.get("url"), CONTENT_TYPE_URL);
 		assertEquals("type should be bulletins", documentMap.get("type"), "bulletins");
 		assertEquals("title should be index.html", documentMap.get("title"), "index.html");
 		assertTrue("tags should contain subdirs", documentMap.get("tags").contains("nationalaccounts"));
@@ -38,7 +43,7 @@ public class LoadIndexHelperTest {
 	@Test
 	public void testGetDocumentMapForHomePage() {
 		Map<String, String> documentMap = LoadIndexHelper.getDocumentMap(HOME_PAGE_TEST_FILE);
-		assertEquals("url should math file structure", documentMap.get("url"), HOME_PAGE_TEST_FILE);
+		assertEquals("url should math file structure", documentMap.get("url"), HOME_PAGE_URL);
 		assertEquals("type should be bulletins", documentMap.get("type"), "home");
 		assertEquals("title should be index.html", documentMap.get("title"), "index.html");
 		assertFalse("tags should not contain content type subdir", documentMap.get("tags").contains("CONTENT_TYPE"));
