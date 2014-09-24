@@ -37,7 +37,6 @@ $(function() {
 	        return false;
 	    },
         select: function (event, ui) {
-        	alert('URL: ' + ui.item.url)
             window.open(ui.item.url);
 
         }	    
