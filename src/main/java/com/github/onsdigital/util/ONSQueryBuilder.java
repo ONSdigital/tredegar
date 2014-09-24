@@ -24,7 +24,7 @@ public class ONSQueryBuilder {
 	String query;
 	String index;
 	String type;
-	int page;
+	int page = 1;
 	int size = 10;
 	String[] fields;
 

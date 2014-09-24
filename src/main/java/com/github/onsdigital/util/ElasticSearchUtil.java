@@ -62,14 +62,14 @@ public class ElasticSearchUtil {
 	public SearchResult search(ONSQueryBuilder queryBuilder) {
 		testConnection();
 		SearchResponse searchResponse = execute(queryBuilder);
-		return new SearchResult(searchResponse, queryBuilder.getSize());
+		return new SearchResult(searchResponse);
 	}
 
 	private SearchResponse execute(ONSQueryBuilder queryBuilder) {
 		BaseQueryBuilder builder = buildSearch(queryBuilder);
 		SearchRequestBuilder requestBuilder = buildRequest(queryBuilder,
 				builder);
-		return requestBuilder.get();
+		return requestBuilder.execute().actionGet();
 	}
 
 	private SearchRequestBuilder buildRequest(ONSQueryBuilder queryBuilder,
@@ -78,7 +78,6 @@ public class ElasticSearchUtil {
 				.prepareSearch(queryBuilder.getIndex())
 				.setFrom(calculateFrom(queryBuilder))
 				.setSize(queryBuilder.getSize())
-				.setSearchType(SearchType.DFS_QUERY_AND_FETCH)
 				.setQuery(builder.buildAsBytes());
 
 		String type = queryBuilder.getType();
