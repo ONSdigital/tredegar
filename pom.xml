@@ -8,7 +8,6 @@
 	<description>Repository for ONS Alpha development project</description>
 	<url>https://tredegar.herokuapp.com</url>
 
-
 	<properties>
 		<java.version>1.7</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -16,15 +15,13 @@
 		<es.version>1.3.2</es.version>
 	</properties>
 
-
-
 	<dependencies>
 
 		<!-- Prototyping framework -->
 		<dependency>
 			<groupId>com.github.davidcarboni</groupId>
 			<artifactId>restolino</artifactId>
-			<version>0.0.10</version>
+			<version>0.0.12</version>
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
