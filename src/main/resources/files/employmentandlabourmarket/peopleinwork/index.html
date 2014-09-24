@@ -8,7 +8,7 @@
   <!--<![endif]-->
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>People in Work</title>
+    <title></title>
     <meta charset="utf-8" />
     <meta content="width=device-width,initial-scale=1.0" name="viewport" />
     <meta content="on" http-equiv="cleartype" />
@@ -76,7 +76,7 @@ markup: false
       <!-- temp removal to allow for component list selective wrapping -->
       <!-- <div class="wrapper"> -->
       <div class="fake-section">
-        <h1 class="flush">People in Work</h1>
+        <h1 class="flush"></h1>
       </div>
       <div class="slate panel--small" id="homepage-search">
         <div class="wrapper">
@@ -109,7 +109,7 @@ markup: false
 
       <div class="page-header slate">
         <div class="wrapper">
-          <h1 class="page-header__title flush--half--bottom">People in Work</h1>
+          <h1 class="page-header__title flush--half--bottom"></h1>
           <div class="content-reveal lede">
             <p>
               Producer Price Inflation (PPI) measures the price changes of goods bought and sold by UK manufacturers this month compared to the same month a year ago. PPI provides a key measure of inflation alongside other indicators such as the Consumer Prices Index (CPI) and Services Producer Price Index (SPPI).
@@ -436,7 +436,7 @@ markup: false
           <div class="grid-col tablet-wide-grid-one-half">
             <article class="nav-panel nav-panel--stats sectioned lifted">
               <header class="nav-panel__header nav-panel__roomy">
-                <h2>Other People in Work Categories</h2>
+                <h2 id="other">Other Categories</h2>
               </header>
               				<footer class="nav-panel__footer">
 		          <div class="nav-panel__action">
@@ -901,5 +901,22 @@ markup: false
     <!-- build:js /ui/js/ons-alpha.js-->
     <script src='//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js'></script>
     <!-- endbuild -->
+
+    <script type="text/javascript">
+
+    $( document ).ready(function() {
+
+      // Get the data.json file to populate the page:
+      $.get( "data.json", function( data ) {
+          console.log(JSON.stringify(data))
+        $( "title" ).html( data.name )
+        $( "h1" ).html( data.name )
+        $( "#other" ).html( "Other " + data.name + " categories" )
+      });
+
+    });
+
+    </script>
+
   </body>
 </html>
