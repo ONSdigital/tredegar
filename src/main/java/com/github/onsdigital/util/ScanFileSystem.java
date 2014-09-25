@@ -36,6 +36,7 @@ public class ScanFileSystem {
 			if (path.toFile().isDirectory())
 				getFileNames(fileNames, path);
 			else {
+				System.out.println("ScanFileSystem found file: " + path.toAbsolutePath().toString());
 				fileNames.add(path.toAbsolutePath().toString());
 			}
 		}
