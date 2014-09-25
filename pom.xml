@@ -36,6 +36,13 @@
 			<artifactId>elasticsearch</artifactId>
 			<version>${es.version}</version>
 		</dependency>
+		
+		<!-- Elastic Search HTTP Client (JEST) -->
+		<dependency>
+			<groupId>io.searchbox</groupId>
+			<artifactId>jest</artifactId>
+			<version>0.1.2</version>
+		</dependency>		
 
 		<!-- Test -->
 		<dependency>
