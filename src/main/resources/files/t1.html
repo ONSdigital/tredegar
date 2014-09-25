@@ -23,21 +23,21 @@
     <!-- endbuild -->
     <!-- build:css /ui/css/main.css-->
     <!--[if gt IE 8]><!-->
-    <link rel="stylesheet" href="ui/css/main.css" />
+    <link rel="stylesheet" href="/ui/css/main.css" />
 	<link rel="stylesheet" href="/ui/css/jquery-ui.min.css">    
     <!--<![endif]-->
     <!-- endbuild -->
-    <script src="ui/js/lib/modernizr.min.js"></script>
-    <script src="ui/js/lib/jquery-1.11.0.min.js"></script>
+    <script src="/ui/js/lib/modernizr.min.js"></script>
+    <script src="/ui/js/lib/jquery-1.11.0.min.js"></script>
     <script src="/ui/js/lib/jquery-ui.min.js"></script>    
     <!--[if (!IE)|(gt IE 8)]>><!-->
-    <script src="ui/js/lib/jquery.tooltipster.js"></script>
+    <script src="/ui/js/lib/jquery.tooltipster.js"></script>
     <!--<![endif]-->
-    <script src="ui/js/app/app.js"></script>
-    <script src="ui/js/app/content-reveal.js"></script>
-    <script src="ui/js/app/nav.js"></script>
-    <script src="ui/js/app/tables.js"></script>
-    <script src="ui/js/app/tabs.js"></script>
+    <script src="/ui/js/app/app.js"></script>
+    <script src="/ui/js/app/content-reveal.js"></script>
+    <script src="/ui/js/app/nav.js"></script>
+    <script src="/ui/js/app/tables.js"></script>
+    <script src="/ui/js/app/tabs.js"></script>
     <script src="/ui/js/custom-autocomplete.js"></script>    
     <script>
     </script>
@@ -178,7 +178,7 @@ markup: false
               </section>
               <footer class="nav-panel__footer">
                 <div class="nav-panel__action">
-                  <a class="nav-panel__roomy" href="#">View all Business, Industry, and Trade</a>
+                  <a class="nav-panel__roomy" href="/businessindustryandtrade">View all Business, Industry, and Trade</a>
                 </div>
               </footer>
             </article>
@@ -242,7 +242,7 @@ markup: false
               </section>
               <footer class="nav-panel__footer">
                 <div class="nav-panel__action">
-                  <a class="nav-panel__roomy" href="#">View all Economy</a>
+                  <a class="nav-panel__roomy" href="/economy">View all Economy</a>
                 </div>
               </footer>
             </article>
@@ -309,7 +309,7 @@ markup: false
               </section>
               <footer class="nav-panel__footer">
                 <div class="nav-panel__action">
-                  <a class="nav-panel__roomy" href="#">View all Employment and Labour Market</a>
+                  <a class="nav-panel__roomy" href="/employmentandlabourmarket">View all Employment and Labour Market</a>
                 </div>
               </footer>
             </article>
@@ -372,7 +372,7 @@ markup: false
               </section>
               <footer class="nav-panel__footer">
                 <div class="nav-panel__action">
-                  <a class="nav-panel__roomy" href="#">View all People, Population, and Community</a>
+                  <a class="nav-panel__roomy" href="/peoplepopulationandcommunity">View all People, Population, and Community</a>
                 </div>
               </footer>
             </article>
@@ -636,7 +636,7 @@ markup: false
             <article class="box orange border--large-left lifted">
               <div class="box__inner border box--padded">
                 <div class="media">
-                  <img class="media__img" src="ui/img/census.png" width="80" alt=" ">
+                  <img class="media__img" src="/ui/img/census.png" width="80" alt=" ">
                   <div class="media__body">
                     <header class="box__header">
                       <h2 class="gamma">
@@ -733,7 +733,7 @@ markup: false
               <div class="grid-col tablet-grid-one-half">
                 <p>
                   <a href="#">
-                    <img src="ui/img/interactive.jpg" alt="A a world map overlaid with various data mapped to countries.">
+                    <img src="/ui/img/interactive.jpg" alt="A a world map overlaid with various data mapped to countries.">
                   </a>
                 </p>
                 <p>
@@ -798,7 +798,7 @@ markup: false
         <div class="slate--mid-grey">
           <div class="wrapper">
             <div class="footer__license">
-              <img class="footer__license__img" alt="OGL_License_Logo" width="60" src="ui/img/ogl.png">
+              <img class="footer__license__img" alt="OGL_License_Logo" width="60" src="/ui/img/ogl.png">
               <p class="footer__license__body">
                 All content is available under the Open Government Licence v2.0, except where otherwise
                 stated
@@ -812,5 +812,18 @@ markup: false
     <!-- build:js /ui/js/ons-alpha.js-->
     <script src='//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js'></script>
     <!-- endbuild -->
+
+    <script type="text/javascript">
+
+    $( document ).ready(function() {
+
+      // Titles and headings:
+      $( "title" ).html( "Home" )
+      $( "h1" ).html( "Home" )
+
+    });
+
+    </script>
+
   </body>
 </html>

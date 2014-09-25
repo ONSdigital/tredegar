@@ -23,19 +23,19 @@
     <!-- endbuild -->
     <!-- build:css /ui/css/main.css-->
     <!--[if gt IE 8]><!-->
-    <link rel="stylesheet" href="ui/css/main.css" />
+    <link rel="stylesheet" href="/ui/css/main.css" />
     <!--<![endif]-->
     <!-- endbuild -->
-    <script src="ui/js/lib/modernizr.min.js"></script>
-    <script src="ui/js/lib/jquery-1.11.0.min.js"></script>
+    <script src="/ui/js/lib/modernizr.min.js"></script>
+    <script src="/ui/js/lib/jquery-1.11.0.min.js"></script>
     <!--[if (!IE)|(gt IE 8)]>><!-->
-    <script src="ui/js/lib/jquery.tooltipster.js"></script>
+    <script src="/ui/js/lib/jquery.tooltipster.js"></script>
     <!--<![endif]-->
-    <script src="ui/js/app/app.js"></script>
-    <script src="ui/js/app/content-reveal.js"></script>
-    <script src="ui/js/app/nav.js"></script>
-    <script src="ui/js/app/tables.js"></script>
-    <script src="ui/js/app/tabs.js"></script>
+    <script src="/ui/js/app/app.js"></script>
+    <script src="/ui/js/app/content-reveal.js"></script>
+    <script src="/ui/js/app/nav.js"></script>
+    <script src="/ui/js/app/tables.js"></script>
+    <script src="/ui/js/app/tabs.js"></script>
     <script>
     </script>
     <style>
@@ -71,6 +71,20 @@ markup: false
       <div class="fake-section">
         <h1 class="flush">Header and nav area goes here</h1>
       </div>
+      
+      <!-- David C: Added this in to keep a breadcrumb on each page. -->
+      <section class="panel--large wrapper">
+        <div class="grid-wrap">
+          <div class="grid-col desktop-grid-one-third tablet-grid-full">
+            <article class="box">
+              <a href="/" class="action-link hide-med-down">Home</a>
+               $breadcrumb
+            </article>
+          </div>
+        </div>
+        </section>
+      <!-- David C: Added this in to keep a breadcrumb on each page. -->
+      
       <div class="page-header slate">
         <div class="wrapper">
           <h1 class="page-header__title flush--half--bottom">Inflation and Price Indices</h1>
@@ -158,7 +172,7 @@ markup: false
       </div>
       <!-- /wrapper -->
       <section class="panel--large wrapper">
-        <h2 class="list--table-header">All Statistics Related to Inflation and Price Indices</h2>
+        <h2 id="related" class="list--table-header">All Statistics Related to Inflation and Price Indices</h2>
           <ol class="list--table list--table--complex table--striped-light table--selectable table-light--sectioned lifted">
             <li class="list--table__item list--table__head">
               <label class="list--table__item__body list--table__item__body--select-all nojs-hidden">Select all
@@ -803,7 +817,7 @@ markup: false
         <div class="slate--mid-grey">
           <div class="wrapper">
             <div class="footer__license">
-              <img class="footer__license__img" alt="OGL_license_logo" width="60" src="ui/img/ogl.png">
+              <img class="footer__license__img" alt="OGL_license_logo" width="60" src="/ui/img/ogl.png">
               <p class="footer__license__body">
                 All content is available under the Open Government Licence v2.0, except where otherwise
                 stated
