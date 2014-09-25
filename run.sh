@@ -12,6 +12,10 @@ export BONSAI_URL=http://localhost:9200
 
 mvn clean package && \
 
+# Generate taxonomy
+rm -rf src/main/taxonomy && \
+java -cp "target/classes:target/dependency/*" com.github.onsdigital.generator.Csv
+
 # Development: reloadable
 java $JAVA_OPTS -Drestolino.files=$RESTOLINO_STATIC -Drestolino.classes=$RESTOLINO_CLASSES -Drestolino.packageprefix=$PACKAGE_PREFIX -cp "target/dependency/*" com.github.davidcarboni.restolino.Main
 
