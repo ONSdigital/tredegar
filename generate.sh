@@ -4,7 +4,7 @@
 mvn clean package && \
 
 # Delete the old output:
-rm -rf src/main/resources/taxonomy && \
+rm -rf src/main/taxonomy && \
 
 # Generate the new output:
-java $JAVA_OPTS -jar target/*-jar-with-dependencies.jar
+java -cp "target/classes:target/dependency/*.jar" com.github.onsdigital.generator.Csv
