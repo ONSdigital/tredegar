@@ -62,23 +62,6 @@ public class ElasticSearchHTTPUtil {
 
 	private Search buildRequest(ONSQueryBuilder queryBuilder) {
 
-		// JsonObject object = new JsonObject();
-		// object.addProperty("from", calculateFrom(queryBuilder));
-		// object.addProperty("size", queryBuilder.getSize());
-		//
-		// if (ArrayUtils.isNotEmpty(queryBuilder.getFields())) {
-		// JsonObject hihglight = new JsonObject();
-		// for (String field : queryBuilder.getFields()) {
-		// JsonObject fieldObject = new JsonObject();
-		// hihglight.add(field, fieldObject);
-		// }
-		// object.add("highlight", hihglight);
-		// }
-
-		// JsonObject query = new Gson().fromJson(queryBuilder.buildQuery(),
-		// JsonObject.class);
-		// object.add("query", query);
-		//
 		Search.Builder builder = new Search.Builder(queryBuilder.buildQuery())
 				.addIndex(queryBuilder.getIndex()).setSearchType(
 						SearchType.DFS_QUERY_THEN_FETCH);

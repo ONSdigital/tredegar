@@ -145,10 +145,10 @@ public class ONSQueryBuilder {
 				.type(MatchQueryBuilder.Type.PHRASE_PREFIX);
 
 		HighlightBuilder highlightBuilder = new HighlightBuilder();
-		highlightBuilder.fragmentSize(0);
-
+		highlightBuilder.preTags("<strong>")
+				.postTags("</strong>");
 		for (String field : getFields()) {
-			highlightBuilder.field(field);
+			highlightBuilder.field(field,0,0);
 		}
 
 		return new SearchSourceBuilder().query(builder)

@@ -65,9 +65,32 @@ public class SearchResult {
 			item.put("path", object.get("_source").getAsJsonObject()
 					.get("path"));
 			item.put("url", object.get("_source").getAsJsonObject().get("url"));
-			// item.putAll(extractHihglightedFields(hit));
+			item.putAll(extractHihglightedFields(hit, new String[] { "title",
+					"path" }));
 			results.add(item);
 		}
+	}
+
+	private Map<? extends String, ? extends Object> extractHihglightedFields(
+			JsonElement hit, String[] fields) {
+
+		HashMap<String, Object> highlightedFields = new HashMap<>();
+
+		JsonObject object = hit.getAsJsonObject().get("highlight")
+				.getAsJsonObject();
+
+		for (String field : fields) {
+			JsonElement highlightField = object.get(field);
+			if (highlightField != null) {
+				Iterator<JsonElement> iterator = highlightField
+						.getAsJsonArray().iterator();
+				while (iterator.hasNext()) {
+					highlightedFields.put(field, iterator.next().getAsString());
+
+				}
+			}
+		}
+		return highlightedFields;
 	}
 
 	private Map<? extends String, ? extends Object> extractHihglightedFields(
