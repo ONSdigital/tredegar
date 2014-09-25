@@ -11,7 +11,7 @@ $.extend({
 			query : '',
 			resultsHolder : '',
 			paginatorHolder : '',
-			searchResultLegeng : '' ,
+			resultInfoHolder : '' ,
 			page: 0,
 			onSearchStart: function () {
 				// Callback triggered before searching
@@ -56,6 +56,7 @@ function doSearch() {
 				onssearch.data = data;  
 			  	buildResultList();
 			  	buildPaginator();
+			  	buildInfo();
 			  	onssearch.onSearchComplete();
 			  }).fail(function() {
 			    console.log( "Failed searching for query " + keyword );
@@ -66,10 +67,10 @@ function doSearch() {
 function buildResultList() {
 	
 	var onssearch = $('body').data('onssearch');
-	var resultsContainer = $('#' + onssearch.resultsHolder);
-	if (!resultsContainer) {
+	if (!onssearch.resultsHolder) {
 		return;
 	};
+	var resultsContainer = $('#' + onssearch.resultsHolder);
 
 	clearDiv(resultsContainer);	
 	
@@ -93,10 +94,10 @@ function buildResultList() {
 function buildPaginator() {
 
 	var onssearch = $('body').data('onssearch');
-	var paginatorContainer = $('#' + onssearch.paginatorHolder);
-	if (!paginatorContainer) {
+	if (!onssearch.paginatorHolder) {
 		return;
 	};	
+	var paginatorContainer = $('#' + onssearch.paginatorHolder);
 
     $(paginatorContainer).pagination({
         items: onssearch.data.numberOfResults,
@@ -113,6 +114,23 @@ function buildPaginator() {
 		}
     });
 }
+
+function buildInfo() {
+
+	var onssearch = $('body').data('onssearch');
+	if (!onssearch.resultInfoHolder) {
+		return;
+	};	
+
+	var infoContainer = $('#' + onssearch.resultInfoHolder);
+	clearDiv(infoContainer);
+
+	var resultNum = $("<span class='results-total'>" + onssearch.data.numberOfResults + "</span>");
+	infoContainer.append(resultNum);
+	infoContainer.append(" results for ");
+	infoContainer.append($("<span class='results-search-term'>\'" + onssearch.query + "\'</span>"));
+}
+
 
 function clearDiv(div) {
 //Clear div content
@@ -136,5 +154,6 @@ function  createDummyresults() {
 	onssearch.data = data;
 	buildResultList();
 	buildPaginator();
+	buildInfo();
 	onssearch.onSearchComplete();
 }

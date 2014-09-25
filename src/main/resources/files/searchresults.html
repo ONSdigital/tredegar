@@ -99,7 +99,7 @@ markup: false
 
     <!--Search filters, sorting and results description, grid col two thirds, left class removes padding and crates space within the div-->
   <div class="grid-col tablet-wide-grid-two-thirds left">
-      <div class="search-results-total"> <span class="results-total"> 2112</span> results for <span class="results-search-term"> 'CPI' </span>
+      <div id="search-results-total" class="search-results-total"> 
       </div>
       <div class="search-filters">
         <p> Filters: <span class="lozenge lozenge-spacer lozenge-blue">STATISTIC BULLETIN</span><span class="lozenge lozenge-spacer lozenge-red">DATASET</span><span class="lozenge lozenge-spacer">ARTICLE</span><span class="lozenge lozenge-spacer lozenge-green">METHODOLOGY</span>
@@ -132,20 +132,9 @@ markup: false
             </div>
 
           <div id="paginator" class="pagination simple-pagination pagination-centred">
-            <ul>
-              <li><a href="#" class="previous">Prev</a></li>
-              <li><span class="current">1</span></li>
-              <li><a href="#page-2" class="page-link" target="">2</a></li>
-              <li><a href="#page-3" class="page-link" target="">3</a></li>
-              <li><a href="#page-4" class="page-link" target="">4</a></li>
-              <li><a href="#page-5" class="page-link" target="">5</a></li>
-              <li><a href="#page-6" class="page-link" target="">6</a></li>
-              <li><a href="#page-7" class="page-link" target="">7</a></li>
-              <li><a href="#page-8" class="page-link" target="">8</a></li>
-              <li><a href="#page-9" class="page-link" target="">9</a></li>
-              <li><a href="#page-10" class="page-link" target="">10</a></li>
-              <li><a href="#" class="current next">Next</a></li>
-            </ul>
+          
+          <!--Paginator goes here -->
+
           </div>
     
           </article>
@@ -271,7 +260,8 @@ markup: false
             query : $.getUrlVar('q'),
             page  : pageNumber,
             resultsHolder : "search",
-            paginatorHolder : "paginator"
+            paginatorHolder : "paginator",
+            resultInfoHolder: "search-results-total"
           });
      }
      
