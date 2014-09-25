@@ -86,7 +86,7 @@ markup: false
       </div>
       <div class="slate panel--small" id="homepage-search">
         <div class="wrapper">
-          <form action="/search.html" class="hero">
+          <form action="/searchresults.html" class="hero">
             <label for="homepageSearch" class="visuallyhidden">Search term:</label>
             <input id="homepageSearch" type="text" class="input-med-large--flex--four-fifths input--lede"
             name="q" value="" placeholder="Search for postcode, release number, or keyword">
@@ -104,7 +104,7 @@ markup: false
         <section class="panel--large wrapper">
         <div class="grid-wrap">
           <div class="grid-col desktop-grid-one-third tablet-grid-full">
-            <article class="box">
+            <article id="breadcrumb" class="box">
              <!-- <a href="/" class="action-link hide-med-down">Home</a> -->
                 <a href="/" class="action-link">Home</a>
             </article>
@@ -950,31 +950,48 @@ markup: false
           $("#thirdLink").text("View all " + third.name).attr("href", third.fileName)
         }
 
-        $( "#otherTitle" ).html( "Other " + data.name + " categories" )
-        for (var i = 0; i < data.children.length; i++) {
-          var other = data.children.shift();
-          console.log(JSON.stringify(other))
+        $( "#otherList" ).empty();
+        $( "#otherList" ).append( '<header class="nav-panel__header nav-panel__roomy">'+
+                                    '<h2>Other ' + data.name + ' categories</h2>'+
+                                  '</header>');
 
-          // Build the markup template:
-          var item = $('<footer class="nav-panel__footer">' +
-                        '<div class="nav-panel__action">' +
-                          '<a class="nav-panel__roomy" href="#"></a>' +
-                        '</div>' + 
-                      '</footer>')
-
-          // Update the link:
-          $("a", item).text(other.name).attr("href", other.fileName)
-          $("#otherList").append(item)
-        }
-
+        // If there are no more items, show a "nowt" message:
         if (data.children.length == 0) {
-          // Show a "nowt" message:
           $("#otherList").append('<footer class="nav-panel__footer">' +
                         '<div class="nav-panel__action">' +
                           '<a class="nav-panel__roomy" href="#">Lies, damned lies and missing statistics! There\'s nothing here to see.</a>' +
                         '</div>' + 
                       '</footer>')
         }
+
+        // Otherwise list the additional items:
+        while (data.children.length > 0) {
+          var other = data.children.shift();
+
+          // Build the markup template:
+          var item = $('<footer class="nav-panel__footer">' +
+                        '<div class="nav-panel__action">' +
+                          '<a class="nav-panel__roomy" href="' + other.fileName + '">' + other.name + '</a>' +
+                        '</div>' + 
+                      '</footer>')
+
+          // Append the item:
+          $("#otherList").append(item)
+        }
+
+        // Build the breadcrumb:
+        var upLink = "../"
+        while (data.breadcrumb.length > 0) {
+          var crumb = data.breadcrumb.shift();
+          console.log(JSON.stringify(crumb))
+          $('#breadcrumb').append(document.createTextNode(" > "));
+          $('#breadcrumb').append('<a href="' + upLink + '" class="action-link">' + crumb.name + '</a>');
+          upLink += "../"
+        }
+
+        // Add the current page at the end of the breadcrumb:
+        $('#breadcrumb').append(document.createTextNode(" > "));
+        $('#breadcrumb').append(document.createTextNode(data.name));
 
       });
 

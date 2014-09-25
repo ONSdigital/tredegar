@@ -1,7 +1,5 @@
 package com.github.onsdigital.api;
 
-import java.io.IOException;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.GET;
@@ -10,34 +8,34 @@ import javax.ws.rs.core.Context;
 import org.apache.commons.lang3.StringUtils;
 
 import com.github.davidcarboni.restolino.framework.Endpoint;
-import com.github.onsdigital.util.ElasticSearchUtil;
+import com.github.onsdigital.util.ElasticSearchHTTPUtil;
 import com.github.onsdigital.util.ONSQueryBuilder;
-import com.github.onsdigital.util.SearchConnectionManager;
+import com.github.onsdigital.util.SearchHTTPConnectionManager;
 
 @Endpoint
 public class Search {
 	final static String jsonMime = "application/json";
+	final static String BONSAI_URL = System.getenv("BONSAI_URL");
 
 	@GET
 	public Object get(@Context HttpServletRequest request,
-			@Context HttpServletResponse response) throws IOException {
+			@Context HttpServletResponse response) throws Exception {
 
 		return search(extractQuery(request), extractPage(request),
 				request.getParameter("type"));
 
 	}
 
-	private Object search(String query, int page, String type) {
-		SearchConnectionManager connectionManager = new SearchConnectionManager(
-				"elasticsearch", "localhost", 9300);
+	private Object search(String query, int page, String type) throws Exception {
+		SearchHTTPConnectionManager connectionManager = new SearchHTTPConnectionManager(
+				BONSAI_URL);
 		try {
-
 			ONSQueryBuilder queryBuilder = new ONSQueryBuilder("ons")
 					.setType(type).setPage(page).setQuery(query)
 					.setFields("title", "path");
 			connectionManager.openConnection();
 
-			ElasticSearchUtil searchUtil = new ElasticSearchUtil(
+			ElasticSearchHTTPUtil searchUtil = new ElasticSearchHTTPUtil(
 					connectionManager);
 
 			return searchUtil.search(queryBuilder);
