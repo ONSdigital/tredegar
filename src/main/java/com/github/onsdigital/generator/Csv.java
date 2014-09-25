@@ -179,7 +179,7 @@ public class Csv {
 	private static void createHomePage(File file) throws IOException {
 
 		// if (folder.children.size() == 0) {
-		String markup = ResourceUtils.getString("/t1.html");
+		String markup = ResourceUtils.getString("/files/t1.html");
 		markup = markup.replaceAll("\\$title", "Home");
 		FileUtils.writeStringToFile(new File(file, "index.html"), markup);
 		// File index = ResourceUtils.getFile("/index.html");
@@ -190,7 +190,7 @@ public class Csv {
 	private static void createT2(Folder folder, File file) throws IOException {
 
 		// if (folder.children.size() == 0) {
-		String markup = ResourceUtils.getString("/t2.html");
+		String markup = ResourceUtils.getString("/files/t2.html");
 		String json = Serialiser.serialise(new Data(folder));
 
 		Iterator<Folder> iterator = folder.children.iterator();
@@ -279,7 +279,7 @@ public class Csv {
 	private static void createT3(Folder folder, File file) throws IOException {
 
 		// if (folder.children.size() == 0) {
-		String markup = ResourceUtils.getString("/t3.html");
+		String markup = ResourceUtils.getString("/files/t3.html");
 		String json = Serialiser.serialise(new Data(folder));
 
 		markup = markup.replaceAll("\\$title", folder.name);
