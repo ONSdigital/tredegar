@@ -13,6 +13,7 @@ export BONSAI_URL=http://localhost:9200
 mvn clean package && \
 
 # Generate taxonomy
+rm -rf src/main/taxonomy && \
 java -cp "target/classes:target/dependency/*" com.github.onsdigital.generator.Csv
 
 # Development: reloadable
