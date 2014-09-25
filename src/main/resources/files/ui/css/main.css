@@ -3640,3 +3640,25 @@ ul.simple-pagination {
     max-width: 55%;
     margin: 0 auto;
 }
+
+/* Aaron T3 classes*/
+
+.navpanel-list {
+  font-size: 1.1em;
+  color: #016db9;
+
+}
+
+.navpanel-list-heading {
+  font-weight: bold;
+  text-align: center;
+}
+
+.stat__figure .large {
+  font-size: 2.4em;
+}
+
+.beta .normal {
+  font-weight: normal !important;
+  font-size: 1.5em;
+}
