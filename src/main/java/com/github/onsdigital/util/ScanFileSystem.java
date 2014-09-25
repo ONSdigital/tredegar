@@ -25,7 +25,6 @@ public class ScanFileSystem {
 	 */
 	public static List<String> getFileNames(List<String> fileNames, Path dir)
 			throws IOException {
-		System.out.println("ScanFileSystem getFileNames ...");
 
 		if (fileNames == null || dir == null) {
 			throw new IllegalArgumentException(
@@ -37,12 +36,12 @@ public class ScanFileSystem {
 			if (path.toFile().isDirectory())
 				getFileNames(fileNames, path);
 			else {
+				System.out.println("ScanFileSystem found file: " + path.toAbsolutePath().toString());
 				fileNames.add(path.toAbsolutePath().toString());
 			}
 		}
 		stream.close();
 
-		System.out.println("ScanFileSystem number of files: " + fileNames.size());
 		return fileNames;
 	}
 }
