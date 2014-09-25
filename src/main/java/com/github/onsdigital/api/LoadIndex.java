@@ -55,6 +55,7 @@ public class LoadIndex {
 		for (String absoluteFilePath : absoluteFilePaths) {
 			idCounter++;
 
+			System.out.println("LoadIndex submitting record to index: " + absoluteFilePath);
 			buildAndSubmitJson(manager,
 					LoadIndexHelper.getDocumentMap(absoluteFilePath), idCounter);
 		}
