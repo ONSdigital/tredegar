@@ -8,7 +8,7 @@
   <!--<![endif]-->
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title></title>
+    <title>T2 Economy - CX partners</title>
     <meta charset="utf-8" />
     <meta content="width=device-width,initial-scale=1.0" name="viewport" />
     <meta content="on" http-equiv="cleartype" />
@@ -23,10 +23,12 @@
     <!-- build:css /ui/css/main.css-->
     <!--[if gt IE 8]><!-->
     <link rel="stylesheet" href="/ui/css/main.css" />
+	<link rel="stylesheet" href="/ui/css/jquery-ui.min.css">    
     <!--<![endif]-->
     <!-- endbuild -->
     <script src="/ui/js/lib/modernizr.min.js"></script>
     <script src="/ui/js/lib/jquery-1.11.0.min.js"></script>
+    <script src="/ui/js/lib/jquery-ui.min.js"></script>    
     <!--[if (!IE)|(gt IE 8)]>><!-->
     <script src="/ui/js/lib/jquery.tooltipster.js"></script>
     <!--<![endif]-->
@@ -35,6 +37,7 @@
     <script src="/ui/js/app/nav.js"></script>
     <script src="/ui/js/app/tables.js"></script>
     <script src="/ui/js/app/tabs.js"></script>
+    <script src="/ui/js/custom-autocomplete.js"></script>    
     <script>
     </script>
     <style>
@@ -58,6 +61,9 @@
         margin-top: 2rem;
       }
     }
+    .ui-autocomplete {
+    	position: relative;
+	}
     </style>
     <!---
 title: Theme Page Template (T2)
@@ -76,14 +82,14 @@ markup: false
       <!-- temp removal to allow for component list selective wrapping -->
       <!-- <div class="wrapper"> -->
       <div class="fake-section">
-        <h1 class="flush"></h1>
+        <h1 class="flush">Header and nav area goes here</h1>
       </div>
       <div class="slate panel--small" id="homepage-search">
         <div class="wrapper">
-          <form action="#" class="hero">
+          <form action="/search.html" class="hero">
             <label for="homepageSearch" class="visuallyhidden">Search term:</label>
             <input id="homepageSearch" type="text" class="input-med-large--flex--four-fifths input--lede"
-            name="homepageSearch" value="" placeholder="Search for postcode, release number, or keyword">
+            name="q" value="" placeholder="Search for postcode, release number, or keyword">
             <button type="submit" class="btn btn--primary btn--narrow btn--form--large-icon input--lede-btn-icon">
               <span class="icon icon-search">
                 <span class="visuallyhidden">Search</span>
@@ -99,8 +105,8 @@ markup: false
         <div class="grid-wrap">
           <div class="grid-col desktop-grid-one-third tablet-grid-full">
             <article class="box">
-              <a href="/" class="action-link hide-med-down">Home</a>
-               &gt; <a href="../" class="action-link hide-med-down">Business, Industry and Trade</a> &gt; Changes to Business
+             <!-- <a href="/" class="action-link hide-med-down">Home</a> -->
+                <a href="/" class="action-link">Home</a>
             </article>
           </div>
         </div>
@@ -109,7 +115,7 @@ markup: false
 
       <div class="page-header slate">
         <div class="wrapper">
-          <h1 class="page-header__title flush--half--bottom"></h1>
+          <h1 class="page-header__title flush--half--bottom">Economy</h1>
           <div class="content-reveal lede">
             <p>
               Producer Price Inflation (PPI) measures the price changes of goods bought and sold by UK manufacturers this month compared to the same month a year ago. PPI provides a key measure of inflation alongside other indicators such as the Consumer Prices Index (CPI) and Services Producer Price Index (SPPI).
@@ -148,7 +154,7 @@ markup: false
           <div class="grid-col tablet-wide-grid-one-half">
             <article class="nav-panel nav-panel--stats sectioned lifted">
               <header class="nav-panel__header nav-panel__roomy">
-                <h2>Mergers and Acquisitions</h2>
+                <h2 id="firstTitle">Mergers and Acquisitions</h2>
               </header>
               <section class="nav-panel__roomy">
                 <ul class="list--neutral">
@@ -249,7 +255,7 @@ markup: false
               </section>
               <footer class="nav-panel__footer">
                 <div class="nav-panel__action">
-                  <a class="nav-panel__roomy" href="mergersandacquisitions">View all Mergers and Acquisitions</a>
+                  <a id="firstLink" class="nav-panel__roomy" href="#">View all Mergers and Acquisitions</a>
                 </div>
               </footer>
             </article>
@@ -259,7 +265,7 @@ markup: false
           <div class="grid-col tablet-wide-grid-one-half">
             <article class="nav-panel nav-panel--stats sectioned lifted">
               <header class="nav-panel__header nav-panel__roomy">
-                <h2>Bankruptcy/Insolvency</h2>
+                <h2 id="secondTitle">Bankruptcy/Insolvency</h2>
               </header>
               <section class="nav-panel__roomy">
                 <ul class="list--neutral">
@@ -359,7 +365,7 @@ markup: false
               </section>
               <footer class="nav-panel__footer">
                 <div class="nav-panel__action">
-                  <a class="nav-panel__roomy" href="bankruptcyinsolvency">View all Bankruptcy/Insolvency</a>
+                  <a id="secondLink" class="nav-panel__roomy" href="#">View all Bankruptcy/Insolvency</a>
                 </div>
               </footer>
             </article>
@@ -372,7 +378,7 @@ markup: false
           <div class="grid-col tablet-wide-grid-one-half">
             <article class="nav-panel nav-panel--stats sectioned lifted">
               <header class="nav-panel__header nav-panel__roomy">
-                <h2>Business Births, Deaths and Survival Rates</h2>
+                <h2 id="thirdTitle">Business Births, Deaths and Survival Rates</h2>
               </header>
               <section class="nav-panel__roomy">
                 <ul class="list--neutral">
@@ -426,7 +432,7 @@ markup: false
               </section>
               <footer class="nav-panel__footer">
                 <div class="nav-panel__action">
-                  <a class="nav-panel__roomy" href="businessbirthsdeathsandsurvivalrates">View all Business Births, Deaths and Survival Rates</a>
+                  <a id="thirdLink" class="nav-panel__roomy" href="#">View all Business Births, Deaths and Survival Rates</a>
                 </div>
               </footer>
             </article>
@@ -434,15 +440,30 @@ markup: false
           </div>
           <!-- /grid-col -->
           <div class="grid-col tablet-wide-grid-one-half">
-            <article class="nav-panel nav-panel--stats sectioned lifted">
+            <article id="otherList" class="nav-panel nav-panel--stats sectioned lifted">
               <header class="nav-panel__header nav-panel__roomy">
-                <h2 id="other">Other Categories</h2>
+                <h2 id="otherTitle">Other Economy Categories</h2>
               </header>
-              		        <footer class="nav-panel__footer">
-		          <div class="nav-panel__action">
-		            <a class="nav-panel__roomy">Lies, damned lies and missing statistics! There's nothing here to see.</a>
-		          </div>
-		        </footer>
+              <footer class="nav-panel__footer">
+                <div class="nav-panel__action">
+                  <a class="nav-panel__roomy" href="#">Environmental Accounts</a>
+                </div>
+              </footer>
+              <footer class="nav-panel__footer">
+                <div class="nav-panel__action">
+                  <a class="nav-panel__roomy" href="#">Government, Public Sector and Taxes</a>
+                </div>
+              </footer>
+              <footer class="nav-panel__footer">
+                <div class="nav-panel__action">
+                  <a class="nav-panel__roomy" href="#">Gross Value Added (GVA)</a>
+                </div>
+              </footer>
+              <footer class="nav-panel__footer">
+                <div class="nav-panel__action">
+                  <a class="nav-panel__roomy" href="#">Investments, Pensions and Trusts</a>
+                </div>
+              </footer>
             </article>
             <!-- /nav-panel -->
           </div>
@@ -902,10 +923,59 @@ markup: false
 
       // Get the data.json file to populate the page:
       $.get( "data.json", function( data ) {
-          console.log(JSON.stringify(data))
+
+        console.log(JSON.stringify(data))
+
+        // Titles and headings:
         $( "title" ).html( data.name )
         $( "h1" ).html( data.name )
-        $( "#other" ).html( "Other " + data.name + " categories" )
+
+        // Sections:
+
+        if (data.children.length > 0) {
+          var first = data.children.shift()
+          $("#firstTitle").text(first.name)
+          $("#firstLink").text("View all " + first.name).attr("href", first.fileName)
+        }
+        
+        if (data.children.length > 0) {
+          var second = data.children.shift()
+          $("#secondTitle").text(second.name)
+          $("#secondLink").text("View all " + second.name).attr("href", second.fileName)
+        }
+        
+        if (data.children.length > 0) {
+          var third = data.children.shift()
+          $("#thirdTitle").text(third.name)
+          $("#thirdLink").text("View all " + third.name).attr("href", third.fileName)
+        }
+
+        $( "#otherTitle" ).html( "Other " + data.name + " categories" )
+        for (var i = 0; i < data.children.length; i++) {
+          var other = data.children.shift();
+          console.log(JSON.stringify(other))
+
+          // Build the markup template:
+          var item = $('<footer class="nav-panel__footer">' +
+                        '<div class="nav-panel__action">' +
+                          '<a class="nav-panel__roomy" href="#"></a>' +
+                        '</div>' + 
+                      '</footer>')
+
+          // Update the link:
+          $("a", item).text(other.name).attr("href", other.fileName)
+          $("#otherList").append(item)
+        }
+
+        if (data.children.length == 0) {
+          // Show a "nowt" message:
+          $("#otherList").append('<footer class="nav-panel__footer">' +
+                        '<div class="nav-panel__action">' +
+                          '<a class="nav-panel__roomy" href="#">Lies, damned lies and missing statistics! There\'s nothing here to see.</a>' +
+                        '</div>' + 
+                      '</footer>')
+        }
+
       });
 
     });
