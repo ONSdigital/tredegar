@@ -2,6 +2,12 @@ package com.github.onsdigital.util;
 
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.elasticsearch.index.query.BaseQueryBuilder;
+import org.elasticsearch.index.query.MatchAllQueryBuilder;
+import org.elasticsearch.index.query.MatchQueryBuilder;
+import org.elasticsearch.index.query.MultiMatchQueryBuilder;
+import org.elasticsearch.search.builder.SearchSourceBuilder;
+import org.elasticsearch.search.highlight.HighlightBuilder;
 
 /**
  * 
@@ -123,5 +129,35 @@ public class ONSQueryBuilder {
 	public ONSQueryBuilder setFields(String... fields) {
 		this.fields = fields;
 		return this;
+	}
+
+	public String buildQuery() {
+
+		BaseQueryBuilder builder;
+
+		// Return all documents
+		if (StringUtils.isEmpty(getQuery())) {
+			builder = new MatchAllQueryBuilder();
+		}
+		// return documents with fields containing words that start with given
+		// query
+		builder = new MultiMatchQueryBuilder(getQuery(), getFields())
+				.type(MatchQueryBuilder.Type.PHRASE_PREFIX);
+
+		HighlightBuilder highlightBuilder = new HighlightBuilder();
+		highlightBuilder.preTags("<strong>")
+				.postTags("</strong>");
+		for (String field : getFields()) {
+			highlightBuilder.field(field,0,0);
+		}
+
+		return new SearchSourceBuilder().query(builder)
+				.highlight(highlightBuilder).from(calculateFrom())
+				.size(getSize()).toString();
+
+	}
+
+	private int calculateFrom() {
+		return getSize() * (getPage() - 1);
 	}
 }

@@ -3,10 +3,6 @@ package com.github.onsdigital.util;
 import org.apache.commons.lang3.StringUtils;
 import org.elasticsearch.action.search.SearchRequestBuilder;
 import org.elasticsearch.action.search.SearchResponse;
-import org.elasticsearch.index.query.BaseQueryBuilder;
-import org.elasticsearch.index.query.MatchAllQueryBuilder;
-import org.elasticsearch.index.query.MatchQueryBuilder;
-import org.elasticsearch.index.query.MultiMatchQueryBuilder;
 
 import com.github.onsdigital.bean.SearchResult;
 import com.github.onsdigital.common.ClosedConnectionException;
@@ -65,20 +61,19 @@ public class ElasticSearchUtil {
 	}
 
 	private SearchResponse execute(ONSQueryBuilder queryBuilder) {
-		BaseQueryBuilder builder = buildSearch(queryBuilder);
-		SearchRequestBuilder requestBuilder = buildRequest(queryBuilder,
-				builder);
+		SearchRequestBuilder requestBuilder = buildRequest(queryBuilder);
 		return requestBuilder.execute().actionGet();
 	}
 
-	private SearchRequestBuilder buildRequest(ONSQueryBuilder queryBuilder,
-			BaseQueryBuilder builder) {
+	private SearchRequestBuilder buildRequest(ONSQueryBuilder queryBuilder) {
 		SearchRequestBuilder requestBuilder = connectionManager.getClient()
 				.prepareSearch(queryBuilder.getIndex())
 				.setFrom(calculateFrom(queryBuilder))
 				.setSize(queryBuilder.getSize())
-				.setQuery(builder.buildAsBytes()).setHighlighterPreTags("<em>")
-				.setHighlighterPostTags("</em>").setHighlighterNumOfFragments(0);
+				.setQuery(queryBuilder.buildQuery())
+				.setHighlighterPreTags("<strong>")
+				.setHighlighterPostTags("</strong>")
+				.setHighlighterNumOfFragments(0);
 
 		for (String field : queryBuilder.getFields()) {
 			requestBuilder.addHighlightedField(field);
@@ -93,18 +88,6 @@ public class ElasticSearchUtil {
 
 	private int calculateFrom(ONSQueryBuilder builder) {
 		return builder.getSize() * (builder.getPage() - 1);
-	}
-
-	private BaseQueryBuilder buildSearch(ONSQueryBuilder queryBuilder) {
-		// Return all documents
-		if (StringUtils.isEmpty(queryBuilder.query)) {
-			return new MatchAllQueryBuilder();
-		}
-		// return documents with fields containing words that start with given
-		// query
-		return new MultiMatchQueryBuilder(queryBuilder.getQuery(),
-				queryBuilder.getFields())
-				.type(MatchQueryBuilder.Type.PHRASE_PREFIX);
 	}
 
 	private void testConnection() {
