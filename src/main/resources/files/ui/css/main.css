@@ -415,7 +415,7 @@ body {
 html,
 body {
   height: 100%;
-  overflow: auto !important; }
+  /*----------  overflow: auto !important; } ------- commented out to fix scrolltop  */
 
 body,
 button,
@@ -3697,7 +3697,7 @@ ul.simple-pagination {
 .stat_bulletin_grid_right {
   font-weight: normal;
   padding: 2.8em 0em 1em 2em;
-  max-width: 45%;
+  min-width: 45%;
 
 }
 
@@ -3751,4 +3751,15 @@ background-color: #edeeee !important;
 
 .table__action {
   margin: 0rem 8rem;
+}
+
+#main > section:nth-child(7) > div > div > div > article > header {
+  font-size: 1.125em;
+  color: #016db9 !important;
+  text-decoration: none !important;
+}
+
+
+#main > section:nth-child(7){
+  background-color: #f6f6f7; 
 }
