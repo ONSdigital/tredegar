@@ -2906,20 +2906,20 @@ $SPLIT
   font-size: 12px;
   font-size: 1.2rem; }
 
-.stat--headline .stat__figure {
+.stat--headline .stat__figure .stat_figure .large {
   font-size: 40px;
   font-size: 4rem;
   line-height: 1; }
   @media screen and (min-width: 20em) {
-    .stat--headline .stat__figure {
+    .stat--headline .stat__figure .stat_figure .large {
       font-size: 50px;
       font-size: 5rem; } }
   @media screen and (min-width: 55em) {
-    .stat--headline .stat__figure {
+    .stat--headline .stat__figure .stat_figure .large {
       font-size: 65px;
       font-size: 6.5rem; } }
   @media screen and (min-width: 65em) {
-    .stat--headline .stat__figure {
+    .stat--headline .stat__figure .stat_figure .large {
       font-size: 80px;
       font-size: 8rem; } }
 .stat--headline .stat__figure__unit {
@@ -3643,6 +3643,8 @@ ul.simple-pagination {
 
 /* Aaron T3 classes*/
 
+/*T3 Divided Navpanel*/
+
 .navpanel-list {
   font-size: 1.1em;
   color: #016db9;
@@ -3654,11 +3656,99 @@ ul.simple-pagination {
   text-align: center;
 }
 
-.stat__figure .large {
-  font-size: 2.4em;
+.large {
+  font-size: 11rem !important;
 }
 
-.beta .normal {
+.normal {
   font-weight: normal !important;
   font-size: 1.5em;
+  padding-left: 0.8em;
+}
+
+.definition-med {
+  font-size: 1.5rem !important;
+  font-weight: normal !important;
+  line-height: 1.5em;
+}
+
+.nav-grid-no-padding{
+  margin: 0em 0.7em 1em 0em;
+  padding-left: 0em !important;
+}
+
+.nav-grid-padding-min {
+  padding-left: 0.5em !important;
+}
+
+.nav-grid-dt {
+  float: left;
+  margin-right: 0.4em;
+}
+
+.stat_bulletin_grid{
+  text-align: center;
+  margin: 0.2em;
+  padding-left: 0em;
+  max-width: 45%;
+
+}
+
+.stat_bulletin_grid_right {
+  font-weight: normal;
+  padding: 2.8em 0em 1em 2em;
+  max-width: 45%;
+
+}
+
+
+.divider-padding-min {
+  
+  padding: 0rem 0.3rem;
+}
+
+.stat_change {
+  height: 1em;
+  width: 1em;
+  margin: 0em 0.2em;
+}
+
+.red_highlight {
+  color: #c92607 !important;
+}
+
+#main > div.wrapper > section > div > div > div.divider__half.divider-padding-min.divider__half--border.divider__half--border-first > div > div.grid-col.desktop-grid-one-half.stat_bulletin_grid_right{
+  font-weight: normal !important;
+}
+
+
+/* T3 list--table*/
+
+ .table--striped-light .list--table__body:nth-child(odd) {
+background-color: #edeeee !important;
+}
+
+.list--table__item__header {
+  font-weight: bold;
+  font-size: 1.125em;
+  color: #016db9 !important;
+  text-decoration: none !important;
+}
+
+.no_underline{
+  text-decoration: none !important;
+}
+
+.list--table--complex .list--table__item__body--caption {
+  width: 55%;
+  }
+
+
+#main > section:nth-child(5) > ol > li > div.list--table__item__body.list--table__item__body--update > dl {
+  max-width: 70% !important;
+}
+
+
+.table__action {
+  margin: 0rem 8rem;
 }

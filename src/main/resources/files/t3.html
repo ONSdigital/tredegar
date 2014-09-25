@@ -125,31 +125,48 @@ markup: false
         <section class="box box--padded-vertical solid border lifted offset-top">
           <div class="box__content">
             <div class="divider">
-              <div class="divider__half divider__half--border divider__half--border-first">
+              <div class="divider__half divider-padding-min divider__half--border divider__half--border-first">
                 <h2 class="beta normal">
                   CPI Annual Rate Percentage Change over 12 Months
                   <span tabindex="0" title="Lorem ipsum dolor sit amet" class="tooltip icon-info-circled icon--grey icon--inline icon--inline--large-text icon--small"></span>
                 </h2>
-                <div class="box box--inline box--med">
+              
+              <div class="grid wrap">
+                <div class="grid-col desktop-grid-one-half">
+                <div class="box box--med">
                   <div class="stat stat--headline">
                     <div class="stat__figure large">
-                      1.5
-                      <span class="stat__figure__unit">%</span>
+                      1.5%
                     </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid-col desktop-grid-one-half stat_bulletin_grid_right">
+                <div class="box box--med">
+                  <div class="stat stat--headline">
+                    
                     <div class="stat__description">
-                      Jan 2014
-                      <span class="icon icon-up-bold icon--large icon--green icon--fat" role="presentation"></span>
+                      January 2014
+                      <img src="/ui/img/uparrowwhite.png" class="stat_change"/>
                       0.7%
+
+                      <dl class="definition-med">
+                      <dt class="nav-grid-dt">Last updated:</dt>
+                      <dd>18 July 2014</dd>
+                      <dt class="nav-grid-dt">Next update:</dt>
+                      <dd><span class="red_highlight">18 August 2014</span></dd>
+                      </dl>
+
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+
                 <!-- /box -->
-                <dl class="definition mini">
-                  <dt>Last updated:</dt>
-                  <dd>18 Jul 2014</dd>
-                  <dt>Next update:</dt>
-                  <dd>18 Aug 2014</dd>
-                </dl>
+                
               </div>
               <div class="divider__half">
                 <h3 class="body-type lede flush--bottom navpanel-list-heading">CPI Statistical Bulletin Headlines</h3>
@@ -183,7 +200,7 @@ markup: false
             <li class="list--table__item list--table__body">
               <div class="list--table__item__body list--table__item__body--caption">
                 <h3 class="list--table__item__header">
-                  <a href="#">CPI Index</a>
+                  <a href="#" class="no_underline">CPI Index </a>
                   <a class="information" href="#">
                     <span tabindex="0" title="Lorem ipsum dolor sit amet" class="tooltip icon-info-circled icon--grey icon--inline"></span>
                     <span class="visuallyhidden">More information about CPI index</span>
@@ -192,11 +209,11 @@ markup: false
                 <p class="list--table__item__description">2005 = 100. Not seasonally adjusted</p>
               </div>
               <div class="list--table__item__body list--table__item__body--stat">
-                <div class="stat">
+                <div class="stat list--table__item__body--centred">
                   <div class="stat__figure stat__tight">
-                    £567,890
+                    126.7
                   </div>
-                  <time class="stat__description" datetime="2014-01">Jan 2014</time>
+                  <time class="stat__description" datetime="2014-01">January 2014</time>
                 </div>
               </div>
               <div class="list--table__item__body list--table__item__body--update">
@@ -204,7 +221,7 @@ markup: false
                   <dt>Last updated:</dt>
                   <dd>18th Feb 2014</dd>
                   <dt>Next update:</dt>
-                  <dd>25th June 2014</dd>
+                  <dd class="red_highlight">25th June 2014</dd>
                 </dl>
               </div>
               <label class="list--table__item__body list--table__item__body--select">
@@ -213,23 +230,24 @@ markup: false
               </label>
             </li>
             <!-- /list- -table__body -->
+
             <li class="list--table__item list--table__body">
               <div class="list--table__item__body list--table__item__body--caption">
                 <h3 class="list--table__item__header">
-                  <a href="#">CPI Annual Rate Percentage Change over 12 Months</a>
+                  <a href="#" class="no_underline">CPIH Index <span tabindex="0" title="Lorem ipsum dolor sit amet" class="tooltip icon-info-circled icon--grey icon--inline"></span></a>
                   <a class="information" href="#">
-                    <span tabindex="0" title="Lorem ipsum dolor sit amet" class="tooltip icon-info-circled icon--grey icon--inline"></span>
+                    
                     <span class="visuallyhidden">More information about CPI index</span>
                   </a>
                 </h3>
               </div>
               <div class="list--table__item__body list--table__item__body--stat">
-                <div class="stat">
+                <div class="stat list--table__item__body--centred">
                   <div class="stat__figure stat__tight">
-                    78.7
-                    <span class="stat__figure__unit">Yrs</span>
+                    124.7
+                    <span class="stat__figure__unit"></span>
                   </div>
-                  <time class="stat__description" datetime="2014-01">Jan 2014</time>
+                  <time class="stat__description" datetime="2014-01">January 2014</time>
                 </div>
               </div>
               <div class="list--table__item__body list--table__item__body--update">
@@ -237,7 +255,7 @@ markup: false
                   <dt>Last updated:</dt>
                   <dd>18th Feb 2014</dd>
                   <dt>Next updated:</dt>
-                  <dd>25th June 2014</dd>
+                  <dd class="red_highlight">25th June 2014</dd>
                 </dl>
               </div>
               <label class="list--table__item__body list--table__item__body--select">
@@ -246,32 +264,31 @@ markup: false
               </label>
             </li>
             <!-- /list- -table__body -->
-            <li class="list--table__item list--table__body">
+             <li class="list--table__item list--table__body">
               <div class="list--table__item__body list--table__item__body--caption">
                 <h3 class="list--table__item__header">
-                  <a href="#">CPI Annual Rate Percentage Change over 12 Months</a>
+                  <a href="#" class="no_underline">CPI Annual Rate Percentage Change over 12 Months <span tabindex="0" title="Lorem ipsum dolor sit amet" class="tooltip icon-info-circled icon--grey icon--inline"></span></a>
                   <a class="information" href="#">
-                    <span tabindex="0" title="Lorem ipsum dolor sit amet" class="tooltip icon-info-circled icon--grey icon--inline"></span>
+                    
                     <span class="visuallyhidden">More information about CPI index</span>
                   </a>
                 </h3>
-                <p class="list--table__item__description">Not a national statistic</p>
               </div>
               <div class="list--table__item__body list--table__item__body--stat">
-                <div class="stat">
+                <div class="stat list--table__item__body--centred">
                   <div class="stat__figure stat__tight">
-                    67.89
+                    1.5
                     <span class="stat__figure__unit">%</span>
                   </div>
-                  <time class="stat__description" datetime="2014-01">Jan 2014</time>
+                  <time class="stat__description" datetime="2014-01">January 2014</time>
                 </div>
               </div>
               <div class="list--table__item__body list--table__item__body--update">
                 <dl class="micro definition-list definition-list--inline flush--half--vertical">
-                  <dt class="">Last updated:</dt>
+                  <dt>Last updated:</dt>
                   <dd>18th Feb 2014</dd>
-                  <dt class="">Next updated:</dt>
-                  <dd>25th June 2014</dd>
+                  <dt>Next updated:</dt>
+                  <dd class="red_highlight">25th June 2014</dd>
                 </dl>
               </div>
               <label class="list--table__item__body list--table__item__body--select">
@@ -279,6 +296,76 @@ markup: false
                 <input type="checkbox">
               </label>
             </li>
+
+             <!-- /list- -table__body -->
+                <li class="list--table__item list--table__body">
+              <div class="list--table__item__body list--table__item__body--caption">
+                <h3 class="list--table__item__header">
+                  <a href="#" class="no_underline">RPI Index <span tabindex="0" title="Lorem ipsum dolor sit amet" class="tooltip icon-info-circled icon--grey icon--inline"></span></a>
+                  <a class="information" href="#">
+                    
+                    <span class="visuallyhidden">More information about CPI index</span>
+                  </a>
+                </h3>
+              </div>
+              <div class="list--table__item__body list--table__item__body--stat">
+                <div class="stat list--table__item__body--centred">
+                  <div class="stat__figure stat__tight">
+                    252.6
+                    <span class="stat__figure__unit"></span>
+                  </div>
+                  <time class="stat__description" datetime="2014-01">January 2014</time>
+                </div>
+              </div>
+              <div class="list--table__item__body list--table__item__body--update">
+                <dl class="micro definition-list definition-list--inline flush--half--vertical">
+                  <dt>Last updated:</dt>
+                  <dd>18th Feb 2014</dd>
+                  <dt>Next updated:</dt>
+                  <dd class="red_highlight">25th June 2014</dd>
+                </dl>
+              </div>
+              <label class="list--table__item__body list--table__item__body--select">
+                <span class="visuallyhidden">Select statistic</span>
+                <input type="checkbox">
+              </label>
+            </li>
+            <!-- /list- -table__body -->
+                <li class="list--table__item list--table__body">
+              <div class="list--table__item__body list--table__item__body--caption">
+                <h3 class="list--table__item__header">
+                  <a href="#" class="no_underline">RPIX Index excluding mortgage interest <span tabindex="0" title="Lorem ipsum dolor sit amet" class="tooltip icon-info-circled icon--grey icon--inline"></span></a>
+                  <a class="information" href="#">
+                    
+                    <span class="visuallyhidden">More information about CPI index</span>
+                  </a>
+                </h3>
+                <p class="list--table__item__description">Not a national statistic</p>
+              </div>
+              <div class="list--table__item__body list--table__item__body--stat">
+                <div class="stat list--table__item__body--centred">
+                  <div class="stat__figure stat__tight">
+                    251.9
+                    <span class="stat__figure__unit"></span>
+                  </div>
+                  <time class="stat__description" datetime="2014-01">January 2014</time>
+                </div>
+              </div>
+              <div class="list--table__item__body list--table__item__body--update">
+                <dl class="micro definition-list definition-list--inline flush--half--vertical">
+                  <dt>Last updated:</dt>
+                  <dd>18th Feb 2014</dd>
+                  <dt>Next updated:</dt>
+                  <dd class="red_highlight">25th June 2014</dd>
+                </dl>
+              </div>
+              <label class="list--table__item__body list--table__item__body--select">
+                <span class="visuallyhidden">Select statistic</span>
+                <input type="checkbox">
+              </label>
+            </li>
+                      
+            
             <!-- /list- -table__body -->
             <li class="list--table__item list--table__footer">
               <div class="list--table__item__body">
