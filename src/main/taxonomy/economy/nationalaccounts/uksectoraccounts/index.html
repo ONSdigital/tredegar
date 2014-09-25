@@ -76,9 +76,9 @@ markup: false
       <section class="panel--large wrapper">
         <div class="grid-wrap">
           <div class="grid-col desktop-grid-one-third tablet-grid-full">
-            <article class="box">
-              <a href="/" class="action-link hide-med-down">Home</a>
-                &gt; <a href="../../" class="action-link hide-med-down">Economy</a> &gt; <a href="../" class="action-link hide-med-down">National Accounts</a> &gt; UK Sector Accounts
+            <article id="breadcrumb" class="box">
+             <!-- <a href="/" class="action-link hide-med-down">Home</a> -->
+                <a href="/" class="action-link">Home</a>
             </article>
           </div>
         </div>
@@ -842,6 +842,20 @@ markup: false
         // Titles and headings:
         $( "title" ).html( data.name )
         $( "h1" ).html( data.name )
+
+        // Build the breadcrumb:
+        var upLink = "../"
+        while (data.breadcrumb.length > 0) {
+          var crumb = data.breadcrumb.shift();
+          console.log(JSON.stringify(crumb))
+          $('#breadcrumb').append(document.createTextNode(" > "));
+          $('#breadcrumb').append('<a href="' + upLink + '" class="action-link">' + crumb.name + '</a>');
+          upLink += "../"
+        }
+
+        // Add the current page at the end of the breadcrumb:
+        $('#breadcrumb').append(document.createTextNode(" > "));
+        $('#breadcrumb').append(document.createTextNode(data.name));
 
       });
 
