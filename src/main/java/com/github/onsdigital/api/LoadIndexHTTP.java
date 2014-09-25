@@ -15,6 +15,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.GET;
 import javax.ws.rs.core.Context;
 
+import org.apache.commons.lang3.StringUtils;
+
 import com.github.davidcarboni.restolino.framework.Endpoint;
 import com.github.onsdigital.util.LoadIndexHelper;
 
@@ -23,17 +25,20 @@ import com.github.onsdigital.util.LoadIndexHelper;
  */
 @Endpoint
 public class LoadIndexHTTP {
+	private static final String DEFAULT_URL = "http://localhost:9200";
+	private static final String BONSAI_URL = "BONSAI_URL";
 
 	@GET
 	public void get(@Context HttpServletRequest httpServletRequest, @Context HttpServletResponse httpServletResponse)
 			throws Exception {
 
 		// Construct a new Jest client according to configuration via factory
-		String connectionUrl = System.getenv("BONSAI_URL");
-		if (connectionUrl == null) {
-			connectionUrl = "http://localhost:9200";
+		String connectionUrl = System.getenv(BONSAI_URL);
+		if (StringUtils.isEmpty(connectionUrl)) {
+			connectionUrl = DEFAULT_URL;
 		}
 		System.out.println("LoadIndexHTTP using connectionUrl: " + connectionUrl);
+
 		JestClientFactory factory = new JestClientFactory();
 		factory.setHttpClientConfig(new HttpClientConfig.Builder(connectionUrl).multiThreaded(true).build());
 		JestClient client = factory.getObject();
