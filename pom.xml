@@ -56,6 +56,17 @@
 	</dependencies>
 
 	<build>
+		<resources>
+			<!-- Standard resources -->
+			<resource>
+				<directory>src/main/resources</directory>
+			</resource>
+			<!-- Generated taxonomy structure -->
+			<resource>
+				<directory>src/main/taxonomy</directory>
+				<targetPath>${project.build.outputDirectory}/files</targetPath>
+			</resource>
+		</resources>
 		<plugins>
 
 			<!-- Needs Java 1.7 -->
