@@ -77,8 +77,8 @@ public class ElasticSearchUtil {
 				.prepareSearch(queryBuilder.getIndex())
 				.setFrom(calculateFrom(queryBuilder))
 				.setSize(queryBuilder.getSize())
-				.setQuery(builder.buildAsBytes()).setHighlighterPreTags("<em>")
-				.setHighlighterPostTags("</em>").setHighlighterNumOfFragments(0);
+				.setQuery(builder.buildAsBytes()).setHighlighterPreTags("<strong>")
+				.setHighlighterPostTags("</strong>").setHighlighterNumOfFragments(0);
 
 		for (String field : queryBuilder.getFields()) {
 			requestBuilder.addHighlightedField(field);
