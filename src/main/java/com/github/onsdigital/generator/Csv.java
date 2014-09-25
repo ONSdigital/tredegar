@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.io.Reader;
 import java.util.Calendar;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
@@ -180,8 +179,8 @@ public class Csv {
 
 		// if (folder.children.size() == 0) {
 		String markup = ResourceUtils.getString("/files/t1.html");
-		markup = markup.replaceAll("\\$title", "Home");
-		FileUtils.writeStringToFile(new File(file, "index.html"), markup);
+//		markup = markup.replaceAll("\\$title", "Home");
+//		FileUtils.writeStringToFile(new File(file, "index.html"), markup);
 		// File index = ResourceUtils.getFile("/index.html");
 		// index.renameTo(new File(file, "index.html"));
 		// }
@@ -193,65 +192,69 @@ public class Csv {
 		String markup = ResourceUtils.getString("/files/t2.html");
 		String json = Serialiser.serialise(new Data(folder));
 
-		Iterator<Folder> iterator = folder.children.iterator();
-
-		if (iterator.hasNext()) {
-			// First section:
-			Folder item1 = iterator.next();
-			markup = markup.replace("Gross Domestic Product (GDP)", item1.name);
-			markup = markup.replace("$link1", item1.filename());
-		}
-
-		if (iterator.hasNext()) {
-			// Second section:
-			Folder item2 = iterator.next();
-			markup = markup.replace("Inflation and Price Indices", item2.name);
-			markup = markup.replace("$link2", item2.filename());
-		}
-
-		if (iterator.hasNext()) {
-			// Third section:
-			Folder item3 = iterator.next();
-			markup = markup.replace("National Accounts", item3.name);
-			markup = markup.replace("$link3", item3.filename());
-		}
-
-		String additionalLinks;
-		if (iterator.hasNext()) {
-
-			// Stringses:
-			additionalLinks = "";
-			String linkTemplate = "				<footer class=\"nav-panel__footer\">\n"
-					+ "		          <div class=\"nav-panel__action\">\n"
-					+ "		            <a class=\"nav-panel__roomy\" href=\"$link\">$title</a>\n"
-					+ "		          </div>\n" + "		        </footer>\n";
-
-			// Generate the rest of the links:
-			while (iterator.hasNext()) {
-
-				Folder item = iterator.next();
-				additionalLinks += linkTemplate.replace("$title", item.name)
-						.replace("$link", item.filename());
-
-			}
-		} else {
-			// additionalLinks = "		  <section class=\"nav-panel__roomy\">\n"
-			// + "            <ul class=\"list--neutral\">\n"
-			// + "              <li class=\"nav-panel__item\">\n"
-			// + "                <dl><dt>\n"
-			// + "                <h3 class=\"nav-panel__heading\">\n"
-			// +
-			// "                  Lies, damned lies and missing statistics! There's nothing here to see.\n"
-			// + "                </h3>\n" + "                <dt><dl>\n"
-			// + "              </li>\n" + "            </ul>\n"
-			// + "          </section>\n";
-
-			additionalLinks = "		        <footer class=\"nav-panel__footer\">\n"
-					+ "		          <div class=\"nav-panel__action\">\n"
-					+ "		            <a class=\"nav-panel__roomy\">Lies, damned lies and missing statistics! There's nothing here to see.</a>\n"
-					+ "		          </div>\n" + "		        </footer>";
-		}
-		markup = markup.replace("<!-- Additional links -->", additionalLinks);
+		// Iterator<Folder> iterator = folder.children.iterator();
+		//
+		// if (iterator.hasNext()) {
+		// // First section:
+		// Folder item1 = iterator.next();
+		// markup = markup.replace("Gross Domestic Product (GDP)", item1.name);
+		// markup = markup.replace("$link1", item1.filename());
+		// }
+		//
+		// if (iterator.hasNext()) {
+		// // Second section:
+		// Folder item2 = iterator.next();
+		// markup = markup.replace("Inflation and Price Indices", item2.name);
+		// markup = markup.replace("$link2", item2.filename());
+		// }
+		//
+		// if (iterator.hasNext()) {
+		// // Third section:
+		// Folder item3 = iterator.next();
+		// markup = markup.replace("National Accounts", item3.name);
+		// markup = markup.replace("$link3", item3.filename());
+		// }
+		//
+		// String additionalLinks;
+		// if (iterator.hasNext()) {
+		//
+		// // Stringses:
+		// additionalLinks = "";
+		// String linkTemplate = "				<footer class=\"nav-panel__footer\">\n"
+		// + "		          <div class=\"nav-panel__action\">\n"
+		// +
+		// "		            <a class=\"nav-panel__roomy\" href=\"$link\">$title</a>\n"
+		// + "		          </div>\n" + "		        </footer>\n";
+		//
+		// // Generate the rest of the links:
+		// while (iterator.hasNext()) {
+		//
+		// Folder item = iterator.next();
+		// additionalLinks += linkTemplate.replace("$title", item.name)
+		// .replace("$link", item.filename());
+		//
+		// }
+		// } else {
+		// // additionalLinks = "		  <section class=\"nav-panel__roomy\">\n"
+		// // + "            <ul class=\"list--neutral\">\n"
+		// // + "              <li class=\"nav-panel__item\">\n"
+		// // + "                <dl><dt>\n"
+		// // + "                <h3 class=\"nav-panel__heading\">\n"
+		// // +
+		// //
+		// "                  Lies, damned lies and missing statistics! There's nothing here to see.\n"
+		// // + "                </h3>\n" + "                <dt><dl>\n"
+		// // + "              </li>\n" + "            </ul>\n"
+		// // + "          </section>\n";
+		//
+		// additionalLinks = "		        <footer class=\"nav-panel__footer\">\n"
+		// + "		          <div class=\"nav-panel__action\">\n"
+		// +
+		// "		            <a class=\"nav-panel__roomy\">Lies, damned lies and missing statistics! There's nothing here to see.</a>\n"
+		// + "		          </div>\n" + "		        </footer>";
+		// }
+		// markup = markup.replace("<!-- Additional links -->",
+		// additionalLinks);
 
 		// Breadcrumb
 		String breadcrumb = " &gt; " + folder.name;
@@ -267,9 +270,9 @@ public class Csv {
 		markup = markup.replace("$breadcrumb", breadcrumb);
 
 		// Do the title last, otherwise it partially matches the keys above:
-		markup = markup.replaceAll("\\$title", folder.name);
+//		markup = markup.replaceAll("\\$title", folder.name);
 
-		FileUtils.writeStringToFile(new File(file, "index.html"), markup);
+//		FileUtils.writeStringToFile(new File(file, "index.html"), markup);
 		FileUtils.writeStringToFile(new File(file, "data.json"), json);
 		// File index = ResourceUtils.getFile("/index.html");
 		// index.renameTo(new File(file, "index.html"));
@@ -282,7 +285,7 @@ public class Csv {
 		String markup = ResourceUtils.getString("/files/t3.html");
 		String json = Serialiser.serialise(new Data(folder));
 
-		markup = markup.replaceAll("\\$title", folder.name);
+//		markup = markup.replaceAll("\\$title", folder.name);
 
 		// Breadcrumb
 		String breadcrumb = " &gt; " + folder.name;
@@ -297,7 +300,7 @@ public class Csv {
 		}
 		markup = markup.replace("$breadcrumb", breadcrumb);
 
-		FileUtils.writeStringToFile(new File(file, "index.html"), markup);
+//		FileUtils.writeStringToFile(new File(file, "index.html"), markup);
 		FileUtils.writeStringToFile(new File(file, "data.json"), json);
 		// File index = ResourceUtils.getFile("/index.html");
 		// index.renameTo(new File(file, "index.html"));
