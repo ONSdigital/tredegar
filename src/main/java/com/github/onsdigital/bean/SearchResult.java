@@ -5,9 +5,12 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import org.elasticsearch.action.search.SearchResponse;
+import org.elasticsearch.common.text.Text;
 import org.elasticsearch.search.SearchHit;
+import org.elasticsearch.search.highlight.HighlightField;
 
 public class SearchResult {
 
@@ -29,8 +32,26 @@ public class SearchResult {
 			hit = iterator.next();
 			Map<String, Object> item = new HashMap<String, Object>(hit.getSource());
 			item.put("type", hit.getType());
+			item.putAll(extractHihglightedFields(hit));
 			results.add(item);
 		}
+	}
+
+	private Map<? extends String, ? extends Object> extractHihglightedFields(
+			SearchHit hit) {
+		
+		HashMap<String, Object> highlightedFields = new HashMap<>();
+		
+		for (Entry<String, HighlightField> entry: hit.getHighlightFields().entrySet()) {
+			Text[] fragments = entry.getValue().getFragments();
+			if(fragments != null) {
+				for (Text text : fragments) {
+					highlightedFields.put(entry.getKey(),text.toString());
+				}
+			}
+		}
+		
+		return highlightedFields;
 	}
 
 	public long getTook() {

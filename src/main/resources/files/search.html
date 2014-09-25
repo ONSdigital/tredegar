@@ -32,12 +32,19 @@
 <script type="text/javascript">
 
 function searchResults() {   
-			var query = $.getUrlVar('q');     
+
 			var anchor = $.getAnchor();
+			var pageNumber = 1;
 			if (anchor) {
-					var page = anchor.slice(anchor.indexOf("-") + 1);	
+				pageNumber = anchor.slice(anchor.indexOf("-") + 1);	
 			}
-			onssearch.search(query, "search", "paginator", page);
+
+			$.search({
+				query : $.getUrlVar('q'),
+				page  : pageNumber,
+				resultsHolder : "search",
+				paginatorHolder : "paginator"
+			});
 }
 </script>
 

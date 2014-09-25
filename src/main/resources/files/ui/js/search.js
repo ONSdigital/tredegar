@@ -1,61 +1,81 @@
-var onssearch = {
+/**
+* ons search
+* Jquery based search plugin to search and generated markup for results
+*
+*/
 
-};	
-	
-onssearch.search = function(query, contentHolderId, paginatorId, page) {
-		onssearch.query = query;		
-		onssearch.contentHolder = $("#" + contentHolderId);
-		onssearch.paginator = $("#" + paginatorId);
-		onssearch.page = page || 1;
+
+$.extend({
+	search: function(options) {
+		var onssearch = $.extend({
+			query : '',
+			resultsHolder : '',
+			paginatorHolder : '',
+			searchResultLegeng : '' ,
+			page: 0,
+			onSearchStart: function () {
+				// Callback triggered before searching
+			},
+			onSearchComplete: function() {
+			// Callback triggered when search is complete and markup generated
+			}
+		}, options || {});
+
+
+		onssearch.onSearchStart();
+
+		// attach search widget to document body
+		$('body').data('onssearch', onssearch);
 		
-		if (!query) {
-					createDummyresults(onssearch.contentHolder, onssearch.paginator, onssearch.page);
-					return;
-		}		
+		if (!onssearch.query) {
+			createDummyresults();
+			return onssearch;
+		}
+
+		doSearch();
+
+		return onssearch;
+	} 			
+});
+
+
+function loadPage(pageNumber) {
+	var onssearch = $('body').data('onssearch');
+	onssearch.page = pageNumber || onssearch.page;
+	doSearch();
+}
+
+
+function doSearch() {
 		
-		$.getJSON("search?q=" + query + "&page=" + onssearch.page,   function(data) {
-		  	console.log( "Search successful for query " + 	query );
-			console.log(data);
-			onssearch.data = data;  
-		  	buildResultList(data.results, onssearch.contentHolder);
-			buildPaginator(onssearch.data.numberOfResults, onssearch.paginator, onssearch.page);
-		  }).fail(function() {
-		    console.log( "Failed searching for query " + keyword );
+		var onssearch = $('body').data('onssearch');
+		
+		$.getJSON("search?q=" + onssearch.query + "&page=" + onssearch.page,  function(data) {
+			  	console.log( "Search successful for query " + 	onssearch.query );
+				console.log(data);
+				onssearch.data = data;  
+			  	buildResultList();
+			  	buildPaginator();
+			  	onssearch.onSearchComplete();
+			  }).fail(function() {
+			    console.log( "Failed searching for query " + keyword );
 		});
-				 
-}
-
-onssearch.loadPage = function (pageNumber) {
-	doSearch(onssearch.query, pageNumber);
 }
 
 
-function doSearch(query, page) {
-		
-		if (!query) {
-					createDummyresults(onssearch.contentHolder, onssearch.paginator);
-					return;
-		}		
-		
-	onssearch.page = page || 1;			
+function buildResultList() {
 	
-	$.getJSON("search?q=" + query + "&page=" + onssearch.page,   function(data) {
-		  	console.log( "Search successful for query " + 	query );
-			console.log(data);
-			onssearch.data = data;  
-		  	buildResultList(data.results, onssearch.contentHolder);
-		  }).fail(function() {
-		    console.log( "Failed searching for query " + keyword );
-		});
-}
+	var onssearch = $('body').data('onssearch');
+	var resultsContainer = $('#' + onssearch.resultsHolder);
+	if (!resultsContainer) {
+		return;
+	};
 
-
-function buildResultList(results, holder) {
+	clearDiv(resultsContainer);	
 	
-	clearDiv(holder);	
-	
+	var results = onssearch.data.results;
 	var dl = $("<dl/>"); 
-	holder.append(dl);
+	resultsContainer.append(dl);
 		
 	for (i = 0; i < results.length; i++) {
 			var dt =  $("<dt class=''/>");
@@ -70,55 +90,43 @@ function buildResultList(results, holder) {
 	}	
 }
 
-function buildPaginator(numberOfResults, holder, page) {
-    $(holder).pagination({
-        items: numberOfResults,
+function buildPaginator() {
+
+	var onssearch = $('body').data('onssearch');
+	var paginatorContainer = $('#' + onssearch.paginatorHolder);
+	if (!paginatorContainer) {
+		return;
+	};	
+
+    $(paginatorContainer).pagination({
+        items: onssearch.data.numberOfResults,
         itemsOnPage: 10,
         displayedPages: 10,
-        currentPage : page,
+        currentPage : onssearch.page,
         edges: 0,
         cssStyle: "pagination",
         hideIfSinglePage : true,
         hideNextOnLastPage : true,
         hidePrevOnFirstPage : true,
 		onPageClick: function (pageNumber) {
-			onssearch.loadPage(pageNumber);		
+			loadPage(pageNumber);		
 		}
     });
 }
-
-
-function buildDummyPaginator(numberOfResults, holder, page) {
-    $(holder).pagination({
-        items: numberOfResults,
-        itemsOnPage: 10,
-        displayedPages: 10,
-        currentPage : page,
-        edges: 0,
-   		hideIfSinglePage : true,
-        hideNextOnLastPage : true,
-        hidePrevOnFirstPage : true,
-        cssStyle: "pagination"
-        
-    });
-}
-
 
 function clearDiv(div) {
 //Clear div content
 div.html('');
 }
 
-function printError(div) {
-	div.append("Enter a keyword for search");
-}
-
-createDummyresults = function(contentHolder, paginator, page) {
+function  createDummyresults() {
 	
+	var onssearch = $('body').data('onssearch');
+
 	var data={
-	took:10,
-	numberOfResults:1004,
-	results:new Array()
+		took:10,
+		numberOfResults:1004,
+		results:new Array()
 	}
 	
 	for (i=0; i<10;i++) {
@@ -126,21 +134,7 @@ createDummyresults = function(contentHolder, paginator, page) {
 	}	
 
 	onssearch.data = data;
-	
-	buildResultList(data.results,onssearch.contentHolder);
-	buildDummyPaginator(data.numberOfResults,onssearch.paginator, page);
-	
+	buildResultList();
+	buildPaginator();
+	onssearch.onSearchComplete();
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
