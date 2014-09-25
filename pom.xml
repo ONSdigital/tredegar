@@ -28,7 +28,18 @@
 			<artifactId>javax.servlet-api</artifactId>
 			<version>3.1.0</version>
 		</dependency>
-
+		
+		<!-- Taxonomy generator -->
+		<dependency>
+			<groupId>net.sf.opencsv</groupId>
+			<artifactId>opencsv</artifactId>
+			<version>2.3</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.davidcarboni</groupId>
+			<artifactId>resource-utils</artifactId>
+			<version>1.1.1</version>
+		</dependency>
 
 		<!-- Elastic Search -->
 		<dependency>
