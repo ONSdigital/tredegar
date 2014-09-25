@@ -59,7 +59,7 @@ function doSearch() {
 			  	buildInfo();
 			  	onssearch.onSearchComplete();
 			  }).fail(function() {
-			    console.log( "Failed searching for query " + keyword );
+			    console.log( "Failed searching for query " + onssearch.query );
 		});
 }
 
@@ -80,7 +80,7 @@ function buildResultList() {
 		
 	for (i = 0; i < results.length; i++) {
 			var dt =  $("<dt class=''/>");
-			dt.append("<a href='#' >" +  results[i].title + "</a>");
+			dt.append("<a href=' "  +  results[i].url  + "'>"  +  results[i].title + "</a>");
 			dt.append("<span class='lozenge' href='#'>" + results[i].type +  "</span>"  );
 			var releaseDate =  $("<dd class='microcopy'>Released ...." + "</dd>");
 			var content = $("<dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet diam vel est congue eleifend non eget sem. Nam enim ipsum, vestibulum sed facilisis ut, commodo et nulla. Aliquam erat volutpat. Sed ut aliquet nunc. Ut mollis, arcu non vehicula gravida, lectus magna auctor quam, in rhoncus nibh nisl nec odio. Nam suscipit, dui in maximus porttitor, velit nulla rutrum leo, sit amet porttitor tellus dolor sit amet est. Quisque nulla augue, gravida sit amet mauris vel, congue aliquam urna. Quisque consectetur commodo mi eu pulvinar. Nam egestas magna sem, non sagittis massa vehicula non. Cras ultricies eleifend scelerisque. Pellentesque nunc tellus, commodo eget est nec, molestie elementum nulla. Donec mattis sed nisl in tincidunt. Mauris</dd>");
