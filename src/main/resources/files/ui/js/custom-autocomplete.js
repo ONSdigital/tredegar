@@ -8,11 +8,19 @@ $.widget( "ui.autocomplete", $.ui.autocomplete, {
 	        }
 	        count++;
 	    });
-	} 
+	},
+	_resizeMenu: function () {
+	    var ul = this.menu.element;
+	    ul.outerWidth(this.element.outerWidth());
+	}
 });  
   
 $(function() {
 	$("#homepageSearch").autocomplete({
+	   open: function() { 
+			var width = $(".ui-autocomplete-input").innerWidth();
+			$('.ui-menu').css('max-width',width);
+	    }, 
 		source : function(request, response) {
 			var URL = "/search";
 			$.getJSON(URL, request, function(data) {
@@ -35,14 +43,14 @@ $(function() {
 				// if no results then just output a message
 				if (firstTenResultsCount == 0) {
 					firstTenResults[searchResultsIndex] = {
-						title : '',
-						path : 'No results found'
+						title : 'No results found',
+						path : ''
 					};
 				// otherwise add count at end of array
 				} else {
 					firstTenResults[searchResultsIndex] = {
-						title : '',
-						path : 'See all ' + numberOfResults + ' results',
+						title : 'See all ' + numberOfResults + ' results',
+						path : '',
 						url : '/searchresults.html?q=' + searchTerm
 					};
 				}
@@ -64,33 +72,39 @@ $(function() {
 	        return false;
 	    },
         select: function (event, ui) {
-        	if (ui.item.path != 'No results found') {
+        	if (ui.item.title != 'No results found') {
         		window.open(ui.item.url);
         	}
         }
     })
     .autocomplete( "instance" )._renderItem = function( dt, item ) {
 		var contentType;
-		if (item.type == 'home') {
-			contentType = "<span class='lozenge lozenge-spacer lozenge-blue'>STATISTIC BULLETIN</span>";
-		}  else if (item.type == 'bulletins') {
-			contentType = "<span class='lozenge lozenge-spacer lozenge-blue'>STATISTIC BULLETIN</span>";
-		} else if (item.type == 'datasets') {
-			contentType = "<span class='lozenge lozenge-spacer lozenge-red'>DATASET</span>";
-		} else if (item.type == 'articles') {
-			contentType = "<span class='lozenge lozenge-spacer'>ARTICLE</span>";
-		} else if (item.type == 'methodology') {
-			contentType = "<span class='lozenge lozenge-spacer lozenge-green'>METHODOLOGY</span>";
-		} else {
-			contentType = "";
+		switch (item.type) {
+			case "home":
+				contentType = "<span class='lozenge lozenge-spacer lozenge-blue'>STATISTIC BULLETIN</span>";
+				break;
+			case "bulletins":
+				contentType = "<span class='lozenge lozenge-spacer lozenge-blue'>STATISTIC BULLETIN</span>";
+				break;
+			case "datasets":
+				contentType = "<span class='lozenge lozenge-spacer lozenge-red'>DATASET</span>";
+				break;
+			case "articles":
+				contentType = "<span class='lozenge lozenge-spacer'>ARTICLE</span>";
+				break;
+			case "methodology":
+				contentType = "<span class='lozenge lozenge-spacer lozenge-green'>METHODOLOGY</span>";
+				break;
+			default:
+				contentType = "";
 		}
 		
       return $( "<dt>" )
         .append( "<a>" 
         		+ contentType 
         		+ item.title 
-        		+ "<br>" 
-        		+ item.path 
+//        		+ "<br>" 
+//        		+ item.path 
         		+ "</a>" )
         .appendTo( dt );
     };
