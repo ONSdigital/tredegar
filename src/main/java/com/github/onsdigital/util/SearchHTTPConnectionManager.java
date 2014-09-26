@@ -4,6 +4,15 @@ import io.searchbox.client.JestClient;
 import io.searchbox.client.JestClientFactory;
 import io.searchbox.client.config.HttpClientConfig;
 
+/**
+ * 
+ * Elastic search http connection manager based on JEST Elastic Search HTTP Client
+ * 
+ * 
+ * @author Bren
+ *
+ */
+
 public class SearchHTTPConnectionManager {
 
 	private JestClient client;

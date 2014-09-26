@@ -31,7 +31,7 @@ public class Search {
 				BONSAI_URL);
 		try {
 			ONSQueryBuilder queryBuilder = new ONSQueryBuilder("ons")
-					.setType(type).setPage(page).setQuery(query)
+					.setType(type).setPage(page).setSearchTerm(query)
 					.setFields("title", "path");
 			connectionManager.openConnection();
 
