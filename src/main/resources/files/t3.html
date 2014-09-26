@@ -923,8 +923,27 @@ markup: false
 
     $( document ).ready(function() {
 
+      var dataPath = window.location.pathname
+      if (dataPath.substring(dataPath.length - 1) != "/") {
+        dataPath += "/"
+      }
+      dataPath += "data.json"
+      console.log("Data at: "+dataPath)
+
       // Get the data.json file to populate the page:
-      $.get( "data.json", function( data ) {
+      $.get( dataPath, function( data ) {
+
+        /*
+        * Builds a link to the given file using the given data.
+        */
+        var link = function (fileName) {
+          var result = window.location.pathname
+          if (result.substring(result.length - 1) != "/") {
+            result += "/"
+          }
+          result += fileName
+          return result
+        }
 
         // Titles and headings:
         $( "title" ).html( data.name )
@@ -934,7 +953,6 @@ markup: false
         var upLink = "../"
         while (data.breadcrumb.length > 0) {
           var crumb = data.breadcrumb.shift();
-          console.log(JSON.stringify(crumb))
           $('#breadcrumb').append(document.createTextNode(" > "));
           $('#breadcrumb').append('<a href="' + upLink + '" class="action-link">' + crumb.name + '</a>');
           upLink += "../"

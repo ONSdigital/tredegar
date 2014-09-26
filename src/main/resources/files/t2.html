@@ -927,18 +927,27 @@ markup: false
 
     $( document ).ready(function() {
 
-      // Create and endsWith method for strings:
-      // http://stackoverflow.com/questions/280634/endswith-in-javascript
-      if (typeof String.prototype.endsWith !== 'function') {
-        String.prototype.endsWith = function(suffix) {
-          return this.indexOf(suffix, this.length - suffix.length) !== -1;
-        };
+      var dataPath = window.location.pathname
+      if (dataPath.substring(dataPath.length - 1) != "/") {
+        dataPath += "/"
       }
+      dataPath += "data.json"
+      console.log("Data at: "+dataPath)
 
       // Get the data.json file to populate the page:
-      $.get( link("data.json"), function( data ) {
+      $.get( dataPath, function( data ) {
 
-        console.log(JSON.stringify(data))
+        /*
+        * Builds a link to the given file using the given data.
+        */
+        var link = function (fileName) {
+          var result = window.location.pathname
+          if (result.substring(result.length - 1) != "/") {
+            result += "/"
+          }
+          result += fileName
+          return result
+        }
 
         // Titles and headings:
         $( "title" ).html( data.name )
@@ -949,20 +958,19 @@ markup: false
         if (data.children.length > 0) {
           var first = data.children.shift()
           $("#firstTitle").text(first.name)
-          var link = link(first.fileName)
-          $("#firstLink").text("View all " + first.name).attr("href", link)
+          $("#firstLink").text("View all " + first.name).attr("href", link(first.fileName))
         }
         
         if (data.children.length > 0) {
           var second = data.children.shift()
           $("#secondTitle").text(second.name)
-          $("#secondLink").text("View all " + second.name).attr("href", second.fileName)
+          $("#secondLink").text("View all " + second.name).attr("href", link(second.fileName))
         }
         
         if (data.children.length > 0) {
           var third = data.children.shift()
           $("#thirdTitle").text(third.name)
-          $("#thirdLink").text("View all " + third.name).attr("href", third.fileName)
+          $("#thirdLink").text("View all " + third.name).attr("href", link(third.fileName))
         }
 
         $( "#otherList" ).empty();
@@ -986,7 +994,7 @@ markup: false
           // Build the markup template:
           var item = $('<footer class="nav-panel__footer">' +
                         '<div class="nav-panel__action">' +
-                          '<a class="nav-panel__roomy" href="' + other.fileName + '">' + other.name + '</a>' +
+                          '<a class="nav-panel__roomy" href="' + link(other.fileName) + '">' + other.name + '</a>' +
                         '</div>' + 
                       '</footer>')
 
@@ -998,7 +1006,6 @@ markup: false
         var upLink = "../"
         while (data.breadcrumb.length > 0) {
           var crumb = data.breadcrumb.shift();
-          console.log(JSON.stringify(crumb))
           $('#breadcrumb').append(document.createTextNode(" > "));
           $('#breadcrumb').append('<a href="' + upLink + '" class="action-link">' + crumb.name + '</a>');
           upLink += "../"
@@ -1011,18 +1018,6 @@ markup: false
       });
 
     });
-
-    /*
-    * Builds a link to the given child using the given data.
-    */
-    function link(fileName) {
-      var result = window.location.pathname
-      if (result.substring(result.length - 1) != "/") {
-        result += "/"
-      }
-      result += fileName
-      console.log("Path: "+result)
-    }
 
     </script>
 
