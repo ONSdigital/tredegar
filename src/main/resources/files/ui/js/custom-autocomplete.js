@@ -36,7 +36,7 @@ $(function() {
 				if (firstTenResultsCount == 0) {
 					firstTenResults[searchResultsIndex] = {
 						title : '',
-						path : 'No results found',
+						path : 'No results found'
 					};
 				// otherwise add count at end of array
 				} else {
@@ -64,7 +64,9 @@ $(function() {
 	        return false;
 	    },
         select: function (event, ui) {
-            window.open(ui.item.url);
+        	if (ui.item.path != 'No results found') {
+        		window.open(ui.item.url);
+        	}
         }
     })
     .autocomplete( "instance" )._renderItem = function( dt, item ) {
