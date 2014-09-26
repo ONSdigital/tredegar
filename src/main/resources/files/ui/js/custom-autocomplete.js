@@ -103,9 +103,7 @@ $(function() {
       return $( "<dt>" )
         .append( "<a>" 
         		+ contentType 
-        		+ "<span style='text-align:right'>"
         		+ item.title 
-        		+ "</span>"
 //        		+ "<br>" 
 //        		+ item.path 
         		+ "</a>" )
