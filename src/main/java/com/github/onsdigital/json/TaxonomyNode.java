@@ -1,4 +1,4 @@
-package com.github.onsdigital.generator.json;
+package com.github.onsdigital.json;
 
 import com.github.onsdigital.generator.Folder;
 

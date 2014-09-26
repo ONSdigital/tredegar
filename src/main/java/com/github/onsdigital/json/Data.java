@@ -1,4 +1,4 @@
-package com.github.onsdigital.generator.json;
+package com.github.onsdigital.json;
 
 import java.util.ArrayList;
 import java.util.List;

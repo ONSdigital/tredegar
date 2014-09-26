@@ -15,7 +15,7 @@ import au.com.bytecode.opencsv.CSVReader;
 
 import com.github.davidcarboni.ResourceUtils;
 import com.github.davidcarboni.restolino.json.Serialiser;
-import com.github.onsdigital.generator.json.Data;
+import com.github.onsdigital.json.Data;
 import com.google.common.io.Files;
 
 public class Csv {
