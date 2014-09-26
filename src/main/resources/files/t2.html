@@ -935,7 +935,8 @@ markup: false
         if (data.children.length > 0) {
           var first = data.children.shift()
           $("#firstTitle").text(first.name)
-          $("#firstLink").text("View all " + first.name).attr("href", first.fileName)
+          var link = link(first, data);
+          $("#firstLink").text("View all " + first.name).attr("href", link)
         }
         
         if (data.children.length > 0) {
@@ -996,6 +997,17 @@ markup: false
       });
 
     });
+
+    /*
+    * Builds a link to the given child using the given data.
+    */
+    function link(child, data) {
+      for (var i=0; i<data.breadcrumb.length; i++) {
+        link += "/" + data.breadcrumb[i].fileName
+      }
+      link += "/" + data.fileName
+      link += "/" + child.fileName
+    }
 
     </script>
 
