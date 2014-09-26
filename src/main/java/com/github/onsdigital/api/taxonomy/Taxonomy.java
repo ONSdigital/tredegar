@@ -20,29 +20,16 @@ import com.github.onsdigital.json.TaxonomyNode;
 public abstract class Taxonomy {
 
 	@GET
-	public void goToIndex(@Context HttpServletRequest request,
+	public void serveTemplate(@Context HttpServletRequest request,
 			@Context HttpServletResponse response) throws IOException {
 
 		URI uri = URI.create(request.getRequestURI());
 		Data data = getNodeData(uri);
-
-		// Serve T2 or T3 depending on whether there are children:
-		String templateResourceName;
-		if (data.children == null || data.children.size() == 0) {
-			// t3
-			templateResourceName = "files/t3.html";
-		} else {
-			// t2
-			templateResourceName = "files/t2.html";
-		}
-		try (InputStream html = Taxonomy.class.getClassLoader()
-				.getResourceAsStream(templateResourceName)) {
+		try (InputStream html = selectTemplate(data)) {
 			response.setContentType("text/html");
 			response.setCharacterEncoding("UTF8");
 			IOUtils.copy(html, response.getOutputStream());
 		}
-
-		// response.sendRedirect(join(uri.getPath(), "index.html"));
 	}
 
 	/**
@@ -55,7 +42,7 @@ public abstract class Taxonomy {
 	private Data getNodeData(URI uri) throws IOException {
 
 		// Get the data for this node:
-		String jsonResourceName = "files" + join(uri.getPath(), "data.json");
+		String jsonResourceName = "/files" + join(uri.getPath(), "data.json");
 		Data data;
 		try (InputStream json = ResourceUtils.getStream(jsonResourceName)) {
 			data = Serialiser.deserialise(json, Data.class);
@@ -64,10 +51,37 @@ public abstract class Taxonomy {
 		return data;
 	}
 
-	private static String join(String path, String file) {
-		if (!StringUtils.endsWith(path, "/")) {
-			return path + "/" + file;
+	private InputStream selectTemplate(Data data) throws IOException {
+
+		// Select T2 or T3 depending on whether there are children:
+		String templateResourceName;
+		if (data.children == null || data.children.size() == 0) {
+			// t3
+			templateResourceName = "/files/t3.html";
+		} else {
+			// t2
+			templateResourceName = "/files/t2.html";
 		}
-		return path + file;
+		return ResourceUtils.getStream(templateResourceName);
+	}
+
+	/**
+	 * We could optimise this by using StringBuilder.
+	 * 
+	 * @param path
+	 * @param file
+	 * @return
+	 */
+	private static String join(String path, String file) {
+		String result;
+		if (!StringUtils.endsWith(path, "/")) {
+			result = path + "/" + file;
+		} else {
+			result = path + file;
+		}
+		if (!StringUtils.startsWith(result, "/")) {
+			result = "/" + result;
+		}
+		return result;
 	}
 }
