@@ -973,10 +973,13 @@ markup: false
           $("#thirdLink").text("View all " + third.name).attr("href", link(third.fileName))
         }
 
-        $( "#otherList" ).empty();
-        $( "#otherList" ).append( '<header class="nav-panel__header nav-panel__roomy">'+
-                                    '<h2>Other ' + data.name + ' categories</h2>'+
-                                  '</header>');
+        // Clear the Other Categories list, but retain the header:
+        var otherList = $( "#otherList" );
+        var otherListHeader = $( "header", otherList )
+        otherListHeader.detach()
+        otherList.empty();
+        otherList.append(otherListHeader)
+        $("h2", otherListHeader).text('Other ' + data.name + ' categories')
 
         // If there are no more items, show a "nowt" message:
         if (data.children.length == 0) {
