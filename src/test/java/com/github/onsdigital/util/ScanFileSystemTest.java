@@ -1,6 +1,7 @@
 package com.github.onsdigital.util;
 
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import java.io.IOException;
 import java.nio.file.Path;
@@ -24,6 +25,18 @@ public class ScanFileSystemTest {
 		List<String> fileNames = new ArrayList<String>();
 		ScanFileSystem.getFileNames(fileNames, rootDir);
 		assertFalse(fileNames.isEmpty());
+
+		for (String fileName : fileNames) {
+			assertTrue("File extension must be one of small subset of types, e.g. html but not css",
+					(fileName.endsWith(".html") || fileName.endsWith(".xls") || fileName.endsWith(".xlsx") || fileName
+							.endsWith(".csv")));
+			assertTrue(
+					"File path must be one of small subset of content type paths, e.g. economy but not ui",
+					(fileName.contains("target/classes/files/businessindustryandtrade")
+							|| fileName.contains("target/classes/files/economy")
+							|| fileName.contains("target/classes/files/employmentandlabourmarket") || fileName
+							.contains("target/classes/file/peoplepopulationandcommunity")));
+		}
 	}
 
 	@Test(expected = IOException.class)
