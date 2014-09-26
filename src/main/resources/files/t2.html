@@ -926,8 +926,16 @@ markup: false
 
     $( document ).ready(function() {
 
+      // Create and endsWith method for strings:
+      // http://stackoverflow.com/questions/280634/endswith-in-javascript
+      if (typeof String.prototype.endsWith !== 'function') {
+        String.prototype.endsWith = function(suffix) {
+          return this.indexOf(suffix, this.length - suffix.length) !== -1;
+        };
+      }
+
       // Get the data.json file to populate the page:
-      $.get( "data.json", function( data ) {
+      $.get( link("data.json"), function( data ) {
 
         console.log(JSON.stringify(data))
 
@@ -940,7 +948,7 @@ markup: false
         if (data.children.length > 0) {
           var first = data.children.shift()
           $("#firstTitle").text(first.name)
-          var link = link(first, data);
+          var link = link(first.fileName)
           $("#firstLink").text("View all " + first.name).attr("href", link)
         }
         
@@ -1006,12 +1014,13 @@ markup: false
     /*
     * Builds a link to the given child using the given data.
     */
-    function link(child, data) {
-      for (var i=0; i<data.breadcrumb.length; i++) {
-        link += "/" + data.breadcrumb[i].fileName
+    function link(fileName) {
+      var result = window.location.pathname
+      if (result.substring(result.length - 1) != "/") {
+        result += "/"
       }
-      link += "/" + data.fileName
-      link += "/" + child.fileName
+      result += fileName
+      console.log("Path: "+result)
     }
 
     </script>
