@@ -23,6 +23,9 @@ public abstract class Taxonomy {
 	public void serveTemplate(@Context HttpServletRequest request,
 			@Context HttpServletResponse response) throws IOException {
 
+		// Ensures ResourceUtils gets the right classloader when running
+		// reloadable in development:
+		ResourceUtils.classLoaderClass = Taxonomy.class;
 		URI uri = URI.create(request.getRequestURI());
 		Data data = getNodeData(uri);
 		try (InputStream html = selectTemplate(data)) {
