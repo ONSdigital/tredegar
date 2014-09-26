@@ -9,13 +9,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.commons.lang3.StringUtils;
-
 /**
  * Helper methods for loading index into search engine
  */
 public class LoadIndexHelper {
-	private static final String RESTOLINO_STATIC = "RESTOLINO_STATIC";
 	private static final String TAGS = "tags";
 	private static final String TITLE = "title";
 	private static final String TYPE = "type";
@@ -38,14 +35,7 @@ public class LoadIndexHelper {
 	public static List<String> getAbsoluteFilePaths() throws IOException {
 		List<String> fileNames = new ArrayList<String>();
 
-		// Lookup env variable to identify path to start searching from
-		String pathToSearch = System.getenv(RESTOLINO_STATIC);
-		if (StringUtils.isEmpty(pathToSearch)) {
-			pathToSearch = ROOT_SEARCH;
-		}
-		System.out.println("Search file system at: " + pathToSearch);
-
-		final Path rootDir = Paths.get(pathToSearch);
+		final Path rootDir = Paths.get(ROOT_SEARCH);
 		fileNames = ScanFileSystem.getFileNames(fileNames, rootDir);
 		return fileNames;
 	}
