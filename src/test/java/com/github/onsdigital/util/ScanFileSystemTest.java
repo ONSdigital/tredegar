@@ -10,14 +10,12 @@ import java.util.List;
 
 import org.junit.Test;
 
-import com.github.onsdigital.util.ScanFileSystem;
-
 
 /**
  * Exercises scanning the file system
  */
 public class ScanFileSystemTest {
-	private String rootSearch = "src/main/resources";
+	private String rootSearch = "target/classes";
 
 	@Test
 	public void testGetFileNames() throws IOException {
