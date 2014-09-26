@@ -8,11 +8,19 @@ $.widget( "ui.autocomplete", $.ui.autocomplete, {
 	        }
 	        count++;
 	    });
-	} 
+	},
+	_resizeMenu: function () {
+	    var ul = this.menu.element;
+	    ul.outerWidth(this.element.outerWidth());
+	}
 });  
   
 $(function() {
 	$("#homepageSearch").autocomplete({
+	   open: function() { 
+			var width = $(".ui-autocomplete-input").innerWidth();
+			$('.ui-menu').css('max-width',width);
+	    }, 
 		source : function(request, response) {
 			var URL = "/search";
 			$.getJSON(URL, request, function(data) {
@@ -35,14 +43,14 @@ $(function() {
 				// if no results then just output a message
 				if (firstTenResultsCount == 0) {
 					firstTenResults[searchResultsIndex] = {
-						title : '',
-						path : 'No results found'
+						title : 'No results found',
+						path : ''
 					};
 				// otherwise add count at end of array
 				} else {
 					firstTenResults[searchResultsIndex] = {
-						title : '',
-						path : 'See all ' + numberOfResults + ' results',
+						title : 'See all ' + numberOfResults + ' results',
+						path : '',
 						url : '/searchresults.html?q=' + searchTerm
 					};
 				}
@@ -64,7 +72,7 @@ $(function() {
 	        return false;
 	    },
         select: function (event, ui) {
-        	if (ui.item.path != 'No results found') {
+        	if (ui.item.title != 'No results found') {
         		window.open(ui.item.url);
         	}
         }
@@ -95,8 +103,8 @@ $(function() {
         .append( "<a>" 
         		+ contentType 
         		+ item.title 
-        		+ "<br>" 
-        		+ item.path 
+//        		+ "<br>" 
+//        		+ item.path 
         		+ "</a>" )
         .appendTo( dt );
     };
