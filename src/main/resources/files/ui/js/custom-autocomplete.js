@@ -71,18 +71,24 @@ $(function() {
     })
     .autocomplete( "instance" )._renderItem = function( dt, item ) {
 		var contentType;
-		if (item.type == 'home') {
-			contentType = "<span class='lozenge lozenge-spacer lozenge-blue'>STATISTIC BULLETIN</span>";
-		}  else if (item.type == 'bulletins') {
-			contentType = "<span class='lozenge lozenge-spacer lozenge-blue'>STATISTIC BULLETIN</span>";
-		} else if (item.type == 'datasets') {
-			contentType = "<span class='lozenge lozenge-spacer lozenge-red'>DATASET</span>";
-		} else if (item.type == 'articles') {
-			contentType = "<span class='lozenge lozenge-spacer'>ARTICLE</span>";
-		} else if (item.type == 'methodology') {
-			contentType = "<span class='lozenge lozenge-spacer lozenge-green'>METHODOLOGY</span>";
-		} else {
-			contentType = "";
+		switch (item.type) {
+			case "home":
+				contentType = "<span class='lozenge lozenge-spacer lozenge-blue'>STATISTIC BULLETIN</span>";
+				break;
+			case "bulletins":
+				contentType = "<span class='lozenge lozenge-spacer lozenge-blue'>STATISTIC BULLETIN</span>";
+				break;
+			case "datasets":
+				contentType = "<span class='lozenge lozenge-spacer lozenge-red'>DATASET</span>";
+				break;
+			case "articles":
+				contentType = "<span class='lozenge lozenge-spacer'>ARTICLE</span>";
+				break;
+			case "methodology":
+				contentType = "<span class='lozenge lozenge-spacer lozenge-green'>METHODOLOGY</span>";
+				break;
+			default:
+				contentType = "";
 		}
 		
       return $( "<dt>" )
