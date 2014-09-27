@@ -55,7 +55,6 @@ public class ElasticSearchHTTPUtil {
 		Search search = buildRequest(queryBuilder);
 		io.searchbox.core.SearchResult result = connectionManager.getClient()
 				.execute(search);
-
 		return result;
 
 	}

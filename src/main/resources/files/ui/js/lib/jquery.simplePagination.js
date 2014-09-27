@@ -34,6 +34,7 @@ Extended & Modified by Bren for ONSAlpha Project 24 Sept, 2014
 				cssStyle: 'light-theme',
 				labelMap: [],
 				selectOnClick: true,
+				scrollTopOnChange: true,
 				nextAtFront: false,
 				invertPageOrder: false,
 				hideIfSinglePage: false,
@@ -268,6 +269,7 @@ Extended & Modified by Bren for ONSAlpha Project 24 Sept, 2014
 					methods._appendItem.call(this, !o.invertPageOrder ? o.currentPage + 1 : o.currentPage - 1, {text: o.nextText, classes: 'next'});
 				}
 			}
+
 		},
 
 		_getPages: function(o) {
@@ -331,7 +333,21 @@ Extended & Modified by Bren for ONSAlpha Project 24 Sept, 2014
 			if (o.selectOnClick) {
 				methods._draw.call(this);
 			}
-			return o.onPageClick(pageIndex + 1, event);
+
+			var result = o.onPageClick(pageIndex + 1, event);
+
+			if(o.scrollTopOnChange) {
+				methods._scrollTop();
+			}
+
+			return result;
+		},
+
+		_scrollTop : function(){
+   			var body = $("html, body");
+   			// body.scrollTop(1);
+			body.animate({scrollTop:0}, '300', 'swing', function() { 
+			});
 		}
 
 	};

@@ -11,12 +11,12 @@ import com.github.onsdigital.common.ClosedConnectionException;
  * 
  * <p>
  * {@link ElasticSearchUtil} connects to an elastic search cluster and perform
- * search & read operations under indexes or types.
+ * search operation under indexes or types.
  * </p>
  * 
  * <p>
  * This class does not create an embedded non-data node. It simply creates a
- * transport client that which sniffs available nodes through connected node. It
+ * transport client that sniffs available nodes through connected node. It
  * is lightweight and still highly available
  * </p>
  * 
@@ -26,7 +26,7 @@ import com.github.onsdigital.common.ClosedConnectionException;
  * /current/client.html <a> </a>
  * </p>
  * 
- * @author boorhun
+ * @author Bren
  *
  */
 
@@ -68,12 +68,7 @@ public class ElasticSearchUtil {
 	private SearchRequestBuilder buildRequest(ONSQueryBuilder queryBuilder) {
 		SearchRequestBuilder requestBuilder = connectionManager.getClient()
 				.prepareSearch(queryBuilder.getIndex())
-				.setFrom(calculateFrom(queryBuilder))
-				.setSize(queryBuilder.getSize())
-				.setQuery(queryBuilder.buildQuery())
-				.setHighlighterPreTags("<strong>")
-				.setHighlighterPostTags("</strong>")
-				.setHighlighterNumOfFragments(0);
+				.setQuery(queryBuilder.buildQuery());
 
 		for (String field : queryBuilder.getFields()) {
 			requestBuilder.addHighlightedField(field);
@@ -86,10 +81,9 @@ public class ElasticSearchUtil {
 		return requestBuilder;
 	}
 
-	private int calculateFrom(ONSQueryBuilder builder) {
-		return builder.getSize() * (builder.getPage() - 1);
-	}
-
+	/**
+	 * 
+	 */
 	private void testConnection() {
 		if (connectionManager.isConnected() == false) {
 			throw new ClosedConnectionException("Connection is closed");

@@ -13,10 +13,10 @@ import org.elasticsearch.search.highlight.HighlightBuilder;
  * 
  * <p>
  * {@link ONSQueryBuilder} hides details of elastic search query builders with
- * the aim of simplifying query building for the purpose
+ * the aim of simplifying query building for ONS Alpha search requirements
  * </p>
  * <p>
- * By default it queries all documents under all indexes
+ * By default it queries all documents under given index.
  * </p>
  * 
  * 
@@ -25,9 +25,11 @@ import org.elasticsearch.search.highlight.HighlightBuilder;
  */
 public class ONSQueryBuilder {
 
-	private static final String ALL_FIELDS = "_all";
+	static final String ALL_FIELDS = "_all";
+	static final String PRE_TAG = "<strong>";
+	static final String POST_TAG = "</strong>";
 
-	String query;
+	String searchTerm;
 	String index;
 	String type;
 	int page = 1;
@@ -38,19 +40,20 @@ public class ONSQueryBuilder {
 		this.index = index;
 	}
 
-	public String getQuery() {
-		return query;
+	public String getSearchTerm() {
+		return searchTerm;
 	}
 
 	/**
 	 * Query to be searched in documents. The documents with fields that has
 	 * values starting with given query will be returned
 	 * 
-	 * @param query
+	 * @param searchTerm
 	 * @return
 	 */
-	public ONSQueryBuilder setQuery(String query) {
-		this.query = StringUtils.isEmpty(query) ? query : (query + "*");
+	public ONSQueryBuilder setSearchTerm(String searchTerm) {
+		this.searchTerm = StringUtils.isEmpty(searchTerm) ? searchTerm
+				: (searchTerm + "*");
 		return this;
 	}
 
@@ -131,24 +134,31 @@ public class ONSQueryBuilder {
 		return this;
 	}
 
+	/**
+	 * Builds query with set index, type and query information highlighting all
+	 * given fields with html strong tag
+	 * 
+	 * @return query
+	 */
 	public String buildQuery() {
 
 		BaseQueryBuilder builder;
 
 		// Return all documents
-		if (StringUtils.isEmpty(getQuery())) {
+		if (StringUtils.isEmpty(getSearchTerm())) {
 			builder = new MatchAllQueryBuilder();
-		}
-		// return documents with fields containing words that start with given
-		// query
-		builder = new MultiMatchQueryBuilder(getQuery(), getFields())
-				.type(MatchQueryBuilder.Type.PHRASE_PREFIX);
+		} else {
+			// return documents with fields containing words that start with
+			// given
+			// query
+			builder = new MultiMatchQueryBuilder(getSearchTerm(), getFields())
+					.type(MatchQueryBuilder.Type.PHRASE_PREFIX);
 
+		}
 		HighlightBuilder highlightBuilder = new HighlightBuilder();
-		highlightBuilder.preTags("<strong>")
-				.postTags("</strong>");
+		highlightBuilder.preTags(PRE_TAG).postTags(POST_TAG);
 		for (String field : getFields()) {
-			highlightBuilder.field(field,0,0);
+			highlightBuilder.field(field, 0, 0);
 		}
 
 		return new SearchSourceBuilder().query(builder)
