@@ -63,10 +63,10 @@ public class Search {
 			if (StringUtils.isEmpty(query)) {
 				throw new RuntimeException("No search query provided");
 			}
-			if (ValidatorUtil.isIllegalCharacter(query)) {
-				throw new RuntimeException(
-						"Search query can only contain alphanumeric characters");
-			}
+		}
+		if (ValidatorUtil.isIllegalCharacter(query)) {
+			throw new RuntimeException(
+					"Search query can only contain alphanumeric characters");
 		}
 
 		return query;
