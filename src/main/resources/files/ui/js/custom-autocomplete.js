@@ -104,8 +104,6 @@ $(function() {
         .append( "<a>" 
         		+ contentType 
         		+ item.title 
-//        		+ "<br>" 
-//        		+ item.path 
         		+ "</a>" )
         .appendTo( dt );
     };
