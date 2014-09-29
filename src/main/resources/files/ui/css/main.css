@@ -3657,9 +3657,16 @@ ul.simple-pagination {
   text-align: center;
 }
 
-.large {
-  font-size: 11rem !important;
+/*---For T3s largest statistic*/
+.stat__figure.large {
+  font-size: 9rem !important;
 }
+
+.centred {
+  text-align: center;
+}
+
+
 
 .normal {
   font-weight: normal !important;
@@ -3682,12 +3689,24 @@ ul.simple-pagination {
   padding-left: 0.5em !important;
 }
 
-.nav-grid-dt {
-  float: left;
-  margin-right: 0.4em;
+.box .box--med{
+  margin-right: 2rem;
 }
 
-.stat_bulletin_grid{
+.definition dd{
+  width: 50%;
+}
+
+.definition dt{
+  width: 50%;
+}
+
+/*.nav-grid-dt {
+  float: left;
+  margin-right: 0.4em;
+}*/
+
+.stat_bulletin_grid_left{
   text-align: center;
   margin: 0.2em;
   padding-left: 0em;
@@ -3699,9 +3718,12 @@ ul.simple-pagination {
   font-weight: normal;
   padding: 2.8em 0em 1em 2em;
   min-width: 45%;
-
+  
 }
 
+/*.margin-top{
+  margin-top: 3em;
+}*/
 
 .divider-padding-min {
   
