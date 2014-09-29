@@ -85,6 +85,7 @@ public class SearchResult {
 					.getAsJsonObject().entrySet()) {
 				item.put(entry.getKey(), entry.getValue());
 			}
+			item.put("type", hit.get("_type"));
 			// Highlighted values overrides field values in the map if the field
 			// is highlighted
 			item.putAll(extractHihglightedFields(hit));
