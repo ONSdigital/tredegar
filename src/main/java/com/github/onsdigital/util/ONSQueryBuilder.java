@@ -152,7 +152,8 @@ public class ONSQueryBuilder {
 			// given
 			// query
 			builder = new MultiMatchQueryBuilder(getSearchTerm(), getFields())
-					.type(MatchQueryBuilder.Type.PHRASE_PREFIX);
+					.type(MatchQueryBuilder.Type.PHRASE_PREFIX).analyzer(
+							"my_synonyms");
 
 		}
 		HighlightBuilder highlightBuilder = new HighlightBuilder();

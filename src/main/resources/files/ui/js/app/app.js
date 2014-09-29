@@ -18,25 +18,4 @@ $(document).ready(function() {
           ]
   });
 
-
-
-
-// create an observer instance
-  var observer = new MutationObserver(function(mutations) {
-    mutations.forEach(function(mutation) {
-      console.log(mutation);
-    });
-  });
-
-// configuration of the observer:
-  var config = { attributes: true, childList: true, characterData: true };
-
-  $('.icon--inline').each(function() {
-
-    observer.observe($(this)[0], config);
-  });
-
-// pass in the target node, as well as the observer options
-
-
 });
