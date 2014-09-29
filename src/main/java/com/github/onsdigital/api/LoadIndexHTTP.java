@@ -99,7 +99,6 @@ public class LoadIndexHTTP {
 		Map<String, String> settings = new HashMap<>();
 		settings.put("analysis.analyzer.my_synonyms.tokenizer", "standard");
 		settings.put("analysis.filter.my_synonym_filter.type", "synonym");
-
 		settingsBuilder.put(settings);
 
 		client.execute(new CreateIndex.Builder("ons").settings(
