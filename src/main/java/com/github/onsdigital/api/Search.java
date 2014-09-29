@@ -11,6 +11,7 @@ import com.github.davidcarboni.restolino.framework.Endpoint;
 import com.github.onsdigital.util.ElasticSearchHTTPUtil;
 import com.github.onsdigital.util.ONSQueryBuilder;
 import com.github.onsdigital.util.SearchHTTPConnectionManager;
+import com.github.onsdigital.util.ValidatorUtil;
 
 @Endpoint
 public class Search {
@@ -31,7 +32,7 @@ public class Search {
 				BONSAI_URL);
 		try {
 			ONSQueryBuilder queryBuilder = new ONSQueryBuilder("ons")
-					.setType(type).setPage(page).setQuery(query)
+					.setType(type).setPage(page).setSearchTerm(query)
 					.setFields("title", "path");
 			connectionManager.openConnection();
 
@@ -61,6 +62,10 @@ public class Search {
 			query = request.getParameter("term");
 			if (StringUtils.isEmpty(query)) {
 				throw new RuntimeException("No search query provided");
+			}
+			if (ValidatorUtil.isIllegalCharacter(query)) {
+				throw new RuntimeException(
+						"Search query can only contain alphanumeric characters");
 			}
 		}
 

@@ -18,6 +18,7 @@ $.widget( "ui.autocomplete", $.ui.autocomplete, {
 $(function() {
 	$("#homepageSearch").autocomplete({
 	   open: function() { 
+		    // keep width of results linked to search field
 			var width = $(".ui-autocomplete-input").innerWidth();
 			$('.ui-menu').css('max-width',width);
 	    }, 
@@ -103,8 +104,6 @@ $(function() {
         .append( "<a>" 
         		+ contentType 
         		+ item.title 
-//        		+ "<br>" 
-//        		+ item.path 
         		+ "</a>" )
         .appendTo( dt );
     };

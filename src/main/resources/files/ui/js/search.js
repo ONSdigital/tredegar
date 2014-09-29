@@ -34,6 +34,7 @@ $.extend({
 
 		doSearch();
 
+
 		return onssearch;
 	} 			
 });
@@ -42,7 +43,14 @@ $.extend({
 function loadPage(pageNumber) {
 	var onssearch = $('body').data('onssearch');
 	onssearch.page = pageNumber || onssearch.page;
-	doSearch();
+	var onssearch = $('body').data('onssearch');
+		
+		$.getJSON("search?q=" + onssearch.query + "&page=" + onssearch.page,  function(data) {
+				onssearch.data = data;  
+			  	buildResultList();
+			  }).fail(function() {
+			    console.log( "Failed searching for query " + onssearch.query );
+		});
 }
 
 
@@ -55,8 +63,8 @@ function doSearch() {
 				console.log(data);
 				onssearch.data = data;  
 			  	buildResultList();
-			  	buildPaginator();
 			  	buildInfo();
+			  	buildPaginator();
 			  	onssearch.onSearchComplete();
 			  }).fail(function() {
 			    console.log( "Failed searching for query " + onssearch.query );

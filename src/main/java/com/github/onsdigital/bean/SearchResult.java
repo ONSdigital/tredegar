@@ -15,30 +15,52 @@ import org.elasticsearch.search.highlight.HighlightField;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
+/**
+ * Puts information returned from search operation together to be converted into
+ * Json format
+ * 
+ * 
+ * @author Bren
+ *
+ */
 public class SearchResult {
 
 	private long took; // milliseconds
-	private long numberOfResults; // total result number
+	private long numberOfResults; // total number of hits
 	private List<Map<String, Object>> results; // results
+
+	/**
+	 * Create search results using Elastic Search java client
+	 * {@link SearchResponse} {@link io.searchbox.core.SearchResult}
+	 * 
+	 * @param result
+	 */
 
 	public SearchResult(SearchResponse response) {
 		results = new ArrayList<Map<String, Object>>();
 		this.numberOfResults = response.getHits().getTotalHits();
 		this.took = response.getTookInMillis();
-		addHits(response);
+		resolveHits(response);
 	}
 
+	/**
+	 * Create search results using JEST client
+	 * {@link io.searchbox.core.SearchResult}
+	 * {@link io.searchbox.core.SearchResult}
+	 * 
+	 * @param result
+	 */
 	public SearchResult(io.searchbox.core.SearchResult result) {
 		results = new ArrayList<Map<String, Object>>();
-		JsonObject jestResult = result.getJsonObject();
-		this.took = jestResult.get("took").getAsLong();
-		this.numberOfResults = jestResult.get("hits").getAsJsonObject()
-				.get("total").getAsLong();
-		addHits(jestResult);
+		JsonObject json = result.getJsonObject();
+		this.took = json.get("took").getAsLong();
+		JsonObject hits = json.get("hits").getAsJsonObject();
+		this.numberOfResults = hits.get("total").getAsLong();
+		resolveHits(hits);
 
 	}
 
-	private void addHits(SearchResponse response) {
+	void resolveHits(SearchResponse response) {
 		SearchHit hit;
 		Iterator<SearchHit> iterator = response.getHits().iterator();
 		while (iterator.hasNext()) {
@@ -51,53 +73,42 @@ public class SearchResult {
 		}
 	}
 
-	private void addHits(JsonObject jestResult) {
-		JsonElement hit;
-		Iterator<JsonElement> iterator = jestResult.get("hits")
-				.getAsJsonObject().get("hits").getAsJsonArray().iterator();
+	void resolveHits(JsonObject hits) {
+		JsonObject hit;
+		Iterator<JsonElement> iterator = hits.get("hits").getAsJsonArray()
+				.iterator();
 		while (iterator.hasNext()) {
-			hit = iterator.next();
+			hit = iterator.next().getAsJsonObject();
 			Map<String, Object> item = new HashMap<>();
-			JsonObject object = hit.getAsJsonObject();
-			item.put("type", object.get("_type").getAsString());
-			item.put("title",
-					object.get("_source").getAsJsonObject().get("title"));
-			item.put("path", object.get("_source").getAsJsonObject()
-					.get("path"));
-			item.put("url", object.get("_source").getAsJsonObject().get("url"));
-			item.putAll(extractHihglightedFields(hit, new String[] { "title",
-					"path" }));
+			// Add fields into map
+			for (Map.Entry<String, JsonElement> entry : hit.get("_source")
+					.getAsJsonObject().entrySet()) {
+				item.put(entry.getKey(), entry.getValue());
+			}
+			item.put("type", hit.get("_type"));
+			// Highlighted values overrides field values in the map if the field
+			// is highlighted
+			item.putAll(extractHihglightedFields(hit));
 			results.add(item);
 		}
 	}
 
-	private Map<? extends String, ? extends Object> extractHihglightedFields(
-			JsonElement hit, String[] fields) {
+	Map<? extends String, ? extends Object> extractHihglightedFields(
+			JsonObject hit) {
 
 		HashMap<String, Object> highlightedFields = new HashMap<>();
-
-		JsonObject object = hit.getAsJsonObject().get("highlight")
-				.getAsJsonObject();
-
-		for (String field : fields) {
-			JsonElement highlightField = object.get(field);
-			if (highlightField != null) {
-				Iterator<JsonElement> iterator = highlightField
-						.getAsJsonArray().iterator();
-				while (iterator.hasNext()) {
-					highlightedFields.put(field, iterator.next().getAsString());
-
-				}
-			}
+		for (Map.Entry<String, JsonElement> entry : hit.get("highlight")
+				.getAsJsonObject().entrySet()) {
+			highlightedFields.put(entry.getKey(), entry.getValue()
+					.getAsString());
 		}
 		return highlightedFields;
 	}
 
-	private Map<? extends String, ? extends Object> extractHihglightedFields(
+	Map<? extends String, ? extends Object> extractHihglightedFields(
 			SearchHit hit) {
 
 		HashMap<String, Object> highlightedFields = new HashMap<>();
-
 		for (Entry<String, HighlightField> entry : hit.getHighlightFields()
 				.entrySet()) {
 			Text[] fragments = entry.getValue().getFragments();
@@ -107,7 +118,6 @@ public class SearchResult {
 				}
 			}
 		}
-
 		return highlightedFields;
 	}
 
