@@ -4034,6 +4034,7 @@ ul.simple-pagination {
   font-weight: normal !important;
   font-size: 1.5em;
   padding-left: 0.8em;
+  margin-bottom: 5rem;
 }
 
 .definition-med {
@@ -4148,3 +4149,138 @@ background-color: #edeeee !important;
 #main > section:nth-child(7){
   background-color: #f6f6f7; 
 }
+
+
+/*------------------------------------*\
+  Aaron T3 Classes
+\*------------------------------------*/
+
+/*T3 Divided Navpanel*/
+
+.navpanel-list {
+  font-size: 1.1em;
+  color: #016db9;
+}
+
+.navpanel-list-heading {
+  font-weight: bold;
+  text-align: center;
+}
+
+/*---For T3s largest statistic*/
+
+.reduced_padding{
+  padding-left: 3px;
+}
+
+.normal {
+  font-weight: normal !important;
+  font-size: 1.5em;
+  padding-left: 0.8em;
+}
+
+.margin{
+  margin-left: 0.25rem;
+}
+
+.productheader_largestat{
+  
+  font-size: 8rem !important;
+  min-width: 19rem !important;
+}
+
+.productheader_changestat{
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  min-width: 21rem !important;
+}
+
+.divider-padding-min {
+  padding: 0rem 0.3rem;
+}
+
+.stat_change_arrow {
+  height: 1em;
+  width: 1em;
+  margin: 0em 0.2em;
+}
+
+.red_highlight {
+  color: #c92607 !important;
+}
+
+.stat_change_term{
+  
+  padding-right: 2.0rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  float: left;
+}
+
+.definition .dd_mini{
+  width: 47%;
+}
+
+.definition .dt_mini{
+  width: 50%;
+}
+
+/* T3 list--table*/
+
+ .table--striped-light .list--table__body:nth-child(odd) {
+background-color: #edeeee !important;
+}
+
+.list--table__item__header {
+  font-weight: bold;
+  font-size: 1.125em;
+  color: #016db9 !important;
+  text-decoration: none !important;
+}
+
+.no_underline{
+  text-decoration: none !important;
+}
+
+.list--table--complex .list--table__item__body--caption {
+  width: 55%;
+  }
+
+
+#main > section:nth-child(5) > ol > li > div.list--table__item__body.list--table__item__body--update > dl {
+  max-width: 70% !important;
+}
+
+.table__action {
+  margin: 0rem 8rem;
+}
+
+#main > section:nth-child(7) > div > div > div > article > header {
+  font-size: 1.125em;
+  color: #016db9 !important;
+  text-decoration: none !important;
+}
+
+
+#main > section:nth-child(7){
+  background-color: #f6f6f7; 
+}
+
+/* Key datasets */
+
+.align_right{
+  margin-left: 30%;
+}
+
+/* Panel Large Slate */
+
+.slate {
+  background-color: #EBEBFC;
+}
+
+.rem_pad_top{
+  padding-top: 0rem;
+}
+
+
+
