@@ -28,7 +28,7 @@
 			<artifactId>javax.servlet-api</artifactId>
 			<version>3.1.0</version>
 		</dependency>
-		
+
 		<!-- Taxonomy generator -->
 		<dependency>
 			<groupId>net.sf.opencsv</groupId>
@@ -46,7 +46,7 @@
 			<groupId>org.elasticsearch</groupId>
 			<artifactId>elasticsearch</artifactId>
 			<version>${es.version}</version>
-		</dependency>		
+		</dependency>
 
 		<!-- Elastic Search HTTP Client (JEST) -->
 		<dependency>
@@ -89,6 +89,20 @@
 					<source>1.7</source>
 					<target>1.7</target>
 					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<!-- This can compile the CX sass. Use the following command: -->
+				<!-- mvn clean org.jasig.maven:sass-maven-plugin:update-stylesheets -->
+				<!-- You may then want to merge the changes into the existing css files. -->
+				<groupId>org.jasig.maven</groupId>
+				<artifactId>sass-maven-plugin</artifactId>
+				<version>1.1.1</version>
+				<configuration>
+					<sassSourceDirectory>${basedir}/src/main/scss/ui/scss</sassSourceDirectory>
+					<destination>${project.build.directory}/scss</destination>
+					<useCompass>true</useCompass>
 				</configuration>
 			</plugin>
 
