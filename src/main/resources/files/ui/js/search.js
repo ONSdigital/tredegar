@@ -9,6 +9,7 @@ $.extend({
 	search: function(options) {
 		var onssearch = $.extend({
 			query : '',
+			type  : '',
 			resultsHolder : '',
 			paginatorHolder : '',
 			resultInfoHolder : '' ,
@@ -44,21 +45,23 @@ function loadPage(pageNumber) {
 	var onssearch = $('body').data('onssearch');
 	onssearch.page = pageNumber || onssearch.page;
 	var onssearch = $('body').data('onssearch');
-		
-		$.getJSON("search?q=" + onssearch.query + "&page=" + onssearch.page,  function(data) {
-				onssearch.data = data;  
-			  	buildResultList();
-			  }).fail(function() {
-			    console.log( "Failed searching for query " + onssearch.query );
-		});
+	var type = onssearch.type ? ("&type=" +onssearch.type) : '';
+
+	$.getJSON("search?q=" + onssearch.query + type + "&page=" + onssearch.page,  function(data) {
+			onssearch.data = data;  
+		  	buildResultList();
+		  }).fail(function() {
+		    console.log( "Failed searching for query " + onssearch.query );
+	});
 }
 
 
 function doSearch() {
 		
 		var onssearch = $('body').data('onssearch');
+		var type = onssearch.type ? ("&type=" +onssearch.type) : '';
 		
-		$.getJSON("search?q=" + onssearch.query + "&page=" + onssearch.page,  function(data) {
+		$.getJSON("search?q=" + onssearch.query + type + "&page=" + onssearch.page,  function(data) {
 			  	console.log( "Search successful for query " + 	onssearch.query );
 				console.log(data);
 				onssearch.data = data;  
