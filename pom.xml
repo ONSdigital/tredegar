@@ -28,7 +28,7 @@
 			<artifactId>javax.servlet-api</artifactId>
 			<version>3.1.0</version>
 		</dependency>
-		
+
 		<!-- Taxonomy generator -->
 		<dependency>
 			<groupId>net.sf.opencsv</groupId>
@@ -46,7 +46,7 @@
 			<groupId>org.elasticsearch</groupId>
 			<artifactId>elasticsearch</artifactId>
 			<version>${es.version}</version>
-		</dependency>		
+		</dependency>
 
 		<!-- Elastic Search HTTP Client (JEST) -->
 		<dependency>
@@ -54,6 +54,7 @@
 			<artifactId>jest</artifactId>
 			<version>0.1.2</version>
 		</dependency>
+
 
 
 		<!-- Test -->

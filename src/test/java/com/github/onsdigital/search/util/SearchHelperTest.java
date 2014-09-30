@@ -1,24 +1,26 @@
-package com.github.onsdigital.util;
+package com.github.onsdigital.search.util;
 
 import static org.elasticsearch.common.xcontent.XContentFactory.jsonBuilder;
 
 import java.io.IOException;
 
 import org.elasticsearch.ElasticsearchException;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.elasticsearch.common.settings.ImmutableSettings;
+import org.elasticsearch.common.settings.Settings;
+import org.junit.Assert;
 
+import com.github.onsdigital.bean.SearchResult;
 import com.github.onsdigital.search.EmbeddedElasticSearchServer;
 
-public class ElasticSearchUtilTest {
+public class SearchHelperTest {
 
 	private EmbeddedElasticSearchServer embeddedServer;
 
-	@Before
 	public void startEmbeddedServer() throws ElasticsearchException,
 			IOException {
-		embeddedServer = new EmbeddedElasticSearchServer("testNode");
+		Settings settings = ImmutableSettings.builder()
+				.put("http.enabled", false).build();
+		embeddedServer = new EmbeddedElasticSearchServer(settings, "testNode");
 		prepareMockData();
 	}
 
@@ -29,27 +31,18 @@ public class ElasticSearchUtilTest {
 				.setSource(
 						jsonBuilder().startObject().field("title", "testTitle")
 								.field("tags", "taggy", "tennis", "doh")
-								.field("theme", "testTheme").endObject())
-				.execute().actionGet();
+								.field("theme", "testTheme").endObject()).get();
 	}
 
-	@After
 	public void shutdownEmbeddedServer() {
 		embeddedServer.shutdown();
 	}
 
-	@Test
-	public void testSearchQuery() {
-
-		// SearchHelper util = null;
-		try {
-			// util = openConnection();
-			// List<Map<String, Object>> results = util
-			// .search(new ONSQueryBuilder("testindex").setQuery("do"));
-			// Assert.assertEquals(results.size(), 1);
-		} finally {
-			// closeConnection(util);
-		}
+	public void testSearchQuery() throws Exception {
+		SearchHelper util = new SearchHelper(embeddedServer.getClient());
+		SearchResult result = util.search(new ONSQueryBuilder("testindex")
+				.setSearchTerm("do"));
+		Assert.assertEquals(1, result.getNumberOfResults());
 	}
 
 }
