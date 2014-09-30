@@ -99,11 +99,20 @@
 				<groupId>org.jasig.maven</groupId>
 				<artifactId>sass-maven-plugin</artifactId>
 				<version>1.1.1</version>
-				<configuration>
-					<sassSourceDirectory>${basedir}/src/main/scss/ui/scss</sassSourceDirectory>
-					<destination>${project.build.directory}/scss</destination>
-					<useCompass>true</useCompass>
-				</configuration>
+				<executions>
+					<execution>
+						<id>sass</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>update-stylesheets</goal>
+						</goals>
+						<configuration>
+							<sassSourceDirectory>${basedir}/src/main/scss/ui/scss</sassSourceDirectory>
+							<destination>${basedir}/src/main/resources/files/ui/css</destination>
+							<useCompass>true</useCompass>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 
 			<!-- An assembly that includes all dependencies for deployment: -->
