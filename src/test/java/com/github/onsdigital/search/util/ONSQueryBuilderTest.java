@@ -1,4 +1,4 @@
-package com.github.onsdigital.util;
+package com.github.onsdigital.search.util;
 
 import static com.github.onsdigital.util.JsonHelper.grab;
 import static org.junit.Assert.assertEquals;
@@ -6,6 +6,7 @@ import static org.junit.Assert.assertNull;
 
 import org.junit.Test;
 
+import com.github.onsdigital.search.util.ONSQueryBuilder;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;

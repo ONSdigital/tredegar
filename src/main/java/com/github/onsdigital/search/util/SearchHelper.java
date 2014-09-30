@@ -1,14 +1,12 @@
 package com.github.onsdigital.search.util;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+import org.elasticsearch.action.search.SearchRequestBuilder;
+import org.elasticsearch.action.search.SearchResponse;
+import org.elasticsearch.client.Client;
 
 import com.github.onsdigital.bean.SearchResult;
-import com.github.onsdigital.common.ClosedConnectionException;
-import com.github.onsdigital.search.client.base.ElasticSearchClient;
-import com.github.onsdigital.search.client.base.SearchBuilder;
-import com.github.onsdigital.util.ONSQueryBuilder;
-import com.github.onsdigital.util.SearchConnectionManager;
-import com.google.gson.JsonObject;
 
 /**
  * 
@@ -23,15 +21,14 @@ import com.google.gson.JsonObject;
 
 public class SearchHelper {
 
-	private ElasticSearchClient client;
+	private Client client;
 
 	/**
 	 * @param connectionManager
-	 *            A {@link SearchConnectionManager} is required to perform
-	 *            search operations. Connection must be open to perform any
-	 *            search operation
+	 *            A {@link Client} is required to perform search operations.
+	 * 
 	 */
-	public SearchHelper(ElasticSearchClient client) {
+	public SearchHelper(Client client) {
 		this.client = client;
 	}
 
@@ -43,19 +40,21 @@ public class SearchHelper {
 	 * @param queryBuilder
 	 * @return {@link SearchResult}
 	 * @throws Exception
-	 * @throws ClosedConnectionException
 	 */
 	public SearchResult search(ONSQueryBuilder queryBuilder) throws Exception {
+		System.out.println("Searcing For:"
+				+ ReflectionToStringBuilder.toString(queryBuilder));
 		return new SearchResult(execute(queryBuilder));
 	}
 
-	private JsonObject execute(ONSQueryBuilder queryBuilder) throws Exception {
-		SearchBuilder searchBuilder = buildRequest(queryBuilder);
-		return searchBuilder.execute();
+	private SearchResponse execute(ONSQueryBuilder queryBuilder)
+			throws Exception {
+		SearchRequestBuilder searchBuilder = buildRequest(queryBuilder);
+		return searchBuilder.get();
 	}
 
-	private SearchBuilder buildRequest(ONSQueryBuilder queryBuilder) {
-		SearchBuilder searchBuilder = client.prepareSearch(
+	private SearchRequestBuilder buildRequest(ONSQueryBuilder queryBuilder) {
+		SearchRequestBuilder searchBuilder = client.prepareSearch(
 				queryBuilder.getIndex(), queryBuilder.buildQuery());
 
 		String type = queryBuilder.getType();

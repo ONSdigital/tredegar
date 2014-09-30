@@ -9,7 +9,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.github.onsdigital.elastic.EmbeddedElasticSearchServer;
+import com.github.onsdigital.search.EmbeddedElasticSearchServer;
 
 public class ElasticSearchUtilTest {
 
