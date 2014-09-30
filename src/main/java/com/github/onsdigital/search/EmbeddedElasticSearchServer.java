@@ -16,7 +16,7 @@ public class EmbeddedElasticSearchServer {
 			.getProperty("java.io.tmpdir");;
 	private static final String DEFAULT_CLUSTERNAME = "ONS";
 	private final Node node;
-	private final String dataDirectory;
+	private String dataDirectory;
 
 	public EmbeddedElasticSearchServer(String clusterName) {
 		this(null, DEFAULT_DATA_DIRECTORY, clusterName);
@@ -43,6 +43,12 @@ public class EmbeddedElasticSearchServer {
 
 		if (settings != null) {
 			settingsBuilder.put(settings);
+			// If data directory is overwritten update data directory
+			// accordingly for cleanup at shutdown
+			String directory = settings.get("path.data");
+			if (directory != null) {
+				this.dataDirectory = directory;
+			}
 		}
 
 		System.out

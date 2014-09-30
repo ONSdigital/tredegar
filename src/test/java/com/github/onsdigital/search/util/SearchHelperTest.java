@@ -19,7 +19,8 @@ public class SearchHelperTest {
 	public void startEmbeddedServer() throws ElasticsearchException,
 			IOException {
 		Settings settings = ImmutableSettings.builder()
-				.put("http.enabled", false).build();
+				.put("http.enabled", false)
+				.put("path.data", "target/elasticsearch-data").build();
 		embeddedServer = new EmbeddedElasticSearchServer(settings, "testNode");
 		prepareMockData();
 	}
@@ -41,7 +42,7 @@ public class SearchHelperTest {
 	public void testSearchQuery() throws Exception {
 		SearchHelper util = new SearchHelper(embeddedServer.getClient());
 		SearchResult result = util.search(new ONSQueryBuilder("testindex")
-				.setSearchTerm("do"));
+				.setSearchTerm("do").setFields("tags"));
 		Assert.assertEquals(1, result.getNumberOfResults());
 	}
 
