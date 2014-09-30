@@ -3073,7 +3073,7 @@ lesser , applied styles
 
 .slate--hero-banner {
   background-color: #757575;
-  background-image: url("ui/img/hero-banner.jpg");
+  background-image: url("/ui/img/hero-banner.jpg");
   background-position: 50% 50%;
   background-size: cover; }
 
@@ -4175,7 +4175,7 @@ background-color: #edeeee !important;
 
 .productheader_largestat{
   
-  font-size: 8rem !important;
+  font-size: 9rem !important;
   min-width: 19rem !important;
 }
 
@@ -4276,4 +4276,10 @@ background-color: #edeeee !important;
   vertical-align: bottom;
   float: right;
   font-size: 0.9rem;
+}
+
+/* Aaron T1 Classes */
+
+.uniform_background {
+  background-color: inherit;
 }
