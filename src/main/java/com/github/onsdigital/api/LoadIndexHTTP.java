@@ -7,10 +7,6 @@ import io.searchbox.client.config.HttpClientConfig;
 import io.searchbox.core.Index;
 import io.searchbox.indices.CreateIndex;
 
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -97,25 +93,13 @@ public class LoadIndexHTTP {
 		String[] filters = { "lowercase", "ons_synonym_filter" };
 		settingsBuilder.putArray("analysis.analyzer.ons_synonyms.filter",
 				filters);
-		
-		InputStream inputStream = getClass()
-				.getResourceAsStream("/synonym.txt");
-		BufferedReader reader = new BufferedReader(new InputStreamReader(
-				inputStream));
-		List<String> synonymList = new ArrayList<String>();
-		String contents = null;
-		while ((contents = reader.readLine()) != null) {
-			synonymList.add(contents);
-		}
-		String[] synonyms = new String[synonymList.size()];
-		synonymList.toArray(synonyms);
-
 		settingsBuilder.putArray("analysis.filter.ons_synonym_filter.synonyms",
-				synonyms);
+				"cpi,inflation, inflationandpriceindices");
 
 		Map<String, String> settings = new HashMap<>();
 		settings.put("analysis.analyzer.ons_synonyms.tokenizer", "standard");
 		settings.put("analysis.filter.ons_synonym_filter.type", "synonym");
+
 		settingsBuilder.put(settings);
 
 		client.execute(new CreateIndex.Builder("ons").settings(
