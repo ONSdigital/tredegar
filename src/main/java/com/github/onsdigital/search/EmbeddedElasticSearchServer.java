@@ -12,11 +12,8 @@ import org.elasticsearch.node.NodeBuilder;
 
 public class EmbeddedElasticSearchServer {
 
-	private static final String DEFAULT_DATA_DIRECTORY = System
-			.getProperty("java.io.tmpdir");
-	private static final int DEFAULT_HTTP_PORT = 9200;
-	private static final int DEFAULT_TCP_PORT = 9300;
-
+	private static final String DEFAULT_DATA_DIRECTORY = "target/elasticsearch-data";
+	private static final String DEFAULT_CLUSTERNAME = "ONS";
 	private final Node node;
 	private final String dataDirectory;
 
@@ -28,27 +25,30 @@ public class EmbeddedElasticSearchServer {
 		this(null, dataDirectory, clusterName);
 	}
 
+	public EmbeddedElasticSearchServer(Settings settings, String clusterName) {
+		this(settings, null, clusterName);
+	}
+
 	public EmbeddedElasticSearchServer(Settings settings, String dataDirectory,
 			String clusterName) {
 
 		this.dataDirectory = (dataDirectory == null) ? DEFAULT_DATA_DIRECTORY
 				: dataDirectory;
+		ImmutableSettings.Builder settingsBuilder = ImmutableSettings
+				.settingsBuilder().put("cluster.name", DEFAULT_CLUSTERNAME)
+				.put("http.enabled", true)
+				.put("path.data", DEFAULT_DATA_DIRECTORY)
+				.put("node.data", true);
 
-		Settings elasticsearchSettings = settings;
-		if (settings == null) {
-			elasticsearchSettings = ImmutableSettings.settingsBuilder()
-					.put("cluster.name", clusterName).put("http.enabled", true)
-					.put("http.port", DEFAULT_HTTP_PORT)
-					.put("transport.tcp.port", DEFAULT_TCP_PORT)
-					.put("path.data", dataDirectory).put("node.data", true)
-					.build();
-
+		if (settings != null) {
+			settingsBuilder.put(settings);
 		}
+
 		System.out
 				.println("Starting embedded Elastic Search node with settings"
-						+ elasticsearchSettings.toDelimitedString(':'));
+						+ settingsBuilder.internalMap());
 		node = NodeBuilder.nodeBuilder().local(true)
-				.settings(elasticsearchSettings).node();
+				.settings(settingsBuilder.build()).node();
 	}
 
 	public Client getClient() {
