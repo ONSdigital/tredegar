@@ -6,6 +6,7 @@ import java.io.IOException;
 import org.apache.commons.io.FileUtils;
 import org.elasticsearch.client.Client;
 import org.elasticsearch.common.settings.ImmutableSettings;
+import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.node.Node;
 import org.elasticsearch.node.NodeBuilder;
 
@@ -20,25 +21,34 @@ public class EmbeddedElasticSearchServer {
 	private final String dataDirectory;
 
 	public EmbeddedElasticSearchServer(String clusterName) {
-		this(DEFAULT_DATA_DIRECTORY, clusterName);
+		this(null, DEFAULT_DATA_DIRECTORY, clusterName);
 	}
 
 	public EmbeddedElasticSearchServer(String dataDirectory, String clusterName) {
-		this.dataDirectory = dataDirectory;
+		this(null, dataDirectory, clusterName);
+	}
 
-		ImmutableSettings.Builder elasticsearchSettings = ImmutableSettings
-				.settingsBuilder().put("cluster.name", clusterName)
-				.put("http.enabled", "false")
-				.put("http.port", DEFAULT_HTTP_PORT)
-				.put("transport.tcp.port", DEFAULT_TCP_PORT)
-				.put("path.data", dataDirectory).put("node.data", true);
+	public EmbeddedElasticSearchServer(Settings settings, String dataDirectory,
+			String clusterName) {
 
+		this.dataDirectory = (dataDirectory == null) ? DEFAULT_DATA_DIRECTORY
+				: dataDirectory;
+
+		Settings elasticsearchSettings = settings;
+		if (settings == null) {
+			elasticsearchSettings = ImmutableSettings.settingsBuilder()
+					.put("cluster.name", clusterName).put("http.enabled", true)
+					.put("http.port", DEFAULT_HTTP_PORT)
+					.put("transport.tcp.port", DEFAULT_TCP_PORT)
+					.put("path.data", dataDirectory).put("node.data", true)
+					.build();
+
+		}
 		System.out
 				.println("Starting embedded Elastic Search node with settings"
-						+ elasticsearchSettings);
-
+						+ elasticsearchSettings.toDelimitedString(':'));
 		node = NodeBuilder.nodeBuilder().local(true)
-				.settings(elasticsearchSettings.build()).node();
+				.settings(elasticsearchSettings).node();
 	}
 
 	public Client getClient() {
@@ -47,7 +57,7 @@ public class EmbeddedElasticSearchServer {
 
 	public void shutdown() {
 		node.close();
-		// deleteDataDirectory();
+		deleteDataDirectory();
 	}
 
 	private void deleteDataDirectory() {

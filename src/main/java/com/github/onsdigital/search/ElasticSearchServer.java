@@ -35,7 +35,7 @@ public class ElasticSearchServer {
 
 	private static void startEmbeddedServer() throws ElasticsearchException,
 			IOException {
-		server = new EmbeddedElasticSearchServer("testNode");
+		server = new EmbeddedElasticSearchServer("ONSNode");
 		Runtime.getRuntime().addShutdownHook(new ShutDownNodeThread());
 	}
 
