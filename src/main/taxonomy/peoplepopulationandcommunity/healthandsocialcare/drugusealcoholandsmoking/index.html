@@ -8,9 +8,9 @@
 <html class="no-js">
   <!--<![endif]-->
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" content="chrome=1"/>
     <title>T3: Inflation and Price Indices - CX partners</title>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta content="width=device-width,initial-scale=1.0" name="viewport" />
     <meta content="on" http-equiv="cleartype" />
     <meta name="format-detection" content="telephone=no">
@@ -18,12 +18,13 @@
     <!--[if IE]><![endif]-->
     <!-- build:css /ui/css/oldie.css-->
     <!--[if lte IE 8]>
-  <link rel="stylesheet" href="../ui/css/oldie.css" />
-<![endif]-->
+    <link rel="stylesheet" href="../ui/css/oldie.css" />
+    <![endif]-->
     <!-- endbuild -->
     <!-- build:css /ui/css/main.css-->
     <!--[if gt IE 8]><!-->
-    <link rel="stylesheet" href="/ui/css/main.css" />
+    <link type="text/css" href="/ui/css/main.css" rel="stylesheet" />
+
     <!--<![endif]-->
     <!-- endbuild -->
     <script src="/ui/js/lib/modernizr.min.js"></script>
@@ -68,21 +69,201 @@ type: template
 group: Templates
 markup: false
 -->
-      <div class="fake-section">
-        <h1 class="flush">Header and nav area goes here</h1>
+      <div class="wrapper panel--pad-small">
+  <header class="global-header">
+    <div class="media">
+      <a href="/">
+        <img src="/ui/img/ons-logo.svg" alt="Office for National Statistics" width="300" class="media__img">
+      </a>
+      <div class="media__body">
+        <ul class="nav nav--inline-block nav--dark globaltop-nav">
+          <li>
+            <a href="#">Release calendar</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+        </ul>
+
+        <form action="#" class="global-header__search">
+          <label for="homepageSearch" class="visuallyhidden">Search term:</label>
+          <input id="homepageSearch" type="text" class="input-mini" name="homepageSearch" value="" placeholder="Search">
+          <button type="submit" class="btn btn--primary btn--narrow btn--form">
+            <span class="icon icon-popup">
+              <span class="visuallyhidden">Search</span>
+            </span>
+          </button>
+        </form>
       </div>
-      
-      <!-- David C: Added this in to keep a breadcrumb on each page. -->
-      <section class="panel--large wrapper">
-        <div class="grid-wrap">
-          <div class="grid-col desktop-grid-one-third tablet-grid-full">
-            <article id="breadcrumb" class="box">
-             <!-- <a href="/" class="action-link hide-med-down">Home</a> -->
-                <a href="/" class="action-link">Home</a>
-            </article>
-          </div>
-        </div>
-        </section>
+    </div>
+  </header>
+</div>
+<nav class="ons-nav">
+  <div class="wrapper">
+    <ul class="nav nav--multi nav--block nav--primary" id="nav-primary">
+      <li>
+        <a href="#" class="nav__expandable js-expandable">Business, Industry, and Trade</a>
+        <ul class="nav--primary__sub js-expandable__content js-nav-hidden">
+          <li>
+            <a href="#">Business</a>
+          </li>
+          <li>
+            <a href="#">Changes to business</a>
+          </li>
+          <li>
+            <a href="#">Construction and industry</a>
+          </li>
+          <li>
+            <a href="#">IT and internet industry</a>
+          </li>
+          <li>
+            <a href="#">International trade</a>
+          </li>
+          <li>
+            <a href="#">Manufacturing and production</a>
+          </li>
+          <li>
+            <a href="#">Retail industry</a>
+          </li>
+          <li>
+            <a href="#">Tourism industry</a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav--primary__active">
+        <a href="#" class="nav__expandable js-expandable">Economy</a>
+        <ul class="nav--primary__sub js-expandable__content js-nav-hidden">
+          <li>
+            <a href="#">Economic output and productivity</a>
+          </li>
+          <li>
+            <a href="#">Environmental account</a>
+          </li>
+          <li class="nav--primary__active">
+            <a href="#">Government, public sector, and taxes</a>
+          </li>
+          <li>
+            <a href="#">Gross Domestic Product (GDP)</a>
+          </li>
+          <li>
+            <a href="#">Gross Values Added (GVA)</a>
+          </li>
+          <li>
+            <a href="#">Inflation and price indices</a>
+          </li>
+          <li>
+            <a href="#">Investment and pension trust</a>
+          </li>
+          <li>
+            <a href="#">National accounts</a>
+          </li>
+          <li>
+            <a href="#">Regional accounts</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="nav__expandable js-expandable">Employment and Labour Market</a>
+        <ul class="nav--primary__sub js-expandable__content js-nav-hidden">
+          <li>
+            <a href="#">People in work</a>
+          </li>
+          <li>
+            <a href="#">People not in work</a>
+          </li>
+          <li>
+            <a href="#">Public sector personnel</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="nav__expandable js-expandable">People, Population, and Community</a>
+        <ul class="nav--primary__sub js-expandable__content js-nav-hidden">
+          <li>
+            <a href="#">Births, deaths, and marriages</a>
+          </li>
+          <li>
+            <a href="#">Community</a>
+          </li>
+          <li>
+            <a href="#">Education and childcare</a>
+          </li>
+          <li>
+            <a href="#">Crime and justice</a>
+          </li>
+          <li>
+            <a href="#">Household characteristics</a>
+          </li>
+          <li>
+            <a href="#">Well-being</a>
+          </li>
+          <li>
+            <a href="#">Health and social care</a>
+          </li>
+          <li>
+            <a href="#">Elections</a>
+          </li>
+          <li>
+            <a href="#">Personal and household finances</a>
+          </li>
+          <li>
+            <a href="#">Population and migration</a>
+          </li>
+          <li>
+            <a href="#">Cultural identity</a>
+          </li>
+          <li>
+            <a href="#">Housing</a>
+          </li>
+          <li>
+            <a href="#">Leisure and tourism</a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav--primary__highlight">
+        <a href="#">
+          <span class="icon-users icon--inline"></span>Respondents</a>
+      </li>
+      <li class="nav--primary__secondary-content">
+        <a href="#">Release calendar</a>
+      </li>
+      <li class="nav--primary__secondary-content">
+        <a href="#">About</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="wrapper panel--pad-small">
+  <ol class="nav nav--heavy breadcrumb mini flush">
+    <li>
+      <a href="#">Home</a>
+    </li>
+    <li>
+      <a href="#">Economy</a>
+    </li>
+    <li class="nav__active">
+      <a href="#">Government, Public Sector, and Taxes</a>
+    </li>
+  </ol>
+
+  <ol class="nav nav--inline-block nav--dark mini">
+    <li>
+      <a href="#">Local Government Finance</a>
+    </li>
+    <li>
+      <a href="#">Public Sector Finance</a>
+    </li>
+    <li class="nav__active">
+      <a href="#">Public Spending</a>
+    </li>
+    <li>
+      <a href="#">Research and Development Expenditure</a>
+    </li>
+    <li>
+      <a href="#">Taxes and Revenue</a>
+    </li>
+  </ol>
+</div>
       <!-- David C: Added this in to keep a breadcrumb on each page. -->
       
       <div class="page-header slate">
@@ -125,32 +306,94 @@ markup: false
         <section class="box box--padded-vertical solid border lifted offset-top">
           <div class="box__content">
             <div class="divider">
-              <div class="divider__half divider__half--border divider__half--border-first">
+              <div class="divider__half divider-padding-min divider__half--border divider__half--border-first">
                 <h2 class="beta normal">
                   CPI Annual Rate Percentage Change over 12 Months
                   <span tabindex="0" title="Lorem ipsum dolor sit amet" class="tooltip icon-info-circled icon--grey icon--inline icon--inline--large-text icon--small"></span>
                 </h2>
-                <div class="box box--inline box--med">
+
+              <div class="grid-wrap">
+                <div class="grid-col tablet-grid-full-width box--inline">
+                  <code></code>
+                </div>
+              </div>
+            <div class="grid-wrap margin">
+              <div class="grid-col tablet-grid-one-half reduced_padding">
+                <div class="box box--med">
                   <div class="stat stat--headline">
-                    <div class="stat__figure large">
-                      1.5
-                      <span class="stat__figure__unit">%</span>
+                    <div class="stat__figure">
+                      1.5%
                     </div>
-                    <div class="stat__description">
-                      Jan 2014
-                      <span class="icon icon-up-bold icon--large icon--green icon--fat" role="presentation"></span>
-                      0.7%
-                    </div>
+                    
                   </div>
                 </div>
-                <!-- /box -->
-                <dl class="definition mini">
-                  <dt>Last updated:</dt>
-                  <dd>18 Jul 2014</dd>
-                  <dt>Next update:</dt>
-                  <dd>18 Aug 2014</dd>
-                </dl>
               </div>
+            <div class="grid-col tablet-grid-one-half reduced_padding">
+              <div class="box box--med">
+                  <div class="stat stat--headline">
+                    <div class="stat__description">
+                      January 2014
+                      <img src="/ui/img/uparrowwhite.png" alt="changearrow" class="stat_change"/>
+                      <strong>0.7%</strong>
+
+                      <dl class="definition mini">
+                        <dt class="dt_mini">Last updated:</dt>
+                        <dd class="dd_mini">18 July 2014</dd>
+                        <dt class="dt_mini">Next update:</dt>
+                        <dd class="dd_mini"><span class="red_highlight">18 August 2014</span></dd>
+                      </dl>
+
+
+                    
+                  </div>
+                </div>
+              </div>
+              <br></br>
+             <p class="stat_change_term"> Change in the 12 month rate since last month</p>
+
+            </div>
+          </div>
+        </div>
+      
+
+              <!--<div class="grid wrap">
+                <div class="grid-col desktop-grid-one-half centred">
+                <div class="box box--med">
+                  <div class="stat stat--headline">
+                    <div class="stat__figure large">
+                      1.5%
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid-col desktop-grid-one-half centred">
+                <div class="box box--med margin-top">
+                  <div class="stat stat--headline">
+                    
+                    <div class="stat__description">
+                      January 2014
+                      <img src="/ui/img/uparrowwhite.png" alt="changearrow" class="stat_change"/>
+                      <strong>0.7%</strong>
+
+                      <dl class="definition mini">
+                      <dt class="nav-grid-dt">Last updated:</dt>
+                      <dd>18 July 2014</dd>
+                      <dt class="nav-grid-dt">Next update:</dt>
+                      <dd><span class="red_highlight">18 August 2014</span></dd>
+                      </dl>
+
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+                <!-- /box -->
+                
+              
               <div class="divider__half">
                 <h3 class="body-type lede flush--bottom navpanel-list-heading">CPI Statistical Bulletin Headlines</h3>
                 <ul class="list--bullet mini flush--half--top navpanel-list">
@@ -183,7 +426,7 @@ markup: false
             <li class="list--table__item list--table__body">
               <div class="list--table__item__body list--table__item__body--caption">
                 <h3 class="list--table__item__header">
-                  <a href="#">CPI Index</a>
+                  <a href="#" class="no_underline">CPI Index </a>
                   <a class="information" href="#">
                     <span tabindex="0" title="Lorem ipsum dolor sit amet" class="tooltip icon-info-circled icon--grey icon--inline"></span>
                     <span class="visuallyhidden">More information about CPI index</span>
@@ -192,11 +435,11 @@ markup: false
                 <p class="list--table__item__description">2005 = 100. Not seasonally adjusted</p>
               </div>
               <div class="list--table__item__body list--table__item__body--stat">
-                <div class="stat">
+                <div class="stat list--table__item__body--centred">
                   <div class="stat__figure stat__tight">
-                    £567,890
+                    126.7
                   </div>
-                  <time class="stat__description" datetime="2014-01">Jan 2014</time>
+                  <time class="stat__description" datetime="2014-01">January 2014</time>
                 </div>
               </div>
               <div class="list--table__item__body list--table__item__body--update">
@@ -204,7 +447,7 @@ markup: false
                   <dt>Last updated:</dt>
                   <dd>18th Feb 2014</dd>
                   <dt>Next update:</dt>
-                  <dd>25th June 2014</dd>
+                  <dd class="red_highlight">25th June 2014</dd>
                 </dl>
               </div>
               <label class="list--table__item__body list--table__item__body--select">
@@ -213,23 +456,24 @@ markup: false
               </label>
             </li>
             <!-- /list- -table__body -->
+
             <li class="list--table__item list--table__body">
               <div class="list--table__item__body list--table__item__body--caption">
                 <h3 class="list--table__item__header">
-                  <a href="#">CPI Annual Rate Percentage Change over 12 Months</a>
+                  <a href="#" class="no_underline">CPIH Index <span tabindex="0" title="Lorem ipsum dolor sit amet" class="tooltip icon-info-circled icon--grey icon--inline"></span></a>
                   <a class="information" href="#">
-                    <span tabindex="0" title="Lorem ipsum dolor sit amet" class="tooltip icon-info-circled icon--grey icon--inline"></span>
+                    
                     <span class="visuallyhidden">More information about CPI index</span>
                   </a>
                 </h3>
               </div>
               <div class="list--table__item__body list--table__item__body--stat">
-                <div class="stat">
+                <div class="stat list--table__item__body--centred">
                   <div class="stat__figure stat__tight">
-                    78.7
-                    <span class="stat__figure__unit">Yrs</span>
+                    124.7
+                    <span class="stat__figure__unit"></span>
                   </div>
-                  <time class="stat__description" datetime="2014-01">Jan 2014</time>
+                  <time class="stat__description" datetime="2014-01">January 2014</time>
                 </div>
               </div>
               <div class="list--table__item__body list--table__item__body--update">
@@ -237,7 +481,7 @@ markup: false
                   <dt>Last updated:</dt>
                   <dd>18th Feb 2014</dd>
                   <dt>Next updated:</dt>
-                  <dd>25th June 2014</dd>
+                  <dd class="red_highlight">25th June 2014</dd>
                 </dl>
               </div>
               <label class="list--table__item__body list--table__item__body--select">
@@ -246,32 +490,31 @@ markup: false
               </label>
             </li>
             <!-- /list- -table__body -->
-            <li class="list--table__item list--table__body">
+             <li class="list--table__item list--table__body">
               <div class="list--table__item__body list--table__item__body--caption">
                 <h3 class="list--table__item__header">
-                  <a href="#">CPI Annual Rate Percentage Change over 12 Months</a>
+                  <a href="#" class="no_underline">CPI Annual Rate Percentage Change over 12 Months <span tabindex="0" title="Lorem ipsum dolor sit amet" class="tooltip icon-info-circled icon--grey icon--inline"></span></a>
                   <a class="information" href="#">
-                    <span tabindex="0" title="Lorem ipsum dolor sit amet" class="tooltip icon-info-circled icon--grey icon--inline"></span>
+                    
                     <span class="visuallyhidden">More information about CPI index</span>
                   </a>
                 </h3>
-                <p class="list--table__item__description">Not a national statistic</p>
               </div>
               <div class="list--table__item__body list--table__item__body--stat">
-                <div class="stat">
+                <div class="stat list--table__item__body--centred">
                   <div class="stat__figure stat__tight">
-                    67.89
+                    1.5
                     <span class="stat__figure__unit">%</span>
                   </div>
-                  <time class="stat__description" datetime="2014-01">Jan 2014</time>
+                  <time class="stat__description" datetime="2014-01">January 2014</time>
                 </div>
               </div>
               <div class="list--table__item__body list--table__item__body--update">
                 <dl class="micro definition-list definition-list--inline flush--half--vertical">
-                  <dt class="">Last updated:</dt>
+                  <dt>Last updated:</dt>
                   <dd>18th Feb 2014</dd>
-                  <dt class="">Next updated:</dt>
-                  <dd>25th June 2014</dd>
+                  <dt>Next updated:</dt>
+                  <dd class="red_highlight">25th June 2014</dd>
                 </dl>
               </div>
               <label class="list--table__item__body list--table__item__body--select">
@@ -279,6 +522,76 @@ markup: false
                 <input type="checkbox">
               </label>
             </li>
+
+             <!-- /list- -table__body -->
+                <li class="list--table__item list--table__body">
+              <div class="list--table__item__body list--table__item__body--caption">
+                <h3 class="list--table__item__header">
+                  <a href="#" class="no_underline">RPI Index <span tabindex="0" title="Lorem ipsum dolor sit amet" class="tooltip icon-info-circled icon--grey icon--inline"></span></a>
+                  <a class="information" href="#">
+                    
+                    <span class="visuallyhidden">More information about CPI index</span>
+                  </a>
+                </h3>
+              </div>
+              <div class="list--table__item__body list--table__item__body--stat">
+                <div class="stat list--table__item__body--centred">
+                  <div class="stat__figure stat__tight">
+                    252.6
+                    <span class="stat__figure__unit"></span>
+                  </div>
+                  <time class="stat__description" datetime="2014-01">January 2014</time>
+                </div>
+              </div>
+              <div class="list--table__item__body list--table__item__body--update">
+                <dl class="micro definition-list definition-list--inline flush--half--vertical">
+                  <dt>Last updated:</dt>
+                  <dd>18th Feb 2014</dd>
+                  <dt>Next updated:</dt>
+                  <dd class="red_highlight">25th June 2014</dd>
+                </dl>
+              </div>
+              <label class="list--table__item__body list--table__item__body--select">
+                <span class="visuallyhidden">Select statistic</span>
+                <input type="checkbox">
+              </label>
+            </li>
+            <!-- /list- -table__body -->
+                <li class="list--table__item list--table__body">
+              <div class="list--table__item__body list--table__item__body--caption">
+                <h3 class="list--table__item__header">
+                  <a href="#" class="no_underline">RPIX Index excluding mortgage interest <span tabindex="0" title="Lorem ipsum dolor sit amet" class="tooltip icon-info-circled icon--grey icon--inline"></span></a>
+                  <a class="information" href="#">
+                    
+                    <span class="visuallyhidden">More information about CPI index</span>
+                  </a>
+                </h3>
+                <p class="list--table__item__description">Not a national statistic</p>
+              </div>
+              <div class="list--table__item__body list--table__item__body--stat">
+                <div class="stat list--table__item__body--centred">
+                  <div class="stat__figure stat__tight">
+                    251.9
+                    <span class="stat__figure__unit"></span>
+                  </div>
+                  <time class="stat__description" datetime="2014-01">January 2014</time>
+                </div>
+              </div>
+              <div class="list--table__item__body list--table__item__body--update">
+                <dl class="micro definition-list definition-list--inline flush--half--vertical">
+                  <dt>Last updated:</dt>
+                  <dd>18th Feb 2014</dd>
+                  <dt>Next updated:</dt>
+                  <dd class="red_highlight">25th June 2014</dd>
+                </dl>
+              </div>
+              <label class="list--table__item__body list--table__item__body--select">
+                <span class="visuallyhidden">Select statistic</span>
+                <input type="checkbox">
+              </label>
+            </li>
+                      
+            
             <!-- /list- -table__body -->
             <li class="list--table__item list--table__footer">
               <div class="list--table__item__body">
@@ -327,7 +640,7 @@ markup: false
               </div>
               <!-- /box__content -->
               <footer class="box__footer box__actions">
-                <a class="btn btn--primary btn--small btn--narrow" href="#">
+                <a class="btn btn--primary btn--small btn--narrow align_right" href="#">
             Download .xls
             <span class="icon icon-download icon--button-inline"></span>
           </a>
@@ -354,7 +667,7 @@ markup: false
               </div>
               <!-- /box__content -->
               <footer class="box__footer box__actions">
-                <a class="btn btn--primary btn--small btn--narrow" href="#">
+                <a class="btn btn--primary btn--small btn--narrow align_right" href="#">
             Download .xls
             <span class="icon icon-download icon--button-inline"></span>
           </a>
@@ -384,7 +697,7 @@ markup: false
               </div>
               <!-- /box__content -->
               <footer class="box__footer box__actions">
-                <a class="btn btn--primary btn--small btn--narrow" href="#">
+                <a class="btn btn--primary btn--small btn--narrow align_right" href="#">
             Download .xls
             <span class="icon icon-download icon--button-inline"></span>
           </a>
@@ -437,7 +750,7 @@ markup: false
             </div>
             <!-- /grid-col -->
             <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
-              <article class="box box--padded-vertical">
+              <article class="box box--padded-vertical rem_pad_top">
                 <header class="box__header">
                   <h3 class="gamma flush">
                     <a href="#">House Price Index January 2014</a>
@@ -513,7 +826,7 @@ markup: false
           </div>
           <!-- /grid-col -->
           <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
-            <article class="box box--padded-vertical">
+            <article class="box box--padded-vertical rem_pad_top">
               <header class="box__header">
                 <h3 class="gamma flush">
                   <a href="#">Economic Review, January 2014</a>
@@ -685,7 +998,7 @@ markup: false
         </div>
         <!-- /grid-wrap -->
       </section>
-      <section class="panel--large slate flush--bottom">
+      <section class="panel--large flush--bottom">
         <div class="wrapper">
           <div class="grid-wrap">
             <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
@@ -765,67 +1078,81 @@ markup: false
       </section>
       <!-- /slate -->
       <footer class="global-footer">
-        <div class="slate--light panel--xl panel--separated">
-          <div class="wrapper">
-            <nav class="grid-wrap">
-              <div class="grid-col tablet-grid-one-third">
-                <h2 class="delta headline-separated">Legal</h2>
-                <ul class="list--neutral list--grid list--spaced">
-                  <li><a href="#">Business Transparency</a>
-                  </li>
-                  <li><a href="#">Terms and Conditions</a>
-                  </li>
-                  <li><a href="#">Copyright</a>
-                  </li>
-                  <li><a href="#">Cookies and Privacy</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="grid-col tablet-grid-one-third">
-                <h2 class="delta headline-separated">About ONS</h2>
-                <ul class="list--neutral list--grid list--spaced">
-                  <li><a href="#">Who we are</a>
-                  </li>
-                  <li><a href="#">Careers</a>
-                  </li>
-                  <li><a href="#">Products and Services</a>
-                  </li>
-                  <li><a href="#">Contact us</a>
-                  </li>
-                  <li><a href="#">Our offices</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="grid-col tablet-grid-one-third">
-                <h2 class="delta headline-separated">Connect with us</h2>
-                <ul class="list--neutral list--grid list--spaced">
-                  <li><a href="#">Facebook</a>
-                  </li>
-                  <li><a href="#">Twitter</a>
-                  </li>
-                  <li><a href="#">YouTube</a>
-                  </li>
-                  <li><a href="#">Email subscriptions</a>
-                  </li>
-                </ul>
-              </div>
-            </nav>
-          </div>
-          <!-- /wrapper -->
+  <div class="slate--light panel--pad-large panel--separated">
+    <div class="wrapper">
+      <nav class="grid-wrap">
+        <div class="grid-col tablet-grid-one-third">
+          <h2 class="delta headline-separated">Legal</h2>
+          <ul class="list--neutral list--grid list--spaced">
+            <li>
+              <a href="#">Business Transparency</a>
+            </li>
+            <li>
+              <a href="#">Terms and Conditions</a>
+            </li>
+            <li>
+              <a href="#">Copyright</a>
+            </li>
+            <li>
+              <a href="#">Cookies and Privacy</a>
+            </li>
+          </ul>
         </div>
-        <!-- /slate -->
-        <div class="slate--mid-grey">
-          <div class="wrapper">
-            <div class="footer__license">
-              <img class="footer__license__img" alt="OGL_license_logo" width="60" src="/ui/img/ogl.png">
-              <p class="footer__license__body">
-                All content is available under the Open Government Licence v2.0, except where otherwise
-                stated
-              </p>
-            </div>
-          </div>
+
+        <div class="grid-col tablet-grid-one-third">
+          <h2 class="delta headline-separated">About ONS</h2>
+          <ul class="list--neutral list--grid list--spaced">
+            <li>
+              <a href="#">Who we are</a>
+            </li>
+            <li>
+              <a href="#">Careers</a>
+            </li>
+            <li>
+              <a href="#">Products and Services</a>
+            </li>
+            <li>
+              <a href="#">Contact us</a>
+            </li>
+            <li>
+              <a href="#">Our offices</a>
+            </li>
+          </ul>
         </div>
-      </footer>
+
+        <div class="grid-col tablet-grid-one-third">
+          <h2 class="delta headline-separated">Connect with us</h2>
+          <ul class="list--neutral list--grid list--spaced">
+            <li>
+              <a href="#">Facebook</a>
+            </li>
+            <li>
+              <a href="#">Twitter</a>
+            </li>
+            <li>
+              <a href="#">YouTube</a>
+            </li>
+            <li>
+              <a href="#">Email subscriptions</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- /wrapper -->
+  </div>
+  <!-- /slate -->
+  <div class="slate--mid-grey">
+    <div class="wrapper">
+      <div class="footer__license">
+        <img class="footer__license__img" width="60" src="/ui/img/ogl.png">
+        <p class="footer__license__body">
+          All content is available under the Open Government Licence v2.0, except where otherwise stated
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
       <!-- </div> -->
     </main>
     <!-- build:js /ui/js/ons-alpha.js-->

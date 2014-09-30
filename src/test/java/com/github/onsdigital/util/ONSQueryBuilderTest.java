@@ -111,7 +111,7 @@ public class ONSQueryBuilderTest {
 	JsonObject buildQuery(ONSQueryBuilder builder) {
 		JsonObject query = new JsonParser().parse(builder.buildQuery())
 				.getAsJsonObject();
-		System.out.println("Query : " + query);
+		// System.out.println("Query : " + query);
 		return query;
 	}
 

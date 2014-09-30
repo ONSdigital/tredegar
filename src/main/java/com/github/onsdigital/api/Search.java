@@ -8,15 +8,17 @@ import javax.ws.rs.core.Context;
 import org.apache.commons.lang3.StringUtils;
 
 import com.github.davidcarboni.restolino.framework.Endpoint;
-import com.github.onsdigital.util.ElasticSearchHTTPUtil;
+import com.github.onsdigital.search.client.ElasticSearchHTTPClient;
+import com.github.onsdigital.search.client.base.ElasticSearchClient;
+import com.github.onsdigital.search.util.SearchHelper;
 import com.github.onsdigital.util.ONSQueryBuilder;
-import com.github.onsdigital.util.SearchHTTPConnectionManager;
 import com.github.onsdigital.util.ValidatorUtil;
 
 @Endpoint
 public class Search {
 	final static String jsonMime = "application/json";
 	final static String BONSAI_URL = System.getenv("BONSAI_URL");
+	private final static float FIELD_BOOST = 2.0f;
 
 	@GET
 	public Object get(@Context HttpServletRequest request,
@@ -28,20 +30,19 @@ public class Search {
 	}
 
 	private Object search(String query, int page, String type) throws Exception {
-		SearchHTTPConnectionManager connectionManager = new SearchHTTPConnectionManager(
-				BONSAI_URL);
+
+		ElasticSearchClient client = null;
 		try {
+			client = ElasticSearchHTTPClient.getClient();
 			ONSQueryBuilder queryBuilder = new ONSQueryBuilder("ons")
 					.setType(type).setPage(page).setSearchTerm(query)
-					.setFields("title", "path");
-			connectionManager.openConnection();
+					.setFields("title^" + FIELD_BOOST, "path");
 
-			ElasticSearchHTTPUtil searchUtil = new ElasticSearchHTTPUtil(
-					connectionManager);
-
-			return searchUtil.search(queryBuilder);
+			return new SearchHelper(client).search(queryBuilder);
 		} finally {
-			connectionManager.closeConnection();
+			if (client != null) {
+				client.close();
+			}
 		}
 	}
 
