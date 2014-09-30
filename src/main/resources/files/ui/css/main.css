@@ -3950,7 +3950,6 @@ ul.simple-pagination {
 }
 .simple-pagination ul {
   list-style: none;
-  padding: 0;
   margin: 0;
 }
 .simple-pagination li {
@@ -4064,12 +4063,7 @@ ul.simple-pagination {
   width: 50%;
 }
 
-/*.nav-grid-dt {
-  float: left;
-  margin-right: 0.4em;
-}*/
-
-.stat_bulletin_grid_left{
+.stat_bulletin_grid_left {
   text-align: center;
   margin: 0.2em;
   padding-left: 0em;
@@ -4083,10 +4077,6 @@ ul.simple-pagination {
   min-width: 45%;
   
 }
-
-/*.margin-top{
-  margin-top: 3em;
-}*/
 
 .divider-padding-min {
   
@@ -4146,9 +4136,9 @@ background-color: #edeeee !important;
 }
 
 
-#main > section:nth-child(7){
+/*#main > section:nth-child(7){
   background-color: #f6f6f7; 
-}
+}*/
 
 
 /*------------------------------------*\
@@ -4262,9 +4252,9 @@ background-color: #edeeee !important;
 }
 
 
-#main > section:nth-child(7){
+/*#main > section:nth-child(7){
   background-color: #f6f6f7; 
-}
+}*/
 
 /* Key datasets */
 
@@ -4274,13 +4264,16 @@ background-color: #edeeee !important;
 
 /* Panel Large Slate */
 
-.slate {
-  background-color: #EBEBFC;
+.blue_section {
+  background-color: #F8F8F8;
 }
 
 .rem_pad_top{
   padding-top: 0rem;
 }
 
-
-
+.caveat{
+  vertical-align: bottom;
+  float: right;
+  font-size: 0.9rem;
+}
