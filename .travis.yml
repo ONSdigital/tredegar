@@ -8,3 +8,5 @@ deploy:
   app: tredegar
   on:
     repo: ONSdigital/tredegar
+before_script:
+  - echo -e "Host codebasehq.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
