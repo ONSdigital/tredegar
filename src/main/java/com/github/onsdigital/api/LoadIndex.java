@@ -15,8 +15,8 @@ import org.apache.commons.lang3.StringUtils;
 import org.elasticsearch.client.Client;
 
 import com.github.davidcarboni.restolino.framework.Endpoint;
+import com.github.onsdigital.search.ElasticSearchServer;
 import com.github.onsdigital.util.LoadIndexHelper;
-import com.github.onsdigital.util.SearchConnectionManager;
 
 /**
  * Loads up indices into the search engine
@@ -28,43 +28,34 @@ public class LoadIndex {
 	public void get(@Context HttpServletRequest httpServletRequest,
 			@Context HttpServletResponse httpServletResponse)
 			throws IOException {
-		SearchConnectionManager manager = new SearchConnectionManager(
-				"elasticsearch", "localhost", 9300);
-		try {
-			manager.openConnection();
 
-			List<String> absoluteFilePaths = LoadIndexHelper
-					.getAbsoluteFilePaths();
-			if (absoluteFilePaths.isEmpty()) {
-				System.out
-						.println("No files located during system scan, nothing will be indexed");
-			}
-
-			indexDocuments(manager, absoluteFilePaths);
-
-		} finally {
-			manager.closeConnection();
+		List<String> absoluteFilePaths = LoadIndexHelper.getAbsoluteFilePaths();
+		if (absoluteFilePaths.isEmpty()) {
+			System.out
+					.println("No files located during system scan, nothing will be indexed");
 		}
+
+		indexDocuments(ElasticSearchServer.getClient(), absoluteFilePaths);
 
 	}
 
-	private void indexDocuments(SearchConnectionManager manager,
-			List<String> absoluteFilePaths) throws IOException {
+	private void indexDocuments(Client client, List<String> absoluteFilePaths)
+			throws IOException {
 
 		int idCounter = 0;
 		for (String absoluteFilePath : absoluteFilePaths) {
 			idCounter++;
 
-			System.out.println("LoadIndex submitting record to index: " + absoluteFilePath);
-			buildAndSubmitJson(manager,
+			System.out.println("LoadIndex submitting record to index: "
+					+ absoluteFilePath);
+			buildAndSubmitJson(client,
 					LoadIndexHelper.getDocumentMap(absoluteFilePath), idCounter);
 		}
 	}
 
-	private void buildAndSubmitJson(SearchConnectionManager manager,
+	private void buildAndSubmitJson(Client client,
 			Map<String, String> documentMap, int idCounter) throws IOException {
 
-		Client client = manager.getClient();
 		client.prepareIndex(StringUtils.lowerCase("ons"),
 				StringUtils.lowerCase(documentMap.get("type")),
 				String.valueOf(idCounter))

@@ -1,5 +1,7 @@
 package com.github.onsdigital.api;
 
+import io.searchbox.client.JestClient;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.GET;
@@ -8,12 +10,18 @@ import javax.ws.rs.core.Context;
 import org.apache.commons.lang3.StringUtils;
 
 import com.github.davidcarboni.restolino.framework.Endpoint;
-import com.github.onsdigital.search.client.ElasticSearchHTTPClient;
-import com.github.onsdigital.search.client.base.ElasticSearchClient;
+import com.github.onsdigital.search.ElasticSearchServer;
+import com.github.onsdigital.search.util.ONSQueryBuilder;
 import com.github.onsdigital.search.util.SearchHelper;
-import com.github.onsdigital.util.ONSQueryBuilder;
 import com.github.onsdigital.util.ValidatorUtil;
 
+/**
+ * 
+ * Search endpoint that uses {@link JestClient}
+ * 
+ * @author Bren
+ *
+ */
 @Endpoint
 public class Search {
 	final static String jsonMime = "application/json";
@@ -31,19 +39,12 @@ public class Search {
 
 	private Object search(String query, int page, String type) throws Exception {
 
-		ElasticSearchClient client = null;
-		try {
-			client = ElasticSearchHTTPClient.getClient();
-			ONSQueryBuilder queryBuilder = new ONSQueryBuilder("ons")
-					.setType(type).setPage(page).setSearchTerm(query)
-					.setFields("title^" + FIELD_BOOST, "path");
+		ONSQueryBuilder queryBuilder = new ONSQueryBuilder("ons").setType(type)
+				.setPage(page).setSearchTerm(query)
+				.setFields("title^" + FIELD_BOOST, "path");
 
-			return new SearchHelper(client).search(queryBuilder);
-		} finally {
-			if (client != null) {
-				client.close();
-			}
-		}
+		return new SearchHelper(ElasticSearchServer.getClient())
+				.search(queryBuilder);
 	}
 
 	private int extractPage(HttpServletRequest request) {

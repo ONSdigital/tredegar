@@ -11,7 +11,7 @@ export PACKAGE_PREFIX=com.github.onsdigital
 export BONSAI_URL=http://localhost:9200
 export BONSAI_CLUSTERNAME=elasticsearch
 export BONSAI_HOSTNAME=localhost
-export BONSAI_PORT=9200
+export BONSAI_TRANSPORT_PORT=9300
 
 
 
