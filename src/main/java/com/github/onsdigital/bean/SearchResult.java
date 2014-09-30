@@ -12,7 +12,6 @@ import org.elasticsearch.common.text.Text;
 import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.highlight.HighlightField;
 
-import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 /**
@@ -34,13 +33,11 @@ public class SearchResult {
 	 * 
 	 * @param result
 	 */
-	public SearchResult(JsonObject json) {
+	public SearchResult(SearchResponse response) {
 		results = new ArrayList<Map<String, Object>>();
-		this.took = json.get("took").getAsLong();
-		JsonObject hits = json.get("hits").getAsJsonObject();
-		this.numberOfResults = hits.get("total").getAsLong();
-		resolveHits(hits);
-
+		this.took = response.getTookInMillis();
+		this.numberOfResults = response.getHits().getTotalHits();
+		resolveHits(response);
 	}
 
 	void resolveHits(SearchResponse response) {
@@ -54,38 +51,6 @@ public class SearchResult {
 			item.putAll(extractHihglightedFields(hit));
 			results.add(item);
 		}
-	}
-
-	void resolveHits(JsonObject hits) {
-		JsonObject hit;
-		Iterator<JsonElement> iterator = hits.get("hits").getAsJsonArray()
-				.iterator();
-		while (iterator.hasNext()) {
-			hit = iterator.next().getAsJsonObject();
-			Map<String, Object> item = new HashMap<>();
-			// Add fields into map
-			for (Map.Entry<String, JsonElement> entry : hit.get("_source")
-					.getAsJsonObject().entrySet()) {
-				item.put(entry.getKey(), entry.getValue());
-			}
-			item.put("type", hit.get("_type"));
-			// Highlighted values overrides field values in the map if the field
-			// is highlighted
-			item.putAll(extractHihglightedFields(hit));
-			results.add(item);
-		}
-	}
-
-	Map<? extends String, ? extends Object> extractHihglightedFields(
-			JsonObject hit) {
-
-		HashMap<String, Object> highlightedFields = new HashMap<>();
-		for (Map.Entry<String, JsonElement> entry : hit.get("highlight")
-				.getAsJsonObject().entrySet()) {
-			highlightedFields.put(entry.getKey(), entry.getValue()
-					.getAsString());
-		}
-		return highlightedFields;
 	}
 
 	Map<? extends String, ? extends Object> extractHihglightedFields(
