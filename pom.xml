@@ -28,7 +28,7 @@
 			<artifactId>javax.servlet-api</artifactId>
 			<version>3.1.0</version>
 		</dependency>
-		
+
 		<!-- Taxonomy generator -->
 		<dependency>
 			<groupId>net.sf.opencsv</groupId>
@@ -46,7 +46,7 @@
 			<groupId>org.elasticsearch</groupId>
 			<artifactId>elasticsearch</artifactId>
 			<version>${es.version}</version>
-		</dependency>		
+		</dependency>
 
 		<!-- Elastic Search HTTP Client (JEST) -->
 		<dependency>
@@ -74,6 +74,9 @@
 			</resource>
 			<!-- Generated taxonomy structure -->
 			<resource>
+				<!-- Copies the remainder of the taxonomy. NB: the resource pluging "overwrite" 
+					setting defaults to false so this won't replace any manually edited files 
+					already copied in from under src/main/resources -->
 				<directory>src/main/taxonomy</directory>
 				<targetPath>${project.build.outputDirectory}/files</targetPath>
 			</resource>
