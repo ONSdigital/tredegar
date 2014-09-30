@@ -30,29 +30,12 @@ public class SearchResult {
 	private List<Map<String, Object>> results; // results
 
 	/**
-	 * Create search results using Elastic Search java client
-	 * {@link SearchResponse} {@link io.searchbox.core.SearchResult}
+	 * Create search results using {@link JsonObject}
 	 * 
 	 * @param result
 	 */
-
-	public SearchResult(SearchResponse response) {
+	public SearchResult(JsonObject json) {
 		results = new ArrayList<Map<String, Object>>();
-		this.numberOfResults = response.getHits().getTotalHits();
-		this.took = response.getTookInMillis();
-		resolveHits(response);
-	}
-
-	/**
-	 * Create search results using JEST client
-	 * {@link io.searchbox.core.SearchResult}
-	 * {@link io.searchbox.core.SearchResult}
-	 * 
-	 * @param result
-	 */
-	public SearchResult(io.searchbox.core.SearchResult result) {
-		results = new ArrayList<Map<String, Object>>();
-		JsonObject json = result.getJsonObject();
 		this.took = json.get("took").getAsLong();
 		JsonObject hits = json.get("hits").getAsJsonObject();
 		this.numberOfResults = hits.get("total").getAsLong();

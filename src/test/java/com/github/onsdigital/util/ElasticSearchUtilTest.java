@@ -41,27 +41,14 @@ public class ElasticSearchUtilTest {
 	@Test
 	public void testSearchQuery() {
 
-		ElasticSearchUtil util = null;
+		// SearchHelper util = null;
 		try {
-			util = openConnection();
+			// util = openConnection();
 			// List<Map<String, Object>> results = util
 			// .search(new ONSQueryBuilder("testindex").setQuery("do"));
 			// Assert.assertEquals(results.size(), 1);
 		} finally {
-			closeConnection(util);
-		}
-	}
-
-	protected ElasticSearchUtil openConnection() {
-		SearchConnectionManager manager = new SearchConnectionManager(
-				"testNode", "localhost", 28999);
-		manager.openConnection();
-		return new ElasticSearchUtil(manager);
-	}
-
-	protected void closeConnection(ElasticSearchUtil util) {
-		if (util != null) {
-			util.getConnectionManager().closeConnection();
+			// closeConnection(util);
 		}
 	}
 
