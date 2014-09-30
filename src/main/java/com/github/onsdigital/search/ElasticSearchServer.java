@@ -4,7 +4,7 @@ import java.io.IOException;
 
 import org.elasticsearch.ElasticsearchException;
 import org.elasticsearch.client.Client;
-
+import org.elasticsearch.common.settings.ImmutableSettings;
 
 /**
  * Starts an {@link EmbeddedElasticSearchServer} when a client requested
@@ -16,6 +16,8 @@ public class ElasticSearchServer {
 
 	private static Client client;
 	private static EmbeddedElasticSearchServer server;
+	private static final String TEMP_DIRECTORY = System
+			.getProperty("java.io.tmpdir");
 
 	private ElasticSearchServer() {
 
@@ -35,7 +37,9 @@ public class ElasticSearchServer {
 
 	private static void startEmbeddedServer() throws ElasticsearchException,
 			IOException {
-		server = new EmbeddedElasticSearchServer("testNode");
+		ImmutableSettings.settingsBuilder().put("path.data", TEMP_DIRECTORY)
+				.put("node.data", true);
+		server = new EmbeddedElasticSearchServer(TEMP_DIRECTORY, "ONSNode");
 		Runtime.getRuntime().addShutdownHook(new ShutDownNodeThread());
 	}
 

@@ -2,7 +2,7 @@ package com.github.onsdigital.util;
 
 public class ValidatorUtil {
 
-	private static final String ALPHA_NUMERIC = "^[a-zA-Z0-9]*$";
+	private static final String ALPHA_NUMERIC = "^[a-zA-Z0-9 ]*$";
 
 	/**
 	 * Checks that string matches acceptable alphanumeric chars
