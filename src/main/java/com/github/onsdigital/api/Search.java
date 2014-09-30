@@ -17,6 +17,7 @@ import com.github.onsdigital.util.ValidatorUtil;
 public class Search {
 	final static String jsonMime = "application/json";
 	final static String BONSAI_URL = System.getenv("BONSAI_URL");
+	private final static float FIELD_BOOST = 2.0f;
 
 	@GET
 	public Object get(@Context HttpServletRequest request,
@@ -33,7 +34,7 @@ public class Search {
 		try {
 			ONSQueryBuilder queryBuilder = new ONSQueryBuilder("ons")
 					.setType(type).setPage(page).setSearchTerm(query)
-					.setFields("title", "path");
+					.setFields("title^" + FIELD_BOOST, "path");
 			connectionManager.openConnection();
 
 			ElasticSearchHTTPUtil searchUtil = new ElasticSearchHTTPUtil(
