@@ -8,5 +8,7 @@ deploy:
   app: tredegar
   on:
     repo: ONSdigital/tredegar
+    
+# From http://stackoverflow.com/questions/16638573/auto-authorize-ssh-auth-requests-on-travis-ci
 before_script:
   - echo -e "Host codebasehq.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
