@@ -82,10 +82,10 @@ $(function() {
 		var contentType;
 		switch (item.type) {
 			case "home":
-				contentType = "<span class='lozenge lozenge-spacer lozenge-blue'>STATISTIC BULLETIN</span>";
+				contentType = "<span class='lozenge lozenge-spacer lozenge-blue'>STATISTICAL BULLETIN</span>";
 				break;
 			case "bulletins":
-				contentType = "<span class='lozenge lozenge-spacer lozenge-blue'>STATISTIC BULLETIN</span>";
+				contentType = "<span class='lozenge lozenge-spacer lozenge-blue'>STATISTICAL BULLETIN</span>";
 				break;
 			case "datasets":
 				contentType = "<span class='lozenge lozenge-spacer lozenge-red'>DATASET</span>";

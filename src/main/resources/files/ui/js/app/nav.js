@@ -3,7 +3,7 @@ $(document).ready(function() {
     event.preventDefault();
     $(this)
       .toggleClass('js-expandable-active')
-      .siblings('.js-expandable__content').toggleClass('js-hidden');
+      .siblings('.js-expandable__content').toggleClass('js-nav-hidden');
   });
 
 
