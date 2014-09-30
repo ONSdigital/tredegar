@@ -54,13 +54,14 @@ public class SearchHelper {
 	}
 
 	private SearchRequestBuilder buildRequest(ONSQueryBuilder queryBuilder) {
-		SearchRequestBuilder searchBuilder = client.prepareSearch(
-				queryBuilder.getIndex(), queryBuilder.buildQuery());
-
+		SearchRequestBuilder searchBuilder = client.prepareSearch(queryBuilder
+				.getIndex());
 		String type = queryBuilder.getType();
 		if (StringUtils.isNotEmpty(type)) {
 			searchBuilder.setTypes(type);
 		}
+
+		searchBuilder.setExtraSource(queryBuilder.buildQuery());
 		return searchBuilder;
 	}
 

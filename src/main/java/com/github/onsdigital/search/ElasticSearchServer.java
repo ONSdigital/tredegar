@@ -5,7 +5,6 @@ import java.io.IOException;
 import org.elasticsearch.ElasticsearchException;
 import org.elasticsearch.client.Client;
 
-
 /**
  * Starts an {@link EmbeddedElasticSearchServer} when a client requested
  * 
@@ -35,7 +34,7 @@ public class ElasticSearchServer {
 
 	private static void startEmbeddedServer() throws ElasticsearchException,
 			IOException {
-		server = new EmbeddedElasticSearchServer("testNode");
+		server = new EmbeddedElasticSearchServer("ONSNode");
 		Runtime.getRuntime().addShutdownHook(new ShutDownNodeThread());
 	}
 
