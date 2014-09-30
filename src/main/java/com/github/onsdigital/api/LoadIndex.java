@@ -45,39 +45,12 @@ public class LoadIndex {
 
 	}
 
-	// private void indexDocuments(Client client, List<String>
-	// absoluteFilePaths)
-	// throws IOException {
-	//
-	// int idCounter = 0;
-	// for (String absoluteFilePath : absoluteFilePaths) {
-	// idCounter++;
-	//
-	// System.out.println("LoadIndex submitting record to index: "
-	// + absoluteFilePath);
-	// buildAndSubmitJson(client,
-	// LoadIndexHelper.getDocumentMap(absoluteFilePath), idCounter);
-	// }
-	// }
-	//
-	// private void buildAndSubmitJson(Client client,
-	// Map<String, String> documentMap, int idCounter) throws IOException {
-	//
-	// client.prepareIndex(StringUtils.lowerCase("ons"),
-	// StringUtils.lowerCase(documentMap.get("type")),
-	// String.valueOf(idCounter))
-	// .setSource(
-	// jsonBuilder().startObject()
-	// .field("title", documentMap.get("title"))
-	// .field("url", documentMap.get("url"))
-	// .field("path", documentMap.get("tags"))
-	// .endObject()).execute().actionGet();
-	// }
-
 	private void indexDocuments(Client client, List<String> absoluteFilePaths)
 			throws Exception {
 
-		buildSettings(client);
+		// Set up the synonyms
+		client.admin().indices().prepareCreate("ons")
+				.setSettings(buildSettings()).execute();
 
 		int idCounter = 0;
 		for (String absoluteFilePath : absoluteFilePaths) {
@@ -93,17 +66,6 @@ public class LoadIndex {
 	private void buildDocument(Client client, Map<String, String> documentMap,
 			int idCounter) throws Exception {
 
-		String source = jsonBuilder().startObject()
-				.field("title", documentMap.get("title"))
-				.field("url", documentMap.get("url"))
-				.field("path", documentMap.get("tags")).endObject().string();
-
-		// Index index = new Index.Builder(source).index("ons")
-		// .type(documentMap.get("type")).id(String.valueOf(idCounter))
-		// .build();
-		client.admin().indices().prepareCreate("ons")
-				.setSettings(buildSettings(client)).execute();
-
 		client.prepareIndex(StringUtils.lowerCase("ons"),
 				StringUtils.lowerCase(documentMap.get("type")),
 				String.valueOf(idCounter))
@@ -115,10 +77,32 @@ public class LoadIndex {
 								.endObject()).execute().actionGet();
 	}
 
-	private Map<String, String> buildSettings(Client client) throws Exception {
+	private Map<String, String> buildSettings() throws Exception {
 		ImmutableSettings.Builder settingsBuilder = ImmutableSettings
 				.settingsBuilder();
 
+		List<String> synonymList = getSynonyms(settingsBuilder);
+		getSettingsBuilder(settingsBuilder, synonymList);
+
+		return settingsBuilder.build().getAsMap();
+	}
+
+	private void getSettingsBuilder(ImmutableSettings.Builder settingsBuilder,
+			List<String> synonymList) {
+		String[] synonyms = new String[synonymList.size()];
+		synonymList.toArray(synonyms);
+
+		settingsBuilder.putArray("analysis.filter.ons_synonym_filter.synonyms",
+				synonyms);
+
+		Map<String, String> settings = new HashMap<>();
+		settings.put("analysis.analyzer.ons_synonyms.tokenizer", "standard");
+		settings.put("analysis.filter.ons_synonym_filter.type", "synonym");
+		settingsBuilder.put(settings);
+	}
+
+	private List<String> getSynonyms(ImmutableSettings.Builder settingsBuilder)
+			throws IOException {
 		String[] filters = { "lowercase", "ons_synonym_filter" };
 		settingsBuilder.putArray("analysis.analyzer.ons_synonyms.filter",
 				filters);
@@ -132,18 +116,6 @@ public class LoadIndex {
 		while ((contents = reader.readLine()) != null) {
 			synonymList.add(contents);
 		}
-		String[] synonyms = new String[synonymList.size()];
-		synonymList.toArray(synonyms);
-
-		settingsBuilder.putArray("analysis.filter.ons_synonym_filter.synonyms",
-				synonyms);
-
-		Map<String, String> settings = new HashMap<>();
-		settings.put("analysis.analyzer.ons_synonyms.tokenizer", "standard");
-		settings.put("analysis.filter.ons_synonym_filter.type", "synonym");
-		settingsBuilder.put(settings);
-
-		return settingsBuilder.build().getAsMap();
+		return synonymList;
 	}
-
 }
