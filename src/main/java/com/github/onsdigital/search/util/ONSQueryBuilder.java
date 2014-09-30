@@ -149,12 +149,10 @@ public class ONSQueryBuilder {
 			builder = new MatchAllQueryBuilder();
 		} else {
 			// return documents with fields containing words that start with
-			// given
-			// query
+			// given search term
 			builder = new MultiMatchQueryBuilder(getSearchTerm(), getFields())
 					.type(MatchQueryBuilder.Type.PHRASE_PREFIX).analyzer(
 							"ons_synonyms");
-
 		}
 		HighlightBuilder highlightBuilder = new HighlightBuilder();
 		highlightBuilder.preTags(PRE_TAG).postTags(POST_TAG);

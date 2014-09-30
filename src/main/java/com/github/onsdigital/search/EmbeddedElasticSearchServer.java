@@ -12,7 +12,8 @@ import org.elasticsearch.node.NodeBuilder;
 
 public class EmbeddedElasticSearchServer {
 
-	private static final String DEFAULT_DATA_DIRECTORY = "target/elasticsearch-data";
+	private static final String DEFAULT_DATA_DIRECTORY = System
+			.getProperty("java.io.tmpdir");;
 	private static final String DEFAULT_CLUSTERNAME = "ONS";
 	private final Node node;
 	private final String dataDirectory;
