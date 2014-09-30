@@ -40,9 +40,7 @@ public class LoadIndex {
 			System.out
 					.println("No files located during system scan, nothing will be indexed");
 		}
-
 		indexDocuments(ElasticSearchServer.getClient(), absoluteFilePaths);
-
 	}
 
 	private void indexDocuments(Client client, List<String> absoluteFilePaths)
