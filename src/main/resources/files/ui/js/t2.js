@@ -18,6 +18,10 @@ function link(filename) {
 	// Get the current path:
 	var result = window.location.pathname
 
+	// This is to help when editing templates:
+	if (result.indexOf(".") != -1)
+		result = result.substring(0, result.lastIndexOf("/"))
+
 	// Add a trailing slash if necessary:
 	if (result.substring(result.length - 1) != "/") {
 		result += "/"
