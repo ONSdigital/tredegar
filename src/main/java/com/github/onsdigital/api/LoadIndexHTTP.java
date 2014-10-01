@@ -55,6 +55,7 @@ public class LoadIndexHTTP {
 		if (absoluteFilePaths.isEmpty()) {
 			System.out
 					.println("No files located during system scan, nothing will be indexed");
+			return;
 		}
 
 		indexDocuments(client, absoluteFilePaths);
@@ -71,8 +72,12 @@ public class LoadIndexHTTP {
 
 			System.out.println("LoadIndexHTTP about to submit: "
 					+ absoluteFilePath);
-			buildDocument(client,
-					LoadIndexHelper.getDocumentMap(absoluteFilePath), idCounter);
+
+			Map<String, String> document = LoadIndexHelper
+					.getDocumentMap(absoluteFilePath);
+			if (document != null) {
+				buildDocument(client, document, ++idCounter);
+			}
 		}
 	}
 
