@@ -70,10 +70,10 @@ $( document ).ready(function() {
 	$("li", breadcrumb).remove()
 
 	// Section blocks
-	var section1 = $("#section1")
-	var section2 = $("#section2")
-	var section3 = $("#section3")
-	var sectionOther = $("#sectionOther")
+	var section1 = $(".nav-panel--stats:eq(0)")
+	var section2 = $(".nav-panel--stats:eq(1)")
+	var section3 = $(".nav-panel--stats:eq(2)")
+	var sectionOther = $(".nav-panel--stats:eq(3)")
 
 	// Section headers - set placeholders:
 	var header1 = $("header", section1)
