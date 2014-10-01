@@ -13,7 +13,7 @@ public class Data extends TaxonomyNode {
 	public String lede;
 	public String more;
 
-	public Data(Folder folder) {
+	public Data(Folder folder, int taxonomyLevel) {
 		super(folder);
 		Folder parent = folder;
 		while ((parent = parent.parent) != null) {
@@ -21,7 +21,10 @@ public class Data extends TaxonomyNode {
 		}
 		int index = 1;
 		for (Folder child : folder.children) {
-			children.add(new Child(child, index++));
+			if (taxonomyLevel == 1)
+				children.add(new ChildT1(child, index++));
+			else
+				children.add(new ChildT2(child, index++));
 		}
 	}
 

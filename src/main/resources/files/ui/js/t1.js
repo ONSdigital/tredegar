@@ -70,44 +70,46 @@ $( document ).ready(function() {
 	$("li", breadcrumb).remove()
 
 	// Section blocks
-	var section1 = $("#section1")
-	var section2 = $("#section2")
-	var section3 = $("#section3")
-	var sectionOther = $("#sectionOther")
+	var section1 = $(".nav-panel--stats:eq(0)")
+	var section2 = $(".nav-panel--stats:eq(1)")
+	var section3 = $(".nav-panel--stats:eq(2)")
+	var section4 = $(".nav-panel--stats:eq(3)")
 
 	// Section headers - set placeholders:
 	var header1 = $("header", section1)
 	var header2 = $("header", section2)
 	var header3 = $("header", section3)
-	var headerOther = $("header", sectionOther)
-	$("h2", header1).text("Loading 1...")
-	$("h2", header2).text("Loading 2...")
-	$("h2", header3).text("Loading 3...")
-	$("h2", headerOther).text("Loading Other...")
+	var header4 = $("header", section4)
+	$("h2", header1).text("Loading..")
+	$("h2", header2).text("Loading..")
+	$("h2", header3).text("Loading..")
+	$("h2", header4).text("Loading..")
 
 	// Section items
 	// - detach one to use as a template and remove the rest:
 	var section1Item = $("li:eq(0)", section1)
 	var section2Item = $("li:eq(0)", section2)
 	var section3Item = $("li:eq(0)", section3)
-	var sectionOtherItem = $("footer:eq(0)", sectionOther)
+	var section4Item = $("li:eq(0)", section4)
 	section1Item.detach()
 	section2Item.detach()
 	section3Item.detach()
-	sectionOtherItem.detach()
+	section4Item.detach()
 	$("li", section1).remove()
 	$("li", section2).remove()
 	$("li", section3).remove()
-	$("footer", sectionOther).remove()
+	$("li", section4).remove()
 
 	// Section footers
 	// - detach these to use as a template:
 	var footer1 = $("footer", section1)
 	var footer2 = $("footer", section2)
 	var footer3 = $("footer", section3)
+	var footer4 = $("footer", section4)
 	footer1.detach()
 	footer2.detach()
 	footer3.detach()
+	footer4.detach()
 
 	/* Get the data.json file to populate the page: */
 
@@ -142,8 +144,6 @@ $( document ).ready(function() {
 			}
 			$("a", footer2).text("View all " + item.name).attr("href", link(item.fileName))
 			section2.append(footer2)
-		} else {
-			section2.remove()
 		}
 
 		// Section 3
@@ -156,22 +156,18 @@ $( document ).ready(function() {
 			}
 			$("a", footer3).text("View all " + item.name).attr("href", link(item.fileName))
 			section3.append(footer3)
-		} else {
-			section3.remove()
 		}
 
-		// "Other..." Section
+		// Section 4
 		if (data.children.length > 0) {
-
-			$("h2", headerOther).text('Other ' + data.name + ' categories')
-			while (data.children.length > 0) {
-				var item = data.children.shift()
-				var other = sectionOtherItem.clone()
-				$("a", other).text(item.name).attr("href", link(item.fileName))
-				sectionOther.append(other)
+			var item = data.children.shift()
+			$("h2", header4).text(item.name)
+			while (item.detail.length > 0) {
+				var detailItem = populateDetail(item.detail.shift(), section4Item)
+				$("ul", section4).append(detailItem)
 			}
-		} else {
-			sectionOther.remove()
+			$("a", footer4).text("View all " + item.name).attr("href", link(item.fileName))
+			section4.append(footer3)
 		}
 
 		// Breadcrumb

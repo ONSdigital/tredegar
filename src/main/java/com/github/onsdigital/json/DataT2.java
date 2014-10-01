@@ -5,7 +5,7 @@ import com.github.onsdigital.generator.Folder;
 public class DataT2 extends Data {
 
 	public DataT2(Folder folder) {
-		super(folder);
+		super(folder, 2);
 		level = "t2";
 		lede = "Producer Price Inflation (PPI) measures the price changes of goods bought and "
 				+ "sold by UK manufacturers this month compared to the same month a year ago. PPI provides a "

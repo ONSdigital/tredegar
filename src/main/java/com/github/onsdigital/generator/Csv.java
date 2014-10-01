@@ -93,7 +93,10 @@ public class Csv {
 
 			// Walk folder tree:
 			File root = new File("src/main/taxonomy");
-			createHomePage(root);
+			Folder rootFolder = new Folder();
+			rootFolder.name = "Home";
+			rootFolder.children.addAll(folders);
+			createHomePage(rootFolder, root);
 			File themeFile;
 			File subjectFile;
 			File topicFile;
@@ -178,11 +181,10 @@ public class Csv {
 		FileUtils.deleteDirectory(tempDir);
 	}
 
-	private static void createHomePage(File file) throws IOException {
+	private static void createHomePage(Folder folder, File file)
+			throws IOException {
 
-		// The folder needs to be the root:
-		Folder folder = new Folder();
-		folder.name = "Home";
+		// The folder needs to be at the root path:
 		Data data = new DataT1(folder);
 		data.fileName = "/";
 		String json = Serialiser.serialise(data);

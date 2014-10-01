@@ -5,11 +5,11 @@ import java.util.List;
 
 import com.github.onsdigital.generator.Folder;
 
-public class Child extends TaxonomyNode {
+public class ChildT2 extends TaxonomyNode {
 
 	public List<Detail> detail = new ArrayList<>();
 
-	public Child(Folder folder, int index) {
+	public ChildT2(Folder folder, int index) {
 		super(folder);
 		if (index == 1)
 			buildList1();
