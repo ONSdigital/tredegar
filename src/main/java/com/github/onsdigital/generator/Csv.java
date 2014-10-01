@@ -31,6 +31,7 @@ public class Csv {
 	 */
 	public static void main(String[] args) throws IOException {
 
+		Serialiser.getBuilder().setPrettyPrinting();
 		Reader reader = ResourceUtils.getReader("/Taxonomy.csv");
 
 		String theme = null;
