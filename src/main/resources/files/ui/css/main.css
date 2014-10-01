@@ -634,8 +634,7 @@ img {
 
 .icon--grey {
   color: #adafa7; }
-  
-.icon--grey:hover {
+  .icon--grey:hover {
     color: #888b7f; }
 
 .icon--fat {
@@ -861,6 +860,13 @@ textarea {
   @media screen and (min-width: 43.75em) {
     .input-med-large--flex--four-fifths {
       width: 87.5%; } }
+
+.input-med-large--flex--three-fifths {
+  width: 60%;
+  max-width: 450px; }
+  @media screen and (min-width: 33.75em) {
+    .input-med-large--flex--three-fifths {
+      width: 80%; } }
 
 .input--full {
   max-width: none; }
@@ -3063,8 +3069,11 @@ lesser , applied styles
       margin-bottom: 60px;
       margin-bottom: 6rem; } }
 
-.slate {
+.slate_original {
   background-color: #eeefed; }
+
+.slate {
+  background-color: #dcdee0; } 
 
 .slate--light {
   background-color: #f3f3f3; }
@@ -3072,12 +3081,15 @@ lesser , applied styles
 .slate--mid-grey {
   background-color: #e4e5e3; }
 
+.slate--mid-grey_new {
+  background-color: #dcdee0; } 
+
 .slate--blue {
   background-color: #e5fcff; }
 
 .slate--hero-banner {
   background-color: #757575;
-  background-image: url("ui/img/hero-banner.jpg");
+  background-image: url("/ui/img/hero-banner.jpg");
   background-position: 50% 50%;
   background-size: cover; }
 
@@ -4149,9 +4161,9 @@ background-color: #edeeee !important;
 }
 
 
-#main > section:nth-child(7){
+/*#main > section:nth-child(7){
   background-color: #f6f6f7; 
-}
+}*/
 
 
 /*------------------------------------*\
@@ -4172,7 +4184,7 @@ background-color: #edeeee !important;
 
 /*---For T3s largest statistic*/
 
-.reduced_padding{
+.reduced_padding_left{
   padding-left: 3px;
 }
 
@@ -4243,6 +4255,7 @@ background-color: #edeeee !important;
 
 .no_underline{
   text-decoration: none !important;
+  font-weight: normal !important;
 }
 
 .list--table--complex .list--table__item__body--caption {
@@ -4265,9 +4278,9 @@ background-color: #edeeee !important;
 }
 
 
-#main > section:nth-child(7){
+/*#main > section:nth-child(7){
   background-color: #f6f6f7; 
-}
+}*/
 
 /* Key datasets */
 
@@ -4277,25 +4290,86 @@ background-color: #edeeee !important;
 
 /* Panel Large Slate */
 
-.slate {
-  background-color: #EBEBFC;
+.blue_section {
+  background-color: #F8F8F8;
 }
 
 .rem_pad_top{
   padding-top: 0rem;
 }
 
-/* stats bulletin classes */
+.caveat{
+  vertical-align: bottom;
+  float: right;
+  font-size: 0.9rem;
+}
 
-.page-header-box-link{
-	padding-left: 2em;
-} 
+/* Aaron T1 Classes */
 
-.page-header-image {
-	height:6rem;
-	width:6rem;
-	float:left;
-	margin: 0rem 2rem 5rem 0rem; 
+.uniform_background {
+  background-color: inherit;
+}
+
+.left_padded {
+  padding-left: 2%;
+}
+
+/* Aaron T2 Classes */
+
+.align_baseline{
+  vertical-align: baseline;
+}
+
+.black {
+  background-color: #000;
+}
+
+.reduced_padding {
+  padding: 10px 0px;
+}
+
+/*.pad_right{
+  padding-right: 30%;
+}*/
+
+.no_left_margin{
+  margin-left: 0;
+}
+
+.search_reduction{
+  font-size: 90%;
+  border-width: 3.5px !important;
+}
+
+.ukmap{
+  height: 4rem;
+  margin: 1.5rem;
+  padding-right: 4rem;
+  
+}
+
+.page-header__icons_new{
+  display: inline-flex;
+  max-width: 50%;
+  min-width: 30%;
+}
+
+.pad_regional_header{
+  padding-left: 10rem;
+}
+
+.link_head{
+  float: left;
+  padding: 2.5rem 0rem 2.5rem 5rem;
+}
+
+.box--inline--flex {
+  display: inline-flex;
+  padding-left: 12%%;
+}
+
+.border-defined{
+  border-color: #A8A1A1;
 }
 
 /* stats bulletin extras */

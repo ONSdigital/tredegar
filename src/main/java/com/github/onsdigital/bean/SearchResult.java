@@ -12,7 +12,6 @@ import org.elasticsearch.common.text.Text;
 import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.highlight.HighlightField;
 
-import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 /**
@@ -30,34 +29,15 @@ public class SearchResult {
 	private List<Map<String, Object>> results; // results
 
 	/**
-	 * Create search results using Elastic Search java client
-	 * {@link SearchResponse} {@link io.searchbox.core.SearchResult}
+	 * Create search results using {@link JsonObject}
 	 * 
 	 * @param result
 	 */
-
 	public SearchResult(SearchResponse response) {
 		results = new ArrayList<Map<String, Object>>();
-		this.numberOfResults = response.getHits().getTotalHits();
 		this.took = response.getTookInMillis();
+		this.numberOfResults = response.getHits().getTotalHits();
 		resolveHits(response);
-	}
-
-	/**
-	 * Create search results using JEST client
-	 * {@link io.searchbox.core.SearchResult}
-	 * {@link io.searchbox.core.SearchResult}
-	 * 
-	 * @param result
-	 */
-	public SearchResult(io.searchbox.core.SearchResult result) {
-		results = new ArrayList<Map<String, Object>>();
-		JsonObject json = result.getJsonObject();
-		this.took = json.get("took").getAsLong();
-		JsonObject hits = json.get("hits").getAsJsonObject();
-		this.numberOfResults = hits.get("total").getAsLong();
-		resolveHits(hits);
-
 	}
 
 	void resolveHits(SearchResponse response) {
@@ -71,38 +51,6 @@ public class SearchResult {
 			item.putAll(extractHihglightedFields(hit));
 			results.add(item);
 		}
-	}
-
-	void resolveHits(JsonObject hits) {
-		JsonObject hit;
-		Iterator<JsonElement> iterator = hits.get("hits").getAsJsonArray()
-				.iterator();
-		while (iterator.hasNext()) {
-			hit = iterator.next().getAsJsonObject();
-			Map<String, Object> item = new HashMap<>();
-			// Add fields into map
-			for (Map.Entry<String, JsonElement> entry : hit.get("_source")
-					.getAsJsonObject().entrySet()) {
-				item.put(entry.getKey(), entry.getValue());
-			}
-			item.put("type", hit.get("_type"));
-			// Highlighted values overrides field values in the map if the field
-			// is highlighted
-			item.putAll(extractHihglightedFields(hit));
-			results.add(item);
-		}
-	}
-
-	Map<? extends String, ? extends Object> extractHihglightedFields(
-			JsonObject hit) {
-
-		HashMap<String, Object> highlightedFields = new HashMap<>();
-		for (Map.Entry<String, JsonElement> entry : hit.get("highlight")
-				.getAsJsonObject().entrySet()) {
-			highlightedFields.put(entry.getKey(), entry.getValue()
-					.getAsString());
-		}
-		return highlightedFields;
 	}
 
 	Map<? extends String, ? extends Object> extractHihglightedFields(

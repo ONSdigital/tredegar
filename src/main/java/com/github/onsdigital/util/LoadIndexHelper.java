@@ -1,5 +1,6 @@
 package com.github.onsdigital.util;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -8,6 +9,12 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import org.apache.commons.io.FileUtils;
+
+import com.google.gson.JsonIOException;
+import com.google.gson.JsonParser;
+import com.google.gson.JsonSyntaxException;
 
 /**
  * Helper methods for loading index into search engine
@@ -24,6 +31,7 @@ public class LoadIndexHelper {
 	private static final String BULLETINS = "bulletins";
 	private static final String DELIMITTER = "/";
 	private static final String ROOT_SEARCH = "target/classes/files/";
+	private static final String DATA_JSON_FILENAME = "data.json";
 
 	/**
 	 * Loads up the file names from a system scan
@@ -46,21 +54,36 @@ public class LoadIndexHelper {
 	 * @param absoluteFilePath
 	 *            the complete path and filename
 	 * @return the collection of key value pairs representing an indexable item
+	 * @throws IOException
+	 * @throws JsonSyntaxException
+	 * @throws JsonIOException
 	 */
-	public static Map<String, String> getDocumentMap(String absoluteFilePath) {
+	public static Map<String, String> getDocumentMap(String absoluteFilePath) throws JsonIOException, JsonSyntaxException, IOException {
 		String[] pathAfterTaxonomy = absoluteFilePath.split("files");
 		String url = pathAfterTaxonomy[1];
 
 		String[] splitPath = url.split(DELIMITTER);
 		int splitPathLength = splitPath.length;
-		int typeTokenIndex = splitPathLength - 2;
-
-		String type = getType(splitPath, typeTokenIndex);
-
+		int folderNameTokenIndex = splitPathLength - 2;
 		int fileNameTokenIndex = splitPathLength - 1;
-		String title = splitPath[fileNameTokenIndex];
 
-		Map<String, String> documentMap = buildDocumentMap(url, splitPath, type, title);
+		String type = getType(splitPath, folderNameTokenIndex);
+		String fileName = splitPath[fileNameTokenIndex];
+
+		Map<String, String> documentMap = null;
+		if (HOME.equals(type)) {
+			if (DATA_JSON_FILENAME.equals(fileName)) {
+				// Read title from data.json
+				String title = getTitle(absoluteFilePath);
+				// Exclude data.json from url
+				url = url.substring(0, url.indexOf(fileName));
+				documentMap = buildDocumentMap(url, splitPath, type, title);
+			} else {
+				// Skip files other than data.json under home directories
+			}
+		} else {
+			documentMap = buildDocumentMap(url, splitPath, type, fileName);
+		}
 		return documentMap;
 	}
 
@@ -77,10 +100,13 @@ public class LoadIndexHelper {
 	private static String getType(String[] splitPath, int typeTokenIndex) {
 
 		String type = splitPath[typeTokenIndex];
-		if (!type.equals(BULLETINS) && !type.equals(ARTICLES)
-				&& !type.equals(METHODOLOGY) && !type.equals(DATASETS)) {
+		if (!type.equals(BULLETINS) && !type.equals(ARTICLES) && !type.equals(METHODOLOGY) && !type.equals(DATASETS)) {
 			type = HOME;
 		}
 		return type;
+	}
+
+	private static String getTitle(String filePath) throws IOException {
+		return new JsonParser().parse(FileUtils.readFileToString(new File(filePath))).getAsJsonObject().get("name").getAsString();
 	}
 }

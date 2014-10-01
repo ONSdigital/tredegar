@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.io.Reader;
 import java.util.Calendar;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
@@ -16,7 +15,10 @@ import au.com.bytecode.opencsv.CSVReader;
 
 import com.github.davidcarboni.ResourceUtils;
 import com.github.davidcarboni.restolino.json.Serialiser;
-import com.github.onsdigital.generator.json.Data;
+import com.github.onsdigital.json.Data;
+import com.github.onsdigital.json.DataT1;
+import com.github.onsdigital.json.DataT2;
+import com.github.onsdigital.json.DataT3;
 import com.google.common.io.Files;
 
 public class Csv {
@@ -29,6 +31,7 @@ public class Csv {
 	 */
 	public static void main(String[] args) throws IOException {
 
+		Serialiser.getBuilder().setPrettyPrinting();
 		Reader reader = ResourceUtils.getReader("/Taxonomy.csv");
 
 		String theme = null;
@@ -91,7 +94,10 @@ public class Csv {
 
 			// Walk folder tree:
 			File root = new File("src/main/taxonomy");
-			createHomePage(root);
+			Folder rootFolder = new Folder();
+			rootFolder.name = "Home";
+			rootFolder.children.addAll(folders);
+			createHomePage(rootFolder, root);
 			File themeFile;
 			File subjectFile;
 			File topicFile;
@@ -176,131 +182,25 @@ public class Csv {
 		FileUtils.deleteDirectory(tempDir);
 	}
 
-	private static void createHomePage(File file) throws IOException {
+	private static void createHomePage(Folder folder, File file)
+			throws IOException {
 
-		// if (folder.children.size() == 0) {
-		String markup = ResourceUtils.getString("/files/t1.html");
-		markup = markup.replaceAll("\\$title", "Home");
-		FileUtils.writeStringToFile(new File(file, "index.html"), markup);
-		// File index = ResourceUtils.getFile("/index.html");
-		// index.renameTo(new File(file, "index.html"));
-		// }
+		// The folder needs to be at the root path:
+		Data data = new DataT1(folder);
+		data.fileName = "/";
+		String json = Serialiser.serialise(data);
+		FileUtils.writeStringToFile(new File(file, "data.json"), json);
 	}
 
 	private static void createT2(Folder folder, File file) throws IOException {
 
-		// if (folder.children.size() == 0) {
-		String markup = ResourceUtils.getString("/files/t2.html");
-		String json = Serialiser.serialise(new Data(folder));
-
-		Iterator<Folder> iterator = folder.children.iterator();
-
-		if (iterator.hasNext()) {
-			// First section:
-			Folder item1 = iterator.next();
-			markup = markup.replace("Gross Domestic Product (GDP)", item1.name);
-			markup = markup.replace("$link1", item1.filename());
-		}
-
-		if (iterator.hasNext()) {
-			// Second section:
-			Folder item2 = iterator.next();
-			markup = markup.replace("Inflation and Price Indices", item2.name);
-			markup = markup.replace("$link2", item2.filename());
-		}
-
-		if (iterator.hasNext()) {
-			// Third section:
-			Folder item3 = iterator.next();
-			markup = markup.replace("National Accounts", item3.name);
-			markup = markup.replace("$link3", item3.filename());
-		}
-
-		String additionalLinks;
-		if (iterator.hasNext()) {
-
-			// Stringses:
-			additionalLinks = "";
-			String linkTemplate = "				<footer class=\"nav-panel__footer\">\n"
-					+ "		          <div class=\"nav-panel__action\">\n"
-					+ "		            <a class=\"nav-panel__roomy\" href=\"$link\">$title</a>\n"
-					+ "		          </div>\n" + "		        </footer>\n";
-
-			// Generate the rest of the links:
-			while (iterator.hasNext()) {
-
-				Folder item = iterator.next();
-				additionalLinks += linkTemplate.replace("$title", item.name)
-						.replace("$link", item.filename());
-
-			}
-		} else {
-			// additionalLinks = "		  <section class=\"nav-panel__roomy\">\n"
-			// + "            <ul class=\"list--neutral\">\n"
-			// + "              <li class=\"nav-panel__item\">\n"
-			// + "                <dl><dt>\n"
-			// + "                <h3 class=\"nav-panel__heading\">\n"
-			// +
-			// "                  Lies, damned lies and missing statistics! There's nothing here to see.\n"
-			// + "                </h3>\n" + "                <dt><dl>\n"
-			// + "              </li>\n" + "            </ul>\n"
-			// + "          </section>\n";
-
-			additionalLinks = "		        <footer class=\"nav-panel__footer\">\n"
-					+ "		          <div class=\"nav-panel__action\">\n"
-					+ "		            <a class=\"nav-panel__roomy\">Lies, damned lies and missing statistics! There's nothing here to see.</a>\n"
-					+ "		          </div>\n" + "		        </footer>";
-		}
-		markup = markup.replace("<!-- Additional links -->", additionalLinks);
-
-		// Breadcrumb
-		String breadcrumb = " &gt; " + folder.name;
-		Folder parent = folder.parent;
-		String parentLink = "../";
-		while (parent != null) {
-			breadcrumb = " &gt; " + "<a href=\"" + parentLink
-					+ "\" class=\"action-link hide-med-down\">" + parent.name
-					+ "</a>" + breadcrumb;
-			parent = parent.parent;
-			parentLink += "../";
-		}
-		markup = markup.replace("$breadcrumb", breadcrumb);
-
-		// Do the title last, otherwise it partially matches the keys above:
-		markup = markup.replaceAll("\\$title", folder.name);
-
-		FileUtils.writeStringToFile(new File(file, "index.html"), markup);
+		String json = Serialiser.serialise(new DataT2(folder));
 		FileUtils.writeStringToFile(new File(file, "data.json"), json);
-		// File index = ResourceUtils.getFile("/index.html");
-		// index.renameTo(new File(file, "index.html"));
-		// }
 	}
 
 	private static void createT3(Folder folder, File file) throws IOException {
 
-		// if (folder.children.size() == 0) {
-		String markup = ResourceUtils.getString("/files/t3.html");
-		String json = Serialiser.serialise(new Data(folder));
-
-		markup = markup.replaceAll("\\$title", folder.name);
-
-		// Breadcrumb
-		String breadcrumb = " &gt; " + folder.name;
-		Folder parent = folder.parent;
-		String parentLink = "../";
-		while (parent != null) {
-			breadcrumb = " &gt; " + "<a href=\"" + parentLink
-					+ "\" class=\"action-link hide-med-down\">" + parent.name
-					+ "</a>" + breadcrumb;
-			parent = parent.parent;
-			parentLink += "../";
-		}
-		markup = markup.replace("$breadcrumb", breadcrumb);
-
-		FileUtils.writeStringToFile(new File(file, "index.html"), markup);
+		String json = Serialiser.serialise(new DataT3(folder));
 		FileUtils.writeStringToFile(new File(file, "data.json"), json);
-		// File index = ResourceUtils.getFile("/index.html");
-		// index.renameTo(new File(file, "index.html"));
-		// }
 	}
 }

@@ -1,5 +1,7 @@
 package com.github.onsdigital.api;
 
+import io.searchbox.client.JestClient;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.GET;
@@ -8,15 +10,23 @@ import javax.ws.rs.core.Context;
 import org.apache.commons.lang3.StringUtils;
 
 import com.github.davidcarboni.restolino.framework.Endpoint;
-import com.github.onsdigital.util.ElasticSearchHTTPUtil;
-import com.github.onsdigital.util.ONSQueryBuilder;
-import com.github.onsdigital.util.SearchHTTPConnectionManager;
+import com.github.onsdigital.search.ElasticSearchServer;
+import com.github.onsdigital.search.util.ONSQueryBuilder;
+import com.github.onsdigital.search.util.SearchHelper;
 import com.github.onsdigital.util.ValidatorUtil;
 
+/**
+ * 
+ * Search endpoint that uses {@link JestClient}
+ * 
+ * @author Bren
+ *
+ */
 @Endpoint
 public class Search {
 	final static String jsonMime = "application/json";
 	final static String BONSAI_URL = System.getenv("BONSAI_URL");
+	private final static float FIELD_BOOST = 2.0f;
 
 	@GET
 	public Object get(@Context HttpServletRequest request,
@@ -28,21 +38,13 @@ public class Search {
 	}
 
 	private Object search(String query, int page, String type) throws Exception {
-		SearchHTTPConnectionManager connectionManager = new SearchHTTPConnectionManager(
-				BONSAI_URL);
-		try {
-			ONSQueryBuilder queryBuilder = new ONSQueryBuilder("ons")
-					.setType(type).setPage(page).setSearchTerm(query)
-					.setFields("title", "path");
-			connectionManager.openConnection();
 
-			ElasticSearchHTTPUtil searchUtil = new ElasticSearchHTTPUtil(
-					connectionManager);
+		ONSQueryBuilder queryBuilder = new ONSQueryBuilder("ons").setType(type)
+				.setPage(page).setSearchTerm(query)
+				.setFields("title^" + FIELD_BOOST, "path");
 
-			return searchUtil.search(queryBuilder);
-		} finally {
-			connectionManager.closeConnection();
-		}
+		return new SearchHelper(ElasticSearchServer.getClient())
+				.search(queryBuilder);
 	}
 
 	private int extractPage(HttpServletRequest request) {
