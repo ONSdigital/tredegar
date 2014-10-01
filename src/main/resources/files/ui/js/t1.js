@@ -1,4 +1,4 @@
-// Functionality to load up a t2 page from data.json
+// Functionality to load up a t1 page from data.json
 
 
 /*
@@ -61,7 +61,7 @@ $( document ).ready(function() {
 	/* Deconstruct the template: */
 
 	// Title
-	setTitle("Loading..")
+	setTitle("Home")
 
 	// Breadcrumb
 	var breadcrumb = $(".breadcrumb")
@@ -80,10 +80,10 @@ $( document ).ready(function() {
 	var header2 = $("header", section2)
 	var header3 = $("header", section3)
 	var headerOther = $("header", sectionOther)
-	$("h2", header1).text("Loading..")
-	$("h2", header2).text("Loading..")
-	$("h2", header3).text("Loading..")
-	$("h2", headerOther).text("Loading..")
+	$("h2", header1).text("Loading 1...")
+	$("h2", header2).text("Loading 2...")
+	$("h2", header3).text("Loading 3...")
+	$("h2", headerOther).text("Loading Other...")
 
 	// Section items
 	// - detach one to use as a template and remove the rest:
@@ -178,20 +178,6 @@ $( document ).ready(function() {
 		var breadcrumbHome = breadcrumbItem.clone()
 		$("a", breadcrumbHome).text("Home").attr("href", "/")
 		breadcrumb.append(breadcrumbHome)
-		var breadcrumbLink = ""
-		while (data.breadcrumb.length > 0) {
-			var breadcrumbSegment = breadcrumbItem.clone()
-			var crumb = data.breadcrumb.shift();
-			breadcrumbLink += "/" + crumb.fileName
-			$("a", breadcrumbSegment).text(crumb.name).attr("href", breadcrumbLink)
-			breadcrumb.append(breadcrumbSegment)
-		}
-
-		// Add the current page at the end of the breadcrumb:
-		var breadcrumbHere = breadcrumbItem.clone()
-		breadcrumbLink += "/" + data.fileName
-		$("a", breadcrumbHere).text(data.name).attr("href", breadcrumbLink)
-		breadcrumb.append(breadcrumbHere);
 
 	});
 
