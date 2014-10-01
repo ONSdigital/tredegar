@@ -65,7 +65,7 @@ $( document ).ready(function() {
 
 	// Breadcrumb
 	var breadcrumb = $(".breadcrumb")
-	var breadcrumbItem = $("li:eq(0)", section1)
+	var breadcrumbItem = $("li:eq(0)", breadcrumb)
 	breadcrumbItem.detach()
 	$("li", breadcrumb).remove()
 
