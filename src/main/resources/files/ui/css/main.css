@@ -760,11 +760,11 @@ input[type="email"],
 input[type="tel"],
 textarea {
   padding: 12px 15px;
-  padding: 1.25rem 1.5rem;
+  padding: 1.1rem 1.1rem;
   background: white;
   border-color: #d1d3cf;
   border-style: solid;
-  border-width: 3px;
+  border-width: 2px;
   border-radius: 3px;
   box-shadow: 0 4px 0 -2px inset #f3f3f3, 0 4px 0 0 inset rgba(222, 223, 220, 0.43); }
 
@@ -857,6 +857,13 @@ textarea {
   @media screen and (min-width: 43.75em) {
     .input-med-large--flex--four-fifths {
       width: 87.5%; } }
+
+.input-med-large--flex--three-fifths {
+  width: 60%;
+  max-width: 450px; }
+  @media screen and (min-width: 33.75em) {
+    .input-med-large--flex--three-fifths {
+      width: 80%; } }
 
 .input--full {
   max-width: none; }
@@ -3059,14 +3066,20 @@ lesser , applied styles
       margin-bottom: 60px;
       margin-bottom: 6rem; } }
 
-.slate {
+.slate_original {
   background-color: #eeefed; }
+
+.slate {
+  background-color: #dcdee0; } 
 
 .slate--light {
   background-color: #f3f3f3; }
 
 .slate--mid-grey {
   background-color: #e4e5e3; }
+
+.slate--mid-grey_new {
+  background-color: #dcdee0; } 
 
 .slate--blue {
   background-color: #e5fcff; }
@@ -4159,7 +4172,7 @@ background-color: #edeeee !important;
 
 /*---For T3s largest statistic*/
 
-.reduced_padding{
+.reduced_padding_left{
   padding-left: 3px;
 }
 
@@ -4230,6 +4243,7 @@ background-color: #edeeee !important;
 
 .no_underline{
   text-decoration: none !important;
+  font-weight: normal !important;
 }
 
 .list--table--complex .list--table__item__body--caption {
@@ -4286,4 +4300,62 @@ background-color: #edeeee !important;
 
 .left_padded {
   padding-left: 2%;
+}
+
+/* Aaron T2 Classes */
+
+.align_baseline{
+  vertical-align: baseline;
+}
+
+.black {
+  background-color: #000;
+}
+
+.reduced_padding {
+  padding: 10px 0px;
+}
+
+/*.pad_right{
+  padding-right: 30%;
+}*/
+
+.no_left_margin{
+  margin-left: 0;
+}
+
+.search_reduction{
+  font-size: 90%;
+  border-width: 3.5px !important;
+}
+
+.ukmap{
+  height: 4rem;
+  margin: 1.5rem;
+  padding-right: 4rem;
+  
+}
+
+.page-header__icons_new{
+  display: inline-flex;
+  max-width: 50%;
+  min-width: 30%;
+}
+
+.pad_regional_header{
+  padding-left: 10rem;
+}
+
+.link_head{
+  float: left;
+  padding: 2.5rem 0rem 2.5rem 5rem;
+}
+
+.box--inline--flex {
+  display: inline-flex;
+  padding-left: 12%%;
+}
+
+.border-defined{
+  border-color: #A8A1A1;
 }
