@@ -108,7 +108,7 @@
 						</goals>
 						<configuration>
 							<sassSourceDirectory>${basedir}/src/main/scss/ui/scss</sassSourceDirectory>
-							<destination>${basedir}/src/main/resources/files/ui/css</destination>
+							<destination>${basedir}/src/main/resources/files/ui/scss</destination>
 							<useCompass>true</useCompass>
 						</configuration>
 					</execution>
