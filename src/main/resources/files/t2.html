@@ -23,7 +23,7 @@
     <!-- build:css /ui/css/main.css-->
     <!--[if gt IE 8]><!-->
     <link rel="stylesheet" href="/ui/css/main.css" />
-	<link rel="stylesheet" href="/ui/css/jquery-ui.min.css">    
+  <link rel="stylesheet" href="/ui/css/jquery-ui.min.css">    
     <!--<![endif]-->
     <!-- endbuild -->
     <script src="/ui/js/lib/modernizr.min.js"></script>
@@ -62,14 +62,14 @@
       }
     }
     .ui-autocomplete {
-    	position: relative;
-	}
-	.ui-menu .ui-menu-item {
-		text-align: center;
-		margin-top: 20px;
-		margin-bottom: 20px;
-		border-bottom: 1px solid;		
-	}	
+      position: relative;
+  }
+  .ui-menu .ui-menu-item {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid;   
+  } 
     </style>
     <!---
 title: Theme Page Template (T2)
@@ -103,22 +103,14 @@ markup: false
           </li>
         </ul>
 
-        <form action="#" class="global-header__search">
-          <label for="homepageSearch" class="visuallyhidden">Search term:</label>
-          <input id="homepageSearch" type="text" class="input-mini" name="homepageSearch" value="" placeholder="Search">
-          <button type="submit" class="btn btn--primary btn--narrow btn--form">
-            <span class="icon icon-popup">
-              <span class="visuallyhidden">Search</span>
-            </span>
-          </button>
-        </form>
+        
       </div>
     </div>
   </header>
 </div>
 <nav class="ons-nav">
   <div class="wrapper">
-    <ul class="nav nav--multi nav--block nav--primary" id="nav-primary">
+    <ul class="nav nav--multi nav--block nav--primary flush--bottom" id="nav-primary">
       <li>
         <a href="#" class="nav__expandable js-expandable">Business, Industry, and Trade</a>
         <ul class="nav--primary__sub js-expandable__content js-nav-hidden">
@@ -251,6 +243,46 @@ markup: false
     </ul>
   </div>
 </nav>
+<div class="slate--mid-grey_new flush">
+        <div class="wrapper">
+         
+         <div class="grid-wrap">
+  <div class="grid-col desktop-grid-one-half box--inline">
+      <form action="#" class="hero reduced_padding pad_right" _lpchecked="1">
+            <label for="homepageSearch" class="visuallyhidden">Search term:</label>
+            <input id="homepageSearch" type="text" class="input-med-large--flex--three-fifths  search_reduction" name="homepageSearch" value="" placeholder="Search for keyword or time series id">
+            <button type="submit" class="btn btn--primary btn--small btn--form--large-icon input--lede-btn-icon align_baseline no_left_margin black">
+              <span class="icon icon-popup">
+                <span class="visuallyhidden">Search</span>
+              </span>
+            </button>
+              
+           
+          </form>
+  </div>
+  <div class="grid-col desktop-grid-one-half box--inline--flex">
+    
+  <div class="link_head">
+    <a href="about:blank" class="link"> Browse Regional Statistics</a></div>
+    <div class="page-header__icons_new">
+            
+              <img src="/ui/img/UK.png" alt="uk map" class="ukmap">
+               
+              
+           
+
+          </div>
+          
+            
+            
+            
+          </div>
+    </div>
+    </div>
+    </div>
+
+        
+
 <div class="wrapper panel--pad-small">
   <ol class="nav nav--heavy breadcrumb mini flush">
     <li>
@@ -323,7 +355,7 @@ markup: false
     <div class="wrapper offset-top nav-panels">
         <div class="grid-wrap">
           <div class="grid-col tablet-wide-grid-one-half">
-            <article class="nav-panel nav-panel--stats sectioned lifted">
+            <article class="nav-panel nav-panel--stats sectioned lifted border-defined">
               <header class="nav-panel__header nav-panel__roomy">
                 <h2>Gross Domestic Product (GDP)</h2>
               </header>
@@ -425,8 +457,8 @@ markup: false
                 </ul>
               </section>
               <footer class="nav-panel__footer">
-                <div class="nav-panel__action">
-                  <a class="nav-panel__roomy" href="#">View all Gross Domestic Product (GDP)</a>
+                <div class="nav-panel__action uniform_background">
+                  <a class="nav-panel__roomy no_underline" href="#">View all Gross Domestic Product (GDP)</a>
                 </div>
               </footer>
             </article>
@@ -434,7 +466,7 @@ markup: false
           </div>
           <!-- /grid-col -->
           <div class="grid-col tablet-wide-grid-one-half">
-            <article class="nav-panel nav-panel--stats sectioned lifted">
+            <article class="nav-panel nav-panel--stats sectioned lifted border-defined">
               <header class="nav-panel__header nav-panel__roomy">
                 <h2>Inflation and Price Indices</h2>
               </header>
@@ -535,8 +567,8 @@ markup: false
                 </ul>
               </section>
               <footer class="nav-panel__footer">
-                <div class="nav-panel__action">
-                  <a class="nav-panel__roomy" href="#">View all Inflation and Price Indices</a>
+                <div class="nav-panel__action uniform_background">
+                  <a class="nav-panel__roomy no_underline" href="#">View all Inflation and Price Indices</a>
                 </div>
               </footer>
             </article>
@@ -547,7 +579,7 @@ markup: false
         <!-- /grid-wrap -->
         <div class="grid-wrap">
           <div class="grid-col tablet-wide-grid-one-half">
-            <article class="nav-panel nav-panel--stats sectioned lifted">
+            <article class="nav-panel nav-panel--stats sectioned lifted border-defined">
               <header class="nav-panel__header nav-panel__roomy">
                 <h2>National Accounts</h2>
               </header>
@@ -602,8 +634,8 @@ markup: false
                 </ul>
               </section>
               <footer class="nav-panel__footer">
-                <div class="nav-panel__action">
-                  <a class="nav-panel__roomy" href="#">View all National Accounts</a>
+                <div class="nav-panel__action uniform_background">
+                  <a class="nav-panel__roomy no_underline" href="#">View all National Accounts</a>
                 </div>
               </footer>
             </article>
@@ -611,28 +643,28 @@ markup: false
           </div>
           <!-- /grid-col -->
           <div class="grid-col tablet-wide-grid-one-half">
-            <article class="nav-panel nav-panel--stats sectioned lifted">
+            <article class="nav-panel nav-panel--stats sectioned lifted border-defined">
               <header class="nav-panel__header nav-panel__roomy">
                 <h2>Other Economy Categories</h2>
               </header>
               <footer class="nav-panel__footer">
-                <div class="nav-panel__action">
-                  <a class="nav-panel__roomy" href="#">Environmental Accounts</a>
+                <div class="nav-panel__action uniform_background">
+                  <a class="nav-panel__roomy no_underline" href="#">Environmental Accounts</a>
                 </div>
               </footer>
               <footer class="nav-panel__footer">
-                <div class="nav-panel__action">
-                  <a class="nav-panel__roomy" href="#">Government, Public Sector and Taxes</a>
+                <div class="nav-panel__action uniform_background">
+                  <a class="nav-panel__roomy no_underline" href="#">Government, Public Sector and Taxes</a>
                 </div>
               </footer>
               <footer class="nav-panel__footer">
-                <div class="nav-panel__action">
-                  <a class="nav-panel__roomy" href="#">Gross Value Added (GVA)</a>
+                <div class="nav-panel__action uniform_background">
+                  <a class="nav-panel__roomy no_underline" href="#">Gross Value Added (GVA)</a>
                 </div>
               </footer>
               <footer class="nav-panel__footer">
-                <div class="nav-panel__action">
-                  <a class="nav-panel__roomy" href="#">Investments, Pensions and Trusts</a>
+                <div class="nav-panel__action uniform_background">
+                  <a class="nav-panel__roomy no_underline" href="#">Investments, Pensions and Trusts</a>
                 </div>
               </footer>
             </article>
@@ -644,130 +676,142 @@ markup: false
       </div>
       <!-- /wrapper -->
 
-      <section class="panel wrapper slate blue_section">
-        <div class="wrapper">
-          <div class="grid-wrap">
-            <div class="grid-col desktop-grid-one-third tablet-grid-full">
-              <article class="box">
-                <h2 class="beta">Most Viewed Reports</h2>
-                <a href="#" class="action-link hide-med-down">View all statistical bulletins and articles</a>
-              </article>
-            </div>
-            <!-- /box -->
-            <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
-              <article class="box">
-                <header class="box__header">
-                  <h3 class="gamma flush">
-                    <a href="#">Second Estimate of GDP, Q4 2013</a>
-                  </h3>
-                </header>
-                <!-- /box__header -->
-                <div class="box__content">
-                  <p>
-                    UK gross domestic product (GDP) in volume terms was estimated to have increased by 0.7% between Q3 2013 and Q4 2013.
-                  </p>
-                  <p class="description mini">(20 min read)</p>
-                  <dl class="definition">
-                    <dt>Categories:</dt>
-                    <dd>Gross Domestic Product</dd>
-                    <dt>Type:</dt>
-                    <dd>Statistical Bulletin</dd>
-                  </dl>
-                  <!-- /definition -->
-                </div>
-                <!-- /box__content -->
-              </article>
-              <!-- /box -->
-            </div>
-            <!-- /grid-col -->
-            <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
-              <article class="box box--padded-vertical rem_pad_top">
-                <header class="box__header">
-                  <h3 class="gamma flush">
-                    <a href="#">Quarterly National Accounts, Q4 2013</a>
-                  </h3>
-                </header>
-                <!-- /box__header -->
-                <div class="box__content">
-                  <p>
-                    The households' saving ratio was estimated to be 5.1% in 2013 compared with 7.3% in 2012.
-                  </p>
-                  <p class="description mini">(5 min read)</p>
-                  <dl class="definition">
-                    <dt>Category:</dt>
-                    <dd>Inflation and Price Indices</dd>
-                    <dt>Type:</dt>
-                    <dd>Statistical Bulletin</dd>
-                  </dl>
-                  <!-- /definition -->
-                </div>
-                <!-- /box__content -->
-              </article>
-              <!-- /box -->
-            </div>
-            <!-- Column without left title -> push -->
-            <div class="grid-col desktop-grid-one-third desktop-grid-push-one-third tablet-grid-one-half tablet-grid-clear">
-              <article class="box">
-                <header class="box__header">
-                  <h3 class="gamma flush">
-                    <a href="#">Second Estimate of GDP, Q4 2013</a>
-                  </h3>
-                </header>
-                <!-- /box__header -->
-                <div class="box__content">
-                  <p>
-                    UK gross domestic product (GDP) in volume terms was estimated to have increased by 0.7% between Q3 2013 and Q4 2013.
-                  </p>
-                  <p class="description mini">(20 min read)</p>
-                  <dl class="definition">
-                    <dt>Categories:</dt>
-                    <dd>Gross Domestic Product</dd>
-                    <dt>Type:</dt>
-                    <dd>Statistical Bulletin</dd>
-                  </dl>
-                  <!-- /definition -->
-                </div>
-                <!-- /box__content -->
-              </article>
-              <!-- /box -->
-            </div>
-            <!-- /grid-col -->
-            <div class="grid-col desktop-grid-one-third desktop-grid-push-one-third tablet-grid-one-half">
-              <article class="box box--padded-vertical">
-                <header class="box__header">
-                  <h3 class="gamma flush">
-                    <a href="#">Quarterly National Accounts, Q4 2013</a>
-                  </h3>
-                </header>
-                <!-- /box__header -->
-                <div class="box__content">
-                  <p>
-                    The households' saving ratio was estimated to be 5.1% in 2013 compared with 7.3% in 2012.
-                  </p>
-                  <p class="description mini">(5 min read)</p>
-                  <dl class="definition">
-                    <dt>Category:</dt>
-                    <dd>Inflation and Price Indices</dd>
-                    <dt>Type:</dt>
-                    <dd>Statistical Bulletin</dd>
-                  </dl>
-                  <!-- /definition -->
-                </div>
-                <!-- /box__content -->
-              </article>
-              <!-- /box -->
-            </div>
-
-            <!-- /grid-col -->
-            <div class="grid-col hide-large">
-              <p class="box box--padded-top">
-                <a href="#" class="action-link hide-large">View all statistical bulletins</a>
-              </p>
-            </div>
+<section class="panel--large wrapper">
+        <div class="grid-wrap">
+          <div class="grid-col desktop-grid-one-third tablet-grid-full">
+            <article class="box">
+              <h2 class="beta">Most Viewed Statistical Bullentins and Articles</h2>
+              <a href="#" class="action-link hide-med-down">View more statistical bulletins and articles > </a>
+            </article>
           </div>
-          <!-- /grid-wrap -->
+          <!-- /box -->
+          <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
+            <article class="box">
+              <header class="box__header">
+                <h3 class="gamma flush">
+                  <a href="#">Second Estimate of GDP, Q4 2013</a>
+                </h3>
+              </header>
+              <!-- /box__header -->
+              <div class="box__content">
+                <p>
+                  A first estimate of retail sales in volume and value terms, seasonally and non-seasonally
+                  adjusted.
+                </p>
+                <p class="description mini">(17,842 words)</p>
+                <p>
+                  <span class="lozenge">Statistical bulletin</span>
+                </p>
+                <dl class="definition">
+                  <dt>Categories:</dt>
+                  <dd>Inflation and Price Indices</dd>
+                  <dt>Type:</dt>
+                  <dd>Statistical Bulletin</dd>
+                </dl>
+                <!-- /definition -->
+              </div>
+              <!-- /box__content -->
+            </article>
+            <!-- /box -->
+          </div>
+          <!-- /grid-col -->
+          <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
+            <article class="box box--padded-vertical rem_pad_top">
+              <header class="box__header">
+                <h3 class="gamma flush">
+                  <a href="#">Quarterly National Accounts, Q4 2013</a>
+                </h3>
+              </header>
+              <!-- /box__header -->
+              <div class="box__content">
+                <p>
+                  A comprehensive review on the UK economy, including the latest GDP estimate and
+                  other statistical outputs of ONS.
+                </p>
+                <p class="description mini">(9,110 words)</p>
+                <p>
+                  <span class="lozenge">Expert analysis</span>
+                </p>
+                <dl class="definition">
+                  <dt>Categories:</dt>
+                  <dd>Economy</dd>
+                  <dt>Type:</dt>
+                  <dd>Expert Analysis</dd>
+                </dl>
+                <!-- /definition -->
+              </div>
+              <!-- /box__content -->
+            </article>
+            <!-- /box -->
+          </div>
+          <!-- /grid-col -->
+          <div class="grid-col desktop-grid-one-third desktop-grid-push-one-third tablet-grid-one-half tablet-grid-clear">
+            <article class="box box--padded-vertical">
+              <header class="box__header">
+                <h2 class="gamma flush">
+                  <a href="#">Producer Price Inflation, January 2014</a>
+                </h2>
+              </header>
+              <!-- /box__header -->
+              <div class="box__content">
+                <p>
+                  This statistical bulletin contains producer price indices of materials and fuels
+                  purchased and output of manufacturing.
+                </p>
+                <p class="description mini">(15,120 words)</p>
+                <p>
+                  <span class="lozenge">Statistical bulletin</span>
+                </p>
+                <dl class="definition">
+                  <dt>Categories:</dt>
+                  <dd>Inflation and Price Indices</dd>
+                  <dt>Type:</dt>
+                  <dd>Statistical Bulletin</dd>
+                </dl>
+                <!-- /definition -->
+              </div>
+              <!-- /box__content -->
+            </article>
+            <!-- /box -->
+          </div>
+          <!-- /grid-col -->
+          <div class="grid-col desktop-grid-one-third desktop-grid-push-one-third tablet-grid-one-half">
+            <article class="box box--padded-vertical">
+              <header class="box__header">
+                <h2 class="gamma flush">
+                  <a href="#">Economic Review, January 2014</a>
+                </h2>
+              </header>
+              <!-- /box__header -->
+              <div class="box__content">
+                <p>
+                  A comprehensive review on the UK economy, including the latest GDP estimate and
+                  other statistical outputs of ONS.
+                </p>
+                <p class="description mini">(1,340 words)</p>
+                <p>
+                  <span class="lozenge">Expert analysis</span>
+                </p>
+                <dl class="definition">
+                  <dt>Categories:</dt>
+                  <dd>Economy</dd>
+                  <dt>Type:</dt>
+                  <dd>Expert Analysis</dd>
+                </dl>
+                <!-- /definition -->
+              </div>
+              <!-- /box__content -->
+            </article>
+            <!-- /box -->
+          </div>
+          <!-- /grid-col -->
         </div>
-        <!-- /wrapper -->
+        <!-- /grid-wrap -->
+        <div class="box box--padded-top hide-large">
+          <p>
+            <a href="#" class="action-link">View all other articles</a>
+          </p>
+        </div>
       </section>
 
       <!-- Tabbed panel -->
@@ -1092,7 +1136,7 @@ markup: false
 
 
       <footer class="global-footer">
-  <div class="slate--light panel--pad-large panel--separated">
+  <div class="slate panel--pad-large panel--separated">
     <div class="wrapper">
       <nav class="grid-wrap">
         <div class="grid-col tablet-grid-one-third">
@@ -1156,7 +1200,7 @@ markup: false
     <!-- /wrapper -->
   </div>
   <!-- /slate -->
-  <div class="slate--mid-grey">
+  <div class="slate">
     <div class="wrapper">
       <div class="footer__license">
         <img class="footer__license__img" width="60" src="/ui/img/ogl.png">
