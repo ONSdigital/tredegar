@@ -35,7 +35,6 @@ public class Folder {
 
 	@Override
 	public boolean equals(Object obj) {
-		// TODO Auto-generated method stub
 		return StringUtils.equals(name, ((Folder) obj).name);
 	}
 

@@ -38,11 +38,14 @@ public class ScanFileSystem {
 			else {
 				String fileName = path.toAbsolutePath().toString();
 
-				if (isValidFileExtensionType(fileName) && isValidFilePath(fileName)) {
+				if (isValidFileExtensionType(fileName)
+						&& isValidFilePath(fileName)) {
 					fileNames.add(fileName);
-					System.out.println("ScanFileSystem added this file: " + fileName);
+					System.out.println("ScanFileSystem added this file: "
+							+ fileName);
 				} else {
-					System.out.println("ScanFileSystem ignored this file: " + fileName);
+					System.out.println("ScanFileSystem ignored this file: "
+							+ fileName);
 				}
 			}
 		}
@@ -54,15 +57,18 @@ public class ScanFileSystem {
 	private static boolean isValidFilePath(String fileName) {
 		if (fileName.contains("target/classes/files/businessindustryandtrade")
 				|| fileName.contains("target/classes/files/economy")
-				|| fileName.contains("target/classes/files/employmentandlabourmarket")
-				|| fileName.contains("target/classes/file/peoplepopulationandcommunity")) {
+				|| fileName
+						.contains("target/classes/files/employmentandlabourmarket")
+				|| fileName
+						.contains("target/classes/file/peoplepopulationandcommunity")) {
 			return true;
 		}
 		return false;
 	}
 
 	private static boolean isValidFileExtensionType(String fileName) {
-		return fileName.endsWith(".html") || fileName.endsWith(".xls") || fileName.endsWith(".xlsx")
-				|| fileName.endsWith(".csv");
+		return fileName.endsWith(".html") || fileName.endsWith(".xls")
+				|| fileName.endsWith(".xlsx") || fileName.endsWith(".csv")
+				|| fileName.endsWith(".json");
 	}
 }
