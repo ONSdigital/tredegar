@@ -1,3 +1,9 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Stats Bulletin</title>
+</head>
 <!DOCTYPE html>
 <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
 <!--[if IE 7]><html class="no-js lt-ie9 lt-ie8 ie7"><![endif]-->
@@ -6,982 +12,472 @@
 <!--[if gt IE 8]><!-->
 <html class="no-js">
   <!--<![endif]-->
-  <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Stats Bulletin - Methods</title>
-    <meta charset="utf-8" />
-    <meta content="width=device-width,initial-scale=1.0" name="viewport" />
-    <meta content="on" http-equiv="cleartype" />
-    <meta name="format-detection" content="telephone=no">
-    <!-- http://www.phpied.com/conditional-comments-block-downloads/ -->
-    <!--[if IE]><![endif]-->
-    <!-- build:css /ui/css/oldie.css-->
-    <!--[if lte IE 8]>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<title>Stats Bulletin - Methods</title>
+<meta charset="utf-8" />
+<meta content="width=device-width,initial-scale=1.0" name="viewport" />
+<meta content="on" http-equiv="cleartype" />
+<meta name="format-detection" content="telephone=no">
+<!-- http://www.phpied.com/conditional-comments-block-downloads/ -->
+<!--[if IE]><![endif]-->
+<!-- build:css /ui/css/oldie.css-->
+<!--[if lte IE 8]>
   <link rel="stylesheet" href="../ui/css/oldie.css" />
 <![endif]-->
-    <!-- endbuild -->
-    <!-- build:css /ui/css/main.css-->
-    <!--[if gt IE 8]><!-->
-    <link rel="stylesheet" href="/ui/css/main.css" />
-	<link rel="stylesheet" href="/ui/css/jquery-ui.min.css">    
+<!-- endbuild -->
+<!-- build:css /ui/css/main.css-->
+<!--[if gt IE 8]><!-->
+   <!-- <link rel="stylesheet" href="/ui/css/main.css" /> -->
+   <link href="ui/css/main.css" rel="stylesheet" type="text/css">
+    
+	<link rel="stylesheet" href="ui/css/jquery-ui.min.css">    
     <!--<![endif]-->
-    <!-- endbuild -->
-    <script src="/ui/js/lib/modernizr.min.js"></script>
-    <script src="/ui/js/lib/jquery-1.11.0.min.js"></script>
-    <script src="/ui/js/lib/jquery-ui.min.js"></script>    
-    <!--[if (!IE)|(gt IE 8)]>><!-->
-    <script src="/ui/js/lib/jquery.tooltipster.js"></script>
-    <!--<![endif]-->
-    <script src="/ui/js/app/app.js"></script>
-    <script src="/ui/js/app/content-reveal.js"></script>
-    <script src="/ui/js/app/nav.js"></script>
-    <script src="/ui/js/app/tables.js"></script>
-    <script src="/ui/js/app/tabs.js"></script>
-    <script src="/ui/js/custom-autocomplete.js"></script>    
-    <script>
+<!-- endbuild -->
+<script src="ui/js/lib/modernizr.min.js"></script>
+<script src="ui/js/lib/jquery-1.11.0.min.js"></script>
+<script src="ui/js/lib/jquery-ui.min.js"></script>
+<!--[if (!IE)|(gt IE 8)]>><!-->
+<script src="ui/js/lib/jquery.tooltipster.js"></script>
+<!--<![endif]-->
+<script src="ui/js/app/app.js"></script>
+<script src="ui/js/app/content-reveal.js"></script>
+<script src="ui/js/app/nav.js"></script>
+<script src="ui/js/app/supporting-content.js"></script>
+<script src="ui/js/app/tables.js"></script>
+<script src="ui/js/app/tabs.js"></script>
+<script src="ui/js/custom-autocomplete.js"></script>
+<script>
     </script>
-    <style>
-    body {
-      padding: 0;
-    }
-    .fake-section {
-      width: 100%;
-      background-color: #666;
-      padding: 60px;
-    }
-    .fake-section h1 {
-      text-align: center;
-      color: #fff;
-    }
-    @media screen and (max-width: 559px) {
-      #homepage-search {
-        display: none;
-      }
-      .offset-top.nav-panels {
-        margin-top: 2rem;
-      }
-    }
-    .ui-autocomplete {
-    	position: relative;
-	}
-    </style>
-    <!---
+<style>
+body {
+	padding: 0;
+}
+.fake-section {
+	width: 100%;
+	background-color: #666;
+	padding: 60px;
+}
+.fake-section h1 {
+	text-align: center;
+	color: #fff;
+}
+ @media screen and (max-width: 559px) {
+ #homepage-search {
+ display: none;
+}
+ .offset-top.nav-panels {
+ margin-top: 2rem;
+}
+}
+.ui-autocomplete {
+	position: relative;
+}
+</style>
+<!---
 title: Theme Page Template (T2)
 external: true
 type: template
 group: Templates
 markup: false
 -->
-  </head>
-
-  <body class="">
-    <a class="skiplink visuallyhidden focusable" href="#main" tabindex="0">
-      <span>Skip to main content</span>
-    </a>
-    <main id="main" role="main">
-      <!-- temp removal to allow for component list selective wrapping -->
-      <!-- <div class="wrapper"> -->
-      <div class="fake-section">
-        <h1 class="flush">Header and nav area goes here</h1>
-      </div>
-      <div class="slate panel--small" id="homepage-search">
-        <div class="wrapper">
-          <form action="/search.html" class="hero">
-            <label for="homepageSearch" class="visuallyhidden">Search term:</label>
-            <input id="homepageSearch" type="text" class="input-med-large--flex--four-fifths input--lede"
-            name="q" value="" placeholder="Search for postcode, release number, or keyword">
-            <button type="submit" class="btn btn--primary btn--narrow btn--form--large-icon input--lede-btn-icon">
-              <span class="icon icon-search">
-                <span class="visuallyhidden">Search</span>
-              </span>
-            </button>
-          </form>
+</head>
+<body class="">
+<a class="skiplink visuallyhidden focusable" href="#main" tabindex="0"> <span>Skip to main content</span> </a>
+<main id="main" role="main">
+<!-- temp removal to allow for component list selective wrapping -->
+<!-- <div class="wrapper"> -->
+<div class="wrapper panel--pad-small">
+    <header class="global-header">
+        <div class="media"> <a href="/"> <img src="ui/img/ons-logo.svg" alt="Office for National Statistics" width="300" class="media__img"> </a>
+            <div class="media__body">
+                <ul class="nav nav--inline-block nav--dark globaltop-nav">
+                    <li> <a href="#">Release calendar</a> </li>
+                    <li> <a href="#">About</a> </li>
+                </ul>
+                <form action="#" class="global-header__search">
+                    <label for="homepageSearch" class="visuallyhidden">Search term:</label>
+                    <input id="homepageSearch" type="text" class="input-mini" name="homepageSearch" value="" placeholder="Search">
+                    <button type="submit" class="btn btn--primary btn--narrow btn--form"> <span class="icon icon-popup"> <span class="visuallyhidden">Search</span> </span> </button>
+                </form>
+            </div>
         </div>
-      </div>
-
-<!-- Put something here with a different colour
- -->
-        <section class="panel--large wrapper">
+    </header>
+</div>
+<nav class="ons-nav">
+    <div class="wrapper">
+        <ul class="nav nav--multi nav--block nav--primary" id="nav-primary">
+            <li> <a href="#" class="nav__expandable js-expandable">Business, Industry, and Trade</a>
+                <ul class="nav--primary__sub js-expandable__content js-nav-hidden">
+                    <li> <a href="#">Business</a> </li>
+                    <li> <a href="#">Changes to business</a> </li>
+                    <li> <a href="#">Construction and industry</a> </li>
+                    <li> <a href="#">IT and internet industry</a> </li>
+                    <li> <a href="#">International trade</a> </li>
+                    <li> <a href="#">Manufacturing and production</a> </li>
+                    <li> <a href="#">Retail industry</a> </li>
+                    <li> <a href="#">Tourism industry</a> </li>
+                </ul>
+            </li>
+            <li class="nav--primary__active"> <a href="#" class="nav__expandable js-expandable">Economy</a>
+                <ul class="nav--primary__sub js-expandable__content js-nav-hidden">
+                    <li> <a href="#">Economic output and productivity</a> </li>
+                    <li> <a href="#">Environmental account</a> </li>
+                    <li class="nav--primary__active"> <a href="#">Government, public sector, and taxes</a> </li>
+                    <li> <a href="#">Gross Domestic Product (GDP)</a> </li>
+                    <li> <a href="#">Gross Values Added (GVA)</a> </li>
+                    <li> <a href="#">Inflation and price indices</a> </li>
+                    <li> <a href="#">Investment and pension trust</a> </li>
+                    <li> <a href="#">National accounts</a> </li>
+                    <li> <a href="#">Regional accounts</a> </li>
+                </ul>
+            </li>
+            <li> <a href="#" class="nav__expandable js-expandable">Employment and Labour Market</a>
+                <ul class="nav--primary__sub js-expandable__content js-nav-hidden">
+                    <li> <a href="#">People in work</a> </li>
+                    <li> <a href="#">People not in work</a> </li>
+                    <li> <a href="#">Public sector personnel</a> </li>
+                </ul>
+            </li>
+            <li> <a href="#" class="nav__expandable js-expandable">People, Population, and Community</a>
+                <ul class="nav--primary__sub js-expandable__content js-nav-hidden">
+                    <li> <a href="#">Births, deaths, and marriages</a> </li>
+                    <li> <a href="#">Community</a> </li>
+                    <li> <a href="#">Education and childcare</a> </li>
+                    <li> <a href="#">Crime and justice</a> </li>
+                    <li> <a href="#">Household characteristics</a> </li>
+                    <li> <a href="#">Well-being</a> </li>
+                    <li> <a href="#">Health and social care</a> </li>
+                    <li> <a href="#">Elections</a> </li>
+                    <li> <a href="#">Personal and household finances</a> </li>
+                    <li> <a href="#">Population and migration</a> </li>
+                    <li> <a href="#">Cultural identity</a> </li>
+                    <li> <a href="#">Housing</a> </li>
+                    <li> <a href="#">Leisure and tourism</a> </li>
+                </ul>
+            </li>
+            <li class="nav--primary__highlight"> <a href="#"> <span class="icon-users icon--inline"></span>Respondents</a> </li>
+            <li class="nav--primary__secondary-content"> <a href="#">Release calendar</a> </li>
+            <li class="nav--primary__secondary-content"> <a href="#">About</a> </li>
+        </ul>
+    </div>
+</nav>
+<div class="wrapper panel--pad-small">
+    <ol class="nav nav--heavy breadcrumb mini flush">
+        <li> <a href="#">Home</a> </li>
+        <li> <a href="#">Economy</a> </li>
+        <li class="nav__active"> <a href="#">Government, Public Sector, and Taxes</a> </li>
+    </ol>
+    <ol class="nav nav--inline-block nav--dark mini">
+        <li> <a href="#">Local Government Finance</a> </li>
+        <li> <a href="#">Public Sector Finance</a> </li>
+        <li class="nav__active"> <a href="#">Public Spending</a> </li>
+        <li> <a href="#">Research and Development Expenditure</a> </li>
+        <li> <a href="#">Taxes and Revenue</a> </li>
+    </ol>
+</div>
+<div class="page-header slate">
+    <div class="wrapper">
+        <p><strong>Statistical Bulletin</strong></p>
+        <h1 class="page-header__title flush--half--bottom">Producer Price Inflation, October 2014</h1>
         <div class="grid-wrap">
-          <div class="grid-col desktop-grid-one-third tablet-grid-full">
-            <article class="box">
-             <!-- <a href="/" class="action-link hide-med-down">Home</a> -->
-                <a href="/" class="action-link">Home</a> > <a href="/" class="action-link">Economy</a> > <a href="/" class="action-link">Inflation and Price Index</a>
-            </article>
-          </div>
+            <div class="grid-col desktop-grid-two-thirds"> <img src="ui/img/nslogo.png" class="page-header-image">
+                <p><strong>Release date: 19 February 2014</strong> <span class="page-header-box-link"> <a href="about:blank"><strong>View latest version</strong></a></span> </p>
+                <p>Next release: 21 November 2014</p>
+                <p>Contact: <a href="mailto:jukesie@hotmail.com">Juksie</a></p>
+            </div>
+            <div class="grid-col desktop-grid-one-third">
+                <p> <span class="icon icon-down-open-big icon--blue"> <span class="visuallyhidden">Print</span> &nbsp;<a href="about:blank">Print summary</a></span> (1 page) </p>
+                <p> <span class="icon icon-down-open-big icon--blue"> <span class="visuallyhidden">Print full report</span> &nbsp;<a href="about:blank">Print full report</a></span> (37 Pages) </p>
+                <p> <span class="icon icon-info-circled icon--blue"> <span class="visuallyhidden">Download PDF</span> &nbsp;<a href="about:blank">Download PDF</a></span> (95.6kb) </p>
+            </div>
         </div>
-        </section>
-
-
-      <div class="page-header slate">
-        <div class="wrapper">
-        <p>Statistical Bulletin</p>
-          <h2 class="page-header__title flush--half--bottom">Producer Price Inflation, October 2014</h2>
-          <div class="content-reveal lede">
-            <p>
-              Producer Price Inflation (PPI) measures the price changes of goods bought and sold by UK manufacturers this month compared to the same month a year ago. PPI provides a key measure of inflation alongside other indicators such as the Consumer Prices Index (CPI) and Services Producer Price Index (SPPI).
-              PPI is split into two components: output price inflation and input price inflation. The input price indices capture changes in the cost of the material and fuel inputs that producers face whereas the output price indices capture the changing prices of goods sold by producers.
-              This article looks at the trends in both producer price indices since 2000 and which components contribute most towards changes in each price index in recent years.
-              <a href="#" class="content-reveal__action hidden">See more</a> <span class="lozenge" href="#">Statistical bulletin</span>
-            </p>
+        <div class="page-header__icons"> <a href="#" class="link-complex"> <span class="icon icon-twitter icon--grey"> <span class="visuallyhidden">Share on Twitter</span> </span> </a> <a href="#" class="link-complex"> <span class="icon icon-facebook icon--grey"> <span class="visuallyhidden">Share on Facebook</span> </span> </a> <a href="#" class="link-complex"> <span class="icon icon-gplus icon--grey"> <span class="visuallyhidden">Share on Google Plus</span> </span> </a> </div>
+    </div>
+    <!-- /nav-panel -->
+</div>
+<div class="wrapper">
+    <div class="panel">
+        <div class="content-reveal">
+            <p> Producer Price Inflation (PPI) measures the price changes of goods bought and sold by UK manufacturers this month compared to the same month a year ago. PPI provides a key measure of inflation alongside other indicators such as the Consumer Prices Index (CPI) and Services Producer Price Index (SPPI).
+                PPI is split into two components: output price inflation and input price inflation. The input price indices capture changes in the cost of the material and fuel inputs that producers face whereas the output price indices capture the changing prices of goods sold by producers.
+                This article looks at the trends in both producer price indices since 2000 and which components contribute most towards changes in each price index in recent years. <a href="#" class="content-reveal__action hidden">See more</a> </p>
             <div class="content-reveal__hidden">
-              <p>Annual output and input price changes follow similar trends, but with the latter tending to have higher price growth1. In Figure 1, trends in producer price inflation can be split into three distinct periods: 2000 to 2005, 2005 to 2012 and 2012 to June 2014.  Both indices experience greater variability within the second period of 2005 to 2012 than compared with the first and third period. From 2005 to 2012 the average growth rate was 2.9% for output price inflation and 8.1% for input price inflation.  The largest peaks and troughs experienced for both indices throughout the time series shown below occurred in the second period of 2005 to 2012. Output price inflation rose to 8.9% in July 2008 while input price inflation rose to 34.8% in June 2008 and both fell to their lowest rates in July 2009: output price inflation falling by 1.6% and input price inflation falling by 14.8%.</p>
+                <p>Annual output and input price changes follow similar trends, but with the latter tending to have higher price growth1. In Figure 1, trends in producer price inflation can be split into three distinct periods: 2000 to 2005, 2005 to 2012 and 2012 to June 2014.  Both indices experience greater variability within the second period of 2005 to 2012 than compared with the first and third period. From 2005 to 2012 the average growth rate was 2.9% for output price inflation and 8.1% for input price inflation.  The largest peaks and troughs experienced for both indices throughout the time series shown below occurred in the second period of 2005 to 2012. Output price inflation rose to 8.9% in July 2008 while input price inflation rose to 34.8% in June 2008 and both fell to their lowest rates in July 2009: output price inflation falling by 1.6% and input price inflation falling by 14.8%.</p>
             </div>
-          </div>
-          <div class="page-header__icons">
-            <a href="#" class="link-complex">
-              <span class="icon icon-twitter icon--grey">
-                <span class="visuallyhidden">Share on Twitter</span>
-              </span>
-            </a>
-            <a href="#" class="link-complex">
-              <span class="icon icon-facebook icon--grey">
-                <span class="visuallyhidden">Share on Facebook</span>
-              </span>
-            </a>
-            <a href="#" class="link-complex">
-              <span class="icon icon-gplus icon--grey">
-                <span class="visuallyhidden">Share on Google Plus</span>
-              </span>
-            </a>
-          </div>
         </div>
-        <!-- /wrapper -->
-      </div>
-      <!-- /page-header -->
-
-    <div class="wrapper offset-top nav-panels">
+        </p>
+    </div>
+</div>
+<div class="wrapper">
+    <article class="box border-horizontal-single">
+    <h3>Table of contents</h3>
+    <div id="toc-content">
+        <div class="toc-columns">
+            <ol>
+                <li><a href="#Summary">Summary</a></li>
+                <li><a href="#PPI">What is Producer Price Inflation (PPI)</a></li>
+                <li><a href="#">Output Prices Summary</a></li>
+                <li><a href="#">Supplimentary analysis - Output prices</a></li>
+                <li><a href="#">Output price - detailed commentary</a></li>
+                <li><a href="#">Prices Analysis</a></li>
+                <li><a href="#">Input prices - summary</a></li>
+                <li><a href="#">Supplementary analysis - Input prices</a></li>
+                <li><a href="#">Input prices: detailed commentary</a></li>
+                <li><a href="#">Revisions</a></li>
+                <li><a href="#">Background notes</a></li>
+                <li><a href="#">Statistical contacts</a></li>
+            </ol>
+        </div>
+        </article>
+    </div>
+    <div class="wrapper panel--bottom-mar">
         <div class="grid-wrap">
-          <div class="grid-col tablet-wide-grid-one-half">
-            <article class="nav-panel nav-panel--stats sectioned lifted">
-              <header class="nav-panel__header nav-panel__roomy">
-                <h2 id="firstTitle">Gross Domestic Product (GDP)</h2>
-              </header>
-              <section class="nav-panel__roomy">
-                <ul class="list--neutral">
-                <!-- Here it starts a line in the panel -->
-                  <li class="nav-panel__item">
-                    <dl>
-                      <dt class="nav-panel__title">
-                        <h3 class="nav-panel__heading">
-                          <a href="#">
-                        Gross Domestic Product
-                      </a>
-                          <span tabindex="0" title="Lorem ipsum dolor sit amet" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin"></span>
-                        </h3>
-                      </dt>
-                      <dd class="nav-panel__value">
-                        <div class="stat stat--small">
-                          <div class="stat__figure">
-                            £390383
-                            <span class="stat__figure__unit">m</span>
-                          </div>
-                          <div class="stat__description">
-                            1st Quarter 2014
-                          </div>
+            <div class="grid-col desktop-grid-two-thirds tablet-grid-two-thirds">
+                <article>
+                    <header class="box__header">
+                        <h2><a name="Summary"></a>1. Summary </h2>
+                    </header>
+                    <!-- /box__header -->
+                    <div class="box__content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non tellus
+                            nibh. Duis tristique risus sed urna fringilla, eu facilisis orci fringilla. Nullam iaculis
+                            libero tempor vehicula ultricies</p>
+                        <ul class="list--bullet">
+                            <li>The annual rate of output producer price inflation remained low in June, while
+                                input prices continued to fall.</li>
+                            <li>The output price index for goods produced by UK manufacturers (factory gate
+                                prices) rose 0.2% in the year to June, compared with a rise of 0.5% in the year
+                                to May.</li>
+                            <li>Factory gate prices fell 0.2% between May and June, compared with a fall of
+                                0.1% between April and May</li>
+                        </ul>
+                        <!-- /list--bullet -->
+                    </div>
+                    <!-- /box__content -->
+                    <footer class="box__footer"> </footer>
+                    <!-- /box__actions -->
+                </article>
+                <!-- /article__content -->
+                <article class="box border-horizontal-single">
+                    <header class="box__header">
+                        <h2><a name="PPI"></a>2. What is Producer Price Inflation (PPI)?</h2>
+                    </header>
+                    <!-- /box__header -->
+                    <div class="box__content">
+                        <p>Etiam fringilla tellus arcu, quis dapibus lacus lacinia a. Vivamus in sollicitudin eros,
+                            sed ornare metus. Nam sapien augue, varius bibendum sagittis sed, malesuada
+                            quis augue.</p>
+                        <div class="box--padded--highlight">
+                            <p>This is an explanation box
+                                Morbi orci nulla, lobortis pretium auctor non, varius eget mi. Mauris viverra
+                                diam quam, at auctor velit placerat sit amet. In sed erat quis elit eleifend
+                                tempus. Pellentesque vestibulum orci nec nulla accumsan egestas. Proin
+                                mauris ipsum, ornare posuere risus non, consectetur lobortis mi.
+                                Pellentesque mi ante, sodales sollicitudin pretium et, varius vel enim.</p>
+                            <!-- /box--padded-highlight -->
                         </div>
-                      </dd>
-                    </dl>
-                  </li> <!-- Here the line finishes -->
-                  <li class="nav-panel__item">
-                    <dl>
-                      <dt class="nav-panel__title">
-                        <h3 class="nav-panel__heading">
-                          <a href="#">
-                        GDP Quarter on Quarter Growth
-                      </a>
-                          <span tabindex="0" title="Lorem ipsum dolor sit amet" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin"></span>
-                        </h3>
-                      </dt>
-                      <dd class="nav-panel__value">
-                        <div class="stat stat--small">
-                          <div class="stat__figure">
-                            0.8
-                            <span class="stat__figure__unit">%</span>
-                          </div>
-                          <div class="stat__description">
-                            1st Quarter 2014
-                          </div>
+                        <p>Etiam ac ultricies orci. Pellentesque et posuere tortor. Nunc quam risus, pharetra
+                            non condimentum at, pretium at dolor. Maecenas placerat, arcu non consequat
+                            venenatis, eros leo eleifend lorem.</p>
+                        <p><img src="ui/img/sample--chart.png" alt="sample chart"></p>
+                        <!-- /list--bullet -->
+                        <p>Proin sed facilisis sapien. Nunc hendrerit dignissim sapien, vel consequat mi
+                            rhoncus eget. Maecenas et tellus convallis, tristique risus vitae.</p>
+                    </div>
+                    <!-- /box__content -->
+                    <footer class="box__footer"> </footer>
+                    <!-- /box__actions -->
+                </article>
+                <!-- /article__content -->
+                <!-- article__content -->
+                <article class="box border-horizontal-single">
+                    <header class="box__header">
+                        <h2>Background notes and Methodology
+                            <div class="media__img--reverse"><span class="icon icon-download"></span></div>
+                        </h2>
+                    </header>
+                    <!-- /box__header -->
+                    <div class="box__content">
+                        <ul class="list--neutral">
+                            <li><a href="#"> Quality and Methodology Information (QMI)</a> (PDF 95.6 kb)</li>
+                            <li><a href="#">Impact of Rebasing the Consumer Price Index to 2010=100</a></li>
+                            <li><a href="#">Consumer Price Index and Retail Price Index Methodology</a></li>
+                        </ul>
+                    </div>
+                    <!-- /box__content -->
+                    <footer class="box__footer"> </footer>
+                    <!-- /box__actions -->
+                </article>
+                <!-- /article__content -->
+                <!-- article__content -->
+                <article class="box border-horizontal-single">
+                    <header class="box__header">
+                        <h2>References
+                            <div class="media__img--reverse"><span class="icon icon-up-open-big"></span></div>
+                        </h2>
+                    </header>
+                    <!-- /box__header -->
+                    <footer class="box__footer"> </footer>
+                    <!-- /box__actions -->
+                </article>
+                <!-- /article__content -->
+                <!-- article__content -->
+                <article class="box border-horizontal-single">
+                    <header class="box__header">
+                        <h2>Footnotes
+                            <div class="media__img--reverse"><span class="icon icon-up-open-big"></span></div>
+                        </h2>
+                    </header>
+                    <!-- /box__header -->
+                    <footer class="box__footer"> </footer>
+                    <!-- /box__actions -->
+                </article>
+                <!-- /article__content -->
+            </div>
+            <!-- /grid-col -->
+            <div class="grid-col desktop-grid-one-third tablet-grid-one-third">
+                <!-- article__content -->
+                <article class="box box--padded slate">
+                    <header class="box__header">
+                        <h3> Data in this bulletin </h3>
+                    </header>
+                    <!-- /box__header -->
+                    <div class="box__content">
+                        <ul class="list--neutral">
+                            <li>Producer Price Index dataset <span class="lozenge" href="#"> Download <span class="icon icon-info-circled icon--button-inline"></span></span> </a></li>
+                            <li>Producer Price Index Revision
+                                Triangle <span class="lozenge" href="#"> Download <span class="icon icon-info-circled icon--button-inline"></span></span> </a></li>
+                        </ul>
+                        <!-- /list--bullet -->
+                    </div>
+                    <!-- /box__content -->
+                    <footer class="box__footer box__actions"> <span class="lozenge" href="#"> Download All <span class="icon icon-info-circled icon--button-inline"></span></span> </a> </a> </footer>
+                    <!-- /box__actions -->
+                </article>
+                <!-- /article__content -->
+                <!-- article__content -->
+                <article class="box box--padded lifted sectioned">
+                    <header class="box__header">
+                        <div class="grid-wrap ">
+                            <div class="grid-col desktop-grid-one-sixth">
+                                <h2><span class="icon icon-phone icon--grey"></span></h2>
+                            </div>
+                            <div class="grid-col desktop-grid-five-sixths">
+                                <h3>Contact details for this
+                                    statistical bulletin</h3>
+                            </div>
                         </div>
-                      </dd>
-                    </dl>
-                  </li>
-                  <li class="nav-panel__item">
-                    <dl>
-                      <dt class="nav-panel__title">
-                        <h3 class="nav-panel__heading">
-                          <a href="#">
-                        GDP Change on same Quarter a year ago
-                      </a>
-                          <span tabindex="0" title="Lorem ipsum dolor sit amet" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin"></span>
-                        </h3>
-                      </dt>
-                      <dd class="nav-panel__value">
-                        <div class="stat stat--small">
-                          <div class="stat__figure">
-                            0.3
-                            <span class="stat__figure__unit">%</span>
-                          </div>
-                          <div class="stat__description">
-                            1st Quarter 2014
-                          </div>
-                        </div>
-                      </dd>
-                    </dl>
-                  </li>
-                  <li class="nav-panel__item">
-                    <dl>
-                      <dt class="nav-panel__title">
-                        <h3 class="nav-panel__heading">
-                          <a href="#">
-                        Production Index
-                      </a>
-                          <span tabindex="0" title="Lorem ipsum dolor sit amet" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin"></span>
-                        </h3>
-                      </dt>
-                      <dd class="nav-panel__value">
-                        <div class="stat stat--small">
-                          <div class="stat__figure">
-                            97.5
-                            <span class="stat__figure__unit"></span>
-                          </div>
-                          <div class="stat__description">
-                            1st Quarter 2014
-                          </div>
-                        </div>
-                      </dd>
-                    </dl>
-                  </li>
-                </ul>
-              </section>
-              <footer class="nav-panel__footer">
-                <div class="nav-panel__action">
-                  <a id="firstLink" class="nav-panel__roomy" href="#">View all Gross Domestic Product (GDP)</a>
-                </div>
-              </footer>
-            </article>
-            <!-- /nav-panel -->
-          </div>
-          <!-- /grid-col -->
-          <div class="grid-col tablet-wide-grid-one-half">
-            <article class="nav-panel nav-panel--stats sectioned lifted">
-              <header class="nav-panel__header nav-panel__roomy">
-                <h2 id="secondTitle">Inflation and Price Indices</h2>
-              </header>
-              <section class="nav-panel__roomy">
-                <ul class="list--neutral">
-                  <li class="nav-panel__item">
-                    <dl>
-                      <dt class="nav-panel__title">
-                        <h3 class="nav-panel__heading">
-                          <a href="#">
-                        CPI Index
-                      </a>
-                          <span tabindex="0" title="Unit: Index, 2010=100 Not seasonaly adjusted" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin"></span>
-                        </h3>
-                      </dt>
-                      <dd class="nav-panel__value">
-                        <div class="stat stat--small">
-                          <div class="stat__figure">
-                            126.7
-                            <span class="stat__figure__unit"></span>
-                          </div>
-                          <div class="stat__description">
-                            January 2014
-                          </div>
-                        </div>
-                      </dd>
-                    </dl>
-                  </li>
-                  <li class="nav-panel__item">
-                    <dl>
-                      <dt class="nav-panel__title">
-                        <h3 class="nav-panel__heading">
-                          <a href="#">
-                        CPI Annual Rate Percentage Change over 12 months
-                      </a>
-                          <span tabindex="0" title="Lorem ipsum dolor sit amet" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin"></span>
-                        </h3>
-                      </dt>
-                      <dd class="nav-panel__value">
-                        <div class="stat stat--small">
-                          <div class="stat__figure">
-                            1.9
-                            <span class="stat__figure__unit">%</span>
-                          </div>
-                          <div class="stat__description">
-                            January 2014
-                          </div>
-                        </div>
-                      </dd>
-                    </dl>
-                  </li>
-                  <li class="nav-panel__item">
-                    <dl>
-                      <dt class="nav-panel__title">
-                        <h3 class="nav-panel__heading">
-                          <a href="#">
-                        CPIH Index
-                      </a>
-                          <span tabindex="0" title="Lorem ipsum dolor sit amet" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin"></span>
-                        </h3>
-                      </dt>
-                      <dd class="nav-panel__value">
-                        <div class="stat stat--small">
-                          <div class="stat__figure">
-                            124.7
-                            <span class="stat__figure__unit"></span>
-                          </div>
-                          <div class="stat__description">
-                            January 2014
-                          </div>
-                        </div>
-                      </dd>
-                    </dl>
-                  </li>
-                  <li class="nav-panel__item">
-                    <dl>
-                      <dt class="nav-panel__title">
-                        <h3 class="nav-panel__heading">
-                          <a href="#">
-                        CPIH Annual Rate Percentage Change over 12 months
-                      </a>
-                          <span tabindex="0" title="Lorem ipsum dolor sit amet" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin"></span>
-                        </h3>
-                      </dt>
-                      <dd class="nav-panel__value">
-                        <div class="stat stat--small">
-                          <div class="stat__figure">
-                            1.8
-                            <span class="stat__figure__unit">%</span>
-                          </div>
-                          <div class="stat__description">
-                            January 2014
-                          </div>
-                        </div>
-                      </dd>
-                    </dl>
-                  </li>
-                </ul>
-              </section>
-              <footer class="nav-panel__footer">
-                <div class="nav-panel__action">
-                  <a id="secondLink" class="nav-panel__roomy" href="#">View all Inflation and Price Indices</a>
-                </div>
-              </footer>
-            </article>
-            <!-- /nav-panel -->
-          </div>
-          <!-- /grid-col -->
+                        <div class="padded"></div>
+                    </header>
+                    <!-- /box__header -->
+                    <div class="box__content">
+                        <p>Kat Pegler<br/>
+                            Business Prices<br/>
+                            <a href="mailto:ppi@ons.gsi.gov.uk">ppi@ons.gsi.gov.uk</a><br/>
+                            Telephone: +44 (0)1633 456468</p>
+                        <!-- /list--bullet -->
+                    </div>
+                    <!-- /box__content -->
+                </article>
+                <!-- /article__content -->
+            </div>
+            <!-- /grid-col -->
         </div>
-        <!-- /grid-wrap -->
+    </div>
+</div>
+<div class="page-header slate">
+    <div class="wrapper">
         <div class="grid-wrap">
-          <div class="grid-col tablet-wide-grid-one-half">
-            <article class="nav-panel nav-panel--stats sectioned lifted">
-              <header class="nav-panel__header nav-panel__roomy">
-                <h2 id="thirdTitle">National Accounts</h2>
-              </header>
-              <section class="nav-panel__roomy">
-                <ul class="list--neutral">
-                  <li class="nav-panel__item">
-                    <dl>
-                      <dt class="nav-panel__title">
-                        <h3 class="nav-panel__heading">
-                          <a href="#">
-                        Employment Rate
-                      </a>
-                          <span tabindex="0" title="Lorem ipsum dolor sit amet" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin"></span>
-                        </h3>
-                      </dt>
-                      <dd class="nav-panel__value">
-                        <div class="stat stat--small">
-                          <div class="stat__figure">
-                            72.9
-                            <span class="stat__figure__unit">%</span>
-                          </div>
-                          <div class="stat__description">
-                            Feb — Apr 2014
-                          </div>
-                        </div>
-                      </dd>
-                    </dl>
-                  </li>
-                  <li class="nav-panel__item">
-                    <dl>
-                      <dt class="nav-panel__title">
-                        <h3 class="nav-panel__heading">
-                          <a href="#">
-                        Unemployment Rate
-                      </a>
-                          <span tabindex="0" title="Lorem ipsum dolor sit amet" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin"></span>
-                        </h3>
-                      </dt>
-                      <dd class="nav-panel__value">
-                        <div class="stat stat--small">
-                          <div class="stat__figure">
-                            6.6
-                            <span class="stat__figure__unit">%</span>
-                          </div>
-                          <div class="stat__description">
-                            Feb — Apr 2014
-                          </div>
-                        </div>
-                      </dd>
-                    </dl>
-                  </li>
-                </ul>
-              </section>
-              <footer class="nav-panel__footer">
-                <div class="nav-panel__action">
-                  <a id="thirdLink" class="nav-panel__roomy" href="#">View all National Accounts</a>
-                </div>
-              </footer>
-            </article>
-            <!-- /nav-panel -->
-          </div>
-          <!-- /grid-col -->
-          <div class="grid-col tablet-wide-grid-one-half">
-            <article id="otherList" class="nav-panel nav-panel--stats sectioned lifted">
-              <header class="nav-panel__header nav-panel__roomy">
-                <h2 id="otherTitle">Other Economy Categories</h2>
-              </header>
-              <footer class="nav-panel__footer">
-                <div class="nav-panel__action">
-                  <a class="nav-panel__roomy" href="#">Environmental Accounts</a>
-                </div>
-              </footer>
-              <footer class="nav-panel__footer">
-                <div class="nav-panel__action">
-                  <a class="nav-panel__roomy" href="#">Government, Public Sector and Taxes</a>
-                </div>
-              </footer>
-              <footer class="nav-panel__footer">
-                <div class="nav-panel__action">
-                  <a class="nav-panel__roomy" href="#">Gross Value Added (GVA)</a>
-                </div>
-              </footer>
-              <footer class="nav-panel__footer">
-                <div class="nav-panel__action">
-                  <a class="nav-panel__roomy" href="#">Investments, Pensions and Trusts</a>
-                </div>
-              </footer>
-            </article>
-            <!-- /nav-panel -->
-          </div>
-          <!-- /grid-col -->
+            <div class="grid-col desktop-grid-two-thirds">
+                <article class="box">
+                    <header class="box__header">
+                        <h2>Related Bulletins </h2>
+                    </header>
+                    <!-- /box__header -->
+                    <div class="box__content">
+                        <p><a href="#">Consumer Price Inflation, January 2014</a><br />
+                            The Consumer Price Inflation is a monthly release that contains percentage
+                            changes and weights for the CPI, CPIH, RPI and RPIJ.</p>
+                        <p><a href="#">Retail Sales, January 2014</a><br />
+                            A first estimate of retail sales in volume and value terms, seasonally and nonseasonally
+                            adjusted.</p>
+                    </div>
+                    <!-- /box__content -->
+                    <footer class="box__footer"> </footer>
+                    <!-- /box__actions -->
+                </article>
+            </div>
+            <div class="grid-col desktop-grid-one-third">
+                <article class="box box--padded white">
+                    <header class="box__header">
+                        <h3>More on <a href="#">Inflation</a></h3>
+                    </header>
+                    <!-- /box__header -->
+                    <div class="box__content">
+                        <p>Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit.</p>
+                        <header class="box__header">
+                            <h3>More on <a href="#">Basket of Goods</a></h3>
+                        </header>
+                        <!-- /box__header -->
+                        <p>Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit.</p>
+                    </div>
+                    <!-- /box__content -->
+                    <footer class="box__footer box__actions"></footer>
+                    <!-- /box__actions -->
+                </article>
+            </div>
         </div>
-        <!-- /grid-wrap -->
-      </div>
-      <!-- /wrapper -->
-
-      <section class="panel--large slate">
+    </div>
+    <!-- /bottom-panel -->
+</div>
+<!-- /end main content -->
+<footer class="global-footer">
+    <div class="slate--light panel--pad-large panel--separated">
         <div class="wrapper">
-          <div class="grid-wrap">
-            <div class="grid-col desktop-grid-one-third tablet-grid-full">
-              <article class="box">
-                <h2 class="beta">Most Viewed Reports</h2>
-                <a href="#" class="action-link hide-med-down">View all statistical bulletins and articles</a>
-              </article>
-            </div>
-            <!-- /box -->
-            <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
-              <article class="box">
-                <header class="box__header">
-                  <h3 class="gamma flush">
-                    <a href="#">Second Estimate of GDP, Q4 2013</a>
-                  </h3>
-                </header>
-                <!-- /box__header -->
-                <div class="box__content">
-                  <p>
-                    UK gross domestic product (GDP) in volume terms was estimated to have increased by 0.7% between Q3 2013 and Q4 2013.
-                  </p>
-                  <p class="description mini">(20 min read)</p>
-                  <dl class="definition">
-                    <dt>Categories:</dt>
-                    <dd>Gross Domestic Product</dd>
-                    <dt>Type:</dt>
-                    <dd>Statistical Bulletin</dd>
-                  </dl>
-                  <!-- /definition -->
+            <nav class="grid-wrap">
+                <div class="grid-col tablet-grid-one-third">
+                    <h2 class="delta headline-separated">Legal</h2>
+                    <ul class="list--neutral list--grid list--spaced">
+                        <li> <a href="#">Business Transparency</a> </li>
+                        <li> <a href="#">Terms and Conditions</a> </li>
+                        <li> <a href="#">Copyright</a> </li>
+                        <li> <a href="#">Cookies and Privacy</a> </li>
+                    </ul>
                 </div>
-                <!-- /box__content -->
-              </article>
-              <!-- /box -->
-            </div>
-            <!-- /grid-col -->
-            <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
-              <article class="box box--padded-vertical">
-                <header class="box__header">
-                  <h3 class="gamma flush">
-                    <a href="#">Quarterly National Accounts, Q4 2013</a>
-                  </h3>
-                </header>
-                <!-- /box__header -->
-                <div class="box__content">
-                  <p>
-                    The households' saving ratio was estimated to be 5.1% in 2013 compared with 7.3% in 2012.
-                  </p>
-                  <p class="description mini">(5 min read)</p>
-                  <dl class="definition">
-                    <dt>Category:</dt>
-                    <dd>Inflation and Price Indices</dd>
-                    <dt>Type:</dt>
-                    <dd>Statistical Bulletin</dd>
-                  </dl>
-                  <!-- /definition -->
+                <div class="grid-col tablet-grid-one-third">
+                    <h2 class="delta headline-separated">About ONS</h2>
+                    <ul class="list--neutral list--grid list--spaced">
+                        <li> <a href="#">Who we are</a> </li>
+                        <li> <a href="#">Careers</a> </li>
+                        <li> <a href="#">Products and Services</a> </li>
+                        <li> <a href="#">Contact us</a> </li>
+                        <li> <a href="#">Our offices</a> </li>
+                    </ul>
                 </div>
-                <!-- /box__content -->
-              </article>
-              <!-- /box -->
-            </div>
-            <!-- Column without left title -> push -->
-            <div class="grid-col desktop-grid-one-third desktop-grid-push-one-third tablet-grid-one-half tablet-grid-clear">
-              <article class="box">
-                <header class="box__header">
-                  <h3 class="gamma flush">
-                    <a href="#">Second Estimate of GDP, Q4 2013</a>
-                  </h3>
-                </header>
-                <!-- /box__header -->
-                <div class="box__content">
-                  <p>
-                    UK gross domestic product (GDP) in volume terms was estimated to have increased by 0.7% between Q3 2013 and Q4 2013.
-                  </p>
-                  <p class="description mini">(20 min read)</p>
-                  <dl class="definition">
-                    <dt>Categories:</dt>
-                    <dd>Gross Domestic Product</dd>
-                    <dt>Type:</dt>
-                    <dd>Statistical Bulletin</dd>
-                  </dl>
-                  <!-- /definition -->
+                <div class="grid-col tablet-grid-one-third">
+                    <h2 class="delta headline-separated">Connect with us</h2>
+                    <ul class="list--neutral list--grid list--spaced">
+                        <li> <a href="#">Facebook</a> </li>
+                        <li> <a href="#">Twitter</a> </li>
+                        <li> <a href="#">YouTube</a> </li>
+                        <li> <a href="#">Email subscriptions</a> </li>
+                    </ul>
                 </div>
-                <!-- /box__content -->
-              </article>
-              <!-- /box -->
-            </div>
-            <!-- /grid-col -->
-            <div class="grid-col desktop-grid-one-third desktop-grid-push-one-third tablet-grid-one-half">
-              <article class="box box--padded-vertical">
-                <header class="box__header">
-                  <h3 class="gamma flush">
-                    <a href="#">Quarterly National Accounts, Q4 2013</a>
-                  </h3>
-                </header>
-                <!-- /box__header -->
-                <div class="box__content">
-                  <p>
-                    The households' saving ratio was estimated to be 5.1% in 2013 compared with 7.3% in 2012.
-                  </p>
-                  <p class="description mini">(5 min read)</p>
-                  <dl class="definition">
-                    <dt>Category:</dt>
-                    <dd>Inflation and Price Indices</dd>
-                    <dt>Type:</dt>
-                    <dd>Statistical Bulletin</dd>
-                  </dl>
-                  <!-- /definition -->
-                </div>
-                <!-- /box__content -->
-              </article>
-              <!-- /box -->
-            </div>
-
-            <!-- /grid-col -->
-            <div class="grid-col hide-large">
-              <p class="box box--padded-top">
-                <a href="#" class="action-link hide-large">View all statistical bulletins</a>
-              </p>
-            </div>
-          </div>
-          <!-- /grid-wrap -->
+            </nav>
         </div>
         <!-- /wrapper -->
-      </section>
-
-      <!-- Tabbed panel -->
-      <div class="wrapper panel">
-        <div class="next-releases tab-pane tab-pane--dual lifted">
-          <ul>
-            <li><a href="#published" class="tab-pane__tab">Published <br class="tab-pane__tab__break">Releases</a>
-            </li>
-            <li><a href="#upcoming" class="tab-pane__tab">Upcoming <br class="tab-pane__tab__break">Releases</a>
-            </li>
-          </ul>
-          <section id="published">
-            <ol class="list--table list--table--cushy table--striped-light list--table--releases">
-              <li class="list--table__item list--table__body">
-                <div class="list--table__item__body list--table__item__body--date">
-                  <div class="list--table__item__body__inner">
-                    <time class="date date--stacked" datetime="2014-04-25">
-                      <div class="date--stacked__date">25</div>
-                      <div class="date--stacked__month date--stacked__month--shorthand">Apr</div>
-                      <div class="date--stacked__year">2014</div>
-                    </time>
-                  </div>
-                </div>
-                <div class="list--table__item__body list--table__item__body--release-caption">
-                  <div class="list--table__item__body__inner list--table__item__body__split">
-                    <div class="list--table__item__body__three-fifths">
-                      <h2 class="delta flush--half--bottom">
-                        <a href="#">Retail Sales - March 2014</a>
-                        <span tabindex="0" title="Lorem ipsum dolor sit amet" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin"></span>
-                      </h2>
-                    </div>
-                    <div class="list--table__item__body__two-fifths">
-                      <dl class="definition-list flush micro">
-                        <dt>Categories:</dt>
-                        <dd>Inflation and Price Indices</dd>
-                      </dl>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="list--table__item list--table__body">
-                <div class="list--table__item__body list--table__item__body--date">
-                  <div class="list--table__item__body__inner">
-                    <time class="date date--stacked" datetime="2014-04-25">
-                      <div class="date--stacked__date">25</div>
-                      <div class="date--stacked__month date--stacked__month--shorthand">Apr</div>
-                      <div class="date--stacked__year">2014</div>
-                    </time>
-                  </div>
-                </div>
-                <div class="list--table__item__body list--table__item__body--release-caption">
-                  <div class="list--table__item__body__inner list--table__item__body__split">
-                    <div class="list--table__item__body__three-fifths">
-                      <h2 class="delta flush--half--bottom">
-                        <a href="#">Index of Private Housing Rental Prices - January to March 2014 results</a>
-                        <span tabindex="0" title="Lorem ipsum dolor sit amet" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin"></span>
-                      </h2>
-                    </div>
-                    <div class="list--table__item__body__two-fifths">
-                      <dl class="definition-list flush micro">
-                        <dt>Categories:</dt>
-                        <dd>Inflation and Price Indices</dd>
-                      </dl>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="list--table__item list--table__body">
-                <div class="list--table__item__body list--table__item__body--date">
-                  <div class="list--table__item__body__inner">
-                    <time class="date date--stacked" datetime="2014-04-29">
-                      <div class="date--stacked__date">29</div>
-                      <div class="date--stacked__month date--stacked__month--shorthand">Apr</div>
-                      <div class="date--stacked__year">2014</div>
-                    </time>
-                  </div>
-                </div>
-                <div class="list--table__item__body list--table__item__body--release-caption">
-                  <div class="list--table__item__body__inner list--table__item__body__split">
-                    <div class="list--table__item__body__three-fifths">
-                      <h2 class="delta flush--half--bottom">
-                        <a href="#">Index of Services - February 2014</a>
-                        <span tabindex="0" title="Lorem ipsum dolor sit amet" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin"></span>
-                      </h2>
-                    </div>
-                    <div class="list--table__item__body__two-fifths">
-                      <dl class="definition-list flush micro">
-                        <dt>Categories:</dt>
-                        <dd>Inflation and Price Indices</dd>
-                      </dl>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="list--table__item list--table__body">
-                <div class="list--table__item__body list--table__item__body--date">
-                  <div class="list--table__item__body__inner">
-                    <time class="date date--stacked" datetime="2014-04-30">
-                      <div class="date--stacked__date">30</div>
-                      <div class="date--stacked__month date--stacked__month--shorthand">Apr</div>
-                      <div class="date--stacked__year">2014</div>
-                    </time>
-                  </div>
-                </div>
-                <div class="list--table__item__body list--table__item__body--release-caption">
-                  <div class="list--table__item__body__inner list--table__item__body__split">
-                    <div class="list--table__item__body__three-fifths">
-                      <h2 class="delta flush--half--bottom">
-                        <a href="#">Gross Domestic Product: Preliminary Estimate - Q1 2014</a>
-                        <span tabindex="0" title="Lorem ipsum dolor sit amet" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin"></span>
-                      </h2>
-                    </div>
-                    <div class="list--table__item__body__two-fifths">
-                      <dl class="definition-list flush micro">
-                        <dt>Categories:</dt>
-                        <dd>Inflation and Price Indices</dd>
-                      </dl>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="list--table__item list--table__body">
-                <div class="list--table__item__body list--table__item__body--date">
-                  <div class="list--table__item__body__inner">
-                    <time class="date date--stacked" datetime="2014-04-30">
-                      <div class="date--stacked__date">30</div>
-                      <div class="date--stacked__month date--stacked__month--shorthand">Apr</div>
-                      <div class="date--stacked__year">2014</div>
-                    </time>
-                  </div>
-                </div>
-                <div class="list--table__item__body list--table__item__body--release-caption">
-                  <div class="list--table__item__body__inner list--table__item__body__split">
-                    <div class="list--table__item__body__three-fifths">
-                      <h2 class="delta flush--half--bottom">
-                        <a href="#">GDP and the Labour Market - Q1 2014, April GDP update</a>
-                        <span tabindex="0" title="Lorem ipsum dolor sit amet" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin"></span>
-                      </h2>
-                    </div>
-                    <div class="list--table__item__body__two-fifths">
-                      <dl class="definition-list flush micro">
-                        <dt>Categories:</dt>
-                        <dd>Inflation and Price Indices</dd>
-                      </dl>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="list--table__item list--table__body">
-                <div class="list--table__item__body list--table__item__body--date">
-                  <div class="list--table__item__body__inner">
-                    <time class="date date--stacked" datetime="2014-04-30">
-                      <div class="date--stacked__date">30</div>
-                      <div class="date--stacked__month date--stacked__month--shorthand">Apr</div>
-                      <div class="date--stacked__year">2014</div>
-                    </time>
-                  </div>
-                </div>
-                <div class="list--table__item__body list--table__item__body--release-caption">
-                  <div class="list--table__item__body__inner list--table__item__body__split">
-                    <div class="list--table__item__body__three-fifths">
-                      <h2 class="delta flush--half--bottom">
-                        <a href="#">National Accounts Sector Classification - Classification update, April 2014</a>
-                        <span tabindex="0" title="Lorem ipsum dolor sit amet" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin"></span>
-                      </h2>
-                    </div>
-                    <div class="list--table__item__body__two-fifths">
-                      <dl class="definition-list flush micro">
-                        <dt>Categories:</dt>
-                        <dd>Inflation and Price Indices</dd>
-                      </dl>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ol>
-            <div class="list--table__item list--table__footer list--table--footer--releases">
-              <div class="list--table__item__body">
-                <a href="#" class="link-muted">View all scheduled releases</a>
-              </div>
+    </div>
+    <!-- /slate -->
+    <div class="slate--mid-grey">
+        <div class="wrapper">
+            <div class="footer__license"> <img class="footer__license__img" width="60" src="ui/img/ogl.png">
+                <p class="footer__license__body"> All content is available under the Open Government Licence v2.0, except where otherwise stated </p>
             </div>
-          </section>
-          <section id="upcoming">
-            <ol class="list--table list--table--cushy table--striped-light list--table--releases">
-              <li class="list--table__item list--table__body">
-                <div class="list--table__item__body list--table__item__body--date">
-                  <div class="list--table__item__body__inner">
-                    <time class="date date--stacked" datetime="2014-04-29">
-                      <div class="date--stacked__date">5</div>
-                      <div class="date--stacked__month date--stacked__month--shorthand">Jul</div>
-                      <div class="date--stacked__year">2014</div>
-                    </time>
-                  </div>
-                </div>
-                <div class="list--table__item__body list--table__item__body--release-caption">
-                  <div class="list--table__item__body__inner list--table__item__body__split">
-                    <div class="list--table__item__body__three-fifths">
-                      <h2 class="delta flush--half--bottom">
-                        <a href="#">Reaaaaally long title. National Accounts Sector Classification - Classification update, July 2014. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita ullam, possimus ratione optio dolores, est architecto ad rem saepe incidunt deleniti tempora labore excepturi culpa quae praesentium! Architecto, assumenda, dicta.</a>
-                        <span tabindex="0" title="Lorem ipsum dolor sit amet" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin"></span>
-                      </h2>
-                    </div>
-                    <div class="list--table__item__body__two-fifths">
-                      <dl class="definition-list flush micro">
-                        <dt>Categories:</dt>
-                        <dd>Inflation and Price Indices</dd>
-                      </dl>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="list--table__item list--table__body">
-                <div class="list--table__item__body list--table__item__body--date">
-                  <div class="list--table__item__body__inner">
-                    <time class="date date--stacked" datetime="2014-04-29">
-                      <div class="date--stacked__date">27</div>
-                      <div class="date--stacked__month date--stacked__month--shorthand">Aug</div>
-                      <div class="date--stacked__year">2014</div>
-                    </time>
-                  </div>
-                </div>
-                <div class="list--table__item__body list--table__item__body--release-caption">
-                  <div class="list--table__item__body__inner list--table__item__body__split">
-                    <div class="list--table__item__body__three-fifths">
-                      <h2 class="delta flush--half--bottom">
-                        <a href="#">Short.</a>
-                        <span tabindex="0" title="Lorem ipsum dolor sit amet" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin"></span>
-                      </h2>
-                    </div>
-                    <div class="list--table__item__body__two-fifths">
-                      <dl class="definition-list flush micro">
-                        <dt>Categories:</dt>
-                        <dd>Inflation and Price Indices,</dd>
-                        <dd>Indices Inflations Price And,</dd>
-                        <dd>Random Category Name,</dd>
-                        <dd>Inflation and Price Indices</dd>
-                      </dl>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ol>
-            <div class="list--table__item list--table__footer list--table--footer--releases">
-              <div class="list--table__item__body">
-                <a href="#" class="link-muted">View all scheduled releases</a>
-              </div>
-            </div>
-          </section>
         </div>
-      </div>
-
-
-      <footer class="global-footer">
-        <div class="slate--light panel--xl panel--separated">
-          <div class="wrapper">
-            <nav class="grid-wrap">
-              <div class="grid-col tablet-grid-one-third">
-                <h2 class="delta headline-separated">Legal</h2>
-                <ul class="list--neutral list--grid list--spaced">
-                  <li><a href="#">Business Transparency</a>
-                  </li>
-                  <li><a href="#">Terms and Conditions</a>
-                  </li>
-                  <li><a href="#">Copyright</a>
-                  </li>
-                  <li><a href="#">Cookies and Privacy</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="grid-col tablet-grid-one-third">
-                <h2 class="delta headline-separated">About ONS</h2>
-                <ul class="list--neutral list--grid list--spaced">
-                  <li><a href="#">Who we are</a>
-                  </li>
-                  <li><a href="#">Careers</a>
-                  </li>
-                  <li><a href="#">Products and Services</a>
-                  </li>
-                  <li><a href="#">Contact us</a>
-                  </li>
-                  <li><a href="#">Our offices</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="grid-col tablet-grid-one-third">
-                <h2 class="delta headline-separated">Connect with us</h2>
-                <ul class="list--neutral list--grid list--spaced">
-                  <li><a href="#">Facebook</a>
-                  </li>
-                  <li><a href="#">Twitter</a>
-                  </li>
-                  <li><a href="#">YouTube</a>
-                  </li>
-                  <li><a href="#">Email subscriptions</a>
-                  </li>
-                </ul>
-              </div>
-            </nav>
-          </div>
-          <!-- /wrapper -->
-        </div>
-        <!-- /slate -->
-        <div class="slate--mid-grey">
-          <div class="wrapper">
-            <div class="footer__license">
-              <img class="footer__license__img" alt="OGL_license_logo" width="60" src="/ui/img/ogl.png">
-              <p class="footer__license__body">
-                All content is available under the Open Government Licence v2.0, except where otherwise
-                stated
-              </p>
-            </div>
-          </div>
-        </div>
-      </footer>
-      <!-- </div> -->
-    </main>
-    <!-- build:js /ui/js/ons-alpha.js-->
-    <script src='//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js'></script>
-    <!-- endbuild -->
-
-    <script type="text/javascript">
-
-    $( document ).ready(function() {
-
-      // Get the data.json file to populate the page:
-      $.get( "data.json", function( data ) {
-
-        console.log(JSON.stringify(data))
-
-        // Titles and headings:
-        $( "title" ).html( data.name )
-        $( "h1" ).html( data.name )
-
-        // Sections:
-
-        if (data.children.length > 0) {
-          var first = data.children.shift()
-          $("#firstTitle").text(first.name)
-          $("#firstLink").text("View all " + first.name).attr("href", first.fileName)
-        }
-        
-        if (data.children.length > 0) {
-          var second = data.children.shift()
-          $("#secondTitle").text(second.name)
-          $("#secondLink").text("View all " + second.name).attr("href", second.fileName)
-        }
-        
-        if (data.children.length > 0) {
-          var third = data.children.shift()
-          $("#thirdTitle").text(third.name)
-          $("#thirdLink").text("View all " + third.name).attr("href", third.fileName)
-        }
-
-        $( "#otherTitle" ).html( "Other " + data.name + " categories" )
-        for (var i = 0; i < data.children.length; i++) {
-          var other = data.children.shift();
-          console.log(JSON.stringify(other))
-
-          // Build the markup template:
-          var item = $('<footer class="nav-panel__footer">' +
-                        '<div class="nav-panel__action">' +
-                          '<a class="nav-panel__roomy" href="#"></a>' +
-                        '</div>' + 
-                      '</footer>')
-
-          // Update the link:
-          $("a", item).text(other.name).attr("href", other.fileName)
-          $("#otherList").append(item)
-        }
-
-        if (data.children.length == 0) {
-          // Show a "nowt" message:
-          $("#otherList").append('<footer class="nav-panel__footer">' +
-                        '<div class="nav-panel__action">' +
-                          '<a class="nav-panel__roomy" href="#">Lies, damned lies and missing statistics! There\'s nothing here to see.</a>' +
-                        '</div>' + 
-                      '</footer>')
-        }
-
-      });
-
-    });
-
-    </script>
-
-  </body>
+    </div>
+</footer>
+</body>
 </html>
