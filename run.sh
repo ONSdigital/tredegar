@@ -15,12 +15,10 @@ export BONSAI_TRANSPORT_PORT=9300
 
 
 
-# Compile the code:
-mvn clean compile dependency:copy-dependencies && \
-
 # Generate taxonomy
-rm -rf src/main/taxonomy && \
-java -cp "target/classes:target/dependency/*" com.github.onsdigital.generator.Csv
+#mvn clean compile dependency:copy-dependencies && \
+#rm -rf src/main/taxonomy && \
+#java -cp "target/classes:target/dependency/*" com.github.onsdigital.generator.Csv
 
 # Now build the JAR:
 mvn package && \
