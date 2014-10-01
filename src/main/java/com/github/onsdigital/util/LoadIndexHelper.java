@@ -2,7 +2,6 @@ package com.github.onsdigital.util;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -13,7 +12,6 @@ import java.util.Map;
 
 import org.apache.commons.io.FileUtils;
 
-import com.github.davidcarboni.ResourceUtils;
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonSyntaxException;
