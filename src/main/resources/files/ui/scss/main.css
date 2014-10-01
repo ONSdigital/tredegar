@@ -400,12 +400,13 @@ body {
 /* ------------------------------
  * Misc utilities
  */
-.cf:before, .rule-above:before, .rule-below:before, .field:before, .definition-list--inline:before, .actionable-header:before, .divider:before, .divider__half:before, .list--table__item:before, .media:before, .nav:before, .callout__stat:before,
+.cf:before, .rule-above:before, .rule-below:before, .field:before, .definition-list--inline:before, .page-header--article__split:before, .actionable-header:before, .divider:before, .divider__half:before, .list--table__item:before, .media:before, .nav:before, .callout__stat:before,
 .cf:after,
 .rule-above:after,
 .rule-below:after,
 .field:after,
 .definition-list--inline:after,
+.page-header--article__split:after,
 .actionable-header:after,
 .divider:after,
 .divider__half:after,
@@ -419,7 +420,7 @@ body {
   /* 1 */
 }
 
-.cf:after, .rule-above:after, .rule-below:after, .field:after, .definition-list--inline:after, .actionable-header:after, .divider:after, .divider__half:after, .list--table__item:after, .media:after, .nav:after, .callout__stat:after {
+.cf:after, .rule-above:after, .rule-below:after, .field:after, .definition-list--inline:after, .page-header--article__split:after, .actionable-header:after, .divider:after, .divider__half:after, .list--table__item:after, .media:after, .nav:after, .callout__stat:after {
   clear: both;
 }
 
@@ -777,6 +778,23 @@ img {
 .flush--half--vertical {
   margin-top: .33em !important;
   margin-bottom: .33em !important;
+}
+
+.flush--third {
+  margin: .66em !important;
+}
+
+.flush--third--top {
+  margin-top: .66em !important;
+}
+
+.flush--third--bottom {
+  margin-bottom: .66em !important;
+}
+
+.flush--third--vertical {
+  margin-top: .66em !important;
+  margin-bottom: .66em !important;
 }
 
 .line-tight {
@@ -1928,6 +1946,10 @@ textarea {
   color: #333333;
 }
 
+.definition-emphasis {
+  font-family: "open-sans-n7", "open-sans", sans-serif;
+}
+
 .definition-list--inline dt,
 .definition-list--inline dd {
   float: left;
@@ -1951,10 +1973,12 @@ textarea {
   list-style: none;
 }
 
-.list--spaced li {
+.list--spaced li,
+.list--spaced dd {
   margin-bottom: 1.2rem;
 }
-.list--spaced li:last-of-type {
+.list--spaced li:last-of-type,
+.list--spaced dd:last-of-type {
   margin-bottom: 0;
 }
 
@@ -2010,7 +2034,7 @@ h2,
 }
 
 h3,
-.delta, .content-image__title, .nav-panel__title {
+.delta, .page-header--stat-bulletin-desc, .content-image__title, .nav-panel__title {
   font-size: 1.9rem;
   line-height: 1.105263158;
 }
@@ -2118,6 +2142,89 @@ a:hover, a:focus {
   color: #424242;
 }
 
+.page-header--stat-bulletin-desc {
+  color: #008898;
+}
+
+.page-header--article__img {
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+.page-header--article__split__meta > dd {
+  margin-bottom: 1rem;
+}
+
+.page-header--article__split__actions {
+  font-size: 1.4rem;
+}
+.page-header--article__split__actions > li {
+  margin-bottom: .75rem;
+}
+.page-header--article__split__actions [class*="icon"] {
+  font-size: 2rem;
+  vertical-align: middle;
+}
+.page-header--article__split__actions .link-complex__target {
+  vertical-align: middle;
+}
+
+@media screen and (min-width: 28em) {
+  .page-header--article__img {
+    float: left;
+    margin-top: .5rem;
+    margin-right: 2rem;
+  }
+
+  .page-header--article__body {
+    overflow: auto;
+  }
+
+  .page-header--article__split__meta {
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 44em) {
+  .page-header--article__split__meta,
+  .page-header--article__split__actions {
+    float: left;
+  }
+
+  .page-header--article__split__meta {
+    width: 55%;
+  }
+
+  .page-header--article__split__actions {
+    width: 42.5%;
+    margin-top: 0;
+    margin-left: 2.5%;
+  }
+}
+@media screen and (min-width: 50em) {
+  .page-header--article .page-header__icons {
+    top: -2.5rem;
+  }
+}
+@media screen and (min-width: 53em) {
+  .page-header .split__multiline-break {
+    display: inline-block;
+    margin-left: 1rem;
+  }
+
+  .page-header--article__split__meta {
+    width: 66%;
+  }
+
+  .page-header--article__split__actions {
+    width: 30%;
+    margin-left: 3%;
+  }
+}
+@media screen and (min-width: 57em) {
+  .page-header--article__img {
+    margin-right: 5%;
+  }
+}
 .footer__license {
   padding-top: 1rem;
   text-align: center;
@@ -3676,6 +3783,26 @@ $SPLIT
   float: left;
   clear: left;
   text-align: left;
+}
+
+.split--fixed {
+  margin-left: 0;
+  text-align: left;
+  list-style: none;
+}
+.split--fixed dd {
+  overflow: auto;
+}
+
+.split--fixed__title {
+  float: left;
+  width: 13rem;
+  clear: left;
+  text-align: left;
+}
+
+.split__multiline-break {
+  display: block;
 }
 
 .callout {
