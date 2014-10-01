@@ -33,7 +33,7 @@
 			<artifactId>resource-utils</artifactId>
 			<version>1.1.2</version>
 		</dependency>
-		
+
 		<!-- Taxonomy generator -->
 		<dependency>
 			<groupId>net.sf.opencsv</groupId>
@@ -105,7 +105,9 @@
 				<executions>
 					<execution>
 						<id>sass</id>
-						<phase>generate-sources</phase>
+						<!-- Phase should be generated sources, change back to it -->
+						<!-- <phase>generate-sources</phase> -->
+						<phase>site</phase>
 						<goals>
 							<goal>update-stylesheets</goal>
 						</goals>
@@ -165,7 +167,8 @@
 		</plugins>
 		<pluginManagement>
 			<plugins>
-				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+				<!--This plugin's configuration is used to store Eclipse m2e settings 
+					only. It has no influence on the Maven build itself. -->
 				<plugin>
 					<groupId>org.eclipse.m2e</groupId>
 					<artifactId>lifecycle-mapping</artifactId>
