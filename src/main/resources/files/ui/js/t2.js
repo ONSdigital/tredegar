@@ -60,6 +60,15 @@ $( document ).ready(function() {
 
 	/* Deconstruct the template: */
 
+	// Title
+	setTitle("Loading..")
+
+	// Breadcrumb
+	var breadcrumb = $(".breadcrumb")
+	var breadcrumbItem = $("li:eq(0)", section1)
+	breadcrumbItem.detach()
+	$("li", breadcrumb).remove()
+
 	// Section blocks
 	var section1 = $("#section1")
 	var section2 = $("#section2")
@@ -71,19 +80,10 @@ $( document ).ready(function() {
 	var header2 = $("header", section2)
 	var header3 = $("header", section3)
 	var headerOther = $("header", sectionOther)
-	$("h2", header1).text("Loading 1...")
-	$("h2", header2).text("Loading 2...")
-	$("h2", header3).text("Loading 3...")
-	$("h2", headerOther).text("Loading Other...")
-
-	// Section footers
-	// - detach these to use as a template:
-	var footer1 = $("footer", section1)
-	var footer2 = $("footer", section2)
-	var footer3 = $("footer", section3)
-	footer1.detach()
-	footer2.detach()
-	footer3.detach()
+	$("h2", header1).text("Loading..")
+	$("h2", header2).text("Loading..")
+	$("h2", header3).text("Loading..")
+	$("h2", headerOther).text("Loading..")
 
 	// Section items
 	// - detach one to use as a template and remove the rest:
@@ -99,6 +99,15 @@ $( document ).ready(function() {
 	$("li", section2).remove()
 	$("li", section3).remove()
 	$("footer", sectionOther).remove()
+
+	// Section footers
+	// - detach these to use as a template:
+	var footer1 = $("footer", section1)
+	var footer2 = $("footer", section2)
+	var footer3 = $("footer", section3)
+	footer1.detach()
+	footer2.detach()
+	footer3.detach()
 
 	/* Get the data.json file to populate the page: */
 
@@ -165,18 +174,24 @@ $( document ).ready(function() {
 			sectionOther.remove()
 		}
 
-		// Build the breadcrumb:
-		var upLink = "../"
+		// Breadcrumb
+		var breadcrumbHome = breadcrumbItem.clone()
+		$("a", breadcrumbHome).text("Home").attr("href", "/")
+		breadcrumb.append(breadcrumbHome)
+		var breadcrumbLink = ""
 		while (data.breadcrumb.length > 0) {
+			var breadcrumbSegment = breadcrumbItem.clone()
 			var crumb = data.breadcrumb.shift();
-			$('#breadcrumb').append(document.createTextNode(" > "));
-			$('#breadcrumb').append('<a href="' + upLink + '" class="action-link">' + crumb.name + '</a>');
-			upLink += "../"
+			breadcrumbLink += "/" + crumb.fileName
+			$("a", breadcrumbSegment).text(crumb.name).attr("href", breadcrumbLink)
+			breadcrumb.append(breadcrumbSegment)
 		}
 
 		// Add the current page at the end of the breadcrumb:
-		$('#breadcrumb').append(document.createTextNode(" > "));
-		$('#breadcrumb').append(document.createTextNode(data.name));
+		var breadcrumbHere = breadcrumbItem.clone()
+		breadcrumbLink += "/" + data.fileName
+		$("a", breadcrumbHere).text(data.name).attr("href", breadcrumbLink)
+		breadcrumb.append(breadcrumbHere);
 
 	});
 
