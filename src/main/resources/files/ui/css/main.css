@@ -762,13 +762,17 @@ input[type="number"],
 input[type="email"],
 input[type="tel"],
 textarea {
-  padding: 12px 15px;
-  padding: 1.25rem 1.5rem;
+  padding: 12px 15px 10px 15px;
+  padding: 1.2rem 1.5rem 1rem 1.5em;
   background: white;
   border-color: #d1d3cf;
   border-style: solid;
   border-width: 3px;
   border-radius: 3px;
+  /*fix for button alignment right*/
+  margin-right:-6px;
+  margin-right:-0.6rem;
+  /*end fix*/
   box-shadow: 0 4px 0 -2px inset #f3f3f3, 0 4px 0 0 inset rgba(222, 223, 220, 0.43); }
 
 select {
@@ -823,7 +827,8 @@ textarea {
     margin-right: .6rem; }
 
 .input, .input--mini, .input--small, .input--med, .input--med-large, .input--large, .input--full {
-  width: 100%; }
+  width: 100%;
+  margin: 0; }
 
 .input {
   display: inline-block; }
@@ -2010,7 +2015,8 @@ a {
 .box--orange--separated-left, .box--blue--separated-left {
   position: relative;
   border-left: 0; }
-  .box--orange--separated-left:before, .box--blue--separated-left:before {
+  
+.box--orange--separated-left:before, .box--blue--separated-left:before {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -2018,7 +2024,7 @@ a {
     z-index: 1;
     border-left: 6px solid #f37121;
     content: " "; }
-
+	 
 .sectioned-ons-top {
   position: relative;
   border-top: 0; }
@@ -2623,7 +2629,8 @@ lesser , applied styles
   margin-left: 2rem; }
 
 .media__body {
-  overflow: hidden; }
+  overflow: hidden;
+   }
   .media__body, .media__body > :last-child {
     margin-bottom: 0; }
 
@@ -3071,12 +3078,19 @@ lesser , applied styles
 
 .slate_original {
   background-color: #eeefed; }
+  
+.slate--light {
+	background-color: #f5f5f4;
+}
 
 .slate {
   background-color: #dcdee0; } 
 
 .slate--light {
   background-color: #f3f3f3; }
+  
+.slate--dark {
+  background-color: #b2b7bb; }
 
 .slate--mid-grey {
   background-color: #e4e5e3; }
@@ -4394,16 +4408,6 @@ background-color: #edeeee !important;
 {
     margin-top:-1em;
 }
-.box--padded--highlight
-{
-	margin:1rem;
-	margin:16px;
-  	padding:16px 20px 2px 20px;
- 	padding:1rem 1.25rem 0.125rem 1.25rem;
-	color:#000;
-	background-color:#fee8a9;
-	border:1px solid #ffba3b;
-}
 
 .border-horizontal {
   border-color: #dedfdc;
@@ -4445,8 +4449,8 @@ background-color: #edeeee !important;
   	padding:16px 20px 2px 20px;
  	padding:1rem 1.25rem 0.125rem 1.25rem;
 	color:#000;
-	background-color:#fee8a9;
-	border:1px solid #ffba3b;
+	background-color:#f0f1d5;
+	border-left:10px solid #b3b92d;
 }
 
 .border-horizontal {
@@ -4462,7 +4466,7 @@ background-color: #edeeee !important;
 .white {
   background-color: #fff; }
   
-  .page-header-image {
+.page-header-image {
 	height:6rem;
 	width:6rem;
 	float:left;
