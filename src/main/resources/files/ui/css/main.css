@@ -4037,11 +4037,6 @@ ul.simple-pagination {
 
 /*T3 Divided Navpanel*/
 
-.navpanel-list {
-  font-size: 1.1em;
-  color: #000000;
-
-}
 
 .navpanel-list-heading {
   font-weight: bold;
@@ -4188,7 +4183,7 @@ background-color: #edeeee !important;
 
 .navpanel-list {
   font-size: 1.1em;
-  color: #016db9;
+  color: #000000;
 }
 
 .navpanel-list-heading {
@@ -4483,4 +4478,8 @@ background-color: #edeeee !important;
 
 .ONS_border{
   border-top: solid 4px #b3b92d;
+}
+
+.table_action-reduced{
+  margin: 0rem 4rem;
 }
