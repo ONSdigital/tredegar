@@ -9,7 +9,8 @@ public class Data extends TaxonomyNode {
 
 	public String level;
 	public List<TaxonomyNode> breadcrumb = new ArrayList<>();
-	public List<TaxonomyNode> children = new ArrayList<>();
+	public List<TaxonomyNode> children;
+	public List<Detail> timeSeries;
 	public String lede;
 	public String more;
 
@@ -20,6 +21,8 @@ public class Data extends TaxonomyNode {
 			breadcrumb.add(0, new TaxonomyNode(parent));
 		}
 		int index = 1;
+		if (folder.children.size() > 0)
+			children = new ArrayList<>();
 		for (Folder child : folder.children) {
 			if (taxonomyLevel == 1)
 				children.add(new ChildT1(child, index++));
