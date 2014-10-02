@@ -35,6 +35,10 @@ public class LoadIndex {
 			@Context HttpServletResponse httpServletResponse)
 			throws IOException, Exception {
 
+		loadIndex();
+	}
+
+	public void loadIndex() throws IOException, Exception {
 		List<String> absoluteFilePaths = LoadIndexHelper.getAbsoluteFilePaths();
 		if (absoluteFilePaths.isEmpty()) {
 			System.out

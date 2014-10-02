@@ -80,7 +80,7 @@ function populateHeadline(headlineItem) {
 function populateStatsBulletinHeadlines(data, timeseriesItem) {
 
 	var headlines = $("#statsBulletinHeadlines")
-	$(".lede", headlines).text(data.name + " Statistical Bulletin Headlines zz")
+	$(".lede", headlines).text(data.name + " Statistical Bulletin Headlines")
 	var headlineList = $("ul", headlines)
 	var itemTemplate = $("li:eq(0)", headlineList)
 	itemTemplate.detach()
@@ -161,7 +161,7 @@ $( document ).ready(function() {
 
 		// Time series items
 		while (data.timeseries.length > 0) {
-			console.log(JSON.stringify(data.timeseries[0]))
+			
 			var timeseriesItem = timeseriesTemplate.clone()
 			var item = data.timeseries.shift()
 
