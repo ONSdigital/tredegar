@@ -82,7 +82,7 @@ public class LoadIndexHelper {
 				// Skip files other than data.json under home directories
 			}
 		} else {
-			documentMap = buildDocumentMap(url, splitPath, type, fileName);
+			documentMap = buildDocumentMap(url, splitPath, type, "Inflation Price And Indices");
 		}
 		return documentMap;
 	}
@@ -92,7 +92,7 @@ public class LoadIndexHelper {
 		Map<String, String> documentMap = new HashMap<String, String>();
 		documentMap.put(URL, url);
 		documentMap.put(TYPE, type);
-		documentMap.put(TITLE, "Inflation Price And Indices");
+		documentMap.put(TITLE, title);
 		documentMap.put(TAGS, Arrays.toString(splitPath));
 		return documentMap;
 	}
