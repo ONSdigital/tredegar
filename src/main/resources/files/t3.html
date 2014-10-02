@@ -1162,54 +1162,8 @@ markup: false
     <script src='//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js'></script>
     <!-- endbuild -->
 
-    <script type="text/javascript">
-
-    $( document ).ready(function() {
-
-      var dataPath = window.location.pathname
-      if (dataPath.substring(dataPath.length - 1) != "/") {
-        dataPath += "/"
-      }
-      dataPath += "data.json"
-      console.log("Data at: "+dataPath)
-
-      // Get the data.json file to populate the page:
-      $.get( dataPath, function( data ) {
-
-        /*
-        * Builds a link to the given file using the given data.
-        */
-        var link = function (fileName) {
-          var result = window.location.pathname
-          if (result.substring(result.length - 1) != "/") {
-            result += "/"
-          }
-          result += fileName
-          return result
-        }
-
-        // Titles and headings:
-        $( "title" ).html( data.name )
-        $( "h1" ).html( data.name )
-
-        // Build the breadcrumb:
-        var upLink = "../"
-        while (data.breadcrumb.length > 0) {
-          var crumb = data.breadcrumb.shift();
-          $('#breadcrumb').append(document.createTextNode(" > "));
-          $('#breadcrumb').append('<a href="' + upLink + '" class="action-link">' + crumb.name + '</a>');
-          upLink += "../"
-        }
-
-        // Add the current page at the end of the breadcrumb:
-        $('#breadcrumb').append(document.createTextNode(" > "));
-        $('#breadcrumb').append(document.createTextNode(data.name));
-
-      });
-
-    });
-
-    </script>
+    <!-- Functionality to populate this page -->
+    <script src='/ui/js/t3.js'></script>
 
   </body>
 </html>
