@@ -1,0 +1,83 @@
+{
+  "level": "t3",
+  "breadcrumb": [
+    {
+      "name": "Economy",
+      "fileName": "economy"
+    }
+  ],
+  "timeseries": [
+    {
+      "name": "CPI",
+      "link": "#",
+      "info": "Consumer Prices Index (CPI) Annual Rate Percentage Change Over 12 Months",
+      "number": "1.5 %",
+      "unit": "%",
+      "date": "Aug 2014",
+      "lastUpated": "16 September 2014",
+      "nextUpdate": "14 October 2014",
+      "headline": true
+    },
+    {
+      "name": "RPIJ",
+      "link": "#",
+      "info": "Retail Prices Index calculated using the Jevons formula (RPIJ) Annual Rate Percentage Change Over 12 Months",
+      "number": "1.8 %",
+      "unit": "%",
+      "date": "Aug 2014",
+      "lastUpated": "16 September 2014",
+      "nextUpdate": "14 October 2014",
+      "headline": false
+    },
+    {
+      "name": "CPIH",
+      "link": "#",
+      "info": "Consumer Prices Index including owner occupiers' housing costs (CPIH) Annual Rate Percentage Change Over 12 Months",
+      "number": "1.5 %",
+      "unit": "%",
+      "date": "Aug 2014",
+      "lastUpated": "16 September 2014",
+      "nextUpdate": "14 October 2014",
+      "note": "Not a national statsitic",
+      "headline": false
+    },
+    {
+      "name": "RPI",
+      "link": "#",
+      "info": "Retail Prices Index (RPI) Annual Rate Percentage Change Over 12 Months",
+      "number": "2.4 %",
+      "unit": "%",
+      "date": "Aug 2014",
+      "lastUpated": "16 September 2014",
+      "nextUpdate": "14 October 2014",
+      "note": "Not a national statsitic",
+      "headline": false
+    },
+    {
+      "name": "PPI: Output of manufactured product Index",
+      "link": "#",
+      "info": "Producer Price Index (PPI) Annual Rate Percentage Change Over 12 Months",
+      "number": "-0.3 %",
+      "unit": "%",
+      "date": "Aug 2014",
+      "lastUpated": "16 September 2014",
+      "nextUpdate": "14 October 2014",
+      "headline": false
+    }
+    {
+      "name": "PPI: Input of all manufacturing Index",
+      "link": "#",
+      "info": "Producer Price Index (PPI) Annual Rate Percentage Change Over 12 Months",
+      "number": "7.2 %",
+      "unit": "%",
+      "date": "Aug 2014",
+      "lastUpated": "16 September 2014",
+      "nextUpdate": "14 October 2014",
+      "headline": false
+    }
+  ],
+  "lede": "Latest Consumer Price Indices including CPI, CPIH, RPI and RPIJ as well as Producer Price Indices and other inflation statistics.",
+  "more": "Some more content goes here. This will expand and contract if you have JS enabled. If JS is disabled, this will show by default. Yay progressive enhancement!",
+  "name": "Inflation and Price Indices",
+  "fileName": "inflationandpriceindices"
+}

@@ -57,6 +57,69 @@ function populateDetail(detail, template) {
 	return detailItem
 }
 
+function populateHeadline(headlineItem) {
+	var headline = $("#headline")
+	
+	//Headline Title
+	$("h2", headline).contents()[0].textContent = headlineItem.name
+	var statFigure =  $(".stat__figure", headline)
+	//Number
+	$("strong", statFigure).text(headlineItem.number+headlineItem.unit)
+	//Date and change in number
+	var statDescription = $(".stat__description", headline)
+	statDescription.contents()[0].textContent = headlineItem.date
+	$("strong", statDescription).text(headlineItem.change)
+	//Last update and next update
+	var updateDate = $("dl", statDescription)
+	$("dd:eq(0)", updateDate).text(headlineItem.lastUpated)
+	$("span", $("dd:eq(1)", updateDate)).text(headlineItem.nextUpdate)
+	//Explanation
+	$(".stat_change_term",headline).text(headlineItem.explanation)
+}
+
+function populateStatsBulletinHeadlines(data, timeseriesItem) {
+
+	var headlines = $("#statsBulletinHeadlines")
+	$(".lede", headlines).text(data.name + " Statistical Bulletin Headlines zz")
+	var headlineList = $("ul", headlines)
+	var itemTemplate = $("li:eq(0)", headlineList)
+	itemTemplate.detach()
+	$("li", headlineList).remove()
+
+	while (timeseriesItem.statsBulletinHeadlines.length > 0) {
+		var headlineData = timeseriesItem.statsBulletinHeadlines.shift()
+		var headlineItem = itemTemplate.clone()
+		// For now it's not actually a link, so we just populate the text.
+		// TODO: eventually use headlineData.href too.
+		headlineItem.text(headlineData.text)
+		headlineList.append(headlineItem)
+	}
+}
+
+function buildBreadcrumb(data, breadcrumbItem) {
+
+	var breadcrumb = $(".breadcrumb")
+
+	var breadcrumbHome = breadcrumbItem.clone()
+	$("a", breadcrumbHome).text("Home").attr("href", "/")
+	breadcrumb.append(breadcrumbHome)
+	var breadcrumbLink = ""
+	while (data.breadcrumb.length > 0) {
+		var breadcrumbSegment = breadcrumbItem.clone()
+		var crumb = data.breadcrumb.shift();
+		breadcrumbLink += "/" + crumb.fileName
+		$("a", breadcrumbSegment).text(crumb.name).attr("href", breadcrumbLink)
+		breadcrumb.append(breadcrumbSegment)
+	}
+
+	// Add the current page at the end of the breadcrumb:
+	var breadcrumbHere = breadcrumbItem.clone()
+	breadcrumbLink += "/" + data.fileName
+	$("a", breadcrumbHere).text(data.name).attr("href", breadcrumbLink)
+	breadcrumb.append(breadcrumbHere);
+}
+
+
 /*
  * Main function to populate the page.
  */
@@ -65,7 +128,7 @@ $( document ).ready(function() {
 	/* Deconstruct the template: */
 
 	// Title
-	setTitle("Loading.. Cats")
+	setTitle("Loading..")
 
 	// Breadcrumb
 	var breadcrumb = $(".breadcrumb")
@@ -74,7 +137,6 @@ $( document ).ready(function() {
 	$("li", breadcrumb).remove()
 
 	// Section blocks
-	var headline = $("#headline")
 	var timeseries = $("#timeseries")
 	
 	// Section items
@@ -105,7 +167,7 @@ $( document ).ready(function() {
 
 			var header = $("h3", timeseriesItem)
 			$("a:eq(0)", header).text(item.name).attr("href", item.link)
-			$(".stat__figure", timeseriesItem).text(item.number)
+			$(".stat__figure", timeseriesItem).text(item.number+item.unit)
 			//TODO: Format and set the datetime property of date
 			var updateDate = $("dl", timeseriesItem)
 			$("dd:eq(0)", updateDate).text(item.lastUpated)
@@ -119,39 +181,15 @@ $( document ).ready(function() {
 
 			$(".list--table__head", timeseries).after(timeseriesItem)
 
-		// "name": "Total population (UK) ",
-	   //    "link": "#",
-	   //    "info": "Lorem ipsum dolor sit amet",
-	   //    "number": "64.1",
-	   //    "unit": "m",
-	   //    "date": "Mid-2013 estimate",
-	   //    "lastUpated": "18th Fex 2014",
-	   //    "nextUpdate": "25th June 2014",
-	   //    "headline": true
-
+			if(item.headline) {
+				populateHeadline(item);
+				populateStatsBulletinHeadlines(data, item)
+			}
 
 		}
-		//var item = timeseriesTemplate.clone()
-		//$(".list--table__head", timeseries).after(item)
 
 		// Breadcrumb
-		var breadcrumbHome = breadcrumbItem.clone()
-		$("a", breadcrumbHome).text("Home").attr("href", "/")
-		breadcrumb.append(breadcrumbHome)
-		var breadcrumbLink = ""
-		while (data.breadcrumb.length > 0) {
-			var breadcrumbSegment = breadcrumbItem.clone()
-			var crumb = data.breadcrumb.shift();
-			breadcrumbLink += "/" + crumb.fileName
-			$("a", breadcrumbSegment).text(crumb.name).attr("href", breadcrumbLink)
-			breadcrumb.append(breadcrumbSegment)
-		}
-
-		// Add the current page at the end of the breadcrumb:
-		var breadcrumbHere = breadcrumbItem.clone()
-		breadcrumbLink += "/" + data.fileName
-		$("a", breadcrumbHere).text(data.name).attr("href", breadcrumbLink)
-		breadcrumb.append(breadcrumbHere);
+		buildBreadcrumb(data, breadcrumbItem)
 
 	});
 
