@@ -11,31 +11,39 @@
       "detail": [
         {
           "name": "Gross Domestic Product",
+          "link": "#",
           "info": "Lorem ipsum dolor sit amet",
           "number": "£390383",
           "unit": "m",
-          "date": "1st Quarter 2014"
+          "date": "1st Quarter 2014",
+          "headline": false
         },
         {
           "name": "GDP Quarter on Quarter Growth",
+          "link": "#",
           "info": "Lorem ipsum dolor sit amet",
           "number": "0.8",
           "unit": "%",
-          "date": "1st Quarter 2014"
+          "date": "1st Quarter 2014",
+          "headline": false
         },
         {
           "name": "GDP Change on same Quarter a year ago",
+          "link": "#",
           "info": "Lorem ipsum dolor sit amet",
           "number": "0.3",
           "unit": "%",
-          "date": "1st Quarter 2014"
+          "date": "1st Quarter 2014",
+          "headline": false
         },
         {
           "name": "Production Index",
+          "link": "#",
           "info": "Lorem ipsum dolor sit amet",
           "number": "97.5",
           "unit": "",
-          "date": "1st Quarter 2014"
+          "date": "1st Quarter 2014",
+          "headline": false
         }
       ],
       "name": "Earnings and Working Hours",
@@ -45,31 +53,39 @@
       "detail": [
         {
           "name": "CPI Index",
+          "link": "#",
           "info": "Lorem ipsum dolor sit amet",
           "number": "126.7",
           "unit": "",
-          "date": "January 2014"
+          "date": "January 2014",
+          "headline": false
         },
         {
           "name": "CPI Annual Rate Percentage Change over 12 months",
+          "link": "#",
           "info": "Lorem ipsum dolor sit amet",
           "number": "1.9",
           "unit": "%",
-          "date": "January 2014"
+          "date": "January 2014",
+          "headline": false
         },
         {
           "name": "CPIH Index",
+          "link": "#",
           "info": "Lorem ipsum dolor sit amet",
           "number": "124.7",
           "unit": "",
-          "date": "January 2014"
+          "date": "January 2014",
+          "headline": false
         },
         {
           "name": "CPIH Annual Rate Percentage Change over 12 months",
+          "link": "#",
           "info": "Lorem ipsum dolor sit amet",
           "number": "1.8",
           "unit": "%",
-          "date": "January 2014"
+          "date": "January 2014",
+          "headline": false
         }
       ],
       "name": "Employment and Employee Types",
@@ -79,17 +95,21 @@
       "detail": [
         {
           "name": "Employment Rate",
+          "link": "#",
           "info": "Lorem ipsum dolor sit amet",
           "number": "72.9",
           "unit": "%",
-          "date": "Feb — Apr 2014"
+          "date": "Feb — Apr 2014",
+          "headline": false
         },
         {
           "name": "Unemployment Rate",
+          "link": "#",
           "info": "Lorem ipsum dolor sit amet",
           "number": "6.6",
           "unit": "%",
-          "date": "Feb — Apr 2014"
+          "date": "Feb — Apr 2014",
+          "headline": false
         }
       ],
       "name": "Workplace Pensions",
