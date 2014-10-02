@@ -161,7 +161,7 @@ $( document ).ready(function() {
 
 		// Time series items
 		while (data.timeseries.length > 0) {
-			console.log(JSON.stringify(data.timeseries[0]))
+			
 			var timeseriesItem = timeseriesTemplate.clone()
 			var item = data.timeseries.shift()
 
