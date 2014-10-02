@@ -8,6 +8,9 @@ public class Detail {
 	public String number;
 	public String unit;
 	public String date;
+	public String lastUpated;
+	public String nextUpdate;
+	public String note;
 	public boolean headline;
 
 	public Detail(String name, String number, String unit, String date) {

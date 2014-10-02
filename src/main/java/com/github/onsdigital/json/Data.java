@@ -20,14 +20,18 @@ public class Data extends TaxonomyNode {
 		while ((parent = parent.parent) != null) {
 			breadcrumb.add(0, new TaxonomyNode(parent));
 		}
-		int index = 1;
-		if (folder.children.size() > 0)
+
+		if (folder.children.size() > 0) {
+			int index = 1;
 			children = new ArrayList<>();
-		for (Folder child : folder.children) {
-			if (taxonomyLevel == 1)
-				children.add(new ChildT1(child, index++));
-			else
-				children.add(new ChildT2(child, index++));
+			for (Folder child : folder.children) {
+				if (taxonomyLevel == 1)
+					children.add(new ChildT1(child, index++));
+				else
+					children.add(new ChildT2(child, index++));
+			}
+		} else {
+			timeSeries = new ArrayList<>();
 		}
 	}
 
