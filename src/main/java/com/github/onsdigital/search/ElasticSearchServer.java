@@ -5,6 +5,8 @@ import java.io.IOException;
 import org.elasticsearch.ElasticsearchException;
 import org.elasticsearch.client.Client;
 
+import com.github.onsdigital.api.LoadIndex;
+
 /**
  * Starts an {@link EmbeddedElasticSearchServer} when a client requested
  * 
@@ -20,12 +22,13 @@ public class ElasticSearchServer {
 
 	}
 
-	public static Client getClient() throws ElasticsearchException, IOException {
+	public static Client getClient() throws Exception {
 		if (client == null) {
 			synchronized (ElasticSearchServer.class) {
 				if (client == null) {
 					startEmbeddedServer();
 					client = server.getClient();
+					new LoadIndex().loadIndex();
 				}
 			}
 		}
