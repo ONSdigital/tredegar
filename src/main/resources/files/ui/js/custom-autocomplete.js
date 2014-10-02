@@ -101,7 +101,9 @@ $(function() {
         		+ "<span style='float:left'>"
         		+ contentType
         		+"</span>" 
+        		+ "<span style='padding-left:30px'>"
         		+ item.title 
+        		+ "</span>"
         		+ "</a>" )
         .appendTo( dt );
     };
