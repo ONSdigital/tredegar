@@ -5,52 +5,18 @@
     {
       "detail": [
         {
-          "name": "Value added of Non-Financial Business Economy",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "£936.3",
-          "unit": "bn",
-          "date": "1st Quarter 2014"
-        },
-        {
-          "name": "UK Gross Expenditure on Research and Development",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "£27",
-          "unit": "bn",
-          "date": "2012"
-        },
-        {
-          "name": "Chained Volume Measure of Construction Output",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "1.2",
+          "name": "GDP Quarter on Quarter Growth",
+          "info": "Gross domestic Product (GDP) Chained Volume Measures",
+          "number": "0.8 %",
           "unit": "%",
-          "date": "Jan 2014"
-        }
-      ],
-      "name": "Business, Industry and Trade",
-      "fileName": "businessindustryandtrade"
-    },
-    {
-      "detail": [
-        {
-          "name": "Gross Domestic Product",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "£936.3",
-          "unit": "bn",
-          "date": "1st Quarter 2014"
+          "date": "Quarter 1 2014"
         },
         {
-          "name": "CPI Annual Rate Percentage Change over 12 months",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "£27",
-          "unit": "bn",
-          "date": "January 2014"
-        },
-        {
-          "name": "Public Sctor Net Borrowing excluding financial interventions",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "£13.3",
-          "unit": "bn",
-          "date": "Jan 2014"
+          "name": "CPI Annual Rate Percentage Change Over 12 Months",
+          "info": "Consumer Prices Index (CPI)",
+          "number": "1.5 %",
+          "unit": "%",
+          "date": "August 2014"
         }
       ],
       "name": "Economy",
@@ -59,25 +25,38 @@
     {
       "detail": [
         {
-          "name": "Employment Rate",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "72.9",
-          "unit": "%",
-          "date": "Feb — Apr 2014"
+          "name": "UK businesses",
+          "info": "Number of local units in VAT and/or PAYE based enterprises",
+          "number": "2.6 million",
+          "unit": "million",
+          "date": "2013"
         },
         {
-          "name": "Unemployment Rate",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "6.6",
+          "name": "Retail Sales Value including automotive fuel",
+          "info": "Index numbers of sales per week",
+          "number": "3.2 %",
           "unit": "%",
-          "date": "Feb — Apr 2014"
+          "date": "August 2014"
+        }        
+      ],
+      "name": "Business, Industry and Trade",
+      "fileName": "businessindustryandtrade"
+    },
+    {
+      "detail": [
+        {
+          "name": "UK population",
+          "info": "Estimates of the usually resident population as at 30 June",
+          "number": "64.1 million",
+          "unit": "million",
+          "date": "Mid-2013"
         },
         {
-          "name": "Vacancies",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "637,000",
-          "unit": "bn",
-          "date": "Mar-May 2014"
+          "name": "Net long-term migration to the UK",
+          "info": "Someone who moves from their country of previous residence for a period of at least a year",
+          "number": "243 thousand",
+          "unit": "thousand",
+          "date": "Year ending March 2014"
         }
       ],
       "name": "People, Population and Community",
@@ -86,25 +65,18 @@
     {
       "detail": [
         {
-          "name": "Total population (UK) ",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "64.1",
-          "unit": "m",
-          "date": "Mid-2013 estimate"
-        },
-        {
-          "name": "Net Migration (UK) ",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "212,000",
+          "name": "Employment rate (aged 16-64)",
+          "info": "Number of people in work",
+          "number": "73.0 %",
           "unit": "%",
-          "date": "Year ending Dec 2014"
+          "date": "May to July 2014"
         },
         {
-          "name": "Number of Births (UK) ",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "812,970 ",
-          "unit": "",
-          "date": "2013"
+          "name": "Unemployment rate (aged 16-64)",
+          "info": "People without a job who are actively seeking work",
+          "number": "6.2 %",
+          "unit": "%",
+          "date": "May to July 2014"
         }
       ],
       "name": "Employment and Labour Market",
