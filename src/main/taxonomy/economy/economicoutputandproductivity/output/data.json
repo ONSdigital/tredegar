@@ -10,9 +10,44 @@
       "fileName": "economicoutputandproductivity"
     }
   ],
-  "children": [],
+  "timeSeries": [
+    {
+      "name": "Total population (UK) ",
+      "link": "#",
+      "info": "Lorem ipsum dolor sit amet",
+      "number": "64.1",
+      "unit": "m",
+      "date": "Mid-2013 estimate",
+      "lastUpated": "18th Fex 2014",
+      "nextUpdate": "25th June 2014",
+      "headline": true
+    },
+    {
+      "name": "CPI Index",
+      "link": "#",
+      "info": "Lorem ipsum dolor sit amet",
+      "number": "212,000",
+      "unit": "%",
+      "date": "Year ending Dec 2014",
+      "lastUpated": "18th Fex 2014",
+      "nextUpdate": "25th June 2014",
+      "note": "2005 \u003d 100. Not seasonally adjusted",
+      "headline": false
+    },
+    {
+      "name": "Number of Births (UK) ",
+      "link": "#",
+      "info": "Lorem ipsum dolor sit amet",
+      "number": "812,970 ",
+      "unit": "",
+      "date": "2013",
+      "lastUpated": "18th Fex 2014",
+      "nextUpdate": "25th June 2014",
+      "headline": false
+    }
+  ],
   "lede": "Consumer price inflation is the speed at which the prices of goods and services bought by households rise or fall.",
-  "more": "Some more content about CPI goes here. This will expand and contract if you have JS enabled. If JS is disabled, this will show by default. Yay progressive enhancement!",
+  "more": "Some more content goes here. This will expand and contract if you have JS enabled. If JS is disabled, this will show by default. Yay progressive enhancement!",
   "name": "Output",
   "fileName": "output"
 }

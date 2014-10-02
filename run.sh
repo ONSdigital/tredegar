@@ -21,8 +21,19 @@ export BONSAI_TRANSPORT_PORT=9300
 # Now build the JAR:
 mvn package && \
 
-# Development: reloadable
-java $JAVA_OPTS -Drestolino.files=$RESTOLINO_STATIC -Drestolino.classes=$RESTOLINO_CLASSES -Drestolino.packageprefix=$PACKAGE_PREFIX -cp "target/dependency/*" com.github.davidcarboni.restolino.Main
+    if hash heroku 2>/dev/null; then
+    
+    	# Run Heroku style if the Heroku Toolbelt is installed
+        foreman start
+        
+    else
 
-# Production: non-reloadable
-#java $JAVA_OPTS -jar target/*-jar-with-dependencies.jar
+		# Otherwise go direct to Java
+		
+		# Development: reloadable
+		java $JAVA_OPTS -Drestolino.files=$RESTOLINO_STATIC -Drestolino.classes=$RESTOLINO_CLASSES -Drestolino.packageprefix=$PACKAGE_PREFIX -cp "target/dependency/*" com.github.davidcarboni.restolino.Main
+		
+		# Production: non-reloadable
+		#java $JAVA_OPTS -jar target/*-jar-with-dependencies.jar
+
+    fi

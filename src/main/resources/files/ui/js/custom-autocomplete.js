@@ -78,7 +78,7 @@ $(function() {
 		var contentType;
 		switch (item.type) {
 			case "home":
-				contentType = "<span class='lozenge lozenge-spacer lozenge-blue'>STATISTICAL BULLETIN</span>";
+				contentType = "<span class='lozenge lozenge-spacer lozenge-grey'>HOME</span>";
 				break;
 			case "bulletins":
 				contentType = "<span class='lozenge lozenge-spacer lozenge-blue'>STATISTICAL BULLETIN</span>";

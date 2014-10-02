@@ -11,31 +11,39 @@
       "detail": [
         {
           "name": "Gross Domestic Product",
+          "link": "#",
           "info": "Lorem ipsum dolor sit amet",
           "number": "£390383",
           "unit": "m",
-          "date": "1st Quarter 2014"
+          "date": "1st Quarter 2014",
+          "headline": false
         },
         {
           "name": "GDP Quarter on Quarter Growth",
+          "link": "#",
           "info": "Lorem ipsum dolor sit amet",
           "number": "0.8",
           "unit": "%",
-          "date": "1st Quarter 2014"
+          "date": "1st Quarter 2014",
+          "headline": false
         },
         {
           "name": "GDP Change on same Quarter a year ago",
+          "link": "#",
           "info": "Lorem ipsum dolor sit amet",
           "number": "0.3",
           "unit": "%",
-          "date": "1st Quarter 2014"
+          "date": "1st Quarter 2014",
+          "headline": false
         },
         {
           "name": "Production Index",
+          "link": "#",
           "info": "Lorem ipsum dolor sit amet",
           "number": "97.5",
           "unit": "",
-          "date": "1st Quarter 2014"
+          "date": "1st Quarter 2014",
+          "headline": false
         }
       ],
       "name": "Home Internet and Social Media Usage",

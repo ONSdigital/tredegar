@@ -47,10 +47,14 @@ function loadPage(pageNumber) {
 	var onssearch = $('body').data('onssearch');
 	var type = onssearch.type ? ("&type=" +onssearch.type) : '';
 
+	clearAll();
+	showLoadingMessage();
 	$.getJSON("search?q=" + onssearch.query + type + "&page=" + onssearch.page,  function(data) {
 			onssearch.data = data;  
+			hideLoadingMessage();
 		  	buildResultList();
 		  }).fail(function() {
+		  	showErrorMessage();
 		    console.log( "Failed searching for query " + onssearch.query );
 	});
 }
@@ -61,15 +65,19 @@ function doSearch() {
 		var onssearch = $('body').data('onssearch');
 		var type = onssearch.type ? ("&type=" +onssearch.type) : '';
 		
+		clearAll();
+		showLoadingMessage();
 		$.getJSON("search?q=" + onssearch.query + type + "&page=" + onssearch.page,  function(data) {
 			  	console.log( "Search successful for query " + 	onssearch.query );
 				console.log(data);
 				onssearch.data = data;  
+				hideLoadingMessage();
 			  	buildResultList();
 			  	buildInfo();
 			  	buildPaginator();
 			  	onssearch.onSearchComplete();
 			  }).fail(function() {
+			  	showErrorMessage();
 			    console.log( "Failed searching for query " + onssearch.query );
 		});
 }
@@ -83,8 +91,6 @@ function buildResultList() {
 	};
 	var resultsContainer = $('#' + onssearch.resultsHolder);
 
-	clearDiv(resultsContainer);	
-	
 	var results = onssearch.data.results;
 	var dl = $("<dl/>"); 
 	resultsContainer.append(dl);
@@ -134,7 +140,6 @@ function buildInfo() {
 	};	
 
 	var infoContainer = $('#' + onssearch.resultInfoHolder);
-	clearDiv(infoContainer);
 
 	var resultNum = $("<span class='results-total'>" + onssearch.data.numberOfResults + "</span>");
 	infoContainer.append(resultNum);
@@ -143,9 +148,36 @@ function buildInfo() {
 }
 
 
-function clearDiv(div) {
-//Clear div content
-div.html('');
+function clearAll() {
+	var onssearch = $('body').data('onssearch');
+	var infoContainer = $('#' + onssearch.resultInfoHolder);
+	var resultsContainer = $('#' + onssearch.resultsHolder);
+
+	if (infoContainer) {
+		infoContainer.html('');	
+	}
+	if (resultsContainer) {
+		resultsContainer.html('');	
+	}
+}
+
+function showLoadingMessage() {
+	var onssearch = $('body').data('onssearch');
+	var infoContainer = $('#' + onssearch.resultInfoHolder);
+	infoContainer.html('<b style="font-size:22px">Loading...</b>');
+}
+
+function hideLoadingMessage() {
+	var onssearch = $('body').data('onssearch');
+	var infoContainer = $('#' + onssearch.resultInfoHolder);
+	infoContainer.html('');
+}
+
+function showErrorMessage() {
+	clearAll();
+	var onssearch = $('body').data('onssearch');
+	var resultsContainer = $('#' + onssearch.resultsHolder);
+	resultsContainer.html('<b style="color:red;font-size:20px">Oops!! Search failed!<b>');
 }
 
 function  createDummyresults() {
