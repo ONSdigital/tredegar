@@ -57,6 +57,27 @@ function populateDetail(detail, template) {
 	return detailItem
 }
 
+function populateHeadline(headlineItem) {
+	var headline = $("#headline")
+	
+	//Headline Title
+	$("h2", headline).contents()[0].textContent = headlineItem.name
+	var statFigure =  $(".stat__figure", headline)
+	//Number
+	$("strong", statFigure).text(headlineItem.number+headlineItem.unit)
+	//Date and change in number
+	var statDescription = $(".stat__description", headline)
+	statDescription.contents()[0].textContent = headlineItem.date
+	$("strong", statDescription).text(headlineItem.change)
+	//Last update and next update
+	var updateDate = $("dl", statDescription)
+	$("dd:eq(0)", updateDate).text(headlineItem.lastUpated)
+	$("span", $("dd:eq(1)", updateDate)).text(headlineItem.nextUpdate)
+	//Explanation
+	$(".stat_change_term",headline).text(headlineItem.explanation)
+}
+
+
 /*
  * Main function to populate the page.
  */
@@ -74,7 +95,7 @@ $( document ).ready(function() {
 	$("li", breadcrumb).remove()
 
 	// Section blocks
-	var headline = $("#headline")
+	
 	var timeseries = $("#timeseries")
 	
 	// Section items
@@ -105,7 +126,7 @@ $( document ).ready(function() {
 
 			var header = $("h3", timeseriesItem)
 			$("a:eq(0)", header).text(item.name).attr("href", item.link)
-			$(".stat__figure", timeseriesItem).text(item.number)
+			$(".stat__figure", timeseriesItem).text(item.number+item.unit)
 			//TODO: Format and set the datetime property of date
 			var updateDate = $("dl", timeseriesItem)
 			$("dd:eq(0)", updateDate).text(item.lastUpated)
@@ -118,6 +139,10 @@ $( document ).ready(function() {
 			}
 
 			$(".list--table__head", timeseries).after(timeseriesItem)
+
+			if(item.headline) {
+				populateHeadline(item);
+			}
 
 		// "name": "Total population (UK) ",
 	   //    "link": "#",
