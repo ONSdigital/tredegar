@@ -82,7 +82,7 @@ public class LoadIndexHelper {
 				// Skip files other than data.json under home directories
 			}
 		} else {
-			documentMap = buildDocumentMap(url, splitPath, type, fileName);
+			documentMap = buildDocumentMap(url, splitPath, type, "Inflation Price And Indices");
 		}
 		return documentMap;
 	}
