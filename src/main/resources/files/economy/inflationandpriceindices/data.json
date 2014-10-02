@@ -11,18 +11,39 @@
       "name": "CPI",
       "link": "#",
       "info": "Consumer Prices Index (CPI) Annual Rate Percentage Change Over 12 Months",
-      "number": "1.5 %",
+      "number": "1.5",
       "unit": "%",
       "date": "Aug 2014",
       "lastUpated": "16 September 2014",
       "nextUpdate": "14 October 2014",
-      "headline": true
+      "headline": true,
+      "explanation": "Change in the 12 month rate since last month.",
+      "change": "0.7%",
+      "changeDirection": "up",
+      "statsBulletinHeadlines": [
+        {
+          "text": "CPI grew by 1.5% in year to August 2014",
+          "href": "#"
+        },
+        {
+          "text": "Down from 1.6% in year to July 2014",
+          "href": "#"
+        },
+        {
+          "text": "Falls in the prices of motor fuels and food & non-alcoholic drinks provided the largest downward contributions to the change",
+          "href": "#"
+        },
+        {
+          "text": "Largest, upward effects came from clothing, transport services and alcohol",
+          "href": "#"
+        }
+      ]
     },
     {
       "name": "RPIJ",
       "link": "#",
       "info": "Retail Prices Index calculated using the Jevons formula (RPIJ) Annual Rate Percentage Change Over 12 Months",
-      "number": "1.8 %",
+      "number": "1.8",
       "unit": "%",
       "date": "Aug 2014",
       "lastUpated": "16 September 2014",
@@ -33,7 +54,7 @@
       "name": "CPIH",
       "link": "#",
       "info": "Consumer Prices Index including owner occupiers' housing costs (CPIH) Annual Rate Percentage Change Over 12 Months",
-      "number": "1.5 %",
+      "number": "1.5",
       "unit": "%",
       "date": "Aug 2014",
       "lastUpated": "16 September 2014",
@@ -45,7 +66,7 @@
       "name": "RPI",
       "link": "#",
       "info": "Retail Prices Index (RPI) Annual Rate Percentage Change Over 12 Months",
-      "number": "2.4 %",
+      "number": "2.4",
       "unit": "%",
       "date": "Aug 2014",
       "lastUpated": "16 September 2014",
@@ -57,18 +78,18 @@
       "name": "PPI: Output of manufactured product Index",
       "link": "#",
       "info": "Producer Price Index (PPI) Annual Rate Percentage Change Over 12 Months",
-      "number": "-0.3 %",
+      "number": "-0.3",
       "unit": "%",
       "date": "Aug 2014",
       "lastUpated": "16 September 2014",
       "nextUpdate": "14 October 2014",
       "headline": false
-    }
+    },
     {
       "name": "PPI: Input of all manufacturing Index",
       "link": "#",
       "info": "Producer Price Index (PPI) Annual Rate Percentage Change Over 12 Months",
-      "number": "7.2 %",
+      "number": "7.2",
       "unit": "%",
       "date": "Aug 2014",
       "lastUpated": "16 September 2014",
