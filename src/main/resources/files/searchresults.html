@@ -24,11 +24,13 @@
     <!-- build:css /ui/css/main.css-->
     <!--[if gt IE 8]><!-->
     <link rel="stylesheet" href="ui/css/main.css" />
+    <link rel="stylesheet" href="/ui/css/jquery-ui.min.css">    
     
     <!--<![endif]-->
     <!-- endbuild -->
     <script src="ui/js/lib/modernizr.min.js"></script>
     <script src="ui/js/lib/jquery.min.js" type="text/javascript" ></script>
+    <script src="/ui/js/lib/jquery-ui.min.js"></script>    
     <!--[if (!IE)|(gt IE 8)]>><!-->
     <script src="ui/js/lib/jquery.tooltipster.js"></script>
     <!--<![endif]-->
@@ -40,6 +42,7 @@
     <script src="ui/js/main.js" type="text/javascript" ></script>
     <script src="ui/js/search.js" type="text/javascript" ></script>
     <script src="ui/js/lib/jquery.simplePagination.js" type="text/javascript" ></script>
+    <script src="/ui/js/custom-autocomplete.js"></script>    
     <script>
     </script>
     <style>
@@ -64,6 +67,12 @@
         margin-top: 2rem;
       }
     }
+	.ui-menu .ui-menu-item {
+	  text-align: center;
+	  margin-top: 20px;
+	  margin-bottom: 20px;
+	  border-bottom: 1px solid;   
+	}     
     </style>
     <!---
 title: Search Page Template (T4)
