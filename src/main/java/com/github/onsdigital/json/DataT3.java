@@ -25,8 +25,8 @@ public class DataT3 extends Data {
 		this.timeseries.add(detail);
 
 		detail = new DetailT3(
-				"CPI Annual Rate Percentage Change over 12 Months", "1.5 ",
-				"%", "January 2014", "18th Feb 2014", "25th June 2014");
+				"CPI Annual Rate Percentage Change over 12 Months", "1.5", "%",
+				"January 2014", "18th Feb 2014", "25th June 2014");
 		detail.headline = true;
 		detail.explanation = "Change in the 12 month rate since last month.";
 		detail.change = "0.7%";
