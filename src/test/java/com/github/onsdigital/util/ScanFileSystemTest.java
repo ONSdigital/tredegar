@@ -11,12 +11,11 @@ import java.util.List;
 
 import org.junit.Test;
 
-
 /**
  * Exercises scanning the file system
  */
 public class ScanFileSystemTest {
-	private String rootSearch = "target/classes";
+	private String rootSearch = "target/classes/files";
 
 	@Test
 	public void testGetFileNames() throws IOException {
@@ -28,14 +27,11 @@ public class ScanFileSystemTest {
 
 		for (String fileName : fileNames) {
 			assertTrue("File extension must be one of small subset of types, e.g. html but not css",
-					(fileName.endsWith(".html") || fileName.endsWith(".xls") || fileName.endsWith(".xlsx") || fileName
-							.endsWith(".csv") || fileName.endsWith(".json")));
+					(fileName.endsWith(".html") || fileName.endsWith(".xls") || fileName.endsWith(".xlsx") || fileName.endsWith(".csv") || fileName.endsWith(".json")));
 			assertTrue(
 					"File path must be one of small subset of content type paths, e.g. economy but not ui",
-					(fileName.contains("target/classes/files/businessindustryandtrade")
-							|| fileName.contains("target/classes/files/economy")
-							|| fileName.contains("target/classes/files/employmentandlabourmarket") || fileName
-							.contains("target/classes/file/peoplepopulationandcommunity")));
+					(fileName.contains("target/classes/files/businessindustryandtrade") || fileName.contains("target/classes/files/economy")
+							|| fileName.contains("target/classes/files/employmentandlabourmarket") || fileName.contains("target/classes/file/peoplepopulationandcommunity")));
 		}
 	}
 
