@@ -8,7 +8,7 @@ public class DataT3 extends Data {
 		super(folder, 3);
 		level = "t3";
 		lede = "Consumer price inflation is the speed at which the prices of goods and services bought by households rise or fall.";
-		more = "Some more content about CPI goes here. This will expand and contract if you have JS enabled. If JS is disabled, "
+		more = "Some more content goes here. This will expand and contract if you have JS enabled. If JS is disabled, "
 				+ "this will show by default. Yay progressive enhancement!";
 	}
 
