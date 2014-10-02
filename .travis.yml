@@ -10,9 +10,10 @@ deploy:
     repo: ONSdigital/tredegar
 
 # We don't pull the CX code in the build
+# From: http://stackoverflow.com/questions/15674064/github-submodule-access-rights-travis-ci
 git:
     submodules: false
 #    
-# # From http://stackoverflow.com/questions/16638573/auto-authorize-ssh-auth-requests-on-travis-ci
+# # From: http://stackoverflow.com/questions/16638573/auto-authorize-ssh-auth-requests-on-travis-ci
 #before_script:
 #  - echo -e "Host codebasehq.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
