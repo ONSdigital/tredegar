@@ -98,7 +98,9 @@ $(function() {
 		
       return $( "<dt>" )
         .append( "<a>" 
-        		+ contentType 
+        		+ "<span style='float:left'>"
+        		+ contentType
+        		+"</span>" 
         		+ item.title 
         		+ "</a>" )
         .appendTo( dt );
