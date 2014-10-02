@@ -57,6 +57,15 @@ function populateDetail(detail, template) {
 	return detailItem
 }
 
+function buildBreadcrumb(breadcrumbItem) {
+
+	var breadcrumb = $(".breadcrumb")
+	
+	var breadcrumbHome = breadcrumbItem.clone()
+	$("a", breadcrumbHome).text("Home").attr("href", "/")
+	breadcrumb.append(breadcrumbHome)
+}
+
 /*
  * Main function to populate the page.
  */
@@ -126,9 +135,7 @@ $( document ).ready(function() {
 		}
 
 		// Breadcrumb
-		var breadcrumbHome = breadcrumbItem.clone()
-		$("a", breadcrumbHome).text("Home").attr("href", "/")
-		breadcrumb.append(breadcrumbHome)
+		buildBreadcrumb(breadcrumbItem)
 
 	});
 

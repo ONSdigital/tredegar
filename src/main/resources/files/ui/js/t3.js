@@ -91,9 +91,32 @@ function populateStatsBulletinHeadlines(data, timeseriesItem) {
 		var headlineItem = itemTemplate.clone()
 		// For now it's not actually a link, so we just populate the text.
 		// TODO: eventually use headlineData.href too.
-		headlineItem.text(headlineData.text + " Zoooooooooo!")
+		headlineItem.text(headlineData.text)
 		headlineList.append(headlineItem)
 	}
+}
+
+function buildBreadcrumb(data, breadcrumbItem) {
+
+	var breadcrumb = $(".breadcrumb")
+
+	var breadcrumbHome = breadcrumbItem.clone()
+	$("a", breadcrumbHome).text("Home").attr("href", "/")
+	breadcrumb.append(breadcrumbHome)
+	var breadcrumbLink = ""
+	while (data.breadcrumb.length > 0) {
+		var breadcrumbSegment = breadcrumbItem.clone()
+		var crumb = data.breadcrumb.shift();
+		breadcrumbLink += "/" + crumb.fileName
+		$("a", breadcrumbSegment).text(crumb.name).attr("href", breadcrumbLink)
+		breadcrumb.append(breadcrumbSegment)
+	}
+
+	// Add the current page at the end of the breadcrumb:
+	var breadcrumbHere = breadcrumbItem.clone()
+	breadcrumbLink += "/" + data.fileName
+	$("a", breadcrumbHere).text(data.name).attr("href", breadcrumbLink)
+	breadcrumb.append(breadcrumbHere);
 }
 
 
@@ -105,7 +128,7 @@ $( document ).ready(function() {
 	/* Deconstruct the template: */
 
 	// Title
-	setTitle("Loading.. Cats")
+	setTitle("Loading..")
 
 	// Breadcrumb
 	var breadcrumb = $(".breadcrumb")
@@ -166,23 +189,7 @@ $( document ).ready(function() {
 		}
 
 		// Breadcrumb
-		var breadcrumbHome = breadcrumbItem.clone()
-		$("a", breadcrumbHome).text("Home").attr("href", "/")
-		breadcrumb.append(breadcrumbHome)
-		var breadcrumbLink = ""
-		while (data.breadcrumb.length > 0) {
-			var breadcrumbSegment = breadcrumbItem.clone()
-			var crumb = data.breadcrumb.shift();
-			breadcrumbLink += "/" + crumb.fileName
-			$("a", breadcrumbSegment).text(crumb.name).attr("href", breadcrumbLink)
-			breadcrumb.append(breadcrumbSegment)
-		}
-
-		// Add the current page at the end of the breadcrumb:
-		var breadcrumbHere = breadcrumbItem.clone()
-		breadcrumbLink += "/" + data.fileName
-		$("a", breadcrumbHere).text(data.name).attr("href", breadcrumbLink)
-		breadcrumb.append(breadcrumbHere);
+		buildBreadcrumb(data, breadcrumbItem)
 
 	});
 
