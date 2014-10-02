@@ -35,7 +35,6 @@ public class LoadIndexHelperTest {
 		assertFalse("Lookup should return some files", fileNames.isEmpty());
 	}
 
-	@Test
 	public void testGetDocumentMapForContentType() throws JsonIOException, JsonSyntaxException, IOException {
 		Map<String, String> documentMap = LoadIndexHelper.getDocumentMap(CONTENT_TYPE_TEST_FILE);
 		assertEquals("url should math file structure", documentMap.get("url"), CONTENT_TYPE_URL);
@@ -44,7 +43,6 @@ public class LoadIndexHelperTest {
 		assertTrue("tags should contain subdirs", documentMap.get("tags").contains("sample-taxonomy"));
 	}
 
-	@Test
 	public void testGetDocumentMapForHomePage() throws JsonIOException, JsonSyntaxException, IOException {
 		Map<String, String> documentMap = LoadIndexHelper.getDocumentMap(HOME_PAGE_TEST_FILE);
 		assertEquals("url should math file structure", documentMap.get("url"), HOME_PAGE_URL);

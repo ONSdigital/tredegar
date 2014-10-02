@@ -92,7 +92,7 @@ public class LoadIndexHelper {
 		Map<String, String> documentMap = new HashMap<String, String>();
 		documentMap.put(URL, url);
 		documentMap.put(TYPE, type);
-		documentMap.put(TITLE, title);
+		documentMap.put(TITLE, "Inflation Price And Indices");
 		documentMap.put(TAGS, Arrays.toString(splitPath));
 		return documentMap;
 	}
