@@ -77,6 +77,25 @@ function populateHeadline(headlineItem) {
 	$(".stat_change_term",headline).text(headlineItem.explanation)
 }
 
+function populateStatsBulletinHeadlines(data, timeseriesItem) {
+
+	var headlines = $("#statsBulletinHeadlines")
+	$(".lede", headlines).text(data.name + " Statistical Bulletin Headlines zz")
+	var headlineList = $("ul", headlines)
+	var itemTemplate = $("li:eq(0)", headlineList)
+	itemTemplate.detach()
+	$("li", headlineList).remove()
+
+	while (timeseriesItem.statsBulletinHeadlines.length > 0) {
+		var headlineData = timeseriesItem.statsBulletinHeadlines.shift()
+		var headlineItem = itemTemplate.clone()
+		// For now it's not actually a link, so we just populate the text.
+		// TODO: eventually use headlineData.href too.
+		headlineItem.text(headlineData.text + " Zoooooooooo!")
+		headlineList.append(headlineItem)
+	}
+}
+
 
 /*
  * Main function to populate the page.
@@ -95,7 +114,6 @@ $( document ).ready(function() {
 	$("li", breadcrumb).remove()
 
 	// Section blocks
-	
 	var timeseries = $("#timeseries")
 	
 	// Section items
@@ -142,22 +160,10 @@ $( document ).ready(function() {
 
 			if(item.headline) {
 				populateHeadline(item);
+				populateStatsBulletinHeadlines(data, item)
 			}
 
-		// "name": "Total population (UK) ",
-	   //    "link": "#",
-	   //    "info": "Lorem ipsum dolor sit amet",
-	   //    "number": "64.1",
-	   //    "unit": "m",
-	   //    "date": "Mid-2013 estimate",
-	   //    "lastUpated": "18th Fex 2014",
-	   //    "nextUpdate": "25th June 2014",
-	   //    "headline": true
-
-
 		}
-		//var item = timeseriesTemplate.clone()
-		//$(".list--table__head", timeseries).after(item)
 
 		// Breadcrumb
 		var breadcrumbHome = breadcrumbItem.clone()
