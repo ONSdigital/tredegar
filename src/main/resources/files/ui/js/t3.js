@@ -65,7 +65,7 @@ $( document ).ready(function() {
 	/* Deconstruct the template: */
 
 	// Title
-	setTitle("Loading..")
+	setTitle("Loading.. Cats")
 
 	// Breadcrumb
 	var breadcrumb = $(".breadcrumb")
@@ -74,44 +74,14 @@ $( document ).ready(function() {
 	$("li", breadcrumb).remove()
 
 	// Section blocks
-	var section1 = $(".nav-panel--stats:eq(0)")
-	var section2 = $(".nav-panel--stats:eq(1)")
-	var section3 = $(".nav-panel--stats:eq(2)")
-	var sectionOther = $(".nav-panel--stats:eq(3)")
-
-	// Section headers - set placeholders:
-	var header1 = $("header", section1)
-	var header2 = $("header", section2)
-	var header3 = $("header", section3)
-	var headerOther = $("header", sectionOther)
-	$("h2", header1).text("Loading..")
-	$("h2", header2).text("Loading..")
-	$("h2", header3).text("Loading..")
-	$("h2", headerOther).text("Loading..")
-
+	var headline = $("#headline")
+	var timeseries = $("#timeseries")
+	
 	// Section items
 	// - detach one to use as a template and remove the rest:
-	var section1Item = $("li:eq(0)", section1)
-	var section2Item = $("li:eq(0)", section2)
-	var section3Item = $("li:eq(0)", section3)
-	var sectionOtherItem = $("footer:eq(0)", sectionOther)
-	section1Item.detach()
-	section2Item.detach()
-	section3Item.detach()
-	sectionOtherItem.detach()
-	$("li", section1).remove()
-	$("li", section2).remove()
-	$("li", section3).remove()
-	$("footer", sectionOther).remove()
-
-	// Section footers
-	// - detach these to use as a template:
-	var footer1 = $("footer", section1)
-	var footer2 = $("footer", section2)
-	var footer3 = $("footer", section3)
-	footer1.detach()
-	footer2.detach()
-	footer3.detach()
+	var timeseriesTemplate = $(".list--table__body:eq(0)", timeseries)
+	timeseriesTemplate.detach()
+	$(".list--table__body", timeseries).remove()
 
 	/* Get the data.json file to populate the page: */
 
@@ -124,62 +94,42 @@ $( document ).ready(function() {
 		$("p", ".lede").text(data.lede);
 		$(".content-reveal__hidden").text(data.more)
 
-		// Detail heading:
-		$("#related").text("All Statistics Related to "+data.name)
+		// Time series items
+		while (data.timeseries.length > 0) {
+			console.log(JSON.stringify(data.timeseries[0]))
+			var timeseriesItem = timeseriesTemplate.clone()
+			var item = data.timeseries.shift()
 
-		// Section 1
-		if (data.children.length > 0) {
-			var item = data.children.shift()
-			$("h2", header1).text(item.name)
-			while (item.detail.length > 0) {
-				var detailItem = populateDetail(item.detail.shift(), section1Item)
-				$("ul", section1).append(detailItem)
+			var header = $("h3", timeseriesItem)
+			$("a:eq(0)", header).text(item.name).attr("href", item.link)
+			$(".stat__figure", timeseriesItem).text(item.number)
+			//TODO: Format and set the datetime property of date
+			var updateDate = $("dl", timeseriesItem)
+			$("dd:eq(0)", updateDate).text(item.lastUpated)
+			$("dd:eq(1)", updateDate).text(item.nextUpdate)
+			$(".stat__description", timeseriesItem).text(item.date)
+			if(item.note) {
+				$(".list--table__item__description", timeseriesItem).text(item.note)
+			} else {
+				$(".list--table__item__description", timeseriesItem).text("")
 			}
-			$("a", footer1).text("View all " + item.name).attr("href", link(item.fileName))
-			section1.append(footer1)
-		}
 
-		// Section 2
-		if (data.children.length > 0) {
-			var item = data.children.shift()
-			$("h2", header2).text(item.name)
-			while (item.detail.length > 0) {
-				var detailItem = populateDetail(item.detail.shift(), section2Item)
-				$("ul", section2).append(detailItem)
-			}
-			$("a", footer2).text("View all " + item.name).attr("href", link(item.fileName))
-			section2.append(footer2)
-		} else {
-			section2.remove()
-		}
+			$(".list--table__head", timeseries).after(timeseriesItem)
 
-		// Section 3
-		if (data.children.length > 0) {
-			var item = data.children.shift()
-			$("h2", header3).text(item.name)
-			while (item.detail.length > 0) {
-				var detailItem = populateDetail(item.detail.shift(), section3Item)
-				$("ul", section3).append(detailItem)
-			}
-			$("a", footer3).text("View all " + item.name).attr("href", link(item.fileName))
-			section3.append(footer3)
-		} else {
-			section3.remove()
-		}
+		// "name": "Total population (UK) ",
+	   //    "link": "#",
+	   //    "info": "Lorem ipsum dolor sit amet",
+	   //    "number": "64.1",
+	   //    "unit": "m",
+	   //    "date": "Mid-2013 estimate",
+	   //    "lastUpated": "18th Fex 2014",
+	   //    "nextUpdate": "25th June 2014",
+	   //    "headline": true
 
-		// "Other..." Section
-		if (data.children.length > 0) {
 
-			$("h2", headerOther).text('Other ' + data.name + ' categories')
-			while (data.children.length > 0) {
-				var item = data.children.shift()
-				var other = sectionOtherItem.clone()
-				$("a", other).text(item.name).attr("href", link(item.fileName))
-				sectionOther.append(other)
-			}
-		} else {
-			sectionOther.remove()
 		}
+		//var item = timeseriesTemplate.clone()
+		//$(".list--table__head", timeseries).after(item)
 
 		// Breadcrumb
 		var breadcrumbHome = breadcrumbItem.clone()

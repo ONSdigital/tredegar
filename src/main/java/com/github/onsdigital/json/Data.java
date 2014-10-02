@@ -10,7 +10,7 @@ public class Data extends TaxonomyNode {
 	public String level;
 	public List<TaxonomyNode> breadcrumb = new ArrayList<>();
 	public List<TaxonomyNode> children;
-	public List<Detail> timeSeries;
+	public List<Detail> timeseries;
 	public String lede;
 	public String more;
 
@@ -31,7 +31,7 @@ public class Data extends TaxonomyNode {
 					children.add(new ChildT2(child, index++));
 			}
 		} else {
-			timeSeries = new ArrayList<>();
+			timeseries = new ArrayList<>();
 		}
 	}
 
