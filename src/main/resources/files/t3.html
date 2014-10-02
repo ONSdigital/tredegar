@@ -24,11 +24,12 @@
     <!-- build:css /ui/css/main.css-->
     <!--[if gt IE 8]><!-->
     <link type="text/css" href="/ui/css/main.css" rel="stylesheet" />
-
+    <link rel="stylesheet" href="/ui/css/jquery-ui.min.css">
     <!--<![endif]-->
     <!-- endbuild -->
     <script src="/ui/js/lib/modernizr.min.js"></script>
     <script src="/ui/js/lib/jquery-1.11.0.min.js"></script>
+    <script src="/ui/js/lib/jquery-ui.min.js"></script>    
     <!--[if (!IE)|(gt IE 8)]>><!-->
     <script src="/ui/js/lib/jquery.tooltipster.js"></script>
     <!--<![endif]-->
@@ -37,6 +38,7 @@
     <script src="/ui/js/app/nav.js"></script>
     <script src="/ui/js/app/tables.js"></script>
     <script src="/ui/js/app/tabs.js"></script>
+    <script src="/ui/js/custom-autocomplete.js"></script>    
     <script>
     </script>
     <style>
@@ -52,6 +54,15 @@
       text-align: center;
       color: #fff;
     }
+    .ui-autocomplete {
+      position: relative;
+  	}
+	.ui-menu .ui-menu-item {
+	  text-align: center;
+	  margin-top: 20px;
+	  margin-bottom: 20px;
+	  border-bottom: 1px solid;   
+	} 
     </style>
   </head>
 
