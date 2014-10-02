@@ -330,15 +330,18 @@ Extended & Modified by Bren for ONSAlpha Project 24 Sept, 2014
 		_selectPage: function(pageIndex, event) {
 			var o = this.data('pagination');
 			o.currentPage = pageIndex;
+
+			if(o.scrollTopOnChange) {
+				methods._scrollTop();
+			}
+
 			if (o.selectOnClick) {
 				methods._draw.call(this);
 			}
 
 			var result = o.onPageClick(pageIndex + 1, event);
 
-			if(o.scrollTopOnChange) {
-				methods._scrollTop();
-			}
+			
 
 			return result;
 		},

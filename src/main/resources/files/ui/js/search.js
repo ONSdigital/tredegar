@@ -164,7 +164,7 @@ function clearAll() {
 function showLoadingMessage() {
 	var onssearch = $('body').data('onssearch');
 	var infoContainer = $('#' + onssearch.resultInfoHolder);
-	infoContainer.html('<b>Loading...</b>');
+	infoContainer.html('<b style="font-size:22px">Loading...</b>');
 }
 
 function hideLoadingMessage() {
@@ -177,7 +177,7 @@ function showErrorMessage() {
 	clearAll();
 	var onssearch = $('body').data('onssearch');
 	var resultsContainer = $('#' + onssearch.resultsHolder);
-	resultsContainer.html('<b>Oops!! Search failed!<b>');
+	resultsContainer.html('<b style="color:red;font-size:20px">Oops!! Search failed!<b>');
 }
 
 function  createDummyresults() {
