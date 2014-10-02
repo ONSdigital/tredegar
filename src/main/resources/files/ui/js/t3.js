@@ -94,6 +94,9 @@ $( document ).ready(function() {
 		$("p", ".lede").text(data.lede);
 		$(".content-reveal__hidden").text(data.more)
 
+		// Headline box
+		$(".lede", headline).text(data.name + " Statistical Bulletin Headlines")
+
 		// Time series items
 		while (data.timeseries.length > 0) {
 			console.log(JSON.stringify(data.timeseries[0]))
