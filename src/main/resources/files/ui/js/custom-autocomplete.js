@@ -9,10 +9,6 @@ $.widget( "ui.autocomplete", $.ui.autocomplete, {
 	        count++;
 	    });
 	},
-	_resizeMenu: function () {
-	    var ul = this.menu.element;
-	    ul.outerWidth(this.element.outerWidth());
-	}
 });  
   
 $(function() {
@@ -20,7 +16,7 @@ $(function() {
 	   open: function() { 
 		    // keep width of results linked to search field
 			var width = $(".ui-autocomplete-input").innerWidth();
-			$('.ui-menu').css('max-width',width);
+			$('.ui-menu').css('max-width',auto);
 	    }, 
 		source : function(request, response) {
 			var URL = "/search";
