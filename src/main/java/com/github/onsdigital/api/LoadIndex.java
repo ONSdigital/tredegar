@@ -31,9 +31,7 @@ import com.github.onsdigital.util.LoadIndexHelper;
 public class LoadIndex {
 
 	@GET
-	public void get(@Context HttpServletRequest httpServletRequest,
-			@Context HttpServletResponse httpServletResponse)
-			throws IOException, Exception {
+	public void get(@Context HttpServletRequest httpServletRequest, @Context HttpServletResponse httpServletResponse) throws IOException, Exception {
 
 		loadIndex();
 	}
@@ -41,47 +39,39 @@ public class LoadIndex {
 	public void loadIndex() throws IOException, Exception {
 		List<String> absoluteFilePaths = LoadIndexHelper.getAbsoluteFilePaths();
 		if (absoluteFilePaths.isEmpty()) {
-			System.out
-					.println("No files located during system scan, nothing will be indexed");
+			System.out.println("No files located during system scan, nothing will be indexed");
 		}
 		indexDocuments(ElasticSearchServer.getClient(), absoluteFilePaths);
 	}
 
-	private void indexDocuments(Client client, List<String> absoluteFilePaths)
-			throws Exception {
+	private void indexDocuments(Client client, List<String> absoluteFilePaths) throws Exception {
 
 		// Set up the synonyms
-		client.admin().indices().prepareCreate("ons")
-				.setSettings(buildSettings()).execute();
+		client.admin().indices().prepareCreate("ons").setSettings(buildSettings()).execute();
 
 		int idCounter = 0;
 		for (String absoluteFilePath : absoluteFilePaths) {
 			idCounter++;
 
-			System.out
-					.println("LoadIndex about to submit: " + absoluteFilePath);
-			buildDocument(client,
-					LoadIndexHelper.getDocumentMap(absoluteFilePath), idCounter);
+			System.out.println("LoadIndex about to submit: " + absoluteFilePath);
+
+			Map<String, String> documentMap = LoadIndexHelper.getDocumentMap(absoluteFilePath);
+			if (documentMap != null) {
+				buildDocument(client, documentMap, idCounter);
+			}
 		}
 	}
 
-	private void buildDocument(Client client, Map<String, String> documentMap,
-			int idCounter) throws Exception {
+	private void buildDocument(Client client, Map<String, String> documentMap, int idCounter) throws Exception {
 
-		client.prepareIndex(StringUtils.lowerCase("ons"),
-				StringUtils.lowerCase(documentMap.get("type")),
-				String.valueOf(idCounter))
-				.setSource(
-						jsonBuilder().startObject()
-								.field("title", documentMap.get("title"))
-								.field("url", documentMap.get("url"))
-								.field("path", documentMap.get("tags"))
-								.endObject()).execute().actionGet();
+		client.prepareIndex(StringUtils.lowerCase("ons"), StringUtils.lowerCase(documentMap.get("type")), String.valueOf(idCounter))
+				.setSource(jsonBuilder().startObject().field("title", documentMap.get("title")).field("url", documentMap.get("url")).field("path", documentMap.get("tags")).endObject()).execute()
+				.actionGet();
+
 	}
 
 	private Map<String, String> buildSettings() throws Exception {
-		ImmutableSettings.Builder settingsBuilder = ImmutableSettings
-				.settingsBuilder();
+		ImmutableSettings.Builder settingsBuilder = ImmutableSettings.settingsBuilder();
 
 		List<String> synonymList = getSynonyms(settingsBuilder);
 		getSettingsBuilder(settingsBuilder, synonymList);
@@ -89,13 +79,11 @@ public class LoadIndex {
 		return settingsBuilder.build().getAsMap();
 	}
 
-	private void getSettingsBuilder(ImmutableSettings.Builder settingsBuilder,
-			List<String> synonymList) {
+	private void getSettingsBuilder(ImmutableSettings.Builder settingsBuilder, List<String> synonymList) {
 		String[] synonyms = new String[synonymList.size()];
 		synonymList.toArray(synonyms);
 
-		settingsBuilder.putArray("analysis.filter.ons_synonym_filter.synonyms",
-				synonyms);
+		settingsBuilder.putArray("analysis.filter.ons_synonym_filter.synonyms", synonyms);
 
 		Map<String, String> settings = new HashMap<>();
 		settings.put("analysis.analyzer.ons_synonyms.tokenizer", "standard");
@@ -103,16 +91,12 @@ public class LoadIndex {
 		settingsBuilder.put(settings);
 	}
 
-	private List<String> getSynonyms(ImmutableSettings.Builder settingsBuilder)
-			throws IOException {
+	private List<String> getSynonyms(ImmutableSettings.Builder settingsBuilder) throws IOException {
 		String[] filters = { "lowercase", "ons_synonym_filter" };
-		settingsBuilder.putArray("analysis.analyzer.ons_synonyms.filter",
-				filters);
+		settingsBuilder.putArray("analysis.analyzer.ons_synonyms.filter", filters);
 
-		InputStream inputStream = getClass()
-				.getResourceAsStream("/synonym.txt");
-		BufferedReader reader = new BufferedReader(new InputStreamReader(
-				inputStream));
+		InputStream inputStream = getClass().getResourceAsStream("/synonym.txt");
+		BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
 		List<String> synonymList = new ArrayList<String>();
 		String contents = null;
 		while ((contents = reader.readLine()) != null) {
