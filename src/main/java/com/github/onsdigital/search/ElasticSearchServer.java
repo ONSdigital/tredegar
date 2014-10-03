@@ -22,7 +22,7 @@ public class ElasticSearchServer {
 
 	}
 
-	public static Client getClient() throws Exception {
+	public static Client getClient() throws IOException {
 		if (client == null) {
 			synchronized (ElasticSearchServer.class) {
 				if (client == null) {

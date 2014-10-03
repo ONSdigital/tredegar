@@ -1,4 +1,4 @@
-package com.github.onsdigital.util;
+package com.github.onsdigital.index;
 
 import java.io.IOException;
 import java.nio.file.DirectoryStream;
