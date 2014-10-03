@@ -1,4 +1,4 @@
-package com.github.onsdigital.util;
+package com.github.onsdigital.index;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
@@ -10,6 +10,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Test;
+
+import com.github.onsdigital.index.ScanFileSystem;
 
 /**
  * Exercises scanning the file system

@@ -4044,6 +4044,7 @@ ul.simple-pagination {
 }
 
 /*---For T3s largest statistic*/
+
 .stat__figure.large {
   font-size: 9rem !important;
 }
@@ -4086,6 +4087,10 @@ ul.simple-pagination {
 
 .definition dt{
   width: 50%;
+}
+
+#timeseries > ol > li.list--table__item.list--table__footer > div > div > a.table__action.split__title.link-muted.tableaction-reduced{
+  margin: 0rem 4rem;
 }
 
 /*.nav-grid-dt {
@@ -4476,10 +4481,9 @@ background-color: #edeeee !important;
   margin: 2% 0;
 }
 
+
+/* ONS Branded Border Top */
 .ONS_border{
   border-top: solid 4px #b3b92d;
 }
 
-.table_action-reduced{
-  margin: 0rem 4rem;
-}
