@@ -28,7 +28,12 @@ public abstract class Taxonomy {
 		ResourceUtils.classLoaderClass = Taxonomy.class;
 		URI uri = URI.create(request.getRequestURI());
 		Data data = getNodeData(uri);
-		try (InputStream html = selectTemplate(data)) {
+		String templateResourceName;
+		if (StringUtils.equals(data.level, "t2"))
+			templateResourceName = "/files/t2.html";
+		else
+			templateResourceName = "/files/t3.html";
+		try (InputStream html = ResourceUtils.getStream(templateResourceName)) {
 			response.setContentType("text/html");
 			response.setCharacterEncoding("UTF8");
 			IOUtils.copy(html, response.getOutputStream());
@@ -52,20 +57,6 @@ public abstract class Taxonomy {
 		}
 
 		return data;
-	}
-
-	private InputStream selectTemplate(Data data) throws IOException {
-
-		// Select T2 or T3 depending on whether there are children:
-		String templateResourceName;
-		if (data.children == null || data.children.size() == 0) {
-			// t3
-			templateResourceName = "/files/t3.html";
-		} else {
-			// t2
-			templateResourceName = "/files/t2.html";
-		}
-		return ResourceUtils.getStream(templateResourceName);
 	}
 
 	/**
