@@ -1,4 +1,4 @@
-package com.github.onsdigital.util;
+package com.github.onsdigital.index;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -11,6 +11,7 @@ import java.util.Map;
 
 import org.junit.Test;
 
+import com.github.onsdigital.index.LoadIndexHelper;
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
 

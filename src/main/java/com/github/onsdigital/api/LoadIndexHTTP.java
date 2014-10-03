@@ -24,7 +24,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.elasticsearch.common.settings.ImmutableSettings;
 
 import com.github.davidcarboni.restolino.framework.Endpoint;
-import com.github.onsdigital.util.LoadIndexHelper;
+import com.github.onsdigital.index.LoadIndexHelper;
 
 /**
  * Loads up indices into the search engine
