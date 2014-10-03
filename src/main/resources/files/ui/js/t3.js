@@ -67,8 +67,7 @@ function populateHeadline(headlineItem) {
 	$("strong", statFigure).text(headlineItem.number+headlineItem.unit)
 	//Date and change in number
 	var statDescription = $(".stat__description", headline)
-	statDescription.contents()[0].textContent = headlineItem.date
-	$("strong", statDescription).text(headlineItem.change)
+
 	//Last update and next update
 	var updateDate = $("dl", statDescription)
 	$("dd:eq(0)", updateDate).text(headlineItem.lastUpated)
