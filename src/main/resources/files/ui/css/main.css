@@ -4033,10 +4033,18 @@ ul.simple-pagination {
     margin: 0 auto;
 }
 
-/* Aaron T3 classes*/
+
+
+/*------------------------------------*\
+  Aaron T3 Classes
+\*------------------------------------*/
 
 /*T3 Divided Navpanel*/
 
+.navpanel-list {
+  font-size: 1.1em;
+  color: #000000;
+}
 
 .navpanel-list-heading {
   font-weight: bold;
@@ -4044,6 +4052,42 @@ ul.simple-pagination {
 }
 
 /*---For T3s largest statistic*/
+
+.normal {
+  font-weight: normal !important;
+  font-size: 1.5em;
+  padding-left: 0.8em;
+}
+
+.margin{
+  margin-left: 0.25rem;
+}
+
+.stat_change_arrow {
+  height: 1em;
+  width: 1em;
+  margin: 0em 0.2em;
+}
+
+.red_highlight {
+  color: #c92607 !important;
+}
+
+.stat_change_term{
+  
+  padding-right: 2.0rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  float: left;
+}
+
+.definition .dd_mini{
+  width: 47%;
+}
+
+.definition .dt_mini{
+  width: 50%;
+}
 
 .stat__figure.large {
   font-size: 9rem !important;
@@ -4053,14 +4097,6 @@ ul.simple-pagination {
   text-align: center;
 }
 
-
-
-.normal {
-  font-weight: normal !important;
-  font-size: 1.5em;
-  padding-left: 0.8em;
-  margin-bottom: 5rem;
-}
 
 .definition-med {
   font-size: 1.5rem !important;
@@ -4093,45 +4129,6 @@ ul.simple-pagination {
   margin: 0rem 4rem;
 }
 
-/*.nav-grid-dt {
-  float: left;
-  margin-right: 0.4em;
-}*/
-
-.stat_bulletin_grid_left{
-  text-align: center;
-  margin: 0.2em;
-  padding-left: 0em;
-  max-width: 45%;
-
-}
-
-.stat_bulletin_grid_right {
-  font-weight: normal;
-  padding: 2.8em 0em 1em 2em;
-  min-width: 45%;
-  
-}
-
-/*.margin-top{
-  margin-top: 3em;
-}*/
-
-.divider-padding-min {
-  
-  padding: 0rem 0.3rem;
-}
-
-.stat_change {
-  height: 1em;
-  width: 1em;
-  margin: 0em 0.2em;
-}
-
-.red_highlight {
-  color: #c92607 !important;
-}
-
 #main > div.wrapper > section > div > div > div.divider__half.divider-padding-min.divider__half--border.divider__half--border-first > div > div.grid-col.desktop-grid-one-half.stat_bulletin_grid_right{
   font-weight: normal !important;
 }
@@ -4152,123 +4149,6 @@ background-color: #edeeee !important;
 
 .no_underline{
   text-decoration: none !important;
-}
-
-.list--table--complex .list--table__item__body--caption {
-  width: 55%;
-  }
-
-
-#main > section:nth-child(5) > ol > li > div.list--table__item__body.list--table__item__body--update > dl {
-  max-width: 70% !important;
-}
-
-
-.table__action {
-  margin: 0rem 8rem;
-}
-
-#main > section:nth-child(7) > div > div > div > article > header {
-  font-size: 1.125em;
-  color: #016db9 !important;
-  text-decoration: none !important;
-}
-
-
-/*#main > section:nth-child(7){
-  background-color: #f6f6f7; 
-}*/
-
-
-/*------------------------------------*\
-  Aaron T3 Classes
-\*------------------------------------*/
-
-/*T3 Divided Navpanel*/
-
-.navpanel-list {
-  font-size: 1.1em;
-  color: #000000;
-}
-
-.navpanel-list-heading {
-  font-weight: bold;
-  text-align: center;
-}
-
-/*---For T3s largest statistic*/
-
-.reduced_padding_left{
-  padding-left: 3px;
-}
-
-.normal {
-  font-weight: normal !important;
-  font-size: 1.5em;
-  padding-left: 0.8em;
-}
-
-.margin{
-  margin-left: 0.25rem;
-}
-
-.productheader_largestat{
-  
-  font-size: 8rem !important;
-  min-width: 19rem !important;
-}
-
-.productheader_changestat{
-  margin-top: 3rem;
-  margin-bottom: 1.5rem;
-  min-width: 21rem !important;
-}
-
-.divider-padding-min {
-  padding: 0rem 0.3rem;
-}
-
-.stat_change_arrow {
-  height: 1em;
-  width: 1em;
-  margin: 0em 0.2em;
-}
-
-.red_highlight {
-  color: #c92607 !important;
-}
-
-.stat_change_term{
-  
-  padding-right: 2.0rem;
-  font-size: 1.2rem;
-  font-weight: bold;
-  float: left;
-}
-
-.definition .dd_mini{
-  width: 47%;
-}
-
-.definition .dt_mini{
-  width: 50%;
-}
-
-/* T3 list--table*/
-
- .table--striped-light .list--table__body:nth-child(odd) {
-background-color: #edeeee !important;
-}
-
-.list--table__item__header {
-  font-weight: bold;
-  font-size: 1.125em;
-  color: #016db9 !important;
-  text-decoration: none !important;
-}
-
-.no_underline{
-  text-decoration: none !important;
   font-weight: normal !important;
 }
 
@@ -4291,10 +4171,6 @@ background-color: #edeeee !important;
   text-decoration: none !important;
 }
 
-
-/*#main > section:nth-child(7){
-  background-color: #f6f6f7; 
-}*/
 
 /* Key datasets */
 
@@ -4318,7 +4194,45 @@ background-color: #edeeee !important;
   font-size: 0.9rem;
 }
 
+
+/* T3 list--table*/
+
+ .table--striped-light .list--table__body:nth-child(odd) {
+background-color: #edeeee !important;
+}
+
+.list--table__item__header {
+  font-weight: bold;
+  font-size: 1.125em;
+  color: #016db9 !important;
+  text-decoration: none !important;
+}
+
+
+.list--table--complex .list--table__item__body--caption {
+  width: 55%;
+  }
+
+
+#main > section:nth-child(5) > ol > li > div.list--table__item__body.list--table__item__body--update > dl {
+  max-width: 70% !important;
+}
+
+
+
+#main > section:nth-child(7) > div > div > div > article > header {
+  font-size: 1.125em;
+  color: #016db9 !important;
+  text-decoration: none !important;
+}
+
+
 /* Aaron T1 Classes */
+
+
+.ONS_border{/* ONS Branded Border Top */
+  border-top: solid 4px #b3b92d;
+}
 
 .uniform_background {
   background-color: inherit;
@@ -4326,6 +4240,10 @@ background-color: #edeeee !important;
 
 .left_padded {
   padding-left: 2%;
+}
+
+.largestat_margin{
+  margin: 2% 0;
 }
 
 /* Aaron T2 Classes */
@@ -4341,10 +4259,6 @@ background-color: #edeeee !important;
 .reduced_padding {
   padding: 10px 0px;
 }
-
-/*.pad_right{
-  padding-right: 30%;
-}*/
 
 .no_left_margin{
   margin-left: 0;
@@ -4477,13 +4391,8 @@ background-color: #edeeee !important;
 	padding-left: 2em;
 } 
 
-.largestat_margin{
-  margin: 2% 0;
-}
 
 
-/* ONS Branded Border Top */
-.ONS_border{
-  border-top: solid 4px #b3b92d;
-}
+
+
 
