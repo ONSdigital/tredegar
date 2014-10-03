@@ -39,32 +39,32 @@
     {
       "detail": [
         {
-          "name": "CPI Annual Rate Percentage Change Over 12 Months",
-          "info": "Consumer Prices Index (CPI)",
+          "name": "Consumer Prices Index (CPI)",
           "number": "1.5 %",
           "unit": "%",
-          "date": "August 2014"
+          "date": "August 2014",
+          "info": "Annual Rate Percentage Change Over 12 Months"
         },
         {
-          "name": "CPI Index",
-          "info": "Consumer Prices Index (CPI)",
+          "name": "Retail Prices Index (RPI)",
           "number": "2.4 %",
           "unit": "%",
-          "date": "August 2014"
+          "date": "August 2014",
+          "info": "Not a national statistic. Annual Rate Percentage Change Over 12 Months"
         },
         {
-          "name": "RPIJ Annual Rate Percentage Change Over 12 Months",
-          "info": "Retail Prices Index calculated using the Jevons formula (RPIJ)",
+          "name": "Retail Prices Index calculated using the Jevons formula (RPIJ)",
           "number": "1.8 %",
           "unit": "%",
-          "date": "August 2014"
+          "date": "August 2014",
+          "info": "Annual Rate Percentage Change Over 12 Months"
         },
         {
-          "name": "RPIJ Index",
-          "info": "Retail Prices Index calculated using the Jevons formula (RPIJ)",
-          "number": "238.3",
-          "unit": "Index, 2005 = 100",
-          "date": "August 2014"
+          "name": "Consumer Prices Index including owner occupiers' housing costs (CPIH)",
+          "number": "1.5 %",
+          "unit": "%",
+          "date": "August 2014",
+          "info": "Not a national statistic. Annual Rate Percentage Change Over 12 Months"
         }
       ],
       "name": "Inflation and Price Indices",
