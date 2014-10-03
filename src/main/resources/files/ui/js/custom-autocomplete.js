@@ -98,12 +98,13 @@ $(function() {
 		
       return $( "<dt>" )
         .append( "<a>" 
-        		+ "<span style='float:left'>"
+        		+ "<div style='float:left;width:100px'>"
         		+ contentType
-        		+"</span>" 
-        		+ "<span style='padding-left:30px'>"
+        		+"</div>" 
+        		+ "<div style='float:left'>"
         		+ item.title 
-        		+ "</span>"
+        		+ "</div>"
+        		+ "<div style='clear:both;'></div>"
         		+ "</a>" )
         .appendTo( dt );
     };
