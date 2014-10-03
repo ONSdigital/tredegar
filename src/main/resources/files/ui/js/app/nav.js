@@ -1,6 +1,6 @@
 $(document).ready(function() {
   $('.js-expandable').on('click' ,function(event) {
-    event.preventDefault();
+    //event.preventDefault();
     $(this)
       .toggleClass('js-expandable-active')
       .siblings('.js-expandable__content').toggleClass('js-nav-hidden');
