@@ -70,7 +70,7 @@ $(function() {
 	    },
         select: function (event, ui) {
         	if (ui.item.title != 'No results found') {
-        		window.open(ui.item.url);
+        		window.location.href = ui.item.url;
         	}
         }
     })

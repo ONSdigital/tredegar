@@ -21,8 +21,8 @@ import org.elasticsearch.client.Client;
 import org.elasticsearch.common.settings.ImmutableSettings;
 
 import com.github.davidcarboni.restolino.framework.Endpoint;
+import com.github.onsdigital.index.LoadIndexHelper;
 import com.github.onsdigital.search.ElasticSearchServer;
-import com.github.onsdigital.util.LoadIndexHelper;
 
 /**
  * Loads up indices into the search engine
@@ -31,20 +31,27 @@ import com.github.onsdigital.util.LoadIndexHelper;
 public class LoadIndex {
 
 	@GET
-	public void get(@Context HttpServletRequest httpServletRequest, @Context HttpServletResponse httpServletResponse) throws IOException, Exception {
+	public Object get(@Context HttpServletRequest httpServletRequest, @Context HttpServletResponse httpServletResponse) throws IOException {
 
-		loadIndex();
+		try {
+			loadIndex();
+		} catch (Exception e) {
+			e.printStackTrace();
+			return "LoadIndex failed";
+		}
+		return "LoadIndex succeeded";
+
 	}
 
-	public void loadIndex() throws IOException, Exception {
+	public void loadIndex() throws IOException {
 		List<String> absoluteFilePaths = LoadIndexHelper.getAbsoluteFilePaths();
 		if (absoluteFilePaths.isEmpty()) {
-			System.out.println("No files located during system scan, nothing will be indexed");
+			throw new IllegalStateException("No items were found for indexing");
 		}
 		indexDocuments(ElasticSearchServer.getClient(), absoluteFilePaths);
 	}
 
-	private void indexDocuments(Client client, List<String> absoluteFilePaths) throws Exception {
+	private void indexDocuments(Client client, List<String> absoluteFilePaths) throws IOException {
 
 		// Set up the synonyms
 		client.admin().indices().prepareCreate("ons").setSettings(buildSettings()).execute();
@@ -58,11 +65,13 @@ public class LoadIndex {
 			Map<String, String> documentMap = LoadIndexHelper.getDocumentMap(absoluteFilePath);
 			if (documentMap != null) {
 				buildDocument(client, documentMap, idCounter);
+			} else {
+				throw new IllegalStateException("No fields found for item: " + absoluteFilePath);
 			}
 		}
 	}
 
-	private void buildDocument(Client client, Map<String, String> documentMap, int idCounter) throws Exception {
+	private void buildDocument(Client client, Map<String, String> documentMap, int idCounter) throws IOException {
 
 		client.prepareIndex(StringUtils.lowerCase("ons"), StringUtils.lowerCase(documentMap.get("type")), String.valueOf(idCounter))
 				.setSource(jsonBuilder().startObject().field("title", documentMap.get("title")).field("url", documentMap.get("url")).field("path", documentMap.get("tags")).endObject()).execute()
@@ -70,7 +79,7 @@ public class LoadIndex {
 
 	}
 
-	private Map<String, String> buildSettings() throws Exception {
+	private Map<String, String> buildSettings() throws IOException {
 		ImmutableSettings.Builder settingsBuilder = ImmutableSettings.settingsBuilder();
 
 		List<String> synonymList = getSynonyms(settingsBuilder);
