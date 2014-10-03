@@ -144,7 +144,7 @@ $( document ).ready(function() {
 		setTitle(data.name)
 
 		// Lede and reveal:
-		$("p", ".lede").text(data.lede);
+		$("p", ".lede").contents()[0].textContent = data.lede;
 		$(".content-reveal__hidden").text(data.more)
 
 		// Section 1
