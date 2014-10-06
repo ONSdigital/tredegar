@@ -4366,16 +4366,16 @@ background-color: #edeeee !important;
 
 /* Main nav arrow on active selection */
 
-#nav-primary > li.nav--primary__active:after{ /* use CSS generated content to add arrow to the menu */
-    content:'';
-    width:0;
-    height:0;
-    position:absolute;
-    left:50%;
-    margin-left:-5px; /* value should match border-width below */
-    bottom: 0;
-    border-width:5px; /* value should match margin-left above */
-    border-style:solid;
-    border-color: transparent transparent white transparent; /* create up arrow */
+#nav-primary > li.nav--primary__active:after{ 
+  content:'';
+  width:0;
+  height:0;
+  position:absolute;
+  left:50%;
+  margin-left:-5px; 
+  bottom: 0;
+  border-width:8px; 
+  border-style:solid;
+  border-color: transparent transparent white transparent; 
 }
 
