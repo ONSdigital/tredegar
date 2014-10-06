@@ -24,6 +24,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.elasticsearch.common.settings.ImmutableSettings;
 
 import com.github.davidcarboni.restolino.framework.Endpoint;
+import com.github.onsdigital.configuration.Configuration;
 import com.github.onsdigital.index.LoadIndexHelper;
 
 /**
@@ -35,34 +36,29 @@ public class LoadIndexHTTP {
 	private static final String BONSAI_URL = "BONSAI_URL";
 
 	@GET
-	public void get(@Context HttpServletRequest httpServletRequest,
-			@Context HttpServletResponse httpServletResponse) throws Exception {
+	public void get(@Context HttpServletRequest httpServletRequest, @Context HttpServletResponse httpServletResponse) throws Exception {
 
 		// Construct a new Jest client according to configuration via factory
 		String connectionUrl = System.getenv(BONSAI_URL);
 		if (StringUtils.isEmpty(connectionUrl)) {
 			connectionUrl = DEFAULT_URL;
 		}
-		System.out.println("LoadIndexHTTP using connectionUrl: "
-				+ connectionUrl);
+		System.out.println("LoadIndexHTTP using connectionUrl: " + connectionUrl);
 
 		JestClientFactory factory = new JestClientFactory();
-		factory.setHttpClientConfig(new HttpClientConfig.Builder(connectionUrl)
-				.multiThreaded(true).build());
+		factory.setHttpClientConfig(new HttpClientConfig.Builder(connectionUrl).multiThreaded(true).build());
 		JestClient client = factory.getObject();
 
-		List<String> absoluteFilePaths = LoadIndexHelper.getAbsoluteFilePaths(System.getenv("TAXONOMY_DIR"));
+		List<String> absoluteFilePaths = LoadIndexHelper.getAbsoluteFilePaths(Configuration.getTaxonomyPath());
 		if (absoluteFilePaths.isEmpty()) {
-			System.out
-					.println("No files located during system scan, nothing will be indexed");
+			System.out.println("No files located during system scan, nothing will be indexed");
 			return;
 		}
 
 		indexDocuments(client, absoluteFilePaths);
 	}
 
-	private void indexDocuments(JestClient client,
-			List<String> absoluteFilePaths) throws Exception {
+	private void indexDocuments(JestClient client, List<String> absoluteFilePaths) throws Exception {
 
 		buildSettings(client);
 
@@ -70,43 +66,31 @@ public class LoadIndexHTTP {
 		for (String absoluteFilePath : absoluteFilePaths) {
 			idCounter++;
 
-			System.out.println("LoadIndexHTTP about to submit: "
-					+ absoluteFilePath);
+			System.out.println("LoadIndexHTTP about to submit: " + absoluteFilePath);
 
-			Map<String, String> document = LoadIndexHelper
-					.getDocumentMap(absoluteFilePath);
+			Map<String, String> document = LoadIndexHelper.getDocumentMap(absoluteFilePath);
 			if (document != null) {
 				buildDocument(client, document, ++idCounter);
 			}
 		}
 	}
 
-	private void buildDocument(JestClient client,
-			Map<String, String> documentMap, int idCounter) throws Exception {
+	private void buildDocument(JestClient client, Map<String, String> documentMap, int idCounter) throws Exception {
 
-		String source = jsonBuilder().startObject()
-				.field("title", documentMap.get("title"))
-				.field("url", documentMap.get("url"))
-				.field("path", documentMap.get("tags")).endObject().string();
+		String source = jsonBuilder().startObject().field("title", documentMap.get("title")).field("url", documentMap.get("url")).field("path", documentMap.get("tags")).endObject().string();
 
-		Index index = new Index.Builder(source).index("ons")
-				.type(documentMap.get("type")).id(String.valueOf(idCounter))
-				.build();
+		Index index = new Index.Builder(source).index("ons").type(documentMap.get("type")).id(String.valueOf(idCounter)).build();
 		client.execute(index);
 	}
 
 	private void buildSettings(JestClient client) throws Exception {
-		ImmutableSettings.Builder settingsBuilder = ImmutableSettings
-				.settingsBuilder();
+		ImmutableSettings.Builder settingsBuilder = ImmutableSettings.settingsBuilder();
 
 		String[] filters = { "lowercase", "ons_synonym_filter" };
-		settingsBuilder.putArray("analysis.analyzer.ons_synonyms.filter",
-				filters);
+		settingsBuilder.putArray("analysis.analyzer.ons_synonyms.filter", filters);
 
-		InputStream inputStream = getClass()
-				.getResourceAsStream("/synonym.txt");
-		BufferedReader reader = new BufferedReader(new InputStreamReader(
-				inputStream));
+		InputStream inputStream = getClass().getResourceAsStream("/synonym.txt");
+		BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
 		List<String> synonymList = new ArrayList<String>();
 		String contents = null;
 		while ((contents = reader.readLine()) != null) {
@@ -115,15 +99,13 @@ public class LoadIndexHTTP {
 		String[] synonyms = new String[synonymList.size()];
 		synonymList.toArray(synonyms);
 
-		settingsBuilder.putArray("analysis.filter.ons_synonym_filter.synonyms",
-				synonyms);
+		settingsBuilder.putArray("analysis.filter.ons_synonym_filter.synonyms", synonyms);
 
 		Map<String, String> settings = new HashMap<>();
 		settings.put("analysis.analyzer.ons_synonyms.tokenizer", "standard");
 		settings.put("analysis.filter.ons_synonym_filter.type", "synonym");
 		settingsBuilder.put(settings);
 
-		client.execute(new CreateIndex.Builder("ons").settings(
-				settingsBuilder.build().getAsMap()).build());
+		client.execute(new CreateIndex.Builder("ons").settings(settingsBuilder.build().getAsMap()).build());
 	}
 }

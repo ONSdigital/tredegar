@@ -39,7 +39,7 @@ function link(filename) {
  */
 function dataPath() {
 
-	var dataPath =  link("data.json")
+	var dataPath =  link("?data")
 
 	console.log("Data for this page is at: "+dataPath)
 	return dataPath

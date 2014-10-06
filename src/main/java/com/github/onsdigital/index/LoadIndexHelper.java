@@ -32,8 +32,6 @@ public class LoadIndexHelper {
 	private static final String DELIMITTER = "/";
 	private static final String DATA_JSON_FILENAME = "data.json";
 
-	public static final String DEFAULT_TAXONOMY_ROOT = "target/classes/home";
-
 	/**
 	 * Loads up the file names from a system scan
 	 * 
@@ -42,9 +40,6 @@ public class LoadIndexHelper {
 	 *             if any file io operations failed
 	 */
 	public static List<String> getAbsoluteFilePaths(String path) throws IOException {
-		if (path == null) {
-			path = DEFAULT_TAXONOMY_ROOT;
-		}
 		List<String> fileNames = new ArrayList<String>();
 		final Path rootDir = Paths.get(path);
 		fileNames = ScanFileSystem.getFileNames(fileNames, rootDir);

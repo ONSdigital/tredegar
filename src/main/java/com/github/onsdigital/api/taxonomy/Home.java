@@ -1,5 +1,6 @@
 package com.github.onsdigital.api.taxonomy;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URI;
@@ -9,12 +10,14 @@ import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.GET;
 import javax.ws.rs.core.Context;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import com.github.davidcarboni.ResourceUtils;
 import com.github.davidcarboni.restolino.framework.Endpoint;
 import com.github.davidcarboni.restolino.json.Serialiser;
+import com.github.onsdigital.configuration.Configuration;
 import com.github.onsdigital.json.Data;
 import com.github.onsdigital.json.TaxonomyNode;
 
@@ -22,7 +25,7 @@ import com.github.onsdigital.json.TaxonomyNode;
 public class Home {
 
 	@GET
-	public void serveTemplate(@Context HttpServletRequest request, @Context HttpServletResponse response) throws IOException {
+	public Object serveTemplate(@Context HttpServletRequest request, @Context HttpServletResponse response) throws IOException {
 
 		// Ensures ResourceUtils gets the right classloader when running
 		// reloadable in development:
@@ -31,10 +34,13 @@ public class Home {
 		String path = uri.getPath().toLowerCase();
 		String templateResourceName;
 
+		Data data = getNodeData(path);
+		if (isDataRequest(request)) {
+			return data;
+		}
 		if (isHomeRequest(path)) {
 			templateResourceName = "/files/t1.html";
 		} else {
-			Data data = getNodeData(path);
 			if (StringUtils.equals(data.level, "t2")) {
 				templateResourceName = "/files/t2.html";
 			} else {
@@ -46,6 +52,7 @@ public class Home {
 			response.setCharacterEncoding("UTF8");
 			IOUtils.copy(html, response.getOutputStream());
 		}
+		return null;
 	}
 
 	/**
@@ -57,14 +64,10 @@ public class Home {
 	 */
 	private Data getNodeData(String path) throws IOException {
 
+		String taxonomyPath = Configuration.getTaxonomyPath();
 		// Get the data for this node:
-		String jsonResourceName = "/files" + join(path, "data.json");
-		Data data;
-		try (InputStream json = ResourceUtils.getStream(jsonResourceName)) {
-			data = Serialiser.deserialise(json, Data.class);
-		}
-
-		return data;
+		String json = FileUtils.readFileToString(new File(taxonomyPath + join(path, "data.json")));
+		return Serialiser.deserialise(json, Data.class);
 	}
 
 	private boolean isHomeRequest(String path) {
@@ -75,6 +78,10 @@ public class Home {
 		}
 
 		return StringUtils.endsWithIgnoreCase(path, "home");
+	}
+
+	private boolean isDataRequest(HttpServletRequest request) {
+		return request.getParameter("data") != null;
 	}
 
 	/**
