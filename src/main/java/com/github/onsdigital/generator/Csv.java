@@ -15,6 +15,7 @@ import au.com.bytecode.opencsv.CSVReader;
 
 import com.github.davidcarboni.ResourceUtils;
 import com.github.davidcarboni.restolino.json.Serialiser;
+import com.github.onsdigital.json.Bulletin;
 import com.github.onsdigital.json.Data;
 import com.github.onsdigital.json.DataT1;
 import com.github.onsdigital.json.DataT2;
@@ -202,5 +203,14 @@ public class Csv {
 
 		String json = Serialiser.serialise(new DataT3(folder));
 		FileUtils.writeStringToFile(new File(file, "data.json"), json);
+
+		// Initial stats bulletin experiment:
+		if (file.getName().equals("inflationandpriceindices")) {
+			File bulletins = new File(file, "bulletins");
+			bulletins.mkdir();
+			json = Serialiser.serialise(new Bulletin());
+			FileUtils.writeStringToFile(new File(bulletins, "bulletin.json"),
+					json);
+		}
 	}
 }
