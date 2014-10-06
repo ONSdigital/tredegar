@@ -32,7 +32,7 @@ public class LoadIndexHelper {
 	private static final String DELIMITTER = "/";
 	private static final String DATA_JSON_FILENAME = "data.json";
 
-	public static final String DEFAULT_TAXONOMY_ROOT = "target/classes/taxonomy";
+	public static final String DEFAULT_TAXONOMY_ROOT = "target/classes/home";
 
 	/**
 	 * Loads up the file names from a system scan

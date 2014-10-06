@@ -13,26 +13,34 @@ import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import com.github.davidcarboni.ResourceUtils;
+import com.github.davidcarboni.restolino.framework.Endpoint;
 import com.github.davidcarboni.restolino.json.Serialiser;
 import com.github.onsdigital.json.Data;
 import com.github.onsdigital.json.TaxonomyNode;
 
-public abstract class Taxonomy {
+@Endpoint
+public class Home {
 
 	@GET
-	public void serveTemplate(@Context HttpServletRequest request,
-			@Context HttpServletResponse response) throws IOException {
+	public void serveTemplate(@Context HttpServletRequest request, @Context HttpServletResponse response) throws IOException {
 
 		// Ensures ResourceUtils gets the right classloader when running
 		// reloadable in development:
-		ResourceUtils.classLoaderClass = Taxonomy.class;
+		ResourceUtils.classLoaderClass = Home.class;
 		URI uri = URI.create(request.getRequestURI());
-		Data data = getNodeData(uri);
+		String path = uri.getPath().toLowerCase();
 		String templateResourceName;
-		if (StringUtils.equals(data.level, "t2"))
-			templateResourceName = "/files/t2.html";
-		else
-			templateResourceName = "/files/t3.html";
+
+		if (isHomeRequest(path)) {
+			templateResourceName = "/files/t1.html";
+		} else {
+			Data data = getNodeData(path);
+			if (StringUtils.equals(data.level, "t2")) {
+				templateResourceName = "/files/t2.html";
+			} else {
+				templateResourceName = "/files/t3.html";
+			}
+		}
 		try (InputStream html = ResourceUtils.getStream(templateResourceName)) {
 			response.setContentType("text/html");
 			response.setCharacterEncoding("UTF8");
@@ -43,20 +51,30 @@ public abstract class Taxonomy {
 	/**
 	 * Accesses the data.json file for this node.
 	 * 
-	 * @param uri
+	 * @param path
 	 * @return A {@link TaxonomyNode} representation.
 	 * @throws IOException
 	 */
-	private Data getNodeData(URI uri) throws IOException {
+	private Data getNodeData(String path) throws IOException {
 
 		// Get the data for this node:
-		String jsonResourceName = "/files" + join(uri.getPath(), "data.json");
+		String jsonResourceName = "/files" + join(path, "data.json");
 		Data data;
 		try (InputStream json = ResourceUtils.getStream(jsonResourceName)) {
 			data = Serialiser.deserialise(json, Data.class);
 		}
 
 		return data;
+	}
+
+	private boolean isHomeRequest(String path) {
+		if (StringUtils.endsWithIgnoreCase(path, "/")) {
+			// Remove slash(/) at the end recursively, even if i appears
+			// multiple times
+			return isHomeRequest(StringUtils.removeEnd(path, "/"));
+		}
+
+		return StringUtils.endsWithIgnoreCase(path, "home");
 	}
 
 	/**

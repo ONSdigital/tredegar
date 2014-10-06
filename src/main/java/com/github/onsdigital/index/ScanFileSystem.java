@@ -53,8 +53,8 @@ public class ScanFileSystem {
 
 	@SuppressWarnings("unused")
 	private static boolean isValidFilePath(String fileName) {
-		if (fileName.contains("target/classes/taxonomy/businessindustryandtrade") || fileName.contains("target/classes/taxonomy/economy")
-				|| fileName.contains("target/classes/taxonomy/employmentandlabourmarket") || fileName.contains("target/classes/taxonomy/peoplepopulationandcommunity")) {
+		if (fileName.contains("target/classes/home/businessindustryandtrade") || fileName.contains("target/classes/home/economy")
+				|| fileName.contains("target/classes/home/employmentandlabourmarket") || fileName.contains("target/classes/home/peoplepopulationandcommunity")) {
 			return true;
 		}
 		return false;

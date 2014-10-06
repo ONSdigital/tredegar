@@ -17,7 +17,7 @@ import com.github.onsdigital.index.ScanFileSystem;
  * Exercises scanning the file system
  */
 public class ScanFileSystemTest {
-	private String rootSearch = "target/classes/taxonomy";
+	private String rootSearch = "target/classes/home";
 
 	@Test
 	public void testGetFileNames() throws IOException {
@@ -38,7 +38,7 @@ public class ScanFileSystemTest {
 			// fileName.contains("target/classes/taxonomy/employmentandlabourmarket")
 			// ||
 			// fileName.contains("target/classes/taxonomy/peoplepopulationandcommunity")));
-			assertTrue("File path must be under taxonomy folder", (fileName.contains("target/classes/taxonomy/")));
+			assertTrue("File path must be under taxonomy folder", (fileName.contains("target/classes/home/")));
 
 		}
 	}

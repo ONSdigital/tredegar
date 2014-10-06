@@ -96,7 +96,7 @@
 					setting defaults to false so this won't replace any manually edited files 
 					already copied in from under src/main/taxonomy -->
 				<directory>src/main/taxonomy</directory>
-				<targetPath>${project.build.outputDirectory}/taxonomy</targetPath>
+				<targetPath>${project.build.outputDirectory}/files/home</targetPath>
 			</resource>
 		</resources>
 		<plugins>

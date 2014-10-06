@@ -21,7 +21,7 @@ public class LoadIndexHelperTest {
 	private final static String DATA_JSON_FILE_NAME = "data.json";
 	private final static String CONTENT_TYPE = "bulletins";
 	private final static String DELIMITTER = "/";
-	private final static String RESOURCE_FILE_PATH = "src/main/taxonomy";
+	private final static String RESOURCE_FILE_PATH = "target/classes/home";
 	private final static String TAXONOMY_PATH = "/sample-taxonomy/";
 	private final static String PRE_BULLETINS_PATH = RESOURCE_FILE_PATH + TAXONOMY_PATH;
 	private final static String CONTENT_TYPE_TEST_FILE = PRE_BULLETINS_PATH + CONTENT_TYPE + DELIMITTER + FILE_NAME + FILE_EXTENSION;
