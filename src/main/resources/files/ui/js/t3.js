@@ -119,30 +119,43 @@ function buildBreadcrumb(data, breadcrumbItem) {
 }
 
 
+var breadcrumb
+var breadcrumbItem
+var timeseries
+var timeseriesTemplate
+
+/**
+  * Deconstructs the page into chunks of markup template. 
+  */
+var deconstruct = function() {
+
+	// Title
+	setTitle("Loading..")
+
+	// Breadcrumb
+	breadcrumb = $(".breadcrumb")
+	breadcrumbItem = $("li:eq(0)", breadcrumb)
+	breadcrumbItem.detach()
+	$("li", breadcrumb).remove()
+
+	// Section blocks
+	timeseries = $("#timeseries")
+	
+	// Section items
+	// - detach one to use as a template and remove the rest:
+	timeseriesTemplate = $(".list--table__body:eq(0)", timeseries)
+	timeseriesTemplate.detach()
+	$(".list--table__body", timeseries).remove()
+}
+
+
 /*
  * Main function to populate the page.
  */
 $( document ).ready(function() {
 
 	/* Deconstruct the template: */
-
-	// Title
-	setTitle("Loading..")
-
-	// Breadcrumb
-	var breadcrumb = $(".breadcrumb")
-	var breadcrumbItem = $("li:eq(0)", breadcrumb)
-	breadcrumbItem.detach()
-	$("li", breadcrumb).remove()
-
-	// Section blocks
-	var timeseries = $("#timeseries")
-	
-	// Section items
-	// - detach one to use as a template and remove the rest:
-	var timeseriesTemplate = $(".list--table__body:eq(0)", timeseries)
-	timeseriesTemplate.detach()
-	$(".list--table__body", timeseries).remove()
+	deconstruct()
 
 	/* Get the data.json file to populate the page: */
 
@@ -159,7 +172,8 @@ $( document ).ready(function() {
 		$(".lede", headline).text(data.name + " Statistical Bulletin Headlines")
 
 		// Time series items
-		while (data.timeseries.length > 0) {
+		var i = 0;
+		while (data.timeseries.length > 0 && i++ < 5) {
 			
 			var timeseriesItem = timeseriesTemplate.clone()
 			var item = data.timeseries.shift()
