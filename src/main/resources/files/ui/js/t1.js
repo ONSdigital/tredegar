@@ -45,6 +45,18 @@ function dataPath() {
 	return dataPath
 }
 
+
+/*
+ * Builds an absolute link to the data.json file.
+ */
+function dataChildPath(child) {
+
+	var dataPath =  link(child.fileName + "/data.json")
+
+	console.log("Data for "+child.name+" at: "+dataPath)
+	return dataPath
+}
+
 function populateDetail(detail, template) {
 
 	var detailItem = template.clone()
@@ -66,26 +78,29 @@ function buildBreadcrumb(breadcrumbItem) {
 	breadcrumb.append(breadcrumbHome)
 }
 
-/*
- * Main function to populate the page.
- */
-$( document ).ready(function() {
 
-	/* Deconstruct the template: */
+// Breadcrumb
+var breadcrumb
+var breadcrumbItem
+
+var section = new Array();
+var header = new Array();
+var sectionItem = new Array();
+var footer = new Array();
+
+/**
+  * Deconstructs the page into chunks of markup template. 
+  */
+var deconstruct = function() {
 
 	// Title
 	setTitle("Home")
 
 	// Breadcrumb
-	var breadcrumb = $(".breadcrumb")
-	var breadcrumbItem = $("li:eq(0)", breadcrumb)
+	breadcrumb = $(".breadcrumb")
+	breadcrumbItem = $("li:eq(0)", breadcrumb)
 	breadcrumbItem.detach()
 	$("li", breadcrumb).remove()
-
-	var section = new Array();
-	var header = new Array();
-	var sectionItem = new Array();
-	var footer = new Array();
 
 	for (var i = 0; i < 4; i++) {
 
@@ -107,6 +122,35 @@ $( document ).ready(function() {
 		footer.push($("footer", section[i]))
 		footer[i].detach()
 	}
+}
+
+var populateChild = function(child, section, template) {
+
+	$.get( dataChildPath(child), function( data ) {
+
+		// Sections
+		var i = 0;
+		while (data.children.length > 0 && i++ < 4) {
+			var item = data.children.shift()
+			console.log("Setting up: "+item.name+" in "+child.name)
+			var itemMarkup = template.clone()
+
+			$("a", itemMarkup).text(item.name)
+			$(".stat__figure", itemMarkup).text(item.number)
+			$(".stat__figure__unit", itemMarkup).text(item.unit)
+			$(".stat__description", itemMarkup).text(item.date)
+
+			$("ul", section).append(itemMarkup)
+		}
+	})
+}
+
+/*
+ * Main function to populate the page.
+ */
+$( document ).ready(function() {
+
+	deconstruct();
 
 	/* Get the data.json file to populate the page: */
 
@@ -125,10 +169,7 @@ $( document ).ready(function() {
 			if (data.children.length > 0) {
 				var item = data.children.shift()
 				$("h2", header[i]).text(item.name)
-				while (item.detail.length > 0) {
-					var detailItem = populateDetail(item.detail.shift(), sectionItem[i])
-					$("ul", section[i]).append(detailItem)
-				}
+				var detail = populateChild(item, section[i], sectionItem[i])
 				$("a", footer[i]).text("View all " + item.name).attr("href", link(item.fileName))
 				section[i].append(footer[i])
 			}
@@ -137,6 +178,6 @@ $( document ).ready(function() {
 		// Breadcrumb
 		buildBreadcrumb(breadcrumbItem)
 
-	});
+	})
 
-});
+})
