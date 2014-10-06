@@ -149,6 +149,7 @@ var populateChild = function(child, section, itemMarkupTemplate) {
  */
 $( document ).ready(function() {
 
+	/* Deconstruct the template: */
 	deconstruct();
 
 	/* Get the data.json file to populate the page: */
