@@ -41,7 +41,7 @@ function dataPath() {
 
 	var dataPath =  link("data.json")
 
-	console.log("Data at: "+dataPath)
+	console.log("Data for this page is at: "+dataPath)
 	return dataPath
 }
 
@@ -53,7 +53,7 @@ function dataChildPath(child) {
 
 	var dataPath =  link(child.fileName + "/data.json")
 
-	console.log("Data for "+child.name+" at: "+dataPath)
+	console.log("Data for "+child.name+" is at: "+dataPath)
 	return dataPath
 }
 
@@ -124,7 +124,7 @@ var deconstruct = function() {
 	}
 }
 
-var populateChild = function(child, section, template) {
+var populateChild = function(child, section, itemMarkupTemplate) {
 
 	$.get( dataChildPath(child), function( data ) {
 
@@ -132,8 +132,7 @@ var populateChild = function(child, section, template) {
 		var i = 0;
 		while (data.children.length > 0 && i++ < 4) {
 			var item = data.children.shift()
-			console.log("Setting up: "+item.name+" in "+child.name)
-			var itemMarkup = template.clone()
+			var itemMarkup = itemMarkupTemplate.clone()
 
 			$("a", itemMarkup).text(item.name)
 			$(".stat__figure", itemMarkup).text(item.number)
