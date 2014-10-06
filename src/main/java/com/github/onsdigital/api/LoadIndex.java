@@ -21,6 +21,7 @@ import org.elasticsearch.client.Client;
 import org.elasticsearch.common.settings.ImmutableSettings;
 
 import com.github.davidcarboni.restolino.framework.Endpoint;
+import com.github.onsdigital.configuration.Configuration;
 import com.github.onsdigital.index.LoadIndexHelper;
 import com.github.onsdigital.search.ElasticSearchServer;
 
@@ -44,7 +45,7 @@ public class LoadIndex {
 	}
 
 	public void loadIndex() throws IOException {
-		List<String> absoluteFilePaths = LoadIndexHelper.getAbsoluteFilePaths(System.getenv("TAXONOMY_DIR"));
+		List<String> absoluteFilePaths = LoadIndexHelper.getAbsoluteFilePaths(Configuration.getTaxonomyPath());
 		if (absoluteFilePaths.isEmpty()) {
 			throw new IllegalStateException("No items were found for indexing");
 		}

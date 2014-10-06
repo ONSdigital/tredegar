@@ -30,14 +30,7 @@ public class ScanFileSystemTest {
 		for (String fileName : fileNames) {
 			assertTrue("File extension must be one of small subset of types, e.g. html but not css",
 					(fileName.endsWith(".html") || fileName.endsWith(".xls") || fileName.endsWith(".xlsx") || fileName.endsWith(".csv") || fileName.endsWith(".json")));
-			// assertTrue(
-			// "File path must be one of small subset of content type paths, e.g. economy but not ui",
-			// (fileName.contains("target/classes/taxonomy/businessindustryandtrade")
-			// || fileName.contains("target/classes/taxonomy/economy")
-			// ||
-			// fileName.contains("target/classes/taxonomy/employmentandlabourmarket")
-			// ||
-			// fileName.contains("target/classes/taxonomy/peoplepopulationandcommunity")));
+			assertTrue("File path must contain be target/classes/home", (fileName.contains("target/classes/home")));
 			assertTrue("File path must be under taxonomy folder", (fileName.contains("target/classes/home/")));
 
 		}

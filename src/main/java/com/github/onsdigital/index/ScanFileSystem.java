@@ -36,9 +36,7 @@ public class ScanFileSystem {
 			else {
 				String fileName = path.toAbsolutePath().toString();
 
-				// if (isValidFileExtensionType(fileName) &&
-				// isValidFilePath(fileName)) {
-				if (isValidFileExtensionType(fileName)) {
+				if (isValidFileExtensionType(fileName) && isValidFilePath(fileName)) {
 					fileNames.add(fileName);
 					System.out.println("ScanFileSystem added this file: " + fileName);
 				} else {
@@ -51,10 +49,8 @@ public class ScanFileSystem {
 		return fileNames;
 	}
 
-	@SuppressWarnings("unused")
 	private static boolean isValidFilePath(String fileName) {
-		if (fileName.contains("target/classes/home/businessindustryandtrade") || fileName.contains("target/classes/home/economy")
-				|| fileName.contains("target/classes/home/employmentandlabourmarket") || fileName.contains("target/classes/home/peoplepopulationandcommunity")) {
+		if (fileName.contains("/home")) {
 			return true;
 		}
 		return false;
