@@ -66,8 +66,6 @@ public class LoadIndex {
 			Map<String, String> documentMap = LoadIndexHelper.getDocumentMap(absoluteFilePath);
 			if (documentMap != null) {
 				buildDocument(client, documentMap, idCounter);
-			} else {
-				throw new IllegalStateException("No fields found for item: " + absoluteFilePath);
 			}
 		}
 	}
