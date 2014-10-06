@@ -3,9 +3,12 @@ package com.github.onsdigital.search.util;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.elasticsearch.index.query.BaseQueryBuilder;
+import org.elasticsearch.index.query.FilterBuilders;
 import org.elasticsearch.index.query.MatchAllQueryBuilder;
 import org.elasticsearch.index.query.MatchQueryBuilder;
 import org.elasticsearch.index.query.MultiMatchQueryBuilder;
+import org.elasticsearch.index.query.functionscore.FunctionScoreQueryBuilder;
+import org.elasticsearch.index.query.functionscore.ScoreFunctionBuilders;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
 import org.elasticsearch.search.highlight.HighlightBuilder;
 
@@ -52,8 +55,7 @@ public class ONSQueryBuilder {
 	 * @return
 	 */
 	public ONSQueryBuilder setSearchTerm(String searchTerm) {
-		this.searchTerm = StringUtils.isEmpty(searchTerm) ? searchTerm
-				: (searchTerm + "*");
+		this.searchTerm = StringUtils.isEmpty(searchTerm) ? searchTerm : (searchTerm + "*");
 		return this;
 	}
 
@@ -150,9 +152,11 @@ public class ONSQueryBuilder {
 		} else {
 			// return documents with fields containing words that start with
 			// given search term
-			builder = new MultiMatchQueryBuilder(getSearchTerm(), getFields())
-					.type(MatchQueryBuilder.Type.PHRASE_PREFIX).analyzer(
-							"ons_synonyms");
+			MultiMatchQueryBuilder multiMatchQueryBuilder = new MultiMatchQueryBuilder(getSearchTerm(), getFields()).type(MatchQueryBuilder.Type.PHRASE_PREFIX).analyzer("ons_synonyms");
+			// wrap this up with a function_score capability that allows us to
+			// boost the home pages
+			builder = new FunctionScoreQueryBuilder(multiMatchQueryBuilder).add(FilterBuilders.termsFilter("_type", "home"), ScoreFunctionBuilders.factorFunction(3.0f));
+
 		}
 		HighlightBuilder highlightBuilder = new HighlightBuilder();
 		highlightBuilder.preTags(PRE_TAG).postTags(POST_TAG);
@@ -160,9 +164,7 @@ public class ONSQueryBuilder {
 			highlightBuilder.field(field, 0, 0);
 		}
 
-		return new SearchSourceBuilder().query(builder)
-				.highlight(highlightBuilder).from(calculateFrom())
-				.size(getSize()).toString();
+		return new SearchSourceBuilder().query(builder).highlight(highlightBuilder).from(calculateFrom()).size(getSize()).toString();
 
 	}
 
