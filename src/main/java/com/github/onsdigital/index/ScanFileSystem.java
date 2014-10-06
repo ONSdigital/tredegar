@@ -35,8 +35,13 @@ public class ScanFileSystem {
 				getFileNames(fileNames, path);
 			else {
 				String fileName = path.toAbsolutePath().toString();
+				if( fileName.contains("statsBulletin")) {
+					System.out.println("hey");
+				}
 
-				if (isValidFileExtensionType(fileName) && isValidFilePath(fileName)) {
+				// if (isValidFileExtensionType(fileName) &&
+				// isValidFilePath(fileName)) {
+				if (isValidFileExtensionType(fileName)) {
 					fileNames.add(fileName);
 					System.out.println("ScanFileSystem added this file: " + fileName);
 				} else {
@@ -49,6 +54,7 @@ public class ScanFileSystem {
 		return fileNames;
 	}
 
+	@SuppressWarnings("unused")
 	private static boolean isValidFilePath(String fileName) {
 		if (fileName.contains("/home")) {
 			return true;

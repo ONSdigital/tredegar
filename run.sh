@@ -18,9 +18,9 @@ export BONSAI_TRANSPORT_PORT=9300
 #export TAXONOMY_DIR=/home/boorhun/Desktop/taxonomy
 
 #Generate taxonomy
-#mvn clean compile dependency:copy-dependencies && \
-#rm -rf src/main/taxonomy && \
-#java -cp "target/classes:target/dependency/*" com.github.onsdigital.generator.Csv
+mvn clean compile dependency:copy-dependencies && \
+rm -rf src/main/taxonomy && \
+java -cp "target/classes:target/dependency/*" com.github.onsdigital.generator.Csv
 
 # Now build the JAR:
 mvn package && \

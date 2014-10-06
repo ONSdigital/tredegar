@@ -12,6 +12,7 @@ import java.util.Map;
 
 import org.apache.commons.io.FileUtils;
 
+import com.github.onsdigital.configuration.Configuration;
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonSyntaxException;
@@ -57,9 +58,7 @@ public class LoadIndexHelper {
 	 * @throws JsonIOException
 	 */
 	public static Map<String, String> getDocumentMap(String absoluteFilePath) throws JsonIOException, JsonSyntaxException, IOException {
-		String[] pathAfterTaxonomy = absoluteFilePath.split("home");
-		String url = pathAfterTaxonomy[1];
-
+		String url = absoluteFilePath.substring(absoluteFilePath.indexOf(Configuration.getTaxonomyPath()) + Configuration.getTaxonomyPath().length());
 		String[] splitPath = url.split(DELIMITTER);
 		int splitPathLength = splitPath.length;
 		int folderNameTokenIndex = splitPathLength - 2;
@@ -79,6 +78,7 @@ public class LoadIndexHelper {
 			} else {
 				// Skip files other than data.json under home directories
 			}
+
 		} else {
 			documentMap = buildDocumentMap(url, splitPath, type, "Inflation Price And Indices");
 		}
