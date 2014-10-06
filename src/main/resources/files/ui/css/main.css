@@ -4171,6 +4171,10 @@ background-color: #edeeee !important;
   text-decoration: none !important;
 }
 
+ .table--striped-light .list--table__body:nth-child(odd) {
+background-color: #edeeee !important;
+}
+
 
 /* Key datasets */
 
@@ -4192,38 +4196,6 @@ background-color: #edeeee !important;
   vertical-align: bottom;
   float: right;
   font-size: 0.9rem;
-}
-
-
-/* T3 list--table*/
-
- .table--striped-light .list--table__body:nth-child(odd) {
-background-color: #edeeee !important;
-}
-
-.list--table__item__header {
-  font-weight: bold;
-  font-size: 1.125em;
-  color: #016db9 !important;
-  text-decoration: none !important;
-}
-
-
-.list--table--complex .list--table__item__body--caption {
-  width: 55%;
-  }
-
-
-#main > section:nth-child(5) > ol > li > div.list--table__item__body.list--table__item__body--update > dl {
-  max-width: 70% !important;
-}
-
-
-
-#main > section:nth-child(7) > div > div > div > article > header {
-  font-size: 1.125em;
-  color: #016db9 !important;
-  text-decoration: none !important;
 }
 
 
@@ -4392,7 +4364,18 @@ background-color: #edeeee !important;
 } 
 
 
+/* Main nav arrow on active selection */
 
-
-
+#nav-primary > li.nav--primary__active:after{ /* use CSS generated content to add arrow to the menu */
+    content:'';
+    width:0;
+    height:0;
+    position:absolute;
+    left:50%;
+    margin-left:-5px; /* value should match border-width below */
+    bottom: 0;
+    border-width:5px; /* value should match margin-left above */
+    border-style:solid;
+    border-color: transparent transparent white transparent; /* create up arrow */
+}
 
