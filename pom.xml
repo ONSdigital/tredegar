@@ -92,11 +92,11 @@
 			</resource>
 			<!-- Generated taxonomy structure -->
 			<resource>
-				<!-- Copies the remainder of the taxonomy. NB: the resource pluging "overwrite" 
+				<!-- Copies the remainder of the taxonomy. NB: the resource plugin "overwrite" 
 					setting defaults to false so this won't replace any manually edited files 
-					already copied in from under src/main/resources -->
+					already copied in from under src/main/taxonomy -->
 				<directory>src/main/taxonomy</directory>
-				<targetPath>${project.build.outputDirectory}/files</targetPath>
+				<targetPath>${project.build.outputDirectory}/taxonomy</targetPath>
 			</resource>
 		</resources>
 		<plugins>

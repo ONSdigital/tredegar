@@ -17,7 +17,7 @@ import com.github.onsdigital.index.ScanFileSystem;
  * Exercises scanning the file system
  */
 public class ScanFileSystemTest {
-	private String rootSearch = "target/classes/files";
+	private String rootSearch = "target/classes/taxonomy";
 
 	@Test
 	public void testGetFileNames() throws IOException {
@@ -30,10 +30,16 @@ public class ScanFileSystemTest {
 		for (String fileName : fileNames) {
 			assertTrue("File extension must be one of small subset of types, e.g. html but not css",
 					(fileName.endsWith(".html") || fileName.endsWith(".xls") || fileName.endsWith(".xlsx") || fileName.endsWith(".csv") || fileName.endsWith(".json")));
-			assertTrue(
-					"File path must be one of small subset of content type paths, e.g. economy but not ui",
-					(fileName.contains("target/classes/files/businessindustryandtrade") || fileName.contains("target/classes/files/economy")
-							|| fileName.contains("target/classes/files/employmentandlabourmarket") || fileName.contains("target/classes/file/peoplepopulationandcommunity")));
+			// assertTrue(
+			// "File path must be one of small subset of content type paths, e.g. economy but not ui",
+			// (fileName.contains("target/classes/taxonomy/businessindustryandtrade")
+			// || fileName.contains("target/classes/taxonomy/economy")
+			// ||
+			// fileName.contains("target/classes/taxonomy/employmentandlabourmarket")
+			// ||
+			// fileName.contains("target/classes/taxonomy/peoplepopulationandcommunity")));
+			assertTrue("File path must be under taxonomy folder", (fileName.contains("target/classes/taxonomy/")));
+
 		}
 	}
 

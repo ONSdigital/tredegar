@@ -68,7 +68,7 @@ public class LoadIndexTest {
 	@Test
 	public void testNoSystemFilesFound() throws IOException {
 		PowerMockito.mockStatic(LoadIndexHelper.class);
-		Mockito.when(LoadIndexHelper.getAbsoluteFilePaths()).thenReturn(Collections.<String> emptyList());
+		Mockito.when(LoadIndexHelper.getAbsoluteFilePaths("target/classes/taxonomy")).thenReturn(Collections.<String> emptyList());
 		assertEquals("Should get failure message", "LoadIndex failed", new LoadIndex().get(httpServletRequest, httpServletResponse));
 	}
 

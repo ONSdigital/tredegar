@@ -44,7 +44,7 @@ public class LoadIndex {
 	}
 
 	public void loadIndex() throws IOException {
-		List<String> absoluteFilePaths = LoadIndexHelper.getAbsoluteFilePaths();
+		List<String> absoluteFilePaths = LoadIndexHelper.getAbsoluteFilePaths(System.getenv("TAXONOMY_DIR"));
 		if (absoluteFilePaths.isEmpty()) {
 			throw new IllegalStateException("No items were found for indexing");
 		}

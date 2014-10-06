@@ -5,13 +5,13 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import java.io.IOException;
+import java.nio.file.NoSuchFileException;
 import java.nio.file.Paths;
 import java.util.List;
 import java.util.Map;
 
 import org.junit.Test;
 
-import com.github.onsdigital.index.LoadIndexHelper;
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
 
@@ -21,7 +21,7 @@ public class LoadIndexHelperTest {
 	private final static String DATA_JSON_FILE_NAME = "data.json";
 	private final static String CONTENT_TYPE = "bulletins";
 	private final static String DELIMITTER = "/";
-	private final static String RESOURCE_FILE_PATH = "src/main/resources/files";
+	private final static String RESOURCE_FILE_PATH = "src/main/taxonomy";
 	private final static String TAXONOMY_PATH = "/sample-taxonomy/";
 	private final static String PRE_BULLETINS_PATH = RESOURCE_FILE_PATH + TAXONOMY_PATH;
 	private final static String CONTENT_TYPE_TEST_FILE = PRE_BULLETINS_PATH + CONTENT_TYPE + DELIMITTER + FILE_NAME + FILE_EXTENSION;
@@ -31,7 +31,14 @@ public class LoadIndexHelperTest {
 
 	@Test
 	public void testGetFileNames() throws IOException {
-		List<String> fileNames = LoadIndexHelper.getAbsoluteFilePaths();
+		List<String> fileNames = LoadIndexHelper.getAbsoluteFilePaths(RESOURCE_FILE_PATH);
+		System.out.println("Tut siise is: " + fileNames.size());
+		assertFalse("Lookup should return some files", fileNames.isEmpty());
+	}
+
+	@Test(expected = NoSuchFileException.class)
+	public void testWrongPath() throws IOException {
+		List<String> fileNames = LoadIndexHelper.getAbsoluteFilePaths("thepath/thesubpath");
 		System.out.println("Tut siise is: " + fileNames.size());
 		assertFalse("Lookup should return some files", fileNames.isEmpty());
 	}
@@ -51,4 +58,5 @@ public class LoadIndexHelperTest {
 		assertEquals("title should be uksectoraccounts", documentMap.get("title"), "Government, Public Sector and Taxes");
 		assertFalse("tags should not contain content type subdir", documentMap.get("tags").contains("CONTENT_TYPE"));
 	}
+
 }
