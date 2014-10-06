@@ -30,8 +30,9 @@ public class LoadIndexHelper {
 	private static final String ARTICLES = "articles";
 	private static final String BULLETINS = "bulletins";
 	private static final String DELIMITTER = "/";
-	private static final String ROOT_SEARCH = "target/classes/files/";
 	private static final String DATA_JSON_FILENAME = "data.json";
+
+	public static final String DEFAULT_TAXONOMY_ROOT = "target/classes/home";
 
 	/**
 	 * Loads up the file names from a system scan
@@ -40,10 +41,12 @@ public class LoadIndexHelper {
 	 * @throws IOException
 	 *             if any file io operations failed
 	 */
-	public static List<String> getAbsoluteFilePaths() throws IOException {
+	public static List<String> getAbsoluteFilePaths(String path) throws IOException {
+		if (path == null) {
+			path = DEFAULT_TAXONOMY_ROOT;
+		}
 		List<String> fileNames = new ArrayList<String>();
-
-		final Path rootDir = Paths.get(ROOT_SEARCH);
+		final Path rootDir = Paths.get(path);
 		fileNames = ScanFileSystem.getFileNames(fileNames, rootDir);
 		return fileNames;
 	}
@@ -59,7 +62,7 @@ public class LoadIndexHelper {
 	 * @throws JsonIOException
 	 */
 	public static Map<String, String> getDocumentMap(String absoluteFilePath) throws JsonIOException, JsonSyntaxException, IOException {
-		String[] pathAfterTaxonomy = absoluteFilePath.split("files");
+		String[] pathAfterTaxonomy = absoluteFilePath.split("taxonomy");
 		String url = pathAfterTaxonomy[1];
 
 		String[] splitPath = url.split(DELIMITTER);
@@ -98,7 +101,6 @@ public class LoadIndexHelper {
 	}
 
 	private static String getType(String[] splitPath, int typeTokenIndex) {
-
 		String type = splitPath[typeTokenIndex];
 		if (!type.equals(BULLETINS) && !type.equals(ARTICLES) && !type.equals(METHODOLOGY) && !type.equals(DATASETS)) {
 			type = HOME;

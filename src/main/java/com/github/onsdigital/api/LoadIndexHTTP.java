@@ -51,7 +51,7 @@ public class LoadIndexHTTP {
 				.multiThreaded(true).build());
 		JestClient client = factory.getObject();
 
-		List<String> absoluteFilePaths = LoadIndexHelper.getAbsoluteFilePaths();
+		List<String> absoluteFilePaths = LoadIndexHelper.getAbsoluteFilePaths(System.getenv("TAXONOMY_DIR"));
 		if (absoluteFilePaths.isEmpty()) {
 			System.out
 					.println("No files located during system scan, nothing will be indexed");
