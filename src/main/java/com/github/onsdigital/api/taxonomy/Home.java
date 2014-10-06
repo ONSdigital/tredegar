@@ -38,14 +38,12 @@ public class Home {
 		if (isDataRequest(request)) {
 			return data;
 		}
-		if (isHomeRequest(path)) {
+		if (StringUtils.equals(data.level, "t1")) {
 			templateResourceName = "/files/t1.html";
+		} else if (StringUtils.equals(data.level, "t2")) {
+			templateResourceName = "/files/t2.html";
 		} else {
-			if (StringUtils.equals(data.level, "t2")) {
-				templateResourceName = "/files/t2.html";
-			} else {
-				templateResourceName = "/files/t3.html";
-			}
+			templateResourceName = "/files/t3.html";
 		}
 		try (InputStream html = ResourceUtils.getStream(templateResourceName)) {
 			response.setContentType("text/html");
@@ -68,16 +66,6 @@ public class Home {
 		// Get the data for this node:
 		String json = FileUtils.readFileToString(new File(taxonomyPath + join(path, "data.json")));
 		return Serialiser.deserialise(json, Data.class);
-	}
-
-	private boolean isHomeRequest(String path) {
-		if (StringUtils.endsWithIgnoreCase(path, "/")) {
-			// Remove slash(/) at the end recursively, even if i appears
-			// multiple times
-			return isHomeRequest(StringUtils.removeEnd(path, "/"));
-		}
-
-		return StringUtils.endsWithIgnoreCase(path, "home");
 	}
 
 	private boolean isDataRequest(HttpServletRequest request) {

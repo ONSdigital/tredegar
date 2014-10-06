@@ -51,7 +51,7 @@ function dataPath() {
  */
 function dataChildPath(child) {
 
-	var dataPath =  link(child.fileName + "/data.json")
+	var dataPath =  link(child.fileName + "/?data")
 
 	console.log("Data for "+child.name+" is at: "+dataPath)
 	return dataPath
