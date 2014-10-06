@@ -18,26 +18,15 @@ export BONSAI_TRANSPORT_PORT=9300
 #export TAXONOMY_DIR=/home/boorhun/Desktop/taxonomy
 
 #Generate taxonomy
-#mvn clean compile dependency:copy-dependencies && \
-#rm -rf src/main/taxonomy && \
-#java -cp "target/classes:target/dependency/*" com.github.onsdigital.generator.Csv
+mvn clean compile dependency:copy-dependencies && \
+rm -rf src/main/taxonomy && \
+java -cp "target/classes:target/dependency/*" com.github.onsdigital.generator.Csv
 
 # Now build the JAR:
 mvn package && \
 
-    if hash heroku 2>/dev/null; then
-    
-    	# Run Heroku style if the Heroku Toolbelt is installed
-        foreman start
-        
-    else
+# Development: reloadable
+java $JAVA_OPTS -Drestolino.files=$RESTOLINO_STATIC -Drestolino.classes=$RESTOLINO_CLASSES -Drestolino.packageprefix=$PACKAGE_PREFIX -cp "target/dependency/*" com.github.davidcarboni.restolino.Main
 
-		# Otherwise go direct to Java
-		
-		# Development: reloadable
-		java $JAVA_OPTS -Drestolino.files=$RESTOLINO_STATIC -Drestolino.classes=$RESTOLINO_CLASSES -Drestolino.packageprefix=$PACKAGE_PREFIX -cp "target/dependency/*" com.github.davidcarboni.restolino.Main
-		
-		# Production: non-reloadable
-		#java $JAVA_OPTS -jar target/*-jar-with-dependencies.jar
-
-    fi
+# Production: non-reloadable
+#java $JAVA_OPTS -jar target/*-jar-with-dependencies.jar

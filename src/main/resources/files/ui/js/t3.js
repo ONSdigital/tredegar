@@ -81,7 +81,7 @@ function populateStatsBulletinHeadlines(data, timeseriesItem) {
 	var headlines = $("#statsBulletinHeadlines")
 	$(".lede", headlines).text(data.name + " Statistical Bulletin Headlines")
 	var headlineList = $("ul", headlines)
-	var itemTemplate = $("li:eq(0)", headlineList)
+	var itemTemplate = $("li", headlineList).first()
 	itemTemplate.detach()
 	$("li", headlineList).remove()
 
@@ -134,7 +134,7 @@ var deconstruct = function() {
 
 	// Breadcrumb
 	breadcrumb = $(".breadcrumb")
-	breadcrumbItem = $("li:eq(0)", breadcrumb)
+	breadcrumbItem = $("li", breadcrumb).first()
 	breadcrumbItem.detach()
 	$("li", breadcrumb).remove()
 
@@ -143,7 +143,7 @@ var deconstruct = function() {
 	
 	// Section items
 	// - detach one to use as a template and remove the rest:
-	timeseriesTemplate = $(".list--table__body:eq(0)", timeseries)
+	timeseriesTemplate = $(".list--table__body", timeseries).first()
 	timeseriesTemplate.detach()
 	$(".list--table__body", timeseries).remove()
 }
@@ -179,7 +179,7 @@ $( document ).ready(function() {
 			var item = data.timeseries.shift()
 
 			var header = $("h3", timeseriesItem)
-			$("a:eq(0)", header).text(item.name).attr("href", item.link)
+			$("a", header).first().text(item.name).attr("href", item.link)
 			$(".stat__figure", timeseriesItem).text(item.number+item.unit)
 			//TODO: Format and set the datetime property of date
 			var updateDate = $("dl", timeseriesItem)
