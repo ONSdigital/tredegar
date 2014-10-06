@@ -41,7 +41,19 @@ function dataPath() {
 
 	var dataPath =  link("data.json")
 
-	console.log("Data at: "+dataPath)
+	console.log("Data for this page is at: "+dataPath)
+	return dataPath
+}
+
+
+/*
+ * Builds an absolute link to the data.json file.
+ */
+function dataChildPath(child) {
+
+	var dataPath =  link(child.fileName + "/data.json")
+
+	console.log("Data for "+child.name+" is at: "+dataPath)
 	return dataPath
 }
 
@@ -80,61 +92,103 @@ function buildBreadcrumb(data, breadcrumbItem) {
 	breadcrumb.append(breadcrumbHere);
 }
 
+
+// Breadcrumb
+var breadcrumb
+var breadcrumbItem
+
+// Main sections
+var section = new Array()
+var header = new Array()
+var sectionItem = new Array()
+var footer = new Array()
+
+// "Other" section
+var headerOther
+var sectionOther
+var sectionOtherItem
+var footerOther
+
+/**
+  * Deconstructs the page into chunks of markup template. 
+  */
+var deconstruct = function() {
+
+	// Title
+	setTitle("Loading..")
+
+	// Breadcrumb
+	breadcrumb = $(".breadcrumb")
+	breadcrumbItem = $("li:eq(0)", breadcrumb)
+	breadcrumbItem.detach()
+	$("li", breadcrumb).remove()
+
+	for (var i = 0; i < 3; i++) {
+
+		// Section blocks
+		section.push($(".nav-panel--stats:eq("+i+")"))
+
+		// Section headers - set placeholders:
+		header.push($("header", section[i]))
+		$("h2", header[i]).text("Loading..")
+
+		// Section items
+		// - detach one to use as a template and remove the rest:
+		sectionItem.push($("li:eq(0)", section[i]))
+		sectionItem[i].detach()
+		$("li", section[i]).remove()
+
+		// Section footers
+		// - detach these to use as a template:
+		footer.push($("footer", section[i]))
+		footer[i].detach()
+	}
+
+	// "Other" section:
+	headerOther = $("header", sectionOther)
+	$("h2", headerOther).text("Loading..")
+	sectionOther = $(".nav-panel--stats:eq(3)")
+	sectionOtherItem = $("footer:eq(0)", sectionOther)
+	sectionOtherItem.detach()
+	$("footer", sectionOther).remove()
+}
+
+var populateChild = function(child, section, itemMarkupTemplate) {
+
+	$.get( dataChildPath(child), function( data ) {
+
+		// Select the right child array:
+		var children
+		if (data.level == "t2")
+			children = data.children
+		else if (data.level == "t3")
+			children = data.timeseries
+		else
+			children = new Array();
+
+		// Sections
+		var i = 0;
+		while (children.length > 0 && i++ < 4) {
+			var item = children.shift()
+			var itemMarkup = itemMarkupTemplate.clone()
+
+			$("a", itemMarkup).text(item.name)
+			$(".stat__figure", itemMarkup).text(item.number)
+			$(".stat__figure__unit", itemMarkup).text(item.unit)
+			$(".stat__description", itemMarkup).text(item.date)
+
+			$("ul", section).append(itemMarkup)
+		}
+	})
+}
+
 /*
  * Main function to populate the page.
  */
 $( document ).ready(function() {
 
 	/* Deconstruct the template: */
-
-	// Title
-	setTitle("Loading..")
-
-	// Breadcrumb
-	var breadcrumb = $(".breadcrumb")
-	var breadcrumbItem = $("li:eq(0)", breadcrumb)
-	breadcrumbItem.detach()
-	$("li", breadcrumb).remove()
-
-	// Section blocks
-	var section1 = $(".nav-panel--stats:eq(0)")
-	var section2 = $(".nav-panel--stats:eq(1)")
-	var section3 = $(".nav-panel--stats:eq(2)")
-	var sectionOther = $(".nav-panel--stats:eq(3)")
-
-	// Section headers - set placeholders:
-	var header1 = $("header", section1)
-	var header2 = $("header", section2)
-	var header3 = $("header", section3)
-	var headerOther = $("header", sectionOther)
-	$("h2", header1).text("Loading..")
-	$("h2", header2).text("Loading..")
-	$("h2", header3).text("Loading..")
-	$("h2", headerOther).text("Loading..")
-
-	// Section items
-	// - detach one to use as a template and remove the rest:
-	var section1Item = $("li:eq(0)", section1)
-	var section2Item = $("li:eq(0)", section2)
-	var section3Item = $("li:eq(0)", section3)
-	var sectionOtherItem = $("footer:eq(0)", sectionOther)
-	section1Item.detach()
-	section2Item.detach()
-	section3Item.detach()
-	sectionOtherItem.detach()
-	$("li", section1).remove()
-	$("li", section2).remove()
-	$("li", section3).remove()
-	$("footer", sectionOther).remove()
-
-	// Section footers
-	// - detach these to use as a template:
-	var footer1 = $("footer", section1)
-	var footer2 = $("footer", section2)
-	var footer3 = $("footer", section3)
-	footer1.detach()
-	footer2.detach()
-	footer3.detach()
+	deconstruct()
 
 	/* Get the data.json file to populate the page: */
 
@@ -147,52 +201,39 @@ $( document ).ready(function() {
 		$("p", ".lede").contents()[0].textContent = data.lede;
 		$(".content-reveal__hidden").text(data.more)
 
-		// Section 1
-		if (data.children.length > 0) {
-			var item = data.children.shift()
-			$("h2", header1).text(item.name)
-			while (item.detail.length > 0) {
-				var detailItem = populateDetail(item.detail.shift(), section1Item)
-				$("ul", section1).append(detailItem)
-			}
-			$("a", footer1).text("View all " + item.name).attr("href", link(item.fileName))
-			section1.append(footer1)
-		}
+		// Select the right child array:
+		var children
+		if (data.level == "t2")
+			children = data.children
+		else if (data.level == "t3")
+			children = data.timeseries
+		else
+			children = new Array();
 
-		// Section 2
-		if (data.children.length > 0) {
-			var item = data.children.shift()
-			$("h2", header2).text(item.name)
-			while (item.detail.length > 0) {
-				var detailItem = populateDetail(item.detail.shift(), section2Item)
-				$("ul", section2).append(detailItem)
-			}
-			$("a", footer2).text("View all " + item.name).attr("href", link(item.fileName))
-			section2.append(footer2)
-		} else {
-			section2.remove()
-		}
+		// Main sections
+		for (var i = 0; i < 3; i++) {
 
-		// Section 3
-		if (data.children.length > 0) {
-			var item = data.children.shift()
-			$("h2", header3).text(item.name)
-			while (item.detail.length > 0) {
-				var detailItem = populateDetail(item.detail.shift(), section3Item)
-				$("ul", section3).append(detailItem)
+			if (children.length > 0) {
+				var item = children.shift()
+				$("h2", header[i]).text(item.name)
+				populateChild(item, section[i], sectionItem[i])
+				// while (item.detail.length > 0) {
+				// 	var detailItem = populateDetail(item.detail.shift(), sectionItem[i])
+				// 	$("ul", section[i]).append(detailItem)
+				// }
+				$("a", footer[i]).text("View all " + item.name).attr("href", link(item.fileName))
+				section[i].append(footer[i])
+			} else {
+				section[i].remove()
 			}
-			$("a", footer3).text("View all " + item.name).attr("href", link(item.fileName))
-			section3.append(footer3)
-		} else {
-			section3.remove()
 		}
 
 		// "Other..." Section
-		if (data.children.length > 0) {
+		if (children.length > 0) {
 
 			$("h2", headerOther).text('Other ' + data.name + ' categories')
-			while (data.children.length > 0) {
-				var item = data.children.shift()
+			while (children.length > 0) {
+				var item = children.shift()
 				var other = sectionOtherItem.clone()
 				$("a", other).text(item.name).attr("href", link(item.fileName))
 				sectionOther.append(other)
