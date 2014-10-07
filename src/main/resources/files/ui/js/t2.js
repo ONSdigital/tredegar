@@ -119,7 +119,7 @@ var deconstruct = function() {
 
 	// Breadcrumb
 	breadcrumb = $(".breadcrumb")
-	breadcrumbItem = $("li:eq(0)", breadcrumb)
+	breadcrumbItem = $("li", breadcrumb).first()
 	breadcrumbItem.detach()
 	$("li", breadcrumb).remove()
 
@@ -134,7 +134,7 @@ var deconstruct = function() {
 
 		// Section items
 		// - detach one to use as a template and remove the rest:
-		sectionItem.push($("li:eq(0)", section[i]))
+		sectionItem.push($("li", section[i]).first())
 		sectionItem[i].detach()
 		$("li", section[i]).remove()
 
@@ -148,7 +148,7 @@ var deconstruct = function() {
 	headerOther = $("header", sectionOther)
 	$("h2", headerOther).text("Loading..")
 	sectionOther = $(".nav-panel--stats:eq(3)")
-	sectionOtherItem = $("footer:eq(0)", sectionOther)
+	sectionOtherItem = $("footer", sectionOther).first()
 	sectionOtherItem.detach()
 	$("footer", sectionOther).remove()
 }
