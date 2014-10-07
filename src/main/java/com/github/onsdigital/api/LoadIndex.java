@@ -60,8 +60,6 @@ public class LoadIndex {
 		for (String absoluteFilePath : absoluteFilePaths) {
 			idCounter++;
 
-			System.out.println("LoadIndex about to submit: " + absoluteFilePath);
-
 			Map<String, String> documentMap = LoadIndexHelper.getDocumentMap(absoluteFilePath);
 			if (documentMap != null) {
 				buildDocument(client, documentMap, idCounter);
