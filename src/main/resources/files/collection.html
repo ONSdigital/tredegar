@@ -93,11 +93,12 @@ markup: false
        <a class="skiplink visuallyhidden focusable" href="#main" tabindex="0">
       <span>Skip to main content</span>
     </a>
+    <main id="main" role="main">
       <!-- temp removal to allow for component list selective wrapping -->
       <!-- <div class="wrapper"> -->
 <div class="wrapper panel--pad-small">
   <header class="global-header">
-    <div class="media"><a href="/"><img src="ui/img/ons-logo.svg" alt="Office for National Statistics" width="300" class="media__img"></a>
+    <div class="media"><a href="/"><a href="/"><img src="ui/img/ons-logo.svg" alt="Office for National Statistics" width="300" class="media__img"></a></a>
         <div class="media__body">
         <ul class="nav nav--inline-block nav--dark globaltop-nav">
           <li>
@@ -249,54 +250,42 @@ markup: false
   </div>
 </nav>
 <div class="slate--mid-grey_new flush">
-        <div class="wrapper">
-         
-         <div class="grid-wrap">
-  <div class="grid-col desktop-grid-one-half box--inline">
-      <form action="/searchresults.html" class="hero reduced_padding pad_right" _lpchecked="1">
-            <label for="homepageSearch" class="visuallyhidden">Search term:</label>
-            <input id="homepageSearch" type="text" class="input-med-large--flex--three-fifths  search_reduction ui-autocomplete-input" name="q" value="" placeholder="Search for keyword or time series id" autocomplete="off">
-            <button type="submit" class="btn btn--primary btn--small btn--form--large-icon input--lede-btn-icon align_baseline no_left_margin">
-              <span class="icon icon-popup">
-                <span class="visuallyhidden">Search</span>
-              </span>
-            </button>
-              
-           
-          </form>
-  </div>
-  <div class="grid-col desktop-grid-one-half box--inline--flex">
-    
-  <div class="link_head">
-    <a href="about:blank" class="link"> Browse Regional Statistics</a></div>
-    <div class="page-header__icons_new">
-            
-              <img src="/ui/img/UK.png" alt="uk map" class="ukmap">
-               
-              
-           
-
-          </div>
-          
-            
-            
-            
+  <div class="wrapper">
+          <div class="grid-wrap">
+            <div class="grid-col desktop-grid-one-half box--inline">
+              <form action="/searchresults.html" class="hero reduced_padding pad_right" _lpchecked="1">
+                    <label for="homepageSearch" class="visuallyhidden">Search term:</label>
+                    <input id="homepageSearch" type="text" class="input-med-large--flex--three-fifths  search_reduction" name="q" value="" placeholder="Search for keyword or time series id">
+                    <button type="submit" class="btn btn--primary btn--small btn--form--large-icon input--lede-btn-icon align_baseline no_left_margin">
+                      <span class="icon icon-popup">
+                        <span class="visuallyhidden">Search</span>
+                      </span>
+                    </button>
+              </form>
+            </div>
+            <div class="grid-col desktop-grid-one-half box--inline--flex">
+              <div class="link_head">
+                <a href="about:blank" class="link"> Browse Regional Statistics</a></div>
+                  <div class="page-header__icons_new">
+                    <img src="/ui/img/UK.png" alt="uk map" class="ukmap">
+                  </div>           
+              </div>
+            </div>
           </div>
     </div>
-    </div>
-    </div>
-<div class="wrapper panel--pad-small">
-  <ol class="nav nav--heavy breadcrumb mini flush">
-    <li>
-      <a href="#">Home</a>
-    </li>
-    <li>
-      <a href="#">Economy</a>
-    </li>
-    <li class="nav__active">
-      <a href="#">Government, Public Sector, and Taxes</a>
-    </li>
-  </ol>
+    <div class="wrapper panel--pad-small">
+            <ol class="nav nav--heavy breadcrumb mini flush">
+              <li>
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a href="#">Economy</a>
+              </li>
+              <li class="nav__active">
+                <a href="#">Government, Public Sector, and Taxes</a>
+              </li>
+            </ol>
+        </div>
 
   <!--<ol class="nav nav-inline-block nav-dark mini">
     <li>
@@ -320,30 +309,26 @@ markup: false
 
 
 <!--Breadcrumbs, grid col two thirds-->
-  <section class="panel--large wrapper flush--top">
+  <section class="panel--large wrapper flush--top flush--bottom rem_padding_bottom">
     
 
     <!--Search filters, sorting and results description, grid col two thirds, left class removes padding and crates space within the div-->
-  <div class="grid-col tablet-wide-grid-two-thirds left">
-      <div id="search-results-total" class="search-results-total"> 
-      </div>
-      <div class="search-filters">
-        <p> Filters: <span class="lozenge lozenge-spacer lozenge-blue">STATISTIC BULLETIN</span><span class="lozenge lozenge-spacer lozenge-red">DATASET</span><span class="lozenge lozenge-spacer">ARTICLE</span><span class="lozenge lozenge-spacer lozenge-green">METHODOLOGY</span>
-        </p>
-      </div>
-      <div class="search-sorting">
-        <div class="field field--spaced"> 
-          <form action="#" class="form"> Sort by: 
-            <select class="input input--mini sorting" name="search" id="select1">
-              <option value="" selected> Relevance </option>
-                <option value="">Date Posted </option>
-            </select> 
-          </form>
-        </div>
-      </div>
-  </div>
-  </section>
+    <div>
+      <div class="grid-wrap">
+        <div class="grid-col tablet-wide-grid-two-thirds">
+           <div class="collection-header"> 
+      <h2>Producer Price Inflation Statistical Bulletin - previous releases 
+      </h2>
+      <p> Frequency: <strong>Monthly</strong>
+      <p> The Producer Price Inflation statistical bulletin is a comprehensive selection of data on input and output index series. It contains producer price indices of materials and fuels purchased and output of manufacturing industry by broad sector.</p>
+      
 
+      
+          </div>
+        </div>  
+      </div> 
+    </div> 
+  </section>
 
   <!--Search Results List, grid col two thirds-->
 <div class="wrapper nav-panels">
@@ -351,11 +336,93 @@ markup: false
       <div class="grid-col tablet-wide-grid-two-thirds">
           <article class="box">
    
-            <div id="search" class="search">
-          
+            <div id="collection-list" class="list--table list--table--cushy list--table--releases vertical-container">
+            <section>  
+            
+            <ol class="list--table ">
+              <div class="collection_latest">
+              <p class="collection_header"> Latest</p>
+              <li class="list--table__item list--table__body">
+                <div class="list--table__item__body">
+                  <h3 class="list--table__item__header">
+                    <a href="#">Producer Price Inflation - September 2014</a>
+                    </a>
+                  </h3>
+                  <p>Released: 17th October 2014 </p>
+                </div>
+                </div>
+              </li>
+              <li class="list--table__item list--table__body">
+                <div class="list--table__item__body">
+                  <h3 class="list--table__item__header">
+                    <a href="#">Producer Price Inflation - August 2014</a>
+                    </a>
+                  </h3>
+                  <p>Released: 17th August 2014</p>
+                </div>
+              </li>
+              <li class="list--table__item list--table__body">
+                <div class="list--table__item__body">
+                  <h3 class="list--table__item__header">
+                    <a href="#">Producer Price Inflation - July 2014</a>
+                    </a>
+                  </h3>
+                  <p>Released: 17th July 2014</p>
+                </div>
+              </li>
+              <li class="list--table__item list--table__body">
+                <div class="list--table__item__body">
+                  <h3 class="list--table__item__header">
+                    <a href="#">Producer Price Inflation - June 2014</a>
+                    </a>
+                  </h3>
+                  <p>Released: 17th June 2014</p>
+                </div>
+              </li>
+              <li class="list--table__item list--table__body">
+                <div class="list--table__item__body">
+                  <h3 class="list--table__item__header">
+                    <a href="#">Producer Price Inflation - April 2014</a>
+                    </a>
+                  </h3>
+                  <p>Released: 17th May 2014</p>
+                </div>
+              </li>
+              <li class="list--table__item list--table__body">
+                <div class="list--table__item__body">
+                  <h3 class="list--table__item__header">
+                    <a href="#">Producer Price Inflation - March 2014</a>
+                    </a>
+                  </h3>
+                  <p>Released: 17th April 2014</p>
+                </div>
+              </li>
+              <li class="list--table__item list--table__body">
+                <div class="list--table__item__body">
+                  <h3 class="list--table__item__header">
+                    <a href="#">Producer Price Inflation - Febuary 2014</a>
+                    </a>
+                  </h3>
+                  <p>Released: 17th March 2014</p>
+                </div>
+              </li>
+              <li class="list--table__item list--table__body">
+                <div class="list--table__item__body">
+                  <h3 class="list--table__item__header">
+                    <a href="#">Producer Price Inflation - January 2014</a>
+                    </a>
+                  </h3>
+                  <p>Released: 17th February 2014</p>
+                </div>
+              </li>
+             </ol>
+          </div>
+            
+            
+
           <!--Search results go here -->
 
-            </div>
+           
 
           <div id="paginator" class="pagination simple-pagination pagination-centred">
           
@@ -369,35 +436,13 @@ markup: false
 
           <!--Start of aside, grid col one third-->
 
-      <div class="grid-col tablet-wide-grid-one-third">
-        <aside class="box sectioned padded">
-              
-              <a href="www.gov.uk"><img src="ui/img/DWP.png" alt="dwplogo" class="aside-logo"/></a>
-              <p class="aside-highlighted"> Also try the Department for Work and Pensions for more information relating to CPI</p>
-              <a href="https://www.gov.uk/government/organisations/department-for-work-pensions" class="aside-links"> https://www.gov.uk/government/organisations/department-for-work-pensions</a>
-              <img src="ui/img/openinnewwindow.png" alt="open in new window" class="open-in-new-window"/>
-              
-              <section class="nav-panel">
-                
-              </section>
-           
-            
-           
-          
-          <!-- grid-col -->
-          <div class="grid-col tablet-wide-grid-one-third">
-            
-            <!-- /grid-col -->
-          </div>
-          <!-- /grid-col -->
       
         <!-- /aside -->
-      </aside>
-      </div>
+     
    <!--End of right col aside, grid col one third-->   
       </div>
   </div>
-</div>
+
 <!-- /wrapper -->
     
 
