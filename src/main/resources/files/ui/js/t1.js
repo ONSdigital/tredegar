@@ -1,4 +1,6 @@
 // Functionality to load up a t1 page from data.json
+
+
 /*
  * Sets the window title and h1 text.
  */
@@ -6,6 +8,8 @@ function setTitle(title) {
     $("title").html(title)
     $("h1").html(title)
 }
+
+
 /*
  * Builds an absolute link to the given filename.
  */
@@ -22,6 +26,8 @@ function link(filename) {
     result += filename
     return result
 }
+
+
 /*
  * Builds an absolute link to the data.json file.
  */
@@ -30,6 +36,8 @@ function dataPath() {
     console.log("Data for this page is at: " + dataPath)
     return dataPath
 }
+
+
 /*
  * Builds an absolute link to the data.json file.
  */
@@ -54,41 +62,56 @@ function buildBreadcrumb(breadcrumbItem) {
     $("a", breadcrumbHome).text("Home").attr("href", "/")
     breadcrumb.append(breadcrumbHome)
 }
+
 // Breadcrumb
 var breadcrumb
 var breadcrumbItem
+
+// Sections
 var section = new Array();
 var header = new Array();
 var sectionItem = new Array();
 var footer = new Array();
+
+
 /**
  * Deconstructs the page into chunks of markup template.
  */
 var deconstruct = function() {
+
     // Title
     setTitle("Home")
+
     // Breadcrumb
     breadcrumb = $(".breadcrumb")
     breadcrumbItem = $("li", breadcrumb).first()
     breadcrumbItem.detach()
     $("li", breadcrumb).remove()
+
+    // Sections
     for (var i = 0; i < 4; i++) {
+
         // Section blocks
         section.push($(".nav-panel--stats:eq(" + i + ")"))
+
         // Section headers - set placeholders:
         header.push($("header", section[i]))
         $("h2", header[i]).text("Loading..")
+
         // Section items
         // - detach one to use as a template and remove the rest:
         sectionItem.push($("li", section[i]).first())
         sectionItem[i].detach()
         $("li", section[i]).remove()
+        
         // Section footers
         // - detach these to use as a template:
         footer.push($("footer", section[i]))
         footer[i].detach()
     }
 }
+
+
 var populateChild = function(child, section, itemMarkupTemplate) {
     $.get(dataChildPath(child), function(data) {
         // Sections
@@ -104,6 +127,8 @@ var populateChild = function(child, section, itemMarkupTemplate) {
         }
     })
 }
+
+
 /*
  * Main function to populate the page.
  */
