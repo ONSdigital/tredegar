@@ -1,4 +1,6 @@
 // Functionality to load up a t2 page from data.json
+
+
 /*
  * Sets the window title and h1 text.
  */
@@ -6,6 +8,8 @@ function setTitle(title) {
     $("title").html(title)
     $("h1").html(title)
 }
+
+
 /*
  * Builds an absolute link to the given filename.
  */
@@ -22,6 +26,8 @@ function link(filename) {
     result += filename
     return result
 }
+
+
 /*
  * Builds an absolute link to the data.json file.
  */
@@ -31,6 +37,7 @@ function dataPath() {
     return dataPath
 }
 
+
 function populateDetail(detail, template) {
     var detailItem = template.clone()
     $("a", detailItem).text(detail.name)
@@ -39,6 +46,7 @@ function populateDetail(detail, template) {
     $(".stat__description", detailItem).text(detail.date)
     return detailItem
 }
+
 
 function populateHeadline(headlineItem) {
     var headline = $("#headline")
@@ -57,6 +65,7 @@ function populateHeadline(headlineItem) {
     $(".stat_change_term", headline).text(headlineItem.explanation)
 }
 
+
 function populateStatsBulletinHeadlines(data, timeseriesItem) {
     var headlines = $("#statsBulletinHeadlines")
     $(".lede", headlines).text(data.name + " Statistical Bulletin Headlines")
@@ -73,6 +82,7 @@ function populateStatsBulletinHeadlines(data, timeseriesItem) {
         headlineList.append(headlineItem)
     }
 }
+
 
 function buildBreadcrumb(data, breadcrumbItem) {
     var breadcrumb = $(".breadcrumb")
@@ -93,44 +103,90 @@ function buildBreadcrumb(data, breadcrumbItem) {
     $("a", breadcrumbHere).text(data.name).attr("href", breadcrumbLink)
     breadcrumb.append(breadcrumbHere);
 }
+
+
+//Breadcrumb
 var breadcrumb
 var breadcrumbItem
+
+//Introductory text
+var summaryBlock
+var lede
+var moreLink
+var more
+
+// Timeseries
 var timeseries
 var timeseriesTemplate
+
+
 /**
  * Deconstructs the page into chunks of markup template.
  */
 var deconstruct = function() {
+	
     // Title
     setTitle("Loading..")
+    
     // Breadcrumb
     breadcrumb = $(".breadcrumb")
     breadcrumbItem = $("li", breadcrumb).first()
     breadcrumbItem.detach()
     $("li", breadcrumb).remove()
-    // Section blocks
+
+    // Summary
+    summaryBlock = $(".content-reveal")
+    more = $(".content-reveal__hidden", summaryBlock)
+    more.detach()
+    lede = $("p", summaryBlock)
+    moreLink = $("a", summaryBlock)
+    moreLink.detach()
+    lede.text("Loading...")
+    more.text("Loading...")
+    
+    // Timeseries blocks
     timeseries = $("#timeseries")
+    
     // Section items
     // - detach one to use as a template and remove the rest:
     timeseriesTemplate = $(".list--table__body", timeseries).first()
     timeseriesTemplate.detach()
     $(".list--table__body", timeseries).remove()
 }
+
+
+function setSummary(data) {
+
+    lede.text(data.lede + " ")
+    console.log(data.lede)
+    if (data.more) {
+        more.text(data.more)
+        summaryBlock.append(more)
+        lede.append(moreLink)
+    }
+}
+
+
 /*
  * Main function to populate the page.
  */
 $(document).ready(function() {
+	
     /* Deconstruct the template: */
     deconstruct()
+    
     /* Get the data.json file to populate the page: */
     $.get(dataPath(), function(data) {
+    	
         // Titles:
         setTitle(data.name)
-        // Lede and reveal:
-        $("p", ".lede").contents()[0].textContent = data.lede;
-        $(".content-reveal__hidden").text(data.more)
+
+        // Summary:
+        setSummary(data)
+        
         // Headline box
         $(".lede", headline).text(data.name + " Statistical Bulletin Headlines")
+        
         // Time series items
         var i = 0;
         while (data.timeseries.length > 0 && i++ < 5) {
@@ -155,6 +211,7 @@ $(document).ready(function() {
                 populateStatsBulletinHeadlines(data, item)
             }
         }
+        
         // Breadcrumb
         buildBreadcrumb(data, breadcrumbItem)
     });
