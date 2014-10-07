@@ -37,7 +37,6 @@ public class LoadIndex {
 		try {
 			loadIndex();
 		} catch (Exception e) {
-			e.printStackTrace();
 			return "LoadIndex failed";
 		}
 		return "LoadIndex succeeded";
@@ -60,8 +59,6 @@ public class LoadIndex {
 		int idCounter = 0;
 		for (String absoluteFilePath : absoluteFilePaths) {
 			idCounter++;
-
-			System.out.println("LoadIndex about to submit: " + absoluteFilePath);
 
 			Map<String, String> documentMap = LoadIndexHelper.getDocumentMap(absoluteFilePath);
 			if (documentMap != null) {
