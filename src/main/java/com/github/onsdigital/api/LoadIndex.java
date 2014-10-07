@@ -37,7 +37,6 @@ public class LoadIndex {
 		try {
 			loadIndex();
 		} catch (Exception e) {
-			e.printStackTrace();
 			return "LoadIndex failed";
 		}
 		return "LoadIndex succeeded";
