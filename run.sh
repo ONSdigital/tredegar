@@ -3,7 +3,8 @@
 export JAVA_OPTS="-Xdebug -Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=n"
 
 # Restolino configuration
-export RESTOLINO_STATIC="target/classes/files"
+#export RESTOLINO_STATIC="target/classes/files"
+export RESTOLINO_STATIC="src/main/resources/files"
 export RESTOLINO_CLASSES="target/classes"
 export PACKAGE_PREFIX=com.github.onsdigital
 
