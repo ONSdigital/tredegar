@@ -9,14 +9,25 @@ function setTitle(title) {
 	$( "h1" ).html( title )
 }
 
+
+// Breadcrumb
+var breadcrumb
+var breadcrumbItem
+
+// Introductory text
 var summaryBlock
 var lede
 var moreLink
 var more
+
+// Table of contents
 var toc
 var tocItem
+
+// Content sections
 var sections
 var section
+
 
 /**
   * Deconstructs the page into chunks of markup template. 
@@ -122,6 +133,27 @@ function addSection(section, index) {
 }
 
 
+function buildBreadcrumb(data, breadcrumbItem) {
+    var breadcrumb = $(".breadcrumb")
+    var breadcrumbHome = breadcrumbItem.clone()
+    $("a", breadcrumbHome).text("Home").attr("href", "/")
+    breadcrumb.append(breadcrumbHome)
+    var breadcrumbLink = ""
+    while (data.breadcrumb.length > 0) {
+        var breadcrumbSegment = breadcrumbItem.clone()
+        var crumb = data.breadcrumb.shift();
+        breadcrumbLink += "/" + crumb.fileName
+        $("a", breadcrumbSegment).text(crumb.name).attr("href", breadcrumbLink)
+        breadcrumb.append(breadcrumbSegment)
+    }
+    // Add the current page at the end of the breadcrumb:
+    var breadcrumbHere = breadcrumbItem.clone()
+    breadcrumbLink += "/" + data.fileName
+    $("a", breadcrumbHere).text(data.name).attr("href", breadcrumbLink)
+    breadcrumb.append(breadcrumbHere);
+}
+
+
 /*
  * Main function to populate the page.
  */
@@ -149,45 +181,8 @@ $( document ).ready(function() {
 			i++
 		}
 
-		// // Lede and reveal:
-		// $("p", ".lede").contents()[0].textContent = data.lede;
-		// $(".content-reveal__hidden").text(data.more)
-
-		// // Headline box
-		// $(".lede", headline).text(data.name + " Statistical Bulletin Headlines")
-
-		// // Time series items
-		// var i = 0;
-		// while (data.timeseries.length > 0 && i++ < 5) {
-			
-		// 	var timeseriesItem = timeseriesTemplate.clone()
-		// 	var item = data.timeseries.shift()
-
-		// 	var header = $("h3", timeseriesItem)
-		// 	$("a:eq(0)", header).text(item.name).attr("href", item.link)
-		// 	$(".stat__figure", timeseriesItem).text(item.number+item.unit)
-		// 	//TODO: Format and set the datetime property of date
-		// 	var updateDate = $("dl", timeseriesItem)
-		// 	$("dd:eq(0)", updateDate).text(item.lastUpated)
-		// 	$("dd:eq(1)", updateDate).text(item.nextUpdate)
-		// 	$(".stat__description", timeseriesItem).text(item.date)
-		// 	if(item.note) {
-		// 		$(".list--table__item__description", timeseriesItem).text(item.note)
-		// 	} else {
-		// 		$(".list--table__item__description", timeseriesItem).text("")
-		// 	}
-
-		// 	$(".list--table__head", timeseries).after(timeseriesItem)
-
-		// 	if(item.headline) {
-		// 		populateHeadline(item);
-		// 		populateStatsBulletinHeadlines(data, item)
-		// 	}
-
-		// }
-
-		// // Breadcrumb
-		// buildBreadcrumb(data, breadcrumbItem)
+		// Breadcrumb
+		buildBreadcrumb(data, breadcrumbItem)
 
 	});
 

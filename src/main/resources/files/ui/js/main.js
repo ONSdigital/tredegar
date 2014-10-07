@@ -16,7 +16,7 @@ $.extend({
       hash = hashes[i].split('=');
       vars.push(hash[0]);
       if(hash[1]) {
-        hash[1].replace(/\+/g, ' ');
+        hash[1] =  hash[1].replace(/\+/g, ' ');
       }
       vars[hash[0]] = hash[1];
     }
