@@ -13,6 +13,7 @@ $.extend({
 			resultsHolder : '',
 			paginatorHolder : '',
 			resultInfoHolder : '' ,
+			searchInput : '' ,
 			page: 0,
 			onSearchStart: function () {
 				// Callback triggered before searching
@@ -27,6 +28,10 @@ $.extend({
 
 		// attach search widget to document body
 		$('body').data('onssearch', onssearch);
+
+		//Fill search input with search term
+		fillSearchInput();
+
 		
 		if (!onssearch.query) {
 			createDummyresults();
@@ -40,6 +45,17 @@ $.extend({
 	} 			
 });
 
+
+
+function fillSearchInput() {
+	var onssearch = $('body').data('onssearch');
+	if (!onssearch.searchInput) {
+		return;
+	};
+
+	var searchBox = $('#' + onssearch.searchInput);
+	searchBox.val(onssearch.query)
+}
 
 function loadPage(pageNumber) {
 	var onssearch = $('body').data('onssearch');

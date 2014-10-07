@@ -43,9 +43,6 @@ public class ScanFileSystem {
 				// isValidFilePath(fileName)) {
 				if (isValidFileExtensionType(fileName)) {
 					fileNames.add(fileName);
-					System.out.println("ScanFileSystem added this file: " + fileName);
-				} else {
-					System.out.println("ScanFileSystem ignored this file: " + fileName);
 				}
 			}
 		}

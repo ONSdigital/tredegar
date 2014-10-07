@@ -4363,8 +4363,38 @@ background-color: #edeeee !important;
 	padding-left: 2em;
 } 
 
+.box--cyan--separated-left{
+	border-left: 10px solid #008e9f;
+	margin-top:1.5rem;
+	margin-top:15px;
+	margin-bottom:3rem;
+	margin-bottom:30px;
+	padding-left: 2rem;
+	padding-left:20px;
+
+
+
+}
+
+.color-cyan {
+	color:#008e9f;
+}
+
+.big {
+	font-size: 2rem;
+	font-size: 20px;
+	padding-right: 2rem;
+	padding-right:10px;
+	font-weight: 700;
+}
+
+.headline {
+  padding-bottom: 1.25em;
+  margin-bottom: 1.25em;
+}
 
 /* Main nav arrow on active selection */
+
 
 #nav-primary > li.nav--primary__active:after{ 
   content:'';

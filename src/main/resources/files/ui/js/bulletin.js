@@ -26,7 +26,7 @@ var deconstruct = function() {
 	// Title
 	setTitle("Loading..")
 
-	// Exec summary
+	// Summary
 	summaryBlock = $(".content-reveal")
 	more = $(".content-reveal__hidden", summaryBlock)
 	more.detach()
@@ -66,7 +66,7 @@ var deconstruct = function() {
 }
 
 
-function setExecSummary(data) {
+function setSummary(data) {
 
 	lede.text(data.lede + " ")
 	console.log(data.lede)
@@ -96,8 +96,26 @@ function addSection(section, index) {
 	header.prepend(anchor)
 
 	// Section body:
+	var content = $(".box__content", sectionItemTemplate)
+	console.log("Processing markdown:")
+	console.log(section.markdown)
 	var html = markdown.toHTML(section.markdown)
-	$(".box__content", sectionItemTemplate).html(html)
+	content.html(html)
+	// Switch from <blockquote> to <div>
+	$("blockquote", content).each(function( index, element) {
+		var blockquote = $(element)
+		var div = $("<div></div>").addClass("box--padded--highlight")
+		blockquote.after(div)
+		div.append($("p", blockquote))
+		blockquote.remove()
+	});
+	// Stick in the temporary image
+	$("pre", content).each(function( index, element ) {
+		$(element).after("<p>"+
+				'<img src="/ui/img/sample--chart.png" alt="sample chart">'+
+			"</p>")
+		$(element).remove()
+	})
 
 	// Attach
 	sections.append(sectionItemTemplate)
@@ -119,8 +137,8 @@ $( document ).ready(function() {
 		// Titles:
 		setTitle(data.title)
 
-		// Exec summary:
-		setExecSummary(data)
+		// Summary:
+		setSummary(data)
 
 		// Sections
 		var i=1

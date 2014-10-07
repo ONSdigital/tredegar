@@ -204,13 +204,17 @@ public class Csv {
 		String json = Serialiser.serialise(new DataT3(folder));
 		FileUtils.writeStringToFile(new File(file, "data.json"), json);
 
-		// Initial stats bulletin experiment:
-		if (file.getName().equals("inflationandpriceindices")) {
-			File bulletins = new File(file, "bulletins");
-			bulletins.mkdir();
-			json = Serialiser.serialise(new Bulletin());
-			FileUtils.writeStringToFile(new File(bulletins, "bulletin.json"),
-					json);
-		}
+		createBulletin(folder, file);
+	}
+
+	private static void createBulletin(Folder folder, File file)
+			throws IOException {
+		// Create a dummy bulletin:
+		File bulletins = new File(file, "bulletins");
+		bulletins.mkdir();
+		Bulletin bulletin = new Bulletin();
+		bulletin.title = folder.name;
+		String json = Serialiser.serialise(bulletin);
+		FileUtils.writeStringToFile(new File(bulletins, "bulletin.json"), json);
 	}
 }
