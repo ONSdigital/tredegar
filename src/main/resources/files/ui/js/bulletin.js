@@ -96,8 +96,24 @@ function addSection(section, index) {
 	header.prepend(anchor)
 
 	// Section body:
+	var content = $(".box__content", sectionItemTemplate)
 	var html = markdown.toHTML(section.markdown)
-	$(".box__content", sectionItemTemplate).html(html)
+	content.html(html)
+	// Switch from <blockquote> to <div>
+	$("blockquote", content).each(function( index, element) {
+		var blockquote = $(element)
+		var div = $("<div></div>").addClass("box--padded--highlight")
+		blockquote.after(div)
+		div.append($("p", blockquote))
+		blockquote.remove()
+	});
+	// Stick in the temporary image
+	$("pre", content).each(function( index, element ) {
+		$(element).after("<p>"+
+				'<img src="/ui/img/sample--chart.png" alt="sample chart">'+
+			"</p>")
+		$(element).remove()
+	})
 
 	// Attach
 	sections.append(sectionItemTemplate)
