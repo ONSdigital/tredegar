@@ -26,7 +26,7 @@ var deconstruct = function() {
 	// Title
 	setTitle("Loading..")
 
-	// Exec summary
+	// Summary
 	summaryBlock = $(".content-reveal")
 	more = $(".content-reveal__hidden", summaryBlock)
 	more.detach()
@@ -66,7 +66,7 @@ var deconstruct = function() {
 }
 
 
-function setExecSummary(data) {
+function setSummary(data) {
 
 	lede.text(data.lede + " ")
 	console.log(data.lede)
@@ -97,6 +97,8 @@ function addSection(section, index) {
 
 	// Section body:
 	var content = $(".box__content", sectionItemTemplate)
+	console.log("Processing markdown:")
+	console.log(section.markdown)
 	var html = markdown.toHTML(section.markdown)
 	content.html(html)
 	// Switch from <blockquote> to <div>
@@ -135,8 +137,8 @@ $( document ).ready(function() {
 		// Titles:
 		setTitle(data.title)
 
-		// Exec summary:
-		setExecSummary(data)
+		// Summary:
+		setSummary(data)
 
 		// Sections
 		var i=1
