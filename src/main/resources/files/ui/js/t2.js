@@ -67,30 +67,55 @@ function buildBreadcrumb(data, breadcrumbItem) {
     $("a", breadcrumbHere).text(data.name).attr("href", breadcrumbLink)
     breadcrumb.append(breadcrumbHere);
 }
+
 // Breadcrumb
 var breadcrumb
 var breadcrumbItem
+
+// Introductory text
+var summaryBlock
+var lede
+var moreLink
+var more
+
 // Main sections
 var section = new Array()
 var header = new Array()
 var sectionItem = new Array()
 var footer = new Array()
+
 // "Other" section
 var headerOther
 var sectionOther
 var sectionOtherItem
 var footerOther
+
+
 /**
  * Deconstructs the page into chunks of markup template.
  */
 var deconstruct = function() {
+
     // Title
     setTitle("Loading..")
+
     // Breadcrumb
     breadcrumb = $(".breadcrumb")
     breadcrumbItem = $("li", breadcrumb).first()
     breadcrumbItem.detach()
     $("li", breadcrumb).remove()
+
+    // Summary
+    summaryBlock = $(".content-reveal")
+    more = $(".content-reveal__hidden", summaryBlock)
+    more.detach()
+    lede = $("p", summaryBlock)
+    moreLink = $("a", summaryBlock)
+    moreLink.detach()
+    lede.text("Loading...")
+    more.text("Loading...")
+
+    // Sections
     for (var i = 0; i < 3; i++) {
         // Section blocks
         section.push($(".nav-panel--stats:eq(" + i + ")"))
@@ -107,14 +132,17 @@ var deconstruct = function() {
         footer.push($("footer", section[i]))
         footer[i].detach()
     }
+
     // "Other" section:
+    sectionOther = $(".nav-panel--stats:eq(3)")
     headerOther = $("header", sectionOther)
     $("h2", headerOther).text("Loading..")
-    sectionOther = $(".nav-panel--stats:eq(3)")
     sectionOtherItem = $("footer", sectionOther).first()
     sectionOtherItem.detach()
     $("footer", sectionOther).remove()
 }
+
+
 var populateChild = function(child, section, itemMarkupTemplate) {
     $.get(dataChildPath(child), function(data) {
         // Select the right child array:
@@ -135,6 +163,20 @@ var populateChild = function(child, section, itemMarkupTemplate) {
         }
     })
 }
+
+
+function setSummary(data) {
+
+    lede.text(data.lede + " ")
+    console.log(data.lede)
+    if (data.more) {
+        more.text(data.more)
+        summaryBlock.append(more)
+        lede.append(moreLink)
+    }
+}
+
+
 /*
  * Main function to populate the page.
  */
@@ -143,16 +185,19 @@ $(document).ready(function() {
     deconstruct()
     /* Get the data.json file to populate the page: */
     $.get(dataPath(), function(data) {
+
         // Titles:
         setTitle(data.name)
-        // Lede and reveal:
-        $("p", ".lede").contents()[0].textContent = data.lede;
-        $(".content-reveal__hidden").text(data.more)
+
+        // Summary:
+        setSummary(data)
+
         // Select the right child array:
         var children
         if (data.level == "t2") children = data.children
         else if (data.level == "t3") children = data.timeseries
         else children = new Array();
+
         // Main sections
         for (var i = 0; i < 3; i++) {
             if (children.length > 0) {
@@ -169,6 +214,7 @@ $(document).ready(function() {
                 section[i].remove()
             }
         }
+        
         // "Other..." Section
         if (children.length > 0) {
             $("h2", headerOther).text('Other ' + data.name + ' categories')
@@ -181,6 +227,7 @@ $(document).ready(function() {
         } else {
             sectionOther.remove()
         }
+
         // Breadcrumb
         buildBreadcrumb(data, breadcrumbItem)
     });
