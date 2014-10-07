@@ -12,6 +12,8 @@ import org.elasticsearch.index.query.functionscore.ScoreFunctionBuilders;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
 import org.elasticsearch.search.highlight.HighlightBuilder;
 
+import com.github.onsdigital.configuration.ElasticSearchProperties;
+
 /**
  * 
  * <p>
@@ -153,9 +155,9 @@ public class ONSQueryBuilder {
 			// return documents with fields containing words that start with
 			// given search term
 			MultiMatchQueryBuilder multiMatchQueryBuilder = new MultiMatchQueryBuilder(getSearchTerm(), getFields()).type(MatchQueryBuilder.Type.PHRASE_PREFIX).analyzer("ons_synonyms");
-			// wrap this up with a function_score capability that allows us to
-			// boost the home pages
-			builder = new FunctionScoreQueryBuilder(multiMatchQueryBuilder).add(FilterBuilders.termsFilter("_type", "home"), ScoreFunctionBuilders.factorFunction(3.0f));
+			// wrap this up with a function_score capability that allows us to boost the home pages
+			float homePageBoostFloat = Float.valueOf((String) ElasticSearchProperties.INSTANCE.getProperty("home"));
+			builder = new FunctionScoreQueryBuilder(multiMatchQueryBuilder).add(FilterBuilders.termsFilter("_type", "home"), ScoreFunctionBuilders.factorFunction(homePageBoostFloat));
 
 		}
 		HighlightBuilder highlightBuilder = new HighlightBuilder();
