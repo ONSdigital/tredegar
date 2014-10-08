@@ -216,5 +216,10 @@ public class Csv {
 		bulletin.title = folder.name;
 		String json = Serialiser.serialise(bulletin);
 		FileUtils.writeStringToFile(new File(bulletins, "bulletin.json"), json);
+
+		String name = folder.filename();
+		if (name.contains("inflationandpriceindices")) {
+			createHistory(folder.filename(), file);
+		}
 	}
 }
