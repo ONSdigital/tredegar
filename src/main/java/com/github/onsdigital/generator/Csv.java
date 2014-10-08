@@ -16,6 +16,7 @@ import au.com.bytecode.opencsv.CSVReader;
 import com.github.davidcarboni.ResourceUtils;
 import com.github.davidcarboni.restolino.json.Serialiser;
 import com.github.onsdigital.json.Bulletin;
+import com.github.onsdigital.json.Collection;
 import com.github.onsdigital.json.Data;
 import com.github.onsdigital.json.DataT1;
 import com.github.onsdigital.json.DataT2;
@@ -205,6 +206,7 @@ public class Csv {
 		FileUtils.writeStringToFile(new File(file, "data.json"), json);
 
 		createBulletin(folder, file);
+		createCollection(folder, file);
 	}
 
 	private static void createBulletin(Folder folder, File file)
@@ -221,5 +223,10 @@ public class Csv {
 		if (name.contains("inflationandpriceindices")) {
 			createHistory(folder.filename(), file);
 		}
+	}
+
+	private static void createCollection(Folder folder, File file) throws IOException {
+		String json = Serialiser.serialise(new Collection());
+		FileUtils.writeStringToFile(new File(file, "collection.json"), json);
 	}
 }
