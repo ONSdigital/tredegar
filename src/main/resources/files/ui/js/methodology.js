@@ -154,6 +154,14 @@ function buildBreadcrumb(data, breadcrumbItem) {
     breadcrumb.append(breadcrumbHere);
 }
 
+function buildTable(data) {
+    var dataRows = $('tbody')
+    for ( var i = 0; i < data.length; i++ ) {
+        dataRows.push($('tr', $('td', data[i])));
+    }
+    return dataRows;
+}
+
 
 /*
  * Main function to populate the page.

@@ -228,7 +228,7 @@ markup: false
 <div class="wrapper panel--bottom-mar">
     <div class="grid-wrap">
         <div class="grid-col desktop-grid-two-thirds tablet-grid-two-thirds">
-            <table id="myTable" class="tablesorter table table--selectable">
+            <table id="myTable" class="tablesorter resp-table">
                 <thead>
                     <tr>
                         <th>Last Name</th>
@@ -236,36 +236,41 @@ markup: false
                         <th>Email</th>
                         <th>Due</th>
                         <th>Web Site</th>
+                        <th>Address</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Smith</td>
-                        <td>John</td>
-                        <td>jsmith@gmail.com</td>
-                        <td>$50.00</td>
-                        <td>http://www.jsmith.com</td>
+                        <td data-th="Last Name">Smith</td>
+                        <td data-th="First Name">John</td>
+                        <td data-th="Email">jsmith@gmail.com</td>
+                        <td data-th="Due">$50.00</td>
+                        <td data-th="Web Site">http://www.jsmith.com</td>
+                        <td data-th="Address">7 Mornington Gardens. NE12 5TG</td>
                     </tr>
                     <tr>
-                        <td>Bach</td>
-                        <td>Frank</td>
-                        <td>fbach@yahoo.com</td>
-                        <td>$50.00</td>
-                        <td>http://www.frank.com</td>
+                        <td data-th="Last Name">Bach</td>
+                        <td data-th="First Name">Frank</td>
+                        <td data-th="Email">fbach@yahoo.com</td>
+                        <td data-th="Due">$50.00</td>
+                        <td data-th="Web Site">http://www.frank.com</td>
+                        <td data-th="Address">123 Kew Hill. SO1 4EZ</td>
                     </tr>
                     <tr>
-                        <td>Doe</td>
-                        <td>Jason</td>
-                        <td>jdoe@hotmail.com</td>
-                        <td>$100.00</td>
-                        <td>http://www.jdoe.com</td>
+                        <td data-th="Last Name">Doe</td>
+                        <td data-th="First Name">Jason</td>
+                        <td data-th="Email">jdoe@hotmail.com</td>
+                        <td data-th="Due">$100.00</td>
+                        <td data-th="Web Site">http://www.jdoe.com</td>
+                        <td data-th="Address">74 Incredible View. YO2 6QT</td>
                     </tr>
                     <tr>
-                        <td>Conway</td>
-                        <td>Tim</td>
-                        <td>tconway@earthlink.net</td>
-                        <td>$50.00</td>
-                        <td>http://www.timconway.com</td>
+                        <td data-th="Last Name">Conway</td>
+                        <td data-th="First Name">Tim</td>
+                        <td data-th="Email">tconway@earthlink.net</td>
+                        <td data-th="Due">$50.00</td>
+                        <td data-th="Web Site">http://www.timconway.com</td>
+                        <td data-th="Address">12 Kent Street. 4MA 2FH</td>
                     </tr>
                 </tbody>
             </table>
@@ -274,102 +279,7 @@ markup: false
 </div>
 <!-- end of table -->
 
-<div class="wrapper panel--bottom-mar">
-    <div class="grid-wrap">
-        <div class="grid-col desktop-grid-two-thirds tablet-grid-two-thirds">
-            <table id="myTable" class="tablesorter table table--striped">
-                <thead>
-                    <tr>
-                        <th>Last Name</th>
-                        <th>First Name</th>
-                        <th>Email</th>
-                        <th>Due</th>
-                        <th>Web Site</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>Smith</td>
-                        <td>John</td>
-                        <td>jsmith@gmail.com</td>
-                        <td>$50.00</td>
-                        <td>http://www.jsmith.com</td>
-                    </tr>
-                    <tr>
-                        <td>Bach</td>
-                        <td>Frank</td>
-                        <td>fbach@yahoo.com</td>
-                        <td>$50.00</td>
-                        <td>http://www.frank.com</td>
-                    </tr>
-                    <tr>
-                        <td>Doe</td>
-                        <td>Jason</td>
-                        <td>jdoe@hotmail.com</td>
-                        <td>$100.00</td>
-                        <td>http://www.jdoe.com</td>
-                    </tr>
-                    <tr>
-                        <td>Conway</td>
-                        <td>Tim</td>
-                        <td>tconway@earthlink.net</td>
-                        <td>$50.00</td>
-                        <td>http://www.timconway.com</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</div>
 
-<div class="wrapper panel--bottom-mar">
-    <div class="grid-wrap">
-        <div class="grid-col desktop-grid-two-thirds tablet-grid-two-thirds">
-            <table id="myTable" class="table">
-                <thead>
-                    <tr class="table__actions split">
-                        <th>Last Name</th>
-                        <th>First Name</th>
-                        <th>Email</th>
-                        <th>Due</th>
-                        <th>Web Site</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr class="table__actions split">
-                        <td>Smith</td>
-                        <td>John</td>
-                        <td>jsmith@gmail.com</td>
-                        <td>$50.00</td>
-                        <td>http://www.jsmith.com</td>
-                    </tr>
-                    <tr class="table__actions split">
-                        <td>Bach</td>
-                        <td>Frank</td>
-                        <td>fbach@yahoo.com</td>
-                        <td>$50.00</td>
-                        <td>http://www.frank.com</td>
-                    </tr>
-                    <tr class="table__actions split">
-                        <td>Doe</td>
-                        <td>Jason</td>
-                        <td>jdoe@hotmail.com</td>
-                        <td>$100.00</td>
-                        <td>http://www.jdoe.com</td>
-                    </tr>
-                    <tr class="table__actions split">
-                        <td>Conway</td>
-                        <td>Tim</td>
-                        <td>tconway@earthlink.net</td>
-                        <td>$50.00</td>
-                        <td>http://www.timconway.com</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</div>
-<!-- /end main content -->
 
 <!-- Footer -->
 <footer class="global-footer">
