@@ -157,7 +157,10 @@ public class ONSQueryBuilder {
 			MultiMatchQueryBuilder multiMatchQueryBuilder = new MultiMatchQueryBuilder(getSearchTerm(), getFields()).type(MatchQueryBuilder.Type.PHRASE_PREFIX).analyzer("ons_synonyms");
 			// wrap this up with a function_score capability that allows us to boost the home pages
 			float homePageBoostFloat = Float.valueOf((String) ElasticSearchProperties.INSTANCE.getProperty("home"));
-			builder = new FunctionScoreQueryBuilder(multiMatchQueryBuilder).add(FilterBuilders.termsFilter("_type", "home"), ScoreFunctionBuilders.factorFunction(homePageBoostFloat));
+
+			FunctionScoreQueryBuilder functionScoreQueryBuilder = new FunctionScoreQueryBuilder(multiMatchQueryBuilder);
+			functionScoreQueryBuilder.add(FilterBuilders.termsFilter("_type", "home"), ScoreFunctionBuilders.factorFunction(homePageBoostFloat));
+			builder = functionScoreQueryBuilder;
 
 		}
 		HighlightBuilder highlightBuilder = new HighlightBuilder();
