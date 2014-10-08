@@ -27,8 +27,8 @@ audio,
 canvas,
 video {
   display: inline-block;
-  *display: inline;
-  *zoom: 1; }
+  display: inline;
+  zoom: 1; }
 
 audio:not([controls]) {
   display: none;
@@ -170,7 +170,7 @@ legend {
   border: 0;
   padding: 0;
   white-space: normal;
-  *margin-left: -7px; }
+  margin-left: -7px; }
 
 button,
 input,
@@ -179,7 +179,7 @@ textarea {
   font-size: 100%;
   margin: 0;
   vertical-align: baseline;
-  *vertical-align: middle; }
+  vertical-align: middle; }
 
 button,
 input {
@@ -195,7 +195,7 @@ input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: none;
   cursor: pointer;
-  *overflow: visible;
+  overflow: visible;
   border-radius: 0; }
 
 button[disabled],
@@ -205,8 +205,8 @@ html input[disabled] {
 input[type="checkbox"],
 input[type="radio"] {
   padding: 0;
-  *height: 13px;
-  *width: 13px; }
+  height: 13px;
+  width: 13px; }
 
 input[type="search"] {
   -webkit-appearance: none; }
@@ -638,7 +638,7 @@ img {
 
 .icon--green {
   color: #b2bb1c; }
-  
+
 .icon--blue {
   color: #0054aa; }
 
@@ -1011,7 +1011,7 @@ textarea {
 
   /*src: url("/ui/fonts/OpenSans-Bold.eot#iefix") format("embedded-opentype"), url("/ui/fonts/OpenSans-Bold.woff") format("woff"), url("/ui/fonts/OpenSans-Bold.ttf") format("truetype"), url("/ui/fonts/OpenSans-Bold.svg#OpenSans-Bold") format("svg");*/
   font-weight: normal;
-  font-style: normal; }
+  font-style: normal; } }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {
     font-family: 'open-sans-n4';
@@ -1029,14 +1029,14 @@ textarea {
   src: url("/ui/fonts/DaxlinePro-Bold.eot");
   src: url("/ui/fonts/DaxlinePro-Bold.eot#iefix") format("embedded-opentype"), url("/ui/fonts/DaxlinePro-Bold.woff") format("woff"), url("/ui/fonts/DaxlinePro-Bold.ttf") format("truetype"), url("/ui/fonts/DaxlinePro-Bold.svg#DaxlinePro-Bold") format("svg");
   font-weight: normal;
-  font-style: normal;*/ }
+  font-style: normal;*/ } }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {
     font-family: 'ubuntu';
     src: url("../fonts/Ubuntu-Bold.ttf") format("truetype");
 
     /*font-family: 'ff-dax-web-pro';
-    src: url("/ui/fonts/DaxlinePro-Bold.svg#DaxlinePro-Bold") format("svg"); } */}
+    src: url("/ui/fonts/DaxlinePro-Bold.svg#DaxlinePro-Bold") format("svg"); } */} }
 .grid-wrap {
   margin-left: -25px;
   clear: both; }
@@ -2026,7 +2026,7 @@ a {
 .box--orange--separated-left, .box--blue--separated-left {
   position: relative;
   border-left: 0; }
-  
+
 .box--orange--separated-left:before, .box--blue--separated-left:before {
     position: absolute;
     top: 0;
@@ -2035,7 +2035,7 @@ a {
     z-index: 1;
     border-left: 6px solid #f37121;
     content: " "; }
-	 
+
 .sectioned-ons-top {
   position: relative;
   border-top: 0; }
@@ -3089,17 +3089,17 @@ lesser , applied styles
 
 .slate_original {
   background-color: #eeefed; }
-  
+
 .slate--light {
 	background-color: #f5f5f4;
 }
 
 .slate {
-  background-color: #dcdee0; } 
+  background-color: #dcdee0; }
 
 .slate--light {
   background-color: #f3f3f3; }
-  
+
 .slate--dark {
   background-color: #b2b7bb; }
 
@@ -3107,7 +3107,7 @@ lesser , applied styles
   background-color: #e4e5e3; }
 
 .slate--mid-grey_new {
-  background-color: #dcdee0; } 
+  background-color: #dcdee0; }
 
 .slate--blue {
   background-color: #e5fcff; }
@@ -3977,7 +3977,7 @@ table actions
 .search{
   border-color: #dedfdc;
     border-style: solid;
-    border-width: 0.125em 0em 0em 0em; 
+    border-width: 0.125em 0em 0em 0em;
 }
 
 ul.simple-pagination {
@@ -4085,7 +4085,7 @@ ul.simple-pagination {
 }
 
 .stat_change_term{
-  
+
   padding-right: 2.0rem;
   font-size: 1.2rem;
   font-weight: bold;
@@ -4256,7 +4256,7 @@ background-color: #edeeee !important;
   height: 4rem;
   margin: 1.5rem;
   padding-right: 4rem;
-  
+
 }
 
 .page-header__icons_new{
@@ -4276,7 +4276,7 @@ background-color: #edeeee !important;
 
 .box--inline--flex {
   display: inline-flex;
-  padding-left: 12%%;
+  padding-left: 12%;
 }
 
 .border-defined{
@@ -4288,14 +4288,14 @@ background-color: #edeeee !important;
 .wrapper h3 {
 	margin-bottom:0px
 }
-#toc-content        
-{ 
-   width: 100%; 
+#toc-content
+{
+   width: 100%;
    text-align: left;
-	margin: 1em 0; 
-} 
+	margin: 1em 0;
+}
 .toc-columns
-{    
+{
    -moz-column-width: 18em; /* Firefox */
    -webkit-column-width: 18em; /* webkit, Safari, Chrome */
    column-width: 18em;
@@ -4310,7 +4310,7 @@ background-color: #edeeee !important;
   border-color: #dedfdc;
   border-style: solid;
   border-width: 0 2px; }
-  
+
 .border-horizontal-single {
   border-color: #dedfdc;
   border-bottom: 2px solid #dedfdc;
@@ -4322,14 +4322,14 @@ background-color: #edeeee !important;
 .wrapper h3 {
 	margin-bottom:0px
 }
-#toc-content        
-{ 
-   width: 100%; 
+#toc-content
+{
+   width: 100%;
    text-align: left;
-	margin: 1em 0; 
-} 
+	margin: 1em 0;
+}
 .toc-columns
-{    
+{
    -moz-column-width: 18em; /* Firefox */
    -webkit-column-width: 18em; /* webkit, Safari, Chrome */
    column-width: 18em;
@@ -4354,7 +4354,7 @@ background-color: #edeeee !important;
   border-color: #dedfdc;
   border-style: solid;
   border-width: 0 2px; }
-  
+
 .border-horizontal-single {
   border-color: #dedfdc;
   border-bottom: 2px solid #dedfdc;
@@ -4362,17 +4362,17 @@ background-color: #edeeee !important;
 
 .white {
   background-color: #fff; }
-  
+
 .page-header-image {
 	height:6rem;
 	width:6rem;
 	float:left;
-	margin: 0rem 2rem 5rem 0rem; 
+	margin: 0rem 2rem 5rem 0rem;
 }
 
 .page-header-box-link{
 	padding-left: 2em;
-} 
+}
 
 .box--cyan--separated-left{
 	border-left: 10px solid #008e9f;
@@ -4407,18 +4407,21 @@ background-color: #edeeee !important;
 /* Main nav arrow on active selection */
 
 
-#nav-primary > li.nav--primary__active:after{ 
+#nav-primary > li.nav--primary__active:after{
   content:'';
   width:0;
   height:0;
   position:absolute;
   left:50%;
-  margin-left:-5px; 
+  margin-left:-5px;
   bottom: 0;
-  border-width:8px; 
+  border-width:8px;
   border-style:solid;
-  border-color: transparent transparent white transparent; 
+  border-color: transparent transparent white transparent;
 }
+}
+<<<<<<< HEAD
+=======
 
 /* Collection Page CSS */
 
@@ -4455,3 +4458,4 @@ background-color: #edeeee !important;
 
 /*----Hyperlink Uniformity----*/
 
+>>>>>>> 81842efda93249991711a43b5c712a070b8f1683
