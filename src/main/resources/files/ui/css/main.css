@@ -2876,6 +2876,7 @@ lesser , applied styles
     .js .nav--primary .js-nav-hidden {
       display: none; } }
 
+
 .nav--primary__sub {
   border-color: #c5c7c1;
   border-style: solid;
@@ -2903,11 +2904,11 @@ lesser , applied styles
     .nav--primary > li {
       position: relative;
       display: table-cell;
-      width: 20%;
+      width: 18%;/*--altered to accomodate home--*/
       text-align: center;
       vertical-align: middle; }
 
-      
+
     .nav--primary > li:hover > .nav--primary__sub,
     .nav--primary .menu-focus {
       position: absolute;
@@ -2930,6 +2931,7 @@ lesser , applied styles
       padding-left: 2.5rem; } }
 .nav--primary__highlight > a {
   color: #b2bb1c; }
+
 
 .nav--primary__active,
 .nav--primary__active > a {
@@ -4458,6 +4460,20 @@ background-color: #edeeee !important;
 }
 
 
-/*----Hyperlink Uniformity----*/
+/*--Nav bar amendmentss----*/
 
+.vertical-align-mid{
+  vertical-align: middle;
+}
+
+/*CSS to incorporate Home in Nav */
+
+@media screen and (min-width: 45em) {
+  #nav-primary > li.nav--primary.home {
+    width: 12%;  }
+
+#nav-primary > li.nav--primary__highlight{
+  width: 25% !important }
+
+/*------------------------------*/
 >>>>>>> 81842efda93249991711a43b5c712a070b8f1683
