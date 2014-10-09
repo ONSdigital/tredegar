@@ -3,8 +3,16 @@ package com.github.onsdigital.generator;
 import java.io.File;
 import java.io.IOException;
 import java.io.Reader;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.nio.file.DirectoryStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Calendar;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
@@ -21,9 +29,10 @@ import com.github.onsdigital.json.Data;
 import com.github.onsdigital.json.DataT1;
 import com.github.onsdigital.json.DataT2;
 import com.github.onsdigital.json.DataT3;
-import com.google.common.io.Files;
+import com.github.onsdigital.json.TimeSeries;
 
 public class Csv {
+	static Map<String, String> cdids = new HashMap<>();
 
 	/**
 	 * Parses the taxonomy CSV file and generates a file structure..
@@ -34,6 +43,7 @@ public class Csv {
 	public static void main(String[] args) throws IOException {
 
 		Serialiser.getBuilder().setPrettyPrinting();
+		loadTimeseries();
 		Reader reader = ResourceUtils.getReader("/Taxonomy.csv");
 
 		String theme = null;
@@ -165,7 +175,9 @@ public class Csv {
 	private static void createHistory(String name, File file)
 			throws IOException {
 
-		File tempDir = Files.createTempDir();
+		File tempDir = com.google.common.io.Files.createTempDir();
+		System.out.println("Copying from " + file.getAbsolutePath() + " to "
+				+ tempDir.getAbsolutePath());
 		FileUtils.copyDirectory(file, tempDir);
 
 		for (int i = 1; i <= 10; i++) {
@@ -178,6 +190,8 @@ public class Csv {
 			int day = 21;
 			String releaseFolderName = year + "-" + month + "-" + day;
 			File releaseFolder = new File(file, releaseFolderName);
+			System.out.println("Copying from " + tempDir.getAbsolutePath()
+					+ " to " + releaseFolder.getAbsolutePath());
 			FileUtils.copyDirectory(tempDir, releaseFolder);
 		}
 
@@ -207,6 +221,7 @@ public class Csv {
 
 		createBulletin(folder, file);
 		createCollection(folder, file);
+		createTimeseries(folder, file);
 	}
 
 	private static void createBulletin(Folder folder, File file)
@@ -221,12 +236,83 @@ public class Csv {
 
 		String name = folder.filename();
 		if (name.contains("inflationandpriceindices")) {
-			createHistory(folder.filename(), file);
+			// createHistory(folder.filename(), file);
 		}
 	}
 
-	private static void createCollection(Folder folder, File file) throws IOException {
+	private static void createCollection(Folder folder, File file)
+			throws IOException {
 		String json = Serialiser.serialise(new Collection());
 		FileUtils.writeStringToFile(new File(file, "collection.json"), json);
+	}
+
+	/**
+	 * Creates dummy timeseries data.
+	 * 
+	 * @param folder
+	 * @param file
+	 * @throws IOException
+	 */
+	private static void createTimeseries(Folder folder, File file)
+			throws IOException {
+
+		// Create the timeseries directory:
+		File timeseries = new File(file, "timeseries");
+		timeseries.mkdir();
+
+		TimeSeries series = new TimeSeries();
+		String json = Serialiser.serialise(series);
+		FileUtils.writeStringToFile(new File(timeseries, "aaaa.json"), json);
+	}
+
+	/**
+	 * Creates dummy timeseries data.
+	 * 
+	 * @param folder
+	 * @param file
+	 * @throws IOException
+	 */
+	private static void loadTimeseries() throws IOException {
+
+		// Read in the CDIDs and names:
+		URI csvUri;
+		try {
+			csvUri = Csv.class.getClassLoader().getResource("cdid").toURI();
+		} catch (URISyntaxException e) {
+			throw new IOException(
+					"Error getting URI for CDID resource folder.", e);
+		}
+		Path csvPath = Paths.get(csvUri);
+		// Creating a DirectoryStream inside a try-with-resource block
+		try (DirectoryStream<Path> stream = Files.newDirectoryStream(csvPath,
+				"*.csv")) {
+			for (Path p : stream) {
+
+				// Iterate over the paths:
+				Serialiser.getBuilder().setPrettyPrinting();
+				Reader reader = ResourceUtils.getReader("/cdid/"
+						+ p.getFileName());
+
+				try (CSVReader csvReader = new CSVReader(reader)) {
+
+					// Read the rows
+					String[] row;
+					while ((row = csvReader.readNext()) != null) {
+						if (row.length > 1 && StringUtils.isNotBlank(row[0])
+								&& StringUtils.isNotBlank(row[1])) {
+							cdids.put(row[0], row[1]);
+							System.out.println("Total: " + cdids.size());
+						} else {
+							System.out.println("Rejected: " + p.getFileName()
+									+ " row: " + ArrayUtils.toString(row));
+						}
+					}
+				}
+
+			}
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 }
