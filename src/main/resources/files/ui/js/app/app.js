@@ -23,9 +23,7 @@ $(document).ready(function() {
 $(document).ready(function(){
     $('#viewAllStatsBulletins').click(function(){
         var url = window.location.pathname;
-        var urlTokens = url.split('/');
-        var nameOfBulletins = urlTokens[urlTokens.length - 2];
-        nameOfBulletins = '/collection.html?q=' + nameOfBulletins + '&type=bulletins'
+        nameOfBulletins = '/collection.html?q=' + url + '&type=bulletin'
         window.location.href = nameOfBulletins;
     });
 });
