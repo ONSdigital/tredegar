@@ -497,6 +497,7 @@ img {
 .icon-down-dir:before { content: '\e880' ; } /* '' */
 .icon-users:before { content: '\e80b' ; } /* '' */
 .icon-export:before { content: '\e828' ; } /* '' */
+.icon-rss:before { content: '\e853' ; } /* '' */
 .icon-right-open-big:before { content: '\e886' ; } /* '' */
 
 /*Original code from CX*/
@@ -2589,22 +2590,22 @@ lesser , applied styles
     padding-right: 7.5%; } }
 .lozenge {
   display: inline-block;
-  padding: 3px 5px;
-  padding: .3rem .5rem;
+  /*padding: 3px 5px;
+  padding: .3rem .5rem;*/
   border: 0 none;
   border-radius: 2px;
   font-size: 10px;
   font-size: 1rem;
   letter-spacing: .1em;
-  color: white;
+  color: #888;
   text-transform: uppercase;
-  cursor: pointer;
-  background-color: #adafa7;}
-  .lozenge:hover, .lozenge:active, .lozenge:focus {
+  /*cursor: pointer;*/
+  /*background-color: #adafa7;*/}
+  /*.lozenge:hover, .lozenge:active, .lozenge:focus {
     color: white;
     text-decoration: none !important;
     background-color: #a1a39a;
-    outline: 0; }
+    outline: 0; }*/
   .lozenge.is-collapsed {
     display: inline-block;
     max-width: inherit;
@@ -3377,7 +3378,7 @@ $SPLIT
   Tables and tabular data
 ============================
 */
-/*.table {
+.table {
   width: 100%;
   table-layout: auto; }
   .table td,
