@@ -9,11 +9,13 @@ import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.TreeMap;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.ArrayUtils;
@@ -32,7 +34,8 @@ import com.github.onsdigital.json.DataT3;
 import com.github.onsdigital.json.TimeSeries;
 
 public class Csv {
-	static Map<String, String> cdids = new HashMap<>();
+	static Map<String, String> cdids = new TreeMap<>();
+	static Map<String, Map<String, String>> firstletters = new TreeMap<>();
 
 	/**
 	 * Parses the taxonomy CSV file and generates a file structure..
@@ -141,6 +144,9 @@ public class Csv {
 			}
 		}
 
+		System.out.println(firstletters.keySet().size());
+		System.out.println("Total timeseries: " + cdids.size());
+
 	}
 
 	// private static void createContentFolders(String name, File file)
@@ -176,9 +182,28 @@ public class Csv {
 			throws IOException {
 
 		File tempDir = com.google.common.io.Files.createTempDir();
+		List<File> historyFolders = historyFolders(file);
+
+		// Delete existing history folders:
+		for (File historyFolder : historyFolders) {
+			FileUtils.deleteQuietly(historyFolder);
+		}
+
 		System.out.println("Copying from " + file.getAbsolutePath() + " to "
 				+ tempDir.getAbsolutePath());
 		FileUtils.copyDirectory(file, tempDir);
+
+		for (File historyFolder : historyFolders) {
+			System.out.println("Copying from " + tempDir.getAbsolutePath()
+					+ " to " + historyFolder.getAbsolutePath());
+			FileUtils.copyDirectory(tempDir, historyFolder);
+		}
+
+		FileUtils.deleteDirectory(tempDir);
+	}
+
+	private static List<File> historyFolders(File file) {
+		List<File> result = new ArrayList<>();
 
 		for (int i = 1; i <= 10; i++) {
 			Calendar release = Calendar.getInstance();
@@ -190,12 +215,10 @@ public class Csv {
 			int day = 21;
 			String releaseFolderName = year + "-" + month + "-" + day;
 			File releaseFolder = new File(file, releaseFolderName);
-			System.out.println("Copying from " + tempDir.getAbsolutePath()
-					+ " to " + releaseFolder.getAbsolutePath());
-			FileUtils.copyDirectory(tempDir, releaseFolder);
+			result.add(releaseFolder);
 		}
 
-		FileUtils.deleteDirectory(tempDir);
+		return result;
 	}
 
 	private static void createHomePage(Folder folder, File file)
@@ -221,7 +244,9 @@ public class Csv {
 
 		createBulletin(folder, file);
 		createCollection(folder, file);
-		createTimeseries(folder, file);
+		if (file.getName().contains("inflationandpriceindices")) {
+			createTimeseries(folder, file);
+		}
 	}
 
 	private static void createBulletin(Folder folder, File file)
@@ -236,7 +261,7 @@ public class Csv {
 
 		String name = folder.filename();
 		if (name.contains("inflationandpriceindices")) {
-			// createHistory(folder.filename(), file);
+			createHistory(folder.filename(), file);
 		}
 	}
 
@@ -260,9 +285,23 @@ public class Csv {
 		File timeseries = new File(file, "timeseries");
 		timeseries.mkdir();
 
-		TimeSeries series = new TimeSeries();
-		String json = Serialiser.serialise(series);
-		FileUtils.writeStringToFile(new File(timeseries, "aaaa.json"), json);
+		// Select a subset of the 14+K CDIDs we have:
+		String firstletter = file.getName().substring(0, 1).toLowerCase();
+		// Aint no Ps in the CDIDs:
+		if (firstletter.equals("p"))
+			firstletter = "q";
+		// System.out.println("Getting " + firstletter + " from "
+		// + firstletters.keySet());
+		Map<String, String> cdids = firstletters.get(firstletter);
+
+		// Generate dummy timeseries for each CDID in the subset:
+		for (String cdid : cdids.keySet()) {
+			TimeSeries series = new TimeSeries();
+			series.name = cdids.get(cdid);
+			String json = Serialiser.serialise(series);
+			FileUtils.writeStringToFile(new File(timeseries, cdid + ".json"),
+					json);
+		}
 	}
 
 	/**
@@ -314,5 +353,18 @@ public class Csv {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+
+		// Now organise into subsets, using the first letter as a useful
+		// "bucket":
+		for (String cdid : cdids.keySet()) {
+			String firstletter = cdid.substring(0, 1).toLowerCase();
+			if (!firstletters.containsKey(firstletter)) {
+				Map<String, String> newMap = new TreeMap<String, String>();
+				firstletters.put(firstletter, newMap);
+				newMap.put(cdid, cdids.get(cdid));
+			} else
+				firstletters.get(firstletter).put(cdid, cdids.get(cdid));
+		}
+		// System.out.println(firstletters);
 	}
 }
