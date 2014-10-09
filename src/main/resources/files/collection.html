@@ -40,7 +40,7 @@
     <script src="ui/js/app/tables.js"></script>
     <script src="ui/js/app/tabs.js"></script>
     <script src="ui/js/main.js" type="text/javascript" ></script>
-    <script src="ui/js/search.js" type="text/javascript" ></script>
+    <script src="ui/js/collection-search.js" type="text/javascript" ></script>
     <script src="ui/js/lib/jquery.simplePagination.js" type="text/javascript" ></script>
     <script src="/ui/js/custom-autocomplete.js"></script>    
     <script>
@@ -529,14 +529,13 @@ markup: false
     <script type="text/javascript">
 
      function searchResults() {  
-
           var anchor = $.getAnchor();
           var pageNumber = 1;
           if (anchor) {
             pageNumber = anchor.slice(anchor.indexOf("-") + 1); 
           }
 
-          $.search({
+          $.collectiontaxonomyfilesystem ({
             query : $.getUrlVar('q'),
             type : $.getUrlVar('type'),
             page  : pageNumber,
