@@ -20,8 +20,7 @@ rem #rm -rf src/main/taxonomy && ^
 rem #java -cp "target/classes:target/dependency/*" com.github.onsdigital.generator.Csv
 
 rem # Now build the JAR:
-mvn package && ^
-^
+mvn -Dmaven.test.skip=true package && ^
 rem # Development: reloadable ^
 java $JAVA_OPTS -Drestolino.files=$RESTOLINO_STATIC -Drestolino.classes=$RESTOLINO_CLASSES -Drestolino.packageprefix=$PACKAGE_PREFIX -cp "target/dependency/*" com.github.davidcarboni.restolino.Main
 
