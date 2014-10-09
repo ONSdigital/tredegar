@@ -1,5 +1,6 @@
 package com.github.onsdigital.index;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
@@ -49,6 +50,28 @@ public class ScanFileSystem {
 		stream.close();
 
 		return fileNames;
+	}
+
+	public static List<File> getFiles(List<File> files, Path dir) throws IOException {
+
+		if (files == null || dir == null) {
+			throw new IllegalArgumentException("List of fileNames and Path dir cannot be null");
+		}
+
+		DirectoryStream<Path> stream = Files.newDirectoryStream(dir);
+		for (Path path : stream) {
+			if (path.toFile().isDirectory()) {
+				getFiles(files, path);
+			} else {
+				File file = path.toFile();
+				if (file.getName().equals("bulletin.json")) {
+					files.add(file);
+				}
+			}
+		}
+		stream.close();
+
+		return files;
 	}
 
 	@SuppressWarnings("unused")

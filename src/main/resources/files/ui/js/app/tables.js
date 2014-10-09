@@ -1,18 +1,18 @@
 $(document).ready(function() {
 
   // Function to check select box associated with table rows
-  $( '.table--selectable' ).on( 'click', '.list--table__body', function(e) {
+  // $( '.table--selectable' ).on( 'click', '.list--table__body', function(e) {
 
-    // target clicks on selectable table that's not a link or an (i)
-    if ($(e.target).not('a, .information > span, .list--table__item__body--select, input[type="checkbox"]').length) {
-      $(this).find('input').click();
-    }
-  });
+  //   // target clicks on selectable table that's not a link or an (i)
+  //   if ($(e.target).not('a, .information > span, .list--table__item__body--select, input[type="checkbox"]').length) {
+  //     $(this).find('input').click();
+  //   }
+  // });
 
-  $( '.table--selectable' ).on( 'touchend', '.list--table__body', function(e) {
-    // prevent hover state on mobile from being triggered from a tap on the body
-    $(this).addClass('hover-override');
-  });
+  // $( '.table--selectable' ).on( 'touchend', '.list--table__body', function(e) {
+  //   // prevent hover state on mobile from being triggered from a tap on the body
+  //   $(this).addClass('hover-override');
+  // });
 
   // Listens to select all functionality
   $( '.list--table__item__body--select-all input' ).change(function() {
