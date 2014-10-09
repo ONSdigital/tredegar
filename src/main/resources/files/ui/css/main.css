@@ -250,7 +250,7 @@ html {
 
 body {
   height: 100%;
-  padding: 1em;
+  /*padding: 1em;*/
   background: #fff; }
 
 /* ------------------------------
@@ -497,7 +497,7 @@ img {
 .icon-down-dir:before { content: '\e880' ; } /* '' */
 .icon-users:before { content: '\e80b' ; } /* '' */
 .icon-export:before { content: '\e828' ; } /* '' */
-
+.icon-right-open-big:before { content: '\e886' ; } /* '' */
 
 /*Original code from CX*/
 
@@ -2703,7 +2703,7 @@ lesser , applied styles
     color: #b4ddf4;
     text-decoration: none !important;
     vertical-align: middle;
-    content: "\e80c";
+    content: "\e886";
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%); }
