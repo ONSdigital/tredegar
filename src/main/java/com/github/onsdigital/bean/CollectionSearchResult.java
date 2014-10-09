@@ -10,26 +10,12 @@ import java.util.Map;
 
 import com.github.davidcarboni.restolino.json.Serialiser;
 import com.github.onsdigital.json.Bulletin;
-import com.google.gson.JsonObject;
 
-/**
- * Puts information returned from search operation together to be converted into
- * Json format
- * 
- * 
- * @author Bren
- *
- */
 public class CollectionSearchResult {
 
 	private long numberOfResults; // total number of hits
 	private List<Map<String, Object>> results; // results
 
-	/**
-	 * Create search results using {@link JsonObject}
-	 * 
-	 * @param result
-	 */
 	public CollectionSearchResult(List<File> files) {
 		results = new ArrayList<Map<String, Object>>();
 		this.numberOfResults = files.size();
@@ -41,7 +27,6 @@ public class CollectionSearchResult {
 			Map<String, Object> item = new HashMap<String, Object>();
 			try {
 				Bulletin json = Serialiser.deserialise(new FileInputStream(file), Bulletin.class);
-				System.out.println(json);
 				item.put("title", json.title);
 				String[] urlPathName = file.getPath().split("target/classes/files");
 				String[] urlWithoutJson = urlPathName[1].split("bulletin.json");
