@@ -2023,11 +2023,11 @@ a {
   border-style: solid;
   border-width: 2px 0; }
 
-.box--orange--separated-left, .box--blue--separated-left {
+.box--orange--separated-left, .box--blue--separated-left, .box--green--separated-left {
   position: relative;
   border-left: 0; }
 
-.box--orange--separated-left:before, .box--blue--separated-left:before {
+.box--orange--separated-left:before, .box--blue--separated-left:before, .box--green--separated-left:before {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -2053,6 +2053,9 @@ a {
 
 .box--blue--separated-left:before {
   border-left-color: #0054aa; }
+
+.box--green--separated-left:before {
+  border-left-color: #b3b92d; }
 
 .box--orange a {
   color: #f37121; }
@@ -2907,6 +2910,7 @@ lesser , applied styles
       width: 18%;/*--altered to accomodate home--*/
       text-align: center;
       vertical-align: middle; }
+
 
 
     .nav--primary > li:hover > .nav--primary__sub,
@@ -4067,6 +4071,7 @@ ul.simple-pagination {
   text-align: center;
 }
 
+
 /*---For T3s largest statistic*/
 
 .normal {
@@ -4263,7 +4268,7 @@ background-color: #edeeee !important;
 
 .ukmap{
   height: 4rem;
-  margin: 1.5rem;
+  margin: 1.5rem 1.5rem 1.5rem 0rem;
   padding-right: 4rem;
 
 }
@@ -4279,8 +4284,9 @@ background-color: #edeeee !important;
 }
 
 .link_head{
-  float: left;
-  padding: 2.5rem 0rem 2.5rem 5rem;
+  /*float: left;
+  padding: 2.5rem 0rem 2.5rem 5rem;*/
+  margin: auto;
 }
 
 .box--inline--flex {
@@ -4475,8 +4481,10 @@ background-color: #edeeee !important;
   #nav-primary > li.nav--primary.home {
     width: 12%;  }
 
+
 #nav-primary > li.nav--primary__highlight{
   width: 25% !important }
+}
 
 /*-----responsive tables-----*/
 .resp-table {
@@ -4545,4 +4553,25 @@ background-color: #edeeee !important;
   color: #b2bb1c;
 }
 
+/*---Release Page Classes-----*/
 
+ ol > li:nth-child(3) > div.list--table__item__body.list--table__item__body--caption.release_contact_header{
+  vertical-align: top;
+ }
+
+@media screen and (min-width: 40em){
+.list--table--complex .list--table__item__body--caption {
+width: 11.5%;
+padding-right: 7.5%;}
+}
+
+ol > li > div.list--table__item__body.list--table__item__body--stat.no_align{
+  vertical-align: inherit;
+}
+
+.release_margin  {
+  margin: 0 0 25px 0;  
+}
+ .release_dates{
+  font-weight: bold;
+ }
