@@ -4428,7 +4428,7 @@ background-color: #edeeee !important;
   border-style:solid;
   border-color: transparent transparent white transparent;
 }
-}
+
 
 /* Collection Page CSS */
 
@@ -4474,6 +4474,7 @@ background-color: #edeeee !important;
 @media screen and (min-width: 45em) {
   #nav-primary > li.nav--primary.home {
     width: 12%;  }
+}
 
 #nav-primary > li.nav--primary__highlight{
   width: 25% !important }
