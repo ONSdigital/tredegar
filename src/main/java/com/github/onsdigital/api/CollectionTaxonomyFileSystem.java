@@ -4,6 +4,7 @@ import java.io.File;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -20,6 +21,7 @@ import com.github.onsdigital.index.ScanFileSystem;
 
 @Endpoint
 public class CollectionTaxonomyFileSystem {
+	private static int multiplierIndex = 10;
 
 	@GET
 	public Object get(@Context HttpServletRequest request, @Context HttpServletResponse response) throws Exception {
@@ -31,7 +33,26 @@ public class CollectionTaxonomyFileSystem {
 		String taxonomyRoot = Configuration.getTaxonomyPath() + query;
 		final Path rootDir = Paths.get(taxonomyRoot);
 		files = ScanFileSystem.getFiles(files, rootDir);
-		return new CollectionSearchResult(files);
+
+		int startIndex = 0;
+		int endIndex = 9;
+
+		int pageMultiplier = page - 1;
+		if (pageMultiplier > 0) {
+			startIndex = startIndex + (pageMultiplier * multiplierIndex);
+			endIndex = endIndex + (pageMultiplier * multiplierIndex);
+			if (endIndex > files.size()) {
+				endIndex = files.size();
+			}
+		}
+
+		Collections.sort(files);
+		Collections.reverse(files);
+		List<File> pagedFiles = files.subList(startIndex, endIndex);
+
+		CollectionSearchResult collectionSearchResult = new CollectionSearchResult(pagedFiles);
+		collectionSearchResult.setNumberOfResults(files.size());
+		return collectionSearchResult;
 	}
 
 	private int extractPage(HttpServletRequest request) {
