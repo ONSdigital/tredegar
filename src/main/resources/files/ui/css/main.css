@@ -2593,8 +2593,8 @@ lesser , applied styles
     padding-right: 7.5%; } }
 .lozenge {
   display: inline-block;
-  /*padding: 3px 5px;
-  padding: .3rem .5rem;*/
+  padding: 3px 5px;
+  padding: .3rem .5rem;
   border: 0 none;
   border-radius: 2px;
   font-size: 10px;
@@ -3897,13 +3897,32 @@ table actions
   font-weight: bold;
 }
 
-.lozenge-blue{ background-color: #3684cd; }
+.lozenge-blue{ 
+  /*background-color: #3684cd;*/
+  color: blue;
+  border: solid 1px;
+  margin-left: 0.5rem;
+}
 
-.lozenge-green{ background-color: #327563; }
+.lozenge-green{
+  /*background-color: #327563;*/
+  color: blue;
+  border: solid 1px;
+}
 
-.lozenge-red{ background-color: #e75f64; }
+.lozenge-red{
+  /*background-color: #e75f64; */
+  color: blue;
+  border: solid 1px;
+}
 
-.lozenge-spacer{ margin-right: 1em; }
+.lozenge-grey{
+  /*background-color: #e75f64; */
+  color: blue;
+  border: solid 1px;
+}
+
+.lozenge-spacer{ margin-right: 1.2em; }
 
 .open-in-new-window{
   height: 1.7em;
