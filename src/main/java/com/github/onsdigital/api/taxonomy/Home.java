@@ -20,6 +20,7 @@ import com.github.davidcarboni.restolino.json.Serialiser;
 import com.github.onsdigital.configuration.Configuration;
 import com.github.onsdigital.json.Data;
 import com.github.onsdigital.json.TaxonomyNode;
+import com.google.gson.JsonParser;
 
 @Endpoint
 public class Home {
@@ -36,7 +37,7 @@ public class Home {
 
 		Data data = getNodeData(path);
 		if (isDataRequest(request)) {
-			return data;
+			return new JsonParser().parse(Serialiser.serialise(data)).getAsJsonObject();
 		}
 		if (StringUtils.equals(data.level, "t1")) {
 			templateResourceName = "/files/t1.html";

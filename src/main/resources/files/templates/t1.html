@@ -1,5 +1,6 @@
-
-      <section class="hero-banner">
+<div  ng-controller="T1Ctrl" >
+     
+    <section class="hero-banner">
         <div class="panel--pad slate--hero-banner">
           <div class="wrapper">
           <h2 class="hero-banner__headline">Latest release</h2>
@@ -28,18 +29,16 @@
       </div>
     </div>
         
-      </section>
+    </section>
 
-      <div  ng-controller="ChildCtrl" class="wrapper offset-top panel--bottom-mar nav-panels">
-     
-        <div  ng-repeat="item in data.children" ng-if="$odd" class="grid-wrap">
-          <div   class="grid-col tablet-wide-grid-one-half">
-          {{getChild(item.fileName)}}
+      <div class="wrapper offset-top panel--bottom-mar nav-panels">
+        <div ng-repeat="item in data.children track by $index" class="grid-wrap">
+          <div ng-repeat="child in item" class="grid-col tablet-wide-grid-one-half">
             <article class="nav-panel nav-panel--stats sectioned lifted border-defined">
               <header class="nav-panel__header nav-panel__roomy">
-                <h2>{{item.name}}</h2>
+                <h2>{{child.name}}</h2>
               </header>
-              <section class="nav-panel__roomy">
+              <section  class="nav-panel__roomy">
                 <ul class="list--neutral">
                   <li class="nav-panel__item">
                     <dl>
@@ -64,52 +63,6 @@
                       </dd>
                     </dl>
                   </li>
-                  <li class="nav-panel__item">
-                    <dl>
-                      <dt class="nav-panel__title">
-                        <h3 class="nav-panel__heading">
-                          <a href="#">
-                        UK Gross Expenditure on Research and Development
-                      </a>
-                          <span tabindex="0" title="" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin"></span>
-                        </h3>
-                      </dt>
-                      <dd class="nav-panel__value">
-                        <div class="stat stat--small">
-                          <div class="stat__figure">
-                            £27
-                            <span class="stat__figure__unit">bn</span>
-                          </div>
-                          <div class="stat__description">
-                            2012
-                          </div>
-                        </div>
-                      </dd>
-                    </dl>
-                  </li>
-                  <li class="nav-panel__item">
-                    <dl>
-                      <dt class="nav-panel__title">
-                        <h3 class="nav-panel__heading">
-                          <a href="#">
-                        Chained Volume Measure of Construction Output
-                      </a>
-                          <span tabindex="0" title="" class="tooltip icon-info-circled icon--warm  icon--inline icon--left-margin"></span>
-                        </h3>
-                      </dt>
-                      <dd class="nav-panel__value">
-                        <div class="stat stat--small">
-                          <div class="stat__figure">
-                            1.2
-                            <span class="stat__figure__unit">%</span>
-                          </div>
-                          <div class="stat__description">
-                            Jan 2014
-                          </div>
-                        </div>
-                      </dd>
-                    </dl>
-                  </li>
                 </ul>
               </section>
               <footer class="nav-panel__footer nav-panel__item">
@@ -121,7 +74,6 @@
             <!-- /nav-panel -->
           </div>
           <!-- /grid-col -->
-
           <!-- /grid-col -->
         </div>
       </div>
@@ -515,5 +467,6 @@
           </div>
         </div>
       </div>
+</div>
     <!-- build:js /ui/js/ons-alpha.js-->
-    <script src="../ui/js/lib/d3.v3.min.js"></script>
+<script src="../ui/js/lib/d3.v3.min.js"></script>
