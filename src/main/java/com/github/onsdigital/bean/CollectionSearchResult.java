@@ -11,48 +11,89 @@ import java.util.Map;
 import com.github.davidcarboni.restolino.json.Serialiser;
 import com.github.onsdigital.json.Bulletin;
 
+/**
+ * Holds the details for a collection of content types
+ */
 public class CollectionSearchResult {
+	private static final String INDEX_VALUE = "latest";
+	private static final String INDEX_KEY = "indexNumber";
+	private static final String RELEASE_DATE = "releaseDate";
+	private static final String URL = "url";
+	private static final String BULLETIN_JSON = "bulletin.json";
+	private static final String PATH_ROOT = "target/classes/files";
+	private static final String TITLE = "title";
+	private long numberOfResults;
+	private List<Map<String, String>> results;
+	private int page;
 
-	private long numberOfResults; // total number of hits
-	private List<Map<String, Object>> results; // results
-
-	public CollectionSearchResult(List<File> files) {
-		results = new ArrayList<Map<String, Object>>();
+	/**
+	 * ctor that parses the files and stores information about these files into
+	 * a map
+	 * 
+	 * @param files
+	 *            collection of files representing the content types
+	 * @param page
+	 *            indicates which page number, needed to help identify latest
+	 *            bulletin
+	 */
+	public CollectionSearchResult(List<File> files, int page) {
+		results = new ArrayList<Map<String, String>>();
 		this.numberOfResults = files.size();
-		resolve(files);
+		this.page = page;
+		init(files);
 	}
 
-	void resolve(List<File> files) {
-		for (File file : files) {
-			Map<String, Object> item = new HashMap<String, Object>();
-			try {
-				Bulletin json = Serialiser.deserialise(new FileInputStream(file), Bulletin.class);
-				item.put("title", json.title);
-				String[] urlPathName = file.getPath().split("target/classes/files");
-				String[] urlWithoutJson = urlPathName[1].split("bulletin.json");
-				item.put("url", urlWithoutJson[0]);
-				item.put("releaseDate", json.releaseDate);
-				results.add(item);
-			} catch (IOException e) {
-				throw new RuntimeException(e);
-			}
-		}
-	}
-
+	/**
+	 * @return number of files found during the search
+	 */
 	public long getNumberOfResults() {
 		return numberOfResults;
 	}
 
+	/**
+	 * @param numberOfHits
+	 *            number of files stored
+	 */
 	public void setNumberOfResults(long numberOfHits) {
 		this.numberOfResults = numberOfHits;
 	}
 
-	public List<Map<String, Object>> getResults() {
+	/**
+	 * @return collection of key,value pairs that detail a content type
+	 */
+	public List<Map<String, String>> getResults() {
 		return results;
 	}
 
-	public void setResults(List<Map<String, Object>> hits) {
-		this.results = hits;
+	private void init(List<File> files) {
+		for (File file : files) {
+			Map<String, String> item = new HashMap<String, String>();
+			Bulletin bulletinJson = getBulletin(file);
+			item.put(TITLE, bulletinJson.title);
+			item.put(RELEASE_DATE, bulletinJson.releaseDate);
+
+			String[] urlWithoutJson = getUrl(file);
+			item.put(URL, urlWithoutJson[0]);
+
+			if ((page == 1) && (files.indexOf(file) == 0)) {
+				item.put(INDEX_KEY, INDEX_VALUE);
+			}
+
+			results.add(item);
+		}
 	}
 
+	private String[] getUrl(File file) {
+		String[] url = file.getPath().split(PATH_ROOT);
+		String[] urlWithoutJson = url[1].split(BULLETIN_JSON);
+		return urlWithoutJson;
+	}
+
+	private Bulletin getBulletin(File file) {
+		try {
+			return Serialiser.deserialise(new FileInputStream(file), Bulletin.class);
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
+	}
 }

@@ -52,6 +52,15 @@ public class ScanFileSystem {
 		return fileNames;
 	}
 
+	/**
+	 * @param files
+	 *            collection to store the files in
+	 * @param dir
+	 *            the root directory to start searching from
+	 * @return collection of located files
+	 * @throws IOException
+	 *             if file lookup fails
+	 */
 	public static List<File> getFiles(List<File> files, Path dir) throws IOException {
 
 		if (files == null || dir == null) {
