@@ -111,14 +111,21 @@ function buildResultList() {
 		
 	for (i = 0; i < results.length; i++) {
 		var dt =  $("<dt class=''/>");
+		
 		if (results[i].indexNumber != null) {
-			dt.append("<p class='collection_header'> Latest</p>");
+			dt.append("<div class='collection_latest'><p class='collection_header'>Latest</p><a href=' "  
+					+ results[i].url  + "'>"  
+					+ results[i].title + "</a><dd class='microcopy'>Released " 
+					+ results[i].releaseDate + "</dd></div>");
+	   	 	dl.append(dt);
+	   	 	dl.append(releaseDate);
+			
+		} else {
+			dt.append("<a href=' "  +  results[i].url  + "'>"  +  results[i].title + "</a>");
+			var releaseDate =  $("<dd class='microcopy'>Released " + results[i].releaseDate + "</dd>");
+			dl.append(dt);
+			dl.append(releaseDate);
 		}
-		dt.append("<a href=' "  +  results[i].url  + "'>"  +  results[i].title + "</a>");
-		var releaseDate =  $("<dd class='microcopy'>Released " + results[i].releaseDate + "</dd>");
-
-   	 	dl.append(dt);
-   	 	dl.append(releaseDate);
 	}	
 }
 
