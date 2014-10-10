@@ -1,9 +1,11 @@
 package com.github.onsdigital.api;
 
 import java.io.File;
+import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -20,6 +22,7 @@ import com.github.onsdigital.index.ScanFileSystem;
 
 @Endpoint
 public class CollectionTaxonomyFileSystem {
+	private static int multiplierIndex = 10;
 
 	@GET
 	public Object get(@Context HttpServletRequest request, @Context HttpServletResponse response) throws Exception {
@@ -27,11 +30,28 @@ public class CollectionTaxonomyFileSystem {
 	}
 
 	private Object search(String query, int page, String type) throws Exception {
+		List<File> files = getFiles(query);
+
+		Collections.sort(files);
+		Collections.reverse(files);
+
+		int startIndex = getStartIndex(files, page);
+		int endIndex = getEndIndex(files, page);
+		List<File> pagedFiles = files.subList(startIndex, endIndex);
+
+		CollectionSearchResult collectionSearchResult = new CollectionSearchResult(pagedFiles, page);
+		// need to set the number of files on the result otherwise the client
+		// loses sight of total results
+		collectionSearchResult.setNumberOfResults(files.size());
+		return collectionSearchResult;
+	}
+
+	private List<File> getFiles(String query) throws IOException {
 		List<File> files = new ArrayList<File>();
 		String taxonomyRoot = Configuration.getTaxonomyPath() + query;
 		final Path rootDir = Paths.get(taxonomyRoot);
 		files = ScanFileSystem.getFiles(files, rootDir);
-		return new CollectionSearchResult(files);
+		return files;
 	}
 
 	private int extractPage(HttpServletRequest request) {
@@ -51,5 +71,28 @@ public class CollectionTaxonomyFileSystem {
 		}
 
 		return query;
+	}
+
+	private int getStartIndex(List<File> files, int page) {
+		int startIndex = 0;
+		int pageMultiplier = page - 1;
+
+		if (pageMultiplier > 0) {
+			startIndex += pageMultiplier * multiplierIndex;
+		}
+		return startIndex;
+	}
+
+	private int getEndIndex(List<File> files, int page) {
+		int endIndex = 9;
+		int pageMultiplier = page - 1;
+
+		if (pageMultiplier > 0) {
+			endIndex += pageMultiplier * multiplierIndex;
+			if (endIndex > files.size()) {
+				endIndex = files.size();
+			}
+		}
+		return endIndex;
 	}
 }

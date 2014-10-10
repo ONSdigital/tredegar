@@ -3,6 +3,7 @@ package com.github.onsdigital.index;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -10,8 +11,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Test;
-
-import com.github.onsdigital.index.ScanFileSystem;
 
 /**
  * Exercises scanning the file system
@@ -34,6 +33,15 @@ public class ScanFileSystemTest {
 			assertTrue("File path must be under taxonomy folder", (fileName.contains("target/classes/files/home/")));
 
 		}
+	}
+
+	@Test
+	public void testGetFiles() throws IOException {
+		final Path rootDir = Paths.get(rootSearch);
+
+		List<File> files = new ArrayList<File>();
+		ScanFileSystem.getFiles(files, rootDir);
+		assertFalse(files.isEmpty());
 	}
 
 	@Test(expected = IOException.class)
