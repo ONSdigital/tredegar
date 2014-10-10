@@ -1,7 +1,10 @@
-package com.github.onsdigital.json;
+package com.github.onsdigital.json.bulletin;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.github.onsdigital.json.Email;
+import com.github.onsdigital.json.Section;
 
 public class Bulletin {
 

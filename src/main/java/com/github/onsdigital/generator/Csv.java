@@ -17,12 +17,11 @@ import au.com.bytecode.opencsv.CSVReader;
 
 import com.github.davidcarboni.ResourceUtils;
 import com.github.davidcarboni.restolino.json.Serialiser;
-import com.github.onsdigital.json.Bulletin;
 import com.github.onsdigital.json.Collection;
-import com.github.onsdigital.json.Data;
-import com.github.onsdigital.json.DataT1;
-import com.github.onsdigital.json.DataT2;
-import com.github.onsdigital.json.DataT3;
+import com.github.onsdigital.json.bulletin.Bulletin;
+import com.github.onsdigital.json.taxonomy.T1;
+import com.github.onsdigital.json.taxonomy.T2;
+import com.github.onsdigital.json.taxonomy.T3;
 
 public class Csv {
 
@@ -209,7 +208,7 @@ public class Csv {
 			throws IOException {
 
 		// The folder needs to be at the root path:
-		Data data = new DataT1(folder);
+		T1 data = new T1(folder);
 		data.fileName = "/";
 		String json = Serialiser.serialise(data);
 		FileUtils.writeStringToFile(new File(file, "data.json"), json);
@@ -217,13 +216,13 @@ public class Csv {
 
 	private static void createT2(Folder folder, File file) throws IOException {
 
-		String json = Serialiser.serialise(new DataT2(folder));
+		String json = Serialiser.serialise(new T2(folder));
 		FileUtils.writeStringToFile(new File(file, "data.json"), json);
 	}
 
 	private static void createT3(Folder folder, File file) throws IOException {
 
-		String json = Serialiser.serialise(new DataT3(folder));
+		String json = Serialiser.serialise(new T3(folder));
 		FileUtils.writeStringToFile(new File(file, "data.json"), json);
 
 		createBulletin(folder, file);

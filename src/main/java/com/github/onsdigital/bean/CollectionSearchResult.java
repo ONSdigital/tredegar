@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.github.davidcarboni.restolino.json.Serialiser;
-import com.github.onsdigital.json.Bulletin;
+import com.github.onsdigital.json.bulletin.Bulletin;
 
 public class CollectionSearchResult {
 

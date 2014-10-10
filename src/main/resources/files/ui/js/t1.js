@@ -43,7 +43,7 @@ function dataPath() {
  */
 function dataChildPath(child) {
     var dataPath = link(child.fileName + "/?data")
-    console.log("Data for " + child.name + " is at: " + dataPath)
+
     return dataPath
 }
 
@@ -111,21 +111,40 @@ var deconstruct = function() {
     }
 }
 
+var populateTimeseries = function(uri, itemMarkup) {
+
+            // $("a", itemMarkup).text(item.name)
+            // $(".stat__figure", itemMarkup).text(item.number)
+            // $(".stat__figure__unit", itemMarkup).text(item.unit)
+            // $(".stat__description", itemMarkup).text(item.date)
+            // $("ul", section).append(itemMarkup)
+}
 
 var populateChild = function(child, section, itemMarkupTemplate) {
-    $.get(dataChildPath(child), function(data) {
-        // Sections
-        var i = 0;
-        while (data.children.length > 0 && i++ < 4) {
-            var item = data.children.shift()
-            var itemMarkup = itemMarkupTemplate.clone()
-            $("a", itemMarkup).text(item.name)
-            $(".stat__figure", itemMarkup).text(item.number)
-            $(".stat__figure__unit", itemMarkup).text(item.unit)
-            $(".stat__description", itemMarkup).text(item.date)
-            $("ul", section).append(itemMarkup)
-        }
-    })
+    var count = 5
+    while (child.timeseries.length > 0 && (count--)>0) {
+        var timeseriesUri = child.timeseries.shift()   
+        var itemMarkup = itemMarkupTemplate.clone()
+        $("a", itemMarkup).text("Loading...: "+timeseriesUri)
+        $(".stat__figure", itemMarkup).text("")
+        $(".stat__figure__unit", itemMarkup).text("")
+        $(".stat__description", itemMarkup).text("")
+        $("ul", section).append(itemMarkup)
+        populateTimeseries(timeseriesUri, itemMarkup)
+    }
+    // $.get(dataChildPath(child), function(data) {
+    //     // Sections
+    //     var i = 0;
+    //     while (data.children.length > 0 && i++ < 4) {
+    //         var item = data.children.shift()
+    //         var itemMarkup = itemMarkupTemplate.clone()
+    //         $("a", itemMarkup).text(item.name)
+    //         $(".stat__figure", itemMarkup).text(item.number)
+    //         $(".stat__figure__unit", itemMarkup).text(item.unit)
+    //         $(".stat__description", itemMarkup).text(item.date)
+    //         $("ul", section).append(itemMarkup)
+    //     }
+    // })
 }
 
 
@@ -133,17 +152,22 @@ var populateChild = function(child, section, itemMarkupTemplate) {
  * Main function to populate the page.
  */
 $(document).ready(function() {
+
     /* Deconstruct the template: */
     deconstruct();
+
     /* Get the data.json file to populate the page: */
     $.get(dataPath(), function(data) {
+
         // Titles:
         setTitle(data.name)
-        // Lede and reveal:
-        $("p", ".lede").text(data.lede);
-        $(".content-reveal__hidden").text(data.more)
+
+        // Headline stat
+        // TODO
+
         for (var i = 0; i < 4; i++) {
-            // Sections
+
+            // Panels
             if (data.children.length > 0) {
                 var item = data.children.shift()
                 $("h2", header[i]).text(item.name)
@@ -152,6 +176,7 @@ $(document).ready(function() {
                 section[i].append(footer[i])
             }
         }
+
         // Breadcrumb
         buildBreadcrumb(breadcrumbItem)
     })

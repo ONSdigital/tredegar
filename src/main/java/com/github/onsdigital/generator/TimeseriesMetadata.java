@@ -10,7 +10,7 @@ import org.apache.commons.lang3.StringUtils;
 import au.com.bytecode.opencsv.CSVReader;
 
 import com.github.davidcarboni.ResourceUtils;
-import com.github.onsdigital.json.TimeSeries;
+import com.github.onsdigital.json.timeseries.TimeSeries;
 
 public class TimeseriesMetadata {
 

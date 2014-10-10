@@ -17,7 +17,6 @@ import org.apache.commons.lang3.StringUtils;
 import au.com.bytecode.opencsv.CSVReader;
 
 import com.github.davidcarboni.ResourceUtils;
-import com.github.davidcarboni.restolino.json.Serialiser;
 
 public class TimeSeriesDummies {
 
@@ -81,7 +80,6 @@ public class TimeSeriesDummies {
 			for (Path p : stream) {
 
 				// Iterate over the paths:
-				Serialiser.getBuilder().setPrettyPrinting();
 				Reader reader = ResourceUtils.getReader("/cdid/"
 						+ p.getFileName());
 

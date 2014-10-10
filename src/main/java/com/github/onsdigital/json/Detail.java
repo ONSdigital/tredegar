@@ -5,6 +5,8 @@ import java.util.List;
 
 public class Detail {
 
+	public String reference = "/home/economy/inflationandpriceindices/timeseries/cbvl.json";
+
 	public String name;
 	public String link;
 	public String info = "Lorem ipsum dolor sit amet";
