@@ -197,7 +197,7 @@ function  createDummyresults() {
 
 	var data={
 		took:10,
-		numberOfResults:1004,
+		numberOfResults:11,
 		results:new Array()
 	}
 	

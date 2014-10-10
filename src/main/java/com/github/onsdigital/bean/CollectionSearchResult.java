@@ -14,17 +14,17 @@ import com.github.onsdigital.json.Bulletin;
 public class CollectionSearchResult {
 
 	private long numberOfResults; // total number of hits
-	private List<Map<String, Object>> results; // results
+	private List<Map<String, String>> results; // results
 
 	public CollectionSearchResult(List<File> files) {
-		results = new ArrayList<Map<String, Object>>();
+		results = new ArrayList<Map<String, String>>();
 		this.numberOfResults = files.size();
 		resolve(files);
 	}
 
 	void resolve(List<File> files) {
 		for (File file : files) {
-			Map<String, Object> item = new HashMap<String, Object>();
+			Map<String, String> item = new HashMap<String, String>();
 			try {
 				Bulletin json = Serialiser.deserialise(new FileInputStream(file), Bulletin.class);
 				item.put("title", json.title);
@@ -47,11 +47,11 @@ public class CollectionSearchResult {
 		this.numberOfResults = numberOfHits;
 	}
 
-	public List<Map<String, Object>> getResults() {
+	public List<Map<String, String>> getResults() {
 		return results;
 	}
 
-	public void setResults(List<Map<String, Object>> hits) {
+	public void setResults(List<Map<String, String>> hits) {
 		this.results = hits;
 	}
 
