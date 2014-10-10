@@ -15,10 +15,12 @@ public class CollectionSearchResult {
 
 	private long numberOfResults; // total number of hits
 	private List<Map<String, String>> results; // results
+	private int page;
 
-	public CollectionSearchResult(List<File> files) {
+	public CollectionSearchResult(List<File> files, int page) {
 		results = new ArrayList<Map<String, String>>();
 		this.numberOfResults = files.size();
+		this.page = page;
 		resolve(files);
 	}
 
@@ -32,6 +34,9 @@ public class CollectionSearchResult {
 				String[] urlWithoutJson = urlPathName[1].split("bulletin.json");
 				item.put("url", urlWithoutJson[0]);
 				item.put("releaseDate", json.releaseDate);
+				if ((page == 1) && (files.indexOf(file) == 0)) {
+					item.put("indexNumber", "latest");
+				}
 				results.add(item);
 			} catch (IOException e) {
 				throw new RuntimeException(e);
@@ -54,5 +59,4 @@ public class CollectionSearchResult {
 	public void setResults(List<Map<String, String>> hits) {
 		this.results = hits;
 	}
-
 }

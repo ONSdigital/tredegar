@@ -110,9 +110,12 @@ function buildResultList() {
 	resultsContainer.append(dl);
 		
 	for (i = 0; i < results.length; i++) {
-			var dt =  $("<dt class=''/>");
-			dt.append("<a href=' "  +  results[i].url  + "'>"  +  results[i].title + "</a>");
-			var releaseDate =  $("<dd class='microcopy'>Released " + results[i].releaseDate + "</dd>");
+		var dt =  $("<dt class=''/>");
+		if (results[i].indexNumber != null) {
+			dt.append("<p class='collection_header'> Latest</p>");
+		}
+		dt.append("<a href=' "  +  results[i].url  + "'>"  +  results[i].title + "</a>");
+		var releaseDate =  $("<dd class='microcopy'>Released " + results[i].releaseDate + "</dd>");
 
    	 	dl.append(dt);
    	 	dl.append(releaseDate);
