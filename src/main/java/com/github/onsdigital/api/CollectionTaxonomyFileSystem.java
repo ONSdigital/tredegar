@@ -50,7 +50,7 @@ public class CollectionTaxonomyFileSystem {
 		Collections.reverse(files);
 		List<File> pagedFiles = files.subList(startIndex, endIndex);
 
-		CollectionSearchResult collectionSearchResult = new CollectionSearchResult(pagedFiles);
+		CollectionSearchResult collectionSearchResult = new CollectionSearchResult(pagedFiles, page);
 		collectionSearchResult.setNumberOfResults(files.size());
 		return collectionSearchResult;
 	}
