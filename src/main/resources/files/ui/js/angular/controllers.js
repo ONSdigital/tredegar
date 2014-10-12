@@ -16,6 +16,7 @@ onsControllers.controller('MainCtrl', ['$scope', '$http', '$location',
 
 ]);
 
+
 onsControllers.controller('TemplateCtrl', ['$scope', '$http', '$location',
   function($scope, $http, $location) {
     $scope.loadData('', function(data) {
@@ -55,7 +56,7 @@ onsControllers.controller('T1Ctrl', ['$scope', '$http', '$location', 'Page',
         grandChildren = childData.children
         for (j = 0; j < grandChildren.length && j < 4 ; j++) {
           grandChild = grandChildren[j]
-          loadGrandChildren(child, grandChild)
+          // loadGrandChildren(child, grandChild)
         }
       })
     }
