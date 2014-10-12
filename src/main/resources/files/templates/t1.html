@@ -33,19 +33,19 @@
 
       <div class="wrapper offset-top panel--bottom-mar nav-panels">
         <div ng-repeat="item in data.children track by $index" class="grid-wrap">
-          <div ng-repeat="child in item" class="grid-col tablet-wide-grid-one-half">
+          <div ng-repeat="section in item" class="grid-col tablet-wide-grid-one-half">
             <article class="nav-panel nav-panel--stats sectioned lifted border-defined">
               <header class="nav-panel__header nav-panel__roomy">
-                <h2>{{child.name}}</h2>
+                <h2>{{section.name}}</h2>
               </header>
               <section  class="nav-panel__roomy">
                 <ul class="list--neutral">
-                  <li class="nav-panel__item">
+                  <li ng-repeat="child in section.data.children | limitTo:4" class="nav-panel__item">
                     <dl>
                       <dt class="nav-panel__title">
                         <h3 class="nav-panel__heading">
                           <a href="#">
-                        Value added of Non-Financial Business Economy
+                            {{child.name}}
                       </a>
                           <span tabindex="0" title="" class="tooltip icon-info-circled icon--warm  icon--inline icon--left-margin"></span>
                         </h3>
@@ -67,7 +67,7 @@
               </section>
               <footer class="nav-panel__footer nav-panel__item">
                 <div class="nav-panel__action">
-                  <a class="nav-panel__roomy " href="#">View all Business, Industry, and Trade</a>
+                  <a class="nav-panel__roomy " href="#/home/{{section.fileName}}">View all {{section.name}}</a>
                 </div>
               </footer>
             </article>

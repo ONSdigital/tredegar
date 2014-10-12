@@ -1,20 +1,16 @@
-
+<div  ng-controller="T2Ctrl" >
 
       <div class="page-header slate">
         <div class="wrapper">
           <h1 class="page-header__title flush--half--bottom">Economy</h1>
           <div class="content-reveal lede">
-            <p>
-              Producer Price Inflation (PPI) measures the price changes of goods bought and sold by UK manufacturers this month compared to the same month a year ago. PPI provides a key measure of inflation alongside other indicators such as the Consumer Prices Index (CPI) and Services Producer Price Index (SPPI).
-              
-              <a href="#" class="content-reveal__action hidden">See more</a>
+            <p>{{data.lede}}
+              <a href="#" class="content-reveal__action">See more</a>
             </p>
             <div class="content-reveal__hidden">
-              <p>PPI is split into two components: output price inflation and input price inflation. The input price indices capture changes in the cost of the material and fuel inputs that producers face whereas the output price indices capture the changing prices of goods sold by producers.This article looks at the trends in both producer price indices since 2000 and which components contribute most towards changes in each price index in recent years.
-              </p>
-
               <p>
-              Annual output and input price changes follow similar trends, but with the latter tending to have higher price growth1. In Figure 1, trends in producer price inflation can be split into three distinct periods: 2000 to 2005, 2005 to 2012 and 2012 to June 2014.  Both indices experience greater variability within the second period of 2005 to 2012 than compared with the first and third period. From 2005 to 2012 the average growth rate was 2.9% for output price inflation and 8.1% for input price inflation.  The largest peaks and troughs experienced for both indices throughout the time series shown below occurred in the second period of 2005 to 2012. Output price inflation rose to 8.9% in July 2008 while input price inflation rose to 34.8% in June 2008 and both fell to their lowest rates in July 2009: output price inflation falling by 1.6% and input price inflation falling by 14.8%.</p>
+              {{data.more}}
+              </p>
             </div>
           </div>
          
@@ -24,21 +20,21 @@
       <!-- /page-header -->
 
     <div class="wrapper offset-top nav-panels">
-        <div class="grid-wrap">
-          <div class="grid-col tablet-wide-grid-one-half">
+        <div ng-repeat="item in data.highlightedChildren track by $index" class="grid-wrap">
+          <div ng-repeat="section in item" class="grid-col tablet-wide-grid-one-half">
             <article class="nav-panel nav-panel--stats sectioned lifted border-defined">
               <header class="nav-panel__header nav-panel__roomy">
-                <h2>Gross Domestic Product (GDP)</h2>
+                <h2>{{section.name}}</h2>
               </header>
               <section class="nav-panel__roomy">
                 <ul class="list--neutral">
                 <!-- Here it starts a line in the panel -->
-                  <li class="nav-panel__item">
+                  <li ng-repeat="time in (section.data.level === 't3' ? section.data.timeseries : section.data.children ) | limitTo:4" class="nav-panel__item">
                     <dl>
                       <dt class="nav-panel__title">
                         <h3 class="nav-panel__heading">
                           <a href="#">
-                        Gross Domestic Product
+                        {{time.name}}
                       </a>
                           <span tabindex="0" title="" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin"></span>
                         </h3>
@@ -46,303 +42,92 @@
                       <dd class="nav-panel__value">
                         <div class="stat stat--small">
                           <div class="stat__figure">
-                            £390383
-                            <span class="stat__figure__unit">m</span>
+                            {{time.number}}
+                            <span class="stat__figure__unit">{{time.unit}}</span>
                           </div>
                           <div class="stat__description">
-                            1st Quarter 2014
+                            {{time.date}}
                           </div>
                         </div>
                       </dd>
                     </dl>
                   </li> <!-- Here the line finishes -->
-                  <li class="nav-panel__item">
-                    <dl>
-                      <dt class="nav-panel__title">
-                        <h3 class="nav-panel__heading">
-                          <a href="#">
-                        GDP Quarter on Quarter Growth
-                      </a>
-                          <span tabindex="0" title="" class="tooltip iicon-info-circled icon--warm icon--inline icon--left-margin"></span>
-                        </h3>
-                      </dt>
-                      <dd class="nav-panel__value">
-                        <div class="stat stat--small">
-                          <div class="stat__figure">
-                            0.8
-                            <span class="stat__figure__unit">%</span>
-                          </div>
-                          <div class="stat__description">
-                            1st Quarter 2014
-                          </div>
-                        </div>
-                      </dd>
-                    </dl>
-                  </li>
-                  <li class="nav-panel__item">
-                    <dl>
-                      <dt class="nav-panel__title">
-                        <h3 class="nav-panel__heading">
-                          <a href="#">
-                        GDP Change on same Quarter a year ago
-                      </a>
-                          <span tabindex="0" title="" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin"></span>
-                        </h3>
-                      </dt>
-                      <dd class="nav-panel__value">
-                        <div class="stat stat--small">
-                          <div class="stat__figure">
-                            0.3
-                            <span class="stat__figure__unit">%</span>
-                          </div>
-                          <div class="stat__description">
-                            1st Quarter 2014
-                          </div>
-                        </div>
-                      </dd>
-                    </dl>
-                  </li>
-                  <li class="nav-panel__item">
-                    <dl>
-                      <dt class="nav-panel__title">
-                        <h3 class="nav-panel__heading">
-                          <a href="#">
-                        Production Index
-                      </a>
-                          <span tabindex="0" title="" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin"></span>
-                        </h3>
-                      </dt>
-                      <dd class="nav-panel__value">
-                        <div class="stat stat--small">
-                          <div class="stat__figure">
-                            97.5
-                            <span class="stat__figure__unit"></span>
-                          </div>
-                          <div class="stat__description">
-                            1st Quarter 2014
-                          </div>
-                        </div>
-                      </dd>
-                    </dl>
-                  </li>
                 </ul>
               </section>
               <footer class="nav-panel__footer">
                 <div class="nav-panel__action ">
-                  <a class="nav-panel__roomy no_underline" href="#">View all Gross Domestic Product (GDP)</a>
+                  <a class="nav-panel__roomy no_underline" href="#/home/{{data.fileName}}/{{section.fileName}}">View all {{section.name}}</a>
                 </div>
               </footer>
             </article>
             <!-- /nav-panel -->
           </div>
           <!-- /grid-col -->
-          <div class="grid-col tablet-wide-grid-one-half">
-            <article class="nav-panel nav-panel--stats sectioned lifted border-defined">
-              <header class="nav-panel__header nav-panel__roomy">
-                <h2>Inflation and Price Indices</h2>
-              </header>
-              <section class="nav-panel__roomy">
-                <ul class="list--neutral">
-                  <li class="nav-panel__item">
-                    <dl>
-                      <dt class="nav-panel__title">
-                        <h3 class="nav-panel__heading">
-                          <a href="#">
-                        CPI Index
-                      </a>
-                          <span tabindex="0" title="Unit: Index, 2010=100 Not seasonaly adjusted" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin"></span>
-                        </h3>
-                      </dt>
-                      <dd class="nav-panel__value">
-                        <div class="stat stat--small">
-                          <div class="stat__figure">
-                            126.7
-                            <span class="stat__figure__unit"></span>
-                          </div>
-                          <div class="stat__description">
-                            January 2014
-                          </div>
-                        </div>
-                      </dd>
-                    </dl>
-                  </li>
-                  <li class="nav-panel__item">
-                    <dl>
-                      <dt class="nav-panel__title">
-                        <h3 class="nav-panel__heading">
-                          <a href="#">
-                        CPI Annual Rate Percentage Change over 12 months
-                      </a>
-                          <span tabindex="0" title="" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin"></span>
-                        </h3>
-                      </dt>
-                      <dd class="nav-panel__value">
-                        <div class="stat stat--small">
-                          <div class="stat__figure">
-                            1.9
-                            <span class="stat__figure__unit">%</span>
-                          </div>
-                          <div class="stat__description">
-                            January 2014
-                          </div>
-                        </div>
-                      </dd>
-                    </dl>
-                  </li>
-                  <li class="nav-panel__item">
-                    <dl>
-                      <dt class="nav-panel__title">
-                        <h3 class="nav-panel__heading">
-                          <a href="#">
-                        CPIH Index
-                      </a>
-                          <span tabindex="0" title="" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin"></span>
-                        </h3>
-                      </dt>
-                      <dd class="nav-panel__value">
-                        <div class="stat stat--small">
-                          <div class="stat__figure">
-                            124.7
-                            <span class="stat__figure__unit"></span>
-                          </div>
-                          <div class="stat__description">
-                            January 2014
-                          </div>
-                        </div>
-                      </dd>
-                    </dl>
-                  </li>
-                  <li class="nav-panel__item">
-                    <dl>
-                      <dt class="nav-panel__title">
-                        <h3 class="nav-panel__heading">
-                          <a href="#">
-                        CPIH Annual Rate Percentage Change over 12 months
-                      </a>
-                          <span tabindex="0" title="" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin"></span>
-                        </h3>
-                      </dt>
-                      <dd class="nav-panel__value">
-                        <div class="stat stat--small">
-                          <div class="stat__figure">
-                            1.8
-                            <span class="stat__figure__unit">%</span>
-                          </div>
-                          <div class="stat__description">
-                            January 2014
-                          </div>
-                        </div>
-                      </dd>
-                    </dl>
-                  </li>
-                </ul>
-              </section>
-              <footer class="nav-panel__footer">
-                <div class="nav-panel__action ">
-                  <a class="nav-panel__roomy no_underline" href="#">View all Inflation and Price Indices</a>
-                </div>
-              </footer>
-            </article>
-            <!-- /nav-panel -->
-          </div>
           <!-- /grid-col -->
         </div>
         <!-- /grid-wrap -->
-        <div class="grid-wrap">
-          <div class="grid-col tablet-wide-grid-one-half">
-            <article class="nav-panel nav-panel--stats sectioned lifted border-defined">
-              <header class="nav-panel__header nav-panel__roomy">
-                <h2>National Accounts</h2>
-              </header>
-              <section class="nav-panel__roomy">
-                <ul class="list--neutral">
-                  <li class="nav-panel__item">
-                    <dl>
-                      <dt class="nav-panel__title">
-                        <h3 class="nav-panel__heading">
-                          <a href="#">
-                        Employment Rate
-                      </a>
-                          <span tabindex="0" title="Lorem ipsum dolor sit amet" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin"></span>
-                        </h3>
-                      </dt>
-                      <dd class="nav-panel__value">
-                        <div class="stat stat--small">
-                          <div class="stat__figure">
-                            72.9
-                            <span class="stat__figure__unit">%</span>
+          <div class="grid-wrap">
+            <div class="grid-col tablet-wide-grid-one-half"  >
+              <article class="nav-panel nav-panel--stats sectioned lifted border-defined">
+                <header class="nav-panel__header nav-panel__roomy">
+                  <h2>{{data.thirdChild.name}}</h2>
+                </header>
+                <section class="nav-panel__roomy">
+                  <ul class="list--neutral">
+                  <!-- Here it starts a line in the panel -->
+                    <li ng-repeat="time in (data.thirdChild.data.level === 't3' ? data.thirdChild.data.timeseries : data.thirdChild.data.children) | limitTo:4" class="nav-panel__item">
+                      <dl>
+                        <dt class="nav-panel__title">
+                          <h3 class="nav-panel__heading">
+                            <a href="#">
+                          {{time.name}}
+                        </a>
+                            <span tabindex="0" title="" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin"></span>
+                          </h3>
+                        </dt>
+                        <dd class="nav-panel__value">
+                          <div class="stat stat--small">
+                            <div class="stat__figure">
+                              {{time.number}}
+                              <span class="stat__figure__unit">{{time.unit}}</span>
+                            </div>
+                            <div class="stat__description">
+                              {{time.date}}
+                            </div>
                           </div>
-                          <div class="stat__description">
-                            Feb — Apr 2014
-                          </div>
-                        </div>
-                      </dd>
-                    </dl>
-                  </li>
-                  <li class="nav-panel__item">
-                    <dl>
-                      <dt class="nav-panel__title">
-                        <h3 class="nav-panel__heading">
-                          <a href="#">
-                        Unemployment Rate
-                      </a>
-                          <span tabindex="0" title="" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin"></span>
-                        </h3>
-                      </dt>
-                      <dd class="nav-panel__value">
-                        <div class="stat stat--small">
-                          <div class="stat__figure">
-                            6.6
-                            <span class="stat__figure__unit">%</span>
-                          </div>
-                          <div class="stat__description">
-                            Feb — Apr 2014
-                          </div>
-                        </div>
-                      </dd>
-                    </dl>
-                  </li>
-                </ul>
-              </section>
-              <footer class="nav-panel__footer">
-                <div class="nav-panel__action ">
-                  <a class="nav-panel__roomy no_underline" href="#">View all National Accounts</a>
-                </div>
-              </footer>
-            </article>
-            <!-- /nav-panel -->
+                        </dd>
+                      </dl>
+                    </li> <!-- Here the line finishes -->
+                  </ul>
+                </section>
+                <footer class="nav-panel__footer">
+                  <div class="nav-panel__action ">
+                    <a class="nav-panel__roomy no_underline" href="#">View all {{data.thirdChild.name}}</a>
+                  </div>
+                </footer>
+              </article>
+              <!-- /nav-panel -->
+            </div>
+            <!-- /grid-col -->
+            <div class="grid-col tablet-wide-grid-one-half">
+              <article class="nav-panel nav-panel--stats sectioned lifted border-defined">
+                <header class="nav-panel__header nav-panel__roomy">
+                  <h2>Other {{data.name}} Categories</h2>
+                </header>
+                <footer ng-repeat="other in data.children | slice:3" class="nav-panel__footer">
+                  <div class="nav-panel__action ">
+                    <a class="nav-panel__roomy no_underline" href="#">{{other.name}}</a>
+                  </div>
+                </footer>
+              </article>
+              <!-- /nav-panel -->
+            </div>
+            <!-- /grid-col -->
           </div>
-          <!-- /grid-col -->
-          <div class="grid-col tablet-wide-grid-one-half">
-            <article class="nav-panel nav-panel--stats sectioned lifted border-defined">
-              <header class="nav-panel__header nav-panel__roomy">
-                <h2>Other Economy Categories</h2>
-              </header>
-              <footer class="nav-panel__footer">
-                <div class="nav-panel__action ">
-                  <a class="nav-panel__roomy no_underline" href="#">Environmental Accounts</a>
-                </div>
-              </footer>
-              <footer class="nav-panel__footer">
-                <div class="nav-panel__action">
-                  <a class="nav-panel__roomy no_underline" href="#">Government, Public Sector and Taxes</a>
-                </div>
-              </footer>
-              <footer class="nav-panel__footer">
-                <div class="nav-panel__action">
-                  <a class="nav-panel__roomy no_underline" href="#">Gross Value Added (GVA)</a>
-                </div>
-              </footer>
-              <footer class="nav-panel__footer">
-                <div class="nav-panel__action ">
-                  <a class="nav-panel__roomy no_underline" href="#">Investments, Pensions and Trusts</a>
-                </div>
-              </footer>
-            </article>
-            <!-- /nav-panel -->
-          </div>
-          <!-- /grid-col -->
+          <!-- /grid-wrap -->
+          <!-- /grid-wrap -->
         </div>
+
         <!-- /grid-wrap -->
       </div>
       <!-- /wrapper -->
@@ -711,7 +496,9 @@
           </section>
         </div>
       </div>
-      
+    
+      </div>
+
     <!-- build:js /ui/js/ons-alpha.js-->
     <script src='//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js'></script>
     <!-- endbuild -->

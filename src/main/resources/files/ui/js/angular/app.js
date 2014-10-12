@@ -12,43 +12,31 @@ var onsApp = angular.module('onsApp', [
 onsApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
-     when('/',{
-        redirectTo: '/home'
-      }).
-     otherwise({
-        templateUrl: 'templates/template.html'
-      });
-  }]);
+    when('/', {
+      redirectTo: '/home'
+    }).
+    otherwise({
+      templateUrl: 'templates/template.html'
+    });
+  }
+]);
+
+onsApp.filter('slice', function() {
+  return function(arr, start, end) {
+      return arr.slice(start, end);
+  };
+});
 
 
-// $(document).ready(function() {
-//   $('body').addClass('js');
 
-//   $(document).ready(function() {
-//     $('.tooltip').tooltipster({
-//       'maxWidth': 270
-//     });
-//   });
-
-//   var placeHolderConfig = {
-//     className: 'placeholder-polyfill'
-//   };
-//   Modernizr.load({
-//     test: Modernizr.input.placeholder,
-//     nope: [
-//             '/ui/css/lib/placeholder_polyfill.min.css',
-//             '/ui/js/lib/jquery.placeholder_polyfill.combo.min.js'
-//           ]
-//   });
-
-// });
-
-// $(document).ready(function(){
-//     $('#viewAllStatsBulletins').click(function(){
-//         var url = window.location.pathname;
-//         var urlTokens = url.split('/');
-//         var nameOfBulletins = urlTokens[urlTokens.length - 2];
-//         nameOfBulletins = '/collection.html?q=' + nameOfBulletins + '&type=bulletins'
-//         window.location.href = nameOfBulletins;
-//     });
-// });
+onsApp.factory('Page', function() {
+  var title = 'default';
+  return {
+    title: function() {
+      return title;
+    },
+    setTitle: function(newTitle) {
+      title = newTitle
+    }
+  };
+});
