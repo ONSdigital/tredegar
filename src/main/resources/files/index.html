@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
-<html>
+<html ng-app="onsApp">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Header and footer</title>
+<title ng-bind="Page.title()"></title>
 </head>
 <!DOCTYPE html>
 <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
@@ -10,11 +10,10 @@
 <!--[if IE 8]><html class="no-js lt-ie9 ie8"><![endif]-->
 <!--[if IE 9]><html class="no-js ie9"><![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js">
+<html class="no-js" ng-app="onsApp">
   <!--<![endif]-->
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<title>Stats Bulletin - Methods</title>
 <meta charset="utf-8" />
 <meta content="width=device-width,initial-scale=1.0" name="viewport" />
 <meta content="on" http-equiv="cleartype" />
@@ -109,7 +108,7 @@ markup: false
 </head>
 
 <!-- id set to ng-app to make older IE happy with Angular ngInclude directive -->
-<body id="ng-app" ng-view ng-app="onsApp" ng-controller="MainCtrl" class="">
+<body id="ng-app" ng-view ng-controller="MainCtrl" class="">
 <!-- src attribute must be in single quotes if a string constant, in this case it is  -->
 </body>
 </html>
