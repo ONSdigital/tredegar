@@ -15,6 +15,9 @@ onsApp.config(['$routeProvider',
     when('/', {
       redirectTo: '/home'
     }).
+    when('/searchresults', {
+      templateUrl: 'templates/searchresults.html'
+    }).
     otherwise({
       templateUrl: 'templates/template.html'
     });
