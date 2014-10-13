@@ -17,12 +17,6 @@ public class HomePage implements Home {
 		// Ensures ResourceUtils gets the right classloader when running
 		// reloadable in development:
 		ResourceUtils.classLoaderClass = HomePage.class;
-
-		// Prerender:
-		if (request.getParameterMap().containsKey("_escaped_fragment_")) {
-			// Prerender
-		}
-
 		response.sendRedirect("/home");
 		return null;
 	}
