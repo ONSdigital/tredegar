@@ -1,302 +1,4 @@
-
-<!DOCTYPE html>
-<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
-<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8 ie7"><![endif]-->
-<!--[if IE 8]><html class="no-js lt-ie9 ie8"><![endif]-->
-<!--[if IE 9]><html class="no-js ie9"><![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js">
-  <!--<![endif]-->
-  <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" content="chrome=1"/>
-    <title>T3: Inflation and Price Indices - CX partners</title>
-    <meta charset="UTF-8" />
-    <meta content="width=device-width,initial-scale=1.0" name="viewport" />
-    <meta content="on" http-equiv="cleartype" />
-    <meta name="format-detection" content="telephone=no">
-    <!-- http://www.phpied.com/conditional-comments-block-downloads/ -->
-    <!--[if IE]><![endif]-->
-    <!-- build:css /ui/css/oldie.css-->
-    <!--[if lte IE 8]>
-    <link rel="stylesheet" href="../ui/css/oldie.css" />
-    <![endif]-->
-    <!-- endbuild -->
-    <!-- build:css /ui/css/main.css-->
-    <!--[if gt IE 8]><!-->
-    <link type="text/css" href="/ui/css/main.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/ui/css/jquery-ui.min.css">
-    <!--<![endif]-->
-    <!-- endbuild -->
-    <script src="/ui/js/lib/modernizr.min.js"></script>
-    <script src="/ui/js/lib/jquery-1.11.0.min.js"></script>
-    <script src="/ui/js/lib/jquery-ui.min.js"></script>
-    <!--[if (!IE)|(gt IE 8)]>><!-->
-    <script src="/ui/js/lib/jquery.tooltipster.js"></script>
-    <!--<![endif]-->
-    <script src="/ui/js/app/app.js"></script>
-    <script src="/ui/js/app/content-reveal.js"></script>
-    <script src="/ui/js/app/nav.js"></script>
-    <script src="/ui/js/app/tables.js"></script>
-    <script src="/ui/js/app/tabs.js"></script>
-    <script src="/ui/js/custom-autocomplete.js"></script>
-    <script>
-    </script>
-    <style>
-    body {
-      padding: 0;
-    }
-    .fake-section {
-      width: 100%;
-      background-color: #666;
-      padding: 60px;
-    }
-    .fake-section h1 {
-      text-align: center;
-      color: #fff;
-    }
-	.ui-menu .ui-menu-item {
-	  text-align: left;
-	  margin-top: 20px;
-	  margin-bottom: 20px;
-	  border-bottom: 1px solid;
-	}
-    </style>
-  </head>
-
-  <body class="">
-    <a class="skiplink visuallyhidden focusable" href="#main" tabindex="0">
-      <span>Skip to main content</span>
-    </a>
-    <main id="main" role="main" class="ONS_border">
-      <!-- temp removal to allow for component list selective wrapping -->
-      <!-- <div class="wrapper"> -->
-      <!---
-title: Product Page (T3)
-external: true
-type: template
-group: Templates
-markup: false
--->
-<div class="wrapper panel--pad-small">
-  <header class="global-header">
-    <div class="media">
-      <a href="/">
-        <img src="/ui/img/ons-logo.svg" alt="Office for National Statistics" width="300" class="media__img">
-      </a>
-      <div class="media__body">
-        <ul class="nav nav--inline-block nav--dark globaltop-nav">
-          <li>
-            <a href="#">Release calendar</a>
-          </li>
-          <li>
-            <a href="#">Methodology</a>
-          </li>
-          <li>
-            <a href="#">About</a>
-          </li>
-        </ul>
-
-      </div>
-    </div>
-  </header>
-</div>
-<nav class="ons-nav">
-  <div class="wrapper">
-    <ul class="nav nav--multi nav--block nav--primary flush--bottom" id="nav-primary">
-      <li class="nav--primary home">
-        <a href="http://onsdigital.herokuapp.com/"><span class="icon-home icon--inline"></span><span class="icon-inline vertical-align-mid">Home</span></a>
-      </li>
-      <li>
-        <a href="#" class="nav__expandable js-expandable">Business, Industry, and Trade</a>
-        <ul class="nav--primary__sub js-expandable__content js-nav-hidden">
-          <li>
-            <a href="#">Business</a>
-          </li>
-          <li>
-            <a href="#">Changes to business</a>
-          </li>
-          <li>
-            <a href="#">Construction and industry</a>
-          </li>
-          <li>
-            <a href="#">IT and internet industry</a>
-          </li>
-          <li>
-            <a href="#">International trade</a>
-          </li>
-          <li>
-            <a href="#">Manufacturing and production</a>
-          </li>
-          <li>
-            <a href="#">Retail industry</a>
-          </li>
-          <li>
-            <a href="#">Tourism industry</a>
-          </li>
-        </ul>
-      </li>
-      <li class="nav--primary__active">
-        <a href="http://onsdigital.herokuapp.com/home/economy/" class="nav__expandable js-expandable">Economy</a>
-        <ul class="nav--primary__sub js-expandable__content js-nav-hidden">
-          <li>
-            <a href="#">Economic output and productivity</a>
-          </li>
-          <li>
-            <a href="#">Environmental account</a>
-          </li>
-          <li>
-            <a href="#">Government, public sector, and taxes</a>
-          </li>
-          <li>
-            <a href="#">Gross Domestic Product (GDP)</a>
-          </li>
-          <li>
-            <a href="#">Gross Values Added (GVA)</a>
-          </li>
-          <li>
-            <a href="home/economy/inflationandpriceindices">Inflation and price indices</a>
-          </li>
-          <li>
-            <a href="#">Investment and pension trust</a>
-          </li>
-          <li>
-            <a href="#">National accounts</a>
-          </li>
-          <li>
-            <a href="#">Regional accounts</a>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="#" class="nav__expandable js-expandable">Employment and Labour Market</a>
-        <ul class="nav--primary__sub js-expandable__content js-nav-hidden">
-          <li>
-            <a href="#">People in work</a>
-          </li>
-          <li>
-            <a href="#">People not in work</a>
-          </li>
-          <li>
-            <a href="#">Public sector personnel</a>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="#" class="nav__expandable js-expandable">People, Population, and Community</a>
-        <ul class="nav--primary__sub js-expandable__content js-nav-hidden">
-          <li>
-            <a href="#">Births, deaths, and marriages</a>
-          </li>
-          <li>
-            <a href="#">Community</a>
-          </li>
-          <li>
-            <a href="#">Education and childcare</a>
-          </li>
-          <li>
-            <a href="#">Crime and justice</a>
-          </li>
-          <li>
-            <a href="#">Household characteristics</a>
-          </li>
-          <li>
-            <a href="#">Well-being</a>
-          </li>
-          <li>
-            <a href="#">Health and social care</a>
-          </li>
-          <li>
-            <a href="#">Elections</a>
-          </li>
-          <li>
-            <a href="#">Personal and household finances</a>
-          </li>
-          <li>
-            <a href="#">Population and migration</a>
-          </li>
-          <li>
-            <a href="#">Cultural identity</a>
-          </li>
-          <li>
-            <a href="#">Housing</a>
-          </li>
-          <li>
-            <a href="#">Leisure and tourism</a>
-          </li>
-        </ul>
-      </li>
-      <li class="nav--primary__highlight">
-        <a href="#">
-          <span class="icon-users icon--inline"></span>Respondents</a>
-      </li>
-      <li class="nav--primary__secondary-content">
-        <a href="#">Release calendar</a>
-      </li>
-      <li class="nav--primary__secondary-content">
-        <a href="#">About</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-
-<div class="slate--mid-grey_new flush">
-        <div class="wrapper">
-          <div class="grid-wrap">
-            <div class="grid-col desktop-grid-one-half box--inline">
-              <form action="/searchresults.html" class="hero reduced_padding pad_right" _lpchecked="1">
-                    <label for="homepageSearch" class="visuallyhidden">Search term:</label>
-                    <input id="homepageSearch" type="text" class="input-med-large--flex--three-fifths  search_reduction" name="q" value="" placeholder="Search for keyword or time series id">
-                    <button type="submit" class="btn btn--primary btn--small btn--form--large-icon input--lede-btn-icon align_middle no_left_margin">
-                      <span class="icon icon-search-1">
-                        <span class="visuallyhidden">Search</span>
-                      </span>
-                    </button>
-              </form>
-            </div>
-            <div class="grid-col desktop-grid-one-half box--inline--flex">
-              <div class="link_head">
-                <a href="about:blank" class="link"> Browse Regional Statistics</a></div>
-                  <div class="page-header__icons_new">
-                    <img src="/ui/img/UK.png" alt="uk map" class="ukmap">
-                  </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      <div class="wrapper panel--pad-small">
-        <ol class="nav nav--heavy breadcrumb mini flush">
-          <li>
-            <a href="http://onsdigital.herokuapp.com/home">Home</a>
-          </li>
-          <li>
-            <a href="http://onsdigital.herokuapp.com/home/economy/">Economy</a>
-          </li>
-          <li class="nav__active">
-            <a href="#">Government, Public Sector, and Taxes</a>
-          </li>
-        </ol>
-    </div>
-
-  <!--<ol class="nav nav-inline-block nav-dark mini">
-    <li>
-      <a href="#">Local Government Finance</a>
-    </li>
-    <li>
-      <a href="#">Public Sector Finance</a>
-    </li>
-    <li class="nav__active">
-      <a href="#">Public Spending</a>
-    </li>
-    <li>
-      <a href="#">Research and Development Expenditure</a>
-    </li>
-    <li>
-      <a href="#">Taxes and Revenue</a>
-    </li>
-  </ol>!-->
-
-      <!-- David C: Added this in to keep a breadcrumb on each page. -->
-
+      
       <div class="page-header slate">
         <div class="wrapper">
           <h1 class="page-header__title flush--half--bottom">Inflation and Price Indices</h1>
@@ -317,8 +19,12 @@ markup: false
               <span class="icon icon-twitter icon-grey">
                 <span class="visuallyhidden">Share on Twitter</span>
               </span>
-            </a>!left in for linked in-->
-            <a href="#" class="link-complex"><span class="icon icon-twitter icon--grey"><span class="visuallyhidden">Share on Twitter</span></span></a>
+            </a>!-->
+            <a href="#" class="link-complex">
+              <span class="icon icon-twitter icon--grey">
+                <span class="visuallyhidden">Share on Twitter</span>
+              </span>
+            </a>
             <a href="#" class="link-complex">
               <span class="icon icon-facebook icon--grey">
                 <span class="visuallyhidden">Share on Facebook</span>
@@ -330,7 +36,7 @@ markup: false
       </div>
       <!-- /page-header -->
       <div class="wrapper">
-        <section id="headline" class="box box--padded-vertical box--blue box--green--separated-left solid border lifted offset-top border-defined">
+        <section id="headline" class="box box--padded-vertical solid border lifted offset-top border-defined">
           <div class="box__content">
             <div class="divider">
               <div class="divider__half divider__half--border divider__half--border-first">
@@ -344,7 +50,7 @@ markup: false
                       1.5
                       <span class="stat__figure__unit">%</span>
                     </div>
-
+                    
                   </div>
                 </div>
                 <!-- /box -->
@@ -355,10 +61,10 @@ markup: false
                   <dd>14 Oct 2014</dd>
                 </dl>
               </div>
-
+      
                 <!-- /box -->
-
-
+                
+              
               <div id="statsBulletinHeadlines" class="divider__half">
                 <h3 class="body-type lede flush--bottom navpanel-list-heading">CPI Statistical Bulletin Headlines</h3>
                 <ul class="list--bullet mini flush--half--top navpanel-list">
@@ -369,8 +75,11 @@ markup: false
                   <li>The timing of Easter in April is likely to have an impact on
                     movements in the index, notably for air and sea fares.</li>
                   </ul>
-                <a class="div_panel_link" href="home/economy/inflationandpriceindices/bulletins/statsBulletin.html">View the statistical bulletin &gt;                   
-                </a>                
+                <a class="action" href="/economy/inflationandpriceindices/bulletins/statsBulletin.html">
+                    <span class="table__action__text search-sorting">View the statistical bulletin > 
+                    </span>
+                    
+                  </a>
               </div>
             </div>
           </div>
@@ -427,7 +136,7 @@ markup: false
                 <h3 class="list--table__item__header">
                   <a href="#" class="no_underline">CPIH Index <span tabindex="0" title="" class="tooltip icon-info-circled icon--warm  icon--inline"></span></a>
                   <a class="information" href="#">
-
+                    
                     <span class="visuallyhidden">More information about CPI index</span>
                   </a>
                 </h3>
@@ -460,7 +169,7 @@ markup: false
                 <h3 class="list--table__item__header">
                   <a href="#" class="no_underline">CPI Annual Rate Percentage Change over 12 Months <span tabindex="0" title="" class="tooltip icon-info-circled icon--warm  icon--inline"></span></a>
                   <a class="information" href="#">
-
+                    
                     <span class="visuallyhidden">More information about CPI index</span>
                   </a>
                 </h3>
@@ -494,7 +203,7 @@ markup: false
                 <h3 class="list--table__item__header">
                   <a href="#" class="no_underline">RPI Index <span tabindex="0" title="" class="tooltip icon-info-circled icon--warm  icon--inline"></span></a>
                   <a class="information" href="#">
-
+                    
                     <span class="visuallyhidden">More information about CPI index</span>
                   </a>
                 </h3>
@@ -527,7 +236,7 @@ markup: false
                 <h3 class="list--table__item__header">
                   <a href="#" class="no_underline">RPIX Index excluding mortgage interest <span tabindex="0" title="" class="tooltip icon-info-circled icon--warm  icon--inline"></span></a>
                   <a class="information" href="#">
-
+                    
                     <span class="visuallyhidden">More information about CPI index</span>
                   </a>
                 </h3>
@@ -555,8 +264,8 @@ markup: false
                 <input type="checkbox">
               </label>
             </li>
-
-
+                      
+            
             <!-- /list- -table__body -->
             <li class="list--table__item list--table__footer">
               <div class="list--table__item__body">
@@ -583,33 +292,33 @@ markup: false
       </section>
       <section class="panel wrapper">
         <header class="actionable-header">
-          <h2 class="actionable-header__title table-inline ">Key datasets</h2>
-          <a class="" href="#">View more datasets</a>
+          <h2 class="actionable-header__title">Key datasets</h2>
+          <a class="actionable-header__action hide-med-down" href="#">View more datasets</a>
         </header>
         <div class="grid-wrap">
           <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
             <article class="box box--padded sectioned lifted border-defined">
               <header class="box__header">
                 <h3 class="gamma">
-                    <a href="#">Inflation Summary </a>
+                  Regional Gross Value Added (Income Approach)
                 </h3>
               </header>
               <!-- /box__header -->
               <div class="box__content">
-                <ul class="list--table">
-                  <li class="">Overview of all high level consumer inflation data, including CPI, RPI, CPIH and RPIJ</li>
-                  <!-- <li>Between 1997 and 2011 the contribution of building to total GVA decreased in each of the NUTS1 regions.</li> -->
+                <ul class="list--bullet">
+                  <li>In 2012 the South East had the largest increase in GVA</li>
+                  <li>Between 1997 and 2011 the contribution of building to total GVA
+                    decreased in each of the NUTS1 regions.</li>
                 </ul>
-                <p class="lozenge">Dataset</p>
                 <!-- /list- -bullet -->
               </div>
               <!-- /box__content -->
-              <!-- <footer class="box__footer box__actions">
+              <footer class="box__footer box__actions">
                 <a class="btn btn--primary btn--small btn--narrow align_right" href="#">
             Download .xls
             <span class="icon icon-download icon--button-inline"></span>
           </a>
-              </footer> -->
+              </footer>
               <!-- /box__actions -->
             </article>
             <!-- /box -->
@@ -619,25 +328,24 @@ markup: false
             <article class="box box--padded sectioned lifted border-defined">
               <header class="box__header">
                 <h3 class="gamma">
-                  <a href="#">Retail Price Index </a>
+                  Consumer Price Inflation
                 </h3>
               </header>
               <!-- /box__header -->
               <div class="box__content">
-                <ul class="list--table">
-                  <li>Complete dataset covering all RPI statistics. Not a national statistic</li>
-                  <!-- <li>Falls in transport services costs, notably air fares</li> -->
+                <ul class="list--bullet">
+                  <li>The Consumer Prices Index (CPI) grew by 1.5%</li>
+                  <li>Falls in transport services costs, notably air fares</li>
                 </ul>
-                <p class="lozenge">Dataset</p>
                 <!-- /list- -bullet -->
               </div>
               <!-- /box__content -->
-              <!-- <footer class="box__footer box__actions">
+              <footer class="box__footer box__actions">
                 <a class="btn btn--primary btn--small btn--narrow align_right" href="#">
             Download .xls
             <span class="icon icon-download icon--button-inline"></span>
           </a>
-              </footer> -->
+              </footer>
             </article>
             <!-- /box -->
           </div>
@@ -646,29 +354,28 @@ markup: false
             <article class="box box--padded sectioned lifted border-defined">
               <header class="box__header">
                 <h3 class="gamma">
-                  <a href="#">Produce Price Inflation </a>
+                  Regional Gross Value Added (Income Approach)
                 </h3>
               </header>
               <!-- /box__header -->
               <div class="box__content">
-                <ul class="list--table">
-                  <li>Comprehensive dataset covering input and output index series</li>
-                  <!-- <li>Between 1997 and 2011 the contribution of building to total GVA
+                <ul class="list--bullet">
+                  <li>In 2012 the South East had the largest increase in GVA</li>
+                  <li>Between 1997 and 2011 the contribution of building to total GVA
                     decreased in each of the NUTS1 regions.</li>
                   <li>In 2012 the South East had the largest increase in GVA</li>
                   <li>Between 1997 and 2011 the contribution of building to total GVA
-                    decreased in each of the NUTS1 regions.</li> -->
+                    decreased in each of the NUTS1 regions.</li>
                 </ul>
-                <p class="lozenge">Dataset</p>
                 <!-- /list- -bullet -->
               </div>
               <!-- /box__content -->
-              <!-- <footer class="box__footer box__actions">
+              <footer class="box__footer box__actions">
                 <a class="btn btn--primary btn--small btn--narrow align_right" href="#">
             Download .xls
             <span class="icon icon-download icon--button-inline"></span>
           </a>
-              </footer> -->
+              </footer>
             </article>
             <!-- /box -->
           </div>
@@ -679,12 +386,13 @@ markup: false
         </div>
         <!-- /grid-wrap -->
       </section>
-      <section class="panel--pad panel--bottom-mar slate wrapper flush--bottom">
+      <section class="panel--pad panel--bottom-mar slate">
+        <div class="wrapper">
           <div class="grid-wrap">
             <div class="grid-col desktop-grid-one-third tablet-grid-full">
               <article class="box">
                 <h2 class="beta">Latest Statistical Bulletins</h2>
-                <a href="#" class="action-link hide-med-down">View all statistical bulletins</a>
+                <a id="viewAllStatsBulletins" class="action-link hide-med-down">View all statistical bulletins</a>
               </article>
             </div>
             <!-- /box -->
@@ -692,7 +400,7 @@ markup: false
               <article class="box">
                 <header class="box__header">
                   <h3 class="gamma flush">
-                    <a href="/home/economy/inflationandpriceindices/bulletins/statsBulletin.html">Consumer Price Inflation, January 2014</a>
+                    <a href="/economy/inflationandpriceindices/bulletins/statsBulletin.html">Consumer Price Inflation, January 2014</a>
                   </h3>
                 </header>
                 <!-- /box__header -->
@@ -741,14 +449,15 @@ markup: false
             </div>
           </div>
           <!-- /grid-wrap -->
+        </div>
         <!-- /wrapper -->
       </section>
-      <section class="panel--large wrapper flush--top">
+      <section class="panel--large wrapper">
         <div class="grid-wrap">
           <div class="grid-col desktop-grid-one-third tablet-grid-full">
             <article class="box">
-              <h2 class="beta">Related Articles</h2>
-              <a href="#" class="action-link hide-med-down">View more articles</a>
+              <h2 class="beta">Other Statistical Bulletins and Articles</h2>
+              <a href="#" class="action-link hide-med-down">View more statistical bulletins and articles</a>
             </article>
           </div>
           <!-- /box -->
@@ -767,9 +476,9 @@ markup: false
                 </p>
                 <p class="description mini"></p>
                 <p>
-                  <span class="lozenge">Article</span>
+                  <span class="lozenge">Statistical bulletin</span>
                 </p>
-
+               
               </div>
               <!-- /box__content -->
             </article>
@@ -793,7 +502,7 @@ markup: false
                 <p>
                   <span class="lozenge">Expert analysis</span>
                 </p>
-
+                
               </div>
               <!-- /box__content -->
             </article>
@@ -815,9 +524,9 @@ markup: false
                 </p>
                 <p class="description mini"></p>
                 <p>
-                  <span class="lozenge">Article</span>
+                  <span class="lozenge">Statistical bulletin</span>
                 </p>
-
+               
               </div>
               <!-- /box__content -->
             </article>
@@ -841,7 +550,7 @@ markup: false
                 <p>
                   <span class="lozenge">Expert analysis</span>
                 </p>
-
+                
               </div>
               <!-- /box__content -->
             </article>
@@ -852,7 +561,7 @@ markup: false
         <!-- /grid-wrap -->
         <div class="box box--padded-top hide-large">
           <p>
-            <a href="#" class="action-link">View more articles</a>
+            <a href="#" class="action-link">View more statistical bulletins and articles</a>
           </p>
         </div>
       </section>
@@ -1012,88 +721,7 @@ markup: false
         <!-- /wrapper -->
       </section>
       <!-- /slate -->
-      <footer class="global-footer">
-  <div class="slate panel--pad-large panel--separated">
-    <div class="wrapper">
-      <nav class="grid-wrap">
-        <div class="grid-col tablet-grid-one-third">
-          <h2 class="delta headline-separated">Legal</h2>
-          <ul class="list--neutral list--grid list--spaced">
-            <li>
-              <a href="#">Business Transparency</a>
-            </li>
-            <li>
-              <a href="#">Terms and Conditions</a>
-            </li>
-            <li>
-              <a href="#">Copyright</a>
-            </li>
-            <li>
-              <a href="#">Cookies and Privacy</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="grid-col tablet-grid-one-third">
-          <h2 class="delta headline-separated">About ONS</h2>
-          <ul class="list--neutral list--grid list--spaced">
-            <li>
-              <a href="#">Who we are</a>
-            </li>
-            <li>
-              <a href="#">Careers</a>
-            </li>
-            <li>
-              <a href="#">Products and Services</a>
-            </li>
-            <li>
-              <a href="#">Contact us</a>
-            </li>
-            <li>
-              <a href="#">Our offices</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="grid-col tablet-grid-one-third">
-          <h2 class="delta headline-separated">Connect with us</h2>
-          <ul class="list--neutral list--grid list--spaced">
-            <li>
-              <a href="#">Twitter</a>
-            </li>
-            <li>
-              <a href="#">Facebook</a>
-            </li>
-            <li>
-              <a href="#">LinkedIn</a>
-            </li>
-
-          </ul>
-        </div>
-      </nav>
-    </div>
-    <!-- /wrapper -->
-  </div>
-  <!-- /slate -->
-  <div class="slate--dark">
-    <div class="wrapper">
-      <div class="footer__license">
-        <img class="footer__license__img" alt="OGLlogo" width="60" src="/ui/img/ogl.png">
-        <p class="footer__license__body">
-          All content is available under the Open Government Licence v2.0, except where otherwise stated
-        </p>
-      </div>
-    </div>
-  </div>
-</footer>
-      <!-- </div> -->
-    </main>
+      
     <!-- build:js /ui/js/ons-alpha.js-->
     <script src='//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js'></script>
     <!-- endbuild -->
-
-    <!-- Functionality to populate this page -->
-    <script src='/ui/js/t3.js'></script>
-
-  </body>
-</html>

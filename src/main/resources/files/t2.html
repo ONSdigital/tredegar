@@ -114,9 +114,7 @@ markup: false
   <div class="wrapper">
     <ul class="nav nav--multi nav--block nav--primary flush--bottom" id="nav-primary">
       <li class="nav--primary home">
-              <a href="http://onsdigital.herokuapp.com/">
-                <span class="icon-home icon--inline"></span>
-                <span class="icon-inline vertical-align-mid">Home</span></a>
+              <a href="http://onsdigital.herokuapp.com/"><span class="icon-home icon--inline"></span><span class="icon-inline vertical-align-mid">Home</span></a>
       </li>
       <li>
         <a href="#" class="nav__expandable js-expandable arrowunderline">Business, Industry, and Trade</a>
@@ -148,7 +146,7 @@ markup: false
         </ul>
       </li>
       <li class="nav--primary__active">
-        <a href="http://onsdigital.herokuapp.com/economy" class="nav__expandable js-expandable arrowunderline">Economy</a>
+        <a href="http://onsdigital.herokuapp.com/home/economy/" class="nav__expandable js-expandable arrowunderline">Economy</a>
         <ul class="nav--primary__sub js-expandable__content js-nav-hidden">
           <li>
             <a href="#">Economic output and productivity</a>
@@ -156,7 +154,7 @@ markup: false
           <li>
             <a href="#">Environmental account</a>
           </li>
-          <li class="nav--primary__active">
+          <li>
             <a href="#">Government, public sector, and taxes</a>
           </li>
           <li>
@@ -166,7 +164,7 @@ markup: false
             <a href="#">Gross Values Added (GVA)</a>
           </li>
           <li>
-            <a href="/economy/inflationandpriceindices">Inflation and price indices</a>
+            <a href="home/economy/inflationandpriceindices">Inflation and price indices</a>
           </li>
           <li>
             <a href="#">Investment and pension trust</a>
@@ -658,12 +656,77 @@ markup: false
       </div>
       <!-- /wrapper -->
 
-<section class="panel--large wrapper">
+<section class="panel--pad panel--bottom-mar slate wrapper flush--bottom">
+          <div class="grid-wrap">
+            <div class="grid-col desktop-grid-one-third tablet-grid-full">
+              <article class="box">
+                <h2 class="beta">Latest Statistical Bulletins</h2>
+                <a href="#" class="action-link hide-med-down">View all statistical bulletins</a>
+              </article>
+            </div>
+            <!-- /box -->
+            <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
+              <article class="box">
+                <header class="box__header">
+                  <h3 class="gamma flush">
+                    <a href="/home/economy/inflationandpriceindices/bulletins/statsBulletin.html">Consumer Price Inflation, January 2014</a>
+                  </h3>
+                </header>
+                <!-- /box__header -->
+                <div class="box__content">
+                  <p>
+                    The Consumer Price Inflation is a monthly release that contains percentage changes
+                    and weights for the CPI, CPIH, RPI and RPIJ.
+                  </p>
+                  <p class="description mini"></p>
+                  <p>
+                  <span class="lozenge">Statistical bulletin</span>
+                </p>
+                </div>
+                <!-- /box__content -->
+              </article>
+              <!-- /box -->
+            </div>
+            <!-- /grid-col -->
+            <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
+              <article class="box box--padded-vertical rem_pad_top">
+                <header class="box__header">
+                  <h3 class="gamma flush">
+                    <a href="#">House Price Index January 2014</a>
+                  </h3>
+                </header>
+                <!-- /box__header -->
+                <div class="box__content">
+                  <p>
+                    The ONS House Price Index (HPI) is a monthly release that publishes figures for
+                    mix-adjusted average house prices.
+                  </p>
+                  <p class="description mini"></p>
+                  <p>
+                  <span class="lozenge">Statistical bulletin</span>
+                </p>
+                </div>
+                <!-- /box__content -->
+              </article>
+              <!-- /box -->
+            </div>
+            <!-- /grid-col -->
+            <div class="grid-col hide-large">
+              <p class="box box--padded-top">
+                <a href="#" class="action-link hide-large">View all statistical bulletins</a>
+              </p>
+            </div>
+          </div>
+          <!-- /grid-wrap -->
+        <!-- /wrapper -->
+      </section>
+
+      <section class="panel--large wrapper flush--top">
         <div class="grid-wrap">
           <div class="grid-col desktop-grid-one-third tablet-grid-full">
             <article class="box">
-              <h2 class="beta">Most Viewed Statistical Bullentins and Articles</h2>
-              <a href="#" class="action-link hide-med-down">View more statistical bulletins and articles</a>
+              <h2 class="beta">Related Articles</h2>
+              <a href="#" class="action-link hide-med-down">View more articles</a>
             </article>
           </div>
           <!-- /box -->
@@ -671,7 +734,7 @@ markup: false
             <article class="box">
               <header class="box__header">
                 <h3 class="gamma flush">
-                  <a href="#">Second Estimate of GDP, Q4 2013</a>
+                  <a href="#">Retail Sailes, January 2014</a>
                 </h3>
               </header>
               <!-- /box__header -->
@@ -680,11 +743,10 @@ markup: false
                   A first estimate of retail sales in volume and value terms, seasonally and non-seasonally
                   adjusted.
                 </p>
-                <!-- <p class="description mini">(17,842 words)</p> -->
+                <p class="description mini"></p>
                 <p>
-                  <span class="lozenge">Statistical bulletin</span>
+                  <span class="lozenge">Article</span>
                 </p>
-
 
               </div>
               <!-- /box__content -->
@@ -696,7 +758,7 @@ markup: false
             <article class="box box--padded-vertical rem_pad_top">
               <header class="box__header">
                 <h3 class="gamma flush">
-                  <a href="#">Quarterly National Accounts, Q4 2013</a>
+                  <a href="#">Economic Review, January 2014</a>
                 </h3>
               </header>
               <!-- /box__header -->
@@ -705,11 +767,10 @@ markup: false
                   A comprehensive review on the UK economy, including the latest GDP estimate and
                   other statistical outputs of ONS.
                 </p>
-                <!-- <p class="description mini">(9,110 words)</p> -->
+                <p class="description mini"></p>
                 <p>
                   <span class="lozenge">Expert analysis</span>
                 </p>
-
 
               </div>
               <!-- /box__content -->
@@ -730,11 +791,10 @@ markup: false
                   This statistical bulletin contains producer price indices of materials and fuels
                   purchased and output of manufacturing.
                 </p>
-                <!-- <p class="description mini">(15,120 words)</p> -->
+                <p class="description mini"></p>
                 <p>
-                  <span class="lozenge">Statistical bulletin</span>
+                  <span class="lozenge">Article</span>
                 </p>
-
 
               </div>
               <!-- /box__content -->
@@ -746,7 +806,7 @@ markup: false
             <article class="box box--padded-vertical">
               <header class="box__header">
                 <h2 class="gamma flush">
-                  <a href="#">Economic Review, January 2014</a>
+                  <a href="#">CPI Review, January 2014</a>
                 </h2>
               </header>
               <!-- /box__header -->
@@ -755,11 +815,10 @@ markup: false
                   A comprehensive review on the UK economy, including the latest GDP estimate and
                   other statistical outputs of ONS.
                 </p>
-                <!-- <p class="description mini">(1,340 words)</p> -->
+                <p class="description mini"></p>
                 <p>
                   <span class="lozenge">Expert analysis</span>
                 </p>
-
 
               </div>
               <!-- /box__content -->
@@ -771,7 +830,7 @@ markup: false
         <!-- /grid-wrap -->
         <div class="box box--padded-top hide-large">
           <p>
-            <a href="#" class="action-link">View all other articles</a>
+            <a href="#" class="action-link">View more articles</a>
           </p>
         </div>
       </section>
