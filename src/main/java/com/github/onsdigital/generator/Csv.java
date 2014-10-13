@@ -153,7 +153,7 @@ public class Csv {
 	}
 
 	static void addUrl(String path) {
-		sitemap.append("<url><loc>http://onsdigital.herokuapp.com" + path
+		sitemap.append("<url><loc>http://onsdigital.herokuapp.com/home" + path
 				+ "</loc></url>\n");
 	}
 
