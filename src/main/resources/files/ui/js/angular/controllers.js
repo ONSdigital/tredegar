@@ -12,6 +12,16 @@ onsControllers.controller('MainCtrl', ['$scope', '$http', '$location',
       console.log("Loadint data at " + path)
       $http.get(path).success(callback)
     }
+
+    $scope.getJSON = function(fullPath, callback) {
+      console.log("Loadint json at " + fullPath)
+      $http.get(fullPath).success(callback)
+    }
+
+    $scope.getUrlParam= function(paramName) {
+      var params = $location.search()
+      return params[paramName]
+    }
   }
 
 ]);
@@ -29,28 +39,27 @@ onsControllers.controller('TabsCtrl', ['$scope',
   }
 ])
 
-onsControllers.controller('SearchCtrl', ['$scope','$location',
-  function($scope, $location) {
-    var thePage = getParam('page')
-    var query = getParam('q')
-    var pageNumber = 1
-    if (thePage) {
-      pageNumber = thePage
+onsControllers.controller('SearchCtrl', ['$scope',
+  function($scope) {
+    var getParam = $scope.getUrlParam
+    $scope.page = getParam('page')
+    $scope.searchTerm = getParam('q')
+    $scope.type = getParam('type')
+
+    if ($scope.page) {
+      $scope.page = 1
     }
 
-    if(query) {
-      search(query)
-    }
-    
-    function getParam(paramName) {
-      var params = $location.search()
-      return params[paramName]
+    if($scope.searchTerm) {
+      search($scope.searchTerm, $scope.type, $scope.page)
     }
 
-    function search(query) {
-    
+    function search(q, type, pageNumber) {
+          var searchString = "?q=" + q + (type ? "&type=" + type : "") + "&page=" + pageNumber
+          $scope.getJSON("/search" + searchString, function(data){
+            $scope.searchResponse = data
+          })
     }
-
 
   }
 ])
