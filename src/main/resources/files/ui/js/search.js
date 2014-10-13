@@ -4,7 +4,6 @@
 *
 */
 
-
 $.extend({
 	search: function(options) {
 		var onssearch = $.extend({
@@ -44,8 +43,6 @@ $.extend({
 		return onssearch;
 	} 			
 });
-
-
 
 function fillSearchInput() {
 	var onssearch = $('body').data('onssearch');

@@ -10,24 +10,55 @@ onsControllers.controller('MainCtrl', ['$scope', '$http', '$location',
       path = (path) ? ("/" + path) : ""
       path = $location.$$path + path + "?data"
       console.log("Loadint data at " + path)
-    $http.get(path).success(callback)
+      $http.get(path).success(callback)
     }
   }
 
 ]);
 
 //Use this controller to show and hide large contents
-onsControllers.controller('TabsController', ['$scope', function($scope) {
-    $scope.tab = 1
-    $scope.changeTab = function(tabNumber) {
-      $scope.tab = tabNumber
+onsControllers.controller('TabsCtrl', ['$scope',
+  function($scope) {
+    $scope.activeTab = 1
+    $scope.selectTab = function(tabNumber) {
+      $scope.activeTab = tabNumber
     }
+    $scope.isSelected = function(tabNumber) {
+      return $scope.activeTab === tabNumber
+    }
+  }
+])
+
+onsControllers.controller('SearchCtrl', ['$scope','$location',
+  function($scope, $location) {
+    var thePage = getParam('page')
+    var query = getParam('q')
+    var pageNumber = 1
+    if (thePage) {
+      pageNumber = thePage
+    }
+
+    if(query) {
+      search(query)
+    }
+    
+    function getParam(paramName) {
+      var params = $location.search()
+      return params[paramName]
+    }
+
+    function search(query) {
+    
+    }
+
+
   }
 ])
 
 
 //Use this controller to show and hide large contents
-onsControllers.controller('ContentRevealCtrl', ['$scope', function($scope) {
+onsControllers.controller('ContentRevealCtrl', ['$scope',
+  function($scope) {
     $scope.showContent = false
     $scope.toggleContent = function() {
       $scope.showContent = !$scope.showContent
@@ -151,7 +182,7 @@ onsControllers.controller('T2Ctrl', ['$scope', '$http', '$location', 'Page',
         if (mod === 0) {
           result[index] = [];
           result[index][0] = children[i]
-          if(index < 1) {
+          if (index < 1) {
             result[index][1] = children[i + 1]
           }
           index++
