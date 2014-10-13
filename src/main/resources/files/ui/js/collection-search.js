@@ -1,7 +1,5 @@
 /**
-* ons search
-* Jquery based search plugin to search and generated markup for results
-*
+* ons search across taxonomy file system
 */
 
 
