@@ -23,8 +23,13 @@ import com.github.onsdigital.json.Data;
 import com.github.onsdigital.json.DataT1;
 import com.github.onsdigital.json.DataT2;
 import com.github.onsdigital.json.DataT3;
+import com.github.onsdigital.json.TaxonomyNode;
 
 public class Csv {
+
+	static StringBuilder sitemap = new StringBuilder(
+			"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
+					+ "<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n");
 
 	/**
 	 * Parses the taxonomy CSV file and generates a file structure..
@@ -131,6 +136,25 @@ public class Csv {
 				}
 			}
 		}
+
+		// Output the sitemap:
+		sitemap.append("</urlset>\n");
+		FileUtils.writeStringToFile(new File(
+				"src/main/resources/files/sitemap.xml"), sitemap.toString());
+	}
+
+	private static void addUrl(Data t2) {
+		String url = "";
+		for (TaxonomyNode node : t2.breadcrumb) {
+			url += "/" + node.fileName;
+		}
+		url += "/" + t2.fileName;
+		addUrl(url);
+	}
+
+	static void addUrl(String path) {
+		sitemap.append("<url><loc>http://onsdigital.herokuapp.com" + path
+				+ "</loc></url>\n");
 	}
 
 	// private static void createContentFolders(String name, File file)
@@ -213,17 +237,21 @@ public class Csv {
 		data.fileName = "/";
 		String json = Serialiser.serialise(data);
 		FileUtils.writeStringToFile(new File(file, "data.json"), json);
+		addUrl("/");
 	}
 
 	private static void createT2(Folder folder, File file) throws IOException {
 
-		String json = Serialiser.serialise(new DataT2(folder));
+		DataT2 t2 = new DataT2(folder);
+		String json = Serialiser.serialise(t2);
 		FileUtils.writeStringToFile(new File(file, "data.json"), json);
+		addUrl(t2);
 	}
 
 	private static void createT3(Folder folder, File file) throws IOException {
 
-		String json = Serialiser.serialise(new DataT3(folder));
+		DataT3 t3 = new DataT3(folder);
+		String json = Serialiser.serialise(t3);
 		FileUtils.writeStringToFile(new File(file, "data.json"), json);
 
 		createBulletin(folder, file);
@@ -231,6 +259,7 @@ public class Csv {
 		if (file.getName().contains("inflationandpriceindices")) {
 			createTimeseries(folder, file);
 		}
+		addUrl(t3);
 	}
 
 	/**
