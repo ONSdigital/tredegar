@@ -1,53 +1,57 @@
+<!-- <div  ng-controller="T2Ctrl" > -->
 
-      <div class="page-header slate">
+<!-- Content-reveal section -->
+<div class="slate--mid-grey_new flush">
+    <div class="page-header slate" ng-controller="ContentRevealCtrl" >
         <div class="wrapper">
           <h1 class="page-header__title flush--half--bottom">Inflation and Price Indices</h1>
           <div class="content-reveal lede">
-            <p>
-              Consumer price inflation is the speed at which the prices of goods and services
-              bought by households rise or fall.
-              <a href="#" class="content-reveal__action hidden">See more</a>
+            <p>{{data.lede}}
+              <a href="" ng-click="toggleContent()" class="content-reveal__action">{{showContent ? 'Show less' : 'Show more'}}</a>
             </p>
-            <div class="content-reveal__hidden">
-              <p>Some more content about CPI goes here. This will expand and contract
-                if you have JS enabled. If JS is disabled, this will show by default.
-                Yay progressive enhancement!</p>
+            <div ng-show="showContent" class="content-reveal__hidden">
+              <p>
+              {{data.more}}
+              </p>
             </div>
           </div>
+        </div>
+
           <div class="page-header__icons">
             <!--<a href="#" class="link-complex">
               <span class="icon icon-twitter icon-grey">
                 <span class="visuallyhidden">Share on Twitter</span>
               </span>
             </a>!-->
-            <a href="#" class="link-complex">
-              <span class="icon icon-twitter icon--grey">
-                <span class="visuallyhidden">Share on Twitter</span>
-              </span>
-            </a>
+            <a href="#" class="link-complex"><span class="icon icon-twitter icon--grey"><span class="visuallyhidden">Share on Twitter</span></span></a>
             <a href="#" class="link-complex">
               <span class="icon icon-facebook icon--grey">
                 <span class="visuallyhidden">Share on Facebook</span>
               </span>
             </a>
           </div>
-        </div>
+    </div>
+    </div>
         <!-- /wrapper -->
-      </div>
+
+
+<!-- Top header box -->
       <!-- /page-header -->
-      <div class="wrapper">
-        <section id="headline" class="box box--padded-vertical solid border lifted offset-top border-defined">
+      <div ng-repeat="timeseries in data.timeseries" class="wrapper">
+        <section ng-show="timeseries.headline === true" id="headline" class="box box--padded-vertical box--blue box--green--separated-left solid border lifted offset-top border-defined">
           <div class="box__content">
             <div class="divider">
               <div class="divider__half divider__half--border divider__half--border-first">
                 <h2 class="beta">
-                  CPI Annual Rate Percentage Change over 12 months
+                    {{timeseries.name}}
+                  <!-- CPI Annual Rate Percentage Change over 12 months -->
                   <span tabindex="0" class="tooltip icon-info-circled icon--warm icon--inline icon--inline--large-text icon--small tooltipstered"></span>
                 </h2>
                 <div class="box box--inline box--padded muted--dark">
                   <div class="stat stat--headline">
                     <div class="stat__figure">
-                      1.5
+                      {{timeseries.number}}
+                      <!-- 1.5 -->
                       <span class="stat__figure__unit">%</span>
                     </div>
 
@@ -56,24 +60,35 @@
                 <!-- /box -->
                 <dl class="definition mini">
                   <dt>Last updated:</dt>
-                  <dd>16 Sep 2014</dd>
+                  <dd>
+                  {{timeseries.lastUpated}}
+                  <!-- 16 Sep 2014 -->
+                  </dd>
                   <dt>Next update:</dt>
-                  <dd>14 Oct 2014</dd>
+                  <dd>
+                  {{timeseries.nextUpdate}}
+                  <!-- 14 Oct 2014 -->
+                  </dd>
                 </dl>
               </div>
+        <!-- /box -->
 
-                <!-- /box -->
 
+    <!-- Explanation of the numbers -->
+              <div  id="statsBulletinHeadlines" class="divider__half">
+                <h3  class="body-type lede flush--bottom navpanel-list-heading">
 
-              <div id="statsBulletinHeadlines" class="divider__half">
-                <h3 class="body-type lede flush--bottom navpanel-list-heading">CPI Statistical Bulletin Headlines</h3>
-                <ul class="list--bullet mini flush--half--top navpanel-list">
-                  <li>The Consumer Price Index (CPI) grew by 1.5% in the year to May
-                    2014, down from 1.8% in April.</li>
-                  <li>Fall in transport services costs, notably air fares, provided
+                Statistical Bulletin Headlines
+                </h3>
+                <ul ng-repeat="explanation in timeseries.statsBulletinHeadlines" class="list--bullet mini flush--half--top navpanel-list">
+                  <li>
+                  {{explanation.text}}
+                  <!-- The Consumer Price Index (CPI) grew by 1.5% in the year to May
+                    2014, down from 1.8% in April. -->
+                  </li>
+                  <!-- <li>Fall in transport services costs, notably air fares, provided
                     the largest contribution to the decrease in the rate.</li>
-                  <li>The timing of Easter in April is likely to have an impact on
-                    movements in the index, notably for air and sea fares.</li>
+                  <li>The timing of Easter in April is likely to have an impact on movements in the index, notably for air and sea fares.</li> -->
                   </ul>
                 <a class="action" href="/economy/inflationandpriceindices/bulletins/statsBulletin.html">
                     <span class="table__action__text search-sorting">View the statistical bulletin >
