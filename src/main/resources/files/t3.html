@@ -559,24 +559,24 @@ markup: false
 
             <!-- /list- -table__body -->
             <li class="list--table__item list--table__footer">
-              <div class="list--table__item__body">
-                <div class="table__actions split">
-                  <a class="table__action split__title link-muted tableaction-reduced" href="#">
-                    <span class="table_action__text">View all 1234 time series</span>
-                  </a>
-                  <a class="table__action" href="#">
-                    <span class="table__action__text">Download all 1234</span>
-                    <span class="icon-download" role="presentation"></span>
-                  </a>
-                  <a href="#" class="btn btn--flex btn--block btn--primary">
-                    <span class="table__action__text">Download selected</span>
-                    <span class="icon-download" role="presentation"></span>
-                  </a>
-                </div>
-                <!-- /table-actions -->
+            <div class="list--table__item__body">
+              <div class="table__actions split">
+                <a class="table__action split__title link-muted" href="#">
+                  <span class="table__action__text">View all 1234 time series</span>
+                </a>
+                <a class="table__action" href="#">
+                  <span class="table__action__text">Download all 1234</span>
+                  <span class="icon-download" role="presentation"></span>
+                </a>
+                <a href="#" class="btn btn--flex btn--block btn--primary">
+                  <span class="table__action__text">Download selected</span>
+                  <span class="icon-download" role="presentation"></span>
+                </a>
               </div>
-              <!-- /list- -table__item__body -->
-            </li>
+              <!-- /table-actions -->
+            </div>
+            <!--  /list-table__item__body -->
+          </li>
             <!-- /list- -table__item -->
           </ol>
           <!-- /list- -table -->
@@ -684,7 +684,7 @@ markup: false
             <div class="grid-col desktop-grid-one-third tablet-grid-full">
               <article class="box">
                 <h2 class="beta">Latest Statistical Bulletins</h2>
-                <a href="#" class="action-link hide-med-down">View all statistical bulletins</a>
+                <a href="#" id="viewAllStatsBulletins" class="action-link hide-med-down">View all statistical bulletins</a>
               </article>
             </div>
             <!-- /box -->
