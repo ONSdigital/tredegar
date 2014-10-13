@@ -498,7 +498,8 @@ img {
 .icon-users:before { content: '\e80b' ; } /* '' */
 .icon-export:before { content: '\e828' ; } /* '' */
 .icon-rss:before { content: '\e853' ; } /* '' */
-.icon-right-open-big:before { content: '\e886' ; } /* '' */
+/*.icon-right-open-big:before { content: '\e886' ; } /* '' */
+.icon-right-open-big:after { content: '\e886' ; } /* '' */
 
 /*Original code from CX*/
 
@@ -660,9 +661,12 @@ img {
 .icon--left {
   text-align: left; }
 
-.icon--left-margin {
+
+/* Reduced left margin spacing on icons*/  
+
+/*.icon--left-margin {
   margin-left: 10px;
-  margin-left: 1rem; }
+  margin-left: 1rem; }*/ 
 
 .icon--right-margin {
   margin-right: 10px;
@@ -2056,7 +2060,7 @@ a {
   border-left-color: #0054aa; }
 
 .box--green--separated-left:before {
-  border-left-color: #b3b92d; }
+  border-left-color: #b2bb1c; }
 
 .box--orange a {
   color: #f37121; }
@@ -2595,7 +2599,7 @@ lesser , applied styles
   display: inline-block;
   padding: 3px 5px;
   padding: .3rem .5rem;
-  border: 0 none;
+  border: solid 1px;
   border-radius: 2px;
   font-size: 10px;
   font-size: 1rem;
@@ -3898,37 +3902,38 @@ table actions
 }
 
 .lozenge-blue{ 
-  /*background-color: #3684cd;*/
-  color: blue;
+  /*background-color: #3684cd;
+  color: blue;*/
   border: solid 1px;
   margin-left: 0.5rem;
 }
 
 .lozenge-green{
-  /*background-color: #327563;*/
-  color: blue;
+  /*background-color: #327563;
+  color: blue;*/
   border: solid 1px;
 }
 
 .lozenge-red{
-  /*background-color: #e75f64; */
-  color: blue;
-  border: solid 1px;git 
+  /*background-color: #e75f64; 
+  color: blue;*/
+  border: solid 1px; 
 }
 
 .lozenge-grey{
-  /*background-color: #e75f64; */
-  color: blue;
+  /*background-color: #e75f64; 
+  color: blue;*/
   border: solid 1px;
 }
 
 .lozenge-spacer{ margin-right: 1.2em; }
 
 .open-in-new-window{
-  height: 1.7em;
-  width: 1.5em;
-  float: right;
+  height: 1.5em;
+  width: 1.3em;
+  display: block;
   vertical-align: bottom;
+  margin-left: 93%;
 }
 
 .padded{ padding: 0.6em; }
@@ -3955,12 +3960,14 @@ table actions
   vertical-align: top;
 }
 
-.search .lozenge:hover, .lozenge:active, .lozenge:focus {
+
+/*--Stops strange lozenge behaviour on click*/
+/*.search .lozenge:hover, .lozenge:active, .lozenge:focus {
   color: white;
   text-decoration: none !important;
   background-color: #a1a39a;
   outline: 0;
-}
+}*/
 
 .search .microcopy { font-size: 0.85em; color: #999; padding:0em; }
 
@@ -4174,6 +4181,10 @@ ul.simple-pagination {
   font-weight: normal !important;
 }
 
+.div_panel_link{
+  float: right;
+}
+
 
 /* T3 list--table*/
 
@@ -4239,12 +4250,16 @@ background-color: #edeeee !important;
   font-size: 0.9rem;
 }
 
+.table-inline{
+  display: inline-table;
+  padding-right: 3rem;
+}
 
 /* Aaron T1 Classes */
 
-
-.ONS_border{/* ONS Branded Border Top */
-  border-top: solid 4px #b3b92d;
+/* ONS Branded Border Top */
+.ONS_border{
+  border-top: solid 4px #b2bb1c;
 }
 
 .uniform_background {
@@ -4581,7 +4596,8 @@ background-color: #edeeee !important;
  }
 
 @media screen and (min-width: 40em){
-.list--table--complex .list--table__item__body--caption {
+
+section.panel--bottom-mar.wrapper > ol > li > div.list--table__item__body.list--table__item__body--caption {
 width: 11.5%;
 padding-right: 7.5%;}
 }
@@ -4596,3 +4612,5 @@ ol > li > div.list--table__item__body.list--table__item__body--stat.no_align{
  .release_dates{
   font-weight: bold;
  }
+
+section.panel--bottom-mar.wrapper > ol > li > div.list--table__item__body.list--table__item__body--caption
