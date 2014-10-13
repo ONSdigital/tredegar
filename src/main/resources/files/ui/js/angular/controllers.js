@@ -10,12 +10,30 @@ onsControllers.controller('MainCtrl', ['$scope', '$http', '$location',
       path = (path) ? ("/" + path) : ""
       path = $location.$$path + path + "?data"
       console.log("Loadint data at " + path)
-      $http.get(path).success(callback)
+    $http.get(path).success(callback)
     }
   }
 
 ]);
 
+//Use this controller to show and hide large contents
+onsControllers.controller('TabsController', ['$scope', function($scope) {
+    $scope.tab = 1
+    $scope.changeTab = function(tabNumber) {
+      $scope.tab = tabNumber
+    }
+  }
+])
+
+
+//Use this controller to show and hide large contents
+onsControllers.controller('ContentRevealCtrl', ['$scope', function($scope) {
+    $scope.showContent = false
+    $scope.toggleContent = function() {
+      $scope.showContent = !$scope.showContent
+    }
+  }
+])
 
 onsControllers.controller('TemplateCtrl', ['$scope', '$http', '$location',
   function($scope, $http, $location) {
@@ -23,7 +41,7 @@ onsControllers.controller('TemplateCtrl', ['$scope', '$http', '$location',
       $scope.data = data
     })
   }
-]);
+])
 
 onsControllers.controller('T1Ctrl', ['$scope', '$http', '$location', 'Page',
   function($scope, $http, $location, Page) {

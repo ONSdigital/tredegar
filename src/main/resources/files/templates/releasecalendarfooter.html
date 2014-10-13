@@ -1,12 +1,12 @@
- <div class="wrapper panel--bottom-mar">
+ <div class="wrapper panel--bottom-mar" ng-controller="TabsCtrl">
         <div class="next-releases tab-pane tab-pane--dual lifted">
           <ul role="tablist" class="nav tab-pane__tabs-container">
-            <li role="presentation" class="tab-pane__tab-container"><a tabId="#published" class="tab-pane__tab tab-pane__tab--selected" role="tab" tabindex="0" aria-controls="published" aria-selected="true">Published <br class="tab-pane__tab__break">Releases</a>
+            <li role="presentation" class="tab-pane__tab-container"><a href="" ng-click="changeTab(1)" class="tab-pane__tab tab-pane__tab--selected" role="tab" tabindex="0" aria-controls="published" aria-selected="true">Published <br class="tab-pane__tab__break">Releases</a>
             </li>
-            <li role="presentation" class="tab-pane__tab-container"><a tabId="#upcoming" class="tab-pane__tab" role="tab" tabindex="-1" aria-controls="upcoming">Upcoming <br class="tab-pane__tab__break">Releases</a>
+            <li role="presentation" class="tab-pane__tab-container"><a href="" ng-click="changeTab(2)" class="tab-pane__tab" role="tab" tabindex="-1" aria-controls="upcoming">Upcoming <br class="tab-pane__tab__break">Releases</a>
             </li>
           </ul>
-          <section id="published" role="tabpanel" class="tab-pane__panel" aria-hidden="true">
+          <section  ng-show="tab === 1" id="published" role="tabpanel" class="tab-pane__panel" aria-hidden="true">
             <ol class="list--table list--table--cushy table--striped-light list--table--releases">
               <li class="list--table__item list--table__body">
                 <div class="list--table__item__body list--table__item__body--date">
@@ -177,7 +177,7 @@
               </div>
             </div>
           </section>
-          <section id="upcoming" role="tabpanel" class="tab-pane__panel tab-pane__tab--inactive">
+          <section  ng-show="tab === 2" id="upcoming" role="tabpanel" class="tab-pane__panel tab-pane__tab--inactive">
             <ol class="list--table list--table--cushy table--striped-light list--table--releases">
               <li class="list--table__item list--table__body">
                 <div class="list--table__item__body list--table__item__body--date">

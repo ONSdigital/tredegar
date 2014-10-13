@@ -1,13 +1,13 @@
 <div  ng-controller="T2Ctrl" >
 
-      <div class="page-header slate">
+      <div class="page-header slate" ng-controller="ContentRevealCtrl" >
         <div class="wrapper">
           <h1 class="page-header__title flush--half--bottom">Economy</h1>
           <div class="content-reveal lede">
             <p>{{data.lede}}
-              <a href="#" class="content-reveal__action">See more</a>
+              <a href="" ng-click="toggleContent()" class="content-reveal__action">{{showContent ? 'Show less' : 'Show more'}}</a>
             </p>
-            <div class="content-reveal__hidden">
+            <div ng-show="showContent" class="content-reveal__hidden">
               <p>
               {{data.more}}
               </p> 
@@ -29,12 +29,12 @@
               <section class="nav-panel__roomy">
                 <ul class="list--neutral">
                 <!-- Here it starts a line in the panel -->
-                  <li ng-repeat="time in (section.data.level === 't3' ? section.data.timeseries : section.data.children ) | limitTo:4" class="nav-panel__item">
+                  <li ng-repeat="child in (section.data.level === 't3' ? section.data.timeseries : section.data.children ) | limitTo:4" class="nav-panel__item">
                     <dl>
                       <dt class="nav-panel__title">
                         <h3 class="nav-panel__heading">
-                          <a href="#{{time.fileName}}">
-                        {{time.name}}
+                          <a href="#/home/{{data.fileName}}/{{section.fileName}}/{{child.fileName}}">
+                        {{child.name}}
                       </a>
                           <span tabindex="0" title="" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin"></span>
                         </h3>
@@ -42,11 +42,11 @@
                       <dd class="nav-panel__value">
                         <div class="stat stat--small">
                           <div class="stat__figure">
-                            {{time.number}}
-                            <span class="stat__figure__unit">{{time.unit}}</span>
+                            {{child.number}}
+                            <span class="stat__figure__unit">{{child.unit}}</span>
                           </div>
                           <div class="stat__description">
-                            {{time.date}}
+                            {{child.date}}
                           </div>
                         </div>
                       </dd>
