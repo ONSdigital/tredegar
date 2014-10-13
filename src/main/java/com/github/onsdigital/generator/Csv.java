@@ -143,18 +143,28 @@ public class Csv {
 				"src/main/resources/files/sitemap.xml"), sitemap.toString());
 	}
 
-	private static void addUrl(Data t2) {
+	private static void addUrl(DataT2 t2) {
 		String url = "";
 		for (TaxonomyNode node : t2.breadcrumb) {
 			url += "/" + node.fileName;
 		}
 		url += "/" + t2.fileName;
-		addUrl(url);
+		addUrl(url, 0.8);
 	}
 
-	static void addUrl(String path) {
-		sitemap.append("<url><loc>http://onsdigital.herokuapp.com/home" + path
-				+ "</loc></url>\n");
+	private static void addUrl(DataT3 t3) {
+		String url = "";
+		for (TaxonomyNode node : t3.breadcrumb) {
+			url += "/" + node.fileName;
+		}
+		url += "/" + t3.fileName;
+		addUrl(url, 0.6);
+	}
+
+	static void addUrl(String path, double priority) {
+		sitemap.append("<url>\n" + "<loc>http://onsdigital.herokuapp.com/home"
+				+ path + "</loc>\n" + "<priority>" + priority + "</priority>\n"
+				+ "</url>\n");
 	}
 
 	// private static void createContentFolders(String name, File file)
@@ -237,7 +247,7 @@ public class Csv {
 		data.fileName = "/";
 		String json = Serialiser.serialise(data);
 		FileUtils.writeStringToFile(new File(file, "data.json"), json);
-		addUrl("/");
+		addUrl("/", 1);
 	}
 
 	private static void createT2(Folder folder, File file) throws IOException {

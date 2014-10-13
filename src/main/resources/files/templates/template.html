@@ -1,20 +1,16 @@
-<div>
-  
-<div ng-include="'templates/header.html'"></div>        
+<span ng-controller="TemplateCtrl"  class="wrapper panel--bottom-mar">
 
-<div ng-controller="TemplateCtrl"  class="wrapper panel--bottom-mar">
-
-      <div ng-if="data.level == 't2'">
-              <div ng-include="'templates/t2.html'"></div>        
-      </div>
-      <div ng-if="data.level == 't1'">
-              <div ng-include="'templates/t1.html'"></div>    
-      </div>
-      <div ng-if="data.level == 't3'">
-              <div ng-include="'templates/t3.html'"></div>        
-      </div>
+      <span ng-if="data.level == 't2'">
+              <span ng-include="'templates/t2.html'"></span>        
+      </span>
+      <span ng-if="data.level == 't1'">
+              <span ng-include="'templates/t1.html'"></span>    
+      </span>
+      <span ng-if="data.level == 't3'">
+              <span ng-include="'templates/t3.html'"></span>        
+      </span>
  
-</div>
+</span>
 
-<div ng-include="'templates/footer.html'">        
-</div>
+<span ng-include="'templates/footer.html'">        
+</span>

@@ -1,0 +1,82 @@
+<span ng-include="'templates/header.html'"></span>     
+
+   <script src="ui/js/search.js" type="text/javascript" ></script>
+   <script src="ui/js/lib/jquery.simplePagination.js" type="text/javascript" ></script>
+   
+
+<!--Breadcrumbs, grid col two thirds-->
+  <section class="panel--large wrapper flush--top">
+
+
+    <!--Search filters, sorting and results description, grid col two thirds, left class removes padding and crates space within the div-->
+  <div class="grid-col tablet-wide-grid-two-thirds left">
+      <div id="search-results-total" class="search-results-total">
+      </div>
+      <div class="search-filters">
+        <p> Filters: <span class="lozenge lozenge-spacer lozenge-blue">STATISTICAL BULLETIN</span><span class="lozenge lozenge-spacer lozenge-red">DATASET</span><span class="lozenge lozenge-grey lozenge-spacer">ARTICLE</span><span class="lozenge lozenge-spacer lozenge-green">METHODOLOGY</span>
+        </p>
+      </div>
+      <div class="search-sorting">
+        <div class="field field--spaced">
+          <form action="#" class="form"> Sort by:
+            <select class="input input--mini sorting" name="search" id="select1">
+              <option value="" selected> Relevance </option>
+                <option value="">Date Posted </option>
+            </select>
+          </form>
+        </div>
+      </div>
+  </div>
+  </section>
+
+ <!--Search Results List, grid col two thirds-->
+<div  ng-controller="SearchCtrl" class="wrapper nav-panels">
+  <div class="grid-wrap">
+      <div class="grid-col tablet-wide-grid-two-thirds">
+          <article class="box">
+
+            <div id="search" class="search">
+
+          <!--Search results go here -->
+
+            </div>
+
+          <div id="paginator" class="pagination simple-pagination pagination-centred">
+
+          <!--Paginator goes here -->
+
+          </div>
+
+          </article>
+      </div>
+          <!-- /end of results list grid-col -->
+
+          <!--Start of aside, grid col one third-->
+
+      <div class="grid-col tablet-wide-grid-one-third">
+        <aside class="box sectioned padded">
+
+              <a href="www.gov.uk"><img src="ui/img/DWP.png" alt="dwplogo" class="aside-logo"/></a>
+              <p class="aside-highlighted"> Also try the Department for Work and Pensions for more information relating to CPI</p>
+              <a href="https://www.gov.uk/government/organisations/department-for-work-pensions" class="aside-links"> https://www.gov.uk/government/organisations/department-for-work-pensions</a>
+              <img src="ui/img/openinnewwindow.png" alt="open in new window" class="open-in-new-window"/>
+
+
+          
+          <div class="grid-col tablet-wide-grid-one-third">
+
+            
+          </div>
+          <!-- /grid-col -->
+
+        <!-- /aside -->
+      </aside>
+      </div>
+   <!--End of right col aside, grid col one third-->
+      </div>
+  </div>
+
+
+<span ng-include="'templates/footer.html'">        
+</span>
+
