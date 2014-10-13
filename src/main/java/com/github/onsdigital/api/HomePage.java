@@ -11,7 +11,8 @@ import com.github.davidcarboni.restolino.framework.Home;
 public class HomePage implements Home {
 
 	@Override
-	public Object get(HttpServletRequest reqquest, HttpServletResponse response) throws IOException {
+	public Object get(HttpServletRequest request, HttpServletResponse response)
+			throws IOException {
 
 		// Ensures ResourceUtils gets the right classloader when running
 		// reloadable in development:

@@ -498,8 +498,7 @@ img {
 .icon-users:before { content: '\e80b' ; } /* '' */
 .icon-export:before { content: '\e828' ; } /* '' */
 .icon-rss:before { content: '\e853' ; } /* '' */
-/*.icon-right-open-big:before { content: '\e886' ; } /* '' */
-.icon-right-open-big:after { content: '\e886' ; } /* '' */
+.icon-right-open-big:before { content: '\e886'; } /* '' */
 
 /*Original code from CX*/
 
@@ -4456,7 +4455,7 @@ background-color: #edeeee !important;
 
 /* Main nav arrow on active selection */
 
-
+@media (min-width: 750px){
 #nav-primary > li.nav--primary__active:after{
   content:'';
   width:0;
@@ -4469,7 +4468,7 @@ background-color: #edeeee !important;
   border-style:solid;
   border-color: transparent transparent white transparent;
 }
-
+}
 
 /* Collection Page CSS */
 
@@ -4518,9 +4517,9 @@ background-color: #edeeee !important;
 }
 
 
-#nav-primary > li.nav--primary__highlight{
+/*#nav-primary > li.nav--primary__highlight{
   width: 25% !important }
-}
+}*/
 
 /*-----responsive tables-----*/
 .resp-table {
