@@ -104,9 +104,7 @@ markup: false
   <div class="wrapper">
     <ul class="nav nav--multi nav--block nav--primary flush--bottom" id="nav-primary">
       <li class="nav--primary home">
-        <a href="http://onsdigital.herokuapp.com/">
-          <span class="icon-home icon--inline"></span>
-          <span class="icon-inline vertical-align-mid">Home</span></a>
+        <a href="http://onsdigital.herokuapp.com/"><span class="icon-home icon--inline"></span><span class="icon-inline vertical-align-mid">Home</span></a>
       </li>
       <li>
         <a href="#" class="nav__expandable js-expandable">Business, Industry, and Trade</a>
@@ -138,7 +136,7 @@ markup: false
         </ul>
       </li>
       <li class="nav--primary__active">
-        <a href="http://onsdigital.herokuapp.com/economy" class="nav__expandable js-expandable">Economy</a>
+        <a href="http://onsdigital.herokuapp.com/home/economy/" class="nav__expandable js-expandable">Economy</a>
         <ul class="nav--primary__sub js-expandable__content js-nav-hidden">
           <li>
             <a href="#">Economic output and productivity</a>
@@ -146,7 +144,7 @@ markup: false
           <li>
             <a href="#">Environmental account</a>
           </li>
-          <li class="nav--primary__active">
+          <li>
             <a href="#">Government, public sector, and taxes</a>
           </li>
           <li>
@@ -156,7 +154,7 @@ markup: false
             <a href="#">Gross Values Added (GVA)</a>
           </li>
           <li>
-            <a href="/economy/inflationandpriceindices">Inflation and price indices</a>
+            <a href="home/economy/inflationandpriceindices">Inflation and price indices</a>
           </li>
           <li>
             <a href="#">Investment and pension trust</a>
@@ -268,10 +266,10 @@ markup: false
       <div class="wrapper panel--pad-small">
         <ol class="nav nav--heavy breadcrumb mini flush">
           <li>
-            <a href="#">Home</a>
+            <a href="http://onsdigital.herokuapp.com/home">Home</a>
           </li>
           <li>
-            <a href="#">Economy</a>
+            <a href="http://onsdigital.herokuapp.com/home/economy/">Economy</a>
           </li>
           <li class="nav__active">
             <a href="#">Government, Public Sector, and Taxes</a>
@@ -319,12 +317,8 @@ markup: false
               <span class="icon icon-twitter icon-grey">
                 <span class="visuallyhidden">Share on Twitter</span>
               </span>
-            </a>!-->
-            <a href="#" class="link-complex">
-              <span class="icon icon-twitter icon--grey">
-                <span class="visuallyhidden">Share on Twitter</span>
-              </span>
-            </a>
+            </a>!left in for linked in-->
+            <a href="#" class="link-complex"><span class="icon icon-twitter icon--grey"><span class="visuallyhidden">Share on Twitter</span></span></a>
             <a href="#" class="link-complex">
               <span class="icon icon-facebook icon--grey">
                 <span class="visuallyhidden">Share on Facebook</span>
@@ -336,7 +330,7 @@ markup: false
       </div>
       <!-- /page-header -->
       <div class="wrapper">
-        <section id="headline" class="box box--padded-vertical box--blue box--blue--separated-left solid border lifted offset-top border-defined">
+        <section id="headline" class="box box--padded-vertical box--blue box--green--separated-left solid border lifted offset-top border-defined">
           <div class="box__content">
             <div class="divider">
               <div class="divider__half divider__half--border divider__half--border-first">
@@ -375,11 +369,8 @@ markup: false
                   <li>The timing of Easter in April is likely to have an impact on
                     movements in the index, notably for air and sea fares.</li>
                   </ul>
-                <a class="action" href="/economy/inflationandpriceindices/bulletins/statsBulletin.html">
-                    <span class="table__action__text search-sorting">View the statistical bulletin >
-                    </span>
-
-                  </a>
+                <a class="div_panel_link" href="home/economy/inflationandpriceindices/bulletins/statsBulletin.html">View the statistical bulletin &gt;                   
+                </a>                
               </div>
             </div>
           </div>
@@ -592,8 +583,8 @@ markup: false
       </section>
       <section class="panel wrapper">
         <header class="actionable-header">
-          <h2 class="actionable-header__title">Key datasets</h2>
-          <a class="actionable-header__action hide-med-down" href="#">View more datasets</a>
+          <h2 class="actionable-header__title table-inline ">Key datasets</h2>
+          <a class="" href="#">View more datasets</a>
         </header>
         <div class="grid-wrap">
           <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
@@ -688,12 +679,12 @@ markup: false
         </div>
         <!-- /grid-wrap -->
       </section>
-      <section class="panel--pad panel--bottom-mar slate wrapper">
+      <section class="panel--pad panel--bottom-mar slate wrapper flush--bottom">
           <div class="grid-wrap">
             <div class="grid-col desktop-grid-one-third tablet-grid-full">
               <article class="box">
                 <h2 class="beta">Latest Statistical Bulletins</h2>
-                <a id="viewAllStatsBulletins" class="action-link hide-med-down">View all statistical bulletins</a>
+                <a href="#" class="action-link hide-med-down">View all statistical bulletins</a>
               </article>
             </div>
             <!-- /box -->
@@ -752,7 +743,7 @@ markup: false
           <!-- /grid-wrap -->
         <!-- /wrapper -->
       </section>
-      <section class="panel--large wrapper">
+      <section class="panel--large wrapper flush--top">
         <div class="grid-wrap">
           <div class="grid-col desktop-grid-one-third tablet-grid-full">
             <article class="box">
