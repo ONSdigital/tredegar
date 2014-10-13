@@ -10,12 +10,30 @@ onsControllers.controller('MainCtrl', ['$scope', '$http', '$location',
       path = (path) ? ("/" + path) : ""
       path = $location.$$path + path + "?data"
       console.log("Loadint data at " + path)
-      $http.get(path).success(callback)
+    $http.get(path).success(callback)
     }
   }
 
 ]);
 
+//Use this controller to show and hide large contents
+onsControllers.controller('TabsController', ['$scope', function($scope) {
+    $scope.tab = 1
+    $scope.changeTab = function(tabNumber) {
+      $scope.tab = tabNumber
+    }
+  }
+])
+
+
+//Use this controller to show and hide large contents
+onsControllers.controller('ContentRevealCtrl', ['$scope', function($scope) {
+    $scope.showContent = false
+    $scope.toggleContent = function() {
+      $scope.showContent = !$scope.showContent
+    }
+  }
+])
 
 onsControllers.controller('TemplateCtrl', ['$scope', '$http', '$location',
   function($scope, $http, $location) {
@@ -23,7 +41,7 @@ onsControllers.controller('TemplateCtrl', ['$scope', '$http', '$location',
       $scope.data = data
     })
   }
-]);
+])
 
 onsControllers.controller('T1Ctrl', ['$scope', '$http', '$location', 'Page',
   function($scope, $http, $location, Page) {
@@ -53,11 +71,11 @@ onsControllers.controller('T1Ctrl', ['$scope', '$http', '$location', 'Page',
       $scope.loadData(level2Path, function(childData) {
         child.data = childData
         //Load level 3 data for numbers
-        grandChildren = childData.children
-        for (j = 0; j < grandChildren.length && j < 4 ; j++) {
-          grandChild = grandChildren[j]
-          // loadGrandChildren(child, grandChild)
-        }
+        // grandChildren = childData.children
+        // for (j = 0; j < grandChildren.length && j < 4 ; j++) {
+        //   grandChild = grandChildren[j]
+        //   // loadGrandChildren(child, grandChild)
+        // }
       })
     }
 
@@ -127,13 +145,15 @@ onsControllers.controller('T2Ctrl', ['$scope', '$http', '$location', 'Page',
     function convert(children) {
       var result = []
       var index = 0
-      for (var i = 0; i < children.length && i < 2; i++) {
+      for (var i = 0; i < children.length && i < 4; i++) {
         //Load full child data and replace with current child
         var mod = i % 2
         if (mod === 0) {
           result[index] = [];
           result[index][0] = children[i]
-          result[index][1] = children[i + 1]
+          if(index < 1) {
+            result[index][1] = children[i + 1]
+          }
           index++
         }
       }

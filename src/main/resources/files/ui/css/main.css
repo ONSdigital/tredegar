@@ -498,7 +498,7 @@ img {
 .icon-users:before { content: '\e80b' ; } /* '' */
 .icon-export:before { content: '\e828' ; } /* '' */
 .icon-rss:before { content: '\e853' ; } /* '' */
-.icon-right-open-big:before { content: '\e886' ; } /* '' */
+/*.icon-right-open-big:before { content: '\e886' ; } /* '' */
 .icon-right-open-big:after { content: '\e886' ; } /* '' */
 
 /*Original code from CX*/
@@ -3473,8 +3473,8 @@ $SPLIT
 .table--striped tbody tr,
 .table--striped .list--table__body {
   background-color: #dedfdc; }
-  .table--striped tbody tr:nth-child(odd),
-  .table--striped .list--table__body:nth-child(odd) {
+  .table--striped tbody tr:nth-child(even),
+  .table--striped .list--table__body:nth-child(even) {
     background-color: #ebebe9; }
 
 .table--selectable tbody tr:not(.hover-override):hover,
@@ -3484,8 +3484,8 @@ $SPLIT
 .table--striped-light tbody tr,
 .table--striped-light .list--table__body {
   background-color: white; }
-  .table--striped-light tbody tr:nth-child(odd),
-  .table--striped-light .list--table__body:nth-child(odd) {
+  .table--striped-light tbody tr:nth-child(even),
+  .table--striped-light .list--table__body:nth-child(even) {
     background-color: #f6f6f6; }
 
 .table-light--sectioned > .list--table__body,
@@ -4188,7 +4188,7 @@ ul.simple-pagination {
 
 /* T3 list--table*/
 
- .table--striped-light .list--table__body:nth-child(odd) {
+ .table--striped-light .list--table__body:nth-child(even) {
 background-color: #edeeee !important;
 }
 
@@ -4204,18 +4204,18 @@ background-color: #edeeee !important;
   font-weight: normal !important;
 }*/
 
-.list--table--complex .list--table__item__body--caption {
+/*.list--table--complex .list--table__item__body--caption {
   width: 55%;
-  }
+  }*/
 
 
 #main > section:nth-child(5) > ol > li > div.list--table__item__body.list--table__item__body--update > dl {
   max-width: 70% !important;
 }
 
-.table__action {
+/*.table__action {
   margin: 0rem 8rem;
-}
+}*/
 
 #main > section:nth-child(7) > div > div > div > article > header {
   font-size: 1.125em;
@@ -4223,7 +4223,7 @@ background-color: #edeeee !important;
   text-decoration: none !important;
 }
 
- .table--striped-light .list--table__body:nth-child(odd) {
+ .table--striped-light .list--table__body:nth-child(even) {
 background-color: #edeeee !important;
 }
 
