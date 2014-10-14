@@ -22,7 +22,7 @@ rem #java -cp "target/classes:target/dependency/*" com.github.onsdigital.generat
 rem # Now build the JAR:
 mvn -Dmaven.test.skip=true package && ^
 rem # Development: reloadable ^
-java $JAVA_OPTS -Drestolino.files=$RESTOLINO_STATIC -Drestolino.classes=$RESTOLINO_CLASSES -Drestolino.packageprefix=$PACKAGE_PREFIX -cp "target/dependency/*" com.github.davidcarboni.restolino.Main
+java %JAVA_OPTS% -Drestolino.files=%RESTOLINO_STATIC% -Drestolino.classes=%RESTOLINO_CLASSES% -Drestolino.packageprefix=%PACKAGE_PREFIX% -cp "target/dependency/*" com.github.davidcarboni.restolino.Main
 
 rem # Production: non-reloadable
-rem #java $JAVA_OPTS -jar target/*-jar-with-dependencies.jar
+rem #java %JAVA_OPTS% -jar target/*-jar-with-dependencies.jar
