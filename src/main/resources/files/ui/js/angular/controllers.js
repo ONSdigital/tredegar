@@ -18,9 +18,21 @@ onsControllers.controller('MainCtrl', ['$scope', '$http', '$location',
       $http.get(fullPath).success(callback)
     }
 
-    $scope.getUrlParam= function(paramName) {
+    $scope.getUrlParam = function(paramName) {
       var params = $location.search()
       return params[paramName]
+    }
+
+    $scope.setUrlParam = function(paramName, value) {
+      if (value) {
+        $location.search(paramName, value)
+      } else {
+        $location.search(paramName)
+      }
+    }
+
+    $scope.getRange = function(num) {
+      return new Array(num);
     }
   }
 
@@ -42,27 +54,76 @@ onsControllers.controller('TabsCtrl', ['$scope',
 onsControllers.controller('SearchCtrl', ['$scope',
   function($scope) {
     var getParam = $scope.getUrlParam
-    $scope.page = getParam('page')
-    $scope.searchTerm = getParam('q')
-    $scope.type = getParam('type')
+    var page = getParam('page')
+    var searchTerm = $scope.searchTerm = getParam('q')
+    var type = $scope.type = getParam('type')
 
-    if ($scope.page) {
-      $scope.page = 1
+    if (!searchTerm) {
+      return
     }
 
-    if($scope.searchTerm) {
-      search($scope.searchTerm, $scope.type, $scope.page)
+    if (!page) {
+      page = 1
     }
+
+    console.log("page is " + page)
+    $scope.setUrlParam('page', page)
+
+    search(searchTerm, type, page)
 
     function search(q, type, pageNumber) {
-          var searchString = "?q=" + q + (type ? "&type=" + type : "") + "&page=" + pageNumber
-          $scope.getJSON("/search" + searchString, function(data){
-            $scope.searchResponse = data
-          })
+      var searchString = "?q=" + q + (type ? "&type=" + type : "") + "&page=" + pageNumber
+      $scope.getJSON("/search" + searchString, function(data) {
+        $scope.searchResponse = data
+        $scope.pageCount = Math.ceil(data.numberOfResults / 10)
+      })
     }
 
   }
 ])
+
+onsControllers.controller('PaginatorCtrl', ['$scope',
+  function($scope) {
+    var page = $scope.getUrlParam('page')
+    $scope.currentPage = page ? (+page) : 1
+    $scope.isVisible = function() {
+      return ($scope.pageCount > 1)
+    }
+
+    $scope.isPreviousVisible = function() {
+      return ($scope.currentPage != 1)
+    }
+
+    $scope.selectPage = function(index) {
+      var page = $scope.currentPage = (index + 1)
+      $scope.setUrlParam('page', page)
+    }
+
+    $scope.goToNext = function() {
+      var page = $scope.currentPage += 1
+      $scope.setUrlParam('page', page)
+    }
+
+    $scope.goToPrev = function() {
+      var page = $scope.currentPage -= 1
+      $scope.setUrlParam('page', page)
+    }
+
+    $scope.isCurrentPage = function(index) {
+      return $scope.currentPage === (index + 1)
+    }
+
+    $scope.isNextVisible = function() {
+      return ($scope.currentPage != $scope.pageCount)
+    }
+
+    $scope.getClass = function(index) {
+      return $scope.currentPage === (index + 1) ? 'active' : ''
+    }
+
+  }
+])
+
 
 
 //Use this controller to show and hide large contents

@@ -24,11 +24,46 @@ onsApp.config(['$routeProvider',
   }
 ]);
 
+/*Filters for ng-repeat*/
+
 onsApp.filter('slice', function() {
   return function(arr, start, end) {
       return arr.slice(start, end);
   };
 });
+
+
+/*Custom Directives*/
+onsApp.directive('onsFooter', function() {
+  return {
+    restrict : 'E',
+    templateUrl : 'templates/footer.html'
+  } 
+
+})
+
+onsApp.directive('onsHeader', function() {
+  return {
+    restrict : 'E',
+    templateUrl : 'templates/header.html'
+  } 
+
+})
+
+onsApp.directive('onsHomeHeader', function() {
+  return {
+    restrict : 'E',
+    templateUrl : 'templates/homeheader.html'
+  } 
+
+})
+
+onsApp.directive('paginator', function() {
+  return {
+    restrict : 'E',
+    templateUrl : 'templates/paginator.html'
+  } 
+})
 
 
 

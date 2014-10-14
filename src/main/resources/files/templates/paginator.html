@@ -1,0 +1,14 @@
+<div ng-controller="PaginatorCtrl" ng-show="isVisible()" id="paginator" class="pagination simple-pagination pagination-centred">
+  <ul>
+  	<li ng-show="isPreviousVisible()">
+  		<a href="" ng-click="goToPrev()" class="page-link previous" >Prev</a>	
+  	</li>
+    <li ng-repeat="i in getRange(pageCount) track by $index"  ng-class="getClass($index)">
+      <span ng-show="isCurrentPage($index)" class="current">{{$index + 1}}</span>
+      <a href="" ng-click="selectPage($index)" ng-hide="isCurrentPage($index)" class="page-link" >{{$index + 1}}</a>
+    </li>
+    <li ng-show="isNextVisible()">
+  		<a href="" ng-click="goToNext()" class="page-link next" >Next</a>	
+  	</li>
+  </ul>
+</div>
