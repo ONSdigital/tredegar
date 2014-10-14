@@ -95,7 +95,7 @@ $( document ).ready(function() {
 
 	/* Get the collection.json file to populate the page: */
 
-	$.get( "http://localhost:8080/collection.json", function( data ) {
+	$.get( "/collection.json", function( data ) {
 		
 		// Titles:
 		setTitle(data.title)
