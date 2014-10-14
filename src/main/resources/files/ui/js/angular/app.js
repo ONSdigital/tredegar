@@ -58,10 +58,7 @@ onsApp.directive('onsFooter', function() {
 onsApp.directive('onsHeader', function() {
   return {
     restrict: 'E',
-    templateUrl: 'templates/header.html',
-    scope: {
-      styleclass: '@'
-    }
+    templateUrl: 'templates/header.html'
 
   }
 
@@ -80,7 +77,7 @@ onsApp.directive('onsNav', function() {
   }
 })
 
-onsApp.directive('breadcrumb', function() {
+onsApp.directive('onsBreadcrumb', function() {
   return {
     restrict: 'E',
     templateUrl: 'templates/breadcrumb.html'
