@@ -165,7 +165,7 @@ $( document ).ready(function() {
 
     /* Get the data.json file to populate the page: */
 
-    $.get( "S/bulletin.json", function( data ) {
+    $.get( "/bulletin.json", function( data ) {
 
         // Titles:
         setTitle(data.title)
