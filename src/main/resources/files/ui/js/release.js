@@ -47,18 +47,16 @@ var deconstruct = function() {
     // Bulletins and Articles section
     // Select the second one - the first is the TOC
 	var bulletinsAndArticlesSection = $("#bulletinsAndArticles")
-    bulletinsAndArticlesTemplate = $("article:eq(1)", bulletinsAndArticlesSection)
+    bulletinsAndArticlesTemplate = $("#bulletinsGridTemplate", bulletinsAndArticlesSection)
     bulletinsAndArticles = bulletinsAndArticlesTemplate.parent()
     bulletinsAndArticlesTemplate.detach()
-    bulletinsAndArticles.empty()
     
     // Datasets section
     // Select the second one - the first is the TOC
 	var datasetsSection = $("#datasets")
-    datasetsTemplate = $("article:eq(1)", datasetsSection)
+    datasetsTemplate = $("#datasetsTemplate", datasetsSection)
     datasets = datasetsTemplate.parent()
     datasetsTemplate.detach()
-    datasets.empty()	
 }
 
 
@@ -140,10 +138,16 @@ function addBulletinOrArticle(bulletinOrArticle, index) {
     header.prepend(anchor)
     
     // Section body:
-    var content = $(".box__content", bulletinOrArticleTemplate)
-    var html = markdown.toHTML(bulletinOrArticle.markdown)
-    content.html(html)
-
+    var content = $("#bulletinOrArticleSummary", bulletinOrArticleTemplate)
+    content.text(bulletinOrArticle.summary)
+    
+    var lozenge = $("#bulletinOrArticleTypeLozenge", bulletinOrArticleTemplate)
+    lozenge.text(bulletinOrArticle.type)
+    
+    if (index > 2) {
+    	bulletinOrArticleTemplate.attr("class", "grid-col desktop-grid-push-one-third desktop-grid-one-third tablet-grid-one-half")
+    }
+    
     // Attach
     bulletinsAndArticles.append(bulletinOrArticleTemplate)
 }
@@ -171,10 +175,13 @@ function addDataset(dataset, index) {
     header.prepend(anchor)
     
     // Section body:
-    var content = $(".box__content", datasetTemplate)
-    var html = markdown.toHTML(dataset.markdown)
-    content.html(html)
-
+    var content = $("#datasetSummary", datasetTemplate)
+    content.text(dataset.summary)
+    
+    if (index > 2) {
+    	datasetTemplate.attr("class", "grid-col desktop-grid-push-one-third desktop-grid-one-third tablet-grid-one-half")
+    }
+    
     // Attach
     datasets.append(datasetTemplate)
 }

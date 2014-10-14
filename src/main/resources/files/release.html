@@ -390,17 +390,16 @@ markup: false
         <!--  /list-table -->
       </section>
 
-      <section id="bulletinsAndArticles" class="panel--pad panel--bottom-mar">
+      <section id="bulletinsAndArticles" class="panel--large wrapper">
         <div class="wrapper">
           <div class="grid-wrap">
             <div class="grid-col desktop-grid-one-third tablet-grid-full">
               <article class="box">
-                <h2 class="beta">Statistical Bulletins and Articles</h2>
-                
+                <h2 class="beta">Statistical Bulletins and Articles</h2>                
               </article>
             </div>
             <!-- /box -->
-            <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
+             <div id="bulletinsGridTemplate" class="grid-col desktop-grid-one-third tablet-grid-one-half">
               <article class="box">
                 <header class="box__header">
                   <h3 class="gamma flush">
@@ -409,19 +408,17 @@ markup: false
                 </header>
                 <!-- /box__header -->
                 <div class="box__content">
-                  <p>
+                  <p id="bulletinOrArticleSummary">
                     This statistical bulletin contains producer price indices of materials and fuels purchased and output of manufacturing.
                   </p>
                   <p class="description mini"></p>
                   <p>
-                  <span class="lozenge">Statistical Bulletin</span>
-                </p>
+                  	<span id="bulletinOrArticleTypeLozenge" class="lozenge">Statistical Bulletin</span>
+                  </p>
                 </div>
                 <!-- /box__content -->
               </article>
-              <!-- /box -->
-            </div>
-            <!-- /grid-col -->
+        	</div>
           </div>
           <!-- /grid-wrap -->
         </div>
@@ -429,45 +426,35 @@ markup: false
       </section>
 
 	<section id="datasets" class="panel--large wrapper">
-        <div class="grid-wrap">
-          <div class="grid-col desktop-grid-one-third tablet-grid-full">
-            <article class="box">
-              <h2 class="beta">Datasets</h2>
-              <a href="#" class="action-link hide-med-down">See all datasets in this release &gt;</a>
-            </article>
-          </div>
-          <!-- /box -->
-          <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
-            <article class="box">
-              <header class="box__header">
-                <h3 class="gamma flush">
-                  <a href="#">Producer Price Index summary dataset</a>
-                </h3>
-              </header>
-              <!-- /box__header -->
-              <div class="box__content">
-                <p>
-                  A comprehensive selction of data on input and output indices. Contains producer price indices of materials and fuels purchased. 
-                </p>
-                <p class="description mini"></p>
-                <p>
-                  <span class="lozenge">Statistical bulletin</span>
-                </p>
-               
-              </div>
-              <!-- /box__content -->
-            </article>
-            <!-- /box -->
-          </div>
-          <!-- /grid-col -->
-          <!-- /grid-col -->
-        </div>
-        <!-- /grid-wrap -->
-        <div class="box box--padded-top hide-large">
-          <p>
-            <a href="#" class="action-link">View more statistical bulletins and articles</a>
-          </p>
-        </div>
+		<div class="wrapper">
+	        <div class="grid-wrap">
+	          <div class="grid-col desktop-grid-one-third tablet-grid-full">
+	            <article class="box">
+	              <h2 class="beta">Datasets</h2>
+	              <a href="#" class="action-link hide-med-down">See all datasets in this release &gt;</a>
+	            </article>
+	          </div>
+	          <!-- /box -->
+	          <div id="datasetsTemplate" class="grid-col desktop-grid-one-third tablet-grid-one-half">
+	            <article class="box">
+	              <header class="box__header">
+	                <h3 class="gamma flush">
+	                  <a href="#">Producer Price Index summary dataset</a>
+	                </h3>
+	              </header>
+	              <!-- /box__header -->
+	              <div class="box__content">
+	                <p id="datasetSummary">
+	                  A comprehensive selction of data on input and output indices. Contains producer price indices of materials and fuels purchased. 
+	                </p>
+	                <p>
+                  		<span class="lozenge">Dataset</span>
+                	</p>
+	              </div>
+	            </article>
+	          </div>
+	        </div>
+	    </div>
       </section>
 
 <div class="wrapper panel--bottom-mar">
