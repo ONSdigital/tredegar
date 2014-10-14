@@ -18,6 +18,9 @@ onsApp.config(['$routeProvider',
     when('/searchresults', {
       templateUrl: 'templates/searchresults.html'
     }).
+    when('/release', {
+        templateUrl: 'templates/release.html'
+      }).    
     otherwise({
       templateUrl: 'templates/template.html'
     });
