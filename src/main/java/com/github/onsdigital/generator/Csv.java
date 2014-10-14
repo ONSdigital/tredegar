@@ -23,13 +23,8 @@ import com.github.onsdigital.json.Data;
 import com.github.onsdigital.json.DataT1;
 import com.github.onsdigital.json.DataT2;
 import com.github.onsdigital.json.DataT3;
-import com.github.onsdigital.json.TaxonomyNode;
 
 public class Csv {
-
-	static StringBuilder sitemap = new StringBuilder(
-			"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
-					+ "<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n");
 
 	/**
 	 * Parses the taxonomy CSV file and generates a file structure..
@@ -136,35 +131,6 @@ public class Csv {
 				}
 			}
 		}
-
-		// Output the sitemap:
-		sitemap.append("</urlset>\n");
-		FileUtils.writeStringToFile(new File(
-				"src/main/resources/files/sitemap.xml"), sitemap.toString());
-	}
-
-	private static void addUrl(DataT2 t2) {
-		String url = "";
-		for (TaxonomyNode node : t2.breadcrumb) {
-			url += "/" + node.fileName;
-		}
-		url += "/" + t2.fileName;
-		addUrl(url, 0.8);
-	}
-
-	private static void addUrl(DataT3 t3) {
-		String url = "";
-		for (TaxonomyNode node : t3.breadcrumb) {
-			url += "/" + node.fileName;
-		}
-		url += "/" + t3.fileName;
-		addUrl(url, 0.6);
-	}
-
-	static void addUrl(String path, double priority) {
-		sitemap.append("<url>\n" + "<loc>http://onsdigital.herokuapp.com/home"
-				+ path + "</loc>\n" + "<priority>" + priority + "</priority>\n"
-				+ "</url>\n");
 	}
 
 	// private static void createContentFolders(String name, File file)
@@ -247,7 +213,6 @@ public class Csv {
 		data.fileName = "/";
 		String json = Serialiser.serialise(data);
 		FileUtils.writeStringToFile(new File(file, "data.json"), json);
-		addUrl("/", 1);
 	}
 
 	private static void createT2(Folder folder, File file) throws IOException {
@@ -255,7 +220,6 @@ public class Csv {
 		DataT2 t2 = new DataT2(folder);
 		String json = Serialiser.serialise(t2);
 		FileUtils.writeStringToFile(new File(file, "data.json"), json);
-		addUrl(t2);
 	}
 
 	private static void createT3(Folder folder, File file) throws IOException {
@@ -269,7 +233,6 @@ public class Csv {
 		if (file.getName().contains("inflationandpriceindices")) {
 			createTimeseries(folder, file);
 		}
-		addUrl(t3);
 	}
 
 	/**
