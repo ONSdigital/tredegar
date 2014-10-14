@@ -37,6 +37,14 @@ onsControllers.controller('MainCtrl', ['$scope', '$http', '$location',
       return $location.$$path
     }
 
+    $scope.getParentPath = function() {    
+      var path =  $location.$$path
+      var lastIndex = path.lastIndexOf('/')
+      var parenPath = path.substring(0, lastIndex)
+      return parenPath
+
+    }
+
     $scope.search = function(searchTerm) {
       if (!searchTerm) {
         return
@@ -178,6 +186,10 @@ onsControllers.controller('TemplateCtrl', ['$scope',
   function($scope) {
     $scope.loadData('', function(data) {
       $scope.data = data
+      if(data.level === 't1') {
+            $scope.styleclass = 'footer__license'
+        }
+
       console.log('TemplateCtrl: ' + data)
     })
   }
@@ -186,9 +198,7 @@ onsControllers.controller('TemplateCtrl', ['$scope',
 
 onsControllers.controller('T1Ctrl', ['$scope', 'Page',
   function($scope, Page) {
-
     Page.setTitle('Home')
-
     var data = $scope.data
     var children = data.children
     var i

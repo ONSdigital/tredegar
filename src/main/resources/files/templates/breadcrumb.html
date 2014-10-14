@@ -1,15 +1,16 @@
-
+<breadcrumb > 
 <div class="wrapper panel--pad-small">
   <ol class="nav nav--heavy breadcrumb mini flush">
     <li>
-      <a href="#">Home</a>
+      <a href="#/" >Home</a>
     </li>
-    <li>
-      <a href="/home/economy">Economy</a>
+    <li ng-repeat="item in data.breadcrumb">
+      <a href="#{{getParentPath()}}">{{item.name}}</a>
     </li>
-    <li class="nav__active">
-      <a href="#">Government, Public Sector, and Taxes</a>
+    <li class="nav__active" ng-hide="data.level === 't1'">
+      <a href="#{{getPath()}}">{{data.name}}</a>
     </li>
   </ol>
 <!-- /Wrapper panel -->
 </div>
+</breadcrumb>
