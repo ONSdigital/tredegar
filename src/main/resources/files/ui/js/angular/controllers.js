@@ -4,19 +4,21 @@
 
 var onsControllers = angular.module('onsControllers', []);
 
-onsControllers.controller('MainCtrl', [ '$scope', '$http', '$location',
-		function($scope, $http, $location) {
-			$scope.loadData = function(path, callback) {
-				path = (path) ? ("/" + path) : ""
-				path = $location.$$path + path + "?data"
-				console.log("Loading data at " + path)
-				$http.get(path).success(callback)
-			}
 
-			$scope.getJSON = function(fullPath, callback) {
-				console.log("Loading json at " + fullPath)
-				$http.get(fullPath).success(callback)
-			}
+// Main controller that applies to all the pages
+onsControllers.controller('MainCtrl', ['$scope', '$http', '$location',
+  function($scope, $http, $location) {
+    $scope.loadData = function(path, callback) {
+      path = (path) ? ("/" + path) : ""
+      path = $location.$$path + path + "?data"
+      console.log("Loading data at " + path)
+      $http.get(path).success(callback)
+    }
+
+    $scope.getJSON = function(fullPath, callback) {
+      console.log("Loading json at " + fullPath)
+      $http.get(fullPath).success(callback)
+    }
 
     $scope.getUrlParam = function(paramName) {
       var params = $location.search()
@@ -31,24 +33,45 @@ onsControllers.controller('MainCtrl', [ '$scope', '$http', '$location',
       }
     }
 
-    $scope.getRange = function(num) {
-      return new Array(num);
+    $scope.getPath = function() {    
+      return $location.$$path
+    }
+
+    $scope.getParentPath = function() {    
+      var path =  $location.$$path
+      var lastIndex = path.lastIndexOf('/')
+      var parenPath = path.substring(0, lastIndex)
+      return parenPath
+
+    }
+
+    $scope.search = function(searchTerm) {
+      if (!searchTerm) {
+        return
+      }
+      $location.path('/searchresults')
+      $location.search('q', searchTerm)
+      $location.search('page', 1)
+
     }
   }
 
 ]);
 
-// Use this controller to show and hide large contents
-onsControllers.controller('TabsCtrl', [ '$scope', function($scope) {
-	$scope.activeTab = 1
-	$scope.selectTab = function(tabNumber) {
-		$scope.activeTab = tabNumber
-	}
-	$scope.isSelected = function(tabNumber) {
-		return $scope.activeTab === tabNumber
-	}
-} ])
+// Use this controller to show and hide tabs, see example in releasecalendarfooter.html
+onsControllers.controller('TabsCtrl', ['$scope',
+  function($scope) {
+    $scope.activeTab = 1
+    $scope.selectTab = function(tabNumber) {
+      $scope.activeTab = tabNumber
+    }
+    $scope.isSelected = function(tabNumber) {
+      return $scope.activeTab === tabNumber
+    }
+  }
+])
 
+//Search ctrl, used for search results page
 onsControllers.controller('SearchCtrl', ['$scope',
   function($scope) {
     var getParam = $scope.getUrlParam
@@ -77,13 +100,41 @@ onsControllers.controller('SearchCtrl', ['$scope',
       })
     }
 
+
+    $scope.isLoading = function() {
+      return ($scope.searchTerm && !$scope.searchResponse)
+    }
+
   }
 ])
 
+//Paginator
 onsControllers.controller('PaginatorCtrl', ['$scope',
   function($scope) {
     var page = $scope.getUrlParam('page')
     $scope.currentPage = page ? (+page) : 1
+
+    $scope.getStart = function() {
+      if($scope.pageCount <= 10) {
+        return 1
+      }
+
+      var end = $scope.getEnd()
+      var start = end - 9
+      return start > 0 ? start : 1
+    }
+
+    $scope.getEnd = function() {
+      var max = $scope.pageCount
+      if($scope.pageCount <= 10) {
+        return  max
+      }
+
+        //Five page links after current page
+      var end = $scope.curentPage + 5
+      return end > max ? max : end
+    }
+
     $scope.isVisible = function() {
       return ($scope.pageCount > 1)
     }
@@ -93,7 +144,7 @@ onsControllers.controller('PaginatorCtrl', ['$scope',
     }
 
     $scope.selectPage = function(index) {
-      var page = $scope.currentPage = (index + 1)
+      var page = $scope.currentPage = (index)
       $scope.setUrlParam('page', page)
     }
 
@@ -108,7 +159,7 @@ onsControllers.controller('PaginatorCtrl', ['$scope',
     }
 
     $scope.isCurrentPage = function(index) {
-      return $scope.currentPage === (index + 1)
+      return $scope.currentPage === (index)
     }
 
     $scope.isNextVisible = function() {
@@ -116,13 +167,11 @@ onsControllers.controller('PaginatorCtrl', ['$scope',
     }
 
     $scope.getClass = function(index) {
-      return $scope.currentPage === (index + 1) ? 'active' : ''
+      return $scope.currentPage === (index) ? 'active' : ''
     }
 
   }
 ])
-
-
 
 //Use this controller to show and hide large contents
 onsControllers.controller('ContentRevealCtrl', ['$scope',
@@ -133,20 +182,23 @@ onsControllers.controller('ContentRevealCtrl', ['$scope',
     }
   }
 ])
-onsControllers.controller('TemplateCtrl', [ '$scope', '$http', '$location',
-		function($scope, $http, $location) {
-			$scope.loadData('', function(data) {
-				$scope.data = data
-				console.log('TemplateCtrl: ' + data)
-			})
-		} ])
+onsControllers.controller('TemplateCtrl', ['$scope',
+  function($scope) {
+    $scope.loadData('', function(data) {
+      $scope.data = data
+      if(data.level === 't1') {
+            $scope.styleclass = 'footer__license'
+        }
+
+      console.log('TemplateCtrl: ' + data)
+    })
+  }
+])
 
 
-onsControllers.controller('T1Ctrl', ['$scope', '$http', '$location', 'Page',
-  function($scope, $http, $location, Page) {
-
+onsControllers.controller('T1Ctrl', ['$scope', 'Page',
+  function($scope, Page) {
     Page.setTitle('Home')
-
     var data = $scope.data
     var children = data.children
     var i
@@ -208,9 +260,8 @@ onsControllers.controller('T1Ctrl', ['$scope', '$http', '$location', 'Page',
 ]);
 
 
-
-onsControllers.controller('T2Ctrl', ['$scope', '$http', '$location', 'Page',
-  function($scope, $http, $location, Page) {
+onsControllers.controller('T2Ctrl', ['$scope', 'Page',
+  function($scope, Page) {
 
     Page.setTitle('Home')
 
@@ -261,3 +312,22 @@ onsControllers.controller('T2Ctrl', ['$scope', '$http', '$location', 'Page',
   }
 
 ]);
+
+
+onsControllers.controller('NavCtrl', ['$scope',
+  function($scope) {
+    var path =  $scope.getPath()
+    var tokens = path.split('/')
+    if(tokens[1] === 'home') {
+      if(tokens.length < 3) {
+        $scope.location = "home"
+      } else {
+        $scope.location = tokens[2]
+      }
+    }
+
+    $scope.isCurrentPage=function(page) {
+      return $scope.location === page
+    }
+  }
+])

@@ -1,5 +1,4 @@
-<span ng-include="'templates/header.html'"></span>     
-
+<ons-header></ons-header>
 
 <div ng-controller="SearchCtrl" >
 
@@ -9,6 +8,7 @@
 
     <!--Search filters, sorting and results description, grid col two thirds, left class removes padding and crates space within the div-->
   <div class="grid-col tablet-wide-grid-two-thirds left">
+      <span ng-show="isLoading()" >Loading ...</span>
       <div ng-show="searchResponse" id="search-results-total" class="search-results-total">
         <span class='results-total'>
           {{searchResponse.numberOfResults}}
@@ -42,6 +42,8 @@
           <article class="box">
 
             <div id="search" class="search">
+              <span ng-show="isLoading()" >Loading ...</span>
+
               <dl>
                   <dt ng-repeat-start="item in searchResponse.results" class="">
                     <a href="#{{item.url}}">{{item.title}}</a>

@@ -34,21 +34,24 @@
   <link rel="stylesheet" href="ui/css/jquery-ui.min.css">    
     <!--<![endif]-->
 <!-- endbuild -->
-<script src="ui/js/lib/modernizr.min.js"></script>
-<script src="ui/js/lib/jquery-1.11.0.min.js"></script>
-<script src="ui/js/lib/jquery-ui.min.js"></script>
+<script type="text/javascript" src="ui/js/lib/modernizr.min.js" defer></script>
+<script type="text/javascript" src="ui/js/lib/jquery-1.11.0.min.js" defer></script>
+<script type="text/javascript" src="ui/js/lib/jquery-ui.min.js" defer></script>
 <!--[if (!IE)|(gt IE 8)]>><!-->
-<script src="ui/js/lib/jquery.tooltipster.js"></script>
+<script type="text/javascript" src="ui/js/lib/jquery.tooltipster.js" defer></script>
 <!--<![endif]-->
-<script src="ui/js/app/app.js"></script>
-<script src="ui/js/app/content-reveal.js"></script>
-<script src="ui/js/app/nav.js"></script>
-<script src="ui/js/app/supporting-content.js"></script>
-<script src="ui/js/app/tables.js"></script>
-<script src="ui/js/app/tabs.js"></script>
-<script src="ui/js/custom-autocomplete.js"></script>
-<script>
-    </script>
+<script type="text/javascript" src="ui/js/app/app.js" defer></script>
+<script type="text/javascript" src="ui/js/app/content-reveal.js" defer></script>
+<script type="text/javascript" src="ui/js/app/nav.js" defer></script>
+<script type="text/javascript" src="ui/js/app/supporting-content.js" defer></script>
+<script type="text/javascript" src="ui/js/app/tables.js" defer></script>
+<script type="text/javascript" src="ui/js/app/tabs.js" defer></script>
+<script type="text/javascript" src="ui/js/custom-autocomplete.js" defer></script>
+
+<!-- Functionality to populate this page -->
+<script type="text/javascript" src="/ui/js/markdown.js" defer></script>
+<script type="text/javascript" src="/ui/js/release.js" defer></script>
+
 <style>
 body {
   padding: 0;
@@ -69,16 +72,12 @@ body {
  .offset-top.nav-panels {
  margin-top: 2rem;
 }
-}
-.ui-autocomplete {
-  position: relative;
-}
-  .ui-menu .ui-menu-item {
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid;   
-  } 
+.ui-menu .ui-menu-item {
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid;   
+} 
 </style>
 <!---
 title: Release Page Template (T6)
@@ -390,17 +389,16 @@ markup: false
         <!--  /list-table -->
       </section>
 
-      <section id="bulletinsAndArticles" class="panel--pad panel--bottom-mar">
+      <section id="bulletinsAndArticles" class="panel--large wrapper">
         <div class="wrapper">
           <div class="grid-wrap">
             <div class="grid-col desktop-grid-one-third tablet-grid-full">
               <article class="box">
-                <h2 class="beta">Statistical Bulletins and Articles</h2>
-                
+                <h2 class="beta">Statistical Bulletins and Articles</h2>                
               </article>
             </div>
             <!-- /box -->
-            <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
+             <div id="bulletinsGridTemplate" class="grid-col desktop-grid-one-third tablet-grid-one-half">
               <article class="box">
                 <header class="box__header">
                   <h3 class="gamma flush">
@@ -409,19 +407,17 @@ markup: false
                 </header>
                 <!-- /box__header -->
                 <div class="box__content">
-                  <p>
+                  <p id="bulletinOrArticleSummary">
                     This statistical bulletin contains producer price indices of materials and fuels purchased and output of manufacturing.
                   </p>
                   <p class="description mini"></p>
                   <p>
-                  <span class="lozenge">Statistical Bulletin</span>
-                </p>
+                  	<span id="bulletinOrArticleTypeLozenge" class="lozenge">Statistical Bulletin</span>
+                  </p>
                 </div>
                 <!-- /box__content -->
               </article>
-              <!-- /box -->
-            </div>
-            <!-- /grid-col -->
+        	</div>
           </div>
           <!-- /grid-wrap -->
         </div>
@@ -429,45 +425,35 @@ markup: false
       </section>
 
 	<section id="datasets" class="panel--large wrapper">
-        <div class="grid-wrap">
-          <div class="grid-col desktop-grid-one-third tablet-grid-full">
-            <article class="box">
-              <h2 class="beta">Datasets</h2>
-              <a href="#" class="action-link hide-med-down">See all datasets in this release &gt;</a>
-            </article>
-          </div>
-          <!-- /box -->
-          <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
-            <article class="box">
-              <header class="box__header">
-                <h3 class="gamma flush">
-                  <a href="#">Producer Price Index summary dataset</a>
-                </h3>
-              </header>
-              <!-- /box__header -->
-              <div class="box__content">
-                <p>
-                  A comprehensive selction of data on input and output indices. Contains producer price indices of materials and fuels purchased. 
-                </p>
-                <p class="description mini"></p>
-                <p>
-                  <span class="lozenge">Statistical bulletin</span>
-                </p>
-               
-              </div>
-              <!-- /box__content -->
-            </article>
-            <!-- /box -->
-          </div>
-          <!-- /grid-col -->
-          <!-- /grid-col -->
-        </div>
-        <!-- /grid-wrap -->
-        <div class="box box--padded-top hide-large">
-          <p>
-            <a href="#" class="action-link">View more statistical bulletins and articles</a>
-          </p>
-        </div>
+		<div class="wrapper">
+	        <div class="grid-wrap">
+	          <div class="grid-col desktop-grid-one-third tablet-grid-full">
+	            <article class="box">
+	              <h2 class="beta">Datasets</h2>
+	              <a href="#" class="action-link hide-med-down">See all datasets in this release &gt;</a>
+	            </article>
+	          </div>
+	          <!-- /box -->
+	          <div id="datasetsTemplate" class="grid-col desktop-grid-one-third tablet-grid-one-half">
+	            <article class="box">
+	              <header class="box__header">
+	                <h3 class="gamma flush">
+	                  <a href="#">Producer Price Index summary dataset</a>
+	                </h3>
+	              </header>
+	              <!-- /box__header -->
+	              <div class="box__content">
+	                <p id="datasetSummary">
+	                  A comprehensive selction of data on input and output indices. Contains producer price indices of materials and fuels purchased. 
+	                </p>
+	                <p>
+                  		<span class="lozenge">Dataset</span>
+                	</p>
+	              </div>
+	            </article>
+	          </div>
+	        </div>
+	    </div>
       </section>
 
 <div class="wrapper panel--bottom-mar">
@@ -565,9 +551,5 @@ markup: false
     </div>
   </div>
 </footer>
-
-<!-- Functionality to populate this page -->
-<script src="/ui/js/markdown.js"></script>
-<script src='/ui/js/release.js'></script>
 
 </main>

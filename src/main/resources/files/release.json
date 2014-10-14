@@ -15,36 +15,30 @@
 	    {
 	      "title": "Producer Price Inflation, October 2014",
 	      "url": "/economy/inflationandpriceindices/bulletins/",
-	      "markdown": "This statistical bulletin contains producer price indices of materials and fuels purchased and output of manufacturing help.",
+	      "summary": "This statistical bulletin contains producer price indices of materials and fuels purchased and output of manufacturing.",
 	      "type": "Statistical Bulletin"
-	    },
-	    {
-	      "title": "Producer Price Article, October 2014",
-	      "url": "/economy/inflationandpriceindices/bulletins/",
-	      "markdown": "This article ...",
-	      "type": "Article"
 	    }    
 	  ],
   "datasets": [
     {
-      "title": "Producer Price Index summary dataset today",
+      "title": "Producer Price Index summary dataset",
       "url": "/economy/inflationandpriceindices/timeseries/",
-      "markdown": "A comprehensive selection of data on input and output indices. Contains producer price indices of materials and fuels purchased."
+      "summary": "A comprehensive selection of data on input and output indices. Contains producer price indices of materials and fuels purchased."
     },
     {
-      "title": "Producer Price Index full dataset today",
+      "title": "Producer Price Index full dataset",
       "url": "/economy/inflationandpriceindices/timeseries/",
-      "markdown": "A comprehensive selection of data on input and output indices.  Contains producer price indices of materials and fuels purchased and output of manufacturing industry by broad sector."
+      "summary": "A comprehensive selection of data on input and output indices.  Contains producer price indices of materials and fuels purchased and output of manufacturing industry by broad sector."
     },
     {
-      "title": "Aerospace and Electronics Cost indices dataset today",
+      "title": "Aerospace and Electronics Cost indices dataset",
       "url": "/economy/inflationandpriceindices/timeseries/",
-      "markdown": "Cost indices (purchase of materials and fuels, average weekly earnings, general expenses and combined costs) relating to four aerospace and electorics industries."
+      "summary": "Cost indices (purchase of materials and fuels, average weekly earnings, general expenses and combined costs) relating to four aerospace and electorics industries."
     },
     {
-      "title": "TSD_MM22 producer Price indices dataset today",
+      "title": "TSD_MM22 producer Price indices dataset",
       "url": "/economy/inflationandpriceindices/timeseries/",
-      "markdown": "Producer Price indices (PPIs) are a series of economic indicators that measure the price movement of goods bought and sold by UK manufacturers. It is a base weighted index working on the basket of goods concept."
+      "summary": "Producer Price indices (PPIs) are a series of economic indicators that measure the price movement of goods bought and sold by UK manufacturers. It is a base weighted index working on the basket of goods concept."
     }        
   ]    
 }

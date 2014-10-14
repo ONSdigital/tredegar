@@ -19,8 +19,8 @@ onsApp.config(['$routeProvider',
       templateUrl: 'templates/searchresults.html'
     }).
     when('/release', {
-        templateUrl: 'templates/release.html'
-      }).    
+      templateUrl: 'templates/release.html'
+    }).
     otherwise({
       templateUrl: 'templates/template.html'
     });
@@ -31,7 +31,17 @@ onsApp.config(['$routeProvider',
 
 onsApp.filter('slice', function() {
   return function(arr, start, end) {
-      return arr.slice(start, end);
+    return arr.slice(start, end);
+  };
+});
+
+onsApp.filter('range', function() {
+  return function(input, start, end) {
+    var start = parseInt(start);
+    var end = parseInt(end);
+    for (var i = start; i <= end; i++)
+      input.push(i);
+    return input;
   };
 });
 
@@ -39,39 +49,58 @@ onsApp.filter('slice', function() {
 /*Custom Directives*/
 onsApp.directive('onsFooter', function() {
   return {
-    restrict : 'E',
-    templateUrl : 'templates/footer.html'
-  } 
+    restrict: 'E',
+    templateUrl: 'templates/footer.html'
+  }
 
 })
 
 onsApp.directive('onsHeader', function() {
   return {
-    restrict : 'E',
-    templateUrl : 'templates/header.html'
-  } 
+    restrict: 'E',
+    templateUrl: 'templates/header.html'
+
+  }
 
 })
-
-onsApp.directive('onsHomeHeader', function() {
-  return {
-    restrict : 'E',
-    templateUrl : 'templates/homeheader.html'
-  } 
-
-})
-
 onsApp.directive('paginator', function() {
   return {
-    restrict : 'E',
-    templateUrl : 'templates/paginator.html'
-  } 
+    restrict: 'E',
+    templateUrl: 'templates/paginator.html'
+  }
 })
 
+onsApp.directive('onsNav', function() {
+  return {
+    restrict: 'E',
+    templateUrl: 'templates/onsnav.html'
+  }
+})
+
+onsApp.directive('onsBreadcrumb', function() {
+  return {
+    restrict: 'E',
+    templateUrl: 'templates/breadcrumb.html'
+  }
+})
+
+onsApp.directive('searchBox', function() {
+  return {
+    restrict: 'E',
+    templateUrl: 'templates/searchbox.html'
+  }
+})
+
+onsApp.directive('topBar', function() {
+  return {
+    restrict: 'E',
+    templateUrl: 'templates/top.html'
+  }
+})
 
 
 onsApp.factory('Page', function() {
-  var title = 'default';
+  var title = 'Office Of National Statistics';
   return {
     title: function() {
       return title;
