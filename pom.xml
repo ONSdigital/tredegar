@@ -48,13 +48,12 @@
 			<version>${es.version}</version>
 		</dependency>
 
-		<!-- Elastic Search HTTP Client (JEST) -->
-		<dependency>
-			<groupId>io.searchbox</groupId>
-			<artifactId>jest</artifactId>
-			<version>0.1.2</version>
-		</dependency>
-
+		<!-- HtmlUnit for dealing with crawler requests -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>net.sourceforge.htmlunit</groupId> -->
+<!-- 			<artifactId>htmlunit</artifactId> -->
+<!-- 			<version>2.15</version> -->
+<!-- 		</dependency> -->
 
 		<!-- Test -->
 		<dependency>

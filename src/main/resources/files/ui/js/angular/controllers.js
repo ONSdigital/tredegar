@@ -4,19 +4,19 @@
 
 var onsControllers = angular.module('onsControllers', []);
 
-onsControllers.controller('MainCtrl', ['$scope', '$http', '$location',
-  function($scope, $http, $location) {
-    $scope.loadData = function(path, callback) {
-      path = (path) ? ("/" + path) : ""
-      path = $location.$$path + path + "?data"
-      console.log("Loadint data at " + path)
-      $http.get(path).success(callback)
-    }
+onsControllers.controller('MainCtrl', [ '$scope', '$http', '$location',
+		function($scope, $http, $location) {
+			$scope.loadData = function(path, callback) {
+				path = (path) ? ("/" + path) : ""
+				path = $location.$$path + path + "?data"
+				console.log("Loading data at " + path)
+				$http.get(path).success(callback)
+			}
 
-    $scope.getJSON = function(fullPath, callback) {
-      console.log("Loadint json at " + fullPath)
-      $http.get(fullPath).success(callback)
-    }
+			$scope.getJSON = function(fullPath, callback) {
+				console.log("Loading json at " + fullPath)
+				$http.get(fullPath).success(callback)
+			}
 
     $scope.getUrlParam = function(paramName) {
       var params = $location.search()
@@ -38,18 +38,16 @@ onsControllers.controller('MainCtrl', ['$scope', '$http', '$location',
 
 ]);
 
-//Use this controller to show and hide large contents
-onsControllers.controller('TabsCtrl', ['$scope',
-  function($scope) {
-    $scope.activeTab = 1
-    $scope.selectTab = function(tabNumber) {
-      $scope.activeTab = tabNumber
-    }
-    $scope.isSelected = function(tabNumber) {
-      return $scope.activeTab === tabNumber
-    }
-  }
-])
+// Use this controller to show and hide large contents
+onsControllers.controller('TabsCtrl', [ '$scope', function($scope) {
+	$scope.activeTab = 1
+	$scope.selectTab = function(tabNumber) {
+		$scope.activeTab = tabNumber
+	}
+	$scope.isSelected = function(tabNumber) {
+		return $scope.activeTab === tabNumber
+	}
+} ])
 
 onsControllers.controller('SearchCtrl', ['$scope',
   function($scope) {
@@ -135,14 +133,14 @@ onsControllers.controller('ContentRevealCtrl', ['$scope',
     }
   }
 ])
+onsControllers.controller('TemplateCtrl', [ '$scope', '$http', '$location',
+		function($scope, $http, $location) {
+			$scope.loadData('', function(data) {
+				$scope.data = data
+				console.log('TemplateCtrl: ' + data)
+			})
+		} ])
 
-onsControllers.controller('TemplateCtrl', ['$scope', '$http', '$location',
-  function($scope, $http, $location) {
-    $scope.loadData('', function(data) {
-      $scope.data = data
-    })
-  }
-])
 
 onsControllers.controller('T1Ctrl', ['$scope', '$http', '$location', 'Page',
   function($scope, $http, $location, Page) {

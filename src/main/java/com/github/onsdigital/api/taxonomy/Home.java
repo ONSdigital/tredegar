@@ -25,7 +25,8 @@ import com.github.onsdigital.json.TaxonomyNode;
 public class Home {
 
 	@GET
-	public Object serveTemplate(@Context HttpServletRequest request, @Context HttpServletResponse response) throws IOException {
+	public Object serveTemplate(@Context HttpServletRequest request,
+			@Context HttpServletResponse response) throws IOException {
 
 		// Ensures ResourceUtils gets the right classloader when running
 		// reloadable in development:
@@ -38,6 +39,12 @@ public class Home {
 		if (isDataRequest(request)) {
 			return data;
 		}
+
+		// Handle crawler request:
+		// https://developers.google.com/webmasters/ajax-crawling/
+		// if (CrawlerHandler.handle(request, response))
+		// return null;
+
 		if (StringUtils.equals(data.level, "t1")) {
 			templateResourceName = "/files/t1.html";
 		} else if (StringUtils.equals(data.level, "t2")) {
@@ -64,7 +71,8 @@ public class Home {
 
 		String taxonomyPath = Configuration.getTaxonomyPath();
 		// Get the data for this node:
-		String json = FileUtils.readFileToString(new File(taxonomyPath + join(path, "data.json")));
+		String json = FileUtils.readFileToString(new File(taxonomyPath
+				+ join(path, "data.json")));
 		return Serialiser.deserialise(json, Data.class);
 	}
 

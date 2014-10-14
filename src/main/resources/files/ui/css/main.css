@@ -661,11 +661,11 @@ img {
   text-align: left; }
 
 
-/* Reduced left margin spacing on icons*/  
+/* Reduced left margin spacing on icons*/
 
 /*.icon--left-margin {
   margin-left: 10px;
-  margin-left: 1rem; }*/ 
+  margin-left: 1rem; }*/
 
 .icon--right-margin {
   margin-right: 10px;
@@ -2704,7 +2704,7 @@ lesser , applied styles
     right: 15px;
     right: 1.5rem;
     z-index: 9;
-    font-family: "fontello";
+    font-family: "entypo";
     font-size: 150%;
     line-height: .85;
     color: #b4ddf4;
@@ -3900,7 +3900,7 @@ table actions
   font-weight: bold;
 }
 
-.lozenge-blue{ 
+.lozenge-blue{
   /*background-color: #3684cd;
   color: blue;*/
   border: solid 1px;
@@ -3914,13 +3914,13 @@ table actions
 }
 
 .lozenge-red{
-  /*background-color: #e75f64; 
+  /*background-color: #e75f64;
   color: blue;*/
-  border: solid 1px; 
+  border: solid 1px;
 }
 
 .lozenge-grey{
-  /*background-color: #e75f64; 
+  /*background-color: #e75f64;
   color: blue;*/
   border: solid 1px;
 }
@@ -4606,7 +4606,7 @@ ol > li > div.list--table__item__body.list--table__item__body--stat.no_align{
 }
 
 .release_margin  {
-  margin: 0 0 25px 0;  
+  margin: 0 0 25px 0;
 }
  .release_dates{
   font-weight: bold;

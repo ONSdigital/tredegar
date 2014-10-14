@@ -148,7 +148,7 @@ $( document ).ready(function() {
 	deconstruct()
 
 	/* Get the release.json file to populate the page: */
-	$.get( "http://localhost:8080/release.json", function( data ) {
+	$.get( "/release.json", function( data ) {
 		// Titles:
 		setTitle(data.title)
 
