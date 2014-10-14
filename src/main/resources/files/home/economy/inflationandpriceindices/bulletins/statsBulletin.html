@@ -30,8 +30,8 @@
 <!--[if gt IE 8]><!-->
    <!-- <link rel="stylesheet" href="/ui/css/main.css" /> -->
    <link href="/ui/css/main.css" rel="stylesheet" type="text/css">
-    
-	<link rel="stylesheet" href="/ui/css/jquery-ui.min.css">    
+
+	<link rel="stylesheet" href="/ui/css/jquery-ui.min.css">
     <!--<![endif]-->
 <!-- endbuild -->
 <script src="/ui/js/lib/modernizr.min.js"></script>
@@ -73,8 +73,8 @@ body {
   text-align: left;
   margin-top: 20px;
   margin-bottom: 20px;
-  border-bottom: 1px solid;   
-} 
+  border-bottom: 1px solid;
+}
 </style>
 <!---
 title: Theme Page Template (T2)
@@ -95,6 +95,7 @@ markup: false
             <div class="media__body">
                 <ul class="nav nav--inline-block nav--dark globaltop-nav">
                     <li> <a href="#">Release calendar</a> </li>
+                    <li> <a href="#">Methodology</a> </li>
                     <li> <a href="#">About</a> </li>
                 </ul>
             </div>
@@ -104,6 +105,9 @@ markup: false
 <nav class="ons-nav">
     <div class="wrapper">
         <ul class="nav nav--multi nav--block nav--primary flush--bottom" id="nav-primary">
+            <li class="nav--primary home">
+              <a href="/"><span class="icon-home icon--inline"></span><span class="icon-inline vertical-align-mid">Home</span></a>
+            </li>
             <li> <a href="#" class="nav__expandable js-expandable">Business, Industry, and Trade</a>
                 <ul class="nav--primary__sub js-expandable__content js-nav-hidden">
                     <li> <a href="#">Business</a> </li>
@@ -116,11 +120,11 @@ markup: false
                     <li> <a href="#">Tourism industry</a> </li>
                 </ul>
             </li>
-            <li class="nav--primary__active"> <a href="#" class="nav__expandable js-expandable">Economy</a>
+            <li class="nav--primary__active"> <a href="/home/economy/" class="nav__expandable js-expandable">Economy</a>
                 <ul class="nav--primary__sub js-expandable__content js-nav-hidden">
                     <li> <a href="#">Economic output and productivity</a> </li>
                     <li> <a href="#">Environmental account</a> </li>
-                    <li class="nav--primary__active"> <a href="#">Government, public sector, and taxes</a> </li>
+                    <li> <a href="#">Government, public sector, and taxes</a> </li>
                     <li> <a href="#">Gross Domestic Product (GDP)</a> </li>
                     <li> <a href="#">Gross Values Added (GVA)</a> </li>
                     <li> <a href="/home/economy/inflationandpriceindices">Inflation and price indices</a> </li>
@@ -166,25 +170,25 @@ markup: false
                 <form action="/searchresults.html" class="hero reduced_padding pad_right form-horizontal" _lpchecked="1">
                     <label for="homepageSearch" class="visuallyhidden">Search term:</label>
                     <input id="homepageSearch" type="text" class="input-med-large--flex--three-fifths  search_reduction" name="q" value="" placeholder="Search for keyword or time series id">
-                    
-                    
-                    <button type="submit" class=" btn btn--primary btn--small btn--form--large-icon input--lede-btn-icon align_baseline no_left_margin">
-                    
-                   
-                     
-                     
-                     
-                    
-                     
-                     
-                     
-                    
-                    
-                    <span class="icon icon-popup"> <span class="visuallyhidden">Search</span> </span> </button>
+
+
+                    <button type="submit" class=" btn btn--primary btn--small btn--form--large-icon input--lede-btn-icon align_middle no_left_margin">
+
+
+
+
+
+
+
+
+
+
+
+                    <span class="icon icon-search-1"> <span class="visuallyhidden">Search</span> </span> </button>
                 </form>
             </div>
             <div class="grid-col desktop-grid-one-half box--inline--flex">
-                <div class="link_head"> <a href="about:blank" class="link"> Browse Regional Statistics</a></div>
+                <div class="link_head"> <a href="#" class="link"> Browse Regional Statistics</a></div>
                 <div class="page-header__icons_new"> <img src="/ui/img/UK.png" alt="uk map" class="ukmap"> </div>
             </div>
         </div>
@@ -192,9 +196,9 @@ markup: false
 </div>
 <div class="wrapper panel--pad-small">
     <ol class="nav nav--heavy breadcrumb mini flush">
-        <li> <a href="/">Home</a> </li>
-        <li> <a href="/economy">Economy</a> </li>
-        <li class="nav__active"> <a href="/economy/inflationandpriceindices/">Inflation and Price Indices</a> </li>
+    <li><a href="/">Home</a></li>
+    <li><a href="home/economy">Economy</a></li>
+    <li class="nav__active"> <a href="/economy/inflationandpriceindices/">Inflation and Price Indices</a> </li>
     </ol>
     <!--<ol class="nav nav--inline-block nav--dark mini">
         <li> <a href="#">Local Government Finance</a> </li>
@@ -210,18 +214,17 @@ markup: false
         <h1 class="page-header__title flush--half--bottom">Producer Price Inflation, October 2014</h1>
         <div class="grid-wrap">
             <div class="grid-col desktop-grid-two-thirds"> <img src="/ui/img/nslogo.png" class="page-header-image">
-                <p><strong>Release date: 19 February 2014</strong> <span class="page-header-box-link"> <a href="about:blank"><strong>View latest version</strong></a></span> </p>
+                <p><strong>Release date: 19 February 2014</strong> <span class="page-header-box-link"> <a href="#"><strong>View latest version</strong></a></span> </p>
                 <p>Next release: 21 November 2014</p>
                 <p>Contact: <a href="mailto:jukesie@hotmail.com">Juksie</a></p>
             </div>
             <div class="grid-col desktop-grid-one-third">
-                <p> <span class="icon icon-down-open-big icon--blue"> <span class="visuallyhidden">Print</span> &nbsp;<a href="about:blank">Print summary</a></span> (1 page) </p>
-                <p> <span class="icon icon-down-open-big icon--blue"> <span class="visuallyhidden">Print full report</span> &nbsp;<a href="about:blank">Print full report</a></span> (37 Pages) </p>
-                <p> <span class="icon icon-info-circled icon--blue"> <span class="visuallyhidden">Download PDF</span> &nbsp;<a href="about:blank">Download PDF</a></span> (95.6kb) </p>
+                <p> <span class="icon icon-print icon--blue"> <span class="visuallyhidden">Print</span> &nbsp;<a href="#">Print summary</a></span> (1 page) </p>
+                <p> <span class="icon icon-print icon--blue"> <span class="visuallyhidden">Print full report</span> &nbsp;<a href="#">Print full report</a></span> (37 Pages) </p>
+                <p> <span class="icon icon-download icon--blue"> <span class="visuallyhidden">Download PDF</span> &nbsp;<a href="#">Download PDF</a></span> (95.6kb) </p>
             </div>
         </div>
-        <div class="page-header__icons"> <a href="#" class="link-complex"> <span class="icon icon-twitter icon--grey"> <span class="visuallyhidden">Share on Twitter</span> </span> </a> <a href="#" class="link-complex"> <span class="icon icon-facebook icon--grey"> <span class="visuallyhidden">Share on Facebook</span> </span> </a> <a href="#" class="link-complex"> <span class="icon icon-gplus icon--grey"> <span class="visuallyhidden">Share on Google Plus</span> </span> </a> </div>
-    </div>
+        <div class="page-header__icons"><a href="#" class="link-complex"><span class="icon icon-twitter icon--grey"><span class="visuallyhidden">Share on Twitter</span></span></a><a href="#" class="link-complex"><span class="icon icon-facebook icon--grey"><span class="visuallyhidden">Share on Facebook</span></span></a></div></div>
     <!-- /nav-panel -->
 </div>
 <div class="wrapper">
@@ -270,18 +273,34 @@ markup: false
                 <!-- /box__header -->
                 <div class="box__content">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non tellus
-                        nibh. Duis tristique risus sed urna fringilla, eu facilisis orci fringilla. Nullam iaculis
-                        libero tempor vehicula ultricies</p>
-                    <ul class="list--bullet">
-                        <li>The annual rate of output producer price inflation remained low in June, while
-                            input prices continued to fall.</li>
-                        <li>The output price index for goods produced by UK manufacturers (factory gate
-                            prices) rose 0.2% in the year to June, compared with a rise of 0.5% in the year
-                            to May.</li>
-                        <li>Factory gate prices fell 0.2% between May and June, compared with a fall of
-                            0.1% between April and May</li>
-                    </ul>
-                    <!-- /list--bullet -->
+                        nibh. Duis tristique risus sed urna fringilla, eu facilisis orci fringilla. Nullam iaculis libero tempor vehicula ultricies</p>
+                    <h3><span class="color-cyan">The Employment Rate</span> in Great Britain was:</h3>
+                    <div class="box--cyan--separated-left">
+                        <ul class="list--neutral">
+                            <li><span class="big">76.9%</span> <strong>Highest</strong> in South East</li>
+                            <li><span class="big">69.2%</span> <strong>Lowest</strong> in Wales</li>
+                        </ul>
+                        <!-- /box list -->
+                    </div>
+                    <!-- /box box--cyan--separated-left -->
+                    <h3><span class="color-cyan">The Unemployment Rate</span> in Great Britain was:</h3>
+                    <div class="box--cyan--separated-left">
+                        <ul class="list--neutral">
+                            <li><span class="big">9.6%</span> <strong>Highest</strong> in North East</li>
+                            <li><span class="big">4.4%</span> <strong>Lowest</strong> in South East</li>
+                        </ul>
+                         <!-- /box list -->
+                    </div>
+                    <!-- /box box--cyan--separated-left -->
+                    <h3><span class="color-cyan">The Inactivity Rate</span> in Great Britain was:</h3>
+                    <div class="box--cyan--separated-left">
+                        <ul class="list--neutral">
+                            <li><span class="big">25.7%</span> <strong>Highest</strong> in Wales</li>
+                            <li><span class="big">19.3%</span> <strong>Lowest</strong> in east of England</li>
+                        </ul>
+                    <!-- /box list -->
+                    </div>
+                    <!-- /box box--cyan--separated-left -->
                 </div>
                 <!-- /box__content -->
                 <footer class="box__footer"> </footer>
@@ -369,19 +388,39 @@ markup: false
             <!-- article__content -->
             <article class="box box--padded lifted sectioned">
                 <header class="box__header">
-                    <h3> Data in this bulletin </h3>
+                    <h3 class="headline"> Data in this bulletin </h3>
                 </header>
                 <!-- /box__header -->
                 <div class="box__content">
-                    <ul class="list--neutral">
-                        <li>Producer Price Index dataset <span class="lozenge" href="#"> Download <span class="icon icon-info-circled icon--button-inline"></span></span> </a></li>
-                        <li>Producer Price Index Revision
-                            Triangle <span class="lozenge" href="#"> Download <span class="icon icon-info-circled icon--button-inline"></span></span> </a></li>
-                    </ul>
-                    <!-- /list--bullet -->
+                <div class="grid-wrap">
+  <div class="grid-col grid-one-sixth">
+    <span class="icon icon-download icon--blue"> </span>
+  </div>
+  <div class="grid-col grid-five-sixths">
+   <a href="#">Producer Price Index dataset</a>
+  </div>
+</div>
+
+<div class="grid-wrap">
+  <div class="grid-col grid-one-sixth">
+    <span class="icon icon-download icon--blue"> </span>
+  </div>
+  <div class="grid-col grid-five-sixths">
+   <a href="#">Gross Domestic Product dataset</a>
+  </div>
+</div>
+
+
                 </div>
                 <!-- /box__content -->
-                <footer class="box__footer box__actions"> <span class="lozenge" href="#"> Download All <span class="icon icon-info-circled icon--button-inline"></span></span> </a> </a> </footer>
+                <footer class="box__footer box__actions">
+
+                <a href="#" class="btn btn--primary btn--small">Download all data
+  <span class="icon-download icon--button-inline"></span>
+</a>
+
+
+                </footer>
                 <!-- /box__actions -->
             </article>
             <!-- /article__content -->
@@ -390,7 +429,7 @@ markup: false
                 <header class="box__header">
                     <div class="grid-wrap ">
                         <div class="grid-col desktop-grid-one-sixth">
-                            <h2><span class="icon icon-phone icon--warm"></span></h2>
+                            <h2><span class="icon icon-info-circled icon--grey"></span></h2>
                         </div>
                         <div class="grid-col desktop-grid-five-sixths">
                             <h3>Contact details for this
@@ -408,6 +447,16 @@ markup: false
                     <!-- /list--bullet -->
                 </div>
                 <!-- /box__content -->
+
+                <footer class="box__footer box__actions">
+
+               <p class="right"> <a href="#" title="Opens in new window">View all contacts</a><span class="icon icon-book icon--blue"></span></p>
+
+
+                </footer>
+
+
+
             </article>
             <!-- /article__content -->
         </div>
@@ -501,5 +550,9 @@ markup: false
         </div>
     </div>
 </footer>
-</body>
+
+    <!-- Functionality to populate this page -->
+    <script src="/ui/js/markdown.js"></script>
+    <script src='/ui/js/bulletin.js'></script>
+  </body>
 </html>
