@@ -39,7 +39,7 @@ onsApp.filter('range', function() {
   return function(input, start, end) {
     var start = parseInt(start);
     var end = parseInt(end);
-    for (var i=start; i<=end; i++)
+    for (var i = start; i <= end; i++)
       input.push(i);
     return input;
   };
@@ -58,19 +58,14 @@ onsApp.directive('onsFooter', function() {
 onsApp.directive('onsHeader', function() {
   return {
     restrict: 'E',
-    templateUrl: 'templates/header.html'
+    templateUrl: 'templates/header.html',
+    scope: {
+      styleclass: '@'
+    }
+
   }
 
 })
-
-onsApp.directive('onsHomeHeader', function() {
-  return {
-    restrict: 'E',
-    templateUrl: 'templates/homeheader.html'
-  }
-
-})
-
 onsApp.directive('paginator', function() {
   return {
     restrict: 'E',

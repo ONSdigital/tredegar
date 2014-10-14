@@ -107,7 +107,7 @@ onsControllers.controller('PaginatorCtrl', ['$scope',
     $scope.currentPage = page ? (+page) : 1
 
     $scope.getStart = function() {
-      if($scope.pageCount < 10) {
+      if($scope.pageCount <= 10) {
         return 1
       }
 
@@ -118,7 +118,7 @@ onsControllers.controller('PaginatorCtrl', ['$scope',
 
     $scope.getEnd = function() {
       var max = $scope.pageCount
-      if($scope.pageCount < 10) {
+      if($scope.pageCount <= 10) {
         return  max
       }
 
