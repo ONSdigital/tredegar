@@ -12,7 +12,7 @@ function setTitle(title) {
  * Sets the h2
  */
 function setH2(h2) {
-	$( "h2" ).html( h2 )
+	$("#mainH2" ).html( h2 )
 }
 
 // Breadcrumb
@@ -44,12 +44,21 @@ var deconstruct = function() {
 	lede.text("Loading...")
 	more.text("Loading...")
 	
-    // Article section
+    // Bulletins and Articles section
     // Select the second one - the first is the TOC
-    sectionTemplate = $("article:eq(1)")
-    sections = sectionTemplate.parent()
-    sectionTemplate.detach()
-    sections.empty()	
+	var bulletinsAndArticlesSection = $("#bulletinsAndArticles")
+    bulletinsAndArticlesTemplate = $("article:eq(1)", bulletinsAndArticlesSection)
+    bulletinsAndArticles = bulletinsAndArticlesTemplate.parent()
+    bulletinsAndArticlesTemplate.detach()
+    bulletinsAndArticles.empty()
+    
+    // Datasets section
+    // Select the second one - the first is the TOC
+	var datasetsSection = $("#datasets")
+    datasetsTemplate = $("article:eq(1)", datasetsSection)
+    datasets = datasetsTemplate.parent()
+    datasetsTemplate.detach()
+    datasets.empty()	
 }
 
 
@@ -117,27 +126,59 @@ function setBulletinsAndArticles(data) {
 	}
 }
 
-function addBulletinOrArticle(section, index) {
-    var sectionItemTemplate = sectionTemplate.clone()
+function addBulletinOrArticle(bulletinOrArticle, index) {
+    var bulletinOrArticleTemplate = bulletinsAndArticlesTemplate.clone()
 
     // Header anchor and text - adding an id, which is more html5:
-    var header = $("h3", sectionItemTemplate)
+    var header = $("h3", bulletinOrArticleTemplate)
     header.attr("id", "Section"+index)
     var anchor = $("a", header)
     anchor.detach()
     anchor.attr("name", "Section"+index)
-    anchor.attr("href", section.url)
-    anchor.text(section.title)
+    anchor.attr("href", bulletinOrArticle.url)
+    anchor.text(bulletinOrArticle.title)
     header.prepend(anchor)
-
+    
     // Section body:
-    var content = $(".box__content", sectionItemTemplate)
-    var html = markdown.toHTML(section.markdown)
+    var content = $(".box__content", bulletinOrArticleTemplate)
+    var html = markdown.toHTML(bulletinOrArticle.markdown)
     content.html(html)
 
     // Attach
-    sections.append(sectionItemTemplate)
+    bulletinsAndArticles.append(bulletinOrArticleTemplate)
 }
+
+function setDatasets(data) {
+	var i = 1
+	while (data.datasets.length > 0) {
+		var dataset = data.datasets.shift()
+		addDataset(dataset, i)
+		i++
+	}
+}
+
+function addDataset(dataset, index) {
+    var datasetTemplate = datasetsTemplate.clone()
+
+    // Header anchor and text - adding an id, which is more html5:
+    var header = $("h3", datasetTemplate)
+    header.attr("id", "Section"+index)
+    var anchor = $("a", header)
+    anchor.detach()
+    anchor.attr("name", "Section"+index)
+    anchor.attr("href", dataset.url)
+    anchor.text(dataset.title)
+    header.prepend(anchor)
+    
+    // Section body:
+    var content = $(".box__content", datasetTemplate)
+    var html = markdown.toHTML(dataset.markdown)
+    content.html(html)
+
+    // Attach
+    datasets.append(datasetTemplate)
+}
+
 
 /*
  * Main function to populate the page.
@@ -171,7 +212,7 @@ $( document ).ready(function() {
 		setBulletinsAndArticles(data)
 		
 		// Datasets:
-//		setDatasets(data)		
+		setDatasets(data)		
 		
 		// Breadcrumb
 		buildBreadcrumb(data, breadcrumbItem)
