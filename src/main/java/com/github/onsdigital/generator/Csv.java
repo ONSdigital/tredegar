@@ -17,12 +17,12 @@ import au.com.bytecode.opencsv.CSVReader;
 
 import com.github.davidcarboni.ResourceUtils;
 import com.github.davidcarboni.restolino.json.Serialiser;
-import com.github.onsdigital.json.Bulletin;
 import com.github.onsdigital.json.Collection;
 import com.github.onsdigital.json.Data;
-import com.github.onsdigital.json.DataT1;
-import com.github.onsdigital.json.DataT2;
-import com.github.onsdigital.json.DataT3;
+import com.github.onsdigital.json.bulletin.Bulletin;
+import com.github.onsdigital.json.taxonomy.DataT1;
+import com.github.onsdigital.json.taxonomy.DataT2;
+import com.github.onsdigital.json.taxonomy.DataT3;
 
 public class Csv {
 

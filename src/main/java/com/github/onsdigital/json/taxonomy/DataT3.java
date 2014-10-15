@@ -1,8 +1,9 @@
-package com.github.onsdigital.json;
+package com.github.onsdigital.json.taxonomy;
 
 import java.util.ArrayList;
 
 import com.github.onsdigital.generator.Folder;
+import com.github.onsdigital.json.Data;
 
 public class DataT3 extends Data {
 
