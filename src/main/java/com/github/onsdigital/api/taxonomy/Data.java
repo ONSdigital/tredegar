@@ -81,6 +81,6 @@ public class Data {
 		// Lowercase
 		result = result.toLowerCase();
 
-		return "home/" + result;
+		return result;
 	}
 }
