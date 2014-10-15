@@ -121,7 +121,7 @@
 							</header>
 							<!-- /box__header -->
 							<div class="box__content">
-								<p>{{bulletinOrArticle.markdown}}</p>
+								<p>{{bulletinOrArticle.summary}}</p>
 								<p class="description mini"></p>
 								<p>
 									<span class="lozenge">{{bulletinOrArticle.type}}</span>
@@ -145,59 +145,38 @@
 	</section>
 
 	<section id="datasets" class="panel--large wrapper">
-		<div class="grid-wrap">
-			<div class="grid-col desktop-grid-one-third tablet-grid-full">
-				<article class="box">
-					<h2 class="beta">Datasets</h2>
-					<a href="#" class="action-link hide-med-down">See all datasets in this release &gt;</a>
-				</article>
-			</div>
-			<div ng-repeat="dataset in releaseData.datasets track by $index">
-			<!-- /box -->
-				<div class="grid-col desktop-grid-one-third tablet-grid-one-half">
+		<div class="wrapper">
+			<div class="grid-wrap">
+				<div class="grid-col desktop-grid-one-third tablet-grid-full">
 					<article class="box">
-						<header class="box__header">
-							<h3 class="gamma flush">
-								<a href={{dataset.url}}>{{dataset.title}}</a>
-							</h3>
-						</header>
-						<!-- /box__header -->
-						<div class="box__content">
-							<p>{{dataset.markdown}}</p>
-							<p class="description mini"></p>
-							<p>
-								<span class="lozenge">Dataset</span>
-							</p>
-	
-						</div>
-						<!-- /box__content -->
+						<h2 class="beta">Datasets</h2>
+						<a href="#" class="action-link hide-med-down">See all datasets in this release &gt;</a>
 					</article>
-					<!-- /box -->
 				</div>
-				<div class="grid-col desktop-grid-one-third tablet-grid-one-half">
-					<article class="box box--padded-vertical rem_pad_top">
-						<header class="box__header">
-							<h3 class="gamma flush">
-								<a href="#">Producer Price Index full dataset</a>
-							</h3>
-						</header>
-						<!-- /box__header -->
-						<div class="box__content">
-							<p>A comprehensive selection of data on input and output
-								indices. Contains producer price indices of materials and fuels
-								purchased and output of manufacturing industry by broad sector.</p>
-							<p class="description mini"></p>
-							<p>
-								<span class="lozenge">Expert analysis</span>
-							</p>
-	
-						</div>
-						<!-- /box__content -->
-					</article>
-					<!-- /box -->
-				</div>				
-			</div>
- 		</div>
+				<div ng-repeat="dataset in releaseData.datasets track by $index">
+				<!-- /box -->
+					<div ng-class-odd="'grid-col desktop-grid-one-third tablet-grid-one-half'"
+						 ng-class-even="'grid-col desktop-grid-one-third tablet-grid-one-half'">
+						<article class="box">
+							<header class="box__header">
+								<h3 class="gamma flush">
+									<a href={{dataset.url}}>{{dataset.title}}</a>
+								</h3>
+							</header>
+							<!-- /box__header -->
+							<div class="box__content">
+								<p>{{dataset.summary}}</p>
+								<p>
+									<span class="lozenge">Dataset</span>
+								</p>
+							</div>
+							<!-- /box__content -->
+						</article>
+						<!-- /box -->
+					</div>
+				</div>
+	 		</div>
+	 	</div>
 		<!-- /grid-wrap -->
 		<div class="box box--padded-top hide-large">
 			<p>
