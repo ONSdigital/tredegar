@@ -6,8 +6,8 @@ var onsControllers = angular.module('onsControllers', []);
 
 
 // Main controller that applies to all the pages
-onsControllers.controller('MainCtrl', ['$scope', '$http', '$location',
-  function($scope, $http, $location) {
+onsControllers.controller('MainCtrl', ['$scope', '$http', '$location', '$route',
+  function($scope, $http, $location, $route) {
     $scope.loadData = function(path, callback) {
       path = (path) ? ("/" + path) : ""
       path = $location.$$path + path + "?data"
@@ -52,6 +52,8 @@ onsControllers.controller('MainCtrl', ['$scope', '$http', '$location',
       $location.path('/searchresults')
       $location.search('q', searchTerm)
       $location.search('page', 1)
+      //Re-initializes controllers. Fixes searching on search results page searching the same term
+      $route.reload() 
 
     }
   }
