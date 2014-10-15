@@ -18,14 +18,12 @@ onsApp.config(['$routeProvider',
     when('/searchresults', {
       templateUrl: 'templates/searchresults.html'
     }).
-<<<<<<< HEAD
     when('/home/methodology', {
       templateUrl: 'templates/methodology.html',
       controller: 'methodology'
-=======
+    }).
     when('/release', {
       templateUrl: 'templates/release.html'
->>>>>>> 99c5e3aaa7e9d38b54d3e8f97ea1a49906d9a2b2
     }).
     otherwise({
       templateUrl: 'templates/template.html'

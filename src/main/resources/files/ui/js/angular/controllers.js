@@ -262,13 +262,8 @@ onsControllers.controller('T1Ctrl', ['$scope', 'Page',
 ]);
 
 
-<<<<<<< HEAD
-onsControllers.controller('T2Ctrl', ['$scope', '$http', '$location', 'Page',
-  function($scope, $http, $location, Page) {
-=======
 onsControllers.controller('T2Ctrl', ['$scope', 'Page',
   function($scope, Page) {
->>>>>>> 99c5e3aaa7e9d38b54d3e8f97ea1a49906d9a2b2
 
     Page.setTitle('Home')
 
@@ -333,33 +328,6 @@ onsControllers.controller('methodology', ['$scope', '$http', '$location', '$anch
 
 
 
-<<<<<<< HEAD
-// onsControllers.controller('methodology', function($scope, $http, $location, $anchorScroll){
-//     $http.get('/methodology.json').success(function(data) {
-//         $scope.methodology = data;
-//     });
-
-//     $scope.scrollTo = function(id) {
-//       $location.hash(id);
-//       $anchorScroll();
-//    }
-// });
-// $scope.gotoAnchor = function(x) {
-//             var newHash = 'anchor' + x;
-//             if ($location.hash() !== newHash) {
-//                 // set the $location.hash to `newHash` and
-//                 // $anchorScroll will automatically scroll to it
-//                 $location.hash('anchor' + x);
-//             } else {
-//                 // call $anchorScroll() explicitly,
-//                 // since $location.hash hasn't changed
-//                 $anchorScroll();
-//             }
-//         };
-=======
-]);
-
-
 onsControllers.controller('NavCtrl', ['$scope',
   function($scope) {
     var path =  $scope.getPath()
@@ -377,4 +345,3 @@ onsControllers.controller('NavCtrl', ['$scope',
     }
   }
 ])
->>>>>>> 99c5e3aaa7e9d38b54d3e8f97ea1a49906d9a2b2
