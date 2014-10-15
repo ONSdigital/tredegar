@@ -35,8 +35,8 @@ import org.w3c.dom.Element;
 import com.github.davidcarboni.restolino.framework.Endpoint;
 import com.github.davidcarboni.restolino.json.Serialiser;
 import com.github.onsdigital.configuration.Configuration;
-import com.github.onsdigital.json.Data;
-import com.github.onsdigital.json.TaxonomyNode;
+import com.github.onsdigital.json.FileItem;
+import com.github.onsdigital.json.taxonomy.TaxonomyNode;
 
 /**
  * Sitemap endpoint that reflects the taxonomy structure:
@@ -142,7 +142,7 @@ public class Sitemap {
 
 	private static void addPath(Path path, Document document,
 			Element rootElement, double priority) throws IOException {
-		Data data = getDataJson(path);
+		TaxonomyNode data = getDataJson(path);
 		if (data != null) {
 			try {
 				URI uri = toUri(data);
@@ -154,22 +154,22 @@ public class Sitemap {
 		}
 	}
 
-	private static Data getDataJson(Path path) throws IOException {
-		Data result = null;
+	private static TaxonomyNode getDataJson(Path path) throws IOException {
+		TaxonomyNode result = null;
 
 		Path dataJson = path.resolve("data.json");
 		if (Files.exists(dataJson)) {
 			try (InputStream input = Files.newInputStream(dataJson)) {
-				result = Serialiser.deserialise(input, Data.class);
+				result = Serialiser.deserialise(input, TaxonomyNode.class);
 			}
 		}
 
 		return result;
 	}
 
-	private static URI toUri(Data data) throws URISyntaxException {
+	private static URI toUri(TaxonomyNode data) throws URISyntaxException {
 		StringBuilder urlPath = new StringBuilder();
-		for (TaxonomyNode segment : data.breadcrumb)
+		for (FileItem segment : data.breadcrumb)
 			urlPath.append("/" + segment.fileName);
 		if (!StringUtils.equals("/", data.fileName))
 			urlPath.append("/" + data.fileName);
