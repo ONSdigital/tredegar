@@ -124,6 +124,18 @@ onsApp.directive('onsContent', function() {
   }
 })
 
+onsApp.directive('markdown', function () {
+    var converter = new Showdown.converter();
+    return {
+        restrict: 'A',
+        // transclude: true,
+        link: function (scope, element, attrs) {
+            var htmlText = converter.makeHtml(element.text());
+            element.html(htmlText);
+        }
+    };
+});
+
 
 onsApp.factory('Page', function() {
   var title = 'Office Of National Statistics';
@@ -138,12 +150,12 @@ onsApp.factory('Page', function() {
 });
 
 onsApp.service('anchorSmoothScroll', function(){
-    
+
     this.scrollTo = function(eID) {
 
-        // This scrolling function 
+        // This scrolling function
         // is from http://www.itnewb.com/tutorial/Creating-the-Smooth-Scroll-Effect-with-JavaScript
-        
+
         var startY = currentYPosition();
         var stopY = elmYPosition(eID);
         var distance = stopY > startY ? stopY - startY : startY - stopY;
@@ -165,7 +177,7 @@ onsApp.service('anchorSmoothScroll', function(){
             setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
             leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
         }
-        
+
         function currentYPosition() {
             // Firefox, Chrome, Opera, Safari
             if (self.pageYOffset) return self.pageYOffset;
@@ -176,7 +188,7 @@ onsApp.service('anchorSmoothScroll', function(){
             if (document.body.scrollTop) return document.body.scrollTop;
             return 0;
         }
-        
+
         function elmYPosition(eID) {
             var elm = document.getElementById(eID);
             var y = elm.offsetTop;
@@ -188,7 +200,7 @@ onsApp.service('anchorSmoothScroll', function(){
         }
 
     };
-    
+
 });
 
 
