@@ -69,14 +69,14 @@
                 <!-- /box__content -->
 
         <!-- Responsive Table (if any) -->
-                <div ng-if="section.table" class="wrapper panel--bottom-mar">Table
+                <div ng-if="section.table" class="wrapper panel--bottom-mar">
                     <div class="grid-wrap">
                         <div class="grid-col desktop-grid-two-thirds tablet-grid-two-thirds">
                             <table id="myTable" class="tablesorter resp-table">
                                 <thead>
-                                    <tr ng-repeat="cell in section.table">
-                                        <th>
-                                        {{cell.title}}
+                                    <tr>
+                                        <th ng-repeat="title in section.table.col">
+                                        {{title}}
                                         <!-- Title One -->
                                         </th>
                                       <!--   <th>First Name</th>
@@ -87,8 +87,8 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td >{{cells.data}}</td>
+                                    <tr ng-repeat="cell in section.table.row">
+                                        <td ng-repeat="data in cell.users" data-th="{{section.table.col[$index%section.table.col.length]}}">{{data}}</td>
                                     </tr>
                                     <!-- <tr>
                                         <td data-th="Last Name">Bach</td>
@@ -127,7 +127,7 @@
         </div>
 
         <div ng-if="sidebar" >
-            <div ng-include="sidebarUrl" ></div>                
+            <div ng-include="sidebarUrl" ></div>
         </div>
     </div>
 </div>
