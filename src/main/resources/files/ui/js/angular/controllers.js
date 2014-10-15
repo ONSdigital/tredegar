@@ -6,8 +6,8 @@ var onsControllers = angular.module('onsControllers', []);
 
 
 // Main controller that applies to all the pages
-onsControllers.controller('MainCtrl', ['$scope', '$http', '$location', '$route',
-  function($scope, $http, $location, $route) {
+onsControllers.controller('MainCtrl', ['$scope', '$http', '$location', '$route', 'anchorSmoothScroll',
+  function($scope, $http, $location, $route, anchorSmoothScroll) {
     $scope.getData = function(path, callback) {
       console.log("Loading data at " + path)
       $http.get(path).success(callback)
@@ -43,6 +43,11 @@ onsControllers.controller('MainCtrl', ['$scope', '$http', '$location', '$route',
       var parenPath = path.substring(0, lastIndex)
       return parenPath
 
+    }
+
+    $scope.scrollTo = function(id) {
+      $location.hash(id)
+      anchorSmoothScroll.scrollTo(id)
     }
 
     $scope.search = function(searchTerm) {
@@ -391,16 +396,11 @@ onsControllers.controller('T2Ctrl', ['$scope', 'Page',
   }
 ]);
 
-onsControllers.controller('ContentCtrl', ['$scope', '$location', 'anchorSmoothScroll',
-  function($scope, $location, anchorSmoothScroll) {
+onsControllers.controller('ContentCtrl', ['$scope', '$location',
+  function($scope, $location) {
     $scope.getData("/" + $scope.getPage() + ".json", function(data) {
       $scope.content = data
     })
-
-    $scope.scrollTo = function(id) {
-      $location.hash(id)
-      anchorSmoothScroll.scrollTo(id)
-    }
 
     $scope.scroll = function() {
       anchorSmoothScroll.scrollTo($location.hash())
