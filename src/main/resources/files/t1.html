@@ -23,14 +23,14 @@
     <!-- build:css /ui/css/main.css-->
     <!--[if gt IE 8]><!-->
     <link rel="stylesheet" href="../ui/css/main.css" />
-    <link rel="stylesheet" href="/ui/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
     <!--<![endif]-->
     <!-- endbuild -->
-    <script type="text/javascript" src="../ui/js/lib/modernizr.min.js" defer></script>
-    <script type="text/javascript" src="../ui/js/lib/jquery-1.11.0.min.js" defer></script>
-    <script type="text/javascript" src="/ui/js/lib/jquery-ui.min.js" defer></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" defer></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js" defer></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js" defer></script>
     <!--[if (!IE)|(gt IE 8)]>><!-->
-    <script type="text/javascript" src="../ui/js/lib/jquery.tooltipster.js" defer></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/tooltipster/3.0.5/js/jquery.tooltipster.min.js" defer></script>
     <!--<![endif]-->
     <script type="text/javascript" src="../ui/js/app/app.js" defer></script>
     <script type="text/javascript" src="../ui/js/app/content-reveal.js" defer></script>
@@ -41,7 +41,7 @@
     <script type="text/javascript" src="/ui/js/custom-autocomplete.js" defer></script>
     
     <!-- build:js /ui/js/ons-alpha.js-->
-    <script type="text/javascript" src="../ui/js/lib/d3.v3.min.js" defer></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.12/d3.min.js" defer></script>
     <!-- endbuild -->
 
     <!-- Functionality to populate this page -->
@@ -51,15 +51,6 @@
 
     body {
       padding: 0;
-    }
-    .fake-section {
-      width: 100%;
-      background-color: #666;
-      padding: 60px;
-    }
-    .fake-section h1 {
-      text-align: center;
-      color: #fff;
     }
     @media screen and (max-width: 559px) {
       #homepage-search {
@@ -711,7 +702,7 @@ markup: false
                     <div class="list--table__item__body__three-fifths">
                       <h2 class="delta flush--half--bottom">
                         <a href="#" class="no_underline">Retail Sales - March 2014</a>
-                        <span tabindex="0" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin tooltipstered"></span>
+                        <span tabindex="0" class="tooltips icon-info-circled icon--warm icon--inline icon--left-margin tooltipstered"><span>I'll be a tooltip when I grow up</span></span>
                       </h2>
                     </div>
                     <div class="list--table__item__body__two-fifths">
@@ -738,7 +729,7 @@ markup: false
                     <div class="list--table__item__body__three-fifths">
                       <h2 class="delta flush--half--bottom">
                         <a href="#" class="no_underline">Index of Private Housing Rental Prices - January to March 2014 results</a>
-                        <span tabindex="0" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin tooltipstered"></span>
+                        
                       </h2>
                     </div>
                     <div class="list--table__item__body__two-fifths">
@@ -765,7 +756,7 @@ markup: false
                     <div class="list--table__item__body__three-fifths">
                       <h2 class="delta flush--half--bottom">
                         <a href="#" class="no_underline">Index of Services - February 2014</a>
-                        <span tabindex="0" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin tooltipstered"></span>
+                        <span tabindex="0" class="tooltips icon-info-circled icon--warm icon--inline icon--left-margin tooltipstered"><span>I'll be a tooltip when I grow up</span></span>
                       </h2>
                     </div>
                     <div class="list--table__item__body__two-fifths">
@@ -792,7 +783,7 @@ markup: false
                     <div class="list--table__item__body__three-fifths">
                       <h2 class="delta flush--half--bottom">
                         <a href="#" class="no_underline">Gross Domestic Product: Preliminary Estimate - Q1 2014</a>
-                        <span tabindex="0" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin tooltipstered"></span>
+                       <!--<span tabindex="0" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin tooltipstered"></span>!-->
                       </h2>
                     </div>
                     <div class="list--table__item__body__two-fifths">
@@ -819,7 +810,7 @@ markup: false
                     <div class="list--table__item__body__three-fifths">
                       <h2 class="delta flush--half--bottom">
                         <a href="#" class="no_underline">GDP and the Labour Market - Q1 2014, April GDP update</a>
-                        <span tabindex="0" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin tooltipstered"></span>
+                        <span tabindex="0" class="tooltips icon-info-circled icon--warm icon--inline icon--left-margin tooltipstered"><span>I'll be a tooltip when I grow up</span></span>
                       </h2>
                     </div>
                     <div class="list--table__item__body__two-fifths">
@@ -846,7 +837,7 @@ markup: false
                     <div class="list--table__item__body__three-fifths">
                       <h2 class="delta flush--half--bottom">
                         <a href="#" class="no_underline" >National Accounts Sector Classification - Classification update, April 2014</a>
-                        <span tabindex="0" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin tooltipstered"></span>
+                       <!-- <span tabindex="0" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin tooltipstered"></span>!-->
                       </h2>
                     </div>
                     <div class="list--table__item__body__two-fifths">
@@ -882,7 +873,7 @@ markup: false
                     <div class="list--table__item__body__three-fifths">
                       <h2 class="delta flush--half--bottom">
                         <a href="#" class="no_underline">National Accounts Sector Classification - Classification update, July 2014</a>
-                        <span tabindex="0" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin tooltipstered"></span>
+                        <span tabindex="0" class="tooltips icon-info-circled icon--warm icon--inline icon--left-margin tooltipstered"><span>I'll be a tooltip when I grow up</span></span>
                       </h2>
                     </div>
                     <div class="list--table__item__body__two-fifths">
@@ -909,7 +900,7 @@ markup: false
                     <div class="list--table__item__body__three-fifths">
                       <h2 class="delta flush--half--bottom">
                         <a href="#" class="no_underline">National Accounts Sector Classification - Classification update, Oct 2014. </a>
-                        <span tabindex="0" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin tooltipstered"></span>
+                        <!--<span tabindex="0" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin tooltipstered"></span>!-->
                       </h2>
                     </div>
                     <div class="list--table__item__body__two-fifths">

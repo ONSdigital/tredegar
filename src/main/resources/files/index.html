@@ -25,11 +25,11 @@
    <!-- <link rel="stylesheet" href="ui/css/main.css" /> -->
    <link href="ui/css/main.css" rel="stylesheet" type="text/css">
     
-  <link rel="stylesheet" href="ui/css/jquery-ui.min.css">    
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/css/jquery-ui.min.css">    
     <!--<![endif]-->
 <!-- endbuild -->
  <!--[if (!IE)|(gt IE 8)]>><!-->
-<!-- <script type="text/javascript" src="ui/js/lib/jquery.tooltipster.js" defer></script> -->
+<!-- <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/tooltipster/3.0.5/js/jquery.tooltipster.min.js" defer></script> -->
 <!--<![endif]-->
 
  <!--[if lte IE 8]>
@@ -45,15 +45,19 @@
       </script>
     <![endif]-->
 
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js" defer></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-route.min.js" defer></script>
+<--!
+<script type="text/javascript" src="ui/js/lib/angular.js" defer></script>
+<script type="text/javascript" src="ui/js/lib/angular-route.min.js" defer></script>
+-->
+<!-- <script type="text/javascript" src="ui/js/lib/angular.min.js" defer></script> -->
+<!-- <script type="text/javascript" src="https://code.angularjs.org/1.2.26/angular-route.js" defer></sript> -->
 <!-- 
 <script type="text/javascript" src="ui/js/lib/modernizr.min.js" defer></script>
 <script type="text/javascript" src="ui/js/lib/jquery-1.11.0.min.js" defer></script>
 <script type="text/javascript" src="ui/js/lib/jquery-ui.min.js" defer></script>
--->
-<script type="text/javascript" src="ui/js/lib/angular.js" defer></script>
-<script type="text/javascript" src="ui/js/lib/angular-route.min.js" defer></script>
-<!-- <script type="text/javascript" src="ui/js/lib/angular.min.js" defer></script> -->
-<!-- <script type="text/javascript" src="https://code.angularjs.org/1.2.26/angular-route.js" defer></sript> -->
+ -->
 
 <script type="text/javascript" src="ui/js/angular/app.js" defer></script>
 <script type="text/javascript" src="ui/js/angular/controllers.js" defer></script>
@@ -66,15 +70,6 @@
 <style>
 body {
   padding: 0;
-}
-.fake-section {
-  width: 100%;
-  background-color: #666;
-  padding: 60px;
-}
-.fake-section h1 {
-  text-align: center;
-  color: #fff;
 }
  @media screen and (max-width: 559px) {
  #homepage-search {
