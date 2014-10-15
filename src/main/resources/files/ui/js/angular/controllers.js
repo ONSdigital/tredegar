@@ -149,7 +149,6 @@ onsControllers.controller('T1Ctrl', ['$scope', '$http', '$location', 'Page',
 ]);
 
 
-
 onsControllers.controller('T2Ctrl', ['$scope', '$http', '$location', 'Page',
   function($scope, $http, $location, Page) {
 
@@ -200,5 +199,41 @@ onsControllers.controller('T2Ctrl', ['$scope', '$http', '$location', 'Page',
       return result;
     }
   }
-
 ]);
+
+onsControllers.controller('methodology', ['$scope', '$http', '$location', '$anchorScroll',
+    function ($scope, $http, $location, $anchorScroll) {
+        $http.get('/methodology.json').success(function(data) {
+            $scope.methodology = data;
+        });
+        $scope.scrollTo = function(id) {
+            $location.hash(id);
+            $anchorScroll();
+        }
+    }
+]);
+
+
+
+// onsControllers.controller('methodology', function($scope, $http, $location, $anchorScroll){
+//     $http.get('/methodology.json').success(function(data) {
+//         $scope.methodology = data;
+//     });
+
+//     $scope.scrollTo = function(id) {
+//       $location.hash(id);
+//       $anchorScroll();
+//    }
+// });
+// $scope.gotoAnchor = function(x) {
+//             var newHash = 'anchor' + x;
+//             if ($location.hash() !== newHash) {
+//                 // set the $location.hash to `newHash` and
+//                 // $anchorScroll will automatically scroll to it
+//                 $location.hash('anchor' + x);
+//             } else {
+//                 // call $anchorScroll() explicitly,
+//                 // since $location.hash hasn't changed
+//                 $anchorScroll();
+//             }
+//         };
