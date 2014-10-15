@@ -1,17 +1,14 @@
-<span ng-controller="TemplateCtrl" >
-
-	<ons-header></ons-header>
-     
-      <span ng-if="data.level == 't2'">
-              <span ng-include="'templates/t2.html'"></span>        
-      </span>
-      <span ng-if="data.level == 't1'">
-              <span ng-include="'templates/t1.html'"></span>    
-      </span>
-      <span ng-if="data.level == 't3'">
-              <span ng-include="'templates/t3.html'"></span>        
-      </span>
+<ons-header></ons-header>
+   
+  <span ng-if="data.level == 't2'">
+          <span ng-include="'templates/t2.html'"></span>        
+  </span>
+  <span ng-if="data.level == 't1'">
+          <span ng-include="'templates/t1.html'"></span>    
+  </span>
+  <span ng-if="data.level == 't3'">
+          <span ng-include="'templates/t3.html'"></span>        
+  </span>
  
-</span>
 
 <ons-footer></ons-footer>

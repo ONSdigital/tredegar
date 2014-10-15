@@ -8,6 +8,7 @@ var onsControllers = angular.module('onsControllers', []);
 // Main controller that applies to all the pages
 onsControllers.controller('MainCtrl', ['$scope', '$http', '$location', '$route',
   function($scope, $http, $location, $route) {
+
     $scope.loadData = function(path, callback) {
       path = (path) ? ("/" + path) : ""
       path = $location.$$path + path + "?data"
@@ -35,6 +36,13 @@ onsControllers.controller('MainCtrl', ['$scope', '$http', '$location', '$route',
 
     $scope.getPath = function() {    
       return $location.$$path
+    }
+
+    $scope.getPage = function() {    
+      var path =  $location.$$path
+      var lastIndex = path.lastIndexOf('/')
+      var parenPath = path.substring(lastIndex + 1, path.length)
+      return parenPath
     }
 
     $scope.getParentPath = function() {    
@@ -70,6 +78,35 @@ onsControllers.controller('TabsCtrl', ['$scope',
     $scope.isSelected = function(tabNumber) {
       return $scope.activeTab === tabNumber
     }
+  }
+])
+
+//Article Controller
+onsControllers.controller('ArticleCtrl', ['$scope',
+  function($scope) {
+    $scope.header = "Expert Analysis"
+    $scope.contentType = "article"
+    $scope.sidebar=true
+    $scope.sidebarUrl = "templates/contentsidebar.html"
+  }
+])
+
+//Methodology Controller
+onsControllers.controller('MethodologyCtrl', ['$scope',
+  function($scope) {
+    $scope.header = "Methodology"
+    $scope.contentType = "methodology"
+    $scope.sidebar=false
+  }
+])
+
+//Bulletin Controller
+onsControllers.controller('BulletinCtrl', ['$scope',
+  function($scope) {
+    $scope.header = "Statistical Bulletin"
+    $scope.contentType = "bulletin"
+    $scope.sidebar=true
+    $scope.sidebarUrl = "templates/contentsidebar.html"
   }
 ])
 
@@ -314,15 +351,21 @@ onsControllers.controller('T2Ctrl', ['$scope', 'Page',
   }
 ]);
 
-onsControllers.controller('methodology', ['$scope', '$http', '$location', '$anchorScroll',
-    function ($scope, $http, $location, $anchorScroll) {
-        $http.get('/methodology.json').success(function(data) {
-            $scope.methodology = data;
-        });
+onsControllers.controller('ContentCtrl', ['$scope',  '$location', 'anchorSmoothScroll',
+    function ($scope, $location, anchorSmoothScroll) {
+        $scope.getJSON("/" + $scope.getPage() + ".json", function(data) {
+          $scope.content = data
+        } )
+
         $scope.scrollTo = function(id) {
-            $location.hash(id);
-            $anchorScroll();
+            $location.hash(id)
+            anchorSmoothScroll.scrollTo(id)
         }
+
+        $scope.scroll = function() {
+            anchorSmoothScroll.scrollTo($location.hash())
+        }
+
     }
 ]);
 
