@@ -27,7 +27,8 @@ public class CollectionSearchResultTest {
 		Map<String, String> bulletin = results.get(0);
 		assertEquals("title should be available from map", "Inflation and Price Indices", bulletin.get("title"));
 		assertEquals("release date should be available from map", "19 February 2014", bulletin.get("releaseDate"));
-		assertEquals("url should be available from map", "/", bulletin.get("url"));
+		// TODO: this needs looking at - not currently working right
+		assertEquals("url should be available from map", "/taxonomy/economy/inflationandpriceindices/bulletins/", bulletin.get("url"));
 		assertEquals("only one item in list and on page 1, so should be the latest", "latest", bulletin.get("indexNumber"));
 	}
 
@@ -57,7 +58,7 @@ public class CollectionSearchResultTest {
 	private List<File> setUpFiles(String fileName) {
 		File file;
 		if (StringUtils.isEmpty(fileName)) {
-			file = new File("target/classes/files/bulletin.json");
+			file = new File("target/taxonomy/economy/inflationandpriceindices/bulletins/bulletin.json");
 		} else {
 			file = new File(fileName);
 		}
