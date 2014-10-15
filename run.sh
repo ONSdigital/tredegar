@@ -20,7 +20,7 @@ export BONSAI_TRANSPORT_PORT=9300
 
 
 #External Taxonomy
-#export TAXONOMY_DIR=target/classes/files
+#export TAXONOMY_DIR=target/taxonomy
 
 #Generate taxonomy
 mvn clean compile dependency:copy-dependencies && \

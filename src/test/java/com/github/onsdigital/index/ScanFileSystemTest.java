@@ -16,7 +16,7 @@ import org.junit.Test;
  * Exercises scanning the file system
  */
 public class ScanFileSystemTest {
-	private String rootSearch = "target/classes/files/taxonomy";
+	private String rootSearch = "target/taxonomy";
 
 	@Test
 	public void testGetFileNames() throws IOException {
@@ -33,10 +33,10 @@ public class ScanFileSystemTest {
 							|| fileName.endsWith(".xlsx")
 							|| fileName.endsWith(".csv") || fileName
 							.endsWith(".json")));
-			assertTrue("File path must contain target/classes/files",
-					(fileName.contains("target/classes/files")));
+			assertTrue("File path must contain target",
+					(fileName.contains("target")));
 			assertTrue("File path must be under taxonomy folder",
-					(fileName.contains("target/classes/files/taxonomy/")));
+					(fileName.contains("target/taxonomy/")));
 
 		}
 	}

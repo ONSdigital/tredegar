@@ -4,7 +4,7 @@ import org.apache.commons.lang3.StringUtils;
 
 public class Configuration {
 
-	private static final String DEFAULT_TAXONOMY_ROOT = "target/classes/files/taxonomy";
+	private static final String DEFAULT_TAXONOMY_ROOT = "target/taxonomy";
 
 	public static String getTaxonomyPath() {
 		String path = System.getenv("TAXONOMY_DIR");
