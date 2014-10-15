@@ -1,0 +1,138 @@
+<nav class="ons-nav" ng-controller="NavCtrl">
+  <div class="wrapper">
+    <ul class="nav nav--multi nav--block nav--primary flush--bottom" id="nav-primary">
+      <li class="nav--primary home" >
+              <a href="#/"><span class="icon-home icon--inline"></span><span class="icon-inline vertical-align-mid">Home</span></a>
+      </li>
+      <li ng-class="isCurrentPage('businessindustryandtrade') ? 'nav--primary__active' : ''"  >
+        <a href="#/home/businessindustryandtrade" class="nav__expandable js-expandable arrowunderline" ng-class="isExpanded('businessindustryandtrade') ? 'js-expandable-active' : ''" ng-click="toggle('businessindustryandtrade')" >Business, Industry, and Trade</a>
+        <ul class="nav--primary__sub js-expandable__content" ng-class="isExpanded('businessindustryandtrade') ? '' : 'js-nav-hidden'" >
+          <li>
+            <a href="#/home/businessindustryandtrade/business">Business</a>
+          </li>
+          <li>
+            <a href="#/home/businessindustryandtrade/changestobusiness">Changes to business</a>
+          </li>
+          <li>
+            <a href="#/home/businessindustryandtrade/constructionindustry">Construction and industry</a>
+          </li>
+          <li>
+            <a href="#/home/businessindustryandtrade/itandinternetindustry">IT and internet industry</a>
+          </li>
+          <li>
+            <a href="#/home/businessindustryandtrade/internationaltrade">International trade</a>
+          </li>
+          <li>
+            <a href="#/home/businessindustryandtrade/manufacturingandproductionindustry">Manufacturing and production</a>
+          </li>
+          <li>
+            <a href="#/home/businessindustryandtrade/retailindustry">Retail industry</a>
+          </li>
+          <li>
+            <a href="#/home/businessindustryandtrade/tourismindustry">Tourism industry</a>
+          </li>
+        </ul>
+      </li>
+      <li ng-class="isCurrentPage('economy') ? 'nav--primary__active' : ''" >
+        <a href="#/home/economy" ng-click="toggle('economy')" class="nav__expandable js-expandable arrowunderline" ng-class="isExpanded('economy') ? 'js-expandable-active' : ''">Economy</a>
+        <ul class="nav--primary__sub js-expandable__content" ng-class="isExpanded('economy') ? '' : 'js-nav-hidden'" >
+          <li>
+            <a href="#/home/economy/economicoutputandproductivity">Economic output and productivity</a>
+          </li>
+          <li>
+            <a href="#/home/economy/environmentalaccounts">Environmental account</a>
+          </li>
+          <li>
+            <a href="#/home/economy/governmentpublicsectorandtaxes">Government, public sector, and taxes</a>
+          </li>
+          <li>
+            <a href="#/home/economy/grossdomesticproductgdp">Gross Domestic Product (GDP)</a>
+          </li>
+          <li>
+            <a href="#/home/economy/grossvalueaddedgva">Gross Values Added (GVA)</a>
+          </li>
+          <li>
+            <a href="#/home/economy/inflationandpriceindices">Inflation and price indices</a>
+          </li>
+          <li>
+            <a href="#/home/economy/investmentspensionsandtrusts">Investment and pension trust</a>
+          </li>
+          <li>
+            <a href="#/home/economy/nationalaccounts">National accounts</a>
+          </li>
+          <li>
+            <a href="#/home/economy/regionalaccounts">Regional accounts</a>
+          </li>
+        </ul>
+      </li>
+      <li ng-class="isCurrentPage('employmentandlabourmarket') ? 'nav--primary__active' : ''"  >
+        <a href="#/home/employmentandlabourmarket" ng-click="toggle('employmentandlabourmarket')" class="nav__expandable js-expandable arrowunderline" ng-class="isExpanded('employmentandlabourmarket') ? 'js-expandable-active' : ''">Employment and Labour Market</a>
+        <ul class="nav--primary__sub js-expandable__content " ng-class="isExpanded('employmentandlabourmarket') ? '' : 'js-nav-hidden'"  >
+          <li>
+            <a href="#/home/employmentandlabourmarket/peopleinwork">People in work</a>
+          </li>
+          <li>
+            <a href="#/home/employmentandlabourmarket/peoplenotinwork">People not in work</a>
+          </li>
+          <li>
+            <a href="#/home/employmentandlabourmarket/publicsectorpersonnel">Public sector personnel</a>
+          </li>
+        </ul>
+      </li>
+      <li ng-class="isExpanded('peoplepopulationandcommunity') ? 'nav--primary__active' : ''"  >
+        <a href="#/home/peoplepopulationandcommunity" ng-click="toggle('peoplepopulationandcommunity')" class="nav__expandable js-expandable arrowunderline" ng-class="isExpanded('peoplepopulationandcommunity') ? 'js-expandable-active' : ''" >People, Population, and Community</a>
+        <ul class="nav--primary__sub js-expandable__content" ng-class="isCurrentPage('peoplepopulationandcommunity') ? '' : 'js-nav-hidden'"  >
+          <li>
+            <a href="#/home/peoplepopulationandcommunity/birthsdeathsandmarriages">Births, deaths, and marriages</a>
+          </li>
+          <li>
+            <a href="#/home/peoplepopulationandcommunity/community">Community</a>
+          </li>
+          <li>
+            <a href="#/home/peoplepopulationandcommunity/educationandchildcare">Education and childcare</a>
+          </li>
+          <li>
+            <a href="#/home/peoplepopulationandcommunity/crimeandjustice">Crime and justice</a>
+          </li>
+          <li>
+            <a href="#/home/peoplepopulationandcommunity/householdcharacteristics">Household characteristics</a>
+          </li>
+          <li>
+            <a href="#/home/peoplepopulationandcommunity/wellbeing">Well-being</a>
+          </li>
+          <li>
+            <a href="#/home/peoplepopulationandcommunity/healthandsocialcare">Health and social care</a>
+          </li>
+          <li>
+            <a href="#/home/peoplepopulationandcommunity/elections">Elections</a>
+          </li>
+          <li>
+            <a href="#/home/peoplepopulationandcommunity/personalandhouseholdfinances">Personal and household finances</a>
+          </li>
+          <li>
+            <a href="#/home/peoplepopulationandcommunity/populationandmigration">Population and migration</a>
+          </li>
+          <li>
+            <a href="#/home/peoplepopulationandcommunity/culturalidentity">Cultural identity</a>
+          </li>
+          <li>
+            <a href="#/home/peoplepopulationandcommunity/housing">Housing</a>
+          </li>
+          <li>
+            <a href="#/home/peoplepopulationandcommunity/leisureandtourism">Leisure and tourism</a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav--primary__highlight">
+        <a href="#">
+          <span class="icon-users icon--inline"></span>Respondents</a>
+      </li>
+      <li class="nav--primary__secondary-content">
+        <a href="#">Release calendar</a>
+      </li>
+      <li class="nav--primary__secondary-content">
+        <a href="#">About</a>
+      </li>
+    </ul>
+  </div>
+</nav>

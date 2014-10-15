@@ -8,17 +8,9 @@ var onsControllers = angular.module('onsControllers', []);
 // Main controller that applies to all the pages
 onsControllers.controller('MainCtrl', ['$scope', '$http', '$location', '$route',
   function($scope, $http, $location, $route) {
-
-    $scope.loadData = function(path, callback) {
-      path = (path) ? ("/" + path) : ""
-      path = $location.$$path + path + "?data"
+    $scope.getData = function(path, callback) {
       console.log("Loading data at " + path)
       $http.get(path).success(callback)
-    }
-
-    $scope.getJSON = function(fullPath, callback) {
-      console.log("Loading json at " + fullPath)
-      $http.get(fullPath).success(callback)
     }
 
     $scope.getUrlParam = function(paramName) {
@@ -34,19 +26,19 @@ onsControllers.controller('MainCtrl', ['$scope', '$http', '$location', '$route',
       }
     }
 
-    $scope.getPath = function() {    
+    $scope.getPath = function() {
       return $location.$$path
     }
 
-    $scope.getPage = function() {    
-      var path =  $location.$$path
+    $scope.getPage = function() {
+      var path = $location.$$path
       var lastIndex = path.lastIndexOf('/')
       var parenPath = path.substring(lastIndex + 1, path.length)
       return parenPath
     }
 
-    $scope.getParentPath = function() {    
-      var path =  $location.$$path
+    $scope.getParentPath = function() {
+      var path = $location.$$path
       var lastIndex = path.lastIndexOf('/')
       var parenPath = path.substring(0, lastIndex)
       return parenPath
@@ -60,7 +52,7 @@ onsControllers.controller('MainCtrl', ['$scope', '$http', '$location', '$route',
       $location.path('/searchresults')
       $location.search('q', searchTerm)
       //Re-initializes controllers. Fixes searching on search results page searching the same term
-      $route.reload() 
+      $route.reload()
 
     }
   }
@@ -87,7 +79,7 @@ onsControllers.controller('ArticleCtrl', ['$scope',
   function($scope) {
     $scope.header = "Expert Analysis"
     $scope.contentType = "article"
-    $scope.sidebar=true
+    $scope.sidebar = true
     $scope.sidebarUrl = "templates/contentsidebar.html"
   }
 ])
@@ -97,7 +89,7 @@ onsControllers.controller('MethodologyCtrl', ['$scope',
   function($scope) {
     $scope.header = "Methodology"
     $scope.contentType = "methodology"
-    $scope.sidebar=false
+    $scope.sidebar = false
   }
 ])
 
@@ -106,7 +98,7 @@ onsControllers.controller('BulletinCtrl', ['$scope',
   function($scope) {
     $scope.header = "Statistical Bulletin"
     $scope.contentType = "bulletin"
-    $scope.sidebar=true
+    $scope.sidebar = true
     $scope.sidebarUrl = "templates/contentsidebar.html"
   }
 ])
@@ -116,8 +108,8 @@ onsControllers.controller('BulletinCtrl', ['$scope',
 onsControllers.controller('CollectionCtrl', ['$scope',
   function($scope) {
 
-    $scope.getJSON("/collection.json", function(data){
-      $scope.content =  data
+    $scope.getData("/collection.json", function(data) {
+      $scope.content = data
     })
 
     var getParam = $scope.getUrlParam
@@ -137,7 +129,7 @@ onsControllers.controller('CollectionCtrl', ['$scope',
 
     function search(q, type, pageNumber) {
       var searchString = "?q=" + q + (type ? "&type=" + type : "") + "&page=" + pageNumber
-      $scope.getJSON("/collectiontaxonomyfilesystem" + searchString, function(data) {
+      $scope.getData("/collectiontaxonomyfilesystem" + searchString, function(data) {
         $scope.searchResponse = data
         console.log(data)
         $scope.pageCount = Math.ceil(data.numberOfResults / 10)
@@ -175,7 +167,7 @@ onsControllers.controller('SearchCtrl', ['$scope',
 
     function search(q, type, pageNumber) {
       var searchString = "?q=" + q + (type ? "&type=" + type : "") + "&page=" + pageNumber
-      $scope.getJSON("/search" + searchString, function(data) {
+      $scope.getData("/search" + searchString, function(data) {
         $scope.searchResponse = data
         $scope.pageCount = Math.ceil(data.numberOfResults / 10)
       })
@@ -196,7 +188,7 @@ onsControllers.controller('PaginatorCtrl', ['$scope',
     $scope.currentPage = page ? (+page) : 1
 
     $scope.getStart = function() {
-      if($scope.pageCount <= 10) {
+      if ($scope.pageCount <= 10) {
         return 1
       }
 
@@ -207,11 +199,11 @@ onsControllers.controller('PaginatorCtrl', ['$scope',
 
     $scope.getEnd = function() {
       var max = $scope.pageCount
-      if($scope.pageCount <= 10) {
-        return  max
+      if ($scope.pageCount <= 10) {
+        return max
       }
 
-        //Five page links after current page
+      //Five page links after current page
       var end = $scope.curentPage + 5
       return end > max ? max : end
     }
@@ -265,11 +257,17 @@ onsControllers.controller('ContentRevealCtrl', ['$scope',
 ])
 onsControllers.controller('TemplateCtrl', ['$scope',
   function($scope) {
-    $scope.loadData('', function(data) {
+    $scope.getDataPath = function() {
+      var path = $scope.getPath()
+      path = "/data" + path.substring(5)
+      return path
+    }
+
+    $scope.getData($scope.getDataPath(), function(data) {
       $scope.data = data
-      if(data.level === 't1') {
-            $scope.styleclass = 'footer__license'
-        }
+      if (data.level === 't1') {
+        $scope.styleclass = 'footer__license'
+      }
 
       console.log('TemplateCtrl: ' + data)
     })
@@ -296,11 +294,11 @@ onsControllers.controller('T1Ctrl', ['$scope', 'Page',
     console.log(data)
 
     function loadChildren(child) {
-      var level2Path = child.fileName
+      var level2Path = $scope.getDataPath() + "/" + child.fileName
       var j
       var grandChildren
 
-      $scope.loadData(level2Path, function(childData) {
+      $scope.getData(level2Path, function(childData) {
         child.data = childData
         //Load level 3 data for numbers
         // grandChildren = childData.children
@@ -313,7 +311,7 @@ onsControllers.controller('T1Ctrl', ['$scope', 'Page',
 
     function loadGrandChildren(child, grandChild) {
       var level3Path = child.fileName + "/" + grandChild.fileName
-      $scope.loadData(level3Path, function(grandChildData) {
+      $scope.getData(level3Path, function(grandChildData) {
         grandChild.data = grandChildData
       })
     }
@@ -363,11 +361,11 @@ onsControllers.controller('T2Ctrl', ['$scope', 'Page',
     console.log(data)
 
     function loadChildren(child) {
-      var level2Path = child.fileName
+      var level2Path = $scope.getDataPath() + "/" + child.fileName
       var j
       var grandChildren
 
-      $scope.loadData(level2Path, function(childData) {
+      $scope.getData(level2Path, function(childData) {
         child.data = childData
       })
     }
@@ -393,48 +391,60 @@ onsControllers.controller('T2Ctrl', ['$scope', 'Page',
   }
 ]);
 
-onsControllers.controller('ContentCtrl', ['$scope',  '$location', 'anchorSmoothScroll',
-    function ($scope, $location, anchorSmoothScroll) {
-        $scope.getJSON("/" + $scope.getPage() + ".json", function(data) {
-          $scope.content = data
-        } )
+onsControllers.controller('ContentCtrl', ['$scope', '$location', 'anchorSmoothScroll',
+  function($scope, $location, anchorSmoothScroll) {
+    $scope.getData("/" + $scope.getPage() + ".json", function(data) {
+      $scope.content = data
+    })
 
-        $scope.scrollTo = function(id) {
-            $location.hash(id)
-            anchorSmoothScroll.scrollTo(id)
-        }
-
-        $scope.scroll = function() {
-            anchorSmoothScroll.scrollTo($location.hash())
-        }
-
+    $scope.scrollTo = function(id) {
+      $location.hash(id)
+      anchorSmoothScroll.scrollTo(id)
     }
+
+    $scope.scroll = function() {
+      anchorSmoothScroll.scrollTo($location.hash())
+    }
+
+  }
 ]);
 
 
 
 onsControllers.controller('NavCtrl', ['$scope',
   function($scope) {
-    var path =  $scope.getPath()
+    var path = $scope.getPath()
     var tokens = path.split('/')
-    if(tokens[1] === 'home') {
-      if(tokens.length < 3) {
+    if (tokens[1] === 'home') {
+      if (tokens.length < 3) {
         $scope.location = "home"
       } else {
         $scope.location = tokens[2]
       }
     }
 
-    $scope.isCurrentPage=function(page) {
+    $scope.getData("/navigation", function(data) {
+      $scope.navigation = data
+    })
+
+    $scope.isCurrentPage = function(page) {
       return $scope.location === page
+    }
+
+    $scope.toggle = function(page) {
+      $scope.expandedPage = page
+    }
+
+    $scope.isExpanded = function(page) {
+      return $scope.expandedPage === page
     }
   }
 ])
 
 onsControllers.controller('ReleaseCtrl', ['$scope',
-   function($scope) {
-     $scope.getJSON("/release.json", function(data) {
-       $scope.releaseData = data
-     })
-   }
+  function($scope) {
+    $scope.getData("/release.json", function(data) {
+      $scope.releaseData = data
+    })
+  }
 ])

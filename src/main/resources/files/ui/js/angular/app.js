@@ -74,6 +74,14 @@ onsApp.directive('onsFooter', function() {
 
 })
 
+onsApp.directive('releaseCalendarFooter', function() {
+  return {
+    restrict: 'E',
+    templateUrl: 'templates/releasecalendarfooter.html'
+  }
+
+})
+
 onsApp.directive('onsHeader', function() {
   return {
     restrict: 'E',
