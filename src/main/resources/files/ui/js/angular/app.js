@@ -34,6 +34,10 @@ onsApp.config(['$routeProvider',
     when('/release', {
       templateUrl: 'templates/release.html'
     }).
+    when('/collection', {
+      templateUrl: 'templates/collection.html',
+      controller: "CollectionCtrl"
+    }).
     otherwise({
       templateUrl: 'templates/template.html',
       controller: 'TemplateCtrl'
