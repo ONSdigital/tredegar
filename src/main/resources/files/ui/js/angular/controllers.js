@@ -430,3 +430,11 @@ onsControllers.controller('NavCtrl', ['$scope',
     }
   }
 ])
+
+onsControllers.controller('ReleaseCtrl', ['$scope',
+   function($scope) {
+     $scope.getJSON("/release.json", function(data) {
+       $scope.releaseData = data
+     })
+   }
+])
