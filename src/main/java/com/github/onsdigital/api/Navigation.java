@@ -11,7 +11,7 @@ import com.github.davidcarboni.restolino.framework.Endpoint;
 import com.github.onsdigital.util.NavigationUtil;
 
 /**
- * Navigation end point that returns taxonomy leves  
+ * Navigation end point that returns taxonomy leves
  * 
  * @author Bren
  */
@@ -26,8 +26,7 @@ public class Navigation {
 			@Context HttpServletResponse response) throws IOException {
 
 		return NavigationUtil.getNavigationNodes();
-		
-	}
 
+	}
 
 }

@@ -29,13 +29,18 @@ public class Search {
 	private final static String TITLE = "title";
 
 	@GET
-	public Object get(@Context HttpServletRequest request, @Context HttpServletResponse response) throws Exception {
-		return search(extractQuery(request), extractPage(request), request.getParameter("type"));
+	public Object get(@Context HttpServletRequest request,
+			@Context HttpServletResponse response) throws Exception {
+		return search(extractQuery(request), extractPage(request),
+				request.getParameter("type"));
 	}
 
 	private Object search(String query, int page, String type) throws Exception {
-		ONSQueryBuilder queryBuilder = new ONSQueryBuilder("ons").setType(type).setPage(page).setSearchTerm(query).setFields(getTitle(), "path");
-		return new SearchHelper(ElasticSearchServer.getClient()).search(queryBuilder);
+		ONSQueryBuilder queryBuilder = new ONSQueryBuilder("ons").setType(type)
+				.setPage(page).setSearchTerm(query)
+				.setFields(getTitle(), "path");
+		return new SearchHelper(ElasticSearchServer.getClient())
+				.search(queryBuilder);
 	}
 
 	private int extractPage(HttpServletRequest request) {
@@ -58,14 +63,16 @@ public class Search {
 			}
 		}
 		if (ValidatorUtil.isIllegalCharacter(query)) {
-			throw new RuntimeException("Search query can only contain alphanumeric characters");
+			throw new RuntimeException(
+					"Search query can only contain alphanumeric characters");
 		}
 
 		return query;
 	}
 
 	private String getTitle() {
-		String titleBoost = (String) ElasticSearchProperties.INSTANCE.getProperty(TITLE);
+		String titleBoost = (String) ElasticSearchProperties.INSTANCE
+				.getProperty(TITLE);
 		return ElasticSearchFieldUtil.getBoost(TITLE, titleBoost);
 	}
 }

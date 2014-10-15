@@ -40,7 +40,7 @@ public class NavigationUtil {
 	}
 
 	private static void buildNavigationNodes() throws IOException {
-		navigation = new ArrayList<>();
+		navigation = new ArrayList<NavigationUtil.NavigationNode>();
 		Path taxonomyPath = getHomePath();
 		addNodes(navigation, getNodes(taxonomyPath));
 		for (NavigationNode node : navigation) {
