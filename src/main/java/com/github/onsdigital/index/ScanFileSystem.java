@@ -24,10 +24,12 @@ public class ScanFileSystem {
 	 * @throws IOException
 	 *             if any file io operations fail
 	 */
-	public static List<String> getFileNames(List<String> fileNames, Path dir) throws IOException {
+	public static List<String> getFileNames(List<String> fileNames, Path dir)
+			throws IOException {
 
 		if (fileNames == null || dir == null) {
-			throw new IllegalArgumentException("List of fileNames and Path dir cannot be null");
+			throw new IllegalArgumentException(
+					"List of fileNames and Path dir cannot be null");
 		}
 
 		DirectoryStream<Path> stream = Files.newDirectoryStream(dir);
@@ -36,9 +38,6 @@ public class ScanFileSystem {
 				getFileNames(fileNames, path);
 			else {
 				String fileName = path.toAbsolutePath().toString();
-				if( fileName.contains("statsBulletin")) {
-					System.out.println("hey");
-				}
 
 				// if (isValidFileExtensionType(fileName) &&
 				// isValidFilePath(fileName)) {
@@ -61,10 +60,12 @@ public class ScanFileSystem {
 	 * @throws IOException
 	 *             if file lookup fails
 	 */
-	public static List<File> getFiles(List<File> files, Path dir) throws IOException {
+	public static List<File> getFiles(List<File> files, Path dir)
+			throws IOException {
 
 		if (files == null || dir == null) {
-			throw new IllegalArgumentException("List of fileNames and Path dir cannot be null");
+			throw new IllegalArgumentException(
+					"List of fileNames and Path dir cannot be null");
 		}
 
 		DirectoryStream<Path> stream = Files.newDirectoryStream(dir);
@@ -92,6 +93,8 @@ public class ScanFileSystem {
 	}
 
 	private static boolean isValidFileExtensionType(String fileName) {
-		return fileName.endsWith(".html") || fileName.endsWith(".xls") || fileName.endsWith(".xlsx") || fileName.endsWith(".csv") || fileName.endsWith(".json");
+		return fileName.endsWith(".html") || fileName.endsWith(".xls")
+				|| fileName.endsWith(".xlsx") || fileName.endsWith(".csv")
+				|| fileName.endsWith(".json");
 	}
 }
