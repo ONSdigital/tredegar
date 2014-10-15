@@ -3,11 +3,13 @@
   "breadcrumb": [
     {
       "name": "People, Population and Community",
-      "fileName": "peoplepopulationandcommunity"
+      "fileName": "peoplepopulationandcommunity",
+      "index": 0
     },
     {
       "name": "Health and Social Care",
-      "fileName": "healthandsocialcare"
+      "fileName": "healthandsocialcare",
+      "index": 0
     }
   ],
   "timeseries": [
@@ -89,5 +91,6 @@
   "lede": "Consumer price inflation is the speed at which the prices of goods and services bought by households rise or fall.",
   "more": "Some more content goes here. This will expand and contract if you have JS enabled. If JS is disabled, this will show by default. Yay progressive enhancement!",
   "name": "Conditions and Diseases",
-  "fileName": "conditionsanddiseases"
+  "fileName": "conditionsanddiseases",
+  "index": 0
 }

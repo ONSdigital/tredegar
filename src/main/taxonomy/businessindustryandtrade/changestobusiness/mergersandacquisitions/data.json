@@ -3,11 +3,13 @@
   "breadcrumb": [
     {
       "name": "Business, Industry and Trade",
-      "fileName": "businessindustryandtrade"
+      "fileName": "businessindustryandtrade",
+      "index": 0
     },
     {
       "name": "Changes to Business",
-      "fileName": "changestobusiness"
+      "fileName": "changestobusiness",
+      "index": 0
     }
   ],
   "timeseries": [
@@ -89,5 +91,6 @@
   "lede": "Consumer price inflation is the speed at which the prices of goods and services bought by households rise or fall.",
   "more": "Some more content goes here. This will expand and contract if you have JS enabled. If JS is disabled, this will show by default. Yay progressive enhancement!",
   "name": "Mergers and Acquisitions",
-  "fileName": "mergersandacquisitions"
+  "fileName": "mergersandacquisitions",
+  "index": 1
 }

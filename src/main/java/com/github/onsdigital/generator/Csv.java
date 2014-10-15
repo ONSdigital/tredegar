@@ -43,6 +43,9 @@ public class Csv {
 		Folder themeFolder = null;
 		Folder subjectFolder = null;
 		Folder topicFolder = null;
+		int themeCounter = 0;
+		int subjectCounter = 0;
+		int topicCounter = 0;
 
 		Set<Folder> folders = new HashSet<>();
 
@@ -65,6 +68,9 @@ public class Csv {
 					theme = row[themeIndex];
 					themeFolder = new Folder();
 					themeFolder.name = theme;
+					themeFolder.index = themeCounter++;
+					subjectCounter = 0;
+					topicCounter = 0;
 					folders.add(themeFolder);
 					subject = null;
 					topic = null;
@@ -75,6 +81,8 @@ public class Csv {
 					subjectFolder = new Folder();
 					subjectFolder.name = subject;
 					subjectFolder.parent = themeFolder;
+					subjectFolder.index = subjectCounter++;
+					topicCounter = 0;
 					themeFolder.children.add(subjectFolder);
 					topic = null;
 				}
@@ -84,6 +92,7 @@ public class Csv {
 					topicFolder = new Folder();
 					topicFolder.name = topic;
 					topicFolder.parent = subjectFolder;
+					topicFolder.index = topicCounter++;
 					subjectFolder.children.add(topicFolder);
 				}
 
@@ -218,6 +227,7 @@ public class Csv {
 	private static void createT2(Folder folder, File file) throws IOException {
 
 		DataT2 t2 = new DataT2(folder);
+		t2.index = folder.index;
 		String json = Serialiser.serialise(t2);
 		FileUtils.writeStringToFile(new File(file, "data.json"), json);
 	}
@@ -225,6 +235,7 @@ public class Csv {
 	private static void createT3(Folder folder, File file) throws IOException {
 
 		DataT3 t3 = new DataT3(folder);
+		t3.index = folder.index;
 		String json = Serialiser.serialise(t3);
 		FileUtils.writeStringToFile(new File(file, "data.json"), json);
 

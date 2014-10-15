@@ -3,7 +3,8 @@
   "breadcrumb": [
     {
       "name": "Economy",
-      "fileName": "economy"
+      "fileName": "economy",
+      "index": 0
     }
   ],
   "timeseries": [
@@ -85,5 +86,6 @@
   "lede": "Consumer price inflation is the speed at which the prices of goods and services bought by households rise or fall.",
   "more": "Some more content goes here. This will expand and contract if you have JS enabled. If JS is disabled, this will show by default. Yay progressive enhancement!",
   "name": "Gross Domestic Product (GDP)",
-  "fileName": "grossdomesticproductgdp"
+  "fileName": "grossdomesticproductgdp",
+  "index": 3
 }
