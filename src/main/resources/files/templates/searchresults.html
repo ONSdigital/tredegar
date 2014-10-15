@@ -1,5 +1,4 @@
-<span ng-include="'templates/header.html'"></span>     
-
+<ons-header></ons-header>
 
 <div ng-controller="SearchCtrl" >
 
@@ -9,7 +8,8 @@
 
     <!--Search filters, sorting and results description, grid col two thirds, left class removes padding and crates space within the div-->
   <div class="grid-col tablet-wide-grid-two-thirds left">
-      <div id="search-results-total" class="search-results-total">
+      <span ng-show="isLoading()" >Loading ...</span>
+      <div ng-show="searchResponse" id="search-results-total" class="search-results-total">
         <span class='results-total'>
           {{searchResponse.numberOfResults}}
         </span>
@@ -42,6 +42,8 @@
           <article class="box">
 
             <div id="search" class="search">
+              <span ng-show="isLoading()" >Loading ...</span>
+
               <dl>
                   <dt ng-repeat-start="item in searchResponse.results" class="">
                     <a href="#{{item.url}}">{{item.title}}</a>
@@ -51,12 +53,8 @@
                   <dd ng-repeat-end > Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet diam vel est congue eleifend non eget sem. Nam enim ipsum, vestibulum sed facilisis ut, commodo et nulla. Aliquam erat volutpat. Sed ut aliquet nunc. Ut mollis, arcu non vehicula gravida, lectus magna auctor quam, in rhoncus nibh nisl nec odio. Nam suscipit, dui in maximus porttitor, velit nulla rutrum leo, sit amet porttitor tellus dolor sit amet est. Quisque nulla augue, gravida sit amet mauris vel, congue aliquam urna. Quisque consectetur commodo mi eu pulvinar. Nam egestas magna sem, non sagittis massa vehicula non. Cras ultricies eleifend scelerisque. Pellentesque nunc tellus, commodo eget est nec, molestie elementum nulla. Donec mattis sed nisl in tincidunt. Mauris </dd>
               </dl>
             </div>
-
-          <div id="paginator" class="pagination simple-pagination pagination-centred">
-
-          <!--Paginator goes here -->
-
-          </div>
+            
+            <paginator></paginator>
 
           </article>
       </div>
@@ -89,6 +87,4 @@
 
 </div>
 
-<span ng-include="'templates/footer.html'">        
-</span>
-
+<ons-footer></ons-footer>

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
 <!--[if IE 7]><html class="no-js lt-ie9 lt-ie8 ie7"><![endif]-->
@@ -10,7 +9,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>T1 Homepage Template - CX partners</title>
-    <meta charset="utf-8" />
+<meta charset="UTF-8">
     <meta content="width=device-width,initial-scale=1.0" name="viewport" />
     <meta content="on" http-equiv="cleartype" />
     <meta name="format-detection" content="telephone=no">
@@ -27,25 +26,28 @@
     <link rel="stylesheet" href="/ui/css/jquery-ui.min.css">
     <!--<![endif]-->
     <!-- endbuild -->
-    <script src="../ui/js/lib/modernizr.min.js"></script>
-    <script src="../ui/js/lib/jquery-1.11.0.min.js"></script>
-    <script src="/ui/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../ui/js/lib/modernizr.min.js" defer></script>
+    <script type="text/javascript" src="../ui/js/lib/jquery-1.11.0.min.js" defer></script>
+    <script type="text/javascript" src="/ui/js/lib/jquery-ui.min.js" defer></script>
     <!--[if (!IE)|(gt IE 8)]>><!-->
-    <script src="../ui/js/lib/jquery.tooltipster.js"></script>
+    <script type="text/javascript" src="../ui/js/lib/jquery.tooltipster.js" defer></script>
     <!--<![endif]-->
-    <script src="../ui/js/app/app.js"></script>
-    <script src="../ui/js/app/content-reveal.js"></script>
-    <script src="../ui/js/app/nav.js"></script>
-    <script src="../ui/js/app/supporting-content.js"></script>
-    <script src="../ui/js/app/tables.js"></script>
-    <script src="../ui/js/app/tabs.js"></script>
-    <script src="/ui/js/custom-autocomplete.js"></script>
-    <script>
-    </script>
-    <style>
+    <script type="text/javascript" src="../ui/js/app/app.js" defer></script>
+    <script type="text/javascript" src="../ui/js/app/content-reveal.js" defer></script>
+    <script type="text/javascript" src="../ui/js/app/nav.js" defer></script>
+    <script type="text/javascript" src="../ui/js/app/supporting-content.js" defer></script>
+    <script type="text/javascript" src="../ui/js/app/tables.js" defer></script>
+    <script type="text/javascript" src="../ui/js/app/tabs.js" defer></script>
+    <script type="text/javascript" src="/ui/js/custom-autocomplete.js" defer></script>
+    
+    <!-- build:js /ui/js/ons-alpha.js-->
+    <script type="text/javascript" src="../ui/js/lib/d3.v3.min.js" defer></script>
+    <!-- endbuild -->
+
+    <!-- Functionality to populate this page -->
+    <script type="text/javascript" src="/ui/js/t1.js" defer></script>
 
     <style>
-
 
     body {
       padding: 0;
@@ -670,6 +672,33 @@ markup: false
               <li class="list--table__item list--table__body">
                 <div class="list--table__item__body list--table__item__body--date">
                   <div class="list--table__item__body__inner">
+                    <time class="date date--stacked" datetime="2014-10-19">
+                      <div class="date--stacked__date">19</div>
+                      <div class="date--stacked__month date--stacked__month--shorthand">Oct</div>
+                      <div class="date--stacked__year">2014</div>
+                    </time>
+                  </div>
+                </div>
+                <div class="list--table__item__body list--table__item__body--release-caption">
+                  <div class="list--table__item__body__inner list--table__item__body__split">
+                    <div class="list--table__item__body__three-fifths">
+                      <h2 class="delta flush--half--bottom">
+                        <a href="/release.html" class="no_underline">Producer Price Inflation - October 2014</a>
+                        <span tabindex="0" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin tooltipstered"></span>
+                      </h2>
+                    </div>
+                    <div class="list--table__item__body__two-fifths">
+                      <dl class="definition-list flush micro">
+                        <dt></dt>
+                        <dd>Inflation and Price Indices</dd>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+              </li>            
+              <li class="list--table__item list--table__body">
+                <div class="list--table__item__body list--table__item__body--date">
+                  <div class="list--table__item__body__inner">
                     <time class="date date--stacked" datetime="2014-04-25">
                       <div class="date--stacked__date">25</div>
                       <div class="date--stacked__month date--stacked__month--shorthand">Apr</div>
@@ -1115,12 +1144,6 @@ markup: false
       </footer>
       <!-- </div> -->
     </main>
-    <!-- build:js /ui/js/ons-alpha.js-->
-    <script src="../ui/js/lib/d3.v3.min.js"></script>
-    <!-- endbuild -->
-
-    <!-- Functionality to populate this page -->
-    <script src='/ui/js/t1.js'></script>
 
   </body>
 </html>

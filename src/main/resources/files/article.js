@@ -165,7 +165,7 @@ $( document ).ready(function() {
 
 	/* Get the data.json file to populate the page: */
 
-	$.get( "http://localhost:9090/tredegar/src/main/resources/files/bulletin.json", function( data1 ) {
+	$.get( "/bulletin.json", function( data1 ) {
 
 		// Titles:
 		setTitle(data1.title)
