@@ -9,6 +9,8 @@ public class ElasticSearchPropertiesTest {
 
 	@Test
 	public void testGetProperty() {
-		assertFalse(StringUtils.isEmpty((String) ElasticSearchProperties.INSTANCE.getProperty("title")));
+		assertFalse(StringUtils
+				.isEmpty((String) ElasticSearchProperties.INSTANCE
+						.getProperty("title")));
 	}
 }

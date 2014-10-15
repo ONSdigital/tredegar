@@ -42,7 +42,8 @@ public class NavigationUtil {
 		Path taxonomyPath = getHomePath();
 		navigation.addAll(getNodes(taxonomyPath));
 		for (NavigationNode node : navigation) {
-			node.children.addAll(getNodes(FileSystems.getDefault().getPath(taxonomyPath + "/" + node.fileName)));
+			node.children.addAll(getNodes(FileSystems.getDefault().getPath(
+					taxonomyPath + "/" + node.fileName)));
 		}
 
 	}
@@ -64,7 +65,8 @@ public class NavigationUtil {
 	}
 
 	private static Path getHomePath() {
-		return FileSystems.getDefault().getPath(Configuration.getTaxonomyPath());
+		return FileSystems.getDefault()
+				.getPath(Configuration.getTaxonomyPath());
 	}
 
 	private static Data getDataJson(Path path) throws IOException {
@@ -102,7 +104,8 @@ public class NavigationUtil {
 		try {
 			List<NavigationNode> nodes = NavigationUtil.getNavigationNodes();
 			for (NavigationNode navigationNode : nodes) {
-				System.out.println(ReflectionToStringBuilder.toString(navigationNode));
+				System.out.println(ReflectionToStringBuilder
+						.toString(navigationNode));
 			}
 		} catch (IOException e) {
 			e.printStackTrace();

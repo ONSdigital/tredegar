@@ -30,11 +30,14 @@ public class CollectionTaxonomyFileSystemTest {
 
 	@Test
 	public void testGet() throws Exception {
-		Mockito.when(httpServletRequest.getParameter("q")).thenReturn("/home/economy/inflationandpriceindices");
+		Mockito.when(httpServletRequest.getParameter("q")).thenReturn(
+				"/home/economy/inflationandpriceindices");
 		Mockito.when(httpServletRequest.getParameter("page")).thenReturn("1");
-		Mockito.when(httpServletRequest.getParameter("type")).thenReturn("bulletins");
+		Mockito.when(httpServletRequest.getParameter("type")).thenReturn(
+				"bulletins");
 
-		CollectionSearchResult collectionSearchResult = (CollectionSearchResult) collectionTaxonomyFileSystem.get(httpServletRequest, httpServletResponse);
+		CollectionSearchResult collectionSearchResult = (CollectionSearchResult) collectionTaxonomyFileSystem
+				.get(httpServletRequest, httpServletResponse);
 		/*
 		 * existing unit tests upon CollectionSearchResult entity exercises all
 		 * attributes, so just testing here that scanning the taxonomy file

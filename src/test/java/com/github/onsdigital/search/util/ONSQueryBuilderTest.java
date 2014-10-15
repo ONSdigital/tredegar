@@ -24,7 +24,8 @@ public class ONSQueryBuilderTest {
 
 	@Test
 	public void testMatchAllQuery() {
-		ONSQueryBuilder builder = new ONSQueryBuilder(SEARCH_INDEX).setFields(TEST_FIELDS);
+		ONSQueryBuilder builder = new ONSQueryBuilder(SEARCH_INDEX)
+				.setFields(TEST_FIELDS);
 		JsonObject query = buildQuery(builder);
 		String matchType = grab(query.get("query")).getFirstMemberName();
 		query.get("query").getAsJsonObject().get("took");
@@ -35,7 +36,8 @@ public class ONSQueryBuilderTest {
 
 	@Test
 	public void testMultiMatchQuery() {
-		ONSQueryBuilder builder = new ONSQueryBuilder(SEARCH_INDEX).setSearchTerm(SEARCH_TERM);
+		ONSQueryBuilder builder = new ONSQueryBuilder(SEARCH_INDEX)
+				.setSearchTerm(SEARCH_TERM);
 		JsonObject query = buildQuery(builder);
 		String matchType = grab(query.get("query")).getFirstMemberName();
 		assertEquals(FUNCTION_SCORE_QUERY, matchType);
@@ -44,20 +46,24 @@ public class ONSQueryBuilderTest {
 
 	@Test
 	public void testSearchTerm() {
-		ONSQueryBuilder builder = new ONSQueryBuilder(SEARCH_INDEX).setSearchTerm(SEARCH_TERM);
+		ONSQueryBuilder builder = new ONSQueryBuilder(SEARCH_INDEX)
+				.setSearchTerm(SEARCH_TERM);
 		testSearchTerm(builder);
 	}
 
 	private void testSearchTerm(ONSQueryBuilder builder) {
 		JsonObject query = buildQuery(builder);
-		JsonObject multiMatchQuery = grab(query.get("query")).getFirstMemberAsObject();
-		String searchTerm = grab(multiMatchQuery.get("query")).getFirstMemberAsObject().get("query").getAsString();
+		JsonObject multiMatchQuery = grab(query.get("query"))
+				.getFirstMemberAsObject();
+		String searchTerm = grab(multiMatchQuery.get("query"))
+				.getFirstMemberAsObject().get("query").getAsString();
 		assertEquals(SEARCH_TERM + "*", searchTerm);
 	}
 
 	@Test
 	public void testFrom() {
-		ONSQueryBuilder builder = new ONSQueryBuilder(SEARCH_INDEX).setPage(3).setSize(24);
+		ONSQueryBuilder builder = new ONSQueryBuilder(SEARCH_INDEX).setPage(3)
+				.setSize(24);
 		JsonObject query = buildQuery(builder);
 		int from = query.get("from").getAsInt();
 		assertEquals(calculateFrom(3, 24), from);
@@ -73,19 +79,26 @@ public class ONSQueryBuilderTest {
 
 	@Test
 	public void testAllFields() {
-		ONSQueryBuilder builder = new ONSQueryBuilder(SEARCH_INDEX).setSearchTerm(SEARCH_TERM);
+		ONSQueryBuilder builder = new ONSQueryBuilder(SEARCH_INDEX)
+				.setSearchTerm(SEARCH_TERM);
 		JsonObject query = buildQuery(builder);
-		JsonObject multiMatchQuery = grab(query.get("query")).getFirstMemberAsObject();
-		String fields = grab(multiMatchQuery.get("query")).getFirstMemberAsObject().get("fields").getAsJsonArray().get(0).getAsString();
+		JsonObject multiMatchQuery = grab(query.get("query"))
+				.getFirstMemberAsObject();
+		String fields = grab(multiMatchQuery.get("query"))
+				.getFirstMemberAsObject().get("fields").getAsJsonArray().get(0)
+				.getAsString();
 		assertEquals("_all", fields);
 	}
 
 	@Test
 	public void testSomeFields() {
-		ONSQueryBuilder builder = new ONSQueryBuilder(SEARCH_INDEX).setSearchTerm(SEARCH_TERM).setFields(TEST_FIELDS);
+		ONSQueryBuilder builder = new ONSQueryBuilder(SEARCH_INDEX)
+				.setSearchTerm(SEARCH_TERM).setFields(TEST_FIELDS);
 		JsonObject query = buildQuery(builder);
-		JsonObject multiMatchQuery = grab(query.get("query")).getFirstMemberAsObject();
-		JsonArray array = grab(multiMatchQuery.get("query")).getFirstMemberAsObject().get("fields").getAsJsonArray();
+		JsonObject multiMatchQuery = grab(query.get("query"))
+				.getFirstMemberAsObject();
+		JsonArray array = grab(multiMatchQuery.get("query"))
+				.getFirstMemberAsObject().get("fields").getAsJsonArray();
 		for (int i = 0; i < ALL_FIELDS.length; i++) {
 			assertEquals(TEST_FIELDS[i], array.get(i).getAsString());
 		}
@@ -94,14 +107,18 @@ public class ONSQueryBuilderTest {
 
 	@Test
 	public void testHihglighFields() {
-		ONSQueryBuilder builder = new ONSQueryBuilder(SEARCH_INDEX).setSearchTerm(SEARCH_TERM).setFields("myfield");
+		ONSQueryBuilder builder = new ONSQueryBuilder(SEARCH_INDEX)
+				.setSearchTerm(SEARCH_TERM).setFields("myfield");
 		JsonObject query = buildQuery(builder);
-		String fieldName = grab(query.getAsJsonObject("highlight").get("fields")).getFirstMemberName();
+		String fieldName = grab(
+				query.getAsJsonObject("highlight").get("fields"))
+				.getFirstMemberName();
 		assertEquals("myfield", fieldName);
 	}
 
 	JsonObject buildQuery(ONSQueryBuilder builder) {
-		JsonObject query = new JsonParser().parse(builder.buildQuery()).getAsJsonObject();
+		JsonObject query = new JsonParser().parse(builder.buildQuery())
+				.getAsJsonObject();
 		// System.out.println("Query : " + query);
 		return query;
 	}
