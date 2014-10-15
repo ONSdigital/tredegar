@@ -4,19 +4,63 @@
 
 var onsControllers = angular.module('onsControllers', []);
 
-onsControllers.controller('MainCtrl', ['$scope', '$http', '$location',
-  function($scope, $http, $location) {
+
+// Main controller that applies to all the pages
+onsControllers.controller('MainCtrl', ['$scope', '$http', '$location', '$route',
+  function($scope, $http, $location, $route) {
     $scope.loadData = function(path, callback) {
       path = (path) ? ("/" + path) : ""
       path = $location.$$path + path + "?data"
-      console.log("Loadint data at " + path)
+      console.log("Loading data at " + path)
       $http.get(path).success(callback)
+    }
+
+    $scope.getJSON = function(fullPath, callback) {
+      console.log("Loading json at " + fullPath)
+      $http.get(fullPath).success(callback)
+    }
+
+    $scope.getUrlParam = function(paramName) {
+      var params = $location.search()
+      return params[paramName]
+    }
+
+    $scope.setUrlParam = function(paramName, value) {
+      if (value) {
+        $location.search(paramName, value)
+      } else {
+        $location.search(paramName)
+      }
+    }
+
+    $scope.getPath = function() {    
+      return $location.$$path
+    }
+
+    $scope.getParentPath = function() {    
+      var path =  $location.$$path
+      var lastIndex = path.lastIndexOf('/')
+      var parenPath = path.substring(0, lastIndex)
+      return parenPath
+
+    }
+
+    $scope.search = function(searchTerm) {
+      if (!searchTerm) {
+        return
+      }
+      $location.path('/searchresults')
+      $location.search('q', searchTerm)
+      $location.search('page', 1)
+      //Re-initializes controllers. Fixes searching on search results page searching the same term
+      $route.reload() 
+
     }
   }
 
 ]);
 
-//Use this controller to show and hide large contents
+// Use this controller to show and hide tabs, see example in releasecalendarfooter.html
 onsControllers.controller('TabsCtrl', ['$scope',
   function($scope) {
     $scope.activeTab = 1
@@ -29,32 +73,107 @@ onsControllers.controller('TabsCtrl', ['$scope',
   }
 ])
 
-onsControllers.controller('SearchCtrl', ['$scope','$location',
-  function($scope, $location) {
-    var thePage = getParam('page')
-    var query = getParam('q')
-    var pageNumber = 1
-    if (thePage) {
-      pageNumber = thePage
+//Search ctrl, used for search results page
+onsControllers.controller('SearchCtrl', ['$scope',
+  function($scope) {
+    var getParam = $scope.getUrlParam
+    var page = getParam('page')
+    var searchTerm = $scope.searchTerm = getParam('q')
+    var type = $scope.type = getParam('type')
+
+    if (!searchTerm) {
+      return
     }
 
-    if(query) {
-      search(query)
-    }
-    
-    function getParam(paramName) {
-      var params = $location.search()
-      return params[paramName]
+    if (!page) {
+      page = 1
     }
 
-    function search(query) {
-    
+    console.log("page is " + page)
+    $scope.setUrlParam('page', page)
+
+    search(searchTerm, type, page)
+
+    function search(q, type, pageNumber) {
+      var searchString = "?q=" + q + (type ? "&type=" + type : "") + "&page=" + pageNumber
+      $scope.getJSON("/search" + searchString, function(data) {
+        $scope.searchResponse = data
+        $scope.pageCount = Math.ceil(data.numberOfResults / 10)
+      })
     }
 
+
+    $scope.isLoading = function() {
+      return ($scope.searchTerm && !$scope.searchResponse)
+    }
 
   }
 ])
 
+//Paginator
+onsControllers.controller('PaginatorCtrl', ['$scope',
+  function($scope) {
+    var page = $scope.getUrlParam('page')
+    $scope.currentPage = page ? (+page) : 1
+
+    $scope.getStart = function() {
+      if($scope.pageCount <= 10) {
+        return 1
+      }
+
+      var end = $scope.getEnd()
+      var start = end - 9
+      return start > 0 ? start : 1
+    }
+
+    $scope.getEnd = function() {
+      var max = $scope.pageCount
+      if($scope.pageCount <= 10) {
+        return  max
+      }
+
+        //Five page links after current page
+      var end = $scope.curentPage + 5
+      return end > max ? max : end
+    }
+
+    $scope.isVisible = function() {
+      return ($scope.pageCount > 1)
+    }
+
+    $scope.isPreviousVisible = function() {
+      return ($scope.currentPage != 1)
+    }
+
+    $scope.selectPage = function(index) {
+      var page = $scope.currentPage = (index)
+      $scope.setUrlParam('page', page)
+    }
+
+    $scope.goToNext = function() {
+      var page = $scope.currentPage += 1
+      $scope.setUrlParam('page', page)
+    }
+
+    $scope.goToPrev = function() {
+      var page = $scope.currentPage -= 1
+      $scope.setUrlParam('page', page)
+    }
+
+    $scope.isCurrentPage = function(index) {
+      return $scope.currentPage === (index)
+    }
+
+    $scope.isNextVisible = function() {
+      return ($scope.currentPage != $scope.pageCount)
+    }
+
+    $scope.getClass = function(index) {
+      return $scope.currentPage === (index) ? 'active' : ''
+    }
+
+  }
+])
 
 //Use this controller to show and hide large contents
 onsControllers.controller('ContentRevealCtrl', ['$scope',
@@ -65,20 +184,23 @@ onsControllers.controller('ContentRevealCtrl', ['$scope',
     }
   }
 ])
-
-onsControllers.controller('TemplateCtrl', ['$scope', '$http', '$location',
-  function($scope, $http, $location) {
+onsControllers.controller('TemplateCtrl', ['$scope',
+  function($scope) {
     $scope.loadData('', function(data) {
       $scope.data = data
+      if(data.level === 't1') {
+            $scope.styleclass = 'footer__license'
+        }
+
+      console.log('TemplateCtrl: ' + data)
     })
   }
 ])
 
-onsControllers.controller('T1Ctrl', ['$scope', '$http', '$location', 'Page',
-  function($scope, $http, $location, Page) {
 
+onsControllers.controller('T1Ctrl', ['$scope', 'Page',
+  function($scope, Page) {
     Page.setTitle('Home')
-
     var data = $scope.data
     var children = data.children
     var i
@@ -140,9 +262,8 @@ onsControllers.controller('T1Ctrl', ['$scope', '$http', '$location', 'Page',
 ]);
 
 
-
-onsControllers.controller('T2Ctrl', ['$scope', '$http', '$location', 'Page',
-  function($scope, $http, $location, Page) {
+onsControllers.controller('T2Ctrl', ['$scope', 'Page',
+  function($scope, Page) {
 
     Page.setTitle('Home')
 
@@ -191,5 +312,36 @@ onsControllers.controller('T2Ctrl', ['$scope', '$http', '$location', 'Page',
       return result;
     }
   }
-
 ]);
+
+onsControllers.controller('methodology', ['$scope', '$http', '$location', '$anchorScroll',
+    function ($scope, $http, $location, $anchorScroll) {
+        $http.get('/methodology.json').success(function(data) {
+            $scope.methodology = data;
+        });
+        $scope.scrollTo = function(id) {
+            $location.hash(id);
+            $anchorScroll();
+        }
+    }
+]);
+
+
+
+onsControllers.controller('NavCtrl', ['$scope',
+  function($scope) {
+    var path =  $scope.getPath()
+    var tokens = path.split('/')
+    if(tokens[1] === 'home') {
+      if(tokens.length < 3) {
+        $scope.location = "home"
+      } else {
+        $scope.location = tokens[2]
+      }
+    }
+
+    $scope.isCurrentPage=function(page) {
+      return $scope.location === page
+    }
+  }
+])
