@@ -16,7 +16,7 @@ import org.junit.Test;
  * Exercises scanning the file system
  */
 public class ScanFileSystemTest {
-	private String rootSearch = "target/classes/files/home";
+	private String rootSearch = "target/classes/files/taxonomy";
 
 	@Test
 	public void testGetFileNames() throws IOException {
@@ -27,10 +27,16 @@ public class ScanFileSystemTest {
 		assertFalse(fileNames.isEmpty());
 
 		for (String fileName : fileNames) {
-			assertTrue("File extension must be one of small subset of types, e.g. html but not css",
-					(fileName.endsWith(".html") || fileName.endsWith(".xls") || fileName.endsWith(".xlsx") || fileName.endsWith(".csv") || fileName.endsWith(".json")));
-			assertTrue("File path must contain be target/classes/home", (fileName.contains("target/classes/files/home")));
-			assertTrue("File path must be under taxonomy folder", (fileName.contains("target/classes/files/home/")));
+			assertTrue(
+					"File extension must be one of small subset of types, e.g. html but not css",
+					(fileName.endsWith(".html") || fileName.endsWith(".xls")
+							|| fileName.endsWith(".xlsx")
+							|| fileName.endsWith(".csv") || fileName
+							.endsWith(".json")));
+			assertTrue("File path must contain target/classes/files",
+					(fileName.contains("target/classes/files")));
+			assertTrue("File path must be under taxonomy folder",
+					(fileName.contains("target/classes/files/taxonomy/")));
 
 		}
 	}
