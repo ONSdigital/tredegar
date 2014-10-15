@@ -498,6 +498,8 @@ img {
 .icon-export:before { content: '\e828' ; } /* '' */
 .icon-rss:before { content: '\e853' ; } /* '' */
 .icon-right-open-big:before { content: '\e886'; } /* '' */
+.icon-up-open-big:before { content: '\e885'; } /* '' */
+.icon-down-open-big:before { content: '\e888'; } /* '' */
 
 /*Original code from CX*/
 
@@ -4341,7 +4343,9 @@ background-color: #edeeee !important;
   border-color: #A8A1A1;
 }
 
-/* stats bulletin extras */
+/*------------------------------------*\
+  Stats Bulletin Classes
+\*------------------------------------*/
 
 .wrapper h3 {
 	margin-bottom:0px
@@ -4425,6 +4429,26 @@ background-color: #edeeee !important;
   margin-bottom: 1.25em;
 }
 
+/*------------------------------------*\
+  Accordion Styles
+\*------------------------------------*/
+
+#accordion{margin:100px auto;width:400px;}
+#accordion ul{list-style:none;margin:0;padding:0;}
+.accordion{display:none;}
+.accordion:target{display:block;}
+#accordion ul li a{text-decoration:none;display:block;padding:10px;}
+.accordion{padding:4px;}
+/*End General Accordion****************************************************************************/
+
+/*Vertical Accordion *************************************************************************/
+.vertical article{ width:100%;/* height:100px;*/
+  -webkit-transition:height 0.2s ease-out;
+  -moz-transition:height 0.2s ease-out;
+    -o-transition:height 0.2s ease-out;
+  -ms-transition:height 0.2s ease-out;
+    transition:height 0.2s ease-out;
+}
 
 /*------------------------------------*\
   Collection Page Styles
@@ -4632,37 +4656,48 @@ ol > li > div.list--table__item__body.list--table__item__body--stat.no_align{
  }
 
 /*------------------------------------*\
-  Tooltip Styles
+ Tooltip Styles
 \*------------------------------------*/
 
 
-.tooltips {outline:none;
-            text-decoration: none;
-            font-size: 1.5rem;
-            font-weight: lighter;
-             }
-.tooltips strong {line-height:30px;}
-.tooltips:hover {text-decoration:none;
-                font-weight: lighter;
-                  } 
-.tooltips span {
-    z-index:10;display:none; padding:14px 20px;
-    margin-top: 15px; margin-left:5px;
-    width:200px; line-height:16px;
-    font-size: 1.2rem;
-    font-weight: lighter;
+.tooltips {
+    outline: none;
 }
-.tooltips:hover span{
-    display:inline; position:absolute; color:#111;
-    border:1px solid #757575; background:#f3f3f3;
-    font-size: 1.2rem; font-weight: lighter;}
-.callout {z-index:20;position:absolute;top:10px;border:0;left:-12px; font-weight: lighter;}
- 
+.tooltips:hover {
+    text-decoration: none;
+}
+.tooltips span {
+    z-index: 10;
+    display: none;
+    padding: 0.8rem;
+    padding: 8px;
+    margin-top: 2.5px;
+    margin-left: 5px;
+    width: 20%;
+    max-width:200px;
+}
+.tooltips:hover span {
+    display: inline;
+    position: absolute;
+    border: 1px solid #757575 ;
+    background: #f3f3f3 ;
+    color: #333;
+    line-height: 15px;
+    font-family: "open-sans-n4", "open-sans", sans-serif;
+    font-size: 1.3rem;
+    font-size: 13px;
+}
+.callout {
+    z-index: 20;
+    position: absolute;
+    top: 10px;
+    border: 0;
+    left: -12px;
+}
+
 /*CSS3 extras
 a.tooltips span
 {
-    border-radius:4px;
-    box-shadow: 5px 5px 8px #CCC;
+   border-radius:4px;
+   box-shadow: 5px 5px 8px #CCC;
 }*/
-
-

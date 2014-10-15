@@ -1,7 +1,9 @@
-package com.github.onsdigital.json;
+package com.github.onsdigital.json.taxonomy;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.github.onsdigital.json.Link;
 
 public class Detail {
 

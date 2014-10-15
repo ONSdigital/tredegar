@@ -58,8 +58,8 @@ public class Sitemap {
 		Element rootElement = createRootElement(document);
 
 		// Iterate the taxonomy structure:
-		Path taxonomyPath = findHome();
-		System.out.println("Searching " + taxonomyPath);
+		Path taxonomyPath = getHomePath();
+		// System.out.println("Searching " + taxonomyPath);
 		addPath(taxonomyPath, document, rootElement, 1);
 		iterate(taxonomyPath, 0.8, document, rootElement);
 
@@ -67,23 +67,10 @@ public class Sitemap {
 		writeResponse(document, response);
 	}
 
-	private static Path findHome() throws IOException {
+	private static Path getHomePath() throws IOException {
 
-		Path taxonomyPath = FileSystems.getDefault().getPath(
-				Configuration.getTaxonomyPath());
-
-		try (DirectoryStream<Path> stream = Files
-				.newDirectoryStream(taxonomyPath)) {
-			for (Path path : stream) {
-
-				// Iterate over the paths:
-				if (StringUtils.equals("home", path.getFileName().toString()))
-					taxonomyPath = path;
-			}
-
-		}
-
-		return taxonomyPath;
+		return FileSystems.getDefault()
+				.getPath(Configuration.getTaxonomyPath());
 	}
 
 	private static Document createDocument() throws IOException {
@@ -147,7 +134,8 @@ public class Sitemap {
 			try {
 				URI uri = toUri(data);
 				addUrl(uri, document, rootElement, priority);
-				System.out.println(path + " : " + uri + " (" + priority + ")");
+				// System.out.println(path + " : " + uri + " (" + priority +
+				// ")");
 			} catch (URISyntaxException | DOMException | MalformedURLException e) {
 				throw new IOException("Error iterating taxonomy", e);
 			}
@@ -193,7 +181,7 @@ public class Sitemap {
 		// Priority
 		Element priority = document.createElement("priority");
 		url.appendChild(priority);
-		priority.setTextContent(String.valueOf(priorityValue));
+		priority.setTextContent(String.format("%.2f", priorityValue));
 	}
 
 	private static void writeResponse(Document document,
