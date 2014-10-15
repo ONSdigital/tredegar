@@ -1,9 +1,3 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Article - Expert Analysis</title>
-</head>
 <!DOCTYPE html>
 <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
 <!--[if IE 7]><html class="no-js lt-ie9 lt-ie8 ie7"><![endif]-->
@@ -14,8 +8,8 @@
   <!--<![endif]-->
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<title>Article - Methods</title>
-<meta charset="utf-8" />
+<meta charset="UTF-8">
+<title>Article - Expert Analysis</title>
 <meta content="width=device-width,initial-scale=1.0" name="viewport" />
 <meta content="on" http-equiv="cleartype" />
 <meta name="format-detection" content="telephone=no">
@@ -31,23 +25,26 @@
    <!-- <link rel="stylesheet" href="/ui/css/main.css" /> -->
    <link href="../ui/css/main.css" rel="stylesheet" type="text/css">
 
-    <link rel="stylesheet" href="../ui/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
     <!--<![endif]-->
 <!-- endbuild -->
-<script src="../ui/js/lib/modernizr.min.js"></script>
-<script src="../ui/js/lib/jquery-1.11.0.min.js"></script>
-<script src="../ui/js/lib/jquery-ui.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" defer></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js" defer></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js" defer></script>
 <!--[if (!IE)|(gt IE 8)]>><!-->
-<script src="../ui/js/lib/jquery.tooltipster.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/tooltipster/3.0.5/js/jquery.tooltipster.min.js" defer></script>
 <!--<![endif]-->
-<script src="../ui/js/app/app.js"></script>
-<script src="../ui/js/app/content-reveal.js"></script>
-<script src="../ui/js/app/nav.js"></script>
-<script src="../ui/js/app/supporting-content.js"></script>
-<script src="../ui/js/app/tables.js"></script>
-<script src="../ui/js/app/tabs.js"></script>
-<script src="../ui/js/custom-autocomplete.js"></script>
+<script type="text/javascript" src="../ui/js/app/app.js" defer></script>
+<script type="text/javascript" src="../ui/js/app/content-reveal.js" defer></script>
+<script type="text/javascript" src="../ui/js/app/nav.js" defer></script>
+<script type="text/javascript" src="../ui/js/app/supporting-content.js" defer></script>
+<script type="text/javascript" src="../ui/js/app/tables.js" defer></script>
+<script type="text/javascript" src="../ui/js/app/tabs.js" defer></script>
+<script type="text/javascript" src="../ui/js/custom-autocomplete.js" defer></script>
 
+<!-- Functionality to populate this page -->
+<script type="text/javascript" src="../ui/js/markdown.js" defer></script>
+<script type="text/javascript" src="../ui/js/methodology.js" defer></script>
 
 <!---
 title: Article Template
@@ -81,7 +78,7 @@ markup: false
     <div class="wrapper">
         <ul class="nav nav--multi nav--block nav--primary flush--bottom" id="nav-primary">
             <li class="nav--primary home">
-              <a href="http://onsdigital.herokuapp.com/"><span class="icon-home icon--inline"></span><span class="icon-inline vertical-align-mid">Home</span></a>
+              <a href="/"><span class="icon-home icon--inline"></span><span class="icon-inline vertical-align-mid">Home</span></a>
             </li>
             <li> <a href="#" class="nav__expandable js-expandable">Business, Industry, and Trade</a>
                 <ul class="nav--primary__sub js-expandable__content js-nav-hidden">
@@ -95,14 +92,14 @@ markup: false
                     <li> <a href="#">Tourism industry</a> </li>
                 </ul>
             </li>
-            <li class="nav--primary__active"> <a href="http://onsdigital.herokuapp.com/economy" class="nav__expandable js-expandable">Economy</a>
+            <li class="nav--primary__active"> <a href="/home/economy" class="nav__expandable js-expandable">Economy</a>
                 <ul class="nav--primary__sub js-expandable__content js-nav-hidden">
                     <li> <a href="#">Economic output and productivity</a> </li>
                     <li> <a href="#">Environmental account</a> </li>
                     <li> <a href="#">Government, public sector, and taxes</a> </li>
                     <li> <a href="#">Gross Domestic Product (GDP)</a> </li>
                     <li> <a href="#">Gross Values Added (GVA)</a> </li>
-                    <li> <a href="home/economy/inflationandpriceindices">Inflation and price indices</a> </li>
+                    <li> <a href="/home/economy/inflationandpriceindices">Inflation and price indices</a> </li>
                     <li> <a href="#">Investment and pension trust</a> </li>
                     <li> <a href="#">National accounts</a> </li>
                     <li> <a href="#">Regional accounts</a> </li>
@@ -153,7 +150,7 @@ markup: false
                 </form>
             </div>
             <div class="grid-col desktop-grid-one-half box--inline--flex">
-                <div class="link_head"> <a href="about:blank" class="link"> Browse Regional Statistics</a></div>
+                <div class="link_head"> <a href="#" class="link"> Browse Regional Statistics</a></div>
                 <div class="page-header__icons_new"> <img src="../ui/img/UK.png" alt="uk map" class="ukmap"> </div>
             </div>
         </div>
@@ -180,14 +177,14 @@ markup: false
         <h1 class="page-header__title flush--half--bottom">Producer Price Inflation, October 2014</h1>
         <div class="grid-wrap">
             <div class="grid-col desktop-grid-two-thirds"> <img src="ui/img/nslogo.png" class="page-header-image">
-                <p><strong>Release date: 19 February 2014</strong> <span class="page-header-box-link"> <a href="about:blank"><strong>View latest version</strong></a></span> </p>
+                <p><strong>Release date: 19 February 2014</strong> <span class="page-header-box-link"> <a href="#"><strong>View latest version</strong></a></span> </p>
                 <p>Next release: 21 November 2014</p>
                 <p>Contact: <a href="mailto:jukesie@hotmail.com">Juksie</a></p>
             </div>
             <div class="grid-col desktop-grid-one-third">
-                <p> <span class="icon icon-print icon--blue"> <span class="visuallyhidden">Print</span> &nbsp;<a href="about:blank">Print summary</a></span> (1 page) </p>
-                <p> <span class="icon icon-print icon--blue"> <span class="visuallyhidden">Print full report</span> &nbsp;<a href="about:blank">Print full report</a></span> (37 Pages) </p>
-                <p> <span class="icon icon-download icon--blue"> <span class="visuallyhidden">Download PDF</span> &nbsp;<a href="about:blank">Download PDF</a></span> (95.6kb) </p>
+                <p> <span class="icon icon-print icon--blue"> <span class="visuallyhidden">Print</span> &nbsp;<a href="#">Print summary</a></span> (1 page) </p>
+                <p> <span class="icon icon-print icon--blue"> <span class="visuallyhidden">Print full report</span> &nbsp;<a href="#">Print full report</a></span> (37 Pages) </p>
+                <p> <span class="icon icon-download icon--blue"> <span class="visuallyhidden">Download PDF</span> &nbsp;<a href="#">Download PDF</a></span> (95.6kb) </p>
             </div>
         </div>
         <div class="page-header__icons"> <a href="#" class="link-complex"> <span class="icon icon-twitter icon--grey"> <span class="visuallyhidden">Share on Twitter</span> </span> </a> <a href="#" class="link-complex"> <span class="icon icon-facebook icon--grey"> <span class="visuallyhidden">Share on Facebook</span> </span> </a> </div>
@@ -575,10 +572,6 @@ markup: false
     </div>
   </div>
 </footer>
-
-    <!-- Functionality to populate this page -->
-    <script src="../ui/js/markdown.js"></script>
-    <script src='../ui/js/bulletin.js'></script>
 
   </body>
 </html>

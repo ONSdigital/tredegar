@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
 <!--[if IE 7]><html class="no-js lt-ie9 lt-ie8 ie7"><![endif]-->
@@ -10,7 +9,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>T1 Homepage Template - CX partners</title>
-    <meta charset="utf-8" />
+<meta charset="UTF-8">
     <meta content="width=device-width,initial-scale=1.0" name="viewport" />
     <meta content="on" http-equiv="cleartype" />
     <meta name="format-detection" content="telephone=no">
@@ -24,28 +23,31 @@
     <!-- build:css /ui/css/main.css-->
     <!--[if gt IE 8]><!-->
     <link rel="stylesheet" href="../ui/css/main.css" />
-    <link rel="stylesheet" href="/ui/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
     <!--<![endif]-->
     <!-- endbuild -->
-    <script src="../ui/js/lib/modernizr.min.js"></script>
-    <script src="../ui/js/lib/jquery-1.11.0.min.js"></script>
-    <script src="/ui/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" defer></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js" defer></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js" defer></script>
     <!--[if (!IE)|(gt IE 8)]>><!-->
-    <script src="../ui/js/lib/jquery.tooltipster.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/tooltipster/3.0.5/js/jquery.tooltipster.min.js" defer></script>
     <!--<![endif]-->
-    <script src="../ui/js/app/app.js"></script>
-    <script src="../ui/js/app/content-reveal.js"></script>
-    <script src="../ui/js/app/nav.js"></script>
-    <script src="../ui/js/app/supporting-content.js"></script>
-    <script src="../ui/js/app/tables.js"></script>
-    <script src="../ui/js/app/tabs.js"></script>
-    <script src="/ui/js/custom-autocomplete.js"></script>
-    <script>
-    </script>
-    <style>
+    <script type="text/javascript" src="../ui/js/app/app.js" defer></script>
+    <script type="text/javascript" src="../ui/js/app/content-reveal.js" defer></script>
+    <script type="text/javascript" src="../ui/js/app/nav.js" defer></script>
+    <script type="text/javascript" src="../ui/js/app/supporting-content.js" defer></script>
+    <script type="text/javascript" src="../ui/js/app/tables.js" defer></script>
+    <script type="text/javascript" src="../ui/js/app/tabs.js" defer></script>
+    <script type="text/javascript" src="/ui/js/custom-autocomplete.js" defer></script>
+    
+    <!-- build:js /ui/js/ons-alpha.js-->
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.12/d3.min.js" defer></script>
+    <!-- endbuild -->
+
+    <!-- Functionality to populate this page -->
+    <script type="text/javascript" src="/ui/js/t1.js" defer></script>
 
     <style>
-
 
     body {
       padding: 0;
@@ -114,7 +116,7 @@ markup: false
         <div class="wrapper">
           <ul class="nav nav--multi nav--block nav--primary flush--bottom" id="nav-primary">
             <li class="nav--primary home">
-              <a href="http://onsdigital.herokuapp.com/"><span class="icon-home icon--inline"></span><span class="icon-inline vertical-align-mid">Home</span></a>
+              <a href="/"><span class="icon-home icon--inline"></span><span class="icon-inline vertical-align-mid">Home</span></a>
             </li>
             <li>
               <a href="#" class="nav__expandable js-expandable arrowunderline">Business, Industry, and Trade</a>
@@ -138,7 +140,7 @@ markup: false
               </ul>
             </li>
             <li>
-              <a href="http://onsdigital.herokuapp.com/home/economy/" class="nav__expandable js-expandable arrowunderline">Economy</a>
+              <a href="/home/economy/" class="nav__expandable js-expandable arrowunderline">Economy</a>
               <ul class="nav--primary__sub js-expandable__content js-nav-hidden">
                 <li><a href="#">Economic output and productivity</a>
                 </li>
@@ -233,7 +235,7 @@ markup: false
             <div class="grid-col desktop-grid-one-half box--inline--flex">
 
               <div class="link_head">
-                <a href="about:blank" class="link"> Browse Regional Statistics</a></div>
+                <a href="#" class="link"> Browse Regional Statistics</a></div>
                   <div class="page-header__icons_new">
                     <img src="/ui/img/UK.png" alt="uk map" class="ukmap">
                   </div>
@@ -667,6 +669,33 @@ markup: false
           </ul>
           <section id="published" role="tabpanel" class="tab-pane__panel" aria-hidden="true">
             <ol class="list--table list--table--cushy table--striped-light list--table--releases">
+              <li class="list--table__item list--table__body">
+                <div class="list--table__item__body list--table__item__body--date">
+                  <div class="list--table__item__body__inner">
+                    <time class="date date--stacked" datetime="2014-10-19">
+                      <div class="date--stacked__date">19</div>
+                      <div class="date--stacked__month date--stacked__month--shorthand">Oct</div>
+                      <div class="date--stacked__year">2014</div>
+                    </time>
+                  </div>
+                </div>
+                <div class="list--table__item__body list--table__item__body--release-caption">
+                  <div class="list--table__item__body__inner list--table__item__body__split">
+                    <div class="list--table__item__body__three-fifths">
+                      <h2 class="delta flush--half--bottom">
+                        <a href="/release.html" class="no_underline">Producer Price Inflation - October 2014</a>
+                        <span tabindex="0" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin tooltipstered"></span>
+                      </h2>
+                    </div>
+                    <div class="list--table__item__body__two-fifths">
+                      <dl class="definition-list flush micro">
+                        <dt></dt>
+                        <dd>Inflation and Price Indices</dd>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+              </li>            
               <li class="list--table__item list--table__body">
                 <div class="list--table__item__body list--table__item__body--date">
                   <div class="list--table__item__body__inner">
@@ -1115,12 +1144,6 @@ markup: false
       </footer>
       <!-- </div> -->
     </main>
-    <!-- build:js /ui/js/ons-alpha.js-->
-    <script src="../ui/js/lib/d3.v3.min.js"></script>
-    <!-- endbuild -->
-
-    <!-- Functionality to populate this page -->
-    <script src='/ui/js/t1.js'></script>
 
   </body>
 </html>

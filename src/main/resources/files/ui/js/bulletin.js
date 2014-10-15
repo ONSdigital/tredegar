@@ -49,9 +49,9 @@ var deconstruct = function() {
 
     // Table of contents
     toc = $(".toc-columns")
-    tocItem = $("<li><a></a></li>")
-    //tocItem = $("ol", toc).first()
-    //$("ol", toc).empty()
+    tocItem = $("li", toc).first()
+    tocItem.detach()
+    $("ol", toc).empty().hide()
 
     // Article section
     // Select the second one - the first is the TOC
@@ -165,36 +165,36 @@ $( document ).ready(function() {
 
     /* Get the data.json file to populate the page: */
 
-    $.get( "http://localhost:8080/bulletin.json", function( data1 ) {
+    $.get( "/bulletin.json", function( data ) {
 
         // Titles:
-        setTitle(data1.title)
+        setTitle(data.title)
 
         // Summary:
-        setSummary(data1)
+        setSummary(data)
 
         // Sections
         var i=1
-        while (data1.sections.length > 0) {
-            var section = data1.sections.shift()
+        while (data.sections.length > 0) {
+            var section = data.sections.shift()
             addTocItem(section, i)
             addSection(section, i)
             i++
         }
 
         // // Lede and reveal:
-        // $("p", ".lede").contents()[0].textContent = data1.lede;
-        // $(".content-reveal__hidden").text(data1.more)
+        // $("p", ".lede").contents()[0].textContent = data.lede;
+        // $(".content-reveal__hidden").text(data.more)
 
         // // Headline box
-        // $(".lede", headline).text(data1.name + " Statistical Bulletin Headlines")
+        // $(".lede", headline).text(data.name + " Statistical Bulletin Headlines")
 
         // // Time series items
         // var i = 0;
-        // while (data1.timeseries.length > 0 && i++ < 5) {
+        // while (data.timeseries.length > 0 && i++ < 5) {
 
         //  var timeseriesItem = timeseriesTemplate.clone()
-        //  var item = data1.timeseries.shift()
+        //  var item = data.timeseries.shift()
 
         //  var header = $("h3", timeseriesItem)
         //  $("a:eq(0)", header).text(item.name).attr("href", item.link)
@@ -214,13 +214,13 @@ $( document ).ready(function() {
 
         //  if(item.headline) {
         //      populateHeadline(item);
-        //      populateStatsBulletinHeadlines(data1, item)
+        //      populateStatsBulletinHeadlines(data, item)
         //  }
 
         // }
 
         // // Breadcrumb
-        // buildBreadcrumb(data1, breadcrumbItem)
+        // buildBreadcrumb(data, breadcrumbItem)
         // Breadcrumb
 
     });

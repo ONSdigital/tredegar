@@ -66,6 +66,12 @@ public class Home {
 
 	private String selectTaxonomyLevel(TaxonomyNode data) {
 		String templateResourceName;
+
+		// Handle crawler request:
+		// https://developers.google.com/webmasters/ajax-crawling/
+		// if (CrawlerHandler.handle(request, response))
+		// return null;
+
 		if (StringUtils.equals(data.level, "t1")) {
 			templateResourceName = "/files/t1.html";
 		} else if (StringUtils.equals(data.level, "t2")) {
@@ -106,7 +112,6 @@ public class Home {
 
 		// Not something we recognise
 		return null;
-
 	}
 
 	private boolean isDataRequest(HttpServletRequest request) {

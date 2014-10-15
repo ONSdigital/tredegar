@@ -1,84 +1,98 @@
-      
-      <div class="page-header slate">
+<!-- <div  ng-controller="T2Ctrl" > -->
+
+<!-- Content-reveal section -->
+    <div class="page-header slate" ng-controller="ContentRevealCtrl" >
         <div class="wrapper">
           <h1 class="page-header__title flush--half--bottom">Inflation and Price Indices</h1>
           <div class="content-reveal lede">
-            <p>
-              Consumer price inflation is the speed at which the prices of goods and services
-              bought by households rise or fall.
-              <a href="#" class="content-reveal__action hidden">See more</a>
+            <p>{{data.lede}}
+              <a href="" ng-click="toggleContent()" class="content-reveal__action">{{showContent ? 'Show less' : 'Show more'}}</a>
             </p>
-            <div class="content-reveal__hidden">
-              <p>Some more content about CPI goes here. This will expand and contract
-                if you have JS enabled. If JS is disabled, this will show by default.
-                Yay progressive enhancement!</p>
+            <div ng-show="showContent" class="content-reveal__hidden">
+              <p>
+              {{data.more}}
+              </p>
             </div>
           </div>
+        </div>
+
           <div class="page-header__icons">
             <!--<a href="#" class="link-complex">
               <span class="icon icon-twitter icon-grey">
                 <span class="visuallyhidden">Share on Twitter</span>
               </span>
             </a>!-->
-            <a href="#" class="link-complex">
-              <span class="icon icon-twitter icon--grey">
-                <span class="visuallyhidden">Share on Twitter</span>
-              </span>
-            </a>
+            <a href="#" class="link-complex"><span class="icon icon-twitter icon--grey"><span class="visuallyhidden">Share on Twitter</span></span></a>
             <a href="#" class="link-complex">
               <span class="icon icon-facebook icon--grey">
                 <span class="visuallyhidden">Share on Facebook</span>
               </span>
             </a>
           </div>
-        </div>
+    </div>
         <!-- /wrapper -->
-      </div>
+
+
+<!-- Top header box -->
       <!-- /page-header -->
-      <div class="wrapper">
-        <section id="headline" class="box box--padded-vertical solid border lifted offset-top border-defined">
+      <div ng-repeat="timeseries in data.timeseries" class="wrapper">
+        <section ng-show="timeseries.headline === true" id="headline" class="box box--padded-vertical box--blue box--green--separated-left solid border lifted offset-top border-defined">
           <div class="box__content">
             <div class="divider">
               <div class="divider__half divider__half--border divider__half--border-first">
                 <h2 class="beta">
-                  CPI Annual Rate Percentage Change over 12 months
+                    {{timeseries.name}}
+                  <!-- CPI Annual Rate Percentage Change over 12 months -->
                   <span tabindex="0" class="tooltip icon-info-circled icon--warm icon--inline icon--inline--large-text icon--small tooltipstered"></span>
                 </h2>
                 <div class="box box--inline box--padded muted--dark">
                   <div class="stat stat--headline">
                     <div class="stat__figure">
-                      1.5
+                      {{timeseries.number}}
+                      <!-- 1.5 -->
                       <span class="stat__figure__unit">%</span>
                     </div>
-                    
+
                   </div>
                 </div>
                 <!-- /box -->
                 <dl class="definition mini">
                   <dt>Last updated:</dt>
-                  <dd>16 Sep 2014</dd>
+                  <dd>
+                  {{timeseries.lastUpated}}
+                  <!-- 16 Sep 2014 -->
+                  </dd>
                   <dt>Next update:</dt>
-                  <dd>14 Oct 2014</dd>
+                  <dd>
+                  {{timeseries.nextUpdate}}
+                  <!-- 14 Oct 2014 -->
+                  </dd>
                 </dl>
               </div>
-      
+        <!-- /box -->
+
                 <!-- /box -->
-                
-              
-              <div id="statsBulletinHeadlines" class="divider__half">
-                <h3 class="body-type lede flush--bottom navpanel-list-heading">CPI Statistical Bulletin Headlines</h3>
-                <ul class="list--bullet mini flush--half--top navpanel-list">
-                  <li>The Consumer Price Index (CPI) grew by 1.5% in the year to May
-                    2014, down from 1.8% in April.</li>
-                  <li>Fall in transport services costs, notably air fares, provided
+
+    <!-- Explanation of the numbers -->
+              <div  id="statsBulletinHeadlines" class="divider__half">
+                <h3  class="body-type lede flush--bottom navpanel-list-heading">
+
+                Statistical Bulletin Headlines
+                </h3>
+                <ul ng-repeat="explanation in timeseries.statsBulletinHeadlines" class="list--bullet mini flush--half--top navpanel-list">
+                  <li>
+                  {{explanation.text}}
+                  <!-- The Consumer Price Index (CPI) grew by 1.5% in the year to May
+                    2014, down from 1.8% in April. -->
+                  </li>
+                  <!-- <li>Fall in transport services costs, notably air fares, provided
                     the largest contribution to the decrease in the rate.</li>
-                  <li>The timing of Easter in April is likely to have an impact on
-                    movements in the index, notably for air and sea fares.</li>
+                  <li>The timing of Easter in April is likely to have an impact on movements in the index, notably for air and sea fares.</li> -->
                   </ul>
                 <a class="action" href="/economy/inflationandpriceindices/bulletins/statsBulletin.html">
-                    <span class="table__action__text search-sorting">View the statistical bulletin > 
+                    <span class="table__action__text search-sorting">View the statistical bulletin &gt;
                     </span>
-                    
+
                   </a>
               </div>
             </div>
@@ -87,7 +101,11 @@
         </section>
         <!-- /box -->
       </div>
+
+
       <!-- /wrapper -->
+
+<!-- List/Table with data -->
       <section id="timeseries" class="panel--large wrapper">
         <h2 id="related" class="list--table-header">All Statistics Related to Inflation and Price Indices</h2>
           <ol class="list--table list--table--complex table--striped-light table--selectable table-light--sectioned lifted">
@@ -96,32 +114,49 @@
                 <input type="checkbox" aria-label="Select" id="checkbox">
               </label>
             </li>
+        <!-- Table line starts here -->
             <!-- /list- -table__head -->
-            <li class="list--table__item list--table__body">
+            <li ng-repeat="timeseries in data.timeseries" class="list--table__item list--table__body">
               <div class="list--table__item__body list--table__item__body--caption">
                 <h3 class="list--table__item__header">
-                  <a href="#" class="no_underline">CPI Index </a>
+                  <a href="#" class="no_underline">
+                  {{timeseries.name}}
+                  <!-- CPI Index -->
+                  </a>
                   <a class="information" href="#">
                     <span tabindex="0" title="" class="tooltip icon-info-circled icon--warm  icon--inline"></span>
                     <span class="visuallyhidden">More information about CPI index</span>
                   </a>
                 </h3>
-                <p class="list--table__item__description">2005 = 100. Not seasonally adjusted</p>
+                <p class="list--table__item__description">
+                {{timeseries.note}}
+                <!-- 2005 = 100. Not seasonally adjusted -->
+                </p>
               </div>
               <div class="list--table__item__body list--table__item__body--stat">
                 <div class="stat list--table__item__body--centred">
                   <div class="stat__figure stat__tight">
-                    1.5
+                    {{timeseries.number}}
+                    <!-- 1.5 -->
                   </div>
-                  <time class="stat__description" datetime="2014-01">January 2014</time>
+                  <time class="stat__description" datetime="2014-01">
+                  {{timeseries.date}}
+                  <!-- January 2014 -->
+                  </time>
                 </div>
               </div>
               <div class="list--table__item__body list--table__item__body--update">
                 <dl class="micro definition-list definition-list--inline flush--half--vertical">
                   <dt>Last updated:</dt>
-                  <dd>16th September 2014</dd>
-                  <dt>Next update:</dt>
-                  <dd class="red_highlight">14th October 2014</dd>
+                  <dd>
+                  {{timeseries.lastUpated}}
+                  <!-- 18th Feb 2014 -->
+                  </dd>
+                  <dt>Next updated:</dt>
+                  <dd class="red_highlight">
+                  {{timeseries.nextUpdate}}
+                  <!-- 25th June 2014 -->
+                  </dd>
                 </dl>
               </div>
               <label class="list--table__item__body list--table__item__body--select">
@@ -130,195 +165,69 @@
               </label>
             </li>
             <!-- /list- -table__body -->
+        <!-- End of line -->
 
-            <li class="list--table__item list--table__body">
-              <div class="list--table__item__body list--table__item__body--caption">
-                <h3 class="list--table__item__header">
-                  <a href="#" class="no_underline">CPIH Index <span tabindex="0" title="" class="tooltip icon-info-circled icon--warm  icon--inline"></span></a>
-                  <a class="information" href="#">
-                    
-                    <span class="visuallyhidden">More information about CPI index</span>
-                  </a>
-                </h3>
-              </div>
-              <div class="list--table__item__body list--table__item__body--stat">
-                <div class="stat list--table__item__body--centred">
-                  <div class="stat__figure stat__tight">
-                    124.7
-                    <span class="stat__figure__unit"></span>
-                  </div>
-                  <time class="stat__description" datetime="2014-01">January 2014</time>
-                </div>
-              </div>
-              <div class="list--table__item__body list--table__item__body--update">
-                <dl class="micro definition-list definition-list--inline flush--half--vertical">
-                  <dt>Last updated:</dt>
-                  <dd>18th Feb 2014</dd>
-                  <dt>Next updated:</dt>
-                  <dd class="red_highlight">25th June 2014</dd>
-                </dl>
-              </div>
-              <label class="list--table__item__body list--table__item__body--select">
-                <span class="visuallyhidden">Select statistic</span>
-                <input type="checkbox">
-              </label>
-            </li>
-            <!-- /list- -table__body -->
-             <li class="list--table__item list--table__body">
-              <div class="list--table__item__body list--table__item__body--caption">
-                <h3 class="list--table__item__header">
-                  <a href="#" class="no_underline">CPI Annual Rate Percentage Change over 12 Months <span tabindex="0" title="" class="tooltip icon-info-circled icon--warm  icon--inline"></span></a>
-                  <a class="information" href="#">
-                    
-                    <span class="visuallyhidden">More information about CPI index</span>
-                  </a>
-                </h3>
-              </div>
-              <div class="list--table__item__body list--table__item__body--stat">
-                <div class="stat list--table__item__body--centred">
-                  <div class="stat__figure stat__tight">
-                    1.5
-                    <span class="stat__figure__unit">%</span>
-                  </div>
-                  <time class="stat__description" datetime="2014-01">January 2014</time>
-                </div>
-              </div>
-              <div class="list--table__item__body list--table__item__body--update">
-                <dl class="micro definition-list definition-list--inline flush--half--vertical">
-                  <dt>Last updated:</dt>
-                  <dd>18th Feb 201</dd>
-                  <dt>Next updated:</dt>
-                  <dd class="red_highlight">25th June 2014</dd>
-                </dl>
-              </div>
-              <label class="list--table__item__body list--table__item__body--select">
-                <span class="visuallyhidden">Select statistic</span>
-                <input type="checkbox">
-              </label>
-            </li>
 
-             <!-- /list- -table__body -->
-                <li class="list--table__item list--table__body">
-              <div class="list--table__item__body list--table__item__body--caption">
-                <h3 class="list--table__item__header">
-                  <a href="#" class="no_underline">RPI Index <span tabindex="0" title="" class="tooltip icon-info-circled icon--warm  icon--inline"></span></a>
-                  <a class="information" href="#">
-                    
-                    <span class="visuallyhidden">More information about CPI index</span>
-                  </a>
-                </h3>
-              </div>
-              <div class="list--table__item__body list--table__item__body--stat">
-                <div class="stat list--table__item__body--centred">
-                  <div class="stat__figure stat__tight">
-                    252.6
-                    <span class="stat__figure__unit"></span>
-                  </div>
-                  <time class="stat__description" datetime="2014-01">January 2014</time>
-                </div>
-              </div>
-              <div class="list--table__item__body list--table__item__body--update">
-                <dl class="micro definition-list definition-list--inline flush--half--vertical">
-                  <dt>Last updated:</dt>
-                  <dd>18th Feb 2014</dd>
-                  <dt>Next updated:</dt>
-                  <dd class="red_highlight">25th June 2014</dd>
-                </dl>
-              </div>
-              <label class="list--table__item__body list--table__item__body--select">
-                <span class="visuallyhidden">Select statistic</span>
-                <input type="checkbox">
-              </label>
-            </li>
-            <!-- /list- -table__body -->
-                <li class="list--table__item list--table__body">
-              <div class="list--table__item__body list--table__item__body--caption">
-                <h3 class="list--table__item__header">
-                  <a href="#" class="no_underline">RPIX Index excluding mortgage interest <span tabindex="0" title="" class="tooltip icon-info-circled icon--warm  icon--inline"></span></a>
-                  <a class="information" href="#">
-                    
-                    <span class="visuallyhidden">More information about CPI index</span>
-                  </a>
-                </h3>
-                <p class="list--table__item__description">Not a national statistic</p>
-              </div>
-              <div class="list--table__item__body list--table__item__body--stat">
-                <div class="stat list--table__item__body--centred">
-                  <div class="stat__figure stat__tight">
-                    251.9
-                    <span class="stat__figure__unit"></span>
-                  </div>
-                  <time class="stat__description" datetime="2014-01">January 2014</time>
-                </div>
-              </div>
-              <div class="list--table__item__body list--table__item__body--update">
-                <dl class="micro definition-list definition-list--inline flush--half--vertical">
-                  <dt>Last updated:</dt>
-                  <dd>18th Feb 2014</dd>
-                  <dt>Next updated:</dt>
-                  <dd class="red_highlight">25th June 2014</dd>
-                </dl>
-              </div>
-              <label class="list--table__item__body list--table__item__body--select">
-                <span class="visuallyhidden">Select statistic</span>
-                <input type="checkbox">
-              </label>
-            </li>
-                      
-            
+
+    <!-- Bottom options for downloading table contents -->
             <!-- /list- -table__body -->
             <li class="list--table__item list--table__footer">
-              <div class="list--table__item__body">
-                <div class="table__actions split">
-                  <a class="table__action split__title link-muted tableaction-reduced" href="#">
-                    <span class="table_action__text">View all 1234 time series</span>
-                  </a>
-                  <a class="table__action" href="#">
-                    <span class="table__action__text">Download all 1234</span>
-                    <span class="icon-download" role="presentation"></span>
-                  </a>
-                  <a href="#" class="btn btn--flex btn--block btn--primary">
-                    <span class="table__action__text">Download selected</span>
-                    <span class="icon-download" role="presentation"></span>
-                  </a>
-                </div>
-                <!-- /table-actions -->
+            <div class="list--table__item__body">
+              <div class="table__actions split">
+                <a class="table__action split__title link-muted" href="#">
+                  <span class="table__action__text">View all 1234 time series</span>
+                </a>
+                <a class="table__action" href="#">
+                  <span class="table__action__text">Download all 1234</span>
+                  <span class="icon-download" role="presentation"></span>
+                </a>
+                <a href="#" class="btn btn--flex btn--block btn--primary">
+                  <span class="table__action__text">Download selected</span>
+                  <span class="icon-download" role="presentation"></span>
+                </a>
               </div>
-              <!-- /list- -table__item__body -->
-            </li>
+              <!-- /table-actions -->
+            </div>
+            <!--  /list-table__item__body -->
+          </li>
             <!-- /list- -table__item -->
           </ol>
           <!-- /list- -table -->
       </section>
-      <section class="panel wrapper">
+
+
+
+
+<!-- Key dataset -->
+<section class="panel wrapper">
         <header class="actionable-header">
-          <h2 class="actionable-header__title">Key datasets</h2>
-          <a class="actionable-header__action hide-med-down" href="#">View more datasets</a>
+          <h2 class="actionable-header__title table-inline ">Key datasets</h2>
+          <a class="" href="#">View more datasets</a>
         </header>
         <div class="grid-wrap">
           <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
             <article class="box box--padded sectioned lifted border-defined">
               <header class="box__header">
                 <h3 class="gamma">
-                  Regional Gross Value Added (Income Approach)
+                    <a href="#">Inflation Summary </a>
                 </h3>
               </header>
               <!-- /box__header -->
               <div class="box__content">
-                <ul class="list--bullet">
-                  <li>In 2012 the South East had the largest increase in GVA</li>
-                  <li>Between 1997 and 2011 the contribution of building to total GVA
-                    decreased in each of the NUTS1 regions.</li>
+                <ul class="list--table">
+                  <li class="">Overview of all high level consumer inflation data, including CPI, RPI, CPIH and RPIJ</li>
+                  <!-- <li>Between 1997 and 2011 the contribution of building to total GVA decreased in each of the NUTS1 regions.</li> -->
                 </ul>
+                <p class="lozenge">Dataset</p>
                 <!-- /list- -bullet -->
               </div>
               <!-- /box__content -->
-              <footer class="box__footer box__actions">
+              <!-- <footer class="box__footer box__actions">
                 <a class="btn btn--primary btn--small btn--narrow align_right" href="#">
             Download .xls
             <span class="icon icon-download icon--button-inline"></span>
           </a>
-              </footer>
+              </footer> -->
               <!-- /box__actions -->
             </article>
             <!-- /box -->
@@ -328,24 +237,25 @@
             <article class="box box--padded sectioned lifted border-defined">
               <header class="box__header">
                 <h3 class="gamma">
-                  Consumer Price Inflation
+                  <a href="#">Retail Price Index </a>
                 </h3>
               </header>
               <!-- /box__header -->
               <div class="box__content">
-                <ul class="list--bullet">
-                  <li>The Consumer Prices Index (CPI) grew by 1.5%</li>
-                  <li>Falls in transport services costs, notably air fares</li>
+                <ul class="list--table">
+                  <li>Complete dataset covering all RPI statistics. Not a national statistic</li>
+                  <!-- <li>Falls in transport services costs, notably air fares</li> -->
                 </ul>
+                <p class="lozenge">Dataset</p>
                 <!-- /list- -bullet -->
               </div>
               <!-- /box__content -->
-              <footer class="box__footer box__actions">
+              <!-- <footer class="box__footer box__actions">
                 <a class="btn btn--primary btn--small btn--narrow align_right" href="#">
             Download .xls
             <span class="icon icon-download icon--button-inline"></span>
           </a>
-              </footer>
+              </footer> -->
             </article>
             <!-- /box -->
           </div>
@@ -354,28 +264,29 @@
             <article class="box box--padded sectioned lifted border-defined">
               <header class="box__header">
                 <h3 class="gamma">
-                  Regional Gross Value Added (Income Approach)
+                  <a href="#">Produce Price Inflation </a>
                 </h3>
               </header>
               <!-- /box__header -->
               <div class="box__content">
-                <ul class="list--bullet">
-                  <li>In 2012 the South East had the largest increase in GVA</li>
-                  <li>Between 1997 and 2011 the contribution of building to total GVA
+                <ul class="list--table">
+                  <li>Comprehensive dataset covering input and output index series</li>
+                  <!-- <li>Between 1997 and 2011 the contribution of building to total GVA
                     decreased in each of the NUTS1 regions.</li>
                   <li>In 2012 the South East had the largest increase in GVA</li>
                   <li>Between 1997 and 2011 the contribution of building to total GVA
-                    decreased in each of the NUTS1 regions.</li>
+                    decreased in each of the NUTS1 regions.</li> -->
                 </ul>
+                <p class="lozenge">Dataset</p>
                 <!-- /list- -bullet -->
               </div>
               <!-- /box__content -->
-              <footer class="box__footer box__actions">
+              <!-- <footer class="box__footer box__actions">
                 <a class="btn btn--primary btn--small btn--narrow align_right" href="#">
             Download .xls
             <span class="icon icon-download icon--button-inline"></span>
           </a>
-              </footer>
+              </footer> -->
             </article>
             <!-- /box -->
           </div>
@@ -386,13 +297,15 @@
         </div>
         <!-- /grid-wrap -->
       </section>
-      <section class="panel--pad panel--bottom-mar slate">
-        <div class="wrapper">
+
+
+      <!-- Latest statistical bulletin -->
+ <section class="panel--pad panel--bottom-mar slate wrapper flush--bottom">
           <div class="grid-wrap">
             <div class="grid-col desktop-grid-one-third tablet-grid-full">
               <article class="box">
                 <h2 class="beta">Latest Statistical Bulletins</h2>
-                <a id="viewAllStatsBulletins" class="action-link hide-med-down">View all statistical bulletins</a>
+                <a href="#" id="viewAllStatsBulletins" class="action-link hide-med-down">View all statistical bulletins</a>
               </article>
             </div>
             <!-- /box -->
@@ -400,7 +313,7 @@
               <article class="box">
                 <header class="box__header">
                   <h3 class="gamma flush">
-                    <a href="/economy/inflationandpriceindices/bulletins/statsBulletin.html">Consumer Price Inflation, January 2014</a>
+                    <a href="/home/economy/inflationandpriceindices/bulletins/statsBulletin.html">Consumer Price Inflation, January 2014</a>
                   </h3>
                 </header>
                 <!-- /box__header -->
@@ -449,15 +362,17 @@
             </div>
           </div>
           <!-- /grid-wrap -->
-        </div>
         <!-- /wrapper -->
       </section>
-      <section class="panel--large wrapper">
+
+
+    <!-- Other Articles -->
+      <section class="panel--large wrapper flush--top">
         <div class="grid-wrap">
           <div class="grid-col desktop-grid-one-third tablet-grid-full">
             <article class="box">
-              <h2 class="beta">Other Statistical Bulletins and Articles</h2>
-              <a href="#" class="action-link hide-med-down">View more statistical bulletins and articles</a>
+              <h2 class="beta">Related Articles</h2>
+              <a href="#" class="action-link hide-med-down">View more articles</a>
             </article>
           </div>
           <!-- /box -->
@@ -476,9 +391,9 @@
                 </p>
                 <p class="description mini"></p>
                 <p>
-                  <span class="lozenge">Statistical bulletin</span>
+                  <span class="lozenge">Article</span>
                 </p>
-               
+
               </div>
               <!-- /box__content -->
             </article>
@@ -502,7 +417,7 @@
                 <p>
                   <span class="lozenge">Expert analysis</span>
                 </p>
-                
+
               </div>
               <!-- /box__content -->
             </article>
@@ -524,9 +439,9 @@
                 </p>
                 <p class="description mini"></p>
                 <p>
-                  <span class="lozenge">Statistical bulletin</span>
+                  <span class="lozenge">Article</span>
                 </p>
-               
+
               </div>
               <!-- /box__content -->
             </article>
@@ -550,7 +465,7 @@
                 <p>
                   <span class="lozenge">Expert analysis</span>
                 </p>
-                
+
               </div>
               <!-- /box__content -->
             </article>
@@ -561,10 +476,12 @@
         <!-- /grid-wrap -->
         <div class="box box--padded-top hide-large">
           <p>
-            <a href="#" class="action-link">View more statistical bulletins and articles</a>
+            <a href="#" class="action-link">View more articles</a>
           </p>
         </div>
       </section>
+
+<!-- Contact Details -->
       <section class="panel wrapper flush--bottom">
         <div class="grid-wrap">
           <div class="grid-col desktop-grid-one-half tablet-grid-one-half">
@@ -721,7 +638,7 @@
         <!-- /wrapper -->
       </section>
       <!-- /slate -->
-      
+
     <!-- build:js /ui/js/ons-alpha.js-->
-    <script src='//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js'></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js" defer></script>
     <!-- endbuild -->

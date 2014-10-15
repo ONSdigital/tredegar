@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
 <!--[if IE 7]><html class="no-js lt-ie9 lt-ie8 ie7"><![endif]-->
@@ -10,7 +9,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>Collection</title>
-    <meta charset="utf-8" />
+<meta charset="UTF-8">
     <meta content="width=device-width,initial-scale=1.0" name="viewport" />
     <meta content="on" http-equiv="cleartype" />
     <meta name="format-detection" content="telephone=no">
@@ -24,27 +23,26 @@
     <!-- build:css /ui/css/main.css-->
     <!--[if gt IE 8]><!-->
     <link rel="stylesheet" href="ui/css/main.css" />
-    <link rel="stylesheet" href="/ui/css/jquery-ui.min.css">    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/css/jquery-ui.min.css">    
     
     <!--<![endif]-->
     <!-- endbuild -->
-    <script src="ui/js/lib/modernizr.min.js"></script>
-    <script src="ui/js/lib/jquery.min.js" type="text/javascript" ></script>
-    <script src="/ui/js/lib/jquery-ui.min.js"></script>    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" defer></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js" defer></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js" defer></script>    
     <!--[if (!IE)|(gt IE 8)]>><!-->
-    <script src="ui/js/lib/jquery.tooltipster.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/tooltipster/3.0.5/js/jquery.tooltipster.min.js" defer></script>
     <!--<![endif]-->
-    <script src="ui/js/app/app.js"></script>
-    <script src="ui/js/app/content-reveal.js"></script>
-    <script src="ui/js/app/nav.js"></script>
-    <script src="ui/js/app/tables.js"></script>
-    <script src="ui/js/app/tabs.js"></script>
-    <script src="ui/js/main.js" type="text/javascript" ></script>
-    <script src="ui/js/collection-search.js" type="text/javascript" ></script>
-    <script src="ui/js/lib/jquery.simplePagination.js" type="text/javascript" ></script>
-    <script src="/ui/js/custom-autocomplete.js"></script>    
-    <script>
-    </script>
+    <script type="text/javascript" src="ui/js/app/app.js" defer></script>
+    <script type="text/javascript" src="ui/js/app/content-reveal.js" defer></script>
+    <script type="text/javascript" src="ui/js/app/nav.js" defer></script>
+    <script type="text/javascript" src="ui/js/app/tables.js" defer></script>
+    <script type="text/javascript" src="ui/js/app/tabs.js" defer></script>
+    <script type="text/javascript" src="ui/js/main.js" defer></script>
+    <script type="text/javascript" src="ui/js/collection-search.js" defer></script>
+    <script type="text/javascript" src="ui/js/lib/jquery.simplePagination.js" defer></script>
+    <script type="text/javascript" src="/ui/js/custom-autocomplete.js" defer></script>
+    
     <style>
 
     body {
@@ -118,7 +116,7 @@ markup: false
   <div class="wrapper">
     <ul class="nav nav--multi nav--block nav--primary flush--bottom" id="nav-primary">
       <li class="nav--primary home">
-              <a href="http://onsdigital.herokuapp.com/"><span class="icon-home icon--inline"></span><span class="icon-inline vertical-align-mid">Home</span></a>
+              <a href="/"><span class="icon-home icon--inline"></span><span class="icon-inline vertical-align-mid">Home</span></a>
       </li>
       <li>
         <a href="#" class="nav__expandable js-expandable">Business, Industry, and Trade</a>
@@ -150,7 +148,7 @@ markup: false
         </ul>
       </li>
       <li class="nav--primary__active">
-        <a href="http://onsdigital.herokuapp.com/home/economy/" class="nav__expandable js-expandable">Economy</a>
+        <a href="/home/economy/" class="nav__expandable js-expandable">Economy</a>
         <ul class="nav--primary__sub js-expandable__content js-nav-hidden">
           <li>
             <a href="#">Economic output and productivity</a>
@@ -268,7 +266,7 @@ markup: false
             </div>
             <div class="grid-col desktop-grid-one-half box--inline--flex">
               <div class="link_head">
-                <a href="about:blank" class="link"> Browse Regional Statistics</a></div>
+                <a href="#" class="link"> Browse Regional Statistics</a></div>
                   <div class="page-header__icons_new">
                     <img src="/ui/img/UK.png" alt="uk map" class="ukmap">
                   </div>           
@@ -437,7 +435,7 @@ markup: false
     </script>
     
     <!-- Functionality to populate this page -->
-    <script src='/ui/js/collection.js'></script>    
+    <script type="text/javascript" src="/ui/js/collection.js" defer></script>    
 
   </body>
 </html>

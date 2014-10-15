@@ -216,13 +216,15 @@ public class Csv {
 
 	private static void createT2(Folder folder, File file) throws IOException {
 
-		String json = Serialiser.serialise(new T2(folder));
+		T2 t2 = new T2(folder);
+		String json = Serialiser.serialise(t2);
 		FileUtils.writeStringToFile(new File(file, "data.json"), json);
 	}
 
 	private static void createT3(Folder folder, File file) throws IOException {
 
-		String json = Serialiser.serialise(new T3(folder));
+		T3 t3 = new T3(folder);
+		String json = Serialiser.serialise(t3);
 		FileUtils.writeStringToFile(new File(file, "data.json"), json);
 
 		createBulletin(folder, file);

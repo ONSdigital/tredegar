@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
 <!--[if IE 7]><html class="no-js lt-ie9 lt-ie8 ie7"><![endif]-->
@@ -10,7 +9,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" content="chrome=1"/>
     <title>T3: Inflation and Price Indices - CX partners</title>
-    <meta charset="UTF-8" />
+<meta charset="UTF-8">
     <meta content="width=device-width,initial-scale=1.0" name="viewport" />
     <meta content="on" http-equiv="cleartype" />
     <meta name="format-detection" content="telephone=no">
@@ -24,24 +23,31 @@
     <!-- build:css /ui/css/main.css-->
     <!--[if gt IE 8]><!-->
     <link type="text/css" href="/ui/css/main.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/ui/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
     <!--<![endif]-->
     <!-- endbuild -->
-    <script src="/ui/js/lib/modernizr.min.js"></script>
-    <script src="/ui/js/lib/jquery-1.11.0.min.js"></script>
-    <script src="/ui/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" defer></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js" defer></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js" defer></script>
     <!--[if (!IE)|(gt IE 8)]>><!-->
-    <script src="/ui/js/lib/jquery.tooltipster.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/tooltipster/3.0.5/js/jquery.tooltipster.min.js" defer></script>
     <!--<![endif]-->
-    <script src="/ui/js/app/app.js"></script>
-    <script src="/ui/js/app/content-reveal.js"></script>
-    <script src="/ui/js/app/nav.js"></script>
-    <script src="/ui/js/app/tables.js"></script>
-    <script src="/ui/js/app/tabs.js"></script>
-    <script src="/ui/js/custom-autocomplete.js"></script>
-    <script>
-    </script>
+    <script type="text/javascript" src="/ui/js/app/app.js" defer></script>
+    <script type="text/javascript" src="/ui/js/app/content-reveal.js" defer></script>
+    <script type="text/javascript" src="/ui/js/app/nav.js" defer></script>
+    <script type="text/javascript" src="/ui/js/app/tables.js" defer></script>
+    <script type="text/javascript" src="/ui/js/app/tabs.js" defer></script>
+    <script type="text/javascript" src="/ui/js/custom-autocomplete.js" defer></script>
+    
+    <!-- build:js /ui/js/ons-alpha.js-->
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js" defer></script>
+    <!-- endbuild -->
+
+    <!-- Functionality to populate this page -->
+    <script type="text/javascript" src="/ui/js/t3.js" defer></script>
+    
     <style>
+    
     body {
       padding: 0;
     }
@@ -104,7 +110,7 @@ markup: false
   <div class="wrapper">
     <ul class="nav nav--multi nav--block nav--primary flush--bottom" id="nav-primary">
       <li class="nav--primary home">
-        <a href="http://onsdigital.herokuapp.com/"><span class="icon-home icon--inline"></span><span class="icon-inline vertical-align-mid">Home</span></a>
+        <a href="/"><span class="icon-home icon--inline"></span><span class="icon-inline vertical-align-mid">Home</span></a>
       </li>
       <li>
         <a href="#" class="nav__expandable js-expandable">Business, Industry, and Trade</a>
@@ -136,7 +142,7 @@ markup: false
         </ul>
       </li>
       <li class="nav--primary__active">
-        <a href="http://onsdigital.herokuapp.com/home/economy/" class="nav__expandable js-expandable">Economy</a>
+        <a href="/home/economy/" class="nav__expandable js-expandable">Economy</a>
         <ul class="nav--primary__sub js-expandable__content js-nav-hidden">
           <li>
             <a href="#">Economic output and productivity</a>
@@ -154,7 +160,7 @@ markup: false
             <a href="#">Gross Values Added (GVA)</a>
           </li>
           <li>
-            <a href="home/economy/inflationandpriceindices">Inflation and price indices</a>
+            <a href="/home/economy/inflationandpriceindices">Inflation and price indices</a>
           </li>
           <li>
             <a href="#">Investment and pension trust</a>
@@ -255,7 +261,7 @@ markup: false
             </div>
             <div class="grid-col desktop-grid-one-half box--inline--flex">
               <div class="link_head">
-                <a href="about:blank" class="link"> Browse Regional Statistics</a></div>
+                <a href="#" class="link"> Browse Regional Statistics</a></div>
                   <div class="page-header__icons_new">
                     <img src="/ui/img/UK.png" alt="uk map" class="ukmap">
                   </div>
@@ -266,10 +272,10 @@ markup: false
       <div class="wrapper panel--pad-small">
         <ol class="nav nav--heavy breadcrumb mini flush">
           <li>
-            <a href="http://onsdigital.herokuapp.com/home">Home</a>
+            <a href="/">Home</a>
           </li>
           <li>
-            <a href="http://onsdigital.herokuapp.com/home/economy/">Economy</a>
+            <a href="/home/economy/">Economy</a>
           </li>
           <li class="nav__active">
             <a href="#">Government, Public Sector, and Taxes</a>
@@ -369,7 +375,7 @@ markup: false
                   <li>The timing of Easter in April is likely to have an impact on
                     movements in the index, notably for air and sea fares.</li>
                   </ul>
-                <a class="div_panel_link" href="home/economy/inflationandpriceindices/bulletins/statsBulletin.html">View the statistical bulletin &gt;                   
+                <a class="div_panel_link" href="/home/economy/inflationandpriceindices/bulletins/statsBulletin.html">View the statistical bulletin &gt;                   
                 </a>                
               </div>
             </div>
@@ -559,24 +565,24 @@ markup: false
 
             <!-- /list- -table__body -->
             <li class="list--table__item list--table__footer">
-              <div class="list--table__item__body">
-                <div class="table__actions split">
-                  <a class="table__action split__title link-muted tableaction-reduced" href="#">
-                    <span class="table_action__text">View all 1234 time series</span>
-                  </a>
-                  <a class="table__action" href="#">
-                    <span class="table__action__text">Download all 1234</span>
-                    <span class="icon-download" role="presentation"></span>
-                  </a>
-                  <a href="#" class="btn btn--flex btn--block btn--primary">
-                    <span class="table__action__text">Download selected</span>
-                    <span class="icon-download" role="presentation"></span>
-                  </a>
-                </div>
-                <!-- /table-actions -->
+            <div class="list--table__item__body">
+              <div class="table__actions split">
+                <a class="table__action split__title link-muted" href="#">
+                  <span class="table__action__text">View all 1234 time series</span>
+                </a>
+                <a class="table__action" href="#">
+                  <span class="table__action__text">Download all 1234</span>
+                  <span class="icon-download" role="presentation"></span>
+                </a>
+                <a href="#" class="btn btn--flex btn--block btn--primary">
+                  <span class="table__action__text">Download selected</span>
+                  <span class="icon-download" role="presentation"></span>
+                </a>
               </div>
-              <!-- /list- -table__item__body -->
-            </li>
+              <!-- /table-actions -->
+            </div>
+            <!--  /list-table__item__body -->
+          </li>
             <!-- /list- -table__item -->
           </ol>
           <!-- /list- -table -->
@@ -684,7 +690,7 @@ markup: false
             <div class="grid-col desktop-grid-one-third tablet-grid-full">
               <article class="box">
                 <h2 class="beta">Latest Statistical Bulletins</h2>
-                <a href="#" class="action-link hide-med-down">View all statistical bulletins</a>
+                <a href="#" id="viewAllStatsBulletins" class="action-link hide-med-down">View all statistical bulletins</a>
               </article>
             </div>
             <!-- /box -->
@@ -1088,12 +1094,6 @@ markup: false
 </footer>
       <!-- </div> -->
     </main>
-    <!-- build:js /ui/js/ons-alpha.js-->
-    <script src='//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js'></script>
-    <!-- endbuild -->
-
-    <!-- Functionality to populate this page -->
-    <script src='/ui/js/t3.js'></script>
 
   </body>
 </html>
