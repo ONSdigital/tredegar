@@ -1,4 +1,4 @@
-package com.github.onsdigital.json;
+package com.github.onsdigital.json.taxonomy;
 
 public class DetailT3 extends Detail {
 

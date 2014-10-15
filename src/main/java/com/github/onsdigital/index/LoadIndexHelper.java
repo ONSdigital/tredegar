@@ -40,7 +40,8 @@ public class LoadIndexHelper {
 	 * @throws IOException
 	 *             if any file io operations failed
 	 */
-	public static List<String> getAbsoluteFilePaths(String path) throws IOException {
+	public static List<String> getAbsoluteFilePaths(String path)
+			throws IOException {
 		List<String> fileNames = new ArrayList<String>();
 		final Path rootDir = Paths.get(path);
 		fileNames = ScanFileSystem.getFileNames(fileNames, rootDir);
@@ -57,8 +58,11 @@ public class LoadIndexHelper {
 	 * @throws JsonSyntaxException
 	 * @throws JsonIOException
 	 */
-	public static Map<String, String> getDocumentMap(String absoluteFilePath) throws JsonIOException, JsonSyntaxException, IOException {
-		String url = absoluteFilePath.substring(absoluteFilePath.indexOf(Configuration.getTaxonomyPath()) + Configuration.getTaxonomyPath().length());
+	public static Map<String, String> getDocumentMap(String absoluteFilePath)
+			throws JsonIOException, JsonSyntaxException, IOException {
+		String url = absoluteFilePath.substring(absoluteFilePath
+				.indexOf(Configuration.getTaxonomyPath())
+				+ Configuration.getTaxonomyPath().length());
 		String[] splitPath = url.split(DELIMITTER);
 		int splitPathLength = splitPath.length;
 		int folderNameTokenIndex = splitPathLength - 2;
@@ -80,12 +84,14 @@ public class LoadIndexHelper {
 			}
 
 		} else {
-			documentMap = buildDocumentMap(url, splitPath, type, "Inflation Price And Indices");
+			documentMap = buildDocumentMap(url, splitPath, type,
+					"Inflation Price And Indices");
 		}
 		return documentMap;
 	}
 
-	private static Map<String, String> buildDocumentMap(String url, String[] splitPath, String type, String title) {
+	private static Map<String, String> buildDocumentMap(String url,
+			String[] splitPath, String type, String title) {
 
 		Map<String, String> documentMap = new HashMap<String, String>();
 		documentMap.put(URL, url);
@@ -97,13 +103,16 @@ public class LoadIndexHelper {
 
 	private static String getType(String[] splitPath, int typeTokenIndex) {
 		String type = splitPath[typeTokenIndex];
-		if (!type.equals(BULLETINS) && !type.equals(ARTICLES) && !type.equals(METHODOLOGY) && !type.equals(DATASETS)) {
+		if (!type.equals(BULLETINS) && !type.equals(ARTICLES)
+				&& !type.equals(METHODOLOGY) && !type.equals(DATASETS)) {
 			type = HOME;
 		}
 		return type;
 	}
 
 	private static String getTitle(String filePath) throws IOException {
-		return new JsonParser().parse(FileUtils.readFileToString(new File(filePath))).getAsJsonObject().get("name").getAsString();
+		return new JsonParser()
+				.parse(FileUtils.readFileToString(new File(filePath)))
+				.getAsJsonObject().get("name").getAsString();
 	}
 }

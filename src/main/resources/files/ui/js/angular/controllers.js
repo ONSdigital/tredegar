@@ -59,7 +59,6 @@ onsControllers.controller('MainCtrl', ['$scope', '$http', '$location', '$route',
       }
       $location.path('/searchresults')
       $location.search('q', searchTerm)
-      $location.search('page', 1)
       //Re-initializes controllers. Fixes searching on search results page searching the same term
       $route.reload() 
 
@@ -80,6 +79,8 @@ onsControllers.controller('TabsCtrl', ['$scope',
     }
   }
 ])
+
+
 
 //Article Controller
 onsControllers.controller('ArticleCtrl', ['$scope',
@@ -107,6 +108,47 @@ onsControllers.controller('BulletinCtrl', ['$scope',
     $scope.contentType = "bulletin"
     $scope.sidebar=true
     $scope.sidebarUrl = "templates/contentsidebar.html"
+  }
+])
+
+
+//Collection Controller
+onsControllers.controller('CollectionCtrl', ['$scope',
+  function($scope) {
+
+    $scope.getJSON("/collection.json", function(data){
+      $scope.content =  data
+    })
+
+    var getParam = $scope.getUrlParam
+    var page = getParam('page')
+    var searchTerm = $scope.searchTerm = getParam('q')
+    var type = $scope.type = getParam('type')
+    if (!searchTerm) {
+      return
+    }
+    if (!page) {
+      page = 1
+    }
+
+    $scope.setUrlParam('page', page)
+
+    search(searchTerm, type, page)
+
+    function search(q, type, pageNumber) {
+      var searchString = "?q=" + q + (type ? "&type=" + type : "") + "&page=" + pageNumber
+      $scope.getJSON("/collectiontaxonomyfilesystem" + searchString, function(data) {
+        $scope.searchResponse = data
+        console.log(data)
+        $scope.pageCount = Math.ceil(data.numberOfResults / 10)
+      })
+    }
+
+
+    $scope.isLoading = function() {
+      return ($scope.searchTerm && !$scope.searchResponse)
+    }
+
   }
 ])
 
@@ -387,4 +429,12 @@ onsControllers.controller('NavCtrl', ['$scope',
       return $scope.location === page
     }
   }
+])
+
+onsControllers.controller('ReleaseCtrl', ['$scope',
+   function($scope) {
+     $scope.getJSON("/release.json", function(data) {
+       $scope.releaseData = data
+     })
+   }
 ])
