@@ -3,7 +3,7 @@
 <!-- Content-reveal section -->
     <div class="page-header slate" ng-controller="ContentRevealCtrl" >
         <div class="wrapper">
-          <h1 class="page-header__title flush--half--bottom">Inflation and Price Indices</h1>
+          <h1 class="page-header__title flush--half--bottom">{{data.name}}</h1>
           <div class="content-reveal lede">
             <p>{{data.lede}}
               <a href="" ng-click="toggleContent()" class="content-reveal__action">{{showContent ? 'Show less' : 'Show more'}}</a>
