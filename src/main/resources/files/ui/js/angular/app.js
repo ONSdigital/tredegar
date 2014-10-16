@@ -9,8 +9,10 @@ var onsApp = angular.module('onsApp', [
     'onsControllers'
 ]);
 
-onsApp.config(['$routeProvider',
-    function($routeProvider) {
+onsApp.config(['$routeProvider','$locationProvider',
+    function($routeProvider, $locationProvider) {
+		//$locationProvider.hashPrefix('!');
+//			 .html5Mode(false)
         $routeProvider.
         when('/', {
             redirectTo: '/home'
