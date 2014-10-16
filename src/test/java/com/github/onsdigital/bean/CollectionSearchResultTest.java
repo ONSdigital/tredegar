@@ -31,7 +31,6 @@ public class CollectionSearchResultTest {
 				"Inflation and Price Indices", bulletin.get("title"));
 		assertEquals("release date should be available from map",
 				"19 February 2014", bulletin.get("releaseDate"));
-		// TODO: this needs looking at - not currently working right
 		assertEquals("url should be available from map",
 				"/taxonomy/economy/inflationandpriceindices/bulletins/",
 				bulletin.get("url"));
