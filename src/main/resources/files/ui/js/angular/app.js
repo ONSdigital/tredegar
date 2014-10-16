@@ -99,6 +99,7 @@ onsApp.directive('onsHeader', function() {
   }
 
 })
+
 onsApp.directive('paginator', function() {
   return {
     restrict: 'E',
@@ -204,17 +205,17 @@ onsApp.directive('markdown', function($http) {
     };
 });
 
-        onsApp.factory('Page', function() {
-            var title = 'Office Of National Statistics';
-            return {
-                title: function() {
-                    return title;
-                },
-                setTitle: function(newTitle) {
-                    title = newTitle
-                }
-            };
-        });
+onsApp.factory('Page', function() {
+    var title = 'Office Of National Statistics';
+    return {
+        title: function() {
+            return title;
+        },
+        setTitle: function(newTitle) {
+            title = newTitle
+        }
+    };
+});
 
 onsApp.service('anchorSmoothScroll', function(){
 
