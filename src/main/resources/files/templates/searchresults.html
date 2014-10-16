@@ -11,10 +11,8 @@
       <div ng-show="searchResponse" id="search-results-total" class="search-results-total">
         <span class='results-total'>
           {{searchResponse.numberOfResults}}
-        </span>
-           results for 
-          <span class='results-search-term'>
-           {{searchTerm}}
+        </span>results for<span class='results-search-term'>
+           '{{searchTerm}}'
            <span>
       </div>
       <div class="search-filters">
@@ -45,7 +43,7 @@
 
               <dl>
                   <dt ng-repeat-start="item in searchResponse.results" class="">
-                    <a href="#{{item.url}}">{{item.title}}</a>
+                    <a href="#{{ '/home' +item.url}}">{{item.title}}</a>
                     <span class="lozenge" href="">{{item.type}}</span>
                   </dt>
                   <dd class="microcopy"> Released...</dd>

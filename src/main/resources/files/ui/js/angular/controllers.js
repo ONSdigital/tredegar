@@ -50,7 +50,8 @@ onsControllers.controller('MainCtrl', ['$scope', '$http', '$location', '$route',
       anchorSmoothScroll.scrollTo(id)
     }
 
-    $scope.search = function(searchTerm) {
+    $scope.goToSearch = function(searchTerm) {
+      alert("Gioing to search")
       if (!searchTerm) {
         return
       }
@@ -60,6 +61,34 @@ onsControllers.controller('MainCtrl', ['$scope', '$http', '$location', '$route',
       $route.reload()
 
     }
+
+   $scope.search = function(q, type, pageNumber, callback) {
+      var searchString = "?q=" + q + (type ? "&type=" + type : "") + "&page=" + pageNumber
+      $scope.getData("/search" + searchString, function(data) {
+        $scope.searchResponse = data
+        $scope.pageCount = Math.ceil(data.numberOfResults / 10)
+        callback(data)
+      })
+    }
+
+    $scope.complete = function(searchTerm) {
+      $scope.show=false
+      if(searchTerm.length <3) {
+        $scope.show=false
+        return
+      }
+      $scope.search(searchTerm, '', 1, function(data){
+        $scope.show = true
+        $scope.count = data.numberOfResults
+      })
+    }
+
+    $scope.hide=function() {
+      $scope.show = false
+    }
+
+
+
   }
 
 ]);
@@ -168,16 +197,7 @@ onsControllers.controller('SearchCtrl', ['$scope',
     console.log("page is " + page)
     $scope.setUrlParam('page', page)
 
-    search(searchTerm, type, page)
-
-    function search(q, type, pageNumber) {
-      var searchString = "?q=" + q + (type ? "&type=" + type : "") + "&page=" + pageNumber
-      $scope.getData("/search" + searchString, function(data) {
-        $scope.searchResponse = data
-        $scope.pageCount = Math.ceil(data.numberOfResults / 10)
-      })
-    }
-
+    $scope.search(searchTerm, type, page, function(data) {})
 
     $scope.isLoading = function() {
       return ($scope.searchTerm && !$scope.searchResponse)
@@ -185,6 +205,14 @@ onsControllers.controller('SearchCtrl', ['$scope',
 
   }
 ])
+
+onsControllers.controller('AutocompleteCtrl', ['$scope',
+  function($scope) {
+    
+  }
+])
+
+
 
 //Paginator
 onsControllers.controller('PaginatorCtrl', ['$scope',

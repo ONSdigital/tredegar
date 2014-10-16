@@ -118,6 +118,14 @@ onsApp.directive('searchBox', function() {
   }
 })
 
+onsApp.directive('autoComplete', function() {
+  return {
+    restrict: 'E',
+    templateUrl: 'templates/autocomplete.html',
+    controller: 'AutocompleteCtrl'
+  }
+})
+
 onsApp.directive('topBar', function() {
   return {
     restrict: 'E',
@@ -131,6 +139,17 @@ onsApp.directive('onsContent', function() {
     templateUrl: 'templates/content.html'
   }
 })
+
+onsApp.directive('stopEvent', function () {
+    return {
+        restrict: 'A',
+        link: function (scope, element, attr) {
+            element.bind('click', function (e) {
+              e.stopPropagation();
+            });
+        }
+    };
+ });
 
 onsApp.directive('markdown', function () {
     var converter = new Showdown.converter();
