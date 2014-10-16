@@ -50,8 +50,7 @@ public class Sitemap {
 	static String encoding = "UTF8";
 
 	@GET
-	public static void get(@Context HttpServletRequest request,
-			@Context HttpServletResponse response) throws IOException {
+	public static void get(@Context HttpServletRequest request, @Context HttpServletResponse response) throws IOException {
 
 		// Create a sitemap structure:
 		Document document = createDocument();
@@ -69,17 +68,14 @@ public class Sitemap {
 
 	private static Path getHomePath() throws IOException {
 
-		return FileSystems.getDefault()
-				.getPath(Configuration.getTaxonomyPath());
+		return FileSystems.getDefault().getPath(Configuration.getTaxonomyPath());
 	}
 
 	private static Document createDocument() throws IOException {
 
 		try {
-			DocumentBuilderFactory builderFactory = DocumentBuilderFactory
-					.newInstance();
-			DocumentBuilder documentBuilder = builderFactory
-					.newDocumentBuilder();
+			DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();
+			DocumentBuilder documentBuilder = builderFactory.newDocumentBuilder();
 			Document document = documentBuilder.newDocument();
 			document.setXmlStandalone(true);
 			return document;
@@ -95,19 +91,16 @@ public class Sitemap {
 	 * @return
 	 */
 	private static Element createRootElement(Document document) {
-		Element rootElement = document.createElementNS(
-				"http://www.sitemaps.org/schemas/sitemap/0.9", "urlset");
+		Element rootElement = document.createElementNS("http://www.sitemaps.org/schemas/sitemap/0.9", "urlset");
 		document.appendChild(rootElement);
 		return rootElement;
 	}
 
-	private static void iterate(Path taxonomyPath, double priority,
-			Document document, Element rootElement) throws IOException {
+	private static void iterate(Path taxonomyPath, double priority, Document document, Element rootElement) throws IOException {
 
 		List<Path> subdirectories = new ArrayList<Path>();
 
-		try (DirectoryStream<Path> stream = Files
-				.newDirectoryStream(taxonomyPath)) {
+		try (DirectoryStream<Path> stream = Files.newDirectoryStream(taxonomyPath)) {
 
 			for (Path path : stream) {
 
@@ -123,12 +116,12 @@ public class Sitemap {
 		}
 
 		// Step into subfolders:
-		for (Path subdirectory : subdirectories)
+		for (Path subdirectory : subdirectories) {
 			iterate(subdirectory, priority * .8, document, rootElement);
+		}
 	}
 
-	private static void addPath(Path path, Document document,
-			Element rootElement, double priority) throws IOException {
+	private static void addPath(Path path, Document document, Element rootElement, double priority) throws IOException {
 		Data data = getDataJson(path);
 		if (data != null) {
 			try {
@@ -156,18 +149,18 @@ public class Sitemap {
 	}
 
 	private static URI toUri(Data data) throws URISyntaxException {
-		StringBuilder urlPath = new StringBuilder();
-		for (TaxonomyNode segment : data.breadcrumb)
-			urlPath.append("/" + segment.fileName);
-		if (!StringUtils.equals("/", data.fileName))
-			urlPath.append("/" + data.fileName);
-		URI uri = new URI("http", "onsdigital.herokuapp.com",
-				urlPath.toString(), null);
+		StringBuilder fragment = new StringBuilder("/home");
+		for (TaxonomyNode segment : data.breadcrumb) {
+			fragment.append("/" + segment.fileName);
+		}
+		if (!StringUtils.equals("/", data.fileName)) {
+			fragment.append("/" + data.fileName);
+		}
+		URI uri = new URI("http", "onsdigital.herokuapp.com", "/", fragment.toString());
 		return uri;
 	}
 
-	private static void addUrl(URI uri, Document document, Element rootElement,
-			double priorityValue) throws DOMException, MalformedURLException {
+	private static void addUrl(URI uri, Document document, Element rootElement, double priorityValue) throws DOMException, MalformedURLException {
 
 		// Container
 		Element url = document.createElement("url");
@@ -184,8 +177,7 @@ public class Sitemap {
 		priority.setTextContent(String.format("%.2f", priorityValue));
 	}
 
-	private static void writeResponse(Document document,
-			HttpServletResponse response) throws IOException {
+	private static void writeResponse(Document document, HttpServletResponse response) throws IOException {
 
 		// Setting the character encoding here ensures the PrintWriter
 		// uses the correct encoding:
