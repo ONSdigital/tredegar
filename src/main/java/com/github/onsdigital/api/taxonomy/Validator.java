@@ -8,9 +8,11 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+import com.github.davidcarboni.restolino.json.Serialiser;
 import com.github.onsdigital.configuration.Configuration;
 
 public class Validator implements Runnable {
@@ -26,8 +28,7 @@ public class Validator implements Runnable {
 
 	@Override
 	public void run() {
-		Path path = FileSystems.getDefault().getPath(
-				Configuration.getTaxonomyPath());
+		Path path = FileSystems.getDefault().getPath(Configuration.getTaxonomyPath());
 
 		executorService = Executors.newCachedThreadPool();
 		System.out.println("Validating taxonomy Json");
@@ -91,12 +92,10 @@ public class Validator implements Runnable {
 			@Override
 			public void run() {
 				try (InputStream input = Files.newInputStream(json)) {
-					// System.out.println(json + " : "
-					// + Serialiser.deserialise(input, Map.class));
+					Serialiser.deserialise(input, Map.class);
 				} catch (Exception e) {
 					error = true;
-					System.out.println("Error validating " + json);
-					e.printStackTrace();
+					System.out.println("Malformed Json detected: error deserialising " + json + " (" + e.getClass().getSimpleName() + ": " + e.getMessage() + ")");
 				}
 			}
 		});

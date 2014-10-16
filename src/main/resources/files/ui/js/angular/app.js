@@ -9,8 +9,10 @@ var onsApp = angular.module('onsApp', [
     'onsControllers'
 ]);
 
-onsApp.config(['$routeProvider',
-    function($routeProvider) {
+onsApp.config(['$routeProvider','$locationProvider',
+    function($routeProvider, $locationProvider) {
+		//$locationProvider.hashPrefix('!');
+//			 .html5Mode(false)
         $routeProvider.
         when('/', {
             redirectTo: '/home'
@@ -34,6 +36,10 @@ onsApp.config(['$routeProvider',
         when('/bulletin', {
             redirectTo: '/home/economy/inflationandpriceindices/bulletin'
         }).
+        when(':home*\/bulletins', {
+            templateUrl: 'templates/bulletin.html',
+            controller: 'BulletinCtrl'
+        }).        
         when('/release', {
             templateUrl: 'templates/release.html'
         }).

@@ -25,8 +25,7 @@ import com.github.onsdigital.json.TaxonomyNode;
 public class Home {
 
 	@GET
-	public Object serveTemplate(@Context HttpServletRequest request,
-			@Context HttpServletResponse response) throws IOException {
+	public Object serveTemplate(@Context HttpServletRequest request, @Context HttpServletResponse response) throws IOException {
 
 		// Ensures ResourceUtils gets the right classloader when running
 		// reloadable in development:
@@ -71,8 +70,7 @@ public class Home {
 
 		String taxonomyPath = Configuration.getTaxonomyPath();
 		// Get the data for this node:
-		String json = FileUtils.readFileToString(new File(taxonomyPath
-				+ join(removeEndpoint(path), "data.json")));
+		String json = FileUtils.readFileToString(new File(taxonomyPath + join(removeEndpoint(path), "data.json")));
 		return Serialiser.deserialise(json, Data.class);
 	}
 
@@ -80,13 +78,15 @@ public class Home {
 		String result = path;
 
 		// Remove leading slash:
-		if (result.startsWith("/"))
+		if (result.startsWith("/")) {
 			result = result.substring(1);
+		}
 
 		// Remove endpoint name:
 		String endpointName = getClass().getSimpleName();
-		if (StringUtils.startsWithIgnoreCase(result, endpointName))
+		if (StringUtils.startsWithIgnoreCase(result, endpointName)) {
 			result = result.substring(endpointName.length());
+		}
 
 		return result;
 	}

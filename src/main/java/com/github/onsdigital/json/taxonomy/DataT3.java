@@ -1,11 +1,14 @@
 package com.github.onsdigital.json.taxonomy;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import com.github.onsdigital.generator.Folder;
 import com.github.onsdigital.json.Data;
 
 public class DataT3 extends Data {
+
+	List<String> items = new ArrayList<>();
 
 	public DataT3(Folder folder) {
 		super(folder, 3);
@@ -13,6 +16,20 @@ public class DataT3 extends Data {
 		lede = "Consumer price inflation is the speed at which the prices of goods and services bought by households rise or fall.";
 		more = "Some more content goes here. This will expand and contract if you have JS enabled. If JS is disabled, "
 				+ "this will show by default. Yay progressive enhancement!";
+
+		items.add("/economy/inflationandpriceindices/timeseries/zptx");
+		items.add("/economy/inflationandpriceindices/timeseries/l53t");
+		items.add("/economy/inflationandpriceindices/timeseries/l573");
+		items.add("/economy/inflationandpriceindices/timeseries/l5dx");
+		items.add("/economy/inflationandpriceindices/timeseries/l5h7");
+		items.add("/economy/inflationandpriceindices/timeseries/l5lw");
+		items.add("/economy/inflationandpriceindices/timeseries/sgpr");
+		items.add("/economy/inflationandpriceindices/timeseries/cbxc");
+		items.add("/economy/inflationandpriceindices/timeseries/cdja");
+		items.add("/economy/inflationandpriceindices/timeseries/cjvx");
+
+		// czdb czhh czxj d7d2 d7gq d7kd d7o5 dkn5 doef gj2e l53u l574 l5dy
+
 		timeseries = new ArrayList<>();
 
 		DetailT3 detail;

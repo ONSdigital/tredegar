@@ -54,12 +54,10 @@ public class Data {
 		// Output directly to the response
 		// (rather than deserialise and re-serialise)
 		if (Files.exists(data)) {
-			System.out.println("found");
 			response.setContentType("application/json");
 			response.setCharacterEncoding("UTF8");
 			IOUtils.copy(Files.newInputStream(data), response.getOutputStream());
 		} else {
-			System.out.println("not found");
 			response.setStatus(HttpStatus.NOT_FOUND_404);
 		}
 	}

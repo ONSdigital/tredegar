@@ -9,7 +9,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
@@ -19,10 +18,17 @@ import com.github.davidcarboni.restolino.json.Serialiser;
 import com.github.onsdigital.configuration.Configuration;
 import com.github.onsdigital.json.Data;
 import com.github.onsdigital.json.TaxonomyNode;
+import com.google.gson.JsonSyntaxException;
 
 public class NavigationUtil {
 
 	private static List<NavigationNode> navigation;
+
+	/**
+	 * Flag to avoid caching a broken navigation. This ensures it gets reloaded
+	 * if there's an error, allowing for a chance to fix it without restarting.
+	 */
+	private static boolean jsonError;
 
 	private NavigationUtil() {
 
@@ -40,15 +46,17 @@ public class NavigationUtil {
 	}
 
 	private static void buildNavigationNodes() throws IOException {
-		navigation = new ArrayList<NavigationUtil.NavigationNode>();
+		List<NavigationNode> navigation = new ArrayList<NavigationUtil.NavigationNode>();
 		Path taxonomyPath = getHomePath();
 		addNodes(navigation, getNodes(taxonomyPath));
 		for (NavigationNode node : navigation) {
 			addNodes(node.children, getNodes(FileSystems.getDefault().getPath(taxonomyPath + "/" + node.fileName)));
 		}
-
+		if (!jsonError) {
+			NavigationUtil.navigation = navigation;
+		}
 	}
-	
+
 	private static void addNodes(List<NavigationNode> nodeList, List<NavigationNode> toAdd) {
 		Collections.sort(toAdd);
 		int i = 0;
@@ -63,9 +71,13 @@ public class NavigationUtil {
 		try (DirectoryStream<Path> stream = Files.newDirectoryStream(path)) {
 			for (Path p : stream) {
 				// Iterate over the paths:
-				// System.out.println(p);
 				if (Files.isDirectory(p)) {
-					nodes.add(new NavigationNode(getDataJson(p)));
+					try {
+						nodes.add(new NavigationNode(getDataJson(p)));
+					} catch (JsonSyntaxException e) {
+						jsonError = true;
+						System.out.println("Navigation: malformed Json, omitting: " + p);
+					}
 				}
 			}
 			return nodes;
@@ -108,12 +120,12 @@ public class NavigationUtil {
 			}
 			url += "/" + data.fileName;
 		}
-		
+
 		@Override
 		public int compareTo(NavigationNode o) {
 			return Integer.compare(this.index, o.index);
 		}
-		
+
 	}
 
 	public static void main(String[] args) {
@@ -125,6 +137,6 @@ public class NavigationUtil {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
+
 	}
 }
