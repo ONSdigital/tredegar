@@ -266,7 +266,11 @@ onsApp.service('anchorSmoothScroll', function(){
             } return y;
         }
 
+<<<<<<< HEAD
+    };
+=======
     }
+>>>>>>> e2efe9f8081e73405c2131cbdd6764565c29a3e1
 });
 
 function AccordionCtrl($scope) {
