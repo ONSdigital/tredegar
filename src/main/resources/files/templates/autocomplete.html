@@ -1,6 +1,6 @@
 <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" ng-if="show" id="ui-id-1" tabindex="0" style="position:absolute; width: 443px; top: 260px; left: 512px;">
-	<dt  ng-mouseover="myStyle={textDecoration:'underline'}" ng-mouseout="myStyle={}" ng-repeat="item in searchResponse.results | limitTo:5"  class="ui-menu-item" id="ui-id-4" tabindex="-1"><a href="#{{'/home' + item.url}}"  stop-event ng-click="hide()"  ><div style="float:left;width:100px">
+	<dt  ng-mouseover="myStyle={textDecoration:'underline'}" ng-mouseout="myStyle={}" ng-repeat="item in searchResponse.results | limitTo:5"  class="ui-menu-item" id="ui-id-4" tabindex="-1"><a href="" ng-mousedown="goToPage('/home' + item.url); hide();"   ><div style="float:left;width:100px">
 		<span class="lozenge lozenge-spacer lozenge-grey">{{item.type == 'bulletins' ? 'STATISTICAL BULLETIN' : item.type}}</span></div><div ng-style="myStyle" style="float:left">{{item.title}}</div><div style="clear:both;"></div></a>
 		</dt>
-		<dt class="ui-menu-item" id="ui-id-9" tabindex="-1"><a href="" ng-click="count > 0 ? goToSearch(searchTerm) : hide()" ><div style="float:left;width:100px"></div><div style="float:left">{{count > 0 ? 'See all ' + count +' results' : 'No results found'}}</div><div style="clear:both;"></div></a></dt>
+		<dt class="ui-menu-item" id="ui-id-9" tabindex="-1"><a href="" ng-mousedown="count > 0 ? goToSearch(searchTerm) : hide()" ><div style="float:left;width:100px"></div><div style="float:left">{{count > 0 ? 'See all ' + count +' results' : 'No results found'}}</div><div style="clear:both;"></div></a></dt>
 	</ul>

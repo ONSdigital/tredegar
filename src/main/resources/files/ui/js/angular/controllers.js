@@ -51,7 +51,6 @@ onsControllers.controller('MainCtrl', ['$scope', '$http', '$location', '$route',
     }
 
     $scope.goToSearch = function(searchTerm) {
-      alert("Gioing to search")
       if (!searchTerm) {
         return
       }
@@ -60,6 +59,14 @@ onsControllers.controller('MainCtrl', ['$scope', '$http', '$location', '$route',
       //Re-initializes controllers. Fixes searching on search results page searching the same term
       $route.reload()
 
+    }
+
+
+    $scope.goToPage = function(page) {
+      if (!page) {
+        return
+      }
+      $location.path(page)
     }
 
    $scope.search = function(q, type, pageNumber, callback) {
