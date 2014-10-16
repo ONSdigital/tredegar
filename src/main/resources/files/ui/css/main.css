@@ -2606,7 +2606,7 @@ lesser , applied styles
   letter-spacing: .1em;
   color: #888;
   text-transform: uppercase;
-  /*cursor: pointer; Commented out as part of Lozenge 
+  /*cursor: pointer; Commented out as part of Lozenge
   /*background-color: #adafa7;*/}
   /*.lozenge:hover, .lozenge:active, .lozenge:focus {
     color: white;
@@ -4367,6 +4367,12 @@ background-color: #edeeee !important;
 {
     margin-top:-1em;
 }
+
+ol.toc-columns
+{
+    list-style-position: inside;
+}
+
 .box--padded--highlight
 {
 	margin:1rem;
@@ -4574,9 +4580,9 @@ table {
 
 .resp-table td:after {
   padding-left: 0.6em;
-} 
+}
 
-@media (min-width: 480px) {
+@media (min-width: 750px) {
 .resp-table td:before {
   display: none;
 }
@@ -4586,7 +4592,7 @@ table {
   text-align: left;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 750px) {
 .resp-table th, .resp-table td {
   display: table-cell;
   padding: .25em .5em;
@@ -4613,14 +4619,14 @@ table {
   margin: .5em 1em;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 750px) {
 .resp-table th, .resp-table td {
   padding: 1em !important;
 }
 }
 .resp-table th, .resp-table td:before {
-  color: #fff;
-  background-color: #00b5cb;
+  color: #000;
+  background-color: #dcdee0;
   padding: 0.5em;
   margin-right: 0.6em;
 }
