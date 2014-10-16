@@ -45,6 +45,10 @@
 <script type="text/javascript" src="/ui/js/markdown.js" defer></script>
 <script type="text/javascript" src="/ui/js/bulletin.js" defer></script>
 
+<!-- Accordion Functionality -->
+<script type="text/javascript" src="/ui/js/accordion.js" defer></script>
+<script type="text/javascript" src="/ui/js/accordionSwitch.js" defer></script>
+
 <!---
 title: Theme Page Template (T2)
 external: true
@@ -291,51 +295,75 @@ markup: false
         </article>
         <!-- /article__content --> 
         <!-- article__content -->
-        <article class="box border-horizontal-single">
-          <header class="box__header">
-            <h2>Background notes and Methodology
-              <div class="media__img--reverse"><span class="icon icon-download"></span></div>
-            </h2>
-          </header>
-          <!-- /box__header -->
-          <div class="box__content">
-            <ul class="list--neutral">
-              <li><a href="#"> Quality and Methodology Information (QMI)</a> (PDF 95.6 kb)</li>
-              <li><a href="#">Impact of Rebasing the Consumer Price Index to 2010=100</a></li>
-              <li><a href="#">Consumer Price Index and Retail Price Index Methodology</a></li>
-            </ul>
-          </div>
-          <!-- /box__content -->
-          <footer class="box__footer"> </footer>
-          <!-- /box__actions --> 
-        </article>
+        <body onload="init()">
+            <article class="box border-horizontal-single">
+                <div class="accordionItem">
+                    <span class="accordion_chevron icon icon-up-open-big"></span>
+                    <header class="box__header">
+                        <h2 class="">Background notes and Methodology
+                        
+                        </h2>
+                    </header>
+                    <!-- /box__header -->
+                              
+                <div class="box__content">
+                    <ul class="list--neutral">
+                        <li><a href="#"> Quality and Methodology Information (QMI)</a> (PDF 95.6 kb)</li>
+                        <li><a href="#">Impact of Rebasing the Consumer Price Index to 2010=100</a></li>
+                        <li><a href="#">Consumer Price Index and Retail Price Index Methodology</a></li>
+                    </ul>
+                </div>
+                </div>
+                <!-- /box__content -->
+                <footer class="box__footer"> </footer>
+                <!-- /box__actions -->
+            </article>           
+            <!-- /article__content -->
+
+            <!-- article__content -->
+            
+            <article class="box border-horizontal-single">
+                <div class="accordionItem">
+                    <span class="accordion_chevron icon icon-down-open-big"></span>
+                    <header class="box__header">
+                        <h2 class="">References</h2>
+                    </header>
+                <!-- /box__header -->
+                <div class="box__content">
+                    <p class="accordion-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet in laborum praesentium esse aliquam molestiae animi non facilis perspiciatis corporis ad molestias quo harum suscipit ipsum incidunt ea voluptates accusantium.
+                    </p>
+                </div>
+             
+                <!-- /box__content -->
+                <footer class="box__footer"> </footer>
+                <!-- /box__actions -->
+                </div>
+            </article>
+                     
+            <!-- /article__content -->
+            <!-- article__content -->
+            
+            <article class="box border-horizontal-single">
+                <div class="accordionItem">
+                    <span class="accordion_chevron icon icon-down-open-big"></span>
+                    <header class="box__header">
+                        <h2 class="">Footnotes</h2>
+                    </header>
+                <!-- /box__header -->
+                <div class="box__content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet in laborum praesentium esse aliquam molestiae animi non facilis perspiciatis corporis ad molestias quo harum suscipit ipsum incidunt ea voluptates accusantium.
+                    </p>
+                </div>
+                </div>
+                <!-- /box__content -->
+                <footer class="box__footer"> </footer>
+                <!-- /box__actions -->
+                </div>
+                <!-- /grid-col -->
+            </article>
         <!-- /article__content --> 
-        <!-- article__content -->
-        <article class="box border-horizontal-single">
-          <header class="box__header">
-            <h2>References
-              <div class="media__img--reverse"><span class="icon icon-up-open-big"></span></div>
-            </h2>
-          </header>
-          <!-- /box__header -->
-          <footer class="box__footer"> </footer>
-          <!-- /box__actions --> 
-        </article>
-        <!-- /article__content --> 
-        <!-- article__content -->
-        <article class="box border-horizontal-single">
-          <header class="box__header">
-            <h2>Footnotes
-              <div class="media__img--reverse"><span class="icon icon-up-open-big"></span></div>
-            </h2>
-          </header>
-          <!-- /box__header -->
-          <footer class="box__footer"> </footer>
-          <!-- /box__actions --> 
-        </article>
-        <!-- /article__content --> 
-      </div>
-      <!-- /grid-col -->
+     
+      
       <div class="grid-col desktop-grid-one-third tablet-grid-one-third"> 
         <!-- article__content -->
         <article class="box box--padded lifted sectioned">

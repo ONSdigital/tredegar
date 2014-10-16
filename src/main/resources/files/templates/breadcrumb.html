@@ -5,7 +5,7 @@
       <a href="#/" >Home</a>
     </li>
     <li ng-repeat="item in data.breadcrumb">
-      <a href="#{{getParentPath()}}">{{item.name}}</a>
+      <a href="#{{getParentOf(item.fileName)}}/{{item.fileName}}">{{item.name}}</a>
     </li>
     <li class="nav__active" ng-hide="data.level === 't1'">
       <a href="#{{getPath()}}">{{data.name}}</a>

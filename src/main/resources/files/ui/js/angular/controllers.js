@@ -45,6 +45,17 @@ onsControllers.controller('MainCtrl', ['$scope', '$http', '$location', '$route',
 
     }
 
+    $scope.getParentOf = function(p) {
+      var path = $location.$$path
+      var lastIndex = path.lastIndexOf(p)
+      var parenPath = path.substring(0, lastIndex -1 )
+      return parenPath
+    }
+
+
+
+
+
     $scope.scrollTo = function(id) {
       $location.hash(id)
       anchorSmoothScroll.scrollTo(id)
@@ -141,6 +152,22 @@ onsControllers.controller('BulletinCtrl', ['$scope',
     $scope.contentType = "bulletin"
     $scope.sidebar = true
     $scope.sidebarUrl = "templates/contentsidebar.html"
+
+    $scope.data = {
+      breadcrumb: [
+        {
+          name: "Economy",
+          fileName: "economy"
+        },
+        {
+          name: "Inflation and Price Indices",
+          fileName: "inflationandpriceindices"
+        }
+      ],
+      name: "Statistical Bulletin",
+      fileName: "bulletin"
+    }
+
   }
 ])
 

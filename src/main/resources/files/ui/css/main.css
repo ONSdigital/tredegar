@@ -482,7 +482,7 @@ img {
 .icon-info-circled:before { content: '\e819'; } /* '' */
 .icon-down-open-big:before { content: '\e884'; } /* '' */
 .icon-right-open-big:before { content: '\e80a'; } /* '' */
-.icon-up-open-big:before { content: '\e881'; } /* '' */
+.icon-up:before { content: '\e881'; } /* '' */
 .icon-cog:before { content: '\e855'; } /* '' */
 .icon-download:before { content: '\e820'; } /* '' */
 .icon-check:before { content: '\e812'; } /* '' */
@@ -4435,26 +4435,44 @@ ol.toc-columns
   margin-bottom: 1.25em;
 }
 
+.icon.icon-up-open-big{
+  text-decoration: none;
+  color: black;
+
+}
+
+.icon.icon-down-open-big{
+  text-decoration: none;
+  color: black;
+}
+
+.accordion_chevron {
+  float: right;
+  position: inherit;
+  font-size: 2.5rem; }
+
+
 /*------------------------------------*\
   Accordion Styles
 \*------------------------------------*/
 
-#accordion{margin:100px auto;width:400px;}
-#accordion ul{list-style:none;margin:0;padding:0;}
-.accordion{display:none;}
-.accordion:target{display:block;}
-#accordion ul li a{text-decoration:none;display:block;padding:10px;}
-.accordion{padding:4px;}
-/*End General Accordion****************************************************************************/
+.accordionItem span:hover { cursor: pointer; }
+.accordionItem.hide div  { 
+  display: none;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
 
-/*Vertical Accordion *************************************************************************/
-.vertical article{ width:100%;/* height:100px;*/
-  -webkit-transition:height 0.2s ease-out;
-  -moz-transition:height 0.2s ease-out;
-    -o-transition:height 0.2s ease-out;
-  -ms-transition:height 0.2s ease-out;
-    transition:height 0.2s ease-out;
-}
+.accordionItem {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+};
+
+
+
 
 /*------------------------------------*\
   Collection Page Styles
@@ -4493,7 +4511,7 @@ ol.toc-columns
 #search > dl > dt:nth-child(1){
   font-size: 1.3em;
   background-color: #fafafb;
-  padding: 0 0 0 0.3em;
+/*  padding: 0 0 0 0.3em;*/ Commented out to align collection results
 }
 
 #search > dl > dd:nth-child(2){
@@ -4502,7 +4520,7 @@ ol.toc-columns
 }
 
 #search > dl > dd {
-  padding: 0 0 0.85em 0.3em;
+  padding: 0 0 0.85em 0em;
 }
 
 #frequency{
