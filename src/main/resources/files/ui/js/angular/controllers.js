@@ -6,8 +6,8 @@ var onsControllers = angular.module('onsControllers', []);
 
 
 // Main controller that applies to all the pages
-onsControllers.controller('MainCtrl', ['$scope', '$http', '$location', '$route',
-  function($scope, $http, $location, $route) {
+onsControllers.controller('MainCtrl', ['$scope', '$http', '$location', '$route', 'anchorSmoothScroll',
+  function($scope, $http, $location, $route, anchorSmoothScroll) {
     $scope.getData = function(path, callback) {
       console.log("Loading data at " + path)
       $http.get(path).success(callback)
@@ -43,6 +43,11 @@ onsControllers.controller('MainCtrl', ['$scope', '$http', '$location', '$route',
       var parenPath = path.substring(0, lastIndex)
       return parenPath
 
+    }
+
+    $scope.scrollTo = function(id) {
+      $location.hash(id)
+      anchorSmoothScroll.scrollTo(id)
     }
 
     $scope.search = function(searchTerm) {
@@ -114,7 +119,7 @@ onsControllers.controller('CollectionCtrl', ['$scope',
 
     var getParam = $scope.getUrlParam
     var page = getParam('page')
-    var searchTerm = $scope.searchTerm = getParam('q')
+    var searchTerm = getParam('loc')
     var type = $scope.type = getParam('type')
     if (!searchTerm) {
       return
@@ -127,8 +132,8 @@ onsControllers.controller('CollectionCtrl', ['$scope',
 
     search(searchTerm, type, page)
 
-    function search(q, type, pageNumber) {
-      var searchString = "?q=" + q + (type ? "&type=" + type : "") + "&page=" + pageNumber
+    function search(loc, type, pageNumber) {
+      var searchString = "?loc=" + loc + (type ? "&type=" + type : "") + "&page=" + pageNumber
       $scope.getData("/collectiontaxonomyfilesystem" + searchString, function(data) {
         $scope.searchResponse = data
         console.log(data)
@@ -391,16 +396,11 @@ onsControllers.controller('T2Ctrl', ['$scope', 'Page',
   }
 ]);
 
-onsControllers.controller('ContentCtrl', ['$scope', '$location', 'anchorSmoothScroll',
-  function($scope, $location, anchorSmoothScroll) {
+onsControllers.controller('ContentCtrl', ['$scope', '$location',
+  function($scope, $location) {
     $scope.getData("/" + $scope.getPage() + ".json", function(data) {
       $scope.content = data
     })
-
-    $scope.scrollTo = function(id) {
-      $location.hash(id)
-      anchorSmoothScroll.scrollTo(id)
-    }
 
     $scope.scroll = function() {
       anchorSmoothScroll.scrollTo($location.hash())

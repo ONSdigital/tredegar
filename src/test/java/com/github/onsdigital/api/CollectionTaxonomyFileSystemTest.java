@@ -30,7 +30,7 @@ public class CollectionTaxonomyFileSystemTest {
 
 	@Test
 	public void testGet() throws Exception {
-		Mockito.when(httpServletRequest.getParameter("q")).thenReturn(
+		Mockito.when(httpServletRequest.getParameter("loc")).thenReturn(
 				"/home/economy/inflationandpriceindices");
 		Mockito.when(httpServletRequest.getParameter("page")).thenReturn("1");
 		Mockito.when(httpServletRequest.getParameter("type")).thenReturn(

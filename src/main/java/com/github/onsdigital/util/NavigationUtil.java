@@ -8,6 +8,8 @@ import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
@@ -40,12 +42,20 @@ public class NavigationUtil {
 	private static void buildNavigationNodes() throws IOException {
 		navigation = new ArrayList<NavigationUtil.NavigationNode>();
 		Path taxonomyPath = getHomePath();
-		navigation.addAll(getNodes(taxonomyPath));
+		addNodes(navigation, getNodes(taxonomyPath));
 		for (NavigationNode node : navigation) {
-			node.children.addAll(getNodes(FileSystems.getDefault().getPath(
-					taxonomyPath + "/" + node.fileName)));
+			addNodes(node.children, getNodes(FileSystems.getDefault().getPath(taxonomyPath + "/" + node.fileName)));
 		}
 
+	}
+	
+	private static void addNodes(List<NavigationNode> nodeList, List<NavigationNode> toAdd) {
+		Collections.sort(toAdd);
+		int i = 0;
+		for (NavigationNode navigationNode : toAdd) {
+			nodeList.add(i, navigationNode);
+			i++;
+		}
 	}
 
 	private static List<NavigationNode> getNodes(Path path) throws IOException {
@@ -65,8 +75,7 @@ public class NavigationUtil {
 	}
 
 	private static Path getHomePath() {
-		return FileSystems.getDefault()
-				.getPath(Configuration.getTaxonomyPath());
+		return FileSystems.getDefault().getPath(Configuration.getTaxonomyPath());
 	}
 
 	private static Data getDataJson(Path path) throws IOException {
@@ -82,33 +91,40 @@ public class NavigationUtil {
 		return result;
 	}
 
-	public static class NavigationNode {
+	public static class NavigationNode implements Comparable<NavigationNode> {
 		String name;
 		String url;
 		String fileName;
+		int index;
 		List<NavigationNode> children = new ArrayList<NavigationNode>();
 
 		public NavigationNode(Data data) {
 			this.name = data.name;
 			this.fileName = data.fileName;
+			this.index = data.index;
 			url = "";
 			for (TaxonomyNode node : data.breadcrumb) {
 				url += "/" + node.fileName;
 			}
 			url += "/" + data.fileName;
 		}
-
+		
+		@Override
+		public int compareTo(NavigationNode o) {
+			return Integer.compare(this.index, o.index);
+		}
+		
 	}
 
 	public static void main(String[] args) {
 		try {
 			List<NavigationNode> nodes = NavigationUtil.getNavigationNodes();
 			for (NavigationNode navigationNode : nodes) {
-				System.out.println(ReflectionToStringBuilder
-						.toString(navigationNode));
+				System.out.println(ReflectionToStringBuilder.toString(navigationNode));
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		
 	}
 }

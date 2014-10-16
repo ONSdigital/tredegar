@@ -67,7 +67,7 @@ public class CollectionTaxonomyFileSystem {
 	}
 
 	private String extractQuery(HttpServletRequest request) {
-		String query = request.getParameter("q");
+		String query = request.getParameter("loc");
 
 		if (StringUtils.isEmpty(query)) {
 			throw new RuntimeException("No search query provided");
