@@ -5,63 +5,63 @@
 /* App Module */
 
 var onsApp = angular.module('onsApp', [
-  'ngRoute',
-  'onsControllers'
+    'ngRoute',
+    'onsControllers'
 ]);
 
 onsApp.config(['$routeProvider',
-  function($routeProvider) {
-    $routeProvider.
-    when('/', {
-      redirectTo: '/home'
-    }).
-    when('/searchresults', {
-      templateUrl: 'templates/searchresults.html',
-      controller: 'SearchCtrl'
-    }).
-    when('/methodology', {
-      templateUrl: 'templates/methodology.html',
-      controller: 'MethodologyCtrl'
-    }).
-    when('/article', {
-      templateUrl: 'templates/article.html',
-      controller: 'ArticleCtrl'
-    }).
-    when('/bulletin', {
-      templateUrl: 'templates/bulletin.html',
-      controller: 'BulletinCtrl'
-    }).
-    when('/release', {
-      templateUrl: 'templates/release.html'
-    }).
-    when('/collection', {
-      templateUrl: 'templates/collection.html',
-      controller: "CollectionCtrl"
-    }).
-    otherwise({
-      templateUrl: 'templates/template.html',
-      controller: 'TemplateCtrl'
-    });
-  }
+    function($routeProvider) {
+        $routeProvider.
+        when('/', {
+            redirectTo: '/home'
+        }).
+        when('/searchresults', {
+            templateUrl: 'templates/searchresults.html',
+            controller: 'SearchCtrl'
+        }).
+        when('/methodology', {
+            templateUrl: 'templates/methodology.html',
+            controller: 'MethodologyCtrl'
+        }).
+        when('/article', {
+            templateUrl: 'templates/article.html',
+            controller: 'ArticleCtrl'
+        }).
+        when('/bulletin', {
+            templateUrl: 'templates/bulletin.html',
+            controller: 'BulletinCtrl'
+        }).
+        when('/release', {
+            templateUrl: 'templates/release.html'
+        }).
+        when('/collection', {
+            templateUrl: 'templates/collection.html',
+            controller: "CollectionCtrl"
+        }).
+        otherwise({
+            templateUrl: 'templates/template.html',
+            controller: 'TemplateCtrl'
+        });
+    }
 ]);
 
 
 /*Filters for ng-repeat*/
 
 onsApp.filter('slice', function() {
-  return function(arr, start, end) {
-    return arr.slice(start, end);
-  };
+    return function(arr, start, end) {
+        return arr.slice(start, end);
+    };
 });
 
 onsApp.filter('range', function() {
-  return function(input, start, end) {
-    var start = parseInt(start);
-    var end = parseInt(end);
-    for (var i = start; i <= end; i++)
-      input.push(i);
-    return input;
-  };
+    return function(input, start, end) {
+        var start = parseInt(start);
+        var end = parseInt(end);
+        for (var i = start; i <= end; i++)
+            input.push(i);
+        return input;
+    };
 });
 
 
@@ -151,30 +151,33 @@ onsApp.directive('stopEvent', function () {
     };
  });
 
-onsApp.directive('markdown', function () {
+onsApp.directive('markdown', function($http) {
     var converter = new Showdown.converter();
     return {
         restrict: 'A',
-        // transclude: true,
-        link: function (scope, element, attrs) {
-            var htmlText = converter.makeHtml(element.text());
-            element.html(htmlText);
+        scope: {
+            link: '@'
+        },
+        link: function(scope, element, attrs) {
+            attrs.$observe('link', function(link) {
+                var htmlText = converter.makeHtml(link);
+                element.html(htmlText);
+            });
         }
     };
 });
 
-
-onsApp.factory('Page', function() {
-  var title = 'Office Of National Statistics';
-  return {
-    title: function() {
-      return title;
-    },
-    setTitle: function(newTitle) {
-      title = newTitle
-    }
-  };
-});
+        onsApp.factory('Page', function() {
+            var title = 'Office Of National Statistics';
+            return {
+                title: function() {
+                    return title;
+                },
+                setTitle: function(newTitle) {
+                    title = newTitle
+                }
+            };
+        });
 
 onsApp.service('anchorSmoothScroll', function(){
 
