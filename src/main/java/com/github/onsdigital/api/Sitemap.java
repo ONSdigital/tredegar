@@ -6,6 +6,7 @@ import java.io.PrintWriter;
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.net.URL;
 import java.nio.file.DirectoryStream;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
@@ -52,6 +53,9 @@ public class Sitemap {
 	@GET
 	public static void get(@Context HttpServletRequest request, @Context HttpServletResponse response) throws IOException {
 
+		// Get the request URI:
+		URL requestUrl = new URL(request.getRequestURL().toString());
+
 		// Create a sitemap structure:
 		Document document = createDocument();
 		Element rootElement = createRootElement(document);
@@ -59,8 +63,8 @@ public class Sitemap {
 		// Iterate the taxonomy structure:
 		Path taxonomyPath = getHomePath();
 		// System.out.println("Searching " + taxonomyPath);
-		addPath(taxonomyPath, document, rootElement, 1);
-		iterate(taxonomyPath, 0.8, document, rootElement);
+		addPath(taxonomyPath, document, rootElement, 1, requestUrl);
+		iterate(taxonomyPath, 0.8, document, rootElement, requestUrl);
 
 		// Output the result:
 		writeResponse(document, response);
@@ -96,7 +100,7 @@ public class Sitemap {
 		return rootElement;
 	}
 
-	private static void iterate(Path taxonomyPath, double priority, Document document, Element rootElement) throws IOException {
+	private static void iterate(Path taxonomyPath, double priority, Document document, Element rootElement, URL requestUrl) throws IOException {
 
 		List<Path> subdirectories = new ArrayList<Path>();
 
@@ -106,7 +110,7 @@ public class Sitemap {
 
 				// Iterate over the paths:
 				if (Files.isDirectory(path)) {
-					addPath(path, document, rootElement, priority);
+					addPath(path, document, rootElement, priority, requestUrl);
 					subdirectories.add(path);
 				}
 			}
@@ -117,15 +121,15 @@ public class Sitemap {
 
 		// Step into subfolders:
 		for (Path subdirectory : subdirectories) {
-			iterate(subdirectory, priority * .8, document, rootElement);
+			iterate(subdirectory, priority * .8, document, rootElement, requestUrl);
 		}
 	}
 
-	private static void addPath(Path path, Document document, Element rootElement, double priority) throws IOException {
+	private static void addPath(Path path, Document document, Element rootElement, double priority, URL requestUrl) throws IOException {
 		Data data = getDataJson(path);
 		if (data != null) {
 			try {
-				URI uri = toUri(data);
+				URI uri = toUri(data, requestUrl);
 				addUrl(uri, document, rootElement, priority);
 				// System.out.println(path + " : " + uri + " (" + priority +
 				// ")");
@@ -148,7 +152,7 @@ public class Sitemap {
 		return result;
 	}
 
-	private static URI toUri(Data data) throws URISyntaxException {
+	private static URI toUri(Data data, URL requestUrl) throws URISyntaxException {
 		StringBuilder fragment = new StringBuilder("/home");
 		for (TaxonomyNode segment : data.breadcrumb) {
 			fragment.append("/" + segment.fileName);
@@ -156,7 +160,7 @@ public class Sitemap {
 		if (!StringUtils.equals("/", data.fileName)) {
 			fragment.append("/" + data.fileName);
 		}
-		URI uri = new URI("http", "onsdigital.herokuapp.com", "/", fragment.toString());
+		URI uri = new URI(requestUrl.getProtocol(), requestUrl.getHost(), "/", fragment.toString());
 		return uri;
 	}
 
