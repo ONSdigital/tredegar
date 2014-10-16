@@ -21,9 +21,18 @@ import com.github.onsdigital.configuration.Configuration;
 @Endpoint
 public class Data {
 
+	static boolean validated;
+
 	@GET
 	public void getData(@Context HttpServletRequest request,
 			@Context HttpServletResponse response) throws IOException {
+
+		// Validate all Json so that we get a warning if
+		// there's an issue with a file that's been edited.
+		if (!validated) {
+			Validator.validate();
+			validated = true;
+		}
 
 		// Ensures ResourceUtils gets the right classloader when running
 		// reloadable in development:
@@ -68,15 +77,18 @@ public class Data {
 		String result = uri.getPath();
 
 		// Remove slashes:
-		if (result.startsWith("/"))
+		if (result.startsWith("/")) {
 			result = result.substring(1);
-		if (result.endsWith("/"))
+		}
+		if (result.endsWith("/")) {
 			result = result.substring(0, result.length() - 1);
+		}
 
 		// Remove endpoint name:
 		String endpointName = getClass().getSimpleName().toLowerCase() + "/";
-		if (result.startsWith(endpointName))
+		if (result.startsWith(endpointName)) {
 			result = result.substring(endpointName.length());
+		}
 
 		// Lowercase
 		result = result.toLowerCase();
