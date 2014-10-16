@@ -45,12 +45,23 @@ onsControllers.controller('MainCtrl', ['$scope', '$http', '$location', '$route',
 
     }
 
+    $scope.getParentOf = function(p) {
+      var path = $location.$$path
+      var lastIndex = path.lastIndexOf(p)
+      var parenPath = path.substring(0, lastIndex -1 )
+      return parenPath
+    }
+
+
+
+
+
     $scope.scrollTo = function(id) {
       $location.hash(id)
       anchorSmoothScroll.scrollTo(id)
     }
 
-    $scope.search = function(searchTerm) {
+    $scope.goToSearch = function(searchTerm) {
       if (!searchTerm) {
         return
       }
@@ -60,6 +71,42 @@ onsControllers.controller('MainCtrl', ['$scope', '$http', '$location', '$route',
       $route.reload()
 
     }
+
+
+    $scope.goToPage = function(page) {
+      if (!page) {
+        return
+      }
+      $location.path(page)
+    }
+
+   $scope.search = function(q, type, pageNumber, callback) {
+      var searchString = "?q=" + q + (type ? "&type=" + type : "") + "&page=" + pageNumber
+      $scope.getData("/search" + searchString, function(data) {
+        $scope.searchResponse = data
+        $scope.pageCount = Math.ceil(data.numberOfResults / 10)
+        callback(data)
+      })
+    }
+
+    $scope.complete = function(searchTerm) {
+      $scope.show=false
+      if(searchTerm.length <3) {
+        $scope.show=false
+        return
+      }
+      $scope.search(searchTerm, '', 1, function(data){
+        $scope.show = true
+        $scope.count = data.numberOfResults
+      })
+    }
+
+    $scope.hide=function() {
+      $scope.show = false
+    }
+
+
+
   }
 
 ]);
@@ -105,6 +152,22 @@ onsControllers.controller('BulletinCtrl', ['$scope',
     $scope.contentType = "bulletin"
     $scope.sidebar = true
     $scope.sidebarUrl = "templates/contentsidebar.html"
+
+    $scope.data = {
+      breadcrumb: [
+        {
+          name: "Economy",
+          fileName: "economy"
+        },
+        {
+          name: "Inflation and Price Indices",
+          fileName: "inflationandpriceindices"
+        }
+      ],
+      name: "Statistical Bulletin",
+      fileName: "bulletin"
+    }
+
   }
 ])
 
@@ -168,16 +231,7 @@ onsControllers.controller('SearchCtrl', ['$scope',
     console.log("page is " + page)
     $scope.setUrlParam('page', page)
 
-    search(searchTerm, type, page)
-
-    function search(q, type, pageNumber) {
-      var searchString = "?q=" + q + (type ? "&type=" + type : "") + "&page=" + pageNumber
-      $scope.getData("/search" + searchString, function(data) {
-        $scope.searchResponse = data
-        $scope.pageCount = Math.ceil(data.numberOfResults / 10)
-      })
-    }
-
+    $scope.search(searchTerm, type, page, function(data) {})
 
     $scope.isLoading = function() {
       return ($scope.searchTerm && !$scope.searchResponse)
@@ -185,6 +239,14 @@ onsControllers.controller('SearchCtrl', ['$scope',
 
   }
 ])
+
+onsControllers.controller('AutocompleteCtrl', ['$scope',
+  function($scope) {
+    
+  }
+])
+
+
 
 //Paginator
 onsControllers.controller('PaginatorCtrl', ['$scope',

@@ -5,7 +5,7 @@
 <!--[if IE 9]><html class="no-js ie9"><![endif]-->
 <!--[if gt IE 8]><!-->
 <html class="no-js">
-  <!--<![endif]-->
+<!--<![endif]-->
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta charset="UTF-8">
@@ -17,16 +17,15 @@
 <!--[if IE]><![endif]-->
 <!-- build:css /ui/css/oldie.css-->
 <!--[if lte IE 8]>
-  <link rel="stylesheet" href="../ui/css/oldie.css" />
+  <link rel="stylesheet" href="/ui/css/oldie.css" />
 <![endif]-->
 <!-- endbuild -->
 <!-- build:css /ui/css/main.css-->
 <!--[if gt IE 8]><!-->
-   <!-- <link rel="stylesheet" href="/ui/css/main.css" /> -->
-   <link href="ui/css/main.css" rel="stylesheet" type="text/css">
-    
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/css/jquery-ui.min.css">    
-    <!--<![endif]-->
+<!-- <link rel="stylesheet" href="/ui/css/main.css" /> -->
+<link href="ui/css/main.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
+<!--<![endif]-->
 <!-- endbuild -->
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" defer></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js" defer></script>
@@ -46,24 +45,6 @@
 <script type="text/javascript" src="/ui/js/markdown.js" defer></script>
 <script type="text/javascript" src="/ui/js/release.js" defer></script>
 
-<style>
-body {
-  padding: 0;
-}
- @media screen and (max-width: 559px) {
- #homepage-search {
- display: none;
-}
- .offset-top.nav-panels {
- margin-top: 2rem;
-}
-.ui-menu .ui-menu-item {
-  text-align: left;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid;   
-} 
-</style>
 <!---
 title: Release Page Template (T6)
 external: true
@@ -74,463 +55,283 @@ markup: false
 </head>
 <body class="">
 <a class="skiplink visuallyhidden focusable" href="#main" tabindex="0"> <span>Skip to main content</span> </a>
-<main id="main" role="main" class="ONS_border">
-      <!-- temp removal to allow for component list selective wrapping -->
-      <!-- <div class="wrapper"> -->
-       <div class="wrapper panel--pad-small">
-  <header class="global-header">
-    <div class="media">
-      <a href="/">
-        <img src="/ui/img/ons-logo.svg" alt="Office for National Statistics" width="300" class="media__img">
-      </a>
-      <div class="media__body">
-        <ul class="nav nav--inline-block nav--dark globaltop-nav">
-          <li>
-            <a href="#">Release calendar</a>
-          </li>
-          <li>
-            <a href="#">About</a>
-          </li>
-        </ul>
-
-    </div>
-    </div>
-  </header>
-</div>
-<nav class="ons-nav">
-  <div class="wrapper">
-    <ul class="nav nav--multi nav--block nav--primary flush--bottom" id="nav-primary">
-        <li class="nav--primary home">
-              <a href="/">
-                <span class="icon-home icon--inline"></span>
-                <span class="icon-inline vertical-align-mid">Home</span></a>
-        </li>
-
-        <li>
-        <a href="#" class="nav__expandable js-expandable arrowunderline">Business, Industry, and Trade</a>
-        <ul class="nav--primary__sub js-expandable__content js-nav-hidden">
-          <li>
-            <a href="#" tabindex="-1">Business</a>
-          </li>
-          <li>
-            <a href="#" tabindex="-1">Changes to business</a>
-          </li>
-          <li>
-            <a href="#" tabindex="-1">Construction and industry</a>
-          </li>
-          <li>
-            <a href="#" tabindex="-1">IT and internet industry</a>
-          </li>
-          <li>
-            <a href="#" tabindex="-1">International trade</a>
-          </li>
-          <li>
-            <a href="#" tabindex="-1">Manufacturing and production</a>
-          </li>
-          <li>
-            <a href="#" tabindex="-1">Retail industry</a>
-          </li>
-          <li>
-            <a href="#" tabindex="-1">Tourism industry</a>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="/home/economy/" class="nav__expandable js-expandable arrowunderline">Economy</a>
-        <ul class="nav--primary__sub js-expandable__content js-nav-hidden">
-          <li>
-            <a href="#" tabindex="-1">Economic output and productivity</a>
-          </li>
-          <li>
-            <a href="#" tabindex="-1">Environmental account</a>
-          </li>
-          <li>
-            <a href="#" tabindex="-1">Government, public sector, and taxes</a>
-          </li>
-          <li>
-            <a href="#" tabindex="-1">Gross Domestic Product (GDP)</a>
-          </li>
-          <li>
-            <a href="#" tabindex="-1">Gross Values Added (GVA)</a>
-          </li>
-          <li>
-            <a href="home/economy/inflationandpriceindices" tabindex="-1">Inflation and price indices</a>
-          </li>
-          <li>
-            <a href="#" tabindex="-1">Investment and pension trust</a>
-          </li>
-          <li>
-            <a href="#" tabindex="-1">National accounts</a>
-          </li>
-          <li>
-            <a href="#" tabindex="-1">Regional accounts</a>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="#" class="nav__expandable js-expandable arrowunderline">Employment and Labour Market</a>
-        <ul class="nav--primary__sub js-expandable__content js-nav-hidden">
-          <li>
-            <a href="#" tabindex="-1">People in work</a>
-          </li>
-          <li>
-            <a href="#" tabindex="-1">People not in work</a>
-          </li>
-          <li>
-            <a href="#" tabindex="-1">Public sector personnel</a>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="#" class="nav__expandable js-expandable arrowunderline">People, Population, and Community</a>
-        <ul class="nav--primary__sub js-expandable__content js-nav-hidden">
-          <li>
-            <a href="#" tabindex="-1">Births, deaths, and marriages</a>
-          </li>
-          <li>
-            <a href="#" tabindex="-1">Community</a>
-          </li>
-          <li>
-            <a href="#" tabindex="-1">Education and childcare</a>
-          </li>
-          <li>
-            <a href="#" tabindex="-1">Crime and justice</a>
-          </li>
-          <li>
-            <a href="#" tabindex="-1">Household characteristics</a>
-          </li>
-          <li>
-            <a href="#" tabindex="-1">Well-being</a>
-          </li>
-          <li>
-            <a href="#" tabindex="-1">Health and social care</a>
-          </li>
-          <li>
-            <a href="#" tabindex="-1">Elections</a>
-          </li>
-          <li>
-            <a href="#" tabindex="-1">Personal and household finances</a>
-          </li>
-          <li>
-            <a href="#" tabindex="-1">Population and migration</a>
-          </li>
-          <li>
-            <a href="#" tabindex="-1">Cultural identity</a>
-          </li>
-          <li>
-            <a href="#" tabindex="-1">Housing</a>
-          </li>
-          <li>
-            <a href="#" tabindex="-1">Leisure and tourism</a>
-          </li>
-        </ul>
-      </li>
-      <li class="nav--primary__highlight">
-        <a href="#">
-          <span class="icon-users icon--inline"></span>Respondents</a>
-      </li>
-      <li class="nav--primary__secondary-content">
-        <a href="#">Release calendar</a>
-      </li>
-      <li class="nav--primary__secondary-content">
-        <a href="#">About</a>
-      </li>
-    </ul>
+<main id="main" role="main" class="ONS_border"> 
+  <!-- temp removal to allow for component list selective wrapping --> 
+  <!-- <div class="wrapper"> -->
+  <div class="wrapper panel--pad-small">
+    <header class="global-header">
+      <div class="media"> <a href="/"> <img src="/ui/img/ons-logo.svg" alt="Office for National Statistics" width="300" class="media__img"> </a>
+        <div class="media__body">
+          <ul class="nav nav--inline-block nav--dark globaltop-nav">
+            <li> <a href="#">Release calendar</a> </li>
+            <li> <a href="#">About</a> </li>
+          </ul>
+        </div>
+      </div>
+    </header>
   </div>
-</nav>
-<div class="slate--mid-grey_new flush">
-  <div class="wrapper">
-    <div class="grid-wrap">
-      <div class="grid-col desktop-grid-one-half box--inline">
-        <form action="/searchresults.html" class="hero reduced_padding pad_right" _lpchecked="1">
-         <label for="homepageSearch" class="visuallyhidden">Search term:</label>
-            <input id="homepageSearch" type="text" class="input-med-large--flex--three-fifths  search_reduction ui-autocomplete-input" name="q" value="" placeholder="Search for keyword or time series id" autocomplete="off">
-            <button type="submit" class="btn btn--primary btn--small btn--form--large-icon input--lede-btn-icon align_middle no_left_margin">
-              <span class="icon icon-search-1">
-                <span class="visuallyhidden">Search</span>
-              </span>
-            </button>
-        </form>
+  <nav class="ons-nav">
+    <div class="wrapper">
+      <ul class="nav nav--multi nav--block nav--primary flush--bottom" id="nav-primary">
+        <li class="nav--primary home"> <a href="/"> <span class="icon-home icon--inline"></span> <span class="icon-inline vertical-align-mid">Home</span></a> </li>
+        <li> <a href="#" class="nav__expandable js-expandable arrowunderline">Business, Industry, and Trade</a>
+          <ul class="nav--primary__sub js-expandable__content js-nav-hidden">
+            <li> <a href="#" tabindex="-1">Business</a> </li>
+            <li> <a href="#" tabindex="-1">Changes to business</a> </li>
+            <li> <a href="#" tabindex="-1">Construction and industry</a> </li>
+            <li> <a href="#" tabindex="-1">IT and internet industry</a> </li>
+            <li> <a href="#" tabindex="-1">International trade</a> </li>
+            <li> <a href="#" tabindex="-1">Manufacturing and production</a> </li>
+            <li> <a href="#" tabindex="-1">Retail industry</a> </li>
+            <li> <a href="#" tabindex="-1">Tourism industry</a> </li>
+          </ul>
+        </li>
+        <li> <a href="/home/economy/" class="nav__expandable js-expandable arrowunderline">Economy</a>
+          <ul class="nav--primary__sub js-expandable__content js-nav-hidden">
+            <li> <a href="#" tabindex="-1">Economic output and productivity</a> </li>
+            <li> <a href="#" tabindex="-1">Environmental account</a> </li>
+            <li> <a href="#" tabindex="-1">Government, public sector, and taxes</a> </li>
+            <li> <a href="#" tabindex="-1">Gross Domestic Product (GDP)</a> </li>
+            <li> <a href="#" tabindex="-1">Gross Values Added (GVA)</a> </li>
+            <li> <a href="home/economy/inflationandpriceindices" tabindex="-1">Inflation and price indices</a> </li>
+            <li> <a href="#" tabindex="-1">Investment and pension trust</a> </li>
+            <li> <a href="#" tabindex="-1">National accounts</a> </li>
+            <li> <a href="#" tabindex="-1">Regional accounts</a> </li>
+          </ul>
+        </li>
+        <li> <a href="#" class="nav__expandable js-expandable arrowunderline">Employment and Labour Market</a>
+          <ul class="nav--primary__sub js-expandable__content js-nav-hidden">
+            <li> <a href="#" tabindex="-1">People in work</a> </li>
+            <li> <a href="#" tabindex="-1">People not in work</a> </li>
+            <li> <a href="#" tabindex="-1">Public sector personnel</a> </li>
+          </ul>
+        </li>
+        <li> <a href="#" class="nav__expandable js-expandable arrowunderline">People, Population, and Community</a>
+          <ul class="nav--primary__sub js-expandable__content js-nav-hidden">
+            <li> <a href="#" tabindex="-1">Births, deaths, and marriages</a> </li>
+            <li> <a href="#" tabindex="-1">Community</a> </li>
+            <li> <a href="#" tabindex="-1">Education and childcare</a> </li>
+            <li> <a href="#" tabindex="-1">Crime and justice</a> </li>
+            <li> <a href="#" tabindex="-1">Household characteristics</a> </li>
+            <li> <a href="#" tabindex="-1">Well-being</a> </li>
+            <li> <a href="#" tabindex="-1">Health and social care</a> </li>
+            <li> <a href="#" tabindex="-1">Elections</a> </li>
+            <li> <a href="#" tabindex="-1">Personal and household finances</a> </li>
+            <li> <a href="#" tabindex="-1">Population and migration</a> </li>
+            <li> <a href="#" tabindex="-1">Cultural identity</a> </li>
+            <li> <a href="#" tabindex="-1">Housing</a> </li>
+            <li> <a href="#" tabindex="-1">Leisure and tourism</a> </li>
+          </ul>
+        </li>
+        <li class="nav--primary__highlight"> <a href="#"> <span class="icon-users icon--inline"></span>Respondents</a> </li>
+        <li class="nav--primary__secondary-content"> <a href="#">Release calendar</a> </li>
+        <li class="nav--primary__secondary-content"> <a href="#">About</a> </li>
+      </ul>
     </div>
-  <div class="grid-col desktop-grid-one-half box--inline--flex">
-    <div class="link_head">
-      <a href="about:blank" class="link"> Browse Regional Statistics</a></div>
-        <div class="page-header__icons_new">
-          <img src="/ui/img/UK.png" alt="uk map" class="ukmap">
+  </nav>
+  <div class="slate--mid-grey_new flush">
+    <div class="wrapper">
+      <div class="grid-wrap">
+        <div class="grid-col desktop-grid-one-half box--inline">
+          <form action="/searchresults.html" class="hero reduced_padding pad_right" _lpchecked="1">
+            <label for="homepageSearch" class="visuallyhidden">Search term:</label>
+            <input id="homepageSearch" type="text" class="input-med-large--flex--three-fifths  search_reduction ui-autocomplete-input" name="q" value="" placeholder="Search for keyword or time series id" autocomplete="off">
+            <button type="submit" class="btn btn--primary btn--small btn--form--large-icon input--lede-btn-icon align_middle no_left_margin"> <span class="icon icon-search-1"> <span class="visuallyhidden">Search</span> </span> </button>
+          </form>
+        </div>
+        <div class="grid-col desktop-grid-one-half box--inline--flex">
+          <div class="link_head"> <a href="about:blank" class="link"> Browse Regional Statistics</a></div>
+          <div class="page-header__icons_new"> <img src="/ui/img/UK.png" alt="uk map" class="ukmap"> </div>
         </div>
       </div>
     </div>
+    <!-- /Slate !--> 
   </div>
-  <!-- /Slate !-->
-</div>
-
-<div class="wrapper panel--pad-small">
-  <ol class="nav nav--heavy breadcrumb mini flush">
-    
-    
-    
-  <li>
-      <a href="/">Home</a>
-    </li></ol>
-</div><div class="page-header">
-        <div class="wrapper">
-          <h2 id="mainH2" class="page-header__title flush--half--bottom">Producer Price Inflation, January 2014</h2>
-          <div class="content-reveal lede">
-            <p>The Producer Price Index (PPI) is a monthly survey that measures the price changes of goods bought and sold by UK manufacturers and provides a key measure of inflation, alongside other indicatrs such as the Consume Price Index (CPI) and Services Producer Price Index (SPPI). </p>
-          </div>
-          <div class="page-header__icons">
-            <!--<a href="#" class="link-complex">
+  <div class="wrapper panel--pad-small">
+    <ol class="nav nav--heavy breadcrumb mini flush">
+      <li> <a href="/">Home</a> </li>
+    </ol>
+  </div>
+  <div class="page-header">
+    <div class="wrapper">
+      <h2 id="mainH2" class="page-header__title flush--half--bottom">Producer Price Inflation, January 2014</h2>
+      <div class="content-reveal lede">
+        <p>The Producer Price Index (PPI) is a monthly survey that measures the price changes of goods bought and sold by UK manufacturers and provides a key measure of inflation, alongside other indicatrs such as the Consume Price Index (CPI) and Services Producer Price Index (SPPI). </p>
+      </div>
+      <div class="page-header__icons"> 
+        <!--<a href="#" class="link-complex">
               <span class="icon icon-twitter icon-grey">
                 <span class="visuallyhidden">Share on Twitter</span>
               </span>
-            </a>!-->
-            <a href="#" class="link-complex"><span class="icon icon-twitter icon--grey"><span class="visuallyhidden">Share on Twitter</span></span></a>
-            <a href="#" class="link-complex">
-              <span class="icon icon-facebook icon--grey">
-                <span class="visuallyhidden">Share on Facebook</span>
-              </span>
-            </a>
+            </a>!--> 
+        <a href="#" class="link-complex"><span class="icon icon-twitter icon--grey"><span class="visuallyhidden">Share on Twitter</span></span></a> <a href="#" class="link-complex"> <span class="icon icon-facebook icon--grey"> <span class="visuallyhidden">Share on Facebook</span> </span> </a> </div>
+    </div>
+    <!-- /wrapper --> 
+  </div>
+  <section class="panel--bottom-mar wrapper">
+    <ol class="list--table list--table--complex">
+      
+      <!--  /list-table__head --> 
+      
+      <!--  /list-table__body -->
+      <li class="list--table release_margin">
+        <div class="list--table__item__body list--table__item__body--caption no_align">
+          <h3> Release Date: </h3>
+        </div>
+        <div class="list--table__item__body list--table__item__body--stat no_align">
+          <div class="">
+            <div class="release_dates">
+              <p id="releaseDate">19th February 2014</p>
+            </div>
           </div>
         </div>
-        <!-- /wrapper -->
-      </div>
-
-      <section class="panel--bottom-mar wrapper">
-        <ol class="list--table list--table--complex">
-          
-          <!--  /list-table__head -->
-          
-          <!--  /list-table__body -->
-           <li class="list--table release_margin">
-            <div class="list--table__item__body list--table__item__body--caption no_align">
-              <h3>
-                <p>Release Date:</p>
-                
-              </h3>
+      </li>
+      <!--  /list-table__body -->
+      <li class="list--table release_margin">
+        <div class="list--table__item__body list--table__item__body--caption no_align">
+          <h3> Next Release: </h3>
+        </div>
+        <div class="list--table__item__body list--table__item__body--stat no_align">
+          <div class="">
+            <div class="release_dates">
+              <p id="nextReleaseDate">19th March 2014</p>
             </div>
-            <div class="list--table__item__body list--table__item__body--stat no_align">
-              <div class="">
-                <div class="release_dates">
-                  <p id="releaseDate">19th February 2014</p>
-                  
-                </div>
-                
-              </div>
-            </div>
-            
-            
-          </li> 
-          <!--  /list-table__body -->
-         <li class="list--table release_margin">
-            <div class="list--table__item__body list--table__item__body--caption no_align">
-              <h3>
-                <p>Next Release:</p>
-                
-              </h3>
-            </div>
-            <div class="list--table__item__body list--table__item__body--stat no_align">
-              <div class="">
-                <div class="release_dates">
-                 <p id="nextReleaseDate">19th March 2014</p>
-                  
-                </div>
-                
-              </div>
-            </div>
-            
-            
-          </li> 
-          <!--  /list-table__body -->
-        <li class="list--table release_margin">
-            <div class="list--table__item__body list--table__item__body--caption  release_contact_header">
-              <h3 class="align-top">
-              Contact:
-                
-              </h3>
-            </div>
-            <div class="list--table__item__body list--table__item__body--stat no_align">
-              <div class="">
-                <div class="box__content">
-                  <div class="vcard">
-                    <div id="contactName" class="name">Kat Pegler</div>
-                    <div id="contactOrganisation" class="organisation">Business Prices</div>
-                    <div id="contactEmail" class="email"><a href="mailto:ppi@ons.gsi.gov.uk">ppi@ons.gsi.gov.uk</a>
-                    </div>
-                    <div id="contactTelephone" class="tel">Telephone: +44 (0)1633 456468</div>
-                  </div>
-                </div>
-                
-              </div>
-            </div>
-            
-            
-          </li> 
-          <!--  /list-table__item -->
-        </ol>
-        <!--  /list-table -->
-      </section>
-
-      <section id="bulletinsAndArticles" class="panel--large wrapper">
-        <div class="wrapper">
-          <div class="grid-wrap">
-            <div class="grid-col desktop-grid-one-third tablet-grid-full">
-              <article class="box">
-                <h2 class="beta">Statistical Bulletins and Articles</h2>                
-              </article>
-            </div>
-            <!-- /box -->
-             <div id="bulletinsGridTemplate" class="grid-col desktop-grid-one-third tablet-grid-one-half">
-              <article class="box">
-                <header class="box__header">
-                  <h3 class="gamma flush">
-                    <a href="#">Producer Price Inflation, January 2014</a>
-                  </h3>
-                </header>
-                <!-- /box__header -->
-                <div class="box__content">
-                  <p id="bulletinOrArticleSummary">
-                    This statistical bulletin contains producer price indices of materials and fuels purchased and output of manufacturing.
-                  </p>
-                  <p class="description mini"></p>
-                  <p>
-                  	<span id="bulletinOrArticleTypeLozenge" class="lozenge">Statistical Bulletin</span>
-                  </p>
-                </div>
-                <!-- /box__content -->
-              </article>
-        	</div>
           </div>
-          <!-- /grid-wrap -->
         </div>
-        <!-- /wrapper -->
-      </section>
-
-	<section id="datasets" class="panel--large wrapper">
-		<div class="wrapper">
-	        <div class="grid-wrap">
-	          <div class="grid-col desktop-grid-one-third tablet-grid-full">
-	            <article class="box">
-	              <h2 class="beta">Datasets</h2>
-	              <a href="#" class="action-link hide-med-down">See all datasets in this release &gt;</a>
-	            </article>
-	          </div>
-	          <!-- /box -->
-	          <div id="datasetsTemplate" class="grid-col desktop-grid-one-third tablet-grid-one-half">
-	            <article class="box">
-	              <header class="box__header">
-	                <h3 class="gamma flush">
-	                  <a href="#">Producer Price Index summary dataset</a>
-	                </h3>
-	              </header>
-	              <!-- /box__header -->
-	              <div class="box__content">
-	                <p id="datasetSummary">
-	                  A comprehensive selction of data on input and output indices. Contains producer price indices of materials and fuels purchased. 
-	                </p>
-	                <p>
-                  		<span class="lozenge">Dataset</span>
-                	</p>
-	              </div>
-	            </article>
-	          </div>
-	        </div>
-	    </div>
-      </section>
-
-<div class="wrapper panel--bottom-mar">
-  <h3>Important Release Information</h3>
-  <br><br>
-
-  <p>The United Kingdom Statistics Authority has designated these statistics as National Statistics, in accordance with the Statistics and Registration Service Act 2007 and signifying compliance with the Code of Practice for Official Statistics.</p>
-
-  <p>Designation can be broadly interpreted to mean that the statistics:
-  <ul>  
-  <li>meet identified user needs;</li>
-  <li>are well explained and readily accessible;
-  <li>are produced according to sound methods; and
-  <li>are managed impartially and objectively in the public interest.</li>
-  </ul>
-
-  <p>Once statistics have been designated as National Statistics it is a statutory requirement that the Code of Practice shall continue to be observed.</p>
-
-  <p><a href="about:blank">Pre-release access list for this release</a>
-
-  
-
-</div>
-<footer class="global-footer">
-  <div class="slate panel--pad-large panel--separated">
+      </li>
+      <!--  /list-table__body -->
+      <li class="list--table release_margin">
+        <div class="list--table__item__body list--table__item__body--caption  release_contact_header">
+          <h3 class="align-top"> Contact: </h3>
+        </div>
+        <div class="list--table__item__body list--table__item__body--stat no_align">
+          <div class="">
+            <div class="box__content">
+              <div class="vcard">
+                <div id="contactName" class="name">Kat Pegler</div>
+                <div id="contactOrganisation" class="organisation">Business Prices</div>
+                <div id="contactEmail" class="email"><a href="mailto:ppi@ons.gsi.gov.uk">ppi@ons.gsi.gov.uk</a> </div>
+                <div id="contactTelephone" class="tel">Telephone: +44 (0)1633 456468</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <!--  /list-table__item -->
+    </ol>
+    <!--  /list-table --> 
+  </section>
+  <section id="bulletinsAndArticles" class="panel--large wrapper">
     <div class="wrapper">
-      <nav class="grid-wrap">
-        <div class="grid-col tablet-grid-one-third">
-          <h2 class="delta headline-separated">Legal</h2>
-          <ul class="list--neutral list--grid list--spaced">
-            <li>
-              <a href="#">Business Transparency</a>
-            </li>
-            <li>
-              <a href="#">Terms and Conditions</a>
-            </li>
-            <li>
-              <a href="#">Copyright</a>
-            </li>
-            <li>
-              <a href="#">Cookies and Privacy</a>
-            </li>
-          </ul>
+      <div class="grid-wrap">
+        <div class="grid-col desktop-grid-one-third tablet-grid-full">
+          <article class="box">
+            <h2 class="beta">Statistical Bulletins and Articles</h2>
+          </article>
         </div>
-
-        <div class="grid-col tablet-grid-one-third">
-          <h2 class="delta headline-separated">About ONS</h2>
-          <ul class="list--neutral list--grid list--spaced">
-            <li>
-              <a href="#">Who we are</a>
-            </li>
-            <li>
-              <a href="#">Careers</a>
-            </li>
-            <li>
-              <a href="#">Products and Services</a>
-            </li>
-            <li>
-              <a href="#">Contact us</a>
-            </li>
-            <li>
-              <a href="#">Our offices</a>
-            </li>
-          </ul>
+        <!-- /box -->
+        <div id="bulletinsGridTemplate" class="grid-col desktop-grid-one-third tablet-grid-one-half">
+          <article class="box">
+            <header class="box__header">
+              <h3 class="gamma flush"> <a href="#">Producer Price Inflation, January 2014</a> </h3>
+            </header>
+            <!-- /box__header -->
+            <div class="box__content">
+              <p id="bulletinOrArticleSummary"> This statistical bulletin contains producer price indices of materials and fuels purchased and output of manufacturing. </p>
+              <p class="description mini"></p>
+              <p> <span id="bulletinOrArticleTypeLozenge" class="lozenge">Statistical Bulletin</span> </p>
+            </div>
+            <!-- /box__content --> 
+          </article>
         </div>
-
-        <div class="grid-col tablet-grid-one-third">
-          <h2 class="delta headline-separated">Connect with us</h2>
-          <ul class="list--neutral list--grid list--spaced">
-            <li>
-              <a href="#">Twitter</a>
-            </li>
-            <li>
-              <a href="#">Facebook</a>
-            </li>
-            <li>
-              <a href="#">LinkedIn</a>
-            </li>
-            
-          </ul>
-        </div>
-      </nav>
+      </div>
+      <!-- /grid-wrap --> 
     </div>
-    <!-- /wrapper -->
-  </div>
-  <!-- /slate -->
-  <div class="slate--dark">
+    <!-- /wrapper --> 
+  </section>
+  <section id="datasets" class="panel--large wrapper">
     <div class="wrapper">
-      <div class="footer__license">
-        <img class="footer__license__img" alt="OGLlogo" width="60" src="/ui/img/ogl.png">
-        <p class="footer__license__body">
-          All content is available under the Open Government Licence v2.0, except where otherwise stated
-        </p>
+      <div class="grid-wrap">
+        <div class="grid-col desktop-grid-one-third tablet-grid-full">
+          <article class="box">
+            <h2 class="beta">Datasets</h2>
+            <a href="#" class="action-link hide-med-down">See all datasets in this release &gt;</a> </article>
+        </div>
+        <!-- /box -->
+        <div id="datasetsTemplate" class="grid-col desktop-grid-one-third tablet-grid-one-half">
+          <article class="box">
+            <header class="box__header">
+              <h3 class="gamma flush"> <a href="#">Producer Price Index summary dataset</a> </h3>
+            </header>
+            <!-- /box__header -->
+            <div class="box__content">
+              <p id="datasetSummary"> A comprehensive selction of data on input and output indices. Contains producer price indices of materials and fuels purchased. </p>
+              <p> <span class="lozenge">Dataset</span> </p>
+            </div>
+          </article>
+        </div>
       </div>
     </div>
+  </section>
+  <div class="wrapper panel--bottom-mar">
+    <h3>Important Release Information</h3>
+    <br>
+    <br>
+    <p>The United Kingdom Statistics Authority has designated these statistics as National Statistics, in accordance with the Statistics and Registration Service Act 2007 and signifying compliance with the Code of Practice for Official Statistics.</p>
+    <p>Designation can be broadly interpreted to mean that the statistics:
+    <ul>
+      <li>meet identified user needs;</li>
+      <li>are well explained and readily accessible;
+      <li>are produced according to sound methods; and
+      <li>are managed impartially and objectively in the public interest.</li>
+    </ul>
+    <p>Once statistics have been designated as National Statistics it is a statutory requirement that the Code of Practice shall continue to be observed.</p>
+    <p><a href="about:blank">Pre-release access list for this release</a> 
   </div>
-</footer>
-
+  <footer class="global-footer">
+    <div class="slate panel--pad-large panel--separated">
+      <div class="wrapper">
+        <nav class="grid-wrap">
+          <div class="grid-col tablet-grid-one-third">
+            <h2 class="delta headline-separated">Legal</h2>
+            <ul class="list--neutral list--grid list--spaced">
+              <li> <a href="#">Business Transparency</a> </li>
+              <li> <a href="#">Terms and Conditions</a> </li>
+              <li> <a href="#">Copyright</a> </li>
+              <li> <a href="#">Cookies and Privacy</a> </li>
+            </ul>
+          </div>
+          <div class="grid-col tablet-grid-one-third">
+            <h2 class="delta headline-separated">About ONS</h2>
+            <ul class="list--neutral list--grid list--spaced">
+              <li> <a href="#">Who we are</a> </li>
+              <li> <a href="#">Careers</a> </li>
+              <li> <a href="#">Products and Services</a> </li>
+              <li> <a href="#">Contact us</a> </li>
+              <li> <a href="#">Our offices</a> </li>
+            </ul>
+          </div>
+          <div class="grid-col tablet-grid-one-third">
+            <h2 class="delta headline-separated">Connect with us</h2>
+            <ul class="list--neutral list--grid list--spaced">
+              <li> <a href="#">Twitter</a> </li>
+              <li> <a href="#">Facebook</a> </li>
+              <li> <a href="#">LinkedIn</a> </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- /wrapper --> 
+    </div>
+    <!-- /slate -->
+    <div class="slate--dark">
+      <div class="wrapper">
+        <div class="footer__license"> <img class="footer__license__img" alt="OGLlogo" width="60" src="/ui/img/ogl.png">
+          <p class="footer__license__body"> All content is available under the Open Government Licence v2.0, except where otherwise stated </p>
+        </div>
+      </div>
+    </div>
+  </footer>
 </main>
+</body>
+</html>

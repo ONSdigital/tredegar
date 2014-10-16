@@ -9,8 +9,10 @@ var onsApp = angular.module('onsApp', [
     'onsControllers'
 ]);
 
-onsApp.config(['$routeProvider',
-    function($routeProvider) {
+onsApp.config(['$routeProvider','$locationProvider',
+    function($routeProvider, $locationProvider) {
+		//$locationProvider.hashPrefix('!');
+//			 .html5Mode(false)
         $routeProvider.
         when('/', {
             redirectTo: '/home'
@@ -27,7 +29,14 @@ onsApp.config(['$routeProvider',
             templateUrl: 'templates/article.html',
             controller: 'ArticleCtrl'
         }).
+        when('/home/economy/inflationandpriceindices/bulletin', {
+            templateUrl: 'templates/bulletin.html',
+            controller: 'BulletinCtrl'
+        }).
         when('/bulletin', {
+            redirectTo: '/home/economy/inflationandpriceindices/bulletin'
+        }).
+        when(':home*\/bulletins', {
             templateUrl: 'templates/bulletin.html',
             controller: 'BulletinCtrl'
         }).
@@ -67,71 +76,117 @@ onsApp.filter('range', function() {
 
 /*Custom Directives*/
 onsApp.directive('onsFooter', function() {
-    return {
-        restrict: 'E',
-        templateUrl: 'templates/footer.html'
-    }
+  return {
+    restrict: 'E',
+    templateUrl: 'templates/footer.html'
+  }
 
 })
 
 onsApp.directive('releaseCalendarFooter', function() {
-    return {
-        restrict: 'E',
-        templateUrl: 'templates/releasecalendarfooter.html'
-    }
+  return {
+    restrict: 'E',
+    templateUrl: 'templates/releasecalendarfooter.html'
+  }
 
 })
 
 onsApp.directive('onsHeader', function() {
-    return {
-        restrict: 'E',
-        templateUrl: 'templates/header.html'
+  return {
+    restrict: 'E',
+    templateUrl: 'templates/header.html'
 
-    }
+  }
 
 })
 onsApp.directive('paginator', function() {
-    return {
-        restrict: 'E',
-        templateUrl: 'templates/paginator.html'
-    }
+  return {
+    restrict: 'E',
+    templateUrl: 'templates/paginator.html'
+  }
 })
 
 onsApp.directive('onsNav', function() {
-    return {
-        restrict: 'E',
-        templateUrl: 'templates/onsnav.html'
-    }
+  return {
+    restrict: 'E',
+    templateUrl: 'templates/onsnav.html'
+  }
 })
 
 onsApp.directive('onsBreadcrumb', function() {
-    return {
-        restrict: 'E',
-        templateUrl: 'templates/breadcrumb.html'
-    }
+  return {
+    restrict: 'E',
+    templateUrl: 'templates/breadcrumb.html'
+  }
 })
 
 onsApp.directive('searchBox', function() {
-    return {
-        restrict: 'E',
-        templateUrl: 'templates/searchbox.html'
-    }
+  return {
+    restrict: 'E',
+    templateUrl: 'templates/searchbox.html'
+  }
+})
+
+onsApp.directive('autoComplete', function() {
+  return {
+    restrict: 'E',
+    templateUrl: 'templates/autocomplete.html',
+    controller: 'AutocompleteCtrl'
+  }
 })
 
 onsApp.directive('topBar', function() {
-    return {
-        restrict: 'E',
-        templateUrl: 'templates/top.html'
-    }
+  return {
+    restrict: 'E',
+    templateUrl: 'templates/top.html'
+  }
 })
 
 onsApp.directive('onsContent', function() {
-    return {
-        restrict: 'E',
-        templateUrl: 'templates/content.html'
-    }
+  return {
+    restrict: 'E',
+    templateUrl: 'templates/content.html'
+  }
 })
 
+onsApp.directive('relatedArticles', function() {
+  return {
+    restrict: 'E',
+    templateUrl: 'templates/relatedarticles.html'
+  }
+})
+
+onsApp.directive('contactDetails', function() {
+  return {
+    restrict: 'E',
+    templateUrl: 'templates/contactdetails.html'
+  }
+})
+
+onsApp.directive('tools', function() {
+  return {
+    restrict: 'E',
+    templateUrl: 'templates/tools.html'
+  }
+})
+
+onsApp.directive('latestBulletins', function() {
+  return {
+    restrict: 'E',
+    templateUrl: 'templates/latestbulletins.html'
+  }
+})
+
+onsApp.directive('stopEvent', function () {
+    return {
+        restrict: 'A',
+        link: function (scope, element, attr) {
+            element.bind('click', function (e) {
+              e.stopPropagation();
+            });
+        }
+    };
+ });
 
 onsApp.directive('markdown', function($http) {
     var converter = new Showdown.converter();
@@ -161,66 +216,57 @@ onsApp.directive('markdown', function($http) {
             };
         });
 
-        onsApp.service('anchorSmoothScroll', function() {
+onsApp.service('anchorSmoothScroll', function(){
 
-            this.scrollTo = function(eID) {
+    this.scrollTo = function(eID) {
 
-                // This scrolling function
-                // is from http://www.itnewb.com/tutorial/Creating-the-Smooth-Scroll-Effect-with-JavaScript
+        // This scrolling function
+        // is from http://www.itnewb.com/tutorial/Creating-the-Smooth-Scroll-Effect-with-JavaScript
 
-                var startY = currentYPosition();
-                var stopY = elmYPosition(eID);
-                var distance = stopY > startY ? stopY - startY : startY - stopY;
-                if (distance < 100) {
-                    scrollTo(0, stopY);
-                    return;
-                }
-                var speed = Math.round(distance / 100);
-                if (speed >= 20) speed = 20;
-                var step = Math.round(distance / 25);
-                var leapY = stopY > startY ? startY + step : startY - step;
-                var timer = 0;
-                if (stopY > startY) {
-                    for (var i = startY; i < stopY; i += step) {
-                        setTimeout("window.scrollTo(0, " + leapY + ")", timer * speed);
-                        leapY += step;
-                        if (leapY > stopY) leapY = stopY;
-                        timer++;
-                    }
-                    return;
-                }
-                for (var i = startY; i > stopY; i -= step) {
-                    setTimeout("window.scrollTo(0, " + leapY + ")", timer * speed);
-                    leapY -= step;
-                    if (leapY < stopY) leapY = stopY;
-                    timer++;
-                }
+        var startY = currentYPosition();
+        var stopY = elmYPosition(eID);
+        var distance = stopY > startY ? stopY - startY : startY - stopY;
+        if (distance < 100) {
+            scrollTo(0, stopY); return;
+        }
+        var speed = Math.round(distance / 100);
+        if (speed >= 20) speed = 20;
+        var step = Math.round(distance / 25);
+        var leapY = stopY > startY ? startY + step : startY - step;
+        var timer = 0;
+        if (stopY > startY) {
+            for ( var i=startY; i<stopY; i+=step ) {
+                setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
+                leapY += step; if (leapY > stopY) leapY = stopY; timer++;
+            } return;
+        }
+        for ( var i=startY; i>stopY; i-=step ) {
+            setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
+            leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
+        }
 
-                function currentYPosition() {
-                    // Firefox, Chrome, Opera, Safari
-                    if (self.pageYOffset) return self.pageYOffset;
-                    // Internet Explorer 6 - standards mode
-                    if (document.documentElement && document.documentElement.scrollTop)
-                        return document.documentElement.scrollTop;
-                    // Internet Explorer 6, 7 and 8
-                    if (document.body.scrollTop) return document.body.scrollTop;
-                    return 0;
-                }
+        function currentYPosition() {
+            // Firefox, Chrome, Opera, Safari
+            if (self.pageYOffset) return self.pageYOffset;
+            // Internet Explorer 6 - standards mode
+            if (document.documentElement && document.documentElement.scrollTop)
+                return document.documentElement.scrollTop;
+            // Internet Explorer 6, 7 and 8
+            if (document.body.scrollTop) return document.body.scrollTop;
+            return 0;
+        }
 
-                function elmYPosition(eID) {
-                    var elm = document.getElementById(eID);
-                    var y = elm.offsetTop;
-                    var node = elm;
-                    while (node.offsetParent && node.offsetParent != document.body) {
-                        node = node.offsetParent;
-                        y += node.offsetTop;
-                    }
-                    return y;
-                }
+        function elmYPosition(eID) {
+            var elm = document.getElementById(eID);
+            var y = elm.offsetTop;
+            var node = elm;
+            while (node.offsetParent && node.offsetParent != document.body) {
+                node = node.offsetParent;
+                y += node.offsetTop;
+            } return y;
+        }
 
-            };
-
-        });
+    };
 
 
 function AccordionCtrl($scope) {
@@ -266,3 +312,4 @@ function AccordionCtrl($scope) {
         }
     }
 }
+
