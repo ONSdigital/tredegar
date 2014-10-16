@@ -4707,3 +4707,33 @@ a.tooltips span
    border-radius:4px;
    box-shadow: 5px 5px 8px #CCC;
 }*/
+
+/*------------------------------------*\
+ Angular Accordion
+\*------------------------------------*/
+
+.accordion__container {
+    background: #fff;
+    padding: 0;
+    border-top: 2px solid #dedfdc;
+
+}
+.accordion__tab {
+    background: #fff;
+    padding: 5px;
+    color: #000;
+    border-bottom: 2px solid #dedfdc;
+}
+.accordion__tab-title {
+    background: #fff;
+    padding: 10px;
+    cursor: pointer;
+    /*border-top: 2px solid #dedfdc;*/
+    /*border-bottom: 2px solid #dedfdc;*/
+
+}
+.accordion__tab-content {
+    background: #fff;
+    padding: 10px;
+    /*border-bottom: 2px solid #dedfdc;*/
+}

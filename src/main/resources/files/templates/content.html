@@ -114,6 +114,37 @@
             <div ng-include="sidebarUrl" ></div>
         </div>
     </div>
+
+    <div class="accordion__container" ng-controller="AccordionCtrl">
+        <div class="accordion__tab">
+            <h2 class="accordion__tab-title " ng-click="openTab('tab one')">Background Notes and Methodology</h2>
+            <div class="accordion__tab-content" ng-show="isOpenTab('tab one')">
+                <p>Quality and Methodology Information (QMI) (PDF 95.6 kb)</p>
+                <p>Impact of Rebasing the Consumer Price Index to 2010=100</p>
+                <p>Consumer Price Index and Retail Price Index Methodology</p>
+            </div>
+        </div>
+        <!-- .accordion__tab -->
+        <div class="accordion__tab">
+            <h2 class="accordion__tab-title" ng-click="openTab('tab two')">References</h2>
+            <div class="accordion__tab-content" ng-show="isOpenTab('tab two')">
+                <p><p>BRITISH STANDARDS INSTITUTE. (1990). BS5605:1990. Recommendations for citing and referencing published material. Milton Keynes: BSI. </p>
+                <p>NEVILLE, C. (2010). The Complete Guide to Referencing and Avoiding Plagiarism.2ND edition. Open UP Study Skills. Maidenhead: Open University Press. </p>
+                <p>PEARS, R & SHIELDS, G. (2006) Cite Them Right: The Essential Guide to Referencing and Plagiarism. Newcastle-upon-Tyne: Northumbria University Press. </p>
+            </div>
+        </div>
+        <!-- .accordion__tab -->
+        <div class="accordion__tab">
+            <h2 class="accordion__tab-title" ng-click="openTab('tab three')">Footnotes</h2>
+            <div class="accordion__tab-content" ng-show="isOpenTab('tab three')">
+                <p>1 Joseph P. Swain, The Broadway Musical: A Critical and Musical Survey (New York: Oxford University Press, 1990), 136. </p>
+                <p>2 Gillian G. Gaar, She's a Rebel: The History of Women in Rock & Roll (Seattle: Seal Press, 1992), 101-2. </p>
+                <p>3 Swain, Broadway Musical, 153.</p>
+            </div>
+        </div>
+        <!-- .accordion__tab -->
+    </div>
+
 </div>
 
 </div>
