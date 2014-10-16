@@ -43,28 +43,12 @@
     <script type="text/javascript" src="ui/js/lib/jquery.simplePagination.js" defer></script>
     <script type="text/javascript" src="/ui/js/custom-autocomplete.js" defer></script>
     
-    <style>
-
-    body {
-      padding: 0;
-    }
-    @media screen and (max-width: 559px) {
-      #homepage-search {
-        display: none;
-      }
-      .offset-top.nav-panels {
-        margin-top: 2rem;
-      }
-    }
-	.ui-menu .ui-menu-item {
-	  text-align: left;
-	  margin-top: 20px;
-	  margin-bottom: 20px;
-	  border-bottom: 1px solid;   
-	}     
-    </style>
-    <!---
-title: Collection Page Template (T4)
+<!-- Functionality to populate this page -->
+<script type="text/javascript" src="/ui/js/markdown.js" defer></script>
+<script type="text/javascript" src="/ui/js/collection.js" defer></script>
+   
+<!---
+title: Article Template
 external: true
 type: template
 group: Templates
@@ -87,7 +71,7 @@ markup: false
       <!-- <div class="wrapper"> -->
 <div class="wrapper panel--pad-small">
   <header class="global-header">
-    <div class="media"><a href="/"><img src="ui/img/ons-logo.svg" alt="Office for National Statistics" width="300" class="media__img"></a>
+    <div class="media"><a href="/"><a href="/"><img src="ui/img/ons-logo.svg" alt="Office for National Statistics" width="300" class="media__img"></a></a>
         <div class="media__body">
         <ul class="nav nav--inline-block nav--dark globaltop-nav">
           <li>
@@ -426,6 +410,6 @@ markup: false
     
     <!-- Functionality to populate this page -->
     <script type="text/javascript" src="/ui/js/collection.js" defer></script>    
-
+</main>
   </body>
 </html>
