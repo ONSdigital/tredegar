@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.github.davidcarboni.restolino.json.Serialiser;
-import com.github.onsdigital.json.Bulletin;
+import com.github.onsdigital.json.bulletin.Bulletin;
 
 /**
  * Holds the details for a collection of content types
@@ -20,7 +20,7 @@ public class CollectionSearchResult {
 	private static final String RELEASE_DATE = "releaseDate";
 	private static final String URL = "url";
 	private static final String BULLETIN_JSON = "bulletin.json";
-	private static final String PATH_ROOT = "target/classes/files";
+	private static final String PATH_ROOT = "target";
 	private static final String TITLE = "title";
 	private long numberOfResults;
 	private List<Map<String, String>> results;
@@ -91,7 +91,8 @@ public class CollectionSearchResult {
 
 	private Bulletin getBulletin(File file) {
 		try {
-			return Serialiser.deserialise(new FileInputStream(file), Bulletin.class);
+			return Serialiser.deserialise(new FileInputStream(file),
+					Bulletin.class);
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}

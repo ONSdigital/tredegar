@@ -6,123 +6,152 @@
       "detail": [
         {
           "name": "Gross Domestic Product",
+          "link": "#",
           "info": "Chained Volume Measures",
           "number": "£390 billion",
           "unit": "£ billion",
-          "date": "Quarter 1 2014"
+          "date": "Quarter 1 2014",
+          "headline": false
         },
         {
           "name": "GDP Quarter on Quarter Growth",
+          "link": "#",
           "info": "Gross domestic Product (GDP) Chained Volume Measures",
           "number": "0.8 £",
           "unit": "%",
-          "date": "Quarter 1 2014"
+          "date": "Quarter 1 2014",
+          "headline": false
         },
         {
           "name": "GDP (average) per head",
+          "link": "#",
           "info": "Gross domestic Product (GDP), Chained Volume Measures (CVM) market prices",
           "number": "£6,057",
           "unit": "£",
-          "date": "Quarter 1 2014"
+          "date": "Quarter 1 2014",
+          "headline": false
         },
         {
           "name": "GDP Change on same Quarter a year ago",
+          "link": "#",
           "info": "Gross domestic Product (GDP) Chained Volume Measures",
           "number": "3.1 %",
           "unit": "%",
-          "date": "Quarter 1 2014"
+          "date": "Quarter 1 2014",
+          "headline": false
         }
       ],
       "name": "Gross Domestic Product (GDP)",
-      "fileName": "grossdomesticproductgdp"
+      "fileName": "grossdomesticproductgdp",
+      "index": 0
     },
     {
       "detail": [
         {
           "name": "Consumer Prices Index (CPI)",
+          "link": "#",
+          "info": "Annual Rate Percentage Change Over 12 Months",
           "number": "1.5 %",
           "unit": "%",
           "date": "August 2014",
-          "info": "Annual Rate Percentage Change Over 12 Months"
+          "headline": false
         },
         {
           "name": "Retail Prices Index (RPI)",
+          "link": "#",
+          "info": "Not a national statistic. Annual Rate Percentage Change Over 12 Months",
           "number": "2.4 %",
           "unit": "%",
           "date": "August 2014",
-          "info": "Not a national statistic. Annual Rate Percentage Change Over 12 Months"
+          "headline": false
         },
         {
           "name": "Retail Prices Index calculated using the Jevons formula (RPIJ)",
+          "link": "#",
+          "info": "Annual Rate Percentage Change Over 12 Months",
           "number": "1.8 %",
           "unit": "%",
           "date": "August 2014",
-          "info": "Annual Rate Percentage Change Over 12 Months"
+          "headline": false
         },
         {
           "name": "Consumer Prices Index including owner occupiers' housing costs (CPIH)",
+          "link": "#",
+          "info": "Not a national statistic. Annual Rate Percentage Change Over 12 Months",
           "number": "1.5 %",
           "unit": "%",
-          "date": "August 2014",
-          "info": "Not a national statistic. Annual Rate Percentage Change Over 12 Months"
+          "date": "August 2014"
         }
       ],
       "name": "Inflation and Price Indices",
-      "fileName": "inflationandpriceindices"
+      "fileName": "inflationandpriceindices",
+      "index": 0
     },
     {
       "detail": [
         {
           "name": "Public sector net borrowing excluding financial interventions",
+          "link": "#",
           "info": "Current Budget Deficit + Net Investment",
           "number": "£10.9 billion",
           "unit": "£ billion%",
-          "date": "August 2014"
+          "date": "August 2014",
+          "headline": false
         },
         {
           "name": "Gross domestic expenditure on R&D",
+          "link": "#",
           "info": "Research and Development (R&D)",
           "number": "£27.0 billion",
           "unit": "£ billion",
-          "date": "2012"
+          "date": "2012",
+          "headline": false
         }
       ],
       "name": "Government, Public Sector and Taxes",
-      "fileName": "governmentpublicsectorandtaxes"
+      "fileName": "governmentpublicsectorandtaxes",
+      "index": 0
     },
     {
       "detail": [],
       "name": "National Accounts",
-      "fileName": "nationalaccounts"
+      "fileName": "nationalaccounts",
+      "index": 0
     },
     {
       "detail": [],
       "name": "Investments, Pensions and Trusts",
-      "fileName": "investmentspensionsandtrusts"
+      "fileName": "investmentspensionsandtrusts",
+      "index": 0
     },
     {
       "detail": [],
       "name": "Regional Accounts",
-      "fileName": "regionalaccounts"
+      "fileName": "regionalaccounts",
+      "index": 0
     },
     {
       "detail": [],
       "name": "Economic Output and Productivity",
-      "fileName": "economicoutputandproductivity"
+      "fileName": "economicoutputandproductivity",
+      "index": 0
     },
     {
       "detail": [],
       "name": "Government, Public Sector and Taxes",
-      "fileName": "environmentalaccounts"
+      "fileName": "environmentalaccounts",
+      "index": 0
     },
     {
       "detail": [],
       "name": "Gross Value Added (GVA)",
-      "fileName": "grossvalueaddedgva"
+      "fileName": "grossvalueaddedgva",
+      "index": 0
     }
   ],
   "lede": "Producer Price Inflation (PPI) measures the price changes of goods bought and sold by UK manufacturers this month compared to the same month a year ago. PPI provides a key measure of inflation alongside other indicators such as the Consumer Prices Index (CPI) and Services Producer Price Index (SPPI).PPI is split into two components: output price inflation and input price inflation. The input price indices capture changes in the cost of the material and fuel inputs that producers face whereas the output price indices capture the changing prices of goods sold by producers.This article looks at the trends in both producer price indices since 2000 and which components contribute most towards changes in each price index in recent years.",
   "more": "Annual output and input price changes follow similar trends, but with the latter tending to have higher price growth1. In Figure 1, trends in producer price inflation can be split into three distinct periods: 2000 to 2005, 2005 to 2012 and 2012 to June 2014.  Both indices experience greater variability within the second period of 2005 to 2012 than compared with the first and third period. From 2005 to 2012 the average growth rate was 2.9% for output price inflation and 8.1% for input price inflation.  The largest peaks and troughs experienced for both indices throughout the time series shown below occurred in the second period of 2005 to 2012. Output price inflation rose to 8.9% in July 2008 while input price inflation rose to 34.8% in June 2008 and both fell to their lowest rates in July 2009: output price inflation falling by 1.6% and input price inflation falling by 14.8%.",
   "name": "Economy",
-  "fileName": "economy"
+  "fileName": "economy",
+  "index": 1
 }

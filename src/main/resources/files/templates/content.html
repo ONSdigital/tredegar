@@ -24,30 +24,30 @@
 </div>
 
 <!-- Content-reveal section -->
-  <div class="wrapper" ng-controller="ContentRevealCtrl" >
-        <div class="panel">
-          <div class="content-reveal lede">
+<div class="wrapper" ng-controller="ContentRevealCtrl" >
+    <div class="panel">
+        <div class="content-reveal lede">
             <p>{{content.lede}}
               <a href="" ng-click="toggleContent()" class="content-reveal__action">{{showContent ? 'Show less' : 'Show more'}}</a>
-            </p>
-            <div ng-show="showContent" class="content-reveal__hidden">
+          </p>
+          <div ng-show="showContent" class="content-reveal__hidden">
               <p>
-              {{content.more}}
+                  {{content.more}}
               </p>
-            </div>
           </div>
-        </div>
-    </div>
+      </div>
+  </div>
+</div>
 
 <!-- Table of contents -->
 <div class="wrapper">
     <article class="box border-horizontal-single">
-    <h3>Table of contents</h3>
-    <div id="toc-content">
-        <ol class="toc-columns">
-            <li ng-repeat="section in content.sections track by $index"><a href="" ng-click="scrollTo('section' + ($index + 1))">{{section.title}}</a></li>
-        </ol>
-    </div>
+        <h3>Table of contents</h3>
+        <div id="toc-content">
+            <ol class="toc-columns">
+                <li ng-repeat="section in content.sections track by $index"><a href="" ng-click="scrollTo('section' + ($index + 1))">{{section.title}}</a></li>
+            </ol>
+        </div>
     </article>
 </div>
 
@@ -61,25 +61,25 @@
                 </header>
                 <!-- /box__header -->
                 <div class="box__content">
-                    <p>{{section.markdown}}</p>
+                    <div markdown link="{{section.markdown}}"></div>
                     <!-- <ul class="list--bullet">
                         <li>{{section.markdown}}</li>
                     </ul> -->
                 </div>
                 <!-- /box__content -->
 
-        <!-- Responsive Table (if any) -->
-                <div ng-if="section.table" class="wrapper panel--bottom-mar">Table
+                <!-- Responsive Table (if any) -->
+                <div ng-if="section.table" class="wrapper panel--bottom-mar">
                     <div class="grid-wrap">
                         <div class="grid-col desktop-grid-two-thirds tablet-grid-two-thirds">
                             <table id="myTable" class="tablesorter resp-table">
                                 <thead>
-                                    <tr ng-repeat="cell in section.table">
-                                        <th>
-                                        {{cell.title}}
-                                        <!-- Title One -->
+                                    <tr>
+                                        <th ng-repeat="title in section.table.col">
+                                            {{title}}
+                                            <!-- Title One -->
                                         </th>
-                                      <!--   <th>First Name</th>
+                                 <!--   <th>First Name</th>
                                         <th>Email</th>
                                         <th>Due</th>
                                         <th>Web Site</th>
@@ -87,8 +87,8 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td >{{cells.data}}</td>
+                                    <tr ng-repeat="cell in section.table.row">
+                                        <td ng-repeat="data in cell.users" data-th="{{section.table.col[$index%section.table.col.length]}}">{{data}}</td>
                                     </tr>
                                     <!-- <tr>
                                         <td data-th="Last Name">Bach</td>
@@ -97,22 +97,6 @@
                                         <td data-th="Due">$50.00</td>
                                         <td data-th="Web Site">http://www.frank.com</td>
                                         <td data-th="Address">123 Kew Hill. SO1 4EZ</td>
-                                    </tr>
-                                    <tr>
-                                        <td data-th="Last Name">Doe</td>
-                                        <td data-th="First Name">Jason</td>
-                                        <td data-th="Email">jdoe@hotmail.com</td>
-                                        <td data-th="Due">$100.00</td>
-                                        <td data-th="Web Site">http://www.jdoe.com</td>
-                                        <td data-th="Address">74 Incredible View. YO2 6QT</td>
-                                    </tr>
-                                    <tr>
-                                        <td data-th="Last Name">Conway</td>
-                                        <td data-th="First Name">Tim</td>
-                                        <td data-th="Email">tconway@earthlink.net</td>
-                                        <td data-th="Due">$50.00</td>
-                                        <td data-th="Web Site">http://www.timconway.com</td>
-                                        <td data-th="Address">12 Kent Street. 4MA 2FH</td>
                                     </tr> -->
                                 </tbody>
                             </table>
@@ -127,7 +111,7 @@
         </div>
 
         <div ng-if="sidebar" >
-            <div ng-include="sidebarUrl" ></div>                
+            <div ng-include="sidebarUrl" ></div>
         </div>
     </div>
 </div>

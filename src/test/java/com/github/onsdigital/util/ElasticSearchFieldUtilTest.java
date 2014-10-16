@@ -12,7 +12,8 @@ public class ElasticSearchFieldUtilTest {
 	@Test
 	public void testGetBoost() {
 		String boostedField = ElasticSearchFieldUtil.getBoost("title", "2");
-		assertEquals("Format: boostedField^boostFactor", "title^2.0", boostedField);
+		assertEquals("Format: boostedField^boostFactor", "title^2.0",
+				boostedField);
 	}
 
 	@Test

@@ -8,7 +8,7 @@
   <!--<![endif]-->
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>T1 Homepage Template - CX partners</title>
+    <title>T1 Homepage Template</title>
 <meta charset="UTF-8">
     <meta content="width=device-width,initial-scale=1.0" name="viewport" />
     <meta content="on" http-equiv="cleartype" />
@@ -22,22 +22,34 @@
     <!-- endbuild -->
     <!-- build:css /ui/css/main.css-->
     <!--[if gt IE 8]><!-->
-    <link rel="stylesheet" href="../ui/css/main.css" />
+    <link rel="stylesheet" href="/ui/css/main.css" />
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
     <!--<![endif]-->
     <!-- endbuild -->
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" defer></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js" defer></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js" defer></script>
+
+    
+    <!--TODO: cdnjs modernizr seems to be breaking the nav. load mathod is not found in cdnjs now -->
+    <script type="text/javascript" src="/ui/js/lib/modernizr.min.js" defer></script>
+<!--     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" defer></script>-->
+    
+    <!--TODO: cdnjs for JQuery is producing issues, so serving locally for now: -->
+    <script type="text/javascript" src="/ui/js/lib/jquery.min.js" defer></script>
+<!--     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js" defer></script> -->
+    
+    <!--TODO: cdnjs for JQuery UI is producing issues, so serving locally for now: -->
+    <script type="text/javascript" src="/ui/js/lib/jquery-ui.min.js" defer></script>
+<!--     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js" defer></script> -->
+
+   
     <!--[if (!IE)|(gt IE 8)]>><!-->
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/tooltipster/3.0.5/js/jquery.tooltipster.min.js" defer></script>
     <!--<![endif]-->
-    <script type="text/javascript" src="../ui/js/app/app.js" defer></script>
-    <script type="text/javascript" src="../ui/js/app/content-reveal.js" defer></script>
-    <script type="text/javascript" src="../ui/js/app/nav.js" defer></script>
-    <script type="text/javascript" src="../ui/js/app/supporting-content.js" defer></script>
-    <script type="text/javascript" src="../ui/js/app/tables.js" defer></script>
-    <script type="text/javascript" src="../ui/js/app/tabs.js" defer></script>
+    <script type="text/javascript" src="/ui/js/app/app.js" defer></script>
+    <script type="text/javascript" src="/ui/js/app/content-reveal.js" defer></script>
+    <script type="text/javascript" src="/ui/js/app/nav.js" defer></script>
+    <script type="text/javascript" src="/ui/js/app/supporting-content.js" defer></script>
+    <script type="text/javascript" src="/ui/js/app/tables.js" defer></script>
+    <script type="text/javascript" src="/ui/js/app/tabs.js" defer></script>
     <script type="text/javascript" src="/ui/js/custom-autocomplete.js" defer></script>
     
     <!-- build:js /ui/js/ons-alpha.js-->
@@ -47,26 +59,7 @@
     <!-- Functionality to populate this page -->
     <script type="text/javascript" src="/ui/js/t1.js" defer></script>
 
-    <style>
 
-    body {
-      padding: 0;
-    }
-    @media screen and (max-width: 559px) {
-      #homepage-search {
-        display: none;
-      }
-      .offset-top.nav-panels {
-        margin-top: 2rem;
-      }
-    }
-	.ui-menu .ui-menu-item {
-	  text-align: left;
-	  margin-top: 20px;
-	  margin-bottom: 20px;
-	  border-bottom: 1px solid;
-	}
-    </style>
     <!---
 title: Homepage Template (T1)
 external: true
@@ -1133,8 +1126,7 @@ markup: false
           </div>
         </div>
       </footer>
-      <!-- </div> -->
-    </main>
+     </main>
 
   </body>
 </html>

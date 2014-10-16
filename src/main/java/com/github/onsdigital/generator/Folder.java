@@ -7,6 +7,7 @@ import org.apache.commons.lang3.StringUtils;
 
 public class Folder {
 
+	public int index;
 	public String name;
 	public Folder parent = null;
 	public Set<Folder> children = new HashSet<>();

@@ -25,8 +25,10 @@ public class CollectionTaxonomyFileSystem {
 	private static int multiplierIndex = 10;
 
 	@GET
-	public Object get(@Context HttpServletRequest request, @Context HttpServletResponse response) throws Exception {
-		return search(extractQuery(request), extractPage(request), request.getParameter("type"));
+	public Object get(@Context HttpServletRequest request,
+			@Context HttpServletResponse response) throws Exception {
+		return search(extractQuery(request), extractPage(request),
+				request.getParameter("type"));
 	}
 
 	private Object search(String query, int page, String type) throws Exception {
@@ -39,7 +41,8 @@ public class CollectionTaxonomyFileSystem {
 		int endIndex = getEndIndex(files, page);
 		List<File> pagedFiles = files.subList(startIndex, endIndex);
 
-		CollectionSearchResult collectionSearchResult = new CollectionSearchResult(pagedFiles, page);
+		CollectionSearchResult collectionSearchResult = new CollectionSearchResult(
+				pagedFiles, page);
 		// need to set the number of files on the result otherwise the client
 		// loses sight of total results
 		collectionSearchResult.setNumberOfResults(files.size());
@@ -64,11 +67,16 @@ public class CollectionTaxonomyFileSystem {
 	}
 
 	private String extractQuery(HttpServletRequest request) {
-		String query = request.getParameter("q");
+		String query = request.getParameter("loc");
 
 		if (StringUtils.isEmpty(query)) {
 			throw new RuntimeException("No search query provided");
 		}
+
+		// Remove the leading "/home"
+		String home = "/home";
+		if (query.startsWith(home))
+			query = query.substring(home.length());
 
 		return query;
 	}

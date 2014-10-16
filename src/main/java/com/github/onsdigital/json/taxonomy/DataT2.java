@@ -1,6 +1,7 @@
-package com.github.onsdigital.json;
+package com.github.onsdigital.json.taxonomy;
 
 import com.github.onsdigital.generator.Folder;
+import com.github.onsdigital.json.Data;
 
 public class DataT2 extends Data {
 

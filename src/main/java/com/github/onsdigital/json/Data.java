@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.github.onsdigital.generator.Folder;
+import com.github.onsdigital.json.taxonomy.Detail;
 
 public class Data extends TaxonomyNode {
 

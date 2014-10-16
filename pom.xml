@@ -21,12 +21,7 @@
 		<dependency>
 			<groupId>com.github.davidcarboni</groupId>
 			<artifactId>restolino</artifactId>
-			<version>0.0.16</version>
-		</dependency>
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<version>3.1.0</version>
+			<version>0.0.17</version>
 		</dependency>
 		<dependency>
 			<groupId>com.github.davidcarboni</groupId>
@@ -89,13 +84,19 @@
 			<resource>
 				<directory>src/main/resources</directory>
 			</resource>
+			<!-- Manually edited taxonomy structure -->
+			<resource>
+				<!-- Copies the manually edited portions of the taxonomy. -->
+				<directory>src/main/taxonomy_override</directory>
+				<targetPath>${project.build.directory}/taxonomy</targetPath>
+			</resource>
 			<!-- Generated taxonomy structure -->
 			<resource>
 				<!-- Copies the remainder of the taxonomy. NB: the resource plugin "overwrite" 
 					setting defaults to false so this won't replace any manually edited files 
-					already copied in from under src/main/taxonomy -->
+					already copied in from under src/main/taxonomy_override -->
 				<directory>src/main/taxonomy</directory>
-				<targetPath>${project.build.outputDirectory}/files/home</targetPath>
+				<targetPath>${project.build.directory}/taxonomy</targetPath>
 			</resource>
 		</resources>
 		<plugins>

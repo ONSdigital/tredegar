@@ -6,6 +6,7 @@ public class TaxonomyNode {
 
 	public String name;
 	public String fileName;
+	public int index;
 
 	TaxonomyNode(Folder folder) {
 		name = folder.name;

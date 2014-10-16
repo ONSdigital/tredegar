@@ -5,7 +5,7 @@ import com.google.gson.JsonObject;
 
 /**
  * Easy drill down to child objects. Solely coded for experimenting with a
- * different coding style. May not be make things easier as intended :).
+ * different coding style. May not make things easier as intended :).
  * 
  * @author Bren
  *

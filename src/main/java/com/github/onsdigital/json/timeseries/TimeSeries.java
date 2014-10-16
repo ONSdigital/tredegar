@@ -1,4 +1,4 @@
-package com.github.onsdigital.json;
+package com.github.onsdigital.json.timeseries;
 
 public class TimeSeries {
 
