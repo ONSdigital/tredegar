@@ -115,8 +115,10 @@
         </div>
     </div>
 
-    <div class="accordion__container" ng-controller="AccordionCtrl">
+<div class="grid-wrap">
+    <div class="accordion__container grid-col {{sidebar ? 'desktop-grid-two-thirds tablet-grid-two-thirds' : ''}}" ng-controller="AccordionCtrl">
         <div class="accordion__tab">
+        <span class="accordion_chevron icon icon-down-open-big" ng-hide="isOpenTab('tab one')"></span>
             <h2 class="accordion__tab-title " ng-click="openTab('tab one')">Background Notes and Methodology</h2>
             <div class="accordion__tab-content" ng-show="isOpenTab('tab one')">
                 <p>Quality and Methodology Information (QMI) (PDF 95.6 kb)</p>
@@ -126,6 +128,7 @@
         </div>
         <!-- .accordion__tab -->
         <div class="accordion__tab">
+        <span class="accordion_chevron icon icon-down-open-big" ng-hide="isOpenTab('tab two')"></span>
             <h2 class="accordion__tab-title" ng-click="openTab('tab two')">References</h2>
             <div class="accordion__tab-content" ng-show="isOpenTab('tab two')">
                 <p><p>BRITISH STANDARDS INSTITUTE. (1990). BS5605:1990. Recommendations for citing and referencing published material. Milton Keynes: BSI. </p>
@@ -135,6 +138,7 @@
         </div>
         <!-- .accordion__tab -->
         <div class="accordion__tab">
+        <span class="accordion_chevron icon icon-down-open-big" ng-hide="isOpenTab('tab three')"></span>
             <h2 class="accordion__tab-title" ng-click="openTab('tab three')">Footnotes</h2>
             <div class="accordion__tab-content" ng-show="isOpenTab('tab three')">
                 <p>1 Joseph P. Swain, The Broadway Musical: A Critical and Musical Survey (New York: Oxford University Press, 1990), 136. </p>
@@ -144,6 +148,7 @@
         </div>
         <!-- .accordion__tab -->
     </div>
+</div>
 
 </div>
 
