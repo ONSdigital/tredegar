@@ -149,41 +149,6 @@ onsApp.directive('markdown', function($http) {
     };
 });
 
-        // onsApp.directive('markdown', function () {
-        //     var converter = new Showdown.converter();
-        //     return {
-        //         restrict: 'A',
-        //         // transclude: true,
-        //         link: function (scope, element, attrs) {
-        //             var htmlText = converter.makeHtml(element.text());
-        //             element.html(htmlText);
-        //         }
-        //     };
-        // });
-
-
-        // onsApp.directive('markdown', function () {
-        //     var converter = new Showdown.converter();
-        //     // var toHtml = '<p></p>'
-        //     return {
-        //         restrict: 'A',
-        //         scope:{},
-        //         compile: function (tElement, tAttrs, transclude) {
-        //             var markdown = tElement.text();
-
-        //             tElement.html(toHtml);
-        //             var viewMd = angular.element(toHtml);
-        //             // tElement.append();
-
-        //             return function (scope, element, attrs) {
-        //                 scope.markdown = markdown;
-        //                 var makeHtml = converter.makeHtml(scope.markdown);
-        //                 viewMd.html(makeHtml);
-        //             };
-        //         }
-        //     };
-        // });
-
         onsApp.factory('Page', function() {
             var title = 'Office Of National Statistics';
             return {
