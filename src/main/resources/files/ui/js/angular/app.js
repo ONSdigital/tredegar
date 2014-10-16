@@ -31,6 +31,10 @@ onsApp.config(['$routeProvider',
             templateUrl: 'templates/bulletin.html',
             controller: 'BulletinCtrl'
         }).
+        when(':home*\/bulletins', {
+            templateUrl: 'templates/bulletin.html',
+            controller: 'BulletinCtrl'
+        }).        
         when('/release', {
             templateUrl: 'templates/release.html'
         }).
