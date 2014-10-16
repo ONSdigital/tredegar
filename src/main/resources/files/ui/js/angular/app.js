@@ -266,8 +266,8 @@ onsApp.service('anchorSmoothScroll', function(){
             } return y;
         }
 
-    };
-
+    }
+});
 
 function AccordionCtrl($scope) {
     //initiate an array to hold all active tabs
