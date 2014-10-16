@@ -27,9 +27,12 @@ onsApp.config(['$routeProvider',
             templateUrl: 'templates/article.html',
             controller: 'ArticleCtrl'
         }).
-        when('/bulletin', {
+        when('/home/economy/inflationandpriceindices/bulletin', {
             templateUrl: 'templates/bulletin.html',
             controller: 'BulletinCtrl'
+        }).
+        when('/bulletin', {
+            redirectTo: '/home/economy/inflationandpriceindices/bulletin'
         }).
         when('/release', {
             templateUrl: 'templates/release.html'
@@ -137,6 +140,34 @@ onsApp.directive('onsContent', function() {
   return {
     restrict: 'E',
     templateUrl: 'templates/content.html'
+  }
+})
+
+onsApp.directive('relatedArticles', function() {
+  return {
+    restrict: 'E',
+    templateUrl: 'templates/relatedarticles.html'
+  }
+})
+
+onsApp.directive('contactDetails', function() {
+  return {
+    restrict: 'E',
+    templateUrl: 'templates/contactdetails.html'
+  }
+})
+
+onsApp.directive('tools', function() {
+  return {
+    restrict: 'E',
+    templateUrl: 'templates/tools.html'
+  }
+})
+
+onsApp.directive('latestBulletins', function() {
+  return {
+    restrict: 'E',
+    templateUrl: 'templates/latestbulletins.html'
   }
 })
 
