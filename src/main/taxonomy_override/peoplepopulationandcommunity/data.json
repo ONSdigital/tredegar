@@ -3,6 +3,12 @@
   "breadcrumb": [],
   "children": [
     {
+      "detail": [],
+      "name": "Births, Deaths and Marriages",
+      "fileName": "birthsdeathsandmarriages",
+      "index": 0
+    },
+    {
       "detail": [
         {
           "name": "Gross Domestic Product",
@@ -41,9 +47,9 @@
           "headline": false
         }
       ],
-      "name": "Health and Social Care",
-      "fileName": "healthandsocialcare",
-      "index": 0
+      "name": "Crime and Justice",
+      "fileName": "crimeandjustice",
+      "index": 1
     },
     {
       "detail": [
@@ -84,9 +90,9 @@
           "headline": false
         }
       ],
-      "name": "Elections",
-      "fileName": "elections",
-      "index": 0
+      "name": "Cultural Identity",
+      "fileName": "culturalidentity",
+      "index": 2
     },
     {
       "detail": [
@@ -109,57 +115,51 @@
           "headline": false
         }
       ],
-      "name": "Housing",
-      "fileName": "housing",
-      "index": 0
+      "name": "Elections",
+      "fileName": "elections",
+      "index": 3
     },
     {
       "detail": [],
-      "name": "Well-being",
-      "fileName": "wellbeing",
-      "index": 0
-    },
-    {
-      "detail": [],
-      "name": "Leisure and Tourism",
-      "fileName": "leisureandtourism",
-      "index": 0
-    },
-    {
-      "detail": [],
-      "name": "Births, Deaths and Marriages",
-      "fileName": "birthsdeathsandmarriages",
-      "index": 0
-    },
-    {
-      "detail": [],
-      "name": "Population and Migration",
-      "fileName": "populationandmigration",
-      "index": 0
-    },
-    {
-      "detail": [],
-      "name": "Personal and Household Finances",
-      "fileName": "personalandhouseholdfinances",
-      "index": 0
+      "name": "Health and Social Care",
+      "fileName": "healthandsocialcare",
+      "index": 4
     },
     {
       "detail": [],
       "name": "Household Characteristics",
       "fileName": "householdcharacteristics",
-      "index": 0
+      "index": 5
     },
     {
       "detail": [],
-      "name": "Crime and Justice",
-      "fileName": "crimeandjustice",
-      "index": 0
+      "name": "Housing",
+      "fileName": "housing",
+      "index": 6
     },
     {
       "detail": [],
-      "name": "Cultural Identity",
-      "fileName": "culturalidentity",
-      "index": 0
+      "name": "Leisure and Tourism",
+      "fileName": "leisureandtourism",
+      "index": 7
+    },
+    {
+      "detail": [],
+      "name": "Personal and Household Finances",
+      "fileName": "personalandhouseholdfinances",
+      "index": 8
+    },
+    {
+      "detail": [],
+      "name": "Population and Migration",
+      "fileName": "populationandmigration",
+      "index": 9
+    },
+    {
+      "detail": [],
+      "name": "Well-being",
+      "fileName": "wellbeing",
+      "index": 10
     }
   ],
   "lede": "People, population and community statistics are the use of statistical measurement systems to study human behavior in a social environment. This can be accomplished through polling a group of people, evaluating a subset of data obtained about a group of people, or by observation and statistical analysis of a set of data that relates to people and their behaviors.",
