@@ -26,14 +26,42 @@ public class Data extends TaxonomyNode {
 			int index = 1;
 			children = new ArrayList<>();
 			for (Folder child : folder.children) {
-				if (taxonomyLevel == 1)
-					children.add(new ChildT1(child, index++));
-				else
-					children.add(new ChildT2(child, index++));
+				if (taxonomyLevel == 1) {
+					children.add(new ChildT1(child, child.index));
+				} else {
+					children.add(new ChildT2(child, child.index));
+				}
 			}
 		} else {
 			timeseries = new ArrayList<>();
 		}
+		sort(children);
 	}
 
+	private void sort(List<TaxonomyNode> children) {
+		if (children != null) {
+			List<TaxonomyNode> sortedChildren = new ArrayList<>();
+			for (TaxonomyNode child : children) {
+				// String current = "";
+				// for (TaxonomyNode c : sortedChildren) {
+				// current += c.index + " ";
+				// }
+				// System.out.println("Current: " + current + " Adding: " +
+				// child.index);
+				int index = 0;
+				for (int i = 0; i < sortedChildren.size(); i++) {
+					if (child.index > sortedChildren.get(i).index) {
+						index = i + 1;
+					}
+				}
+				sortedChildren.add(index, child);
+				// String now = "";
+				// for (TaxonomyNode c : sortedChildren) {
+				// now += c.index + " ";
+				// }
+				// System.out.println("Now: " + now);
+			}
+			this.children = sortedChildren;
+		}
+	}
 }
