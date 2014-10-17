@@ -191,8 +191,6 @@ onsControllers.controller('CollectionCtrl', ['$scope',
       page = 1
     }
 
-    $scope.setUrlParam('page', page)
-
     search(searchTerm, type, page)
 
     function search(loc, type, pageNumber) {
@@ -229,7 +227,6 @@ onsControllers.controller('SearchCtrl', ['$scope',
     }
 
     console.log("page is " + page)
-    $scope.setUrlParam('page', page)
 
     $scope.search(searchTerm, type, page, function(data) {})
 
