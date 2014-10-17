@@ -9,6 +9,12 @@
   ],
   "children": [
     {
+      "detail": [],
+      "name": "Public Sector Finance",
+      "fileName": "publicsectorfinance",
+      "index": 0
+    },
+    {
       "detail": [
         {
           "name": "Gross Domestic Product",
@@ -49,50 +55,7 @@
       ],
       "name": "Research and Development Expenditure",
       "fileName": "researchanddevelopmentexpenditure",
-      "index": 0
-    },
-    {
-      "detail": [
-        {
-          "name": "CPI Index",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "126.7",
-          "unit": "",
-          "date": "January 2014",
-          "headline": false
-        },
-        {
-          "name": "CPI Annual Rate Percentage Change over 12 months",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "1.9",
-          "unit": "%",
-          "date": "January 2014",
-          "headline": false
-        },
-        {
-          "name": "CPIH Index",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "124.7",
-          "unit": "",
-          "date": "January 2014",
-          "headline": false
-        },
-        {
-          "name": "CPIH Annual Rate Percentage Change over 12 months",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "1.8",
-          "unit": "%",
-          "date": "January 2014",
-          "headline": false
-        }
-      ],
-      "name": "Public Sector Finance",
-      "fileName": "publicsectorfinance",
-      "index": 0
+      "index": 1
     }
   ],
   "lede": "Producer Price Inflation (PPI) measures the price changes of goods bought and sold by UK manufacturers this month compared to the same month a year ago. PPI provides a key measure of inflation alongside other indicators such as the Consumer Prices Index (CPI) and Services Producer Price Index (SPPI).PPI is split into two components: output price inflation and input price inflation. The input price indices capture changes in the cost of the material and fuel inputs that producers face whereas the output price indices capture the changing prices of goods sold by producers.This article looks at the trends in both producer price indices since 2000 and which components contribute most towards changes in each price index in recent years.",

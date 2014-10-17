@@ -3,6 +3,12 @@
   "breadcrumb": [],
   "children": [
     {
+      "detail": [],
+      "name": "Business, Industry and Trade",
+      "fileName": "businessindustryandtrade",
+      "index": 0
+    },
+    {
       "detail": [
         {
           "name": "Value added of Non-Financial Business Economy",
@@ -32,9 +38,9 @@
           "headline": false
         }
       ],
-      "name": "Employment and Labour Market",
-      "fileName": "employmentandlabourmarket",
-      "index": 0
+      "name": "Economy",
+      "fileName": "economy",
+      "index": 1
     },
     {
       "detail": [
@@ -66,9 +72,9 @@
           "headline": false
         }
       ],
-      "name": "Economy",
-      "fileName": "economy",
-      "index": 0
+      "name": "Employment and Labour Market",
+      "fileName": "employmentandlabourmarket",
+      "index": 2
     },
     {
       "detail": [
@@ -102,41 +108,7 @@
       ],
       "name": "People, Population and Community",
       "fileName": "peoplepopulationandcommunity",
-      "index": 0
-    },
-    {
-      "detail": [
-        {
-          "name": "Total population (UK) ",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "64.1",
-          "unit": "m",
-          "date": "Mid-2013 estimate",
-          "headline": false
-        },
-        {
-          "name": "Net Migration (UK) ",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "212,000",
-          "unit": "%",
-          "date": "Year ending Dec 2014",
-          "headline": false
-        },
-        {
-          "name": "Number of Births (UK) ",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "812,970 ",
-          "unit": "",
-          "date": "2013",
-          "headline": false
-        }
-      ],
-      "name": "Business, Industry and Trade",
-      "fileName": "businessindustryandtrade",
-      "index": 0
+      "index": 3
     }
   ],
   "name": "Home",

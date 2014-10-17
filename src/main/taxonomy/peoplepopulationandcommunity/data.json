@@ -3,6 +3,12 @@
   "breadcrumb": [],
   "children": [
     {
+      "detail": [],
+      "name": "Births, Deaths and Marriages",
+      "fileName": "birthsdeathsandmarriages",
+      "index": 0
+    },
+    {
       "detail": [
         {
           "name": "Gross Domestic Product",
@@ -41,9 +47,9 @@
           "headline": false
         }
       ],
-      "name": "Health and Social Care",
-      "fileName": "healthandsocialcare",
-      "index": 0
+      "name": "Crime and Justice",
+      "fileName": "crimeandjustice",
+      "index": 1
     },
     {
       "detail": [
@@ -84,9 +90,9 @@
           "headline": false
         }
       ],
-      "name": "Elections",
-      "fileName": "elections",
-      "index": 0
+      "name": "Cultural Identity",
+      "fileName": "culturalidentity",
+      "index": 2
     },
     {
       "detail": [
@@ -109,57 +115,51 @@
           "headline": false
         }
       ],
-      "name": "Housing",
-      "fileName": "housing",
-      "index": 0
+      "name": "Elections",
+      "fileName": "elections",
+      "index": 3
     },
     {
       "detail": [],
-      "name": "Well-being",
-      "fileName": "wellbeing",
-      "index": 0
-    },
-    {
-      "detail": [],
-      "name": "Leisure and Tourism",
-      "fileName": "leisureandtourism",
-      "index": 0
-    },
-    {
-      "detail": [],
-      "name": "Births, Deaths and Marriages",
-      "fileName": "birthsdeathsandmarriages",
-      "index": 0
-    },
-    {
-      "detail": [],
-      "name": "Population and Migration",
-      "fileName": "populationandmigration",
-      "index": 0
-    },
-    {
-      "detail": [],
-      "name": "Personal and Household Finances",
-      "fileName": "personalandhouseholdfinances",
-      "index": 0
+      "name": "Health and Social Care",
+      "fileName": "healthandsocialcare",
+      "index": 4
     },
     {
       "detail": [],
       "name": "Household Characteristics",
       "fileName": "householdcharacteristics",
-      "index": 0
+      "index": 5
     },
     {
       "detail": [],
-      "name": "Crime and Justice",
-      "fileName": "crimeandjustice",
-      "index": 0
+      "name": "Housing",
+      "fileName": "housing",
+      "index": 6
     },
     {
       "detail": [],
-      "name": "Cultural Identity",
-      "fileName": "culturalidentity",
-      "index": 0
+      "name": "Leisure and Tourism",
+      "fileName": "leisureandtourism",
+      "index": 7
+    },
+    {
+      "detail": [],
+      "name": "Personal and Household Finances",
+      "fileName": "personalandhouseholdfinances",
+      "index": 8
+    },
+    {
+      "detail": [],
+      "name": "Population and Migration",
+      "fileName": "populationandmigration",
+      "index": 9
+    },
+    {
+      "detail": [],
+      "name": "Well-being",
+      "fileName": "wellbeing",
+      "index": 10
     }
   ],
   "lede": "Producer Price Inflation (PPI) measures the price changes of goods bought and sold by UK manufacturers this month compared to the same month a year ago. PPI provides a key measure of inflation alongside other indicators such as the Consumer Prices Index (CPI) and Services Producer Price Index (SPPI).PPI is split into two components: output price inflation and input price inflation. The input price indices capture changes in the cost of the material and fuel inputs that producers face whereas the output price indices capture the changing prices of goods sold by producers.This article looks at the trends in both producer price indices since 2000 and which components contribute most towards changes in each price index in recent years.",
