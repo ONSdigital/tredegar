@@ -812,7 +812,7 @@ textarea {
   display: block;
   margin-bottom: 10px;
   margin-bottom: 1rem;
-  font-family: "ubuntu", sans-serif;
+  font-family: "DaxlinePro", sans-serif;
   font-weight: 700; }
   .field__label + .label__description {
     margin-top: -10px;
@@ -1024,9 +1024,9 @@ textarea {
 
     /*src: url("/ui/fonts/OpenSans-Bold.svg#OpenSans-Bold") format("svg"); } */}
 @font-face {
-  font-family: 'ubuntu';
-  src: url("/ui/fonts/Ubuntu-Bold.eot");
-  src: url("../fonts/Ubuntu-Bold.ttf") format("truetype");
+  font-family: 'DaxlinePro';
+  src: url("/ui/fonts/DaxlinePro-Bold.eot");
+  src: url("../fonts/DaxlinePro-Bold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 
@@ -1037,8 +1037,8 @@ textarea {
   font-style: normal;*/ } }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {
-    font-family: 'ubuntu';
-    src: url("../fonts/Ubuntu-Bold.ttf") format("truetype");
+    font-family: 'DaxlinePro';
+    src: url("../fonts/DaxlinePro-Bold.ttf") format("truetype");
 
     /*font-family: 'ff-dax-web-pro';
     src: url("/ui/fonts/DaxlinePro-Bold.svg#DaxlinePro-Bold") format("svg"); } */} }
@@ -1677,7 +1677,7 @@ h6,
 .delta,
 .gamma {
   margin-top: 0;
-  font-family: "ubuntu", sans-serif;
+  font-family: "DaxlinePro", sans-serif;
   font-weight: 100; }
 
 h1,
@@ -1732,7 +1732,7 @@ small, .definition {
   font-family: "open-sans-n3", "open-sans", sans-serif; }
 
 .headline-type {
-  font-family: "ubuntu", sans-serif; }
+  font-family: "DaxlinePro", sans-serif; }
 
 .description {
   color: #757575; }
@@ -4459,7 +4459,7 @@ ol.toc-columns
 \*------------------------------------*/
 
 .accordionItem span:hover { cursor: pointer; }
-.accordionItem.hide div  { 
+.accordionItem.hide div  {
   display: none;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -4727,6 +4727,7 @@ a.tooltips span
    border-radius:4px;
    box-shadow: 5px 5px 8px #CCC;
 }*/
+<<<<<<< HEAD
 
 /*------------------------------------*\
  Angular Accordion
@@ -4790,3 +4791,5 @@ div.grid-col.desktop-grid-two-thirds.tablet-grid-two-thirds > div > ol > li {
   article > div > table.dataset-table > tbody > tr > td{
     text-align: center;}  
 }
+=======
+>>>>>>> d42b5fc4372342db7f3717c4d5557ef6c58b5277

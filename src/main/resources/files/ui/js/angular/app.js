@@ -97,8 +97,8 @@ onsApp.directive('onsHeader', function() {
     templateUrl: 'templates/header.html'
 
   }
-
 })
+
 onsApp.directive('paginator', function() {
   return {
     restrict: 'E',
@@ -186,7 +186,7 @@ onsApp.directive('stopEvent', function () {
             });
         }
     };
- });
+});
 
 onsApp.directive('markdown', function($http) {
     var converter = new Showdown.converter();
@@ -204,17 +204,17 @@ onsApp.directive('markdown', function($http) {
     };
 });
 
-        onsApp.factory('Page', function() {
-            var title = 'Office Of National Statistics';
-            return {
-                title: function() {
-                    return title;
-                },
-                setTitle: function(newTitle) {
-                    title = newTitle
-                }
-            };
-        });
+onsApp.factory('Page', function() {
+    var title = 'Office Of National Statistics';
+    return {
+        title: function() {
+            return title;
+        },
+        setTitle: function(newTitle) {
+            title = newTitle
+        }
+    };
+});
 
 onsApp.service('anchorSmoothScroll', function(){
 
@@ -266,50 +266,6 @@ onsApp.service('anchorSmoothScroll', function(){
             } return y;
         }
 
-    };
-
-
-function AccordionCtrl($scope) {
-    //initiate an array to hold all active tabs
-    $scope.activeTabs = [];
-
-    //------ If you want to have only one opened at a time ------
-    //
-    // $scope.openTab = function (tab) {
-    //     $scope.activeTabs.splice($scope.activeTabs.indexOf(tab), 1);
-    //     //check if tab is already open
-    //     if ($scope.isOpenTab(tab)) {
-    //         //if it is, remove it from the activeTabs array
-    //         $scope.activeTabs.splice($scope.activeTabs.indexOf(tab), 1);
-    //     } else {
-    //         //if it's not, add it!
-    //         $scope.activeTabs.push(tab);
-    //     }
-    // }
-    //
-
-    // check if the tab is active
-    $scope.isOpenTab = function (tab) {
-        //check if this tab is already in the activeTabs array
-        if ($scope.activeTabs.indexOf(tab) > -1) {
-            //if so, return true
-            return true;
-        } else {
-            //if not, return false
-            return false;
-        }
     }
-
-    //function to 'open' a tab
-    $scope.openTab = function (tab) {
-        //check if tab is already open
-        if ($scope.isOpenTab(tab)) {
-            //if it is, remove it from the activeTabs array
-            $scope.activeTabs.splice($scope.activeTabs.indexOf(tab), 1);
-        } else {
-            //if it's not, add it!
-            $scope.activeTabs.push(tab);
-        }
-    }
-}
+});
 

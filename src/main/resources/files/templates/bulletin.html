@@ -56,7 +56,7 @@
 </div>
 <div class="wrapper panel--bottom-mar">
     <div class="grid-wrap">
-        <div class="grid-col desktop-grid-two-thirds tablet-grid-two-thirds">
+        <div class="grid-col desktop-grid-two-thirds tablet-grid-two-thirds" ng-controller="TabsCtrl">
             <article>
                 <header class="box__header">
                     <h2><a name="Summary"></a>1. Summary </h2>
@@ -131,9 +131,10 @@
             <!-- /article__content -->
             <!-- article__content -->
             <article class="box border-horizontal-single">
-                <header class="box__header">
+                <div class="accordionItem" ng-click="selectTab(1)" ng-class="isSelected(1) ? '' : 'hide'" >
+                    <span class="accordion_chevron icon" ng-class="isSelected(1) ? 'icon-down-open-big' : 'icon-up-open-big'" ></span>
+                    <header class="box__header">
                     <h2>Background notes and Methodology
-                        <div class="media__img--reverse"><span class="icon icon-download"></span></div>
                     </h2>
                 </header>
                 <!-- /box__header -->
@@ -144,6 +145,7 @@
                         <li><a href="#">Consumer Price Index and Retail Price Index Methodology</a></li>
                     </ul>
                 </div>
+            </div>
                 <!-- /box__content -->
                 <footer class="box__footer"> </footer>
                 <!-- /box__actions -->
@@ -151,11 +153,18 @@
             <!-- /article__content -->
             <!-- article__content -->
             <article class="box border-horizontal-single">
-                <header class="box__header">
+           <div class="accordionItem" ng-click="selectTab(2)" ng-class="isSelected(2) ? '' : 'hide'"  >
+               <span class="accordion_chevron icon" ng-class="isSelected(2) ? 'icon-down-open-big' : 'icon-up-open-big'"></span>
+               <header class="box__header">
                     <h2>References
-                        <div class="media__img--reverse"><span class="icon icon-up-open-big"></span></div>
                     </h2>
                 </header>
+           <div class="box__content">
+               <p class="accordion-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet in laborum praesentium esse aliquam molestiae animi non facilis perspiciatis corporis ad molestias quo harum suscipit ipsum incidunt ea voluptates accusantium.
+               </p>
+           </div>
+           </div>
+           
                 <!-- /box__header -->
                 <footer class="box__footer"> </footer>
                 <!-- /box__actions -->
@@ -163,17 +172,26 @@
             <!-- /article__content -->
             <!-- article__content -->
             <article class="box border-horizontal-single">
-                <header class="box__header">
+           <div class="accordionItem" ng-click="selectTab(3)" ng-class="isSelected(3) ? '' : 'hide'"  >
+               <span class="accordion_chevron icon" ng-class="isSelected(3) ? 'icon-down-open-big' : 'icon-up-open-big'"></span>
+               <header class="box__header">
                     <h2>Footnotes
-                        <div class="media__img--reverse"><span class="icon icon-up-open-big"></span></div>
                     </h2>
                 </header>
+            <div class="box__content">
+                <p class="accordion-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet in laborum praesentium esse aliquam molestiae animi non facilis perspiciatis corporis ad molestias quo harum suscipit ipsum incidunt ea voluptates accusantium.
+                </p>
+            </div>
+            </div>
                 <!-- /box__header -->
                 <footer class="box__footer"> </footer>
                 <!-- /box__actions -->
             </article>
             <!-- /article__content -->
         </div>
+
+
+
         <!-- /grid-col -->
         <div class="grid-col desktop-grid-one-third tablet-grid-one-third">
             <!-- article__content -->

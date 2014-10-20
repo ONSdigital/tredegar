@@ -54,7 +54,7 @@ $(document).ready(function() {
     event.preventDefault();
     $(this)
       .toggleClass('js-expandable-active')
-      .siblings('.js-expandable__content').toggleClass('js-nav-hidden');
+      .find('.js-expandable__content').toggleClass('js-nav-hidden');
   });
 
 

@@ -1,4 +1,4 @@
-<div ng-controller="ContentCtrl" >
+<div ng-controller="ContentCtrl">
 
 
 <!-- title and social icons -->
@@ -54,7 +54,7 @@
 <!-- Body Sections -->
 <div class="wrapper panel--bottom-mar">
     <div class="grid-wrap">
-        <div class="grid-col {{sidebar ? 'desktop-grid-two-thirds tablet-grid-two-thirds' : ''}}">
+        <div class="grid-col {{sidebar ? 'desktop-grid-two-thirds tablet-grid-two-thirds' : ''}}" ng-controller="TabsCtrl">
             <article ng-repeat="section in content.sections">
                 <header class="box__header">
                     <h2 id="section{{$index + 1}}">{{$index + 1}}. {{section.title}}</h2>
@@ -104,47 +104,133 @@
                     </div>
                 </div>
                 <!-- end of table -->
-
                 <footer class="box__footer"> </footer>
                 <!-- /box__actions -->
             </article>
+
+        <!-- Accordion -->
+        <!-- Needs info from json -->
+        <!-- Needs an ng-repeat for the different tabs -->
+            <!-- Empty article to create an horizontal line -->
+            <article class="box border-horizontal-single" ></article>
+
+            <article class="box border-horizontal-single">
+                <div class="accordionItem" ng-click="selectTab(1)" ng-class="isSelected(1) ? '' : 'hide'" >
+                    <span class="accordion_chevron icon" ng-class="isSelected(1) ? 'icon-down-open-big' : 'icon-up-open-big'" ></span>
+                    <header class="box__header">
+                        <h2>Background notes and Methodology
+                        </h2>
+                    </header>
+                <!-- /box__header -->
+                    <div class="box__content">
+                        <ul class="list--neutral">
+                            <li><a href="#"> Quality and Methodology Information (QMI)</a> (PDF 95.6 kb)</li>
+                            <li><a href="#">Impact of Rebasing the Consumer Price Index to 2010=100</a></li>
+                            <li><a href="#">Consumer Price Index and Retail Price Index Methodology</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /box__content -->
+                <footer class="box__footer"> </footer>
+                <!-- /box__actions -->
+            </article>
+            <!-- /article__content -->
+
+            <article class="box border-horizontal-single">
+                <div class="accordionItem" ng-click="selectTab(2)" ng-class="isSelected(2) ? '' : 'hide'" >
+                    <span class="accordion_chevron icon" ng-class="isSelected(2) ? 'icon-down-open-big' : 'icon-up-open-big'" ></span>
+                    <header class="box__header">
+                        <h2>References
+                        </h2>
+                    </header>
+                <!-- /box__header -->
+                    <div class="box__content">
+                        <ul class="list--neutral">
+                            <li><a href="#">BRITISH STANDARDS INSTITUTE. (1990). BS5605:1990. Recommendations for citing and referencing published material. Milton Keynes: BSI.</a></li>
+                            <li><a href="#">NEVILLE, C. (2010). The Complete Guide to Referencing and Avoiding Plagiarism.2ND edition. Open UP Study Skills. Maidenhead: Open University Press.</a></li>
+                            <li><a href="#">PEARS, R & SHIELDS, G. (2006) Cite Them Right: The Essential Guide to Referencing and Plagiarism. Newcastle-upon-Tyne: Northumbria University Press.</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /box__content -->
+                <footer class="box__footer"> </footer>
+                <!-- /box__actions -->
+            </article>
+            <!-- /article__content -->
+
+            <article class="box border-horizontal-single">
+                <div class="accordionItem" ng-click="selectTab(3)" ng-class="isSelected(3) ? '' : 'hide'" >
+                    <span class="accordion_chevron icon" ng-class="isSelected(3) ? 'icon-down-open-big' : 'icon-up-open-big'" ></span>
+                    <header class="box__header">
+                        <h2>Footnotes
+                        </h2>
+                    </header>
+                <!-- /box__header -->
+                    <div class="box__content">
+                        <ul class="list--neutral">
+                            <li><a href="#"> Quality and Methodology Information (QMI)</a> (PDF 95.6 kb)</li>
+                            <li><a href="#">Impact of Rebasing the Consumer Price Index to 2010=100</a></li>
+                            <li><a href="#">Consumer Price Index and Retail Price Index Methodology</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /box__content -->
+                <footer class="box__footer"> </footer>
+                <!-- /box__actions -->
+            </article>
+            <!-- /article__content -->
+
         </div>
 
         <div ng-if="sidebar" >
             <div ng-include="sidebarUrl" ></div>
         </div>
     </div>
+</div>
 
-    <div class="accordion__container" ng-controller="AccordionCtrl">
-        <div class="accordion__tab">
-            <h2 class="accordion__tab-title " ng-click="openTab('tab one')">Background Notes and Methodology</h2>
-            <div class="accordion__tab-content" ng-show="isOpenTab('tab one')">
-                <p>Quality and Methodology Information (QMI) (PDF 95.6 kb)</p>
-                <p>Impact of Rebasing the Consumer Price Index to 2010=100</p>
-                <p>Consumer Price Index and Retail Price Index Methodology</p>
+<!-- Related Bulletins Section -->
+<!-- Need new section in json for info here -->
+
+<div class="page-header slate--light" ng-show="{{contentType != 'methodology'}}">
+    <div class="wrapper">
+        <div class="grid-wrap">
+            <div class="grid-col desktop-grid-two-thirds">
+                <article class="box">
+                    <header class="box__header">
+                        <h2>Related Bulletins </h2>
+                    </header>
+                    <!-- /box__header -->
+                    <div class="box__content">
+                        <p><a href="#">Consumer Price Inflation, August 2014</a><br />
+                            The Consumer Price Inflation is a monthly release that contains percentage
+                            changes and weights for the CPI, CPIH, RPI and RPIJ.</p>
+                        <p><a href="#">Retail Sales, August 2014</a><br />
+                            A first estimate of retail sales in volume and value terms, seasonally and non seasonally  adjusted.</p>
+                    </div>
+                    <!-- /box__content -->
+                    <footer class="box__footer"> </footer>
+                    <!-- /box__actions -->
+                </article>
+            </div>
+            <div class="grid-col desktop-grid-one-third">
+                <article class="box box--blue box--blue--separated-left">
+                    <div class="box__inner border box--padded">
+                        <div class="box__section">
+                            <h3 class="box__section__header">More on <a href="#">Inflation</a> </h3>
+                            <p>See lorem ipsum dolor sit amet sadipscing consectrue</p>
+                        </div>
+                        <div class="box__section">
+                            <h3 class="box__section__header"> More on <a href="#">Basket of Goods</a> </h3>
+                            <p>See lorem ipsum dolor sit amet sadipscing consectrue</p>
+                        </div>
+                    </div>
+                    <!-- /box__inner -->
+                </article>
             </div>
         </div>
-        <!-- .accordion__tab -->
-        <div class="accordion__tab">
-            <h2 class="accordion__tab-title" ng-click="openTab('tab two')">References</h2>
-            <div class="accordion__tab-content" ng-show="isOpenTab('tab two')">
-                <p><p>BRITISH STANDARDS INSTITUTE. (1990). BS5605:1990. Recommendations for citing and referencing published material. Milton Keynes: BSI. </p>
-                <p>NEVILLE, C. (2010). The Complete Guide to Referencing and Avoiding Plagiarism.2ND edition. Open UP Study Skills. Maidenhead: Open University Press. </p>
-                <p>PEARS, R & SHIELDS, G. (2006) Cite Them Right: The Essential Guide to Referencing and Plagiarism. Newcastle-upon-Tyne: Northumbria University Press. </p>
-            </div>
-        </div>
-        <!-- .accordion__tab -->
-        <div class="accordion__tab">
-            <h2 class="accordion__tab-title" ng-click="openTab('tab three')">Footnotes</h2>
-            <div class="accordion__tab-content" ng-show="isOpenTab('tab three')">
-                <p>1 Joseph P. Swain, The Broadway Musical: A Critical and Musical Survey (New York: Oxford University Press, 1990), 136. </p>
-                <p>2 Gillian G. Gaar, She's a Rebel: The History of Women in Rock & Roll (Seattle: Seal Press, 1992), 101-2. </p>
-                <p>3 Swain, Broadway Musical, 153.</p>
-            </div>
-        </div>
-        <!-- .accordion__tab -->
     </div>
-
+    <!-- /bottom-panel -->
 </div>
 
 </div>
+<!-- /ng-controller -->

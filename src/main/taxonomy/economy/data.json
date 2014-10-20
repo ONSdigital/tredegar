@@ -3,6 +3,12 @@
   "breadcrumb": [],
   "children": [
     {
+      "detail": [],
+      "name": "Gross Domestic Product (GDP)",
+      "fileName": "grossdomesticproductgdp",
+      "index": 0
+    },
+    {
       "detail": [
         {
           "name": "Gross Domestic Product",
@@ -41,9 +47,9 @@
           "headline": false
         }
       ],
-      "name": "Environmental Accounts",
-      "fileName": "environmentalaccounts",
-      "index": 0
+      "name": "Inflation and Price Indices",
+      "fileName": "inflationandpriceindices",
+      "index": 1
     },
     {
       "detail": [
@@ -84,9 +90,9 @@
           "headline": false
         }
       ],
-      "name": "Gross Value Added (GVA)",
-      "fileName": "grossvalueaddedgva",
-      "index": 0
+      "name": "Balance of Payments",
+      "fileName": "balanceofpayments",
+      "index": 2
     },
     {
       "detail": [
@@ -109,45 +115,39 @@
           "headline": false
         }
       ],
-      "name": "Gross Domestic Product (GDP)",
-      "fileName": "grossdomesticproductgdp",
-      "index": 0
-    },
-    {
-      "detail": [],
-      "name": "National Accounts",
-      "fileName": "nationalaccounts",
-      "index": 0
-    },
-    {
-      "detail": [],
-      "name": "Investments, Pensions and Trusts",
-      "fileName": "investmentspensionsandtrusts",
-      "index": 0
-    },
-    {
-      "detail": [],
-      "name": "Regional Accounts",
-      "fileName": "regionalaccounts",
-      "index": 0
+      "name": "Government, Public Sector and Taxes",
+      "fileName": "governmentpublicsectorandtaxes",
+      "index": 3
     },
     {
       "detail": [],
       "name": "Economic Output and Productivity",
       "fileName": "economicoutputandproductivity",
-      "index": 0
+      "index": 4
     },
     {
       "detail": [],
-      "name": "Government, Public Sector and Taxes",
-      "fileName": "governmentpublicsectorandtaxes",
-      "index": 0
+      "name": "Gross Value Added (GVA)",
+      "fileName": "grossvalueaddedgva",
+      "index": 5
     },
     {
       "detail": [],
-      "name": "Inflation and Price Indices",
-      "fileName": "inflationandpriceindices",
-      "index": 0
+      "name": "Investments, Pensions and Trusts",
+      "fileName": "investmentspensionsandtrusts",
+      "index": 6
+    },
+    {
+      "detail": [],
+      "name": "Regional Accounts",
+      "fileName": "regionalaccounts",
+      "index": 7
+    },
+    {
+      "detail": [],
+      "name": "Environmental Accounts",
+      "fileName": "environmentalaccounts",
+      "index": 8
     }
   ],
   "lede": "Producer Price Inflation (PPI) measures the price changes of goods bought and sold by UK manufacturers this month compared to the same month a year ago. PPI provides a key measure of inflation alongside other indicators such as the Consumer Prices Index (CPI) and Services Producer Price Index (SPPI).PPI is split into two components: output price inflation and input price inflation. The input price indices capture changes in the cost of the material and fuel inputs that producers face whereas the output price indices capture the changing prices of goods sold by producers.This article looks at the trends in both producer price indices since 2000 and which components contribute most towards changes in each price index in recent years.",
