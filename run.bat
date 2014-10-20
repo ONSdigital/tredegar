@@ -4,7 +4,6 @@ set JAVA_OPTS="-Xdebug -Xrunjdwp:transport=dt_socket,address=8000,server=y,suspe
 
 rem # Restolino configuration
 set RESTOLINO_STATIC="src/main/resources/files"
-rem set RESTOLINO_STATIC="target/classes/files"
 set RESTOLINO_CLASSES="target/classes"
 set PACKAGE_PREFIX=com.github.onsdigital
 
