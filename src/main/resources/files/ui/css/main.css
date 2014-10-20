@@ -3944,6 +3944,8 @@ table actions
 
 .padded{ padding: 0.6em; }
 
+.padded--med{ padding: 1.2em; }
+
 .search .lozenge {
   float: right;
   display: inline-block;
@@ -4754,4 +4756,37 @@ a.tooltips span
     background: #fff;
     padding: 10px;
     /*border-bottom: 2px solid #dedfdc;*/
+}
+
+/*------------------------------------*\
+ Dataset Pages Styles
+\*------------------------------------*/
+
+.dataset-table {
+  margin: 0 auto;
+  border: none;
+}
+
+div.grid-col.desktop-grid-two-thirds.tablet-grid-two-thirds > article > div > table.dataset-table > tbody > tr{
+  border: 0px;
+}
+
+table .dataset-table > tbody > tr > td {
+  width: 30%;
+}
+
+article > div > table.dataset-table > tbody > tr > td{
+  font-weight: bold;
+  text-align: right;
+}
+
+div.grid-col.desktop-grid-two-thirds.tablet-grid-two-thirds > div > ol > li {
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 650px){
+  article > div > table.dataset-table > tbody > tr > td::before{
+    display: none;}
+  article > div > table.dataset-table > tbody > tr > td{
+    text-align: center;}  
 }
