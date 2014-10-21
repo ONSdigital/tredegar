@@ -62,11 +62,16 @@
                 <!-- /box__header -->
                 <div class="box__content">
                     <div markdown link="{{section.markdown}}"></div>
-                    <!-- <ul class="list--bullet">
-                        <li>{{section.markdown}}</li>
-                    </ul> -->
                 </div>
                 <!-- /box__content -->
+
+                <!-- Bar Graphs (if any) -->
+
+                <div ng-if="section.bars">
+                <bars-chart ng-repeat="value in section.bars" chart-data={{value}}></bars-chart>
+                <p>{{value.year}}</p>
+                <p>{{section.barstitle}}</p>
+                </div>
 
                 <!-- Responsive Table (if any) -->
                 <div ng-if="section.table" class="wrapper panel--bottom-mar">
@@ -88,7 +93,7 @@
                                 </thead>
                                 <tbody>
                                     <tr ng-repeat="cell in section.table.row">
-                                        <td ng-repeat="data in cell.users" data-th="{{section.table.col[$index%section.table.col.length]}}">{{data}}</td>
+                                        <td ng-repeat="data in cell.data" data-th="{{section.table.col[$index%section.table.col.length]}}">{{data}}</td>
                                     </tr>
                                     <!-- <tr>
                                         <td data-th="Last Name">Bach</td>
