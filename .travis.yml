@@ -3,6 +3,7 @@ jdk:
 - openjdk7
 deploy:
   provider: heroku
+  strategy: git
   api_key:
     secure: IH2Gf+FDNUGLLxpke3RSqWOQCakUIvgLrWwYNoYq6X6hkXSfe5MDiSzASsIUEfix+eOuSSXTDCZE69lyGqxos1giI/fwY4E+qJZd72gEgbJyEaIn8QD+4KUjZ4d7gflLAa4xQO/3PjedUKGwiNepuc839bZO0sWpTRunDLA3t0E=
   app: tredegar
