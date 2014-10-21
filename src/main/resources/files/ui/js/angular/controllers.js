@@ -4,6 +4,16 @@
 
 var onsControllers = angular.module('onsControllers', []);
 
+onsApp.factory('Data', function($http){
+    return function getData(path, callback){
+          $http({
+            method: 'GET',
+            url: path,
+            cache: true
+          }).success(callback);
+    };
+});
+
 
 // Main controller that applies to all the pages
 onsControllers.controller('MainCtrl', ['$scope', '$http', '$location', '$route', 'anchorSmoothScroll',
@@ -11,6 +21,9 @@ onsControllers.controller('MainCtrl', ['$scope', '$http', '$location', '$route',
     $scope.getData = function(path, callback) {
       console.log("Loading data at " + path)
       $http.get(path).success(callback)
+        // Data.list(function(data) {
+        //     $scope.data = data;
+        // });
     }
 
     $scope.getUrlParam = function(paramName) {
@@ -239,7 +252,7 @@ onsControllers.controller('SearchCtrl', ['$scope',
 
 onsControllers.controller('AutocompleteCtrl', ['$scope',
   function($scope) {
-    
+
   }
 ])
 
