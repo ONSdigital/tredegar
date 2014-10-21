@@ -54,7 +54,6 @@ onsApp.config(['$routeProvider','$locationProvider',
     }
 ]);
 
-
 /*Filters for ng-repeat*/
 
 onsApp.filter('slice', function() {
@@ -188,6 +187,7 @@ onsApp.directive('stopEvent', function () {
     };
 });
 
+// Working
 onsApp.directive('markdown', function($http) {
     var converter = new Showdown.converter();
     return {
@@ -195,14 +195,24 @@ onsApp.directive('markdown', function($http) {
         scope: {
             link: '@'
         },
+        template: '<p></p>',
         link: function(scope, element, attrs) {
             attrs.$observe('link', function(link) {
                 var htmlText = converter.makeHtml(link);
-                element.html(htmlText);
+                element
+                    .html(htmlText)
+                    .find("pre")
+                    .replaceWith("<p>"+
+                '<img src="/ui/img/sample--chart.png" alt="sample chart">'+
+            "</p>");
+                element
+                    .find("blockquote").find("p")
+                    .addClass("box--padded--highlight")
             });
         }
     };
 });
+
 
 onsApp.factory('Page', function() {
     var title = 'Office Of National Statistics';
