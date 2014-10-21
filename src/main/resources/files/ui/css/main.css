@@ -4768,15 +4768,17 @@ a.tooltips span
   border: none;
 }
 
-div.grid-col.desktop-grid-two-thirds.tablet-grid-two-thirds > article > div > table.dataset-table > tbody > tr{
+div.grid-col.desktop-grid-two-thirds.tablet-grid-two-thirds > article > table.dataset-table > tbody > tr{
   border: 0px;
 }
+
+
 
 table .dataset-table > tbody > tr > td {
   width: 30%;
 }
 
-article > div > table.dataset-table > tbody > tr > td{
+article > table.dataset-table > tbody > tr > td{
   font-weight: bold;
   text-align: right;
 }
@@ -4785,11 +4787,14 @@ div.grid-col.desktop-grid-two-thirds.tablet-grid-two-thirds > div > ol > li {
   margin-bottom: 1.5rem;
 }
 
-@media screen and (max-width: 650px){
-  article > div > table.dataset-table > tbody > tr > td::before{
+@media screen and (max-width: 750px){
+  article > table.dataset-table > tbody > tr > td::before{
     display: none;}
-  article > div > table.dataset-table > tbody > tr > td{
-    text-align: center;}  
+  article > table.dataset-table > tbody > tr > td{
+    text-align: center;} 
+  article > table.dataset-table > tbody > tr > td{
+    margin-bottom: 1.75rem;
+  }
 }
 =======
 >>>>>>> d42b5fc4372342db7f3717c4d5557ef6c58b5277

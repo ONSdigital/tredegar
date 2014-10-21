@@ -9,7 +9,7 @@
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta charset="UTF-8">
-<title>Dataset Excel Cross Sectional</title>
+<title>Dataset Excel Time Series</title>
 <meta content="width=device-width,initial-scale=1.0" name="viewport" />
 <meta content="on" http-equiv="cleartype" />
 <meta name="format-detection" content="telephone=no">
@@ -168,13 +168,18 @@ markup: false
 <div class="page-header slate">
   <div class="wrapper">
     <p><strong>Dataset</strong></p>
-    <h1 class="page-header__title flush--half--bottom">Population Estimates Summary for the UK Dataset</h1>
+    <h1 class="page-header__title flush--half--bottom">Consumer Price Indices Summary Dataset</h1>
     <div class="grid-wrap">
       <div class="grid-col desktop-grid-two-thirds"> <img src="/ui/img/nslogo.png" class="page-header-image" alt="ONS logo">
         <p><strong>Release date: 19 February 2014</strong> <span class="page-header-box-link"> <a href="#"><strong>View latest version</strong></a></span> </p>
         <p>Next release: 21 November 2014 (provisional)</p>
         <p>Contact: <a href="mailto:jukesie@hotmail.com">Juksie</a></p>
       </div>
+      <div class="grid-col desktop-grid-one-third">
+        <p id="frequency"> Series in dataset: 8</p>
+        
+      </div>
+   
       </div>
     <div class="page-header__icons"><a href="#" class="link-complex"><span class="icon icon-twitter icon--grey"><span class="visuallyhidden">Share on Twitter</span></span></a><a href="#" class="link-complex"><span class="icon icon-facebook icon--grey"><span class="visuallyhidden">Share on Facebook</span></span></a></div>
   </div>
@@ -183,10 +188,12 @@ markup: false
 <div class="wrapper">
   <div class="panel border-horizontal-single">
     <div class="content-reveal">
-      <p> Mid-year estimates refer to the population on 30 June of the reference year and are published annually.</p>
+      <p> Consumer price Indices (CPI) are important indicators of how the UK economy is performing.</p>
 
-      <p>Mid-year population estimates relate to the usually resident population. They account for long-term international migrants (people who change their country of usual residence for a period of 12 months or more) but do not account for short term...</p> 
-        <a href="#" class="content-reveal__action hidden">See more</a> 
+      <p>The indices are used in many ways by the government, businesses, and society in general. They can affect interest rates, tax allowances, wages, state benefits, pensions, maintenance, contracts and many other payments. They also show the impact of inflation on family budgets and affect the value of the pound in your pocket.</p>
+
+      <p> This dataset provides a high level overview of consumer inflation and contains percentage change (over 12 months) and index figures for CPI, CPIH1, RPI2 and RPIJ. 
+        <a href="#" class="content-reveal__action hidden">See more</a> </p>
       </div>
   </div>
 </div>
@@ -199,6 +206,7 @@ markup: false
             <h2>Your download options</h2>
           </header>
 
+         
 
           <!-- /box__header -->
 
@@ -206,73 +214,34 @@ markup: false
                
                 <tbody>
                     <tr>
-                        <td data-th="Download Category">ALL</td>
-                        <td><a href="#" class="btn btn--primary btn--small"><span class="table__action__text">Download as .XLS</span><span class="icon-download" role="presentation"></span></a></td>
-                        <td><a href="#" class="btn btn--primary btn--small"><span class="table__action__text">Download as .CSV</span><span class="icon-download" role="presentation"></span></a>
+                       
+                        <td><a href="#" class="btn btn--primary btn--large"><span class="table__action__text">Download as .XLS</span><span class="icon-download" role="presentation"></span></a></td>
+                        <td><a href="#" class="btn btn--primary btn--large"><span class="table__action__text">Download as .CSV</span><span class="icon-download" role="presentation"></span></a>
                         </td>
                        
                     </tr>
-                    <tr>
-                        <td data-th="Download Category">Mid-2013</td>
-                       <td><a href="#" class="btn btn--primary btn--small"><span class="table__action__text">Download as .XLS</span><span class="icon-download" role="presentation"></span></a></td>
-                       <td><a href="#" class="btn btn--primary btn--small"><span class="table__action__text">Download as .CSV</span><span class="icon-download" role="presentation"></span></a>
-                        </td>
-                     
-                    </tr>
-
-                    <tr>
-                        <td data-th="Download Category">Mid-2012</td>
-                        <td><a href="#" class="btn btn--primary btn--small"><span class="table__action__text">Download as .XLS</span><span class="icon-download" role="presentation"></span></a></td>
-                        <td><a href="#" class="btn btn--primary btn--small"><span class="table__action__text">Download as .CSV</span><span class="icon-download" role="presentation"></span></a>
-                        </td>
-                  
-                    </tr>
-
-                    <tr>
-                        <td data-th="Download Category">Mid-2011</td>
-                        <td><a href="#" class="btn btn--primary btn--small"><span class="table__action__text">Download as .XLS</span><span class="icon-download" role="presentation"></span></a></td>
-                        <td><a href="#" class="btn btn--primary btn--small"><span class="table__action__text">Download as .CSV</span><span class="icon-download" role="presentation"></span></a>
-                        </td>
-                
-                    </tr>
-                    <tr>
-                        <td data-th="Download Category">Mid-2010</td>
-                        <td><a href="#" class="btn btn--primary btn--small"><span class="table__action__text">Download as .XLS</span><span class="icon-download" role="presentation"></span></a></td>
-                        <td><a href="#" class="btn btn--primary btn--small"><span class="table__action__text">Download as .CSV</span><span class="icon-download" role="presentation"></span></a>
-                        </td>
-                
-                    </tr>
-                    <tr>
-                        <td data-th="Download Category">Mid-2009</td>
-                        <td><a href="#" class="btn btn--primary btn--small"><span class="table__action__text">Download as .XLS</span><span class="icon-download" role="presentation"></span></a></td>
-                        <td><a href="#" class="btn btn--primary btn--small"><span class="table__action__text">Download as .CSV</span><span class="icon-download" role="presentation"></span></a>
-                        </td>
-                
-                    </tr>
+                    
                 </tbody>
             </table>
 
-        
-           
+      
         
           <!-- /box__content -->
-        
+          
           <!-- /box__actions --> 
         </article>
-        <!-- /article__content -->
        
-        
 
+        <!-- /article__content -->
+   
         <!-- article__content -->
     <div class="panel--bottom-mar">
     <h3>Important Notes and Usage Information</h3>
     
    
     <ol class="dataset_usage">
-      <li>These estimates are rounded to the nearest hundred and are different to the unrounded estimates in other published tables.</li>
-      <li>The estimates are produeced using a variety of data sources and statistical models, including some statistical disclosure control methods, and small estimates should not be taken to refer to particular individuals.</li>
-      <li>The estimated resident population of an area includes all those people who usually live there, regardless of nationality. Arriving international migrants are included in the usually resident population if they remain in the UK for at least a year. Emigrants are excluded if they remain outside the UK for at least a year. This is consistent with the United Nations definition of a long-term migrant. Armed forces stationed outside of the UK are excluded. Students are taken to be usually resident at thir term time address.</li> 
-      <li>Note that age 90 comprises data for ages 90 and above</li>
+      <li>The National Statistic status of CPIH has been discontinued pending work by ONS to invstigate and improve the method for measuring owner occupiers' housing costsin this index.</li>
+      <li>In accordance with the Statistics and Registration Service Act 2007, the Retail Prices Index and its derivatives have been assessed against the Code of Practice for Official Statistics and found not to met the required standards for designation as National Statistics.</li>
      
     </Ol>
    </div>
@@ -290,11 +259,11 @@ markup: false
           <div class="box__content">
             <div class="grid-wrap nav-panel__body">
               <div class="grid-col grid-one-sixth"> <span class="icon icon-download icon--blue"> </span> </div>
-              <div class="grid-col grid-five-sixths"> <a href="#">Population estimates by age and sex dataset</a> </div>
+              <div class="grid-col grid-five-sixths"> <a href="#">Detailed Inflation dataset</a> </div>
             </div>
             <div class="grid-wrap">
               <div class="grid-col grid-one-sixth"> <span class="icon icon-download icon--blue"> </span> </div>
-              <div class="grid-col grid-five-sixths"> <a href="#">Population projection</a> </div>
+              <div class="grid-col grid-five-sixths"> <a href="#">Retail Price Index (RPI) dataset </a> </div>
             </div>
           </div>
           <!-- /box__content -->
@@ -316,16 +285,13 @@ markup: false
           </header>
           <!-- /box__header -->
           <div class="box__content">
-            <p><a href="">Annual Mid-year population Estimates, 2013</a></p>
-            <p><a href="">National Population Projections, 2012-based Statistical Bulletin</a></p>
+            <p><a href="">Consumer Price inflation, January 2014</a></p>
             <p><a href="">See all (8) publications</a></p>
               
             <!-- /list- -bullet --> 
           </div>
           <!-- /box__content -->
-          
-          <br>
-          <p class="caveat"> Alpha feedback CTA to replace this pod*</p>
+                    
         </article>
         <!-- /article__content --> 
         <!-- article__content -->
@@ -344,10 +310,12 @@ markup: false
           </header>
           <!-- /box__header -->
           <div class="box__content">
-            <p>Pete Large<br/>
-              Population Estimates Unit<br/>
-              <a href="mailto:ppi@ons.gsi.gov.uk">ppi@ons.gsi.gov.uk</a><br/>
+            <p>Philip Gooding<br/>
+              Prices, ONS<br/>
+              <a href="mailto:ppi@ons.gsi.gov.uk">cpi@ons.gsi.gov.uk</a><br/>
               Telephone: +44 (0)1633 456468</p>
+               <br>
+              <p class="caveat"> Alpha feedback CTA to replace this pod*</p>
             <!-- /list- -bullet --> 
           </div>
           <!-- /box__content -->
