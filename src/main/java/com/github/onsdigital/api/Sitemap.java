@@ -161,7 +161,7 @@ public class Sitemap {
 			fragment.append("/" + data.fileName);
 		}
 		new URI(requestUrl.getProtocol(), requestUrl.getHost(), "/", fragment.toString());
-		int port = 0;
+		int port = -1;
 		if (requestUrl.getPort() == 8080) {
 			port = 8080;
 		}
