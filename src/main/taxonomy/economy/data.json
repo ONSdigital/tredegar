@@ -4,8 +4,8 @@
   "children": [
     {
       "detail": [],
-      "name": "Economic Output and Productivity",
-      "fileName": "economicoutputandproductivity",
+      "name": "Gross Domestic Product (GDP)",
+      "fileName": "grossdomesticproductgdp",
       "index": 0
     },
     {
@@ -47,8 +47,8 @@
           "headline": false
         }
       ],
-      "name": "Environmental Accounts",
-      "fileName": "environmentalaccounts",
+      "name": "Inflation and Price Indices",
+      "fileName": "inflationandpriceindices",
       "index": 1
     },
     {
@@ -90,8 +90,8 @@
           "headline": false
         }
       ],
-      "name": "Government, Public Sector and Taxes",
-      "fileName": "governmentpublicsectorandtaxes",
+      "name": "Balance of Payments",
+      "fileName": "balanceofpayments",
       "index": 2
     },
     {
@@ -115,20 +115,20 @@
           "headline": false
         }
       ],
-      "name": "Gross Domestic Product (GDP)",
-      "fileName": "grossdomesticproductgdp",
+      "name": "Government, Public Sector and Taxes",
+      "fileName": "governmentpublicsectorandtaxes",
       "index": 3
+    },
+    {
+      "detail": [],
+      "name": "Economic Output and Productivity",
+      "fileName": "economicoutputandproductivity",
+      "index": 4
     },
     {
       "detail": [],
       "name": "Gross Value Added (GVA)",
       "fileName": "grossvalueaddedgva",
-      "index": 4
-    },
-    {
-      "detail": [],
-      "name": "Inflation and Price Indices",
-      "fileName": "inflationandpriceindices",
       "index": 5
     },
     {
@@ -139,14 +139,14 @@
     },
     {
       "detail": [],
-      "name": "National Accounts",
-      "fileName": "nationalaccounts",
+      "name": "Regional Accounts",
+      "fileName": "regionalaccounts",
       "index": 7
     },
     {
       "detail": [],
-      "name": "Regional Accounts",
-      "fileName": "regionalaccounts",
+      "name": "Environmental Accounts",
+      "fileName": "environmentalaccounts",
       "index": 8
     }
   ],

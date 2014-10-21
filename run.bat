@@ -4,7 +4,6 @@ set JAVA_OPTS="-Xdebug -Xrunjdwp:transport=dt_socket,address=8000,server=y,suspe
 
 rem # Restolino configuration
 set RESTOLINO_STATIC="src/main/resources/files"
-rem set RESTOLINO_STATIC="target/classes/files"
 set RESTOLINO_CLASSES="target/classes"
 set PACKAGE_PREFIX=com.github.onsdigital
 
@@ -19,10 +18,6 @@ rem #mvn clean compile dependency:copy-dependencies && ^
 rem #rm -rf src/main/taxonomy && ^
 rem #java -cp "target/classes:target/dependency/*" com.github.onsdigital.generator.Csv
 
-rem # Now build the JAR:
-mvn -Dmaven.test.skip=true package && ^
-rem # Development: reloadable ^
+rem # Build and run:
+mvn -Dmaven.test.skip=true clean compile dependency:copy-dependencies && ^
 java %JAVA_OPTS% -Drestolino.files=%RESTOLINO_STATIC% -Drestolino.classes=%RESTOLINO_CLASSES% -Drestolino.packageprefix=%PACKAGE_PREFIX% -cp "target/dependency/*" com.github.davidcarboni.restolino.Main
-
-rem # Production: non-reloadable
-rem #java %JAVA_OPTS% -jar target/*-jar-with-dependencies.jar
