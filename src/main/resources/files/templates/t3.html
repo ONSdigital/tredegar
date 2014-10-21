@@ -6,7 +6,7 @@
           <h1 class="page-header__title flush--half--bottom">{{data.name}}</h1>
           <div class="content-reveal lede">
             <p>{{data.lede}}
-              <a href="" ng-click="toggleContent()" class="content-reveal__action">{{showContent ? 'Show less' : 'Show more'}}</a>
+              <a  ng-if="data.more" href="" ng-click="toggleContent()" class="content-reveal__action">{{showContent ? 'Show less' : 'Show more'}}</a>
             </p>
             <div ng-show="showContent" class="content-reveal__hidden">
               <p>
