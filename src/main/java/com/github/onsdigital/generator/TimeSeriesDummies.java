@@ -69,34 +69,29 @@ public class TimeSeriesDummies {
 		// Read in the CDIDs and names:
 		URI csvUri;
 		try {
-			csvUri = Csv.class.getClassLoader().getResource("cdid").toURI();
+			csvUri = Csv.class.getClassLoader().getResource("data/Metadata").toURI();
 		} catch (URISyntaxException e) {
-			throw new IOException(
-					"Error getting URI for CDID resource folder.", e);
+			throw new IOException("Error getting URI for CDID resource folder.", e);
 		}
 		Path csvPath = Paths.get(csvUri);
 		// Creating a DirectoryStream inside a try-with-resource block
-		try (DirectoryStream<Path> stream = Files.newDirectoryStream(csvPath,
-				"*.csv")) {
+		try (DirectoryStream<Path> stream = Files.newDirectoryStream(csvPath, "*.csv")) {
 			for (Path p : stream) {
 
 				// Iterate over the paths:
 				Serialiser.getBuilder().setPrettyPrinting();
-				Reader reader = ResourceUtils.getReader("/cdid/"
-						+ p.getFileName());
+				Reader reader = ResourceUtils.getReader("/data/Metadata/" + p.getFileName());
 
 				try (CSVReader csvReader = new CSVReader(reader)) {
 
 					// Read the rows
 					String[] row;
 					while ((row = csvReader.readNext()) != null) {
-						if (row.length > 1 && StringUtils.isNotBlank(row[0])
-								&& StringUtils.isNotBlank(row[1])) {
+						if (row.length > 1 && StringUtils.isNotBlank(row[0]) && StringUtils.isNotBlank(row[1])) {
 							cdids.put(row[0], row[1]);
 							System.out.println("Total: " + cdids.size());
 						} else {
-							System.out.println("Rejected: " + p.getFileName()
-									+ " row: " + ArrayUtils.toString(row));
+							System.out.println("Rejected: " + p.getFileName() + " row: " + ArrayUtils.toString(row));
 						}
 					}
 				}
@@ -115,8 +110,9 @@ public class TimeSeriesDummies {
 				Map<String, String> newMap = new TreeMap<String, String>();
 				firstletters.put(firstletter, newMap);
 				newMap.put(cdid, cdids.get(cdid));
-			} else
+			} else {
 				firstletters.get(firstletter).put(cdid, cdids.get(cdid));
+			}
 		}
 		// System.out.println(firstletters);
 	}
