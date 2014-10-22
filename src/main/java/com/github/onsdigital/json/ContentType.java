@@ -1,16 +1,15 @@
 package com.github.onsdigital.json;
 
+/**
+ * Enumerates the different types of content on the website.
+ * <p>
+ * Strictly these would be uppercase, but "shouty caps" looks wrong when
+ * serialised to Json. There are ways around it, but the simplest solution is to
+ * use lowercase - it's not worth the complexity.
+ * 
+ * @author david
+ *
+ */
 public enum ContentType {
-	ARTICLE("article"), COLLECTION("collection"), BULLETIN("bulletin"), HOME("home"), METHODOLOY("methodology"), RELEASE("release"), TIMESERIES("timeseries"), UNKNOWN("unknown");
-
-	private final String text;
-
-	private ContentType(final String text) {
-		this.text = text;
-	}
-
-	@Override
-	public String toString() {
-		return text;
-	}
+	article, collection, bulletin, home, methodoloy, release, timeseries, unknown;
 }

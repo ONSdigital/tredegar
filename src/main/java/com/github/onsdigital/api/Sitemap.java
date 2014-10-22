@@ -140,7 +140,7 @@ public class Sitemap {
 	private int addPath(Path path, Document document, Element rootElement, double priority, URL requestUrl) throws IOException {
 		int result = 0;
 		Data data = getDataJson(path);
-		if (data != null && !StringUtils.equals(data.type, ContentType.TIMESERIES.toString())) {
+		if (data != null && data.type != ContentType.timeseries) {
 			try {
 				URI uri = toUri(data, requestUrl);
 				addUrl(uri, document, rootElement, priority);
@@ -153,8 +153,8 @@ public class Sitemap {
 		} else if (data == null) {
 			System.out.println("Skipping non-data folder " + path);
 		}
-		// else if (StringUtils.equals(data.type,
-		// ContentType.TIMESERIES.name())) {
+		// else if (data.type==
+		// ContentType.TIMESERIES) {
 		// System.out.println("Skipping timeseries " + path);
 		// } else {
 		// System.out.println("Skipping for some reason: " + path);

@@ -6,7 +6,7 @@ public class TaxonomyFolder extends DataItem {
 	public int index;
 
 	TaxonomyFolder(Folder folder) {
-		type = ContentType.HOME.name();
+		type = ContentType.home;
 		name = folder.name;
 		fileName = folder.filename();
 	}

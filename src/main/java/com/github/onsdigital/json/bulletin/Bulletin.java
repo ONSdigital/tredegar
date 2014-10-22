@@ -4,13 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.github.onsdigital.json.ContentType;
+import com.github.onsdigital.json.DataItem;
 import com.github.onsdigital.json.Email;
 import com.github.onsdigital.json.Section;
 
-public class Bulletin {
+public class Bulletin extends DataItem {
 
-	// identifies what content type this is
-	public String type = ContentType.BULLETIN.name();
 	// Top section
 	public String title = "Cat Tail Inflation, October 2014";
 	public String releaseDate = "19 February 2014";
@@ -30,6 +29,7 @@ public class Bulletin {
 	 * Sets up some basic content.
 	 */
 	public Bulletin() {
+		type = ContentType.bulletin;
 		Section summary = new Section();
 		summary.title = "Summary";
 		summary.markdown = "Consectetur adipiscing elit. Suspendisse non tellus nibh. Duis tristique risus sed urna fringilla, eu facilisis orci fringilla. Nullam iaculis libero tempor vehicula ultricies"

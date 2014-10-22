@@ -26,7 +26,7 @@ public class TimeSeries extends DataItem {
 	public String note = "2005 = 100. Not seasonally adjusted";
 
 	public TimeSeries() {
-		type = ContentType.TIMESERIES.name();
+		type = ContentType.timeseries;
 		name = "People not in Work";
 		fileName = cdid.toLowerCase();
 	}

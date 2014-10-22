@@ -70,17 +70,17 @@ public class LoadIndexHelper {
 		String splitUrl = url.substring(0, url.indexOf(fileName));
 
 		switch (contentType) {
-		case TIMESERIES:
+		case timeseries:
 			String cdid = getField(jsonObject, "cdid");
 			documentMap = buildDocumentMap(splitUrl, splitPath, type, cdid);
 			break;
-		case BULLETIN:
+		case bulletin:
 			String bulletinTitle = getField(jsonObject, "title");
 			documentMap = buildDocumentMap(splitUrl, splitPath, type, bulletinTitle);
 			break;
 		default:
 			String homeTitle = getField(jsonObject, "title");
-			documentMap = buildDocumentMap(splitUrl, splitPath, ContentType.HOME.name(), homeTitle);
+			documentMap = buildDocumentMap(splitUrl, splitPath, ContentType.home.name(), homeTitle);
 			break;
 		}
 
@@ -114,7 +114,7 @@ public class LoadIndexHelper {
 
 		JsonElement jsonElement = jsonObject.get(field);
 		if (jsonElement == null) {
-			return ContentType.UNKNOWN.name();
+			return ContentType.unknown.name();
 		}
 
 		return jsonElement.getAsString();
