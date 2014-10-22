@@ -154,7 +154,7 @@ public class Sitemap {
 
 	private static URI toUri(Data data, URL requestUrl) throws URISyntaxException {
 		StringBuilder fragment = new StringBuilder("!/home");
-		if (data.breadcrumb != null) {
+		if (data != null && data.breadcrumb != null) {
 			for (TaxonomyNode segment : data.breadcrumb) {
 				fragment.append("/" + segment.fileName);
 			}
