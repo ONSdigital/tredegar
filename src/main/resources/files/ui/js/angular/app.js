@@ -11,8 +11,6 @@ var onsApp = angular.module('onsApp', [
 
 onsApp.config(['$routeProvider','$locationProvider',
     function($routeProvider, $locationProvider) {
-		//$locationProvider.hashPrefix('!');
-//			 .html5Mode(false)
         $routeProvider.
         when('/', {
             redirectTo: '/home'
@@ -59,6 +57,9 @@ onsApp.config(['$routeProvider','$locationProvider',
             templateUrl: 'templates/template.html',
             controller: 'TemplateCtrl'
         });
+        $locationProvider
+	        .html5Mode(false)
+	        .hashPrefix('!');
     }
 ]);
 

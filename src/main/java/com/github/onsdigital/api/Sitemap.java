@@ -153,14 +153,21 @@ public class Sitemap {
 	}
 
 	private static URI toUri(Data data, URL requestUrl) throws URISyntaxException {
-		StringBuilder fragment = new StringBuilder("/home");
+		StringBuilder fragment = new StringBuilder("!/home");
 		for (TaxonomyNode segment : data.breadcrumb) {
 			fragment.append("/" + segment.fileName);
 		}
 		if (!StringUtils.equals("/", data.fileName)) {
 			fragment.append("/" + data.fileName);
 		}
-		URI uri = new URI(requestUrl.getProtocol(), requestUrl.getHost(), "/", fragment.toString());
+		new URI(requestUrl.getProtocol(), requestUrl.getHost(), "/", fragment.toString());
+		int port = -1;
+		if (requestUrl.getPort() == 8080) {
+			port = 8080;
+		}
+		String userInfo = null;
+		String query = null;
+		URI uri = new URI(requestUrl.getProtocol(), userInfo, requestUrl.getHost(), port, "/", query, fragment.toString());
 		return uri;
 	}
 
