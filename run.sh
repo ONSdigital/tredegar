@@ -23,7 +23,7 @@ export BONSAI_TRANSPORT_PORT=9300
 #export TAXONOMY_DIR=target/taxonomy
 
 #Generate taxonomy
-mvn clean compile dependency:copy-dependencies && \
+mvn clean test dependency:copy-dependencies && \
 rm -rf src/main/taxonomy && \
 java -cp "target/classes:target/dependency/*" com.github.onsdigital.generator.Csv
 
