@@ -97,10 +97,12 @@ public class CollectionTaxonomyFileSystem {
 
 		if (pageMultiplier > 0) {
 			endIndex += pageMultiplier * multiplierIndex;
-			if (endIndex > files.size()) {
-				endIndex = files.size();
-			}
 		}
+
+		if (endIndex > files.size()) {
+			endIndex = files.size();
+		}
+
 		return endIndex;
 	}
 }
