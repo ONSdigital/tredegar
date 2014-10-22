@@ -49,35 +49,41 @@ import com.github.onsdigital.json.TaxonomyNode;
 public class Sitemap {
 
 	static String encoding = "UTF8";
+	static Document document;
 
 	@GET
-	public static void get(@Context HttpServletRequest request, @Context HttpServletResponse response) throws IOException {
+	public void get(@Context HttpServletRequest request, @Context HttpServletResponse response) throws IOException {
 
-		// Get the request URI:
-		URL requestUrl = new URL(request.getRequestURL().toString());
+		if (document == null) {
 
-		// Create a sitemap structure:
-		Document document = createDocument();
-		Element rootElement = createRootElement(document);
+			// Get the request URI:
+			URL requestUrl = new URL(request.getRequestURL().toString());
 
-		// Iterate the taxonomy structure:
-		Path taxonomyPath = getHomePath();
-		// System.out.println("Searching " + taxonomyPath);
-		int total = 0;
-		total += addPath(taxonomyPath, document, rootElement, 1, requestUrl);
-		total += iterate(taxonomyPath, 0.8, document, rootElement, requestUrl);
+			// Create a sitemap structure:
+			Document document = createDocument();
+			Element rootElement = createRootElement(document);
 
-		// Output the result:
-		System.out.println("Found " + total + " URLs for the sitemap.");
+			// Iterate the taxonomy structure:
+			Path taxonomyPath = getHomePath();
+			// System.out.println("Searching " + taxonomyPath);
+			int total = 0;
+			total += addPath(taxonomyPath, document, rootElement, 1, requestUrl);
+			total += iterate(taxonomyPath, 0.8, document, rootElement, requestUrl);
+
+			// Output the result:
+			System.out.println("Found " + total + " URLs for the sitemap.");
+			Sitemap.document = document;
+		}
+
 		writeResponse(document, response);
 	}
 
-	private static Path getHomePath() throws IOException {
+	private Path getHomePath() throws IOException {
 
 		return FileSystems.getDefault().getPath(Configuration.getTaxonomyPath());
 	}
 
-	private static Document createDocument() throws IOException {
+	private Document createDocument() throws IOException {
 
 		try {
 			DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();
@@ -96,13 +102,13 @@ public class Sitemap {
 	 * @param document
 	 * @return
 	 */
-	private static Element createRootElement(Document document) {
+	private Element createRootElement(Document document) {
 		Element rootElement = document.createElementNS("http://www.sitemaps.org/schemas/sitemap/0.9", "urlset");
 		document.appendChild(rootElement);
 		return rootElement;
 	}
 
-	private static int iterate(Path taxonomyPath, double priority, Document document, Element rootElement, URL requestUrl) throws IOException {
+	private int iterate(Path taxonomyPath, double priority, Document document, Element rootElement, URL requestUrl) throws IOException {
 		int result = 0;
 
 		List<Path> subdirectories = new ArrayList<Path>();
@@ -130,7 +136,7 @@ public class Sitemap {
 		return result;
 	}
 
-	private static int addPath(Path path, Document document, Element rootElement, double priority, URL requestUrl) throws IOException {
+	private int addPath(Path path, Document document, Element rootElement, double priority, URL requestUrl) throws IOException {
 		int result = 0;
 		Data data = getDataJson(path);
 		if (data != null) {
@@ -147,7 +153,7 @@ public class Sitemap {
 		return result;
 	}
 
-	private static Data getDataJson(Path path) throws IOException {
+	private Data getDataJson(Path path) throws IOException {
 		Data result = null;
 
 		Path dataJson = path.resolve("data.json");
@@ -160,7 +166,7 @@ public class Sitemap {
 		return result;
 	}
 
-	private static URI toUri(Data data, URL requestUrl) throws URISyntaxException {
+	private URI toUri(Data data, URL requestUrl) throws URISyntaxException {
 		StringBuilder fragment = new StringBuilder("!/home");
 		if (data != null && data.breadcrumb != null) {
 			for (TaxonomyNode segment : data.breadcrumb) {
@@ -181,7 +187,7 @@ public class Sitemap {
 		return uri;
 	}
 
-	private static void addUrl(URI uri, Document document, Element rootElement, double priorityValue) throws DOMException, MalformedURLException {
+	private void addUrl(URI uri, Document document, Element rootElement, double priorityValue) throws DOMException, MalformedURLException {
 
 		// Container
 		Element url = document.createElement("url");
@@ -200,7 +206,7 @@ public class Sitemap {
 		System.out.println(uri.toURL().toExternalForm());
 	}
 
-	private static void writeResponse(Document document, HttpServletResponse response) throws IOException {
+	private void writeResponse(Document document, HttpServletResponse response) throws IOException {
 
 		// Setting the character encoding here ensures the PrintWriter
 		// uses the correct encoding:
