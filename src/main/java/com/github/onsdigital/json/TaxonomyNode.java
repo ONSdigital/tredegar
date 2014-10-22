@@ -4,6 +4,7 @@ import com.github.onsdigital.generator.Folder;
 
 public class TaxonomyNode {
 
+	public String type;
 	public String name;
 	public String fileName;
 	public int index;

@@ -36,6 +36,7 @@ import org.w3c.dom.Element;
 import com.github.davidcarboni.restolino.framework.Endpoint;
 import com.github.davidcarboni.restolino.json.Serialiser;
 import com.github.onsdigital.configuration.Configuration;
+import com.github.onsdigital.json.ContentType;
 import com.github.onsdigital.json.Data;
 import com.github.onsdigital.json.TaxonomyNode;
 
@@ -118,7 +119,7 @@ public class Sitemap {
 			for (Path path : stream) {
 
 				// Iterate over the paths:
-				if (Files.isDirectory(path) && Files.exists(path.resolve("data.json"))) {
+				if (Files.isDirectory(path)) {
 					result += addPath(path, document, rootElement, priority, requestUrl);
 					subdirectories.add(path);
 				}
@@ -139,7 +140,7 @@ public class Sitemap {
 	private int addPath(Path path, Document document, Element rootElement, double priority, URL requestUrl) throws IOException {
 		int result = 0;
 		Data data = getDataJson(path);
-		if (data != null) {
+		if (data != null && !StringUtils.equals(data.type, ContentType.TIMESERIES.name())) {
 			try {
 				URI uri = toUri(data, requestUrl);
 				addUrl(uri, document, rootElement, priority);
@@ -149,7 +150,15 @@ public class Sitemap {
 			} catch (URISyntaxException | DOMException | MalformedURLException e) {
 				throw new IOException("Error iterating taxonomy", e);
 			}
-		}
+		} else if (data == null) {
+			System.out.println("Skipping non-data folder " + path);
+		} 
+		// else if (StringUtils.equals(data.type,
+		// ContentType.TIMESERIES.name())) {
+		// System.out.println("Skipping timeseries " + path);
+		// } else {
+		// System.out.println("Skipping for some reason: " + path);
+		// }
 		return result;
 	}
 
