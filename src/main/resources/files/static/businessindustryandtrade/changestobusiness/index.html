@@ -1,0 +1,1103 @@
+<!DOCTYPE html><html ng-app="onsApp" class="ng-scope"><!--<![endif]--><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style>
+<title ng-bind="Page.title()" class="ng-binding"></title>
+<meta name="fragment" content="!">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta charset="UTF-8">
+<meta content="width=device-width,initial-scale=1.0" name="viewport">
+<meta content="on" http-equiv="cleartype">
+<meta name="format-detection" content="telephone=no">
+<!-- http://www.phpied.com/conditional-comments-block-downloads/ -->
+<!--[if IE]><![endif]-->
+<!-- build:css /ui/css/oldie.css-->
+<!--[if lte IE 8]>
+  <link rel="stylesheet" href="/ui/css/oldie.css" />
+<![endif]-->
+<!-- endbuild -->
+<!-- build:css ui/css/main.css-->
+<!--[if gt IE 8]><!-->
+<!-- <link rel="stylesheet" href="/ui/css/main.css" /> -->
+<link href="/ui/css/main.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
+<!--<![endif]-->
+<!-- endbuild -->
+<!--[if (!IE)|(gt IE 8)]>><!-->
+<!--  -->
+<!--<![endif]-->
+
+<!--[if lte IE 8]>
+      
+    <![endif]-->
+
+
+
+
+
+
+<!--
+
+
+-->
+<!--  -->
+<!-- 
+
+
+ -->
+
+
+
+<!-- 
+
+
+
+ -->
+<noscript>
+    &lt;img src="/ui/img/nslogo.png" alt="" style="padding-left: 20px; padding-top: 20px;"&gt;&lt;p&gt;&lt;/p&gt;
+    &lt;div&gt;&lt;h2 style="padding-left: 20px;"&gt;This page needs JavaScript to be displayed.&lt;/h2&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;h2 style="color: red; padding-left: 20px;"&gt;Your JavaScript is disabled. Please turn it on.&lt;/h2&gt;&lt;/div&gt;
+    &lt;a href="http://www.enable-javascript.com/" style="padding-left: 20px;"&gt;How to enable JavaScript in your browser&lt;/a&gt;
+</noscript>
+
+<!---
+title: Angular app page
+external: true
+type: template
+group: Templates
+markup: false
+-->
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Hover_Arrow {position: absolute; width: 15px; height: 11px; cursor: pointer}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1px; bottom: 2px; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style></head>
+
+<!-- id set to ng-app to make older IE happy with Angular ngInclude directive -->
+<!-- ngView:  --><body id="ng-app" ng-view="" ng-controller="MainCtrl" class="js ng-scope"><div id="MathJax_Message" style="display: none;"></div><ons-header class="ng-scope"><div>
+  <top-bar>  <a class="skiplink visuallyhidden focusable" href="#main" tabindex="0">
+      <span>Skip to main content</span>
+    </a>
+    <main id="main" role="main" class="ONS_border">
+      <!-- temp removal to allow for component list selective wrapping -->
+      <!-- <div class="wrapper"> -->
+       <div class="wrapper panel--pad-small">
+  <header class="global-header">
+    <div class="media">
+      <a href="/static">
+        <img src="/ui/img/ons-logo.svg" alt="Office for National Statistics" width="300" class="media__img">
+      </a>
+      <div class="media__body">
+        <ul class="nav nav--inline-block nav--dark globaltop-nav">
+          <li>
+            <a href="#">Release calendar</a>
+          </li>
+          <li>
+            <a href="#">Methodology</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+        </ul>
+
+
+      </div>
+    </div>
+  </header>
+</div></main></top-bar>
+  <ons-nav><nav class="ons-nav ng-scope" ng-controller="NavCtrl">
+  <div class="wrapper">
+    <ul class="nav nav--multi nav--block nav--primary flush--bottom" id="nav-primary">
+      <li class="nav--primary home">
+              <a href="/static"><span class="icon-home icon--inline"></span><span class="icon-inline vertical-align-mid">Home</span></a>
+      </li>
+      <!-- ngRepeat: n in navigation --><li ng-repeat="n in navigation" ng-class="isCurrentPage(n.fileName) ? 'nav--primary__active' : ''" class="ng-scope nav--primary__active">
+        <a href="/static/businessindustryandtrade" class="nav__expandable js-expandable arrowunderline ng-binding" ng-class="isExpanded(n.fileName) ? 'js-expandable-active' : ''" ng-click="toggle(n.fileName)">Business, Industry and Trade</a>
+        <ul class="nav--primary__sub js-expandable__content js-nav-hidden" ng-class="isExpanded(n.fileName) ? '' : 'js-nav-hidden'">
+          <!-- ngRepeat: c in n.children --><li ng-repeat="c in n.children" class="ng-scope">
+            <a href="/static/businessindustryandtrade/businessactivitysizeandlocation" class="ng-binding">Business Activity, Size and Location</a>
+          </li><!-- end ngRepeat: c in n.children --><li ng-repeat="c in n.children" class="ng-scope">
+            <a href="/static/businessindustryandtrade/retailindustry" class="ng-binding">Retail Industry</a>
+          </li><!-- end ngRepeat: c in n.children --><li ng-repeat="c in n.children" class="ng-scope">
+            <a href="/static/businessindustryandtrade/internationaltrade" class="ng-binding">International Trade</a>
+          </li><!-- end ngRepeat: c in n.children --><li ng-repeat="c in n.children" class="ng-scope">
+            <a href="/static/businessindustryandtrade/constructionindustry" class="ng-binding">Construction Industry</a>
+          </li><!-- end ngRepeat: c in n.children --><li ng-repeat="c in n.children" class="ng-scope">
+            <a href="/static/businessindustryandtrade/changestobusiness" class="ng-binding">Changes to Business</a>
+          </li><!-- end ngRepeat: c in n.children --><li ng-repeat="c in n.children" class="ng-scope">
+            <a href="/static/businessindustryandtrade/itandinternetindustry" class="ng-binding">IT and Internet Industry</a>
+          </li><!-- end ngRepeat: c in n.children --><li ng-repeat="c in n.children" class="ng-scope">
+            <a href="/static/businessindustryandtrade/manufacturingandproductionindustry" class="ng-binding">Manufacturing and Production Industry</a>
+          </li><!-- end ngRepeat: c in n.children --><li ng-repeat="c in n.children" class="ng-scope">
+            <a href="/static/businessindustryandtrade/tourismindustry" class="ng-binding">Tourism Industry</a>
+          </li><!-- end ngRepeat: c in n.children -->
+        </ul>
+      </li><!-- end ngRepeat: n in navigation --><li ng-repeat="n in navigation" ng-class="isCurrentPage(n.fileName) ? 'nav--primary__active' : ''" class="ng-scope">
+        <a href="/static/economy" class="nav__expandable js-expandable arrowunderline ng-binding" ng-class="isExpanded(n.fileName) ? 'js-expandable-active' : ''" ng-click="toggle(n.fileName)">Economy</a>
+        <ul class="nav--primary__sub js-expandable__content js-nav-hidden" ng-class="isExpanded(n.fileName) ? '' : 'js-nav-hidden'">
+          <!-- ngRepeat: c in n.children --><li ng-repeat="c in n.children" class="ng-scope">
+            <a href="/static/economy/governmentpublicsectorandtaxes" class="ng-binding">Government, Public Sector and Taxes</a>
+          </li><!-- end ngRepeat: c in n.children --><li ng-repeat="c in n.children" class="ng-scope">
+            <a href="/static/economy/balanceofpayments" class="ng-binding">Balance of Payments</a>
+          </li><!-- end ngRepeat: c in n.children --><li ng-repeat="c in n.children" class="ng-scope">
+            <a href="/static/economy/grossdomesticproductgdp" class="ng-binding">Gross Domestic Product (GDP)</a>
+          </li><!-- end ngRepeat: c in n.children --><li ng-repeat="c in n.children" class="ng-scope">
+            <a href="/static/economy/economicoutputandproductivity" class="ng-binding">Economic Output and Productivity</a>
+          </li><!-- end ngRepeat: c in n.children --><li ng-repeat="c in n.children" class="ng-scope">
+            <a href="/static/economy/grossvalueaddedgva" class="ng-binding">Gross Value Added (GVA)</a>
+          </li><!-- end ngRepeat: c in n.children --><li ng-repeat="c in n.children" class="ng-scope">
+            <a href="/static/economy/inflationandpriceindices" class="ng-binding">Inflation and Price Indices</a>
+          </li><!-- end ngRepeat: c in n.children --><li ng-repeat="c in n.children" class="ng-scope">
+            <a href="/static/economy/investmentspensionsandtrusts" class="ng-binding">Investments, Pensions and Trusts</a>
+          </li><!-- end ngRepeat: c in n.children --><li ng-repeat="c in n.children" class="ng-scope">
+            <a href="/static/economy/regionalaccounts" class="ng-binding">Regional Accounts</a>
+          </li><!-- end ngRepeat: c in n.children --><li ng-repeat="c in n.children" class="ng-scope">
+            <a href="/static/economy/nationalaccounts" class="ng-binding">National Accounts</a>
+          </li><!-- end ngRepeat: c in n.children --><li ng-repeat="c in n.children" class="ng-scope">
+            <a href="/static/economy/environmentalaccounts" class="ng-binding">Environmental Accounts</a>
+          </li><!-- end ngRepeat: c in n.children -->
+        </ul>
+      </li><!-- end ngRepeat: n in navigation --><li ng-repeat="n in navigation" ng-class="isCurrentPage(n.fileName) ? 'nav--primary__active' : ''" class="ng-scope">
+        <a href="/static/employmentandlabourmarket" class="nav__expandable js-expandable arrowunderline ng-binding" ng-class="isExpanded(n.fileName) ? 'js-expandable-active' : ''" ng-click="toggle(n.fileName)">Employment and Labour Market</a>
+        <ul class="nav--primary__sub js-expandable__content js-nav-hidden" ng-class="isExpanded(n.fileName) ? '' : 'js-nav-hidden'">
+          <!-- ngRepeat: c in n.children --><li ng-repeat="c in n.children" class="ng-scope">
+            <a href="/static/employmentandlabourmarket/peopleinwork" class="ng-binding">People in Work</a>
+          </li><!-- end ngRepeat: c in n.children --><li ng-repeat="c in n.children" class="ng-scope">
+            <a href="/static/employmentandlabourmarket/peoplenotinwork" class="ng-binding">People not in Work</a>
+          </li><!-- end ngRepeat: c in n.children --><li ng-repeat="c in n.children" class="ng-scope">
+            <a href="/static/employmentandlabourmarket/publicsectorpersonnel" class="ng-binding">Public Sector Personnel</a>
+          </li><!-- end ngRepeat: c in n.children -->
+        </ul>
+      </li><!-- end ngRepeat: n in navigation --><li ng-repeat="n in navigation" ng-class="isCurrentPage(n.fileName) ? 'nav--primary__active' : ''" class="ng-scope">
+        <a href="/static/peoplepopulationandcommunity" class="nav__expandable js-expandable arrowunderline ng-binding" ng-class="isExpanded(n.fileName) ? 'js-expandable-active' : ''" ng-click="toggle(n.fileName)">People, Population and Community</a>
+        <ul class="nav--primary__sub js-expandable__content js-nav-hidden" ng-class="isExpanded(n.fileName) ? '' : 'js-nav-hidden'">
+          <!-- ngRepeat: c in n.children --><li ng-repeat="c in n.children" class="ng-scope">
+            <a href="/static/peoplepopulationandcommunity/populationandmigration" class="ng-binding">Population and Migration</a>
+          </li><!-- end ngRepeat: c in n.children --><li ng-repeat="c in n.children" class="ng-scope">
+            <a href="/static/peoplepopulationandcommunity/birthsdeathsandmarriages" class="ng-binding">Births, Deaths and Marriages</a>
+          </li><!-- end ngRepeat: c in n.children --><li ng-repeat="c in n.children" class="ng-scope">
+            <a href="/static/peoplepopulationandcommunity/healthandsocialcare" class="ng-binding">Health and Social Care</a>
+          </li><!-- end ngRepeat: c in n.children --><li ng-repeat="c in n.children" class="ng-scope">
+            <a href="/static/peoplepopulationandcommunity/crimeandjustice" class="ng-binding">Crime and Justice</a>
+          </li><!-- end ngRepeat: c in n.children --><li ng-repeat="c in n.children" class="ng-scope">
+            <a href="/static/peoplepopulationandcommunity/culturalidentity" class="ng-binding">Cultural Identity</a>
+          </li><!-- end ngRepeat: c in n.children --><li ng-repeat="c in n.children" class="ng-scope">
+            <a href="/static/peoplepopulationandcommunity/elections" class="ng-binding">Elections</a>
+          </li><!-- end ngRepeat: c in n.children --><li ng-repeat="c in n.children" class="ng-scope">
+            <a href="/static/peoplepopulationandcommunity/homeinternetandsocialmediausage" class="ng-binding">Home Internet and Social Media Usage</a>
+          </li><!-- end ngRepeat: c in n.children --><li ng-repeat="c in n.children" class="ng-scope">
+            <a href="/static/peoplepopulationandcommunity/housing" class="ng-binding">Housing</a>
+          </li><!-- end ngRepeat: c in n.children --><li ng-repeat="c in n.children" class="ng-scope">
+            <a href="/static/peoplepopulationandcommunity/leisureandtourism" class="ng-binding">Leisure and Tourism</a>
+          </li><!-- end ngRepeat: c in n.children --><li ng-repeat="c in n.children" class="ng-scope">
+            <a href="/static/peoplepopulationandcommunity/personalandhouseholdfinances" class="ng-binding">Personal and Household Finances</a>
+          </li><!-- end ngRepeat: c in n.children --><li ng-repeat="c in n.children" class="ng-scope">
+            <a href="/static/peoplepopulationandcommunity/wellbeing" class="ng-binding">Well-being</a>
+          </li><!-- end ngRepeat: c in n.children -->
+        </ul>
+      </li><!-- end ngRepeat: n in navigation -->
+      <li class="nav--primary__highlight">
+        <a href="#">
+          <span class="icon-users icon--inline"></span>Respondents</a>
+      </li>
+      <li class="nav--primary__secondary-content">
+        <a href="#">Release calendar</a>
+      </li>
+      <li class="nav--primary__secondary-content">
+        <a href="#">About</a>
+      </li>
+    </ul>
+  </div>
+</nav></ons-nav>
+  <search-box>      <div class="slate--mid-grey_new flush">
+        <div class="wrapper">
+          <div class="grid-wrap ">
+            <div class="grid-col desktop-grid-one-half box--inline">
+              <form ng-submit="goToSearch(searchTerm)" class="hero reduced_padding pad_right ng-pristine ng-valid" _lpchecked="1">
+                <label for="homepageSearch" class="visuallyhidden">Search term:</label>
+                <input id="homepageSearch" type="text" class="input-med-large--flex--three-fifths  search_reduction ng-pristine ng-valid" name="q" ng-model="searchTerm" placeholder="Search for keyword or time series id" focus-me="" ng-change="complete(searchTerm)" ng-blur="hide()" autocomplete="off">
+<!--                 <auto-complete></auto-complete> -->
+                <button type="submit" class="btn btn--primary btn--small btn--form--large-icon input--lede-btn-icon align_middle no_left_margin">
+                  <span class="icon icon-search-1">
+                  <span class="visuallyhidden">Search</span>
+                  </span>
+                </button>
+              </form>
+            </div>
+
+            <div class="grid-col desktop-grid-one-half box--inline--flex">
+
+<!--               <div class="link_head"> -->
+<!--                 <a href="#" class="link"> Browse Regional Statistics</a></div> -->
+<!--                   <div class="page-header__icons_new"> -->
+<!--                     <img src="/ui/img/UK.png" alt="uk map" class="ukmap"> -->
+<!--                   </div> -->
+            </div>
+          </div>
+        </div>
+      </div></search-box>
+  <ons-breadcrumb><breadcrumb> 
+<div class="wrapper panel--pad-small">
+  <ol class="nav nav--heavy breadcrumb mini flush">
+    <li>
+      <a href="/static">Home</a>
+    </li>
+    <!-- ngRepeat: item in data.breadcrumb --><li ng-repeat="item in data.breadcrumb" class="ng-scope">
+      <a href="/static/businessindustryandtrade" class="ng-binding">Business, Industry and Trade</a>
+    </li><!-- end ngRepeat: item in data.breadcrumb -->
+    <li class="nav__active" ng-hide="data.level === 't1'">
+      <a href="/static/businessindustryandtrade/changestobusiness" class="ng-binding">Changes to Business</a>
+    </li>
+  </ol>
+<!-- /Wrapper panel -->
+</div>
+</breadcrumb>
+</ons-breadcrumb>
+</div></ons-header>
+   
+  <!-- ngIf: data.level == 't2' --><span ng-if="data.level == 't2'" class="ng-scope">
+          <!-- ngInclude: 'templates/t2.html' --><span ng-include="'templates/t2.html'" class="ng-scope"><div ng-controller="T2Ctrl" class="ng-scope">
+      <div class="page-header slate ng-scope" ng-controller="ContentRevealCtrl">
+        <div class="wrapper">
+          <h1 class="page-header__title flush--half--bottom ng-binding">Changes to Business</h1>
+          <div class="content-reveal lede">
+            <p class="ng-binding">Producer Price Inflation (PPI) measures the price changes of goods bought and sold by UK manufacturers this month compared to the same month a year ago. PPI provides a key measure of inflation alongside other indicators such as the Consumer Prices Index (CPI) and Services Producer Price Index (SPPI).PPI is split into two components: output price inflation and input price inflation. The input price indices capture changes in the cost of the material and fuel inputs that producers face whereas the output price indices capture the changing prices of goods sold by producers.This article looks at the trends in both producer price indices since 2000 and which components contribute most towards changes in each price index in recent years.
+              <!-- ngIf: data.more --><a ng-if="data.more" href="" ng-click="toggleContent()" class="content-reveal__action ng-binding ng-scope">Show more</a><!-- end ngIf: data.more -->
+            </p>
+            <div ng-show="showContent" class="content-reveal__hidden ng-hide">
+              <p class="ng-binding">
+              Annual output and input price changes follow similar trends, but with the latter tending to have higher price growth1. In Figure 1, trends in producer price inflation can be split into three distinct periods: 2000 to 2005, 2005 to 2012 and 2012 to June 2014.  Both indices experience greater variability within the second period of 2005 to 2012 than compared with the first and third period. From 2005 to 2012 the average growth rate was 2.9% for output price inflation and 8.1% for input price inflation.  The largest peaks and troughs experienced for both indices throughout the time series shown below occurred in the second period of 2005 to 2012. Output price inflation rose to 8.9% in July 2008 while input price inflation rose to 34.8% in June 2008 and both fell to their lowest rates in July 2009: output price inflation falling by 1.6% and input price inflation falling by 14.8%.
+              </p> 
+            </div>
+          </div>
+         
+        </div>
+        <!-- /wrapper -->
+      </div>
+      <!-- /page-header -->
+
+    <div class="wrapper offset-top nav-panels">
+        <!-- ngRepeat: item in data.highlightedChildren track by $index --><div ng-repeat="item in data.highlightedChildren track by $index" class="grid-wrap ng-scope">
+          <!-- ngRepeat: section in item --><div ng-repeat="section in item" ng-show="section" class="grid-col tablet-wide-grid-one-half ng-scope">
+            <article class="nav-panel nav-panel--stats sectioned lifted border-defined">
+              <header class="nav-panel__header nav-panel__roomy">
+                <h2 class="ng-binding">Business Births, Deaths and Survival Rates</h2>
+              </header>
+              <section class="nav-panel__roomy">
+                <ul class="list--neutral">
+                <!-- Here it starts a line in the panel -->
+                  <!-- ngRepeat: child in (section.data.level === 't3' ? section.data.timeseries : section.data.children ) | limitTo:4 --><li ng-repeat="child in (section.data.level === 't3' ? section.data.timeseries : section.data.children ) | limitTo:4" class="nav-panel__item ng-scope">
+                    <dl>
+                      <dt class="nav-panel__title">
+                        <h3 class="nav-panel__heading">
+                          <a href="/static/businessindustryandtrade/changestobusiness/businessbirthsdeathsandsurvivalrates/" class="ng-binding">
+                        CPI Index
+                      </a>
+                          <span tabindex="0" title="" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin"></span>
+                        </h3>
+                      </dt>
+                      <dd class="nav-panel__value">
+                        <div class="stat stat--small">
+                          <div class="stat__figure ng-binding">
+                            126.7
+                            <span class="stat__figure__unit ng-binding"></span>
+                          </div>
+                          <div class="stat__description ng-binding">
+                            Aug 2014
+                          </div>
+                        </div>
+                      </dd>
+                    </dl>
+                  </li><!-- end ngRepeat: child in (section.data.level === 't3' ? section.data.timeseries : section.data.children ) | limitTo:4 --><li ng-repeat="child in (section.data.level === 't3' ? section.data.timeseries : section.data.children ) | limitTo:4" class="nav-panel__item ng-scope">
+                    <dl>
+                      <dt class="nav-panel__title">
+                        <h3 class="nav-panel__heading">
+                          <a href="/static/businessindustryandtrade/changestobusiness/businessbirthsdeathsandsurvivalrates/" class="ng-binding">
+                        CPIH Index
+                      </a>
+                          <span tabindex="0" title="" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin"></span>
+                        </h3>
+                      </dt>
+                      <dd class="nav-panel__value">
+                        <div class="stat stat--small">
+                          <div class="stat__figure ng-binding">
+                            124.7
+                            <span class="stat__figure__unit ng-binding">%</span>
+                          </div>
+                          <div class="stat__description ng-binding">
+                            Aug 2014
+                          </div>
+                        </div>
+                      </dd>
+                    </dl>
+                  </li><!-- end ngRepeat: child in (section.data.level === 't3' ? section.data.timeseries : section.data.children ) | limitTo:4 --><li ng-repeat="child in (section.data.level === 't3' ? section.data.timeseries : section.data.children ) | limitTo:4" class="nav-panel__item ng-scope">
+                    <dl>
+                      <dt class="nav-panel__title">
+                        <h3 class="nav-panel__heading">
+                          <a href="/static/businessindustryandtrade/changestobusiness/businessbirthsdeathsandsurvivalrates/" class="ng-binding">
+                        CPI Annual Rate Percentage Change over 12 Months
+                      </a>
+                          <span tabindex="0" title="" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin"></span>
+                        </h3>
+                      </dt>
+                      <dd class="nav-panel__value">
+                        <div class="stat stat--small">
+                          <div class="stat__figure ng-binding">
+                            1.5
+                            <span class="stat__figure__unit ng-binding">%</span>
+                          </div>
+                          <div class="stat__description ng-binding">
+                            Aug 2014
+                          </div>
+                        </div>
+                      </dd>
+                    </dl>
+                  </li><!-- end ngRepeat: child in (section.data.level === 't3' ? section.data.timeseries : section.data.children ) | limitTo:4 --><li ng-repeat="child in (section.data.level === 't3' ? section.data.timeseries : section.data.children ) | limitTo:4" class="nav-panel__item ng-scope">
+                    <dl>
+                      <dt class="nav-panel__title">
+                        <h3 class="nav-panel__heading">
+                          <a href="/static/businessindustryandtrade/changestobusiness/businessbirthsdeathsandsurvivalrates/" class="ng-binding">
+                        RPI Index
+                      </a>
+                          <span tabindex="0" title="" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin"></span>
+                        </h3>
+                      </dt>
+                      <dd class="nav-panel__value">
+                        <div class="stat stat--small">
+                          <div class="stat__figure ng-binding">
+                            252.6 
+                            <span class="stat__figure__unit ng-binding"></span>
+                          </div>
+                          <div class="stat__description ng-binding">
+                            Aug 2014
+                          </div>
+                        </div>
+                      </dd>
+                    </dl>
+                  </li><!-- end ngRepeat: child in (section.data.level === 't3' ? section.data.timeseries : section.data.children ) | limitTo:4 --> <!-- Here the line finishes -->
+                </ul>
+              </section>
+              <footer class="nav-panel__footer">
+                <div class="nav-panel__action ">
+                  <a class="nav-panel__roomy no_underline ng-binding" href="/static/businessindustryandtrade/changestobusiness/businessbirthsdeathsandsurvivalrates">View all Business Births, Deaths and Survival Rates</a>
+                </div>
+              </footer>
+            </article>
+            <!-- /nav-panel -->
+          </div><!-- end ngRepeat: section in item --><div ng-repeat="section in item" ng-show="section" class="grid-col tablet-wide-grid-one-half ng-scope">
+            <article class="nav-panel nav-panel--stats sectioned lifted border-defined">
+              <header class="nav-panel__header nav-panel__roomy">
+                <h2 class="ng-binding">Mergers and Acquisitions</h2>
+              </header>
+              <section class="nav-panel__roomy">
+                <ul class="list--neutral">
+                <!-- Here it starts a line in the panel -->
+                  <!-- ngRepeat: child in (section.data.level === 't3' ? section.data.timeseries : section.data.children ) | limitTo:4 --><li ng-repeat="child in (section.data.level === 't3' ? section.data.timeseries : section.data.children ) | limitTo:4" class="nav-panel__item ng-scope">
+                    <dl>
+                      <dt class="nav-panel__title">
+                        <h3 class="nav-panel__heading">
+                          <a href="/static/businessindustryandtrade/changestobusiness/mergersandacquisitions/" class="ng-binding">
+                        CPI Index
+                      </a>
+                          <span tabindex="0" title="" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin"></span>
+                        </h3>
+                      </dt>
+                      <dd class="nav-panel__value">
+                        <div class="stat stat--small">
+                          <div class="stat__figure ng-binding">
+                            126.7
+                            <span class="stat__figure__unit ng-binding"></span>
+                          </div>
+                          <div class="stat__description ng-binding">
+                            Aug 2014
+                          </div>
+                        </div>
+                      </dd>
+                    </dl>
+                  </li><!-- end ngRepeat: child in (section.data.level === 't3' ? section.data.timeseries : section.data.children ) | limitTo:4 --><li ng-repeat="child in (section.data.level === 't3' ? section.data.timeseries : section.data.children ) | limitTo:4" class="nav-panel__item ng-scope">
+                    <dl>
+                      <dt class="nav-panel__title">
+                        <h3 class="nav-panel__heading">
+                          <a href="/static/businessindustryandtrade/changestobusiness/mergersandacquisitions/" class="ng-binding">
+                        CPIH Index
+                      </a>
+                          <span tabindex="0" title="" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin"></span>
+                        </h3>
+                      </dt>
+                      <dd class="nav-panel__value">
+                        <div class="stat stat--small">
+                          <div class="stat__figure ng-binding">
+                            124.7
+                            <span class="stat__figure__unit ng-binding">%</span>
+                          </div>
+                          <div class="stat__description ng-binding">
+                            Aug 2014
+                          </div>
+                        </div>
+                      </dd>
+                    </dl>
+                  </li><!-- end ngRepeat: child in (section.data.level === 't3' ? section.data.timeseries : section.data.children ) | limitTo:4 --><li ng-repeat="child in (section.data.level === 't3' ? section.data.timeseries : section.data.children ) | limitTo:4" class="nav-panel__item ng-scope">
+                    <dl>
+                      <dt class="nav-panel__title">
+                        <h3 class="nav-panel__heading">
+                          <a href="/static/businessindustryandtrade/changestobusiness/mergersandacquisitions/" class="ng-binding">
+                        CPI Annual Rate Percentage Change over 12 Months
+                      </a>
+                          <span tabindex="0" title="" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin"></span>
+                        </h3>
+                      </dt>
+                      <dd class="nav-panel__value">
+                        <div class="stat stat--small">
+                          <div class="stat__figure ng-binding">
+                            1.5
+                            <span class="stat__figure__unit ng-binding">%</span>
+                          </div>
+                          <div class="stat__description ng-binding">
+                            Aug 2014
+                          </div>
+                        </div>
+                      </dd>
+                    </dl>
+                  </li><!-- end ngRepeat: child in (section.data.level === 't3' ? section.data.timeseries : section.data.children ) | limitTo:4 --><li ng-repeat="child in (section.data.level === 't3' ? section.data.timeseries : section.data.children ) | limitTo:4" class="nav-panel__item ng-scope">
+                    <dl>
+                      <dt class="nav-panel__title">
+                        <h3 class="nav-panel__heading">
+                          <a href="/static/businessindustryandtrade/changestobusiness/mergersandacquisitions/" class="ng-binding">
+                        RPI Index
+                      </a>
+                          <span tabindex="0" title="" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin"></span>
+                        </h3>
+                      </dt>
+                      <dd class="nav-panel__value">
+                        <div class="stat stat--small">
+                          <div class="stat__figure ng-binding">
+                            252.6 
+                            <span class="stat__figure__unit ng-binding"></span>
+                          </div>
+                          <div class="stat__description ng-binding">
+                            Aug 2014
+                          </div>
+                        </div>
+                      </dd>
+                    </dl>
+                  </li><!-- end ngRepeat: child in (section.data.level === 't3' ? section.data.timeseries : section.data.children ) | limitTo:4 --> <!-- Here the line finishes -->
+                </ul>
+              </section>
+              <footer class="nav-panel__footer">
+                <div class="nav-panel__action ">
+                  <a class="nav-panel__roomy no_underline ng-binding" href="/static/businessindustryandtrade/changestobusiness/mergersandacquisitions">View all Mergers and Acquisitions</a>
+                </div>
+              </footer>
+            </article>
+            <!-- /nav-panel -->
+          </div><!-- end ngRepeat: section in item -->
+          <!-- /grid-col -->
+           <div ng-show="$index === 1 &amp;&amp; data.children.length &gt; 3" class="grid-col tablet-wide-grid-one-half ng-hide">
+              <article class="nav-panel nav-panel--stats sectioned lifted border-defined">
+                <header class="nav-panel__header nav-panel__roomy">
+                  <h2 class="ng-binding">Other Changes to Business Categories</h2>
+                </header>
+                <!-- ngRepeat: other in data.children | slice:3 -->
+              </article>
+              <!-- /nav-panel -->
+            </div>
+          <!-- /grid-col -->
+        </div><!-- end ngRepeat: item in data.highlightedChildren track by $index -->
+        <!-- /grid-wrap -->
+      </div>
+      <!-- /wrapper -->
+
+      <latest-bulletins>      <!-- Latest statistical bulletin -->
+ <section class="panel--pad panel--bottom-mar slate wrapper flush--bottom">
+          <div class="grid-wrap">
+            <div class="grid-col desktop-grid-one-third tablet-grid-full">
+              <article class="box">
+                <h2 class="beta">Latest Statistical Bulletins</h2>
+                <a href="/staticcollection?loc=/home/businessindustryandtrade/changestobusiness" id="viewAllStatsBulletins" class="action-link hide-med-down">View all statistical bulletins</a>
+              </article>
+            </div>
+            <!-- /box -->
+            <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
+              <article class="box">
+                <header class="box__header">
+                  <h3>
+                    <a href="/#/bulletin">Consumer Price Inflation, August 2014</a>
+                  </h3>
+                </header>
+                <!-- /box__header -->
+                <div class="box__content">
+                  <p>
+                    The Consumer Price Inflation is a monthly release that contains percentage changes
+                    and weights for the CPI, CPIH, RPI and RPIJ.
+                  </p>
+                  <p class="description mini"></p>
+                  <p>
+                  <span class="lozenge">Statistical bulletin</span>
+                </p>
+                </div>
+                <!-- /box__content -->
+              </article>
+              <!-- /box -->
+            </div>
+            <!-- /grid-col -->
+            <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
+              <article class="box box--padded-vertical rem_pad_top">
+                <header class="box__header">
+                  <h3>
+                    <a href="#">House Price Index August 2014</a>
+                  </h3>
+                </header>
+                <!-- /box__header -->
+                <div class="box__content">
+                  <p>
+                    The ONS House Price Index (HPI) is a monthly release that publishes figures for
+                    mix-adjusted average house prices.
+                  </p>
+                  <p class="description mini"></p>
+                  <p>
+                  <span class="lozenge">Statistical bulletin</span>
+                </p>
+                </div>
+                <!-- /box__content -->
+              </article>
+              <!-- /box -->
+            </div>
+            <!-- /grid-col -->
+            <div class="grid-col hide-large">
+              <p class="box box--padded-top">
+                <a href="#" class="action-link hide-large">View all statistical bulletins</a>
+              </p>
+            </div>
+          </div>
+          <!-- /grid-wrap -->
+        <!-- /wrapper -->
+      </section></latest-bulletins>
+      <related-articles>    <!-- Other Articles -->
+      <section class="panel--large wrapper flush--top">
+        <div class="grid-wrap">
+          <div class="grid-col desktop-grid-one-third tablet-grid-full">
+            <article class="box">
+              <h2 class="beta">Related Articles</h2>
+              <a href="#" class="action-link hide-med-down">View more articles</a>
+            </article>
+          </div>
+          <!-- /box -->
+          <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
+            <article class="box">
+              <header class="box__header">
+                <h3>
+                  <a href="#">Retail Sales, August 2014</a>
+                </h3>
+              </header>
+              <!-- /box__header -->
+              <div class="box__content">
+                <p>
+                  A first estimate of retail sales in volume and value terms, seasonally and non-seasonally
+                  adjusted.
+                </p>
+                <p class="description mini"></p>
+                <p>
+                  <span class="lozenge">Article</span>
+                </p>
+
+              </div>
+              <!-- /box__content -->
+            </article>
+            <!-- /box -->
+          </div>
+          <!-- /grid-col -->
+          <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
+            <article class="box box--padded-vertical rem_pad_top">
+              <header class="box__header">
+                <h3>
+                  <a href="#">Economic Review, August 2014</a>
+                </h3>
+              </header>
+              <!-- /box__header -->
+              <div class="box__content">
+                <p>
+                  A comprehensive review on the UK economy, including the latest GDP estimate and
+                  other statistical outputs of ONS.
+                </p>
+                <p class="description mini"></p>
+                <p>
+                  <span class="lozenge">Expert analysis</span>
+                </p>
+
+              </div>
+              <!-- /box__content -->
+            </article>
+            <!-- /box -->
+          </div>
+          <!-- /grid-col -->
+          <div class="grid-col desktop-grid-one-third desktop-grid-push-one-third tablet-grid-one-half tablet-grid-clear">
+            <article class="box box--padded-vertical">
+              <header class="box__header">
+                <h3>
+                  <a href="#">Producer Price Inflation, August 2014</a>
+                </h3>
+              </header>
+              <!-- /box__header -->
+              <div class="box__content">
+                <p>
+                  This statistical bulletin contains producer price indices of materials and fuels
+                  purchased and output of manufacturing.
+                </p>
+                <p class="description mini"></p>
+                <p>
+                  <span class="lozenge">Article</span>
+                </p>
+
+              </div>
+              <!-- /box__content -->
+            </article>
+            <!-- /box -->
+          </div>
+          <!-- /grid-col -->
+          <div class="grid-col desktop-grid-one-third desktop-grid-push-one-third tablet-grid-one-half">
+            <article class="box box--padded-vertical">
+              <header class="box__header">
+                <h3>
+                  <a href="#">CPI Review, August 2014</a>
+                </h3>
+              </header>
+              <!-- /box__header -->
+              <div class="box__content">
+                <p>
+                  A comprehensive review on the UK economy, including the latest GDP estimate and
+                  other statistical outputs of ONS.
+                </p>
+                <p class="description mini"></p>
+                <p>
+                  <span class="lozenge">Expert analysis</span>
+                </p>
+
+              </div>
+              <!-- /box__content -->
+            </article>
+            <!-- /box -->
+          </div>
+          <!-- /grid-col -->
+        </div>
+        <!-- /grid-wrap -->
+        <div class="box box--padded-top hide-large">
+          <p>
+            <a href="#" class="action-link">View more articles</a>
+          </p>
+        </div>
+      </section>
+</related-articles>
+
+      <!-- Tabbed panel -->
+      <!-- ngInclude: 'templates/releasecalendarfooter.html' --><span ng-include="'templates/releasecalendarfooter.html'" class="ng-scope"><div class="wrapper panel--bottom-mar ng-scope" ng-controller="TabsCtrl">
+              <section class="panel wrapper">
+            <header class="actionable-header">
+          <h2 class="actionable-header__title">Release Calendar</h2>
+          <span class="actionable-header__action hide-med-down icon-inline">Get updates to this calendar</span>
+          <a class="actionable-header__action hide-med-down" href="#"><span class="icon-mail icon-inline">email</span></a>
+          <a class="actionable-header__action hide-med-down" href="#"><span class="icon-rss icon-inline">RSS</span></a>
+        </header>
+      <!-- <section class="panel--large wrapper">
+        <h2 class="">Release Calendar</h2>
+      </section> -->
+        <div class="next-releases tab-pane tab-pane--dual lifted">
+          <ul role="tablist" class="nav tab-pane__tabs-container">
+             <li role="presentation" class="tab-pane__tab-container"><a href="" ng-click="selectTab(1)" class="tab-pane__tab tab-pane__tab--selected" role="tab" tabindex="0" aria-controls="published" aria-selected="true">Published <br class="tab-pane__tab__break">Releases</a>
+            </li>
+            <li role="presentation" class="tab-pane__tab-container"><a href="" ng-click="selectTab(2)" class="tab-pane__tab " role="tab" tabindex="-1" aria-controls="upcoming">Upcoming <br class="tab-pane__tab__break">Releases</a>
+            </li>
+          </ul>
+          <section ng-show="isSelected(1)" id="published" role="tabpanel" class="tab-pane__panel" aria-hidden="true">
+            <ol class="list--table list--table--cushy table--striped-light list--table--releases">
+              <li class="list--table__item list--table__body">
+                <div class="list--table__item__body list--table__item__body--date">
+                  <div class="list--table__item__body__inner">
+                    <time class="date date--stacked" datetime="2014-08-25">
+                      <div class="date--stacked__date">25</div>
+                      <div class="date--stacked__month date--stacked__month--shorthand">Aug</div>
+                      <div class="date--stacked__year">2014</div>
+                    </time>
+                  </div>
+                </div>
+                <div class="list--table__item__body list--table__item__body--release-caption">
+                  <div class="list--table__item__body__inner list--table__item__body__split">
+                    <!-- <div class="list--table__item__body__three-fifths"> -->
+                    <div class="list--table__item">
+                      <h2 class="delta flush--half--bottom">
+                        <a href="#" class="no_underline">Retail Sales - August 2014</a>
+                        <!-- <span tabindex="0" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin tooltipstered"></span> -->
+                      </h2>
+                    </div>
+                    <!-- <div class="list--table__item__body__two-fifths">
+                      <dl class="definition-list flush micro">
+                        <dt></dt>
+                        <dd>Inflation and Price Indices</dd>
+                      </dl>
+                    </div> -->
+                  </div>
+                </div>
+              </li>
+              <li class="list--table__item list--table__body">
+                <div class="list--table__item__body list--table__item__body--date">
+                  <div class="list--table__item__body__inner">
+                    <time class="date date--stacked" datetime="2014-08-25">
+                      <div class="date--stacked__date">25</div>
+                      <div class="date--stacked__month date--stacked__month--shorthand">Aug</div>
+                      <div class="date--stacked__year">2014</div>
+                    </time>
+                  </div>
+                </div>
+                <div class="list--table__item__body list--table__item__body--release-caption">
+                  <div class="list--table__item__body__inner list--table__item__body__split">
+                    <!-- <div class="list--table__item__body__three-fifths"> -->
+                    <div class="list--table__item">
+                      <h2 class="delta flush--half--bottom">
+                        <a href="#" class="no_underline">Index of Private Housing Rental Prices - January to August 2014 results</a>
+                        <!-- <span tabindex="0" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin tooltipstered"></span> -->
+                      </h2>
+                    </div>
+                    <!-- <div class="list--table__item__body__two-fifths">
+                      <dl class="definition-list flush micro">
+                        <dt></dt>
+                        <dd>Inflation and Price Indices</dd>
+                      </dl>
+                    </div> -->
+                  </div>
+                </div>
+              </li>
+              <li class="list--table__item list--table__body">
+                <div class="list--table__item__body list--table__item__body--date">
+                  <div class="list--table__item__body__inner">
+                    <time class="date date--stacked" datetime="2014-08-29">
+                      <div class="date--stacked__date">29</div>
+                      <div class="date--stacked__month date--stacked__month--shorthand">Aug</div>
+                      <div class="date--stacked__year">2014</div>
+                    </time>
+                  </div>
+                </div>
+                <div class="list--table__item__body list--table__item__body--release-caption">
+                  <div class="list--table__item__body__inner list--table__item__body__split">
+                    <!-- <div class="list--table__item__body__three-fifths"> -->
+                    <div class="list--table__item">
+                      <h2 class="delta flush--half--bottom">
+                        <a href="#" class="no_underline">Index of Services - August 2014</a>
+                        <!-- <span tabindex="0" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin tooltipstered"></span> -->
+                      </h2>
+                    </div>
+                    <!-- <div class="list--table__item__body__two-fifths">
+                      <dl class="definition-list flush micro">
+                        <dt></dt>
+                        <dd>Inflation and Price Indices</dd>
+                      </dl>
+                    </div> -->
+                  </div>
+                </div>
+              </li>
+              <li class="list--table__item list--table__body">
+                <div class="list--table__item__body list--table__item__body--date">
+                  <div class="list--table__item__body__inner">
+                    <time class="date date--stacked" datetime="2014-08-30">
+                      <div class="date--stacked__date">30</div>
+                      <div class="date--stacked__month date--stacked__month--shorthand">Aug</div>
+                      <div class="date--stacked__year">2014</div>
+                    </time>
+                  </div>
+                </div>
+                <div class="list--table__item__body list--table__item__body--release-caption">
+                  <div class="list--table__item__body__inner list--table__item__body__split">
+                    <!-- <div class="list--table__item__body__three-fifths"> -->
+                    <div class="list--table__item">
+                      <h2 class="delta flush--half--bottom">
+                        <a href="#" class="no_underline">Gross Domestic Product: Preliminary Estimate - Q2 2014</a>
+                        <!-- <span tabindex="0" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin tooltipstered"></span> -->
+                      </h2>
+                    </div>
+                    <!-- <div class="list--table__item__body__two-fifths">
+                      <dl class="definition-list flush micro">
+                        <dt></dt>
+                        <dd>Inflation and Price Indices</dd>
+                      </dl>
+                    </div> -->
+                  </div>
+                </div>
+              </li>
+              <li class="list--table__item list--table__body">
+                <div class="list--table__item__body list--table__item__body--date">
+                  <div class="list--table__item__body__inner">
+                    <time class="date date--stacked" datetime="2014-08-30">
+                      <div class="date--stacked__date">30</div>
+                      <div class="date--stacked__month date--stacked__month--shorthand">Aug</div>
+                      <div class="date--stacked__year">2014</div>
+                    </time>
+                  </div>
+                </div>
+                <div class="list--table__item__body list--table__item__body--release-caption">
+                  <div class="list--table__item__body__inner list--table__item__body__split">
+                    <!-- <div class="list--table__item__body__three-fifths"> -->
+                    <div class="list--table__item">
+                      <h2 class="delta flush--half--bottom">
+                        <a href="#" class="no_underline">GDP and the Labour Market - Q2 2014, August GDP update</a>
+                        <!-- <span tabindex="0" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin tooltipstered"></span> -->
+                      </h2>
+                    </div>
+                    <!-- <div class="list--table__item__body__two-fifths">
+                      <dl class="definition-list flush micro">
+                        <dt></dt>
+                        <dd>Inflation and Price Indices</dd>
+                      </dl>
+                    </div> -->
+                  </div>
+                </div>
+              </li>
+              <li class="list--table__item list--table__body">
+                <div class="list--table__item__body list--table__item__body--date">
+                  <div class="list--table__item__body__inner">
+                    <time class="date date--stacked" datetime="2014-08-30">
+                      <div class="date--stacked__date">30</div>
+                      <div class="date--stacked__month date--stacked__month--shorthand">Aug</div>
+                      <div class="date--stacked__year">2014</div>
+                    </time>
+                  </div>
+                </div>
+                <div class="list--table__item__body list--table__item__body--release-caption">
+                  <div class="list--table__item__body__inner list--table__item__body__split">
+                    <!-- <div class="list--table__item__body__three-fifths"> -->
+                    <div class="list--table__item">
+                      <h2 class="delta flush--half--bottom">
+                        <a href="#" class="no_underline">National Accounts Sector Classification - Classification update, August 2014</a>
+                        <!-- <span tabindex="0" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin tooltipstered"></span> -->
+                      </h2>
+                    </div>
+                    <!-- <div class="list--table__item__body__two-fifths">
+                      <dl class="definition-list flush micro">
+                        <dt></dt>
+                        <dd>Inflation and Price Indices</dd>
+                      </dl>
+                    </div> -->
+                  </div>
+                </div>
+              </li>
+              <li class="list--table__item list--table__body">
+                <div class="list--table__item__body list--table__item__body--date">
+                  <div class="list--table__item__body__inner">
+                    <time class="date date--stacked" datetime="2014-09-19">
+                      <div class="date--stacked__date">19</div>
+                      <div class="date--stacked__month date--stacked__month--shorthand">Sept</div>
+                      <div class="date--stacked__year">2014</div>
+                    </time>
+                  </div>
+                </div>
+                <div class="list--table__item__body list--table__item__body--release-caption">
+                  <div class="list--table__item__body__inner list--table__item__body__split">
+                    <!-- <div class="list--table__item__body__three-fifths"> -->
+                    <div class="list--table__item">
+                      <h2 class="delta flush--half--bottom">
+                        <a href="/staticrelease" class="no_underline">Producer Price Inflation - August 2014</a>
+                        <!-- <span tabindex="0" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin tooltipstered"></span> -->
+                      </h2>
+                    </div>
+                    <!-- <div class="list--table__item__body__two-fifths">
+                      <dl class="definition-list flush micro">
+                        <dt></dt>
+                        <dd>Inflation and Price Indices</dd>
+                      </dl>
+                    </div> -->
+                  </div>
+                </div>
+              </li>          
+            </ol>
+            <div class="list--table__item list--table__footer list--table--footer--releases">
+              <div class="list--table__item__body">
+                <a href="#" class="link-muted">View all published releases</a>
+              </div>
+            </div>
+          </section>
+          <section ng-show="isSelected(2)" id="upcoming" role="tabpanel" class="tab-pane__panel ng-hide">
+            <ol class="list--table list--table--cushy table--striped-light list--table--releases">
+              <li class="list--table__item list--table__body">
+                <div class="list--table__item__body list--table__item__body--date">
+                  <div class="list--table__item__body__inner">
+                    <time class="date date--stacked" datetime="2014-11-29">
+                      <div class="date--stacked__date">5</div>
+                      <div class="date--stacked__month date--stacked__month--shorthand">Nov</div>
+                      <div class="date--stacked__year">2014</div>
+                    </time>
+                  </div>
+                </div>
+                <div class="list--table__item__body list--table__item__body--release-caption">
+                  <div class="list--table__item__body__inner list--table__item__body__split">
+                    <!-- <div class="list--table__item__body__three-fifths"> -->
+                    <div class="list--table__item">
+                      <h2 class="delta flush--half--bottom">
+                        <a href="#" class="no_underline">National Accounts Sector Classification - Classification update, November 2014</a>
+                        <!-- <span tabindex="0" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin tooltipstered"></span> -->
+                      </h2>
+                    </div>
+                    <!-- <div class="list--table__item__body__two-fifths">
+                      <dl class="definition-list flush micro">
+                        <dt></dt>
+                        <dd>Inflation and Price Indices</dd>
+                      </dl>
+                    </div> -->
+                  </div>
+                </div>
+              </li>
+              <li class="list--table__item list--table__body">
+                <div class="list--table__item__body list--table__item__body--date">
+                  <div class="list--table__item__body__inner">
+                    <time class="date date--stacked" datetime="2014-11-29">
+                      <div class="date--stacked__date">27</div>
+                      <div class="date--stacked__month date--stacked__month--shorthand">Nov</div>
+                      <div class="date--stacked__year">2014</div>
+                    </time>
+                  </div>
+                </div>
+                <div class="list--table__item__body list--table__item__body--release-caption">
+                  <div class="list--table__item__body__inner list--table__item__body__split">
+                    <!-- <div class="list--table__item__body__three-fifths"> -->
+                    <div class="list--table__item">
+                      <h2 class="delta flush--half--bottom">
+                        <a href="#" class="no_underline">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita ullam, possimus ratione optio dolores. </a>
+                        <!-- <span tabindex="0" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin tooltipstered"></span> -->
+                      </h2>
+                    </div>
+                    <!-- <div class="list--table__item__body__two-fifths">
+                      <dl class="definition-list flush micro">
+                        <dt></dt>
+                        <dd>Inflation and Price Indices</dd>
+                      </dl>
+                    </div> -->
+                  </div>
+                </div>
+              </li>
+            </ol>
+            <div class="list--table__item list--table__footer list--table--footer--releases">
+              <div class="list--table__item__body">
+                <a href="#" class="link-muted">View all upcoming releases</a>
+              </div>
+            </div>
+            </section>
+            </div>
+            </section>
+    <div class="box hide-large hide-large">
+        <span>Get updates to this calendar</span>
+        <a href="#"><span class="action-link icon-mail icon-inline">email</span></a>
+        <a href="#"><span class="action-link icon-rss icon-inline">RSS</span></a>
+    </div>
+</div> 
+
+
+</span>
+    
+      </div>
+
+    <!-- build:js /ui/js/ons-alpha.js-->
+    
+    <!-- endbuild -->
+</span>        
+  </span><!-- end ngIf: data.level == 't2' -->
+  <!-- ngIf: data.level == 't1' -->
+  <!-- ngIf: data.level == 't3' -->
+ 
+
+<ons-footer class="ng-scope">
+<footer class="global-footer">
+  <div class="slate panel--pad-large panel--separated">
+    <div class="wrapper">
+      <nav class="grid-wrap">
+        <div class="grid-col tablet-grid-one-third">
+          <h2 class="delta headline-separated">Legal</h2>
+          <ul class="list--neutral list--grid list--spaced">
+            <li>
+              <a href="#">Business Transparency</a>
+            </li>
+            <li>
+              <a href="#">Terms and Conditions</a>
+            </li>
+            <li>
+              <a href="#">Copyright</a>
+            </li>
+            <li>
+              <a href="#">Cookies and Privacy</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="grid-col tablet-grid-one-third">
+          <h2 class="delta headline-separated">About ONS</h2>
+          <ul class="list--neutral list--grid list--spaced">
+            <li>
+              <a href="#">Who we are</a>
+            </li>
+            <li>
+              <a href="#">Careers</a>
+            </li>
+            <li>
+              <a href="#">Products and Services</a>
+            </li>
+            <li>
+              <a href="#">Contact us</a>
+            </li>
+            <li>
+              <a href="#">Our offices</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="grid-col tablet-grid-one-third">
+          <h2 class="delta headline-separated">Connect with us</h2>
+          <ul class="list--neutral list--grid list--spaced">
+            <li>
+              <a href="#">Twitter</a>
+            </li>
+            <li>
+              <a href="#">Facebook</a>
+            </li>
+            <li>
+              <a href="#">LinkedIn</a>
+            </li>
+            
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- /wrapper -->
+  </div>
+  <!-- /slate -->
+  <div class="slate--dark">
+    <div class="wrapper">
+      <div class="footer__license">
+        <img class="footer__license__img" alt="OGLlogo" width="60" src="/ui/img/ogl.png">
+        <p class="footer__license__body">
+          All content is available under the Open Government Licence v2.0, except where otherwise stated
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+</ons-footer>
+</body></html>
