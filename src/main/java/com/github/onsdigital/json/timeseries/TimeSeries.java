@@ -1,7 +1,11 @@
 package com.github.onsdigital.json.timeseries;
 
+import com.github.onsdigital.json.ContentType;
+
 public class TimeSeries {
 
+	// identifies what content type this is
+	public String type = ContentType.TIMESERIES.name();
 	// Spreadsheet headings
 	public String cdid = "aaaa";
 	public String name = "People not in Work";
