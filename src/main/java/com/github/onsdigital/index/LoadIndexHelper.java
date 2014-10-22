@@ -63,7 +63,6 @@ public class LoadIndexHelper {
 
 		JsonObject jsonObject = getJsonObject(absoluteFilePath);
 		String type = getField(jsonObject, "type");
-		System.out.println("JSON TYPE: " + type);
 		String fileName = splitPath[fileNameTokenIndex];
 
 		Map<String, String> documentMap = null;
@@ -73,18 +72,14 @@ public class LoadIndexHelper {
 		switch (contentType) {
 		case TIMESERIES:
 			String cdid = getField(jsonObject, "cdid");
-			// Exclude data.json from url
 			documentMap = buildDocumentMap(splitUrl, splitPath, type, cdid);
 			break;
 		case BULLETIN:
 			String bulletinTitle = getField(jsonObject, "title");
-			// Exclude data.json from url
 			documentMap = buildDocumentMap(splitUrl, splitPath, type, bulletinTitle);
 			break;
 		default:
-			// Read title from data.json
 			String homeTitle = getField(jsonObject, "title");
-			// Exclude data.json from url
 			documentMap = buildDocumentMap(splitUrl, splitPath, ContentType.HOME.name(), homeTitle);
 			break;
 		}
@@ -107,7 +102,6 @@ public class LoadIndexHelper {
 		try {
 			jsonObject = new JsonParser().parse(FileUtils.readFileToString(new File(absoluteFilePath))).getAsJsonObject();
 		} catch (JsonSyntaxException | IOException e) {
-			System.out.println("Failed to parse json: " + absoluteFilePath);
 			throw new RuntimeException("Failed to parse json: " + absoluteFilePath, e);
 		}
 		return jsonObject;
@@ -117,7 +111,6 @@ public class LoadIndexHelper {
 		if (StringUtils.isEmpty(field)) {
 			throw new IllegalArgumentException("Field cannot be null");
 		}
-		System.out.println("Field: " + field);
 
 		JsonElement jsonElement = jsonObject.get(field);
 		if (jsonElement == null) {
