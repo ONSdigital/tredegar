@@ -28,7 +28,7 @@ rm -rf src/main/taxonomy && \
 java -cp "target/classes:target/dependency/*" com.github.onsdigital.generator.Csv
 
 # Now build the JAR:
-#mvn clean package && \
+mvn process-resources && \
 
 # Development: reloadable
 java $JAVA_OPTS -Drestolino.username=$USERNAME -Drestolino.password=$PASSWORD -Drestolino.realm=$REALM -Drestolino.files=$RESTOLINO_STATIC -Drestolino.classes=$RESTOLINO_CLASSES -Drestolino.packageprefix=$PACKAGE_PREFIX -cp "target/dependency/*" com.github.davidcarboni.restolino.Main
