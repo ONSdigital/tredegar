@@ -19,7 +19,7 @@ import com.github.davidcarboni.restolino.framework.Endpoint;
 import com.github.davidcarboni.restolino.json.Serialiser;
 import com.github.onsdigital.configuration.Configuration;
 import com.github.onsdigital.json.Data;
-import com.github.onsdigital.json.TaxonomyNode;
+import com.github.onsdigital.json.TaxonomyFolder;
 
 @Endpoint
 public class Home {
@@ -63,7 +63,7 @@ public class Home {
 	 * Accesses the data.json file for this node.
 	 * 
 	 * @param path
-	 * @return A {@link TaxonomyNode} representation.
+	 * @return A {@link TaxonomyFolder} representation.
 	 * @throws IOException
 	 */
 	private Data getNodeData(String path) throws IOException {

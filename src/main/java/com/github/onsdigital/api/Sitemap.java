@@ -38,7 +38,7 @@ import com.github.davidcarboni.restolino.json.Serialiser;
 import com.github.onsdigital.configuration.Configuration;
 import com.github.onsdigital.json.ContentType;
 import com.github.onsdigital.json.Data;
-import com.github.onsdigital.json.TaxonomyNode;
+import com.github.onsdigital.json.TaxonomyFolder;
 
 /**
  * Sitemap endpoint that reflects the taxonomy structure:
@@ -140,7 +140,7 @@ public class Sitemap {
 	private int addPath(Path path, Document document, Element rootElement, double priority, URL requestUrl) throws IOException {
 		int result = 0;
 		Data data = getDataJson(path);
-		if (data != null && !StringUtils.equals(data.type, ContentType.TIMESERIES.name())) {
+		if (data != null && !StringUtils.equals(data.type, ContentType.TIMESERIES.toString())) {
 			try {
 				URI uri = toUri(data, requestUrl);
 				addUrl(uri, document, rootElement, priority);
@@ -152,7 +152,7 @@ public class Sitemap {
 			}
 		} else if (data == null) {
 			System.out.println("Skipping non-data folder " + path);
-		} 
+		}
 		// else if (StringUtils.equals(data.type,
 		// ContentType.TIMESERIES.name())) {
 		// System.out.println("Skipping timeseries " + path);
@@ -178,7 +178,7 @@ public class Sitemap {
 	private URI toUri(Data data, URL requestUrl) throws URISyntaxException {
 		StringBuilder fragment = new StringBuilder("!/home");
 		if (data != null && data.breadcrumb != null) {
-			for (TaxonomyNode segment : data.breadcrumb) {
+			for (TaxonomyFolder segment : data.breadcrumb) {
 				fragment.append("/" + segment.fileName);
 			}
 		}

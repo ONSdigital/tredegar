@@ -17,7 +17,7 @@ import org.w3c.dom.DOMException;
 import com.github.davidcarboni.restolino.json.Serialiser;
 import com.github.onsdigital.configuration.Configuration;
 import com.github.onsdigital.json.Data;
-import com.github.onsdigital.json.TaxonomyNode;
+import com.github.onsdigital.json.TaxonomyFolder;
 import com.google.gson.JsonSyntaxException;
 
 public class NavigationUtil {
@@ -115,7 +115,7 @@ public class NavigationUtil {
 			this.fileName = data.fileName;
 			this.index = data.index;
 			url = "";
-			for (TaxonomyNode node : data.breadcrumb) {
+			for (TaxonomyFolder node : data.breadcrumb) {
 				url += "/" + node.fileName;
 			}
 			url += "/" + data.fileName;
