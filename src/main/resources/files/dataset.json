@@ -1,0 +1,48 @@
+{
+    "title": "Population Estimates Summary for the UK Dataset",
+    "releaseDate": "11 February 2014",
+    "nextRelease": "29 November 2014",
+    "contact": {
+        "name": "Jukesie",
+        "email": "jukesie@hotmail.com"
+    },
+    "lede": "Mid-year estimates refer to the population on 30 June of the reference year and are published annually. Mid-year population estimates relate to the usually resident population. They account for long-term international migrants (people who change their country of usual residence for a period of 12 months or more) but do not account for short term.",
+    "download": [{
+            "title": "All",
+            "xls": "#",
+            "csv": "#"
+        },
+        {
+            "title": "Mid-2013",
+            "xls": "#",
+            "csv": "#"
+        },  {
+            "title": "Mid-2012",
+            "xls": "#",
+            "csv": "#"
+        }, {
+            "title": "Mid-2011",
+            "xls": "#",
+            "csv": "#"
+        }, {
+            "title": "Mid-2010",
+            "xls": "#",
+            "csv": "#"
+        }, {
+            "title": "Mid-2009",
+            "xls": "#",
+            "csv": "#"
+        }],
+        "notes": [{
+            "data": "These estimates are rounded to the nearest hundred and are different to the unrounded estimates in other published tables."
+        },
+        {
+            "data": "The estimates are produeced using a variety of data sources and statistical models, including some statistical disclosure control methods, and small estimates should not be taken to refer to particular individuals."
+        },
+        {
+            "data": "The estimated resident population of an area includes all those people who usually live there, regardless of nationality. Arriving international migrants are included in the usually resident population if they remain in the UK for at least a year. Emigrants are excluded if they remain outside the UK for at least a year. This is consistent with the United Nations definition of a long-term migrant. Armed forces stationed outside of the UK are excluded. Students are taken to be usually resident at thir term time address."
+        },
+        {
+            "data": "Note that age 90 comprises data for ages 90 and above."
+        }]
+}
