@@ -1,4 +1,4 @@
-<div ng-controller="DatasetCtrl">
+<div ng-controller="Dataset_TimeseriesCtrl">
 <div ng-controller="DatasetContentCtrl">
 
 
@@ -43,7 +43,6 @@
 
             <tbody>
                 <tr ng-repeat="row in dataset.download">
-                    <td data-th="Download Category">{{row.title}}</td>
                     <td><a href="{{row.xls}}" class="btn btn--primary btn--small"><span class="table__action__text">Download as .XLS</span><span class="icon-download" role="presentation"></span></a></td>
                     <td><a href="{{row.csv}}" class="btn btn--primary btn--small"><span class="table__action__text">Download as .CSV</span><span class="icon-download" role="presentation"></span></a>
                     </td>
@@ -64,13 +63,12 @@
           <li ng-repeat="row in dataset.notes">{{row.data}}</li>
       </ol>
   </div>
+  </div>
+        <div ng-if="sidebar" >
+            <div ng-include="sidebarUrl" ></div>
+        </div>
 
-        
 
-
-</div>
-  <div ng-if="sidebar" >
-  <div ng-include="sidebarUrl" ></div>
 </div>
 </div>
 </div>
@@ -78,5 +76,4 @@
 
 <ons-footer></ons-footer>
 
-</div>
 </div>

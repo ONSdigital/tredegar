@@ -53,6 +53,10 @@ onsApp.config(['$routeProvider','$locationProvider',
             templateUrl: 'templates/Dataset_Excelcrosssection.html',
             controller: "DatasetCtrl"
         }).
+        when('/dataset_timeseries', {
+            templateUrl: 'templates/Dataset_Excel_Time_Series.html',
+            controller: "DatasetCtrl"
+        }).
         otherwise({
             templateUrl: 'templates/template.html',
             controller: 'TemplateCtrl'
