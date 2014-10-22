@@ -47,6 +47,14 @@ onsApp.config(['$routeProvider','$locationProvider',
             templateUrl: 'templates/collection.html',
             controller: "CollectionCtrl"
         }).
+        when('/contactus', {
+            templateUrl: 'templates/contactus.html',
+            controller: "ContactUsCtrl"
+        }).
+        when('/dataset', {
+            templateUrl: 'templates/Dataset_Excelcrosssection.html',
+            controller: "DatasetCtrl"
+        }).
         otherwise({
             templateUrl: 'templates/template.html',
             controller: 'TemplateCtrl'
