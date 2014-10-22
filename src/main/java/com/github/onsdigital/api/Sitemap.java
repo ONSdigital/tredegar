@@ -63,10 +63,12 @@ public class Sitemap {
 		// Iterate the taxonomy structure:
 		Path taxonomyPath = getHomePath();
 		// System.out.println("Searching " + taxonomyPath);
-		addPath(taxonomyPath, document, rootElement, 1, requestUrl);
-		iterate(taxonomyPath, 0.8, document, rootElement, requestUrl);
+		int total = 0;
+		total += addPath(taxonomyPath, document, rootElement, 1, requestUrl);
+		total += iterate(taxonomyPath, 0.8, document, rootElement, requestUrl);
 
 		// Output the result:
+		System.out.println("Found " + total + " URLs for the sitemap.");
 		writeResponse(document, response);
 	}
 
@@ -100,7 +102,8 @@ public class Sitemap {
 		return rootElement;
 	}
 
-	private static void iterate(Path taxonomyPath, double priority, Document document, Element rootElement, URL requestUrl) throws IOException {
+	private static int iterate(Path taxonomyPath, double priority, Document document, Element rootElement, URL requestUrl) throws IOException {
+		int result = 0;
 
 		List<Path> subdirectories = new ArrayList<Path>();
 
@@ -109,8 +112,8 @@ public class Sitemap {
 			for (Path path : stream) {
 
 				// Iterate over the paths:
-				if (Files.isDirectory(path)) {
-					addPath(path, document, rootElement, priority, requestUrl);
+				if (Files.isDirectory(path) && Files.exists(path.resolve("data.json"))) {
+					result += addPath(path, document, rootElement, priority, requestUrl);
 					subdirectories.add(path);
 				}
 			}
@@ -121,22 +124,27 @@ public class Sitemap {
 
 		// Step into subfolders:
 		for (Path subdirectory : subdirectories) {
-			iterate(subdirectory, priority * .8, document, rootElement, requestUrl);
+			result += iterate(subdirectory, priority * .8, document, rootElement, requestUrl);
 		}
+
+		return result;
 	}
 
-	private static void addPath(Path path, Document document, Element rootElement, double priority, URL requestUrl) throws IOException {
+	private static int addPath(Path path, Document document, Element rootElement, double priority, URL requestUrl) throws IOException {
+		int result = 0;
 		Data data = getDataJson(path);
 		if (data != null) {
 			try {
 				URI uri = toUri(data, requestUrl);
 				addUrl(uri, document, rootElement, priority);
+				result++;
 				// System.out.println(path + " : " + uri + " (" + priority +
 				// ")");
 			} catch (URISyntaxException | DOMException | MalformedURLException e) {
 				throw new IOException("Error iterating taxonomy", e);
 			}
 		}
+		return result;
 	}
 
 	private static Data getDataJson(Path path) throws IOException {
@@ -188,6 +196,8 @@ public class Sitemap {
 		Element priority = document.createElement("priority");
 		url.appendChild(priority);
 		priority.setTextContent(String.format("%.2f", priorityValue));
+
+		System.out.println(uri.toURL().toExternalForm());
 	}
 
 	private static void writeResponse(Document document, HttpServletResponse response) throws IOException {
