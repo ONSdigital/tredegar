@@ -3,11 +3,14 @@ package com.github.onsdigital.json.bulletin;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.github.onsdigital.json.ContentType;
 import com.github.onsdigital.json.Email;
 import com.github.onsdigital.json.Section;
 
 public class Bulletin {
 
+	// identifies what content type this is
+	public String type = ContentType.BULLETIN.name();
 	// Top section
 	public String title = "Cat Tail Inflation, October 2014";
 	public String releaseDate = "19 February 2014";
