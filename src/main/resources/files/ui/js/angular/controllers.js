@@ -149,6 +149,27 @@ onsControllers.controller('ArticleCtrl', ['$scope',
   }
 ])
 
+//Dataset Controller
+onsControllers.controller('DatasetCtrl', ['$scope',
+  function($scope) {
+    $scope.header = "Dataset"
+    $scope.contentType = "dataset"
+    $scope.sidebar = true
+    $scope.sidebarUrl = "templates/datasetsidebar.html"
+  }
+])
+
+//Dataset Timeseries Controller
+onsControllers.controller('Dataset_TimeseriesCtrl', ['$scope',
+  function($scope) {
+    $scope.header = "Dataset"
+    $scope.contentType = "dataset"
+    $scope.sidebar = true
+    $scope.sidebarUrl = "templates/datasetsidebar_timeseries.html"
+  }
+])
+
+
 //Methodology Controller
 onsControllers.controller('MethodologyCtrl', ['$scope',
   function($scope) {
@@ -184,6 +205,17 @@ onsControllers.controller('BulletinCtrl', ['$scope',
   }
 ])
 
+
+//Contact Us Controller
+onsControllers.controller('ContactUsCtrl', ['$scope',
+  function($scope) {
+    $scope.data = {
+      breadcrumb: [],
+        name: "Contact Us",
+        fileName: "contactus"
+      }
+  }
+])
 
 //Collection Controller
 onsControllers.controller('CollectionCtrl', ['$scope',
@@ -481,6 +513,13 @@ onsControllers.controller('ContentCtrl', ['$scope', '$location',
   }
 ]);
 
+onsControllers.controller('DatasetContentCtrl', ['$scope', '$location',
+  function($scope, $location) {
+    $scope.getData("/" + $scope.getPage() + ".json", function(data) {
+      $scope.dataset = data;
+    })
+  }
+]);
 
 
 onsControllers.controller('NavCtrl', ['$scope',

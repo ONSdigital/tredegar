@@ -267,8 +267,8 @@ public class Csv {
 		for (String cdid : TimeseriesMetadata.timeseries.keySet()) {
 			String json = Serialiser.serialise(TimeseriesMetadata.timeseries
 					.get(cdid));
-			FileUtils.writeStringToFile(new File(timeseriesFolder, cdid
-					+ ".json"), json);
+			File cdidFolder = new File(timeseriesFolder, cdid);
+			FileUtils.writeStringToFile(new File(cdidFolder, "data.json"), json);
 		}
 	}
 
@@ -281,11 +281,6 @@ public class Csv {
 		bulletin.title = folder.name;
 		String json = Serialiser.serialise(bulletin);
 		FileUtils.writeStringToFile(new File(bulletins, "bulletin.json"), json);
-
-		String name = folder.filename();
-		if (name.contains("inflationandpriceindices")) {
-			createHistory(folder.filename(), file);
-		}
 	}
 
 	private static void createCollection(Folder folder, File file)

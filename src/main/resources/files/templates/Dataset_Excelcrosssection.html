@@ -1,4 +1,5 @@
 <div ng-controller="DatasetCtrl">
+<div ng-controller="DatasetContentCtrl">
 
 
 <ons-header></ons-header>
@@ -64,11 +65,12 @@
       </ol>
   </div>
 
-        <div ng-if="sidebar" >
-            <div ng-include="sidebarUrl" ></div>
-        </div>
+        
 
 
+</div>
+  <div ng-if="sidebar" >
+  <div ng-include="sidebarUrl" ></div>
 </div>
 </div>
 </div>
@@ -76,4 +78,5 @@
 
 <ons-footer></ons-footer>
 
+</div>
 </div>
