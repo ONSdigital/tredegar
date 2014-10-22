@@ -1,7 +1,5 @@
 {
-  "type": "TIMESERIES",
   "cdid": "D7KU",
-  "name": "CPI: Monthly Rate 01.1.4 : Milk, Cheese and Eggs 2005\u003d100",
   "seasonalAdjustment": "Not seasonally adjusted",
   "units": "Index 2005 \u003d 100",
   "mainMeasure": "Consumer Prices Index",
@@ -13,5 +11,8 @@
   "date": "January 2014",
   "lastUpated": "16 Sep 2014",
   "nextUpdate": "14 Oct 2014",
-  "note": "2005 \u003d 100. Not seasonally adjusted"
+  "note": "2005 \u003d 100. Not seasonally adjusted",
+  "type": "TIMESERIES",
+  "name": "CPI: Monthly Rate 01.1.4 : Milk, Cheese and Eggs 2005\u003d100",
+  "fileName": "aaaa"
 }

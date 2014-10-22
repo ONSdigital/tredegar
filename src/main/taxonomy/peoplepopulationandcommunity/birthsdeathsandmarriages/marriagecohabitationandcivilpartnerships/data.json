@@ -14,14 +14,16 @@
   "level": "t3",
   "breadcrumb": [
     {
+      "index": 0,
+      "type": "HOME",
       "name": "People, Population and Community",
-      "fileName": "peoplepopulationandcommunity",
-      "index": 0
+      "fileName": "peoplepopulationandcommunity"
     },
     {
+      "index": 0,
+      "type": "HOME",
       "name": "Births, Deaths and Marriages",
-      "fileName": "birthsdeathsandmarriages",
-      "index": 0
+      "fileName": "birthsdeathsandmarriages"
     }
   ],
   "timeseries": [
@@ -102,7 +104,8 @@
   ],
   "lede": "Consumer price inflation is the speed at which the prices of goods and services bought by households rise or fall.",
   "more": "Some more content goes here. This will expand and contract if you have JS enabled. If JS is disabled, this will show by default. Yay progressive enhancement!",
+  "index": 2,
+  "type": "HOME",
   "name": "Marriage, Cohabitation and Civil Partnerships",
-  "fileName": "marriagecohabitationandcivilpartnerships",
-  "index": 2
+  "fileName": "marriagecohabitationandcivilpartnerships"
 }

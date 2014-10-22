@@ -1,7 +1,5 @@
 {
-  "type": "TIMESERIES",
   "cdid": "L5HR",
-  "name": "CPIH : Percentage Points Change Over Previous Month (12 Month Rate): Restaurants and Hotels",
   "seasonalAdjustment": "Not seasonally adjusted",
   "units": "percentage points change over previous month (12 month rate)",
   "mainMeasure": "Consumer Prices Index including owner occupiers\u0027 housing costs (CPIH)",
@@ -13,5 +11,8 @@
   "date": "January 2014",
   "lastUpated": "16 Sep 2014",
   "nextUpdate": "14 Oct 2014",
-  "note": "2005 \u003d 100. Not seasonally adjusted"
+  "note": "2005 \u003d 100. Not seasonally adjusted",
+  "type": "TIMESERIES",
+  "name": "CPIH : Percentage Points Change Over Previous Month (12 Month Rate): Restaurants and Hotels",
+  "fileName": "aaaa"
 }
