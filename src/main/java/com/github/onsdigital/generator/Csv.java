@@ -154,15 +154,9 @@ public class Csv {
 						createT3(o, topicFile);
 						if (o.children.size() == 0) {
 							// createContentFolders(o.name, topicFile);
-						} else if (o.parent.parent != null && o.parent.parent.name.equals("Releases")) {
+						} else if (isReleaseFolder(o)) {
 							for (Folder u : o.children) {
-								subTopicFile = new File(topicFile, u.filename());
-								subTopicFile.mkdir();
-								System.out.println("\t\t" + subTopicFile.getPath());
-								Release release = new Release(u);
-								release.name = u.name;
-								String json = Serialiser.serialise(release);
-								FileUtils.writeStringToFile(new File(subTopicFile, "data.json"), json);
+								createRelease(topicFile, u);
 							}
 						}
 					}
@@ -261,7 +255,7 @@ public class Csv {
 
 	private static void createT3(Folder folder, File file) throws IOException {
 
-		if (folder.parent.parent != null && folder.parent.parent.name.equals("Releases")) {
+		if (isReleaseFolder(folder)) {
 			System.out.println("Do not create json for Releases createT3");
 		} else {
 			DataT3 t3 = new DataT3(folder);
@@ -325,5 +319,20 @@ public class Csv {
 	private static void createCollection(Folder folder, File file) throws IOException {
 		String json = Serialiser.serialise(new Collection());
 		FileUtils.writeStringToFile(new File(file, "data.json"), json);
+	}
+
+	private static boolean isReleaseFolder(Folder o) {
+		return o.parent.parent != null && o.parent.parent.name.equals("Releases");
+	}
+
+	private static void createRelease(File topicFile, Folder u) throws IOException {
+		File subTopicFile;
+		subTopicFile = new File(topicFile, u.filename());
+		subTopicFile.mkdir();
+		System.out.println("\t\t" + subTopicFile.getPath());
+		Release release = new Release(u);
+		release.name = u.name;
+		String json = Serialiser.serialise(release);
+		FileUtils.writeStringToFile(new File(subTopicFile, "data.json"), json);
 	}
 }
