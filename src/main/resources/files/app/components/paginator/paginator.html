@@ -1,0 +1,15 @@
+<!-- Move classes outside to make re-usable if necessary -->
+<div ng-show="isVisible()" class="pagination simple-pagination pagination-centred" >
+  <ul>
+    <li ng-show="isPreviousVisible()">
+      <a href="" ng-click="goToPrev()" class="page-link previous" >Prev</a>
+    </li>
+    <li ng-repeat="i in [] | range:getStart():getEnd()" >
+      <span ng-show="isCurrentPage(i)" class="current">{{i}}</span>
+      <a href="" ng-click="selectPage(i)" ng-hide="isCurrentPage(i)" class="page-link" >{{i}}</a>
+    </li>
+    <li ng-show="isNextVisible()">
+      <a href="" ng-click="goToNext()" class="page-link next" >Next</a>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,82 @@
+<ons-header></ons-header>
+<!--Breadcrumbs, grid col two thirds-->
+  <section class="panel--large wrapper flush--top">
+
+
+    <!--Search filters, sorting and results description, grid col two thirds, left class removes padding and crates space within the div-->
+  <div class="grid-col tablet-wide-grid-two-thirds left">
+      <span ng-show="isLoading()" >Loading ...</span>
+      <div ng-show="searchResponse" id="search-results-total" class="search-results-total">
+        <span class='results-total'>
+          {{searchResponse.numberOfResults}}
+        </span>results for<span class='results-search-term'>
+           '{{searchTerm}}'
+           <span>
+      </div>
+      <div class="search-filters">
+        <p> Filters: <span class="lozenge lozenge-spacer lozenge-blue">STATISTICAL BULLETIN</span><span class="lozenge lozenge-spacer lozenge-red">DATASET</span><span class="lozenge lozenge-grey lozenge-spacer">ARTICLE</span><span class="lozenge lozenge-spacer lozenge-green">METHODOLOGY</span>
+        </p>
+      </div>
+      <div class="search-sorting">
+        <div class="field field--spaced">
+          <form action="#" class="form"> Sort by:
+            <select class="input input--mini sorting" name="search" id="select1">
+              <option value="" selected> Relevance </option>
+                <option value="">Date Posted </option>
+            </select>
+          </form>
+        </div>
+      </div>
+  </div>
+  </section>
+
+ <!--Search Results List, grid col two thirds-->
+<div  class="wrapper nav-panels">
+  <div class="grid-wrap">
+      <div class="grid-col tablet-wide-grid-two-thirds">
+          <article class="box">
+
+            <div id="search" class="search">
+              <span ng-show="isLoading()" >Loading ...</span>
+
+              <dl>
+                  <dt ng-repeat-start="item in searchResponse.results" class="">
+                    <a href="#{{ '/home' +item.url}}">{{item.title}}</a>
+                    <span class="lozenge" href="">{{item.type}}</span>
+                  </dt>
+                  <dd class="microcopy"> Released...</dd>
+                  <dd ng-repeat-end > Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet diam vel est congue eleifend non eget sem. Nam enim ipsum, vestibulum sed facilisis ut, commodo et nulla. Aliquam erat volutpat. Sed ut aliquet nunc. Ut mollis, arcu non vehicula gravida, lectus magna auctor quam, in rhoncus nibh nisl nec odio. Nam suscipit, dui in maximus porttitor, velit nulla rutrum leo, sit amet porttitor tellus dolor sit amet est. Quisque nulla augue, gravida sit amet mauris vel, congue aliquam urna. Quisque consectetur commodo mi eu pulvinar. Nam egestas magna sem, non sagittis massa vehicula non. Cras ultricies eleifend scelerisque. Pellentesque nunc tellus, commodo eget est nec, molestie elementum nulla. Donec mattis sed nisl in tincidunt. Mauris </dd>
+              </dl>
+            </div>
+            
+            <ons-paginator page-count="{{pageCount}}" ></ons-paginator>
+
+          </article>
+      </div>
+          <!-- /end of results list grid-col -->
+
+          <!--Start of aside, grid col one third-->
+
+      <div class="grid-col tablet-wide-grid-one-third">
+        <aside class="box sectioned padded">
+
+              <a href="www.gov.uk"><img src="ui/img/DWP.png" alt="dwplogo" class="aside-logo"/></a>
+              <p class="aside-highlighted"> Also try the Department for Work and Pensions for more information relating to CPI</p>
+              <a href="https://www.gov.uk/government/organisations/department-for-work-pensions" class="aside-links"> https://www.gov.uk/government/organisations/department-for-work-pensions</a>
+              <img src="ui/img/openinnewwindow.png" alt="open in new window" class="open-in-new-window"/>
+
+
+          
+          <div class="grid-col tablet-wide-grid-one-third">
+
+            
+          </div>
+          <!-- /grid-col -->
+
+        <!-- /aside -->
+      </aside>
+      </div>
+   <!--End of right col aside, grid col one third-->
+      </div>
+  </div>
+<ons-footer></ons-footer>

@@ -1,0 +1,26 @@
+      <div class="slate--mid-grey_new flush">
+        <div class="wrapper">
+          <div class="grid-wrap" ng-class="data.level === 't1' ? 'footer__license'  : ''">
+            <div class="grid-col desktop-grid-one-half box--inline">
+              <form ng-submit="goToSearch(searchTerm)" class="hero reduced_padding pad_right" _lpchecked="1">
+                <label for="homepageSearch" class="visuallyhidden">Search term:</label>
+                <input id="homepageSearch" type="text" class="input-med-large--flex--three-fifths  search_reduction" name="q" ng-model="searchTerm" placeholder="Search for keyword or time series id"  ng-keyup="complete(searchTerm)" ng-blur="hide()" >
+                <button type="submit" class="btn btn--primary btn--small btn--form--large-icon input--lede-btn-icon align_middle no_left_margin">
+                  <span class="icon icon-search-1">
+                  <span class="visuallyhidden">Search</span>
+                  </span>
+                </button>
+              </form>
+            </div>
+
+            <div class="grid-col desktop-grid-one-half box--inline--flex">
+
+              <div class="link_head">
+                <a href="#" class="link"> Browse Regional Statistics</a></div>
+                  <div class="page-header__icons_new">
+                    <img src="/ui/img/UK.png" alt="uk map" class="ukmap">
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
