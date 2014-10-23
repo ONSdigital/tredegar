@@ -1,16 +1,16 @@
-<breadcrumb > 
-<div class="wrapper panel--pad-small">
-  <ol class="nav nav--heavy breadcrumb mini flush">
-    <li>
-      <a href="#/" >Home</a>
-    </li>
-    <li ng-repeat="item in data.breadcrumb">
-      <a href="#{{getParentOf(item.fileName)}}/{{item.fileName}}">{{item.name}}</a>
-    </li>
-    <li class="nav__active" ng-hide="data.level === 't1'">
-      <a href="#{{getPath()}}">{{data.name}}</a>
-    </li>
-  </ol>
-<!-- /Wrapper panel -->
-</div>
+<breadcrumb>
+    <div class="wrapper panel--pad-small">
+        <ol class="nav nav--heavy breadcrumb mini flush">
+            <li>
+                <a href="#/">Home</a>
+            </li>
+            <li ng-repeat="item in data.breadcrumb">
+                <a href="#{{getParentOf(item.fileName)}}/{{item.fileName}}">{{item.name}}</a>
+            </li>
+            <li class="nav__active" ng-hide="data.level === 't1'">
+                <a href="#{{getPath()}}">{{data.name}}</a>
+            </li>
+        </ol>
+        <!-- /Wrapper panel -->
+    </div>
 </breadcrumb>

@@ -13,7 +13,7 @@
 			<div class="content-reveal">
 				<p> 
             {{content.lede}}
-          <a href="" toggler="more" class="content-reveal__action">Show more</a> </p>
+          <a href="" expand-label="Show more" collapse-label="Show less"  toggler="more" ng-if="data.more" class="content-reveal__action"></a> </p>
 				<div toggleable="more"  class="content-reveal__hidden">
 				    <p>
             {{content.more}}    

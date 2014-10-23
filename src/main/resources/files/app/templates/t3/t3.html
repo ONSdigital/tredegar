@@ -6,7 +6,7 @@
           <h1 class="page-header__title flush--half--bottom">{{data.name}}</h1>
           <div class="content-reveal lede">
             <p>{{data.lede}}
-              <a href="" toggler="more" class="content-reveal__action">Show more</a>
+              <a href="" expand-label="Show more" collapse-label="Show less"  toggler="more" ng-if="data.more" class="content-reveal__action"></a>
             </p>
             <div toggleable="more" class="content-reveal__hidden">
               <p>
@@ -41,10 +41,8 @@
           <div class="box__content">
             <div class="divider">
               <div class="divider__half divider__half--border divider__half--border-first">
-                <h2 class="beta">
+                <h2 tooltip="Percentage change over 12 months <br><br> Not seasonally adjusted" tooltip-class="icon--inline--large-text icon--small"  class="beta">
                     {{timeseries.name}}
-                  <!-- CPI Annual Rate Percentage Change over 12 months -->
-                  <span tabindex="0" class="tooltip icon-info-circled icon--warm icon--inline icon--inline--large-text icon--small tooltipstered"></span>
                 </h2>
                 <div class="box box--inline box--padded muted--dark">
                   <div class="stat stat--headline">
@@ -125,8 +123,7 @@
                   <!-- CPI Index -->
                   </a>
                   <a class="information" href="#">
-                    <span tabindex="0" title="" class="tooltip icon-info-circled icon--warm  icon--inline"></span>
-                    <span class="visuallyhidden">More information about CPI index</span>
+                    <span tooltip="More Information" ></span>
                   </a>
                 </h3>
                 <p class="list--table__item__description">

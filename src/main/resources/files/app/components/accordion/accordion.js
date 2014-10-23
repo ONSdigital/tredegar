@@ -39,7 +39,7 @@ angular.module('onsComponents')
         };
 
       },
-      templateUrl: 'app/components/accordion/accordion.html'
+      template: '<div ng-transclude></div>'
     }
   }).directive('onsAccordionItem', function() {
     return {

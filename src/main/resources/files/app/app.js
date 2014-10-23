@@ -17,7 +17,8 @@
         'ngRoute',
         'onsHelpers',
         'onsComponents',
-        'onsTemplates'
+        'onsTemplates',
+        'ngSanitize'
     ])
 
     onsApp

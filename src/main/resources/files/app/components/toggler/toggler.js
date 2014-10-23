@@ -17,13 +17,23 @@ angular.module('onsComponents')
     this.toggle = function(key) {
       toggleables[key].toggle();
     }
+
+    this.isVisible=function(key) {
+      var pane = toggleables[key];
+      return pane ? pane.visible : false
+    }
   })
   .directive('toggler', ['toggleService',
     function(toggleService) {
       return {
         restrict: 'A',
+        scope:{
+          expandLabel:'@',
+          collapseLabel:'@'
+        },
         link: function(scope, elem, attrs) {
           var ctrl = this
+          scope.key = attrs.toggler
           bindClick()
 
           function bindClick() {
@@ -32,14 +42,12 @@ angular.module('onsComponents')
               scope.$apply() // Trigger Angular cycle
             })
           }
-        },
-        controller: function($scope) {
-          this.isVisible=function(key) {
-            var toggleable = toggleService.toggleables[key]
-            alert(toggleable)
-            toggleable ? toggleable.visible : false
+
+          scope.isVisible=function(){
+            return toggleService.isVisible(scope.key)
           }
         },
+        template:'{{isVisible() ?  collapseLabel  : expandLabel}}',
         controllerAs: 'ToggleCtrl'
       }
     }
@@ -61,7 +69,7 @@ angular.module('onsComponents')
           scope.key = attrs.toggleable
           toggleService.registerToggleable(scope);
         },
-        templateUrl: 'app/components/toggler/toggler.html'
+        templateUrl: 'app/components/toggler/toggleable.html'
       }
     }
   ]);
