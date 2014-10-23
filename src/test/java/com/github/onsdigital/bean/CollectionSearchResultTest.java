@@ -57,7 +57,7 @@ public class CollectionSearchResultTest {
 	private List<File> setUpFiles(String fileName) {
 		File file;
 		if (StringUtils.isEmpty(fileName)) {
-			file = new File("target/taxonomy/economy/inflationandpriceindices/bulletins/bulletin.json");
+			file = new File("target/taxonomy/economy/inflationandpriceindices/bulletins/data.json");
 		} else {
 			file = new File(fileName);
 		}

@@ -71,8 +71,9 @@ public class NavigationUtil {
 		try (DirectoryStream<Path> stream = Files.newDirectoryStream(path)) {
 			for (Path p : stream) {
 				// Iterate over the paths:
-				if (Files.isDirectory(p)) {
+				if (Files.isDirectory(p) && !p.getFileName().toString().contains("releases")) {
 					try {
+						System.out.println("Path: " + p.getFileName());
 						nodes.add(new NavigationNode(getDataJson(p)));
 					} catch (JsonSyntaxException e) {
 						jsonError = true;
@@ -111,6 +112,7 @@ public class NavigationUtil {
 		List<NavigationNode> children = new ArrayList<NavigationNode>();
 
 		public NavigationNode(Data data) {
+			System.out.println("Data: " + data.name);
 			this.name = data.name;
 			this.fileName = data.fileName;
 			this.index = data.index;

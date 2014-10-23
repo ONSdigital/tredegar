@@ -17,8 +17,10 @@ import au.com.bytecode.opencsv.CSVReader;
 
 import com.github.davidcarboni.ResourceUtils;
 import com.github.davidcarboni.restolino.json.Serialiser;
+import com.github.onsdigital.json.Article;
 import com.github.onsdigital.json.Collection;
 import com.github.onsdigital.json.Data;
+import com.github.onsdigital.json.Release;
 import com.github.onsdigital.json.bulletin.Bulletin;
 import com.github.onsdigital.json.taxonomy.DataT1;
 import com.github.onsdigital.json.taxonomy.DataT2;
@@ -40,25 +42,28 @@ public class Csv {
 		String theme = null;
 		String subject = null;
 		String topic = null;
+		String subTopic = null;
 		Folder themeFolder = null;
 		Folder subjectFolder = null;
 		Folder topicFolder = null;
+		Folder subTopicFolder = null;
 		int themeCounter = 0;
 		int subjectCounter = 0;
 		int topicCounter = 0;
+		int subTopicCounter = 0;
 
 		Set<Folder> folders = new HashSet<>();
 
 		try (CSVReader csvReader = new CSVReader(reader)) {
 
-			// Column positions:
+			// Column positions:s
 			String[] headers = csvReader.readNext();
 			System.out.println(ArrayUtils.toString(headers));
 			int themeIndex = ArrayUtils.indexOf(headers, "Theme");
 			int subjectIndex = ArrayUtils.indexOf(headers, "Subject");
 			int topicIndex = ArrayUtils.indexOf(headers, "Topic");
-			System.out.println("Theme=" + themeIndex + " Subject="
-					+ subjectIndex + " Topic=" + topicIndex);
+			int subTopicIndex = ArrayUtils.indexOf(headers, "Subtopic");
+			System.out.println("Theme=" + themeIndex + " Subject=" + subjectIndex + " Topic=" + topicIndex + " Subtopic=" + subTopicIndex);
 
 			// Theme Subject Topic
 			String[] row;
@@ -71,9 +76,11 @@ public class Csv {
 					themeFolder.index = themeCounter++;
 					subjectCounter = 0;
 					topicCounter = 0;
+					subTopicCounter = 0;
 					folders.add(themeFolder);
 					subject = null;
 					topic = null;
+					subTopic = null;
 				}
 
 				if (StringUtils.isNotBlank(row[subjectIndex])) {
@@ -83,8 +90,10 @@ public class Csv {
 					subjectFolder.parent = themeFolder;
 					subjectFolder.index = subjectCounter++;
 					topicCounter = 0;
+					subTopicCounter = 0;
 					themeFolder.children.add(subjectFolder);
 					topic = null;
+					subTopic = null;
 				}
 
 				if (StringUtils.isNotBlank(row[topicIndex])) {
@@ -94,10 +103,19 @@ public class Csv {
 					topicFolder.parent = subjectFolder;
 					topicFolder.index = topicCounter++;
 					subjectFolder.children.add(topicFolder);
+					subTopic = null;
 				}
 
-				String path = StringUtils.join(new String[] { theme, subject,
-						topic }, '/');
+				if (StringUtils.isNotBlank(row[subTopicIndex])) {
+					subTopic = row[subTopicIndex];
+					subTopicFolder = new Folder();
+					subTopicFolder.name = subTopic;
+					subTopicFolder.parent = topicFolder;
+					subTopicFolder.index = subTopicCounter++;
+					topicFolder.children.add(subTopicFolder);
+				}
+
+				String path = StringUtils.join(new String[] { theme, subject, topic }, '/');
 				while (StringUtils.endsWith(path, "/"))
 					path = path.substring(0, path.length() - 1);
 				System.out.println(path);
@@ -113,6 +131,7 @@ public class Csv {
 			File themeFile;
 			File subjectFile;
 			File topicFile;
+			File subTopicFile;
 			System.out.println();
 			for (Folder t : folders) {
 				themeFile = new File(root, t.filename());
@@ -135,6 +154,16 @@ public class Csv {
 						createT3(o, topicFile);
 						if (o.children.size() == 0) {
 							// createContentFolders(o.name, topicFile);
+						} else if (o.parent.parent != null && o.parent.parent.name.equals("Releases")) {
+							for (Folder u : o.children) {
+								subTopicFile = new File(topicFile, u.filename());
+								subTopicFile.mkdir();
+								System.out.println("\t\t" + subTopicFile.getPath());
+								Release release = new Release(u);
+								release.name = u.name;
+								String json = Serialiser.serialise(release);
+								FileUtils.writeStringToFile(new File(subTopicFile, "data.json"), json);
+							}
 						}
 					}
 				}
@@ -171,8 +200,7 @@ public class Csv {
 	 * @param file
 	 * @throws IOException
 	 */
-	private static void createHistory(String name, File file)
-			throws IOException {
+	private static void createHistory(String name, File file) throws IOException {
 
 		File tempDir = com.google.common.io.Files.createTempDir();
 		List<File> historyFolders = historyFolders(file);
@@ -182,13 +210,11 @@ public class Csv {
 			FileUtils.deleteQuietly(historyFolder);
 		}
 
-		System.out.println("Copying from " + file.getAbsolutePath() + " to "
-				+ tempDir.getAbsolutePath());
+		System.out.println("Copying from " + file.getAbsolutePath() + " to " + tempDir.getAbsolutePath());
 		FileUtils.copyDirectory(file, tempDir);
 
 		for (File historyFolder : historyFolders) {
-			System.out.println("Copying from " + tempDir.getAbsolutePath()
-					+ " to " + historyFolder.getAbsolutePath());
+			System.out.println("Copying from " + tempDir.getAbsolutePath() + " to " + historyFolder.getAbsolutePath());
 			FileUtils.copyDirectory(tempDir, historyFolder);
 		}
 
@@ -214,9 +240,7 @@ public class Csv {
 		return result;
 	}
 
-	private static void createHomePage(Folder folder, File file)
-			throws IOException {
-
+	private static void createHomePage(Folder folder, File file) throws IOException {
 		// The folder needs to be at the root path:
 		Data data = new DataT1(folder);
 		data.fileName = "/";
@@ -225,24 +249,32 @@ public class Csv {
 	}
 
 	private static void createT2(Folder folder, File file) throws IOException {
-
-		DataT2 t2 = new DataT2(folder);
-		t2.index = folder.index;
-		String json = Serialiser.serialise(t2);
-		FileUtils.writeStringToFile(new File(file, "data.json"), json);
+		if (folder.name.equals("Releases") || (folder.parent != null && folder.parent.name.equals("Releases"))) {
+			System.out.println("Do not create json for Releases createT2");
+		} else {
+			DataT2 t2 = new DataT2(folder);
+			t2.index = folder.index;
+			String json = Serialiser.serialise(t2);
+			FileUtils.writeStringToFile(new File(file, "data.json"), json);
+		}
 	}
 
 	private static void createT3(Folder folder, File file) throws IOException {
 
-		DataT3 t3 = new DataT3(folder);
-		t3.index = folder.index;
-		String json = Serialiser.serialise(t3);
-		FileUtils.writeStringToFile(new File(file, "data.json"), json);
+		if (folder.parent.parent != null && folder.parent.parent.name.equals("Releases")) {
+			System.out.println("Do not create json for Releases createT3");
+		} else {
+			DataT3 t3 = new DataT3(folder);
+			t3.index = folder.index;
+			String json = Serialiser.serialise(t3);
+			FileUtils.writeStringToFile(new File(file, "data.json"), json);
 
-		createBulletin(folder, file);
-		createCollection(folder, file);
-		if (file.getName().contains("inflationandpriceindices")) {
-			createTimeseries(folder, file);
+			createArticle(folder, file);
+			createBulletin(folder, file);
+			// createCollection(folder, file);
+			if (file.getName().contains("inflationandpriceindices")) {
+				createTimeseries(folder, file);
+			}
 		}
 	}
 
@@ -253,8 +285,7 @@ public class Csv {
 	 * @param file
 	 * @throws IOException
 	 */
-	private static void createTimeseries(Folder folder, File file)
-			throws IOException {
+	private static void createTimeseries(Folder folder, File file) throws IOException {
 
 		// Create the timeseries directory:
 		File timeseriesFolder = new File(file, "timeseries");
@@ -265,28 +296,34 @@ public class Csv {
 
 		// Generate dummy timeseries for each CDID in the subset:
 		for (String cdid : TimeseriesMetadata.timeseries.keySet()) {
-			String json = Serialiser.serialise(TimeseriesMetadata.timeseries
-					.get(cdid));
+			String json = Serialiser.serialise(TimeseriesMetadata.timeseries.get(cdid));
 			File cdidFolder = new File(timeseriesFolder, cdid);
 			FileUtils.writeStringToFile(new File(cdidFolder, "data.json"), json);
 		}
 	}
 
-	private static void createBulletin(Folder folder, File file)
-			throws IOException {
+	private static void createArticle(Folder folder, File file) throws IOException {
+		// Create a dummy bulletin:
+		File articles = new File(file, "articles");
+		articles.mkdir();
+		Article article = new Article();
+		article.title = folder.name;
+		String json = Serialiser.serialise(article);
+		FileUtils.writeStringToFile(new File(articles, "data.json"), json);
+	}
+
+	private static void createBulletin(Folder folder, File file) throws IOException {
 		// Create a dummy bulletin:
 		File bulletins = new File(file, "bulletins");
 		bulletins.mkdir();
 		Bulletin bulletin = new Bulletin();
 		bulletin.title = folder.name;
 		String json = Serialiser.serialise(bulletin);
-		FileUtils.writeStringToFile(new File(bulletins, "bulletin.json"), json);
+		FileUtils.writeStringToFile(new File(bulletins, "data.json"), json);
 	}
 
-	private static void createCollection(Folder folder, File file)
-			throws IOException {
+	private static void createCollection(Folder folder, File file) throws IOException {
 		String json = Serialiser.serialise(new Collection());
-		FileUtils.writeStringToFile(new File(file, "collection.json"), json);
+		FileUtils.writeStringToFile(new File(file, "data.json"), json);
 	}
-
 }

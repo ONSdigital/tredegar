@@ -72,7 +72,7 @@ public class ScanFileSystem {
 				getFiles(files, path);
 			} else {
 				File file = path.toFile();
-				if (file.getName().equals("bulletin.json")) {
+				if (file.getName().equals("data.json")) {
 					files.add(file);
 				}
 			}
