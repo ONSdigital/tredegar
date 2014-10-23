@@ -6,11 +6,11 @@ import java.util.List;
 import com.github.onsdigital.generator.Folder;
 import com.github.onsdigital.json.taxonomy.Detail;
 
-public class Data extends TaxonomyNode {
+public class Data extends TaxonomyFolder {
 
 	public String level;
-	public List<TaxonomyNode> breadcrumb = new ArrayList<>();
-	public List<TaxonomyNode> children;
+	public List<TaxonomyFolder> breadcrumb = new ArrayList<>();
+	public List<TaxonomyFolder> children;
 	public List<Detail> timeseries;
 	public String lede;
 	public String more;
@@ -19,7 +19,7 @@ public class Data extends TaxonomyNode {
 		super(folder);
 		Folder parent = folder;
 		while ((parent = parent.parent) != null) {
-			breadcrumb.add(0, new TaxonomyNode(parent));
+			breadcrumb.add(0, new TaxonomyFolder(parent));
 		}
 
 		if (folder.children.size() > 0) {
@@ -38,10 +38,10 @@ public class Data extends TaxonomyNode {
 		sort(children);
 	}
 
-	private void sort(List<TaxonomyNode> children) {
+	private void sort(List<TaxonomyFolder> children) {
 		if (children != null) {
-			List<TaxonomyNode> sortedChildren = new ArrayList<>();
-			for (TaxonomyNode child : children) {
+			List<TaxonomyFolder> sortedChildren = new ArrayList<>();
+			for (TaxonomyFolder child : children) {
 				// String current = "";
 				// for (TaxonomyNode c : sortedChildren) {
 				// current += c.index + " ";

@@ -3,14 +3,14 @@ package com.github.onsdigital.json.bulletin;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.github.onsdigital.json.CollectionItem;
+import com.github.onsdigital.json.ContentType;
 import com.github.onsdigital.json.Email;
 import com.github.onsdigital.json.Section;
 
-public class Bulletin {
+public class Bulletin extends CollectionItem {
 
 	// Top section
-	public String title = "Cat Tail Inflation, October 2014";
-	public String releaseDate = "19 February 2014";
 	public String nextRelease = "21 November 2014";
 	public Email contact = new Email();
 
@@ -27,6 +27,9 @@ public class Bulletin {
 	 * Sets up some basic content.
 	 */
 	public Bulletin() {
+		type = ContentType.bulletin;
+		title = "Cat Tail Inflation, October 2014";
+		releaseDate = "19 February 2014";
 		Section summary = new Section();
 		summary.title = "Summary";
 		summary.markdown = "Consectetur adipiscing elit. Suspendisse non tellus nibh. Duis tristique risus sed urna fringilla, eu facilisis orci fringilla. Nullam iaculis libero tempor vehicula ultricies"

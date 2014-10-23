@@ -1,6 +1,5 @@
 {
   "cdid": "WUNZ",
-  "name": "CPI: Percentage Points Change Over Previous Month (12 Month Rate): Health",
   "seasonalAdjustment": "Not seasonally adjusted",
   "units": "percentage points change over previous month (12 month rate)",
   "mainMeasure": "Consumer Prices Index",
@@ -12,5 +11,8 @@
   "date": "January 2014",
   "lastUpated": "16 Sep 2014",
   "nextUpdate": "14 Oct 2014",
-  "note": "2005 \u003d 100. Not seasonally adjusted"
+  "note": "2005 \u003d 100. Not seasonally adjusted",
+  "type": "timeseries",
+  "name": "CPI: Percentage Points Change Over Previous Month (12 Month Rate): Health",
+  "fileName": "aaaa"
 }

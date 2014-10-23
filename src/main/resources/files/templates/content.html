@@ -45,7 +45,7 @@
         <h3>Table of contents</h3>
         <div id="toc-content">
             <ol class="toc-columns">
-                <li ng-repeat="section in content.sections track by $index"><a href="" ng-click="scrollTo('section' + ($index + 1))">{{section.title}}</a></li>
+                <li ng-repeat="section in content.sections.notes track by $index" ng-if="$even" ><a href="" ng-click="scrollTo('section' + (($index + 1)/2 | number : 0))">{{section.title}}</a></li>
             </ol>
         </div>
     </article>
@@ -55,23 +55,47 @@
 <div class="wrapper panel--bottom-mar">
     <div class="grid-wrap">
         <div class="grid-col {{sidebar ? 'desktop-grid-two-thirds tablet-grid-two-thirds' : ''}}" ng-controller="TabsCtrl">
-            <article ng-repeat="section in content.sections">
+            <article ng-repeat="section in content.sections.notes">
                 <header class="box__header">
-                    <h2 id="section{{$index + 1}}">{{$index + 1}}. {{section.title}}</h2>
+                    <h2 ng-if="$even" id="section{{($index + 1)/2 | number : 0}}">{{($index + 1)/2 | number : 0}}. {{section.title}}</h2>
                 </header>
                 <!-- /box__header -->
-                <div class="box__content">
-                    <div markdown link="{{section.markdown}}"></div>
-                </div>
-                <!-- /box__content -->
 
-                <!-- Bar Graphs (if any) -->
+                <div ng-repeat="item in section.content">
+                    <div ng-switch on="item.content_type">
+                        <div ng-switch-when="image" class="">
+                            <div class="">
+                                <span>
+                                        <img ng-src="{{item.data}}" alt="entry photo">
+                                </span>
+                            </div>
+                            <div>
+                                <div class="">{{item.imgtitle}}</div>
+                                <div class="">{{item.description}}</div>
+                            </div>
+                        </div>
 
-                <div ng-if="section.bars">
-                <bars-chart ng-repeat="value in section.bars" chart-data={{value}}></bars-chart>
-                <p>{{value.year}}</p>
-                <p>{{section.barstitle}}</p>
+                        <div ng-switch-when="graphic" class="">
+                            <div class="">
+                                <span>
+                                        <img ng-src="{{item.data}}" alt="entry photo">
+                                </span>
+                            </div>
+                            <div>
+                                <div class="">{{item.grptitle}}</div>
+                                <div class="">{{item.description}}</div>
+                            </div>
+                        </div>
+
+                        <div ng-switch-when="notes" class="">
+                            <div class="">
+                                <!-- <div class="">{{item.title}}</div> -->
+                                <div markdown link="{{item.data}}" class=""></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
 
                 <!-- Responsive Table (if any) -->
                 <div ng-if="section.table" class="wrapper panel--bottom-mar">

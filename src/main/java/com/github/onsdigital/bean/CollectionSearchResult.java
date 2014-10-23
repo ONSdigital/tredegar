@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.github.davidcarboni.restolino.json.Serialiser;
-import com.github.onsdigital.json.bulletin.Bulletin;
+import com.github.onsdigital.json.CollectionItem;
 
 /**
  * Holds the details for a collection of content types
@@ -19,7 +19,7 @@ public class CollectionSearchResult {
 	private static final String INDEX_KEY = "indexNumber";
 	private static final String RELEASE_DATE = "releaseDate";
 	private static final String URL = "url";
-	private static final String BULLETIN_JSON = "bulletin.json";
+	private static final String DATA_JSON = "data.json";
 	private static final String PATH_ROOT = "target";
 	private static final String TITLE = "title";
 	private long numberOfResults;
@@ -68,9 +68,9 @@ public class CollectionSearchResult {
 	private void init(List<File> files) {
 		for (File file : files) {
 			Map<String, String> item = new HashMap<String, String>();
-			Bulletin bulletinJson = getBulletin(file);
-			item.put(TITLE, bulletinJson.title);
-			item.put(RELEASE_DATE, bulletinJson.releaseDate);
+			CollectionItem collectionItemJson = getCollectionItem(file);
+			item.put(TITLE, collectionItemJson.title);
+			item.put(RELEASE_DATE, collectionItemJson.releaseDate);
 
 			String[] urlWithoutJson = getUrl(file);
 			item.put(URL, urlWithoutJson[0]);
@@ -85,14 +85,13 @@ public class CollectionSearchResult {
 
 	private String[] getUrl(File file) {
 		String[] url = file.getPath().split(PATH_ROOT);
-		String[] urlWithoutJson = url[1].split(BULLETIN_JSON);
+		String[] urlWithoutJson = url[1].split(DATA_JSON);
 		return urlWithoutJson;
 	}
 
-	private Bulletin getBulletin(File file) {
+	private CollectionItem getCollectionItem(File file) {
 		try {
-			return Serialiser.deserialise(new FileInputStream(file),
-					Bulletin.class);
+			return Serialiser.deserialise(new FileInputStream(file), CollectionItem.class);
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}

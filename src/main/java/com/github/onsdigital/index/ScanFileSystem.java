@@ -39,9 +39,7 @@ public class ScanFileSystem {
 			else {
 				String fileName = path.toAbsolutePath().toString();
 
-				// if (isValidFileExtensionType(fileName) &&
-				// isValidFilePath(fileName)) {
-				if (isValidFileExtensionType(fileName)) {
+				if (isJsonFile(fileName) && isNotRelease(fileName)) {
 					fileNames.add(fileName);
 				}
 			}
@@ -74,7 +72,7 @@ public class ScanFileSystem {
 				getFiles(files, path);
 			} else {
 				File file = path.toFile();
-				if (file.getName().equals("bulletin.json")) {
+				if (file.getName().equals("data.json")) {
 					files.add(file);
 				}
 			}
@@ -84,17 +82,11 @@ public class ScanFileSystem {
 		return files;
 	}
 
-	@SuppressWarnings("unused")
-	private static boolean isValidFilePath(String fileName) {
-		if (fileName.contains("/home")) {
-			return true;
-		}
-		return false;
+	private static boolean isJsonFile(String fileName) {
+		return fileName.endsWith(".json");
 	}
 
-	private static boolean isValidFileExtensionType(String fileName) {
-		return fileName.endsWith(".html") || fileName.endsWith(".xls")
-				|| fileName.endsWith(".xlsx") || fileName.endsWith(".csv")
-				|| fileName.endsWith(".json");
+	private static boolean isNotRelease(String fileName) {
+		return !fileName.contains("releases");
 	}
 }
