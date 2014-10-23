@@ -220,11 +220,14 @@ onsApp.directive('markdown', function($http) {
                     .html(htmlText)
                     .find("pre")
                     .replaceWith("<p>"+
-                '<img src="/ui/img/sample--chart.png" alt="sample chart">'+
+                '<img src="/ui/img/equation.png" alt="sample chart">'+
             "</p>");
                 element
                     .find("blockquote").find("p")
-                    .addClass("box--padded--highlight")
+                    .addClass("box--padded--highlight");
+                element
+                    .find("ul").addClass("list--neutral box--cyan--separated-left")
+                    .find("ul").find("li").addClass("big");
             });
         }
     };
@@ -295,4 +298,3 @@ onsApp.service('anchorSmoothScroll', function(){
 
     }
 });
-
