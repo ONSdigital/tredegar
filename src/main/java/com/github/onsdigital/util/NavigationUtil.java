@@ -71,7 +71,7 @@ public class NavigationUtil {
 		try (DirectoryStream<Path> stream = Files.newDirectoryStream(path)) {
 			for (Path p : stream) {
 				// Iterate over the paths:
-				if (Files.isDirectory(p)) {
+				if (Files.isDirectory(p) && isNotRelease(p)) {
 					try {
 						nodes.add(new NavigationNode(getDataJson(p)));
 					} catch (JsonSyntaxException e) {
@@ -101,6 +101,10 @@ public class NavigationUtil {
 		}
 
 		return result;
+	}
+
+	private static boolean isNotRelease(Path p) {
+		return !p.getFileName().toString().contains("releases");
 	}
 
 	public static class NavigationNode implements Comparable<NavigationNode> {

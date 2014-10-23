@@ -25,6 +25,7 @@ import com.google.gson.JsonSyntaxException;
  * Helper methods for loading index into search engine
  */
 public class LoadIndexHelper {
+	private static final String NAME = "name";
 	private static final String CDID = "cdid";
 	private static final String TAGS = "tags";
 	private static final String TITLE = "title";
@@ -72,12 +73,16 @@ public class LoadIndexHelper {
 		String title = getField(jsonObject, TITLE);
 
 		switch (contentType) {
+		case home:
+			String name = getField(jsonObject, NAME);
+			documentMap = buildDocumentMap(splitUrl, splitPath, type, name);
+			break;
 		case timeseries:
 			String cdid = getField(jsonObject, CDID);
 			documentMap = buildDocumentMap(splitUrl, splitPath, type, cdid);
 			break;
 		case unknown:
-			System.out.println("json file does not contain content type field: " + absoluteFilePath);
+			System.out.println("json file: " + absoluteFilePath + "has unknown content type: " + contentType);
 			break;
 		default:
 			documentMap = buildDocumentMap(splitUrl, splitPath, type, title);
