@@ -65,9 +65,6 @@ onsApp.config(['$routeProvider','$locationProvider',
             templateUrl: 'templates/template.html',
             controller: 'TemplateCtrl'
         });
-        $locationProvider
-	        .html5Mode(false)
-	        .hashPrefix('!');
     }
 ]);
 
