@@ -23,12 +23,12 @@ export BONSAI_TRANSPORT_PORT=9300
 #export TAXONOMY_DIR=target/taxonomy
 
 #Generate taxonomy
-mvn clean compile dependency:copy-dependencies && \
+mvn clean test dependency:copy-dependencies && \
 rm -rf src/main/taxonomy && \
 java -cp "target/classes:target/dependency/*" com.github.onsdigital.generator.Csv
 
 # Now build the JAR:
-mvn clean package && \
+mvn process-resources && \
 
 # Development: reloadable
 java $JAVA_OPTS -Drestolino.username=$USERNAME -Drestolino.password=$PASSWORD -Drestolino.realm=$REALM -Drestolino.files=$RESTOLINO_STATIC -Drestolino.classes=$RESTOLINO_CLASSES -Drestolino.packageprefix=$PACKAGE_PREFIX -cp "target/dependency/*" com.github.davidcarboni.restolino.Main

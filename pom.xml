@@ -21,7 +21,7 @@
 		<dependency>
 			<groupId>com.github.davidcarboni</groupId>
 			<artifactId>restolino</artifactId>
-			<version>0.0.17</version>
+			<version>0.0.18</version>
 		</dependency>
 		<dependency>
 			<groupId>com.github.davidcarboni</groupId>
@@ -42,13 +42,6 @@
 			<artifactId>elasticsearch</artifactId>
 			<version>${es.version}</version>
 		</dependency>
-
-		<!-- HtmlUnit for dealing with crawler requests -->
-<!-- 		<dependency> -->
-<!-- 			<groupId>net.sourceforge.htmlunit</groupId> -->
-<!-- 			<artifactId>htmlunit</artifactId> -->
-<!-- 			<version>2.15</version> -->
-<!-- 		</dependency> -->
 
 		<!-- Test -->
 		<dependency>
@@ -97,6 +90,11 @@
 					already copied in from under src/main/taxonomy_override -->
 				<directory>src/main/taxonomy</directory>
 				<targetPath>${project.build.directory}/taxonomy</targetPath>
+			</resource>
+			<!-- Pre-rendered files -->
+			<resource>
+				<directory>src/main/static</directory>
+				<targetPath>${project.build.outputDirectory}/files/static</targetPath>
 			</resource>
 		</resources>
 		<plugins>

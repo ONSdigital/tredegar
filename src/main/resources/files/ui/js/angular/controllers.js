@@ -4,6 +4,16 @@
 
 var onsControllers = angular.module('onsControllers', []);
 
+onsApp.factory('Data', function($http){
+    return function getData(path, callback){
+          $http({
+            method: 'GET',
+            url: path,
+            cache: true
+          }).success(callback);
+    };
+});
+
 
 // Main controller that applies to all the pages
 onsControllers.controller('MainCtrl', ['$scope', '$http', '$location', '$route', 'anchorSmoothScroll',
@@ -11,6 +21,9 @@ onsControllers.controller('MainCtrl', ['$scope', '$http', '$location', '$route',
     $scope.getData = function(path, callback) {
       console.log("Loading data at " + path)
       $http.get(path).success(callback)
+        // Data.list(function(data) {
+        //     $scope.data = data;
+        // });
     }
 
     $scope.getUrlParam = function(paramName) {
@@ -136,6 +149,27 @@ onsControllers.controller('ArticleCtrl', ['$scope',
   }
 ])
 
+//Dataset Controller
+onsControllers.controller('DatasetCtrl', ['$scope',
+  function($scope) {
+    $scope.header = "Dataset"
+    $scope.contentType = "dataset"
+    $scope.sidebar = true
+    $scope.sidebarUrl = "templates/datasetsidebar.html"
+  }
+])
+
+//Dataset Timeseries Controller
+onsControllers.controller('Dataset_TimeseriesCtrl', ['$scope',
+  function($scope) {
+    $scope.header = "Dataset"
+    $scope.contentType = "dataset"
+    $scope.sidebar = true
+    $scope.sidebarUrl = "templates/datasetsidebar_timeseries.html"
+  }
+])
+
+
 //Methodology Controller
 onsControllers.controller('MethodologyCtrl', ['$scope',
   function($scope) {
@@ -171,6 +205,17 @@ onsControllers.controller('BulletinCtrl', ['$scope',
   }
 ])
 
+
+//Contact Us Controller
+onsControllers.controller('ContactUsCtrl', ['$scope',
+  function($scope) {
+    $scope.data = {
+      breadcrumb: [],
+        name: "Contact Us",
+        fileName: "contactus"
+      }
+  }
+])
 
 //Collection Controller
 onsControllers.controller('CollectionCtrl', ['$scope',
@@ -239,7 +284,7 @@ onsControllers.controller('SearchCtrl', ['$scope',
 
 onsControllers.controller('AutocompleteCtrl', ['$scope',
   function($scope) {
-    
+
   }
 ])
 
@@ -468,6 +513,13 @@ onsControllers.controller('ContentCtrl', ['$scope', '$location',
   }
 ]);
 
+onsControllers.controller('DatasetContentCtrl', ['$scope', '$location',
+  function($scope, $location) {
+    $scope.getData("/" + $scope.getPage() + ".json", function(data) {
+      $scope.dataset = data;
+    })
+  }
+]);
 
 
 onsControllers.controller('NavCtrl', ['$scope',

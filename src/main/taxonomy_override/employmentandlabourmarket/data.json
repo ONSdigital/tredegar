@@ -3,6 +3,12 @@
   "breadcrumb": [],
   "children": [
     {
+      "detail": [],
+      "name": "People in Work",
+      "fileName": "peopleinwork",
+      "index": 0
+    },
+    {
       "detail": [
         {
           "name": "Gross Domestic Product",
@@ -41,9 +47,9 @@
           "headline": false
         }
       ],
-      "name": "Public Sector Personnel",
-      "fileName": "publicsectorpersonnel",
-      "index": 0
+      "name": "People not in Work",
+      "fileName": "peoplenotinwork",
+      "index": 1
     },
     {
       "detail": [
@@ -84,34 +90,9 @@
           "headline": false
         }
       ],
-      "name": "People not in Work",
-      "fileName": "peoplenotinwork",
-      "index": 0
-    },
-    {
-      "detail": [
-        {
-          "name": "Employment Rate",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "72.9",
-          "unit": "%",
-          "date": "Feb — Apr 2014",
-          "headline": false
-        },
-        {
-          "name": "Unemployment Rate",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "6.6",
-          "unit": "%",
-          "date": "Feb — Apr 2014",
-          "headline": false
-        }
-      ],
-      "name": "People in Work",
-      "fileName": "peopleinwork",
-      "index": 0
+      "name": "Public Sector Personnel",
+      "fileName": "publicsectorpersonnel",
+      "index": 2
     }
   ],
   "lede": "Labour market statistics measure many different aspects of work and jobs and provide an insight into the economy. They are also very much about people, including their participation in the labour force, the types of work they do, the earnings and benefits they receive and their working patterns. The Office for National Statistics (ONS) has developed a framework for labour market statistics to describe the major concepts that exist within the labour market and their relationship to each other. ",

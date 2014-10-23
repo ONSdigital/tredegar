@@ -11,8 +11,6 @@ var onsApp = angular.module('onsApp', [
 
 onsApp.config(['$routeProvider','$locationProvider',
     function($routeProvider, $locationProvider) {
-		//$locationProvider.hashPrefix('!');
-//			 .html5Mode(false)
         $routeProvider.
         when('/', {
             redirectTo: '/home'
@@ -47,13 +45,27 @@ onsApp.config(['$routeProvider','$locationProvider',
             templateUrl: 'templates/collection.html',
             controller: "CollectionCtrl"
         }).
+        when('/contactus', {
+            templateUrl: 'templates/contactus.html',
+            controller: "ContactUsCtrl"
+        }).
+        when('/dataset', {
+            templateUrl: 'templates/Dataset_Excelcrosssection.html',
+            controller: "DatasetCtrl"
+        }).
+        when('/dataset_timeseries', {
+            templateUrl: 'templates/Dataset_Excel_Time_Series.html',
+            controller: "DatasetCtrl"
+        }).
         otherwise({
             templateUrl: 'templates/template.html',
             controller: 'TemplateCtrl'
         });
+        $locationProvider
+	        .html5Mode(false)
+	        .hashPrefix('!');
     }
 ]);
-
 
 /*Filters for ng-repeat*/
 
@@ -188,6 +200,7 @@ onsApp.directive('stopEvent', function () {
     };
 });
 
+// Working
 onsApp.directive('markdown', function($http) {
     var converter = new Showdown.converter();
     return {
@@ -195,14 +208,24 @@ onsApp.directive('markdown', function($http) {
         scope: {
             link: '@'
         },
+        template: '<p></p>',
         link: function(scope, element, attrs) {
             attrs.$observe('link', function(link) {
                 var htmlText = converter.makeHtml(link);
-                element.html(htmlText);
+                element
+                    .html(htmlText)
+                    .find("pre")
+                    .replaceWith("<p>"+
+                '<img src="/ui/img/sample--chart.png" alt="sample chart">'+
+            "</p>");
+                element
+                    .find("blockquote").find("p")
+                    .addClass("box--padded--highlight")
             });
         }
     };
 });
+
 
 onsApp.factory('Page', function() {
     var title = 'Office Of National Statistics';
@@ -269,32 +292,46 @@ onsApp.service('anchorSmoothScroll', function(){
     }
 });
 
-function AccordionCtrl($scope) {
-    //initiate an array to hold all active tabs
-    $scope.activeTabs = [];
-
-    // check if the tab is active
-    $scope.isOpenTab = function (tab) {
-        //check if this tab is already in the activeTabs array
-        if ($scope.activeTabs.indexOf(tab) > -1) {
-            //if so, return true
-            return true;
-        } else {
-            //if not, return false
-            return false;
+onsApp.directive('barsChart', function($parse) {
+    //explicitly creating a directive definition variable
+    //this may look verbose but is good for clarification purposes
+    //in real life you'd want to simply return the object {...}
+    var directiveDefinitionObject = {
+        //We restrict its use to an element
+        //as usually  <bars-chart> is semantically
+        //more understandable
+        restrict: 'E',
+        //this is important,
+        //we don't want to overwrite our directive declaration
+        //in the HTML mark-up
+        replace: false,
+        //our data source would be an array
+        //passed thru chart-data attribute
+        scope: {
+            data: '@'
+        },
+        link: function(scope, element, attrs) {
+            //in D3, any selection[0] contains the group
+            //selection[0][0] is the DOM node
+            //but we won't need that this time
+            var chart = d3.select(element[0]);
+            //to our original directive markup bars-chart
+            //we add a div with out chart stling and bind each
+            //data entry to the chart
+            chart.append("div").attr("class", "chart")
+                .selectAll('div')
+                .data(scope.data).enter().append("div")
+                .transition().ease("elastic")
+                .style("width", function(d) {
+                    return d + "%";
+                })
+                .text(function(d) {
+                    return d + "%";
+                });
+            //a little of magic: setting it's width based
+            //on the data value (d)
+            //and text all with a smooth transition
         }
     };
-
-    //function to 'open' a tab
-    $scope.openTab = function (tab) {
-        //check if tab is already open
-        if ($scope.isOpenTab(tab)) {
-            //if it is, remove it from the activeTabs array
-            $scope.activeTabs.splice($scope.activeTabs.indexOf(tab), 1);
-        } else {
-            //if it's not, add it!
-            $scope.activeTabs.push(tab);
-        }
-    };
-}
-
+    return directiveDefinitionObject;
+});

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8 ie7"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9 ie8"><![endif]-->
+<!--[if IE 9]><html class="no-js ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta charset="UTF-8">
+<title>Dataset Excel Cross Sectional</title>
+<meta content="width=device-width,initial-scale=1.0" name="viewport" />
+<meta content="on" http-equiv="cleartype" />
+<meta name="format-detection" content="telephone=no">
+<!-- http://www.phpied.com/conditional-comments-block-downloads/ -->
+<!--[if IE]><![endif]-->
+<!-- build:css /ui/css/oldie.css-->
+<!--[if lte IE 8]>
+  <link rel="stylesheet" href="../ui/css/oldie.css" />
+<![endif]-->
+<!-- endbuild -->
+<!-- build:css /ui/css/main.css-->
+<!--[if gt IE 8]><!-->
+<!-- <link rel="stylesheet" href="/ui/css/main.css" /> -->
+<link href="/ui/css/main.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
+<!--<![endif]-->
+<!-- endbuild -->
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" defer></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js" defer></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js" defer></script>
+<!--[if (!IE)|(gt IE 8)]>><!-->
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/tooltipster/3.0.5/js/jquery.tooltipster.min.js" defer></script>
+<!--<![endif]-->
+<script type="text/javascript" src="/ui/js/app/app.js" defer></script>
+<script type="text/javascript" src="/ui/js/app/content-reveal.js" defer></script>
+<script type="text/javascript" src="/ui/js/app/nav.js" defer></script>
+<script type="text/javascript" src="/ui/js/app/supporting-content.js" defer></script>
+<script type="text/javascript" src="/ui/js/app/tables.js" defer></script>
+<script type="text/javascript" src="/ui/js/app/tabs.js" defer></script>
+<script type="text/javascript" src="/ui/js/custom-autocomplete.js" defer></script>
+
+<!-- Functionality to populate this page -->
+<script type="text/javascript" src="/ui/js/markdown.js" defer></script>
+<script type="text/javascript" src="/ui/js/bulletin.js" defer></script>
+
+<!-- Accordion Functionality -->
+<script type="text/javascript" src="/ui/js/accordion.js" defer></script>
+<script type="text/javascript" src="/ui/js/accordionSwitch.js" defer></script>
+
+<!---
+title: Dataset Page Template (T6)
+external: true
+type: template
+group: Templates
+markup: false
+-->
+</head>
+<body class="">
+<a class="skiplink visuallyhidden focusable" href="#main" tabindex="0"> <span>Skip to main content</span> </a>
+<main id="main" role="main" class="ONS_border">
+<!-- temp removal to allow for component list selective wrapping --> 
+<!-- <div class="wrapper"> -->
+<div class="wrapper panel--pad-small">
+  <header class="global-header">
+    <div class="media"> <a href="/"> <img src="/ui/img/ons-logo.svg" alt="Office for National Statistics" width="300" class="media__img"> </a>
+      <div class="media__body">
+        <ul class="nav nav--inline-block nav--dark globaltop-nav">
+          <li> <a href="#">Release calendar</a> </li>
+          <li> <a href="#">Methodology</a> </li>
+          <li> <a href="#">About</a> </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+</div>
+<nav class="ons-nav">
+  <div class="wrapper">
+    <ul class="nav nav--multi nav--block nav--primary flush--bottom" id="nav-primary">
+      <li class="nav--primary home"> <a href="/"><span class="icon-home icon--inline"></span><span class="icon-inline vertical-align-mid">Home</span></a> </li>
+      <li> <a href="#" class="nav__expandable js-expandable">Business, Industry, and Trade</a>
+        <ul class="nav--primary__sub js-expandable__content js-nav-hidden">
+          <li> <a href="#">Business</a> </li>
+          <li> <a href="#">Changes to business</a> </li>
+          <li> <a href="#">Construction and industry</a> </li>
+          <li> <a href="#">IT and internet industry</a> </li>
+          <li> <a href="#">International trade</a> </li>
+          <li> <a href="#">Manufacturing and production</a> </li>
+          <li> <a href="#">Retail industry</a> </li>
+          <li> <a href="#">Tourism industry</a> </li>
+        </ul>
+      </li>
+      <li class="nav--primary__active"> <a href="/home/economy/" class="nav__expandable js-expandable">Economy</a>
+        <ul class="nav--primary__sub js-expandable__content js-nav-hidden">
+          <li> <a href="#">Economic output and productivity</a> </li>
+          <li> <a href="#">Environmental account</a> </li>
+          <li> <a href="#">Government, public sector, and taxes</a> </li>
+          <li> <a href="#">Gross Domestic Product (GDP)</a> </li>
+          <li> <a href="#">Gross Values Added (GVA)</a> </li>
+          <li> <a href="/home/economy/inflationandpriceindices">Inflation and price indices</a> </li>
+          <li> <a href="#">Investment and pension trust</a> </li>
+          <li> <a href="#">National accounts</a> </li>
+          <li> <a href="#">Regional accounts</a> </li>
+        </ul>
+      </li>
+      <li> <a href="#" class="nav__expandable js-expandable">Employment and Labour Market</a>
+        <ul class="nav--primary__sub js-expandable__content js-nav-hidden">
+          <li> <a href="#">People in work</a> </li>
+          <li> <a href="#">People not in work</a> </li>
+          <li> <a href="#">Public sector personnel</a> </li>
+        </ul>
+      </li>
+      <li> <a href="#" class="nav__expandable js-expandable">People, Population, and Community</a>
+        <ul class="nav--primary__sub js-expandable__content js-nav-hidden">
+          <li> <a href="#">Births, deaths, and marriages</a> </li>
+          <li> <a href="#">Community</a> </li>
+          <li> <a href="#">Education and childcare</a> </li>
+          <li> <a href="#">Crime and justice</a> </li>
+          <li> <a href="#">Household characteristics</a> </li>
+          <li> <a href="#">Well-being</a> </li>
+          <li> <a href="#">Health and social care</a> </li>
+          <li> <a href="#">Elections</a> </li>
+          <li> <a href="#">Personal and household finances</a> </li>
+          <li> <a href="#">Population and migration</a> </li>
+          <li> <a href="#">Cultural identity</a> </li>
+          <li> <a href="#">Housing</a> </li>
+          <li> <a href="#">Leisure and tourism</a> </li>
+        </ul>
+      </li>
+      <li class="nav--primary__highlight"> <a href="#"> <span class="icon-users icon--inline"></span>Respondents</a> </li>
+      <li class="nav--primary__secondary-content"> <a href="#">Release calendar</a> </li>
+      <li class="nav--primary__secondary-content"> <a href="#">About</a> </li>
+    </ul>
+  </div>
+</nav>
+<div class="slate--mid-grey_new flush">
+  <div class="wrapper">
+    <div class="grid-wrap">
+      <div class="grid-col desktop-grid-one-half box--inline">
+        <form action="/searchresults.html" class="hero reduced_padding pad_right form-horizontal" _lpchecked="1">
+          <label for="homepageSearch" class="visuallyhidden">Search term:</label>
+          <input id="homepageSearch" type="text" class="input-med-large--flex--three-fifths  search_reduction" name="q" value="" placeholder="Search for keyword or time series id">
+          <button type="submit" class=" btn btn--primary btn--small btn--form--large-icon input--lede-btn-icon align_middle no_left_margin"> <span class="icon icon-search-1"> <span class="visuallyhidden">Search</span> </span> </button>
+        </form>
+      </div>
+      <div class="grid-col desktop-grid-one-half box--inline--flex">
+        <div class="link_head"> <a href="#" class="link"> Browse Regional Statistics</a></div>
+        <div class="page-header__icons_new"> <img src="/ui/img/UK.png" alt="uk map" class="ukmap"> </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="wrapper panel--pad-small">
+  <ol class="nav nav--heavy breadcrumb mini flush">
+    <li><a href="/">Home</a></li>
+    <li><a href="home/economy">Economy</a></li>
+    <li class="nav__active"> <a href="/economy/inflationandpriceindices/">Inflation and Price Indices</a> </li>
+  </ol>
+  <!--<ol class="nav nav- -inline-block nav- -dark mini">
+        <li> <a href="#">Local Government Finance</a> </li>
+        <li> <a href="#">Public Sector Finance</a> </li>
+        <li class="nav__active"> <a href="#">Public Spending</a> </li>
+        <li> <a href="#">Research and Development Expenditure</a> </li>
+        <li> <a href="#">Taxes and Revenue</a> </li>
+    </ol>!--> 
+</div>
+<div class="page-header slate">
+  <div class="wrapper">
+    <p><strong>Dataset</strong></p>
+    <h1 class="page-header__title flush--half--bottom">Population Estimates Summary for the UK Dataset</h1>
+    <div class="grid-wrap">
+      <div class="grid-col desktop-grid-two-thirds"> <img src="/ui/img/nslogo.png" class="page-header-image" alt="ONS logo">
+        <p><strong>Release date: 19 February 2014</strong> <span class="page-header-box-link"> <a href="#"><strong>View latest version</strong></a></span> </p>
+        <p>Next release: 21 November 2014 (provisional)</p>
+        <p>Contact: <a href="mailto:jukesie@hotmail.com">Juksie</a></p>
+      </div>
+      </div>
+    <div class="page-header__icons"><a href="#" class="link-complex"><span class="icon icon-twitter icon--grey"><span class="visuallyhidden">Share on Twitter</span></span></a><a href="#" class="link-complex"><span class="icon icon-facebook icon--grey"><span class="visuallyhidden">Share on Facebook</span></span></a></div>
+  </div>
+  <!-- /nav-panel --> 
+</div>
+<div class="wrapper">
+  <div class="panel border-horizontal-single">
+    <div class="content-reveal">
+      <p> Mid-year estimates refer to the population on 30 June of the reference year and are published annually.</p>
+
+      <p>Mid-year population estimates relate to the usually resident population. They account for long-term international migrants (people who change their country of usual residence for a period of 12 months or more) but do not account for short term...</p> 
+        <a href="#" class="content-reveal__action hidden">See more</a> 
+      </div>
+  </div>
+</div>
+
+  <div class="wrapper panel--bottom-mar">
+    <div class="grid-wrap">
+      <div class="grid-col desktop-grid-two-thirds tablet-grid-two-thirds">
+        <article class="box padded slate">
+          <header class="box__header">
+            <h2>Your download options</h2>
+          </header>
+
+
+          <!-- /box__header -->
+
+            <table class="tablesorter resp-table dataset-table">
+               
+                <tbody>
+                    <tr>
+                        <td data-th="Download Category">ALL</td>
+                        <td><a href="#" class="btn btn--primary btn--small"><span class="table__action__text">Download as .XLS</span><span class="icon-download" role="presentation"></span></a></td>
+                        <td><a href="#" class="btn btn--primary btn--small"><span class="table__action__text">Download as .CSV</span><span class="icon-download" role="presentation"></span></a>
+                        </td>
+                       
+                    </tr>
+                    <tr>
+                        <td data-th="Download Category">Mid-2013</td>
+                       <td><a href="#" class="btn btn--primary btn--small"><span class="table__action__text">Download as .XLS</span><span class="icon-download" role="presentation"></span></a></td>
+                       <td><a href="#" class="btn btn--primary btn--small"><span class="table__action__text">Download as .CSV</span><span class="icon-download" role="presentation"></span></a>
+                        </td>
+                     
+                    </tr>
+
+                    <tr>
+                        <td data-th="Download Category">Mid-2012</td>
+                        <td><a href="#" class="btn btn--primary btn--small"><span class="table__action__text">Download as .XLS</span><span class="icon-download" role="presentation"></span></a></td>
+                        <td><a href="#" class="btn btn--primary btn--small"><span class="table__action__text">Download as .CSV</span><span class="icon-download" role="presentation"></span></a>
+                        </td>
+                  
+                    </tr>
+
+                    <tr>
+                        <td data-th="Download Category">Mid-2011</td>
+                        <td><a href="#" class="btn btn--primary btn--small"><span class="table__action__text">Download as .XLS</span><span class="icon-download" role="presentation"></span></a></td>
+                        <td><a href="#" class="btn btn--primary btn--small"><span class="table__action__text">Download as .CSV</span><span class="icon-download" role="presentation"></span></a>
+                        </td>
+                
+                    </tr>
+                    <tr>
+                        <td data-th="Download Category">Mid-2010</td>
+                        <td><a href="#" class="btn btn--primary btn--small"><span class="table__action__text">Download as .XLS</span><span class="icon-download" role="presentation"></span></a></td>
+                        <td><a href="#" class="btn btn--primary btn--small"><span class="table__action__text">Download as .CSV</span><span class="icon-download" role="presentation"></span></a>
+                        </td>
+                
+                    </tr>
+                    <tr>
+                        <td data-th="Download Category">Mid-2009</td>
+                        <td><a href="#" class="btn btn--primary btn--small"><span class="table__action__text">Download as .XLS</span><span class="icon-download" role="presentation"></span></a></td>
+                        <td><a href="#" class="btn btn--primary btn--small"><span class="table__action__text">Download as .CSV</span><span class="icon-download" role="presentation"></span></a>
+                        </td>
+                
+                    </tr>
+                </tbody>
+            </table>
+
+        
+           
+        
+          <!-- /box__content -->
+        
+          <!-- /box__actions --> 
+        </article>
+        <!-- /article__content -->
+       
+        
+
+        <!-- article__content -->
+    <div class="panel--bottom-mar">
+    <h3>Important Notes and Usage Information</h3>
+    
+   
+    <ol class="dataset_usage">
+      <li>These estimates are rounded to the nearest hundred and are different to the unrounded estimates in other published tables.</li>
+      <li>The estimates are produeced using a variety of data sources and statistical models, including some statistical disclosure control methods, and small estimates should not be taken to refer to particular individuals.</li>
+      <li>The estimated resident population of an area includes all those people who usually live there, regardless of nationality. Arriving international migrants are included in the usually resident population if they remain in the UK for at least a year. Emigrants are excluded if they remain outside the UK for at least a year. This is consistent with the United Nations definition of a long-term migrant. Armed forces stationed outside of the UK are excluded. Students are taken to be usually resident at thir term time address.</li> 
+      <li>Note that age 90 comprises data for ages 90 and above</li>
+     
+    </Ol>
+   </div>
+
+  
+     </div>
+      
+      <div class="grid-col desktop-grid-one-third tablet-grid-one-third"> 
+        <!-- article__content -->
+        <article class="box box--padded slate sectioned">
+          <header class="box__header">
+            <h3 class="headline"> Related Datasets</h3>
+          </header>
+          <!-- /box__header -->
+          <div class="box__content">
+            <div class="grid-wrap nav-panel__body">
+              <div class="grid-col grid-one-sixth"> <span class="icon icon-download icon--blue"> </span> </div>
+              <div class="grid-col grid-five-sixths"> <a href="#">Population estimates by age and sex dataset</a> </div>
+            </div>
+            <div class="grid-wrap">
+              <div class="grid-col grid-one-sixth"> <span class="icon icon-download icon--blue"> </span> </div>
+              <div class="grid-col grid-five-sixths"> <a href="#">Population projection</a> </div>
+            </div>
+          </div>
+          <!-- /box__content -->
+        
+        </article>
+        <!-- /article__content --> 
+        <!-- article__content -->
+        <article class="box box--padded slate sectioned">
+          <header class="box__header">
+            <div class="grid-wrap ">
+              <div class="grid-col desktop-grid-one-sixth">
+                
+              </div>
+              <div class="grid-col desktop-grid-five-sixths">
+                <h3>This dataset is used in the following statistical bulletins and articles:</h3>
+              </div>
+            </div>
+            <div class="padded"></div>
+          </header>
+          <!-- /box__header -->
+          <div class="box__content">
+            <p><a href="">Annual Mid-year population Estimates, 2013</a></p>
+            <p><a href="">National Population Projections, 2012-based Statistical Bulletin</a></p>
+            <p><a href="">See all (8) publications</a></p>
+              
+            <!-- /list- -bullet --> 
+          </div>
+          <!-- /box__content -->
+          
+          <br>
+          <p class="caveat"> Alpha feedback CTA to replace this pod*</p>
+        </article>
+        <!-- /article__content --> 
+        <!-- article__content -->
+        <article class="box box--padded sectioned">
+          <header class="box__header">
+            <div class="grid-wrap ">
+              <div class="grid-col desktop-grid-one-sixth">
+                <h2><span class="icon icon-info-circled icon--grey"></span></h2>
+              </div>
+              <div class="grid-col desktop-grid-five-sixths">
+                <h3>Contact details for this
+                  statistical bulletin</h3>
+              </div>
+            </div>
+            <div class="padded"></div>
+          </header>
+          <!-- /box__header -->
+          <div class="box__content">
+            <p>Pete Large<br/>
+              Population Estimates Unit<br/>
+              <a href="mailto:ppi@ons.gsi.gov.uk">ppi@ons.gsi.gov.uk</a><br/>
+              Telephone: +44 (0)1633 456468</p>
+            <!-- /list- -bullet --> 
+          </div>
+          <!-- /box__content -->
+          
+          <footer class="box__footer box__actions">
+            <p class="right"> <a href="#" title="Opens in new window">View all contacts</a><span class="icon icon-book icon--blue"></span></p>
+          </footer>
+        </article>
+
+      </div>
+      <!-- /grid-col --> 
+    </div>
+  </div>
+</div>
+
+<!-- /end main content -->
+<footer class="global-footer">
+  <div class="slate panel--pad-large panel--separated">
+    <div class="wrapper">
+      <nav class="grid-wrap">
+        <div class="grid-col tablet-grid-one-third">
+          <h2 class="delta headline-separated">Legal</h2>
+          <ul class="list--neutral list--grid list--spaced">
+            <li> <a href="#">Business Transparency</a> </li>
+            <li> <a href="#">Terms and Conditions</a> </li>
+            <li> <a href="#">Copyright</a> </li>
+            <li> <a href="#">Cookies and Privacy</a> </li>
+          </ul>
+        </div>
+        <div class="grid-col tablet-grid-one-third">
+          <h2 class="delta headline-separated">About ONS</h2>
+          <ul class="list--neutral list--grid list--spaced">
+            <li> <a href="#">Who we are</a> </li>
+            <li> <a href="#">Careers</a> </li>
+            <li> <a href="#">Products and Services</a> </li>
+            <li> <a href="#">Contact us</a> </li>
+            <li> <a href="#">Our offices</a> </li>
+          </ul>
+        </div>
+        <div class="grid-col tablet-grid-one-third">
+          <h2 class="delta headline-separated">Connect with us</h2>
+          <ul class="list--neutral list--grid list--spaced">
+            <li> <a href="#">Facebook</a> </li>
+            <li> <a href="#">Twitter</a> </li>
+            <li> <a href="#">YouTube</a> </li>
+            <li> <a href="#">Email subscriptions</a> </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- /wrapper --> 
+  </div>
+  <!-- /slate -->
+  <div class="slate--dark">
+    <div class="wrapper">
+      <div class="footer__license"> <img class="footer__license__img" alt="OGL_logo" width="60" src="/ui/img/ogl.png">
+        <p class="footer__license__body"> All content is available under the Open Government Licence v2.0, except where otherwise stated </p>
+      </div>
+    </div>
+  </div>
+</footer>
+    </main>
+
+</body>
+</html>

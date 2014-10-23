@@ -3,17 +3,11 @@ jdk:
 - openjdk7
 deploy:
   provider: heroku
+  strategy: api
   api_key:
-    secure: IH2Gf+FDNUGLLxpke3RSqWOQCakUIvgLrWwYNoYq6X6hkXSfe5MDiSzASsIUEfix+eOuSSXTDCZE69lyGqxos1giI/fwY4E+qJZd72gEgbJyEaIn8QD+4KUjZ4d7gflLAa4xQO/3PjedUKGwiNepuc839bZO0sWpTRunDLA3t0E=
+    secure: MPemzQ0Ez73iVuSdd2VqZDqSCp9TFJgeKImOETnbX1zduUuvon0Pd9m/xk/JhOQN7b9RsLHFym+yd+Ko2ilAICuMiI1wFm1Bpi3COkE4zOfpix1ZmxgJyE2tYfGiZuIZerUnALKvIQueWpRCJ/wGXBiyMxf8vmY5H/Dk+zrXgeI=
   app: tredegar
   on:
     repo: ONSdigital/tredegar
-
-# We don't pull the CX code in the build
-# From: http://stackoverflow.com/questions/15674064/github-submodule-access-rights-travis-ci
 git:
-    submodules: false
-#    
-# # From: http://stackoverflow.com/questions/16638573/auto-authorize-ssh-auth-requests-on-travis-ci
-#before_script:
-#  - echo -e "Host codebasehq.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+  submodules: false

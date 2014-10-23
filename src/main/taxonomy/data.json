@@ -3,6 +3,13 @@
   "breadcrumb": [],
   "children": [
     {
+      "detail": [],
+      "index": 0,
+      "type": "home",
+      "name": "Business, Industry and Trade",
+      "fileName": "businessindustryandtrade"
+    },
+    {
       "detail": [
         {
           "name": "Value added of Non-Financial Business Economy",
@@ -32,9 +39,10 @@
           "headline": false
         }
       ],
-      "name": "Employment and Labour Market",
-      "fileName": "employmentandlabourmarket",
-      "index": 0
+      "index": 1,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
     },
     {
       "detail": [
@@ -66,9 +74,10 @@
           "headline": false
         }
       ],
-      "name": "Economy",
-      "fileName": "economy",
-      "index": 0
+      "index": 2,
+      "type": "home",
+      "name": "Employment and Labour Market",
+      "fileName": "employmentandlabourmarket"
     },
     {
       "detail": [
@@ -100,46 +109,14 @@
           "headline": false
         }
       ],
+      "index": 3,
+      "type": "home",
       "name": "People, Population and Community",
-      "fileName": "peoplepopulationandcommunity",
-      "index": 0
-    },
-    {
-      "detail": [
-        {
-          "name": "Total population (UK) ",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "64.1",
-          "unit": "m",
-          "date": "Mid-2013 estimate",
-          "headline": false
-        },
-        {
-          "name": "Net Migration (UK) ",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "212,000",
-          "unit": "%",
-          "date": "Year ending Dec 2014",
-          "headline": false
-        },
-        {
-          "name": "Number of Births (UK) ",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "812,970 ",
-          "unit": "",
-          "date": "2013",
-          "headline": false
-        }
-      ],
-      "name": "Business, Industry and Trade",
-      "fileName": "businessindustryandtrade",
-      "index": 0
+      "fileName": "peoplepopulationandcommunity"
     }
   ],
+  "index": 0,
+  "type": "home",
   "name": "Home",
-  "fileName": "/",
-  "index": 0
+  "fileName": "/"
 }
