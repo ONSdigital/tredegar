@@ -6,8 +6,7 @@
 
 var onsApp = angular.module('onsApp', [
     'ngRoute',
-    'onsControllers',
-    'highcharts-ng'
+    'onsControllers'
 ]);
 
 onsApp.config(['$routeProvider','$locationProvider',

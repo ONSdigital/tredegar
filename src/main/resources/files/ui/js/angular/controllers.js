@@ -3,8 +3,6 @@
 /* Controllers */
 
 var onsControllers = angular.module('onsControllers', []);
-var HighchartsControllers = angular.module('highcharts-ng', []);
-
 
 onsApp.factory('Data', function($http){
     return function getData(path, callback){
@@ -16,9 +14,8 @@ onsApp.factory('Data', function($http){
     };
 });
 
-
 // Main controller that applies to all the pages
-onsControllers.controller('MainCtrl', ['$scope', '$http', '$location', '$route', 'anchorSmoothScroll', 'highcharts-ng',
+onsControllers.controller('MainCtrl', ['$scope', '$http', '$location', '$route', 'anchorSmoothScroll',
   function($scope, $http, $location, $route, anchorSmoothScroll) {
     $scope.getData = function(path, callback) {
       console.log("Loading data at " + path)
@@ -571,7 +568,7 @@ onsControllers.controller('ReleaseCtrl', ['$scope',
   }
 ])
 
-HighchartsControllers.controller('ChartCtrl', ['$scope',
+onsControllers.controller('ChartCtrl', ['$scope',
         function($scope) {
             $scope.chartData = getData()
             $scope.changeChartType = function(type) {
