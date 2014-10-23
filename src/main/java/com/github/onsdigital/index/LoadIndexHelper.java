@@ -25,6 +25,7 @@ import com.google.gson.JsonSyntaxException;
  * Helper methods for loading index into search engine
  */
 public class LoadIndexHelper {
+	private static final String CDID = "cdid";
 	private static final String TAGS = "tags";
 	private static final String TITLE = "title";
 	private static final String TYPE = "type";
@@ -62,25 +63,24 @@ public class LoadIndexHelper {
 		int fileNameTokenIndex = splitPathLength - 1;
 
 		JsonObject jsonObject = getJsonObject(absoluteFilePath);
-		String type = getField(jsonObject, "type");
+		String type = getField(jsonObject, TYPE);
 		String fileName = splitPath[fileNameTokenIndex];
 
 		Map<String, String> documentMap = null;
 		ContentType contentType = ContentType.valueOf(type);
 		String splitUrl = url.substring(0, url.indexOf(fileName));
+		String title = getField(jsonObject, TITLE);
 
 		switch (contentType) {
 		case timeseries:
-			String cdid = getField(jsonObject, "cdid");
+			String cdid = getField(jsonObject, CDID);
 			documentMap = buildDocumentMap(splitUrl, splitPath, type, cdid);
 			break;
-		case bulletin:
-			String bulletinTitle = getField(jsonObject, "title");
-			documentMap = buildDocumentMap(splitUrl, splitPath, type, bulletinTitle);
+		case unknown:
+			System.out.println("json file does not contain content type field: " + absoluteFilePath);
 			break;
 		default:
-			String homeTitle = getField(jsonObject, "title");
-			documentMap = buildDocumentMap(splitUrl, splitPath, ContentType.home.name(), homeTitle);
+			documentMap = buildDocumentMap(splitUrl, splitPath, type, title);
 			break;
 		}
 
