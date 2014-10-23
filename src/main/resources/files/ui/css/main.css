@@ -343,7 +343,7 @@ body {
 /* ------------------------------
  * Misc utilities
  */
-.cf:before, .rule-above:before, .rule-below:before, .field:before, .definition-list--inline:before, .actionable-header:before, .divider:before, .divider__half:before, .list--table__item:before, .media:before, .nav:before, .callout__stat:before,
+.cf:before, .rule-above:before, .rule-below:before, .datatable:before, .field:before, .definition-list--inline:before, .actionable-header:before, .divider:before, .divider__half:before, .list--table__item:before, .media:before, .nav:before, .callout__stat:before,
 .cf:after,
 .rule-above:after,
 .rule-below:after,
@@ -361,7 +361,7 @@ body {
   content: " ";
   /* 1 */ }
 
-.cf:after, .rule-above:after, .rule-below:after, .field:after, .definition-list--inline:after, .actionable-header:after, .divider:after, .divider__half:after, .list--table__item:after, .media:after, .nav:after, .callout__stat:after {
+.cf:after, .rule-above:after, .rule-below:after, .field:after,.datatable:after, .definition-list--inline:after, .actionable-header:after, .divider:after, .divider__half:after, .list--table__item:after, .media:after, .nav:after, .callout__stat:after {
   clear: both; }
 
 .phone-link {
@@ -2307,7 +2307,7 @@ lesser , applied styles
   margin-top: -10px;
   margin-top: -1rem; }
 
-.list--table__item {
+.list--table__item, .datatable__item {
   position: relative;
   padding: 5px 10px;
   padding: .5rem 1rem; }
@@ -2321,7 +2321,7 @@ lesser , applied styles
   position: relative;
   float: left; }
 
-.list--table__head {
+.list--table__head, .datatable__head {
   padding: 5px 5px 5px 0;
   padding: .5rem .5rem .5rem 0; }
 
@@ -3109,9 +3109,6 @@ lesser , applied styles
 
 .slate {
   background-color: #dcdee0; }
-
-.slate--light {
-  background-color: #f3f3f3; }
 
 .slate--dark {
   background-color: #b2b7bb; }
@@ -4502,13 +4499,9 @@ ol.toc-columns
 
 }
 
-.rem_padding_bottom{
-  padding-bottom: 0rem;
-}
+.rem_padding_bottom{ padding-bottom: 0rem;}
 
-#collection-list p{
-  color: gray;
-}
+#collection-list p{color: gray;}
 
 #search > dl > dt:nth-child(1){
   font-size: 1.3em;
@@ -4521,21 +4514,15 @@ ol.toc-columns
   background-color: #fafafb;
 }
 
-#search > dl > dd {
-  padding: 0 0 0.85em 0em;
-}
+#search > dl > dd {padding: 0 0 0.85em 0em;}
 
-#frequency{
-  font-weight: bold;
-}
+#frequency{font-weight: bold;}
 
 /*------------------------------------*\
   Nav Bar Styles
 \*------------------------------------*/
 
-.vertical-align-mid{
-  vertical-align: middle;
-}
+.vertical-align-mid{vertical-align: middle;}
 
 /*CSS to incorporate Home in Nav */
 
@@ -4772,7 +4759,6 @@ div.grid-col.desktop-grid-two-thirds.tablet-grid-two-thirds > article > table.da
   border: 0px;
 }
 
-
 article > table.dataset-table > tbody > tr > td{
   font-weight: bold;
   text-align: right;
@@ -4794,3 +4780,87 @@ div.grid-col.desktop-grid-two-thirds.tablet-grid-two-thirds > div > ol > li {
 =======
 >>>>>>> d42b5fc4372342db7f3717c4d5557ef6c58b5277
 
+
+/*------------------------------------*\
+  Data Table Styles
+\*------------------------------------*/
+
+.data-table {
+  margin: 1em 0;
+  min-width: 300px;
+}
+
+.data-table th {
+  border-top:hidden;
+}
+
+.data-table td {
+  display: block;
+}
+.data-table td:first-child {
+  padding-top: .5em;
+}
+.data-table td:last-child {
+  padding-bottom: .5em;
+}
+
+.data-table td:after {
+  padding-left: 0.6em;
+}
+
+.data-table td {
+  text-align: left;
+}
+
+.data-table {
+  border-radius: .4em;
+  overflow: hidden;
+  margin: auto;
+}
+
+.data-table th, .data-table td {
+  margin: .5em 1em;
+}
+
+.datatable-select{
+  color: white;
+  background-color: #757575;
+  width: 10%;
+  padding: 1em;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.datatable--checkbox{
+  border-left: solid #dedfdc 2px;
+}
+
+td.datatable-downloads{
+  text-align: right;
+}
+
+.datatable-row{
+  border-top: 2px solid #dedfdc;
+}
+
+.data_table_section-title{
+  width: 45%;
+}
+
+@media (min-width: 750px) {
+.data-table th, .data-table td {
+  padding: 1em !important;
+}
+}
+
+@media screen and (max-width: 750px){
+  #Datatable > tbody > tr > td > div.micro{
+    display:none;
+  }
+}
+
+@media screen and (min-width: 750px){
+  #Datatable > tbody > tr > td> div > div.micro{
+    display: none;
+  }
+}
