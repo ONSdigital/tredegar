@@ -1,79 +1,107 @@
 <div ng-controller="DatasetCtrl">
-
+<div ng-controller="DatasetContentCtrl">
 
 <ons-header></ons-header>
 
 <div class="page-header slate">
-  <div class="wrapper">
-    <p><strong>{{header}}</strong></p>
-    <h1 class="page-header__title flush--half--bottom">{{dataset.title}}</h1>
-    <div class="grid-wrap">
-      <div class="grid-col desktop-grid-two-thirds"> <img src="/ui/img/nslogo.png" class="page-header-image" alt="ONS logo">
-        <p><strong>{{dataset.releaseDate}}</strong> <span class="page-header-box-link"> <a href="#"><strong>View latest version</strong></a></span> </p>
-        <p>Next release: {{dataset.nextRelease}} (provisional)</p>
-        <p>Contact: <a href="mailto:jukesie@hotmail.com">Juksie</a></p>
+    <div class="wrapper">
+        <p>
+            <strong>{{header}}</strong>
+        </p>
+        <h1 class="page-header__title flush--half--bottom">{{dataset.title}}</h1>
+        <div class="grid-wrap">
+            <div class="grid-col desktop-grid-two-thirds">
+                <img src="/ui/img/nslogo.png" class="page-header-image" alt="ONS logo">
+                <p>
+                    <strong>{{dataset.releaseDate}}</strong>
+                    <span class="page-header-box-link">
+                        <a href="#">
+                            <strong>View latest version</strong>
+                        </a>
+                    </span>
+                </p>
+                <p>Next release: {{dataset.nextRelease}} (provisional)</p>
+                <p>Contact: <a href="mailto:jukesie@hotmail.com">Juksie</a>
+                </p>
+            </div>
+        </div>
+        <div class="page-header__icons">
+            <a href="#" class="link-complex">
+                <span class="icon icon-twitter icon--grey">
+                    <span class="visuallyhidden">Share on Twitter</span>
+                </span>
+            </a>
+            <a href="#" class="link-complex">
+                <span class="icon icon-facebook icon--grey">
+                    <span class="visuallyhidden">Share on Facebook</span>
+                </span>
+            </a>
+        </div>
     </div>
-</div>
-<div class="page-header__icons"><a href="#" class="link-complex"><span class="icon icon-twitter icon--grey"><span class="visuallyhidden">Share on Twitter</span></span></a><a href="#" class="link-complex"><span class="icon icon-facebook icon--grey"><span class="visuallyhidden">Share on Facebook</span></span></a></div>
-</div>
-<!-- /nav-panel -->
-</div>
-<div class="wrapper">
-  <div class="panel border-horizontal-single">
-    <div class="content-reveal">
-      <p> {{dataset.lede}}</p>
-      <a href="#" class="content-reveal__action hidden">See more</a>
-  </div>
-</div>
+    <!-- /nav-panel -->
 </div>
 
+<!-- Content-reveal section -->
+<div class="wrapper" ng-controller="ContentRevealCtrl" >
+    <div class="panel">
+        <div class="content-reveal lede">
+            <p>{{dataset.lede}}
+              <a href="" ng-click="toggleContent()" class="content-reveal__action">{{showContent ? 'Show less' : 'Show more'}}</a>
+          </p>
+          <div ng-show="showContent" class="content-reveal__hidden">
+              <p>
+                  {{dataset.more}}
+              </p>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Main content -->
 <div class="wrapper panel--bottom-mar">
     <div class="grid-wrap">
-      <div class="grid-col desktop-grid-two-thirds tablet-grid-two-thirds">
-        <article class="box padded slate">
-          <header class="box__header">
-            <h2>Your download options</h2>
-        </header>
-
-
-        <!-- /box__header -->
-
-        <table class="tablesorter resp-table dataset-table">
-
-            <tbody>
-                <tr ng-repeat="row in dataset.download">
-                    <td data-th="Download Category">{{row.title}}</td>
-                    <td><a href="{{row.xls}}" class="btn btn--primary btn--small"><span class="table__action__text">Download as .XLS</span><span class="icon-download" role="presentation"></span></a></td>
-                    <td><a href="{{row.csv}}" class="btn btn--primary btn--small"><span class="table__action__text">Download as .CSV</span><span class="icon-download" role="presentation"></span></a>
-                    </td>
-
-                </tr>
-            </tbody>
-        </table>
-        <!-- /box__content -->
-        <!-- /box__actions -->
-    </article>
-    <!-- /article__content -->
-
-
-    <!-- article__content -->
-    <div class="panel--bottom-mar">
-        <h3>Important Notes and Usage Information</h3>
-        <ol class="dataset_usage">
-          <li ng-repeat="row in dataset.notes">{{row.data}}</li>
-      </ol>
-  </div>
-
-        <div ng-if="sidebar" >
-            <div ng-include="sidebarUrl" ></div>
+        <div class="grid-col desktop-grid-two-thirds tablet-grid-two-thirds">
+            <article class="box padded slate">
+                <header class="box__header">
+                    <h2>Your download options</h2>
+                </header>
+                <table class="tablesorter resp-table dataset-table">
+                    <tbody>
+                        <tr ng-repeat="row in dataset.download">
+                            <td data-th="Download Category">{{row.title}}</td>
+                            <td><a href="{{row.xls}}" class="btn btn--primary btn--small"><span class="table__action__text">Download as .XLS</span><span class="icon-download" role="presentation"></span></a></td>
+                            <td><a href="{{row.csv}}" class="btn btn--primary btn--small"><span class="table__action__text">Download as .CSV</span><span class="icon-download" role="presentation"></span></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+            <!-- Footer and notes -->
+            <div class="panel--bottom-mar">
+                <div class="lede">
+              <p>
+                <b>The alcoholic beverages index</b>
+                is calculating weights based on sales to UK businesses and government outside of
+                the service sector. For example, sales of legal services to a UK
+                manufacturing company would be included, but sales to an accountancy
+                company (another service provider) would be excluded. This index
+                gives a measure of inflation that is specific to non-service sector
+                businesses.
+              </p>
+            </div>
+                <h3>Important Notes and Usage Information</h3>
+                <ol class="dataset_usage">
+                    <li ng-repeat="row in dataset.notes">{{row.data}}</li>
+                </ol>
+            </div>
         </div>
-
-
-</div>
-</div>
+        <div ng-if="sidebar">
+            <div ng-include="sidebarUrl"></div>
+        </div>
+    </div>
 </div>
 <!-- /end main content -->
 
 <ons-footer></ons-footer>
-
+</div>
 </div>
