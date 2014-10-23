@@ -131,8 +131,6 @@ public class Csv {
 			File themeFile;
 			File subjectFile;
 			File topicFile;
-			File subTopicFile;
-			System.out.println();
 			for (Folder t : folders) {
 				themeFile = new File(root, t.filename());
 				themeFile.mkdirs();
@@ -326,8 +324,7 @@ public class Csv {
 	}
 
 	private static void createRelease(File topicFile, Folder u) throws IOException {
-		File subTopicFile;
-		subTopicFile = new File(topicFile, u.filename());
+		File subTopicFile = new File(topicFile, u.filename());
 		subTopicFile.mkdir();
 		System.out.println("\t\t" + subTopicFile.getPath());
 		Release release = new Release(u);
