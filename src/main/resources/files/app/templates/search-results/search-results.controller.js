@@ -16,7 +16,9 @@ angular.module('onsTemplates')
         page = 1
       }
 
-      search(searchTerm, type, page, function(data) {})
+      search(searchTerm, type, page, function(data) {
+        $scope.searchTermOneTime = searchTerm
+      })
 
       $scope.isLoading = function() {
         return ($scope.searchTerm && !$scope.searchResponse)

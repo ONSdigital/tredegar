@@ -31,23 +31,26 @@ angular.module('onsComponents')
           var maxVisible = scope.maxVisible = scope.maxVisible || 10
           scope.currentPage = +$location.search()[pageParam] || 1 
             
-
           scope.getStart = function() {
             if (scope.pageCount <= maxVisible) {
               return 1
             }
             var end = scope.getEnd()
-            var start = end - maxVisible - 1
-            return start > 0 ? start : 1
+            var start = end - maxVisible + 1
+            start =  start > 0 ? start : 1
+            return start
           }
           scope.getEnd = function() {
             var max = scope.pageCount
-            if (scope.pageCount <= maxVisible) {
+            if (max <= maxVisible) {
               return max
             }
-            //Five page links after current page
-            var end = scope.curentPage + (Math.ceil(maxVisible / 2))
-            return end > max ? max : end
+
+            //Half of the pages are visible after current page
+            var end = scope.currentPage + Math.ceil(maxVisible / 2)
+            end = (end > max) ? max : end
+            end = (end < maxVisible) ? maxVisible : end
+            return end
           }
           scope.isVisible = function() {
             return (scope.pageCount > 1)
