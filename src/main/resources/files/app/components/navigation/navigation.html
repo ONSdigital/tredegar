@@ -2,25 +2,25 @@
   <div class="wrapper">
     <ul class="nav nav--multi nav--block nav--primary flush--bottom" id="nav-primary">
       <li class="nav--primary home" >
-        <a href="#/"><span class="icon-home icon--inline"></span><span class="icon-inline vertical-align-mid">Home</span></a>
+        <a href="#!/"><span class="icon-home icon--inline"></span><span class="icon-inline vertical-align-mid">Home</span></a>
       </li>
       <li  ng-repeat="n in navigationData" ng-class="isCurrentPage(n.fileName) ? 'nav--primary__active' : ''"  >
-        <a href="#{{n.url}}" class="nav__expandable js-expandable arrowunderline" ng-class="isExpanded(n.fileName) ? 'js-expandable-active' : ''" ng-click="toggle(n.fileName)" >{{n.name}}</a>
+        <a href="#!{{n.url}}" class="nav__expandable js-expandable arrowunderline" ng-class="isExpanded(n.fileName) ? 'js-expandable-active' : ''" ng-click="toggle(n.fileName)" >{{n.name}}</a>
         <ul class="nav--primary__sub js-expandable__content" ng-class="isExpanded(n.fileName) ? '' : 'js-nav-hidden'" >
           <li ng-repeat="c in n.children">
-            <a href="#{{c.url}}">{{c.name}}</a>
+            <a href="#!{{c.url}}">{{c.name}}</a>
           </li>
         </ul>
       </li>
       <li class="nav--primary__highlight">
-        <a href="#">
+        <a href="#!">
         <span class="icon-users icon--inline"></span>Respondents</a>
       </li>
       <li class="nav--primary__secondary-content">
-        <a href="#">Release calendar</a>
+        <a href="#!">Release calendar</a>
       </li>
       <li class="nav--primary__secondary-content">
-        <a href="#">About</a>
+        <a href="#!">About</a>
       </li>
     </ul>
   </div>

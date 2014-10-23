@@ -25,7 +25,18 @@
         .config(['$routeProvider', '$locationProvider',
             function($routeProvider, $locationProvider) {
                 $routeProvider.
-
+                when('/contactus', {
+                    templateUrl: 'app/templates/contact/contactus.html',
+                    controller: "ContactUsCtrl"
+                }).
+                when('/dataset', {
+                    templateUrl: 'app/templates/dataset/Dataset_Excelcrosssection.html',
+                    controller: "DatasetCtrl"
+                }).
+                when('/dataset_timeseries', {
+                    templateUrl: 'app/templates/dataset/Dataset_Excel_Time_Series.html',
+                    controller: "DatasetCtrl"
+                }).
                 when('/release', {
                     templateUrl: 'app/templates/release/release.html'
                 }).
@@ -81,6 +92,10 @@
                     }
                 })
 
+                $locationProvider
+                    .html5Mode(false)
+                    .hashPrefix('!');
+
             }
         ])
 
@@ -99,17 +114,17 @@
                     })
                 }
 
-                $scope.getPath =function()  {
+                $scope.getPath = function() {
                     return PathService.getPath()
                 }
 
                 $scope.getPage = function() {
-                  return PathService.getPage()
+                    return PathService.getPage()
                 }
 
-                $scope.getUrlParam=function(paramName) {
-                  var params = $location.search()
-                  return params[paramName]
+                $scope.getUrlParam = function(paramName) {
+                    var params = $location.search()
+                    return params[paramName]
                 }
 
 

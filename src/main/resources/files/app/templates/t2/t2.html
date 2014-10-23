@@ -32,7 +32,7 @@
                     <dl>
                       <dt class="nav-panel__title">
                         <h3 class="nav-panel__heading">
-                          <a href="#{{getPath()}}/{{section.fileName}}/{{child.fileName}}">
+                          <a href="#!{{getPath()}}/{{section.fileName}}/{{child.fileName}}">
                         {{child.name}}
                       </a>
                           <span tabindex="0" title="" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin"></span>
@@ -55,7 +55,7 @@
               </section>
               <footer class="nav-panel__footer">
                 <div class="nav-panel__action ">
-                  <a class="nav-panel__roomy no_underline" href="#{{getPath()}}/{{section.fileName}}">View all {{section.name}}</a>
+                  <a class="nav-panel__roomy no_underline" href="#!{{getPath()}}/{{section.fileName}}">View all {{section.name}}</a>
                 </div>
               </footer>
             </article>
@@ -69,7 +69,7 @@
                 </header>
                 <footer ng-repeat="other in data.children | slice:3" class="nav-panel__footer">
                   <div class="nav-panel__action ">
-                    <a class="nav-panel__roomy no_underline" href="#{{getPath()}}/{{other.fileName}}">{{other.name}}</a>
+                    <a class="nav-panel__roomy no_underline" href="#!{{getPath()}}/{{other.fileName}}">{{other.name}}</a>
                   </div>
                 </footer>
               </article>

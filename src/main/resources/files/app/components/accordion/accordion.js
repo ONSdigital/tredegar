@@ -54,6 +54,6 @@ angular.module('onsComponents')
         scope.pane = scope
         scope.toggle = accordionCtrl.toggle
       },
-      templateUrl: 'app/components/accordion/accordion-item.html'
+      templateUrl: 'app/components/accordion/accordionitem.html'
     }
   })
