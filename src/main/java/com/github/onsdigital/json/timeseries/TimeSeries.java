@@ -1,10 +1,12 @@
 package com.github.onsdigital.json.timeseries;
 
-public class TimeSeries {
+import com.github.onsdigital.json.ContentType;
+import com.github.onsdigital.json.DataItem;
+
+public class TimeSeries extends DataItem {
 
 	// Spreadsheet headings
 	public String cdid = "aaaa";
-	public String name = "People not in Work";
 	public String seasonalAdjustment = "Not seasonally adjusted";
 	public String units = "Weights (parts per 1000)";
 	public String mainMeasure = "Consumer Prices Index";
@@ -22,4 +24,10 @@ public class TimeSeries {
 
 	// e.g. "Not a national statistic" or "2005 = 100. Not seasonally adjusted"
 	public String note = "2005 = 100. Not seasonally adjusted";
+
+	public TimeSeries() {
+		type = ContentType.timeseries;
+		name = "People not in Work";
+		fileName = cdid.toLowerCase();
+	}
 }

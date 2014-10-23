@@ -6,7 +6,7 @@ import java.util.List;
 import com.github.onsdigital.generator.Folder;
 import com.github.onsdigital.json.taxonomy.Detail;
 
-public class ChildT1 extends TaxonomyNode {
+public class ChildT1 extends TaxonomyFolder {
 
 	public List<Detail> detail = new ArrayList<>();
 

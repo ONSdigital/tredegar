@@ -161,7 +161,17 @@ onsControllers.controller('DatasetCtrl', ['$scope',
   }
 ])
 
-//Timeseriees Controller
+//Dataset Timeseries Controller
+onsControllers.controller('Dataset_TimeseriesCtrl', ['$scope',
+  function($scope) {
+    $scope.header = "Dataset"
+    $scope.contentType = "dataset"
+    $scope.sidebar = true
+    $scope.sidebarUrl = "templates/datasetsidebar_timeseries.html"
+  }
+])
+
+//Timeseries Controller
 onsControllers.controller('T5Ctrl', ['$scope',
   function($scope) {
     $scope.header = "Time Series"
