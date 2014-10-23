@@ -84,7 +84,7 @@
                         redirectCheck: ['$location',
                             function($location) {
                                 var absoluteLocation = $location.absUrl();
-                                if (absoluteLocation.indexOf('#/') === -1) {
+                                if (absoluteLocation.indexOf('#!/') === -1) {
                                     $location.path('/');
                                 }
                             }
@@ -100,8 +100,8 @@
         ])
 
     onsApp
-        .controller('MainCtrl', ['$scope', '$log', '$http', '$location', 'PathService',
-            function($scope, $log, $http, $location, PathService) {
+        .controller('MainCtrl', ['$scope', '$log', '$http', '$location', 'PathService', '$anchorScroll',
+            function($scope, $log, $http, $location, PathService, $anchorScroll) {
                 var ctrl = this
 
                 loadNavigation()
@@ -127,7 +127,10 @@
                     return params[paramName]
                 }
 
-
+                $scope.scrollTo = function(id) {
+                    $location.hash(id)
+                    $anchorScroll()
+                }
             }
         ])
 

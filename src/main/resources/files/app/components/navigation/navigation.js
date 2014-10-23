@@ -11,13 +11,11 @@ angular.module('onsComponents')
         link: function(scope) {
           var path = $location.$$path
           var tokens = path.split('/')
-          if (tokens[1] === 'home') {
-            if (tokens.length < 3) {
-              scope.location = "home"
+            if (tokens.length < 2) {
+              scope.location = "/"
             } else {
-              scope.location = tokens[2]
+              scope.location = tokens[1]
             }
-          }
           scope.isCurrentPage = function(page) {
             return scope.location === page
           }
