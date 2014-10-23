@@ -24,6 +24,7 @@
         .config(['$routeProvider', '$locationProvider',
             function($routeProvider, $locationProvider) {
                 $routeProvider.
+
                 when('/release', {
                     templateUrl: 'app/templates/release/release.html'
                 }).
@@ -32,7 +33,7 @@
                     controller: "CollectionCtrl"
                 }).
                 when('/economy/inflationandpriceindices/bulletin', {
-                    templateUrl: 'templates/bulletin.html',
+                    templateUrl: 'app/templates/bulletin/bulletin.html',
                     controller: 'BulletinCtrl'
                 }).
                 when('/bulletin', {
@@ -78,6 +79,7 @@
                         ]
                     }
                 })
+
             }
         ])
 
