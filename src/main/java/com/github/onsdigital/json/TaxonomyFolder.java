@@ -2,13 +2,11 @@ package com.github.onsdigital.json;
 
 import com.github.onsdigital.generator.Folder;
 
-public class TaxonomyNode {
-
-	public String name;
-	public String fileName;
+public class TaxonomyFolder extends DataItem {
 	public int index;
 
-	TaxonomyNode(Folder folder) {
+	TaxonomyFolder(Folder folder) {
+		type = ContentType.home;
 		name = folder.name;
 		fileName = folder.filename();
 	}

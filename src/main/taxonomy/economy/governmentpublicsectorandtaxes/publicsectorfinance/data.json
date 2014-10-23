@@ -14,14 +14,16 @@
   "level": "t3",
   "breadcrumb": [
     {
+      "index": 0,
+      "type": "home",
       "name": "Economy",
-      "fileName": "economy",
-      "index": 0
+      "fileName": "economy"
     },
     {
+      "index": 0,
+      "type": "home",
       "name": "Government, Public Sector and Taxes",
-      "fileName": "governmentpublicsectorandtaxes",
-      "index": 0
+      "fileName": "governmentpublicsectorandtaxes"
     }
   ],
   "timeseries": [
@@ -102,7 +104,8 @@
   ],
   "lede": "Consumer price inflation is the speed at which the prices of goods and services bought by households rise or fall.",
   "more": "Some more content goes here. This will expand and contract if you have JS enabled. If JS is disabled, this will show by default. Yay progressive enhancement!",
+  "index": 0,
+  "type": "home",
   "name": "Public Sector Finance",
-  "fileName": "publicsectorfinance",
-  "index": 0
+  "fileName": "publicsectorfinance"
 }

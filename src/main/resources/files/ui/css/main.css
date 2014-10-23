@@ -1666,6 +1666,10 @@ textarea {
 body {
   line-height: 1.5; }
 
+b, strong {
+  font-family: "open-sans-n7", "open-sans", sans-serif;
+  font-weight: normal; }
+
 h1,
 h2,
 h3,
@@ -4786,7 +4790,7 @@ div.grid-col.desktop-grid-two-thirds.tablet-grid-two-thirds > div > ol > li {
   article > table.dataset-table > tbody > tr > td::before{
     display: none;}
   article > table.dataset-table > tbody > tr > td{
-    text-align: center;} 
+    text-align: center;}
   article > table.dataset-table > tbody > tr > td{
     margin-bottom: 1.75rem;
   }

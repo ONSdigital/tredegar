@@ -1,6 +1,5 @@
 {
   "cdid": "KW5F",
-  "name": "RPIJ: Percentage Change Over 1 Month - All Items",
   "seasonalAdjustment": "Not seasonally adjusted",
   "units": "percentage change over 1 month",
   "mainMeasure": "Retail Prices Index calculated using the Jevons formula (RPIJ)",
@@ -12,5 +11,8 @@
   "date": "January 2014",
   "lastUpated": "16 Sep 2014",
   "nextUpdate": "14 Oct 2014",
-  "note": "2005 \u003d 100. Not seasonally adjusted"
+  "note": "2005 \u003d 100. Not seasonally adjusted",
+  "type": "timeseries",
+  "name": "RPIJ: Percentage Change Over 1 Month - All Items",
+  "fileName": "aaaa"
 }

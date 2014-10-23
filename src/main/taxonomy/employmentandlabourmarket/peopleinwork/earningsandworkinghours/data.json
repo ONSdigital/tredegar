@@ -14,14 +14,16 @@
   "level": "t3",
   "breadcrumb": [
     {
+      "index": 0,
+      "type": "home",
       "name": "Employment and Labour Market",
-      "fileName": "employmentandlabourmarket",
-      "index": 0
+      "fileName": "employmentandlabourmarket"
     },
     {
+      "index": 0,
+      "type": "home",
       "name": "People in Work",
-      "fileName": "peopleinwork",
-      "index": 0
+      "fileName": "peopleinwork"
     }
   ],
   "timeseries": [
@@ -102,7 +104,8 @@
   ],
   "lede": "Consumer price inflation is the speed at which the prices of goods and services bought by households rise or fall.",
   "more": "Some more content goes here. This will expand and contract if you have JS enabled. If JS is disabled, this will show by default. Yay progressive enhancement!",
+  "index": 1,
+  "type": "home",
   "name": "Earnings and Working Hours",
-  "fileName": "earningsandworkinghours",
-  "index": 1
+  "fileName": "earningsandworkinghours"
 }

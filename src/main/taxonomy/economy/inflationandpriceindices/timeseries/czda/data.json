@@ -1,6 +1,5 @@
 {
   "cdid": "CZDA",
-  "name": "RPI: Percentage Change Over 12 Months - Gas",
   "seasonalAdjustment": "Not seasonally adjusted",
   "units": "Percentage change over 12 months",
   "mainMeasure": "Retail Prices Index",
@@ -12,5 +11,8 @@
   "date": "January 2014",
   "lastUpated": "16 Sep 2014",
   "nextUpdate": "14 Oct 2014",
-  "note": "2005 \u003d 100. Not seasonally adjusted"
+  "note": "2005 \u003d 100. Not seasonally adjusted",
+  "type": "timeseries",
+  "name": "RPI: Percentage Change Over 12 Months - Gas",
+  "fileName": "aaaa"
 }
