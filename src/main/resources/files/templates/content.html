@@ -60,7 +60,7 @@
                     <h2 ng-if="$even" id="section{{($index + 1)/2 | number : 0}}">{{($index + 1)/2 | number : 0}}. {{section.title}}</h2>
                 </header>
                 <!-- /box__header -->
-
+                <!-- Content with markdown, graphics, images or tables -->
                 <div ng-repeat="item in section.content">
                     <div ng-switch on="item.content_type">
                         <div ng-switch-when="image" class="">
@@ -94,45 +94,44 @@
                             </div>
                         </div>
                     </div>
-                </div>
-
-
+                <!-- </div> -->
                 <!-- Responsive Table (if any) -->
-                <div ng-if="section.table" class="wrapper panel--bottom-mar">
-                    <div class="grid-wrap">
-                        <div class="grid-col desktop-grid-two-thirds tablet-grid-two-thirds">
-                            <table id="myTable" class="tablesorter resp-table">
-                                <thead>
-                                    <tr>
-                                        <th ng-repeat="title in section.table.col">
-                                            {{title}}
-                                            <!-- Title One -->
-                                        </th>
-                                 <!--   <th>First Name</th>
-                                        <th>Email</th>
-                                        <th>Due</th>
-                                        <th>Web Site</th>
-                                        <th>Address</th> -->
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr ng-repeat="cell in section.table.row">
-                                        <td ng-repeat="data in cell.data" data-th="{{section.table.col[$index%section.table.col.length]}}">{{data}}</td>
-                                    </tr>
-                                    <!-- <tr>
-                                        <td data-th="Last Name">Bach</td>
-                                        <td data-th="First Name">Frank</td>
-                                        <td data-th="Email">fbach@yahoo.com</td>
-                                        <td data-th="Due">$50.00</td>
-                                        <td data-th="Web Site">http://www.frank.com</td>
-                                        <td data-th="Address">123 Kew Hill. SO1 4EZ</td>
-                                    </tr> -->
-                                </tbody>
-                            </table>
+                    <div ng-if="item.table" class="wrapper panel--bottom-mar">
+                        <div class="grid-wrap">
+                            <div class="grid-col desktop-grid-two-thirds tablet-grid-two-thirds">
+                                <table id="myTable" class="tablesorter resp-table">
+                                    <thead>
+                                        <tr>
+                                            <th ng-repeat="title in item.table.col">
+                                                {{title}}
+                                                <!-- Title One -->
+                                            </th>
+                                     <!--   <th>First Name</th>
+                                            <th>Email</th>
+                                            <th>Due</th>
+                                            <th>Web Site</th>
+                                            <th>Address</th> -->
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="cell in item.table.row">
+                                            <td ng-repeat="data in cell.data" data-th="{{item.table.col[$index%section.table.col.length]}}">{{data}}</td>
+                                        </tr>
+                                        <!-- <tr>
+                                            <td data-th="Last Name">Bach</td>
+                                            <td data-th="First Name">Frank</td>
+                                            <td data-th="Email">fbach@yahoo.com</td>
+                                            <td data-th="Due">$50.00</td>
+                                            <td data-th="Web Site">http://www.frank.com</td>
+                                            <td data-th="Address">123 Kew Hill. SO1 4EZ</td>
+                                        </tr> -->
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
+                    <!-- end of table -->
                 </div>
-                <!-- end of table -->
                 <footer class="box__footer"> </footer>
                 <!-- /box__actions -->
             </article>
