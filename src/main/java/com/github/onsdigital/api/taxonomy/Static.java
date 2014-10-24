@@ -23,7 +23,7 @@ public class Static {
 		response.setContentType("text/html");
 		response.setCharacterEncoding("UTF8");
 
-		if (!PreGenerated.handle(request, response) && !PrerenderIo.handle(request, response)) {
+		if (!PrerenderIo.handle(request, response) && !PreGenerated.handle(request, response)) {
 			response.setStatus(HttpStatus.SC_NOT_FOUND);
 			response.getWriter().write("Apologies, for some reason it seems that page can't be generated.");
 		}
