@@ -7,6 +7,7 @@ import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.Client;
 
 import com.github.onsdigital.bean.SearchResult;
+import com.github.onsdigital.json.ContentType;
 
 /**
  * 
@@ -42,23 +43,22 @@ public class SearchHelper {
 	 * @throws Exception
 	 */
 	public SearchResult search(ONSQueryBuilder queryBuilder) throws Exception {
-		System.out.println("Searcing For:"
-				+ ReflectionToStringBuilder.toString(queryBuilder));
+		System.out.println("Searcing For:" + ReflectionToStringBuilder.toString(queryBuilder));
 		return new SearchResult(execute(queryBuilder));
 	}
 
-	private SearchResponse execute(ONSQueryBuilder queryBuilder)
-			throws Exception {
+	private SearchResponse execute(ONSQueryBuilder queryBuilder) throws Exception {
 		SearchRequestBuilder searchBuilder = buildRequest(queryBuilder);
 		return searchBuilder.get();
 	}
 
 	private SearchRequestBuilder buildRequest(ONSQueryBuilder queryBuilder) {
-		SearchRequestBuilder searchBuilder = client.prepareSearch(queryBuilder
-				.getIndex());
+		SearchRequestBuilder searchBuilder = client.prepareSearch(queryBuilder.getIndex());
 		String type = queryBuilder.getType();
 		if (StringUtils.isNotEmpty(type)) {
 			searchBuilder.setTypes(type);
+		} else {
+			searchBuilder.setTypes(ContentType.home.name(), ContentType.article.name(), ContentType.bulletin.name());
 		}
 
 		searchBuilder.setExtraSource(queryBuilder.buildQuery());

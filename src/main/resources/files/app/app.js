@@ -25,6 +25,10 @@
         .config(['$routeProvider', '$locationProvider',
             function($routeProvider, $locationProvider) {
                 $routeProvider.
+                when('/t5', {
+                    templateUrl: 'app/templates/t5/t5.html',
+                    controller: "T5Ctrl"
+                }).
                 when('/contactus', {
                     templateUrl: 'app/templates/contact/contactus.html',
                     controller: "ContactUsCtrl"
