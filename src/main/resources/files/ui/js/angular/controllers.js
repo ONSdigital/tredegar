@@ -323,7 +323,7 @@ onsControllers.controller('PaginatorCtrl', ['$scope',
       }
 
       //Five page links after current page
-      var end = $scope.curentPage + 5;
+      var end = $scope.currentPage + 5
       return end > max ? max : end;
     };
 
