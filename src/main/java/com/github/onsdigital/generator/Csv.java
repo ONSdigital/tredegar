@@ -291,6 +291,9 @@ public class Csv {
 			String json = Serialiser.serialise(TimeseriesMetadata.timeseries.get(cdid));
 			File cdidFolder = new File(timeseriesFolder, cdid);
 			FileUtils.writeStringToFile(new File(cdidFolder, "data.json"), json);
+
+			// now create some versions
+			// createVersions(cdidFolder, json);
 		}
 	}
 
@@ -302,6 +305,8 @@ public class Csv {
 		article.title = folder.name;
 		String json = Serialiser.serialise(article);
 		FileUtils.writeStringToFile(new File(articles, "data.json"), json);
+
+		createVersions(articles, json);
 	}
 
 	private static void createBulletin(Folder folder, File file) throws IOException {
@@ -331,5 +336,18 @@ public class Csv {
 		release.name = u.name;
 		String json = Serialiser.serialise(release);
 		FileUtils.writeStringToFile(new File(subTopicFile, "data.json"), json);
+	}
+
+	private static void createVersions(File file, String json) throws IOException {
+		// Create the version directory:
+		File versionsFolder = new File(file, "versions");
+		versionsFolder.mkdir();
+
+		// create a few starting at version '2'
+		for (int i = 2; i < 4; i++) {
+			File version = new File(versionsFolder, String.valueOf(i));
+			version.mkdir();
+			FileUtils.writeStringToFile(new File(version, "data.json"), json);
+		}
 	}
 }

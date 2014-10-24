@@ -39,7 +39,7 @@ public class ScanFileSystem {
 			else {
 				String fileName = path.toAbsolutePath().toString();
 
-				if (isJsonFile(fileName) && isNotRelease(fileName)) {
+				if (isRequiredForIndex(fileName)) {
 					fileNames.add(fileName);
 				}
 			}
@@ -82,11 +82,19 @@ public class ScanFileSystem {
 		return files;
 	}
 
+	private static boolean isRequiredForIndex(String fileName) {
+		return isJsonFile(fileName) && isNotRelease(fileName) && isNotPreviousVersion(fileName);
+	}
+
 	private static boolean isJsonFile(String fileName) {
 		return fileName.endsWith(".json");
 	}
 
 	private static boolean isNotRelease(String fileName) {
 		return !fileName.contains("releases");
+	}
+
+	private static boolean isNotPreviousVersion(String fileName) {
+		return !fileName.contains("versions");
 	}
 }

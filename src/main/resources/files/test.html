@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html ng-app="onsApp">
+  <head>
+    
+    <link href="ui/css/main.css" rel="stylesheet" type="text/css">
+
+
+    <script type="text/javascript" src="ui/js/lib/jquery-1.11.0.min.js" defer></script>
+    <script type="text/javascript" src="ui/js/lib/angular.js"></script>
+    <script type="text/javascript" src="ui/js/lib/angular-route.min.js" defer></script>
+    <script type="text/javascript" src="app/app.js" ></script>
+    <script type="text/javascript" src="app/helpers/filters/filters.js" defer></script>
+    <script type="text/javascript" src="app/components/paginator/paginator.js" defer></script>
+    <script type="text/javascript" src="app/components/tabs/tabs.js" defer></script>
+    <script type="text/javascript" src="app/components/accordion/accordion.js" defer></script>
+    <script type="text/javascript" src="app/components/toggler/toggler.js" defer></script>
+    <script type="text/javascript" src="app/components/navigation/navigation.js" defer></script>
+    <script type="text/javascript" src="app/components/breadcrumb/breadcrumb.js" defer></script>
+
+
+
+    <script  type="text/javascript">
+      angular.module('onsApp')
+        .controller('TestCtrl', ['$scope', '$http', function($scope, $http) {
+          $http.get("/navigation").success(function(data) {
+            $scope.navigation = data
+          })
+
+          $http.get("/data/economy/inflationandpriceindices").success(function(data) {
+            $scope.ipi = data
+          })
+        }])
+    </script>
+
+  </head>
+  <body id="ng-app" class="js">
+    
+    <!-- Paginator -->
+    <h1>Paginator</h1>
+    <ons-paginator page-count=10></ons-paginator>
+    
+    <!-- Tabs -->
+    <h1>Tabs</h1>
+    <ons-tabs >
+    <ons-tab title="First Tab" >I am first</ons-tab>
+    <ons-tab title="Second Tab" >I am second</ons-tab>
+    </ons-tabs>
+    
+    <!-- Accordion -->
+    <h1>Accordion</h1>
+    <ons-accordion multiple="true">
+
+    <article class="box border-horizontal-single">
+      <ons-accordion-item header= "Background notes and Methodology">
+      <div class="box__content">
+        <ul class="list--neutral">
+          <li><a href="#"> Quality and Methodology Information (QMI)</a> (PDF 95.6 kb)</li>
+          <li><a href="#">Impact of Rebasing the Consumer Price Index to 2010=100</a></li>
+          <li><a href="#">Consumer Price Index and Retail Price Index Methodology</a></li>
+        </ul>
+      </div>
+      
+      </ons-accordion-item>
+    </article>
+
+    <article class="box border-horizontal-single">
+      <ons-accordion-item header= "References">
+        <div class="box__content">
+          <p class="accordion-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet in laborum praesentium esse aliquam molestiae animi non facilis perspiciatis corporis ad molestias quo harum suscipit ipsum incidunt ea voluptates accusantium.
+          </p>
+        </div>
+      </ons-accordion-item>
+    </article>
+    <article class="box border-horizontal-single">
+      <ons-accordion-item header= "Footnotes">
+        <div class="box__content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet in laborum praesentium esse aliquam molestiae animi non facilis perspiciatis corporis ad molestias quo harum suscipit ipsum incidunt ea voluptates accusantium.
+            </p>
+        </div>
+      </ons-accordion-item>
+      
+    </article>
+    </ons-accordion>
+
+
+    <h1>Toggle</h1>
+    <a  href="" toggler="theToggle" >Click me to toggle</a>
+    <div toggleable="theToggle">
+      Hey
+    </div>
+    
+    <div ng-controller="TestCtrl">
+      
+    <h1>Navigation</h1>
+    <ons-nav navigation-data="navigation" ></ons-nav>
+
+    
+    <h1>Breadcrumb</h1>
+    <ons-breadcrumb breadcrumb-data="ipi"></ons-breadcrumb>
+    </div>
+
+  </body>
+</html>
+
+

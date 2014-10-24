@@ -1,0 +1,11 @@
+<!-- Move classes outside to make re-usable if necessary -->
+<!-- TODO: Figure out how to pass aria-controls -->
+<!-- TODO: Pass whole title using attrbute -->
+<div class="tab-pane tab-pane--dual lifted" >
+	<ul role="tablist" class="nav tab-pane__tabs-container">
+		<li role="presentation" class="tab-pane__tab-container" ng-repeat="pane in panes">
+			<a href="" ng-class="{'tab-pane__tab--selected':pane.selected}" class="tab-pane__tab" role="tab" aria-selected="{{pane.selected ? true : false}}" ng-click="select(pane)">{{pane.title}} <br class="tab-pane__tab__break">Releases</a>
+		</li>
+	</ul>
+	<div ng-transclude></div>
+</div>
