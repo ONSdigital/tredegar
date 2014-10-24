@@ -57,8 +57,7 @@ public class ONSQueryBuilder {
 	 * @return
 	 */
 	public ONSQueryBuilder setSearchTerm(String searchTerm) {
-		this.searchTerm = StringUtils.isEmpty(searchTerm) ? searchTerm
-				: (searchTerm + "*");
+		this.searchTerm = StringUtils.isEmpty(searchTerm) ? searchTerm : (searchTerm + "*");
 		return this;
 	}
 
@@ -155,21 +154,13 @@ public class ONSQueryBuilder {
 		} else {
 			// return documents with fields containing words that start with
 			// given search term
-			MultiMatchQueryBuilder multiMatchQueryBuilder = new MultiMatchQueryBuilder(
-					getSearchTerm(), getFields()).type(
-					MatchQueryBuilder.Type.PHRASE_PREFIX).analyzer(
-					"ons_synonyms");
+			MultiMatchQueryBuilder multiMatchQueryBuilder = new MultiMatchQueryBuilder(getSearchTerm(), getFields()).type(MatchQueryBuilder.Type.PHRASE_PREFIX).analyzer("ons_synonyms");
 			// wrap this up with a function_score capability that allows us to
 			// boost the home pages
-			float homePageBoostFloat = Float
-					.valueOf((String) ElasticSearchProperties.INSTANCE
-							.getProperty("home"));
+			float homePageBoostFloat = Float.valueOf((String) ElasticSearchProperties.INSTANCE.getProperty("home"));
 
-			FunctionScoreQueryBuilder functionScoreQueryBuilder = new FunctionScoreQueryBuilder(
-					multiMatchQueryBuilder);
-			functionScoreQueryBuilder.add(
-					FilterBuilders.termsFilter("_type", "home"),
-					ScoreFunctionBuilders.factorFunction(homePageBoostFloat));
+			FunctionScoreQueryBuilder functionScoreQueryBuilder = new FunctionScoreQueryBuilder(multiMatchQueryBuilder);
+			functionScoreQueryBuilder.add(FilterBuilders.termsFilter("_type", "home"), ScoreFunctionBuilders.factorFunction(homePageBoostFloat));
 			builder = functionScoreQueryBuilder;
 
 		}
@@ -179,9 +170,7 @@ public class ONSQueryBuilder {
 			highlightBuilder.field(field, 0, 0);
 		}
 
-		return new SearchSourceBuilder().query(builder)
-				.highlight(highlightBuilder).from(calculateFrom())
-				.size(getSize()).toString();
+		return new SearchSourceBuilder().query(builder).highlight(highlightBuilder).from(calculateFrom()).size(getSize()).toString();
 
 	}
 
