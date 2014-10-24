@@ -343,7 +343,7 @@ body {
 /* ------------------------------
  * Misc utilities
  */
-.cf:before, .rule-above:before, .rule-below:before, .field:before, .definition-list--inline:before, .actionable-header:before, .divider:before, .divider__half:before, .list--table__item:before, .media:before, .nav:before, .callout__stat:before,
+.cf:before, .rule-above:before, .rule-below:before, .datatable:before, .field:before, .definition-list--inline:before, .actionable-header:before, .divider:before, .divider__half:before, .list--table__item:before, .media:before, .nav:before, .callout__stat:before,
 .cf:after,
 .rule-above:after,
 .rule-below:after,
@@ -361,7 +361,7 @@ body {
   content: " ";
   /* 1 */ }
 
-.cf:after, .rule-above:after, .rule-below:after, .field:after, .definition-list--inline:after, .actionable-header:after, .divider:after, .divider__half:after, .list--table__item:after, .media:after, .nav:after, .callout__stat:after {
+.cf:after, .rule-above:after, .rule-below:after, .field:after,.datatable:after, .definition-list--inline:after, .actionable-header:after, .divider:after, .divider__half:after, .list--table__item:after, .media:after, .nav:after, .callout__stat:after {
   clear: both; }
 
 .phone-link {
@@ -1666,10 +1666,6 @@ textarea {
 body {
   line-height: 1.5; }
 
-b, strong {
-  font-family: "open-sans-n7", "open-sans", sans-serif;
-  font-weight: normal; }
-
 h1,
 h2,
 h3,
@@ -2311,7 +2307,7 @@ lesser , applied styles
   margin-top: -10px;
   margin-top: -1rem; }
 
-.list--table__item {
+.list--table__item, .datatable__item {
   position: relative;
   padding: 5px 10px;
   padding: .5rem 1rem; }
@@ -2325,7 +2321,7 @@ lesser , applied styles
   position: relative;
   float: left; }
 
-.list--table__head {
+.list--table__head, .datatable__head {
   padding: 5px 5px 5px 0;
   padding: .5rem .5rem .5rem 0; }
 
@@ -3108,14 +3104,11 @@ lesser , applied styles
   background-color: #eeefed; }
 
 .slate--light {
-	background-color: #f5f5f4;
+    background-color: #f5f5f4;
 }
 
 .slate {
   background-color: #dcdee0; }
-
-.slate--light {
-  background-color: #f3f3f3; }
 
 .slate--dark {
   background-color: #b2b7bb; }
@@ -4354,20 +4347,20 @@ background-color: #edeeee !important;
 \*------------------------------------*/
 
 .wrapper h3 {
-	margin-bottom:0px
+    margin-bottom:0px
 }
 #toc-content
 {
    width: 100%;
    text-align: left;
-	margin: 1em 0;
+    margin: 1em 0;
 }
 .toc-columns
 {
    -moz-column-width: 18em; /* Firefox */
    -webkit-column-width: 18em; /* webkit, Safari, Chrome */
    column-width: 18em;
-	margin-left: -10px;
+    margin-left: -10px;
 }
 .toc-columns ol li:first-child
 {
@@ -4381,13 +4374,13 @@ ol.toc-columns
 
 .box--padded--highlight
 {
-	margin:1rem;
-	margin:16px;
-  	padding:16px 20px 2px 20px;
- 	padding:1rem 1.25rem 0.125rem 1.25rem;
-	color:#000;
-	background-color:#f0f1d5;
-	border-left:10px solid #b3b92d;
+    margin:1rem;
+    margin:16px;
+    padding:16px 20px 2px 20px;
+    padding:1rem 1.25rem 0.125rem 1.25rem;
+    color:#000;
+    background-color:#f0f1d5;
+    border-left:10px solid #b3b92d;
 }
 
 .border-horizontal {
@@ -4404,36 +4397,36 @@ ol.toc-columns
   background-color: #fff; }
 
 .page-header-image {
-	height:6rem;
-	width:6rem;
-	float:left;
-	margin: 0rem 2rem 5rem 0rem;
+    height:6rem;
+    width:6rem;
+    float:left;
+    margin: 0rem 2rem 5rem 0rem;
 }
 
 .page-header-box-link{
-	padding-left: 2em;
+    padding-left: 2em;
 }
 
 .box--cyan--separated-left{
-	border-left: 10px solid #008e9f;
-	margin-top:1.5rem;
-	margin-top:15px;
-	margin-bottom:3rem;
-	margin-bottom:30px;
-	padding-left: 2rem;
-	padding-left:20px;
+    border-left: 10px solid #008e9f;
+    margin-top:1.5rem;
+    margin-top:15px;
+    margin-bottom:3rem;
+    margin-bottom:30px;
+    padding-left: 2rem;
+    padding-left:20px;
 }
 
 .color-cyan {
-	color:#008e9f;
+    color:#008e9f;
 }
 
 .big {
-	font-size: 2rem;
-	font-size: 20px;
-	padding-right: 2rem;
-	padding-right:10px;
-	font-weight: 700;
+    font-size: 2rem;
+    font-size: 20px;
+    padding-right: 2rem;
+    padding-right:10px;
+    font-weight: 700;
 }
 
 .headline {
@@ -4463,18 +4456,18 @@ ol.toc-columns
 \*------------------------------------*/
 
 .accordionItem span:hover { cursor: pointer; }
-.accordionItem.hide div {
+.accordionItem.hide div  {
   display: none;
-  -webkit-transition: all 2.5s ease-in-out;
-  -moz-transition: all 2.5s ease-in-out;
-  -ms-transition: all 2.5s ease-in-out;
-  transition: all 2.5s ease-in-out; }
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
 
-.accordionItem div {
-  -webkit-transition: all 2.5s ease-in-out;
-  -moz-transition: all 2.5s ease-in-out;
-  -ms-transition: all 2.5s ease-in-out;
-  transition: all 2.5s ease-in-out;
+.accordionItem {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 };
 
 
@@ -4506,13 +4499,9 @@ ol.toc-columns
 
 }
 
-.rem_padding_bottom{
-  padding-bottom: 0rem;
-}
+.rem_padding_bottom{ padding-bottom: 0rem;}
 
-#collection-list p{
-  color: gray;
-}
+#collection-list p{color: gray;}
 
 #search > dl > dt:nth-child(1){
   font-size: 1.3em;
@@ -4525,21 +4514,15 @@ ol.toc-columns
   background-color: #fafafb;
 }
 
-#search > dl > dd {
-  padding: 0 0 0.85em 0em;
-}
+#search > dl > dd {padding: 0 0 0.85em 0em;}
 
-#frequency{
-  font-weight: bold;
-}
+#frequency{font-weight: bold;}
 
 /*------------------------------------*\
   Nav Bar Styles
 \*------------------------------------*/
 
-.vertical-align-mid{
-  vertical-align: middle;
-}
+.vertical-align-mid{vertical-align: middle;}
 
 /*CSS to incorporate Home in Nav */
 
@@ -4733,8 +4716,34 @@ a.tooltips span
 }*/
 <<<<<<< HEAD
 
-.ng-scope {
-    height: 0;
+/*------------------------------------*\
+ Angular Accordion
+\*------------------------------------*/
+
+.accordion__container {
+    background: #fff;
+    padding: 0;
+    border-top: 2px solid #dedfdc;
+
+}
+.accordion__tab {
+    background: #fff;
+    padding: 5px;
+    color: #000;
+    border-bottom: 2px solid #dedfdc;
+}
+.accordion__tab-title {
+    background: #fff;
+    padding: 10px;
+    cursor: pointer;
+    /*border-top: 2px solid #dedfdc;*/
+    /*border-bottom: 2px solid #dedfdc;*/
+
+}
+.accordion__tab-content {
+    background: #fff;
+    padding: 10px;
+    /*border-bottom: 2px solid #dedfdc;*/
 }
 
 /*------------------------------------*\
@@ -4749,7 +4758,6 @@ a.tooltips span
 div.grid-col.desktop-grid-two-thirds.tablet-grid-two-thirds > article > table.dataset-table > tbody > tr{
   border: 0px;
 }
-
 
 article > table.dataset-table > tbody > tr > td{
   font-weight: bold;
@@ -4772,3 +4780,87 @@ div.grid-col.desktop-grid-two-thirds.tablet-grid-two-thirds > div > ol > li {
 =======
 >>>>>>> d42b5fc4372342db7f3717c4d5557ef6c58b5277
 
+
+/*------------------------------------*\
+  Data Table Styles
+\*------------------------------------*/
+
+.data-table {
+  margin: 1em 0;
+  min-width: 300px;
+}
+
+.data-table th {
+  border-top:hidden;
+}
+
+.data-table td {
+  display: block;
+}
+.data-table td:first-child {
+  padding-top: .5em;
+}
+.data-table td:last-child {
+  padding-bottom: .5em;
+}
+
+.data-table td:after {
+  padding-left: 0.6em;
+}
+
+.data-table td {
+  text-align: left;
+}
+
+.data-table {
+  border-radius: .4em;
+  overflow: hidden;
+  margin: auto;
+}
+
+.data-table th, .data-table td {
+  margin: .5em 1em;
+}
+
+.datatable-select{
+  color: white;
+  background-color: #757575;
+  width: 10%;
+  padding: 1em;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.datatable--checkbox{
+  border-left: solid #dedfdc 2px;
+}
+
+td.datatable-downloads{
+  text-align: right;
+}
+
+.datatable-row{
+  border-top: 2px solid #dedfdc;
+}
+
+.data_table_section-title{
+  width: 45%;
+}
+
+@media (min-width: 750px) {
+.data-table th, .data-table td {
+  padding: 1em !important;
+}
+}
+
+@media screen and (max-width: 750px){
+  #Datatable > tbody > tr > td > div.micro{
+    display:none;
+  }
+}
+
+@media screen and (min-width: 750px){
+  #Datatable > tbody > tr > td> div > div.micro{
+    display: none;
+  }
+}
