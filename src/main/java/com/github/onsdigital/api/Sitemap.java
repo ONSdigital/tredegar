@@ -68,7 +68,7 @@ public class Sitemap {
 			Path taxonomyPath = getHomePath();
 			// System.out.println("Searching " + taxonomyPath);
 			int total = 0;
-			total += addPath(taxonomyPath, document, rootElement, 1, requestUrl);
+			total += addPath(taxonomyPath, 1, document, rootElement, requestUrl);
 			total += iterate(taxonomyPath, 0.8, document, rootElement, requestUrl);
 
 			// Output the result:
@@ -120,7 +120,7 @@ public class Sitemap {
 
 				// Iterate over the paths:
 				if (Files.isDirectory(path)) {
-					result += addPath(path, document, rootElement, priority, requestUrl);
+					result += addPath(path, priority, document, rootElement, requestUrl);
 					subdirectories.add(path);
 				}
 			}
@@ -137,28 +137,18 @@ public class Sitemap {
 		return result;
 	}
 
-	private int addPath(Path path, Document document, Element rootElement, double priority, URL requestUrl) throws IOException {
+	private int addPath(Path path, double priority, Document document, Element rootElement, URL requestUrl) throws IOException {
 		int result = 0;
 		Data data = getDataJson(path);
-		if (data != null && data.type != ContentType.timeseries) {
+		if (data != null && data.type == ContentType.home) {
 			try {
 				URI uri = toUri(data, requestUrl);
 				addUrl(uri, document, rootElement, priority);
 				result++;
-				// System.out.println(path + " : " + uri + " (" + priority +
-				// ")");
 			} catch (URISyntaxException | DOMException | MalformedURLException e) {
 				throw new IOException("Error iterating taxonomy", e);
 			}
-		} else if (data == null) {
-			System.out.println("Skipping non-data folder " + path);
 		}
-		// else if (data.type==
-		// ContentType.TIMESERIES) {
-		// System.out.println("Skipping timeseries " + path);
-		// } else {
-		// System.out.println("Skipping for some reason: " + path);
-		// }
 		return result;
 	}
 
@@ -176,14 +166,15 @@ public class Sitemap {
 	}
 
 	private URI toUri(Data data, URL requestUrl) throws URISyntaxException {
-		StringBuilder fragment = new StringBuilder("!/home");
+		StringBuilder fragment = new StringBuilder("!");
 		if (data != null && data.breadcrumb != null) {
 			for (TaxonomyFolder segment : data.breadcrumb) {
 				fragment.append("/" + segment.fileName);
 			}
 		}
+		fragment.append("/");
 		if (!StringUtils.equals("/", data.fileName)) {
-			fragment.append("/" + data.fileName);
+			fragment.append(data.fileName);
 		}
 		new URI(requestUrl.getProtocol(), requestUrl.getHost(), "/", fragment.toString());
 		int port = -1;

@@ -4788,15 +4788,13 @@ div.grid-col.desktop-grid-two-thirds.tablet-grid-two-thirds > div > ol > li {
 .data-table {
   margin: 1em 0;
   min-width: 300px;
+
 }
 
 .data-table th {
   border-top:hidden;
 }
 
-.data-table td {
-  display: block;
-}
 .data-table td:first-child {
   padding-top: .5em;
 }
@@ -4808,16 +4806,12 @@ div.grid-col.desktop-grid-two-thirds.tablet-grid-two-thirds > div > ol > li {
   padding-left: 0.6em;
 }
 
-.data-table td {
-  text-align: left;
-}
-
 .data-table {
   border-radius: .4em;
   overflow: hidden;
   margin: auto;
 }
-
+  
 .data-table th, .data-table td {
   margin: .5em 1em;
 }
@@ -4825,8 +4819,8 @@ div.grid-col.desktop-grid-two-thirds.tablet-grid-two-thirds > div > ol > li {
 .datatable-select{
   color: white;
   background-color: #757575;
-  width: 10%;
-  padding: 1em;
+  width: 12%;
+  padding: 0.5em !important;
   font-size: 1.4rem;
   text-align: center;
 }
@@ -4837,25 +4831,37 @@ div.grid-col.desktop-grid-two-thirds.tablet-grid-two-thirds > div > ol > li {
 
 td.datatable-downloads{
   text-align: right;
+  background-color: #fff;
 }
+
+.download_responsive_btn{
+  opacity: 0.5;
+}
+
 
 .datatable-row{
   border-top: 2px solid #dedfdc;
 }
 
-.data_table_section-title{
-  width: 45%;
+.datatable_stat{
+  text-align: center;
 }
 
-@media (min-width: 750px) {
 .data-table th, .data-table td {
   padding: 1em !important;
-}
 }
 
 @media screen and (max-width: 750px){
   #Datatable > tbody > tr > td > div.micro{
     display:none;
+  }
+  .datatable-select{
+    font-size: 0.8rem;}
+  .responsive_large_width{
+    width: 100%;
+  }
+  .responsive_med_width{
+    width: 80%;
   }
 }
 
@@ -4863,4 +4869,7 @@ td.datatable-downloads{
   #Datatable > tbody > tr > td> div > div.micro{
     display: none;
   }
+  .data_table_section-title{
+  width: 42%;
+}
 }
