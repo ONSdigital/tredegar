@@ -21,7 +21,7 @@
 		<dependency>
 			<groupId>com.github.davidcarboni</groupId>
 			<artifactId>restolino</artifactId>
-			<version>0.0.18</version>
+			<version>0.0.19</version>
 		</dependency>
 		<dependency>
 			<groupId>com.github.davidcarboni</groupId>
@@ -41,6 +41,13 @@
 			<groupId>org.elasticsearch</groupId>
 			<artifactId>elasticsearch</artifactId>
 			<version>${es.version}</version>
+		</dependency>
+
+		<!-- Prerender.io -->
+		<dependency>
+			<groupId>com.github.greengerong</groupId>
+			<artifactId>prerender-java</artifactId>
+			<version>1.6.3</version>
 		</dependency>
 
 		<!-- Test -->
@@ -91,11 +98,11 @@
 				<directory>src/main/taxonomy</directory>
 				<targetPath>${project.build.directory}/taxonomy</targetPath>
 			</resource>
-			<!-- Pre-rendered files -->
-			<resource>
-				<directory>src/main/static</directory>
-				<targetPath>${project.build.outputDirectory}/files/static</targetPath>
-			</resource>
+			<!-- Pre-rendered files - we're doing everything on Prerender.io for now -->
+<!-- 			<resource> -->
+<!-- 				<directory>src/main/static</directory> -->
+<!-- 				<targetPath>${project.build.outputDirectory}/files/static</targetPath> -->
+<!-- 			</resource> -->
 		</resources>
 		<plugins>
 

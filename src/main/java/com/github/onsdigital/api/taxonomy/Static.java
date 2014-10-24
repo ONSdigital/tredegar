@@ -1,19 +1,17 @@
 package com.github.onsdigital.api.taxonomy;
 
 import java.io.IOException;
-import java.io.InputStream;
-import java.net.URI;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.GET;
 import javax.ws.rs.core.Context;
 
-import org.apache.commons.io.IOUtils;
-import org.apache.commons.lang3.StringUtils;
+import org.apache.http.HttpStatus;
 
-import com.github.davidcarboni.ResourceUtils;
 import com.github.davidcarboni.restolino.framework.Endpoint;
+import com.github.onsdigital.prerender.PreGenerated;
+import com.github.onsdigital.prerender.PrerenderIo;
 
 @Endpoint
 public class Static {
@@ -21,41 +19,13 @@ public class Static {
 	@GET
 	public void serveIndex(@Context HttpServletRequest request, @Context HttpServletResponse response) throws IOException {
 
-		// Ensures ResourceUtils gets the right classloader when running
-		// reloadable in development:
-		ResourceUtils.classLoaderClass = Static.class;
-		URI uri = URI.create(request.getRequestURI());
-		String path = uri.getPath().toLowerCase();
-		path = join(path, "index.html");
-		if (!path.startsWith("/")) {
-			path = "/" + path;
-		}
-		path = "/files" + path;
+		// Set up the response:
+		response.setContentType("text/html");
+		response.setCharacterEncoding("UTF8");
 
-		try (InputStream html = ResourceUtils.getStream(path)) {
-			response.setContentType("text/html");
-			response.setCharacterEncoding("UTF8");
-			IOUtils.copy(html, response.getOutputStream());
+		if (!PrerenderIo.handle(request, response) && !PreGenerated.handle(request, response)) {
+			response.setStatus(HttpStatus.SC_NOT_FOUND);
+			response.getWriter().write("Apologies, for some reason it seems that page can't be generated.");
 		}
-	}
-
-	/**
-	 * We could optimise this by using StringBuilder.
-	 * 
-	 * @param path
-	 * @param file
-	 * @return
-	 */
-	private static String join(String path, String file) {
-		String result;
-		if (!StringUtils.endsWith(path, "/")) {
-			result = path + "/" + file;
-		} else {
-			result = path + file;
-		}
-		if (!StringUtils.startsWith(result, "/")) {
-			result = "/" + result;
-		}
-		return result;
 	}
 }
