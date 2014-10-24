@@ -121,28 +121,30 @@ markup: false
 <!-- id set to ng-app to make older IE happy with Angular ngInclude directive -->
 <body id="ng-app" ng-view ng-controller="MainCtrl" class="js">
 <noscript>
-    <div style="margin: 20px;">
-    	<p><img class="clearfix" src="/ui/img/ons-logo.svg" alt="Office for National Statistics" width="300" class="media__img"></p>
-    </div>
-   	<hr/>
-    <div style="margin: 20px;">
-    	<p><h2>This page needs JavaScript to be displayed.</h2></p>
-    </div>
-    <div style="padding-left: 20px;">
-    <p>You can either:</p>
-    <ul>
-    	<li>
-    		enable Javascript as follows: 
-    		<a href="http://www.enable-javascript.com/">Enabling JavaScript</a>
-    	</li>
-    	<li>
-    		click here to browse a simplified version of the site (this may be up to a day out of date):
-    		<a href="/static">HTML version</a>
-   		</li>
-    </ul>
-    <p>If you are having difficulty accessing this site, please send a Tweet to <a href="https://twitter.com/jukesie">@jukesie</a>.</p>
-    </div>
-   <hr/>
+	<main id="main" role="main" class="ONS_border">
+	    <div style="margin: 20px;">
+	    	<p><img class="clearfix" src="/ui/img/ons-logo.svg" alt="Office for National Statistics" width="300" class="media__img"></p>
+	    </div>
+	   	<hr/>
+	    <div style="margin: 20px;">
+	    	<p><h2>This page needs JavaScript to be displayed.</h2></p>
+	    </div>
+	    <div style="padding-left: 20px;">
+	    <p>You can either:</p>
+	    <ul>
+	    	<li>
+	    		enable Javascript as follows: 
+	    		<a href="http://www.enable-javascript.com/">Enabling JavaScript</a>
+	    	</li>
+	    	<li>
+	    		click here to browse a simplified version of the site (this may be up to a day out of date):
+	    		<a href="/static">HTML version</a>
+	   		</li>
+	    </ul>
+	    <p>If you are having difficulty accessing this site, please send a Tweet to <a href="https://twitter.com/jukesie">@jukesie</a>.</p>
+	    </div>
+	   <hr/>
+   </main>
 </noscript>
 </body>
 </html>
