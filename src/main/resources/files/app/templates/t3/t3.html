@@ -105,93 +105,93 @@
       <!-- /wrapper -->
 
 <!-- List/Table with data -->
-      <section id="timeseries" class="panel--large wrapper">
-        <h2 id="related" class="list--table-header">All Statistics Related to Inflation and Price Indices</h2>
-          <ol class="list--table list--table--complex table--striped-light table--selectable table-light--sectioned lifted">
-            <li class="list--table__item list--table__head">
-              <label class="list--table__item__body list--table__item__body--select-all nojs-hidden">Select all
-                <input type="checkbox" aria-label="Select" id="checkbox">
-              </label>
-            </li>
-        <!-- Table line starts here -->
-            <!-- /list- -table__head -->
-            <li ng-repeat="timeseries in data.timeseries" class="list--table__item list--table__body">
-              <div class="list--table__item__body list--table__item__body--caption">
-                <h3 class="list--table__item__header">
-                  <a href="#!" class="no_underline">
-                  {{timeseries.name}}
-                  <!-- CPI Index -->
-                  </a>
-                  <a class="information" href="#!">
-                    <span tooltip="More Information" ></span>
-                  </a>
-                </h3>
-                <p class="list--table__item__description">
-                {{timeseries.note}}
-                <!-- 2005 = 100. Not seasonally adjusted -->
-                </p>
-              </div>
-              <div class="list--table__item__body list--table__item__body--stat">
-                <div class="stat list--table__item__body--centred">
-                  <div class="stat__figure stat__tight">
-                    {{timeseries.number}}
-                    <!-- 1.5 -->
-                  </div>
-                  <time class="stat__description" datetime="2014-01">
-                  {{timeseries.date}}
-                  <!-- January 2014 -->
-                  </time>
-                </div>
-              </div>
-              <div class="list--table__item__body list--table__item__body--update">
-                <dl class="micro definition-list definition-list--inline flush--half--vertical">
-                  <dt>Last updated:</dt>
-                  <dd>
-                  {{timeseries.lastUpated}}
-                  <!-- 18th Feb 2014 -->
-                  </dd>
-                  <dt>Next updated:</dt>
-                  <dd class="red_highlight">
-                  {{timeseries.nextUpdate}}
-                  <!-- 25th June 2014 -->
-                  </dd>
-                </dl>
-              </div>
-              <label class="list--table__item__body list--table__item__body--select">
-                <span class="visuallyhidden">Select statistic</span>
+  <section id="timeseries" class="panel--large wrapper">
+    <table table id="Datatable" class=" tablesorter data-table list--table list--table--complex table--striped-light table-light--sectioned">
+      <thead>
+        <th colspan="4" >
+          <div class="list--table-header split__title">
+            <h2> Statistics Related to Inflation and Price Indices</h2>
+          </div>
+        </th>
+        <th colspan="1" class="datatable-select">Select All
+          <div class="list--table__item">
+            <label class="list--table__item__body list--table__item__body--select">
+              <span class="visuallyhidden">Select statistic</span>
                 <input type="checkbox">
-              </label>
-            </li>
-            <!-- /list- -table__body -->
-        <!-- End of line -->
+            </label>
+          </div>
+        </th>
+      </thead>
 
-
-
-    <!-- Bottom options for downloading table contents -->
-            <!-- /list- -table__body -->
-            <li class="list--table__item list--table__footer">
-            <div class="list--table__item__body">
-              <div class="table__actions split">
-                <a class="table__action split__title link-muted" href="#!">
-                  <span class="table__action__text">View all 1234 time series</span>
-                </a>
-                <a class="table__action" href="#!">
-                  <span class="table__action__text">Download all 1234</span>
-                  <span class="icon-download" role="presentation"></span>
-                </a>
-                <a href="#!" class="btn btn--flex btn--block btn--primary">
-                  <span class="table__action__text">Download selected</span>
-                  <span class="icon-download" role="presentation"></span>
-                </a>
-              </div>
-              <!-- /table-actions -->
+    <tbody>
+      <tr ng-repeat="timeseries in data.timeseries" class="list--table__item list--table__body datatable-row">
+        <td class="data_table_section-title">
+          <div class="list--table__item__body list--table__item__body--caption">
+            <h3 class="list--table__item__header">
+              <a href="#"> {{timeseries.name}}</a>
+              <!-- CPI Index -->
+                <span tabindex="0" class="tooltip icon-info-circled icon--warm icon--inline tooltipstered"></span>
+            </h3>
+            <div class="micro list--table__item__body body_update_media body_update_media">Last updated: {{timeseries.lastUpated}} <br>
+               Next Updated: <span class="red_highlight"> {{timeseries.nextUpdate}} </span>
             </div>
-            <!--  /list-table__item__body -->
-          </li>
-            <!-- /list- -table__item -->
-          </ol>
-          <!-- /list- -table -->
-      </section>
+          </div>
+        </td>
+
+        <td class="data_table_section">
+         <div class="list--table__item__body list--table__item__body--stat stat">
+            <div class="stat">
+              <div class="stat__figure stat__tight">
+                 {{timeseries.number}}
+                 <!-- 1.5 -->
+              </div>
+              <time class="stat__description" datetime="2014-01">{{timeseries.date}}
+              <!-- January 2014 -->
+              </time>
+            </div>
+          </div>
+        </td>   
+  
+      <td>
+        <div class="micro list--table__item__body list--table__item__body--update  body_update_desk">Last updated: {{timeseries.lastUpated}} <br>
+          Next Updated: <span class="red_highlight"> {{timeseries.nextUpdate}} </span>
+        </div>
+      </td>
+    
+    <td class="datatable--checkbox">
+      <div class="list--table__item">
+        <label class="list--table__item__body list--table__item__body--select">
+          <span class="visuallyhidden">Select statistic</span>
+              <input type="checkbox">
+        </label>
+      </div>
+    </td>
+
+    </tr>
+    <!-- /table__row_repeat -->
+
+<!-- Bottom options for downloading table contents -->  
+
+    <tr class="list--table__item list--table datatable-row">
+      <td colspan="4" class="datatable-downloads"> 
+        <a href="#" class="btn btn--primary btn--small">
+          <span class="table__action__text">.CSV</span>
+            <span class="icon-download" role="presentation"></span>
+        </a>
+        <a href="#" class="btn btn--primary btn--small">
+          <span class="table__action__text">.XLS</span>
+            <span class="icon-download" role="presentation"></span>
+        </a>          
+      </td>
+       <!-- /table-actions -->
+    </tr>
+      <!--  /list-table__item__body -->
+  </tbody>
+    <!--  /table -->
+</table>
+  <!--  /section - - timeseries -->
+</section>
+
 
 
 
