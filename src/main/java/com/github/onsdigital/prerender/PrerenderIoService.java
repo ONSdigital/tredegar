@@ -231,7 +231,12 @@ public class PrerenderIoService {
 		if (entity != null) {
 			PrintWriter printWriter = servletResponse.getWriter();
 			try {
-				final String html = EntityUtils.toString(entity);
+				String html = EntityUtils.toString(entity);
+				// System.out.println(html);
+				if (html.contains("href=\"#!/")) {
+					System.out.println("Updating links in pre-rendered HTML:");
+					html = html.replace("href=\"#!/", "href=\"/static/");
+				}
 				printWriter.write(html);
 				printWriter.flush();
 				return html;
