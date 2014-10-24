@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.http.client.utils.URIBuilder;
 
-import com.github.davidcarboni.restolino.Configuration;
 import com.github.greengerong.PreRenderSEOFilter;
+import com.github.onsdigital.configuration.Configuration;
 
 /**
  * Most of this code is taken from {@link PreRenderSEOFilter}. It's pretty
@@ -49,7 +49,7 @@ public class PrerenderIo {
 			System.out.println("URL for Prerender.io is: " + escapedFragmetUrl);
 
 			Map<String, String> config = new HashMap<String, String>();
-			config.put("prerenderToken", "cCc113eXWWV2TbRcnoMV");
+			config.put("prerenderToken", Configuration.getPrerenderToken());
 			PrerenderIoService prerenderSeoService = new PrerenderIoService(config);
 			try {
 				// return prerenderSeoService.prerenderIfEligible(request,
@@ -97,7 +97,8 @@ public class PrerenderIo {
 		uriBuilder.setScheme(url.getProtocol());
 
 		// User information
-		Configuration configuration = new Configuration();
+		// This will be easier to access once we move past Restolino 0.0.x
+		com.github.davidcarboni.restolino.Configuration configuration = new com.github.davidcarboni.restolino.Configuration();
 		if (StringUtils.isNotBlank(configuration.username)) {
 			uriBuilder.setUserInfo(configuration.username, configuration.password);
 		}
