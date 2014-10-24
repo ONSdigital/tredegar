@@ -18,7 +18,6 @@ export BONSAI_CLUSTERNAME=elasticsearch
 export BONSAI_HOSTNAME=localhost
 export BONSAI_TRANSPORT_PORT=9300
 
-
 #External Taxonomy
 #export TAXONOMY_DIR=target/taxonomy
 
