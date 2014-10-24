@@ -298,25 +298,57 @@ public class Csv {
 	}
 
 	private static void createArticle(Folder folder, File file) throws IOException {
-		// Create a dummy bulletin:
-		File articles = new File(file, "articles");
-		articles.mkdir();
-		Article article = new Article();
-		article.title = folder.name;
-		String json = Serialiser.serialise(article);
-		FileUtils.writeStringToFile(new File(articles, "data.json"), json);
+		if (file.getName().contains("inflationandpriceindices")) {
+			File articles = new File(file, "articles");
+			articles.mkdir();
 
-		createVersions(articles, json);
+			BulletinsAndArticles.buildFolders();
+			Set<Folder> articleFolders = BulletinsAndArticles.folders;
+
+			for (Folder articleFolder : articleFolders) {
+				File articleFile = new File(articles, StringUtils.deleteWhitespace(articleFolder.name.toLowerCase()));
+				articleFile.mkdir();
+
+				for (Folder dateFolder : articleFolders) {
+					File dateFile = new File(articleFile, dateFolder.name);
+					dateFile.mkdir();
+					Article article = new Article();
+					article.title = articleFolder.name;
+					String json = Serialiser.serialise(article);
+					FileUtils.writeStringToFile(new File(dateFile, "data.json"), json);
+
+					createVersions(dateFile, json);
+				}
+			}
+		}
 	}
 
 	private static void createBulletin(Folder folder, File file) throws IOException {
-		// Create a dummy bulletin:
-		File bulletins = new File(file, "bulletins");
-		bulletins.mkdir();
-		Bulletin bulletin = new Bulletin();
-		bulletin.title = folder.name;
-		String json = Serialiser.serialise(bulletin);
-		FileUtils.writeStringToFile(new File(bulletins, "data.json"), json);
+
+		if (file.getName().contains("inflationandpriceindices")) {
+			// Create a dummy bulletin:
+			File bulletins = new File(file, "bulletins");
+			bulletins.mkdir();
+
+			BulletinsAndArticles.buildFolders();
+			Set<Folder> bulletinFolders = BulletinsAndArticles.folders;
+
+			for (Folder bulletinFolder : bulletinFolders) {
+				File bulletinFile = new File(bulletins, StringUtils.deleteWhitespace(bulletinFolder.name.toLowerCase()));
+				bulletinFile.mkdir();
+
+				for (Folder dateFolder : bulletinFolder.children) {
+					File dateFile = new File(bulletinFile, dateFolder.name);
+					dateFile.mkdir();
+					Bulletin bulletin = new Bulletin();
+					bulletin.title = bulletinFolder.name;
+					String json = Serialiser.serialise(bulletin);
+					FileUtils.writeStringToFile(new File(dateFile, "data.json"), json);
+
+					createVersions(dateFile, json);
+				}
+			}
+		}
 	}
 
 	private static void createCollection(Folder folder, File file) throws IOException {
