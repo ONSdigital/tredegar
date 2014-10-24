@@ -126,7 +126,7 @@
     <tbody>
       <tr ng-repeat="timeseries in data.timeseries" class="list--table__item list--table__body datatable-row">
         <td class="data_table_section-title">
-          <div class="list--table__item__body list--table__item__body--caption">
+          <div class="list--table__item__body list--table__item__body--caption responsive_large_width">
             <h3 class="list--table__item__header">
               <a href="#"> {{timeseries.name}}</a>
               <!-- CPI Index -->
@@ -139,8 +139,8 @@
         </td>
 
         <td class="data_table_section">
-         <div class="list--table__item__body list--table__item__body--stat stat">
-            <div class="stat">
+         <div class="list--table__item__body list--table__item__body--stat stat  responsive_med_width">
+            <div class="list--table__item__body--centred">
               <div class="stat__figure stat__tight">
                  {{timeseries.number}}
                  <!-- 1.5 -->
@@ -152,7 +152,7 @@
           </div>
         </td>   
   
-      <td>
+      <td class="update_responsive">
         <div class="micro list--table__item__body list--table__item__body--update  body_update_desk">Last updated: {{timeseries.lastUpated}} <br>
           Next Updated: <span class="red_highlight"> {{timeseries.nextUpdate}} </span>
         </div>
@@ -174,11 +174,11 @@
 
     <tr class="list--table__item list--table datatable-row">
       <td colspan="4" class="datatable-downloads"> 
-        <a href="#" class="btn btn--primary btn--small">
+        <a href="#" class="btn btn--primary btn--small download_responsive_btn">
           <span class="table__action__text">.CSV</span>
             <span class="icon-download" role="presentation"></span>
         </a>
-        <a href="#" class="btn btn--primary btn--small">
+        <a href="#" class="btn btn--primary btn--small download_responsive_btn">
           <span class="table__action__text">.XLS</span>
             <span class="icon-download" role="presentation"></span>
         </a>          
