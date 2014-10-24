@@ -24,11 +24,11 @@
 <!--[if gt IE 8]><!-->
 <!-- <link rel="stylesheet" href="ui/css/main.css" /> -->
 <link href="ui/css/main.css" rel="stylesheet" type="text/css">
-<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/css/jquery-ui.min.css"> -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
 <!--<![endif]-->
 <!-- endbuild -->
 <!--[if (!IE)|(gt IE 8)]>><!-->
-<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tooltipster/3.0.5/js/jquery.tooltipster.min.js" defer></script> -->
+<!-- <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/tooltipster/3.0.5/js/jquery.tooltipster.min.js" defer></script> -->
 <!--<![endif]-->
 
 <!--[if lte IE 8]>
@@ -44,12 +44,15 @@
       </script>
     <![endif]-->
 
+<script type="text/javascript" src="//d3js.org/d3.v3.min.js">
+</script>
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js" defer></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js" defer></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-route.min.js" defer></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular-sanitize.js" defer></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js" defer></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js" defer></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-route.min.js" defer></script>
-
-<!-- <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script> -->
 <!--
 <script type="text/javascript" src="ui/js/lib/angular.js" defer></script>
 <script type="text/javascript" src="ui/js/lib/angular-route.min.js" defer></script>
@@ -62,11 +65,44 @@
 <script type="text/javascript" src="ui/js/lib/jquery-ui.min.js" defer></script>
  -->
 
-<script type="text/javascript" src="ui/js/angular/app.js" defer></script>
-<script type="text/javascript" src="ui/js/angular/controllers.js" defer></script>
-<script src="/ui/js/lib/highcharts.js" defer></script>
-<script type="text/javascript" src="/ui/js/lib/highcharts-ng.js" defer></script>
-<script src="/ui/js/lib/ng-google-chart.js" defer></script>
+<script type="text/javascript" src="app/app.js" defer></script>
+<script type="text/javascript" src="app/templates/taxonomy/taxonomy.js" defer></script>
+
+<script type="text/javascript" src="app/templates/t1/t1.controller.js" defer></script>
+<script type="text/javascript" src="app/templates/t2/t2.controller.js" defer></script>
+<script type="text/javascript" src="app/templates/t5/t5.controller.js" defer></script>
+<script type="text/javascript" src="app/templates/search-results/search-results.controller.js" defer></script>
+<script type="text/javascript" src="app/templates/content/content.controller.js" defer></script>
+<script type="text/javascript" src="app/templates/article/article.controller.js" defer></script>
+<script type="text/javascript" src="app/templates/bulletin/bulletin.controller.js" defer></script>
+<script type="text/javascript" src="app/templates/methodology/methodology.controller.js" defer></script>
+<script type="text/javascript" src="app/templates/release/release.controller.js" defer></script>
+<script type="text/javascript" src="app/templates/collection/collection.controller.js" defer></script>
+<script type="text/javascript" src="app/templates/dataset/dataset.controller.js" defer></script>
+<script type="text/javascript" src="app/templates/contact/contact.controller.js" defer></script>
+
+<script type="text/javascript" src="app/partials/header/header.js" defer></script>
+<script type="text/javascript" src="app/partials/footer/footer.js" defer></script>
+<script type="text/javascript" src="app/partials/searchbox/searchbox.directive.js" defer></script>
+<script type="text/javascript" src="app/partials/latest-bulletins/latest-bulletins.directive.js" defer></script>
+<script type="text/javascript" src="app/partials/release-pane/release-pane.directive.js" defer></script>
+<script type="text/javascript" src="app/partials/related-articles/related-articles.directive.js" defer></script>
+<script type="text/javascript" src="app/partials/contact-details/contact-details.directive.js" defer></script>
+<script type="text/javascript" src="app/partials/tools-pane/tools-pane.directive.js" defer></script>
+
+<script type="text/javascript" src="app/components/breadcrumb/breadcrumb.js" defer></script>
+<script type="text/javascript" src="app/components/navigation/navigation.js" defer></script>
+<script type="text/javascript" src="app/components/paginator/paginator.js" defer></script>
+<script type="text/javascript" src="app/components/toggler/toggler.js" defer></script>
+<script type="text/javascript" src="app/components/accordion/accordion.js" defer></script>
+<script type="text/javascript" src="app/components/tabs/tabs.js" defer></script>
+<script type="text/javascript" src="app/components/tooltip/tooltip.directive.js" defer></script>
+<script type="text/javascript" src="app/components/markdown/markdown.directive.js" defer></script>
+
+<script type="text/javascript" src="app/helpers/filters.js" defer></script>
+<script type="text/javascript" src="app/helpers/titleService.js" defer></script>
+<script type="text/javascript" src="app/helpers/pathService.js" defer></script>
+
 <!-- <script type="text/javascript" src="ui/js/app/nav.js" defer></script>
 <script type="text/javascript" src="ui/js/app/supporting-content.js" defer></script>
 <script type="text/javascript" src="ui/js/app/tables.js" defer></script>
@@ -90,6 +126,5 @@ markup: false
 
 <!-- id set to ng-app to make older IE happy with Angular ngInclude directive -->
 <body id="ng-app" ng-view ng-controller="MainCtrl" class="js">
-<!-- src attribute must be in single quotes if a string constant, in this case it is  -->
 </body>
 </html>
