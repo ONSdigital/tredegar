@@ -237,6 +237,16 @@ public class PrerenderIoService {
 					System.out.println("Updating links in pre-rendered HTML:");
 					html = html.replace("href=\"#!/", "href=\"/static/");
 				}
+				// try (Scanner scanner = new Scanner(html)) {
+				// int i = 1;
+				// while (scanner.hasNextLine()) {
+				// String line = scanner.nextLine();
+				// if (line.contains("#")) {
+				// System.out.println(i + "\t" + line);
+				// }
+				// i++;
+				// }
+				// }
 				printWriter.write(html);
 				printWriter.flush();
 				return html;
