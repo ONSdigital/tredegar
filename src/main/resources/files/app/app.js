@@ -78,9 +78,9 @@
                     templateUrl: 'app/templates/t5/t5.html',
                     controller: "T5Ctrl"
                 }).
-                when('/t5alt', {
-                    templateUrl: 'app/templates/t5/t5alt.html',
-                    controller: "T5altCtrl"
+                when('/t6', {
+                    templateUrl: 'app/templates/t6/t6.html',
+                    controller: "T6Ctrl"
                 }).
                 otherwise({
                     templateUrl: 'app/templates/taxonomy/taxonomy.html',

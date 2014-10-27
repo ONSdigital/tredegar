@@ -13,11 +13,11 @@ angular.module('onsComponents')
             attrs.$observe('link', function(link) {
                 var htmlText = converter.makeHtml(link);
                 element
-                    .html(htmlText)
-                    .find("pre")
-                    .replaceWith("<p>"+
-                '<img src="/ui/img/equation.png" alt="sample chart">'+
-            "</p>");
+                    .html(htmlText);
+            //         .find("pre")
+            //         .replaceWith("<p>"+
+            //     '<img src="/ui/img/equation.png" alt="sample chart">'+
+            // "</p>");
                 element
                     .find("blockquote").find("p")
                     .addClass("box--padded--highlight");
