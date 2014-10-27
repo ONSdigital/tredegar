@@ -21,24 +21,10 @@ public class Timeseries {
 
 	@GET
 	public List<TimeSeriesValue> getData(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		// List<Map<String, String>> result = null;
 
 		String cdid = Path.newInstance(request).lastSegment();
 		Set<TimeSeriesValue> data = TimeseriesData.getDataMaps().get(StringUtils.lowerCase(cdid));
 		System.out.println(TimeseriesData.getDataMaps().keySet());
 		return new ArrayList<TimeSeriesValue>(data);
-
-		// System.out.println(TimeseriesData.getDataMaps().keySet());
-		// if (data == null) {
-		// response.setStatus(HttpStatus.SC_NOT_FOUND);
-		// } else {
-		// result = new ArrayList<>();
-		// for (Entry<String, String> entry : data.entrySet()) {
-		// Map<String, String> value = new HashMap<>();
-		// value.put(entry.getKey(), entry.getValue());
-		// result.add(value);
-		// }
-		// }
-		// return result;
 	}
 }
