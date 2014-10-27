@@ -24,6 +24,7 @@ import com.github.onsdigital.json.bulletin.Bulletin;
 import com.github.onsdigital.json.taxonomy.DataT1;
 import com.github.onsdigital.json.taxonomy.DataT2;
 import com.github.onsdigital.json.taxonomy.DataT3;
+import com.github.onsdigital.json.timeseries.TimeSeries;
 
 public class Csv {
 
@@ -115,8 +116,9 @@ public class Csv {
 				}
 
 				String path = StringUtils.join(new String[] { theme, subject, topic }, '/');
-				while (StringUtils.endsWith(path, "/"))
+				while (StringUtils.endsWith(path, "/")) {
 					path = path.substring(0, path.length() - 1);
+				}
 				System.out.println(path);
 
 			}
@@ -141,8 +143,9 @@ public class Csv {
 					if (s.children.size() == 0) {
 						createT3(s, subjectFile);
 						// createContentFolders(s.name, subjectFile);
-					} else
+					} else {
 						createT2(s, subjectFile);
+					}
 					System.out.println("\t" + subjectFile.getPath());
 					for (Folder o : s.children) {
 						topicFile = new File(subjectFile, o.filename());
@@ -287,7 +290,9 @@ public class Csv {
 
 		// Generate dummy timeseries for each CDID in the subset:
 		for (String cdid : TimeseriesMetadata.timeseries.keySet()) {
-			String json = Serialiser.serialise(TimeseriesMetadata.timeseries.get(cdid));
+			TimeSeries timeseries = TimeseriesMetadata.timeseries.get(cdid);
+			timeseries.data = new ArrayList<>(TimeseriesData.getDataMaps().get(cdid));
+			String json = Serialiser.serialise(timeseries);
 			File cdidFolder = new File(timeseriesFolder, cdid);
 			FileUtils.writeStringToFile(new File(cdidFolder, "data.json"), json);
 

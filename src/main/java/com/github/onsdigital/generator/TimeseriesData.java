@@ -2,8 +2,9 @@ package com.github.onsdigital.generator;
 
 import java.io.IOException;
 import java.io.Reader;
-import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
 import java.util.Map;
+import java.util.Set;
 import java.util.TreeMap;
 
 import org.apache.commons.lang3.StringUtils;
@@ -11,16 +12,17 @@ import org.apache.commons.lang3.StringUtils;
 import au.com.bytecode.opencsv.CSVReader;
 
 import com.github.davidcarboni.ResourceUtils;
+import com.github.onsdigital.json.timeseries.TimeSeriesValue;
 
 public class TimeseriesData {
 
-	static Map<String, Map<String, String>> dataMaps;
+	static Map<String, Set<TimeSeriesValue>> dataMaps;
 
-	static Map<String, String> getData(String cdid) throws IOException {
+	static Set<TimeSeriesValue> getData(String cdid) throws IOException {
 		return getDataMaps().get(cdid);
 	}
 
-	public static Map<String, Map<String, String>> getDataMaps() throws IOException {
+	public static Map<String, Set<TimeSeriesValue>> getDataMaps() throws IOException {
 
 		if (dataMaps == null) {
 			buildDataMaps();
@@ -44,11 +46,11 @@ public class TimeseriesData {
 			for (String cdid : cdids) {
 				// Skip the date column, which has no header:
 				if (StringUtils.isNotBlank(cdid)) {
-					// NB LinkedHashMap preserves the order of keys.
+					// NB LinkedHashSet preserves the order of items.
 					// This is useful because we want to avoid duplicates,
 					// but the date values (e.g. months) don't natulally sort
 					// alphabetically.
-					dataMaps.put(cdid.toLowerCase(), new LinkedHashMap<String, String>());
+					dataMaps.put(cdid.toLowerCase(), new LinkedHashSet<TimeSeriesValue>());
 				}
 			}
 
@@ -63,7 +65,10 @@ public class TimeseriesData {
 						// Store the datum in the appropriate CDID map.
 						// Yep, datum is a bit of a poncy word these days.
 						// Not to worry.
-						dataMaps.get(cdids[i].toLowerCase()).put(date, row[i]);
+						TimeSeriesValue value = new TimeSeriesValue();
+						value.date = date;
+						value.value = row[i];
+						dataMaps.get(cdids[i].toLowerCase()).add(value);
 					}
 				}
 			}
