@@ -43,7 +43,7 @@
                     templateUrl: 'app/templates/bulletin/bulletin.html',
                     controller: 'BulletinCtrl'
                 }).
-                when('/collection', {
+                when('/economy/inflationandpriceindices/collection', {
                     templateUrl: 'app/templates/collection/collection.html',
                     controller: "CollectionCtrl"
                 }).

@@ -72,7 +72,7 @@ public class ScanFileSystem {
 				getFiles(files, path);
 			} else {
 				File file = path.toFile();
-				if (file.getName().equals("data.json")) {
+				if (isBulletinCollectionItem(file.getAbsolutePath())) {
 					files.add(file);
 				}
 			}
@@ -86,6 +86,10 @@ public class ScanFileSystem {
 		return isJsonFile(fileName) && isNotRelease(fileName) && isNotPreviousVersion(fileName);
 	}
 
+	private static boolean isBulletinCollectionItem(String fileName) {
+		return isJsonFile(fileName) && isBulletin(fileName) && isNotPreviousVersion(fileName);
+	}
+
 	private static boolean isJsonFile(String fileName) {
 		return fileName.endsWith(".json");
 	}
@@ -96,5 +100,9 @@ public class ScanFileSystem {
 
 	private static boolean isNotPreviousVersion(String fileName) {
 		return !fileName.contains("versions");
+	}
+
+	private static boolean isBulletin(String fileName) {
+		return fileName.contains("bulletins");
 	}
 }
