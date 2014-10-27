@@ -30,7 +30,7 @@ public class CollectionTaxonomyFileSystem {
 	}
 
 	private Object search(String query, int page, String type) throws Exception {
-		List<File> files = getFiles(query);
+		List<File> files = getFiles(query, type);
 
 		Collections.sort(files);
 
@@ -45,11 +45,11 @@ public class CollectionTaxonomyFileSystem {
 		return collectionSearchResult;
 	}
 
-	private List<File> getFiles(String query) throws IOException {
+	private List<File> getFiles(String query, String type) throws IOException {
 		List<File> files = new ArrayList<File>();
 		String taxonomyRoot = Configuration.getTaxonomyPath() + query;
 		final Path rootDir = Paths.get(taxonomyRoot);
-		files = ScanFileSystem.getFiles(files, rootDir);
+		files = ScanFileSystem.getFiles(files, rootDir, type);
 		return files;
 	}
 

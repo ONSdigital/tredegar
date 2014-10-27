@@ -58,7 +58,7 @@ public class ScanFileSystem {
 	 * @throws IOException
 	 *             if file lookup fails
 	 */
-	public static List<File> getFiles(List<File> files, Path dir)
+	public static List<File> getFiles(List<File> files, Path dir, String type)
 			throws IOException {
 
 		if (files == null || dir == null) {
@@ -69,10 +69,10 @@ public class ScanFileSystem {
 		DirectoryStream<Path> stream = Files.newDirectoryStream(dir);
 		for (Path path : stream) {
 			if (path.toFile().isDirectory()) {
-				getFiles(files, path);
+				getFiles(files, path, type);
 			} else {
 				File file = path.toFile();
-				if (isBulletinCollectionItem(file.getAbsolutePath())) {
+				if (isCollectionItem(file.getAbsolutePath(), type)) {
 					files.add(file);
 				}
 			}
@@ -86,8 +86,8 @@ public class ScanFileSystem {
 		return isJsonFile(fileName) && isNotRelease(fileName) && isNotPreviousVersion(fileName);
 	}
 
-	private static boolean isBulletinCollectionItem(String fileName) {
-		return isJsonFile(fileName) && isBulletin(fileName) && isNotPreviousVersion(fileName);
+	private static boolean isCollectionItem(String fileName, String type) {
+		return isJsonFile(fileName) && isCollectionItemType(fileName, type) && isNotPreviousVersion(fileName);
 	}
 
 	private static boolean isJsonFile(String fileName) {
@@ -102,7 +102,7 @@ public class ScanFileSystem {
 		return !fileName.contains("versions");
 	}
 
-	private static boolean isBulletin(String fileName) {
-		return fileName.contains("bulletins");
+	private static boolean isCollectionItemType(String fileName, String type) {
+		return fileName.contains(type);
 	}
 }
