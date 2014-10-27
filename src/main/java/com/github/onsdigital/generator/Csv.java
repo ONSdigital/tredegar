@@ -25,6 +25,7 @@ import com.github.onsdigital.json.taxonomy.DataT1;
 import com.github.onsdigital.json.taxonomy.DataT2;
 import com.github.onsdigital.json.taxonomy.DataT3;
 import com.github.onsdigital.json.timeseries.TimeSeries;
+import com.github.onsdigital.json.timeseries.TimeSeriesValue;
 
 public class Csv {
 
@@ -291,7 +292,10 @@ public class Csv {
 		// Generate dummy timeseries for each CDID in the subset:
 		for (String cdid : TimeseriesMetadata.timeseries.keySet()) {
 			TimeSeries timeseries = TimeseriesMetadata.timeseries.get(cdid);
-			timeseries.data = new ArrayList<>(TimeseriesData.getDataMaps().get(cdid));
+			Set<TimeSeriesValue> data = TimeseriesData.getDataMaps().get(cdid);
+			if (data != null) {
+				timeseries.data = new ArrayList<>(data);
+			}
 			String json = Serialiser.serialise(timeseries);
 			File cdidFolder = new File(timeseriesFolder, cdid);
 			FileUtils.writeStringToFile(new File(cdidFolder, "data.json"), json);

@@ -2,7 +2,17 @@ package com.github.onsdigital.generator;
 
 import java.io.IOException;
 import java.io.Reader;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.nio.charset.Charset;
+import java.nio.file.DirectoryStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Collection;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 import java.util.TreeMap;
 
 import org.apache.commons.lang3.StringUtils;
@@ -33,14 +43,60 @@ public class TimeseriesMetadata {
 
 		timeseries = new TreeMap<>();
 
-		Reader reader = ResourceUtils.getReader("/data/Metadata/TimeseriesMetadata - CPI.csv");
+		for (Path path : getFiles()) {
+			String charsetName = "UTF8";
+			// We have some dodgy characters in this file:
+			String name = path.getFileName().toString();
+			if (name.equals("SDQ7.csv")) {
+				continue;
+				// charsetName = "ASCII";
+			}
+			try (Reader reader = Files.newBufferedReader(path, Charset.forName(charsetName))) {
+				System.out.println("Reading " + path);
+				readFile(reader);
+			}
+		}
+
+		// Ensure the spreadsheet that Rob manually produced is always fully
+		// represented by overwriting any values that may have been replaced:
+		try (Reader reader = ResourceUtils.getReader("/data/Metadata/TimeseriesMetadata - CPI.csv")) {
+			readFile(reader);
+		}
+	}
+
+	private static Collection<Path> getFiles() throws IOException {
+		Set<Path> result = new HashSet<>();
+
+		try {
+			URL resource = TimeseriesMetadata.class.getResource("/data/Metadata");
+			Path folder = Paths.get(resource.toURI());
+
+			try (DirectoryStream<Path> stream = Files.newDirectoryStream(folder, "*.csv")) {
+
+				// Iterate the paths in this directory:
+				for (Path item : stream) {
+					result.add(item);
+				}
+
+			}
+
+		} catch (URISyntaxException e) {
+			throw new IOException(e);
+		}
+
+		return result;
+	}
+
+	private static void readFile(Reader reader) throws IOException {
+
 		try (CSVReader csvReader = new CSVReader(reader)) {
 
 			// Set up the CDID maps:
 			String[] headings = csvReader.readNext();
 
 			// Read the rows until we get a blank for the date.
-			// After that blank line, the content is metadata about the CDIDs.
+			// After that blank line, the content is metadata about the
+			// CDIDs.
 			String[] row;
 			while ((row = csvReader.readNext()) != null) {
 
