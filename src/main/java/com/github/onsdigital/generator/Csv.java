@@ -18,7 +18,6 @@ import au.com.bytecode.opencsv.CSVReader;
 import com.github.davidcarboni.ResourceUtils;
 import com.github.davidcarboni.restolino.json.Serialiser;
 import com.github.onsdigital.json.Article;
-import com.github.onsdigital.json.Collection;
 import com.github.onsdigital.json.Data;
 import com.github.onsdigital.json.Release;
 import com.github.onsdigital.json.bulletin.Bulletin;
@@ -349,11 +348,6 @@ public class Csv {
 				}
 			}
 		}
-	}
-
-	private static void createCollection(Folder folder, File file) throws IOException {
-		String json = Serialiser.serialise(new Collection());
-		FileUtils.writeStringToFile(new File(file, "data.json"), json);
 	}
 
 	private static boolean isReleaseFolder(Folder o) {

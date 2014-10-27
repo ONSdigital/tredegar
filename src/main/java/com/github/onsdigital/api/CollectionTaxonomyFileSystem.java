@@ -33,6 +33,7 @@ public class CollectionTaxonomyFileSystem {
 		List<File> files = getFiles(query, type);
 
 		Collections.sort(files);
+		Collections.reverse(files);
 
 		int startIndex = getStartIndex(files, page);
 		int endIndex = getEndIndex(files, page);
