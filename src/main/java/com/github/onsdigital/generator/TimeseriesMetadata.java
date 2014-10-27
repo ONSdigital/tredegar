@@ -22,8 +22,9 @@ public class TimeseriesMetadata {
 
 	static Map<String, TimeSeries> loadTimeseriesMetadata() throws IOException {
 
-		if (timeseries == null)
+		if (timeseries == null) {
 			buildDataMaps();
+		}
 
 		return timeseries;
 	}
@@ -32,8 +33,7 @@ public class TimeseriesMetadata {
 
 		timeseries = new TreeMap<>();
 
-		Reader reader = ResourceUtils
-				.getReader("/TimeseriesMetadata - CPI.csv");
+		Reader reader = ResourceUtils.getReader("/data/Metadata/TimeseriesMetadata - CPI.csv");
 		try (CSVReader csvReader = new CSVReader(reader)) {
 
 			// Set up the CDID maps:
@@ -46,32 +46,24 @@ public class TimeseriesMetadata {
 
 				TimeSeries item = new TimeSeries();
 				for (int i = 0; i < Math.min(row.length, headings.length); i++) {
-					if (StringUtils.isNotBlank(row[i])
-							&& StringUtils.isNotBlank(headings[i])) {
-						if (headings[i].trim().toLowerCase()
-								.equals("Name".toLowerCase()))
+					if (StringUtils.isNotBlank(row[i]) && StringUtils.isNotBlank(headings[i])) {
+						if (headings[i].trim().toLowerCase().equals("Name".toLowerCase())) {
 							item.name = row[i];
-						else if (headings[i].trim().toLowerCase()
-								.equals("CDID".toLowerCase()))
+						} else if (headings[i].trim().toLowerCase().equals("CDID".toLowerCase())) {
 							item.cdid = row[i];
-						else if (headings[i].trim().toLowerCase()
-								.equals("Seasonal adjustment".toLowerCase()))
+						} else if (headings[i].trim().toLowerCase().equals("Seasonal adjustment".toLowerCase())) {
 							item.seasonalAdjustment = row[i];
-						else if (headings[i].trim().toLowerCase()
-								.equals("Units".toLowerCase()))
+						} else if (headings[i].trim().toLowerCase().equals("Units".toLowerCase())) {
 							item.units = row[i];
-						else if (headings[i].trim().toLowerCase()
-								.equals("Main measure".toLowerCase()))
+						} else if (headings[i].trim().toLowerCase().equals("Main measure".toLowerCase())) {
 							item.mainMeasure = row[i];
-						else if (headings[i].trim().toLowerCase()
-								.equals("Description".toLowerCase()))
+						} else if (headings[i].trim().toLowerCase().equals("Description".toLowerCase())) {
 							item.description = row[i];
-						else if (headings[i].trim().toLowerCase()
-								.equals("Note 1".toLowerCase()))
+						} else if (headings[i].trim().toLowerCase().equals("Note 1".toLowerCase())) {
 							item.note1 = row[i];
-						else if (headings[i].trim().toLowerCase()
-								.equals("Note 2".toLowerCase()))
+						} else if (headings[i].trim().toLowerCase().equals("Note 2".toLowerCase())) {
 							item.note2 = row[i];
+						}
 					}
 				}
 

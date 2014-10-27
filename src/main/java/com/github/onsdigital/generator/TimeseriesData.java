@@ -38,7 +38,7 @@ public class TimeseriesData {
 		// It can probably revert to HashMap at some point.
 		dataMaps = new TreeMap<>();
 
-		Reader reader = ResourceUtils.getReader("/Timeseries data - MM23_CSDB_DS.csdb.csv");
+		Reader reader = ResourceUtils.getReader("/data/Timeseries data - MM23_CSDB_DS.csdb.csv");
 		try (CSVReader csvReader = new CSVReader(reader)) {
 
 			// Set up the CDID maps:
