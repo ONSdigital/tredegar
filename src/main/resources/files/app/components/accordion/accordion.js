@@ -1,5 +1,3 @@
-'use strict';
-
 /*
 
 Accordion component
@@ -7,41 +5,64 @@ Accordion component
 @author Brn
  */
 
+(function() {
 
-//Based on example on https://docs.angularjs.org/guide/directive
-angular.module('onsComponents')
-  .directive('onsAccordion', function() {
+  'use strict';
+
+
+  //Based on example on https://docs.angularjs.org/guide/directive
+  angular.module('onsAccordion', [])
+    .directive('onsAccordion', accordionDirective).directive('onsAccordionItem', accordionitemDirective)
+
+
+  function accordionDirective() {
     return {
       restrict: 'E',
       transclude: true,
       scope: {
         multiple: '@'
       },
-      controller: function($scope) {
-        var multiple = $scope.multiple === 'true' ? true : false
-        var panes = $scope.panes = []
-
-        this.toggle = function(pane) {
-          // Hide all other  panes if multiple not wanted to be seen
-          if (!multiple) {
-            angular.forEach(panes, function(pane) {
-              pane.selected = false;
-            })
-          }
-          pane.selected = !pane.selected;
-        }
-
-        this.addPane = function(pane) {
-          if (panes.length === 0) {
-            this.toggle(pane)
-          }
-          panes.push(pane)
-        };
-
-      },
+      controller: accordionController,
+      controllerAs: 'accordion',
       template: '<div ng-transclude></div>'
     }
-  }).directive('onsAccordionItem', function() {
+  }
+
+  function accordionController($scope) {
+    var accordion = this
+    init()
+
+    function init() {
+      accordion.multiple = $scope.multiple === 'true' ? true : false
+      accordion.panes = $scope.panes = []
+    }
+
+    function addPane(pane) {
+      if (accordion.panes.length === 0) {
+        this.toggle(pane)
+      }
+      accordion.panes.push(pane)
+    }
+
+    function toggle(pane) {
+      // Hide all other  panes if multiple not wanted to be seen
+      if (!accordion.multiple) {
+        angular.forEach(panes, function(pane) {
+          pane.selected = false;
+        })
+      }
+      pane.selected = !pane.selected;
+    }
+
+    //Expose functions
+    angular.extend(accordion, {
+      toggle: toggle,
+      addPane: addPane
+
+    })
+  }
+
+  function accordionitemDirective() {
     return {
       require: '^onsAccordion',
       restrict: 'E',
@@ -49,11 +70,17 @@ angular.module('onsComponents')
       scope: {
         header: '@'
       },
-      link: function(scope, element, attrs, accordionCtrl) {
-        accordionCtrl.addPane(scope)
-        scope.pane = scope
-        scope.toggle = accordionCtrl.toggle
-      },
+      link: accordionItemLink,
       templateUrl: 'app/components/accordion/accordionitem.html'
     }
-  })
+  }
+
+  function accordionItemLink(scope, element, attrs, accordionCtrl) {
+    var accordionItem = scope
+    accordionCtrl.addPane(accordionItem)
+    scope.pane = accordionItem
+    scope.accordion = accordionCtrl
+  }
+
+
+})()
