@@ -14,7 +14,6 @@ Accordion component
   angular.module('onsAccordion', [])
     .directive('onsAccordion', accordionDirective).directive('onsAccordionItem', accordionitemDirective)
 
-
   function accordionDirective() {
     return {
       restrict: 'E',
@@ -48,10 +47,10 @@ Accordion component
       // Hide all other  panes if multiple not wanted to be seen
       if (!accordion.multiple) {
         angular.forEach(panes, function(pane) {
-          pane.selected = false;
+          pane.selected = false
         })
       }
-      pane.selected = !pane.selected;
+      pane.selected = !pane.selected
     }
 
     //Expose functions
@@ -76,10 +75,18 @@ Accordion component
   }
 
   function accordionItemLink(scope, element, attrs, accordionCtrl) {
-    var accordionItem = scope
-    accordionCtrl.addPane(accordionItem)
-    scope.pane = accordionItem
-    scope.accordion = accordionCtrl
+    var pane = this
+    init()
+
+    function init() {
+      accordionCtrl.addPane(pane)
+      scope.pane = pane
+    }
+
+    function toggle() {
+      accordionCtrl.toggle(pane)
+    }
+
   }
 
 
