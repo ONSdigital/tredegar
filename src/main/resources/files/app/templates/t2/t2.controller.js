@@ -1,13 +1,12 @@
-angular.module('onsTemplates')
-  .controller('T2Controller', ['$scope', 'Page', 'TaxonomyService',
-    function($scope, Page, TaxonomyService) {
-      init()
+(function() {
 
-      function init() {
-        Page.setTitle('Home')
-        TaxonomyService.loadChildrenData($scope)
-        $scope.data.highlightedChildren = TaxonomyService.convert($scope.data.children, 3)
-      }
+  angular.module('onsTemplates')
+    .controller('T2Controller', ['Page', T2Controller])
 
+  function T2Controller(Page) {
+    init()
+    function init() {
+      Page.setTitle('Home')
     }
-  ])
+  }
+})()

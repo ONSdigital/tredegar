@@ -4,7 +4,7 @@
 (function() {
 
     // Components are to be injected to onsComponents module
-    var onsComponents = angular.module('onsComponents', [])
+    var onsComponents = angular.module('onsComponents', ['onsAccordion'])
 
     //Filters and other helpers are to be injected to onsHelpers module
     var onsHelpers = angular.module('onsHelpers', [])
@@ -15,6 +15,7 @@
     /* App Module */
     var onsApp = angular.module('onsApp', [
         'ngRoute',
+        'onsTaxonomy',
         'onsHelpers',
         'onsComponents',
         'onsTemplates',
@@ -27,11 +28,6 @@
         .config(['$routeProvider', '$locationProvider',
             function($routeProvider, $locationProvider) {
                 $routeProvider.
-                when('/', {
-                    templateUrl: 'app/templates/taxonomy/taxonomy.html',
-                    controller: 'TaxonomyController',
-                    contollerAs: 'ctrl'
-                }).
                 when('/article', {
                     templateUrl: 'app/templates/article/article.html',
                     controller: 'ArticleCtrl'
@@ -83,9 +79,6 @@
                     controller: "T5altCtrl"
                 }).
                 otherwise({
-                    templateUrl: 'app/templates/taxonomy/taxonomy.html',
-                    controller: 'TaxonomyController',
-                    contollerAs: 'ctrl',
                     resolve: {
                         // https://stackoverflow.com/questions/15975646/angularjs-routing-to-empty-route-doesnt-work-in-ie7
                         // Here we ensure that our route has the document fragment (#), or more specifically that it has #/ at a minimum.
@@ -99,12 +92,20 @@
                                 }
                             }
                         ]
-                    }
-                })
+                        // ,
+                        // theData: ['Taxonomy',
+                        //     function(Taxonomy) {
+                        //         Taxonomy.loadData(function(data) {
+                        //             return data
+                        //         });
+                        //     }
+                        // ]
 
-                $locationProvider
-                    .html5Mode(false)
-                    .hashPrefix('!');
+                    },
+                    templateUrl: 'app/templates/taxonomy/taxonomy.html',
+                    controller: 'TaxonomyController',
+                    controllerAs: 'taxonomy'
+                })
 
             }
         ])
