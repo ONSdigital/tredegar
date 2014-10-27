@@ -309,7 +309,7 @@ public class Csv {
 				File articleFile = new File(articles, StringUtils.deleteWhitespace(articleFolder.name.toLowerCase()));
 				articleFile.mkdir();
 
-				for (Folder dateFolder : articleFolders) {
+				for (Folder dateFolder : articleFolder.children) {
 					File dateFile = new File(articleFile, dateFolder.name);
 					dateFile.mkdir();
 					Article article = new Article();
