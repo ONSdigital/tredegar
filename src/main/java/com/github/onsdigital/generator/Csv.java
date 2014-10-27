@@ -18,13 +18,13 @@ import au.com.bytecode.opencsv.CSVReader;
 import com.github.davidcarboni.ResourceUtils;
 import com.github.davidcarboni.restolino.json.Serialiser;
 import com.github.onsdigital.json.Article;
-import com.github.onsdigital.json.Collection;
 import com.github.onsdigital.json.Data;
 import com.github.onsdigital.json.Release;
 import com.github.onsdigital.json.bulletin.Bulletin;
 import com.github.onsdigital.json.taxonomy.DataT1;
 import com.github.onsdigital.json.taxonomy.DataT2;
 import com.github.onsdigital.json.taxonomy.DataT3;
+import com.github.onsdigital.json.timeseries.TimeSeries;
 
 public class Csv {
 
@@ -116,8 +116,9 @@ public class Csv {
 				}
 
 				String path = StringUtils.join(new String[] { theme, subject, topic }, '/');
-				while (StringUtils.endsWith(path, "/"))
+				while (StringUtils.endsWith(path, "/")) {
 					path = path.substring(0, path.length() - 1);
+				}
 				System.out.println(path);
 
 			}
@@ -142,8 +143,9 @@ public class Csv {
 					if (s.children.size() == 0) {
 						createT3(s, subjectFile);
 						// createContentFolders(s.name, subjectFile);
-					} else
+					} else {
 						createT2(s, subjectFile);
+					}
 					System.out.println("\t" + subjectFile.getPath());
 					for (Folder o : s.children) {
 						topicFile = new File(subjectFile, o.filename());
@@ -288,7 +290,9 @@ public class Csv {
 
 		// Generate dummy timeseries for each CDID in the subset:
 		for (String cdid : TimeseriesMetadata.timeseries.keySet()) {
-			String json = Serialiser.serialise(TimeseriesMetadata.timeseries.get(cdid));
+			TimeSeries timeseries = TimeseriesMetadata.timeseries.get(cdid);
+			timeseries.data = new ArrayList<>(TimeseriesData.getDataMaps().get(cdid));
+			String json = Serialiser.serialise(timeseries);
 			File cdidFolder = new File(timeseriesFolder, cdid);
 			FileUtils.writeStringToFile(new File(cdidFolder, "data.json"), json);
 
@@ -298,30 +302,57 @@ public class Csv {
 	}
 
 	private static void createArticle(Folder folder, File file) throws IOException {
-		// Create a dummy bulletin:
-		File articles = new File(file, "articles");
-		articles.mkdir();
-		Article article = new Article();
-		article.title = folder.name;
-		String json = Serialiser.serialise(article);
-		FileUtils.writeStringToFile(new File(articles, "data.json"), json);
+		if (file.getName().contains("inflationandpriceindices")) {
+			File articles = new File(file, "articles");
+			articles.mkdir();
 
-		createVersions(articles, json);
+			BulletinsAndArticles.buildFolders();
+			Set<Folder> articleFolders = BulletinsAndArticles.folders;
+
+			for (Folder articleFolder : articleFolders) {
+				File articleFile = new File(articles, StringUtils.deleteWhitespace(articleFolder.name.toLowerCase()));
+				articleFile.mkdir();
+
+				for (Folder dateFolder : articleFolder.children) {
+					File dateFile = new File(articleFile, dateFolder.name);
+					dateFile.mkdir();
+					Article article = new Article();
+					article.title = articleFolder.name;
+					String json = Serialiser.serialise(article);
+					FileUtils.writeStringToFile(new File(dateFile, "data.json"), json);
+
+					createVersions(dateFile, json);
+				}
+			}
+		}
 	}
 
 	private static void createBulletin(Folder folder, File file) throws IOException {
-		// Create a dummy bulletin:
-		File bulletins = new File(file, "bulletins");
-		bulletins.mkdir();
-		Bulletin bulletin = new Bulletin();
-		bulletin.title = folder.name;
-		String json = Serialiser.serialise(bulletin);
-		FileUtils.writeStringToFile(new File(bulletins, "data.json"), json);
-	}
 
-	private static void createCollection(Folder folder, File file) throws IOException {
-		String json = Serialiser.serialise(new Collection());
-		FileUtils.writeStringToFile(new File(file, "data.json"), json);
+		if (file.getName().contains("inflationandpriceindices")) {
+			// Create a dummy bulletin:
+			File bulletins = new File(file, "bulletins");
+			bulletins.mkdir();
+
+			BulletinsAndArticles.buildFolders();
+			Set<Folder> bulletinFolders = BulletinsAndArticles.folders;
+
+			for (Folder bulletinFolder : bulletinFolders) {
+				File bulletinFile = new File(bulletins, StringUtils.deleteWhitespace(bulletinFolder.name.toLowerCase()));
+				bulletinFile.mkdir();
+
+				for (Folder dateFolder : bulletinFolder.children) {
+					File dateFile = new File(bulletinFile, dateFolder.name);
+					dateFile.mkdir();
+					Bulletin bulletin = new Bulletin();
+					bulletin.title = bulletinFolder.name;
+					String json = Serialiser.serialise(bulletin);
+					FileUtils.writeStringToFile(new File(dateFile, "data.json"), json);
+
+					createVersions(dateFile, json);
+				}
+			}
+		}
 	}
 
 	private static boolean isReleaseFolder(Folder o) {

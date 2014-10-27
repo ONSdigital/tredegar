@@ -46,7 +46,7 @@ public class ScanFileSystemTest {
 		final Path rootDir = Paths.get(rootSearch);
 
 		List<File> files = new ArrayList<File>();
-		ScanFileSystem.getFiles(files, rootDir);
+		ScanFileSystem.getFiles(files, rootDir, "bulletins");
 		assertFalse(files.isEmpty());
 	}
 

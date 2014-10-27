@@ -1,15 +1,18 @@
 //Collection Controller
 angular.module('onsTemplates')
-  .controller('CollectionCtrl', ['$scope', '$http',
-    function($scope, $http) {
-
+  .controller('CollectionCtrl', ['$scope', '$location', '$http',
+    function($scope, $location, $http) {
+	  
       getData("/collection.json", function(data) {
         $scope.content = data
       })
+	  var url = $location.$$path
+	  var lastIndex = url.lastIndexOf('/');
+	  var searchTerm = url.substr(0, lastIndex)
+	  console.log('Searching for collections from: ' + searchTerm)
 
       var getParam = $scope.getUrlParam
       var page = getParam('page')
-      var searchTerm = getParam('loc')
       var type = $scope.type = getParam('type')
       if (!searchTerm) {
         return
