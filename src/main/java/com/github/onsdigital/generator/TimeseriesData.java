@@ -2,6 +2,7 @@ package com.github.onsdigital.generator;
 
 import java.io.IOException;
 import java.io.Reader;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -19,21 +20,23 @@ public class TimeseriesData {
 		return getDataMaps().get(cdid);
 	}
 
-	private static Map<String, Map<String, String>> getDataMaps()
-			throws IOException {
+	public static Map<String, Map<String, String>> getDataMaps() throws IOException {
 
-		if (dataMaps == null)
+		if (dataMaps == null) {
 			buildDataMaps();
+		}
 
 		return dataMaps;
 	}
 
 	private static void buildDataMaps() throws IOException {
 
+		// We use TreeMap here so that the keys are ordered alphabetically.
+		// This useful when inspecting the map during development.
+		// It can probably revert to HashMap at some point.
 		dataMaps = new TreeMap<>();
 
-		Reader reader = ResourceUtils
-				.getReader("/Timeseries data - MM23_CSDB_DS.csdb.csv");
+		Reader reader = ResourceUtils.getReader("/Timeseries data - MM23_CSDB_DS.csdb.csv");
 		try (CSVReader csvReader = new CSVReader(reader)) {
 
 			// Set up the CDID maps:
@@ -41,16 +44,18 @@ public class TimeseriesData {
 			for (String cdid : cdids) {
 				// Skip the date column, which has no header:
 				if (StringUtils.isNotBlank(cdid)) {
-					dataMaps.put(cdid.toLowerCase(),
-							new TreeMap<String, String>());
+					// NB LinkedHashMap preserves the order of keys.
+					// This is useful because we want to avoid duplicates,
+					// but the date values (e.g. months) don't natulally sort
+					// alphabetically.
+					dataMaps.put(cdid.toLowerCase(), new LinkedHashMap<String, String>());
 				}
 			}
 
 			// Read the rows until we get a blank for the date.
 			// After that blank line, the content is metadata about the CDIDs.
 			String[] row;
-			while ((row = csvReader.readNext()) != null
-					&& StringUtils.isNotBlank(row[0])) {
+			while ((row = csvReader.readNext()) != null && StringUtils.isNotBlank(row[0])) {
 
 				String date = row[0];
 				for (int i = 1; i < row.length; i++) {
