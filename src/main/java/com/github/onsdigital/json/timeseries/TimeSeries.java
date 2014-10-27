@@ -1,5 +1,7 @@
 package com.github.onsdigital.json.timeseries;
 
+import java.util.List;
+
 import com.github.onsdigital.json.ContentType;
 import com.github.onsdigital.json.DataItem;
 
@@ -24,6 +26,9 @@ public class TimeSeries extends DataItem {
 
 	// e.g. "Not a national statistic" or "2005 = 100. Not seasonally adjusted"
 	public String note = "2005 = 100. Not seasonally adjusted";
+
+	// The nectar, the goodness, the very juice of the fireflower: data.
+	public List<TimeSeriesValue> data;
 
 	public TimeSeries() {
 		type = ContentType.timeseries;
