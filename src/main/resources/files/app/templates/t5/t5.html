@@ -132,14 +132,14 @@
 
 
 <!-- Title and release date -->
-<div class="page-header slate">
+<div class="page-header page-header--article page-header--time-series slate--green">
     <div class="wrapper">
         <p>
             <strong>{{header}}</strong>
         </p>
         <h1 class="page-header__title flush--half--bottom">{{chart.name}}</h1>
         <div class="grid-wrap">
-            <div class="grid-col desktop-grid-two-thirds">
+            <div class="grid-col desktop-grid-one-half">
                 <img src="/ui/img/nslogo.png" class="page-header-image" alt="ONS logo">
                 <p>
                     <strong>{{chart.lastUpated}}</strong>
@@ -152,6 +152,16 @@
                 <p>Next release: {{chart.nextUpdate}} (provisional)</p>
                 <p>Contact: <a href="mailto:jukesie@hotmail.com">Juksie</a>
                 </p>
+            </div>
+            <div class="grid-col desktop-grid-one-quarter invisible">.</div>
+            <div class="grid-col desktop-grid-one-quarter">
+                <p>
+                    <strong>Series ID: {{chart.cdid}}</strong>
+                </p>
+                <p>
+                    <strong>Units: {{chart.units}}</strong>
+                </p>
+                <p>{{chart.seasonalAdjustment}}</p>
             </div>
         </div>
         <div class="page-header__icons">
@@ -191,16 +201,16 @@
 <!-- Chart in Highcharts -->
 <div class="wrapper">
     <div ng-controller="chartController">
-    This: {{changeChartTime}}
         <a href="" ng-click="changeChartType('line')">Line</a>
         <a href="" ng-click="changeChartType('bar')">Bar</a>
-        <a href="" ng-click="changeChartTime('year')">Year</a>
-        <a href="" ng-show="chartData.options.xAxis.categories" ng-click="changeChartTime('quarter')">Quarter</a>
-        <a href="" ng-show="chartData.options.xAxis.categories" ng-click="changeChartTime('month')">Month</a>
+        <a href="" ng-if="hasYData" ng-click="changeChartTime('year')">Year</a>
+        <a href="" ng-if="hasQData" ng-click="changeChartTime('quarter')">Quarter</a>
+        <a href="" ng-if="hasMData" ng-click="changeChartTime('month')">Month</a>
+        <br></br>
         <highchart id="chart_prices" config="chartData"></highchart>
     </div>
 </div>
-
+<br></br>
 
 <!-- Notes and info section -->
 <div class="wrapper panel--bottom-mar">
