@@ -24,7 +24,7 @@ import com.github.onsdigital.json.Release;
 import com.github.onsdigital.json.bulletin.Bulletin;
 import com.github.onsdigital.json.taxonomy.DataT1;
 import com.github.onsdigital.json.taxonomy.DataT2;
-import com.github.onsdigital.json.taxonomy.DataT3;
+import com.github.onsdigital.json.taxonomy.T3;
 import com.github.onsdigital.json.timeseries.TimeSeries;
 import com.github.onsdigital.json.timeseries.TimeSeriesValue;
 
@@ -261,7 +261,7 @@ public class Csv {
 		if (isReleaseFolder(folder)) {
 			System.out.println("Do not create json for Releases createT3");
 		} else {
-			DataT3 t3 = new DataT3(folder);
+			T3 t3 = new T3(folder);
 			t3.index = folder.index;
 			String json = Serialiser.serialise(t3);
 			FileUtils.writeStringToFile(new File(file, "data.json"), json);

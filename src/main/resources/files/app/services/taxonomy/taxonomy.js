@@ -25,8 +25,10 @@
 			var level = service.data.level
 			var children = service.data.children
 			if (level === 't3') {
-				service.data.timeseriesData = []
+				service.data.timeseries = []
+				service.data.headlineData= {}
 				loadTimeseriesData()
+				loadHeadlineData()
 			} else {
 				loadChildrenData()
 				if (level === 't1') {
@@ -68,12 +70,22 @@
 			for (var i = 0; i < items.length; i++) {
 				loadTimeseries(items[i])
 			}
+
 		}
 
 		function loadTimeseries(item) {
 			var timeseriesPath = dataPath + item
 			load(timeseriesPath, function(data) {
-				service.data.timeseriesData.push(data)
+				data.url = item
+				service.data.timeseries.push(data)
+			})
+		}
+
+
+		function loadHeadlineData() {
+			var timeseriesPath = dataPath + service.data.headline
+			load(timeseriesPath, function(data) {
+				service.data.headlineData = data
 			})
 		}
 
