@@ -4,7 +4,7 @@
 (function() {
 
     // Components are to be injected to onsComponents module
-    var onsComponents = angular.module('onsComponents', ['onsAccordion', 'onsNavigation', 'highcharts-ng'])
+    var onsComponents = angular.module('onsComponents', ['onsAccordion', 'onsNavigation', 'onsPaginator',  'highcharts-ng'])
 
     //Filters, services and other helpers are to be injected to onsHelpers module
     var onsHelpers = angular.module('onsHelpers', ['onsFilters', 'onsTaxonomy'])
