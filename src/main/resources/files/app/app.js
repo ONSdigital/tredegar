@@ -47,7 +47,7 @@
                 }).
                 when('/contactus', {
                     templateUrl: 'app/templates/contact/contactus.html',
-                    controller: "ContactUsCtrl"
+                    controller: "ContactUsController"
                 }).
                 when('/dataset', {
                     templateUrl: 'app/templates/dataset/Dataset_Excelcrosssection.html',

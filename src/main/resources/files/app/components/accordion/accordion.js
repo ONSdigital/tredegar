@@ -12,22 +12,22 @@ Accordion component
 
   //Based on example on https://docs.angularjs.org/guide/directive
   angular.module('onsAccordion', [])
-    .directive('onsAccordion', accordionDirective).directive('onsAccordionItem', accordionitemDirective)
+    .directive('onsAccordion', AccordionDirective).directive('onsAccordionItem', AccordionitemDirective)
 
-  function accordionDirective() {
+  function AccordionDirective() {
     return {
       restrict: 'E',
       transclude: true,
       scope: {
         multiple: '@'
       },
-      controller: accordionController,
+      controller: AccordionController,
       controllerAs: 'accordion',
       template: '<div ng-transclude></div>'
     }
   }
 
-  function accordionController($scope) {
+  function AccordionController($scope) {
     var accordion = this
     init()
 
@@ -61,7 +61,7 @@ Accordion component
     })
   }
 
-  function accordionitemDirective() {
+  function AccordionitemDirective() {
     return {
       require: '^onsAccordion',
       restrict: 'E',
@@ -69,13 +69,13 @@ Accordion component
       scope: {
         header: '@'
       },
-      link: accordionItemLink,
+      link: AccordionItemLink,
       templateUrl: 'app/components/accordion/accordionitem.html'
     }
   }
 
-  function accordionItemLink(scope, element, attrs, accordionCtrl) {
-    var pane = this
+  function AccordionItemLink(scope, element, attrs, accordionCtrl) {
+    var pane = scope
     init()
 
     function init() {
@@ -86,6 +86,10 @@ Accordion component
     function toggle() {
       accordionCtrl.toggle(pane)
     }
+
+    angular.extend(scope, {
+      toggle: toggle
+    })
 
   }
 
