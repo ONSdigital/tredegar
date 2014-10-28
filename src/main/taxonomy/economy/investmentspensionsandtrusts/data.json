@@ -11,15 +11,6 @@
     "/economy/inflationandpriceindices/timeseries/cdja",
     "/economy/inflationandpriceindices/timeseries/cjvx"
   ],
-  "level": "t3",
-  "breadcrumb": [
-    {
-      "index": 0,
-      "type": "home",
-      "name": "Economy",
-      "fileName": "economy"
-    }
-  ],
   "timeseries": [
     {
       "name": "CPI Index",
@@ -96,9 +87,18 @@
       "headline": false
     }
   ],
+  "level": "t3",
+  "index": 6,
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    }
+  ],
   "lede": "Consumer price inflation is the speed at which the prices of goods and services bought by households rise or fall.",
   "more": "Some more content goes here. This will expand and contract if you have JS enabled. If JS is disabled, this will show by default. Yay progressive enhancement!",
-  "index": 6,
   "type": "home",
   "name": "Investments, Pensions and Trusts",
   "fileName": "investmentspensionsandtrusts"

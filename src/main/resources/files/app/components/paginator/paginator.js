@@ -1,4 +1,3 @@
-'use strict';
 
 /*
 Paginator component is an element directive. 
@@ -13,9 +12,15 @@ pageCount field is mandatory
 @author Bren
  */
 
-angular.module('onsComponents')
-  .directive('onsPaginator', [ '$location',
-    function paginatorDirective($location) {
+(function() {
+
+'use strict';
+
+angular.module('onsPaginator', [])
+  .directive('onsPaginator', [ '$location', PaginatorDirective])
+  .filter('range',rangeFilter )
+
+  function PaginatorDirective($location) {
       return {
         restrict: 'E',
         templateUrl: 'app/components/paginator/paginator.html',
@@ -84,7 +89,8 @@ angular.module('onsComponents')
 
       }
     }
-  ]).filter('range', function() {
+
+    function rangeFilter() {
     return function(input, start, end) {
       var start = parseInt(start)
       var end = parseInt(end)
@@ -92,4 +98,6 @@ angular.module('onsComponents')
         input.push(i)
       return input
     }
-  })
+  }
+
+})()

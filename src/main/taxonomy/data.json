@@ -1,10 +1,9 @@
 {
-  "level": "t1",
-  "breadcrumb": [],
   "children": [
     {
       "detail": [],
       "index": 0,
+      "breadcrumb": [],
       "type": "home",
       "name": "Business, Industry and Trade",
       "fileName": "businessindustryandtrade"
@@ -40,6 +39,7 @@
         }
       ],
       "index": 1,
+      "breadcrumb": [],
       "type": "home",
       "name": "Economy",
       "fileName": "economy"
@@ -75,6 +75,7 @@
         }
       ],
       "index": 2,
+      "breadcrumb": [],
       "type": "home",
       "name": "Employment and Labour Market",
       "fileName": "employmentandlabourmarket"
@@ -110,12 +111,15 @@
         }
       ],
       "index": 3,
+      "breadcrumb": [],
       "type": "home",
       "name": "People, Population and Community",
       "fileName": "peoplepopulationandcommunity"
     }
   ],
+  "level": "t1",
   "index": 0,
+  "breadcrumb": [],
   "type": "home",
   "name": "Home",
   "fileName": "/"
