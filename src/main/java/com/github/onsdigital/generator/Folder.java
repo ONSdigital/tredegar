@@ -11,6 +11,8 @@ public class Folder {
 	public String name;
 	public Folder parent = null;
 	public Set<Folder> children = new HashSet<>();
+	public String lede;
+	public String more;
 
 	/**
 	 * Sanitises folder names to <code>[a-zA-Z0-9]</code>.
@@ -23,8 +25,9 @@ public class Folder {
 		StringBuilder result = new StringBuilder();
 		for (int i = 0; i < name.length(); i++) {
 			String character = name.substring(i, i + 1);
-			if (character.matches("[a-zA-Z0-9]"))
+			if (character.matches("[a-zA-Z0-9]")) {
 				result.append(character);
+			}
 		}
 		return result.toString().toLowerCase();
 	}
