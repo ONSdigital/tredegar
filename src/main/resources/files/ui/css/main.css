@@ -481,7 +481,6 @@ img {
 .icon-twitter:before { content: '\e8e2'; } /* '' */
 .icon-info-circled:before { content: '\e819'; } /* '' */
 .icon-down-open-big:before { content: '\e884'; } /* '' */
-.icon-right-open-big:before { content: '\e80a'; } /* '' */
 .icon-up:before { content: '\e881'; } /* '' */
 .icon-cog:before { content: '\e855'; } /* '' */
 .icon-download:before { content: '\e820'; } /* '' */
@@ -685,6 +684,9 @@ img {
 .flush {
   margin: 0 !important; }
 
+ .flush--padding {
+  padding: 0 !important; } 
+
 .flush--top {
   margin-top: 0 !important; }
 
@@ -753,6 +755,21 @@ img {
    A standard wrapping block to limit the width of blocks - this allows for full width elements
    and contained elements without constraining it at <body> level
    ======================================================*/
+.home_wrapper {
+  position: relative;
+  max-width: 69.75em;
+  padding: 0 10px;
+  padding: 0 1rem;
+  margin: 0 auto; }
+  @media screen and (min-width: 38em) {
+    .home_wrapper {
+      padding: 0 30px;
+      padding: 0 3rem; } }
+  @media screen and (min-width: 62em) {
+    .home_wrapper {
+      padding: 0 20px;
+      padding: 0 2rem; } }
+
 .wrapper {
   position: relative;
   max-width: 59.75em;
@@ -2984,7 +3001,8 @@ lesser , applied styles
   border-bottom: 1px solid #e6e3da; }
 
 .panel--separated--top--large {
-  border-top: 5px solid #e6e3da; }
+  /*border-top: 5px solid #e6e3da; original*/
+    border-top: 5px solid #ececec;}
 
 .panel--separated--bottom--large {
   border-bottom: 5px solid #e6e3da; }
@@ -3650,7 +3668,7 @@ table actions
   left: 0;
   top: 0;
   z-index: 9999999;
-  pointer-events: none;
+  /*pointer-events: none; to make code validate*/
   width: auto;
   overflow: visible; }
 
@@ -3879,16 +3897,19 @@ table actions
   h3 {
     page-break-after: avoid; } }
 
-//*------------------------------------*\\
+/*------------------------------------*\\
   Methods Digital Style Additions
-\\*------------------------------------*//
+\\*------------------------------------*/
 
 
 /*------------------------------------*\
   Search Page Styles
 \*------------------------------------*/
 
-.aside-highlighted{ color: #004790; word-wrap: break-word; }
+.aside-highlighted{ 
+  color: #004790;
+  word-wrap: break-word;
+}
 
 .aside-links{
   color: #bac044 !important;
@@ -3956,13 +3977,18 @@ table actions
   font-size: 10px;
   font-size: 1rem;
   letter-spacing: .1em;
-  color: white;
+  border: solid 1px;
+  border-radius: 2px;
+  /*color: white;
   text-transform: uppercase;
   cursor: pointer;
   background-color: #adafa7;
   border: 0 none;
-  border-radius: 2px;
-}
+  border-radius: 2px; original code
+}*/
+  color: #888;
+  text-transform: uppercase;}
+
 
 .search .lozenge.is-collapsed {
   display: inline-block;
@@ -4003,7 +4029,6 @@ table actions
 
 .search-results-total{
   text-align: left;
-  float: top;
   padding: 0em;
   margin-right: 0em;
 }
@@ -4254,6 +4279,10 @@ background-color: #edeeee !important;
   padding-top: 0rem;
 }
 
+.rem_pad_left{
+  padding-left: 0rem;
+}
+
 .caveat{
   vertical-align: bottom;
   float: right;
@@ -4473,8 +4502,7 @@ ol.toc-columns
   -moz-transition: all 0.5s ease-in-out;
   -ms-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
-};
-
+}
 
 
 
@@ -4511,7 +4539,7 @@ ol.toc-columns
 #search > dl > dt:nth-child(1){
   font-size: 1.3em;
   background-color: #fafafb;
-/*  padding: 0 0 0 0.3em;*/ Commented out to align collection results
+/*  padding: 0 0 0 0.3em; Commented out to align collection results*/
 }
 
 #search > dl > dd:nth-child(2){
@@ -4626,7 +4654,7 @@ table {
   border: 1px solid #aaa;
 }
 
-.
+
 .resp-table th, .resp-table td {
   margin: .5em 1em;
 }
@@ -4719,7 +4747,6 @@ a.tooltips span
    border-radius:4px;
    box-shadow: 5px 5px 8px #CCC;
 }*/
-<<<<<<< HEAD
 
 /*------------------------------------*\
  Angular Accordion
@@ -4782,8 +4809,6 @@ div.grid-col.desktop-grid-two-thirds.tablet-grid-two-thirds > div > ol > li {
     margin-bottom: 1.75rem;
   }
 }
-=======
->>>>>>> d42b5fc4372342db7f3717c4d5557ef6c58b5277
 
 
 /*------------------------------------*\
@@ -4793,7 +4818,8 @@ div.grid-col.desktop-grid-two-thirds.tablet-grid-two-thirds > div > ol > li {
 .data-table {
   margin: 1em 0;
   min-width: 300px;
-
+  overflow: hidden;
+  margin: auto;
 }
 
 .data-table th {
@@ -4811,12 +4837,6 @@ div.grid-col.desktop-grid-two-thirds.tablet-grid-two-thirds > div > ol > li {
   padding-left: 0.6em;
 }
 
-.data-table {
-  border-radius: .4em;
-  overflow: hidden;
-  margin: auto;
-}
-  
 .data-table th, .data-table td {
   margin: .5em 1em;
 }
@@ -4825,9 +4845,8 @@ div.grid-col.desktop-grid-two-thirds.tablet-grid-two-thirds > div > ol > li {
   color: white;
   background-color: #757575;
   width: 12%;
-  padding: 0.5em !important;
   font-size: 1.4rem;
-  text-align: center;
+  text-align: -webkit-center;
 }
 
 .datatable--checkbox{
@@ -4836,13 +4855,14 @@ div.grid-col.desktop-grid-two-thirds.tablet-grid-two-thirds > div > ol > li {
 
 td.datatable-downloads{
   text-align: right;
-  background-color: #fff;
+  background-color: #FFF;
+  border-left: #FFF;
+  border-right: #FFF;
 }
 
 .download_responsive_btn{
   opacity: 0.5;
 }
-
 
 .datatable-row{
   border-top: 2px solid #dedfdc;
@@ -4922,3 +4942,179 @@ td.datatable-downloads{
 
 .slate--green {
   background-color: #fafbe7; }
+
+/*------------------------------------*\
+  New Hompage Styles
+\*------------------------------------*/
+
+.linkbox-padded{
+  padding: 0 30px;
+}
+
+.home_box_img_left {
+  background-image: url("/ui/img/baby_names.png");
+  background-position: 25% 25%;
+  /*background-size: cover;*/
+  height: 18rem }
+
+.home_box_img_right {
+  background-image: url("/ui/img/onsvisual.png");
+  background-position: 25% 25%;
+  height: 18rem; }
+
+.home_hero_img {
+  background-image: url("/ui/img/hero1.png");
+  background-clip: content-box;
+  background-size: 100% 100%;
+  background-position: bottom left;
+  height: 25rem;
+  overflow: hidden;
+  }
+
+.hero-wrapper{
+  width: 100%;
+  height: 80%;
+}
+
+.hero-stat-box{
+  height: 25rem;
+  background-color: #7248b5;
+  margin-left: 25px;
+  margin: 0 auto;
+}
+
+.home_hero_comments{
+  font-size: 1.6rem;
+}
+
+.cta_chevron{
+  position: absolute;
+  right: 25px;
+  bottom: 10px;
+  font-weight: bolder;
+  font-size: 2.5rem;
+  font-weight: bolder; 
+}
+
+.home_nav_boxes{
+  height: 25rem;
+}
+
+/*--------------------------------------------*\
+  CX CHART & Tooltip Styles - No changes made
+\*--------------------------------------------*/
+
+.sidebar {
+  width: 30px;
+  height: 100%;
+  margin-right: 5px;
+  float: left;
+  background-color: #ddd;
+  padding-top: 18px; }
+
+.title {
+  font-size: 14px;
+  text-transform: uppercase; }
+
+#custom-tooltip {
+  display: block;
+  width: 220px;
+  border: 1px solid #ddd;
+  background-color: white; }
+
+.tooltip-short {
+  height: 70px; }
+
+.tooltip-tall {
+  height: 100px; }
+
+.maintext {
+  font-family: "open-sans-n7", "open-sans", sans-serif;
+  padding: 10px 0 0 40px;
+  display: block;
+  width: 220px;
+  height: 100%; }
+
+.maintext__title {
+  font-family: "open-sans-n7", "open-sans", sans-serif;
+  margin-bottom: 5px; }
+
+.circle {
+  margin: 0px;
+  margin-left: 9px;
+  padding: 0px;
+  height: 14px;
+  font-size: 22px;
+  color: #8FBED8;
+  line-height: 13px;
+  clear: both; }
+
+.square {
+  margin: 0px;
+  margin-left: 9px;
+  padding: 0px;
+  height: 21px;
+  font-size: 20px;
+  color: #5296C3;
+  line-height: 21px;
+  clear: both; }
+
+.diamond {
+  margin: 0px;
+  margin-left: 10px;
+  padding: 0px;
+  height: 19px;
+  font-size: 20px;
+  color: #1377B2;
+  line-height: 19px;
+  clear: both; }
+
+.triangle {
+  margin: 0px;
+  margin-left: 9px;
+  padding: 0px;
+  height: 16px;
+  font-size: 14px;
+  color: #1673AC;
+  line-height: 20px;
+  clear: both; }
+
+.tip {
+  padding: 0px;
+  padding-top: 1px;
+  padding-bottom: 1px; }
+
+.tiptext {
+  margin: 0px;
+  padding: 0px;
+  padding-top: 1px;
+  left: 0px;
+  text-align: left; }
+
+.tooltip-right {
+  position: relative; }
+
+.tooltip-right:after {
+  content: "";
+  border-color: transparent transparent transparent #ddd;
+  border-style: solid;
+  border-width: 10px;
+  width: 0;
+  height: 0;
+  position: absolute;
+  bottom: 15px;
+  left: 219px; }
+
+.tooltip-left {
+  position: relative; }
+
+.tooltip-left:after {
+  content: "";
+  border-color: transparent #ddd transparent transparent;
+  border-style: solid;
+  border-width: 10px;
+  width: 0;
+  height: 0;
+  position: absolute;
+  bottom: 15px;
+  left: -20px; }

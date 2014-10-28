@@ -19,11 +19,12 @@ import com.github.davidcarboni.ResourceUtils;
 import com.github.davidcarboni.restolino.json.Serialiser;
 import com.github.onsdigital.json.Article;
 import com.github.onsdigital.json.Data;
+import com.github.onsdigital.json.Dataset;
 import com.github.onsdigital.json.Release;
 import com.github.onsdigital.json.bulletin.Bulletin;
 import com.github.onsdigital.json.taxonomy.DataT1;
 import com.github.onsdigital.json.taxonomy.DataT2;
-import com.github.onsdigital.json.taxonomy.DataT3;
+import com.github.onsdigital.json.taxonomy.T3;
 import com.github.onsdigital.json.timeseries.TimeSeries;
 import com.github.onsdigital.json.timeseries.TimeSeriesValue;
 
@@ -282,17 +283,17 @@ public class TaxonomyGenerator {
 		if (isReleaseFolder(folder)) {
 			System.out.println("Do not create json for Releases createT3");
 		} else {
-			DataT3 t3 = new DataT3(folder);
+			T3 t3 = new T3(folder);
 			t3.index = folder.index;
 			String json = Serialiser.serialise(t3);
 			FileUtils.writeStringToFile(new File(file, "data.json"), json);
 
 			createArticle(folder, file);
 			createBulletin(folder, file);
-			// createCollection(folder, file);
 			if (file.getName().contains("inflationandpriceindices")) {
 				createTimeseries(folder, file);
 			}
+			createDataset(folder, file);
 		}
 	}
 
@@ -346,6 +347,7 @@ public class TaxonomyGenerator {
 					String json = Serialiser.serialise(article);
 					File articleJsonFile = new File(topicFile, "data.json");
 					FileUtils.writeStringToFile(articleJsonFile, json);
+					createVersions(topicFile, json);
 					createHistory(topicFile, json);
 				}
 			}
@@ -372,6 +374,32 @@ public class TaxonomyGenerator {
 					String json = Serialiser.serialise(bulletin);
 					File bulletinJsonFile = new File(topicFile, "data.json");
 					FileUtils.writeStringToFile(bulletinJsonFile, json);
+					createVersions(topicFile, json);
+					createHistory(topicFile, json);
+				}
+			}
+		}
+	}
+
+	private static void createDataset(Folder folder, File file) throws IOException {
+		File datasets = new File(file, "datasets");
+		datasets.mkdir();
+
+		DatasetsCsv.buildFolders();
+		Set<Folder> datasetFolders = DatasetsCsv.folders;
+
+		for (Folder datasetFolder : datasetFolders) {
+			if (StringUtils.deleteWhitespace(datasetFolder.name.toLowerCase()).equals(file.getName())) {
+
+				for (Folder topicFolder : datasetFolder.children) {
+					File topicFile = new File(datasets, StringUtils.deleteWhitespace(topicFolder.name.toLowerCase()));
+					topicFile.mkdir();
+					Dataset dataset = new Dataset();
+					dataset.title = topicFolder.name;
+					String json = Serialiser.serialise(dataset);
+					File datasetJsonFile = new File(topicFile, "data.json");
+					FileUtils.writeStringToFile(datasetJsonFile, json);
+					createVersions(topicFile, json);
 					createHistory(topicFile, json);
 				}
 			}

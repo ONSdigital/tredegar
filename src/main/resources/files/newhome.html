@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8 ie7"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9 ie8"><![endif]-->
+<!--[if IE 9]><html class="no-js ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class=" js geolocation csscolumns localstorage svg placeholder"><!--<![endif]--><head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Home</title>
+<meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1.0" name="viewport">
+    <meta content="on" http-equiv="cleartype">
+    <meta name="format-detection" content="telephone=no">
+    <!-- http://www.phpied.com/conditional-comments-block-downloads/ -->
+    <!--[if IE]><![endif]-->
+    <!-- build:css /ui/css/oldie.css-->
+    <!--[if lte IE 8]>
+  <link rel="stylesheet" href="../ui/css/oldie.css" />
+<![endif]-->
+    <!-- endbuild -->
+    <!-- build:css /ui/css/main.css-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="/ui/css/main.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
+    <!--<![endif]-->
+    <!-- endbuild -->
+
+    
+    <!--TODO: cdnjs modernizr seems to be breaking the nav. load mathod is not found in cdnjs now -->
+    <script type="text/javascript" src="/ui/js/lib/modernizr.min.js" defer=""></script>
+<!--     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" defer></script>-->
+    
+    <!--TODO: cdnjs for JQuery is producing issues, so serving locally for now: -->
+    <script type="text/javascript" src="/ui/js/lib/jquery.min.js" defer=""></script>
+<!--     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js" defer></script> -->
+    
+    <!--TODO: cdnjs for JQuery UI is producing issues, so serving locally for now: -->
+    <script type="text/javascript" src="/ui/js/lib/jquery-ui.min.js" defer=""></script>
+<!--     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js" defer></script> -->
+
+   
+    <!--[if (!IE)|(gt IE 8)]>><!-->
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/tooltipster/3.0.5/js/jquery.tooltipster.min.js" defer=""></script>
+    <!--<![endif]-->
+    <script type="text/javascript" src="/ui/js/app/app.js" defer=""></script>
+    <script type="text/javascript" src="/ui/js/app/content-reveal.js" defer=""></script>
+    <script type="text/javascript" src="/ui/js/app/nav.js" defer=""></script>
+    <script type="text/javascript" src="/ui/js/app/supporting-content.js" defer=""></script>
+    <script type="text/javascript" src="/ui/js/app/tables.js" defer=""></script>
+    <script type="text/javascript" src="/ui/js/app/tabs.js" defer=""></script>
+    <script type="text/javascript" src="/ui/js/custom-autocomplete.js" defer=""></script>
+    
+    <!-- build:js /ui/js/ons-alpha.js-->
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.12/d3.min.js" defer=""></script>
+    <!-- endbuild -->
+
+    <!-- Functionality to populate this page -->
+   <!-- <script type="text/javascript" src="/ui/js/t1.js" defer=""></script>!-->
+
+
+    <!---
+title: Homepage Template (T1)
+external: true
+type: template
+group: Templates
+markup: false
+-->
+  <style type="text/css"></style></head>
+  <body class="js">
+    <a class="skiplink visuallyhidden focusable" href="#main" tabindex="0">
+      <span>Skip to main content</span>
+    </a>
+    <main id="main" role="main" class="ONS_border">
+      <!-- temp removal to allow for component list selective wrapping -->
+      <!-- <div class="wrapper"> -->
+      <div class="wrapper panel--pad-small">
+        <header class="global-header">
+          <div class="media">
+            <a href="/">
+              <img src="../ui/img/ons-logo.svg" alt="Office for National Statistics" width="300" class="media__img">
+            </a>
+            <div class="media__body">
+              <ul class="nav nav--inline-block nav--dark globaltop-nav">
+                <li><a href="#">Release calendar</a>
+                </li>
+                <li> <a href="#">Methodology</a>
+                </li>
+                <li><a href="#">About</a>
+                </li>
+              </ul>
+
+            </div>
+          </div>
+        </header>
+      </div>
+      <nav class="ons-nav">
+        <div class="wrapper">
+          <ul class="nav nav--multi nav--block nav--primary flush--bottom" id="nav-primary">
+            <li class="nav--primary home">
+              <a href="/"><span class="icon-home icon--inline"></span><span class="icon-inline vertical-align-mid">Home</span></a>
+            </li>
+            <li>
+              <a href="#" class="nav__expandable js-expandable arrowunderline">Business, Industry, and Trade</a>
+              <ul class="nav--primary__sub js-expandable__content js-nav-hidden">
+                <li><a href="#" tabindex="-1">Business</a>
+                </li>
+                <li><a href="#" tabindex="-1">Changes to business</a>
+                </li>
+                <li><a href="#" tabindex="-1">Construction and industry</a>
+                </li>
+                <li><a href="#" tabindex="-1">IT and internet industry</a>
+                </li>
+                <li><a href="#" tabindex="-1">International trade</a>
+                </li>
+                <li><a href="#" tabindex="-1">Manufacturing and production</a>
+                </li>
+                <li><a href="#" tabindex="-1">Retail industry</a>
+                </li>
+                <li><a href="#" tabindex="-1">Tourism industry</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="/home/economy/" class="nav__expandable js-expandable arrowunderline">Economy</a>
+              <ul class="nav--primary__sub js-expandable__content js-nav-hidden">
+                <li><a href="#" tabindex="-1">Economic output and productivity</a>
+                </li>
+                <li><a href="#" tabindex="-1">Environmental account</a>
+                </li>
+                <li><a href="#" tabindex="-1">Government, public sector, and taxes</a>
+                </li>
+                <li><a href="#" tabindex="-1">Gross Domestic Product (GDP)</a>
+                </li>
+                <li><a href="#" tabindex="-1">Gross Values Added (GVA)</a>
+                </li>
+                <li><a href="/home/economy/inflationandpriceindices" tabindex="-1">Inflation and price indices</a>
+                </li>
+                <li><a href="#" tabindex="-1">Investment and pension trust</a>
+                </li>
+                <li><a href="#" tabindex="-1">National accounts</a>
+                </li>
+                <li><a href="#" tabindex="-1">Regional accounts</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="nav__expandable js-expandable">Employment and Labour Market</a>
+              <ul class="nav--primary__sub js-expandable__content js-nav-hidden">
+                <li><a href="#" tabindex="-1">People in work</a>
+                </li>
+                <li><a href="#" tabindex="-1">People not in work</a>
+                </li>
+                <li><a href="#" tabindex="-1">Public sector personnel</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="nav__expandable js-expandable">People, Population, and Community</a>
+              <ul class="nav--primary__sub js-expandable__content js-nav-hidden">
+                <li><a href="#" tabindex="-1">Births, deaths, and marriages</a>
+                </li>
+                <li><a href="#" tabindex="-1">Community</a>
+                </li>
+                <li><a href="#" tabindex="-1">Education and childcare</a>
+                </li>
+                <li><a href="#" tabindex="-1">Crime and justice</a>
+                </li>
+                <li><a href="#" tabindex="-1">Household characteristics</a>
+                </li>
+                <li><a href="#" tabindex="-1">Well-being</a>
+                </li>
+                <li><a href="#" tabindex="-1">Health and social care</a>
+                </li>
+                <li><a href="#" tabindex="-1">Elections</a>
+                </li>
+                <li><a href="#" tabindex="-1">Personal and household finances</a>
+                </li>
+                <li><a href="#" tabindex="-1">Population and migration</a>
+                </li>
+                <li><a href="#" tabindex="-1">Cultural identity</a>
+                </li>
+                <li><a href="#" tabindex="-1">Housing</a>
+                </li>
+                <li><a href="#" tabindex="-1">Leisure and tourism</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav--primary__highlight">
+              <a href="#">
+                <span class="icon-users icon--inline"></span>Respondents</a>
+            </li>
+            <li class="nav--primary__secondary-content">
+              <a href="#">Release calendar</a>
+            </li>
+            <li class="nav--primary__secondary-content">
+              <a href="#">About</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="slate--mid-grey_new flush">
+        <div class="wrapper">
+          <div class="grid-wrap footer__license">
+            <div class="grid-col desktop-grid box--inline">
+              <form action="/searchresults.html" class="hero reduced_padding pad_right" _lpchecked="1">
+                <label for="homepageSearch" class="visuallyhidden">Search term:</label>
+                <input id="homepageSearch" type="text" class="input-med-large--flex--three-fifths  search_reduction ui-autocomplete-input" name="q" value="" placeholder="Search for keyword or time series id" autocomplete="off">
+                <button type="submit" class="btn btn--primary btn--small btn--form--large-icon input--lede-btn-icon align_middle no_left_margin">
+                  <span class="icon icon-search-1">
+                  <span class="visuallyhidden">Search</span>
+                  </span> 
+                </button>
+              </form>
+            </div>        
+          </div>
+        </div>
+      </div>
+
+
+       <!-- breadcrumb -->
+      <div class="wrapper panel--pad-small">
+        <ol class="nav nav--heavy breadcrumb mini flush">
+             
+        </ol>
+        <!-- /breadcrumb -->
+      </div>
+
+
+      <section class="hero-banner">
+        <div class="panel--pad slate--hero-banner">
+          <div class="wrapper">
+           <div class="grid-wrap panel--bottom-mar-small">
+            <div class="grid-col tablet-grid-three-quarters home_hero_img">
+            </div>
+            <div class="grid-col tablet-grid-one-quarter box--padded-vertical hero-stat-box">
+              <header>
+                <h2 class="beta">Migration <br/> 2011 -2012</h2>
+              </header>
+                <p class="home_hero_comments">
+                Gross Domestic Product
+                </p>
+
+            </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <div class="wrapper offset-top nav-panels">
+        <div class="grid-wrap">
+          <div class="grid-col tablet-wide-grid-one-quarter">
+            <article class="nav-panel nav-panel--stats sectioned lifted border-defined">
+              <header class="nav-panel__header nav-panel__roomy">
+                <h2 class="delta">Economy</h2>
+              </header>
+              <section class="nav-panel__roomy">
+                <p><a href="#">Inflation and Price Indices</a></p>
+
+              <div class="box box--inline flush--bottom">
+                  <div class="stat">
+                    <div class="stat__figure">
+                      1.5
+                      <!-- 1.5 -->
+                      <span class="stat__figure__unit">%</span>
+                    </div>
+
+                  </div>
+                  <p> Apr 2014  <span tabindex="0" class="tooltips icon-info-circled icon--warm icon--inline icon--inline--large-text icon--med tooltipstered"></span>
+              </div>
+              </section>
+
+              <footer class="nav-panel__footer">
+                <div class="nav-panel__action ">
+                  <a class="nav-panel__roomy no_underline" href="#">View all</a>
+                </div>
+              </footer>
+            </article>
+                      
+            <!-- /nav-panel -->
+          </div>
+          <!-- /grid-col -->
+
+
+          <div class="grid-col tablet-wide-grid-one-quarter">
+            <article class="nav-panel nav-panel--stats sectioned lifted border-defined home_nav_boxes">
+              <header class="nav-panel__header nav-panel__roomy">
+                <h2 class="delta">People </h2>
+              </header>
+              <section class="nav-panel__roomy">
+              <p><a href="#">Population</a></p>
+              <br>
+
+              <div class="box box--inline flush--bottom">
+                  <div class="stat">
+                    <div class="stat__figure">
+                      936
+                      <!-- 1.5 -->
+                      <span class="stat__figure__unit">mn</span>
+                    </div>
+
+                  </div>
+                  <p> Apr 2014  <span tabindex="0" class="tooltips icon-info-circled icon--warm icon--inline icon--inline--large-text icon--med tooltipstered"></span>
+                </div>
+                
+              </section>
+              <footer class="nav-panel__footer">
+                <div class="nav-panel__action ">
+                  <a class="nav-panel__roomy no_underline" href="#">View all</a>
+                </div>
+              </footer>
+            </article>        
+         
+            <!-- /nav-panel -->
+          </div>
+          <!-- /grid-col -->
+        
+        
+        
+          <div class="grid-col tablet-wide-grid-one-quarter">
+            <article class="nav-panel nav-panel--stats sectioned lifted border-defined">
+              <header class="nav-panel__header nav-panel__roomy">
+                <h2 class="delta">Unemployment</h2>
+              </header>
+               <section class="nav-panel__roomy">
+              <p><a href="#">Inflation and Price Indices</a></p>
+
+              <div class="box box--inline flush--bottom">
+                  <div class="stat">
+                    <div class="stat__figure">
+                      1.5
+                      <!-- 1.5 -->
+                      <span class="stat__figure__unit">%</span>
+                    </div>
+
+                  </div>
+                  <p> Apr 2014  <span tabindex="0" class="tooltips icon-info-circled icon--warm icon--inline icon--inline--large-text icon--med tooltipstered"></span>
+              </div>
+                
+              </section>
+              <footer class="nav-panel__footer">
+                <div class="nav-panel__action ">
+                  <a class="nav-panel__roomy no_underline" href="#">View all</a>
+                </div>
+              </footer>
+            </article>        
+         
+            <!-- /nav-panel -->
+          </div>
+          <!-- /grid-col -->
+
+
+          <div class="grid-col tablet-wide-grid-one-quarter">
+            <article class="nav-panel nav-panel--stats sectioned lifted border-defined">
+              <header class="nav-panel__header nav-panel__roomy">
+                <h2 class="delta">Economy</h2>
+              </header>
+              <section class="nav-panel__roomy">
+              <p><a href="#">Gross Domestic Product</a></p>
+
+              <div class="box box--inline flush--bottom">
+                  <div class="stat">
+                    <div class="stat__figure">
+                      1.5
+                      <!-- 1.5 -->
+                      <span class="stat__figure__unit">%</span>
+                    </div>
+
+                  </div>
+                  <p> Apr 2014  <span tabindex="0" class="tooltips icon-info-circled icon--warm icon--inline icon--inline--large-text icon--med tooltipstered"></span>
+                </div>
+                
+              </section>
+              <footer class="nav-panel__footer">
+                <div class="nav-panel__action ">
+                  <a class="nav-panel__roomy no_underline" href="#">View all</a>
+                </div>
+              </footer>
+            </article>             
+         
+            <!-- /nav-panel -->
+          </div>
+          <!-- /grid-col -->
+        </div>
+        <!-- /grid-wrap -->
+      </div>
+      <!-- /wrapper -->
+
+
+      <div class="wrapper panel--top-pad">
+        <div class="grid-wrap">
+          <div class="grid-col desktop-grid-one-half tablet-grid-one-half">
+            <article class="box box--orange box--orange--separated-left">
+              <div class="box__inner border box--padded home_box_img_left">
+                <div class="grid-wrap">
+                  <div class="grid-col tablet-grid-one-half">
+                  
+                  <div class="media__body">
+                    <header class="box__header">
+                      <h2 class="gamma">
+
+                        <a class="no_underline" href="#"></a>
+                      </h2>
+                    </header>
+                    <!-- /box__header -->
+                    <div class="box__content">
+                      <p></p>
+                    </div>
+                    <!-- /box__content -->
+                  </div>
+                  </div>
+                <div class="grid-col tablet-grid-one-half">
+                 
+                  <div class="media__body">
+                    <header class="box__header">
+                      <h2 class="delta field--spaced">
+                        
+                        <a class="no_underline" href="#">
+                          Baby names
+                        </a>
+                      </h2>
+                    </header>
+                    <!-- /box__header -->
+                    <div class="box__content">
+                      <p>
+                        Harry and Amelia still topping the charts?
+                      </p>
+                    </div>
+                    <!-- /box__content -->
+
+                  </div>
+                </div>
+                <a href="#">
+                <span class="cta_chevron icon-right-open-big  icon--warm"></span>
+                </a>               
+                <!-- /media -->
+                </div>
+              <!-- /box__inner -->
+              </div>
+            </article>
+            <!-- /grid-col -->
+          </div>
+        
+
+
+
+        <div class="grid-col desktop-grid-one-half  tablet-grid-one-half">
+            <article class="box box--orange box--orange--separated-left">
+              <div class="box__inner border box--padded home_box_img_right">
+                <div class="grid-wrap">
+                  <div class="grid-col tablet-grid-one-half">
+                  
+                    <div class="media__body">
+                      <header class="box__header">
+                        <h2 class="gamma">
+                          <a class="no_underline" href="#">
+                          </a>
+                        </h2>
+                      </header>
+                    <!-- /box__header -->
+                      <div class="box__content">
+                        <p>
+                        </p>
+                      </div>
+                    <!-- /box__content -->
+                    </div>
+                  </div>
+                  <div class="grid-col tablet-grid-one-half">
+                    <div class="media__body">
+                      <header class="box__header">
+                        <h2 class="delta field--spaced">
+                          <a class="no_underline" href="#">
+                          ONS Visual
+                          </a>
+                        </h2>
+                      </header>
+                    <!-- /box__header -->
+                      <div class="box__content">
+                        <p>
+                        See our data in a new light
+                        </p>
+                      </div>
+                    <!-- /box__content -->
+                    </div>
+                  </div>
+                  <a href="#">
+                  <span class="cta_chevron icon-right-open-big  icon--warm"></span>
+                  </a>
+                  
+                <!-- /media -->
+              </div>
+              <!-- /box__inner -->
+              </div>
+            </article>
+            <!-- /box -->
+          </div>
+          <!-- /grid-col -->      
+        </div>
+        <!-- /wrapper-->
+      </div>
+      
+
+      <div class="wrapper">
+        <div class="panel--top-pad panel--bottom-mar-large panel--separated--top--large flush--bottom">
+          <div class="grid-wrap">
+            <div class="grid-col desktop-grid-one-third">
+              <h2 class="beta">Looking for local statistics?</h2>
+            </div>
+            <div class="grid-col desktop-grid-two-thirds">
+              <div class="grid-wrap">
+                <div class="grid-col tablet-grid-one-third linkbox-padded">
+                  <h2><a class="no_underline" href="#">NESS</a></h2>
+                  <p>Neighbourhood statistics site</p>
+                </div>
+
+                <div class="grid-col tablet-grid-one-third linkbox-padded">
+                  <h2><a class="no_underline" href="#">NOMIS</a></h2>
+                  <p>Labour market statistics</p>
+                </div>
+
+                <div class="grid-col tablet-grid-one-third linkbox-padded">
+                  <h2><a class="no_underline" href="#">WDA</a></h2>
+                  <p>Blah blah blah</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /panel -->
+        </div>
+
+        <div class="panel--top-pad panel--bottom-mar-large panel--separated--top--large">
+          <div class="grid-wrap">
+            <div class="grid-col desktop-grid-one-third">
+              <h2 class="beta">Other national statistics?</h2>
+            </div>
+            <div class="grid-col desktop-grid-two-thirds">
+              <div class="grid-wrap">
+                <div class="grid-col tablet-grid-one-third linkbox-padded">
+                  <h2><a class="no_underline" href="#">GOV.UK</a></h2>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /panel -->
+        </div>
+        <!-- /wrapper -->
+      </div>
+    
+
+
+
+      <footer class="global-footer">
+        <div class="slate panel--pad panel--separated">
+          <div class="wrapper">
+            <nav class="grid-wrap">
+              <div class="grid-col tablet-grid-one-third">
+                <h2 class="delta headline-separated">Legal</h2>
+                <ul class="list--neutral list--grid list--spaced">
+                  <li><a href="#">Business Transparency</a>
+                  </li>
+                  <li><a href="#">Terms and Conditions</a>
+                  </li>
+                  <li><a href="#">Copyright</a>
+                  </li>
+                  <li><a href="#">Cookies and Privacy</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="grid-col tablet-grid-one-third">
+                <h2 class="delta headline-separated">About ONS</h2>
+                <ul class="list--neutral list--grid list--spaced">
+                  <li><a href="#">Who we are</a>
+                  </li>
+                  <li><a href="#">Careers</a>
+                  </li>
+                  <li><a href="#">Products and Services</a>
+                  </li>
+                  <li><a href="#">Contact us</a>
+                  </li>
+                  <li><a href="#">Our offices</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="grid-col tablet-grid-one-third">
+                <h2 class="delta headline-separated">Connect with us</h2>
+                <ul class="list--neutral list--grid list--spaced">
+                  <li><a href="#">Twitter</a>
+                  </li>
+                  <li><a href="#">Facebook</a>
+                  </li>
+                  <li><a href="#">LinkedIn</a>
+                  </li>
+
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <!-- /wrapper -->
+        </div>
+        <!-- /slate -->
+        <div class="slate--dark">
+          <div class="wrapper">
+            <div class="footer__license">
+              <img class="footer__license__img" alt="OGLlogo" width="60" src="../ui/img/ogl.png">
+              <p class="footer__license__body">
+                All content is available under the Open Government Licence v2.0, except where otherwise
+                stated
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+     </main>
+
+  
+
+<!--<ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0" style="display: none;"></ul><span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span><script id="hiddenlpsubmitdiv" style="display: none;"></script><script>try{for(var lastpass_iter=0; lastpass_iter < document.forms.length; lastpass_iter++){ var lastpass_f = document.forms[lastpass_iter]; if(typeof(lastpass_f.lpsubmitorig2)=="undefined"){ lastpass_f.lpsubmitorig2 = lastpass_f.submit; lastpass_f.submit = function(){ var form=this; var customEvent = document.createEvent("Event"); customEvent.initEvent("lpCustomEvent", true, true); var d = document.getElementById("hiddenlpsubmitdiv"); if (d) {for(var i = 0; i < document.forms.length; i++){ if(document.forms[i]==form){ d.innerText=i; } } d.dispatchEvent(customEvent); }form.lpsubmitorig2(); } } }}catch(e){}</script><div id="window-resizer-tooltip" style="display: none;"><a href="#" title="Edit settings" style="background-image: url(chrome-extension://kkelicaakdanhinjdeammmilcgefonfh/images/icon_19.png);"></a><span class="tooltipTitle">Window size: </span><span class="tooltipWidth" id="winWidth">1920</span> x <span class="tooltipHeight" id="winHeight">1056</span><br><span class="tooltipTitle">Viewport size: </span><span class="tooltipWidth" id="vpWidth">1920</span> x <span class="tooltipHeight" id="vpHeight">634</span></div>!--></body></html>

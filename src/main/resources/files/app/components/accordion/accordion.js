@@ -12,7 +12,8 @@ Accordion component
 
   //Based on example on https://docs.angularjs.org/guide/directive
   angular.module('onsAccordion', [])
-    .directive('onsAccordion', AccordionDirective).directive('onsAccordionItem', AccordionitemDirective)
+    .directive('onsAccordion', AccordionDirective)
+    .directive('onsAccordionItem', AccordionitemDirective)
 
   function AccordionDirective() {
     return {

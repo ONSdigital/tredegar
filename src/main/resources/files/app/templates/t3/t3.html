@@ -36,18 +36,18 @@
 
 <!-- Top header box -->
       <!-- /page-header -->
-      <div ng-repeat="timeseries in taxonomy.data.timeseries" class="wrapper">
-        <section ng-show="timeseries.headline === true" id="headline" class="box box--padded-vertical box--blue box--green--separated-left solid border lifted offset-top border-defined">
+      <div class="wrapper">
+        <section id="headline" class="box box--padded-vertical box--blue box--green--separated-left solid border lifted offset-top border-defined">
           <div class="box__content">
             <div class="divider">
               <div class="divider__half divider__half--border divider__half--border-first">
                 <h2 tooltip="Percentage change over 12 months <br><br> Not seasonally adjusted" tooltip-class="icon--inline--large-text icon--small"  class="beta">
-                    {{timeseries.name}}
+                    {{taxonomy.data.headlineData.name}}
                 </h2>
                 <div class="box box--inline box--padded muted--dark">
                   <div class="stat stat--headline">
                     <div class="stat__figure">
-                      {{timeseries.number}}
+                      {{taxonomy.data.headlineData.number}}
                       <!-- 1.5 -->
                       <span class="stat__figure__unit">%</span>
                     </div>
@@ -58,12 +58,12 @@
                 <dl class="definition mini">
                   <dt>Last updated:</dt>
                   <dd>
-                  {{timeseries.lastUpated}}
+                  {{taxonomy.data.headlineData.lastUpated}}
                   <!-- 16 Sep 2014 -->
                   </dd>
                   <dt>Next update:</dt>
                   <dd>
-                  {{timeseries.nextUpdate}}
+                  {{taxonomy.data.headlineData.nextUpdate}}
                   <!-- 14 Oct 2014 -->
                   </dd>
                 </dl>
@@ -73,26 +73,19 @@
                 <!-- /box -->
 
     <!-- Explanation of the numbers -->
-              <div  id="statsBulletinHeadlines" class="divider__half">
-                <h3  class="body-type lede flush--bottom navpanel-list-heading">
-
-                Statistical Bulletin Headlines
-                </h3>
-                <ul ng-repeat="explanation in timeseries.statsBulletinHeadlines" class="list--bullet mini flush--half--top navpanel-list">
-                  <li>
-                  {{explanation.text}}
-                  <!-- The Consumer Price Index (CPI) grew by 1.5% in the year to May
-                    2014, down from 1.8% in April. -->
-                  </li>
-                  <!-- <li>Fall in transport services costs, notably air fares, provided
+              <div id="statsBulletinHeadlines" class="divider__half">
+                <h3 class="body-type lede flush--bottom navpanel-list-heading">CPI Statistical Bulletin Headlines</h3>
+                <ul class="list--bullet mini flush--half--top navpanel-list">
+                  <li>The Consumer Price Index (CPI) grew by 1.5% in the year to May
+                    2014, down from 1.8% in April.</li>
+                  <li>Fall in transport services costs, notably air fares, provided
                     the largest contribution to the decrease in the rate.</li>
-                  <li>The timing of Easter in April is likely to have an impact on movements in the index, notably for air and sea fares.</li> -->
+                  <li>The timing of Easter in April is likely to have an impact on
+                    movements in the index, notably for air and sea fares.</li>
                   </ul>
-                <a class="action" href="#!/bulletin">
-                    <span class="table__action__text search-sorting">View the statistical bulletin &gt;
-                    </span>
-
-                  </a>
+                    <a class="div_panel_link" href="#!/bulletin">
+                      View the statistical bulletin &gt;                   
+                    </a>                
               </div>
             </div>
           </div>
@@ -115,7 +108,7 @@
         </th>
         <th colspan="1" class="datatable-select">Select All
           <div class="list--table__item">
-            <label class="list--table__item__body list--table__item__body--select">
+            <label class="list--table__item__body list--table__item__body">
               <span class="visuallyhidden">Select statistic</span>
                 <input type="checkbox">
             </label>
@@ -127,8 +120,8 @@
       <tr ng-repeat="timeseries in taxonomy.data.timeseries" class="list--table__item list--table__body datatable-row">
         <td class="data_table_section-title">
           <div class="list--table__item__body list--table__item__body--caption responsive_large_width">
-            <h3 class="list--table__item__header">
-              <a href="#"> {{timeseries.name}}</a>
+            <h3 class="nav-panel__heading">
+              <a href="#!{{timeseries.url}}"> {{timeseries.name}}</a>
               <!-- CPI Index -->
                 <span tabindex="0" class="tooltip icon-info-circled icon--warm icon--inline tooltipstered"></span>
             </h3>

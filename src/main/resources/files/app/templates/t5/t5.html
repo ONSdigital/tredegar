@@ -1,4 +1,4 @@
-<ons-header></ons-header>
+<div ng-controller="chartController">
 
 <style>
 .chart{
@@ -135,19 +135,19 @@
         <p>
             <strong>{{header}}</strong>
         </p>
-        <h1 class="page-header__title flush--half--bottom">{{dataset.title}}</h1>
+        <h1 class="page-header__title flush--half--bottom">{{chart.name}}</h1>
         <div class="grid-wrap">
             <div class="grid-col desktop-grid-two-thirds">
                 <img src="/ui/img/nslogo.png" class="page-header-image" alt="ONS logo">
                 <p>
-                    <strong>{{dataset.releaseDate}}</strong>
+                    <strong>{{chart.lastUpated}}</strong>
                     <span class="page-header-box-link">
                         <a href="#">
                             <strong>View latest version</strong>
                         </a>
                     </span>
                 </p>
-                <p>Next release: {{dataset.nextRelease}} (provisional)</p>
+                <p>Next release: {{chart.nextUpdate}} (provisional)</p>
                 <p>Contact: <a href="mailto:jukesie@hotmail.com">Juksie</a>
                 </p>
             </div>
@@ -172,7 +172,7 @@
 <div class="wrapper">
     <div class="actionable-header--tight panel--mar-small">
         <!-- This title will need to be dynamically generated on the server -->
-        <h2 class="actionable-header--tight__title gamma flush--bottom body-type--heavy">Download this entire time series from 1997—2014</h2>
+        <h2 class="actionable-header--tight__title gamma flush--bottom body-type--heavy">Download this entire time series</h2>
         <div class="actionable-header--tight__action actionable-header--tight__action--left">
             <a class="btn btn--primary btn--small" href="#">
               .csv
@@ -189,8 +189,12 @@
 <!-- Chart in Highcharts -->
 <div class="wrapper">
     <div ng-controller="chartController">
+    This: {{changeChartTime}}
         <a href="" ng-click="changeChartType('line')">Line</a>
         <a href="" ng-click="changeChartType('bar')">Bar</a>
+        <a href="" ng-click="changeChartTime('year')">Year</a>
+        <a href="" ng-show="chartData.options.xAxis.categories" ng-click="changeChartTime('quarter')">Quarter</a>
+        <a href="" ng-show="chartData.options.xAxis.categories" ng-click="changeChartTime('month')">Month</a>
         <highchart id="chart_prices" config="chartData"></highchart>
     </div>
 </div>
@@ -203,18 +207,13 @@
             <div class="panel--bottom-mar">
                 <div class="lede">
               <p>
-                <b>The alcoholic beverages index</b>
-                is calculating weights based on sales to UK businesses and government outside of
-                the service sector. For example, sales of legal services to a UK
-                manufacturing company would be included, but sales to an accountancy
-                company (another service provider) would be excluded. This index
-                gives a measure of inflation that is specific to non-service sector
-                businesses.
+                {{chart.description}}
               </p>
             </div>
                 <h3>Important Notes and Usage Information</h3>
                 <ol class="dataset_usage">
-                    <li ng-repeat="row in dataset.notes">{{row.data}}</li>
+                    <li>{{chart.note1}}</li>
+                    <li>{{chart.note2}}</li>
                 </ol>
             </div>
         </div>
@@ -225,4 +224,4 @@
     </div>
 </div>
 
-<ons-footer></ons-footer>
+</div>

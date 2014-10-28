@@ -11,5 +11,5 @@ package com.github.onsdigital.json;
  *
  */
 public enum ContentType {
-	article, collection, bulletin, home, methodology, release, timeseries, unknown;
+	article, bulletin, collection, dataset, home, methodology, release, timeseries, unknown;
 }
