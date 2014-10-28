@@ -37,10 +37,6 @@
                     templateUrl: 'app/templates/bulletin/bulletin.html',
                     controller: 'BulletinCtrl'
                 }).
-                when('/economy/collection', {
-                    templateUrl: 'app/templates/collection/collection.html',
-                    controller: "CollectionCtrl"
-                }).
                 when('/economy/inflationandpriceindices/collection', {
                     templateUrl: 'app/templates/collection/collection.html',
                     controller: "CollectionCtrl"
