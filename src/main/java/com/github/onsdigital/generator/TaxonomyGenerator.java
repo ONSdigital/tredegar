@@ -27,7 +27,7 @@ import com.github.onsdigital.json.taxonomy.DataT3;
 import com.github.onsdigital.json.timeseries.TimeSeries;
 import com.github.onsdigital.json.timeseries.TimeSeriesValue;
 
-public class Csv {
+public class TaxonomyGenerator {
 
 	/**
 	 * Parses the taxonomy CSV file and generates a file structure..
@@ -43,15 +43,15 @@ public class Csv {
 		String theme = null;
 		String subject = null;
 		String topic = null;
-		String subTopic = null;
+		// String subTopic = null;
 		Folder themeFolder = null;
 		Folder subjectFolder = null;
 		Folder topicFolder = null;
-		Folder subTopicFolder = null;
+		// Folder subTopicFolder = null;
 		int themeCounter = 0;
 		int subjectCounter = 0;
 		int topicCounter = 0;
-		int subTopicCounter = 0;
+		// int subTopicCounter = 0;
 
 		Set<Folder> folders = new HashSet<>();
 
@@ -63,8 +63,13 @@ public class Csv {
 			int themeIndex = ArrayUtils.indexOf(headers, "Theme");
 			int subjectIndex = ArrayUtils.indexOf(headers, "Subject");
 			int topicIndex = ArrayUtils.indexOf(headers, "Topic");
-			int subTopicIndex = ArrayUtils.indexOf(headers, "Subtopic");
-			System.out.println("Theme=" + themeIndex + " Subject=" + subjectIndex + " Topic=" + topicIndex + " Subtopic=" + subTopicIndex);
+			// int subTopicIndex = ArrayUtils.indexOf(headers, "Subtopic");
+			int ledeIndex = ArrayUtils.indexOf(headers, "Lede");
+			int moreIndex = ArrayUtils.indexOf(headers, "More");
+			// System.out.println("Theme=" + themeIndex + " Subject=" +
+			// subjectIndex + " Topic=" + topicIndex + " Subtopic=" +
+			// subTopicIndex);
+			System.out.println("Theme=" + themeIndex + " Subject=" + subjectIndex + " Topic=" + topicIndex + " Lede=" + ledeIndex + " More=" + moreIndex);
 
 			// Theme Subject Topic
 			String[] row;
@@ -77,11 +82,17 @@ public class Csv {
 					themeFolder.index = themeCounter++;
 					subjectCounter = 0;
 					topicCounter = 0;
-					subTopicCounter = 0;
+					// subTopicCounter = 0;
+					if (StringUtils.isNotBlank(row[ledeIndex])) {
+						themeFolder.lede = row[ledeIndex];
+					}
+					if (StringUtils.isNotBlank(row[moreIndex])) {
+						themeFolder.more = row[moreIndex];
+					}
 					folders.add(themeFolder);
 					subject = null;
 					topic = null;
-					subTopic = null;
+					// subTopic = null;
 				}
 
 				if (StringUtils.isNotBlank(row[subjectIndex])) {
@@ -91,10 +102,16 @@ public class Csv {
 					subjectFolder.parent = themeFolder;
 					subjectFolder.index = subjectCounter++;
 					topicCounter = 0;
-					subTopicCounter = 0;
+					// subTopicCounter = 0;
+					if (StringUtils.isNotBlank(row[ledeIndex])) {
+						subjectFolder.lede = row[ledeIndex];
+					}
+					if (StringUtils.isNotBlank(row[moreIndex])) {
+						subjectFolder.more = row[moreIndex];
+					}
 					themeFolder.children.add(subjectFolder);
 					topic = null;
-					subTopic = null;
+					// subTopic = null;
 				}
 
 				if (StringUtils.isNotBlank(row[topicIndex])) {
@@ -104,24 +121,29 @@ public class Csv {
 					topicFolder.parent = subjectFolder;
 					topicFolder.index = topicCounter++;
 					subjectFolder.children.add(topicFolder);
-					subTopic = null;
+					// subTopic = null;
+					if (StringUtils.isNotBlank(row[ledeIndex])) {
+						topicFolder.lede = row[ledeIndex];
+					}
+					if (StringUtils.isNotBlank(row[moreIndex])) {
+						topicFolder.more = row[moreIndex];
+					}
 				}
 
-				if (StringUtils.isNotBlank(row[subTopicIndex])) {
-					subTopic = row[subTopicIndex];
-					subTopicFolder = new Folder();
-					subTopicFolder.name = subTopic;
-					subTopicFolder.parent = topicFolder;
-					subTopicFolder.index = subTopicCounter++;
-					topicFolder.children.add(subTopicFolder);
-				}
+				// if (StringUtils.isNotBlank(row[subTopicIndex])) {
+				// subTopic = row[subTopicIndex];
+				// subTopicFolder = new Folder();
+				// subTopicFolder.name = subTopic;
+				// subTopicFolder.parent = topicFolder;
+				// subTopicFolder.index = subTopicCounter++;
+				// topicFolder.children.add(subTopicFolder);
+				// }
 
 				String path = StringUtils.join(new String[] { theme, subject, topic }, '/');
 				while (StringUtils.endsWith(path, "/")) {
 					path = path.substring(0, path.length() - 1);
 				}
 				System.out.println(path);
-
 			}
 
 			// Walk folder tree:

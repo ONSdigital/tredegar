@@ -16,7 +16,7 @@ set BONSAI_TRANSPORT_PORT=9300
 rem # Generate taxonomy
 rem #mvn clean compile dependency:copy-dependencies && ^
 rem #rm -rf src/main/taxonomy && ^
-rem #java -cp "target/classes:target/dependency/*" com.github.onsdigital.generator.Csv
+rem #java -cp "target/classes:target/dependency/*" com.github.onsdigital.generator.TaxonomyGenerator
 
 rem # Build and run:
 mvn -Dmaven.test.skip=true clean compile dependency:copy-dependencies && ^

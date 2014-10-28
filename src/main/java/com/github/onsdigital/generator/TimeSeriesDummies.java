@@ -69,7 +69,7 @@ public class TimeSeriesDummies {
 		// Read in the CDIDs and names:
 		URI csvUri;
 		try {
-			csvUri = Csv.class.getClassLoader().getResource("data/Metadata").toURI();
+			csvUri = TaxonomyGenerator.class.getClassLoader().getResource("data/Metadata").toURI();
 		} catch (URISyntaxException e) {
 			throw new IOException("Error getting URI for CDID resource folder.", e);
 		}
