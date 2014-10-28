@@ -1,7 +1,5 @@
 <ons-header></ons-header>
 
-
-
 <!-- T1, T2 , T3 -->
 <span ng-if="taxonomy.data.type === 'home'">
     <span ng-if="taxonomy.data.level === 't2'">
@@ -16,12 +14,17 @@
 </span>
 
 <!-- Bulletin -->
-<span ng-if="taxonomy.data.type === 'bulletin'">
+<span ng-if="taxonomy.data.type === 'bulletin'" ng-controller="BulletinCtrl">
     <span ng-include="'app/templates/bulletin/bulletin.html'"></span>
 </span>
 
 <!-- T5- Timeseries -->
 <span ng-if="taxonomy.data.type === 'timeseries'">
+    <span ng-include="'app/templates/t5/t5.html'"></span>
+</span>
+
+<!-- Article -->
+<span ng-if="taxonomy.data.type === 'article'">
     <span ng-include="'app/templates/t5/t5.html'"></span>
 </span>
 
