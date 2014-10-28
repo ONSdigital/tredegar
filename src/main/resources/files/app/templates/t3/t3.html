@@ -3,14 +3,14 @@
 <!-- Content-reveal section -->
     <div class="page-header slate_original"  >
         <div class="wrapper">
-          <h1 class="page-header__title flush--half--bottom">{{data.name}}</h1>
+          <h1 class="page-header__title flush--half--bottom">{{taxonomy.data.name}}</h1>
           <div class="content-reveal lede">
-            <p>{{data.lede}}
-              <a href="" expand-label="Show more" collapse-label="Show less"  toggler="more" ng-if="data.more" class="content-reveal__action"></a>
+            <p>{{taxonomy.data.lede}}
+              <a href="" expand-label="Show more" collapse-label="Show less"  toggler="more" ng-if="taxonomy.data.more" class="content-reveal__action"></a>
             </p>
             <div toggleable="more" class="content-reveal__hidden">
               <p>
-              {{data.more}}
+              {{taxonomy.data.more}}
               </p>
             </div>
           </div>
@@ -36,7 +36,7 @@
 
 <!-- Top header box -->
       <!-- /page-header -->
-      <div ng-repeat="timeseries in data.timeseries" class="wrapper">
+      <div ng-repeat="timeseries in taxonomy.data.timeseries" class="wrapper">
         <section ng-show="timeseries.headline === true" id="headline" class="box box--padded-vertical box--blue box--green--separated-left solid border lifted offset-top border-defined">
           <div class="box__content">
             <div class="divider">
@@ -124,7 +124,7 @@
       </thead>
 
     <tbody>
-      <tr ng-repeat="timeseries in data.timeseries" class="list--table__item list--table__body datatable-row">
+      <tr ng-repeat="timeseries in taxonomy.data.timeseries" class="list--table__item list--table__body datatable-row">
         <td class="data_table_section-title">
           <div class="list--table__item__body list--table__item__body--caption responsive_large_width">
             <h3 class="list--table__item__header">
@@ -191,9 +191,6 @@
 </table>
   <!--  /section - - timeseries -->
 </section>
-
-
-
 
 
 <!-- Key dataset -->

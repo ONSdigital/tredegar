@@ -2,19 +2,26 @@
 (function() {
 	'use strict';
 
-	var onsTemplates = angular.module('onsTemplates')
-	onsTemplates.controller('TaxonomyController', ['Taxonomy',
-		TaxonomyController
-	])
+	angular.module('onsTemplates')
+		.controller('TaxonomyController', ['$scope', 'Taxonomy',
+			TaxonomyController
+		])
 
-	function TaxonomyController(Taxonomy) {
+	function TaxonomyController($scope, Taxonomy) {
 		var taxonomy = this
 		Taxonomy.loadData(function(data) {
 			taxonomy.data = data
-			console.log("Here it is")
-			console.log(data)
+			prepareBreadcrumb($scope, data)
 		})
+	}
 
+	function prepareBreadcrumb($scope, data) {
+		if(data.level === 't1') {
+			return
+		}
+		$scope.breadcrumb = {}
+		$scope.breadcrumb.parent = data.breadcrumb
+		$scope.breadcrumb.current = data.name
 	}
 
 })()

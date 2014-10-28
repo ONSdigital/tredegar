@@ -4,10 +4,10 @@
 (function() {
 
     // Components are to be injected to onsComponents module
-    var onsComponents = angular.module('onsComponents', ['onsAccordion'])
+    var onsComponents = angular.module('onsComponents', ['onsAccordion', 'onsNavigation', 'highcharts-ng'])
 
-    //Filters and other helpers are to be injected to onsHelpers module
-    var onsHelpers = angular.module('onsHelpers', [])
+    //Filters, services and other helpers are to be injected to onsHelpers module
+    var onsHelpers = angular.module('onsHelpers', ['onsFilters', 'onsTaxonomy'])
 
     //Template related components are to be registered to onsTemplates module
     var onsTemplates = angular.module('onsTemplates', [])
@@ -15,13 +15,11 @@
     /* App Module */
     var onsApp = angular.module('onsApp', [
         'ngRoute',
-        'onsTaxonomy',
-        'onsHelpers',
-        'onsComponents',
-        'onsTemplates',
         'ngSanitize',
-        'googlechart',
-        'highcharts-ng',
+        'onsComponents',
+        'onsHelpers',
+        'onsTemplates',
+        'googlechart'
     ])
 
     onsApp

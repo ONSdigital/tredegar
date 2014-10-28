@@ -1,4 +1,4 @@
-<div  ng-controller="T2Controller" >
+<div>
       <div class="page-header slate" >
         <div class="wrapper">
           <h1 class="page-header__title flush--half--bottom">{{taxonomy.data.name}}</h1>
@@ -28,7 +28,7 @@
               <section class="nav-panel__roomy">
                 <ul class="list--neutral">
                 <!-- Here it starts a line in the panel -->
-                  <li ng-repeat="child in (section.taxonomy.data.level === 't3' ? section.data.timeseries : section.data.children ) | limitTo:4" class="nav-panel__item">
+                  <li ng-repeat="child in (section.data.level === 't3' ? section.data.timeseries : section.data.children ) | limitTo:4" class="nav-panel__item">
                     <dl>
                       <dt class="nav-panel__title">
                         <h3 class="nav-panel__heading">
