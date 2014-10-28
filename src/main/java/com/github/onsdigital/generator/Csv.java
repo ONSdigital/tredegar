@@ -17,6 +17,7 @@ import au.com.bytecode.opencsv.CSVReader;
 
 import com.github.davidcarboni.ResourceUtils;
 import com.github.davidcarboni.restolino.json.Serialiser;
+import com.github.onsdigital.json.Article;
 import com.github.onsdigital.json.Data;
 import com.github.onsdigital.json.Release;
 import com.github.onsdigital.json.bulletin.Bulletin;
@@ -306,28 +307,27 @@ public class Csv {
 	}
 
 	private static void createArticle(Folder folder, File file) throws IOException {
-		// File articles = new File(file, "articles");
-		// articles.mkdir();
-		//
-		// BulletinsCsv.buildFolders();
-		// Set<Folder> articleFolders = BulletinsCsv.folders;
-		//
-		// for (Folder articleFolder : articleFolders) {
-		// File articleFile = new File(articles,
-		// StringUtils.deleteWhitespace(articleFolder.name.toLowerCase()));
-		// articleFile.mkdir();
-		//
-		// for (Folder dateFolder : articleFolder.children) {
-		// File dateFile = new File(articleFile, dateFolder.name);
-		// dateFile.mkdir();
-		// Article article = new Article();
-		// article.title = articleFolder.name;
-		// String json = Serialiser.serialise(article);
-		// FileUtils.writeStringToFile(new File(dateFile, "data.json"), json);
-		//
-		// createVersions(dateFile, json);
-		// }
-		// }
+		File articles = new File(file, "articles");
+		articles.mkdir();
+
+		ArticlesCsv.buildFolders();
+		Set<Folder> articleFolders = ArticlesCsv.folders;
+
+		for (Folder articleFolder : articleFolders) {
+			if (StringUtils.deleteWhitespace(articleFolder.name.toLowerCase()).equals(file.getName())) {
+
+				for (Folder topicFolder : articleFolder.children) {
+					File topicFile = new File(articles, StringUtils.deleteWhitespace(topicFolder.name.toLowerCase()));
+					topicFile.mkdir();
+					Article article = new Article();
+					article.title = topicFolder.name;
+					String json = Serialiser.serialise(article);
+					File articleJsonFile = new File(topicFile, "data.json");
+					FileUtils.writeStringToFile(articleJsonFile, json);
+					createHistory(topicFile, json);
+				}
+			}
+		}
 	}
 
 	private static void createBulletin(Folder folder, File file) throws IOException {
