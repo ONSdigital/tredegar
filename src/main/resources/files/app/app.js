@@ -76,6 +76,11 @@
                     templateUrl: 'app/templates/t6/t6.html',
                     controller: "T6Ctrl"
                 }).
+                when('/:path',{
+                    templateUrl: 'app/templates/t5/t5.html',
+                    controller: "T5Ctrl",
+                    path: '^[0-9a-zA-Z]{4}$'
+                }).
                 otherwise({
                     resolve: {
                         // https://stackoverflow.com/questions/15975646/angularjs-routing-to-empty-route-doesnt-work-in-ie7

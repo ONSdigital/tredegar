@@ -12,7 +12,7 @@ angular.module('onsTemplates')
 
 .controller('GoogleChartCtrl', ['$scope', '$location', '$http',
     function($scope, $location, $http) {
-        getTable("/googletimeseries.json", function(data) {
+        getTable("/googlechart.json", function(data) {
             $scope.chart = data;
             console.log($scope.chart);
         });
