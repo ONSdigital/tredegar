@@ -3,6 +3,8 @@ package com.github.onsdigital.generator;
 import java.io.File;
 import java.io.IOException;
 import java.io.Reader;
+import java.net.URI;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashSet;
@@ -17,6 +19,7 @@ import au.com.bytecode.opencsv.CSVReader;
 
 import com.github.davidcarboni.ResourceUtils;
 import com.github.davidcarboni.restolino.json.Serialiser;
+import com.github.onsdigital.generator.timeseries.AlphaContent;
 import com.github.onsdigital.json.Article;
 import com.github.onsdigital.json.Data;
 import com.github.onsdigital.json.Dataset;
@@ -146,47 +149,49 @@ public class TaxonomyGenerator {
 				}
 				System.out.println(path);
 			}
+		}
 
-			// Walk folder tree:
-			File root = new File("src/main/taxonomy");
-			Folder rootFolder = new Folder();
-			rootFolder.name = "Home";
-			rootFolder.children.addAll(folders);
-			createHomePage(rootFolder, root);
-			File themeFile;
-			File subjectFile;
-			File topicFile;
-			for (Folder t : folders) {
-				themeFile = new File(root, t.filename());
-				themeFile.mkdirs();
-				System.out.println(themeFile.getAbsolutePath());
-				createT2(t, themeFile);
-				for (Folder s : t.children) {
-					subjectFile = new File(themeFile, s.filename());
-					subjectFile.mkdirs();
-					if (s.children.size() == 0) {
-						createT3(s, subjectFile);
-						// createContentFolders(s.name, subjectFile);
-					} else {
-						createT2(s, subjectFile);
-					}
-					System.out.println("\t" + subjectFile.getPath());
-					for (Folder o : s.children) {
-						topicFile = new File(subjectFile, o.filename());
-						topicFile.mkdirs();
-						System.out.println("\t\t" + topicFile.getPath());
-						createT3(o, topicFile);
-						if (o.children.size() == 0) {
-							// createContentFolders(o.name, topicFile);
-						} else if (isReleaseFolder(o)) {
-							for (Folder u : o.children) {
-								createRelease(topicFile, u);
-							}
+		// Walk folder tree:
+		File root = new File("src/main/taxonomy");
+		Folder rootFolder = new Folder();
+		rootFolder.name = "Home";
+		rootFolder.children.addAll(folders);
+		createHomePage(rootFolder, root);
+		File themeFile;
+		File subjectFile;
+		File topicFile;
+		for (Folder t : folders) {
+			themeFile = new File(root, t.filename());
+			themeFile.mkdirs();
+			System.out.println(themeFile.getAbsolutePath());
+			createT2(t, themeFile);
+			for (Folder s : t.children) {
+				subjectFile = new File(themeFile, s.filename());
+				subjectFile.mkdirs();
+				if (s.children.size() == 0) {
+					createT3(s, subjectFile);
+					// createContentFolders(s.name, subjectFile);
+				} else {
+					createT2(s, subjectFile);
+				}
+				System.out.println("\t" + subjectFile.getPath());
+				for (Folder o : s.children) {
+					topicFile = new File(subjectFile, o.filename());
+					topicFile.mkdirs();
+					System.out.println("\t\t" + topicFile.getPath());
+					createT3(o, topicFile);
+					if (o.children.size() == 0) {
+						// createContentFolders(o.name, topicFile);
+					} else if (isReleaseFolder(o)) {
+						for (Folder u : o.children) {
+							createRelease(topicFile, u);
 						}
 					}
 				}
 			}
 		}
+
+		// createTimeseries(Paths.get(root.toURI()));
 	}
 
 	// private static void createContentFolders(String name, File file)
@@ -285,15 +290,30 @@ public class TaxonomyGenerator {
 		} else {
 			T3 t3 = new T3(folder);
 			t3.index = folder.index;
+
+			// Timeseries references:
+			List<TimeSeries> timeserieses = AlphaContent.getTimeSeries(folder);
+			t3.items.clear();
+			String baseUri = "/" + folder.filename();
+			Folder parent = folder.parent;
+			while (parent != null) {
+				baseUri = "/" + parent.filename() + baseUri;
+				parent = parent.parent;
+			}
+			baseUri += "/timeseries";
+			for (TimeSeries timeseries : timeserieses) {
+				System.out.println(baseUri + "/" + timeseries.fileName);
+				t3.items.add(URI.create(baseUri + "/" + timeseries.fileName));
+			}
+
+			// Serialise
 			String json = Serialiser.serialise(t3);
 			FileUtils.writeStringToFile(new File(file, "data.json"), json);
 
 			createArticle(folder, file);
 			createBulletin(folder, file);
-			if (file.getName().contains("inflationandpriceindices")) {
-				createTimeseries(folder, file);
-			}
 			createDataset(folder, file);
+			createTimeseries(folder, file);
 		}
 	}
 
@@ -306,26 +326,20 @@ public class TaxonomyGenerator {
 	 */
 	private static void createTimeseries(Folder folder, File file) throws IOException {
 
-		// Create the timeseries directory:
-		File timeseriesFolder = new File(file, "timeseries");
-		timeseriesFolder.mkdir();
+		List<TimeSeries> timeserieses = AlphaContent.getTimeSeries(folder);
 
-		// Load up the CPI timeseries metadata:
-		TimeseriesMetadata.loadTimeseriesMetadata();
-
-		// Generate dummy timeseries for each CDID in the subset:
-		for (String cdid : TimeseriesMetadata.timeseries.keySet()) {
-			TimeSeries timeseries = TimeseriesMetadata.timeseries.get(cdid);
-			Set<TimeSeriesValue> data = TimeseriesData.getDataMaps().get(cdid);
-			if (data != null) {
-				timeseries.data = new ArrayList<>(data);
+		if (timeserieses.size() > 0) {
+			File timeseriesesFolder = new File(file, "timeseries");
+			timeseriesesFolder.mkdir();
+			for (TimeSeries timeseries : timeserieses) {
+				File timeseriesFolder = new File(timeseriesesFolder, timeseries.fileName);
+				Set<TimeSeriesValue> data = TimeseriesData.getDataMaps().get(timeseries.cdid);
+				if (data != null) {
+					timeseries.data = new ArrayList<>(data);
+				}
+				String json = Serialiser.serialise(timeseries);
+				FileUtils.writeStringToFile(new File(timeseriesFolder, "data.json"), json, Charset.forName("UTF8"));
 			}
-			String json = Serialiser.serialise(timeseries);
-			File cdidFolder = new File(timeseriesFolder, cdid);
-			FileUtils.writeStringToFile(new File(cdidFolder, "data.json"), json);
-
-			// now create some versions
-			// createVersions(cdidFolder, json);
 		}
 	}
 
