@@ -82,6 +82,11 @@
                     templateUrl: 'app/templates/t6/t6.html',
                     controller: "T6Ctrl"
                 }).
+                when('/:path',{
+                    templateUrl: 'app/templates/t5/t5.html',
+                    controller: "T5Ctrl",
+                    path: '^[0-9a-zA-Z]{4}$'
+                }).
                 otherwise({
                     templateUrl: 'app/templates/taxonomy/taxonomy.html',
                     controller: 'TaxonomyController',
