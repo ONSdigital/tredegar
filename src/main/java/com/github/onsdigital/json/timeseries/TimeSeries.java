@@ -33,6 +33,5 @@ public class TimeSeries extends DataItem {
 	public TimeSeries() {
 		type = ContentType.timeseries;
 		name = "People not in Work";
-		fileName = cdid.toLowerCase();
 	}
 }
