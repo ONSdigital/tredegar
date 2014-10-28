@@ -11,21 +11,6 @@
     "/economy/inflationandpriceindices/timeseries/cdja",
     "/economy/inflationandpriceindices/timeseries/cjvx"
   ],
-  "level": "t3",
-  "breadcrumb": [
-    {
-      "index": 0,
-      "type": "home",
-      "name": "People, Population and Community",
-      "fileName": "peoplepopulationandcommunity"
-    },
-    {
-      "index": 0,
-      "type": "home",
-      "name": "Births, Deaths and Marriages",
-      "fileName": "birthsdeathsandmarriages"
-    }
-  ],
   "timeseries": [
     {
       "name": "CPI Index",
@@ -102,9 +87,24 @@
       "headline": false
     }
   ],
+  "level": "t3",
+  "index": 2,
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "People, Population and Community",
+      "fileName": "peoplepopulationandcommunity"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Births, Deaths and Marriages",
+      "fileName": "birthsdeathsandmarriages"
+    }
+  ],
   "lede": "Consumer price inflation is the speed at which the prices of goods and services bought by households rise or fall.",
   "more": "Some more content goes here. This will expand and contract if you have JS enabled. If JS is disabled, this will show by default. Yay progressive enhancement!",
-  "index": 2,
   "type": "home",
   "name": "Marriage, Cohabitation and Civil Partnerships",
   "fileName": "marriagecohabitationandcivilpartnerships"

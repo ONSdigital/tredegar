@@ -25,16 +25,15 @@
 			var level = service.data.level
 			var children = service.data.children
 			if (level === 't3') {
-				return
-			}
-
-			loadChildrenData()
-			if (level === 't1') {
-				$log.debug('Taxonomy Service: Converting children to table for t1')
-				service.data.children = convertToTable(children)
-			} else if (level === 't2') {
-				$log.debug('Taxonomy Service: Converting children to table for t2')
-				service.data.highlightedChildren = convertToTable(children, 3)
+				service.data.timeseriesData = []
+				loadTimeseriesData()
+			} else {
+				loadChildrenData()
+				if (level === 't1') {
+					service.data.children = convertToTable(children)
+				} else if (level === 't2') {
+					service.data.highlightedChildren = convertToTable(children, 3)
+				}
 			}
 		}
 
@@ -42,7 +41,7 @@
 			$log.debug('Taxonomy Service: Loading children data')
 			var data = service.data
 			var children = data.children
-			var timeseries = data.timeseries
+			var items = data.items
 			loadChildren(children)
 		}
 
@@ -60,6 +59,21 @@
 			var childPath = path + child.fileName
 			load(childPath, function(data) {
 				child.data = data
+			})
+		}
+
+		function loadTimeseriesData() {
+			$log.debug('Taxonomy Service: Loading timeseries data')
+			var items = service.data.items
+			for (var i = 0; i < items.length; i++) {
+				loadTimeseries(items[i])
+			}
+		}
+
+		function loadTimeseries(item) {
+			var timeseriesPath = dataPath + item
+			load(timeseriesPath, function(data) {
+				service.data.timeseriesData.push(data)
 			})
 		}
 
