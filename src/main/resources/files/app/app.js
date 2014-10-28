@@ -4,10 +4,10 @@
 (function() {
 
     // Components are to be injected to onsComponents module
-    var onsComponents = angular.module('onsComponents', [])
+    var onsComponents = angular.module('onsComponents', ['onsAccordion', 'onsNavigation', 'highcharts-ng'])
 
-    //Filters and other helpers are to be injected to onsHelpers module
-    var onsHelpers = angular.module('onsHelpers', [])
+    //Filters, services and other helpers are to be injected to onsHelpers module
+    var onsHelpers = angular.module('onsHelpers', ['onsFilters', 'onsTaxonomy'])
 
     //Template related components are to be registered to onsTemplates module
     var onsTemplates = angular.module('onsTemplates', [])
@@ -15,23 +15,17 @@
     /* App Module */
     var onsApp = angular.module('onsApp', [
         'ngRoute',
-        'onsHelpers',
-        'onsComponents',
-        'onsTemplates',
         'ngSanitize',
-        'googlechart',
-        'highcharts-ng',
+        'onsComponents',
+        'onsHelpers',
+        'onsTemplates',
+        'googlechart'
     ])
 
     onsApp
         .config(['$routeProvider', '$locationProvider',
             function($routeProvider, $locationProvider) {
                 $routeProvider.
-                when('/', {
-                    templateUrl: 'app/templates/taxonomy/taxonomy.html',
-                    controller: 'TaxonomyController',
-                    contollerAs: 'ctrl'
-                }).
                 when('/article', {
                     templateUrl: 'app/templates/article/article.html',
                     controller: 'ArticleCtrl'
@@ -49,7 +43,7 @@
                 }).
                 when('/contactus', {
                     templateUrl: 'app/templates/contact/contactus.html',
-                    controller: "ContactUsCtrl"
+                    controller: "ContactUsController"
                 }).
                 when('/dataset', {
                     templateUrl: 'app/templates/dataset/Dataset_Excelcrosssection.html',
@@ -88,9 +82,6 @@
                     path: '^[0-9a-zA-Z]{4}$'
                 }).
                 otherwise({
-                    templateUrl: 'app/templates/taxonomy/taxonomy.html',
-                    controller: 'TaxonomyController',
-                    contollerAs: 'ctrl',
                     resolve: {
                         // https://stackoverflow.com/questions/15975646/angularjs-routing-to-empty-route-doesnt-work-in-ie7
                         // Here we ensure that our route has the document fragment (#), or more specifically that it has #/ at a minimum.
@@ -104,12 +95,20 @@
                                 }
                             }
                         ]
-                    }
-                })
+                        // ,
+                        // theData: ['Taxonomy',
+                        //     function(Taxonomy) {
+                        //         Taxonomy.loadData(function(data) {
+                        //             return data
+                        //         });
+                        //     }
+                        // ]
 
-                $locationProvider
-                    .html5Mode(false)
-                    .hashPrefix('!');
+                    },
+                    templateUrl: 'app/templates/taxonomy/taxonomy.html',
+                    controller: 'TaxonomyController',
+                    controllerAs: 'taxonomy'
+                })
 
             }
         ])

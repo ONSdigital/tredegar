@@ -1,4 +1,4 @@
-<div  ng-controller="T1Controller" >
+<div>
     <section class="hero-banner">
         <div class="panel--pad slate--hero-banner">
           <div class="wrapper">
@@ -31,7 +31,7 @@
     </section>
 
       <div class="wrapper offset-top panel--bottom-mar nav-panels">
-        <div ng-repeat="item in data.children track by $index" class="grid-wrap">
+        <div ng-repeat="item in taxonomy.data.children track by $index" class="grid-wrap">
           <div ng-repeat="section in item" class="grid-col tablet-wide-grid-one-half">
             <article class="nav-panel nav-panel--stats sectioned lifted border-defined">
               <header class="nav-panel__header nav-panel__roomy">
