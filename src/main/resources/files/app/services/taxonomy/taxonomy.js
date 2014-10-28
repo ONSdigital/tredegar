@@ -14,37 +14,26 @@
 		function loadData(callback) {
 			load(resolvePath(), function(data) {
 				service.data = data
-				resolveChildren()
+				resolveChildren(data)
+				resolveTimeseries(data)
 				if (callback) {
 					callback(service.data)
 				}
 			})
 		}
 
-		function resolveChildren() {
-			var level = service.data.level
-			var children = service.data.children
-			if (level === 't3') {
-				service.data.timeseries = []
-				service.data.headlineData= {}
-				loadTimeseriesData()
-				loadHeadlineData()
-			} else {
-				loadChildrenData()
-				if (level === 't1') {
-					service.data.children = convertToTable(children)
-				} else if (level === 't2') {
-					service.data.highlightedChildren = convertToTable(children, 3)
-				}
-			}
-		}
-
-		function loadChildrenData() {
-			$log.debug('Taxonomy Service: Loading children data')
-			var data = service.data
-			var children = data.children
-			var items = data.items
+		function resolveChildren(data) {
+			$log.debug('Taxonomy Service: Resolving children of ', data.name , 'in taxonomy')
+			var level =  data.level
+			var children =  data.children
+			
 			loadChildren(children)
+
+			if (level === 't1') {
+				service.data.children = convertToTable(children)
+			} else if (level === 't2') {
+				service.data.highlightedChildren = convertToTable(children, 3)
+			}
 		}
 
 		function loadChildren(children) {
@@ -61,31 +50,39 @@
 			var childPath = path + child.fileName
 			load(childPath, function(data) {
 				child.data = data
+				resolveTimeseries(data) //Resolve numbers for child elements if any
 			})
 		}
 
-		function loadTimeseriesData() {
-			$log.debug('Taxonomy Service: Loading timeseries data')
-			var items = service.data.items
-			for (var i = 0; i < items.length; i++) {
-				loadTimeseries(items[i])
+		function resolveTimeseries(data) {
+			$log.debug('Taxonomy Service: Resolving timeseries data for ', data.name)
+			var items = data.items
+			if (!items) {
+				return
 			}
 
+			data.timeseries = []
+			for (var i = 0; i < items.length; i++) {
+				loadTimeseries(data,items[i])
+			}
+
+			loadHeadline(data)
+
 		}
 
-		function loadTimeseries(item) {
+		function loadTimeseries(data,item) {
 			var timeseriesPath = dataPath + item
-			load(timeseriesPath, function(data) {
-				data.url = item
-				service.data.timeseries.push(data)
+			load(timeseriesPath, function(timeseries) {
+				timeseries.url = item
+				data.timeseries.push(timeseries)
 			})
 		}
 
 
-		function loadHeadlineData() {
-			var timeseriesPath = dataPath + service.data.headline
-			load(timeseriesPath, function(data) {
-				service.data.headlineData = data
+		function loadHeadline(data) {
+			var timeseriesPath = dataPath + data.headline
+			load(timeseriesPath, function(timeseries) {
+				data.headlineData = timeseries
 			})
 		}
 
@@ -133,9 +130,7 @@
 
 		//Expose public api
 		angular.extend(service, {
-			loadData: loadData,
-			loadChildrenData: loadChildrenData,
-			convertToTable: convertToTable
+			loadData: loadData
 		})
 
 	}
