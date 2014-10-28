@@ -8,37 +8,14 @@ import com.github.onsdigital.json.taxonomy.Detail;
 
 public class Data extends TaxonomyFolder {
 
-	public String level;
-	public List<TaxonomyFolder> breadcrumb = new ArrayList<>();
 	public List<TaxonomyFolder> children;
 	public List<Detail> timeseries;
-	public String lede;
-	public String more;
 
 	public Data(Folder folder, int taxonomyLevel) {
 		super(folder);
-		Folder parent = folder;
-		while ((parent = parent.parent) != null) {
-			breadcrumb.add(0, new TaxonomyFolder(parent));
-		}
-
-		if (folder.children.size() > 0) {
-			int index = 1;
-			children = new ArrayList<>();
-			for (Folder child : folder.children) {
-				if (taxonomyLevel == 1) {
-					children.add(new ChildT1(child, child.index));
-				} else {
-					children.add(new ChildT2(child, child.index));
-				}
-			}
-		} else {
-			timeseries = new ArrayList<>();
-		}
-		sort(children);
 	}
 
-	private void sort(List<TaxonomyFolder> children) {
+	protected void sort(List<TaxonomyFolder> children) {
 		if (children != null) {
 			List<TaxonomyFolder> sortedChildren = new ArrayList<>();
 			for (TaxonomyFolder child : children) {
