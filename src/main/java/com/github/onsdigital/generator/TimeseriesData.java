@@ -2,6 +2,15 @@ package com.github.onsdigital.generator;
 
 import java.io.IOException;
 import java.io.Reader;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.nio.charset.Charset;
+import java.nio.file.DirectoryStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Collection;
+import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Map;
 import java.util.Set;
@@ -38,7 +47,51 @@ public class TimeseriesData {
 		// It can probably revert to HashMap at some point.
 		dataMaps = new TreeMap<>();
 
-		Reader reader = ResourceUtils.getReader("/Timeseries data - MM23_CSDB_DS.csdb.csv");
+		for (Path path : getFiles()) {
+			// String charsetName = "UTF8";
+			String charsetName = "windows-1252";
+			// We have some dodgy characters in this file:
+			// String name = path.getFileName().toString();
+			// if (name.equals("BB.csv") || name.equals("SDQ7.csv")) {
+			// continue;
+			// // charsetName = "ASCII";
+			// }
+			try (Reader reader = Files.newBufferedReader(path, Charset.forName(charsetName))) {
+				System.out.println("Reading " + path);
+				readFile(reader);
+			}
+		}
+
+		try (Reader reader = ResourceUtils.getReader("/data/Timeseries data - MM23_CSDB_DS.csdb.csv")) {
+			readFile(reader);
+		}
+	}
+
+	private static Collection<Path> getFiles() throws IOException {
+		Set<Path> result = new HashSet<>();
+
+		try {
+			URL resource = TimeseriesMetadata.class.getResource("/data");
+			Path folder = Paths.get(resource.toURI());
+
+			try (DirectoryStream<Path> stream = Files.newDirectoryStream(folder, "*.csv")) {
+
+				// Iterate the paths in this directory:
+				for (Path item : stream) {
+					result.add(item);
+				}
+
+			}
+
+		} catch (URISyntaxException e) {
+			throw new IOException(e);
+		}
+
+		return result;
+	}
+
+	private static void readFile(Reader reader) throws IOException {
+
 		try (CSVReader csvReader = new CSVReader(reader)) {
 
 			// Set up the CDID maps:
