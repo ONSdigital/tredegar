@@ -4,11 +4,11 @@
             <li>
                 <a href="#!/">Home</a>
             </li>
-            <li ng-repeat="item in data.breadcrumb">
+            <li ng-repeat="item in data.parent">
                 <a href="#!{{getParentOf(item.fileName)}}/{{item.fileName}}">{{item.name}}</a>
             </li>
-            <li class="nav__active" ng-hide="data.level === 't1'">
-                <a href="#!{{getPath()}}">{{data.name}}</a>
+            <li class="nav__active">
+                <a href="#!{{getPath()}}">{{data.current}}</a>
             </li>
         </ol>
         <!-- /Wrapper panel -->

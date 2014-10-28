@@ -1,7 +1,136 @@
 <ons-header></ons-header>
 
+<style>
+.chart{
+    height:440px;
+  }
+  /* CHART: tooltip side bar */
+  .sidebar {
+    width:30px;
+    height:100px;
+    margin-right: 5px;
+    float:left;
+    background-color: #ddd;
+  }
+  .title {
+    font-size:14px;
+    text-transform: uppercase;
+  }
+
+#custom-tooltip {
+  display:block;
+  height: 100px;
+  width: 190px;
+  border: 1px solid #ddd;
+  background-color: rgba(255, 255, 255, 1);
+}
+  .maintext {
+    display:block;
+    width:190px;
+    height:100px;
+    background-color: rgba(255, 255, 255, 1);
+  }
+
+.circle{
+    margin:0px;
+    margin-left: 9px;
+  padding:0px;
+  height:14px;
+  font-size: 22px;
+  color:#8FBED8;
+  line-height: 13px;
+  clear:both;
+}
+
+.square{
+    margin:0px;
+    margin-left: 9px;
+  padding:0px;
+  height:21px;
+  font-size: 20px;
+  color:#5296C3;
+  line-height: 21px;
+  clear:both;
+}
+
+.diamond{
+    margin:0px;
+    margin-left: 10px;
+  padding:0px;
+  height:19px;
+  font-size: 20px;
+  color:#1377B2;
+  line-height: 19px;
+  clear:both;
+}
+
+.triangle{
+    margin:0px;
+    margin-left: 9px;
+  padding:0px;
+  height:16px;
+  font-size: 14px;
+  color:#1673AC;
+  line-height: 20px;
+  clear:both;
+}
+
+.tip{
+  padding:0px;
+  padding-top:1px;
+  padding-bottom:1px;
+}
+
+.tiptext{
+  margin:0px;
+  padding:0px;
+    padding-top:1px;
+  left:0px;
+  text-align:left;
+}
+
+.tooltip-right {
+    width:90px;
+    height:50px;
+
+    position:relative;
+}
+
+.tooltip-right:after {
+    content:"";
+    border-color: transparent transparent transparent #ddd;
+    border-style:solid;
+    border-width:10px;
+    width:0;
+    height:0;
+    position:absolute;
+    bottom:15px;
+    left:189px
+}
+
+.tooltip-left {
+    width:190px;
+    height:50px;
+    position:relative;
+}
+
+.tooltip-left:after {
+    content:"";
+    border-color: transparent #ddd transparent transparent ;
+    border-style:solid;
+    border-width:10px;
+    width:0;
+    height:0;
+    position:absolute;
+    bottom:15px;
+    left:-21px
+    }
+
+</style>
+
+
 <!-- Title and release date -->
-<div class="page-header page-header--article page-header--time-series slate--green">
+<div class="page-header slate">
     <div class="wrapper">
         <p>
             <strong>{{header}}</strong>
@@ -43,7 +172,7 @@
 <div class="wrapper">
     <div class="actionable-header--tight panel--mar-small">
         <!-- This title will need to be dynamically generated on the server -->
-        <h2 class="actionable-header--tight__title gamma flush--bottom body-type--heavy">Download this entire time series from 1988—2014</h2>
+        <h2 class="actionable-header--tight__title gamma flush--bottom body-type--heavy">Download this entire time series from 1997—2014</h2>
         <div class="actionable-header--tight__action actionable-header--tight__action--left">
             <a class="btn btn--primary btn--small" href="#">
               .csv
@@ -57,178 +186,15 @@
     </div>
 </div>
 
-<!-- Chart/Table Section-->
+<!-- Chart in Highcharts -->
 <div class="wrapper">
-    <div class="chart-area slate">
-        <div class="chart-area__controls">
-            <form data-chart-controls="" data-chart-controls-for="[&quot;chart1&quot;, &quot;table1&quot;]">
-                <div class="button-bar chart-area__controls__buttons">
-                    <div class="button-group chart-area__controls__type">
-                        <label class="btn btn--secondary btn--small btn--narrow btn--thin btn--secondary--active">
-                            Chart
-                            <input type="radio" name="type" data-chart-controls-type="" value="chart1" checked="">
-                        </label>
-                        <label class="btn btn--secondary btn--small btn--narrow btn--thin">
-                            Table
-                            <input type="radio" name="type" data-chart-controls-type="" value="table1">
-                        </label>
-                    </div>
-                    <div class="button-group chart-area__controls__timespan">
-                        <label class="btn btn--secondary btn--small btn--narrow btn--thin">
-                            Month
-                            <input type="radio" name="scale" data-chart-controls-scale="" value="month" checked="">
-                        </label>
-                        <label class="btn btn--secondary btn--small btn--narrow btn--thin">
-                            Quarter
-                            <input type="radio" name="scale" data-chart-controls-scale="" value="quarter">
-                        </label>
-                        <label class="btn btn--secondary btn--small btn--narrow btn--thin btn--secondary--active">
-                            Year
-                            <input type="radio" name="scale" data-chart-controls-scale="" value="year">
-                        </label>
-                    </div>
-                </div>
-                <!-- /chart-area__controls__buttons -->
-                <div class="chart-area__controls__time">
-                    <span class="chart-area__controls__time__label">Time period:</span>
-                    <ul class="nav flush--top chart-area__controls__time__ranges">
-                        <li>
-                            <a href="#" data-chart-controls-range="all" class="">All</a>
-                        </li>
-                        <li>
-                            <a href="#" data-chart-controls-range="10yr">Last 10 yrs</a>
-                        </li>
-                        <li>
-                            <a href="#" data-chart-controls-range="5yr" class="">Last 5 yrs</a>
-                        </li>
-                        <li class="chart-area__controls__custom--active">
-                            <a href="#" class="link-complex chart-area__controls__active">
-                                <span class="link-complex__target">Custom</span>
-                                <span class="icon-down-open-big icon--inline" role="presentation"></span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- /chart-area__controls__time -->
-                <div class="chart-area__controls__custom" id="customControls">
-                    <div class="chart-area__controls__custom__errors"></div>
-                    <div class="chart-area__controls__custom__container">
-                        <div class="chart-area__controls__dropdowns">
-                            <fieldset class="chart-area__controls__date">
-                                <legend class="chart-area__controls__date__label">From</legend>
-                                <select class="chart-area__controls__month" id="from-month" name="from-month" data-chart-controls-from-month="">
-                                    <option value="1" selected="selected">Jan</option>
-                                    <option value="2">Feb</option>
-                                    <option value="3">Mar</option>
-                                    <option value="4">Apr</option>
-                                    <option value="5">May</option>
-                                    <option value="6">Jun</option>
-                                    <option value="7">Jul</option>
-                                    <option value="8">Aug</option>
-                                    <option value="9" selected="">Sep</option>
-                                    <option value="10" selected="selected">Oct</option>
-                                    <option value="11">Nov</option>
-                                    <option value="12">Dec</option>
-                                </select>
-                                <select class="chart-area__controls__year" id="from-year" name="from-year" data-chart-controls-from-year="">
-                                    <option value="1988" selected="selected">1988</option>
-                                    <option value="1989">1989</option>
-                                    <option value="1990">1990</option>
-                                    <option value="1991">1991</option>
-                                    <option value="1992">1992</option>
-                                    <option value="1993">1993</option>
-                                    <option value="1994">1994</option>
-                                    <option value="1995">1995</option>
-                                    <option value="1996">1996</option>
-                                    <option value="1997">1997</option>
-                                    <option value="1998">1998</option>
-                                    <option value="1999">1999</option>
-                                    <option value="2000">2000</option>
-                                    <option value="2001">2001</option>
-                                    <option value="2002">2002</option>
-                                    <option value="2003">2003</option>
-                                    <option value="2004">2004</option>
-                                    <option value="2005">2005</option>
-                                    <option value="2006">2006</option>
-                                    <option value="2007">2007</option>
-                                    <option value="2008">2008</option>
-                                    <option value="2009" selected="selected">2009</option>
-                                    <option value="2010">2010</option>
-                                    <option value="2011">2011</option>
-                                    <option value="2012">2012</option>
-                                    <option value="2013">2013</option>
-                                    <option value="2014">2014</option>
-                                </select>
-                            </fieldset>
-                            <fieldset class="chart-area__controls__date">
-                                <legend class="chart-area__controls__date__label">To</legend>
-                                <select class="chart-area__controls__month" id="to-month" name="to-month" data-chart-controls-to-month="">
-                                    <option value="1">Jan</option>
-                                    <option value="2">Feb</option>
-                                    <option value="3">Mar</option>
-                                    <option value="4">Apr</option>
-                                    <option value="5">May</option>
-                                    <option value="6">Jun</option>
-                                    <option value="7">Jul</option>
-                                    <option value="8">Aug</option>
-                                    <option value="9" selected="">Sep</option>
-                                    <option value="10" selected="selected">Oct</option>
-                                    <option value="11">Nov</option>
-                                    <option value="12">Dec</option>
-                                </select>
-                                <select class="chart-area__controls__year" id="from-year" name="to-year" data-chart-controls-to-year="">
-                                    <option value="1986">1986</option>
-                                    <option value="1987">1987</option>
-                                    <option value="1988">1988</option>
-                                    <option value="1989">1989</option>
-                                    <option value="1990">1990</option>
-                                    <option value="1991">1991</option>
-                                    <option value="1992">1992</option>
-                                    <option value="1993">1993</option>
-                                    <option value="1994">1994</option>
-                                    <option value="1995">1995</option>
-                                    <option value="1996">1996</option>
-                                    <option value="1997">1997</option>
-                                    <option value="1998">1998</option>
-                                    <option value="1999">1999</option>
-                                    <option value="2000">2000</option>
-                                    <option value="2001">2001</option>
-                                    <option value="2002">2002</option>
-                                    <option value="2003">2003</option>
-                                    <option value="2004">2004</option>
-                                    <option value="2005">2005</option>
-                                    <option value="2006">2006</option>
-                                    <option value="2007">2007</option>
-                                    <option value="2008">2008</option>
-                                    <option value="2009">2009</option>
-                                    <option value="2010">2010</option>
-                                    <option value="2011">2011</option>
-                                    <option value="2012">2012</option>
-                                    <option value="2013">2013</option>
-                                    <option value="2014" selected="selected">2014</option>
-                                </select>
-                            </fieldset>
-                        </div>
-                        <div class="chart-area__controls__submit">
-                            <input class="btn btn--small btn--thin btn--narrow btn--primary" type="submit" name="submit" data-chart-controls-submit="" value="Show">
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
+    <div ng-controller="chartController">
+        <a href="" ng-click="changeChartType('line')">Line</a>
+        <a href="" ng-click="changeChartType('bar')">Bar</a>
+        <highchart id="chart_prices" config="chartData"></highchart>
     </div>
 </div>
-<!-- Chart -->
-<div class="wrapper">
-    <div class="highcharts-container" id="highcharts-0" style="position: relative; overflow: hidden; width: 876px; height: 480px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); font-family: open-sans-n4; color: rgb(0, 0, 0);">
 
-        <div ng-controller="ChartCtrl">
-            <a href="" ng-click="changeChartType('line')">Line</a>
-            <a href="" ng-click="changeChartType('bar')">Bar</a>
-            <highchart config="chartConfig"></highchart>
-        </div>
-    </div>
-</div>
 
 <!-- Notes and info section -->
 <div class="wrapper panel--bottom-mar">

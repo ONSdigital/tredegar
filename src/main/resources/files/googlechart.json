@@ -1,117 +1,181 @@
 {
   "type": "LineChart",
-  "cssStyle": "height:200px; width:300px;",
   "data": {
-    "cols": [
-      {
-        "id": "month",
-        "label": "Month",
-        "type": "string",
-        "p": {}
-      },
-      {
-        "id": "laptop-id",
-        "label": "Laptop",
-        "type": "number",
-        "p": {}
-      },
-      {
-        "id": "desktop-id",
-        "label": "Desktop",
-        "type": "number",
-        "p": {}
-      },
-      {
-        "id": "server-id",
-        "label": "Server",
-        "type": "number",
-        "p": {}
-      },
-      {
-        "id": "cost-id",
-        "label": "Shipping",
-        "type": "number"
-      }
-    ],
-    "rows": [
-      {
-        "c": [
-          {
-            "v": "January"
-          },
-          {
-            "v": 42,
-            "f": "42 items"
-          },
-          {
-            "v": 12,
-            "f": "Ony 12 items"
-          },
-          {
-            "v": 7,
-            "f": "7 servers"
-          },
-          {
-            "v": 4
-          }
-        ]
-      },
-      {
-        "c": [
-          {
-            "v": "February"
-          },
-          {
-            "v": 13
-          },
-          {
-            "v": 1,
-            "f": "1 unit (Out of stock this month)"
-          },
-          {
-            "v": 12
-          },
-          {
-            "v": 2
-          }
-        ]
-      },
-      {
-        "c": [
-          {
-            "v": "March"
-          },
-          {
-            "v": 24
-          },
-          {
-            "v": 0
-          },
-          {
-            "v": 11
-          },
-          {
-            "v": 6
-          }
-        ]
-      }
-    ]
+    "cols": [{
+    "id": "A",
+    "label": "Date",
+    "type": "date",
+    "pattern": "yyyy"
+}, {
+    "id": "B",
+    "label": "DS38",
+    "type": "number",
+    "pattern": ""
+}], "rows": [{
+        "c": [{
+            "v": "Date(1997, 0, 1)",
+            "f": "1997"
+        }, {
+            "v": 3956.0,
+            "f": "3956"
+        }]
+    }, {
+        "c": [{
+            "v": "Date(1998, 0, 1)",
+            "f": "1998"
+        }, {
+            "v": 3534.0,
+            "f": "3534"
+        }]
+    }, {
+        "c": [{
+            "v": "Date(1999, 0, 1)",
+            "f": "1999"
+        }, {
+            "v": 3133.0,
+            "f": "3133"
+        }]
+    }, {
+        "c": [{
+            "v": "Date(2000, 0, 1)",
+            "f": "2000"
+        }, {
+            "v": 3069.0,
+            "f": "3069"
+        }]
+    }, {
+        "c": [{
+            "v": "Date(2001, 0, 1)",
+            "f": "2001"
+        }, {
+            "v": 3571.0,
+            "f": "3571"
+        }]
+    }, {
+        "c": [{
+            "v": "Date(2002, 0, 1)",
+            "f": "2002"
+        }, {
+            "v": 3710.0,
+            "f": "3710"
+        }]
+    }, {
+        "c": [{
+            "v": "Date(2003, 0, 1)",
+            "f": "2003"
+        }, {
+            "v": 3771.0,
+            "f": "3771"
+        }]
+    }, {
+        "c": [{
+            "v": "Date(2004, 0, 1)",
+            "f": "2004"
+        }, {
+            "v": 4129.0,
+            "f": "4129"
+        }]
+    }, {
+        "c": [{
+            "v": "Date(2005, 0, 1)",
+            "f": "2005"
+        }, {
+            "v": 3982.0,
+            "f": "3982"
+        }]
+    }, {
+        "c": [{
+            "v": "Date(2006, 0, 1)",
+            "f": "2006"
+        }, {
+            "v": 4078.0,
+            "f": "4078"
+        }]
+    }, {
+        "c": [{
+            "v": "Date(2007, 0, 1)",
+            "f": "2007"
+        }, {
+            "v": 5365.0,
+            "f": "5365"
+        }]
+    }, {
+        "c": [{
+            "v": "Date(2008, 0, 1)",
+            "f": "2008"
+        }, {
+            "v": 5657.0,
+            "f": "5657"
+        }]
+    }, {
+        "c": [{
+            "v": "Date(2009, 0, 1)",
+            "f": "2009"
+        }, {
+            "v": 5940.0,
+            "f": "5940"
+        }]
+    }, {
+        "c": [{
+            "v": "Date(2010, 0, 1)",
+            "f": "2010"
+        }, {
+            "v": 5359.0,
+            "f": "5359"
+        }]
+    }, {
+        "c": [{
+            "v": "Date(2011, 0, 1)",
+            "f": "2011"
+        }, {
+            "v": 5744.0,
+            "f": "5744"
+        }]
+    }, {
+        "c": [{
+            "v": "Date(2012, 0, 1)",
+            "f": "2012"
+        }, {
+            "v": 6604.0,
+            "f": "6604"
+        }]
+    }, {
+        "c": [{
+            "v": "Date(2013, 0, 1)",
+            "f": "2013"
+        }, {
+            "v": 7088.0,
+            "f": "7088"
+        }]
+}]
   },
   "options": {
-    "title": "Sales per month",
+    "title": "Priv Sect: Non-Manuf: Agriculture forestry and fishing",
+    "dateFormat": "yyyy",
+    "zoomButtonsOrder": [
+    "1-year", "5-year", "10-year", "max"
+    ],
+    "zoomButtons": {
+    "1-year": { "label": "1y", "offset": [1, 1, 0, 0, 0, 0, 0] },
+    "5-year": { "label": "5y", "offset": [5, 1, 0, 0, 0, 0, 0] },
+    "10-year": { "label": "10y", "offset": [10, 1, 0, 0, 0, 0, 0] },
+
+    "max": {
+    "label": "max",
+    "range": {
+      "start": null,
+      "end": null
+    }}},
+    "width": "",
+    "height": "500",
     "isStacked": "true",
     "fill": 20,
     "displayExactValues": true,
     "vAxis": {
-      "title": "Sales unit",
-      "gridlines": {
-        "count": 6
-      }
+      "title": "£m"
     },
     "hAxis": {
-      "title": "Date"
+      "title": ""
     }
-  },
-  "formatters": {},
-  "displayed": true
+  }
 }

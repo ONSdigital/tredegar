@@ -46,9 +46,8 @@
 
 <script type="text/javascript" src="//d3js.org/d3.v3.min.js">
 </script>
-<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js" defer></script>
+<!-- <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script> -->
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js" defer></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-route.min.js" defer></script>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular-sanitize.js" defer></script>
@@ -66,11 +65,13 @@
  -->
 
 <script type="text/javascript" src="app/app.js" defer></script>
-<script type="text/javascript" src="app/templates/taxonomy/taxonomy.js" defer></script>
+<script type="text/javascript" src="app/config/config.js" defer></script>
+<script type="text/javascript" src="app/services/taxonomy/taxonomy.js" defer></script>
 
-<script type="text/javascript" src="app/templates/t1/t1.controller.js" defer></script>
-<script type="text/javascript" src="app/templates/t2/t2.controller.js" defer></script>
+<script type="text/javascript" src="app/templates/taxonomy/taxonomy.controller.js" defer></script>
+
 <script type="text/javascript" src="app/templates/t5/t5.controller.js" defer></script>
+<script type="text/javascript" src="app/templates/t6/t6.controller.js" defer></script>
 <script type="text/javascript" src="app/templates/search-results/search-results.controller.js" defer></script>
 <script type="text/javascript" src="app/templates/content/content.controller.js" defer></script>
 <script type="text/javascript" src="app/templates/article/article.controller.js" defer></script>
@@ -98,11 +99,15 @@
 <script type="text/javascript" src="app/components/tabs/tabs.js" defer></script>
 <script type="text/javascript" src="app/components/tooltip/tooltip.directive.js" defer></script>
 <script type="text/javascript" src="app/components/markdown/markdown.directive.js" defer></script>
+<script type="text/javascript" src="app/components/charts/charts.js" defer></script>
+<script type="text/javascript" src="app/components/charts/highcharts-ng.js" defer></script>
 
 <script type="text/javascript" src="app/helpers/filters.js" defer></script>
 <script type="text/javascript" src="app/helpers/titleService.js" defer></script>
 <script type="text/javascript" src="app/helpers/pathService.js" defer></script>
 
+<script type="text/javascript" src="ui/js/lib/jquery.min.js" defer></script>
+<script src="/ui/js/lib/highcharts.js" defer></script>
 <!-- <script type="text/javascript" src="ui/js/app/nav.js" defer></script>
 <script type="text/javascript" src="ui/js/app/supporting-content.js" defer></script>
 <script type="text/javascript" src="ui/js/app/tables.js" defer></script>
@@ -133,7 +138,7 @@ markup: false
 	    <p>You can either:</p>
 	    <ul>
 	    	<li>
-	    		enable Javascript as follows: 
+	    		enable Javascript as follows:
 	    		<a href="http://www.enable-javascript.com/">Enabling JavaScript</a>
 	    	</li>
 	    	<li>

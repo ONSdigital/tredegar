@@ -18,13 +18,14 @@ import au.com.bytecode.opencsv.CSVReader;
 import com.github.davidcarboni.ResourceUtils;
 import com.github.davidcarboni.restolino.json.Serialiser;
 import com.github.onsdigital.json.Article;
-import com.github.onsdigital.json.Collection;
 import com.github.onsdigital.json.Data;
 import com.github.onsdigital.json.Release;
 import com.github.onsdigital.json.bulletin.Bulletin;
 import com.github.onsdigital.json.taxonomy.DataT1;
 import com.github.onsdigital.json.taxonomy.DataT2;
 import com.github.onsdigital.json.taxonomy.DataT3;
+import com.github.onsdigital.json.timeseries.TimeSeries;
+import com.github.onsdigital.json.timeseries.TimeSeriesValue;
 
 public class Csv {
 
@@ -116,8 +117,9 @@ public class Csv {
 				}
 
 				String path = StringUtils.join(new String[] { theme, subject, topic }, '/');
-				while (StringUtils.endsWith(path, "/"))
+				while (StringUtils.endsWith(path, "/")) {
 					path = path.substring(0, path.length() - 1);
+				}
 				System.out.println(path);
 
 			}
@@ -142,8 +144,9 @@ public class Csv {
 					if (s.children.size() == 0) {
 						createT3(s, subjectFile);
 						// createContentFolders(s.name, subjectFile);
-					} else
+					} else {
 						createT2(s, subjectFile);
+					}
 					System.out.println("\t" + subjectFile.getPath());
 					for (Folder o : s.children) {
 						topicFile = new File(subjectFile, o.filename());
@@ -192,10 +195,10 @@ public class Csv {
 	 * @param file
 	 * @throws IOException
 	 */
-	private static void createHistory(String name, File file) throws IOException {
+	private static void createHistory(File file, String json) throws IOException {
 
 		File tempDir = com.google.common.io.Files.createTempDir();
-		List<File> historyFolders = historyFolders(file);
+		List<File> historyFolders = historyFolders(file, json);
 
 		// Delete existing history folders:
 		for (File historyFolder : historyFolders) {
@@ -213,7 +216,7 @@ public class Csv {
 		FileUtils.deleteDirectory(tempDir);
 	}
 
-	private static List<File> historyFolders(File file) {
+	private static List<File> historyFolders(File file, String json) throws IOException {
 		List<File> result = new ArrayList<>();
 
 		for (int i = 1; i <= 10; i++) {
@@ -224,7 +227,8 @@ public class Csv {
 			// Fixed at 21 to avoid the taxonomy being different too often.
 			// 21st of September is "International Peace Day".
 			int day = 21;
-			String releaseFolderName = year + "-" + month + "-" + day;
+			String releaseFolderName = year + "-" + (month < 10 ? ("0" + month) : (month)) + "-" + day;
+
 			File releaseFolder = new File(file, releaseFolderName);
 			result.add(releaseFolder);
 		}
@@ -288,7 +292,12 @@ public class Csv {
 
 		// Generate dummy timeseries for each CDID in the subset:
 		for (String cdid : TimeseriesMetadata.timeseries.keySet()) {
-			String json = Serialiser.serialise(TimeseriesMetadata.timeseries.get(cdid));
+			TimeSeries timeseries = TimeseriesMetadata.timeseries.get(cdid);
+			Set<TimeSeriesValue> data = TimeseriesData.getDataMaps().get(cdid);
+			if (data != null) {
+				timeseries.data = new ArrayList<>(data);
+			}
+			String json = Serialiser.serialise(timeseries);
 			File cdidFolder = new File(timeseriesFolder, cdid);
 			FileUtils.writeStringToFile(new File(cdidFolder, "data.json"), json);
 
@@ -298,30 +307,53 @@ public class Csv {
 	}
 
 	private static void createArticle(Folder folder, File file) throws IOException {
-		// Create a dummy bulletin:
 		File articles = new File(file, "articles");
 		articles.mkdir();
-		Article article = new Article();
-		article.title = folder.name;
-		String json = Serialiser.serialise(article);
-		FileUtils.writeStringToFile(new File(articles, "data.json"), json);
 
-		createVersions(articles, json);
+		ArticlesCsv.buildFolders();
+		Set<Folder> articleFolders = ArticlesCsv.folders;
+
+		for (Folder articleFolder : articleFolders) {
+			if (StringUtils.deleteWhitespace(articleFolder.name.toLowerCase()).equals(file.getName())) {
+
+				for (Folder topicFolder : articleFolder.children) {
+					File topicFile = new File(articles, StringUtils.deleteWhitespace(topicFolder.name.toLowerCase()));
+					topicFile.mkdir();
+					Article article = new Article();
+					article.title = topicFolder.name;
+					String json = Serialiser.serialise(article);
+					File articleJsonFile = new File(topicFile, "data.json");
+					FileUtils.writeStringToFile(articleJsonFile, json);
+					createHistory(topicFile, json);
+				}
+			}
+		}
 	}
 
 	private static void createBulletin(Folder folder, File file) throws IOException {
+
 		// Create a dummy bulletin:
 		File bulletins = new File(file, "bulletins");
 		bulletins.mkdir();
-		Bulletin bulletin = new Bulletin();
-		bulletin.title = folder.name;
-		String json = Serialiser.serialise(bulletin);
-		FileUtils.writeStringToFile(new File(bulletins, "data.json"), json);
-	}
 
-	private static void createCollection(Folder folder, File file) throws IOException {
-		String json = Serialiser.serialise(new Collection());
-		FileUtils.writeStringToFile(new File(file, "data.json"), json);
+		BulletinsCsv.buildFolders();
+		Set<Folder> bulletinFolders = BulletinsCsv.folders;
+
+		for (Folder bulletinFolder : bulletinFolders) {
+			if (StringUtils.deleteWhitespace(bulletinFolder.name.toLowerCase()).equals(file.getName())) {
+
+				for (Folder topicFolder : bulletinFolder.children) {
+					File topicFile = new File(bulletins, StringUtils.deleteWhitespace(topicFolder.name.toLowerCase()));
+					topicFile.mkdir();
+					Bulletin bulletin = new Bulletin();
+					bulletin.title = topicFolder.name;
+					String json = Serialiser.serialise(bulletin);
+					File bulletinJsonFile = new File(topicFile, "data.json");
+					FileUtils.writeStringToFile(bulletinJsonFile, json);
+					createHistory(topicFile, json);
+				}
+			}
+		}
 	}
 
 	private static boolean isReleaseFolder(Folder o) {
@@ -343,8 +375,8 @@ public class Csv {
 		File versionsFolder = new File(file, "versions");
 		versionsFolder.mkdir();
 
-		// create a few starting at version '2'
-		for (int i = 2; i < 4; i++) {
+		// create a few versions
+		for (int i = 1; i < 4; i++) {
 			File version = new File(versionsFolder, String.valueOf(i));
 			version.mkdir();
 			FileUtils.writeStringToFile(new File(version, "data.json"), json);

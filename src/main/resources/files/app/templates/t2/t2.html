@@ -1,14 +1,14 @@
-<div  ng-controller="T2Controller" >
+<div>
       <div class="page-header slate" >
         <div class="wrapper">
-          <h1 class="page-header__title flush--half--bottom">{{data.name}}</h1>
+          <h1 class="page-header__title flush--half--bottom">{{taxonomy.data.name}}</h1>
           <div class="content-reveal lede">
-            <p>{{data.lede}}
-              <a href=""  expand-label="Show more" collapse-label="Show less"  toggler="more" ng-if="data.more"  class="content-reveal__action"></a>
+            <p>{{taxonomy.data.lede}}
+              <a href=""  expand-label="Show more" collapse-label="Show less"  toggler="more" ng-if="taxonomy.data.more"  class="content-reveal__action"></a>
             </p>
             <div toggleable="more" class="content-reveal__hidden">
               <p>
-              {{data.more}}
+              {{taxonomy.data.more}}
               </p> 
             </div>
           </div>
@@ -19,7 +19,7 @@
       <!-- /page-header -->
 
     <div class="wrapper offset-top nav-panels">
-        <div ng-repeat="item in data.highlightedChildren track by $index" class="grid-wrap">
+        <div ng-repeat="item in taxonomy.data.highlightedChildren track by $index" class="grid-wrap">
           <div ng-repeat="section in item" ng-show="section" class="grid-col tablet-wide-grid-one-half">
             <article class="nav-panel nav-panel--stats sectioned lifted border-defined">
               <header class="nav-panel__header nav-panel__roomy">
@@ -62,12 +62,12 @@
             <!-- /nav-panel -->
           </div>
           <!-- /grid-col -->
-           <div ng-show="$index === 1 && data.children.length > 3" class="grid-col tablet-wide-grid-one-half">
+           <div ng-show="$index === 1 && taxonomy.data.children.length > 3" class="grid-col tablet-wide-grid-one-half">
               <article class="nav-panel nav-panel--stats sectioned lifted border-defined">
                 <header class="nav-panel__header nav-panel__roomy">
-                  <h2>Other {{data.name}} Categories</h2>
+                  <h2>Other {{taxonomy.data.name}} Categories</h2>
                 </header>
-                <footer ng-repeat="other in data.children | slice:3" class="nav-panel__footer">
+                <footer ng-repeat="other in taxonomy.data.children | slice:3" class="nav-panel__footer">
                   <div class="nav-panel__action ">
                     <a class="nav-panel__roomy no_underline" href="#!{{getPath()}}/{{other.fileName}}">{{other.name}}</a>
                   </div>

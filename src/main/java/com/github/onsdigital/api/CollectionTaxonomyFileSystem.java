@@ -19,6 +19,7 @@ import com.github.davidcarboni.restolino.framework.Endpoint;
 import com.github.onsdigital.bean.CollectionSearchResult;
 import com.github.onsdigital.configuration.Configuration;
 import com.github.onsdigital.index.ScanFileSystem;
+import com.github.onsdigital.util.TaxonomyDateComparator;
 
 @Endpoint
 public class CollectionTaxonomyFileSystem {
@@ -30,9 +31,9 @@ public class CollectionTaxonomyFileSystem {
 	}
 
 	private Object search(String query, int page, String type) throws Exception {
-		List<File> files = getFiles(query);
+		List<File> files = getFiles(query, type);
 
-		Collections.sort(files);
+		Collections.sort(files, new TaxonomyDateComparator());
 		Collections.reverse(files);
 
 		int startIndex = getStartIndex(files, page);
@@ -46,11 +47,11 @@ public class CollectionTaxonomyFileSystem {
 		return collectionSearchResult;
 	}
 
-	private List<File> getFiles(String query) throws IOException {
+	private List<File> getFiles(String query, String type) throws IOException {
 		List<File> files = new ArrayList<File>();
 		String taxonomyRoot = Configuration.getTaxonomyPath() + query;
 		final Path rootDir = Paths.get(taxonomyRoot);
-		files = ScanFileSystem.getFiles(files, rootDir);
+		files = ScanFileSystem.getFiles(files, rootDir, type);
 		return files;
 	}
 
