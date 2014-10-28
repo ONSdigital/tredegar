@@ -684,6 +684,9 @@ img {
 .flush {
   margin: 0 !important; }
 
+ .flush--padding {
+  padding: 0 !important; } 
+
 .flush--top {
   margin-top: 0 !important; }
 
@@ -2998,7 +3001,8 @@ lesser , applied styles
   border-bottom: 1px solid #e6e3da; }
 
 .panel--separated--top--large {
-  border-top: 5px solid #e6e3da; }
+  /*border-top: 5px solid #e6e3da; original*/
+    border-top: 5px solid #ececec;}
 
 .panel--separated--bottom--large {
   border-bottom: 5px solid #e6e3da; }
@@ -3973,13 +3977,18 @@ table actions
   font-size: 10px;
   font-size: 1rem;
   letter-spacing: .1em;
-  color: white;
+  border: solid 1px;
+  border-radius: 2px;
+  /*color: white;
   text-transform: uppercase;
   cursor: pointer;
   background-color: #adafa7;
   border: 0 none;
-  border-radius: 2px;
-}
+  border-radius: 2px; original code
+}*/
+  color: #888;
+  text-transform: uppercase;}
+
 
 .search .lozenge.is-collapsed {
   display: inline-block;
@@ -4809,7 +4818,8 @@ div.grid-col.desktop-grid-two-thirds.tablet-grid-two-thirds > div > ol > li {
 .data-table {
   margin: 1em 0;
   min-width: 300px;
-
+  overflow: hidden;
+  margin: auto;
 }
 
 .data-table th {
@@ -4827,12 +4837,6 @@ div.grid-col.desktop-grid-two-thirds.tablet-grid-two-thirds > div > ol > li {
   padding-left: 0.6em;
 }
 
-.data-table {
-  border-radius: .4em;
-  overflow: hidden;
-  margin: auto;
-}
-  
 .data-table th, .data-table td {
   margin: .5em 1em;
 }
@@ -4841,9 +4845,8 @@ div.grid-col.desktop-grid-two-thirds.tablet-grid-two-thirds > div > ol > li {
   color: white;
   background-color: #757575;
   width: 12%;
-  padding: 0.5em !important;
   font-size: 1.4rem;
-  text-align: center;
+  text-align: -webkit-center;
 }
 
 .datatable--checkbox{
@@ -4852,14 +4855,14 @@ div.grid-col.desktop-grid-two-thirds.tablet-grid-two-thirds > div > ol > li {
 
 td.datatable-downloads{
   text-align: right;
-  background-color: #fff;
+  background-color: #FFF;
+  border-left: #FFF;
+  border-right: #FFF;
 }
 
 .download_responsive_btn{
   opacity: 0.5;
-  
 }
-
 
 .datatable-row{
   border-top: 2px solid #dedfdc;
