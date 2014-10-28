@@ -19,6 +19,7 @@ import com.github.davidcarboni.ResourceUtils;
 import com.github.davidcarboni.restolino.json.Serialiser;
 import com.github.onsdigital.json.Article;
 import com.github.onsdigital.json.Data;
+import com.github.onsdigital.json.Dataset;
 import com.github.onsdigital.json.Release;
 import com.github.onsdigital.json.bulletin.Bulletin;
 import com.github.onsdigital.json.taxonomy.DataT1;
@@ -267,10 +268,10 @@ public class Csv {
 
 			createArticle(folder, file);
 			createBulletin(folder, file);
-			// createCollection(folder, file);
 			if (file.getName().contains("inflationandpriceindices")) {
 				createTimeseries(folder, file);
 			}
+			createDataset(folder, file);
 		}
 	}
 
@@ -324,6 +325,7 @@ public class Csv {
 					String json = Serialiser.serialise(article);
 					File articleJsonFile = new File(topicFile, "data.json");
 					FileUtils.writeStringToFile(articleJsonFile, json);
+					createVersions(topicFile, json);
 					createHistory(topicFile, json);
 				}
 			}
@@ -350,6 +352,32 @@ public class Csv {
 					String json = Serialiser.serialise(bulletin);
 					File bulletinJsonFile = new File(topicFile, "data.json");
 					FileUtils.writeStringToFile(bulletinJsonFile, json);
+					createVersions(topicFile, json);
+					createHistory(topicFile, json);
+				}
+			}
+		}
+	}
+
+	private static void createDataset(Folder folder, File file) throws IOException {
+		File datasets = new File(file, "datasets");
+		datasets.mkdir();
+
+		DatasetsCsv.buildFolders();
+		Set<Folder> datasetFolders = DatasetsCsv.folders;
+
+		for (Folder datasetFolder : datasetFolders) {
+			if (StringUtils.deleteWhitespace(datasetFolder.name.toLowerCase()).equals(file.getName())) {
+
+				for (Folder topicFolder : datasetFolder.children) {
+					File topicFile = new File(datasets, StringUtils.deleteWhitespace(topicFolder.name.toLowerCase()));
+					topicFile.mkdir();
+					Dataset dataset = new Dataset();
+					dataset.title = topicFolder.name;
+					String json = Serialiser.serialise(dataset);
+					File datasetJsonFile = new File(topicFile, "data.json");
+					FileUtils.writeStringToFile(datasetJsonFile, json);
+					createVersions(topicFile, json);
 					createHistory(topicFile, json);
 				}
 			}

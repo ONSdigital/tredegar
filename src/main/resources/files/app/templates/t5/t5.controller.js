@@ -12,6 +12,10 @@ angular.module('onsTemplates')
 
 .controller('chartController', ['$scope', '$location', '$http',
     function($scope, $location, $http) {
+        function getTable(path, callback) {
+            // console.log("Loading data at " + path);
+            $http.get(path).success(callback);
+        }
         var categoriesY = [];
         var seriesDataY = [];
         var categoriesQ = [];
@@ -25,31 +29,30 @@ angular.module('onsTemplates')
         getTable("/t5data3.json", function(data) {
             $scope.chart = data;
 
-            function makeArray (dat) {
-                for (var i = 0; i < dat.length; i++) {
-                    if (reY.test(dat[i].date)){
-                        categoriesY.push(dat[i].date);
-                        seriesDataY.push(Number(dat[i].value));
-                    }
-                    if (reQ.test(dat[i].date)){
-                        categoriesQ.push(dat[i].date);
-                        seriesDataQ.push(Number(dat[i].value));
-                    }
-                    if (reM.test(dat[i].date)){
-                        categoriesM.push(dat[i].date);
-                        seriesDataM.push(Number(dat[i].value));
-                    }
-                    // console.log(dat);
+            // function makeArray (dat) {
+            //     for (var i = 0; i < dat.length; i++) {
+            //         if (reY.test(dat[i].date)){
+            //             categoriesY.push(dat[i].date);
+            //             seriesDataY.push(Number(dat[i].value));
+            //         }
+            //         if (reQ.test(dat[i].date)){
+            //             categoriesQ.push(dat[i].date);
+            //             seriesDataQ.push(Number(dat[i].value));
+            //         }
+            //         if (reM.test(dat[i].date)){
+            //             categoriesM.push(dat[i].date);
+            //             seriesDataM.push(Number(dat[i].value));
+            //         }
+            //         // console.log(dat);
 
-                }
-            }
-            makeArray ($scope.chart.data);
-        });
+            //     }
+            // }
+            // makeArray ($scope.chart.data);
+        // });
 
-        function getTable(path, callback) {
-            // console.log("Loading data at " + path);
-            $http.get(path).success(callback);
-        }
+
+        $scope.hasData = makeArray ($scope.chart.data);
+
 
         $scope.chartData = getData();
 
@@ -75,6 +78,26 @@ angular.module('onsTemplates')
                 $scope.chartData.series[0].data = seriesDataM;
             }
         };
+        console.log($scope.chart);
+
+        function makeArray (dat) {
+            for (var i = 0; i < dat.length; i++) {
+                if (reY.test(dat[i].date)){
+                    categoriesY.push(dat[i].date);
+                    seriesDataY.push(Number(dat[i].value));
+                }
+                if (reQ.test(dat[i].date)){
+                    categoriesQ.push(dat[i].date);
+                    seriesDataQ.push(Number(dat[i].value));
+                }
+                if (reM.test(dat[i].date)){
+                    categoriesM.push(dat[i].date);
+                    seriesDataM.push(Number(dat[i].value));
+                }
+                // console.log(dat);
+
+            }
+        }
 
         function getData() {
             var data = {
@@ -192,7 +215,7 @@ angular.module('onsTemplates')
                         // symbols
                         $.each(this.points, function(i, val) {
                             content += symbol[i];
-                        })
+                        });
 
                         content += "</div>";
                         content += "<div class='mainText'>";
@@ -202,7 +225,7 @@ angular.module('onsTemplates')
                         // series names and values
                         $.each(this.points, function(i, val) {
                             content += '<div class="tiptext"><b>' + val.point.series.chart.series[i].name + "= </b>" + Highcharts.numberFormat(val.y, 2) + '%</div>';
-                        })
+                        });
                         content += "</div>";
                         return content;
                     },
@@ -340,5 +363,5 @@ angular.module('onsTemplates')
             return data;
         }
 
-    }
-]);
+    });
+}]);
