@@ -28,7 +28,7 @@ public class TaxonomyDateComparator implements Comparator<Object> {
 			firstDate = dateFormat.parse(firstDateAsString);
 			secondDate = dateFormat.parse(secondDateAsString);
 		} catch (ParseException pe) {
-			throw new RuntimeException(pe);
+			return 1;
 		}
 		return firstDate.compareTo(secondDate);
 	}

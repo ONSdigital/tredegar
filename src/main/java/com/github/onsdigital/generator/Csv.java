@@ -17,7 +17,6 @@ import au.com.bytecode.opencsv.CSVReader;
 
 import com.github.davidcarboni.ResourceUtils;
 import com.github.davidcarboni.restolino.json.Serialiser;
-import com.github.onsdigital.json.Article;
 import com.github.onsdigital.json.Data;
 import com.github.onsdigital.json.Release;
 import com.github.onsdigital.json.bulletin.Bulletin;
@@ -195,10 +194,10 @@ public class Csv {
 	 * @param file
 	 * @throws IOException
 	 */
-	private static void createHistory(String name, File file) throws IOException {
+	private static void createHistory(File file, String json) throws IOException {
 
 		File tempDir = com.google.common.io.Files.createTempDir();
-		List<File> historyFolders = historyFolders(file);
+		List<File> historyFolders = historyFolders(file, json);
 
 		// Delete existing history folders:
 		for (File historyFolder : historyFolders) {
@@ -216,7 +215,7 @@ public class Csv {
 		FileUtils.deleteDirectory(tempDir);
 	}
 
-	private static List<File> historyFolders(File file) {
+	private static List<File> historyFolders(File file, String json) throws IOException {
 		List<File> result = new ArrayList<>();
 
 		for (int i = 1; i <= 10; i++) {
@@ -227,7 +226,8 @@ public class Csv {
 			// Fixed at 21 to avoid the taxonomy being different too often.
 			// 21st of September is "International Peace Day".
 			int day = 21;
-			String releaseFolderName = year + "-" + month + "-" + day;
+			String releaseFolderName = year + "-" + (month < 10 ? ("0" + month) : (month)) + "-" + day;
+
 			File releaseFolder = new File(file, releaseFolderName);
 			result.add(releaseFolder);
 		}
@@ -306,54 +306,51 @@ public class Csv {
 	}
 
 	private static void createArticle(Folder folder, File file) throws IOException {
-		if (file.getName().contains("inflationandpriceindices")) {
-			File articles = new File(file, "articles");
-			articles.mkdir();
-
-			BulletinsAndArticles.buildFolders();
-			Set<Folder> articleFolders = BulletinsAndArticles.folders;
-
-			for (Folder articleFolder : articleFolders) {
-				File articleFile = new File(articles, StringUtils.deleteWhitespace(articleFolder.name.toLowerCase()));
-				articleFile.mkdir();
-
-				for (Folder dateFolder : articleFolder.children) {
-					File dateFile = new File(articleFile, dateFolder.name);
-					dateFile.mkdir();
-					Article article = new Article();
-					article.title = articleFolder.name;
-					String json = Serialiser.serialise(article);
-					FileUtils.writeStringToFile(new File(dateFile, "data.json"), json);
-
-					createVersions(dateFile, json);
-				}
-			}
-		}
+		// File articles = new File(file, "articles");
+		// articles.mkdir();
+		//
+		// BulletinsCsv.buildFolders();
+		// Set<Folder> articleFolders = BulletinsCsv.folders;
+		//
+		// for (Folder articleFolder : articleFolders) {
+		// File articleFile = new File(articles,
+		// StringUtils.deleteWhitespace(articleFolder.name.toLowerCase()));
+		// articleFile.mkdir();
+		//
+		// for (Folder dateFolder : articleFolder.children) {
+		// File dateFile = new File(articleFile, dateFolder.name);
+		// dateFile.mkdir();
+		// Article article = new Article();
+		// article.title = articleFolder.name;
+		// String json = Serialiser.serialise(article);
+		// FileUtils.writeStringToFile(new File(dateFile, "data.json"), json);
+		//
+		// createVersions(dateFile, json);
+		// }
+		// }
 	}
 
 	private static void createBulletin(Folder folder, File file) throws IOException {
 
-		if (file.getName().contains("inflationandpriceindices")) {
-			// Create a dummy bulletin:
-			File bulletins = new File(file, "bulletins");
-			bulletins.mkdir();
+		// Create a dummy bulletin:
+		File bulletins = new File(file, "bulletins");
+		bulletins.mkdir();
 
-			BulletinsAndArticles.buildFolders();
-			Set<Folder> bulletinFolders = BulletinsAndArticles.folders;
+		BulletinsCsv.buildFolders();
+		Set<Folder> bulletinFolders = BulletinsCsv.folders;
 
-			for (Folder bulletinFolder : bulletinFolders) {
-				File bulletinFile = new File(bulletins, StringUtils.deleteWhitespace(bulletinFolder.name.toLowerCase()));
-				bulletinFile.mkdir();
+		for (Folder bulletinFolder : bulletinFolders) {
+			if (StringUtils.deleteWhitespace(bulletinFolder.name.toLowerCase()).equals(file.getName())) {
 
-				for (Folder dateFolder : bulletinFolder.children) {
-					File dateFile = new File(bulletinFile, dateFolder.name);
-					dateFile.mkdir();
+				for (Folder topicFolder : bulletinFolder.children) {
+					File topicFile = new File(bulletins, StringUtils.deleteWhitespace(topicFolder.name.toLowerCase()));
+					topicFile.mkdir();
 					Bulletin bulletin = new Bulletin();
-					bulletin.title = bulletinFolder.name;
+					bulletin.title = topicFolder.name;
 					String json = Serialiser.serialise(bulletin);
-					FileUtils.writeStringToFile(new File(dateFile, "data.json"), json);
-
-					createVersions(dateFile, json);
+					File bulletinJsonFile = new File(topicFile, "data.json");
+					FileUtils.writeStringToFile(bulletinJsonFile, json);
+					createHistory(topicFile, json);
 				}
 			}
 		}
@@ -378,8 +375,8 @@ public class Csv {
 		File versionsFolder = new File(file, "versions");
 		versionsFolder.mkdir();
 
-		// create a few starting at version '2'
-		for (int i = 2; i < 4; i++) {
+		// create a few versions
+		for (int i = 1; i < 4; i++) {
 			File version = new File(versionsFolder, String.valueOf(i));
 			version.mkdir();
 			FileUtils.writeStringToFile(new File(version, "data.json"), json);

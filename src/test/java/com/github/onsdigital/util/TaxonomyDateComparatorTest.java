@@ -9,8 +9,8 @@ public class TaxonomyDateComparatorTest {
 
 	@Test
 	public void testCompare() {
-		String date1AsString = "target/taxonomy/economy/inflationandpriceindices/bulletins/producerpriceinflation/2014-08-21/data.json";
-		String date2AsString = "target/taxonomy/economy/inflationandpriceindices/bulletins/producerpriceinflation/2014-07-21/data.json";
+		String date1AsString = "target/taxonomy/economy/inflationandpriceindices/bulletins/producerpriceinflation/2014-1-21/data.json";
+		String date2AsString = "target/taxonomy/economy/inflationandpriceindices/bulletins/producerpriceinflation/2013-12-21/data.json";
 
 		TaxonomyDateComparator dateComparator1 = new TaxonomyDateComparator();
 		int result1 = dateComparator1.compare(date1AsString, date2AsString);
