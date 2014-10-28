@@ -27,9 +27,6 @@ public class T3 extends TaxonomyFolder {
 		items.add(URI.create("/economy/inflationandpriceindices/timeseries/czbh"));
 		items.add(URI.create("/economy/inflationandpriceindices/timeseries/kvr8"));
 		items.add(URI.create("/economy/inflationandpriceindices/timeseries/kvr9"));
-
-		// czdb czhh czxj d7d2 d7gq d7kd d7o5 dkn5 doef gj2e l53u l574 l5dy
-
 	}
 
 }
