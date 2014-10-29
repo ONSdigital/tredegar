@@ -68,7 +68,7 @@ public class AlphaContent {
 	private static void parseCsv() throws IOException {
 		rows = CSV.parse("/Alpha content master.csv");
 		// String[] headings = { "Theme", "Level 2", "Level 3", "Name", "Key",
-		// "Units", "CDID", "Path", "Link", "Notes" };
+		// "Units", "CDID", "Path", "Link", "Notes" }; + "Figure"
 
 		for (Map<String, String> row : rows) {
 
@@ -93,6 +93,9 @@ public class AlphaContent {
 			timeseries.fileName = timeseries.cdid.toLowerCase();
 			timeseries.name = row.get("Name");
 			timeseries.unit = row.get("Units");
+			if (StringUtils.isNotBlank(row.get("Figure"))) {
+				timeseries.number = row.get("Figure");
+			}
 			node.addTimeseries(timeseries, isHeadline);
 			Data.timeseries.add(timeseries);
 		}
