@@ -1,4 +1,4 @@
-package com.github.onsdigital.generator;
+package com.github.onsdigital.generator.timeseries;
 
 import java.io.IOException;
 import java.io.Reader;
@@ -20,6 +20,7 @@ import org.apache.commons.lang3.StringUtils;
 import au.com.bytecode.opencsv.CSVReader;
 
 import com.github.davidcarboni.ResourceUtils;
+import com.github.onsdigital.generator.TimeseriesData;
 import com.github.onsdigital.json.timeseries.TimeSeries;
 
 public class TimeseriesMetadata {
