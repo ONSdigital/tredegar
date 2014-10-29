@@ -21,12 +21,11 @@ import com.github.davidcarboni.ResourceUtils;
 import com.github.davidcarboni.restolino.json.Serialiser;
 import com.github.onsdigital.generator.timeseries.AlphaContentCSV;
 import com.github.onsdigital.json.Article;
-import com.github.onsdigital.json.Data;
 import com.github.onsdigital.json.Dataset;
 import com.github.onsdigital.json.Release;
 import com.github.onsdigital.json.bulletin.Bulletin;
-import com.github.onsdigital.json.taxonomy.DataT1;
-import com.github.onsdigital.json.taxonomy.DataT2;
+import com.github.onsdigital.json.taxonomy.T1;
+import com.github.onsdigital.json.taxonomy.T2;
 import com.github.onsdigital.json.taxonomy.T3;
 import com.github.onsdigital.json.timeseries.TimeSeries;
 import com.github.onsdigital.json.timeseries.TimeSeriesValue;
@@ -116,7 +115,7 @@ public class TaxonomyGenerator {
 					if (StringUtils.isNotBlank(row[moreIndex])) {
 						subjectFolder.more = row[moreIndex];
 					}
-					themeFolder.children.add(subjectFolder);
+					themeFolder.addChild(subjectFolder);
 					topic = null;
 					// subTopic = null;
 				}
@@ -127,7 +126,7 @@ public class TaxonomyGenerator {
 					topicFolder.name = topic;
 					topicFolder.parent = subjectFolder;
 					topicFolder.index = topicCounter++;
-					subjectFolder.children.add(topicFolder);
+					subjectFolder.addChild(topicFolder);
 					// subTopic = null;
 					if (StringUtils.isNotBlank(row[ledeIndex])) {
 						topicFolder.lede = row[ledeIndex];
@@ -158,7 +157,7 @@ public class TaxonomyGenerator {
 		File root = new File("src/main/taxonomy");
 		Folder rootFolder = new Folder();
 		rootFolder.name = "Home";
-		rootFolder.children.addAll(folders);
+		rootFolder.addChildren(folders);
 		createHomePage(rootFolder, root);
 		File themeFile;
 		File subjectFile;
@@ -168,25 +167,25 @@ public class TaxonomyGenerator {
 			themeFile.mkdirs();
 			System.out.println(themeFile.getAbsolutePath());
 			createT2(t, themeFile);
-			for (Folder s : t.children) {
+			for (Folder s : t.getChildren()) {
 				subjectFile = new File(themeFile, s.filename());
 				subjectFile.mkdirs();
-				if (s.children.size() == 0) {
+				if (s.getChildren().size() == 0) {
 					createT3(s, subjectFile);
 					// createContentFolders(s.name, subjectFile);
 				} else {
 					createT2(s, subjectFile);
 				}
 				System.out.println("\t" + subjectFile.getPath());
-				for (Folder o : s.children) {
+				for (Folder o : s.getChildren()) {
 					topicFile = new File(subjectFile, o.filename());
 					topicFile.mkdirs();
 					System.out.println("\t\t" + topicFile.getPath());
 					createT3(o, topicFile);
-					if (o.children.size() == 0) {
+					if (o.getChildren().size() == 0) {
 						// createContentFolders(o.name, topicFile);
 					} else if (isReleaseFolder(o)) {
-						for (Folder u : o.children) {
+						for (Folder u : o.getChildren()) {
 							createRelease(topicFile, u);
 						}
 					}
@@ -269,13 +268,13 @@ public class TaxonomyGenerator {
 
 	private static void createHomePage(Folder folder, File file) throws IOException {
 		// The folder needs to be at the root path:
-		Data data = new DataT1(folder);
-		data.fileName = "/";
+		T1 t1 = new T1(folder);
+		t1.fileName = "/";
 		if (StringUtils.isNotBlank(folder.lede)) {
-			data.lede = folder.lede;
-			data.more = folder.more;
+			t1.lede = folder.lede;
+			t1.more = folder.more;
 		}
-		String json = Serialiser.serialise(data);
+		String json = Serialiser.serialise(t1);
 		FileUtils.writeStringToFile(new File(file, "data.json"), json);
 	}
 
@@ -283,7 +282,7 @@ public class TaxonomyGenerator {
 		if (folder.name.equals("Releases") || (folder.parent != null && folder.parent.name.equals("Releases"))) {
 			System.out.println("Do not create json for Releases createT2");
 		} else {
-			DataT2 t2 = new DataT2(folder);
+			T2  t2 = new T2(folder, folder.index );
 			if (StringUtils.isNotBlank(folder.lede)) {
 				t2.lede = folder.lede;
 				t2.more = folder.more;
@@ -391,7 +390,7 @@ public class TaxonomyGenerator {
 		for (Folder articleFolder : articleFolders) {
 			if (StringUtils.deleteWhitespace(articleFolder.name.toLowerCase()).equals(file.getName())) {
 
-				for (Folder topicFolder : articleFolder.children) {
+				for (Folder topicFolder : articleFolder.getChildren()) {
 					File topicFile = new File(articles, StringUtils.deleteWhitespace(topicFolder.name.toLowerCase()));
 					topicFile.mkdir();
 					Article article = new Article();
@@ -418,7 +417,7 @@ public class TaxonomyGenerator {
 		for (Folder bulletinFolder : bulletinFolders) {
 			if (StringUtils.deleteWhitespace(bulletinFolder.name.toLowerCase()).equals(file.getName())) {
 
-				for (Folder topicFolder : bulletinFolder.children) {
+				for (Folder topicFolder : bulletinFolder.getChildren()) {
 					File topicFile = new File(bulletins, StringUtils.deleteWhitespace(topicFolder.name.toLowerCase()));
 					topicFile.mkdir();
 					Bulletin bulletin = new Bulletin();
@@ -443,7 +442,7 @@ public class TaxonomyGenerator {
 		for (Folder datasetFolder : datasetFolders) {
 			if (StringUtils.deleteWhitespace(datasetFolder.name.toLowerCase()).equals(file.getName())) {
 
-				for (Folder topicFolder : datasetFolder.children) {
+				for (Folder topicFolder : datasetFolder.getChildren()) {
 					File topicFile = new File(datasets, StringUtils.deleteWhitespace(topicFolder.name.toLowerCase()));
 					topicFile.mkdir();
 					Dataset dataset = new Dataset();

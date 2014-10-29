@@ -54,7 +54,7 @@ public class BulletinsCsv {
 					dateFolder.name = date;
 					dateFolder.parent = titleFolder;
 					dateFolder.index = dateCounter++;
-					titleFolder.children.add(dateFolder);
+					titleFolder.addChild(dateFolder);
 				}
 			}
 		}
@@ -66,7 +66,7 @@ public class BulletinsCsv {
 
 			for (Folder folder : folders) {
 				System.out.println("folderName: " + folder.name);
-				for (Folder childFolder : folder.children) {
+				for (Folder childFolder : folder.getChildren()) {
 					System.out.println("date: " + childFolder.name);
 				}
 			}

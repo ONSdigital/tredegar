@@ -5,9 +5,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.github.onsdigital.generator.Folder;
-import com.github.onsdigital.json.TaxonomyFolder;
+import com.github.onsdigital.json.TaxonomyHome;
 
-public class T3 extends TaxonomyFolder {
+public class T3 extends TaxonomyHome {
 
 	public URI headline;
 	public List<URI> items = new ArrayList<>();

@@ -54,7 +54,7 @@ public class ArticlesCsv {
 					titleFolder.name = title;
 					titleFolder.parent = taxonomyNodeFolder;
 					titleFolder.index = titleCounter++;
-					taxonomyNodeFolder.children.add(titleFolder);
+					taxonomyNodeFolder.addChild(titleFolder);
 				}
 			}
 		}
@@ -66,7 +66,7 @@ public class ArticlesCsv {
 
 			for (Folder folder : folders) {
 				System.out.println("folderName: " + folder.name);
-				for (Folder childFolder : folder.children) {
+				for (Folder childFolder : folder.getChildren()) {
 					System.out.println("date: " + childFolder.name);
 				}
 			}

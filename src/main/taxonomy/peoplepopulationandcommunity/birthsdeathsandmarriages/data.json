@@ -1,332 +1,79 @@
 {
-  "children": [
+  "sections": [
     {
-      "detail": [],
-      "index": 0,
-      "breadcrumb": [
-        {
-          "index": 0,
-          "type": "home",
-          "name": "People, Population and Community",
-          "fileName": "peoplepopulationandcommunity"
-        },
-        {
-          "index": 0,
-          "type": "home",
-          "name": "Births, Deaths and Marriages",
-          "fileName": "birthsdeathsandmarriages"
-        }
-      ],
-      "type": "home",
       "name": "Live Births",
-      "fileName": "livebirths"
+      "link": "livebirths",
+      "index": 0,
+      "items": []
     },
     {
-      "detail": [
-        {
-          "name": "Gross Domestic Product",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "£390383",
-          "unit": "m",
-          "date": "1st Quarter 2014",
-          "headline": false
-        },
-        {
-          "name": "GDP Quarter on Quarter Growth",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "0.8",
-          "unit": "%",
-          "date": "1st Quarter 2014",
-          "headline": false
-        },
-        {
-          "name": "GDP Change on same Quarter a year ago",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "0.3",
-          "unit": "%",
-          "date": "1st Quarter 2014",
-          "headline": false
-        },
-        {
-          "name": "Production Index",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "97.5",
-          "unit": "",
-          "date": "1st Quarter 2014",
-          "headline": false
-        }
-      ],
-      "index": 1,
-      "breadcrumb": [
-        {
-          "index": 0,
-          "type": "home",
-          "name": "People, Population and Community",
-          "fileName": "peoplepopulationandcommunity"
-        },
-        {
-          "index": 0,
-          "type": "home",
-          "name": "Births, Deaths and Marriages",
-          "fileName": "birthsdeathsandmarriages"
-        }
-      ],
-      "type": "home",
       "name": "Deaths",
-      "fileName": "deaths"
+      "link": "deaths",
+      "index": 1,
+      "items": []
     },
     {
-      "detail": [
-        {
-          "name": "CPI Index",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "126.7",
-          "unit": "",
-          "date": "January 2014",
-          "headline": false
-        },
-        {
-          "name": "CPI Annual Rate Percentage Change over 12 months",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "1.9",
-          "unit": "%",
-          "date": "January 2014",
-          "headline": false
-        },
-        {
-          "name": "CPIH Index",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "124.7",
-          "unit": "",
-          "date": "January 2014",
-          "headline": false
-        },
-        {
-          "name": "CPIH Annual Rate Percentage Change over 12 months",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "1.8",
-          "unit": "%",
-          "date": "January 2014",
-          "headline": false
-        }
-      ],
-      "index": 2,
-      "breadcrumb": [
-        {
-          "index": 0,
-          "type": "home",
-          "name": "People, Population and Community",
-          "fileName": "peoplepopulationandcommunity"
-        },
-        {
-          "index": 0,
-          "type": "home",
-          "name": "Births, Deaths and Marriages",
-          "fileName": "birthsdeathsandmarriages"
-        }
-      ],
-      "type": "home",
       "name": "Marriage, Cohabitation and Civil Partnerships",
-      "fileName": "marriagecohabitationandcivilpartnerships"
+      "link": "marriagecohabitationandcivilpartnerships",
+      "index": 2,
+      "items": []
     },
     {
-      "detail": [
-        {
-          "name": "Employment Rate",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "72.9",
-          "unit": "%",
-          "date": "Feb — Apr 2014",
-          "headline": false
-        },
-        {
-          "name": "Unemployment Rate",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "6.6",
-          "unit": "%",
-          "date": "Feb — Apr 2014",
-          "headline": false
-        }
-      ],
-      "index": 3,
-      "breadcrumb": [
-        {
-          "index": 0,
-          "type": "home",
-          "name": "People, Population and Community",
-          "fileName": "peoplepopulationandcommunity"
-        },
-        {
-          "index": 0,
-          "type": "home",
-          "name": "Births, Deaths and Marriages",
-          "fileName": "birthsdeathsandmarriages"
-        }
-      ],
-      "type": "home",
       "name": "Life Expectancies",
-      "fileName": "lifeexpectancies"
+      "link": "lifeexpectancies",
+      "index": 3,
+      "items": []
     },
     {
-      "detail": [],
-      "index": 4,
-      "breadcrumb": [
-        {
-          "index": 0,
-          "type": "home",
-          "name": "People, Population and Community",
-          "fileName": "peoplepopulationandcommunity"
-        },
-        {
-          "index": 0,
-          "type": "home",
-          "name": "Births, Deaths and Marriages",
-          "fileName": "birthsdeathsandmarriages"
-        }
-      ],
-      "type": "home",
       "name": "Divorce",
-      "fileName": "divorce"
+      "link": "divorce",
+      "index": 4,
+      "items": []
     },
     {
-      "detail": [],
-      "index": 5,
-      "breadcrumb": [
-        {
-          "index": 0,
-          "type": "home",
-          "name": "People, Population and Community",
-          "fileName": "peoplepopulationandcommunity"
-        },
-        {
-          "index": 0,
-          "type": "home",
-          "name": "Births, Deaths and Marriages",
-          "fileName": "birthsdeathsandmarriages"
-        }
-      ],
-      "type": "home",
       "name": "Adoption",
-      "fileName": "adoption"
+      "link": "adoption",
+      "index": 5,
+      "items": []
     },
     {
-      "detail": [],
-      "index": 6,
-      "breadcrumb": [
-        {
-          "index": 0,
-          "type": "home",
-          "name": "People, Population and Community",
-          "fileName": "peoplepopulationandcommunity"
-        },
-        {
-          "index": 0,
-          "type": "home",
-          "name": "Births, Deaths and Marriages",
-          "fileName": "birthsdeathsandmarriages"
-        }
-      ],
-      "type": "home",
       "name": "Ageing",
-      "fileName": "ageing"
+      "link": "ageing",
+      "index": 6,
+      "items": []
     },
     {
-      "detail": [],
-      "index": 7,
-      "breadcrumb": [
-        {
-          "index": 0,
-          "type": "home",
-          "name": "People, Population and Community",
-          "fileName": "peoplepopulationandcommunity"
-        },
-        {
-          "index": 0,
-          "type": "home",
-          "name": "Births, Deaths and Marriages",
-          "fileName": "birthsdeathsandmarriages"
-        }
-      ],
-      "type": "home",
       "name": "Conception and Fertility Rates",
-      "fileName": "conceptionandfertilityrates"
+      "link": "conceptionandfertilityrates",
+      "index": 7,
+      "items": []
     },
     {
-      "detail": [],
-      "index": 8,
-      "breadcrumb": [
-        {
-          "index": 0,
-          "type": "home",
-          "name": "People, Population and Community",
-          "fileName": "peoplepopulationandcommunity"
-        },
-        {
-          "index": 0,
-          "type": "home",
-          "name": "Births, Deaths and Marriages",
-          "fileName": "birthsdeathsandmarriages"
-        }
-      ],
-      "type": "home",
       "name": "Families",
-      "fileName": "families"
+      "link": "families",
+      "index": 8,
+      "items": []
     },
     {
-      "detail": [],
-      "index": 9,
-      "breadcrumb": [
-        {
-          "index": 0,
-          "type": "home",
-          "name": "People, Population and Community",
-          "fileName": "peoplepopulationandcommunity"
-        },
-        {
-          "index": 0,
-          "type": "home",
-          "name": "Births, Deaths and Marriages",
-          "fileName": "birthsdeathsandmarriages"
-        }
-      ],
-      "type": "home",
       "name": "Maternities",
-      "fileName": "maternities"
+      "link": "maternities",
+      "index": 9,
+      "items": []
     },
     {
-      "detail": [],
-      "index": 10,
-      "breadcrumb": [
-        {
-          "index": 0,
-          "type": "home",
-          "name": "People, Population and Community",
-          "fileName": "peoplepopulationandcommunity"
-        },
-        {
-          "index": 0,
-          "type": "home",
-          "name": "Births, Deaths and Marriages",
-          "fileName": "birthsdeathsandmarriages"
-        }
-      ],
-      "type": "home",
       "name": "Stillbirths",
-      "fileName": "stillbirths"
+      "link": "stillbirths",
+      "index": 10,
+      "items": []
     }
   ],
   "level": "t2",
   "index": 1,
+  "lede": "Producer Price Inflation (PPI) measures the price changes of goods bought and sold by UK manufacturers this month compared to the same month a year ago. PPI provides a key measure of inflation alongside other indicators such as the Consumer Prices Index (CPI) and Services Producer Price Index (SPPI).PPI is split into two components: output price inflation and input price inflation. The input price indices capture changes in the cost of the material and fuel inputs that producers face whereas the output price indices capture the changing prices of goods sold by producers.This article looks at the trends in both producer price indices since 2000 and which components contribute most towards changes in each price index in recent years.",
+  "more": "Annual output and input price changes follow similar trends, but with the latter tending to have higher price growth1. In Figure 1, trends in producer price inflation can be split into three distinct periods: 2000 to 2005, 2005 to 2012 and 2012 to June 2014.  Both indices experience greater variability within the second period of 2005 to 2012 than compared with the first and third period. From 2005 to 2012 the average growth rate was 2.9% for output price inflation and 8.1% for input price inflation.  The largest peaks and troughs experienced for both indices throughout the time series shown below occurred in the second period of 2005 to 2012. Output price inflation rose to 8.9% in July 2008 while input price inflation rose to 34.8% in June 2008 and both fell to their lowest rates in July 2009: output price inflation falling by 1.6% and input price inflation falling by 14.8%.",
+  "type": "home",
+  "name": "Births, Deaths and Marriages",
+  "fileName": "birthsdeathsandmarriages",
   "breadcrumb": [
     {
       "index": 0,
@@ -334,10 +81,5 @@
       "name": "People, Population and Community",
       "fileName": "peoplepopulationandcommunity"
     }
-  ],
-  "lede": "Producer Price Inflation (PPI) measures the price changes of goods bought and sold by UK manufacturers this month compared to the same month a year ago. PPI provides a key measure of inflation alongside other indicators such as the Consumer Prices Index (CPI) and Services Producer Price Index (SPPI).PPI is split into two components: output price inflation and input price inflation. The input price indices capture changes in the cost of the material and fuel inputs that producers face whereas the output price indices capture the changing prices of goods sold by producers.This article looks at the trends in both producer price indices since 2000 and which components contribute most towards changes in each price index in recent years.",
-  "more": "Annual output and input price changes follow similar trends, but with the latter tending to have higher price growth1. In Figure 1, trends in producer price inflation can be split into three distinct periods: 2000 to 2005, 2005 to 2012 and 2012 to June 2014.  Both indices experience greater variability within the second period of 2005 to 2012 than compared with the first and third period. From 2005 to 2012 the average growth rate was 2.9% for output price inflation and 8.1% for input price inflation.  The largest peaks and troughs experienced for both indices throughout the time series shown below occurred in the second period of 2005 to 2012. Output price inflation rose to 8.9% in July 2008 while input price inflation rose to 34.8% in June 2008 and both fell to their lowest rates in July 2009: output price inflation falling by 1.6% and input price inflation falling by 14.8%.",
-  "type": "home",
-  "name": "Births, Deaths and Marriages",
-  "fileName": "birthsdeathsandmarriages"
+  ]
 }

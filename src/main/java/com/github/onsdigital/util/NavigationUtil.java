@@ -16,8 +16,7 @@ import org.w3c.dom.DOMException;
 
 import com.github.davidcarboni.restolino.json.Serialiser;
 import com.github.onsdigital.configuration.Configuration;
-import com.github.onsdigital.json.Data;
-import com.github.onsdigital.json.TaxonomyFolder;
+import com.github.onsdigital.json.TaxonomyHome;
 import com.google.gson.JsonSyntaxException;
 
 public class NavigationUtil {
@@ -90,13 +89,13 @@ public class NavigationUtil {
 		return FileSystems.getDefault().getPath(Configuration.getTaxonomyPath());
 	}
 
-	private static Data getDataJson(Path path) throws IOException {
-		Data result = null;
+	private static TaxonomyHome getDataJson(Path path) throws IOException {
+		TaxonomyHome result = null;
 
 		Path dataJson = path.resolve("data.json");
 		if (Files.exists(dataJson)) {
 			try (InputStream input = Files.newInputStream(dataJson)) {
-				result = Serialiser.deserialise(input, Data.class);
+				result = Serialiser.deserialise(input, TaxonomyHome.class);
 			}
 		}
 
@@ -114,15 +113,15 @@ public class NavigationUtil {
 		int index;
 		List<NavigationNode> children = new ArrayList<NavigationNode>();
 
-		public NavigationNode(Data data) {
-			this.name = data.name;
-			this.fileName = data.fileName;
-			this.index = data.index;
+		public NavigationNode(TaxonomyHome taxonomyHome) {
+			this.name = taxonomyHome.name;
+			this.fileName = taxonomyHome.fileName;
+			this.index = taxonomyHome.index;
 			url = "";
-			for (TaxonomyFolder node : data.breadcrumb) {
+			for (TaxonomyHome node : taxonomyHome.breadcrumb) {
 				url += "/" + node.fileName;
 			}
-			url += "/" + data.fileName;
+			url += "/" + taxonomyHome.fileName;
 		}
 
 		@Override
