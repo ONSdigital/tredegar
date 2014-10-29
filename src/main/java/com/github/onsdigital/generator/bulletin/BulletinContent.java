@@ -76,9 +76,6 @@ public class BulletinContent {
 			node.addBulletin(bulletin);
 			BulletinData.bulletins.add(bulletin);
 		}
-
-		System.out.println("Number of items in BulletinData: " + BulletinData.bulletins.size());
-
 	}
 
 	public static void main(String[] args) throws IOException {
