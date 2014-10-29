@@ -2,7 +2,7 @@
 
 <!-- T1, T2 , T3 -->
 <span ng-if="taxonomy.data.type === 'home'">
-    <span ng-if="taxonomy.data.level === 't2'">
+    <span ng-if="taxonomy.data.level === 't2'" ng-controller="T2Ctrl" >
         <span ng-include="'app/templates/t2/t2.html'"></span>
     </span>
     <span ng-if="taxonomy.data.level === 't1'">
