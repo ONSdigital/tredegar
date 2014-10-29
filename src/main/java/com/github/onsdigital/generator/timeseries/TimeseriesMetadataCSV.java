@@ -20,10 +20,9 @@ import org.apache.commons.lang3.StringUtils;
 import au.com.bytecode.opencsv.CSVReader;
 
 import com.github.davidcarboni.ResourceUtils;
-import com.github.onsdigital.generator.TimeseriesData;
 import com.github.onsdigital.json.timeseries.TimeSeries;
 
-public class TimeseriesMetadata {
+public class TimeseriesMetadataCSV {
 
 	static Map<String, TimeSeries> timeseries;
 
@@ -69,7 +68,7 @@ public class TimeseriesMetadata {
 		Set<Path> result = new HashSet<>();
 
 		try {
-			URL resource = TimeseriesMetadata.class.getResource("/data/Metadata");
+			URL resource = TimeseriesMetadataCSV.class.getResource("/data/Metadata");
 			Path folder = Paths.get(resource.toURI());
 
 			try (DirectoryStream<Path> stream = Files.newDirectoryStream(folder, "*.csv")) {
@@ -131,31 +130,4 @@ public class TimeseriesMetadata {
 		}
 	}
 
-	/**
-	 * Builds the data maps and prints out some info about what was parsed.
-	 * 
-	 * @param args
-	 * @throws IOException
-	 */
-	public static void main(String[] args) throws IOException {
-		buildDataMaps();
-
-		System.out.println("done");
-		// for (String cdid : timeseries.keySet()) {
-		// System.out.println(cdid + ": " + timeseries.get(cdid).name);
-		// }
-		System.out.println("Total timeseries: " + timeseries.size());
-
-		System.out.println();
-
-		System.out.println("CDIDs in common:");
-		int count = 0;
-		for (String cdid : timeseries.keySet()) {
-			if (TimeseriesData.getData(cdid) != null) {
-				System.out.println(cdid + ": " + timeseries.get(cdid).name);
-				count++;
-			}
-		}
-		System.out.println(count);
-	}
 }

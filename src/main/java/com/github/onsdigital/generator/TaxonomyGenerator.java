@@ -19,7 +19,7 @@ import au.com.bytecode.opencsv.CSVReader;
 
 import com.github.davidcarboni.ResourceUtils;
 import com.github.davidcarboni.restolino.json.Serialiser;
-import com.github.onsdigital.generator.timeseries.AlphaContent;
+import com.github.onsdigital.generator.timeseries.AlphaContentCSV;
 import com.github.onsdigital.json.Article;
 import com.github.onsdigital.json.Data;
 import com.github.onsdigital.json.Dataset;
@@ -307,11 +307,11 @@ public class TaxonomyGenerator {
 			t3.index = folder.index;
 
 			// Timeseries references:
-			URI headline = toUri(folder, AlphaContent.getHeadlineTimeSeries(folder));
+			URI headline = toUri(folder, AlphaContentCSV.getHeadlineTimeSeries(folder));
 			if (headline != null) {
 				t3.headline = headline;
 			}
-			List<TimeSeries> timeserieses = AlphaContent.getTimeSeries(folder);
+			List<TimeSeries> timeserieses = AlphaContentCSV.getTimeSeries(folder);
 			t3.items.clear();
 			String baseUri = "/" + folder.filename();
 			Folder parent = folder.parent;
@@ -362,7 +362,7 @@ public class TaxonomyGenerator {
 	 */
 	private static void createTimeseries(Folder folder, File file) throws IOException {
 
-		List<TimeSeries> timeserieses = AlphaContent.getTimeSeries(folder);
+		List<TimeSeries> timeserieses = AlphaContentCSV.getTimeSeries(folder);
 
 		if (timeserieses.size() > 0) {
 			File timeseriesesFolder = new File(file, "timeseries");

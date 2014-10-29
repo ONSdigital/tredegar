@@ -10,7 +10,7 @@ import org.apache.commons.lang3.StringUtils;
 import com.github.onsdigital.generator.Folder;
 import com.github.onsdigital.json.timeseries.TimeSeries;
 
-public class AlphaContent {
+public class AlphaContentCSV {
 
 	private static List<Map<String, String>> rows;
 
@@ -88,7 +88,7 @@ public class AlphaContent {
 
 			// Now get the Timeseries details:
 			boolean isHeadline = BooleanUtils.toBoolean(row.get("Key"));
-			TimeSeries timeseries = TimeseriesMetadata.getData(row.get("CDID"));
+			TimeSeries timeseries = TimeseriesMetadataCSV.getData(row.get("CDID"));
 			if (timeseries == null) {
 				timeseries = new TimeSeries();
 			}
@@ -102,14 +102,5 @@ public class AlphaContent {
 			node.addTimeseries(timeseries, isHeadline);
 			Data.timeseries.add(timeseries);
 		}
-	}
-
-	public static void main(String[] args) throws IOException {
-		Folder theme = new Folder();
-		theme.name = "Business, Industry and Trade";
-		Folder level2 = new Folder();
-		level2.name = "Retail Industry";
-		level2.parent = theme;
-		System.out.println(getTimeSeries(level2));
 	}
 }
