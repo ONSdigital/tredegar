@@ -48,6 +48,7 @@
                 <div class="box box--inline box--padded muted--dark">
                   <div class="stat stat--headline">
                     <div class="stat__figure">
+                  	  <span class="stat__figure__unit">{{taxonomy.data.headlineData.preUnit}}</span>
                       {{taxonomy.data.headlineData.number}}
                       <span class="stat__figure__unit"> {{taxonomy.data.headlineData.unit}}</span>
                     </div>
@@ -135,6 +136,8 @@
          <div class="list--table__item__body list--table__item__body--stat stat  responsive_med_width">
             <div class="list--table__item__body--centred">
               <div class="stat__figure stat__tight">
+                 <span class="stat__figure__unit">{{item.preUnit}}</span>
+                 <!-- % -->
                  {{item.number}}
                  <!-- 1.5 -->
                  <span class="stat__figure__unit">{{item.unit}}</span>
