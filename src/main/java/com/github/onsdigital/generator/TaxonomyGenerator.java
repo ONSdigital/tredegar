@@ -292,6 +292,7 @@ public class TaxonomyGenerator {
 			t3.index = folder.index;
 
 			// Timeseries references:
+			t3.headline = toUri(folder, AlphaContent.getHeadlineTimeSeries(folder));
 			List<TimeSeries> timeserieses = AlphaContent.getTimeSeries(folder);
 			t3.items.clear();
 			String baseUri = "/" + folder.filename();
@@ -303,7 +304,7 @@ public class TaxonomyGenerator {
 			baseUri += "/timeseries";
 			for (TimeSeries timeseries : timeserieses) {
 				System.out.println(baseUri + "/" + timeseries.fileName);
-				t3.items.add(URI.create(baseUri + "/" + timeseries.fileName));
+				t3.items.add(toUri(folder, timeseries));
 			}
 
 			// Serialise
@@ -315,6 +316,18 @@ public class TaxonomyGenerator {
 			createDataset(folder, file);
 			createTimeseries(folder, file);
 		}
+	}
+
+	private static URI toUri(Folder folder, TimeSeries timeseries) {
+
+		String baseUri = "/" + folder.filename();
+		Folder parent = folder.parent;
+		while (parent != null) {
+			baseUri = "/" + parent.filename() + baseUri;
+			parent = parent.parent;
+		}
+		baseUri += "/timeseries";
+		return URI.create(baseUri + "/" + timeseries.fileName);
 	}
 
 	/**
