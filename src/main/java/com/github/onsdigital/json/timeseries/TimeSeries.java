@@ -1,5 +1,6 @@
 package com.github.onsdigital.json.timeseries;
 
+import java.net.URI;
 import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
@@ -10,7 +11,7 @@ import com.github.onsdigital.json.DataItem;
 public class TimeSeries extends DataItem {
 
 	// Spreadsheet headings
-	public String cdid = "aaaa";
+	private String cdid = "aaaa";
 	public String seasonalAdjustment = "Not seasonally adjusted";
 	public String units = "Weights (parts per 1000)";
 	public String mainMeasure = "Consumer Prices Index";
@@ -22,6 +23,8 @@ public class TimeSeries extends DataItem {
 	// Additional information
 	public String number = "126.7";
 	public String unit = "m";
+	// A unit that needs to go before the number, e.g. £
+	public String preUnit;
 	public String date = "January 2014";
 	public String lastUpated = "16 Sep 2014";
 	public String nextUpdate = "14 Oct 2014";
@@ -32,9 +35,24 @@ public class TimeSeries extends DataItem {
 	// The nectar, the goodness, the very juice of the fireflower: data.
 	public List<TimeSeriesValue> data;
 
+	// The URI of this timeseries.
+	// This is useful when it is referenced from more than one place in the
+	// taxonomy.
+	// It helps the generator to ensure it only gets created in one place.
+	public URI uri;
+
 	public TimeSeries() {
 		type = ContentType.timeseries;
 		name = "People not in Work";
+	}
+
+	public String cdid() {
+		return cdid;
+	}
+
+	public void setCdid(String cdid) {
+		this.cdid = StringUtils.trim(cdid);
+		fileName = this.cdid.toLowerCase();
 	}
 
 	@Override

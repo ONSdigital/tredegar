@@ -14,14 +14,6 @@
   "note": "2005 \u003d 100. Not seasonally adjusted",
   "data": [
     {
-      "date": "1946",
-      "value": "1800"
-    },
-    {
-      "date": "1947",
-      "value": "2202"
-    },
-    {
       "date": "1948",
       "value": "2407"
     },
@@ -1238,6 +1230,7 @@
       "value": "128426"
     }
   ],
+  "uri": "/economy/nationalaccounts/timeseries/ikbi",
   "type": "timeseries",
   "name": "Total imports of goods and services",
   "fileName": "ikbi"

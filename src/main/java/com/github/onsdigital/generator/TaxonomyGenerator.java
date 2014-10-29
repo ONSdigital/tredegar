@@ -36,6 +36,8 @@ import com.github.onsdigital.json.timeseries.TimeSeriesValue;
 
 public class TaxonomyGenerator {
 
+	static File root;
+
 	/**
 	 * Parses the taxonomy CSV file and generates a file structure..
 	 * 
@@ -92,9 +94,6 @@ public class TaxonomyGenerator {
 					// subTopicCounter = 0;
 					if (StringUtils.isNotBlank(row[ledeIndex])) {
 						themeFolder.lede = row[ledeIndex];
-						System.out.println(themeFolder.name + " lede: " + themeFolder.lede);
-					} else {
-						System.out.println("- No lede");
 					}
 					if (StringUtils.isNotBlank(row[moreIndex])) {
 						themeFolder.more = row[moreIndex];
@@ -158,7 +157,7 @@ public class TaxonomyGenerator {
 		}
 
 		// Walk folder tree:
-		File root = new File("src/main/taxonomy");
+		root = new File("src/main/taxonomy");
 		Folder rootFolder = new Folder();
 		rootFolder.name = "Home";
 		rootFolder.addChildren(folders);
@@ -395,14 +394,17 @@ public class TaxonomyGenerator {
 		URI result = null;
 
 		if (timeseries != null) {
-			String baseUri = "/" + folder.filename();
-			Folder parent = folder.parent;
-			while (parent != null) {
-				baseUri = "/" + parent.filename() + baseUri;
-				parent = parent.parent;
+			if (timeseries.uri == null) {
+				String baseUri = "/" + folder.filename();
+				Folder parent = folder.parent;
+				while (parent != null) {
+					baseUri = "/" + parent.filename() + baseUri;
+					parent = parent.parent;
+				}
+				baseUri += "/timeseries";
+				timeseries.uri = URI.create(baseUri + "/" + StringUtils.trim(timeseries.fileName));
 			}
-			baseUri += "/timeseries";
-			result = URI.create(baseUri + "/" + timeseries.fileName);
+			result = timeseries.uri;
 		}
 
 		return result;
@@ -420,20 +422,27 @@ public class TaxonomyGenerator {
 
 		List<TimeSeries> timeserieses = AlphaContentCSV.getTimeSeries(folder);
 
-		if (timeserieses.size() > 0) {
-			File timeseriesesFolder = new File(file, "timeseries");
-			timeseriesesFolder.mkdir();
-			for (TimeSeries timeseries : timeserieses) {
-				File timeseriesFolder = new File(timeseriesesFolder, timeseries.fileName);
-				Set<TimeSeriesValue> data = TimeseriesData.getData(timeseries.cdid);
+		for (TimeSeries timeseries : timeserieses) {
+
+			URI uri = toUri(folder, timeseries);
+			File timeseriesFolder = new File(root, uri.toString());
+			File timeseriesFile = new File(timeseriesFolder, "data.json");
+
+			if (!timeseriesFile.exists()) {
+				timeseriesFolder.mkdirs();
+
+				Set<TimeSeriesValue> data = TimeseriesData.getData(timeseries.cdid());
 				if (data != null) {
 					timeseries.data = new ArrayList<>(data);
-					System.out.println(data.size() + " timeseries values for " + timeseries.cdid);
+					// System.out.println(data.size() +
+					// " timeseries values for " + timeseries.cdid);
 				} else {
-					System.out.println("No data for " + timeseries.cdid);
+					System.out.println("No data for " + timeseries.cdid());
 				}
 				String json = Serialiser.serialise(timeseries);
-				FileUtils.writeStringToFile(new File(timeseriesFolder, "data.json"), json, Charset.forName("UTF8"));
+				System.out.println(timeseriesFile.getAbsolutePath());
+				FileUtils.writeStringToFile(timeseriesFile, json, Charset.forName("UTF8"));
+
 			}
 		}
 	}

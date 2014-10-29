@@ -72,6 +72,7 @@ public class BulletinContent {
 
 			Bulletin bulletin = new Bulletin();
 			bulletin.name = StringUtils.trim(row.get("Name"));
+			bulletin.title = bulletin.name;
 			bulletin.fileName = bulletin.name.toLowerCase();
 			node.addBulletin(bulletin);
 			BulletinData.bulletins.add(bulletin);

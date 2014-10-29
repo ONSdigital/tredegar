@@ -4748,9 +4748,9 @@ ol > li > div.list--table__item__body.list--table__item__body--stat.no_align{
 .tooltips:hover span {
     display: inline;
     position: absolute;
-    border: 1px solid #757575 ;
-    background: #f3f3f3 ;
-    color: #333;
+    border: 2px solid #E1E1DF;
+    background: #FFF;
+    color: #333; 
     line-height: 15px;
     font-family: "open-sans-n4", "open-sans", sans-serif;
     font-size: 1.3rem;
