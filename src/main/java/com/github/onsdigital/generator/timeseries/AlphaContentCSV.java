@@ -17,14 +17,10 @@ public class AlphaContentCSV {
 	public static List<TimeSeries> getTimeSeries(Folder folder) throws IOException {
 		List<TimeSeries> result = null;
 
-		// Parse the data:
-		if (rows == null) {
-			parseCsv();
-		}
-
+		parseCsv();
 		Node node = getNode(folder);
 		if (node != null) {
-			result = node.timeseriesList().timeserieses;
+			result = node.timeseriesList().timeserieses();
 		}
 
 		return result;
@@ -33,11 +29,7 @@ public class AlphaContentCSV {
 	public static TimeSeries getHeadlineTimeSeries(Folder folder) throws IOException {
 		TimeSeries result = null;
 
-		// Parse the data:
-		if (rows == null) {
-			parseCsv();
-		}
-
+		parseCsv();
 		Node node = getNode(folder);
 		if (node != null) {
 			result = node.timeseriesList().headline;
@@ -66,41 +58,42 @@ public class AlphaContentCSV {
 	}
 
 	private static void parseCsv() throws IOException {
-		rows = CSV.parse("/Alpha content master.csv");
-		// String[] headings = { "Theme", "Level 2", "Level 3", "Name", "Key",
-		// "Units", "CDID", "Path", "Link", "Notes" }; + "Figure"
 
-		for (Map<String, String> row : rows) {
+		if (rows == null) {
 
-			// There are blank rows separating the themes:
-			if (StringUtils.isBlank(row.get("Theme"))) {
-				continue;
-			}
+			rows = CSV.parse("/Alpha content master.csv");
+			// String[] headings = { "Theme", "Level 2", "Level 3", "Name",
+			// "Key",
+			// "Units", "CDID", "Path", "Link", "Notes" }; + "Figure"
 
-			// Get to the folder in question:
-			Node node = Data.rootNode.getChild(row.get("Theme"));
-			if (StringUtils.isNotBlank(row.get("Level 2"))) {
-				node = node.getChild(row.get("Level 2"));
-			}
-			if (StringUtils.isNotBlank(row.get("Level 3"))) {
-				node = node.getChild(row.get("Level 3"));
-			}
+			for (Map<String, String> row : rows) {
 
-			// Now get the Timeseries details:
-			boolean isHeadline = BooleanUtils.toBoolean(row.get("Key"));
-			TimeSeries timeseries = TimeseriesMetadataCSV.getData(row.get("CDID"));
-			if (timeseries == null) {
-				timeseries = new TimeSeries();
+				// There are blank rows separating the themes:
+				if (StringUtils.isBlank(row.get("Theme"))) {
+					continue;
+				}
+
+				// Get to the folder in question:
+				Node node = Data.rootNode.getChild(row.get("Theme"));
+				if (StringUtils.isNotBlank(row.get("Level 2"))) {
+					node = node.getChild(row.get("Level 2"));
+				}
+				if (StringUtils.isNotBlank(row.get("Level 3"))) {
+					node = node.getChild(row.get("Level 3"));
+				}
+
+				// Now get the Timeseries details:
+				boolean isHeadline = BooleanUtils.toBoolean(row.get("Key"));
+
+				TimeSeries timeseries = Data.timeseries(row.get("CDID"));
+				timeseries.setCdid(StringUtils.defaultIfBlank(timeseries.cdid(), StringUtils.trim(row.get("CDID"))));
+				timeseries.name = row.get("Name");
+				timeseries.unit = row.get("Units");
+				if (StringUtils.isNotBlank(row.get("Figure"))) {
+					timeseries.number = row.get("Figure");
+				}
+				node.addTimeseries(timeseries, isHeadline);
 			}
-			timeseries.cdid = StringUtils.trim(row.get("CDID"));
-			timeseries.fileName = timeseries.cdid.toLowerCase();
-			timeseries.name = row.get("Name");
-			timeseries.unit = row.get("Units");
-			if (StringUtils.isNotBlank(row.get("Figure"))) {
-				timeseries.number = row.get("Figure");
-			}
-			node.addTimeseries(timeseries, isHeadline);
-			Data.timeseries.add(timeseries);
 		}
 	}
 }
