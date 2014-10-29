@@ -1,7 +1,8 @@
 package com.github.onsdigital.generator;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
 
@@ -10,7 +11,7 @@ public class Folder {
 	public int index;
 	public String name;
 	public Folder parent = null;
-	public Set<Folder> children = new HashSet<>();
+	private Map<String,Folder> children = new HashMap<>();
 	public String lede;
 	public String more;
 
@@ -30,6 +31,24 @@ public class Folder {
 			}
 		}
 		return result.toString().toLowerCase();
+	}
+	
+	public void addChild(Folder child) {
+		this.children.put(child.filename(), child);
+	}
+	
+	public void addChildren(Collection<Folder> children) {
+		for (Folder folder : children) {
+			this.children.put(folder.filename(), folder);
+		}
+	}
+	
+	public Folder getChild(String fileName) {
+		return this.children.get(fileName);
+	}
+	
+	public Collection<Folder> getChildren() {
+		return children.values();
 	}
 
 	@Override

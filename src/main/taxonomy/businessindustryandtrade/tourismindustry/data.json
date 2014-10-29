@@ -1,13 +1,17 @@
 {
-  "headline": "/businessindustryandtrade/tourismindustry/timeseries/gmat",
+  "headline": "/peoplepopulationandcommunity/leisureandtourism/timeseries/gmat",
   "items": [
-    "/businessindustryandtrade/tourismindustry/timeseries/gmat",
-    "/businessindustryandtrade/tourismindustry/timeseries/gmax",
-    "/businessindustryandtrade/tourismindustry/timeseries/gmaz",
-    "/businessindustryandtrade/tourismindustry/timeseries/gmbb"
+    "/peoplepopulationandcommunity/leisureandtourism/timeseries/gmat",
+    "/peoplepopulationandcommunity/leisureandtourism/timeseries/gmax",
+    "/peoplepopulationandcommunity/leisureandtourism/timeseries/gmaz",
+    "/peoplepopulationandcommunity/leisureandtourism/timeseries/gmbb"
   ],
   "level": "t3",
   "index": 7,
+  "lede": "The Tourism Industry include all those establishments whose main activity concerns producing products or services for visitors. Tourism is defined by the activities of persons identified as visitors. A visitor is someone who is making a visit to a main destination outside his/her usual environment for less than a year for any main purpose [including] holidays, leisure and recreation, business, health, education or other purposes.",
+  "type": "home",
+  "name": "Tourism Industry",
+  "fileName": "tourismindustry",
   "breadcrumb": [
     {
       "index": 0,
@@ -15,10 +19,5 @@
       "name": "Business, Industry and Trade",
       "fileName": "businessindustryandtrade"
     }
-  ],
-  "lede": "Consumer price inflation is the speed at which the prices of goods and services bought by households rise or fall.",
-  "more": "Some more content goes here. This will expand and contract if you have JS enabled. If JS is disabled, this will show by default. Yay progressive enhancement!",
-  "type": "home",
-  "name": "Tourism Industry",
-  "fileName": "tourismindustry"
+  ]
 }

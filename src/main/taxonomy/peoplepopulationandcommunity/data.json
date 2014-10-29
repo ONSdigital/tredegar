@@ -1,269 +1,127 @@
 {
-  "children": [
+  "sections": [
     {
-      "detail": [],
-      "index": 0,
-      "breadcrumb": [
-        {
-          "index": 0,
-          "type": "home",
-          "name": "People, Population and Community",
-          "fileName": "peoplepopulationandcommunity"
-        }
-      ],
-      "type": "home",
       "name": "Population and Migration",
-      "fileName": "populationandmigration"
+      "link": "populationandmigration",
+      "index": 0,
+      "items": [
+        "/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/raid121",
+        "/peoplepopulationandcommunity/populationandmigration/migrationwithintheuk/timeseries/raid120",
+        "/peoplepopulationandcommunity/populationandmigration/internationalmigration/timeseries/raid117",
+        "/peoplepopulationandcommunity/populationandmigration/populationprojections/timeseries/raid130",
+        "/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/raid127",
+        "/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/raid128",
+        "/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/raid129"
+      ]
     },
     {
-      "detail": [
-        {
-          "name": "Gross Domestic Product",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "£390383",
-          "unit": "m",
-          "date": "1st Quarter 2014",
-          "headline": false
-        },
-        {
-          "name": "GDP Quarter on Quarter Growth",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "0.8",
-          "unit": "%",
-          "date": "1st Quarter 2014",
-          "headline": false
-        },
-        {
-          "name": "GDP Change on same Quarter a year ago",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "0.3",
-          "unit": "%",
-          "date": "1st Quarter 2014",
-          "headline": false
-        },
-        {
-          "name": "Production Index",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "97.5",
-          "unit": "",
-          "date": "1st Quarter 2014",
-          "headline": false
-        }
-      ],
-      "index": 1,
-      "breadcrumb": [
-        {
-          "index": 0,
-          "type": "home",
-          "name": "People, Population and Community",
-          "fileName": "peoplepopulationandcommunity"
-        }
-      ],
-      "type": "home",
       "name": "Births, Deaths and Marriages",
-      "fileName": "birthsdeathsandmarriages"
+      "link": "birthsdeathsandmarriages",
+      "index": 1,
+      "items": [
+        "/peoplepopulationandcommunity/birthsdeathsandmarriages/conceptionandfertilityrates/timeseries/raid28",
+        "/peoplepopulationandcommunity/birthsdeathsandmarriages/adoption/timeseries/raid19",
+        "/peoplepopulationandcommunity/birthsdeathsandmarriages/marriagecohabitationandcivilpartnerships/timeseries/raid57",
+        "/peoplepopulationandcommunity/birthsdeathsandmarriages/maternities/timeseries/raid60",
+        "/peoplepopulationandcommunity/birthsdeathsandmarriages/stillbirths/timeseries/raid61",
+        "/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/timeseries/raid33",
+        "/peoplepopulationandcommunity/birthsdeathsandmarriages/divorce/timeseries/raid39",
+        "/peoplepopulationandcommunity/birthsdeathsandmarriages/livebirths/timeseries/raid53",
+        "/peoplepopulationandcommunity/birthsdeathsandmarriages/ageing/timeseries/raid24",
+        "/peoplepopulationandcommunity/birthsdeathsandmarriages/families/timeseries/raid42",
+        "/peoplepopulationandcommunity/birthsdeathsandmarriages/lifeexpectancies/timeseries/raid49",
+        "/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/timeseries/raid38",
+        "/peoplepopulationandcommunity/birthsdeathsandmarriages/families/timeseries/raid47",
+        "/peoplepopulationandcommunity/birthsdeathsandmarriages/families/timeseries/raid48"
+      ]
     },
     {
-      "detail": [
-        {
-          "name": "CPI Index",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "126.7",
-          "unit": "",
-          "date": "January 2014",
-          "headline": false
-        },
-        {
-          "name": "CPI Annual Rate Percentage Change over 12 months",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "1.9",
-          "unit": "%",
-          "date": "January 2014",
-          "headline": false
-        },
-        {
-          "name": "CPIH Index",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "124.7",
-          "unit": "",
-          "date": "January 2014",
-          "headline": false
-        },
-        {
-          "name": "CPIH Annual Rate Percentage Change over 12 months",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "1.8",
-          "unit": "%",
-          "date": "January 2014",
-          "headline": false
-        }
-      ],
-      "index": 2,
-      "breadcrumb": [
-        {
-          "index": 0,
-          "type": "home",
-          "name": "People, Population and Community",
-          "fileName": "peoplepopulationandcommunity"
-        }
-      ],
-      "type": "home",
       "name": "Health and Social Care",
-      "fileName": "healthandsocialcare"
+      "link": "healthandsocialcare",
+      "index": 2,
+      "items": [
+        "/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/timeseries/raid89",
+        "/peoplepopulationandcommunity/healthandsocialcare/disability/timeseries/raid95",
+        "/peoplepopulationandcommunity/healthandsocialcare/drugusealcoholandsmoking/timeseries/raid98"
+      ]
     },
     {
-      "detail": [
-        {
-          "name": "Employment Rate",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "72.9",
-          "unit": "%",
-          "date": "Feb — Apr 2014",
-          "headline": false
-        },
-        {
-          "name": "Unemployment Rate",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "6.6",
-          "unit": "%",
-          "date": "Feb — Apr 2014",
-          "headline": false
-        }
-      ],
-      "index": 3,
-      "breadcrumb": [
-        {
-          "index": 0,
-          "type": "home",
-          "name": "People, Population and Community",
-          "fileName": "peoplepopulationandcommunity"
-        }
-      ],
-      "type": "home",
       "name": "Crime and Justice",
-      "fileName": "crimeandjustice"
+      "link": "crimeandjustice",
+      "index": 3,
+      "items": [
+        "/peoplepopulationandcommunity/crimeandjustice/timeseries/raid62"
+      ]
     },
     {
-      "detail": [],
-      "index": 4,
-      "breadcrumb": [
-        {
-          "index": 0,
-          "type": "home",
-          "name": "People, Population and Community",
-          "fileName": "peoplepopulationandcommunity"
-        }
-      ],
-      "type": "home",
       "name": "Cultural Identity",
-      "fileName": "culturalidentity"
+      "link": "culturalidentity",
+      "index": 4,
+      "items": [
+        "/peoplepopulationandcommunity/culturalidentity/religion/timeseries/raid74",
+        "/peoplepopulationandcommunity/culturalidentity/language/timeseries/raid70",
+        "/peoplepopulationandcommunity/culturalidentity/sexuality/timeseries/raid81",
+        "/peoplepopulationandcommunity/culturalidentity/ethnicity/timeseries/raid65",
+        "/peoplepopulationandcommunity/culturalidentity/religion/timeseries/raid79",
+        "/peoplepopulationandcommunity/culturalidentity/religion/timeseries/raid80",
+        "/peoplepopulationandcommunity/culturalidentity/sexuality/timeseries/raid86"
+      ]
     },
     {
-      "detail": [],
-      "index": 5,
-      "breadcrumb": [
-        {
-          "index": 0,
-          "type": "home",
-          "name": "People, Population and Community",
-          "fileName": "peoplepopulationandcommunity"
-        }
-      ],
-      "type": "home",
       "name": "Elections",
-      "fileName": "elections"
+      "link": "elections",
+      "index": 5,
+      "items": [
+        "/peoplepopulationandcommunity/elections/timeseries/raid87"
+      ]
     },
     {
-      "detail": [],
-      "index": 6,
-      "breadcrumb": [
-        {
-          "index": 0,
-          "type": "home",
-          "name": "People, Population and Community",
-          "fileName": "peoplepopulationandcommunity"
-        }
-      ],
-      "type": "home",
       "name": "Home Internet and Social Media Usage",
-      "fileName": "homeinternetandsocialmediausage"
+      "link": "homeinternetandsocialmediausage",
+      "index": 6,
+      "items": [
+        "/peoplepopulationandcommunity/homeinternetandsocialmediausage/timeseries/raid101"
+      ]
     },
     {
-      "detail": [],
-      "index": 7,
-      "breadcrumb": [
-        {
-          "index": 0,
-          "type": "home",
-          "name": "People, Population and Community",
-          "fileName": "peoplepopulationandcommunity"
-        }
-      ],
-      "type": "home",
       "name": "Housing",
-      "fileName": "housing"
+      "link": "housing",
+      "index": 7,
+      "items": [
+        "/peoplepopulationandcommunity/housing/timeseries/raid103",
+        "/peoplepopulationandcommunity/housing/timeseries/raid108"
+      ]
     },
     {
-      "detail": [],
-      "index": 8,
-      "breadcrumb": [
-        {
-          "index": 0,
-          "type": "home",
-          "name": "People, Population and Community",
-          "fileName": "peoplepopulationandcommunity"
-        }
-      ],
-      "type": "home",
       "name": "Leisure and Tourism",
-      "fileName": "leisureandtourism"
+      "link": "leisureandtourism",
+      "index": 8,
+      "items": [
+        "/peoplepopulationandcommunity/leisureandtourism/timeseries/gmat"
+      ]
     },
     {
-      "detail": [],
-      "index": 9,
-      "breadcrumb": [
-        {
-          "index": 0,
-          "type": "home",
-          "name": "People, Population and Community",
-          "fileName": "peoplepopulationandcommunity"
-        }
-      ],
-      "type": "home",
       "name": "Personal and Household Finances",
-      "fileName": "personalandhouseholdfinances"
+      "link": "personalandhouseholdfinances",
+      "index": 9,
+      "items": [
+        "/peoplepopulationandcommunity/personalandhouseholdfinances/expenditure/timeseries/raid114",
+        "/peoplepopulationandcommunity/personalandhouseholdfinances/debt/timeseries/raid109",
+        "/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/timeseries/raid115"
+      ]
     },
     {
-      "detail": [],
-      "index": 10,
-      "breadcrumb": [
-        {
-          "index": 0,
-          "type": "home",
-          "name": "People, Population and Community",
-          "fileName": "peoplepopulationandcommunity"
-        }
-      ],
-      "type": "home",
       "name": "Well-being",
-      "fileName": "wellbeing"
+      "link": "wellbeing",
+      "index": 10,
+      "items": []
     }
   ],
   "level": "t2",
   "index": 3,
-  "breadcrumb": [],
   "lede": "People, population and community statistics are the use of statistical measurement systems to study human behavior in a social environment. This can be accomplished through polling a group of people, evaluating a subset of data obtained about a group of people, or by observation and statistical analysis of a set of data that relates to people and their behaviors.",
   "type": "home",
   "name": "People, Population and Community",
-  "fileName": "peoplepopulationandcommunity"
+  "fileName": "peoplepopulationandcommunity",
+  "breadcrumb": []
 }

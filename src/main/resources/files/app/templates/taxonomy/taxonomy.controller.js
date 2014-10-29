@@ -23,19 +23,6 @@
 			$scope.breadcrumb.current = data.name
 		}
 
-		function getLink(section, item) {
-			if (item.type === "timeseries") {
-				return item.url
-			} else {
-				return $scope.getPath() + '/' + section.fileName + '/' + item.fileName
-			}
-		}
-
-		angular.extend(taxonomy, {
-			getLink: getLink
-		})
-
-
 	}
 
 })()

@@ -2,13 +2,18 @@
   "headline": "/economy/economicoutputandproductivity/timeseries/l2kq",
   "items": [
     "/economy/economicoutputandproductivity/timeseries/l2kq",
-    "/economy/economicoutputandproductivity/timeseries/l2kx",
-    "/economy/economicoutputandproductivity/timeseries/l2kl",
-    "/economy/economicoutputandproductivity/timeseries/l2n8",
-    "/economy/economicoutputandproductivity/timeseries/l2nc"
+    "/economy/grossdomesticproductgdp/timeseries/l2kx",
+    "/economy/grossdomesticproductgdp/timeseries/l2kl",
+    "/economy/grossdomesticproductgdp/timeseries/l2n8",
+    "/economy/grossdomesticproductgdp/timeseries/l2nc"
   ],
   "level": "t3",
   "index": 4,
+  "lede": "Consumer price inflation is the speed at which the prices of goods and services bought by households rise or fall.",
+  "more": "Some more content goes here. This will expand and contract if you have JS enabled. If JS is disabled, this will show by default. Yay progressive enhancement!",
+  "type": "home",
+  "name": "Economic Output and Productivity",
+  "fileName": "economicoutputandproductivity",
   "breadcrumb": [
     {
       "index": 0,
@@ -16,10 +21,5 @@
       "name": "Economy",
       "fileName": "economy"
     }
-  ],
-  "lede": "Consumer price inflation is the speed at which the prices of goods and services bought by households rise or fall.",
-  "more": "Some more content goes here. This will expand and contract if you have JS enabled. If JS is disabled, this will show by default. Yay progressive enhancement!",
-  "type": "home",
-  "name": "Economic Output and Productivity",
-  "fileName": "economicoutputandproductivity"
+  ]
 }

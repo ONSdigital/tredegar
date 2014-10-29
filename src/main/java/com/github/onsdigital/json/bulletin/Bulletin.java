@@ -28,8 +28,8 @@ public class Bulletin extends CollectionItem {
 	 */
 	public Bulletin() {
 		type = ContentType.bulletin;
-		title = "Cat Tail Inflation, October 2014";
-		releaseDate = "19 February 2014";
+		title = "Consumer Price Inflation, August 2014";
+		releaseDate = "19 August 2014";
 		Section summary = new Section();
 		summary.title = "Summary";
 		summary.markdown = "Consectetur adipiscing elit. Suspendisse non tellus nibh. Duis tristique risus sed urna fringilla, eu facilisis orci fringilla. Nullam iaculis libero tempor vehicula ultricies"

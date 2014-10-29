@@ -8,13 +8,17 @@ import com.github.onsdigital.json.timeseries.TimeSeries;
 class TimeseriesList {
 
 	TimeSeries headline;
-	List<TimeSeries> timeserieses;
+	private List<TimeSeries> timeserieses;
 
 	public void add(TimeSeries timeseries) {
+		timeserieses().add(timeseries);
+	}
+
+	public List<TimeSeries> timeserieses() {
 		if (timeserieses == null) {
 			timeserieses = new ArrayList<>();
 		}
-		timeserieses.add(timeseries);
+		return timeserieses;
 	}
 
 }

@@ -2,6 +2,7 @@
 
 <!-- Content-reveal section -->
     <div class="page-header slate_original"  >
+     <ons-breadcrumb data="breadcrumb"></ons-breadcrumb>
         <div class="wrapper">
           <h1 class="page-header__title flush--half--bottom">{{taxonomy.data.name}}</h1>
           <div class="content-reveal lede">
@@ -42,7 +43,7 @@
             <div class="divider">
               <div class="divider__half divider__half--border divider__half--border-first">
                 <h2 tooltip="Percentage change over 12 months <br><br> Not seasonally adjusted" tooltip-class="icon--inline--large-text icon--small"  class="beta">
-                    {{taxonomy.data.headlineData.name}}
+                    <a href="#!{{taxonomy.data.headlineData.url}}">{{taxonomy.data.headlineData.name}}</a>
                 </h2>
                 <div class="box box--inline box--padded muted--dark">
                   <div class="stat stat--headline">
@@ -82,7 +83,7 @@
                   <li>The timing of Easter in April is likely to have an impact on
                     movements in the index, notably for air and sea fares.</li>
                   </ul>
-                    <a class="div_panel_link" href="#!/economy/inflationandpriceindices/bulletins/consumerpriceinflation/2013-12-21/">
+                    <a class="div_panel_link" href="#!/economy/inflationandpriceindices/bulletins/consumerpriceinflation/">
                       View the statistical bulletin &gt;                   
                     </a>                
               </div>
@@ -116,16 +117,16 @@
       </thead>
 
     <tbody>
-      <tr ng-repeat="timeseries in taxonomy.data.timeseries" class="list--table__item list--table__body datatable-row">
+      <tr ng-repeat="item in taxonomy.data.itemData" class="list--table__item list--table__body datatable-row">
         <td class="data_table_section-title">
           <div class="list--table__item__body list--table__item__body--caption responsive_large_width">
             <h3 class="nav-panel__heading">
-              <a href="#!{{timeseries.url}}"> {{timeseries.name}}</a>
+              <a href="#!{{item.url}}"> {{item.name}}</a>
               <!-- CPI Index -->
                 <span tabindex="0" class="tooltip icon-info-circled icon--warm icon--inline tooltipstered"></span>
             </h3>
-            <div class="micro list--table__item__body body_update_media body_update_media">Last updated: {{timeseries.lastUpated}} <br>
-               Next Updated: <span class="red_highlight"> {{timeseries.nextUpdate}} </span>
+            <div class="micro list--table__item__body body_update_media body_update_media">Last updated: {{item.lastUpated}} <br>
+               Next Updated: <span class="red_highlight"> {{item.nextUpdate}} </span>
             </div>
           </div>
         </td>
@@ -134,10 +135,10 @@
          <div class="list--table__item__body list--table__item__body--stat stat  responsive_med_width">
             <div class="list--table__item__body--centred">
               <div class="stat__figure stat__tight">
-                 {{timeseries.number}}
+                 {{item.number}}
                  <!-- 1.5 -->
               </div>
-              <time class="stat__description" datetime="2014-01">{{timeseries.date}}
+              <time class="stat__description" datetime="2014-01">{{item.date}}
               <!-- January 2014 -->
               </time>
             </div>
@@ -145,8 +146,8 @@
         </td>   
   
       <td class="update_responsive">
-        <div class="micro list--table__item__body list--table__item__body--update  body_update_desk">Last updated: {{timeseries.lastUpated}} <br>
-          Next Updated: <span class="red_highlight"> {{timeseries.nextUpdate}} </span>
+        <div class="micro list--table__item__body list--table__item__body--update  body_update_desk">Last updated: {{item.lastUpated}} <br>
+          Next Updated: <span class="red_highlight"> {{item.nextUpdate}} </span>
         </div>
       </td>
     
@@ -196,7 +197,7 @@
             <article class="box box--padded sectioned lifted border-defined">
               <header class="box__header">
                 <h3 class="gamma">
-                    <a href="#">Inflation Summary </a>
+                    <a href="#!/economy/inflationandpriceindices/datasets/inflationsummary/">Inflation Summary </a>
                 </h3>
               </header>
               <!-- /box__header -->

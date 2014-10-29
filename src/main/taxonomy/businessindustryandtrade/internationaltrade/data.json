@@ -1,15 +1,19 @@
 {
-  "headline": "/businessindustryandtrade/internationaltrade/timeseries/ikbj",
+  "headline": "/economy/nationalaccounts/timeseries/ikbj",
   "items": [
-    "/businessindustryandtrade/internationaltrade/timeseries/ikbj",
-    "/businessindustryandtrade/internationaltrade/timeseries/ikbi",
-    "/businessindustryandtrade/internationaltrade/timeseries/ikbh",
+    "/economy/nationalaccounts/timeseries/ikbj",
+    "/economy/nationalaccounts/timeseries/ikbi",
+    "/economy/nationalaccounts/timeseries/ikbh",
     "/businessindustryandtrade/internationaltrade/timeseries/mhn9",
     "/businessindustryandtrade/internationaltrade/timeseries/l87q",
     "/businessindustryandtrade/internationaltrade/timeseries/l87k"
   ],
   "level": "t3",
   "index": 2,
+  "lede": "International trade is the exchange of capital, goods, and services across international borders or territories. In most countries, such trade represents a significant share of gross domestic product (GDP).",
+  "type": "home",
+  "name": "International Trade",
+  "fileName": "internationaltrade",
   "breadcrumb": [
     {
       "index": 0,
@@ -17,10 +21,5 @@
       "name": "Business, Industry and Trade",
       "fileName": "businessindustryandtrade"
     }
-  ],
-  "lede": "Consumer price inflation is the speed at which the prices of goods and services bought by households rise or fall.",
-  "more": "Some more content goes here. This will expand and contract if you have JS enabled. If JS is disabled, this will show by default. Yay progressive enhancement!",
-  "type": "home",
-  "name": "International Trade",
-  "fileName": "internationaltrade"
+  ]
 }

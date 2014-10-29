@@ -58,7 +58,7 @@ public class SearchHelper {
 		if (StringUtils.isNotEmpty(type)) {
 			searchBuilder.setTypes(type);
 		} else {
-			searchBuilder.setTypes(ContentType.home.name(), ContentType.article.name(), ContentType.bulletin.name());
+			searchBuilder.setTypes(ContentType.home.name(), ContentType.article.name(), ContentType.bulletin.name(), ContentType.dataset.name());
 		}
 
 		searchBuilder.setExtraSource(queryBuilder.buildQuery());

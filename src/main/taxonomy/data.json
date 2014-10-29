@@ -1,126 +1,42 @@
 {
-  "children": [
+  "sections": [
     {
-      "detail": [],
-      "index": 0,
-      "breadcrumb": [],
-      "type": "home",
-      "name": "Business, Industry and Trade",
-      "fileName": "businessindustryandtrade"
-    },
-    {
-      "detail": [
-        {
-          "name": "Value added of Non-Financial Business Economy",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "£936.3",
-          "unit": "bn",
-          "date": "1st Quarter 2014",
-          "headline": false
-        },
-        {
-          "name": "UK Gross Expenditure on Research and Development",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "£27",
-          "unit": "bn",
-          "date": "2012",
-          "headline": false
-        },
-        {
-          "name": "Chained Volume Measure of Construction Output",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "1.2",
-          "unit": "%",
-          "date": "Jan 2014",
-          "headline": false
-        }
-      ],
-      "index": 1,
-      "breadcrumb": [],
-      "type": "home",
       "name": "Economy",
-      "fileName": "economy"
+      "link": "economy",
+      "index": 0,
+      "items": [
+        "/economy/grossdomesticproductgdp/timeseries/abmi"
+      ]
     },
     {
-      "detail": [
-        {
-          "name": "Gross Domestic Product",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "£936.3",
-          "unit": "bn",
-          "date": "1st Quarter 2014",
-          "headline": false
-        },
-        {
-          "name": "CPI Annual Rate Percentage Change over 12 months",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "£27",
-          "unit": "bn",
-          "date": "January 2014",
-          "headline": false
-        },
-        {
-          "name": "Public Sctor Net Borrowing excluding financial interventions",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "£13.3",
-          "unit": "bn",
-          "date": "Jan 2014",
-          "headline": false
-        }
-      ],
-      "index": 2,
-      "breadcrumb": [],
-      "type": "home",
+      "name": "Business, Industry and Trade",
+      "link": "businessindustryandtrade",
+      "index": 0,
+      "items": [
+        "/businessindustryandtrade/internationaltrade/timeseries/ikbj"
+      ]
+    },
+    {
       "name": "Employment and Labour Market",
-      "fileName": "employmentandlabourmarket"
+      "link": "employmentandlabourmarket",
+      "index": 0,
+      "items": [
+        "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/lf24"
+      ]
     },
     {
-      "detail": [
-        {
-          "name": "Employment Rate",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "72.9",
-          "unit": "%",
-          "date": "Feb — Apr 2014",
-          "headline": false
-        },
-        {
-          "name": "Unemployment Rate",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "6.6",
-          "unit": "%",
-          "date": "Feb — Apr 2014",
-          "headline": false
-        },
-        {
-          "name": "Vacancies",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "637,000",
-          "unit": "bn",
-          "date": "Mar-May 2014",
-          "headline": false
-        }
-      ],
-      "index": 3,
-      "breadcrumb": [],
-      "type": "home",
       "name": "People, Population and Community",
-      "fileName": "peoplepopulationandcommunity"
+      "link": "peoplepopulationandcommunity",
+      "index": 0,
+      "items": [
+        "/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/raid121"
+      ]
     }
   ],
   "level": "t1",
   "index": 0,
-  "breadcrumb": [],
   "type": "home",
   "name": "Home",
-  "fileName": "/"
+  "fileName": "/",
+  "breadcrumb": []
 }
