@@ -72,6 +72,7 @@ public class DatasetContent {
 
 			Dataset dataset = new Dataset();
 			dataset.name = StringUtils.trim(row.get("Name"));
+			dataset.title = dataset.name;
 			dataset.fileName = dataset.name.toLowerCase();
 			node.addDataset(dataset);
 			DatasetData.datasets.add(dataset);
