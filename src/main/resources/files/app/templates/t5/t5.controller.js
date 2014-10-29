@@ -10,12 +10,10 @@ angular.module('onsTemplates')
     }
 ])
 
-.controller('chartController', ['$scope', '$location', '$http',
-    function($scope, $location, $http) {
-        function getTable(path, callback) {
-            // console.log("Loading data at " + path);
-            $http.get(path).success(callback);
-        }
+
+.controller('chartController', ['$scope', '$location',
+    function($scope, $location) {
+        var data = $scope.taxonomy.data;
         var categoriesY = [];
         var seriesDataY = [];
         var categoriesQ = [];
@@ -26,8 +24,8 @@ angular.module('onsTemplates')
         var reQ = new RegExp('^[0-9]{4}.[Q1-4]{2}$');
         var reM = new RegExp('^[0-9]{4}.[A-Z]{3}$');
 
-        // getTable("/t5data3.json", function(data) {
-            $scope.chart = data;
+        $scope.chart = data;
+        // console.log($scope.chart);
 
         makeArray($scope.chart.data);
         $scope.tableValue = makeObj(categoriesY, seriesDataY);
