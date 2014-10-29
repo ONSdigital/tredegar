@@ -4025,7 +4025,7 @@ table actions
   color: #016db9;
 }
 
-.search-filters{ margin-top: 0.5em; }
+.search-filters{ margin-top: 0.5em; z-index: -1; }
 
 .search-results-total{
   text-align: left;
@@ -4034,6 +4034,10 @@ table actions
 }
 
 .search-sorting{ float: right; }
+
+.search-sorting-grid{ padding-left: 10px; }
+
+
 /* .wrapper{ max-width: 98%; } */
 .sorting{ width: 14em !important; margin-left: 1em; }
 
@@ -4733,6 +4737,7 @@ ol > li > div.list--table__item__body.list--table__item__body--stat.no_align{
     font-size: 1.3rem;
     font-size: 13px;
 }
+
 .callout {
     z-index: 20;
     position: absolute;
@@ -5000,121 +5005,3 @@ td.datatable-downloads{
   height: 25rem;
 }
 
-/*--------------------------------------------*\
-  CX CHART & Tooltip Styles - No changes made
-\*--------------------------------------------*/
-
-.sidebar {
-  width: 30px;
-  height: 100%;
-  margin-right: 5px;
-  float: left;
-  background-color: #ddd;
-  padding-top: 18px; }
-
-.title {
-  font-size: 14px;
-  text-transform: uppercase; }
-
-#custom-tooltip {
-  display: block;
-  width: 220px;
-  border: 1px solid #ddd;
-  background-color: white; }
-
-.tooltip-short {
-  height: 70px; }
-
-.tooltip-tall {
-  height: 100px; }
-
-.maintext {
-  font-family: "open-sans-n7", "open-sans", sans-serif;
-  padding: 10px 0 0 40px;
-  display: block;
-  width: 220px;
-  height: 100%; }
-
-.maintext__title {
-  font-family: "open-sans-n7", "open-sans", sans-serif;
-  margin-bottom: 5px; }
-
-.circle {
-  margin: 0px;
-  margin-left: 9px;
-  padding: 0px;
-  height: 14px;
-  font-size: 22px;
-  color: #8FBED8;
-  line-height: 13px;
-  clear: both; }
-
-.square {
-  margin: 0px;
-  margin-left: 9px;
-  padding: 0px;
-  height: 21px;
-  font-size: 20px;
-  color: #5296C3;
-  line-height: 21px;
-  clear: both; }
-
-.diamond {
-  margin: 0px;
-  margin-left: 10px;
-  padding: 0px;
-  height: 19px;
-  font-size: 20px;
-  color: #1377B2;
-  line-height: 19px;
-  clear: both; }
-
-.triangle {
-  margin: 0px;
-  margin-left: 9px;
-  padding: 0px;
-  height: 16px;
-  font-size: 14px;
-  color: #1673AC;
-  line-height: 20px;
-  clear: both; }
-
-.tip {
-  padding: 0px;
-  padding-top: 1px;
-  padding-bottom: 1px; }
-
-.tiptext {
-  margin: 0px;
-  padding: 0px;
-  padding-top: 1px;
-  left: 0px;
-  text-align: left; }
-
-.tooltip-right {
-  position: relative; }
-
-.tooltip-right:after {
-  content: "";
-  border-color: transparent transparent transparent #ddd;
-  border-style: solid;
-  border-width: 10px;
-  width: 0;
-  height: 0;
-  position: absolute;
-  bottom: 15px;
-  left: 219px; }
-
-.tooltip-left {
-  position: relative; }
-
-.tooltip-left:after {
-  content: "";
-  border-color: transparent #ddd transparent transparent;
-  border-style: solid;
-  border-width: 10px;
-  width: 0;
-  height: 0;
-  position: absolute;
-  bottom: 15px;
-  left: -20px; }
