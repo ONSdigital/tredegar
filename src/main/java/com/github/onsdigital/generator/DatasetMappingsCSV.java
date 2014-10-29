@@ -21,7 +21,7 @@ import au.com.bytecode.opencsv.CSVReader;
 import com.github.davidcarboni.ResourceUtils;
 import com.github.davidcarboni.restolino.helpers.QueryString;
 
-public class DatasetMappings {
+public class DatasetMappingsCSV {
 
 	static String resourceName = "Alpha content (completed first draft)";
 	static String theme = "Theme";
@@ -86,8 +86,9 @@ public class DatasetMappings {
 
 			// Verify the headings:
 			String[] headings = csvReader.readNext();
-			if (!Arrays.equals(DatasetMappings.headings, headings)) {
-				throw new RuntimeException("CSV headings don't match the expected headings. Expected " + ArrayUtils.toString(DatasetMappings.headings) + " but found " + ArrayUtils.toString(headings));
+			if (!Arrays.equals(DatasetMappingsCSV.headings, headings)) {
+				throw new RuntimeException("CSV headings don't match the expected headings. Expected " + ArrayUtils.toString(DatasetMappingsCSV.headings) + " but found "
+						+ ArrayUtils.toString(headings));
 			}
 
 			// Read in the CSV rows:
@@ -95,14 +96,11 @@ public class DatasetMappings {
 			while ((row = csvReader.readNext()) != null) {
 				Map<String, String> values = new HashMap<>();
 				for (int i = 0; i < headings.length; i++) {
-					values.put(DatasetMappings.headings[i], row[i]);
+					values.put(DatasetMappingsCSV.headings[i], row[i]);
 				}
 				rows.add(values);
 			}
 		}
 	}
 
-	public static void main(String[] args) throws IOException {
-		System.out.println(getCdids("mm23"));
-	}
 }
