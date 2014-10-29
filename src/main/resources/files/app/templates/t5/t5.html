@@ -26,9 +26,24 @@
     }
     .maintext {
         display: block;
-        width: 190px;
-        height: 100px;
+        word-wrap: normal;
+        white-space: normal;
+        width: 100px;
+        height: auto;
+        overflow-x: auto;
         background-color: rgba(255, 255, 255, 1);
+    }
+    .tiptext {
+        word-wrap: normal;
+        white-space: normal;
+        width: 150px;
+        height: auto;
+        overflow-x: auto;
+        margin: 0px;
+        padding: 0px;
+        padding-top: 1px;
+        left: 0px;
+        text-align: left;
     }
     .circle {
         margin: 0px;
@@ -1530,14 +1545,14 @@ lesser , applied styles
 
     <!-- Title and release date -->
     <div class="page-header page-header--article page-header--time-series slate--green">
-        <div class="wrapper">
-            <p>
+        <div class="wrapper wrapper--article">
+            <p class="page-header__title page-header--time-series-desc">
                 <strong>{{header}}</strong>
             </p>
             <h1 class="page-header__title flush--half--bottom">{{chart.name}}</h1>
             <div class="grid-wrap">
                 <div class="grid-col desktop-grid-one-half">
-                    <img src="/ui/img/nslogo.png" class="page-header-image" alt="ONS logo">
+                    <img src="../ui/img/nslogo.png" class="page-header-image" alt="ONS logo">
                     <p>
                         <strong>{{chart.lastUpated}}</strong>
                         <span class="page-header-box-link">
@@ -1595,7 +1610,7 @@ lesser , applied styles
         </div>
 
         <!-- Chart in Highcharts -->
-        <div ng-controller="chartController" class="chart-area slate">
+        <div class="chart-area slate">
             <div class="chart-area__controls">
                 <div class="button-bar chart-area__controls__buttons">
                     <div class="button-group chart-area__controls__type">
@@ -1649,7 +1664,7 @@ lesser , applied styles
             </div>
         </div>
     </div>
-    <br></br>
+    <p></p>
     <!-- Notes and info section -->
     <div class="wrapper panel--bottom-mar">
         <div class="grid-wrap">

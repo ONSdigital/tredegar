@@ -6,7 +6,7 @@ angular.module('onsTemplates')
         $scope.header = "Time Series";
         // $scope.contentType = "timeseries";
         $scope.sidebar = true;
-        $scope.sidebarUrl = "app/templates/t5/t5sidebar.html";
+        $scope.sidebarUrl = "/app/templates/t5/t5sidebar.html";
     }
 ])
 
@@ -26,7 +26,7 @@ angular.module('onsTemplates')
         var reQ = new RegExp('^[0-9]{4}.[Q1-4]{2}$');
         var reM = new RegExp('^[0-9]{4}.[A-Z]{3}$');
 
-        getTable("/t5data3.json", function(data) {
+        // getTable("/t5data3.json", function(data) {
             $scope.chart = data;
 
         makeArray($scope.chart.data);
@@ -251,7 +251,7 @@ angular.module('onsTemplates')
 
                         // series names and values
                         $.each(this.points, function(i, val) {
-                            content += '<div class="tiptext"><b>' + val.point.series.chart.series[i].name + "= </b>" + Highcharts.numberFormat(val.y, 2) + '%</div>';
+                            content += '<div class="tiptext"><b>' + val.point.series.chart.series[i].name + "= </b>" + Highcharts.numberFormat(val.y, 2) + '</div>';
                         });
                         content += "</div>";
                         return content;
@@ -390,5 +390,8 @@ angular.module('onsTemplates')
             return data;
         }
 
-    });
-}]);
+    }]);
+
+
+//     });
+// }]);
