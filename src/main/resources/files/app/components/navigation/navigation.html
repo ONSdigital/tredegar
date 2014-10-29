@@ -2,7 +2,7 @@
   <div class="wrapper">
     <ul class="nav nav--multi nav--block nav--primary flush--bottom" id="nav-primary">
       <li class="nav--primary home" >
-        <a href="#!/"><span class="icon-home icon--inline"></span><span class="icon-inline vertical-align-mid">Home</span></a>
+        <a href="#!/"><span class="icon-inline vertical-align-mid">Home</span></a>
       </li>
       <li  ng-repeat="n in navigationData" ng-class="isCurrentPage(n.fileName) ? 'nav--primary__active' : ''"  >
         <a href="#!{{n.url}}" class="nav__expandable js-expandable arrowunderline" ng-class="isExpanded(n.fileName) ? 'js-expandable-active' : ''" ng-click="toggle(n.fileName)" >{{n.name}}</a>

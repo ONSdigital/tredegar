@@ -9,8 +9,8 @@ import com.github.onsdigital.json.TaxonomyFolder;
 
 public class T3 extends TaxonomyFolder {
 
-	URI headline;
-	List<URI> items = new ArrayList<>();
+	public URI headline;
+	public List<URI> items = new ArrayList<>();
 
 	public T3(Folder folder) {
 		super(folder);

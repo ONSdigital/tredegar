@@ -13,15 +13,29 @@
 			taxonomy.data = data
 			prepareBreadcrumb($scope, data)
 		})
-	}
 
-	function prepareBreadcrumb($scope, data) {
-		if(data.level === 't1') {
-			return
+		function prepareBreadcrumb($scope, data) {
+			if (data.level === 't1') {
+				return
+			}
+			$scope.breadcrumb = {}
+			$scope.breadcrumb.parent = data.breadcrumb
+			$scope.breadcrumb.current = data.name
 		}
-		$scope.breadcrumb = {}
-		$scope.breadcrumb.parent = data.breadcrumb
-		$scope.breadcrumb.current = data.name
+
+		function getLink(section, item) {
+			if (item.type === "timeseries") {
+				return item.url
+			} else {
+				return $scope.getPath() + '/' + section.fileName + '/' + item.fileName
+			}
+		}
+
+		angular.extend(taxonomy, {
+			getLink: getLink
+		})
+
+
 	}
 
 })()

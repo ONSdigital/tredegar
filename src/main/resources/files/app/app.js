@@ -30,13 +30,6 @@
                     templateUrl: 'app/templates/article/article.html',
                     controller: 'ArticleCtrl'
                 }).
-                when('/bulletin', {
-                    redirectTo: '/economy/inflationandpriceindices/bulletin'
-                }).
-                when(':*\/bulletins', {
-                    templateUrl: 'app/templates/bulletin/bulletin.html',
-                    controller: 'BulletinCtrl'
-                }).
                 when('/economy/inflationandpriceindices/collection', {
                     templateUrl: 'app/templates/collection/collection.html',
                     controller: "CollectionCtrl"
@@ -67,10 +60,6 @@
                 when('/search', {
                     templateUrl: 'app/templates/search-results/search-results.html',
                     controller: 'SearchCtrl'
-                }).
-                when('/t5', {
-                    templateUrl: 'app/templates/t5/t5.html',
-                    controller: "T5Ctrl"
                 }).
                 when('/t6', {
                     templateUrl: 'app/templates/t6/t6.html',
