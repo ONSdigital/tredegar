@@ -14,67 +14,49 @@
 		function loadData(callback) {
 			load(resolvePath(), function(data) {
 				service.data = data
-				resolveChildren(data)
-				resolveTimeseries(data)
+				
+				if(data.level === 't1' || data.level === 't2') {
+					resolveSections(data)
+				} else if(data.level === 't3') {
+					data.itemData = []
+					loadItems(data, data.items)
+					loadHeadline(data)
+				}
 				if (callback) {
 					callback(service.data)
 				}
 			})
 		}
 
-		function resolveChildren(data) {
-			$log.debug('Taxonomy Service: Resolving children of ', data.name , 'in taxonomy')
+		function resolveSections(data) {
+			$log.debug('Taxonomy Service: Resolving sections of ', data.name)
 			var level =  data.level
-			var children =  data.children
+			var sections =  data.sections
 			
-			loadChildren(children)
-
-			if (level === 't1') {
-				service.data.children = convertToTable(children)
-			} else if (level === 't2') {
-				service.data.highlightedChildren = convertToTable(children, 3)
-			}
-		}
-
-		function loadChildren(children) {
-			if (!children) {
+			if (!sections) {
 				return
 			}
-			for (var i = 0; i < children.length; i++) {
-				loadChild(children[i])
+			for (var i = 0; i < sections.length; i++) {
+				sections[i].itemData = []
+				loadItems(sections[i], sections[i].items)
 			}
+
 		}
 
-		function loadChild(child) {
-			var path = resolvePath()
-			var childPath = path + child.fileName
-			load(childPath, function(data) {
-				child.data = data
-				resolveTimeseries(data) //Resolve numbers for child elements if any
-			})
-		}
-
-		function resolveTimeseries(data) {
-			$log.debug('Taxonomy Service: Resolving timeseries data for ', data.name)
-			var items = data.items
+		function loadItems(section, items) {
 			if (!items) {
 				return
 			}
-
-			data.timeseries = []
 			for (var i = 0; i < items.length; i++) {
-				loadTimeseries(data,items[i])
+				loadItem(section, items[i])
 			}
-
-			loadHeadline(data)
-
 		}
 
-		function loadTimeseries(data,item) {
-			var timeseriesPath = dataPath + item
-			load(timeseriesPath, function(timeseries) {
-				timeseries.url = item
-				data.timeseries.push(timeseries)
+		function loadItem(section, item) {
+			var path = dataPath + item
+			load(path, function(data) {
+				data.url = item
+				section.itemData.push(data)
 			})
 		}
 
@@ -110,23 +92,6 @@
 			return str.indexOf(suffix, str.length - suffix.length) !== -1;
 		}
 
-
-		//Converts list into two dimensonal array for easy handling on view
-		function convertToTable(children, numberOfItems) {
-			var result = []
-			var index = 0
-			var mod
-			var length = (numberOfItems && numberOfItems < children.length) ? numberOfItems : children.length
-			for (var i = 0; i < length; i = i + 2) {
-				result[index] = []
-				result[index][0] = children[i]
-				if (i + 1 < length) {
-					result[index][1] = children[i + 1]
-				}
-				index++
-			}
-			return result
-		}
 
 		//Expose public api
 		angular.extend(service, {
