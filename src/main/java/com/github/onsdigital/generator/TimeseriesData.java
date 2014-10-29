@@ -27,8 +27,8 @@ public class TimeseriesData {
 
 	static Map<String, Set<TimeSeriesValue>> dataMaps;
 
-	static Set<TimeSeriesValue> getData(String cdid) throws IOException {
-		return getDataMaps().get(cdid);
+	public static Set<TimeSeriesValue> getData(String cdid) throws IOException {
+		return getDataMaps().get(StringUtils.lowerCase(cdid));
 	}
 
 	public static Map<String, Set<TimeSeriesValue>> getDataMaps() throws IOException {
@@ -71,7 +71,7 @@ public class TimeseriesData {
 		Set<Path> result = new HashSet<>();
 
 		try {
-			URL resource = TimeseriesMetadata.class.getResource("/data");
+			URL resource = TimeseriesData.class.getResource("/data");
 			Path folder = Paths.get(resource.toURI());
 
 			try (DirectoryStream<Path> stream = Files.newDirectoryStream(folder, "*.csv")) {

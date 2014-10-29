@@ -19,7 +19,7 @@ import au.com.bytecode.opencsv.CSVReader;
 
 import com.github.davidcarboni.ResourceUtils;
 import com.github.davidcarboni.restolino.json.Serialiser;
-import com.github.onsdigital.generator.timeseries.AlphaContent;
+import com.github.onsdigital.generator.timeseries.AlphaContentCSV;
 import com.github.onsdigital.json.Article;
 import com.github.onsdigital.json.Data;
 import com.github.onsdigital.json.Dataset;
@@ -307,11 +307,11 @@ public class TaxonomyGenerator {
 			t3.index = folder.index;
 
 			// Timeseries references:
-			URI headline = toUri(folder, AlphaContent.getHeadlineTimeSeries(folder));
+			URI headline = toUri(folder, AlphaContentCSV.getHeadlineTimeSeries(folder));
 			if (headline != null) {
 				t3.headline = headline;
 			}
-			List<TimeSeries> timeserieses = AlphaContent.getTimeSeries(folder);
+			List<TimeSeries> timeserieses = AlphaContentCSV.getTimeSeries(folder);
 			t3.items.clear();
 			String baseUri = "/" + folder.filename();
 			Folder parent = folder.parent;
@@ -321,7 +321,6 @@ public class TaxonomyGenerator {
 			}
 			baseUri += "/timeseries";
 			for (TimeSeries timeseries : timeserieses) {
-				System.out.println(baseUri + "/" + timeseries.fileName);
 				t3.items.add(toUri(folder, timeseries));
 			}
 
@@ -362,16 +361,19 @@ public class TaxonomyGenerator {
 	 */
 	private static void createTimeseries(Folder folder, File file) throws IOException {
 
-		List<TimeSeries> timeserieses = AlphaContent.getTimeSeries(folder);
+		List<TimeSeries> timeserieses = AlphaContentCSV.getTimeSeries(folder);
 
 		if (timeserieses.size() > 0) {
 			File timeseriesesFolder = new File(file, "timeseries");
 			timeseriesesFolder.mkdir();
 			for (TimeSeries timeseries : timeserieses) {
 				File timeseriesFolder = new File(timeseriesesFolder, timeseries.fileName);
-				Set<TimeSeriesValue> data = TimeseriesData.getDataMaps().get(timeseries.cdid);
+				Set<TimeSeriesValue> data = TimeseriesData.getData(timeseries.cdid);
 				if (data != null) {
 					timeseries.data = new ArrayList<>(data);
+					System.out.println(data.size() + " timeseries values for " + timeseries.cdid);
+				} else {
+					System.out.println("No data for " + timeseries.cdid);
 				}
 				String json = Serialiser.serialise(timeseries);
 				FileUtils.writeStringToFile(new File(timeseriesFolder, "data.json"), json, Charset.forName("UTF8"));
