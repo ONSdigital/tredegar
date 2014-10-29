@@ -20,6 +20,7 @@ import au.com.bytecode.opencsv.CSVReader;
 import com.github.davidcarboni.ResourceUtils;
 import com.github.davidcarboni.restolino.json.Serialiser;
 import com.github.onsdigital.generator.timeseries.AlphaContentCSV;
+import com.github.onsdigital.generator.bulletin.BulletinContent;
 import com.github.onsdigital.json.Article;
 import com.github.onsdigital.json.Data;
 import com.github.onsdigital.json.Dataset;
@@ -280,18 +281,14 @@ public class TaxonomyGenerator {
 	}
 
 	private static void createT2(Folder folder, File file) throws IOException {
-		if (folder.name.equals("Releases") || (folder.parent != null && folder.parent.name.equals("Releases"))) {
-			System.out.println("Do not create json for Releases createT2");
-		} else {
-			DataT2 t2 = new DataT2(folder);
-			if (StringUtils.isNotBlank(folder.lede)) {
-				t2.lede = folder.lede;
-				t2.more = folder.more;
-			}
-			t2.index = folder.index;
-			String json = Serialiser.serialise(t2);
-			FileUtils.writeStringToFile(new File(file, "data.json"), json);
+		DataT2 t2 = new DataT2(folder);
+		if (StringUtils.isNotBlank(folder.lede)) {
+			t2.lede = folder.lede;
+			t2.more = folder.more;
 		}
+		t2.index = folder.index;
+		String json = Serialiser.serialise(t2);
+		FileUtils.writeStringToFile(new File(file, "data.json"), json);
 	}
 
 	private static void createT3(Folder folder, File file) throws IOException {
@@ -408,27 +405,16 @@ public class TaxonomyGenerator {
 
 	private static void createBulletin(Folder folder, File file) throws IOException {
 
-		// Create a dummy bulletin:
-		File bulletins = new File(file, "bulletins");
-		bulletins.mkdir();
+		List<Bulletin> bulletins = BulletinContent.getBulletins(folder);
 
-		BulletinsCsv.buildFolders();
-		Set<Folder> bulletinFolders = BulletinsCsv.folders;
-
-		for (Folder bulletinFolder : bulletinFolders) {
-			if (StringUtils.deleteWhitespace(bulletinFolder.name.toLowerCase()).equals(file.getName())) {
-
-				for (Folder topicFolder : bulletinFolder.children) {
-					File topicFile = new File(bulletins, StringUtils.deleteWhitespace(topicFolder.name.toLowerCase()));
-					topicFile.mkdir();
-					Bulletin bulletin = new Bulletin();
-					bulletin.title = topicFolder.name;
-					String json = Serialiser.serialise(bulletin);
-					File bulletinJsonFile = new File(topicFile, "data.json");
-					FileUtils.writeStringToFile(bulletinJsonFile, json);
-					createVersions(topicFile, json);
-					createHistory(topicFile, json);
-				}
+		if (bulletins != null && bulletins.size() > 0) {
+			File bulletinsFolder = new File(file, "bulletins");
+			bulletinsFolder.mkdir();
+			for (Bulletin bulletin : bulletins) {
+				String bulletinFileName = bulletin.fileName.replaceAll("[-+.^:,();] ", "");
+				File bulletinFolder = new File(bulletinsFolder, StringUtils.deleteWhitespace(bulletinFileName.toLowerCase()));
+				String json = Serialiser.serialise(bulletin);
+				FileUtils.writeStringToFile(new File(bulletinFolder, "data.json"), json, Charset.forName("UTF8"));
 			}
 		}
 	}

@@ -7,6 +7,7 @@ import java.util.Map;
 import org.apache.commons.lang3.BooleanUtils;
 import org.apache.commons.lang3.StringUtils;
 
+import com.github.onsdigital.generator.CSV;
 import com.github.onsdigital.generator.Folder;
 import com.github.onsdigital.json.timeseries.TimeSeries;
 
