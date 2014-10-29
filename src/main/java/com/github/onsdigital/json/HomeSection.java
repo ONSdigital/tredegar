@@ -16,8 +16,8 @@ public class HomeSection implements Comparable<HomeSection> {
 	public String name;
 	public String link;
 	public int index;
-	//References to items listed in section
-	public List<URI> items = new ArrayList<>() ;
+	// References to items listed in section
+	public List<URI> items = new ArrayList<>();
 
 	public HomeSection(String name, String link) {
 		this.name = name;
@@ -28,5 +28,5 @@ public class HomeSection implements Comparable<HomeSection> {
 	public int compareTo(HomeSection o) {
 		return Integer.compare(this.index, o.index);
 	}
-	
+
 }
