@@ -1675,7 +1675,7 @@ lesser , applied styles
                                 <fieldset class="chart-area__controls__date">
                                     <legend class="chart-area__controls__date__label">From</legend>
                                     <label class="visuallyhidden">Date</label>
-                                    <select class="chart-area__controls__month" ng-model="tableValue" ng-options="date for date in chartData.options.xAxis.categories">
+                                    <select class="chart-area__controls__month" ng-model="tableValueFrom" ng-options="date for date in chartData.options.xAxis.categories">
                                         <option value="">Select option</option>
                                     </select>
                                 </fieldset>
@@ -1683,9 +1683,15 @@ lesser , applied styles
                                 <fieldset class="chart-area__controls__date">
                                     <legend class="chart-area__controls__date__label">To</legend>
                                     <label class="visuallyhidden">Date</label>
-                                    <select class="chart-area__controls__month" ng-model="tableValue" ng-options="date for date in chartData.options.xAxis.categories">
+                                    <select class="chart-area__controls__month" ng-model="tableValueTo" ng-options="date for date in chartData.options.xAxis.categories">
                                         <option value="">Select option</option>
                                     </select>
+                                </fieldset>
+
+                                <fieldset ng-show="!chartTable" class="chart-area__controls__date">
+                                    <legend class="chart-area__controls__date__label">Search</legend>
+                                    <label class="visuallyhidden">Date</label>
+                                    <input ng-model="query" type="test"/>
                                 </fieldset>
                             </div>
                             <!-- <div class="chart-area__controls__submit">
@@ -1704,14 +1710,14 @@ lesser , applied styles
                     <table class="tablesaw">
                         <thead>
                             <tr>
-                                <th>Period</th>
-                                <th>{{chart.cdid}}</th>
+                                <th><a href="" ng-click="sortField = 'date'; reverse = !reverse">Period</a></th>
+                                <th><a href="" ng-click="sortField = 'values'; reverse = !reverse">{{chart.cdid}}</a></th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr ng-repeat="data in tableValue">
-                                <th>{{data[0]}}</th>
-                                <td>{{data[1]}}</td>
+                            <tr ng-repeat="data in tableValue | filter:query | orderBy:sortField:reverse">
+                                <th>{{data.date}}</th>
+                                <td>{{data.values}}</td>
                             </tr>
                         </tbody>
                     </table>
