@@ -28,4 +28,9 @@
     <span ng-include="'app/templates/t5/t5.html'"></span>
 </span>
 
+<!-- Dataset -->
+<span ng-if="taxonomy.data.type === 'dataset'" ng-controller="DatasetCtrl">
+    <span ng-include="'app/templates/dataset/Dataset_Excelcrosssection.html'"></span>
+</span>
+
 <ons-footer></ons-footer>
