@@ -8,6 +8,7 @@ import org.apache.commons.lang3.BooleanUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import com.github.onsdigital.generator.Folder;
+import com.github.onsdigital.generator.TimeseriesMetadata;
 import com.github.onsdigital.json.timeseries.TimeSeries;
 
 public class AlphaContent {
@@ -88,7 +89,10 @@ public class AlphaContent {
 
 			// Now get the Timeseries details:
 			boolean isHeadline = BooleanUtils.toBoolean(row.get("Key"));
-			TimeSeries timeseries = new TimeSeries();
+			TimeSeries timeseries = TimeseriesMetadata.getData(row.get("CDID"));
+			if (timeseries == null) {
+				timeseries = new TimeSeries();
+			}
 			timeseries.cdid = StringUtils.trim(row.get("CDID"));
 			timeseries.fileName = timeseries.cdid.toLowerCase();
 			timeseries.name = row.get("Name");

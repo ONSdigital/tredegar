@@ -27,8 +27,8 @@ public class TimeseriesData {
 
 	static Map<String, Set<TimeSeriesValue>> dataMaps;
 
-	static Set<TimeSeriesValue> getData(String cdid) throws IOException {
-		return getDataMaps().get(cdid);
+	public static Set<TimeSeriesValue> getData(String cdid) throws IOException {
+		return getDataMaps().get(StringUtils.lowerCase(cdid));
 	}
 
 	public static Map<String, Set<TimeSeriesValue>> getDataMaps() throws IOException {

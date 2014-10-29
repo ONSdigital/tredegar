@@ -26,8 +26,8 @@ public class TimeseriesMetadata {
 
 	static Map<String, TimeSeries> timeseries;
 
-	static TimeSeries getData(String cdid) throws IOException {
-		return loadTimeseriesMetadata().get(cdid);
+	public static TimeSeries getData(String cdid) throws IOException {
+		return loadTimeseriesMetadata().get(StringUtils.lowerCase(cdid));
 	}
 
 	static Map<String, TimeSeries> loadTimeseriesMetadata() throws IOException {
@@ -125,7 +125,7 @@ public class TimeseriesMetadata {
 				}
 
 				// Add to the collection:
-				timeseries.put(item.cdid.toLowerCase(), item);
+				timeseries.put(StringUtils.lowerCase(item.cdid), item);
 			}
 		}
 	}
