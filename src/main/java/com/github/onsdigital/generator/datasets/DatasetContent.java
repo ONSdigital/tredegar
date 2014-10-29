@@ -1,4 +1,4 @@
-package com.github.onsdigital.generator.bulletin;
+package com.github.onsdigital.generator.datasets;
 
 import java.io.IOException;
 import java.util.List;
@@ -8,35 +8,35 @@ import org.apache.commons.lang3.StringUtils;
 
 import com.github.onsdigital.generator.CSV;
 import com.github.onsdigital.generator.Folder;
-import com.github.onsdigital.json.bulletin.Bulletin;
+import com.github.onsdigital.json.Dataset;
 
-public class BulletinContent {
+public class DatasetContent {
 
 	private static List<Map<String, String>> rows;
 
-	public static List<Bulletin> getBulletins(Folder folder) throws IOException {
-		List<Bulletin> result = null;
+	public static List<Dataset> getDatasets(Folder folder) throws IOException {
+		List<Dataset> result = null;
 
 		// Parse the data:
 		if (rows == null) {
 			parseCsv();
 		}
 
-		BulletinNode node = getNode(folder);
+		DatasetNode node = getNode(folder);
 		if (node != null) {
-			result = node.bulletinList().bulletins;
+			result = node.datasetList().datasets;
 		}
 
 		return result;
 	}
 
-	private static BulletinNode getNode(Folder folder) {
-		BulletinNode result = null;
+	private static DatasetNode getNode(Folder folder) {
+		DatasetNode result = null;
 
 		// Recurse up the hierarchy to the root node:
-		BulletinNode parentNode = null;
+		DatasetNode parentNode = null;
 		if (folder.parent == null) {
-			parentNode = BulletinData.rootNode;
+			parentNode = DatasetData.rootNode;
 		} else {
 			parentNode = getNode(folder.parent);
 		}
@@ -50,7 +50,7 @@ public class BulletinContent {
 	}
 
 	private static void parseCsv() throws IOException {
-		rows = CSV.parse("/Alpha bulletin content.csv");
+		rows = CSV.parse("/Alpha dataset content.csv");
 		// String[] headings = { "Theme", "Level 2", "Level 3", "Name", "Key",
 		// "Units", "CDID", "Path", "Link", "Notes" };
 
@@ -62,7 +62,7 @@ public class BulletinContent {
 			}
 
 			// Get to the folder in question:
-			BulletinNode node = BulletinData.rootNode.getChild(row.get("Theme"));
+			DatasetNode node = DatasetData.rootNode.getChild(row.get("Theme"));
 			if (StringUtils.isNotBlank(row.get("Level 2"))) {
 				node = node.getChild(row.get("Level 2"));
 			}
@@ -70,12 +70,13 @@ public class BulletinContent {
 				node = node.getChild(row.get("Level 3"));
 			}
 
-			Bulletin bulletin = new Bulletin();
-			bulletin.name = StringUtils.trim(row.get("Name"));
-			bulletin.fileName = bulletin.name.toLowerCase();
-			node.addBulletin(bulletin);
-			BulletinData.bulletins.add(bulletin);
+			Dataset dataset = new Dataset();
+			dataset.name = StringUtils.trim(row.get("Name"));
+			dataset.fileName = dataset.name.toLowerCase();
+			node.addDataset(dataset);
+			DatasetData.datasets.add(dataset);
 		}
+		System.out.println(DatasetData.datasets.size());
 	}
 
 	public static void main(String[] args) throws IOException {
@@ -84,9 +85,6 @@ public class BulletinContent {
 		Folder level2 = new Folder();
 		level2.name = "Business Activity, Size and Location";
 		level2.parent = theme;
-		Folder level3 = new Folder();
-		level3.name = "Activity, Size and Location";
-		level3.parent = level2;
-		System.out.println(getBulletins(level3));
+		System.out.println(getDatasets(level2));
 	}
 }
