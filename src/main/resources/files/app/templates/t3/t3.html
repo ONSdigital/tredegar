@@ -99,7 +99,8 @@
 
 <!-- List/Table with data -->
   <section id="timeseries" class="panel--large wrapper">
-    <table table id="Datatable" class=" tablesorter data-table list--table list--table--complex table--striped-light table-light--sectioned">
+
+    <table table id="Datatable" st-table="taxonomy.data.itemData" class=" tablesorter data-table list--table list--table--complex table--striped-light table-light--sectioned">
       <thead>
         <th colspan="4" >
           <div class="list--table-header split__title">
@@ -110,7 +111,7 @@
           <div class="list--table__item">
             <label class="list--table__item__body list--table__item__body">
               <span class="visuallyhidden">Select statistic</span>
-                <input type="checkbox">
+                <input st-select-all ng-model="t3.allSelected" type="checkbox">
             </label>
           </div>
         </th>
@@ -133,7 +134,7 @@
 
         <td class="data_table_section">
          <div class="list--table__item__body list--table__item__body--stat stat  responsive_med_width">
-            <div class="list--table__item__body--centred">
+            <div class="list--table__item__body--centred">isSelected
               <div class="stat__figure stat__tight">
                  {{item.number}}
                  <!-- 1.5 -->
@@ -155,7 +156,8 @@
       <div class="list--table__item">
         <label class="list--table__item__body list--table__item__body--select">
           <span class="visuallyhidden">Select statistic</span>
-              <input type="checkbox">
+              <input type="checkbox" st-select-row="item" st-select-mode="multiple" ng-model="item.isSelected">
+              {{item.isSelected}}
         </label>
       </div>
     </td>

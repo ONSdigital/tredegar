@@ -8,7 +8,7 @@
     <span ng-if="taxonomy.data.level === 't1'">
         <span ng-include="'app/templates/t1new/t1new.html'"></span>
     </span>
-    <span ng-if="taxonomy.data.level === 't3'">
+    <span ng-if="taxonomy.data.level === 't3'" ng-controller="T3Controller as t3">
         <span ng-include="'app/templates/t3/t3.html'"></span>
     </span>
 </span>
