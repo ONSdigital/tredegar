@@ -321,7 +321,6 @@ public class TaxonomyGenerator {
 			}
 			baseUri += "/timeseries";
 			for (TimeSeries timeseries : timeserieses) {
-				System.out.println(baseUri + "/" + timeseries.fileName);
 				t3.items.add(toUri(folder, timeseries));
 			}
 
@@ -369,9 +368,12 @@ public class TaxonomyGenerator {
 			timeseriesesFolder.mkdir();
 			for (TimeSeries timeseries : timeserieses) {
 				File timeseriesFolder = new File(timeseriesesFolder, timeseries.fileName);
-				Set<TimeSeriesValue> data = TimeseriesData.getDataMaps().get(timeseries.cdid);
+				Set<TimeSeriesValue> data = TimeseriesData.getData(timeseries.cdid);
 				if (data != null) {
 					timeseries.data = new ArrayList<>(data);
+					System.out.println(data.size() + " timeseries values for " + timeseries.cdid);
+				} else {
+					System.out.println("No data for " + timeseries.cdid);
 				}
 				String json = Serialiser.serialise(timeseries);
 				FileUtils.writeStringToFile(new File(timeseriesFolder, "data.json"), json, Charset.forName("UTF8"));
