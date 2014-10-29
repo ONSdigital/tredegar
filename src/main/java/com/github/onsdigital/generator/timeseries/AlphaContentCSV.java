@@ -92,10 +92,11 @@ public class AlphaContentCSV {
 				timeseries.unit = StringUtils.defaultIfBlank(row.get("Units"), timeseries.unit);
 				timeseries.preUnit = StringUtils.defaultIfBlank(row.get("Pre unit"), timeseries.preUnit);
 				timeseries.number = StringUtils.defaultIfBlank(row.get("Figure"), timeseries.number);
-				timeseries.date = StringUtils.defaultIfBlank(row.get("Period"), timeseries.date);
-				if (StringUtils.isNotBlank(row.get("Figure"))) {
-					timeseries.number = row.get("Figure");
-				}
+				// timeseries.date =
+				// StringUtils.defaultIfBlank(row.get("Period"),
+				// timeseries.date);
+				timeseries.date = row.get("Period");
+
 				node.addTimeseries(timeseries, isHeadline);
 			}
 		}
