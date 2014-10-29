@@ -71,7 +71,7 @@ public class TimeseriesData {
 		Set<Path> result = new HashSet<>();
 
 		try {
-			URL resource = TimeseriesMetadata.class.getResource("/data");
+			URL resource = TimeseriesData.class.getResource("/data");
 			Path folder = Paths.get(resource.toURI());
 
 			try (DirectoryStream<Path> stream = Files.newDirectoryStream(folder, "*.csv")) {
