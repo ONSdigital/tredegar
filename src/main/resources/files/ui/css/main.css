@@ -4027,21 +4027,33 @@ table actions
 
 .search-filters{ margin-top: 0.5em; z-index: -1; }
 
+@media screen and (min-width: 920px){
+  .search-filters{width: 100%;}
+}
+
 .search-results-total{
   text-align: left;
   padding: 0em;
   margin-right: 0em;
 }
 
-.search-sorting{ float: right; }
+.search-sorting{
+  margin: 0.5em 0em;
+  position: relative; 
+  float: right;
+  display: inline-block;
+
+ }
 
 .search-sorting-grid{ padding-left: 10px; }
 
+.search-aside{margin-top: 1em;}
 
 /* .wrapper{ max-width: 98%; } */
 .sorting{ width: 14em !important; margin-left: 1em; }
 
-.results-total{ font-size: 2em; }
+.results-total{ font-size: 2em;
+                font-weight: bolder; }
 
 .results-search-term{ font-size: 1.5em; }
 
@@ -4049,11 +4061,11 @@ table actions
   padding: 0.75em 0em;
 }
 
-.search{
+/*.search{
   border-color: #dedfdc;
-    border-style: solid;
-    border-width: 0.125em 0em 0em 0em;
-}
+  border-style: solid;
+  border-width: 0.125em 0em 0em 0em;
+} to integrate new page style 2510*/
 
 ul.simple-pagination {
   list-style: none;
