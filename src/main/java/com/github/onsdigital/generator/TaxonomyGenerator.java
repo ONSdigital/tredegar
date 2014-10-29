@@ -89,6 +89,9 @@ public class TaxonomyGenerator {
 					// subTopicCounter = 0;
 					if (StringUtils.isNotBlank(row[ledeIndex])) {
 						themeFolder.lede = row[ledeIndex];
+						System.out.println(themeFolder.name + " lede: " + themeFolder.lede);
+					} else {
+						System.out.println("- No lede");
 					}
 					if (StringUtils.isNotBlank(row[moreIndex])) {
 						themeFolder.more = row[moreIndex];
@@ -268,6 +271,10 @@ public class TaxonomyGenerator {
 		// The folder needs to be at the root path:
 		Data data = new DataT1(folder);
 		data.fileName = "/";
+		if (StringUtils.isNotBlank(folder.lede)) {
+			data.lede = folder.lede;
+			data.more = folder.more;
+		}
 		String json = Serialiser.serialise(data);
 		FileUtils.writeStringToFile(new File(file, "data.json"), json);
 	}
@@ -277,6 +284,10 @@ public class TaxonomyGenerator {
 			System.out.println("Do not create json for Releases createT2");
 		} else {
 			DataT2 t2 = new DataT2(folder);
+			if (StringUtils.isNotBlank(folder.lede)) {
+				t2.lede = folder.lede;
+				t2.more = folder.more;
+			}
 			t2.index = folder.index;
 			String json = Serialiser.serialise(t2);
 			FileUtils.writeStringToFile(new File(file, "data.json"), json);
@@ -289,6 +300,10 @@ public class TaxonomyGenerator {
 			System.out.println("Do not create json for Releases createT3");
 		} else {
 			T3 t3 = new T3(folder);
+			if (StringUtils.isNotBlank(folder.lede)) {
+				t3.lede = folder.lede;
+				t3.more = folder.more;
+			}
 			t3.index = folder.index;
 
 			// Timeseries references:
