@@ -7,7 +7,7 @@ import java.util.Comparator;
 import java.util.Date;
 
 /**
- * Compares the date tokens with the taxonomy file system where the date toekn
+ * Compares the date tokens with the taxonomy file system where the date token
  * is in the format of yyyy-MM-dd
  */
 public class TaxonomyDateComparator implements Comparator<Object> {

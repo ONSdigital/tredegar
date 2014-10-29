@@ -64,6 +64,7 @@
 		function loadHeadline(data) {
 			var timeseriesPath = dataPath + data.headline
 			load(timeseriesPath, function(timeseries) {
+				timeseries.url = data.headline
 				data.headlineData = timeseries
 			})
 		}

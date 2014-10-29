@@ -1,24 +1,33 @@
 <ons-header></ons-header>
 <!--Breadcrumbs, grid col two thirds-->
-  <section class="panel--large wrapper flush--top">
+ 
 
 
     <!--Search filters, sorting and results description, grid col two thirds, left class removes padding and crates space within the div-->
-  <div class="grid-col tablet-wide-grid-two-thirds left">
-      <span ng-show="isLoading()" >Loading ...</span>
-      <div ng-show="searchResponse" id="search-results-total" class="search-results-total">
-        <span class='results-total'>
+  
+<div class="page-header slate">
+        <div class="wrapper nav-panels">
+         <div class="grid-wrap">
+          
+          <div class="grid-col tablet-wide">
+             <span ng-show="isLoading()" >Loading ...</span>
+              <div ng-show="searchResponse" id="search-results-total" class="search-results-total">
+                 <span class='results-total'>
           {{searchResponse.numberOfResults}}
         </span>results for<span class='results-search-term'>
            '{{searchTermOneTime}}'
            <span>
-      </div>
-      <div class="search-filters">
-        <p> Filters: <span class="lozenge lozenge-spacer lozenge-blue">STATISTICAL BULLETIN</span><span class="lozenge lozenge-spacer lozenge-red">DATASET</span><span class="lozenge lozenge-grey lozenge-spacer">ARTICLE</span><span class="lozenge lozenge-spacer lozenge-green">METHODOLOGY</span>
-        </p>
-      </div>
-      <div class="search-sorting">
-        <div class="field field--spaced">
+                  </div>
+                  <div class="grid-wrap">
+                    <div class="grid-col tablet-grid-two-thirds">
+                      <div class="search-filters">
+                        <p> Content types:  <span class="lozenge lozenge-spacer lozenge-blue">STATISTICAL BULLETIN</span><span class="lozenge lozenge-spacer lozenge-red">DATASET</span><span class="lozenge lozenge-grey lozenge-spacer">ARTICLE</span><span class="lozenge lozenge-spacer lozenge-green">METHODOLOGY</span>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="grid-col tablet-grid-one-third search-sorting-grid">
+                      <div class="search-sorting">
+              <div class="field field--spaced">
           <form action="#" class="form"> Sort by:
             <select class="input input--mini sorting" name="search" id="select1">
               <option value="" selected> Relevance </option>
@@ -27,8 +36,14 @@
           </form>
         </div>
       </div>
-  </div>
-  </section>
+      </div>
+
+      </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
 
  <!--Search Results List, grid col two thirds-->
 <div  class="wrapper nav-panels">
@@ -57,24 +72,53 @@
 
           <!--Start of aside, grid col one third-->
 
-      <div class="grid-col tablet-wide-grid-one-third">
-        <aside class="box sectioned padded">
-
-              <a href="www.gov.uk"><img src="/ui/img/DWP.png" alt="dwplogo" class="aside-logo"/></a>
-              <p class="aside-highlighted"> Also try the Department for Work and Pensions for more information relating to CPI</p>
-              <a href="https://www.gov.uk/government/organisations/department-for-work-pensions" class="aside-links"> https://www.gov.uk/government/organisations/department-for-work-pensions</a>
-              <img src="/ui/img/openinnewwindow.png" alt="open in new window" class="open-in-new-window"/>
+   <div class="grid-col desktop-grid-one-third tablet-grid-one-third search-aside">
+              <article class="box box--orange lifted--dark">
+                <div class="box__inner border box--padded box--orange--separated-left">
+                  <header class="box__header">
+                    <h2 class="gamma">
+                      <a href="#">
+                  Who we are
+                  
+                </a>
+                    </h2>
+                  </header>
+                  <!-- /box__header -->
+                  <div class="box__content">
+                    <p>
+                      More on the ONS, the UK's largest independent producer of official statistics
+                    </p>
+                  </div>
+                  <!-- /box__content -->
+                </div>
+              </article>
+              <!-- /box -->
+            </div>
 
 
           
-          <div class="grid-col tablet-wide-grid-one-third">
-
-            
-          </div>
-          <!-- /grid-col -->
-
-        <!-- /aside -->
-      </aside>
+          <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
+              <article class="box box--orange lifted--dark">
+                <div class="box__inner border box--padded box--orange--separated-left">
+                  <header class="box__header">
+                    <h2 class="gamma">
+                      <a href="#">
+                  Sign up for email alerts
+                  
+                </a>
+                    </h2>
+                  </header>
+                  <!-- /box__header -->
+                  <div class="box__content">
+                    <p>
+                      Keep abreast of the latest statistical bulletins and releases from the ONS
+                    </p>
+                  </div>
+                  <!-- /box__content -->
+                </div>
+              </article>
+              <!-- /box -->
+            </div>
       </div>
    <!--End of right col aside, grid col one third-->
       </div>

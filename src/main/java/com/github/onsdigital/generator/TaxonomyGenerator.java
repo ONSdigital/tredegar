@@ -22,8 +22,11 @@ import au.com.bytecode.opencsv.CSVReader;
 
 import com.github.davidcarboni.ResourceUtils;
 import com.github.davidcarboni.restolino.json.Serialiser;
+import com.github.onsdigital.generator.bulletin.BulletinContent;
+import com.github.onsdigital.generator.datasets.DatasetContent;
 import com.github.onsdigital.generator.timeseries.AlphaContentCSV;
 import com.github.onsdigital.json.Article;
+import com.github.onsdigital.json.Data;
 import com.github.onsdigital.json.Dataset;
 import com.github.onsdigital.json.HomeSection;
 import com.github.onsdigital.json.Release;
