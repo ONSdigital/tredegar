@@ -84,12 +84,6 @@
 			<resource>
 				<directory>src/main/resources</directory>
 			</resource>
-			<!-- Manually edited taxonomy structure -->
-			<resource>
-				<!-- Copies the manually edited portions of the taxonomy. -->
-				<directory>src/main/taxonomy_override</directory>
-				<targetPath>${project.build.directory}/taxonomy</targetPath>
-			</resource>
 			<!-- Generated taxonomy structure -->
 			<resource>
 				<!-- Copies the remainder of the taxonomy. NB: the resource plugin "overwrite" 

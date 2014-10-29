@@ -51,7 +51,7 @@ angular.module('onsTemplates')
         // });
 
 
-        $scope.hasData = makeArray ($scope.chart.data);
+        makeArray ($scope.chart.data);
 
 
         $scope.chartData = getData();
@@ -78,21 +78,23 @@ angular.module('onsTemplates')
                 $scope.chartData.series[0].data = seriesDataM;
             }
         };
-        console.log($scope.chart);
 
         function makeArray (dat) {
             for (var i = 0; i < dat.length; i++) {
                 if (reY.test(dat[i].date)){
                     categoriesY.push(dat[i].date);
                     seriesDataY.push(Number(dat[i].value));
+                    $scope.hasYData = true;
                 }
                 if (reQ.test(dat[i].date)){
                     categoriesQ.push(dat[i].date);
                     seriesDataQ.push(Number(dat[i].value));
+                    $scope.hasQData = true;
                 }
                 if (reM.test(dat[i].date)){
                     categoriesM.push(dat[i].date);
                     seriesDataM.push(Number(dat[i].value));
+                    $scope.hasMData = true;
                 }
                 // console.log(dat);
 
@@ -108,7 +110,7 @@ angular.module('onsTemplates')
                     colors: ['#007dc3', '#409ed2', '#7fbee1', '#007dc3', '#409ed2', '#7fbee1'],
 
                 title: {
-                    // text: chartJson.mainMeasure // 'Prices Indices'
+                    text: ''
                 },
                 subtitle: {
                     text: ''
@@ -116,7 +118,7 @@ angular.module('onsTemplates')
                 xAxis: {
                     categories: categoriesY,
                     // categories: ['Feb 2013', 'Mar 2013', 'Apr 2013', 'May 2013', 'Jun 2103', 'Jul 2013', 'Aug 2013', 'Sept 2013', 'Oct 2013', 'Nov 2013', 'Dec 2013', 'Jan 2014', 'Feb 2014'],
-                    tickInterval: 12,
+                    tickInterval: 1,
                     labels: {
                         formatter: function() {
                             var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
@@ -139,7 +141,8 @@ angular.module('onsTemplates')
                 },
                 yAxis: {
                     title: {
-                        text: 'Percentage change'
+                        // text: 'Percentage change'
+                        text: $scope.chart.units
                     }
                 },
 
@@ -258,7 +261,7 @@ angular.module('onsTemplates')
                 */
 
                 series: [{
-                        name: 'CPI % change',
+                        name: $scope.chart.name,
                         data: seriesDataY,
                         // data: [1.7, 1.9, 2, 2.1, 2.2, 2.7, 2.7, 2.8, 2.9, 2.7, 2.4, 2.8, 2.8],
                         marker: {

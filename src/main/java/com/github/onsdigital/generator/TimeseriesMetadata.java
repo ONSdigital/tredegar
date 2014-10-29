@@ -107,6 +107,7 @@ public class TimeseriesMetadata {
 							item.name = row[i];
 						} else if (headings[i].trim().toLowerCase().equals("CDID".toLowerCase())) {
 							item.cdid = row[i];
+							item.fileName = StringUtils.lowerCase(row[i]);
 						} else if (headings[i].trim().toLowerCase().equals("Seasonal adjustment".toLowerCase())) {
 							item.seasonalAdjustment = row[i];
 						} else if (headings[i].trim().toLowerCase().equals("Units".toLowerCase())) {

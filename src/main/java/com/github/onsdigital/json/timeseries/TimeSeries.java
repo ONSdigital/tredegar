@@ -2,6 +2,8 @@ package com.github.onsdigital.json.timeseries;
 
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
+
 import com.github.onsdigital.json.ContentType;
 import com.github.onsdigital.json.DataItem;
 
@@ -33,6 +35,30 @@ public class TimeSeries extends DataItem {
 	public TimeSeries() {
 		type = ContentType.timeseries;
 		name = "People not in Work";
-		fileName = cdid.toLowerCase();
+	}
+
+	@Override
+	public String toString() {
+		return cdid;
+	}
+
+	@Override
+	public int hashCode() {
+		if (cdid != null) {
+			return cdid.toLowerCase().hashCode();
+		} else {
+			return 0;
+		}
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (obj == null) {
+			return false;
+		}
+		if (!TimeSeries.class.isAssignableFrom(obj.getClass())) {
+			return false;
+		}
+		return StringUtils.equalsIgnoreCase(((TimeSeries) obj).cdid, cdid);
 	}
 }
