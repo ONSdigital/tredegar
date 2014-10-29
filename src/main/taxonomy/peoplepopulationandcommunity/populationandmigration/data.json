@@ -1,185 +1,47 @@
 {
-  "children": [
+  "sections": [
     {
-      "detail": [],
-      "index": 0,
-      "breadcrumb": [
-        {
-          "index": 0,
-          "type": "home",
-          "name": "People, Population and Community",
-          "fileName": "peoplepopulationandcommunity"
-        },
-        {
-          "index": 0,
-          "type": "home",
-          "name": "Population and Migration",
-          "fileName": "populationandmigration"
-        }
-      ],
-      "type": "home",
       "name": "Population Estimates",
-      "fileName": "populationestimates"
+      "link": "populationestimates",
+      "index": 0,
+      "items": [
+        "/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/raid121",
+        "/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/raid127",
+        "/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/raid128",
+        "/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/raid129"
+      ]
     },
     {
-      "detail": [
-        {
-          "name": "Gross Domestic Product",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "£390383",
-          "unit": "m",
-          "date": "1st Quarter 2014",
-          "headline": false
-        },
-        {
-          "name": "GDP Quarter on Quarter Growth",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "0.8",
-          "unit": "%",
-          "date": "1st Quarter 2014",
-          "headline": false
-        },
-        {
-          "name": "GDP Change on same Quarter a year ago",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "0.3",
-          "unit": "%",
-          "date": "1st Quarter 2014",
-          "headline": false
-        },
-        {
-          "name": "Production Index",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "97.5",
-          "unit": "",
-          "date": "1st Quarter 2014",
-          "headline": false
-        }
-      ],
-      "index": 1,
-      "breadcrumb": [
-        {
-          "index": 0,
-          "type": "home",
-          "name": "People, Population and Community",
-          "fileName": "peoplepopulationandcommunity"
-        },
-        {
-          "index": 0,
-          "type": "home",
-          "name": "Population and Migration",
-          "fileName": "populationandmigration"
-        }
-      ],
-      "type": "home",
       "name": "International Migration",
-      "fileName": "internationalmigration"
+      "link": "internationalmigration",
+      "index": 1,
+      "items": [
+        "/peoplepopulationandcommunity/populationandmigration/internationalmigration/timeseries/raid117"
+      ]
     },
     {
-      "detail": [
-        {
-          "name": "CPI Index",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "126.7",
-          "unit": "",
-          "date": "January 2014",
-          "headline": false
-        },
-        {
-          "name": "CPI Annual Rate Percentage Change over 12 months",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "1.9",
-          "unit": "%",
-          "date": "January 2014",
-          "headline": false
-        },
-        {
-          "name": "CPIH Index",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "124.7",
-          "unit": "",
-          "date": "January 2014",
-          "headline": false
-        },
-        {
-          "name": "CPIH Annual Rate Percentage Change over 12 months",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "1.8",
-          "unit": "%",
-          "date": "January 2014",
-          "headline": false
-        }
-      ],
-      "index": 2,
-      "breadcrumb": [
-        {
-          "index": 0,
-          "type": "home",
-          "name": "People, Population and Community",
-          "fileName": "peoplepopulationandcommunity"
-        },
-        {
-          "index": 0,
-          "type": "home",
-          "name": "Population and Migration",
-          "fileName": "populationandmigration"
-        }
-      ],
-      "type": "home",
       "name": "Population Projections",
-      "fileName": "populationprojections"
+      "link": "populationprojections",
+      "index": 2,
+      "items": [
+        "/peoplepopulationandcommunity/populationandmigration/populationprojections/timeseries/raid130"
+      ]
     },
     {
-      "detail": [
-        {
-          "name": "Employment Rate",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "72.9",
-          "unit": "%",
-          "date": "Feb — Apr 2014",
-          "headline": false
-        },
-        {
-          "name": "Unemployment Rate",
-          "link": "#",
-          "info": "Lorem ipsum dolor sit amet",
-          "number": "6.6",
-          "unit": "%",
-          "date": "Feb — Apr 2014",
-          "headline": false
-        }
-      ],
-      "index": 3,
-      "breadcrumb": [
-        {
-          "index": 0,
-          "type": "home",
-          "name": "People, Population and Community",
-          "fileName": "peoplepopulationandcommunity"
-        },
-        {
-          "index": 0,
-          "type": "home",
-          "name": "Population and Migration",
-          "fileName": "populationandmigration"
-        }
-      ],
-      "type": "home",
       "name": "Migration within the UK",
-      "fileName": "migrationwithintheuk"
+      "link": "migrationwithintheuk",
+      "index": 3,
+      "items": [
+        "/peoplepopulationandcommunity/populationandmigration/migrationwithintheuk/timeseries/raid120"
+      ]
     }
   ],
   "level": "t2",
   "index": 0,
+  "lede": "Population and migration statistics have a wide range of uses; they are used by central and local government and the health sector for planning and monitoring policy and service delivery; resource allocation; and managing the economy. Additionally, they are used by a wider range of organisations such as commercial companies for market research, special interest groups and academia as well as being of interest to the general public.",
+  "type": "home",
+  "name": "Population and Migration",
+  "fileName": "populationandmigration",
   "breadcrumb": [
     {
       "index": 0,
@@ -187,9 +49,5 @@
       "name": "People, Population and Community",
       "fileName": "peoplepopulationandcommunity"
     }
-  ],
-  "lede": "Population and migration statistics have a wide range of uses; they are used by central and local government and the health sector for planning and monitoring policy and service delivery; resource allocation; and managing the economy. Additionally, they are used by a wider range of organisations such as commercial companies for market research, special interest groups and academia as well as being of interest to the general public.",
-  "type": "home",
-  "name": "Population and Migration",
-  "fileName": "populationandmigration"
+  ]
 }

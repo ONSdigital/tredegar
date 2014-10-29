@@ -7,7 +7,10 @@ import java.net.URI;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -22,11 +25,11 @@ import com.github.davidcarboni.restolino.json.Serialiser;
 import com.github.onsdigital.generator.bulletin.BulletinContent;
 import com.github.onsdigital.generator.datasets.DatasetContent;
 import com.github.onsdigital.generator.timeseries.AlphaContentCSV;
-import com.github.onsdigital.json.Data;
 import com.github.onsdigital.json.Dataset;
+import com.github.onsdigital.json.HomeSection;
 import com.github.onsdigital.json.bulletin.Bulletin;
-import com.github.onsdigital.json.taxonomy.DataT1;
-import com.github.onsdigital.json.taxonomy.DataT2;
+import com.github.onsdigital.json.taxonomy.T1;
+import com.github.onsdigital.json.taxonomy.T2;
 import com.github.onsdigital.json.taxonomy.T3;
 import com.github.onsdigital.json.timeseries.TimeSeries;
 import com.github.onsdigital.json.timeseries.TimeSeriesValue;
@@ -116,7 +119,7 @@ public class TaxonomyGenerator {
 					if (StringUtils.isNotBlank(row[moreIndex])) {
 						subjectFolder.more = row[moreIndex];
 					}
-					themeFolder.children.add(subjectFolder);
+					themeFolder.addChild(subjectFolder);
 					topic = null;
 					// subTopic = null;
 				}
@@ -127,7 +130,7 @@ public class TaxonomyGenerator {
 					topicFolder.name = topic;
 					topicFolder.parent = subjectFolder;
 					topicFolder.index = topicCounter++;
-					subjectFolder.children.add(topicFolder);
+					subjectFolder.addChild(topicFolder);
 					// subTopic = null;
 					if (StringUtils.isNotBlank(row[ledeIndex])) {
 						topicFolder.lede = row[ledeIndex];
@@ -158,7 +161,7 @@ public class TaxonomyGenerator {
 		File root = new File("src/main/taxonomy");
 		Folder rootFolder = new Folder();
 		rootFolder.name = "Home";
-		rootFolder.children.addAll(folders);
+		rootFolder.addChildren(folders);
 		createHomePage(rootFolder, root);
 		File themeFile;
 		File subjectFile;
@@ -168,24 +171,24 @@ public class TaxonomyGenerator {
 			themeFile.mkdirs();
 			System.out.println(themeFile.getAbsolutePath());
 			createT2(t, themeFile);
-			for (Folder s : t.children) {
+			for (Folder s : t.getChildren()) {
 				subjectFile = new File(themeFile, s.filename());
 				subjectFile.mkdirs();
-				if (s.children.size() == 0) {
+				if (s.getChildren().size() == 0) {
 					createT3(s, subjectFile);
 					// createContentFolders(s.name, subjectFile);
 				} else {
 					createT2(s, subjectFile);
 				}
 				System.out.println("\t" + subjectFile.getPath());
-				for (Folder o : s.children) {
+				for (Folder o : s.getChildren()) {
 					topicFile = new File(subjectFile, o.filename());
 					topicFile.mkdirs();
 					System.out.println("\t\t" + topicFile.getPath());
 					createT3(o, topicFile);
-					if (o.children.size() == 0) {
+					if (o.getChildren().size() == 0) {
 						// createContentFolders(o.name, topicFile);
-					}
+					} 
 				}
 			}
 		}
@@ -265,62 +268,127 @@ public class TaxonomyGenerator {
 
 	private static void createHomePage(Folder folder, File file) throws IOException {
 		// The folder needs to be at the root path:
-		Data data = new DataT1(folder);
-		data.fileName = "/";
+		T1 t1 = new T1(folder);
+		t1.fileName = "/";
 		if (StringUtils.isNotBlank(folder.lede)) {
-			data.lede = folder.lede;
-			data.more = folder.more;
+			t1.lede = folder.lede;
+			t1.more = folder.more;
 		}
-		String json = Serialiser.serialise(data);
+		String json = Serialiser.serialise(t1);
 		FileUtils.writeStringToFile(new File(file, "data.json"), json);
 	}
 
 	private static void createT2(Folder folder, File file) throws IOException {
-		DataT2 t2 = new DataT2(folder);
-		if (StringUtils.isNotBlank(folder.lede)) {
-			t2.lede = folder.lede;
-			t2.more = folder.more;
+		if (folder.name.equals("Releases") || (folder.parent != null && folder.parent.name.equals("Releases"))) {
+			System.out.println("Do not create json for Releases createT2");
+		} else {
+			T2 t2 = new T2(folder, folder.index);
+			if (StringUtils.isNotBlank(folder.lede)) {
+				t2.lede = folder.lede;
+				t2.more = folder.more;
+			}
+			t2.index = folder.index;
+			buildT2Sections(t2, folder);
+
+			String json = Serialiser.serialise(t2);
+			FileUtils.writeStringToFile(new File(file, "data.json"), json);
 		}
-		t2.index = folder.index;
-		String json = Serialiser.serialise(t2);
-		FileUtils.writeStringToFile(new File(file, "data.json"), json);
+	}
+
+	private static void buildT2Sections(T2 t2, Folder folder) throws IOException {
+		t2.sections = new ArrayList<HomeSection>();
+		for (Folder child : folder.getChildren()) {
+			HomeSection section = new HomeSection(child.name, child.filename());
+			section.index = child.index;
+			t2.sections.add(section);
+			List<Folder> t3Folders = getT3Folders(child);
+			Collection<URI> timeserieses = getTimeseries(t3Folders);
+			for (URI timeseries : timeserieses) {
+				section.items.add(timeseries);
+			}
+		}
+		Collections.sort(t2.sections);
+	}
+
+	private static List<Folder> getT3Folders(Folder folder) {
+		List<Folder> result = new ArrayList<Folder>();
+
+		// If the folder is t3, add it directly:
+		if (folder.getChildren().size() == 0) {
+			result.add(folder);
+		}
+
+		// If it's a t2, recurse:
+		for (Folder child : folder.getChildren()) {
+			result.addAll(getT3Folders(child));
+		}
+		return result;
+	}
+
+	private static Set<URI> getTimeseries(List<Folder> t3Folders) throws IOException {
+		// Keep keys in the order they are added, but allow for de-duplication:
+		Set<URI> result = new LinkedHashSet<>();
+
+		// Add the headlines first so that they will appear first
+		for (Folder t3Folder : t3Folders) {
+			TimeSeries headlineTimeSeries = AlphaContentCSV.getHeadlineTimeSeries(t3Folder);
+			if (headlineTimeSeries != null) {
+				result.add(toUri(t3Folder, headlineTimeSeries));
+			}
+		}
+
+		// Add the other items in case there aren't enough headline items:
+		for (Folder t3Folder : t3Folders) {
+			// Limit the number in case we have thousands
+			// (this is quite likely at some point)
+			int max = 4;
+			for (TimeSeries timeSeries : AlphaContentCSV.getTimeSeries(t3Folder)) {
+				if (max-- < 0) {
+					if (timeSeries != null) {
+						result.add(toUri(t3Folder, timeSeries));
+					}
+				}
+			}
+		}
+
+		return result;
 	}
 
 	private static void createT3(Folder folder, File file) throws IOException {
 
-		T3 t3 = new T3(folder);
-		if (StringUtils.isNotBlank(folder.lede)) {
-			t3.lede = folder.lede;
-			t3.more = folder.more;
-		}
-		t3.index = folder.index;
+			T3 t3 = new T3(folder);
+			if (StringUtils.isNotBlank(folder.lede)) {
+				t3.lede = folder.lede;
+				t3.more = folder.more;
+			}
+			t3.index = folder.index;
 
-		// Timeseries references:
-		URI headline = toUri(folder, AlphaContentCSV.getHeadlineTimeSeries(folder));
-		if (headline != null) {
-			t3.headline = headline;
-		}
-		List<TimeSeries> timeserieses = AlphaContentCSV.getTimeSeries(folder);
-		t3.items.clear();
-		String baseUri = "/" + folder.filename();
-		Folder parent = folder.parent;
-		while (parent != null) {
-			baseUri = "/" + parent.filename() + baseUri;
-			parent = parent.parent;
-		}
-		baseUri += "/timeseries";
-		for (TimeSeries timeseries : timeserieses) {
-			t3.items.add(toUri(folder, timeseries));
-		}
+			// Timeseries references:
+			URI headline = toUri(folder, AlphaContentCSV.getHeadlineTimeSeries(folder));
+			if (headline != null) {
+				t3.headline = headline;
+			}
+			List<TimeSeries> timeserieses = AlphaContentCSV.getTimeSeries(folder);
+			t3.items.clear();
+			String baseUri = "/" + folder.filename();
+			Folder parent = folder.parent;
+			while (parent != null) {
+				baseUri = "/" + parent.filename() + baseUri;
+				parent = parent.parent;
+			}
+			baseUri += "/timeseries";
+			for (TimeSeries timeseries : timeserieses) {
+				t3.items.add(toUri(folder, timeseries));
+			}
 
-		// Serialise
-		String json = Serialiser.serialise(t3);
-		FileUtils.writeStringToFile(new File(file, "data.json"), json);
+			// Serialise
+			String json = Serialiser.serialise(t3);
+			FileUtils.writeStringToFile(new File(file, "data.json"), json);
 
-		createArticle(folder, file);
-		createBulletin(folder, file);
-		createDataset(folder, file);
-		createTimeseries(folder, file);
+			createArticle(folder, file);
+			createBulletin(folder, file);
+			createDataset(folder, file);
+			createTimeseries(folder, file);
 	}
 
 	private static URI toUri(Folder folder, TimeSeries timeseries) {
@@ -340,6 +408,7 @@ public class TaxonomyGenerator {
 		return result;
 	}
 
+	
 	/**
 	 * Creates timeseries data.
 	 *
@@ -418,4 +487,5 @@ public class TaxonomyGenerator {
 			FileUtils.writeStringToFile(new File(version, "data.json"), json);
 		}
 	}
+	
 }

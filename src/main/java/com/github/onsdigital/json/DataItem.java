@@ -1,5 +1,7 @@
 package com.github.onsdigital.json;
 
+import java.util.List;
+
 /**
  * The minimal fields required by the data about every item on the website.
  * 
@@ -19,4 +21,7 @@ public class DataItem {
 	 * relative URL to reach this item from the parent.
 	 */
 	public String fileName;
+	
+	public List<TaxonomyHome> breadcrumb;
+
 }

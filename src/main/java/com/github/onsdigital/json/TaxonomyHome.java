@@ -1,7 +1,6 @@
 package com.github.onsdigital.json;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import com.github.onsdigital.generator.Folder;
 
@@ -11,11 +10,10 @@ import com.github.onsdigital.generator.Folder;
  * @author david
  *
  */
-public class TaxonomyFolder extends DataItem {
+public class TaxonomyHome extends DataItem {
 
 	public String level;
 	public int index;
-	public List<TaxonomyFolder> breadcrumb;
 	public String lede;
 	public String more;
 
@@ -24,7 +22,7 @@ public class TaxonomyFolder extends DataItem {
 	 * @param folder
 	 *            The folder for this taxonomy homepage node.
 	 */
-	public TaxonomyFolder(Folder folder) {
+	public TaxonomyHome(Folder folder) {
 		this(folder, true);
 	}
 
@@ -37,7 +35,7 @@ public class TaxonomyFolder extends DataItem {
 	 *            as false when parsing a breadcrumb in order to avoid
 	 *            recursively building breadcrumbs within breadcrumbs.
 	 */
-	private TaxonomyFolder(Folder folder, boolean parseBreadcrumb) {
+	private TaxonomyHome(Folder folder, boolean parseBreadcrumb) {
 		type = ContentType.home;
 		name = folder.name;
 		fileName = folder.filename();
@@ -46,9 +44,10 @@ public class TaxonomyFolder extends DataItem {
 			breadcrumb = new ArrayList<>();
 			Folder parent = folder;
 			while ((parent = parent.parent) != null) {
-				breadcrumb.add(0, new TaxonomyFolder(parent, false));
+				breadcrumb.add(0, new TaxonomyHome(parent, false));
 			}
 		}
 
 	}
+	
 }

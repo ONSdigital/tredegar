@@ -37,8 +37,7 @@ import com.github.davidcarboni.restolino.framework.Endpoint;
 import com.github.davidcarboni.restolino.json.Serialiser;
 import com.github.onsdigital.configuration.Configuration;
 import com.github.onsdigital.json.ContentType;
-import com.github.onsdigital.json.Data;
-import com.github.onsdigital.json.TaxonomyFolder;
+import com.github.onsdigital.json.TaxonomyHome;
 
 /**
  * Sitemap endpoint that reflects the taxonomy structure:
@@ -139,7 +138,7 @@ public class Sitemap {
 
 	private int addPath(Path path, double priority, Document document, Element rootElement, URL requestUrl) throws IOException {
 		int result = 0;
-		Data data = getDataJson(path);
+		TaxonomyHome data = getDataJson(path);
 		if (data != null && data.type == ContentType.home) {
 			try {
 				URI uri = toUri(data, requestUrl);
@@ -152,23 +151,23 @@ public class Sitemap {
 		return result;
 	}
 
-	private Data getDataJson(Path path) throws IOException {
-		Data result = null;
+	private TaxonomyHome getDataJson(Path path) throws IOException {
+		TaxonomyHome result = null;
 
 		Path dataJson = path.resolve("data.json");
 		if (Files.exists(dataJson)) {
 			try (InputStream input = Files.newInputStream(dataJson)) {
-				result = Serialiser.deserialise(input, Data.class);
+				result = Serialiser.deserialise(input, TaxonomyHome.class);
 			}
 		}
 
 		return result;
 	}
 
-	private URI toUri(Data data, URL requestUrl) throws URISyntaxException {
+	private URI toUri(TaxonomyHome data, URL requestUrl) throws URISyntaxException {
 		StringBuilder fragment = new StringBuilder("!");
 		if (data != null && data.breadcrumb != null) {
-			for (TaxonomyFolder segment : data.breadcrumb) {
+			for (TaxonomyHome segment : data.breadcrumb) {
 				fragment.append("/" + segment.fileName);
 			}
 		}

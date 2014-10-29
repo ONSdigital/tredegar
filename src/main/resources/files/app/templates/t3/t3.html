@@ -117,16 +117,16 @@
       </thead>
 
     <tbody>
-      <tr ng-repeat="timeseries in taxonomy.data.timeseries" class="list--table__item list--table__body datatable-row">
+      <tr ng-repeat="item in taxonomy.data.itemData" class="list--table__item list--table__body datatable-row">
         <td class="data_table_section-title">
           <div class="list--table__item__body list--table__item__body--caption responsive_large_width">
             <h3 class="nav-panel__heading">
-              <a href="#!{{timeseries.url}}"> {{timeseries.name}}</a>
+              <a href="#!{{item.url}}"> {{item.name}}</a>
               <!-- CPI Index -->
                 <span tabindex="0" class="tooltip icon-info-circled icon--warm icon--inline tooltipstered"></span>
             </h3>
-            <div class="micro list--table__item__body body_update_media body_update_media">Last updated: {{timeseries.lastUpated}} <br>
-               Next Updated: <span class="red_highlight"> {{timeseries.nextUpdate}} </span>
+            <div class="micro list--table__item__body body_update_media body_update_media">Last updated: {{item.lastUpated}} <br>
+               Next Updated: <span class="red_highlight"> {{item.nextUpdate}} </span>
             </div>
           </div>
         </td>
@@ -135,10 +135,10 @@
          <div class="list--table__item__body list--table__item__body--stat stat  responsive_med_width">
             <div class="list--table__item__body--centred">
               <div class="stat__figure stat__tight">
-                 {{timeseries.number}}
+                 {{item.number}}
                  <!-- 1.5 -->
               </div>
-              <time class="stat__description" datetime="2014-01">{{timeseries.date}}
+              <time class="stat__description" datetime="2014-01">{{item.date}}
               <!-- January 2014 -->
               </time>
             </div>
@@ -146,8 +146,8 @@
         </td>   
   
       <td class="update_responsive">
-        <div class="micro list--table__item__body list--table__item__body--update  body_update_desk">Last updated: {{timeseries.lastUpated}} <br>
-          Next Updated: <span class="red_highlight"> {{timeseries.nextUpdate}} </span>
+        <div class="micro list--table__item__body list--table__item__body--update  body_update_desk">Last updated: {{item.lastUpated}} <br>
+          Next Updated: <span class="red_highlight"> {{item.nextUpdate}} </span>
         </div>
       </td>
     

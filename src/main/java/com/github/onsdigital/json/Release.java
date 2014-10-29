@@ -9,7 +9,7 @@ import com.github.onsdigital.generator.Folder;
  * Java entity representation of the json that holds links to the articles,
  * bulletins and datasets that make up a published release
  */
-public class Release extends TaxonomyFolder {
+public class Release extends TaxonomyHome {
 	// Top section
 	public String releaseDate = "21 October 2014";
 	public String nextRelease = "21 November 2014";

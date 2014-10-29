@@ -1,15 +1,18 @@
 package com.github.onsdigital.json.taxonomy;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import com.github.onsdigital.generator.Folder;
-import com.github.onsdigital.json.ChildT2;
-import com.github.onsdigital.json.Data;
+import com.github.onsdigital.json.HomeSection;
+import com.github.onsdigital.json.TaxonomyHome;
 
-public class DataT2 extends Data {
+public class T2 extends TaxonomyHome {
 
-	public DataT2(Folder folder) {
-		super(folder, 2);
+	public List<HomeSection> sections;
+
+	public T2(Folder folder, int index) {
+		super(folder);
+		super.index = index;
 		level = "t2";
 		lede = "Producer Price Inflation (PPI) measures the price changes of goods bought and " + "sold by UK manufacturers this month compared to the same month a year ago. PPI provides a "
 				+ "key measure of inflation alongside other indicators such as the Consumer Prices Index (CPI) " + "and Services Producer Price Index (SPPI)."
@@ -25,12 +28,6 @@ public class DataT2 extends Data {
 				+ "occurred in the second period of 2005 to 2012. Output price inflation rose to 8.9% in July "
 				+ "2008 while input price inflation rose to 34.8% in June 2008 and both fell to their lowest "
 				+ "rates in July 2009: output price inflation falling by 1.6% and input price inflation " + "falling by 14.8%.";
-
-		children = new ArrayList<>();
-		for (Folder child : folder.children) {
-			children.add(new ChildT2(child, child.index));
-		}
-		sort(children);
 	}
 
 }
