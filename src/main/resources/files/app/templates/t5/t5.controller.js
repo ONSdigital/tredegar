@@ -4,7 +4,6 @@ angular.module('onsTemplates')
 .controller('T5Ctrl', ['$scope',
     function($scope) {
         $scope.header = "Time Series";
-        // $scope.contentType = "timeseries";
         $scope.sidebar = true;
         $scope.sidebarUrl = "/app/templates/t5/t5sidebar.html";
     }
@@ -25,7 +24,12 @@ angular.module('onsTemplates')
         var reM = new RegExp('^[0-9]{4}.[A-Z]{3}$');
 
         $scope.chart = data;
-        // console.log($scope.chart);
+
+        //If true shows graph, else table.
+        $scope.chartTable = true;
+
+        //Year, Quarter or month
+        $scope.yqm = 0;
 
         makeArray($scope.chart.data);
         $scope.tableValue = makeObj(categoriesY, seriesDataY);
@@ -34,30 +38,62 @@ angular.module('onsTemplates')
         $scope.chartData = getData();
 
         $scope.changeChartType = function(type) {
-            $scope.chartData.options.chart.type = type;
-            // console.log($scope.chartData)
+            if (type === "line") {
+                $scope.chartTable = true;
+            }
+            if (type === "table") {
+                $scope.chartTable = false;
+            }
+            console.log($scope.chartTable);
         };
 
         $scope.changeChartTime = function(time) {
             if (time === 'year') {
                 $scope.chartData.options.xAxis.categories = categoriesY;
-                $scope.chartData.options.xAxis.tickInterval = 1;
+                $scope.chartData.options.xAxis.tickInterval = tickInterval(categoriesY.length);
                 $scope.chartData.series[0].data = seriesDataY;
                 $scope.tableValue = makeObj(categoriesY, seriesDataY);
+                $scope.yqm = 0;
             }
             if (time === 'quarter') {
                 $scope.chartData.options.xAxis.categories = categoriesQ;
-                $scope.chartData.options.xAxis.tickInterval = 4;
+                $scope.chartData.options.xAxis.tickInterval = tickInterval(categoriesQ.length);
                 $scope.chartData.series[0].data = seriesDataQ;
                 $scope.tableValue = makeObj(categoriesQ, seriesDataQ);
+                $scope.yqm = 1;
             }
             if (time === 'month') {
                 $scope.chartData.options.xAxis.categories = categoriesM;
-                $scope.chartData.options.xAxis.tickInterval = 12;
+                $scope.chartData.options.xAxis.tickInterval = tickInterval(categoriesM.length);
                 $scope.chartData.series[0].data = seriesDataM;
                 $scope.tableValue = makeObj(categoriesM, seriesDataM);
+                $scope.yqm = 2;
             }
         };
+
+        function tickInterval(categories) {
+            var tick;
+            if (categories <= 20) {
+                tick = 1;
+            }
+            if (categories > 20 && categories <= 80) {
+                tick = 4;
+            }
+            if (categories > 80) {
+                tick = 12;
+            }
+            if (categories > 240) {
+                tick = 48;
+            }
+            if (categories > 480) {
+                tick = 96;
+            }
+            if (categories > 960) {
+                tick = 192;
+            }
+            console.log("Esto es: " + tick);
+            return tick;
+        }
 
         function makeArray (dat) {
             for (var i = 0; i < dat.length; i++) {
@@ -110,7 +146,6 @@ angular.module('onsTemplates')
                         y: 0,
                         text: 'Image',
                         theme: {
-                            // stroke: '#0054aa',
                             fill: '#0054aa',
                             r: 0,
                             states: {
@@ -118,21 +153,10 @@ angular.module('onsTemplates')
                                     fill: '#004790'
                                 },
                                 select: {
-                                    // stroke: '#039',
                                     fill: '#004790'
                                 }
                             }
                         }
-                //     }
-                // },
-                // exporting: {
-                //     buttons: {
-                //         contextButton: {
-                //             enabled: false
-                //         },
-                //         exportButton: {
-                //             text: 'Image',
-                //         }
                     }
                 },
                 xAxis: {

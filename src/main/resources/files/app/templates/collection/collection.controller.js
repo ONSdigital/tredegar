@@ -2,6 +2,7 @@
 angular.module('onsTemplates')
   .controller('CollectionCtrl', ['$scope', '$location', '$http',
     function($scope, $location, $http) {
+	  console.log('CollectionCtrl invoked')
 	  
       getData("/collection.json", function(data) {
         $scope.content = data

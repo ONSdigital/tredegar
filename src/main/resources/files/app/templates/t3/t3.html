@@ -103,7 +103,7 @@
       <thead>
         <th colspan="4" >
           <div class="list--table-header split__title">
-            <h2> Statistics Related to Inflation and Price Indices</h2>
+            <h2> Statistics Related to {{taxonomy.data.name}}</h2>
           </div>
         </th>
         <th colspan="1" class="datatable-select">Select All
@@ -137,6 +137,8 @@
               <div class="stat__figure stat__tight">
                  {{item.number}}
                  <!-- 1.5 -->
+                 <span class="stat__figure__unit">{{item.unit}}</span>
+                 <!-- % -->
               </div>
               <time class="stat__description" datetime="2014-01">{{item.date}}
               <!-- January 2014 -->
@@ -190,20 +192,20 @@
 <section class="panel wrapper">
         <header class="actionable-header">
           <h2 class="actionable-header__title table-inline ">Key datasets</h2>
-          <a class="" href="#">View more datasets</a>
+          <a class="" href="#!{{getPath()}}/collection?type=datasets">View more datasets</a>
         </header>
         <div class="grid-wrap">
           <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
             <article class="box box--padded sectioned lifted border-defined">
               <header class="box__header">
                 <h3 class="gamma">
-                    <a href="#!/economy/inflationandpriceindices/datasets/inflationsummary/">Inflation Summary </a>
+                    <a href="#!/economy/inflationandpriceindices/datasets/inflationsummary/">Lorem ipsum</a>
                 </h3>
               </header>
               <!-- /box__header -->
               <div class="box__content">
                 <ul class="list--table">
-                  <li class="">Overview of all high level consumer inflation data, including CPI, RPI, CPIH and RPIJ</li>
+                  <li class="">Quisque eget magna nec erat laoreet sodales. Suspendisse at risus non libero.</li>
                   <!-- <li>Between 1997 and 2011 the contribution of building to total GVA decreased in each of the NUTS1 regions.</li> -->
                 </ul>
                 <p class="lozenge">Dataset</p>
@@ -225,13 +227,13 @@
             <article class="box box--padded sectioned lifted border-defined">
               <header class="box__header">
                 <h3 class="gamma">
-                  <a href="#">Retail Price Index </a>
+                  <a href="#">Vestibulum ligula tortor </a>
                 </h3>
               </header>
               <!-- /box__header -->
               <div class="box__content">
                 <ul class="list--table">
-                  <li>Complete dataset covering all RPI statistics. Not a national statistic</li>
+                  <li>Nunc in nunc dictum, sollicitudin ligula vitae, pulvinar nulla.</li>
                   <!-- <li>Falls in transport services costs, notably air fares</li> -->
                 </ul>
                 <p class="lozenge">Dataset</p>
@@ -252,13 +254,13 @@
             <article class="box box--padded sectioned lifted border-defined">
               <header class="box__header">
                 <h3 class="gamma">
-                  <a href="#">Produce Price Inflation </a>
+                  <a href="#">Duis sit amet egestas</a>
                 </h3>
               </header>
               <!-- /box__header -->
               <div class="box__content">
                 <ul class="list--table">
-                  <li>Comprehensive dataset covering input and output index series</li>
+                  <li>Nam ut ex sit amet libero pulvinar varius molestie vitae ipsum.</li>
                   <!-- <li>Between 1997 and 2011 the contribution of building to total GVA
                     decreased in each of the NUTS1 regions.</li>
                   <li>In 2012 the South East had the largest increase in GVA</li>

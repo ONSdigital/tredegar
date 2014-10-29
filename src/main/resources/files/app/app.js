@@ -30,7 +30,7 @@
                     templateUrl: 'app/templates/article/article.html',
                     controller: 'ArticleCtrl'
                 }).
-                when('/economy/inflationandpriceindices/collection', {
+                when(':collectionPath*\/collection', {
                     templateUrl: 'app/templates/collection/collection.html',
                     controller: "CollectionCtrl"
                 }).
@@ -45,10 +45,6 @@
                 when('/dataset_timeseries', {
                     templateUrl: 'app/templates/dataset/Dataset_Excel_Time_Series.html',
                     controller: "DatasetCtrl"
-                }).
-                when('/economy/inflationandpriceindices/bulletin', {
-                    templateUrl: 'app/templates/bulletin/bulletin.html',
-                    controller: 'BulletinCtrl'
                 }).
                 when('/methodology', {
                     templateUrl: 'app/templates/methodology/methodology.html',

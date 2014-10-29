@@ -274,6 +274,12 @@
     .tooltip-tall {
         height: 100px;
     }
+
+    /*****************************************
+    *
+    * Changed this to adapt to different sizes
+    *
+    ******************************************/
     .maintext {
         font-family: "open-sans-n7", "open-sans", sans-serif;
         padding: 10px 0 0 40px;
@@ -281,6 +287,11 @@
         width: 220px;
         height: 100%;
     }
+    /*****************************************
+    *
+    * Added this class
+    *
+    ******************************************/
     .maintext__title {
         font-family: "open-sans-n7", "open-sans", sans-serif;
         margin-bottom: 5px;
@@ -1322,9 +1333,19 @@
     .chart-area__controls__year {
         text-indent: 0;
     }
+
+
+    /*****************************************
+    *
+    * Changed this to adapt to different sizes
+    *
+    ******************************************/
     .chart-area__controls__month {
-        width: 60px;
-        width: 6rem;
+        text-align: center;
+        width: 100px;
+        width: 10rem;
+        margin-right: 10px;
+
     }
     .chart-area__controls__year {
         width: 70px;
@@ -1553,7 +1574,7 @@ lesser , applied styles
             <h1 class="page-header__title flush--half--bottom">{{chart.name}}</h1>
             <div class="grid-wrap">
                 <div class="grid-col desktop-grid-one-half">
-                    <img src="../ui/img/nslogo.png" class="page-header-image" alt="ONS logo">
+                    <img src="/ui/img/nslogo.png" class="page-header-image" alt="ONS logo">
                     <p>
                         <strong>{{chart.lastUpated}}</strong>
                         <span class="page-header-box-link">
@@ -1613,15 +1634,17 @@ lesser , applied styles
         <!-- Chart in Highcharts -->
         <div class="chart-area slate">
             <div class="chart-area__controls">
-                <div class="button-bar chart-area__controls__buttons">
-                    <div class="button-group chart-area__controls__type">
-                        <div class="btn btn--secondary btn--small btn--narrow btn--thin btn--secondary--active" ng-click="changeChartType('line')">Line</div>
-                        <div class="btn btn--secondary btn--small btn--narrow btn--thin" ng-click="changeChartType('table')">Table</div>
-                    </div>
-                    <div class="button-group chart-area__controls__timespan">
-                        <div class="btn btn--secondary btn--small btn--narrow btn--thin btn--secondary--active" ng-if="hasYData" ng-click="changeChartTime('year')">Year</div>
-                        <div class="btn btn--secondary btn--small btn--narrow btn--thin" ng-if="hasQData" ng-click="changeChartTime('quarter')">Quarter</div>
-                        <div class="btn btn--secondary btn--small btn--narrow btn--thin " ng-if="hasMData" ng-click="changeChartTime('month')">Month</div>
+                <form>
+                    <div class="button-bar chart-area__controls__buttons">
+                        <div class="button-group chart-area__controls__type">
+                            <label class="btn btn--secondary btn--small btn--narrow btn--thin" ng-class="{'btn--secondary--active': chartTable}" ng-click="changeChartType('line')">Line</label>
+                            <label class="btn btn--secondary btn--small btn--narrow btn--thin" ng-class="{'btn--secondary--active': !chartTable}" ng-click="changeChartType('table')">Table</label>
+                        </div>
+                        <div class="button-group chart-area__controls__timespan">
+                            <label class="btn btn--secondary btn--small btn--narrow btn--thin" ng-if="hasYData" ng-class="{'btn--secondary--active': yqm === 0}" ng-click="changeChartTime('year')">Year</label>
+                            <label class="btn btn--secondary btn--small btn--narrow btn--thin" ng-if="hasQData" ng-class="{'btn--secondary--active': yqm === 1}" ng-click="changeChartTime('quarter')">Quarter</label>
+                            <label class="btn btn--secondary btn--small btn--narrow btn--thin " ng-if="hasMData" ng-class="{'btn--secondary--active': yqm === 2}" ng-click="changeChartTime('month')">Month</label>
+                        </div>
                     </div>
                     <div class="button-group chart-area__controls__time">
                         <span class="chart-area__controls__time__label">Time period:</span>
@@ -1633,35 +1656,66 @@ lesser , applied styles
                                 <a href="#" data-chart-controls-range="10yr">Last 10 yrs</a>
                             </li>
                             <li>
-                                <a href="#" data-chart-controls-range="5yr" class="chart-area__controls__active">Last 5 yrs</a>
+                                <a href="#" data-chart-controls-range="5yr">Last 5 yrs</a>
                             </li>
-                            <li class="chart-area__controls__custom--active invisible">
+                            <li class="chart-area__controls__custom--active">
                                 <a href="#" class="link-complex">
-                                    <span class="link-complex__target">Custom-custom-cusni</span>
+                                    <span class="link-complex__target">Custom</span>
                                     <span class="icon-down-open-big icon--inline" role="presentation"></span>
                                 </a>
                             </li>
                         </ul>
                     </div>
 
-                    <br></br>
-                    <highchart class="highcharts-background" id="chart_prices" config="chartData"></highchart>
+                    <!-- Selectors -->
+                    <div class="chart-area__controls__custom" id="customControls">
+                        <div class="chart-area__controls__custom__errors"></div>
+                        <div class="chart-area__controls__custom__container">
+                            <div class="chart-area__controls__dropdowns">
+                                <fieldset class="chart-area__controls__date">
+                                    <legend class="chart-area__controls__date__label">From</legend>
+                                    <label class="visuallyhidden">Date</label>
+                                    <select class="chart-area__controls__month" ng-model="tableValue" ng-options="date for date in chartData.options.xAxis.categories">
+                                        <option value="">Select option</option>
+                                    </select>
+                                </fieldset>
+
+                                <fieldset class="chart-area__controls__date">
+                                    <legend class="chart-area__controls__date__label">To</legend>
+                                    <label class="visuallyhidden">Date</label>
+                                    <select class="chart-area__controls__month" ng-model="tableValue" ng-options="date for date in chartData.options.xAxis.categories">
+                                        <option value="">Select option</option>
+                                    </select>
+                                </fieldset>
+                            </div>
+                            <!-- <div class="chart-area__controls__submit">
+                                <input class="btn btn--small btn--thin btn--narrow btn--primary" type="submit" name="submit" data-chart-controls-submit="" value="Show"/>
+                            </div> -->
+                        </div>
+                        <br></br>
+                    </div>
+                    <!-- chart -->
+                    <div ng-if="chartTable">
+                        <highchart class="highcharts-background" id="chart_prices" config="chartData"></highchart>
+                    </div>
+                </form>
+                <!-- table -->
+                <div ng-if="!chartTable">
+                    <table class="tablesaw">
+                        <thead>
+                            <tr>
+                                <th>Period</th>
+                                <th>{{chart.cdid}}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="data in tableValue">
+                                <th>{{data[0]}}</th>
+                                <td>{{data[1]}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <br></br>
-                <table class="tablesaw">
-                    <thead>
-                        <tr>
-                            <th>Period</th>
-                            <th>{{chart.cdid}}</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr ng-repeat="data in tableValue">
-                            <th>{{data[0]}}</th>
-                            <td>{{data[1]}}</td>
-                        </tr>
-                    </tbody>
-                </table>
             </div>
         </div>
     </div>
