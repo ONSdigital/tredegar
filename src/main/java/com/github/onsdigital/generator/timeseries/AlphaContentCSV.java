@@ -88,8 +88,11 @@ public class AlphaContentCSV {
 
 				TimeSeries timeseries = Data.timeseries(row.get("CDID"));
 				timeseries.setCdid(StringUtils.defaultIfBlank(timeseries.cdid(), StringUtils.trim(row.get("CDID"))));
-				timeseries.name = row.get("Name");
-				timeseries.unit = row.get("Units");
+				timeseries.name = StringUtils.defaultIfBlank(row.get("Name"), timeseries.name);
+				timeseries.unit = StringUtils.defaultIfBlank(row.get("Units"), timeseries.unit);
+				timeseries.preUnit = StringUtils.defaultIfBlank(row.get("Pre unit"), timeseries.preUnit);
+				timeseries.number = StringUtils.defaultIfBlank(row.get("Figure"), timeseries.number);
+				timeseries.date = StringUtils.defaultIfBlank(row.get("Period"), timeseries.date);
 				if (StringUtils.isNotBlank(row.get("Figure"))) {
 					timeseries.number = row.get("Figure");
 				}

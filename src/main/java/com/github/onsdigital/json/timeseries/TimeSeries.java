@@ -23,6 +23,8 @@ public class TimeSeries extends DataItem {
 	// Additional information
 	public String number = "126.7";
 	public String unit = "m";
+	// A unit that needs to go before the number, e.g. £
+	public String preUnit;
 	public String date = "January 2014";
 	public String lastUpated = "16 Sep 2014";
 	public String nextUpdate = "14 Oct 2014";
