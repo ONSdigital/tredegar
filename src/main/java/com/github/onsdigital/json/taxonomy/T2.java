@@ -1,7 +1,5 @@
 package com.github.onsdigital.json.taxonomy;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import com.github.onsdigital.generator.Folder;
@@ -30,19 +28,6 @@ public class T2 extends TaxonomyHome {
 				+ "occurred in the second period of 2005 to 2012. Output price inflation rose to 8.9% in July "
 				+ "2008 while input price inflation rose to 34.8% in June 2008 and both fell to their lowest "
 				+ "rates in July 2009: output price inflation falling by 1.6% and input price inflation " + "falling by 14.8%.";
-	
-		buildSections(folder);
-	}
-	
-	protected void buildSections(Folder folder) {
-		sections = new ArrayList<HomeSection>();
-		for (Folder child : folder.getChildren()) {
-			HomeSection section = new HomeSection(child.name, child.filename());
-			section.index = child.index;
-			sections.add(section);
-			
-		}
-		Collections.sort(sections);
 	}
 
 }

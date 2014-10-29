@@ -7,7 +7,10 @@ import java.net.URI;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -22,6 +25,7 @@ import com.github.davidcarboni.restolino.json.Serialiser;
 import com.github.onsdigital.generator.timeseries.AlphaContentCSV;
 import com.github.onsdigital.json.Article;
 import com.github.onsdigital.json.Dataset;
+import com.github.onsdigital.json.HomeSection;
 import com.github.onsdigital.json.Release;
 import com.github.onsdigital.json.bulletin.Bulletin;
 import com.github.onsdigital.json.taxonomy.T1;
@@ -282,15 +286,76 @@ public class TaxonomyGenerator {
 		if (folder.name.equals("Releases") || (folder.parent != null && folder.parent.name.equals("Releases"))) {
 			System.out.println("Do not create json for Releases createT2");
 		} else {
-			T2  t2 = new T2(folder, folder.index );
+			T2 t2 = new T2(folder, folder.index);
 			if (StringUtils.isNotBlank(folder.lede)) {
 				t2.lede = folder.lede;
 				t2.more = folder.more;
 			}
 			t2.index = folder.index;
+			buildT2Sections(t2, folder);
+
 			String json = Serialiser.serialise(t2);
 			FileUtils.writeStringToFile(new File(file, "data.json"), json);
 		}
+	}
+
+	private static void buildT2Sections(T2 t2, Folder folder) throws IOException {
+		t2.sections = new ArrayList<HomeSection>();
+		for (Folder child : folder.getChildren()) {
+			HomeSection section = new HomeSection(child.name, child.filename());
+			section.index = child.index;
+			t2.sections.add(section);
+			List<Folder> t3Folders = getT3Folders(child);
+			Collection<URI> timeserieses = getTimeseries(t3Folders);
+			for (URI timeseries : timeserieses) {
+				section.items.add(timeseries);
+			}
+		}
+		Collections.sort(t2.sections);
+	}
+
+	private static List<Folder> getT3Folders(Folder folder) {
+		List<Folder> result = new ArrayList<Folder>();
+
+		// If the folder is t3, add it directly:
+		if (folder.getChildren().size() == 0) {
+			result.add(folder);
+		}
+
+		// If it's a t2, recurse:
+		for (Folder child : folder.getChildren()) {
+			result.addAll(getT3Folders(child));
+		}
+		return result;
+	}
+
+	private static Set<URI> getTimeseries(List<Folder> t3Folders) throws IOException {
+		// Keep keys in the order they are added, but allow for de-duplication:
+		Set<URI> result = new LinkedHashSet<>();
+
+		// Add the headlines first so that they will appear first
+		for (Folder t3Folder : t3Folders) {
+			TimeSeries headlineTimeSeries = AlphaContentCSV.getHeadlineTimeSeries(t3Folder);
+			if (headlineTimeSeries != null) {
+				result.add(toUri(t3Folder, headlineTimeSeries));
+			}
+		}
+
+		// Add the other items in case there aren't enough headline items:
+		for (Folder t3Folder : t3Folders) {
+			// Limit the number in case we have thousands
+			// (this is quite likely at some point)
+			int max = 4;
+			for (TimeSeries timeSeries : AlphaContentCSV.getTimeSeries(t3Folder)) {
+				if (max-- < 0) {
+					if (timeSeries != null) {
+						result.add(toUri(t3Folder, timeSeries));
+					}
+				}
+			}
+		}
+
+		return result;
 	}
 
 	private static void createT3(Folder folder, File file) throws IOException {
