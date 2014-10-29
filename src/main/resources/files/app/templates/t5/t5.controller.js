@@ -44,7 +44,6 @@ angular.module('onsTemplates')
             if (type === "table") {
                 $scope.chartTable = false;
             }
-            console.log($scope.chartTable);
         };
 
         $scope.changeChartTime = function(time) {
@@ -121,7 +120,7 @@ angular.module('onsTemplates')
             for(var i = 0; i<key.length; i++){
                 obj[0] = key[i];
                 obj[1] = values[i];
-                x.push([obj[0], obj[1]]);
+                x.push({"date":obj[0], "values":obj[1]});
             }
             return x;
         }

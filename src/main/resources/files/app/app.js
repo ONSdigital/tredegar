@@ -19,7 +19,8 @@
         'onsComponents',
         'onsHelpers',
         'onsTemplates',
-        'googlechart'
+        'googlechart',
+        'smart-table'
     ])
 
     onsApp
