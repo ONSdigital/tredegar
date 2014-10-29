@@ -22,11 +22,11 @@ import au.com.bytecode.opencsv.CSVReader;
 
 import com.github.davidcarboni.ResourceUtils;
 import com.github.davidcarboni.restolino.json.Serialiser;
+import com.github.onsdigital.generator.bulletin.BulletinContent;
+import com.github.onsdigital.generator.datasets.DatasetContent;
 import com.github.onsdigital.generator.timeseries.AlphaContentCSV;
-import com.github.onsdigital.json.Article;
 import com.github.onsdigital.json.Dataset;
 import com.github.onsdigital.json.HomeSection;
-import com.github.onsdigital.json.Release;
 import com.github.onsdigital.json.bulletin.Bulletin;
 import com.github.onsdigital.json.taxonomy.T1;
 import com.github.onsdigital.json.taxonomy.T2;
@@ -188,11 +188,7 @@ public class TaxonomyGenerator {
 					createT3(o, topicFile);
 					if (o.getChildren().size() == 0) {
 						// createContentFolders(o.name, topicFile);
-					} else if (isReleaseFolder(o)) {
-						for (Folder u : o.getChildren()) {
-							createRelease(topicFile, u);
-						}
-					}
+					} 
 				}
 			}
 		}
@@ -360,9 +356,6 @@ public class TaxonomyGenerator {
 
 	private static void createT3(Folder folder, File file) throws IOException {
 
-		if (isReleaseFolder(folder)) {
-			System.out.println("Do not create json for Releases createT3");
-		} else {
 			T3 t3 = new T3(folder);
 			if (StringUtils.isNotBlank(folder.lede)) {
 				t3.lede = folder.lede;
@@ -396,7 +389,6 @@ public class TaxonomyGenerator {
 			createBulletin(folder, file);
 			createDataset(folder, file);
 			createTimeseries(folder, file);
-		}
 	}
 
 	private static URI toUri(Folder folder, TimeSeries timeseries) {
@@ -416,6 +408,7 @@ public class TaxonomyGenerator {
 		return result;
 	}
 
+	
 	/**
 	 * Creates timeseries data.
 	 *
@@ -448,92 +441,38 @@ public class TaxonomyGenerator {
 	private static void createArticle(Folder folder, File file) throws IOException {
 		File articles = new File(file, "articles");
 		articles.mkdir();
-
-		ArticlesCsv.buildFolders();
-		Set<Folder> articleFolders = ArticlesCsv.folders;
-
-		for (Folder articleFolder : articleFolders) {
-			if (StringUtils.deleteWhitespaTaxce(articleFolder.name.toLowerCase()).equals(file.getName())) {
-
-				for (Folder topicFolder : articleFolder.getChildren()) {
-					File topicFile = new File(articles, StringUtils.deleteWhitespace(topicFolder.name.toLowerCase()));
-					topicFile.mkdir();
-					Article article = new Article();
-					article.title = topicFolder.name;
-					String json = Serialiser.serialise(article);
-					File articleJsonFile = new File(topicFile, "data.json");
-					FileUtils.writeStringToFile(articleJsonFile, json);
-					createVersions(topicFile, json);
-					createHistory(topicFile, json);
-				}
-			}
-		}
+		// removed generation pending refactor to reuse AlphaContent approach
 	}
 
 	private static void createBulletin(Folder folder, File file) throws IOException {
 
-		// Create a dummy bulletin:
-		File bulletins = new File(file, "bulletins");
-		bulletins.mkdir();
+		List<Bulletin> bulletins = BulletinContent.getBulletins(folder);
 
-		BulletinsCsv.buildFolders();
-		Set<Folder> bulletinFolders = BulletinsCsv.folders;
-
-		for (Folder bulletinFolder : bulletinFolders) {
-			if (StringUtils.deleteWhitespace(bulletinFolder.name.toLowerCase()).equals(file.getName())) {
-
-				for (Folder topicFolder : bulletinFolder.getChildren()) {
-					File topicFile = new File(bulletins, StringUtils.deleteWhitespace(topicFolder.name.toLowerCase()));
-					topicFile.mkdir();
-					Bulletin bulletin = new Bulletin();
-					bulletin.title = topicFolder.name;
-					String json = Serialiser.serialise(bulletin);
-					File bulletinJsonFile = new File(topicFile, "data.json");
-					FileUtils.writeStringToFile(bulletinJsonFile, json);
-					createVersions(topicFile, json);
-					createHistory(topicFile, json);
-				}
+		if (bulletins != null && bulletins.size() > 0) {
+			File bulletinsFolder = new File(file, "bulletins");
+			bulletinsFolder.mkdir();
+			for (Bulletin bulletin : bulletins) {
+				String bulletinFileName = bulletin.fileName.replaceAll("[-+.^:,();] ", "");
+				File bulletinFolder = new File(bulletinsFolder, StringUtils.deleteWhitespace(bulletinFileName.toLowerCase()));
+				String json = Serialiser.serialise(bulletin);
+				FileUtils.writeStringToFile(new File(bulletinFolder, "data.json"), json, Charset.forName("UTF8"));
 			}
 		}
 	}
 
 	private static void createDataset(Folder folder, File file) throws IOException {
-		File datasets = new File(file, "datasets");
-		datasets.mkdir();
+		List<Dataset> datasets = DatasetContent.getDatasets(folder);
 
-		DatasetsCsv.buildFolders();
-		Set<Folder> datasetFolders = DatasetsCsv.folders;
-
-		for (Folder datasetFolder : datasetFolders) {
-			if (StringUtils.deleteWhitespace(datasetFolder.name.toLowerCase()).equals(file.getName())) {
-
-				for (Folder topicFolder : datasetFolder.getChildren()) {
-					File topicFile = new File(datasets, StringUtils.deleteWhitespace(topicFolder.name.toLowerCase()));
-					topicFile.mkdir();
-					Dataset dataset = new Dataset();
-					dataset.title = topicFolder.name;
-					String json = Serialiser.serialise(dataset);
-					File datasetJsonFile = new File(topicFile, "data.json");
-					FileUtils.writeStringToFile(datasetJsonFile, json);
-					createVersions(topicFile, json);
-					createHistory(topicFile, json);
-				}
+		if (datasets != null && datasets.size() > 0) {
+			File datasetsFolder = new File(file, "datasets");
+			datasetsFolder.mkdir();
+			for (Dataset dataset : datasets) {
+				String datasetFileName = dataset.fileName.replaceAll("[-+.^:,();] ", "");
+				File datasetFolder = new File(datasetsFolder, StringUtils.deleteWhitespace(datasetFileName.toLowerCase()));
+				String json = Serialiser.serialise(dataset);
+				FileUtils.writeStringToFile(new File(datasetFolder, "data.json"), json, Charset.forName("UTF8"));
 			}
 		}
-	}
-
-	private static boolean isReleaseFolder(Folder o) {
-		return o.parent.parent != null && o.parent.parent.name.equals("Releases");
-	}
-
-	private static void createRelease(File topicFile, Folder u) throws IOException {
-		File subTopicFile = new File(topicFile, u.filename());
-		subTopicFile.mkdir();
-		System.out.println("\t\t" + subTopicFile.getPath());
-		Release release = new Release(u);
-		release.name = u.name;
-		String json = Serialiser.serialise(release);
-		FileUtils.writeStringToFile(new File(subTopicFile, "data.json"), json);
 	}
 
 	private static void createVersions(File file, String json) throws IOException {
@@ -548,4 +487,5 @@ public class TaxonomyGenerator {
 			FileUtils.writeStringToFile(new File(version, "data.json"), json);
 		}
 	}
+	
 }
