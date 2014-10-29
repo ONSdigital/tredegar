@@ -19,7 +19,7 @@ import au.com.bytecode.opencsv.CSVReader;
 
 import com.github.davidcarboni.ResourceUtils;
 import com.github.davidcarboni.restolino.json.Serialiser;
-import com.github.onsdigital.generator.timeseries.AlphaContent;
+import com.github.onsdigital.generator.timeseries.AlphaContentCSV;
 import com.github.onsdigital.json.Article;
 import com.github.onsdigital.json.Data;
 import com.github.onsdigital.json.Dataset;
@@ -89,6 +89,9 @@ public class TaxonomyGenerator {
 					// subTopicCounter = 0;
 					if (StringUtils.isNotBlank(row[ledeIndex])) {
 						themeFolder.lede = row[ledeIndex];
+						System.out.println(themeFolder.name + " lede: " + themeFolder.lede);
+					} else {
+						System.out.println("- No lede");
 					}
 					if (StringUtils.isNotBlank(row[moreIndex])) {
 						themeFolder.more = row[moreIndex];
@@ -268,6 +271,10 @@ public class TaxonomyGenerator {
 		// The folder needs to be at the root path:
 		Data data = new DataT1(folder);
 		data.fileName = "/";
+		if (StringUtils.isNotBlank(folder.lede)) {
+			data.lede = folder.lede;
+			data.more = folder.more;
+		}
 		String json = Serialiser.serialise(data);
 		FileUtils.writeStringToFile(new File(file, "data.json"), json);
 	}
@@ -277,6 +284,10 @@ public class TaxonomyGenerator {
 			System.out.println("Do not create json for Releases createT2");
 		} else {
 			DataT2 t2 = new DataT2(folder);
+			if (StringUtils.isNotBlank(folder.lede)) {
+				t2.lede = folder.lede;
+				t2.more = folder.more;
+			}
 			t2.index = folder.index;
 			String json = Serialiser.serialise(t2);
 			FileUtils.writeStringToFile(new File(file, "data.json"), json);
@@ -289,14 +300,18 @@ public class TaxonomyGenerator {
 			System.out.println("Do not create json for Releases createT3");
 		} else {
 			T3 t3 = new T3(folder);
+			if (StringUtils.isNotBlank(folder.lede)) {
+				t3.lede = folder.lede;
+				t3.more = folder.more;
+			}
 			t3.index = folder.index;
 
 			// Timeseries references:
-			URI headline = toUri(folder, AlphaContent.getHeadlineTimeSeries(folder));
+			URI headline = toUri(folder, AlphaContentCSV.getHeadlineTimeSeries(folder));
 			if (headline != null) {
 				t3.headline = headline;
 			}
-			List<TimeSeries> timeserieses = AlphaContent.getTimeSeries(folder);
+			List<TimeSeries> timeserieses = AlphaContentCSV.getTimeSeries(folder);
 			t3.items.clear();
 			String baseUri = "/" + folder.filename();
 			Folder parent = folder.parent;
@@ -306,7 +321,6 @@ public class TaxonomyGenerator {
 			}
 			baseUri += "/timeseries";
 			for (TimeSeries timeseries : timeserieses) {
-				System.out.println(baseUri + "/" + timeseries.fileName);
 				t3.items.add(toUri(folder, timeseries));
 			}
 
@@ -347,16 +361,19 @@ public class TaxonomyGenerator {
 	 */
 	private static void createTimeseries(Folder folder, File file) throws IOException {
 
-		List<TimeSeries> timeserieses = AlphaContent.getTimeSeries(folder);
+		List<TimeSeries> timeserieses = AlphaContentCSV.getTimeSeries(folder);
 
 		if (timeserieses.size() > 0) {
 			File timeseriesesFolder = new File(file, "timeseries");
 			timeseriesesFolder.mkdir();
 			for (TimeSeries timeseries : timeserieses) {
 				File timeseriesFolder = new File(timeseriesesFolder, timeseries.fileName);
-				Set<TimeSeriesValue> data = TimeseriesData.getDataMaps().get(timeseries.cdid);
+				Set<TimeSeriesValue> data = TimeseriesData.getData(timeseries.cdid);
 				if (data != null) {
 					timeseries.data = new ArrayList<>(data);
+					System.out.println(data.size() + " timeseries values for " + timeseries.cdid);
+				} else {
+					System.out.println("No data for " + timeseries.cdid);
 				}
 				String json = Serialiser.serialise(timeseries);
 				FileUtils.writeStringToFile(new File(timeseriesFolder, "data.json"), json, Charset.forName("UTF8"));

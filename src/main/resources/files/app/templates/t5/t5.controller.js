@@ -6,16 +6,14 @@ angular.module('onsTemplates')
         $scope.header = "Time Series";
         // $scope.contentType = "timeseries";
         $scope.sidebar = true;
-        $scope.sidebarUrl = "app/templates/t5/t5sidebar.html";
+        $scope.sidebarUrl = "/app/templates/t5/t5sidebar.html";
     }
 ])
 
-.controller('chartController', ['$scope', '$location', '$http',
-    function($scope, $location, $http) {
-        function getTable(path, callback) {
-            // console.log("Loading data at " + path);
-            $http.get(path).success(callback);
-        }
+
+.controller('chartController', ['$scope', '$location',
+    function($scope, $location) {
+        var data = $scope.taxonomy.data;
         var categoriesY = [];
         var seriesDataY = [];
         var categoriesQ = [];
@@ -26,32 +24,11 @@ angular.module('onsTemplates')
         var reQ = new RegExp('^[0-9]{4}.[Q1-4]{2}$');
         var reM = new RegExp('^[0-9]{4}.[A-Z]{3}$');
 
-        getTable("/t5data3.json", function(data) {
-            $scope.chart = data;
+        $scope.chart = data;
+        // console.log($scope.chart);
 
-            // function makeArray (dat) {
-            //     for (var i = 0; i < dat.length; i++) {
-            //         if (reY.test(dat[i].date)){
-            //             categoriesY.push(dat[i].date);
-            //             seriesDataY.push(Number(dat[i].value));
-            //         }
-            //         if (reQ.test(dat[i].date)){
-            //             categoriesQ.push(dat[i].date);
-            //             seriesDataQ.push(Number(dat[i].value));
-            //         }
-            //         if (reM.test(dat[i].date)){
-            //             categoriesM.push(dat[i].date);
-            //             seriesDataM.push(Number(dat[i].value));
-            //         }
-            //         // console.log(dat);
-
-            //     }
-            // }
-            // makeArray ($scope.chart.data);
-        // });
-
-
-        makeArray ($scope.chart.data);
+        makeArray($scope.chart.data);
+        $scope.tableValue = makeObj(categoriesY, seriesDataY);
 
 
         $scope.chartData = getData();
@@ -66,16 +43,19 @@ angular.module('onsTemplates')
                 $scope.chartData.options.xAxis.categories = categoriesY;
                 $scope.chartData.options.xAxis.tickInterval = 1;
                 $scope.chartData.series[0].data = seriesDataY;
+                $scope.tableValue = makeObj(categoriesY, seriesDataY);
             }
             if (time === 'quarter') {
                 $scope.chartData.options.xAxis.categories = categoriesQ;
                 $scope.chartData.options.xAxis.tickInterval = 4;
                 $scope.chartData.series[0].data = seriesDataQ;
+                $scope.tableValue = makeObj(categoriesQ, seriesDataQ);
             }
             if (time === 'month') {
                 $scope.chartData.options.xAxis.categories = categoriesM;
                 $scope.chartData.options.xAxis.tickInterval = 12;
                 $scope.chartData.series[0].data = seriesDataM;
+                $scope.tableValue = makeObj(categoriesM, seriesDataM);
             }
         };
 
@@ -96,9 +76,18 @@ angular.module('onsTemplates')
                     seriesDataM.push(Number(dat[i].value));
                     $scope.hasMData = true;
                 }
-                // console.log(dat);
-
             }
+        }
+
+        function makeObj (key, values) {
+            var obj = [];
+            var x = [];
+            for(var i = 0; i<key.length; i++){
+                obj[0] = key[i];
+                obj[1] = values[i];
+                x.push([obj[0], obj[1]]);
+            }
+            return x;
         }
 
         function getData() {
@@ -115,9 +104,39 @@ angular.module('onsTemplates')
                 subtitle: {
                     text: ''
                 },
+                navigation: {
+                    buttonOptions: {
+                        verticalAlign: 'bottom',
+                        y: 0,
+                        text: 'Image',
+                        theme: {
+                            // stroke: '#0054aa',
+                            fill: '#0054aa',
+                            r: 0,
+                            states: {
+                                hover: {
+                                    fill: '#004790'
+                                },
+                                select: {
+                                    // stroke: '#039',
+                                    fill: '#004790'
+                                }
+                            }
+                        }
+                //     }
+                // },
+                // exporting: {
+                //     buttons: {
+                //         contextButton: {
+                //             enabled: false
+                //         },
+                //         exportButton: {
+                //             text: 'Image',
+                //         }
+                    }
+                },
                 xAxis: {
                     categories: categoriesY,
-                    // categories: ['Feb 2013', 'Mar 2013', 'Apr 2013', 'May 2013', 'Jun 2103', 'Jul 2013', 'Aug 2013', 'Sept 2013', 'Oct 2013', 'Nov 2013', 'Dec 2013', 'Jan 2014', 'Feb 2014'],
                     tickInterval: 1,
                     labels: {
                         formatter: function() {
@@ -141,9 +160,12 @@ angular.module('onsTemplates')
                 },
                 yAxis: {
                     title: {
-                        // text: 'Percentage change'
                         text: $scope.chart.units
                     }
+                },
+
+                credits: {
+                    enabled: false
                 },
 
                 plotOptions: {
@@ -227,7 +249,7 @@ angular.module('onsTemplates')
 
                         // series names and values
                         $.each(this.points, function(i, val) {
-                            content += '<div class="tiptext"><b>' + val.point.series.chart.series[i].name + "= </b>" + Highcharts.numberFormat(val.y, 2) + '%</div>';
+                            content += '<div class="tiptext"><b>' + val.point.series.chart.series[i].name + "= </b>" + Highcharts.numberFormat(val.y, 2) + '</div>';
                         });
                         content += "</div>";
                         return content;
@@ -366,5 +388,8 @@ angular.module('onsTemplates')
             return data;
         }
 
-    });
-}]);
+    }]);
+
+
+//     });
+// }]);

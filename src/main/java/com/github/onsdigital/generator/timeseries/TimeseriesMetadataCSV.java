@@ -1,4 +1,4 @@
-package com.github.onsdigital.generator;
+package com.github.onsdigital.generator.timeseries;
 
 import java.io.IOException;
 import java.io.Reader;
@@ -22,12 +22,12 @@ import au.com.bytecode.opencsv.CSVReader;
 import com.github.davidcarboni.ResourceUtils;
 import com.github.onsdigital.json.timeseries.TimeSeries;
 
-public class TimeseriesMetadata {
+public class TimeseriesMetadataCSV {
 
 	static Map<String, TimeSeries> timeseries;
 
-	static TimeSeries getData(String cdid) throws IOException {
-		return loadTimeseriesMetadata().get(cdid);
+	public static TimeSeries getData(String cdid) throws IOException {
+		return loadTimeseriesMetadata().get(StringUtils.lowerCase(cdid));
 	}
 
 	static Map<String, TimeSeries> loadTimeseriesMetadata() throws IOException {
@@ -68,7 +68,7 @@ public class TimeseriesMetadata {
 		Set<Path> result = new HashSet<>();
 
 		try {
-			URL resource = TimeseriesMetadata.class.getResource("/data/Metadata");
+			URL resource = TimeseriesMetadataCSV.class.getResource("/data/Metadata");
 			Path folder = Paths.get(resource.toURI());
 
 			try (DirectoryStream<Path> stream = Files.newDirectoryStream(folder, "*.csv")) {
@@ -125,36 +125,9 @@ public class TimeseriesMetadata {
 				}
 
 				// Add to the collection:
-				timeseries.put(item.cdid.toLowerCase(), item);
+				timeseries.put(StringUtils.lowerCase(item.cdid), item);
 			}
 		}
 	}
 
-	/**
-	 * Builds the data maps and prints out some info about what was parsed.
-	 * 
-	 * @param args
-	 * @throws IOException
-	 */
-	public static void main(String[] args) throws IOException {
-		buildDataMaps();
-
-		System.out.println("done");
-		// for (String cdid : timeseries.keySet()) {
-		// System.out.println(cdid + ": " + timeseries.get(cdid).name);
-		// }
-		System.out.println("Total timeseries: " + timeseries.size());
-
-		System.out.println();
-
-		System.out.println("CDIDs in common:");
-		int count = 0;
-		for (String cdid : timeseries.keySet()) {
-			if (TimeseriesData.getData(cdid) != null) {
-				System.out.println(cdid + ": " + timeseries.get(cdid).name);
-				count++;
-			}
-		}
-		System.out.println(count);
-	}
 }
