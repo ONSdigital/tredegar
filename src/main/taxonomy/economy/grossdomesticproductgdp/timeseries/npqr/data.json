@@ -7,7 +7,7 @@
   "note1": "In accordance with the Statistics and Registration Service Act 2007, the Retail Prices Index and its derivatives have been assessed against the Code of Practice for Official Statistics and found not to meet the required standards for designation as National Statistics.",
   "note2": "Changes in the internal purchasing power of a currency may be defined as  the \u0027inverse\u0027 of changes in the levels of prices; when prices go up, the  amount which can be purchased with a given sum of money goes down. The  monthly figures of the all items RPI can be used to obtain estimates of the  changes in prices or in purchasing power between any 2 months. To find the  purchasing power of the pound in one month, given that it was 100p in a  previous month the calculation is:  100p multiplied by the earlier month RPI then divided by the later month RPI.",
   "number": "126.7",
-  "unit": "£ million",
+  "unit": "million",
   "date": "January 2014",
   "lastUpated": "16 Sep 2014",
   "nextUpdate": "14 Oct 2014",
@@ -15,265 +15,1222 @@
   "data": [
     {
       "date": "1948",
-      "value": "28261"
+      "value": "24570"
     },
     {
       "date": "1949",
-      "value": "30761"
+      "value": "27884"
     },
     {
       "date": "1950",
-      "value": "32418"
+      "value": "30359"
     },
     {
       "date": "1951",
-      "value": "32789"
+      "value": "32446"
     },
     {
       "date": "1952",
-      "value": "33334"
+      "value": "36039"
     },
     {
       "date": "1953",
-      "value": "36978"
+      "value": "45243"
     },
     {
       "date": "1954",
-      "value": "40012"
+      "value": "50160"
     },
     {
       "date": "1955",
-      "value": "42114"
+      "value": "54284"
     },
     {
       "date": "1956",
-      "value": "44038"
+      "value": "58729"
     },
     {
       "date": "1957",
-      "value": "46215"
+      "value": "61931"
     },
     {
       "date": "1958",
-      "value": "46590"
+      "value": "65819"
     },
     {
       "date": "1959",
-      "value": "50099"
+      "value": "71066"
     },
     {
       "date": "1960",
-      "value": "54589"
+      "value": "82494"
     },
     {
       "date": "1961",
-      "value": "59742"
+      "value": "89169"
     },
     {
       "date": "1962",
-      "value": "60157"
+      "value": "89996"
     },
     {
       "date": "1963",
-      "value": "61080"
+      "value": "92106"
     },
     {
       "date": "1964",
-      "value": "70844"
+      "value": "107024"
     },
     {
       "date": "1965",
-      "value": "74538"
+      "value": "112038"
     },
     {
       "date": "1966",
-      "value": "76556"
+      "value": "111798"
     },
     {
       "date": "1967",
-      "value": "83426"
+      "value": "121556"
     },
     {
       "date": "1968",
-      "value": "88227"
+      "value": "134890"
     },
     {
       "date": "1969",
-      "value": "87731"
+      "value": "133696"
     },
     {
       "date": "1970",
-      "value": "90295"
+      "value": "138622"
     },
     {
       "date": "1971",
-      "value": "92178"
+      "value": "148696"
     },
     {
       "date": "1972",
-      "value": "92102"
+      "value": "155823"
     },
     {
       "date": "1973",
-      "value": "98206"
+      "value": "158797"
     },
     {
       "date": "1974",
-      "value": "96300"
+      "value": "146958"
     },
     {
       "date": "1975",
-      "value": "94463"
+      "value": "138187"
     },
     {
       "date": "1976",
-      "value": "96193"
+      "value": "139140"
     },
     {
       "date": "1977",
-      "value": "94780"
+      "value": "141313"
     },
     {
       "date": "1978",
-      "value": "97196"
+      "value": "151733"
     },
     {
       "date": "1979",
-      "value": "99904"
+      "value": "164769"
     },
     {
       "date": "1980",
-      "value": "95232"
+      "value": "154128"
     },
     {
       "date": "1981",
-      "value": "86916"
+      "value": "143896"
     },
     {
       "date": "1982",
-      "value": "92140"
+      "value": "151297"
     },
     {
       "date": "1983",
-      "value": "96791"
+      "value": "162237"
     },
     {
       "date": "1984",
-      "value": "105591"
+      "value": "172683"
     },
     {
       "date": "1985",
-      "value": "109995"
+      "value": "176138"
     },
     {
       "date": "1986",
-      "value": "112410"
+      "value": "173888"
     },
     {
       "date": "1987",
-      "value": "123064"
+      "value": "195446"
     },
     {
       "date": "1988",
-      "value": "141333"
+      "value": "225692"
     },
     {
       "date": "1989",
-      "value": "149951"
+      "value": "236641"
     },
     {
       "date": "1990",
-      "value": "146635"
+      "value": "230584"
     },
     {
       "date": "1991",
-      "value": "137353"
+      "value": "212258"
     },
     {
       "date": "1992",
-      "value": "138590"
+      "value": "208822"
     },
     {
       "date": "1993",
-      "value": "140751"
+      "value": "210412"
     },
     {
       "date": "1994",
-      "value": "149753"
+      "value": "213769"
     },
     {
       "date": "1995",
-      "value": "156852"
+      "value": "212759"
     },
     {
       "date": "1996",
-      "value": "168204"
+      "value": "222690"
     },
     {
       "date": "1997",
-      "value": "183274"
+      "value": "219148"
     },
     {
       "date": "1998",
-      "value": "206054"
+      "value": "234054"
     },
     {
       "date": "1999",
-      "value": "209909"
+      "value": "239889"
     },
     {
       "date": "2000",
-      "value": "215372"
+      "value": "248115"
     },
     {
       "date": "2001",
-      "value": "211280"
+      "value": "244769"
     },
     {
       "date": "2002",
-      "value": "216955"
+      "value": "250837"
     },
     {
       "date": "2003",
-      "value": "221909"
+      "value": "258536"
     },
     {
       "date": "2004",
-      "value": "235691"
+      "value": "266891"
     },
     {
       "date": "2005",
-      "value": "244373"
+      "value": "271284"
     },
     {
       "date": "2006",
-      "value": "258060"
+      "value": "280162"
     },
     {
       "date": "2007",
-      "value": "277341"
+      "value": "294888"
     },
     {
       "date": "2008",
-      "value": "258332"
+      "value": "281041"
     },
     {
       "date": "2009",
-      "value": "215142"
+      "value": "240605"
     },
     {
       "date": "2010",
-      "value": "221156"
+      "value": "254861"
     },
     {
       "date": "2011",
-      "value": "215918"
+      "value": "260779"
     },
     {
       "date": "2012",
-      "value": "216974"
+      "value": "262697"
+    },
+    {
+      "date": "2013",
+      "value": "271018"
+    },
+    {
+      "date": "1955 Q1",
+      "value": "12837"
+    },
+    {
+      "date": "1955 Q2",
+      "value": "13025"
+    },
+    {
+      "date": "1955 Q3",
+      "value": "13547"
+    },
+    {
+      "date": "1955 Q4",
+      "value": "14876"
+    },
+    {
+      "date": "1956 Q1",
+      "value": "14082"
+    },
+    {
+      "date": "1956 Q2",
+      "value": "14241"
+    },
+    {
+      "date": "1956 Q3",
+      "value": "14513"
+    },
+    {
+      "date": "1956 Q4",
+      "value": "15893"
+    },
+    {
+      "date": "1957 Q1",
+      "value": "15131"
+    },
+    {
+      "date": "1957 Q2",
+      "value": "15068"
+    },
+    {
+      "date": "1957 Q3",
+      "value": "15161"
+    },
+    {
+      "date": "1957 Q4",
+      "value": "16571"
+    },
+    {
+      "date": "1958 Q1",
+      "value": "16025"
+    },
+    {
+      "date": "1958 Q2",
+      "value": "15941"
+    },
+    {
+      "date": "1958 Q3",
+      "value": "16334"
+    },
+    {
+      "date": "1958 Q4",
+      "value": "17518"
+    },
+    {
+      "date": "1959 Q1",
+      "value": "16222"
+    },
+    {
+      "date": "1959 Q2",
+      "value": "17111"
+    },
+    {
+      "date": "1959 Q3",
+      "value": "17617"
+    },
+    {
+      "date": "1959 Q4",
+      "value": "20115"
+    },
+    {
+      "date": "1960 Q1",
+      "value": "19508"
+    },
+    {
+      "date": "1960 Q2",
+      "value": "19843"
+    },
+    {
+      "date": "1960 Q3",
+      "value": "20749"
+    },
+    {
+      "date": "1960 Q4",
+      "value": "22394"
+    },
+    {
+      "date": "1961 Q1",
+      "value": "21658"
+    },
+    {
+      "date": "1961 Q2",
+      "value": "21778"
+    },
+    {
+      "date": "1961 Q3",
+      "value": "22767"
+    },
+    {
+      "date": "1961 Q4",
+      "value": "22967"
+    },
+    {
+      "date": "1962 Q1",
+      "value": "22101"
+    },
+    {
+      "date": "1962 Q2",
+      "value": "22208"
+    },
+    {
+      "date": "1962 Q3",
+      "value": "22804"
+    },
+    {
+      "date": "1962 Q4",
+      "value": "22882"
+    },
+    {
+      "date": "1963 Q1",
+      "value": "20429"
+    },
+    {
+      "date": "1963 Q2",
+      "value": "22480"
+    },
+    {
+      "date": "1963 Q3",
+      "value": "23753"
+    },
+    {
+      "date": "1963 Q4",
+      "value": "25445"
+    },
+    {
+      "date": "1964 Q1",
+      "value": "26000"
+    },
+    {
+      "date": "1964 Q2",
+      "value": "25691"
+    },
+    {
+      "date": "1964 Q3",
+      "value": "26946"
+    },
+    {
+      "date": "1964 Q4",
+      "value": "28386"
+    },
+    {
+      "date": "1965 Q1",
+      "value": "28637"
+    },
+    {
+      "date": "1965 Q2",
+      "value": "26825"
+    },
+    {
+      "date": "1965 Q3",
+      "value": "27386"
+    },
+    {
+      "date": "1965 Q4",
+      "value": "29190"
+    },
+    {
+      "date": "1966 Q1",
+      "value": "28683"
+    },
+    {
+      "date": "1966 Q2",
+      "value": "26590"
+    },
+    {
+      "date": "1966 Q3",
+      "value": "27659"
+    },
+    {
+      "date": "1966 Q4",
+      "value": "28866"
+    },
+    {
+      "date": "1967 Q1",
+      "value": "30009"
+    },
+    {
+      "date": "1967 Q2",
+      "value": "29711"
+    },
+    {
+      "date": "1967 Q3",
+      "value": "30384"
+    },
+    {
+      "date": "1967 Q4",
+      "value": "31452"
+    },
+    {
+      "date": "1968 Q1",
+      "value": "33636"
+    },
+    {
+      "date": "1968 Q2",
+      "value": "31470"
+    },
+    {
+      "date": "1968 Q3",
+      "value": "33212"
+    },
+    {
+      "date": "1968 Q4",
+      "value": "36572"
+    },
+    {
+      "date": "1969 Q1",
+      "value": "33058"
+    },
+    {
+      "date": "1969 Q2",
+      "value": "31648"
+    },
+    {
+      "date": "1969 Q3",
+      "value": "33677"
+    },
+    {
+      "date": "1969 Q4",
+      "value": "35313"
+    },
+    {
+      "date": "1970 Q1",
+      "value": "33437"
+    },
+    {
+      "date": "1970 Q2",
+      "value": "33353"
+    },
+    {
+      "date": "1970 Q3",
+      "value": "34494"
+    },
+    {
+      "date": "1970 Q4",
+      "value": "37339"
+    },
+    {
+      "date": "1971 Q1",
+      "value": "35915"
+    },
+    {
+      "date": "1971 Q2",
+      "value": "35734"
+    },
+    {
+      "date": "1971 Q3",
+      "value": "37268"
+    },
+    {
+      "date": "1971 Q4",
+      "value": "39779"
+    },
+    {
+      "date": "1972 Q1",
+      "value": "39043"
+    },
+    {
+      "date": "1972 Q2",
+      "value": "37804"
+    },
+    {
+      "date": "1972 Q3",
+      "value": "38575"
+    },
+    {
+      "date": "1972 Q4",
+      "value": "40401"
+    },
+    {
+      "date": "1973 Q1",
+      "value": "42708"
+    },
+    {
+      "date": "1973 Q2",
+      "value": "37961"
+    },
+    {
+      "date": "1973 Q3",
+      "value": "38203"
+    },
+    {
+      "date": "1973 Q4",
+      "value": "39925"
+    },
+    {
+      "date": "1974 Q1",
+      "value": "39994"
+    },
+    {
+      "date": "1974 Q2",
+      "value": "34438"
+    },
+    {
+      "date": "1974 Q3",
+      "value": "35388"
+    },
+    {
+      "date": "1974 Q4",
+      "value": "37139"
+    },
+    {
+      "date": "1975 Q1",
+      "value": "36440"
+    },
+    {
+      "date": "1975 Q2",
+      "value": "32953"
+    },
+    {
+      "date": "1975 Q3",
+      "value": "34486"
+    },
+    {
+      "date": "1975 Q4",
+      "value": "34307"
+    },
+    {
+      "date": "1976 Q1",
+      "value": "36445"
+    },
+    {
+      "date": "1976 Q2",
+      "value": "32758"
+    },
+    {
+      "date": "1976 Q3",
+      "value": "34347"
+    },
+    {
+      "date": "1976 Q4",
+      "value": "35591"
+    },
+    {
+      "date": "1977 Q1",
+      "value": "34690"
+    },
+    {
+      "date": "1977 Q2",
+      "value": "33703"
+    },
+    {
+      "date": "1977 Q3",
+      "value": "35022"
+    },
+    {
+      "date": "1977 Q4",
+      "value": "37898"
+    },
+    {
+      "date": "1978 Q1",
+      "value": "38377"
+    },
+    {
+      "date": "1978 Q2",
+      "value": "36084"
+    },
+    {
+      "date": "1978 Q3",
+      "value": "37757"
+    },
+    {
+      "date": "1978 Q4",
+      "value": "39515"
+    },
+    {
+      "date": "1979 Q1",
+      "value": "40396"
+    },
+    {
+      "date": "1979 Q2",
+      "value": "38716"
+    },
+    {
+      "date": "1979 Q3",
+      "value": "41381"
+    },
+    {
+      "date": "1979 Q4",
+      "value": "44276"
+    },
+    {
+      "date": "1980 Q1",
+      "value": "40941"
+    },
+    {
+      "date": "1980 Q2",
+      "value": "36478"
+    },
+    {
+      "date": "1980 Q3",
+      "value": "37560"
+    },
+    {
+      "date": "1980 Q4",
+      "value": "39149"
+    },
+    {
+      "date": "1981 Q1",
+      "value": "35931"
+    },
+    {
+      "date": "1981 Q2",
+      "value": "34211"
+    },
+    {
+      "date": "1981 Q3",
+      "value": "35985"
+    },
+    {
+      "date": "1981 Q4",
+      "value": "37769"
+    },
+    {
+      "date": "1982 Q1",
+      "value": "36871"
+    },
+    {
+      "date": "1982 Q2",
+      "value": "35225"
+    },
+    {
+      "date": "1982 Q3",
+      "value": "38147"
+    },
+    {
+      "date": "1982 Q4",
+      "value": "41053"
+    },
+    {
+      "date": "1983 Q1",
+      "value": "40739"
+    },
+    {
+      "date": "1983 Q2",
+      "value": "37319"
+    },
+    {
+      "date": "1983 Q3",
+      "value": "39997"
+    },
+    {
+      "date": "1983 Q4",
+      "value": "44183"
+    },
+    {
+      "date": "1984 Q1",
+      "value": "43523"
+    },
+    {
+      "date": "1984 Q2",
+      "value": "40160"
+    },
+    {
+      "date": "1984 Q3",
+      "value": "42983"
+    },
+    {
+      "date": "1984 Q4",
+      "value": "46017"
+    },
+    {
+      "date": "1985 Q1",
+      "value": "47639"
+    },
+    {
+      "date": "1985 Q2",
+      "value": "39764"
+    },
+    {
+      "date": "1985 Q3",
+      "value": "43236"
+    },
+    {
+      "date": "1985 Q4",
+      "value": "45498"
+    },
+    {
+      "date": "1986 Q1",
+      "value": "44514"
+    },
+    {
+      "date": "1986 Q2",
+      "value": "38249"
+    },
+    {
+      "date": "1986 Q3",
+      "value": "43794"
+    },
+    {
+      "date": "1986 Q4",
+      "value": "47331"
+    },
+    {
+      "date": "1987 Q1",
+      "value": "46273"
+    },
+    {
+      "date": "1987 Q2",
+      "value": "43259"
+    },
+    {
+      "date": "1987 Q3",
+      "value": "51518"
+    },
+    {
+      "date": "1987 Q4",
+      "value": "54396"
+    },
+    {
+      "date": "1988 Q1",
+      "value": "56438"
+    },
+    {
+      "date": "1988 Q2",
+      "value": "53049"
+    },
+    {
+      "date": "1988 Q3",
+      "value": "57373"
+    },
+    {
+      "date": "1988 Q4",
+      "value": "58831"
+    },
+    {
+      "date": "1989 Q1",
+      "value": "61999"
+    },
+    {
+      "date": "1989 Q2",
+      "value": "55277"
+    },
+    {
+      "date": "1989 Q3",
+      "value": "59666"
+    },
+    {
+      "date": "1989 Q4",
+      "value": "59699"
+    },
+    {
+      "date": "1990 Q1",
+      "value": "61984"
+    },
+    {
+      "date": "1990 Q2",
+      "value": "53806"
+    },
+    {
+      "date": "1990 Q3",
+      "value": "56848"
+    },
+    {
+      "date": "1990 Q4",
+      "value": "57946"
+    },
+    {
+      "date": "1991 Q1",
+      "value": "56912"
+    },
+    {
+      "date": "1991 Q2",
+      "value": "49345"
+    },
+    {
+      "date": "1991 Q3",
+      "value": "51901"
+    },
+    {
+      "date": "1991 Q4",
+      "value": "54100"
+    },
+    {
+      "date": "1992 Q1",
+      "value": "55810"
+    },
+    {
+      "date": "1992 Q2",
+      "value": "48421"
+    },
+    {
+      "date": "1992 Q3",
+      "value": "52043"
+    },
+    {
+      "date": "1992 Q4",
+      "value": "52548"
+    },
+    {
+      "date": "1993 Q1",
+      "value": "55639"
+    },
+    {
+      "date": "1993 Q2",
+      "value": "48054"
+    },
+    {
+      "date": "1993 Q3",
+      "value": "51869"
+    },
+    {
+      "date": "1993 Q4",
+      "value": "54849"
+    },
+    {
+      "date": "1994 Q1",
+      "value": "57420"
+    },
+    {
+      "date": "1994 Q2",
+      "value": "49064"
+    },
+    {
+      "date": "1994 Q3",
+      "value": "52481"
+    },
+    {
+      "date": "1994 Q4",
+      "value": "54804"
+    },
+    {
+      "date": "1995 Q1",
+      "value": "55754"
+    },
+    {
+      "date": "1995 Q2",
+      "value": "49705"
+    },
+    {
+      "date": "1995 Q3",
+      "value": "52486"
+    },
+    {
+      "date": "1995 Q4",
+      "value": "54814"
+    },
+    {
+      "date": "1996 Q1",
+      "value": "58369"
+    },
+    {
+      "date": "1996 Q2",
+      "value": "53857"
+    },
+    {
+      "date": "1996 Q3",
+      "value": "54490"
+    },
+    {
+      "date": "1996 Q4",
+      "value": "55974"
+    },
+    {
+      "date": "1997 Q1",
+      "value": "55158"
+    },
+    {
+      "date": "1997 Q2",
+      "value": "51851"
+    },
+    {
+      "date": "1997 Q3",
+      "value": "54259"
+    },
+    {
+      "date": "1997 Q4",
+      "value": "57880"
+    },
+    {
+      "date": "1998 Q1",
+      "value": "59274"
+    },
+    {
+      "date": "1998 Q2",
+      "value": "55095"
+    },
+    {
+      "date": "1998 Q3",
+      "value": "57823"
+    },
+    {
+      "date": "1998 Q4",
+      "value": "61862"
+    },
+    {
+      "date": "1999 Q1",
+      "value": "62851"
+    },
+    {
+      "date": "1999 Q2",
+      "value": "56331"
+    },
+    {
+      "date": "1999 Q3",
+      "value": "60558"
+    },
+    {
+      "date": "1999 Q4",
+      "value": "60149"
+    },
+    {
+      "date": "2000 Q1",
+      "value": "64293"
+    },
+    {
+      "date": "2000 Q2",
+      "value": "61069"
+    },
+    {
+      "date": "2000 Q3",
+      "value": "59415"
+    },
+    {
+      "date": "2000 Q4",
+      "value": "63338"
+    },
+    {
+      "date": "2001 Q1",
+      "value": "62853"
+    },
+    {
+      "date": "2001 Q2",
+      "value": "59563"
+    },
+    {
+      "date": "2001 Q3",
+      "value": "61169"
+    },
+    {
+      "date": "2001 Q4",
+      "value": "61184"
+    },
+    {
+      "date": "2002 Q1",
+      "value": "61024"
+    },
+    {
+      "date": "2002 Q2",
+      "value": "60243"
+    },
+    {
+      "date": "2002 Q3",
+      "value": "62841"
+    },
+    {
+      "date": "2002 Q4",
+      "value": "66729"
+    },
+    {
+      "date": "2003 Q1",
+      "value": "67737"
+    },
+    {
+      "date": "2003 Q2",
+      "value": "60562"
+    },
+    {
+      "date": "2003 Q3",
+      "value": "63735"
+    },
+    {
+      "date": "2003 Q4",
+      "value": "66502"
+    },
+    {
+      "date": "2004 Q1",
+      "value": "71725"
+    },
+    {
+      "date": "2004 Q2",
+      "value": "63666"
+    },
+    {
+      "date": "2004 Q3",
+      "value": "65402"
+    },
+    {
+      "date": "2004 Q4",
+      "value": "66098"
+    },
+    {
+      "date": "2005 Q1",
+      "value": "68802"
+    },
+    {
+      "date": "2005 Q2",
+      "value": "64441"
+    },
+    {
+      "date": "2005 Q3",
+      "value": "68392"
+    },
+    {
+      "date": "2005 Q4",
+      "value": "69649"
+    },
+    {
+      "date": "2006 Q1",
+      "value": "72042"
+    },
+    {
+      "date": "2006 Q2",
+      "value": "63485"
+    },
+    {
+      "date": "2006 Q3",
+      "value": "70618"
+    },
+    {
+      "date": "2006 Q4",
+      "value": "74017"
+    },
+    {
+      "date": "2007 Q1",
+      "value": "76036"
+    },
+    {
+      "date": "2007 Q2",
+      "value": "68618"
+    },
+    {
+      "date": "2007 Q3",
+      "value": "72408"
+    },
+    {
+      "date": "2007 Q4",
+      "value": "77826"
+    },
+    {
+      "date": "2008 Q1",
+      "value": "75868"
+    },
+    {
+      "date": "2008 Q2",
+      "value": "68754"
+    },
+    {
+      "date": "2008 Q3",
+      "value": "68407"
+    },
+    {
+      "date": "2008 Q4",
+      "value": "68012"
+    },
+    {
+      "date": "2009 Q1",
+      "value": "65600"
+    },
+    {
+      "date": "2009 Q2",
+      "value": "53310"
+    },
+    {
+      "date": "2009 Q3",
+      "value": "60160"
+    },
+    {
+      "date": "2009 Q4",
+      "value": "61535"
+    },
+    {
+      "date": "2010 Q1",
+      "value": "65395"
+    },
+    {
+      "date": "2010 Q2",
+      "value": "57529"
+    },
+    {
+      "date": "2010 Q3",
+      "value": "64699"
+    },
+    {
+      "date": "2010 Q4",
+      "value": "67238"
+    },
+    {
+      "date": "2011 Q1",
+      "value": "68482"
+    },
+    {
+      "date": "2011 Q2",
+      "value": "59023"
+    },
+    {
+      "date": "2011 Q3",
+      "value": "65107"
+    },
+    {
+      "date": "2011 Q4",
+      "value": "68167"
+    },
+    {
+      "date": "2012 Q1",
+      "value": "70089"
+    },
+    {
+      "date": "2012 Q2",
+      "value": "61096"
+    },
+    {
+      "date": "2012 Q3",
+      "value": "64190"
+    },
+    {
+      "date": "2012 Q4",
+      "value": "67322"
+    },
+    {
+      "date": "2013 Q1",
+      "value": "68519"
+    },
+    {
+      "date": "2013 Q2",
+      "value": "62783"
+    },
+    {
+      "date": "2013 Q3",
+      "value": "67768"
+    },
+    {
+      "date": "2013 Q4",
+      "value": "71948"
+    },
+    {
+      "date": "2014 Q1",
+      "value": "73883"
+    },
+    {
+      "date": "2014 Q2",
+      "value": "68639"
     }
   ],
+  "uri": "/economy/grossdomesticproductgdp/timeseries/npqr",
   "type": "timeseries",
   "name": "Expenditure Measure - Gross Fixed Capital Formation ",
   "fileName": "npqr"
