@@ -20,7 +20,7 @@ public class CollectionSearchResult {
 	private static final String RELEASE_DATE = "releaseDate";
 	private static final String URL = "url";
 	private static final String DATA_JSON = "data.json";
-	private static final String PATH_ROOT = "target";
+	private static final String PATH_ROOT = "taxonomy";
 	private static final String TITLE = "title";
 	private long numberOfResults;
 	private List<Map<String, String>> results;
