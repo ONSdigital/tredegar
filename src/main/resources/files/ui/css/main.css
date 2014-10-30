@@ -1866,13 +1866,13 @@ a {
 
 .hero-banner__main-title {
   margin-bottom: 0;
-  font-size: 24px;
-  font-size: 2.4rem;
+  font-size: 19px;
+  font-size: 1.9rem;
   line-height: 1.125; }
-  @media screen and (min-width: 38em) {
+  @media screen and (min-width: 52em) {
     .hero-banner__main-title {
-      font-size: 36px;
-      font-size: 3.6rem;
+      font-size: 25px;
+      font-size: 2.5rem;
       line-height: 1.25; } }
 
 .page-header {
@@ -4012,7 +4012,7 @@ table actions
 
 #search > dl > dt:nth-child(1){
   font-size: 1.35em;
-  background-color: #fafafb;
+/*  background-color: #fafafb;*/
 /*  padding: 0 0 0 0.3em; Commented out to align collection results*/
 }
 
@@ -4565,10 +4565,10 @@ ol.toc-columns
 #collection-list p{color: gray;}
 
 
-#search > dl > dd:nth-child(2){
+/*#search > dl > dd:nth-child(2){
   font-size: 1em;
   background-color: #fafafb;
-}
+}*/
 
 #search > dl > dd {padding: 0 0 0.85em 0em;}
 
@@ -5003,7 +5003,7 @@ td.datatable-downloads{
 .hero-stat-box{
   height: 25rem;
   background-color: #4d7495;
-  margin-left: 25px;
+  padding: 2rem;
   margin: 0 auto;
 }
 
@@ -5024,3 +5024,8 @@ td.datatable-downloads{
   height: 25rem;
 }
 
+@media screen and (min-width: 800px){
+  .navpanel_wrapper{
+  height: 17em;
+  padding: 0;}
+}
