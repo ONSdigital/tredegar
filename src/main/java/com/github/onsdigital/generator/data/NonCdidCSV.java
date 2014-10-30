@@ -101,9 +101,10 @@ class NonCdidCSV {
 									figureUpdated = figureUpdated.substring(0, figureUpdated.length() - 3);
 								}
 							}
-							if (!StringUtils.equals(figure, figureUpdated)) {
-								System.out.println("Updated: " + figure + " -> " + figureUpdated);
-							}
+							// if (!StringUtils.equals(figure, figureUpdated)) {
+							// System.out.println("Updated: " + figure + " -> "
+							// + figureUpdated);
+							// }
 
 							timeseriesValue.date = date;
 							timeseriesValue.value = figure;
