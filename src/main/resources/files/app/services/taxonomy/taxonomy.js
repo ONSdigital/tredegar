@@ -21,6 +21,7 @@
 					data.itemData = []
 					loadItems(data, data.items)
 					loadHeadline(data)
+					loadStatsBulletinHeadline(data)
 				}
 				if (callback) {
 					callback(service.data)
@@ -78,6 +79,15 @@
 			load(timeseriesPath, function(timeseries) {
 				timeseries.url = data.headline
 				data.headlineData = timeseries
+			})
+		}
+		
+		function loadStatsBulletinHeadline(data) {
+			var statsBulletinPath = dataPath + data.statsBulletinHeadline
+			load(statsBulletinPath, function(bulletin) {
+				bulletin.url = data.statsBulletinHeadline
+				data.statsBulletinHeadlineData = bulletin
+				$log.debug('Loaded data.statsBulletinHeadlineData: ', statsBulletinPath, ' ', bulletin)
 			})
 		}
 

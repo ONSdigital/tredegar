@@ -80,8 +80,11 @@ class BulletinNode {
 		return children;
 	}
 
-	void addBulletin(Bulletin bulletin) {
+	void addBulletin(Bulletin bulletin, boolean isHeadline) {
 		bulletinList().add(bulletin);
+		if (isHeadline) {
+			bulletinList().headline = bulletin;
+		}
 	}
 
 	public BulletinList bulletinList() {

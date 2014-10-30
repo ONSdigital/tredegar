@@ -406,6 +406,12 @@ public class TaxonomyGenerator {
 				System.out.println("No URI set for " + timeseries);
 			}
 		}
+		
+		// Stats bulletin references:
+		URI statsBulletinHeadline = toStatsBulletinUri(folder, BulletinContent.getHeadlineBulletin(folder));
+		if (statsBulletinHeadline != null) {
+			t3.statsBulletinHeadline = statsBulletinHeadline;
+		}
 
 		// Serialise
 		String json = Serialiser.serialise(t3);
@@ -437,6 +443,28 @@ public class TaxonomyGenerator {
 	//
 	// return result;
 	// }
+	
+	private static URI toStatsBulletinUri(Folder folder, Bulletin bulletin) {
+		URI result = null;
+
+		if (bulletin != null) {
+			if (bulletin.uri == null) {
+				String baseUri = "/" + folder.filename();
+				Folder parent = folder.parent;
+				while (parent != null) {
+					baseUri = "/" + parent.filename() + baseUri;
+					parent = parent.parent;
+				}
+				baseUri += "/bulletins";
+				String bulletinFileName = bulletin.fileName;
+				String sanitizedBulletinFileName = bulletinFileName.replaceAll("\\W", "");
+				bulletin.uri = URI.create(baseUri + "/" + StringUtils.deleteWhitespace(sanitizedBulletinFileName));
+			}
+			result = bulletin.uri;
+		}
+
+		return result;
+	}
 
 	/**
 	 * Creates timeseries data.
@@ -485,8 +513,9 @@ public class TaxonomyGenerator {
 			File bulletinsFolder = new File(file, "bulletins");
 			bulletinsFolder.mkdir();
 			for (Bulletin bulletin : bulletins) {
-				String bulletinFileName = bulletin.fileName.replaceAll("[-+.^:,();] ", "");
-				File bulletinFolder = new File(bulletinsFolder, StringUtils.deleteWhitespace(bulletinFileName.toLowerCase()));
+				String bulletinFileName = bulletin.fileName;
+				String sanitizedBulletinFileName = bulletinFileName.replaceAll("\\W", "");
+				File bulletinFolder = new File(bulletinsFolder, StringUtils.deleteWhitespace(sanitizedBulletinFileName.toLowerCase()));
 				String json = Serialiser.serialise(bulletin);
 				FileUtils.writeStringToFile(new File(bulletinFolder, "data.json"), json, Charset.forName("UTF8"));
 			}
@@ -500,7 +529,7 @@ public class TaxonomyGenerator {
 			File datasetsFolder = new File(file, "datasets");
 			datasetsFolder.mkdir();
 			for (Dataset dataset : datasets) {
-				String datasetFileName = dataset.fileName.replaceAll("[-+.^:,();] ", "");
+				String datasetFileName = dataset.fileName.replaceAll("\\W", "");
 				File datasetFolder = new File(datasetsFolder, StringUtils.deleteWhitespace(datasetFileName.toLowerCase()));
 				String json = Serialiser.serialise(dataset);
 				FileUtils.writeStringToFile(new File(datasetFolder, "data.json"), json, Charset.forName("UTF8"));
