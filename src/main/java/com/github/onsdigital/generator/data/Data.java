@@ -23,6 +23,7 @@ public class Data {
 	}
 
 	private static void parse() throws IOException {
+		NonCdidCSV.parse();
 		DataCSV.parse();
 		MetadataCSV.parse();
 		AlphaContentCSV.parse();
@@ -88,6 +89,13 @@ public class Data {
 			throw new IllegalArgumentException("Duplicate timeseries: " + timeseries);
 		}
 		timeserieses.put(toKey(timeseries.cdid()), timeseries);
+	}
+
+	public static TimeSeries addTimeseries(String cdid) {
+		TimeSeries timeseries = new TimeSeries();
+		timeseries.setCdid(cdid);
+		addTimeseries(timeseries);
+		return timeseries;
 	}
 
 	public static void addDataset(String name, Set<TimeSeries> dataset) {

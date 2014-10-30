@@ -50,6 +50,13 @@
 			<version>1.6.3</version>
 		</dependency>
 
+		<!-- Spreadsheet handling -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.10.1</version>
+		</dependency>
+
 		<!-- Test -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -93,10 +100,10 @@
 				<targetPath>${project.build.directory}/taxonomy</targetPath>
 			</resource>
 			<!-- Pre-rendered files - we're doing everything on Prerender.io for now -->
-<!-- 			<resource> -->
-<!-- 				<directory>src/main/static</directory> -->
-<!-- 				<targetPath>${project.build.outputDirectory}/files/static</targetPath> -->
-<!-- 			</resource> -->
+			<!-- <resource> -->
+			<!-- <directory>src/main/static</directory> -->
+			<!-- <targetPath>${project.build.outputDirectory}/files/static</targetPath> -->
+			<!-- </resource> -->
 		</resources>
 		<plugins>
 
