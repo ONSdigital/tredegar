@@ -22,7 +22,7 @@ import org.apache.commons.lang3.StringUtils;
 import au.com.bytecode.opencsv.CSVReader;
 
 import com.github.onsdigital.generator.TimeseriesData;
-import com.github.onsdigital.json.timeseries.TimeSeries;
+import com.github.onsdigital.json.timeseries.Timeseries;
 
 /**
  * Handles the metadata CSVs under the {@value #resourceName} folder.
@@ -51,7 +51,7 @@ public class MetadataCSV {
 		readRobsFile();
 
 		// Report on "other":
-		Set<TimeSeries> other = Data.dataset("other");
+		Set<Timeseries> other = Data.dataset("other");
 		if (other != null) {
 			System.out.println("'other' dataset contains " + other.size() + " CDIDs.");
 		}
@@ -66,7 +66,7 @@ public class MetadataCSV {
 		int other = 0;
 		for (Map<String, String> row : csv) {
 			String cdid = row.get("CDID");
-			TimeSeries timeseries = Data.timeseries(cdid);
+			Timeseries timeseries = Data.timeseries(cdid);
 			if (timeseries == null) {
 				timeseries = addOther(cdid);
 				other++;
@@ -98,7 +98,7 @@ public class MetadataCSV {
 				// Add the name to each timeseries:
 				String cdid = row[0];
 				String name = row[1];
-				TimeSeries timeseries = Data.timeseries(cdid);
+				Timeseries timeseries = Data.timeseries(cdid);
 				if (timeseries == null) {
 					if (!splat) {
 						System.out.println("Found a timeseries that has no data in " + file.getFileName() + ": " + cdid);
@@ -145,11 +145,11 @@ public class MetadataCSV {
 	 * 
 	 * @param timeseries
 	 */
-	private static TimeSeries addOther(String cdid) {
+	private static Timeseries addOther(String cdid) {
 
-		TimeSeries timeseries = Data.addTimeseries(cdid);
+		Timeseries timeseries = Data.addTimeseries(cdid);
 
-		Set<TimeSeries> dataset = Data.dataset("other");
+		Set<Timeseries> dataset = Data.dataset("other");
 		if (dataset == null) {
 			dataset = new HashSet<>();
 			Data.addDataset("other", dataset);

@@ -6,12 +6,12 @@ import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
 
-import com.github.onsdigital.json.timeseries.TimeSeries;
+import com.github.onsdigital.json.timeseries.Timeseries;
 
-public class Dataset implements Iterable<TimeSeries> {
+public class Dataset implements Iterable<Timeseries> {
 
 	private String name;
-	private Map<String, TimeSeries> timeserieses = new HashMap<>();
+	private Map<String, Timeseries> timeserieses = new HashMap<>();
 
 	public Dataset(String name) {
 		this.name = name;
@@ -22,20 +22,20 @@ public class Dataset implements Iterable<TimeSeries> {
 	}
 
 	public void addTimeseries(String cdid) {
-		TimeSeries result = timeserieses.get(StringUtils.lowerCase(cdid));
+		Timeseries result = timeserieses.get(StringUtils.lowerCase(cdid));
 		if (result == null) {
-			result = new TimeSeries();
+			result = new Timeseries();
 			result.setCdid(cdid);
 		}
 		timeserieses.put(StringUtils.lowerCase(result.cdid()), result);
 	}
 
-	public TimeSeries timeseries(String cdid) {
+	public Timeseries timeseries(String cdid) {
 		return timeserieses.get(StringUtils.lowerCase(cdid));
 	}
 
 	@Override
-	public Iterator<TimeSeries> iterator() {
+	public Iterator<Timeseries> iterator() {
 		return timeserieses.values().iterator();
 	}
 }

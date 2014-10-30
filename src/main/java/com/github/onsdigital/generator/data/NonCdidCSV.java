@@ -7,8 +7,8 @@ import java.util.Set;
 
 import org.apache.commons.lang3.StringUtils;
 
-import com.github.onsdigital.json.timeseries.TimeSeries;
-import com.github.onsdigital.json.timeseries.TimeSeriesValue;
+import com.github.onsdigital.json.timeseries.Timeseries;
+import com.github.onsdigital.json.timeseries.TimeseriesValue;
 
 /**
  * Handles the non-CDID data in the {@value #resourceName} spreadsheet.
@@ -45,7 +45,7 @@ class NonCdidCSV {
 				}
 
 				// Get the timeseries object for this CDID:
-				TimeSeries timeseries = Data.timeseries(cdid);
+				Timeseries timeseries = Data.timeseries(cdid);
 				if (timeseries == null) {
 					// System.out.println("Sheet " + sheetIndex + ", column " +
 					// c + " - new timeseries " + cdid);
@@ -72,7 +72,7 @@ class NonCdidCSV {
 
 						} else {
 
-							TimeSeriesValue timeSeriesValue = new TimeSeriesValue();
+							TimeseriesValue timeSeriesValue = new TimeseriesValue();
 							timeSeriesValue.date = date;
 							timeSeriesValue.value = figure;
 							timeseries.data.add(timeSeriesValue);

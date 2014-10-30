@@ -9,7 +9,7 @@ import org.apache.commons.lang.BooleanUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import com.github.onsdigital.generator.Folder;
-import com.github.onsdigital.json.timeseries.TimeSeries;
+import com.github.onsdigital.json.timeseries.Timeseries;
 
 /**
  * Handles the {@value #resourceName} CSV file.
@@ -22,7 +22,7 @@ import com.github.onsdigital.json.timeseries.TimeSeries;
  */
 class AlphaContentCSV {
 
-	static final String resourceName = "/Alpha content master.csv";
+	static final String resourceName = "/Alpha content master.xlsx";
 
 	static String THEME = "Theme";
 	static String LEVEL2 = "Level 2";
@@ -45,9 +45,9 @@ class AlphaContentCSV {
 	 */
 	public static void parse() throws IOException {
 
-		// Read the CSV:
+		// Read the first worksheet - "Data":
 		csv = new Csv(resourceName);
-		csv.read();
+		csv.read(0);
 		String[] headings = csv.getHeadings();
 
 		// Verify the headings:
@@ -68,7 +68,7 @@ class AlphaContentCSV {
 			String cdid = row.get(CDID);
 
 			// Get the timeseries to work with:
-			TimeSeries timeseries = Data.timeseries(cdid);
+			Timeseries timeseries = Data.timeseries(cdid);
 			if (timeseries == null) {
 				// We haven't seen this one before, so add it:
 				System.out.println(resourceName + ": new CDID found - " + cdid);
@@ -77,7 +77,7 @@ class AlphaContentCSV {
 			}
 
 			// Set the URI if necessary:
-			Folder folder = Data.getNode(row.get(THEME), row.get(LEVEL2), row.get(LEVEL3));
+			Folder folder = Data.getFolder(row.get(THEME), row.get(LEVEL2), row.get(LEVEL3));
 			if (timeseries.uri == null) {
 				timeseries.uri = toUri(folder, timeseries);
 			}
@@ -95,7 +95,7 @@ class AlphaContentCSV {
 		}
 	}
 
-	private static URI toUri(Folder folder, TimeSeries timeseries) {
+	private static URI toUri(Folder folder, Timeseries timeseries) {
 		URI result = null;
 
 		if (timeseries != null) {

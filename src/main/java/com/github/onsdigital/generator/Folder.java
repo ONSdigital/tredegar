@@ -8,7 +8,7 @@ import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
 
-import com.github.onsdigital.json.timeseries.TimeSeries;
+import com.github.onsdigital.json.timeseries.Timeseries;
 
 public class Folder {
 
@@ -18,8 +18,8 @@ public class Folder {
 	private Map<String, Folder> children = new HashMap<>();
 	public String lede;
 	public String more;
-	public TimeSeries headline;
-	public List<TimeSeries> timeserieses = new ArrayList<>();
+	public Timeseries headline;
+	public List<Timeseries> timeserieses = new ArrayList<>();
 
 	/**
 	 * Sanitises folder names to <code>[a-zA-Z0-9]</code>.

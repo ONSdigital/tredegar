@@ -24,8 +24,11 @@ public class Data {
 	static boolean validated;
 
 	@GET
-	public void getData(@Context HttpServletRequest request,
-			@Context HttpServletResponse response) throws IOException {
+	public void getData(@Context HttpServletRequest request, @Context HttpServletResponse response) throws IOException {
+
+		// Ensures ResourceUtils gets the right classloader when running
+		// reloadable in development:
+		ResourceUtils.classLoaderClass = Data.class;
 
 		// Validate all Json so that we get a warning if
 		// there's an issue with a file that's been edited.
@@ -34,15 +37,29 @@ public class Data {
 			validated = true;
 		}
 
-		// Ensures ResourceUtils gets the right classloader when running
-		// reloadable in development:
-		ResourceUtils.classLoaderClass = Data.class;
+		// Look for a data file:
+		Path data = getData(request.getRequestURI());
+
+		// Output directly to the response
+		// (rather than deserialise and re-serialise)
+		response.setCharacterEncoding("UTF8");
+		if (data != null) {
+			response.setContentType("application/json");
+			IOUtils.copy(Files.newInputStream(data), response.getOutputStream());
+		} else {
+			response.setStatus(HttpStatus.NOT_FOUND_404);
+			response.setContentType("text/plain");
+			response.getWriter().write("These are not the data you are looking for.");
+		}
+	}
+
+	public Path getData(String uriString) {
+		Path result = null;
 
 		// Standardise the path:
-		URI uri = URI.create(request.getRequestURI());
+		URI uri = URI.create(uriString);
 		String uriPath = cleanPath(uri);
-		Path taxonomy = FileSystems.getDefault().getPath(
-				Configuration.getTaxonomyPath());
+		Path taxonomy = FileSystems.getDefault().getPath(Configuration.getTaxonomyPath());
 
 		// Look for a data.json file, or
 		// fall back to adding a .json file extension
@@ -54,12 +71,10 @@ public class Data {
 		// Output directly to the response
 		// (rather than deserialise and re-serialise)
 		if (Files.exists(data)) {
-			response.setContentType("application/json");
-			response.setCharacterEncoding("UTF8");
-			IOUtils.copy(Files.newInputStream(data), response.getOutputStream());
-		} else {
-			response.setStatus(HttpStatus.NOT_FOUND_404);
+			result = data;
 		}
+
+		return result;
 	}
 
 	/**

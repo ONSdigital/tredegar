@@ -21,17 +21,17 @@ import org.apache.commons.lang3.StringUtils;
 import au.com.bytecode.opencsv.CSVReader;
 
 import com.github.davidcarboni.ResourceUtils;
-import com.github.onsdigital.json.timeseries.TimeSeriesValue;
+import com.github.onsdigital.json.timeseries.TimeseriesValue;
 
 public class TimeseriesData {
 
-	static Map<String, Set<TimeSeriesValue>> dataMaps;
+	static Map<String, Set<TimeseriesValue>> dataMaps;
 
-	public static Set<TimeSeriesValue> getData(String cdid) throws IOException {
+	public static Set<TimeseriesValue> getData(String cdid) throws IOException {
 		return getDataMaps().get(StringUtils.lowerCase(cdid));
 	}
 
-	public static Map<String, Set<TimeSeriesValue>> getDataMaps() throws IOException {
+	public static Map<String, Set<TimeseriesValue>> getDataMaps() throws IOException {
 
 		if (dataMaps == null) {
 			buildDataMaps();
@@ -103,7 +103,7 @@ public class TimeseriesData {
 					// This is useful because we want to avoid duplicates,
 					// but the date values (e.g. months) don't natulally sort
 					// alphabetically.
-					dataMaps.put(cdid.toLowerCase(), new LinkedHashSet<TimeSeriesValue>());
+					dataMaps.put(cdid.toLowerCase(), new LinkedHashSet<TimeseriesValue>());
 				}
 			}
 
@@ -118,7 +118,7 @@ public class TimeseriesData {
 						// Store the datum in the appropriate CDID map.
 						// Yep, datum is a bit of a poncy word these days.
 						// Not to worry.
-						TimeSeriesValue value = new TimeSeriesValue();
+						TimeseriesValue value = new TimeseriesValue();
 						value.date = date;
 						value.value = row[i];
 						dataMaps.get(cdids[i].toLowerCase()).add(value);

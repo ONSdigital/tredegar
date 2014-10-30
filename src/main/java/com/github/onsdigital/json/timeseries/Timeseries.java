@@ -8,7 +8,7 @@ import org.apache.commons.lang3.StringUtils;
 import com.github.onsdigital.json.ContentType;
 import com.github.onsdigital.json.DataItem;
 
-public class TimeSeries extends DataItem {
+public class Timeseries extends DataItem {
 
 	// Spreadsheet headings
 	private String cdid;
@@ -32,7 +32,7 @@ public class TimeSeries extends DataItem {
 	public String note;
 
 	// The nectar, the goodness, the very juice of the fireflower: data.
-	public List<TimeSeriesValue> data;
+	public List<TimeseriesValue> data;
 
 	// The URI of this timeseries.
 	// This is useful when it is referenced from more than one place in the
@@ -40,7 +40,7 @@ public class TimeSeries extends DataItem {
 	// place.
 	public URI uri;
 
-	public TimeSeries() {
+	public Timeseries() {
 		type = ContentType.timeseries;
 		name = "People not in Work";
 	}
@@ -76,9 +76,9 @@ public class TimeSeries extends DataItem {
 		if (obj == null) {
 			return false;
 		}
-		if (!TimeSeries.class.isAssignableFrom(obj.getClass())) {
+		if (!Timeseries.class.isAssignableFrom(obj.getClass())) {
 			return false;
 		}
-		return StringUtils.equalsIgnoreCase(((TimeSeries) obj).cdid, cdid);
+		return StringUtils.equalsIgnoreCase(((Timeseries) obj).cdid, cdid);
 	}
 }

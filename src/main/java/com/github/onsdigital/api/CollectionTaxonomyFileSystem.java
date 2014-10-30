@@ -27,7 +27,7 @@ public class CollectionTaxonomyFileSystem {
 
 	@GET
 	public Object get(@Context HttpServletRequest request, @Context HttpServletResponse response) throws Exception {
-		return search(extractQuery(request), extractPage(request), request.getParameter("type"));
+		return search(extractQuery(request), extractPage(request), request.getParameter("contentType"));
 	}
 
 	private Object search(String query, int page, String type) throws Exception {

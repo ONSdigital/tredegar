@@ -122,7 +122,6 @@ angular.module('onsTemplates')
             if (categories > 960) {
                 tick = 192;
             }
-            console.log("Esto es: " + tick);
             return tick;
         }
 
@@ -271,14 +270,23 @@ angular.module('onsTemplates')
                         content += "<div class='mainText'>";
                         content += title;
 
-
                         // series names and values
-                        $.each(this.points, function(i, val) {
-                            content += '<div class="tiptext"><b>' + val.point.series.chart.series[i].name + "= </b>" + Highcharts.numberFormat(val.y, 2) + '</div>';
+                        $.each(this.points, function(i, val){
+                            content += '<div class="tiptext"><i>' + val.point.series.chart.series[i].name + "</i><br/><b>Value: " + Highcharts.numberFormat(val.y, 2) +'</b></div>' ;
                         });
-                        content += "</div>";
+                        content+= "</div>";
                         return content;
                     },
+
+
+
+                    //     // series names and values
+                    //     $.each(this.points, function(i, val) {
+                    //         content += '<div class="tiptext"><b>' + val.point.series.chart.series[i].name + "= </b>" + Highcharts.numberFormat(val.y, 2) + '</div>';
+                    //     });
+                    //     content += "</div>";
+                    //     return content;
+                    // },
 
                     backgroundColor: 'rgba(255, 255, 255, 0)',
                     borderWidth: 0,
@@ -310,7 +318,6 @@ angular.module('onsTemplates')
                 series: [{
                         name: $scope.chart.name,
                         data: seriesDataY,
-                        // data: [1.7, 1.9, 2, 2.1, 2.2, 2.7, 2.7, 2.8, 2.9, 2.7, 2.4, 2.8, 2.8],
                         marker: {
                             symbol: "circle",
                             states: {
@@ -322,98 +329,13 @@ angular.module('onsTemplates')
                             }
                         },
                         dashStyle: 'Solid',
-
-                    } //Erase this line and uncomment below to get multiseries
-                    // }, {
-                    //     name: ' CPIH % change',
-                    //     data: [1.6, 1.8, 1.9, 1.9, 2, 2.5, 2.5, 2.5, 2.7, 2.5, 2.2, 2.6, 2.6],
-                    //     marker: {
-                    //         symbol: "square",
-                    //         states: {
-                    //             hover: {
-                    //                 fillColor: '#409ed2',
-                    //                 radiusPlus: 0,
-                    //                 lineWidthPlus: 0
-                    //             }
-                    //         }
-                    //     },
-                    //     dashStyle: 'longdash'
-                    // }, {
-                    //     name: 'RPIJ % change',
-                    //     data: [2, 2.1, 2, 2, 1.9, 2.5, 2.6, 2.6, 2.7, 2.5, 2.3, 2.7, 2.6],
-                    //     marker: {
-                    //         symbol: "diamond",
-                    //         states: {
-                    //             hover: {
-                    //                 fillColor: '#7fbee1',
-                    //                 radiusPlus: 0,
-                    //                 lineWidthPlus: 0
-                    //             }
-                    //         }
-                    //     },
-                    //     dashStyle: 'shortdot'
-                    // }, {
-                    //     name: 'RPI % change',
-                    //     data: [2.7, 2.8, 2.7, 2.6, 2.6, 3.2, 3.3, 3.1, 3.3, 3.1, 2.9, 3.3, 3.2],
-                    //     marker: {
-                    //         symbol: "triangle",
-                    //         states: {
-                    //             hover: {
-                    //                 fillColor: '#007dc3',
-                    //                 radiusPlus: 0,
-                    //                 lineWidthPlus: 0
-                    //             }
-                    //         }
-                    //     },
-                    //     dashStyle: 'Dot'
-                    // }
-
-                    /*
-                        ,
-                        {
-                          name: 'CPI',
-                          data: [127.4,126.7,127.5,127,126.9,126.8,126.4,125.8,125.9,126.1,125.9,125.6,125.2],
-                          visible:false,
-                          marker:{
-                            symbol:"circle"
-                          }
-                        }
-                        ,
-                        {
-                          name: 'CPIH',
-                          data: [125.2,124.7,125.3,124.8,124.8,124.7,124.3,123.8,123.8,124,123.8,123.6,123.2],
-                          visible:false,
-                          marker:{
-                            symbol:"square"
-                          }
-                        }
-                        ,
-                        {
-                          name: 'RPIJ',
-                          data: [236.3,235.4,236.2,235.1,234.9,235,234.2,233.2,233.2,233.5,233.2,232.6,231.7],
-                          visible:false,
-                          marker:{
-                            symbol:"diamond"
-                          }
-                        }
-                        ,
-                        {
-                          name: 'RPI',
-                          data: [254.2,252.6,253.4,252.1,251.9,251.9,251,249.7,249.7,250,249.5,248.7,247.6],
-                          visible:false,
-                          marker:{
-                            symbol:"triangle"
-                          }
-                        }
-
-                    */
-
+                    }
                 ]
             };
             return data;
         }
-
-    }]);
+    }
+]);
 
 
 //     });
