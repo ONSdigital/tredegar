@@ -93,18 +93,13 @@ class NonCdidCSV {
 							// Give the figure a sensible format.
 							// This is due to the way numbers come out of
 							// Excel.
-							String figureUpdated = figure;
 							if (StringUtils.isNotBlank(figure) && figure.contains("E") && figure.contains(".")) {
 								DecimalFormat format = new DecimalFormat("###,###,###,##0.00");
-								figureUpdated = format.format(Double.parseDouble(figure));
-								if (figureUpdated.endsWith(".00")) {
-									figureUpdated = figureUpdated.substring(0, figureUpdated.length() - 3);
+								figure = format.format(Double.parseDouble(figure));
+								if (figure.endsWith(".00")) {
+									figure = figure.substring(0, figure.length() - 3);
 								}
 							}
-							// if (!StringUtils.equals(figure, figureUpdated)) {
-							// System.out.println("Updated: " + figure + " -> "
-							// + figureUpdated);
-							// }
 
 							timeseriesValue.date = date;
 							timeseriesValue.value = figure;
