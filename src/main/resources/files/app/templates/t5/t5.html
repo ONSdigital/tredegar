@@ -1294,9 +1294,19 @@
         box-shadow: 0 0 1px 2px #e2383f;
     }
     @media screen and (min-width: 62em) {
-        .chart-area__controls__custom__container {
+    /*****************************************
+    *
+    * Changed this to adapt to table/graph
+    *
+    ******************************************/
+    .chart-area__controls__custom__container__table {
             width: 660px;
             width: 66rem;
+            float: right;
+        }
+    .chart-area__controls__custom__container {
+            width: 440px;
+            width: 44rem;
             float: right;
         }
     }
@@ -1634,7 +1644,7 @@ lesser , applied styles
                 <form>
                     <div class="button-bar chart-area__controls__buttons">
                         <div class="button-group chart-area__controls__type">
-                            <label class="btn btn--secondary btn--small btn--narrow btn--thin" ng-class="{'btn--secondary--active': chartTable}" ng-click="changeChartType('line')">Line</label>
+                            <label class="btn btn--secondary btn--small btn--narrow btn--thin" ng-class="{'btn--secondary--active': chartTable}" ng-click="changeChartType('line')">Chart</label>
                             <label class="btn btn--secondary btn--small btn--narrow btn--thin" ng-class="{'btn--secondary--active': !chartTable}" ng-click="changeChartType('table')">Table</label>
                         </div>
                         <div class="button-group chart-area__controls__timespan">
@@ -1647,7 +1657,7 @@ lesser , applied styles
                         <span class="chart-area__controls__time__label">Time period:</span>
                         <ul class="nav flush--top chart-area__controls__time__ranges">
                             <li>
-                                <a href="#" data-chart-controls-range="all">All</a>
+                                <a href="#" ng-model="tableValueAll" ng-options="date for date in chartData.options.xAxis.categories">All</a>
                             </li>
                             <li>
                                 <a href="#" data-chart-controls-range="10yr">Last 10 yrs</a>
@@ -1664,13 +1674,13 @@ lesser , applied styles
                         </ul>
                     </div>
 
-                    <!-- Selectors -->
-                    <div class="chart-area__controls__custom" id="customControls">
+                    <!-- Selectors chart-area__controls__custom__container__table-->
+                    <div class="chart-area__controls__custom">
                         <div class="chart-area__controls__custom__errors"></div>
-                        <div class="chart-area__controls__custom__container">
+                        <div ng-class="{'chart-area__controls__custom__container__table': !chartTable}">
                             <div class="chart-area__controls__dropdowns">
                                 <fieldset ng-show="!chartTable" class="chart-area__controls__date">
-                                    <legend class="chart-area__controls__date__label">Search</legend>
+                                    <legend class="chart-area__controls__date__label">Find</legend>
                                     <label class="visuallyhidden">Date</label>
                                     <input ng-model="query" type="test"/>
                                 </fieldset>
@@ -1679,7 +1689,7 @@ lesser , applied styles
                                     <legend class="chart-area__controls__date__label">From</legend>
                                     <label class="visuallyhidden">Date</label>
                                     <select class="chart-area__controls__month" ng-model="tableValueFrom" ng-options="date for date in chartData.options.xAxis.categories">
-                                        <option value="">Select option</option>
+                                        <option value="2000">Select option</option>
                                     </select>
                                 </fieldset>
 
@@ -1687,7 +1697,7 @@ lesser , applied styles
                                     <legend class="chart-area__controls__date__label">To</legend>
                                     <label class="visuallyhidden">Date</label>
                                     <select class="chart-area__controls__month" ng-model="tableValueTo" ng-options="date for date in chartData.options.xAxis.categories">
-                                        <option value="">Select option</option>
+                                        <option value="2010">Select option</option>
                                     </select>
                                 </fieldset>
 
@@ -1713,7 +1723,7 @@ lesser , applied styles
                             </tr>
                         </thead>
                         <tbody>
-                            <tr ng-repeat="data in tableValue | filter:query | orderBy:sortField:reverse">
+                            <tr ng-repeat="data in tableValue | filter:query | orderBy:sortField:reverse | rangeDate:tableValueFrom:tableValueTo:'date'" >
                                 <th>{{data.date}}</th>
                                 <td>{{data.values}}</td>
                             </tr>

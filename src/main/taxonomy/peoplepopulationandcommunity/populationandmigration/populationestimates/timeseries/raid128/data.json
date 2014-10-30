@@ -4,14 +4,332 @@
   "units": "Weights (parts per 1000)",
   "mainMeasure": "Consumer Prices Index",
   "description": "Consumer price indices are important indicators of how the UK economy is performing.\nThe indices are used in many ways by the government, businesses, and society in general. They can affect interest rates, tax allowances, wages, state benefits, pensions, maintenance, contracts and many other payments. They also show the impact of inflation on family budgets and affect the value of the pound in your pocket.",
-  "note1": "In accordance with the Statistics and Registration Service Act 2007, the Retail Prices Index and its derivatives have been assessed against the Code of Practice for Official Statistics and found not to meet the required standards for designation as National Statistics.",
   "note2": "Changes in the internal purchasing power of a currency may be defined as  the \u0027inverse\u0027 of changes in the levels of prices; when prices go up, the  amount which can be purchased with a given sum of money goes down. The  monthly figures of the all items RPI can be used to obtain estimates of the  changes in prices or in purchasing power between any 2 months. To find the  purchasing power of the pound in one month, given that it was 100p in a  previous month the calculation is:  100p multiplied by the earlier month RPI then divided by the later month RPI.",
   "number": "31.3",
   "unit": "million",
+  "preUnit": "",
   "date": "Mid-2013",
   "lastUpated": "16 Sep 2014",
   "nextUpdate": "14 Oct 2014",
   "note": "2005 \u003d 100. Not seasonally adjusted",
+  "data": [
+    {
+      "value": "People, Population and Community"
+    },
+    {
+      "value": "Population and Migration"
+    },
+    {
+      "value": "Population Estimates"
+    },
+    {
+      "value": "Males in the UK"
+    },
+    {
+      "value": "N"
+    },
+    {
+      "value": "million"
+    },
+    {
+      "value": "RAID128"
+    },
+    {
+      "value": "People,PopulationandCommunity"
+    },
+    {
+      "value": "PeoplePopulationandCommunity"
+    },
+    {
+      "value": "PopulationandMigration"
+    },
+    {
+      "value": "PopulationandMigration"
+    },
+    {
+      "value": "PopulationEstimates"
+    },
+    {
+      "value": "PopulationEstimates"
+    },
+    {
+      "value": "PopulationEstimates"
+    },
+    {
+      "value": "PopulationEstimates"
+    },
+    {
+      "value": "/PeoplePopulationandCommunity/PopulationandMigration/timeseries/RAID128"
+    },
+    {
+      "value": "/PeoplePopulationandCommunity/PopulationandMigration/PopulationEstimates/timeseries/RAID128"
+    },
+    {
+      "value": "/PeoplePopulationandCommunity/PopulationandMigration/PopulationEstimates/timeseries/RAID128"
+    },
+    {
+      "value": "/PeoplePopulationandCommunity/PopulationandMigration/PopulationEstimates/timeseries/RAID128"
+    },
+    {
+      "value": "/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/raid128"
+    },
+    {
+      "value": "/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/raid128"
+    },
+    {
+      "value": "/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/raid128"
+    },
+    {
+      "value": "/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/raid128"
+    },
+    {
+      "value": "http://www.ons.gov.uk/ons/rel/pop-estimate/population-estimates-for-uk--england-and-wales--scotland-and-northern-ireland/2013/rft---mid-2013-uk-population-estimates.zip"
+    },
+    {
+      "date": "1953.0",
+      "value": "2.1206E7"
+    },
+    {
+      "date": "1954.0",
+      "value": "2.1288E7"
+    },
+    {
+      "date": "1955.0",
+      "value": "2.1389E7"
+    },
+    {
+      "date": "1956.0",
+      "value": "2.1517E7"
+    },
+    {
+      "date": "1957.0",
+      "value": "2.1648E7"
+    },
+    {
+      "date": "1958.0",
+      "value": "2.1744E7"
+    },
+    {
+      "date": "1959.0",
+      "value": "2.1885E7"
+    },
+    {
+      "date": "1960.0",
+      "value": "2.2097E7"
+    },
+    {
+      "date": "1961.0",
+      "value": "2.2347E7"
+    },
+    {
+      "date": "1962.0",
+      "value": "2.26313E7"
+    },
+    {
+      "date": "1963.0",
+      "value": "2.27867E7"
+    },
+    {
+      "date": "1964.0",
+      "value": "2.29785E7"
+    },
+    {
+      "date": "1965.0",
+      "value": "2.31507E7"
+    },
+    {
+      "date": "1966.0",
+      "value": "2.32958E7"
+    },
+    {
+      "date": "1967.0",
+      "value": "2.34511E7"
+    },
+    {
+      "date": "1968.0",
+      "value": "2.35535E7"
+    },
+    {
+      "date": "1969.0",
+      "value": "2.36662E7"
+    },
+    {
+      "date": "1970.0",
+      "value": "2.37381E7"
+    },
+    {
+      "date": "1971.0",
+      "value": "2.3897E7"
+    },
+    {
+      "date": "1972.0",
+      "value": "2.39886E7"
+    },
+    {
+      "date": "1973.0",
+      "value": "2.40605E7"
+    },
+    {
+      "date": "1974.0",
+      "value": "2.40745E7"
+    },
+    {
+      "date": "1975.0",
+      "value": "2.40914E7"
+    },
+    {
+      "date": "1976.0",
+      "value": "2.40891E7"
+    },
+    {
+      "date": "1977.0",
+      "value": "2.40762E7"
+    },
+    {
+      "date": "1978.0",
+      "value": "2.40673E7"
+    },
+    {
+      "date": "1979.0",
+      "value": "2.41131E7"
+    },
+    {
+      "date": "1980.0",
+      "value": "2.41555E7"
+    },
+    {
+      "date": "1981.0",
+      "value": "2.41601E7"
+    },
+    {
+      "date": "1982.0",
+      "value": "2.4119499E7"
+    },
+    {
+      "date": "1983.0",
+      "value": "2.4133341E7"
+    },
+    {
+      "date": "1984.0",
+      "value": "2.4184694E7"
+    },
+    {
+      "date": "1985.0",
+      "value": "2.4254346E7"
+    },
+    {
+      "date": "1986.0",
+      "value": "2.4311228E7"
+    },
+    {
+      "date": "1987.0",
+      "value": "2.4370607E7"
+    },
+    {
+      "date": "1988.0",
+      "value": "2.4433525E7"
+    },
+    {
+      "date": "1989.0",
+      "value": "2.4509732E7"
+    },
+    {
+      "date": "1990.0",
+      "value": "2.459679E7"
+    },
+    {
+      "date": "1991.0",
+      "value": "2.4681337E7"
+    },
+    {
+      "date": "1992.0",
+      "value": "2.4739461E7"
+    },
+    {
+      "date": "1993.0",
+      "value": "2.4792642E7"
+    },
+    {
+      "date": "1994.0",
+      "value": "2.4853043E7"
+    },
+    {
+      "date": "1995.0",
+      "value": "2.4946334E7"
+    },
+    {
+      "date": "1996.0",
+      "value": "2.5029777E7"
+    },
+    {
+      "date": "1997.0",
+      "value": "2.5113194E7"
+    },
+    {
+      "date": "1998.0",
+      "value": "2.52007E7"
+    },
+    {
+      "date": "1999.0",
+      "value": "2.5323441E7"
+    },
+    {
+      "date": "2000.0",
+      "value": "2.5438046E7"
+    },
+    {
+      "date": "2001.0",
+      "value": "2.5574258E7"
+    },
+    {
+      "date": "2002.0",
+      "value": "2.5708118E7"
+    },
+    {
+      "date": "2003.0",
+      "value": "2.5854109E7"
+    },
+    {
+      "date": "2004.0",
+      "value": "2.6012115E7"
+    },
+    {
+      "date": "2005.0",
+      "value": "2.6234398E7"
+    },
+    {
+      "date": "2006.0",
+      "value": "2.643335E7"
+    },
+    {
+      "date": "2007.0",
+      "value": "2.6669068E7"
+    },
+    {
+      "date": "2008.0",
+      "value": "2.6914321E7"
+    },
+    {
+      "date": "2009.0",
+      "value": "2.712168E7"
+    },
+    {
+      "date": "2010.0",
+      "value": "2.7372737E7"
+    },
+    {
+      "date": "2011.0",
+      "value": "2.7637637E7"
+    },
+    {
+      "date": "2012.0",
+      "value": "2.7843384E7"
+    },
+    {
+      "date": "2013.0",
+      "value": "2.8049196E7"
+    }
+  ],
   "uri": "/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/raid128",
   "type": "timeseries",
   "name": "Males in the UK",

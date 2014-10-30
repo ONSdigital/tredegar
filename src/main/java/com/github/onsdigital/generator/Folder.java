@@ -1,19 +1,25 @@
 package com.github.onsdigital.generator;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
+
+import com.github.onsdigital.json.timeseries.Timeseries;
 
 public class Folder {
 
 	public int index;
 	public String name;
 	public Folder parent = null;
-	private Map<String,Folder> children = new HashMap<>();
+	private Map<String, Folder> children = new HashMap<>();
 	public String lede;
 	public String more;
+	public Timeseries headline;
+	public List<Timeseries> timeserieses = new ArrayList<>();
 
 	/**
 	 * Sanitises folder names to <code>[a-zA-Z0-9]</code>.
@@ -32,21 +38,21 @@ public class Folder {
 		}
 		return result.toString().toLowerCase();
 	}
-	
+
 	public void addChild(Folder child) {
 		this.children.put(child.filename(), child);
 	}
-	
+
 	public void addChildren(Collection<Folder> children) {
 		for (Folder folder : children) {
 			this.children.put(folder.filename(), folder);
 		}
 	}
-	
+
 	public Folder getChild(String fileName) {
 		return this.children.get(fileName);
 	}
-	
+
 	public Collection<Folder> getChildren() {
 		return children.values();
 	}

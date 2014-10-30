@@ -1866,13 +1866,13 @@ a {
 
 .hero-banner__main-title {
   margin-bottom: 0;
-  font-size: 24px;
-  font-size: 2.4rem;
+  font-size: 19px;
+  font-size: 1.9rem;
   line-height: 1.125; }
-  @media screen and (min-width: 38em) {
+  @media screen and (min-width: 52em) {
     .hero-banner__main-title {
-      font-size: 36px;
-      font-size: 3.6rem;
+      font-size: 25px;
+      font-size: 2.5rem;
       line-height: 1.25; } }
 
 .page-header {
@@ -3960,7 +3960,7 @@ table actions
   border: solid 1px;
 }
 
-.lozenge-spacer{ margin-right: 1.2em; }
+.lozenge-spacer{ margin: 0.8em; }
 
 .open-in-new-window{
   height: 1.5em;
@@ -4012,7 +4012,7 @@ table actions
 
 #search > dl > dt:nth-child(1){
   font-size: 1.35em;
-  background-color: #fafafb;
+/*  background-color: #fafafb;*/
 /*  padding: 0 0 0 0.3em; Commented out to align collection results*/
 }
 
@@ -4050,19 +4050,22 @@ table actions
 }
 
 .search-sorting{
-  margin: 0.5em 0em;
+  margin: 0.77em 0em 0.5em 0em;
   position: relative; 
   float: right;
-  display: inline-block;
+  
 
  }
 
-.search-sorting-grid{ padding-left: 10px; }
+.search-sorting-grid{ padding-left: 10px;
+                      float: right;
+                      min-width: 18em;
+                      /*display: inline-table; */}
 
 .search-aside{margin-top: 1em;}
 
 /* .wrapper{ max-width: 98%; } */
-.sorting{ width: 14em !important; margin-left: 1em; }
+.sorting{ width: 14em !important; margin-left: 0.7em; }
 
 .results-total{ font-size: 2em;
                 font-weight: bolder; }
@@ -4565,10 +4568,10 @@ ol.toc-columns
 #collection-list p{color: gray;}
 
 
-#search > dl > dd:nth-child(2){
+/*#search > dl > dd:nth-child(2){
   font-size: 1em;
   background-color: #fafafb;
-}
+}*/
 
 #search > dl > dd {padding: 0 0 0.85em 0em;}
 
@@ -4587,7 +4590,7 @@ ol.toc-columns
     width: 12%;  }
 }
 
-@media (min-width: 750px){
+/*@media (min-width: 750px){
 #nav-primary > li.nav--primary__active:after{
   content:'';
   width:0;
@@ -4600,7 +4603,7 @@ ol.toc-columns
   border-style:solid;
   border-color: transparent transparent white transparent;
 }
-}
+}*/
 
 /*#nav-primary > li.nav--primary__highlight{
   width: 25% !important }
@@ -4841,7 +4844,7 @@ div.grid-col.desktop-grid-two-thirds.tablet-grid-two-thirds > div > ol > li {
 
 .data-table {
   margin: 1em 0;
-  min-width: 300px;
+  min-width: 280px;
   overflow: hidden;
   margin: auto;
 }
@@ -5002,8 +5005,8 @@ td.datatable-downloads{
 
 .hero-stat-box{
   height: 25rem;
-  background-color: #7248b5;
-  margin-left: 25px;
+  background-color: #4d7495;
+  padding: 2rem;
   margin: 0 auto;
 }
 
@@ -5024,3 +5027,10 @@ td.datatable-downloads{
   height: 25rem;
 }
 
+@media screen and (min-width: 800px){
+  .navpanel_wrapper{
+  height: 17em;
+  /*line-height: 1.3;*/
+  overflow: hidden;
+  padding: 0;}
+}

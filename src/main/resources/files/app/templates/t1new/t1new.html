@@ -5,12 +5,12 @@
            <div class="grid-wrap panel--bottom-mar-small">
             <div class="grid-col tablet-grid-three-quarters home_hero_img">
             </div>
-            <div class="grid-col tablet-grid-one-quarter box--padded-vertical hero-stat-box">
+            <div class="grid-col tablet-grid-one-quarter hero-stat-box">
               <header>
-                <h2 class="beta">Migration <br/> 2011 -2012</h2>
+                <h2 class="hero-banner__main-title panel--bottom-mar">Importers of UK manufactured goods</h2>
               </header>
                 <p class="home_hero_comments">
-                Gross Domestic Product
+                Which are the top 10 countries?
                 </p>
 
             </div>
@@ -24,6 +24,7 @@
         <div class="grid-wrap">
           <div ng-repeat="section in taxonomy.data.sections" class="grid-col tablet-wide-grid-one-quarter">
             <article class="nav-panel nav-panel--stats sectioned lifted border-defined">
+              <div class="navpanel_wrapper">
               <header class="nav-panel__header nav-panel__roomy">
                 <h2 class="delta">{{section.name}}</h2>
               </header>
@@ -32,7 +33,7 @@
 
               <div class="box box--inline flush--bottom">
                   <div class="stat">
-                    <div class="stat__figure">
+                    <div class="stat--small stat__figure">
                       {{item.number}}
                       <span class="stat__figure__unit">{{item.unit}}</span>
                     </div>
@@ -41,7 +42,7 @@
                   <p> {{item.date}}  <span tabindex="0" class="tooltips icon-info-circled icon--warm icon--inline icon--inline--large-text icon--med tooltipstered"></span>
               </div>
               </section>
-
+                </div>
               <footer class="nav-panel__footer">
                 <div class="nav-panel__action ">
                   <a class="nav-panel__roomy no_underline" href="#!{{getPath()}}{{section.link}}">View all</a>
@@ -180,17 +181,17 @@
             <div class="grid-col desktop-grid-two-thirds">
               <div class="grid-wrap">
                 <div class="grid-col tablet-grid-one-third linkbox-padded">
-                  <h2><a class="no_underline" href="#">NESS</a></h2>
+                  <h2><a class="no_underline" href="http://www.neighbourhood.statistics.gov.uk/dissemination/">NESS</a></h2>
                   <p>Neighbourhood statistics site</p>
                 </div>
 
                 <div class="grid-col tablet-grid-one-third linkbox-padded">
-                  <h2><a class="no_underline" href="#">NOMIS</a></h2>
+                  <h2><a class="no_underline" href="https://www.nomisweb.co.uk/">NOMIS</a></h2>
                   <p>Labour market statistics</p>
                 </div>
 
                 <div class="grid-col tablet-grid-one-third linkbox-padded">
-                  <h2><a class="no_underline" href="#">Data Explorer</a></h2>
+                  <h2><a class="no_underline" href="http://ukdataexplorer.com/">Data Explorer</a></h2>
                   <p></p>
                 </div>
               </div>

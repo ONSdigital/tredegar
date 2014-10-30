@@ -1,5 +1,6 @@
 package com.github.onsdigital.json.bulletin;
 
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,6 +23,10 @@ public class Bulletin extends CollectionItem {
 
 	// Table of contents
 	public List<Section> sections = new ArrayList<Section>();
+	public URI uri;
+	public String headline1 = "Duis ut laoreet felis";
+	public String headline2 = "Morbi sed sem at magna";
+	public String headline3 = "Auctor gravida sed non enim";
 
 	/**
 	 * Sets up some basic content.

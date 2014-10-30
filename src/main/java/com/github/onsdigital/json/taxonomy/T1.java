@@ -20,8 +20,8 @@ public class T1 extends TaxonomyHome {
 
 	protected void buildSections(Folder folder) {
 		sections = new ArrayList<>();
-		buildChild(folder.getChild("economy"), URI.create("/economy/grossdomesticproductgdp/timeseries/abmi"));
-		buildChild(folder.getChild("businessindustryandtrade"), URI.create("/economy/nationalaccounts/timeseries/ikbj"));
+		buildChild(folder.getChild("economy"), URI.create("/inflationandpriceindices/timeseries/d7g7"));
+		buildChild(folder.getChild("businessindustryandtrade"), URI.create("/businessindustryandtrade/internationaltrade/timeseries/ikbj"));
 		buildChild(folder.getChild("employmentandlabourmarket"), URI.create("/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/lf24"));
 		buildChild(folder.getChild("peoplepopulationandcommunity"), URI.create("/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/raid121"));
 	}

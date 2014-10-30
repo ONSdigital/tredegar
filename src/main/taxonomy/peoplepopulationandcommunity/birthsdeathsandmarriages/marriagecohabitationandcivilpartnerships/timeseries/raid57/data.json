@@ -4,14 +4,398 @@
   "units": "Weights (parts per 1000)",
   "mainMeasure": "Consumer Prices Index",
   "description": "Consumer price indices are important indicators of how the UK economy is performing.\nThe indices are used in many ways by the government, businesses, and society in general. They can affect interest rates, tax allowances, wages, state benefits, pensions, maintenance, contracts and many other payments. They also show the impact of inflation on family budgets and affect the value of the pound in your pocket.",
-  "note1": "In accordance with the Statistics and Registration Service Act 2007, the Retail Prices Index and its derivatives have been assessed against the Code of Practice for Official Statistics and found not to meet the required standards for designation as National Statistics.",
+  "note1": "2012 figure provisional",
   "note2": "Changes in the internal purchasing power of a currency may be defined as  the \u0027inverse\u0027 of changes in the levels of prices; when prices go up, the  amount which can be purchased with a given sum of money goes down. The  monthly figures of the all items RPI can be used to obtain estimates of the  changes in prices or in purchasing power between any 2 months. To find the  purchasing power of the pound in one month, given that it was 100p in a  previous month the calculation is:  100p multiplied by the earlier month RPI then divided by the later month RPI.",
   "number": "262240",
-  "unit": "m",
+  "unit": "",
+  "preUnit": "",
   "date": "2012",
   "lastUpated": "16 Sep 2014",
   "nextUpdate": "14 Oct 2014",
   "note": "2005 \u003d 100. Not seasonally adjusted",
+  "data": [
+    {
+      "value": "People, Population and Community"
+    },
+    {
+      "value": "Births, Deaths and Marriages"
+    },
+    {
+      "value": "Marriage, Cohabitation and Civil Partnerships"
+    },
+    {
+      "value": "Marriages"
+    },
+    {
+      "value": "Y"
+    },
+    {
+      "value": "number"
+    },
+    {
+      "value": "RAID57"
+    },
+    {
+      "value": "People,PopulationandCommunity"
+    },
+    {
+      "value": "PeoplePopulationandCommunity"
+    },
+    {
+      "value": "Births,DeathsandMarriages"
+    },
+    {
+      "value": "BirthsDeathsandMarriages"
+    },
+    {
+      "value": "Marriage,CohabitationandCivilPartnerships"
+    },
+    {
+      "value": "MarriageCohabitationandCivilPartnerships"
+    },
+    {
+      "value": "Marriage,CohabitationandCivilPartnerships"
+    },
+    {
+      "value": "MarriageCohabitationandCivilPartnerships"
+    },
+    {
+      "value": "/PeoplePopulationandCommunity/BirthsDeathsandMarriages/timeseries/RAID57"
+    },
+    {
+      "value": "/PeoplePopulationandCommunity/BirthsDeathsandMarriages/MarriageCohabitationandCivilPartnerships/timeseries/RAID57"
+    },
+    {
+      "value": "/PeoplePopulationandCommunity/BirthsDeathsandMarriages/MarriageCohabitationandCivilPartnerships/timeseries/RAID57"
+    },
+    {
+      "value": "/PeoplePopulationandCommunity/BirthsDeathsandMarriages/MarriageCohabitationandCivilPartnerships/timeseries/RAID57"
+    },
+    {
+      "value": "/peoplepopulationandcommunity/birthsdeathsandmarriages/marriagecohabitationandcivilpartnerships/timeseries/raid57"
+    },
+    {
+      "value": "/peoplepopulationandcommunity/birthsdeathsandmarriages/marriagecohabitationandcivilpartnerships/timeseries/raid57"
+    },
+    {
+      "value": "/peoplepopulationandcommunity/birthsdeathsandmarriages/marriagecohabitationandcivilpartnerships/timeseries/raid57"
+    },
+    {
+      "value": "/peoplepopulationandcommunity/birthsdeathsandmarriages/marriagecohabitationandcivilpartnerships/timeseries/raid57"
+    },
+    {
+      "value": "http://www.ons.gov.uk/ons/rel/vsob1/marriages-in-england-and-wales--provisional-/2012/rtd-marriage-summary-statistics-2012--provisional-.xls"
+    },
+    {
+      "date": "1936.0",
+      "value": "354644.0"
+    },
+    {
+      "date": "1937.0",
+      "value": "359160.0"
+    },
+    {
+      "date": "1938.0",
+      "value": "361768.0"
+    },
+    {
+      "date": "1939.0",
+      "value": "439694.0"
+    },
+    {
+      "date": "1940.0",
+      "value": "470549.0"
+    },
+    {
+      "date": "1941.0",
+      "value": "388921.0"
+    },
+    {
+      "date": "1942.0",
+      "value": "369744.0"
+    },
+    {
+      "date": "1943.0",
+      "value": "296432.0"
+    },
+    {
+      "date": "1944.0",
+      "value": "302714.0"
+    },
+    {
+      "date": "1945.0",
+      "value": "397626.0"
+    },
+    {
+      "date": "1946.0",
+      "value": "385606.0"
+    },
+    {
+      "date": "1947.0",
+      "value": "401210.0"
+    },
+    {
+      "date": "1948.0",
+      "value": "396891.0"
+    },
+    {
+      "date": "1949.0",
+      "value": "375041.0"
+    },
+    {
+      "date": "1950.0",
+      "value": "358490.0"
+    },
+    {
+      "date": "1951.0",
+      "value": "360624.0"
+    },
+    {
+      "date": "1952.0",
+      "value": "349308.0"
+    },
+    {
+      "date": "1953.0",
+      "value": "344998.0"
+    },
+    {
+      "date": "1954.0",
+      "value": "341731.0"
+    },
+    {
+      "date": "1955.0",
+      "value": "357918.0"
+    },
+    {
+      "date": "1956.0",
+      "value": "352944.0"
+    },
+    {
+      "date": "1957.0",
+      "value": "346903.0"
+    },
+    {
+      "date": "1958.0",
+      "value": "339913.0"
+    },
+    {
+      "date": "1959.0",
+      "value": "340126.0"
+    },
+    {
+      "date": "1960.0",
+      "value": "343614.0"
+    },
+    {
+      "date": "1961.0",
+      "value": "346678.0"
+    },
+    {
+      "date": "1962.0",
+      "value": "347732.0"
+    },
+    {
+      "date": "1963.0",
+      "value": "351329.0"
+    },
+    {
+      "date": "1964.0",
+      "value": "359307.0"
+    },
+    {
+      "date": "1965.0",
+      "value": "371127.0"
+    },
+    {
+      "date": "1966.0",
+      "value": "384497.0"
+    },
+    {
+      "date": "1967.0",
+      "value": "386052.0"
+    },
+    {
+      "date": "1968.0",
+      "value": "407822.0"
+    },
+    {
+      "date": "1969.0",
+      "value": "396746.0"
+    },
+    {
+      "date": "1970.0",
+      "value": "415487.0"
+    },
+    {
+      "date": "1971.0",
+      "value": "404737.0"
+    },
+    {
+      "date": "1972.0",
+      "value": "426241.0"
+    },
+    {
+      "date": "1973.0",
+      "value": "400435.0"
+    },
+    {
+      "date": "1974.0",
+      "value": "384389.0"
+    },
+    {
+      "date": "1975.0",
+      "value": "380620.0"
+    },
+    {
+      "date": "1976.0",
+      "value": "358567.0"
+    },
+    {
+      "date": "1977.0",
+      "value": "356954.0"
+    },
+    {
+      "date": "1978.0",
+      "value": "368258.0"
+    },
+    {
+      "date": "1979.0",
+      "value": "368853.0"
+    },
+    {
+      "date": "1980.0",
+      "value": "370022.0"
+    },
+    {
+      "date": "1981.0",
+      "value": "351973.0"
+    },
+    {
+      "date": "1982.0",
+      "value": "342166.0"
+    },
+    {
+      "date": "1983.0",
+      "value": "344334.0"
+    },
+    {
+      "date": "1984.0",
+      "value": "349186.0"
+    },
+    {
+      "date": "1985.0",
+      "value": "346389.0"
+    },
+    {
+      "date": "1986.0",
+      "value": "347924.0"
+    },
+    {
+      "date": "1987.0",
+      "value": "351761.0"
+    },
+    {
+      "date": "1988.0",
+      "value": "348492.0"
+    },
+    {
+      "date": "1989.0",
+      "value": "346697.0"
+    },
+    {
+      "date": "1990.0",
+      "value": "331150.0"
+    },
+    {
+      "date": "1991.0",
+      "value": "306756.0"
+    },
+    {
+      "date": "1992.0",
+      "value": "311564.0"
+    },
+    {
+      "date": "1993.0",
+      "value": "299197.0"
+    },
+    {
+      "date": "1994.0",
+      "value": "291069.0"
+    },
+    {
+      "date": "1995.0",
+      "value": "283012.0"
+    },
+    {
+      "date": "1996.0",
+      "value": "278975.0"
+    },
+    {
+      "date": "1997.0",
+      "value": "272536.0"
+    },
+    {
+      "date": "1998.0",
+      "value": "267303.0"
+    },
+    {
+      "date": "1999.0",
+      "value": "263515.0"
+    },
+    {
+      "date": "2000.0",
+      "value": "267961.0"
+    },
+    {
+      "date": "2001.0",
+      "value": "249227.0"
+    },
+    {
+      "date": "2002.0",
+      "value": "255596.0"
+    },
+    {
+      "date": "2003.0",
+      "value": "270109.0"
+    },
+    {
+      "date": "2004.0",
+      "value": "273069.0"
+    },
+    {
+      "date": "2005.0",
+      "value": "247805.0"
+    },
+    {
+      "date": "2006.0",
+      "value": "239454.0"
+    },
+    {
+      "date": "2007.0",
+      "value": "235367.0"
+    },
+    {
+      "date": "2008.0",
+      "value": "235794.0"
+    },
+    {
+      "date": "2009.0",
+      "value": "232443.0"
+    },
+    {
+      "date": "2010.0",
+      "value": "243808.0"
+    },
+    {
+      "date": "2011.0",
+      "value": "249133.0"
+    },
+    {
+      "date": "2012.0",
+      "value": "262240.0"
+    },
+    {}
+  ],
   "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/marriagecohabitationandcivilpartnerships/timeseries/raid57",
   "type": "timeseries",
   "name": "Marriages",
