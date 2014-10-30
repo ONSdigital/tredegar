@@ -71,7 +71,6 @@ class AlphaContentCSV {
 			Timeseries timeseries = Data.timeseries(cdid);
 			if (timeseries == null) {
 				// We haven't seen this one before, so add it:
-				System.out.println(resourceName + ": new CDID found - " + cdid);
 				timeseries = Data.addTimeseries(cdid);
 
 			}
