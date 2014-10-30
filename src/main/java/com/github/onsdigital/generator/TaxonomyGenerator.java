@@ -195,7 +195,7 @@ public class TaxonomyGenerator {
 			}
 		}
 
-		// createTimeseries(Paths.get(root.toURI()));
+		System.out.println("You have a grand total of " + Data.size() + " timeseries. Wow.");
 	}
 
 	// private static void createContentFolders(String name, File file)
@@ -406,7 +406,7 @@ public class TaxonomyGenerator {
 				System.out.println("No URI set for " + timeseries);
 			}
 		}
-		
+
 		// Stats bulletin references:
 		URI statsBulletinHeadline = toStatsBulletinUri(folder, BulletinContent.getHeadlineBulletin(folder));
 		if (statsBulletinHeadline != null) {
@@ -443,7 +443,7 @@ public class TaxonomyGenerator {
 	//
 	// return result;
 	// }
-	
+
 	private static URI toStatsBulletinUri(Folder folder, Bulletin bulletin) {
 		URI result = null;
 

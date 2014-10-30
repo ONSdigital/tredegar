@@ -77,7 +77,7 @@ class AlphaContentCSV {
 			}
 
 			// Set the URI if necessary:
-			Folder folder = Data.getNode(row.get(THEME), row.get(LEVEL2), row.get(LEVEL3));
+			Folder folder = Data.getFolder(row.get(THEME), row.get(LEVEL2), row.get(LEVEL3));
 			if (timeseries.uri == null) {
 				timeseries.uri = toUri(folder, timeseries);
 			}
