@@ -22,7 +22,7 @@ import com.github.onsdigital.json.timeseries.TimeSeries;
  */
 class AlphaContentCSV {
 
-	static final String resourceName = "/Alpha content master.csv";
+	static final String resourceName = "/Alpha content master.xlsx";
 
 	static String THEME = "Theme";
 	static String LEVEL2 = "Level 2";
@@ -45,9 +45,9 @@ class AlphaContentCSV {
 	 */
 	public static void parse() throws IOException {
 
-		// Read the CSV:
+		// Read the first worksheet - "Data":
 		csv = new Csv(resourceName);
-		csv.read();
+		csv.read(0);
 		String[] headings = csv.getHeadings();
 
 		// Verify the headings:
