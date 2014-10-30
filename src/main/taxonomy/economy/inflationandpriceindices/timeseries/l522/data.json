@@ -1,7 +1,6 @@
 {
   "cdid": "L522",
   "seasonalAdjustment": "Not seasonally adjusted",
-  "units": "Weights (parts per 1000)",
   "mainMeasure": "Consumer Prices Index including owner occupiers\u0027 housing costs (CPIH)",
   "description": "Consumer price indices are important indicators of how the UK economy is performing.\n\nThe indices are used in many ways by the government, businesses, and society in general. They can affect interest rates, tax allowances, wages, state benefits, pensions, maintenance, contracts and many other payments. They also show the impact of inflation on family budgets and affect the value of the pound in your pocket.",
   "note1": "The National Statistics status of CPIH has been discontinued pending work by ONS to investigate and improve the method for measuring owner occupiers\u0027 housing costs in this index\n",
@@ -10,9 +9,6 @@
   "unit": "Index",
   "preUnit": "",
   "date": "September 2014",
-  "lastUpated": "16 Sep 2014",
-  "nextUpdate": "14 Oct 2014",
-  "note": "2005 \u003d 100. Not seasonally adjusted",
   "data": [
     {
       "date": "2005",
@@ -669,6 +665,6 @@
   ],
   "uri": "/economy/inflationandpriceindices/timeseries/l522",
   "type": "timeseries",
-  "name": "CPIH Index, 2005 \u003d 100",
+  "name": "CPIH Index (2005 \u003d 100)",
   "fileName": "l522"
 }
