@@ -1657,7 +1657,7 @@ lesser , applied styles
                         <span class="chart-area__controls__time__label">Time period:</span>
                         <ul class="nav flush--top chart-area__controls__time__ranges">
                             <li>
-                                <a href="#" data-chart-controls-range="all">All</a>
+                                <a href="#" ng-model="tableValueAll" ng-options="date for date in chartData.options.xAxis.categories">All</a>
                             </li>
                             <li>
                                 <a href="#" data-chart-controls-range="10yr">Last 10 yrs</a>
@@ -1689,7 +1689,7 @@ lesser , applied styles
                                     <legend class="chart-area__controls__date__label">From</legend>
                                     <label class="visuallyhidden">Date</label>
                                     <select class="chart-area__controls__month" ng-model="tableValueFrom" ng-options="date for date in chartData.options.xAxis.categories">
-                                        <option value="">Select option</option>
+                                        <option value="2000">Select option</option>
                                     </select>
                                 </fieldset>
 
@@ -1697,7 +1697,7 @@ lesser , applied styles
                                     <legend class="chart-area__controls__date__label">To</legend>
                                     <label class="visuallyhidden">Date</label>
                                     <select class="chart-area__controls__month" ng-model="tableValueTo" ng-options="date for date in chartData.options.xAxis.categories">
-                                        <option value="">Select option</option>
+                                        <option value="2010">Select option</option>
                                     </select>
                                 </fieldset>
 
@@ -1723,7 +1723,7 @@ lesser , applied styles
                             </tr>
                         </thead>
                         <tbody>
-                            <tr ng-repeat="data in tableValue | filter:query | orderBy:sortField:reverse">
+                            <tr ng-repeat="data in tableValue | filter:query | orderBy:sortField:reverse | rangeDate:tableValueFrom:tableValueTo:'date'" >
                                 <th>{{data.date}}</th>
                                 <td>{{data.values}}</td>
                             </tr>
