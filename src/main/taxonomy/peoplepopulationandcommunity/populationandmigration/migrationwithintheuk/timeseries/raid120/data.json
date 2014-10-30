@@ -4,7 +4,7 @@
   "units": "Weights (parts per 1000)",
   "mainMeasure": "Consumer Prices Index",
   "description": "Consumer price indices are important indicators of how the UK economy is performing.\nThe indices are used in many ways by the government, businesses, and society in general. They can affect interest rates, tax allowances, wages, state benefits, pensions, maintenance, contracts and many other payments. They also show the impact of inflation on family budgets and affect the value of the pound in your pocket.",
-  "note1": "In accordance with the Statistics and Registration Service Act 2007, the Retail Prices Index and its derivatives have been assessed against the Code of Practice for Official Statistics and found not to meet the required standards for designation as National Statistics.",
+  "note1": "Methods changes mid-2008 and mid 2011",
   "note2": "Changes in the internal purchasing power of a currency may be defined as  the \u0027inverse\u0027 of changes in the levels of prices; when prices go up, the  amount which can be purchased with a given sum of money goes down. The  monthly figures of the all items RPI can be used to obtain estimates of the  changes in prices or in purchasing power between any 2 months. To find the  purchasing power of the pound in one month, given that it was 100p in a  previous month the calculation is:  100p multiplied by the earlier month RPI then divided by the later month RPI.",
   "number": "2.714",
   "unit": "million",
@@ -13,6 +13,129 @@
   "lastUpated": "16 Sep 2014",
   "nextUpdate": "14 Oct 2014",
   "note": "2005 \u003d 100. Not seasonally adjusted",
+  "data": [
+    {
+      "value": "People, Population and Community"
+    },
+    {
+      "value": "Population and Migration"
+    },
+    {
+      "value": "Migration within the UK"
+    },
+    {
+      "value": "Residents moving between local authorities"
+    },
+    {
+      "value": "Y"
+    },
+    {
+      "value": "million"
+    },
+    {
+      "value": "RAID120"
+    },
+    {
+      "value": "People,PopulationandCommunity"
+    },
+    {
+      "value": "PeoplePopulationandCommunity"
+    },
+    {
+      "value": "PopulationandMigration"
+    },
+    {
+      "value": "PopulationandMigration"
+    },
+    {
+      "value": "MigrationwithintheUK"
+    },
+    {
+      "value": "MigrationwithintheUK"
+    },
+    {
+      "value": "MigrationwithintheUK"
+    },
+    {
+      "value": "MigrationwithintheUK"
+    },
+    {
+      "value": "/PeoplePopulationandCommunity/PopulationandMigration/timeseries/RAID120"
+    },
+    {
+      "value": "/PeoplePopulationandCommunity/PopulationandMigration/MigrationwithintheUK/timeseries/RAID120"
+    },
+    {
+      "value": "/PeoplePopulationandCommunity/PopulationandMigration/MigrationwithintheUK/timeseries/RAID120"
+    },
+    {
+      "value": "/PeoplePopulationandCommunity/PopulationandMigration/MigrationwithintheUK/timeseries/RAID120"
+    },
+    {
+      "value": "/peoplepopulationandcommunity/populationandmigration/migrationwithintheuk/timeseries/raid120"
+    },
+    {
+      "value": "/peoplepopulationandcommunity/populationandmigration/migrationwithintheuk/timeseries/raid120"
+    },
+    {
+      "value": "/peoplepopulationandcommunity/populationandmigration/migrationwithintheuk/timeseries/raid120"
+    },
+    {
+      "value": "/peoplepopulationandcommunity/populationandmigration/migrationwithintheuk/timeseries/raid120"
+    },
+    {
+      "value": "http://www.ons.gov.uk/ons/rel/migration1/internal-migration-by-local-authorities-in-england-and-wales/year-ending-june-2013/chd-figure-1.xls"
+    },
+    {
+      "date": "2002.0",
+      "value": "2.617"
+    },
+    {
+      "date": "2003.0",
+      "value": "2.638"
+    },
+    {
+      "date": "2004.0",
+      "value": "2.651"
+    },
+    {
+      "date": "2005.0",
+      "value": "2.589"
+    },
+    {
+      "date": "2006.0",
+      "value": "2.641"
+    },
+    {
+      "date": "2007.0",
+      "value": "2.772"
+    },
+    {
+      "date": "2008.0",
+      "value": "2.65"
+    },
+    {
+      "date": "2009.0",
+      "value": "2.556"
+    },
+    {
+      "date": "2010.0",
+      "value": "2.626"
+    },
+    {
+      "date": "2011.0",
+      "value": "2.593"
+    },
+    {
+      "date": "2012.0",
+      "value": "2.754"
+    },
+    {
+      "date": "2013.0",
+      "value": "2.714"
+    },
+    {}
+  ],
   "uri": "/peoplepopulationandcommunity/populationandmigration/migrationwithintheuk/timeseries/raid120",
   "type": "timeseries",
   "name": "Residents moving between local authorities ",

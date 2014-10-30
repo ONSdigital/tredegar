@@ -4,7 +4,7 @@
   "units": "Weights (parts per 1000)",
   "mainMeasure": "Consumer Prices Index",
   "description": "Consumer price indices are important indicators of how the UK economy is performing.\nThe indices are used in many ways by the government, businesses, and society in general. They can affect interest rates, tax allowances, wages, state benefits, pensions, maintenance, contracts and many other payments. They also show the impact of inflation on family budgets and affect the value of the pound in your pocket.",
-  "note1": "In accordance with the Statistics and Registration Service Act 2007, the Retail Prices Index and its derivatives have been assessed against the Code of Practice for Official Statistics and found not to meet the required standards for designation as National Statistics.",
+  "note1": "Mid year estimates for 2002-2010 are due to be revised to take account of the 2011 Census for Scotland. Revised population estimates for Scotland and the UK for 2002–2010 were not available at the time of projection.",
   "note2": "Changes in the internal purchasing power of a currency may be defined as  the \u0027inverse\u0027 of changes in the levels of prices; when prices go up, the  amount which can be purchased with a given sum of money goes down. The  monthly figures of the all items RPI can be used to obtain estimates of the  changes in prices or in purchasing power between any 2 months. To find the  purchasing power of the pound in one month, given that it was 100p in a  previous month the calculation is:  100p multiplied by the earlier month RPI then divided by the later month RPI.",
   "number": "73.3",
   "unit": "million",
@@ -13,6 +13,181 @@
   "lastUpated": "16 Sep 2014",
   "nextUpdate": "14 Oct 2014",
   "note": "2005 \u003d 100. Not seasonally adjusted",
+  "data": [
+    {
+      "value": "People, Population and Community"
+    },
+    {
+      "value": "Population and Migration"
+    },
+    {
+      "value": "Population Projections"
+    },
+    {
+      "value": "Mid-2037 UK population projected to reach"
+    },
+    {
+      "value": "Y"
+    },
+    {
+      "value": "million"
+    },
+    {
+      "value": "RAID130"
+    },
+    {
+      "value": "People,PopulationandCommunity"
+    },
+    {
+      "value": "PeoplePopulationandCommunity"
+    },
+    {
+      "value": "PopulationandMigration"
+    },
+    {
+      "value": "PopulationandMigration"
+    },
+    {
+      "value": "PopulationProjections"
+    },
+    {
+      "value": "PopulationProjections"
+    },
+    {
+      "value": "PopulationProjections"
+    },
+    {
+      "value": "PopulationProjections"
+    },
+    {
+      "value": "/PeoplePopulationandCommunity/PopulationandMigration/timeseries/RAID130"
+    },
+    {
+      "value": "/PeoplePopulationandCommunity/PopulationandMigration/PopulationProjections/timeseries/RAID130"
+    },
+    {
+      "value": "/PeoplePopulationandCommunity/PopulationandMigration/PopulationProjections/timeseries/RAID130"
+    },
+    {
+      "value": "/PeoplePopulationandCommunity/PopulationandMigration/PopulationProjections/timeseries/RAID130"
+    },
+    {
+      "value": "/peoplepopulationandcommunity/populationandmigration/populationprojections/timeseries/raid130"
+    },
+    {
+      "value": "/peoplepopulationandcommunity/populationandmigration/populationprojections/timeseries/raid130"
+    },
+    {
+      "value": "/peoplepopulationandcommunity/populationandmigration/populationprojections/timeseries/raid130"
+    },
+    {
+      "value": "/peoplepopulationandcommunity/populationandmigration/populationprojections/timeseries/raid130"
+    },
+    {
+      "value": "http://www.ons.gov.uk/ons/rel/npp/national-population-projections/2012-based-projections/rft-table-a1-1-principal-projection---uk-summary.xls"
+    },
+    {
+      "date": "2013.0",
+      "value": "64.087123"
+    },
+    {
+      "date": "2014.0",
+      "value": "64.510969"
+    },
+    {
+      "date": "2015.0",
+      "value": "64.937575"
+    },
+    {
+      "date": "2016.0",
+      "value": "65.386324"
+    },
+    {
+      "date": "2017.0",
+      "value": "65.824545"
+    },
+    {
+      "date": "2018.0",
+      "value": "66.266129"
+    },
+    {
+      "date": "2019.0",
+      "value": "66.69743799999999"
+    },
+    {
+      "date": "2020.0",
+      "value": "67.125807"
+    },
+    {
+      "date": "2021.0",
+      "value": "67.549973"
+    },
+    {
+      "date": "2022.0",
+      "value": "67.96897"
+    },
+    {
+      "date": "2023.0",
+      "value": "68.38185"
+    },
+    {
+      "date": "2024.0",
+      "value": "68.787633"
+    },
+    {
+      "date": "2025.0",
+      "value": "69.18551"
+    },
+    {
+      "date": "2026.0",
+      "value": "69.57467999999999"
+    },
+    {
+      "date": "2027.0",
+      "value": "69.954634"
+    },
+    {
+      "date": "2028.0",
+      "value": "70.32516"
+    },
+    {
+      "date": "2029.0",
+      "value": "70.686072"
+    },
+    {
+      "date": "2030.0",
+      "value": "71.03746000000001"
+    },
+    {
+      "date": "2031.0",
+      "value": "71.379512"
+    },
+    {
+      "date": "2032.0",
+      "value": "71.712619"
+    },
+    {
+      "date": "2033.0",
+      "value": "72.03738899999999"
+    },
+    {
+      "date": "2034.0",
+      "value": "72.354739"
+    },
+    {
+      "date": "2035.0",
+      "value": "72.66565399999999"
+    },
+    {
+      "date": "2036.0",
+      "value": "72.971152"
+    },
+    {
+      "date": "2037.0",
+      "value": "73.27229"
+    },
+    {}
+  ],
   "uri": "/peoplepopulationandcommunity/populationandmigration/populationprojections/timeseries/raid130",
   "type": "timeseries",
   "name": "Mid-2037 UK population projected to reach",
