@@ -25,6 +25,41 @@ angular.module('onsTemplates')
 
         $scope.chart = data;
 
+        makeArray($scope.chart.data);
+        // Year by default
+        $scope.tableValue = makeObj(categoriesY, seriesDataY);
+
+        function makeArray (dat) {
+            for (var i = 0; i < dat.length; i++) {
+                if (reY.test(dat[i].date)){
+                    categoriesY.push(dat[i].date);
+                    seriesDataY.push(Number(dat[i].value));
+                    $scope.hasYData = true;
+                }
+                if (reQ.test(dat[i].date)){
+                    categoriesQ.push(dat[i].date);
+                    seriesDataQ.push(Number(dat[i].value));
+                    $scope.hasQData = true;
+                }
+                if (reM.test(dat[i].date)){
+                    categoriesM.push(dat[i].date);
+                    seriesDataM.push(Number(dat[i].value));
+                    $scope.hasMData = true;
+                }
+            }
+        }
+
+        function makeObj (key, values) {
+            var obj = [];
+            var x = [];
+            for(var i = 0; i<key.length; i++){
+                obj[0] = key[i];
+                obj[1] = values[i];
+                x.push({"date":obj[0], "values":obj[1]});
+            }
+            return x;
+        }
+
         $scope.chartData = getData();
 
         //If true shows graph, else table.
@@ -91,40 +126,6 @@ angular.module('onsTemplates')
             return tick;
         }
 
-        makeArray($scope.chart.data);
-        // Year by default
-        $scope.tableValue = makeObj(categoriesY, seriesDataY);
-
-        function makeArray (dat) {
-            for (var i = 0; i < dat.length; i++) {
-                if (reY.test(dat[i].date)){
-                    categoriesY.push(dat[i].date);
-                    seriesDataY.push(Number(dat[i].value));
-                    $scope.hasYData = true;
-                }
-                if (reQ.test(dat[i].date)){
-                    categoriesQ.push(dat[i].date);
-                    seriesDataQ.push(Number(dat[i].value));
-                    $scope.hasQData = true;
-                }
-                if (reM.test(dat[i].date)){
-                    categoriesM.push(dat[i].date);
-                    seriesDataM.push(Number(dat[i].value));
-                    $scope.hasMData = true;
-                }
-            }
-        }
-
-        function makeObj (key, values) {
-            var obj = [];
-            var x = [];
-            for(var i = 0; i<key.length; i++){
-                obj[0] = key[i];
-                obj[1] = values[i];
-                x.push({"date":obj[0], "values":obj[1]});
-            }
-            return x;
-        }
 
         function getData() {
             var data = {
