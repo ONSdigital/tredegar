@@ -26,7 +26,18 @@ import com.github.onsdigital.generator.TimeseriesData;
 import com.github.onsdigital.json.timeseries.TimeSeries;
 import com.github.onsdigital.json.timeseries.TimeSeriesValue;
 
+/**
+ * Handles the data CSVs under the {@value #resourceName} folder.
+ * <p>
+ * This class and its members are package private (default visibility) because
+ * the API doesn't need to be exposed to the rest of the application.
+ * 
+ * @author david
+ *
+ */
 public class DataCSV {
+
+	static final String resourceName = "/data";
 
 	static ExecutorService executorService = Executors.newCachedThreadPool();
 
@@ -99,7 +110,7 @@ public class DataCSV {
 		Set<Path> result = new HashSet<>();
 
 		try {
-			URL resource = TimeseriesData.class.getResource("/data");
+			URL resource = TimeseriesData.class.getResource(resourceName);
 			Path folder = Paths.get(resource.toURI());
 
 			try (DirectoryStream<Path> stream = Files.newDirectoryStream(folder, "*.csv")) {

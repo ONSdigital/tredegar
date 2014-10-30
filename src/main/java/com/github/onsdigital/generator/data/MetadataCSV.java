@@ -24,11 +24,22 @@ import au.com.bytecode.opencsv.CSVReader;
 import com.github.onsdigital.generator.TimeseriesData;
 import com.github.onsdigital.json.timeseries.TimeSeries;
 
+/**
+ * Handles the metadata CSVs under the {@value #resourceName} folder.
+ * <p>
+ * This class and its members are package private (default visibility) because
+ * the API doesn't need to be exposed to the rest of the application.
+ * 
+ * @author david
+ *
+ */
 public class MetadataCSV {
+
+	static final String resourceName = "/data/Metadata";
 
 	static ExecutorService executorService = Executors.newCachedThreadPool();
 
-	public static void parse() throws IOException {
+	static void parse() throws IOException {
 		Collection<Path> files = getFiles();
 
 		// Read the files containing basic info:
@@ -48,7 +59,7 @@ public class MetadataCSV {
 
 	private static void readRobsFile() throws IOException {
 
-		Csv csv = new Csv("/data/Metadata/TimeseriesMetadata - CPI.csv");
+		Csv csv = new Csv(resourceName + "/TimeseriesMetadata - CPI.csv");
 		csv.read();
 		csv.getHeadings();
 		int updates = 0;
@@ -108,7 +119,7 @@ public class MetadataCSV {
 		Set<Path> result = new HashSet<>();
 
 		try {
-			URL resource = TimeseriesData.class.getResource("/data/Metadata");
+			URL resource = TimeseriesData.class.getResource(resourceName);
 			Path folder = Paths.get(resource.toURI());
 
 			try (DirectoryStream<Path> stream = Files.newDirectoryStream(folder, "*.csv")) {
