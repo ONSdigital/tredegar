@@ -1,4 +1,4 @@
-package com.github.onsdigital.generator.timeseries;
+package com.github.onsdigital.generator.data;
 
 import java.util.ArrayList;
 import java.util.List;

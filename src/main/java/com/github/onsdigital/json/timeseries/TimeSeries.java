@@ -37,8 +37,8 @@ public class TimeSeries extends DataItem {
 
 	// The URI of this timeseries.
 	// This is useful when it is referenced from more than one place in the
-	// taxonomy.
-	// It helps the generator to ensure it only gets created in one place.
+	// taxonomy. It helps the generator to ensure it only gets created in one
+	// place.
 	public URI uri;
 
 	public TimeSeries() {
