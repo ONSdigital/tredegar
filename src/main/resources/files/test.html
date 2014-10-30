@@ -8,7 +8,8 @@
     <script type="text/javascript" src="ui/js/lib/angular.js"></script>
     <script type="text/javascript" src="app/components/accordion/accordion.js"></script>
     <script type="text/javascript" src="app/components/paginator/paginator.js"></script>
-    <script type="text/javascript" src="app/components/table/table.js"></script>
+    <script type="text/javascript" src="app/components/navigation/navigation.js"></script>
+
 
 </head>
 
@@ -17,6 +18,35 @@
     <!-- Paginator -->
     <h1>Paginator</h1>
     <ons-paginator page-count=10></ons-paginator>
+
+
+    <div ng-controller="TestCtrl">
+
+        <h1>Navigation</h1>
+        <ons-nav>
+            <ons-nav-item nav-label="Home" href="#!" class="nav nav--multi nav--block nav--primary" ></ons-nav-item>
+            <ons-nav-item ng-repeat="item in navigation" expandable="true" nav-label="{{item.name}}" class="nav__expandable js-expandable" href="#!{{item.url}}">
+                <ons-nav-sub-item ng-repeat="subitem in item.children" nav-label="{{subitem.name}}" href="#!{{subitem.url}}"></ons-nav-sub-item>
+            </ons-nav-item>
+            <ons-nav-item nav-label="Respondents" class="nav--primary__respondents"  label-class="icon-users icon--inline" href="#!" ></ons-nav-item>
+            <ons-nav-item nav-label="Release calendar" class="nav--primary__secondary-content" href="#!" ></ons-nav-item>
+            <ons-nav-item nav-label="Methodology" class="nav--primary__secondary-content" href="#!" ></ons-nav-item>
+            <ons-nav-item nav-label="About" class="nav--primary__secondary-content" href="#!" ></ons-nav-item>
+        </ons-nav>
+            <div class="slate--mid-grey_new search-wrapper">
+            <form ng-submit="goToSearch(searchTerm)" class="nav-search nav-search--hidden" id="searchBar">
+                <div class="nav-search__container">
+                    <label for="nav-search" class="visuallyhidden">Search term:</label>
+                    <input id="nav-search" type="text" class="input--full  search_reduction" name="q" ng-model="searchTerm" placeholder="Search for keyword or time series id">
+                    <button type="submit" class="btn btn--primary btn--small btn--form--large-icon input--lede-btn-icon align_middle no_left_margin " id="nav-search-submit">
+                        <span class="icon icon-search-1" role="presentational">
+                            <span class="visuallyhidden">Search</span>
+                        </span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
 
     <!-- Tabs -->
     <h1>Tabs</h1>
@@ -70,24 +100,10 @@
         Hey
     </div>
 
-    <div ng-controller="TestCtrl">
-
-        <h1>Navigation</h1>
-        <ons-nav navigation-data="navigation"></ons-nav>
-
-    </div>
-
-    <div ng-controller="TestCtrl">
-        <h1>Table</h1>
-        <ons-table value="navigation">
-            <ons-column><span>Hey</span></ons-column>
-        </ons-table>
-    </div>
-
 </body>
 
 <script type="text/javascript">
-angular.module('testModule', ['onsAccordion', 'onsPaginator', 'onsTable'])
+angular.module('testModule', ['onsAccordion', 'onsPaginator', 'onsNavigation'])
     .controller('TestCtrl', ['$scope', '$http', function($scope, $http) {
         $http.get("/navigation").success(function(data) {
             $scope.navigation = data
