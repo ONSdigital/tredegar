@@ -62,10 +62,8 @@ public class DataCSV {
 			for (int i = 1; i < header.length; i++) {
 				TimeSeries timeseries = Data.timeseries(header[i]);
 				if (timeseries == null) {
-					timeseries = new TimeSeries();
-					timeseries.setCdid(header[i]);
+					timeseries = Data.addTimeseries(header[i]);
 					timeseries.data = new ArrayList<>();
-					Data.addTimeseries(timeseries);
 				} else {
 					// Don't process this timeseries - it's a duplicate.
 					duplicates++;

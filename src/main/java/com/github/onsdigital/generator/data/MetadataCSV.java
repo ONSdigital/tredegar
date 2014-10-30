@@ -147,9 +147,7 @@ public class MetadataCSV {
 	 */
 	private static TimeSeries addOther(String cdid) {
 
-		TimeSeries timeseries = new TimeSeries();
-		timeseries.setCdid(cdid);
-		Data.addTimeseries(timeseries);
+		TimeSeries timeseries = Data.addTimeseries(cdid);
 
 		Set<TimeSeries> dataset = Data.dataset("other");
 		if (dataset == null) {

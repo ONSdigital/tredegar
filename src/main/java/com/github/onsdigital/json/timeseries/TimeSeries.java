@@ -51,8 +51,11 @@ public class TimeSeries extends DataItem {
 	}
 
 	public void setCdid(String cdid) {
+		if (StringUtils.isBlank(cdid)) {
+			throw new IllegalArgumentException("Blank CDID");
+		}
 		this.cdid = StringUtils.trim(cdid);
-		fileName = this.cdid.toLowerCase();
+		fileName = StringUtils.lowerCase(this.cdid.toLowerCase());
 	}
 
 	@Override
