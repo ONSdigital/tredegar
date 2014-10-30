@@ -7,6 +7,7 @@ import com.github.onsdigital.json.bulletin.Bulletin;
 
 class BulletinList {
 
+	Bulletin headline;
 	List<Bulletin> bulletins;
 
 	public void add(Bulletin bulletin) {

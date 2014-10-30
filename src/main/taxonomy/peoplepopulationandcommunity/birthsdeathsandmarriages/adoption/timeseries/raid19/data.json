@@ -4,14 +4,244 @@
   "units": "Weights (parts per 1000)",
   "mainMeasure": "Consumer Prices Index",
   "description": "Consumer price indices are important indicators of how the UK economy is performing.\nThe indices are used in many ways by the government, businesses, and society in general. They can affect interest rates, tax allowances, wages, state benefits, pensions, maintenance, contracts and many other payments. They also show the impact of inflation on family budgets and affect the value of the pound in your pocket.",
-  "note1": "In accordance with the Statistics and Registration Service Act 2007, the Retail Prices Index and its derivatives have been assessed against the Code of Practice for Official Statistics and found not to meet the required standards for designation as National Statistics.",
   "note2": "Changes in the internal purchasing power of a currency may be defined as  the \u0027inverse\u0027 of changes in the levels of prices; when prices go up, the  amount which can be purchased with a given sum of money goes down. The  monthly figures of the all items RPI can be used to obtain estimates of the  changes in prices or in purchasing power between any 2 months. To find the  purchasing power of the pound in one month, given that it was 100p in a  previous month the calculation is:  100p multiplied by the earlier month RPI then divided by the later month RPI.",
   "number": "5053",
   "unit": "children",
+  "preUnit": "",
   "date": "2012",
   "lastUpated": "16 Sep 2014",
   "nextUpdate": "14 Oct 2014",
   "note": "2005 \u003d 100. Not seasonally adjusted",
+  "data": [
+    {
+      "value": "People, Population and Community"
+    },
+    {
+      "value": "Births, Deaths and Marriages"
+    },
+    {
+      "value": "Adoption"
+    },
+    {
+      "value": "Adoptions in England and Wales"
+    },
+    {
+      "value": "Y"
+    },
+    {
+      "value": "children"
+    },
+    {
+      "value": "RAID19"
+    },
+    {
+      "value": "People,PopulationandCommunity"
+    },
+    {
+      "value": "PeoplePopulationandCommunity"
+    },
+    {
+      "value": "Births,DeathsandMarriages"
+    },
+    {
+      "value": "BirthsDeathsandMarriages"
+    },
+    {
+      "value": "Adoption"
+    },
+    {
+      "value": "Adoption"
+    },
+    {
+      "value": "Adoption"
+    },
+    {
+      "value": "Adoption"
+    },
+    {
+      "value": "/PeoplePopulationandCommunity/BirthsDeathsandMarriages/timeseries/RAID19"
+    },
+    {
+      "value": "/PeoplePopulationandCommunity/BirthsDeathsandMarriages/Adoption/timeseries/RAID19"
+    },
+    {
+      "value": "/PeoplePopulationandCommunity/BirthsDeathsandMarriages/Adoption/timeseries/RAID19"
+    },
+    {
+      "value": "/PeoplePopulationandCommunity/BirthsDeathsandMarriages/Adoption/timeseries/RAID19"
+    },
+    {
+      "value": "/peoplepopulationandcommunity/birthsdeathsandmarriages/adoption/timeseries/raid19"
+    },
+    {
+      "value": "/peoplepopulationandcommunity/birthsdeathsandmarriages/adoption/timeseries/raid19"
+    },
+    {
+      "value": "/peoplepopulationandcommunity/birthsdeathsandmarriages/adoption/timeseries/raid19"
+    },
+    {
+      "value": "/peoplepopulationandcommunity/birthsdeathsandmarriages/adoption/timeseries/raid19"
+    },
+    {
+      "value": "http://www.ons.gov.uk/ons/rel/vsob1/adoptions-in-england-and-wales/2012/rtd-adoptions-tables--2012.xls"
+    },
+    {
+      "date": "1974.0",
+      "value": "22502.0"
+    },
+    {
+      "date": "1975.0",
+      "value": "21299.0"
+    },
+    {
+      "date": "1976.0",
+      "value": "17621.0"
+    },
+    {
+      "date": "1977.0",
+      "value": "12748.0"
+    },
+    {
+      "date": "1978.0",
+      "value": "12121.0"
+    },
+    {
+      "date": "1979.0",
+      "value": "10870.0"
+    },
+    {
+      "date": "1980.0",
+      "value": "10609.0"
+    },
+    {
+      "date": "1981.0",
+      "value": "9284.0"
+    },
+    {
+      "date": "1982.0",
+      "value": "10240.0"
+    },
+    {
+      "date": "1983.0",
+      "value": "9029.0"
+    },
+    {
+      "date": "1984.0",
+      "value": "8648.0"
+    },
+    {
+      "date": "1985.0",
+      "value": "7615.0"
+    },
+    {
+      "date": "1986.0",
+      "value": "7892.0"
+    },
+    {
+      "date": "1987.0",
+      "value": "7201.0"
+    },
+    {
+      "date": "1988.0",
+      "value": "7390.0"
+    },
+    {
+      "date": "1989.0",
+      "value": "7044.0"
+    },
+    {
+      "date": "1990.0",
+      "value": "6533.0"
+    },
+    {
+      "date": "1991.0",
+      "value": "7170.0"
+    },
+    {
+      "date": "1992.0",
+      "value": "7341.0"
+    },
+    {
+      "date": "1993.0",
+      "value": "6854.0"
+    },
+    {
+      "date": "1994.0",
+      "value": "6240.0"
+    },
+    {
+      "date": "1995.0",
+      "value": "5797.0"
+    },
+    {
+      "date": "1996.0",
+      "value": "5962.0"
+    },
+    {
+      "date": "1997.0",
+      "value": "5300.0"
+    },
+    {
+      "date": "1998.0",
+      "value": "4382.0"
+    },
+    {
+      "date": "1999.0",
+      "value": "4323.0"
+    },
+    {
+      "date": "2000.0",
+      "value": "4943.0"
+    },
+    {
+      "date": "2001.0",
+      "value": "5977.0"
+    },
+    {
+      "date": "2002.0",
+      "value": "5671.0"
+    },
+    {
+      "date": "2003.0",
+      "value": "4809.0"
+    },
+    {
+      "date": "2004.0",
+      "value": "5555.0"
+    },
+    {
+      "date": "2005.0",
+      "value": "5556.0"
+    },
+    {
+      "date": "2006.0",
+      "value": "4978.0"
+    },
+    {
+      "date": "2007.0",
+      "value": "4637.0"
+    },
+    {
+      "date": "2008.0",
+      "value": "5065.0"
+    },
+    {
+      "date": "2009.0",
+      "value": "4725.0"
+    },
+    {
+      "date": "2010.0",
+      "value": "4550.0"
+    },
+    {
+      "date": "2011.0",
+      "value": "4777.0"
+    },
+    {
+      "date": "2012.0",
+      "value": "5053.0"
+    }
+  ],
   "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/adoption/timeseries/raid19",
   "type": "timeseries",
   "name": "Adoptions in England and Wales",

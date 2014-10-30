@@ -21,6 +21,7 @@
 					data.itemData = []
 					loadItems(data, data.items)
 					loadHeadline(data)
+					loadStatsBulletinHeadline(data)
 				}
 				if (callback) {
 					callback(service.data)
@@ -37,6 +38,18 @@
 				return
 			}
 			for (var i = 0; i < sections.length; i++) {
+				if(data.level === 't1') {
+					// Shorten section names for T1:
+					if (sections[i].name.indexOf("Economy")!=-1) {
+						sections[i].name="Economy"
+					} else if (sections[i].name.indexOf("Business")!=-1) {
+						sections[i].name="Business"
+					} else if (sections[i].name.indexOf("Employment")!=-1) {
+						sections[i].name="Employment"
+					} else if (sections[i].name.indexOf("Population")!=-1) {
+						sections[i].name="Population"
+					} 
+				}
 				sections[i].itemData = []
 				loadItems(sections[i], sections[i].items)
 			}
@@ -66,6 +79,15 @@
 			load(timeseriesPath, function(timeseries) {
 				timeseries.url = data.headline
 				data.headlineData = timeseries
+			})
+		}
+		
+		function loadStatsBulletinHeadline(data) {
+			var statsBulletinPath = dataPath + data.statsBulletinHeadline
+			load(statsBulletinPath, function(bulletin) {
+				bulletin.url = data.statsBulletinHeadline
+				data.statsBulletinHeadlineData = bulletin
+				$log.debug('Loaded data.statsBulletinHeadlineData: ', statsBulletinPath, ' ', bulletin)
 			})
 		}
 

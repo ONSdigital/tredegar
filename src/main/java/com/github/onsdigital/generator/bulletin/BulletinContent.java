@@ -30,6 +30,18 @@ public class BulletinContent {
 		return result;
 	}
 
+	public static Bulletin getHeadlineBulletin(Folder folder) throws IOException {
+		Bulletin result = null;
+
+		parseCsv();
+		BulletinNode node = getNode(folder);
+		if (node != null) {
+			result = node.bulletinList().headline;
+		}
+
+		return result;
+	}
+
 	private static BulletinNode getNode(Folder folder) {
 		BulletinNode result = null;
 
@@ -74,7 +86,22 @@ public class BulletinContent {
 			bulletin.name = StringUtils.trim(row.get("Name"));
 			bulletin.title = bulletin.name;
 			bulletin.fileName = bulletin.name.toLowerCase();
-			node.addBulletin(bulletin);
+
+			boolean isHeadline = false;
+			if (StringUtils.isNotBlank(row.get("Headline1"))) {
+				isHeadline = true;
+				bulletin.headline1 = row.get("Headline1");
+			}
+
+			if (StringUtils.isNotBlank(row.get("Headline2"))) {
+				bulletin.headline2 = row.get("Headline2");
+			}
+
+			if (StringUtils.isNotBlank(row.get("Headline3"))) {
+				bulletin.headline3 = row.get("Headline3");
+			}
+
+			node.addBulletin(bulletin, isHeadline);
 			BulletinData.bulletins.add(bulletin);
 		}
 	}
