@@ -93,9 +93,9 @@ public class DataCSV {
 							continue;
 						}
 						String value = row[i];
-						TimeseriesValue timeSeriesValue = new TimeseriesValue();
-						timeSeriesValue.date = date;
-						timeSeriesValue.value = value;
+						TimeseriesValue timeseriesValue = new TimeseriesValue();
+						timeseriesValue.date = date;
+						timeseriesValue.value = value;
 					}
 				}
 			}

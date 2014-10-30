@@ -1,6 +1,7 @@
 package com.github.onsdigital.generator.data;
 
 import java.io.IOException;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
@@ -70,12 +71,44 @@ class NonCdidCSV {
 							timeseries.note1 = StringUtils.trim(row[1]);
 							break data;
 
-						} else {
+						} else if (StringUtils.isNotEmpty(date) && StringUtils.isNotEmpty(figure)) {
 
-							TimeseriesValue timeSeriesValue = new TimeseriesValue();
-							timeSeriesValue.date = date;
-							timeSeriesValue.value = figure;
-							timeseries.data.add(timeSeriesValue);
+							TimeseriesValue timeseriesValue = new TimeseriesValue();
+
+							// Prevent decimal points on the date for years,
+							// e.g. 2014.0.
+							// This is due to the way numbers come out of
+							// Excel.
+							if (date != null && date.matches("\\d+[\\.\\d+]?")) {
+								date = String.valueOf((long) Double.parseDouble(date));
+							}
+
+							// Sanity-check that the figure really is a number:
+							try {
+								Double.parseDouble(figure);
+							} catch (NumberFormatException e) {
+								System.out.println(" ! The figure for " + cdid + " is " + figure);
+							}
+
+							// Give the figure a sensible format.
+							// This is due to the way numbers come out of
+							// Excel.
+							String figureUpdated = figure;
+							if (StringUtils.isNotBlank(figure) && figure.contains("E") && figure.contains(".")) {
+								DecimalFormat format = new DecimalFormat("###,###,###,##0.00");
+								figureUpdated = format.format(Double.parseDouble(figure));
+								if (figureUpdated.endsWith(".00")) {
+									figureUpdated = figureUpdated.substring(0, figureUpdated.length() - 3);
+								}
+							}
+							// if (!StringUtils.equals(figure, figureUpdated)) {
+							// System.out.println("Updated: " + figure + " -> "
+							// + figureUpdated);
+							// }
+
+							timeseriesValue.date = date;
+							timeseriesValue.value = figure;
+							timeseries.data.add(timeseriesValue);
 						}
 					}
 				}
