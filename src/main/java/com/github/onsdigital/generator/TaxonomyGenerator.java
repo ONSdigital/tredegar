@@ -31,7 +31,7 @@ import com.github.onsdigital.json.bulletin.Bulletin;
 import com.github.onsdigital.json.taxonomy.T1;
 import com.github.onsdigital.json.taxonomy.T2;
 import com.github.onsdigital.json.taxonomy.T3;
-import com.github.onsdigital.json.timeseries.TimeSeries;
+import com.github.onsdigital.json.timeseries.Timeseries;
 import com.github.onsdigital.json.timeseries.TimeSeriesValue;
 
 public class TaxonomyGenerator {
@@ -361,7 +361,7 @@ public class TaxonomyGenerator {
 			// Limit the number in case we have thousands
 			// (this is quite likely at some point)
 			int max = 4;
-			for (TimeSeries timeseries : t3Folder.timeserieses) {
+			for (Timeseries timeseries : t3Folder.timeserieses) {
 				if (max-- < 0) {
 					if (timeseries.uri != null) {
 						result.add(timeseries.uri);
@@ -390,7 +390,7 @@ public class TaxonomyGenerator {
 		} else {
 			System.out.println("No headline URI set for " + folder.name);
 		}
-		List<TimeSeries> timeserieses = folder.timeserieses;
+		List<Timeseries> timeserieses = folder.timeserieses;
 		t3.items.clear();
 		String baseUri = "/" + folder.filename();
 		Folder parent = folder.parent;
@@ -399,7 +399,7 @@ public class TaxonomyGenerator {
 			parent = parent.parent;
 		}
 		baseUri += "/timeseries";
-		for (TimeSeries timeseries : timeserieses) {
+		for (Timeseries timeseries : timeserieses) {
 			if (timeseries.uri != null) {
 				t3.items.add(timeseries.uri);
 			} else {
@@ -475,9 +475,9 @@ public class TaxonomyGenerator {
 	 */
 	private static void createTimeseries(Folder folder, File file) throws IOException {
 
-		List<TimeSeries> timeserieses = folder.timeserieses;
+		List<Timeseries> timeserieses = folder.timeserieses;
 
-		for (TimeSeries timeseries : timeserieses) {
+		for (Timeseries timeseries : timeserieses) {
 
 			URI uri = timeseries.uri;
 			File timeseriesFolder = new File(root, uri.toString());

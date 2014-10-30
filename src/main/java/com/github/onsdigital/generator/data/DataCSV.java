@@ -23,7 +23,7 @@ import org.apache.commons.lang3.StringUtils;
 import au.com.bytecode.opencsv.CSVReader;
 
 import com.github.onsdigital.generator.TimeseriesData;
-import com.github.onsdigital.json.timeseries.TimeSeries;
+import com.github.onsdigital.json.timeseries.Timeseries;
 import com.github.onsdigital.json.timeseries.TimeSeriesValue;
 
 /**
@@ -53,14 +53,14 @@ public class DataCSV {
 		try (CSVReader csvReader = new CSVReader(new BufferedReader(new InputStreamReader(Files.newInputStream(file), Charset.forName("CP1252"))))) {
 
 			String name = FilenameUtils.getBaseName(file.getFileName().toString());
-			Set<TimeSeries> dataset = new HashSet<TimeSeries>();
+			Set<Timeseries> dataset = new HashSet<Timeseries>();
 			Data.addDataset(name, dataset);
 
 			// Check all the CDIDs in the header row:
 			int duplicates = 0;
 			String[] header = csvReader.readNext();
 			for (int i = 1; i < header.length; i++) {
-				TimeSeries timeseries = Data.timeseries(header[i]);
+				Timeseries timeseries = Data.timeseries(header[i]);
 				if (timeseries == null) {
 					timeseries = Data.addTimeseries(header[i]);
 					timeseries.data = new ArrayList<>();

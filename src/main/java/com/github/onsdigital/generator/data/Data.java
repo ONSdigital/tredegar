@@ -8,7 +8,7 @@ import java.util.Set;
 import org.apache.commons.lang3.StringUtils;
 
 import com.github.onsdigital.generator.Folder;
-import com.github.onsdigital.json.timeseries.TimeSeries;
+import com.github.onsdigital.json.timeseries.Timeseries;
 
 /**
  * This class provides a structure for holding data used in building the
@@ -24,8 +24,8 @@ import com.github.onsdigital.json.timeseries.TimeSeries;
 public class Data {
 
 	private static Set<Folder> folders;
-	private static Map<String, Set<TimeSeries>> datasets = new HashMap<>();
-	private static Map<String, TimeSeries> timeserieses = new HashMap<>();
+	private static Map<String, Set<Timeseries>> datasets = new HashMap<>();
+	private static Map<String, Timeseries> timeserieses = new HashMap<>();
 
 	/**
 	 * Sets the taxonomy folder structure and triggers parsing of CSV data.
@@ -124,7 +124,7 @@ public class Data {
 	 *            The name of the dataset.
 	 * @return The specified dataset, or null if it is not present.
 	 */
-	public static Set<TimeSeries> dataset(String name) {
+	public static Set<Timeseries> dataset(String name) {
 		return datasets.get(toKey(name));
 	}
 
@@ -135,7 +135,7 @@ public class Data {
 	 *            The CDID identifier for the timeseries.
 	 * @return The specified timeseries, or null if it is not present.
 	 */
-	public static TimeSeries timeseries(String cdid) {
+	public static Timeseries timeseries(String cdid) {
 		return timeserieses.get(toKey(cdid));
 	}
 
@@ -146,7 +146,7 @@ public class Data {
 	 * @param timeseries
 	 *            The timeseries.
 	 */
-	public static void addTimeseries(TimeSeries timeseries) {
+	public static void addTimeseries(Timeseries timeseries) {
 		if (timeserieses.containsKey(toKey(timeseries.cdid()))) {
 			throw new IllegalArgumentException("Duplicate timeseries: " + timeseries);
 		}
@@ -161,8 +161,8 @@ public class Data {
 	 *            The timeseries CDID.
 	 * @return The new timeseries.
 	 */
-	public static TimeSeries addTimeseries(String cdid) {
-		TimeSeries timeseries = new TimeSeries();
+	public static Timeseries addTimeseries(String cdid) {
+		Timeseries timeseries = new Timeseries();
 		timeseries.setCdid(cdid);
 		addTimeseries(timeseries);
 		return timeseries;
@@ -177,7 +177,7 @@ public class Data {
 	 * @param dataset
 	 *            The dataset.
 	 */
-	public static void addDataset(String name, Set<TimeSeries> dataset) {
+	public static void addDataset(String name, Set<Timeseries> dataset) {
 		if (datasets.containsKey(toKey(name))) {
 			throw new IllegalArgumentException("Duplicate dataset: " + name);
 		}

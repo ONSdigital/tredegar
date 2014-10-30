@@ -5,7 +5,7 @@ import java.util.Set;
 
 import org.apache.commons.lang3.StringUtils;
 
-import com.github.onsdigital.json.timeseries.TimeSeries;
+import com.github.onsdigital.json.timeseries.Timeseries;
 
 class Node {
 
@@ -81,14 +81,14 @@ class Node {
 	}
 
 	/**
-	 * Adds a {@link TimeSeries}
+	 * Adds a {@link Timeseries}
 	 * 
 	 * @param timeseries
-	 *            {@link TimeSeries}
+	 *            {@link Timeseries}
 	 * @param isHeadline
 	 *            If this is a headline timeseries at this node, true.
 	 */
-	void addTimeseries(TimeSeries timeseries, boolean isHeadline) {
+	void addTimeseries(Timeseries timeseries, boolean isHeadline) {
 		timeseriesList().add(timeseries);
 		if (isHeadline) {
 			timeseriesList().headline = timeseries;
