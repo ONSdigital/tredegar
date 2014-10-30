@@ -25,74 +25,9 @@ angular.module('onsTemplates')
 
         $scope.chart = data;
 
-        //If true shows graph, else table.
-        $scope.chartTable = true;
-
-        //Year, Quarter or month
-        $scope.yqm = 0;
-
         makeArray($scope.chart.data);
+        // Year by default
         $scope.tableValue = makeObj(categoriesY, seriesDataY);
-
-
-        $scope.chartData = getData();
-
-        $scope.changeChartType = function(type) {
-            if (type === "line") {
-                $scope.chartTable = true;
-            }
-            if (type === "table") {
-                $scope.chartTable = false;
-            }
-        };
-
-        $scope.changeChartTime = function(time) {
-            if (time === 'year') {
-                $scope.chartData.options.xAxis.categories = categoriesY;
-                $scope.chartData.options.xAxis.tickInterval = tickInterval(categoriesY.length);
-                $scope.chartData.series[0].data = seriesDataY;
-                $scope.tableValue = makeObj(categoriesY, seriesDataY);
-                $scope.yqm = 0;
-            }
-            if (time === 'quarter') {
-                $scope.chartData.options.xAxis.categories = categoriesQ;
-                $scope.chartData.options.xAxis.tickInterval = tickInterval(categoriesQ.length);
-                $scope.chartData.series[0].data = seriesDataQ;
-                $scope.tableValue = makeObj(categoriesQ, seriesDataQ);
-                $scope.yqm = 1;
-            }
-            if (time === 'month') {
-                $scope.chartData.options.xAxis.categories = categoriesM;
-                $scope.chartData.options.xAxis.tickInterval = tickInterval(categoriesM.length);
-                $scope.chartData.series[0].data = seriesDataM;
-                $scope.tableValue = makeObj(categoriesM, seriesDataM);
-                $scope.yqm = 2;
-            }
-        };
-
-        function tickInterval(categories) {
-            var tick;
-            if (categories <= 20) {
-                tick = 1;
-            }
-            if (categories > 20 && categories <= 80) {
-                tick = 4;
-            }
-            if (categories > 80) {
-                tick = 12;
-            }
-            if (categories > 240) {
-                tick = 48;
-            }
-            if (categories > 480) {
-                tick = 96;
-            }
-            if (categories > 960) {
-                tick = 192;
-            }
-            console.log("Esto es: " + tick);
-            return tick;
-        }
 
         function makeArray (dat) {
             for (var i = 0; i < dat.length; i++) {
@@ -124,6 +59,73 @@ angular.module('onsTemplates')
             }
             return x;
         }
+
+        $scope.chartData = getData();
+
+        //If true shows graph, else table.
+        $scope.chartTable = true;
+
+        $scope.changeChartType = function(type) {
+            if (type === "line") {
+                $scope.chartTable = true;
+            }
+            if (type === "table") {
+                $scope.chartTable = false;
+            }
+        };
+
+        //Year, Quarter or month
+        $scope.yqm = 0;
+
+        $scope.changeChartTime = function(time) {
+            if (time === 'year') {
+                $scope.chartData.options.xAxis.categories = categoriesY;
+                $scope.chartData.options.xAxis.tickInterval = tickInterval(categoriesY.length);
+                $scope.chartData.series[0].data = seriesDataY;
+                $scope.tableValue = makeObj(categoriesY, seriesDataY);
+                $scope.yqm = 0;
+            }
+            if (time === 'quarter') {
+                $scope.chartData.options.xAxis.categories = categoriesQ;
+                $scope.chartData.options.xAxis.tickInterval = tickInterval(categoriesQ.length);
+                $scope.chartData.series[0].data = seriesDataQ;
+                $scope.tableValue = makeObj(categoriesQ, seriesDataQ);
+                $scope.yqm = 1;
+            }
+            if (time === 'month') {
+                $scope.chartData.options.xAxis.categories = categoriesM;
+                $scope.chartData.options.xAxis.tickInterval = tickInterval(categoriesM.length);
+                $scope.chartData.series[0].data = seriesDataM;
+                $scope.tableValue = makeObj(categoriesM, seriesDataM);
+                $scope.yqm = 2;
+            }
+        };
+
+        //Defines the intervals in xAxis according to data
+        function tickInterval(categories) {
+            var tick;
+            if (categories <= 20) {
+                tick = 1;
+            }
+            if (categories > 20 && categories <= 80) {
+                tick = 4;
+            }
+            if (categories > 80) {
+                tick = 12;
+            }
+            if (categories > 240) {
+                tick = 48;
+            }
+            if (categories > 480) {
+                tick = 96;
+            }
+            if (categories > 960) {
+                tick = 192;
+            }
+            console.log("Esto es: " + tick);
+            return tick;
+        }
+
 
         function getData() {
             var data = {
