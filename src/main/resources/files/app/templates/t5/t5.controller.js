@@ -25,17 +25,10 @@ angular.module('onsTemplates')
 
         $scope.chart = data;
 
+        $scope.chartData = getData();
+
         //If true shows graph, else table.
         $scope.chartTable = true;
-
-        //Year, Quarter or month
-        $scope.yqm = 0;
-
-        makeArray($scope.chart.data);
-        $scope.tableValue = makeObj(categoriesY, seriesDataY);
-
-
-        $scope.chartData = getData();
 
         $scope.changeChartType = function(type) {
             if (type === "line") {
@@ -45,6 +38,9 @@ angular.module('onsTemplates')
                 $scope.chartTable = false;
             }
         };
+
+        //Year, Quarter or month
+        $scope.yqm = 0;
 
         $scope.changeChartTime = function(time) {
             if (time === 'year') {
@@ -70,6 +66,7 @@ angular.module('onsTemplates')
             }
         };
 
+        //Defines the intervals in xAxis according to data
         function tickInterval(categories) {
             var tick;
             if (categories <= 20) {
@@ -93,6 +90,10 @@ angular.module('onsTemplates')
             console.log("Esto es: " + tick);
             return tick;
         }
+
+        makeArray($scope.chart.data);
+        // Year by default
+        $scope.tableValue = makeObj(categoriesY, seriesDataY);
 
         function makeArray (dat) {
             for (var i = 0; i < dat.length; i++) {
