@@ -48,6 +48,7 @@
                 <div class="box box--inline box--padded muted--dark">
                   <div class="stat stat--headline">
                     <div class="stat__figure">
+                  	  <span class="stat__figure__unit">{{taxonomy.data.headlineData.preUnit}}</span>
                       {{taxonomy.data.headlineData.number}}
                       <span class="stat__figure__unit"> {{taxonomy.data.headlineData.unit}}</span>
                     </div>
@@ -74,14 +75,11 @@
 
     <!-- Explanation of the numbers -->
               <div id="statsBulletinHeadlines" class="divider__half">
-                <h3 class="body-type lede flush--bottom navpanel-list-heading">CPI Statistical Bulletin Headlines</h3>
+                <h3 class="body-type lede flush--bottom navpanel-list-heading">Statistical Bulletin Headlines</h3>
                 <ul class="list--bullet mini flush--half--top navpanel-list">
-                  <li>The Consumer Price Index (CPI) grew by 1.5% in the year to May
-                    2014, down from 1.8% in April.</li>
-                  <li>Fall in transport services costs, notably air fares, provided
-                    the largest contribution to the decrease in the rate.</li>
-                  <li>The timing of Easter in April is likely to have an impact on
-                    movements in the index, notably for air and sea fares.</li>
+                  <li>Sed hendrerit, orci a faucibus tincidunt, ex ex vestibulum orci, eget varius lacus nunc sit amet leo. </li>
+                  <li>Aliquam erat volutpat. Integer quam nisi, elementum ut tellus sit amet, pretium egestas orci.</li>
+                  <li>Fusce convallis massa sodales orci mollis blandit. Curabitur malesuada odio at dolor tempus pulvinar a ac ante. Nunc rutrum nec lacus ac pulvinar.</li>
                   </ul>
                     <a class="div_panel_link" href="#!/economy/inflationandpriceindices/bulletins/consumerpriceinflation/">
                       View the statistical bulletin &gt;                   
@@ -99,7 +97,8 @@
 
 <!-- List/Table with data -->
   <section id="timeseries" class="panel--large wrapper">
-    <table table id="Datatable" class=" tablesorter data-table list--table list--table--complex table--striped-light table-light--sectioned">
+
+    <table table id="Datatable" st-table="taxonomy.data.itemData" class=" tablesorter data-table list--table list--table--complex table--striped-light table-light--sectioned">
       <thead>
         <th colspan="4" >
           <div class="list--table-header split__title">
@@ -110,7 +109,7 @@
           <div class="list--table__item">
             <label class="list--table__item__body list--table__item__body">
               <span class="visuallyhidden">Select statistic</span>
-                <input type="checkbox">
+                <input st-select-all ng-model="t3.allSelected" type="checkbox">
             </label>
           </div>
         </th>
@@ -135,6 +134,8 @@
          <div class="list--table__item__body list--table__item__body--stat stat  responsive_med_width">
             <div class="list--table__item__body--centred">
               <div class="stat__figure stat__tight">
+                 <span class="stat__figure__unit">{{item.preUnit}}</span>
+                 <!-- % -->
                  {{item.number}}
                  <!-- 1.5 -->
                  <span class="stat__figure__unit">{{item.unit}}</span>
@@ -157,7 +158,7 @@
       <div class="list--table__item">
         <label class="list--table__item__body list--table__item__body--select">
           <span class="visuallyhidden">Select statistic</span>
-              <input type="checkbox">
+              <input type="checkbox" st-select ng-model="item.isSelected">
         </label>
       </div>
     </td>
@@ -169,11 +170,11 @@
 
     <tr class="list--table__item list--table datatable-row">
       <td colspan="4" class="datatable-downloads"> 
-        <a href="#" class="btn btn--primary btn--small download_responsive_btn">
+        <a href="" ng-click="t3.downloadCsv()" class="btn btn--primary btn--small download_responsive_btn">
           <span class="table__action__text">.CSV</span>
             <span class="icon-download" role="presentation"></span>
         </a>
-        <a href="#" class="btn btn--primary btn--small download_responsive_btn">
+        <a href="" ng-click="t3.downloadXls()" class="btn btn--primary btn--small download_responsive_btn">
           <span class="table__action__text">.XLS</span>
             <span class="icon-download" role="presentation"></span>
         </a>          
