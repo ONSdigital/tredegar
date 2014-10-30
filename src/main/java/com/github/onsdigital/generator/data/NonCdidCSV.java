@@ -79,8 +79,8 @@ class NonCdidCSV {
 							// e.g. 2014.0.
 							// This is due to the way numbers come out of
 							// Excel.
-							if (date != null && date.matches("\\d+[\\.\\d+]?")) {
-								date = String.valueOf((long) Double.parseDouble(date));
+							if (date.endsWith(".0")) {
+								date = date.substring(0, date.length() - 2);
 							}
 
 							// Sanity-check that the figure really is a number:
