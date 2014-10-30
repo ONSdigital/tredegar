@@ -14,7 +14,7 @@ angular.module('onsTemplates')
 
       var getParam = $scope.getUrlParam
       var page = getParam('page')
-      var type = $scope.type = getParam('type')
+      var contentType = getParam('contentType')
       if (!searchTerm) {
         return
       }
@@ -22,11 +22,11 @@ angular.module('onsTemplates')
         page = 1
       }
 
-      search(searchTerm, type, page)
+      searchCollection(searchTerm, contentType, page)
 
-      function search(loc, type, pageNumber) {
-        var searchString = "?loc=" + loc + (type ? "&type=" + type : "") + "&page=" + pageNumber
-        getData("/collectiontaxonomyfilesystem" + searchString, function(data) {
+      function searchCollection(loc, type, pageNumber) {
+        var collectionSearchString = "?loc=" + loc + (contentType ? "&contentType=" + contentType : "") + "&page=" + pageNumber
+        getData("/collectiontaxonomyfilesystem" + collectionSearchString, function(data) {
           $scope.searchResponse = data
           console.log(data)
           $scope.pageCount = Math.ceil(data.numberOfResults / 10)
