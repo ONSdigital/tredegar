@@ -24,7 +24,7 @@ import au.com.bytecode.opencsv.CSVReader;
 
 import com.github.onsdigital.generator.TimeseriesData;
 import com.github.onsdigital.json.timeseries.Timeseries;
-import com.github.onsdigital.json.timeseries.TimeSeriesValue;
+import com.github.onsdigital.json.timeseries.TimeseriesValue;
 
 /**
  * Handles the data CSVs under the {@value #resourceName} folder.
@@ -93,7 +93,7 @@ public class DataCSV {
 							continue;
 						}
 						String value = row[i];
-						TimeSeriesValue timeSeriesValue = new TimeSeriesValue();
+						TimeseriesValue timeSeriesValue = new TimeseriesValue();
 						timeSeriesValue.date = date;
 						timeSeriesValue.value = value;
 					}

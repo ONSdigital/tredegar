@@ -32,7 +32,7 @@ import com.github.onsdigital.json.taxonomy.T1;
 import com.github.onsdigital.json.taxonomy.T2;
 import com.github.onsdigital.json.taxonomy.T3;
 import com.github.onsdigital.json.timeseries.Timeseries;
-import com.github.onsdigital.json.timeseries.TimeSeriesValue;
+import com.github.onsdigital.json.timeseries.TimeseriesValue;
 
 public class TaxonomyGenerator {
 
@@ -486,7 +486,7 @@ public class TaxonomyGenerator {
 			if (!timeseriesFile.exists()) {
 				timeseriesFolder.mkdirs();
 
-				Set<TimeSeriesValue> data = TimeseriesData.getData(timeseries.cdid());
+				Set<TimeseriesValue> data = TimeseriesData.getData(timeseries.cdid());
 				if (data != null) {
 					timeseries.data = new ArrayList<>(data);
 				} else {

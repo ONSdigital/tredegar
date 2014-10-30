@@ -32,7 +32,7 @@ public class Timeseries extends DataItem {
 	public String note;
 
 	// The nectar, the goodness, the very juice of the fireflower: data.
-	public List<TimeSeriesValue> data;
+	public List<TimeseriesValue> data;
 
 	// The URI of this timeseries.
 	// This is useful when it is referenced from more than one place in the
