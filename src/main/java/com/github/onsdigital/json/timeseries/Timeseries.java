@@ -1,12 +1,15 @@
 package com.github.onsdigital.json.timeseries;
 
 import java.net.URI;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
 
+import com.github.onsdigital.generator.Folder;
 import com.github.onsdigital.json.ContentType;
 import com.github.onsdigital.json.DataItem;
+import com.github.onsdigital.json.TaxonomyHome;
 
 public class Timeseries extends DataItem {
 
@@ -32,7 +35,7 @@ public class Timeseries extends DataItem {
 	public String note;
 
 	// The nectar, the goodness, the very juice of the fireflower: data.
-	public List<TimeseriesValue> data;
+	public List<TimeseriesValue> data = new ArrayList<>();
 
 	// The URI of this timeseries.
 	// This is useful when it is referenced from more than one place in the
@@ -43,6 +46,14 @@ public class Timeseries extends DataItem {
 	public Timeseries() {
 		type = ContentType.timeseries;
 		name = "People not in Work";
+	}
+
+	public void setBreadcrumb(TaxonomyHome t3) {
+		breadcrumb = new ArrayList<>(t3.breadcrumb);
+		Folder folder = new Folder();
+		folder.name = t3.name;
+		TaxonomyHome extra = new TaxonomyHome(folder);
+		breadcrumb.add(extra);
 	}
 
 	public String cdid() {
