@@ -4,8 +4,24 @@
   "unit": "bn",
   "preUnit": "£",
   "date": "",
+  "data": [],
   "uri": "/economy/environmentalaccounts/timeseries/raid140",
   "type": "timeseries",
   "name": "Revenue from environmentally related taxes",
-  "fileName": "raid140"
+  "fileName": "raid140",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Environmental Accounts",
+      "fileName": "environmentalaccounts",
+      "breadcrumb": []
+    }
+  ]
 }

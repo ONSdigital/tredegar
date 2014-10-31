@@ -73,5 +73,20 @@
   "uri": "/economy/regionalaccounts/timeseries/c92i",
   "type": "timeseries",
   "name": "Gross Disposable Household Income North East",
-  "fileName": "c92i"
+  "fileName": "c92i",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Regional Accounts",
+      "fileName": "regionalaccounts",
+      "breadcrumb": []
+    }
+  ]
 }

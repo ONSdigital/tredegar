@@ -73,5 +73,20 @@
   "uri": "/economy/regionalaccounts/timeseries/c92u",
   "type": "timeseries",
   "name": "Gross Disposable Household Income Northern Ireland",
-  "fileName": "c92u"
+  "fileName": "c92u",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Regional Accounts",
+      "fileName": "regionalaccounts",
+      "breadcrumb": []
+    }
+  ]
 }

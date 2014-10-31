@@ -73,5 +73,20 @@
   "uri": "/economy/regionalaccounts/timeseries/c92n",
   "type": "timeseries",
   "name": "Gross Disposable Household Income East of England",
-  "fileName": "c92n"
+  "fileName": "c92n",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Regional Accounts",
+      "fileName": "regionalaccounts",
+      "breadcrumb": []
+    }
+  ]
 }

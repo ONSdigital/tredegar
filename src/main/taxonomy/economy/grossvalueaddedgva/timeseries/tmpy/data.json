@@ -4,8 +4,24 @@
   "unit": "m",
   "preUnit": "£",
   "date": "2012",
+  "data": [],
   "uri": "/economy/grossvalueaddedgva/timeseries/tmpy",
   "type": "timeseries",
   "name": "Yorkshire and The Humber Gross Value Added",
-  "fileName": "tmpy"
+  "fileName": "tmpy",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Gross Value Added (GVA)",
+      "fileName": "grossvalueaddedgva",
+      "breadcrumb": []
+    }
+  ]
 }

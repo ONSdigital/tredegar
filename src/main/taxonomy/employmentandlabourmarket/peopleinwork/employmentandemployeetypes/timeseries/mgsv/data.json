@@ -2965,5 +2965,26 @@
   "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgsv",
   "type": "timeseries",
   "name": "Employment Rate (aged 16-64) Male",
-  "fileName": "mgsv"
+  "fileName": "mgsv",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Employment and Labour Market",
+      "fileName": "employmentandlabourmarket"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "People in Work",
+      "fileName": "peopleinwork"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Employment and Employee Types",
+      "fileName": "employmentandemployeetypes",
+      "breadcrumb": []
+    }
+  ]
 }

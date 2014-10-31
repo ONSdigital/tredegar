@@ -2505,5 +2505,20 @@
   "uri": "/businessindustryandtrade/manufacturingandproductionindustry/timeseries/k27y",
   "type": "timeseries",
   "name": "Manufacturing",
-  "fileName": "k27y"
+  "fileName": "k27y",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Business, Industry and Trade",
+      "fileName": "businessindustryandtrade"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Manufacturing and Production Industry",
+      "fileName": "manufacturingandproductionindustry",
+      "breadcrumb": []
+    }
+  ]
 }

@@ -913,5 +913,26 @@
   "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/ap2y",
   "type": "timeseries",
   "name": "Vacancies",
-  "fileName": "ap2y"
+  "fileName": "ap2y",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Employment and Labour Market",
+      "fileName": "employmentandlabourmarket"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "People in Work",
+      "fileName": "peopleinwork"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Employment and Employee Types",
+      "fileName": "employmentandemployeetypes",
+      "breadcrumb": []
+    }
+  ]
 }

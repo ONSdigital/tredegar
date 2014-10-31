@@ -321,5 +321,20 @@
   "uri": "/employmentandlabourmarket/publicsectorpersonnel/timeseries/g7fs",
   "type": "timeseries",
   "name": "Local government: Full time equivalent",
-  "fileName": "g7fs"
+  "fileName": "g7fs",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Employment and Labour Market",
+      "fileName": "employmentandlabourmarket"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Public Sector Personnel",
+      "fileName": "publicsectorpersonnel",
+      "breadcrumb": []
+    }
+  ]
 }

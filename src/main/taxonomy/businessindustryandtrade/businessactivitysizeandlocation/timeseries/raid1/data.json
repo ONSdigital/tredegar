@@ -30,5 +30,20 @@
   "uri": "/businessindustryandtrade/businessactivitysizeandlocation/timeseries/raid1",
   "type": "timeseries",
   "name": "UK businesses",
-  "fileName": "raid1"
+  "fileName": "raid1",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Business, Industry and Trade",
+      "fileName": "businessindustryandtrade"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Business Activity, Size and Location",
+      "fileName": "businessactivitysizeandlocation",
+      "breadcrumb": []
+    }
+  ]
 }

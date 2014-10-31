@@ -318,5 +318,26 @@
   "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/marriagecohabitationandcivilpartnerships/timeseries/raid57",
   "type": "timeseries",
   "name": "Marriages",
-  "fileName": "raid57"
+  "fileName": "raid57",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "People, Population and Community",
+      "fileName": "peoplepopulationandcommunity"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Births, Deaths and Marriages",
+      "fileName": "birthsdeathsandmarriages"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Marriage, Cohabitation and Civil Partnerships",
+      "fileName": "marriagecohabitationandcivilpartnerships",
+      "breadcrumb": []
+    }
+  ]
 }

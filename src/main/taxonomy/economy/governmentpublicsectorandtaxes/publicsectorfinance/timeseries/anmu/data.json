@@ -2221,5 +2221,26 @@
   "uri": "/economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/anmu",
   "type": "timeseries",
   "name": "Public Sector current budget",
-  "fileName": "anmu"
+  "fileName": "anmu",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Government, Public Sector and Taxes",
+      "fileName": "governmentpublicsectorandtaxes"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Public Sector Finance",
+      "fileName": "publicsectorfinance",
+      "breadcrumb": []
+    }
+  ]
 }

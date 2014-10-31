@@ -253,5 +253,26 @@
   "uri": "/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/raid125",
   "type": "timeseries",
   "name": "Scotland population",
-  "fileName": "raid125"
+  "fileName": "raid125",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "People, Population and Community",
+      "fileName": "peoplepopulationandcommunity"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Population and Migration",
+      "fileName": "populationandmigration"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Population Estimates",
+      "fileName": "populationestimates",
+      "breadcrumb": []
+    }
+  ]
 }

@@ -953,5 +953,20 @@
   "uri": "/economy/grossdomesticproductgdp/timeseries/ihyn",
   "type": "timeseries",
   "name": "GDP Quarter on Quarter growth (CP)",
-  "fileName": "ihyn"
+  "fileName": "ihyn",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Gross Domestic Product (GDP)",
+      "fileName": "grossdomesticproductgdp",
+      "breadcrumb": []
+    }
+  ]
 }

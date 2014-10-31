@@ -514,5 +514,26 @@
   "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/timeseries/raid33",
   "type": "timeseries",
   "name": "UK deaths",
-  "fileName": "raid33"
+  "fileName": "raid33",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "People, Population and Community",
+      "fileName": "peoplepopulationandcommunity"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Births, Deaths and Marriages",
+      "fileName": "birthsdeathsandmarriages"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Deaths",
+      "fileName": "deaths",
+      "breadcrumb": []
+    }
+  ]
 }

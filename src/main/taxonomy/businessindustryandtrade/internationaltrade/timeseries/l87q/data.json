@@ -1137,5 +1137,20 @@
   "uri": "/businessindustryandtrade/internationaltrade/timeseries/l87q",
   "type": "timeseries",
   "name": "Balance of trade in goods from all EU",
-  "fileName": "l87q"
+  "fileName": "l87q",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Business, Industry and Trade",
+      "fileName": "businessindustryandtrade"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "International Trade",
+      "fileName": "internationaltrade",
+      "breadcrumb": []
+    }
+  ]
 }

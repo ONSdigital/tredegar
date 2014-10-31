@@ -1221,5 +1221,20 @@
   "uri": "/economy/grossdomesticproductgdp/timeseries/dtwm",
   "type": "timeseries",
   "name": "Income Measure: Compensation of Employees ",
-  "fileName": "dtwm"
+  "fileName": "dtwm",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Gross Domestic Product (GDP)",
+      "fileName": "grossdomesticproductgdp",
+      "breadcrumb": []
+    }
+  ]
 }

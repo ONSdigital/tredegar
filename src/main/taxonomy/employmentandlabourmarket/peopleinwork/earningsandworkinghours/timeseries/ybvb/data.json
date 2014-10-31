@@ -1525,5 +1525,26 @@
   "uri": "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/timeseries/ybvb",
   "type": "timeseries",
   "name": "Average weekly hours worked – part time",
-  "fileName": "ybvb"
+  "fileName": "ybvb",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Employment and Labour Market",
+      "fileName": "employmentandlabourmarket"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "People in Work",
+      "fileName": "peopleinwork"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Earnings and Working Hours",
+      "fileName": "earningsandworkinghours",
+      "breadcrumb": []
+    }
+  ]
 }

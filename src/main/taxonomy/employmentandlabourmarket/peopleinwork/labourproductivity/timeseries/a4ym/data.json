@@ -357,5 +357,26 @@
   "uri": "/employmentandlabourmarket/peopleinwork/labourproductivity/timeseries/a4ym",
   "type": "timeseries",
   "name": "Output per worker",
-  "fileName": "a4ym"
+  "fileName": "a4ym",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Employment and Labour Market",
+      "fileName": "employmentandlabourmarket"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "People in Work",
+      "fileName": "peopleinwork"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Labour Productivity",
+      "fileName": "labourproductivity",
+      "breadcrumb": []
+    }
+  ]
 }

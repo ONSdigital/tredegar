@@ -61,5 +61,20 @@
   "uri": "/economy/environmentalaccounts/timeseries/raid138",
   "type": "timeseries",
   "name": "Total energy consumption (oil equivalent)",
-  "fileName": "raid138"
+  "fileName": "raid138",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Environmental Accounts",
+      "fileName": "environmentalaccounts",
+      "breadcrumb": []
+    }
+  ]
 }

@@ -58,5 +58,26 @@
   "uri": "/peoplepopulationandcommunity/populationandmigration/migrationwithintheuk/timeseries/raid120",
   "type": "timeseries",
   "name": "Residents moving between local authorities ",
-  "fileName": "raid120"
+  "fileName": "raid120",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "People, Population and Community",
+      "fileName": "peoplepopulationandcommunity"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Population and Migration",
+      "fileName": "populationandmigration"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Migration within the UK",
+      "fileName": "migrationwithintheuk",
+      "breadcrumb": []
+    }
+  ]
 }

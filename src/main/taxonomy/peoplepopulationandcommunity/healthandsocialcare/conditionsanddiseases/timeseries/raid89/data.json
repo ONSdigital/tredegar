@@ -178,5 +178,26 @@
   "uri": "/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/timeseries/raid89",
   "type": "timeseries",
   "name": "Number of newly diagnosed cancers",
-  "fileName": "raid89"
+  "fileName": "raid89",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "People, Population and Community",
+      "fileName": "peoplepopulationandcommunity"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Health and Social Care",
+      "fileName": "healthandsocialcare"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Conditions and Diseases",
+      "fileName": "conditionsanddiseases",
+      "breadcrumb": []
+    }
+  ]
 }

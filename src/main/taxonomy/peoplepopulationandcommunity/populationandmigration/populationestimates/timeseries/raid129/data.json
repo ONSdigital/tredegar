@@ -253,5 +253,26 @@
   "uri": "/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/raid129",
   "type": "timeseries",
   "name": "Females in the UK",
-  "fileName": "raid129"
+  "fileName": "raid129",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "People, Population and Community",
+      "fileName": "peoplepopulationandcommunity"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Population and Migration",
+      "fileName": "populationandmigration"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Population Estimates",
+      "fileName": "populationestimates",
+      "breadcrumb": []
+    }
+  ]
 }

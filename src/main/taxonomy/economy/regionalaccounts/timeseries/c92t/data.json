@@ -73,5 +73,20 @@
   "uri": "/economy/regionalaccounts/timeseries/c92t",
   "type": "timeseries",
   "name": "Gross Disposable Household Income Scotland",
-  "fileName": "c92t"
+  "fileName": "c92t",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Regional Accounts",
+      "fileName": "regionalaccounts",
+      "breadcrumb": []
+    }
+  ]
 }

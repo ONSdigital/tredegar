@@ -1953,5 +1953,20 @@
   "uri": "/businessindustryandtrade/tourismindustry/timeseries/gmax",
   "type": "timeseries",
   "name": "UK visits abroad",
-  "fileName": "gmax"
+  "fileName": "gmax",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Business, Industry and Trade",
+      "fileName": "businessindustryandtrade"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Tourism Industry",
+      "fileName": "tourismindustry",
+      "breadcrumb": []
+    }
+  ]
 }

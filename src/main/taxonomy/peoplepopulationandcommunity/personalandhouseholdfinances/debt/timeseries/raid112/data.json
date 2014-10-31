@@ -4,8 +4,30 @@
   "unit": "bn",
   "preUnit": "£",
   "date": "",
+  "data": [],
   "uri": "/peoplepopulationandcommunity/personalandhouseholdfinances/debt/timeseries/raid112",
   "type": "timeseries",
   "name": "Median household financial debt",
-  "fileName": "raid112"
+  "fileName": "raid112",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "People, Population and Community",
+      "fileName": "peoplepopulationandcommunity"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Personal and Household Finances",
+      "fileName": "personalandhouseholdfinances"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Debt",
+      "fileName": "debt",
+      "breadcrumb": []
+    }
+  ]
 }

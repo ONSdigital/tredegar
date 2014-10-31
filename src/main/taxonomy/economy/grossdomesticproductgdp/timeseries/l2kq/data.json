@@ -493,5 +493,20 @@
   "uri": "/economy/grossdomesticproductgdp/timeseries/l2kq",
   "type": "timeseries",
   "name": "Production Index ",
-  "fileName": "l2kq"
+  "fileName": "l2kq",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Gross Domestic Product (GDP)",
+      "fileName": "grossdomesticproductgdp",
+      "breadcrumb": []
+    }
+  ]
 }

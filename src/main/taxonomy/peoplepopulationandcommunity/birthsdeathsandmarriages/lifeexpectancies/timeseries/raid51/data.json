@@ -4,8 +4,30 @@
   "unit": "years",
   "preUnit": "",
   "date": "2010-2012",
+  "data": [],
   "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/lifeexpectancies/timeseries/raid51",
   "type": "timeseries",
   "name": "Male Life expectancy at age 65",
-  "fileName": "raid51"
+  "fileName": "raid51",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "People, Population and Community",
+      "fileName": "peoplepopulationandcommunity"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Births, Deaths and Marriages",
+      "fileName": "birthsdeathsandmarriages"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Life Expectancies",
+      "fileName": "lifeexpectancies",
+      "breadcrumb": []
+    }
+  ]
 }

@@ -2965,5 +2965,20 @@
   "uri": "/employmentandlabourmarket/unemployment/timeseries/mgsc",
   "type": "timeseries",
   "name": "Unemployment 16+",
-  "fileName": "mgsc"
+  "fileName": "mgsc",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Employment and Labour Market",
+      "fileName": "employmentandlabourmarket"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Unemployment",
+      "fileName": "unemployment",
+      "breadcrumb": []
+    }
+  ]
 }

@@ -1221,5 +1221,20 @@
   "uri": "/economy/grossvalueaddedgva/timeseries/abml",
   "type": "timeseries",
   "name": "United Kingdom Gross Value Added (GVA)",
-  "fileName": "abml"
+  "fileName": "abml",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Gross Value Added (GVA)",
+      "fileName": "grossvalueaddedgva",
+      "breadcrumb": []
+    }
+  ]
 }

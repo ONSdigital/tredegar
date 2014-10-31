@@ -321,5 +321,20 @@
   "uri": "/employmentandlabourmarket/publicsectorpersonnel/timeseries/g6nt",
   "type": "timeseries",
   "name": "Local government: Head count",
-  "fileName": "g6nt"
+  "fileName": "g6nt",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Employment and Labour Market",
+      "fileName": "employmentandlabourmarket"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Public Sector Personnel",
+      "fileName": "publicsectorpersonnel",
+      "breadcrumb": []
+    }
+  ]
 }

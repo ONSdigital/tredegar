@@ -1621,5 +1621,26 @@
   "uri": "/economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/rutn",
   "type": "timeseries",
   "name": "Public Sector net debt excluding banks",
-  "fileName": "rutn"
+  "fileName": "rutn",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Government, Public Sector and Taxes",
+      "fileName": "governmentpublicsectorandtaxes"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Public Sector Finance",
+      "fileName": "publicsectorfinance",
+      "breadcrumb": []
+    }
+  ]
 }

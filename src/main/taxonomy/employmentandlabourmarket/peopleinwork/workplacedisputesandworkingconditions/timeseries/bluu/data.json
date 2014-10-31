@@ -4361,5 +4361,26 @@
   "uri": "/employmentandlabourmarket/peopleinwork/workplacedisputesandworkingconditions/timeseries/bluu",
   "type": "timeseries",
   "name": "Number of stoppages",
-  "fileName": "bluu"
+  "fileName": "bluu",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Employment and Labour Market",
+      "fileName": "employmentandlabourmarket"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "People in Work",
+      "fileName": "peopleinwork"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Workplace Disputes and Working Conditions",
+      "fileName": "workplacedisputesandworkingconditions",
+      "breadcrumb": []
+    }
+  ]
 }

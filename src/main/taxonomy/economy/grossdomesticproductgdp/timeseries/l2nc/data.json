@@ -493,5 +493,20 @@
   "uri": "/economy/grossdomesticproductgdp/timeseries/l2nc",
   "type": "timeseries",
   "name": "Services Index ",
-  "fileName": "l2nc"
+  "fileName": "l2nc",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Gross Domestic Product (GDP)",
+      "fileName": "grossdomesticproductgdp",
+      "breadcrumb": []
+    }
+  ]
 }

@@ -13,5 +13,26 @@
   "uri": "/peoplepopulationandcommunity/culturalidentity/sexuality/timeseries/raid81",
   "type": "timeseries",
   "name": "Adults identifying themselves as Gay, Lesbian or Bisexual",
-  "fileName": "raid81"
+  "fileName": "raid81",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "People, Population and Community",
+      "fileName": "peoplepopulationandcommunity"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Cultural Identity",
+      "fileName": "culturalidentity"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Sexuality",
+      "fileName": "sexuality",
+      "breadcrumb": []
+    }
+  ]
 }

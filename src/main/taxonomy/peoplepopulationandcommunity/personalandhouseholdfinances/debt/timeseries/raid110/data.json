@@ -4,8 +4,30 @@
   "unit": "bn",
   "preUnit": "£",
   "date": "",
+  "data": [],
   "uri": "/peoplepopulationandcommunity/personalandhouseholdfinances/debt/timeseries/raid110",
   "type": "timeseries",
   "name": "Financial debt",
-  "fileName": "raid110"
+  "fileName": "raid110",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "People, Population and Community",
+      "fileName": "peoplepopulationandcommunity"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Personal and Household Finances",
+      "fileName": "personalandhouseholdfinances"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Debt",
+      "fileName": "debt",
+      "breadcrumb": []
+    }
+  ]
 }

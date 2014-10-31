@@ -3577,5 +3577,20 @@
   "uri": "/businessindustryandtrade/manufacturingandproductionindustry/timeseries/k22a",
   "type": "timeseries",
   "name": "Manufacturing",
-  "fileName": "k22a"
+  "fileName": "k22a",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Business, Industry and Trade",
+      "fileName": "businessindustryandtrade"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Manufacturing and Production Industry",
+      "fileName": "manufacturingandproductionindustry",
+      "breadcrumb": []
+    }
+  ]
 }

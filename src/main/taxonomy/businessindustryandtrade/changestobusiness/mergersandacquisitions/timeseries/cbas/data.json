@@ -545,5 +545,26 @@
   "uri": "/businessindustryandtrade/changestobusiness/mergersandacquisitions/timeseries/cbas",
   "type": "timeseries",
   "name": "Number of disposals",
-  "fileName": "cbas"
+  "fileName": "cbas",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Business, Industry and Trade",
+      "fileName": "businessindustryandtrade"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Changes to Business",
+      "fileName": "changestobusiness"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Mergers and Acquisitions",
+      "fileName": "mergersandacquisitions",
+      "breadcrumb": []
+    }
+  ]
 }

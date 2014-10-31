@@ -4,8 +4,24 @@
   "unit": "m",
   "preUnit": "£",
   "date": "2012",
+  "data": [],
   "uri": "/economy/grossvalueaddedgva/timeseries/dgpj",
   "type": "timeseries",
   "name": "South East Gross Value Added",
-  "fileName": "dgpj"
+  "fileName": "dgpj",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Gross Value Added (GVA)",
+      "fileName": "grossvalueaddedgva",
+      "breadcrumb": []
+    }
+  ]
 }

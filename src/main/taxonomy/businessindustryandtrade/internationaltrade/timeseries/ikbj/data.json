@@ -1221,5 +1221,20 @@
   "uri": "/businessindustryandtrade/internationaltrade/timeseries/ikbj",
   "type": "timeseries",
   "name": "Trade in goods and services deficit (or surplus)",
-  "fileName": "ikbj"
+  "fileName": "ikbj",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Business, Industry and Trade",
+      "fileName": "businessindustryandtrade"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "International Trade",
+      "fileName": "internationaltrade",
+      "breadcrumb": []
+    }
+  ]
 }

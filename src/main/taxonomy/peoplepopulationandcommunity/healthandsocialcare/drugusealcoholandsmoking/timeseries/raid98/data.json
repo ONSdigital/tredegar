@@ -89,5 +89,26 @@
   "uri": "/peoplepopulationandcommunity/healthandsocialcare/drugusealcoholandsmoking/timeseries/raid98",
   "type": "timeseries",
   "name": "Deaths from drug-related poisoning",
-  "fileName": "raid98"
+  "fileName": "raid98",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "People, Population and Community",
+      "fileName": "peoplepopulationandcommunity"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Health and Social Care",
+      "fileName": "healthandsocialcare"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Drug use, Alcohol and Smoking",
+      "fileName": "drugusealcoholandsmoking",
+      "breadcrumb": []
+    }
+  ]
 }

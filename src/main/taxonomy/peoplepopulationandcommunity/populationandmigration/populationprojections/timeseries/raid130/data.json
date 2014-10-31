@@ -110,5 +110,26 @@
   "uri": "/peoplepopulationandcommunity/populationandmigration/populationprojections/timeseries/raid130",
   "type": "timeseries",
   "name": "Mid-2037 UK population projected to reach",
-  "fileName": "raid130"
+  "fileName": "raid130",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "People, Population and Community",
+      "fileName": "peoplepopulationandcommunity"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Population and Migration",
+      "fileName": "populationandmigration"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Population Projections",
+      "fileName": "populationprojections",
+      "breadcrumb": []
+    }
+  ]
 }

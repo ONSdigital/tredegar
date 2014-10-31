@@ -1281,5 +1281,20 @@
   "uri": "/economy/inflationandpriceindices/timeseries/jvz7",
   "type": "timeseries",
   "name": "Output of manufactured product Index (2005 \u003d 100)",
-  "fileName": "jvz7"
+  "fileName": "jvz7",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Inflation and Price Indices",
+      "fileName": "inflationandpriceindices",
+      "breadcrumb": []
+    }
+  ]
 }

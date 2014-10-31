@@ -4,8 +4,24 @@
   "unit": "%",
   "preUnit": "",
   "date": "",
+  "data": [],
   "uri": "/peoplepopulationandcommunity/homeinternetandsocialmediausage/timeseries/raid102",
   "type": "timeseries",
   "name": "Adults that have never used the Internet",
-  "fileName": "raid102"
+  "fileName": "raid102",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "People, Population and Community",
+      "fileName": "peoplepopulationandcommunity"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Home Internet and Social Media Usage",
+      "fileName": "homeinternetandsocialmediausage",
+      "breadcrumb": []
+    }
+  ]
 }

@@ -1225,5 +1225,20 @@
   "uri": "/economy/grossdomesticproductgdp/timeseries/npqr",
   "type": "timeseries",
   "name": "Expenditure Measure: Gross Fixed Capital Formation ",
-  "fileName": "npqr"
+  "fileName": "npqr",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Gross Domestic Product (GDP)",
+      "fileName": "grossdomesticproductgdp",
+      "breadcrumb": []
+    }
+  ]
 }

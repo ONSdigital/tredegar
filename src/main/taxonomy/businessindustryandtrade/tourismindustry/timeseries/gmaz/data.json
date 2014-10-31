@@ -1953,5 +1953,20 @@
   "uri": "/businessindustryandtrade/tourismindustry/timeseries/gmaz",
   "type": "timeseries",
   "name": "Overseas visits to UK Earnings ",
-  "fileName": "gmaz"
+  "fileName": "gmaz",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Business, Industry and Trade",
+      "fileName": "businessindustryandtrade"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Tourism Industry",
+      "fileName": "tourismindustry",
+      "breadcrumb": []
+    }
+  ]
 }

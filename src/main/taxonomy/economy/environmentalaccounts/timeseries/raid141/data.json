@@ -4,8 +4,24 @@
   "unit": "bn",
   "preUnit": "£",
   "date": "",
+  "data": [],
   "uri": "/economy/environmentalaccounts/timeseries/raid141",
   "type": "timeseries",
   "name": "Spend on environmental protection activities",
-  "fileName": "raid141"
+  "fileName": "raid141",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Environmental Accounts",
+      "fileName": "environmentalaccounts",
+      "breadcrumb": []
+    }
+  ]
 }

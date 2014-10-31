@@ -4517,5 +4517,26 @@
   "uri": "/employmentandlabourmarket/peopleinwork/workplacedisputesandworkingconditions/timeseries/bbfw",
   "type": "timeseries",
   "name": "Working days lost",
-  "fileName": "bbfw"
+  "fileName": "bbfw",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Employment and Labour Market",
+      "fileName": "employmentandlabourmarket"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "People in Work",
+      "fileName": "peopleinwork"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Workplace Disputes and Working Conditions",
+      "fileName": "workplacedisputesandworkingconditions",
+      "breadcrumb": []
+    }
+  ]
 }

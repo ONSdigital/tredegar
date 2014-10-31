@@ -37,5 +37,20 @@
   "uri": "/peoplepopulationandcommunity/homeinternetandsocialmediausage/timeseries/raid101",
   "type": "timeseries",
   "name": "Adults in the UK that have used the Internet",
-  "fileName": "raid101"
+  "fileName": "raid101",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "People, Population and Community",
+      "fileName": "peoplepopulationandcommunity"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Home Internet and Social Media Usage",
+      "fileName": "homeinternetandsocialmediausage",
+      "breadcrumb": []
+    }
+  ]
 }

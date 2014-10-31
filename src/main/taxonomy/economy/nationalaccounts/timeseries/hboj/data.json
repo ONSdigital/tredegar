@@ -1197,5 +1197,20 @@
   "uri": "/economy/nationalaccounts/timeseries/hboj",
   "type": "timeseries",
   "name": "Balance of Payments: Total income",
-  "fileName": "hboj"
+  "fileName": "hboj",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "National Accounts",
+      "fileName": "nationalaccounts",
+      "breadcrumb": []
+    }
+  ]
 }

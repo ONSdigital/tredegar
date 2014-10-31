@@ -493,5 +493,20 @@
   "uri": "/economy/grossdomesticproductgdp/timeseries/l2n8",
   "type": "timeseries",
   "name": "Construction Index ",
-  "fileName": "l2n8"
+  "fileName": "l2n8",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Gross Domestic Product (GDP)",
+      "fileName": "grossdomesticproductgdp",
+      "breadcrumb": []
+    }
+  ]
 }

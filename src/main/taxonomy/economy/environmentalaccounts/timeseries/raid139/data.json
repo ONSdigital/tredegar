@@ -4,8 +4,24 @@
   "unit": "million tonnes",
   "preUnit": "",
   "date": "",
+  "data": [],
   "uri": "/economy/environmentalaccounts/timeseries/raid139",
   "type": "timeseries",
   "name": "Greenhouse gas emissions (CO2 equivalent)",
-  "fileName": "raid139"
+  "fileName": "raid139",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Environmental Accounts",
+      "fileName": "environmentalaccounts",
+      "breadcrumb": []
+    }
+  ]
 }

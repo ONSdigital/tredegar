@@ -89,5 +89,26 @@
   "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/lifeexpectancies/timeseries/raid49",
   "type": "timeseries",
   "name": "Female Life expectancy at birth",
-  "fileName": "raid49"
+  "fileName": "raid49",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "People, Population and Community",
+      "fileName": "peoplepopulationandcommunity"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Births, Deaths and Marriages",
+      "fileName": "birthsdeathsandmarriages"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Life Expectancies",
+      "fileName": "lifeexpectancies",
+      "breadcrumb": []
+    }
+  ]
 }

@@ -1001,5 +1001,26 @@
   "uri": "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/timeseries/kab9",
   "type": "timeseries",
   "name": "Average weekly earning (total pay)",
-  "fileName": "kab9"
+  "fileName": "kab9",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Employment and Labour Market",
+      "fileName": "employmentandlabourmarket"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "People in Work",
+      "fileName": "peopleinwork"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Earnings and Working Hours",
+      "fileName": "earningsandworkinghours",
+      "breadcrumb": []
+    }
+  ]
 }

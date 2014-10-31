@@ -1221,5 +1221,20 @@
   "uri": "/economy/grossdomesticproductgdp/timeseries/abmi",
   "type": "timeseries",
   "name": "Gross Domestic Product (CVM)",
-  "fileName": "abmi"
+  "fileName": "abmi",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Gross Domestic Product (GDP)",
+      "fileName": "grossdomesticproductgdp",
+      "breadcrumb": []
+    }
+  ]
 }

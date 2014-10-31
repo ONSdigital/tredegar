@@ -2505,5 +2505,26 @@
   "uri": "/economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/rurq",
   "type": "timeseries",
   "name": "Public Sector Net Cash Requirement (NCR)",
-  "fileName": "rurq"
+  "fileName": "rurq",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Government, Public Sector and Taxes",
+      "fileName": "governmentpublicsectorandtaxes"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Public Sector Finance",
+      "fileName": "publicsectorfinance",
+      "breadcrumb": []
+    }
+  ]
 }

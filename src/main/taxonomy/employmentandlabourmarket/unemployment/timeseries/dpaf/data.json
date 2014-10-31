@@ -2981,5 +2981,20 @@
   "uri": "/employmentandlabourmarket/unemployment/timeseries/dpaf",
   "type": "timeseries",
   "name": "Total Claimant Count Female",
-  "fileName": "dpaf"
+  "fileName": "dpaf",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Employment and Labour Market",
+      "fileName": "employmentandlabourmarket"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Unemployment",
+      "fileName": "unemployment",
+      "breadcrumb": []
+    }
+  ]
 }

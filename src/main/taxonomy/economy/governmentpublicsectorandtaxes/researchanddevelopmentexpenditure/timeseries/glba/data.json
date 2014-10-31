@@ -129,5 +129,26 @@
   "uri": "/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/timeseries/glba",
   "type": "timeseries",
   "name": "Gross domestic expenditure on research and development",
-  "fileName": "glba"
+  "fileName": "glba",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Government, Public Sector and Taxes",
+      "fileName": "governmentpublicsectorandtaxes"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Research and Development Expenditure",
+      "fileName": "researchanddevelopmentexpenditure",
+      "breadcrumb": []
+    }
+  ]
 }

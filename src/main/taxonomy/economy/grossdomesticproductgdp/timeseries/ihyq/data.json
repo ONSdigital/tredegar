@@ -953,5 +953,20 @@
   "uri": "/economy/grossdomesticproductgdp/timeseries/ihyq",
   "type": "timeseries",
   "name": "GDP Quarter on Quarter growth (CVM)",
-  "fileName": "ihyq"
+  "fileName": "ihyq",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Gross Domestic Product (GDP)",
+      "fileName": "grossdomesticproductgdp",
+      "breadcrumb": []
+    }
+  ]
 }

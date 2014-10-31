@@ -2961,5 +2961,26 @@
   "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/lf25",
   "type": "timeseries",
   "name": "Employment Rate (aged 16-64) Female",
-  "fileName": "lf25"
+  "fileName": "lf25",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Employment and Labour Market",
+      "fileName": "employmentandlabourmarket"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "People in Work",
+      "fileName": "peopleinwork"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Employment and Employee Types",
+      "fileName": "employmentandemployeetypes",
+      "breadcrumb": []
+    }
+  ]
 }

@@ -493,5 +493,20 @@
   "uri": "/economy/grossdomesticproductgdp/timeseries/l2kl",
   "type": "timeseries",
   "name": "Agriculture, Forestry and Fishing",
-  "fileName": "l2kl"
+  "fileName": "l2kl",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Gross Domestic Product (GDP)",
+      "fileName": "grossdomesticproductgdp",
+      "breadcrumb": []
+    }
+  ]
 }

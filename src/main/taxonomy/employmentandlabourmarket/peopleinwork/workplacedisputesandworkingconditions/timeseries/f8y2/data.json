@@ -905,5 +905,26 @@
   "uri": "/employmentandlabourmarket/peopleinwork/workplacedisputesandworkingconditions/timeseries/f8y2",
   "type": "timeseries",
   "name": "Working days lost in the Private Sector ",
-  "fileName": "f8y2"
+  "fileName": "f8y2",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Employment and Labour Market",
+      "fileName": "employmentandlabourmarket"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "People in Work",
+      "fileName": "peopleinwork"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Workplace Disputes and Working Conditions",
+      "fileName": "workplacedisputesandworkingconditions",
+      "breadcrumb": []
+    }
+  ]
 }

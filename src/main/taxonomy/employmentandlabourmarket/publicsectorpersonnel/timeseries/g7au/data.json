@@ -321,5 +321,20 @@
   "uri": "/employmentandlabourmarket/publicsectorpersonnel/timeseries/g7au",
   "type": "timeseries",
   "name": "Total public sector employees: Head count",
-  "fileName": "g7au"
+  "fileName": "g7au",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Employment and Labour Market",
+      "fileName": "employmentandlabourmarket"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Public Sector Personnel",
+      "fileName": "publicsectorpersonnel",
+      "breadcrumb": []
+    }
+  ]
 }

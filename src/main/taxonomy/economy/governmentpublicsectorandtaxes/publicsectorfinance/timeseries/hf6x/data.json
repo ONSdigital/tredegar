@@ -1549,5 +1549,26 @@
   "uri": "/economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/hf6x",
   "type": "timeseries",
   "name": "Public Sector net lending excluding banks",
-  "fileName": "hf6x"
+  "fileName": "hf6x",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Government, Public Sector and Taxes",
+      "fileName": "governmentpublicsectorandtaxes"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Public Sector Finance",
+      "fileName": "publicsectorfinance",
+      "breadcrumb": []
+    }
+  ]
 }
