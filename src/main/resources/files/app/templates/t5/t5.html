@@ -1,6 +1,6 @@
 <div ng-controller="chartController">
 
-    <style>
+<style>
     .chart {
         height: 440px;
     }
@@ -166,11 +166,11 @@
         margin-left: -0.6rem;
     }
     /*.tablesaw-bar .btn-select.btn-small:after, .tablesaw-bar .btn-select.btn-micro:after, .tablesaw-bar .btn-select:after {
-  padding-right: 0;
-  padding-top: 0;
-  font-family: "fontello";
-  content: '\e818';
-  top: -4px; }*/
+    padding-right: 0;
+    padding-top: 0;
+    font-family: "fontello";
+    content: '\e818';
+    top: -4px; }*/
 
     .tablesaw-bar .tablesaw-advance > .btn.left:before,
     .icon-arrow-gray-left:before {
@@ -230,9 +230,9 @@
         margin-left: 0.5rem;
     }
     /*
- * This should really be for mobiles, but we don't have a mobile
- * breakpoint at the moment, so using
- */
+    * This should really be for mobiles, but we don't have a mobile
+    * breakpoint at the moment, so using
+    */
 
     @media screen and (max-width: 30em) {
         .tablesaw-advance.minimap {
@@ -430,8 +430,8 @@
         margin-left: 1rem;
     }
     /*! Tablesaw - v0.1.6 - 2014-07-23
-* https://github.com/filamentgroup/tablesaw
-* Copyright (c) 2014 Filament Group; Licensed MIT */
+    * https://github.com/filamentgroup/tablesaw
+    * Copyright (c) 2014 Filament Group; Licensed MIT */
 
     table.tablesaw {
         empty-cells: show;
@@ -1408,10 +1408,10 @@
         font-family: "open-sans-n7", "open-sans", sans-serif;
     }
     /*
-============================
-Button styles
-============================
-*/
+    ============================
+    Button styles
+    ============================
+    */
 
     .btn {
         display: inline-block;
@@ -1436,8 +1436,8 @@ Button styles
         outline: 0;
     }
     /*-----------------------------------
-lesser , applied styles
-*/
+    lesser , applied styles
+    */
 
     .btn--primary {
         font-family: "open-sans-n7", "open-sans", sans-serif;
@@ -1568,7 +1568,7 @@ lesser , applied styles
     .button-bar > .button-group:last-of-type {
         margin-right: 0;
     }
-    </style>
+</style>
 
 
     <!-- Title and release date -->
@@ -1657,13 +1657,13 @@ lesser , applied styles
                         <span class="chart-area__controls__time__label">Time period:</span>
                         <ul class="nav flush--top chart-area__controls__time__ranges">
                             <li>
-                                <a href="#" ng-model="tableValueAll" ng-options="date for date in chartData.options.xAxis.categories">All</a>
+                                <a href="#">All</a>
                             </li>
                             <li>
-                                <a href="#" data-chart-controls-range="10yr">Last 10 yrs</a>
+                                <a href="#">Last 10 yrs</a>
                             </li>
                             <li>
-                                <a href="#" data-chart-controls-range="5yr">Last 5 yrs</a>
+                                <a href="#">Last 5 yrs</a>
                             </li>
                             <li class="chart-area__controls__custom--active">
                                 <a href="#" class="link-complex">
@@ -1674,56 +1674,79 @@ lesser , applied styles
                         </ul>
                     </div>
 
-                    <!-- Selectors chart-area__controls__custom__container__table-->
-                    <div class="chart-area__controls__custom">
+                    <!-- Selector for chart -->
+                    <div ng-show="chartTable" class="chart-area__controls__custom">
                         <div class="chart-area__controls__custom__errors"></div>
-                        <div ng-class="{'chart-area__controls__custom__container__table': !chartTable}">
+                        <div class="chart-area__controls__custom__container">
+                            <div class="chart-area__controls__dropdowns">
+                                <fieldset class="chart-area__controls__date">
+                                    <legend class="chart-area__controls__date__label">From</legend>
+                                    <select class="chart-area__controls__month" ng-model="chartDataFrom" ng-options="date for date in chartData.options.xAxis.categories">
+                                        <option value="">Show all</option>
+                                    </select>
+                                </fieldset>
+
+                                <fieldset class="chart-area__controls__date">
+                                    <legend class="chart-area__controls__date__label">To</legend>
+                                    <select class="chart-area__controls__month" ng-model="chartDataTo" ng-options="date for date in chartData.options.xAxis.categories">
+                                        <option value="">Show all</option>
+                                    </select>
+                                </fieldset>
+
+                            </div>
+                        </div>
+                        <br></br>
+                    </div>
+
+                    <!-- Selector for table -->
+                    <div ng-show="!chartTable" class="chart-area__controls__custom">
+                        <div class="chart-area__controls__custom__errors"></div>
+                        <div class="chart-area__controls__custom__container__table">
                             <div class="chart-area__controls__dropdowns">
                                 <fieldset ng-show="!chartTable" class="chart-area__controls__date">
                                     <legend class="chart-area__controls__date__label">Find</legend>
-                                    <label class="visuallyhidden">Date</label>
                                     <input ng-model="query" type="test"/>
                                 </fieldset>
 
                                 <fieldset class="chart-area__controls__date">
                                     <legend class="chart-area__controls__date__label">From</legend>
                                     <label class="visuallyhidden">Date</label>
-                                    <select class="chart-area__controls__month" ng-model="tableValueFrom" ng-options="date for date in chartData.options.xAxis.categories">
-                                        <option value="2000">Select option</option>
+                                    <select class="chart-area__controls__month" ng-model="tableValueFrom">
+                                        <option value="">Show all</option>
+                                        <option ng-repeat="item in tableValue" value="{{item.number}}">{{item.date}}</option>
                                     </select>
                                 </fieldset>
 
                                 <fieldset class="chart-area__controls__date">
                                     <legend class="chart-area__controls__date__label">To</legend>
                                     <label class="visuallyhidden">Date</label>
-                                    <select class="chart-area__controls__month" ng-model="tableValueTo" ng-options="date for date in chartData.options.xAxis.categories">
-                                        <option value="2010">Select option</option>
+                                    <select class="chart-area__controls__month" ng-model="tableValueTo" >
+                                        <option value="">Show all</option>
+                                        <option ng-repeat="item in tableValue" value="{{item.number}}">{{item.date}}</option>
                                     </select>
                                 </fieldset>
-
                             </div>
-                            <!-- <div class="chart-area__controls__submit">
-                                <input class="btn btn--small btn--thin btn--narrow btn--primary" type="submit" name="submit" data-chart-controls-submit="" value="Show"/>
-                            </div> -->
                         </div>
                         <br></br>
                     </div>
-                    <!-- chart -->
-                    <div ng-if="chartTable">
-                        <highchart class="highcharts-background" id="chart_prices" config="chartData"></highchart>
-                    </div>
                 </form>
+
+                <!-- chart -->
+                <div ng-if="chartTable">
+                    <highchart class="highcharts-background" id="chart_prices" config="chartData"></highchart>
+                </div>
+
                 <!-- table -->
                 <div ng-if="!chartTable">
                     <table class="tablesaw">
                         <thead>
                             <tr>
-                                <th><a href="" ng-click="sortField = 'date'; reverse = !reverse">Period</a></th>
+                                <th><a href="" ng-click="sortField = 'number'; reverse = !reverse">Period</a></th>
                                 <th><a href="" ng-click="sortField = 'values'; reverse = !reverse">{{chart.cdid}}</a></th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr ng-repeat="data in tableValue | filter:query | orderBy:sortField:reverse | rangeDate:tableValueFrom:tableValueTo:'date'" >
+                            <tr ng-repeat="data in tableValue | filter:query | orderBy:sortField:reverse | rangeDate:tableValueFrom:tableValueTo:'number'" >
                                 <th>{{data.date}}</th>
                                 <td>{{data.values}}</td>
                             </tr>
