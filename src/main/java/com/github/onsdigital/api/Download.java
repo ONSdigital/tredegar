@@ -32,9 +32,10 @@ public class Download {
 
 	@POST
 	public void get(@Context HttpServletRequest request, @Context HttpServletResponse response) throws IOException {
-		response.setHeader("Content-Disposition:", "attachment; filename=data.xlsx");
 		try {
 			DownloadRequest downloadRequest = Serialiser.deserialise(request, DownloadRequest.class);
+			response.setHeader("Content-Disposition", "attachment; filename=data." + downloadRequest.type);
+			response.setCharacterEncoding("UTF8");
 			response.setContentType("application/" + downloadRequest.type);
 			processRequest(response.getOutputStream(), downloadRequest);
 		} catch (IOException e) {
@@ -47,7 +48,6 @@ public class Download {
 	private void processRequest(OutputStream output, DownloadRequest downloadRequest) throws IOException {
 		List<Timeseries> dataList = new ArrayList<Timeseries>();
 		for (String uri : downloadRequest.uriList) {
-			System.out.println(uri);
 			dataList.add(Serialiser.deserialise(Files.newInputStream(Data.getData(uri)), Timeseries.class));
 		}
 
