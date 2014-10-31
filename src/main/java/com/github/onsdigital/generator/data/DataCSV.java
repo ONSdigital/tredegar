@@ -98,8 +98,9 @@ public class DataCSV {
 
 				// Add data to timeseries:
 				String date = row[0];
-				for (int i = 1; i < row.length; i++) {
-					if (StringUtils.isNotBlank(row[i])) {
+				for (int i = 1; i < Math.min(header.length, row.length); i++) {
+					if (StringUtils.isNotBlank(header[i]) && StringUtils.isNotBlank(row[i])) {
+						Timeseries timeseries = Data.timeseries(header[i]);
 						String cdid = header[i];
 						if (cdid == null) {
 							// This one was marked as a duplicate
@@ -109,11 +110,25 @@ public class DataCSV {
 						TimeseriesValue timeseriesValue = new TimeseriesValue();
 						timeseriesValue.date = date;
 						timeseriesValue.value = value;
+						timeseries.data.add(timeseriesValue);
 					}
 				}
 			}
 
-			System.out.println(name + " contains " + dataset.size() + " timeseries (" + duplicates + " duplicates)");
+			// Print out some sanity-check information:
+			for (int i = 1; i < header.length; i++) {
+				if (StringUtils.isNotBlank(header[i])) {
+					Timeseries timeseries = Data.timeseries(header[i]);
+					if (timeseries.data.size() == 0) {
+						System.out.println(timeseries + " has no data.");
+					}
+				}
+			}
+			if (duplicates > 0) {
+				System.out.println(name + " contains " + dataset.size() + " timeseries (" + duplicates + " duplicates)");
+			} else {
+				System.out.println(name + " contains " + dataset.size() + " timeseries");
+			}
 		}
 	}
 
