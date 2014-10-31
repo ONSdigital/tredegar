@@ -199,6 +199,7 @@ public class Csv implements Iterable<Map<String, String>> {
 							// Not strictly correct (should round up), but good
 							// enough for now:
 							value = value.substring(0, value.indexOf("99999"));
+							// TODO: get this to round correctly.
 						}
 
 						if (cell.getCellType() == Cell.CELL_TYPE_NUMERIC) {
