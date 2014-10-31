@@ -5,6 +5,7 @@ angular.module('onsComponents')
 		function($location, $route) {
 			return {
 				restrict: 'E',
+				replace:true,
 				templateUrl: 'app/partials/searchbox/searchbox.html',
 				controller: function($scope) {
 					$scope.goToSearch = function(searchTerm) {

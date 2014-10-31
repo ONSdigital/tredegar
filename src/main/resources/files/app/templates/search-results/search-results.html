@@ -57,7 +57,7 @@
               <dl>
                   <dt ng-repeat-start="item in searchResponse.results" class="">
                     <a href="#!{{item.url}}">{{item.title}}</a>
-                    <span class="lozenge" href="">{{item.type === 'bulletin' ? 'Statistical Bulletin' : item.type}}</span>
+                    <span ng-if="item.type != 'home'" class="lozenge" href="">{{item.type === 'bulletin' ? 'Statistical Bulletin' : item.type}}</span>
                   </dt>
                   <dd class="microcopy"> Released...</dd>
                   <dd ng-repeat-end > Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet diam vel est congue eleifend non eget sem. Nam enim ipsum, vestibulum sed facilisis ut, commodo et nulla.  </dd>

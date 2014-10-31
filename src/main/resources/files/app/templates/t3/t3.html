@@ -172,15 +172,25 @@
 <!-- Bottom options for downloading table contents -->  
 
     <tr class="list--table__item list--table datatable-row">
-      <td colspan="4" class="datatable-downloads"> 
-        <a href="" ng-click="t3.downloadCsv()" class="btn btn--primary btn--small download_responsive_btn">
+      <td colspan="4" ng-if="t3.selectedCount > 0" class="datatable-downloads"> 
+        <a href="" style="opacity:1" ng-click="t3.downloadCsv()" class="btn btn--primary btn--small download_responsive_btn">
           <span class="table__action__text">.CSV</span>
             <span class="icon-download" role="presentation"></span>
         </a>
-        <a href="" ng-click="t3.downloadXls()" class="btn btn--primary btn--small download_responsive_btn">
-          <span class="table__action__text">.XLS</span>
+        <a href="" style="opacity:1"  ng-click="t3.downloadXls()" class="btn btn--primary btn--small download_responsive_btn">
+          <span class="table__action__text">.XLSX</span>
             <span class="icon-download" role="presentation"></span>
         </a>          
+      </td>
+      <td colspan="4" ng-if="t3.selectedCount === 0" class="datatable-downloads"> 
+        <span class="btn btn--primary btn--small download_responsive_btn">
+          <span class="table__action__text">.CSV</span>
+            <span class="icon-download" role="presentation"></span>
+        </span>
+        <span href="" ng-click="t3.downloadXls()" class="btn btn--primary btn--small download_responsive_btn">
+          <span class="table__action__text">.XLSX</span>
+            <span class="icon-download" role="presentation"></span>
+        </span>          
       </td>
        <!-- /table-actions -->
     </tr>

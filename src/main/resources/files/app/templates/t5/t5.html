@@ -1,4 +1,4 @@
-<div ng-controller="chartController">
+<div id="t5" ng-controller="chartController">
 
 <style>
     .chart {
@@ -1416,7 +1416,7 @@
     .btn {
         display: inline-block;
         width: auto;
-        padding: 1em 2em;
+        /*padding: 1em 2em;*/
         border: 0 none;
         border-radius: 3px;
         font-size: 16px;
@@ -1627,12 +1627,12 @@
             <!-- This title will need to be dynamically generated on the server -->
             <h2 class="actionable-header--tight__title gamma flush--bottom body-type--heavy">Download this entire time series</h2>
             <div class="actionable-header--tight__action actionable-header--tight__action--left">
-                <a class="btn btn--primary btn--small" href="#">
+                <a class="btn btn--primary btn--small" href="" ng-click="t5.downloadCsv()" >
               .csv
               <span class="icon-download icon--button-inline" role="presentation"></span>
             </a>
-                <a class="btn btn--primary btn--small" href="#">
-              .xsl
+                <a class="btn btn--primary btn--small" href="" ng-click="t5.downloadXls()">
+              .xlsx
               <span class="icon-download icon--button-inline" role="presentation"></span>
             </a>
             </div>
