@@ -11,6 +11,10 @@
       "title": "Mid-2013",
       "xls": "#",
       "csv": "#"
+    },
+    {
+      "title": "Unemployment Summary",
+      "xls": "http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/july-2014/table-a01.xls"
     }
   ],
   "notes": [
@@ -18,6 +22,8 @@
       "data": "These estimates are rounded to the nearest hundred and are different to the unrounded estimates in other published tables."
     }
   ],
+  "summary": "People without a job who have been actively seeking work in the UK",
+  "uri": "/employmentandlabourmarket/peoplenotinwork/datasets/unemploymentsummary",
   "title": "Unemployment Summary",
   "releaseDate": "19 February 2014",
   "type": "dataset",

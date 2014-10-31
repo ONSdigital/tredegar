@@ -13,6 +13,15 @@
     "/economy/inflationandpriceindices/timeseries/k646"
   ],
   "statsBulletinHeadline": "/economy/inflationandpriceindices/bulletins/consumerpriceinflation",
+  "statsBulletins": [
+    "/economy/inflationandpriceindices/bulletins/consumerpriceinflation",
+    "/economy/inflationandpriceindices/bulletins/housepriceindex"
+  ],
+  "datasets": [
+    "/economy/inflationandpriceindices/datasets/inflationsummary",
+    "/economy/inflationandpriceindices/datasets/retailpricesindex",
+    "/economy/inflationandpriceindices/datasets/producerpricesinflation"
+  ],
   "level": "t3",
   "index": 1,
   "lede": "Consumer price inflation is the speed at which the prices of goods and services bought by households rise or fall. Consumer price inflation is estimated by using price indices. One way to understand a price index is to think of a very large shopping basket containing all the goods and services bought by households. The price index estimates changes to the total cost of this basket. ONS consumer price indices are published monthly.",

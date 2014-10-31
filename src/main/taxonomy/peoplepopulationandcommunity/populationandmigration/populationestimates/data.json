@@ -11,6 +11,15 @@
     "/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/raid129"
   ],
   "statsBulletinHeadline": "/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/annualmidyearpopulationestimates",
+  "statsBulletins": [
+    "/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/annualmidyearpopulationestimates",
+    "/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/estimatesoftheveryoldincludingcentenarians"
+  ],
+  "datasets": [
+    "/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationsummary",
+    "/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationbyageandsex",
+    "/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationforlocalauthorities"
+  ],
   "level": "t3",
   "index": 0,
   "lede": "ONS estimates annually the size of the “usually resident population” at the mid-year point (30 June). This is the population who have been usually resident for a period of at least 12 months, or, if they have been resident for less than this period, intend to stay for at least 12 months in total.  Visitors and short term immigrants are not included, but usual residents of the UK temporarily visiting another country are included.",

@@ -12,6 +12,15 @@
     "/employmentandlabourmarket/peoplenotinwork/timeseries/dpae"
   ],
   "statsBulletinHeadline": "/employmentandlabourmarket/peoplenotinwork/bulletins/uklabourmarket",
+  "statsBulletins": [
+    "/employmentandlabourmarket/peoplenotinwork/bulletins/uklabourmarket",
+    "/employmentandlabourmarket/peoplenotinwork/bulletins/youngpeoplenotineducationemploymentortrainingneet"
+  ],
+  "datasets": [
+    "/employmentandlabourmarket/peoplenotinwork/datasets/unemploymentsummary",
+    "/employmentandlabourmarket/peoplenotinwork/datasets/claimantcountsummary",
+    "/employmentandlabourmarket/peoplenotinwork/datasets/inactivitysummary"
+  ],
   "level": "t3",
   "index": 1,
   "lede": "Consumer price inflation is the speed at which the prices of goods and services bought by households rise or fall.",
