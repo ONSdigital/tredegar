@@ -9,7 +9,6 @@ angular.module('onsTemplates')
     }
 ])
 
-
 .controller('chartController', ['$scope', '$location',
     function($scope, $location) {
         var data = $scope.taxonomy.data;
@@ -30,26 +29,39 @@ angular.module('onsTemplates')
 
         makeArray($scope.chart.data);
         // Year by default
-        $scope.tableValue = makeObj(categoriesY, seriesDataY, categoriesYnum);
+        $scope.tableValue = makeTableObj(categoriesY, seriesDataY, categoriesYnum);
 
-        function makeArray (dat) {
-            for (var i = 0; i < dat.length; i++) {
-                if (reY.test(dat[i].date)){
-                    categoriesY.push(dat[i].date);
-                    categoriesYnum.push(Number(dat[i].date));
-                    seriesDataY.push(Number(dat[i].value));
+        $scope.graphValue = makeGraphValue(categoriesY, seriesDataY);
+
+        function makeGraphValue(x, y) {
+            return [x , y];
+        }
+
+        console.log($scope.graphValue[0][0]);
+
+        //Takes data from json file and transforms it in an array to be read by Highcharts
+        function makeArray(jsonData) {
+            // Will make the buttons for y,q,m appear or not
+            $scope.hasYData = false;
+            $scope.hasQData = false;
+            $scope.hasMData = false;
+            for (var i = 0; i < jsonData.length; i++) {
+                if (reY.test(jsonData[i].date)) {
+                    categoriesY.push(jsonData[i].date);
+                    categoriesYnum.push(Number(jsonData[i].date));
+                    seriesDataY.push(Number(jsonData[i].value));
                     $scope.hasYData = true;
                 }
-                if (reQ.test(dat[i].date)){
-                    categoriesQ.push(dat[i].date);
-                    categoriesQnum.push(QtoNum(dat[i].date));
-                    seriesDataQ.push(Number(dat[i].value));
+                if (reQ.test(jsonData[i].date)) {
+                    categoriesQ.push(jsonData[i].date);
+                    categoriesQnum.push(QtoNum(jsonData[i].date));
+                    seriesDataQ.push(Number(jsonData[i].value));
                     $scope.hasQData = true;
                 }
-                if (reM.test(dat[i].date)){
-                    categoriesM.push(dat[i].date);
-                    categoriesMnum.push(MtoNum(dat[i].date));
-                    seriesDataM.push(Number(dat[i].value));
+                if (reM.test(jsonData[i].date)) {
+                    categoriesM.push(jsonData[i].date);
+                    categoriesMnum.push(MtoNum(jsonData[i].date));
+                    seriesDataM.push(Number(jsonData[i].value));
                     $scope.hasMData = true;
                 }
             }
@@ -57,8 +69,9 @@ angular.module('onsTemplates')
 
         /* ****************************************
         WARNING!!!!
-        THIS WILL FAIL IF THE JSON FORMAT CHANGES
+        THIS WILL FAIL IF THE DATA FORMAT CHANGES
         ******************************************* */
+        // helper to sort table by quarter
         function QtoNum(quarter) {
             return Number(quarter.replace(' Q', '.'));
         }
@@ -66,56 +79,62 @@ angular.module('onsTemplates')
 
         /* ****************************************
         WARNING!!!!
-        THIS WILL FAIL IF THE JSON FORMAT CHANGES
+        THIS WILL FAIL IF THE DATA FORMAT CHANGES
         ******************************************* */
+        // helper to sort table by month
         function MtoNum(months) {
-            var month = months.match(/ [A-Z]{3}/);
-            if (month[0] === ' JAN'){
+            var month = months.match(/ [A-Z]{3}/i);
+            if (month[0].toUpperCase() === ' JAN') {
                 return Number(months.replace(month[0], '.01'));
             }
-            if (month[0] === ' FEB'){
+            if (month[0].toUpperCase() === ' FEB') {
                 return Number(months.replace(month[0], '.02'));
             }
-            if (month[0] === ' MAR'){
+            if (month[0].toUpperCase() === ' MAR') {
                 return Number(months.replace(month[0], '.03'));
             }
-            if (month[0] === ' APR'){
+            if (month[0].toUpperCase() === ' APR') {
                 return Number(months.replace(month[0], '.04'));
             }
-            if (month[0] === ' MAY'){
+            if (month[0].toUpperCase() === ' MAY') {
                 return Number(months.replace(month[0], '.05'));
             }
-            if (month[0] === ' JUN'){
+            if (month[0].toUpperCase() === ' JUN') {
                 return Number(months.replace(month[0], '.06'));
             }
-            if (month[0] === ' JUL'){
+            if (month[0].toUpperCase() === ' JUL') {
                 return Number(months.replace(month[0], '.07'));
             }
-            if (month[0] === ' AUG'){
+            if (month[0].toUpperCase() === ' AUG') {
                 return Number(months.replace(month[0], '.08'));
             }
-            if (month[0] === ' SEP'){
+            if (month[0].toUpperCase() === ' SEP') {
                 return Number(months.replace(month[0], '.09'));
             }
-            if (month[0] === ' OCT'){
+            if (month[0].toUpperCase() === ' OCT') {
                 return Number(months.replace(month[0], '.10'));
             }
-            if (month[0] === ' NOV'){
+            if (month[0].toUpperCase() === ' NOV') {
                 return Number(months.replace(month[0], '.11'));
             }
-            if (month[0] === ' DEC'){
+            if (month[0].toUpperCase() === ' DEC') {
                 return Number(months.replace(month[0], '.12'));
             }
         }
 
-        function makeObj (key, values, number) {
+        // Creates an object for angular table control
+        function makeTableObj(key, values, number) {
             var obj = [];
             var x = [];
-            for(var i = 0; i<key.length; i++){
+            for (var i = 0; i < key.length; i++) {
                 obj[0] = key[i];
                 obj[1] = values[i];
                 obj[2] = number[i];
-                x.push({"date":obj[0], "values":obj[1], "number":obj[2]});
+                x.push({
+                    "date": obj[0],
+                    "values": obj[1],
+                    "number": obj[2]
+                });
             }
             return x;
         }
@@ -134,30 +153,32 @@ angular.module('onsTemplates')
             }
         };
 
-        //Year, Quarter or month
+        //year (0, by Default), quarter (1) or month (2)
         $scope.yqm = 0;
-
-        $scope.changeChartTime = function(time) {
+        $scope.changeTime = function(time) {
             if (time === 'year') {
-                $scope.chartData.options.xAxis.categories = categoriesY;
-                $scope.chartData.options.xAxis.tickInterval = tickInterval(categoriesY.length);
-                $scope.chartData.series[0].data = seriesDataY;
-                $scope.tableValue = makeObj(categoriesY, seriesDataY, categoriesYnum);
+                $scope.tableValue = makeTableObj(categoriesY, seriesDataY, categoriesYnum);
+                $scope.graphValue = makeGraphValue(categoriesY, seriesDataY);
                 $scope.yqm = 0;
+                $scope.chartData.options.xAxis.categories = $scope.graphValue[0];
+                $scope.chartData.options.xAxis.tickInterval = tickInterval(categoriesY.length);
+                $scope.chartData.series[0].data = $scope.graphValue[1];
             }
             if (time === 'quarter') {
-                $scope.chartData.options.xAxis.categories = categoriesQ;
-                $scope.chartData.options.xAxis.tickInterval = tickInterval(categoriesQ.length);
-                $scope.chartData.series[0].data = seriesDataQ;
-                $scope.tableValue = makeObj(categoriesQ, seriesDataQ, categoriesQnum);
+                $scope.tableValue = makeTableObj(categoriesQ, seriesDataQ, categoriesQnum);
+                $scope.graphValue = makeGraphValue(categoriesQ, seriesDataQ);
                 $scope.yqm = 1;
+                $scope.chartData.options.xAxis.categories = $scope.graphValue[0];
+                $scope.chartData.options.xAxis.tickInterval = tickInterval(categoriesQ.length);
+                $scope.chartData.series[0].data = $scope.graphValue[1];
             }
             if (time === 'month') {
-                $scope.chartData.options.xAxis.categories = categoriesM;
-                $scope.chartData.options.xAxis.tickInterval = tickInterval(categoriesM.length);
-                $scope.chartData.series[0].data = seriesDataM;
-                $scope.tableValue = makeObj(categoriesM, seriesDataM, categoriesMnum);
+                $scope.tableValue = makeTableObj(categoriesM, seriesDataM, categoriesMnum);
+                $scope.graphValue = makeGraphValue(categoriesM, seriesDataM);
                 $scope.yqm = 2;
+                $scope.chartData.options.xAxis.categories = $scope.graphValue[0];
+                $scope.chartData.options.xAxis.tickInterval = tickInterval(categoriesM.length);
+                $scope.chartData.series[0].data = $scope.graphValue[1];
             }
         };
 
@@ -185,7 +206,6 @@ angular.module('onsTemplates')
             return tick;
         }
 
-
         function getData() {
             var data = {
                 options: {
@@ -194,209 +214,176 @@ angular.module('onsTemplates')
                     },
                     colors: ['#007dc3', '#409ed2', '#7fbee1', '#007dc3', '#409ed2', '#7fbee1'],
 
-                title: {
-                    text: ''
-                },
-                subtitle: {
-                    text: ''
-                },
-                navigation: {
-                    buttonOptions: {
-                        verticalAlign: 'bottom',
-                        y: 0,
-                        text: 'Image',
-                        theme: {
-                            fill: '#0054aa',
-                            r: 0,
-                            states: {
-                                hover: {
-                                    fill: '#004790'
-                                },
-                                select: {
-                                    fill: '#004790'
+                    title: {
+                        text: ''
+                    },
+                    subtitle: {
+                        text: ''
+                    },
+                    navigation: {
+                        buttonOptions: {
+                            verticalAlign: 'bottom',
+                            y: 0,
+                            text: 'Image',
+                            theme: {
+                                fill: '#0054aa',
+                                r: 0,
+                                states: {
+                                    hover: {
+                                        fill: '#004790'
+                                    },
+                                    select: {
+                                        fill: '#004790'
+                                    }
                                 }
                             }
                         }
-                    }
-                },
-                xAxis: {
-                    categories: categoriesY,
-                    tickInterval: 1,
-                    labels: {
-                        formatter: function() {
-                            var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-                            var response = "";
-                            if (w < 768) {
-                                if (this.isFirst) {
-                                    count = 0;
-                                }
-                                if (count % 3 === 0) {
+                    },
+                    xAxis: {
+                        categories: $scope.graphValue[0],
+                        tickInterval: 1,
+                        labels: {
+                            formatter: function() {
+                                var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+                                var response = "";
+                                if (w < 768) {
+                                    if (this.isFirst) {
+                                        count = 0;
+                                    }
+                                    if (count % 3 === 0) {
+                                        response = this.value;
+                                    }
+                                    count++;
+                                } else {
                                     response = this.value;
                                 }
-                                count++;
-                            } else {
-                                response = this.value;
-                            }
-                            return response;
+                                return response;
+                            },
                         },
+                        tickmarkPlacement: 'on'
                     },
-                    tickmarkPlacement: 'on'
-                },
-                yAxis: {
-                    title: {
-                        text: $scope.chart.units
-                    }
-                },
+                    yAxis: {
+                        title: {
+                            text: $scope.chart.units
+                        }
+                    },
 
-                credits: {
-                    enabled: false
-                },
+                    credits: {
+                        enabled: false
+                    },
 
-                plotOptions: {
-                    series: {
-                        shadow: false,
-                        states: {
-                            hover: {
-                                enabled: true,
-                                shadow: false,
-                                lineWidth: 3,
-                                lineWidthPlus: 0,
-                                marker: {
-                                    height: 0,
-                                    width: 0,
-                                    halo: false,
+                    plotOptions: {
+                        series: {
+                            shadow: false,
+                            states: {
+                                hover: {
                                     enabled: true,
-                                    fillColor: null,
-                                    radiusPlus: null,
+                                    shadow: false,
                                     lineWidth: 3,
-                                    lineWidthPlus: 0
+                                    lineWidthPlus: 0,
+                                    marker: {
+                                        height: 0,
+                                        width: 0,
+                                        halo: false,
+                                        enabled: true,
+                                        fillColor: null,
+                                        radiusPlus: null,
+                                        lineWidth: 3,
+                                        lineWidthPlus: 0
+                                    }
                                 }
                             }
                         }
-                    }
-                },
-                tooltip: {
-                    shared: true,
-                    width: '150px',
-                    crosshairs: {
-                        width: 2,
-                        color: '#f37121'
                     },
-                    positioner: function(labelWidth, labelHeight, point) {
-                        var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-                        var points = {
-                            x: 30,
-                            y: 42
-                        };
-                        var tooltipX, tooltipY;
-                        var chart = Highcharts.charts[Highcharts.charts.length - 1];
-                        if (w > 768) {
+                    tooltip: {
+                        shared: true,
+                        width: '150px',
+                        crosshairs: {
+                            width: 2,
+                            color: '#f37121'
+                        },
+                        positioner: function(labelWidth, labelHeight, point) {
+                            var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+                            var points = {
+                                x: 30,
+                                y: 42
+                            };
+                            var tooltipX, tooltipY;
+                            var chart = Highcharts.charts[Highcharts.charts.length - 1];
+                            if (w > 768) {
 
-                            if (point.plotX + labelWidth > chart.plotWidth) {
-                                tooltipX = point.plotX + chart.plotLeft - labelWidth - 20;
-                                $("#custom-tooltip").removeClass('tooltip-left');
+                                if (point.plotX + labelWidth > chart.plotWidth) {
+                                    tooltipX = point.plotX + chart.plotLeft - labelWidth - 20;
+                                    $("#custom-tooltip").removeClass('tooltip-left');
+                                } else {
+                                    tooltipX = point.plotX + chart.plotLeft + 20;
+                                    $("#custom-tooltip").removeClass('tooltip-right');
+                                }
+
+                                tooltipY = 50;
+                                points = {
+                                    x: tooltipX,
+                                    y: tooltipY
+                                };
                             } else {
-                                tooltipX = point.plotX + chart.plotLeft + 20;
+                                $("#custom-tooltip").removeClass('tooltip-left');
                                 $("#custom-tooltip").removeClass('tooltip-right');
                             }
 
-                            tooltipY = 50;
-                            points = {
-                                x: tooltipX,
-                                y: tooltipY
-                            };
-                        } else {
-                            $("#custom-tooltip").removeClass('tooltip-left');
-                            $("#custom-tooltip").removeClass('tooltip-right');
-                        }
+                            return points;
+                        },
 
-                        return points;
-                    },
+                        formatter: function() {
+                            var id = '<div id="custom-tooltip" class="tooltip-left tooltip-right">';
+                            var block = id + "<div class='sidebar' >";
+                            var title = '<b class="title">' + this.x + ': </b><br/>';
+                            var symbol = ['<div class="circle">●</div>', '<div class="square">■</div>', '<div class="diamond">♦</div>', '<div class="triangle">▲</div>', '<div class="triangle">▼</div>'];
 
-                    formatter: function() {
-                        var id = '<div id="custom-tooltip" class="tooltip-left tooltip-right">';
-                        var block = id + "<div class='sidebar' >";
-                        var title = '<b class="title">' + this.x + ': </b><br/>';
-                        var symbol = ['<div class="circle">●</div>', '<div class="square">■</div>', '<div class="diamond">♦</div>', '<div class="triangle">▲</div>', '<div class="triangle">▼</div>'];
+                            var content = block + "<div class='title'>&nbsp;</div>";
 
-                        var content = block + "<div class='title'>&nbsp;</div>";
+                            // symbols
+                            $.each(this.points, function(i, val) {
+                                content += symbol[i];
+                            });
 
-                        // symbols
-                        $.each(this.points, function(i, val) {
-                            content += symbol[i];
-                        });
+                            content += "</div>";
+                            content += "<div class='mainText'>";
+                            content += title;
 
-                        content += "</div>";
-                        content += "<div class='mainText'>";
-                        content += title;
+                            // series names and values
+                            $.each(this.points, function(i, val) {
+                                content += '<div class="tiptext"><i>' + val.point.series.chart.series[i].name + "</i><br/><b>Value: " + Highcharts.numberFormat(val.y, 2) + '</b></div>';
+                            });
+                            content += "</div>";
+                            return content;
+                        },
 
-                        // series names and values
-                        $.each(this.points, function(i, val){
-                            content += '<div class="tiptext"><i>' + val.point.series.chart.series[i].name + "</i><br/><b>Value: " + Highcharts.numberFormat(val.y, 2) +'</b></div>' ;
-                        });
-                        content+= "</div>";
-                        return content;
-                    },
+                        backgroundColor: 'rgba(255, 255, 255, 0)',
+                        borderWidth: 0,
+                        borderColor: 'rgba(255, 255, 255, 0)',
+                        shadow: false,
+                        useHTML: true
 
-
-
-                    //     // series names and values
-                    //     $.each(this.points, function(i, val) {
-                    //         content += '<div class="tiptext"><b>' + val.point.series.chart.series[i].name + "= </b>" + Highcharts.numberFormat(val.y, 2) + '</div>';
-                    //     });
-                    //     content += "</div>";
-                    //     return content;
-                    // },
-
-                    backgroundColor: 'rgba(255, 255, 255, 0)',
-                    borderWidth: 0,
-                    borderColor: 'rgba(255, 255, 255, 0)',
-                    shadow: false,
-                    useHTML: true
-
-                }
+                    }
                 },
 
-
-
-                /*
-
-                    Solid
-                    ShortDash
-                    ShortDot
-                    ShortDashDot
-                    ShortDashDotDot
-                    Dot
-                    Dash
-                    LongDash
-                    DashDot
-                    LongDashDot
-                    LongDashDotDot
-
-                */
-
                 series: [{
-                        name: $scope.chart.name,
-                        data: seriesDataY,
-                        marker: {
-                            symbol: "circle",
-                            states: {
-                                hover: {
-                                    fillColor: '#007dc3',
-                                    radiusPlus: 0,
-                                    lineWidthPlus: 0
-                                }
+                    name: $scope.chart.name,
+                    data: $scope.graphValue[1],
+                    marker: {
+                        symbol: "circle",
+                        states: {
+                            hover: {
+                                fillColor: '#007dc3',
+                                radiusPlus: 0,
+                                lineWidthPlus: 0
                             }
-                        },
-                        dashStyle: 'Solid',
-                    }
-                ]
+                        }
+                    },
+                    dashStyle: 'Solid',
+                }]
             };
             return data;
         }
     }
 ]);
-
-
-//     });
-// }]);
