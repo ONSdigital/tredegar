@@ -5,6 +5,6 @@ import java.util.List;
 public class DownloadRequest {
 	
 	public String type;
-	public List<String> urlList;
+	public List<String> uriList;
 	
 }

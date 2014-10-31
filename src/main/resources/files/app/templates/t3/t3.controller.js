@@ -50,19 +50,19 @@
 			var downloadRequest = {
 				type: type
 			}
-			downloadRequest.urlList = getFileList()
+			downloadRequest.uriList = getFileList()
 			downloadFile(downloadRequest)
 			
 		}
 
 		function getFileList() {
-			var urlList = []
+			var uriList = []
 			for (var i = 0; i < items.length; i++) {
 				if (items[i].isSelected) {
-					urlList.push(items[i].url)
+					uriList.push(items[i].url)
 				}
 			}
-			return urlList
+			return uriList
 		}
 
 
