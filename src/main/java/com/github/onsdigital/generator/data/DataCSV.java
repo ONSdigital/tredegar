@@ -46,6 +46,19 @@ public class DataCSV {
 		for (Path file : files) {
 			read(file);
 		}
+
+		readManuallyEditedCsv();
+	}
+
+	private static void readManuallyEditedCsv() throws IOException {
+		try {
+			// Now apply the data from the manually-prepared CSV:
+			URL resource = DataCSV.class.getResource(resourceName + "/" + "Timeseries data - MM23_CSDB_DS.csdb.csv");
+			Path manuallyEditedCsv = Paths.get(resource.toURI());
+			read(manuallyEditedCsv);
+		} catch (URISyntaxException e) {
+			throw new IOException(e);
+		}
 	}
 
 	private static void read(Path file) throws IOException {
@@ -63,7 +76,7 @@ public class DataCSV {
 				if (timeseries == null) {
 					timeseries = Data.addTimeseries(header[i]);
 					timeseries.data = new ArrayList<>();
-				} else {
+				} else if (timeseries.data != null && timeseries.data.size() > 0) {
 					// Don't process this timeseries - it's a duplicate.
 					duplicates++;
 					header[i] = null;
@@ -114,7 +127,7 @@ public class DataCSV {
 
 				// Iterate the paths in this directory:
 				for (Path item : stream) {
-					if (!StringUtils.equals(item.getFileName().toString(), "Data for non-CDID hero series.xlsx")) {
+					if (!StringUtils.equals(item.getFileName().toString(), "Timeseries data - MM23_CSDB_DS.csdb.csv")) {
 						result.add(item);
 					}
 				}
