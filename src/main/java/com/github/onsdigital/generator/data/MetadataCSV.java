@@ -75,8 +75,8 @@ public class MetadataCSV {
 			timeseries.unit = row.get("Units");
 			timeseries.mainMeasure = row.get("Main measure");
 			timeseries.description = row.get("Description");
-			timeseries.note1 = row.get("Note 1");
-			timeseries.note2 = row.get("Note 2");
+			timeseries.note1 = StringUtils.defaultIfBlank(row.get("Note 1"), timeseries.note1);
+			timeseries.note2 = StringUtils.defaultIfBlank(row.get("Note 2"), timeseries.note2);
 			updates++;
 		}
 		System.out.println("Updated " + updates + " timeseries with Rob's metadata.");
