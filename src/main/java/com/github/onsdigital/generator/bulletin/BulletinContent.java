@@ -6,20 +6,19 @@ import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
 
-import com.github.onsdigital.generator.CSV;
 import com.github.onsdigital.generator.Folder;
+import com.github.onsdigital.generator.data.Csv;
 import com.github.onsdigital.json.bulletin.Bulletin;
 
 public class BulletinContent {
 
-	private static List<Map<String, String>> rows;
+	private static Csv rows;
 
 	public static List<Bulletin> getBulletins(Folder folder) throws IOException {
 		List<Bulletin> result = null;
 
 		// Parse the data:
 		if (rows == null) {
-			System.out.println("WTF: rows is null");
 			parseCsv();
 		}
 
@@ -66,7 +65,9 @@ public class BulletinContent {
 	}
 
 	private static void parseCsv() throws IOException {
-		rows = CSV.parse("/Alpha bulletin content.csv");
+		rows = new Csv("/Alpha bulletin content.csv");
+		rows.read();
+		rows.getHeadings();
 		// String[] headings = { "Theme", "Level 2", "Level 3", "Name", "Key",
 		// "Units", "CDID", "Path", "Link", "Notes" };
 

@@ -9,14 +9,19 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
 
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -42,6 +47,7 @@ public class Csv implements Iterable<Map<String, String>> {
 	private List<String[]> rows;
 	private XSSFWorkbook xssfWorkbook;
 	private int sheetIndex;
+	private static Set<String> formatStrings = new TreeSet<>();
 
 	public Csv(Path path) {
 		this.path = path;
@@ -115,13 +121,110 @@ public class Csv implements Iterable<Map<String, String>> {
 				for (int c = 0; c < columnTotal; c++) {
 					XSSFCell cell = row.getCell(c);
 					if (cell != null) {
-						cells[c] = cell.toString();
+
+						String value;
+
+						// Excel makes a dog's dinner of numerical values:
+
+						// toString() before = 64.1
+						// getRawValue() before = 64.099999999999994
+						// [set cell type to string]
+						// toString() after = 64.099999999999994
+						// getRawValue() after = 1563 <- this is a reference
+						// to the string table in the spreadsheet
+
+						// toString() before = 2012.0
+						// getRawValue() before = 2012
+						// [set cell type to string]
+						// toString() after = 2012
+						// getRawValue() after = 1446 <- this is a reference
+						// to the string table in the spreadsheet
+
+						// So... we do some acrobatics here for Alpha purposes
+						// only.
+						// TODO: Burn this code in Beta. Then find a solution to
+						// dealing with Microsoft's high regard for standards.
+
+						// Format numbers as strings to try and get the value as
+						// displayed in the spreadsheet:
+						// String rawValue = cell.getRawValue();
+						String dataFormat = cell.getCellStyle().getDataFormatString();
+						formatStrings.add(dataFormat);
+						if (cell.getCellType() == Cell.CELL_TYPE_NUMERIC) {
+
+							// System.out.println("toString() before     = " +
+							// cell.toString());
+							// System.out.println("getRawValue() before = " +
+							// cell.getRawValue());
+							cell.setCellType(Cell.CELL_TYPE_STRING);
+							// System.out.println("toString()      after  = " +
+							// cell.toString());
+							// System.out.println("getRawValue() after  = " +
+							// cell.getRawValue());
+
+							if (dataFormat.contains("0") && !dataFormat.contains("[Red]")) {
+								// Remove commas from numbers - these would
+								// break the graphs.
+								dataFormat = dataFormat.replaceAll(",", "");
+
+								if (dataFormat.contains(";")) {
+									// e.g. #,##0_);(#,##0)
+									dataFormat = dataFormat.substring(0, dataFormat.indexOf(';'));
+								}
+
+								// e.g. ###0_)
+								dataFormat = dataFormat.replaceAll("\\(", "");
+								dataFormat = dataFormat.replaceAll("\\)", "");
+								dataFormat = dataFormat.replaceAll("\\_", "");
+
+								NumberFormat format = new DecimalFormat(dataFormat);
+								Double d = Double.parseDouble(cell.toString());
+								value = format.format(d);
+							} else {
+								// Probably a "General" format.
+								value = cell.toString();
+							}
+							// System.out.println("Format: " + dataFormat);
+						} else {
+							value = cell.toString();
+						}
+
+						// Last-resort tweak.
+						// This seems to be needed if the cell format is
+						// "General"
+						if (value.contains("00000")) {
+							value = value.substring(0, value.indexOf("00000"));
+						}
+						if (value.contains("99999")) {
+							// Not strictly correct (should round up), but good
+							// enough for now:
+							value = value.substring(0, value.indexOf("99999"));
+						}
+
+						if (cell.getCellType() == Cell.CELL_TYPE_NUMERIC) {
+							// System.out.println("Value: " + value);
+							// System.out.println();
+						}
+
+						// if (rawValue != null && (rawValue.contains("00000")
+						// || rawValue.contains("99999")) &&
+						// !"0.0".equals(dataFormat)) {
+						// System.out.println("mince");
+						// } else if (rawValue == null) {
+						// System.out.println("Canhasnull?");
+						// }
+						// if (value.endsWith("_)")) {
+						// System.out.println("WAT?!");
+						// }
+
+						cells[c] = value;
 					}
 				}
+				result.add(cells);
 			}
-			result.add(cells);
 		}
 
+		System.out.println(formatStrings);
 		return result;
 	}
 
@@ -146,7 +249,7 @@ public class Csv implements Iterable<Map<String, String>> {
 
 			@Override
 			public boolean hasNext() {
-				return index < rows.size();
+				return rows != null && index < rows.size();
 			}
 
 			@Override

@@ -1,14 +1,21 @@
 package com.github.onsdigital.generator.data;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.TreeSet;
 
 import org.apache.commons.lang3.StringUtils;
 
 import com.github.onsdigital.generator.Folder;
 import com.github.onsdigital.json.timeseries.Timeseries;
+import com.github.onsdigital.json.timeseries.TimeseriesValue;
 
 /**
  * This class provides a structure for holding data used in building the
@@ -53,6 +60,7 @@ public class Data {
 		DataCSV.parse();
 		MetadataCSV.parse();
 		AlphaContentCSV.parse();
+		System.out.println("Parsing complete.");
 	}
 
 	/**
@@ -189,6 +197,72 @@ public class Data {
 	 */
 	public static int size() {
 		return timeserieses.size();
+	}
+
+	public static Collection<String> getDateLabels() {
+		Set<String> result = new TreeSet<>();
+
+		for (Timeseries timeseries : timeserieses.values()) {
+			if (timeseries.data != null) {
+				for (TimeseriesValue value : timeseries.data) {
+					result.add(value.date);
+				}
+			}
+		}
+
+		List<String> list = new ArrayList<String>(result);
+		Collections.sort(list, new Comparator<String>() {
+
+			String[] shortMonth = { "jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec" };
+			String[] fullMonth = { "january", "febuary", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december" };
+			String year = "\\d{4}(\\.\\d)?";
+			String yearMonth = "\\d{4} \\w{3}";
+
+			@Override
+			public int compare(String o1, String o2) {
+
+				String o1Standard = o1.toLowerCase();
+				String o2Standard = o2.toLowerCase();
+
+				if (o1Standard.matches(year)) {
+					o1Standard = "year: " + o1Standard;
+				}
+				if (o2Standard.matches(year)) {
+					o2Standard = "year: " + o2Standard;
+				}
+				if (o1Standard.matches(yearMonth)) {
+					o1Standard = "year month: " + o1Standard;
+				}
+				if (o2Standard.matches(yearMonth)) {
+					o2Standard = "year month: " + o2Standard;
+				}
+
+				o1Standard = replaceMonth(o1Standard);
+				o2Standard = replaceMonth(o2Standard);
+
+				return o1Standard.compareTo(o2Standard);
+			}
+
+			private String replaceMonth(String date) {
+				String result = date;
+				for (int i = 0; i < 12; i++) {
+					String number = String.valueOf(i);
+					if (number.length() < 2) {
+						number = "0" + number;
+					}
+					if (result.contains(fullMonth[i])) {
+						result.replace(fullMonth[i], number);
+					}
+					if (result.contains(shortMonth[i])) {
+						result.replace(shortMonth[i], number);
+					}
+				}
+				return result;
+			}
+
+		});
+
+		return list;
 	}
 
 	/**

@@ -96,9 +96,10 @@ class AlphaContentCSV {
 			String date = row.get(PERIOD);
 			if (date.endsWith(".0")) {
 				date = date.substring(0, date.length() - 2);
-			} else {
-				System.out.println(date);
 			}
+			// else {
+			// System.out.println(date);
+			// }
 			timeseries.date = date;
 
 			// Give the figure a sensible format.

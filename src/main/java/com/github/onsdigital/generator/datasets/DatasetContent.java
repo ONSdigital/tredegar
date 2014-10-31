@@ -6,14 +6,14 @@ import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
 
-import com.github.onsdigital.generator.CSV;
 import com.github.onsdigital.generator.Folder;
+import com.github.onsdigital.generator.data.Csv;
 import com.github.onsdigital.json.Dataset;
 import com.github.onsdigital.json.DownloadSection;
 
 public class DatasetContent {
 
-	private static List<Map<String, String>> rows;
+	private static Csv rows;
 
 	public static List<Dataset> getDatasets(Folder folder) throws IOException {
 		List<Dataset> result = null;
@@ -51,7 +51,9 @@ public class DatasetContent {
 	}
 
 	private static void parseCsv() throws IOException {
-		rows = CSV.parse("/Alpha dataset content.csv");
+		rows = new Csv("/Alpha dataset content.csv");
+		rows.read();
+		rows.getHeadings();
 		// String[] headings = { "Theme", "Level 2", "Level 3", "Name", "Key",
 		// "Units", "CDID", "Path", "Link", "Notes" };
 
@@ -70,7 +72,6 @@ public class DatasetContent {
 			if (StringUtils.isNotBlank(row.get("Level 3"))) {
 				node = node.getChild(row.get("Level 3"));
 			}
-
 
 			Dataset dataset = new Dataset();
 			dataset.name = StringUtils.trim(row.get("Name"));

@@ -21,7 +21,6 @@ import org.apache.commons.lang3.StringUtils;
 
 import au.com.bytecode.opencsv.CSVReader;
 
-import com.github.onsdigital.generator.TimeseriesData;
 import com.github.onsdigital.json.timeseries.Timeseries;
 
 /**
@@ -119,7 +118,7 @@ public class MetadataCSV {
 		Set<Path> result = new HashSet<>();
 
 		try {
-			URL resource = TimeseriesData.class.getResource(resourceName);
+			URL resource = MetadataCSV.class.getResource(resourceName);
 			Path folder = Paths.get(resource.toURI());
 
 			try (DirectoryStream<Path> stream = Files.newDirectoryStream(folder, "*.csv")) {

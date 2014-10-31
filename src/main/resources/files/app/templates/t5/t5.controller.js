@@ -14,10 +14,13 @@ angular.module('onsTemplates')
     function($scope, $location) {
         var data = $scope.taxonomy.data;
         var categoriesY = [];
+        var categoriesYnum = [];
         var seriesDataY = [];
         var categoriesQ = [];
+        var categoriesQnum = [];
         var seriesDataQ = [];
         var categoriesM = [];
+        var categoriesMnum = [];
         var seriesDataM = [];
         var reY = new RegExp('^[0-9]{4}$');
         var reQ = new RegExp('^[0-9]{4}.[Q1-4]{2}$');
@@ -27,35 +30,92 @@ angular.module('onsTemplates')
 
         makeArray($scope.chart.data);
         // Year by default
-        $scope.tableValue = makeObj(categoriesY, seriesDataY);
+        $scope.tableValue = makeObj(categoriesY, seriesDataY, categoriesYnum);
 
         function makeArray (dat) {
             for (var i = 0; i < dat.length; i++) {
                 if (reY.test(dat[i].date)){
                     categoriesY.push(dat[i].date);
+                    categoriesYnum.push(Number(dat[i].date));
                     seriesDataY.push(Number(dat[i].value));
                     $scope.hasYData = true;
                 }
                 if (reQ.test(dat[i].date)){
                     categoriesQ.push(dat[i].date);
+                    categoriesQnum.push(QtoNum(dat[i].date));
                     seriesDataQ.push(Number(dat[i].value));
                     $scope.hasQData = true;
                 }
                 if (reM.test(dat[i].date)){
                     categoriesM.push(dat[i].date);
+                    categoriesMnum.push(MtoNum(dat[i].date));
                     seriesDataM.push(Number(dat[i].value));
                     $scope.hasMData = true;
                 }
             }
         }
 
-        function makeObj (key, values) {
+        /* ****************************************
+        WARNING!!!!
+        THIS WILL FAIL IF THE JSON FORMAT CHANGES
+        ******************************************* */
+        function QtoNum(quarter) {
+            return Number(quarter.replace(' Q', '.'));
+        }
+
+
+        /* ****************************************
+        WARNING!!!!
+        THIS WILL FAIL IF THE JSON FORMAT CHANGES
+        ******************************************* */
+        function MtoNum(months) {
+            var month = months.match(/ [A-Z]{3}/);
+            if (month[0] === ' JAN'){
+                return Number(months.replace(month[0], '.01'));
+            }
+            if (month[0] === ' FEB'){
+                return Number(months.replace(month[0], '.02'));
+            }
+            if (month[0] === ' MAR'){
+                return Number(months.replace(month[0], '.03'));
+            }
+            if (month[0] === ' APR'){
+                return Number(months.replace(month[0], '.04'));
+            }
+            if (month[0] === ' MAY'){
+                return Number(months.replace(month[0], '.05'));
+            }
+            if (month[0] === ' JUN'){
+                return Number(months.replace(month[0], '.06'));
+            }
+            if (month[0] === ' JUL'){
+                return Number(months.replace(month[0], '.07'));
+            }
+            if (month[0] === ' AUG'){
+                return Number(months.replace(month[0], '.08'));
+            }
+            if (month[0] === ' SEP'){
+                return Number(months.replace(month[0], '.09'));
+            }
+            if (month[0] === ' OCT'){
+                return Number(months.replace(month[0], '.10'));
+            }
+            if (month[0] === ' NOV'){
+                return Number(months.replace(month[0], '.11'));
+            }
+            if (month[0] === ' DEC'){
+                return Number(months.replace(month[0], '.12'));
+            }
+        }
+
+        function makeObj (key, values, number) {
             var obj = [];
             var x = [];
             for(var i = 0; i<key.length; i++){
                 obj[0] = key[i];
                 obj[1] = values[i];
-                x.push({"date":obj[0], "values":obj[1]});
+                obj[2] = number[i];
+                x.push({"date":obj[0], "values":obj[1], "number":obj[2]});
             }
             return x;
         }
@@ -82,21 +142,21 @@ angular.module('onsTemplates')
                 $scope.chartData.options.xAxis.categories = categoriesY;
                 $scope.chartData.options.xAxis.tickInterval = tickInterval(categoriesY.length);
                 $scope.chartData.series[0].data = seriesDataY;
-                $scope.tableValue = makeObj(categoriesY, seriesDataY);
+                $scope.tableValue = makeObj(categoriesY, seriesDataY, categoriesYnum);
                 $scope.yqm = 0;
             }
             if (time === 'quarter') {
                 $scope.chartData.options.xAxis.categories = categoriesQ;
                 $scope.chartData.options.xAxis.tickInterval = tickInterval(categoriesQ.length);
                 $scope.chartData.series[0].data = seriesDataQ;
-                $scope.tableValue = makeObj(categoriesQ, seriesDataQ);
+                $scope.tableValue = makeObj(categoriesQ, seriesDataQ, categoriesQnum);
                 $scope.yqm = 1;
             }
             if (time === 'month') {
                 $scope.chartData.options.xAxis.categories = categoriesM;
                 $scope.chartData.options.xAxis.tickInterval = tickInterval(categoriesM.length);
                 $scope.chartData.series[0].data = seriesDataM;
-                $scope.tableValue = makeObj(categoriesM, seriesDataM);
+                $scope.tableValue = makeObj(categoriesM, seriesDataM, categoriesMnum);
                 $scope.yqm = 2;
             }
         };

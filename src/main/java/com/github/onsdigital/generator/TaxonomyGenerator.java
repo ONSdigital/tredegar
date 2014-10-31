@@ -194,6 +194,7 @@ public class TaxonomyGenerator {
 			}
 		}
 
+		// System.out.println(Data.getDateLabels());
 		System.out.println("You have a grand total of " + Data.size() + " timeseries. Wow.");
 	}
 
@@ -325,7 +326,7 @@ public class TaxonomyGenerator {
 		if (statsBulletinHeadline != null) {
 			t3.statsBulletinHeadline = statsBulletinHeadline;
 		}
-		
+
 		t3.statsBulletins.clear();
 		List<Bulletin> bulletins = BulletinContent.getBulletins(folder);
 
