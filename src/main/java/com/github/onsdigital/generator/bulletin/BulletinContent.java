@@ -67,6 +67,8 @@ public class BulletinContent {
 
 	private static void parseCsv() throws IOException {
 		rows = new Csv("/Alpha bulletin content.csv");
+		rows.read();
+		rows.getHeadings();
 		// String[] headings = { "Theme", "Level 2", "Level 3", "Name", "Key",
 		// "Units", "CDID", "Path", "Link", "Notes" };
 

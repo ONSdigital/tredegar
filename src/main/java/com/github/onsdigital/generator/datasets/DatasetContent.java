@@ -52,6 +52,8 @@ public class DatasetContent {
 
 	private static void parseCsv() throws IOException {
 		rows = new Csv("/Alpha dataset content.csv");
+		rows.read();
+		rows.getHeadings();
 		// String[] headings = { "Theme", "Level 2", "Level 3", "Name", "Key",
 		// "Units", "CDID", "Path", "Link", "Notes" };
 
