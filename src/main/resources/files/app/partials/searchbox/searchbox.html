@@ -1,5 +1,5 @@
 <div class="slate--mid-grey_new search-wrapper">
-    <form  ng-submit="goToSearch(searchTerm)" class="nav-search nav-search--hidden ng-pristine ng-valid" id="searchBar" aria-expanded="false">
+    <form  ng-class="hideSearch ? 'nav-search--hidden' : '' "  ng-submit="goToSearch(searchTerm)" class="nav-search ng-pristine ng-valid" id="searchBar" aria-expanded="false">
       <div class="nav-search__container">
         <label class="visuallyhidden" for="nav-search">Search for keyword or time series ID</label>
         <input type="search" class="nav-search__field" id="nav-search" name="nav-search" value="" name="q" ng-model="searchTerm" placeholder="Enter keyword or time series ID">
