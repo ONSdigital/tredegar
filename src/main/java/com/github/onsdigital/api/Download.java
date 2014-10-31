@@ -1,8 +1,8 @@
 package com.github.onsdigital.api;
 
-import java.io.File;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.io.OutputStreamWriter;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -25,6 +25,7 @@ import org.apache.poi.xssf.usermodel.XSSFFont;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.eclipse.jetty.http.HttpStatus;
 
+import au.com.bytecode.opencsv.CSVWriter;
 
 /**
  * 
@@ -40,6 +41,8 @@ import com.github.onsdigital.json.timeseries.TimeseriesValue;
 
 @Endpoint
 public class Download {
+
+	public final char CSV_DELIMTER = ',';
 
 	@POST
 	public void get(@Context HttpServletRequest request, @Context HttpServletResponse response) throws IOException {
@@ -66,18 +69,64 @@ public class Download {
 		case "xlsx":
 			generateExcelFile(output, dataList);
 		case "csv":
+			generateCsvFile(output, dataList);
 		default:
 			break;
 		}
 
 	}
 
-	private File generateCsvFile(List<Timeseries> dataList) {
-		for (Timeseries timeseries : dataList) {
+	private void generateCsvFile(OutputStream output, List<Timeseries> timeseriesList) throws IOException {
+		CSVWriter writer = new CSVWriter(new OutputStreamWriter(output), CSV_DELIMTER);
+		generateCsvHeaders(writer, timeseriesList);
+		generateCsvRows(writer, timeseriesList);
+	}
 
+	private void generateCsvRows(CSVWriter writer, List<Timeseries> timeseriesList) {
+		List<Iterator<TimeseriesValue>> iterators = getIterators(timeseriesList);
+		int size = timeseriesList.size() * 3;
+		String[] row;
+		
+		while (hasMoreData(iterators)) { // Check if any of the lists has more
+			// data left
+			int i = 0;
+			row = newRow(size);
+			for (Iterator<TimeseriesValue> iterator : iterators) {
+				if (iterator.hasNext()) {
+					TimeseriesValue timeseriesValue = iterator.next();
+					row[i++] = timeseriesValue.date;
+					row[i++] = timeseriesValue.value;
+				} else {
+					row[i++] ="";
+					row[i++] ="";
+				}
+				row[i++] = "";
+			}
+			writer.writeNext(row);
 		}
+	}
 
-		return null;
+	@SuppressWarnings("unused")
+	private void generateCsvHeaders(CSVWriter writer, List<Timeseries> timeSeriesList) {
+		int size = timeSeriesList.size() * 3;
+		String[] row = newRow(size);
+		int i = 0;
+		for (Timeseries timeseries : timeSeriesList) {
+			row[i++] = timeseries.name;
+			row[i++] = "";
+			row[i++] = "";
+		}
+		writer.writeNext(row);
+		
+		row = newRow(size);
+		i=0;
+		for (Timeseries timeseries : timeSeriesList) {
+			row[i++] = "Date";
+			row[i++] = "Value";
+			row[i++] = "";
+		}
+		writer.writeNext(row);
+
 	}
 
 	private void generateExcelFile(OutputStream output, List<Timeseries> timeSeriesList) throws IOException {
@@ -91,21 +140,8 @@ public class Download {
 	}
 
 	private void generateRows(Sheet sheet, List<Timeseries> timeseriesList) {
-		// CellStyle cellStyle = wb.createCellStyle();
-		// Font cellFont = wb.createFont();
-		// cellFont.setBoldweight(XSSFFont.BOLDWEIGHT_NORMAL);
-		// cellStyle.setFont(cellFont);
-
 		// Get iterator for each timeseries data
-		List<Iterator<TimeseriesValue>> iterators = new ArrayList<Iterator<TimeseriesValue>>();
-		for (Timeseries timeseries : timeseriesList) {
-			if(timeseries.data == null) {
-				//Temporary fix for timeseries with no data
-				timeseries.data = Collections.emptyList();
-			}
-			iterators.add(timeseries.data.iterator());
-		}
-
+		List<Iterator<TimeseriesValue>> iterators = getIterators(timeseriesList);
 		int rowIndex = 2;
 		while (hasMoreData(iterators)) { // Check if any of the lists has more
 											// data left
@@ -124,6 +160,18 @@ public class Download {
 				columnIndex++;
 			}
 		}
+	}
+
+	private List<Iterator<TimeseriesValue>> getIterators(List<Timeseries> timeseriesList) {
+		List<Iterator<TimeseriesValue>> iterators = new ArrayList<Iterator<TimeseriesValue>>();
+		for (Timeseries timeseries : timeseriesList) {
+			if (timeseries.data == null) {
+				// Temporary fix for timeseries with no data
+				timeseries.data = Collections.emptyList();
+			}
+			iterators.add(timeseries.data.iterator());
+		}
+		return iterators;
 	}
 
 	private void generateHeaders(Workbook wb, Sheet sheet, List<Timeseries> timeseriesList) {
@@ -153,8 +201,8 @@ public class Download {
 			Cell valueHeader = row.createCell(++i);
 			valueHeader.setCellValue("Value");
 			valueHeader.setCellStyle(styleHeader);
-			
-			i++; //Empty column
+
+			i++; // Empty column
 		}
 	}
 
@@ -167,5 +215,9 @@ public class Download {
 			}
 		}
 		return false; // No more data in non of the lists
+	}
+	
+	private String[] newRow(int size) {
+		return new String[size];
 	}
 }

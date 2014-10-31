@@ -79,7 +79,7 @@
 
 		        // Get the filename from the x-filename header or default to "download.bin"
 		        // var filename = headers['x-filename'] || 'download.bin';
-		        var filename = 'data.' + downloadRequest.type;
+		        var filename = $scope.getPage() +  '.' + downloadRequest.type;
 
 
 		        // Determine the content type from the header or default to "application/octet-stream"
