@@ -33,7 +33,8 @@ public class T3 extends TaxonomyHome {
 		items.add(URI.create("/economy/inflationandpriceindices/timeseries/kvr8"));
 		items.add(URI.create("/economy/inflationandpriceindices/timeseries/kvr9"));
 
-		statsBulletinHeadline = URI.create("/economy/inflationandpriceindices/bulletins/consumerpriceinflation");
+		// statsBulletinHeadline =
+		// URI.create("/economy/inflationandpriceindices/bulletins/consumerpriceinflation");
 		statsBulletins.add(URI.create("/economy/inflationandpriceindices/bulletins/consumerpriceinflation"));
 		statsBulletins.add(URI.create("/economy/inflationandpriceindices/bulletins/housepriceindex"));
 

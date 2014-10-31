@@ -77,9 +77,12 @@
               <div id="statsBulletinHeadlines" class="divider__half">
                 <h3 class="body-type lede flush--bottom navpanel-list-heading">Statistical Bulletin Headlines</h3>
                 <ul class="list--bullet mini flush--half--top navpanel-list">
-                  <li>{{taxonomy.data.statsBulletinHeadlineData.headline1}}</li>
-                  <li>{{taxonomy.data.statsBulletinHeadlineData.headline2}}</li>
-                  <li>{{taxonomy.data.statsBulletinHeadlineData.headline3}}</li>
+                  <li ng-if="taxonomy.data.statsBulletinHeadlineData.headline1">{{taxonomy.data.statsBulletinHeadlineData.headline1}}</li>
+                  <li ng-if="taxonomy.data.statsBulletinHeadlineData.headline1">{{taxonomy.data.statsBulletinHeadlineData.headline2}}</li>
+                  <li ng-if="taxonomy.data.statsBulletinHeadlineData.headline1">{{taxonomy.data.statsBulletinHeadlineData.headline3}}</li>
+                  <li ng-if="!taxonomy.data.statsBulletinHeadlineData">Lorem ipsum dolor sit amet, vel oporteat percipitur ex, quando persecuti id mea, pri at nihil essent aliquid.</li>
+                  <li ng-if="!taxonomy.data.statsBulletinHeadlineData">Lorem ipsum dolor sit amet, vel oporteat percipitur ex, quando persecuti id mea, pri at nihil essent aliquid.</li>
+                  <li ng-if="!taxonomy.data.statsBulletinHeadlineData">Lorem ipsum dolor sit amet, vel oporteat percipitur ex, quando persecuti id mea, pri at nihil essent aliquid.</li>                  
                   </ul>
                     <a class="div_panel_link" href=#!{{taxonomy.data.statsBulletinHeadlineData.url}}>
                       View the statistical bulletin &gt;                   
