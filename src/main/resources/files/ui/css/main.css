@@ -2876,7 +2876,7 @@ lesser , applied styles
 
 .ons-nav {
   background-color: #333333; }
-
+/*
 .nav--primary {
   font-size: 14px; }
   .nav--primary > li {
@@ -2936,7 +2936,7 @@ lesser , applied styles
       position: relative;
       display: table-cell;
       width: 18%;/*--altered to accomodate home--*/
-      text-align: center;
+/*      text-align: center;
       vertical-align: middle; }
 
 
@@ -2968,7 +2968,7 @@ lesser , applied styles
 .nav--primary__active,
 .nav--primary__active > a {
   color: #828282; }
-
+*/*/
 .panel {
   padding-top: 15px;
   padding-top: 1.5rem;
