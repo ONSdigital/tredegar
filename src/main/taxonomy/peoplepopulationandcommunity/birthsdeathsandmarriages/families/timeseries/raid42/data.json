@@ -81,5 +81,26 @@
   "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/families/timeseries/raid42",
   "type": "timeseries",
   "name": "Families",
-  "fileName": "raid42"
+  "fileName": "raid42",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "People, Population and Community",
+      "fileName": "peoplepopulationandcommunity"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Births, Deaths and Marriages",
+      "fileName": "birthsdeathsandmarriages"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Families",
+      "fileName": "families",
+      "breadcrumb": []
+    }
+  ]
 }

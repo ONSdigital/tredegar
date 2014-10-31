@@ -1,11 +1,29 @@
 {
   "cdid": "RAID10",
+  "note1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quam leo, blandit a turpis non, varius feugiat mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In posuere lectus eu laoreet ultrices. Donec ac sodales libero, eget fermentum arcu.",
+  "note2": "Fusce pharetra, libero in imperdiet ultricies, ex erat tempor dolor, vitae aliquet magna velit in urna. Duis finibus augue velit, ut consectetur risus imperdiet in. Sed tempus congue ante, ac cursus diam porttitor vitae. Vivamus arcu leo, volutpat in mauris ac, lacinia fermentum velit. Sed dictum tortor justo, aliquet facilisis lorem dictum a.",
   "number": "11185",
   "unit": "m",
   "preUnit": "£",
   "date": "June 2014",
+  "data": [],
   "uri": "/businessindustryandtrade/constructionindustry/timeseries/raid10",
   "type": "timeseries",
   "name": "Value of construction output - all work",
-  "fileName": "raid10"
+  "fileName": "raid10",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Business, Industry and Trade",
+      "fileName": "businessindustryandtrade"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Construction Industry",
+      "fileName": "constructionindustry",
+      "breadcrumb": []
+    }
+  ]
 }

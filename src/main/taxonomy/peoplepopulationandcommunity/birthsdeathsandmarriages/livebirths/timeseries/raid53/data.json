@@ -313,5 +313,26 @@
   "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/livebirths/timeseries/raid53",
   "type": "timeseries",
   "name": "Live births in England and Wales ",
-  "fileName": "raid53"
+  "fileName": "raid53",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "People, Population and Community",
+      "fileName": "peoplepopulationandcommunity"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Births, Deaths and Marriages",
+      "fileName": "birthsdeathsandmarriages"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Live Births",
+      "fileName": "livebirths",
+      "breadcrumb": []
+    }
+  ]
 }

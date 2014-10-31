@@ -21,5 +21,26 @@
   "uri": "/peoplepopulationandcommunity/personalandhouseholdfinances/expenditure/timeseries/raid114",
   "type": "timeseries",
   "name": "Average total housing expenditure",
-  "fileName": "raid114"
+  "fileName": "raid114",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "People, Population and Community",
+      "fileName": "peoplepopulationandcommunity"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Personal and Household Finances",
+      "fileName": "personalandhouseholdfinances"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Expenditure",
+      "fileName": "expenditure",
+      "breadcrumb": []
+    }
+  ]
 }

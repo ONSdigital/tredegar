@@ -181,5 +181,26 @@
   "uri": "/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/raid124",
   "type": "timeseries",
   "name": "England population",
-  "fileName": "raid124"
+  "fileName": "raid124",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "People, Population and Community",
+      "fileName": "peoplepopulationandcommunity"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Population and Migration",
+      "fileName": "populationandmigration"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Population Estimates",
+      "fileName": "populationestimates",
+      "breadcrumb": []
+    }
+  ]
 }

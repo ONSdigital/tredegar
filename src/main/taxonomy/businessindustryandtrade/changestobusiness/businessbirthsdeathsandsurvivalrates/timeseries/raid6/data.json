@@ -46,5 +46,26 @@
   "uri": "/businessindustryandtrade/changestobusiness/businessbirthsdeathsandsurvivalrates/timeseries/raid6",
   "type": "timeseries",
   "name": "Business births",
-  "fileName": "raid6"
+  "fileName": "raid6",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Business, Industry and Trade",
+      "fileName": "businessindustryandtrade"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Changes to Business",
+      "fileName": "changestobusiness"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Business Births, Deaths and Survival Rates",
+      "fileName": "businessbirthsdeathsandsurvivalrates",
+      "breadcrumb": []
+    }
+  ]
 }

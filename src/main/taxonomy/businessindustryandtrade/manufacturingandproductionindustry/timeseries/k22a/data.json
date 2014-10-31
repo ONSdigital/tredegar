@@ -1,5 +1,7 @@
 {
   "cdid": "K22A",
+  "note1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quam leo, blandit a turpis non, varius feugiat mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In posuere lectus eu laoreet ultrices. Donec ac sodales libero, eget fermentum arcu.",
+  "note2": "Fusce pharetra, libero in imperdiet ultricies, ex erat tempor dolor, vitae aliquet magna velit in urna. Duis finibus augue velit, ut consectetur risus imperdiet in. Sed tempus congue ante, ac cursus diam porttitor vitae. Vivamus arcu leo, volutpat in mauris ac, lacinia fermentum velit. Sed dictum tortor justo, aliquet facilisis lorem dictum a.",
   "number": "102.2",
   "unit": "Index, 2010 \u003d 100",
   "preUnit": "",
@@ -3577,5 +3579,20 @@
   "uri": "/businessindustryandtrade/manufacturingandproductionindustry/timeseries/k22a",
   "type": "timeseries",
   "name": "Manufacturing",
-  "fileName": "k22a"
+  "fileName": "k22a",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Business, Industry and Trade",
+      "fileName": "businessindustryandtrade"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Manufacturing and Production Industry",
+      "fileName": "manufacturingandproductionindustry",
+      "breadcrumb": []
+    }
+  ]
 }

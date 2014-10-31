@@ -1130,5 +1130,20 @@
   "uri": "/economy/inflationandpriceindices/timeseries/kvr9",
   "type": "timeseries",
   "name": "RPIJ",
-  "fileName": "kvr9"
+  "fileName": "kvr9",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Inflation and Price Indices",
+      "fileName": "inflationandpriceindices",
+      "breadcrumb": []
+    }
+  ]
 }

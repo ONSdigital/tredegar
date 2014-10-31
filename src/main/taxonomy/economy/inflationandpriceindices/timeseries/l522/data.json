@@ -666,5 +666,20 @@
   "uri": "/economy/inflationandpriceindices/timeseries/l522",
   "type": "timeseries",
   "name": "CPIH Index (2005 \u003d 100)",
-  "fileName": "l522"
+  "fileName": "l522",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Inflation and Price Indices",
+      "fileName": "inflationandpriceindices",
+      "breadcrumb": []
+    }
+  ]
 }

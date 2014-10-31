@@ -1754,5 +1754,20 @@
   "uri": "/economy/inflationandpriceindices/timeseries/d7g7",
   "type": "timeseries",
   "name": "CPI: Consumer Prices Index",
-  "fileName": "d7g7"
+  "fileName": "d7g7",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Inflation and Price Indices",
+      "fileName": "inflationandpriceindices",
+      "breadcrumb": []
+    }
+  ]
 }

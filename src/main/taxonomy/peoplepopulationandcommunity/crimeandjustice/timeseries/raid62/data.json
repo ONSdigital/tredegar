@@ -73,5 +73,20 @@
   "uri": "/peoplepopulationandcommunity/crimeandjustice/timeseries/raid62",
   "type": "timeseries",
   "name": "Crimes recorded by police",
-  "fileName": "raid62"
+  "fileName": "raid62",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "People, Population and Community",
+      "fileName": "peoplepopulationandcommunity"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Crime and Justice",
+      "fileName": "crimeandjustice",
+      "breadcrumb": []
+    }
+  ]
 }

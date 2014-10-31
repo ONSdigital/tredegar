@@ -1198,5 +1198,20 @@
   "uri": "/economy/inflationandpriceindices/timeseries/kvr8",
   "type": "timeseries",
   "name": "RPIJ Index (1987 \u003d 100)",
-  "fileName": "kvr8"
+  "fileName": "kvr8",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Inflation and Price Indices",
+      "fileName": "inflationandpriceindices",
+      "breadcrumb": []
+    }
+  ]
 }

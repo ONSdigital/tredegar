@@ -105,7 +105,7 @@ public class Data {
 				}
 			}
 			if (level2Folder == null) {
-				throw new RuntimeException(theme + " is not a level 2 folder in the taxonomy.");
+				throw new RuntimeException(level2 + " is not a level 2 folder in the taxonomy.");
 			}
 		}
 
@@ -118,7 +118,7 @@ public class Data {
 				}
 			}
 			if (level3Folder == null) {
-				throw new RuntimeException(theme + " is not a level 3 folder in the taxonomy.");
+				throw new RuntimeException(level3 + " is not a level 3 folder in the taxonomy.");
 			}
 		}
 

@@ -360,7 +360,7 @@ public class TaxonomyGenerator {
 		createArticle(folder, file);
 		createBulletin(folder, file);
 		createDataset(folder, file);
-		createTimeseries(folder, file);
+		createTimeseries(folder, file, t3);
 	}
 
 	private static URI toStatsBulletinUri(Folder folder, Bulletin bulletin) {
@@ -412,9 +412,10 @@ public class TaxonomyGenerator {
 	 *
 	 * @param folder
 	 * @param file
+	 * @param t3
 	 * @throws IOException
 	 */
-	private static void createTimeseries(Folder folder, File file) throws IOException {
+	private static void createTimeseries(Folder folder, File file, T3 t3) throws IOException {
 
 		List<Timeseries> timeserieses = folder.timeserieses;
 
@@ -426,17 +427,18 @@ public class TaxonomyGenerator {
 
 			if (!timeseriesFile.exists()) {
 				timeseriesFolder.mkdirs();
-
-				Set<TimeseriesValue> data = TimeseriesData.getData(timeseries.cdid());
-				if (data != null) {
-					timeseries.data = new ArrayList<>(data);
-				} else {
-					System.out.println("No data for " + timeseries.cdid());
-				}
-				String json = Serialiser.serialise(timeseries);
-				System.out.println(timeseriesFile.getAbsolutePath());
-				FileUtils.writeStringToFile(timeseriesFile, json, Charset.forName("UTF8"));
 			}
+
+			Set<TimeseriesValue> data = TimeseriesData.getData(timeseries.cdid());
+			if (data != null) {
+				timeseries.data = new ArrayList<>(data);
+			} else {
+				System.out.println("No data for " + timeseries.cdid());
+			}
+			timeseries.setBreadcrumb(t3);
+			String json = Serialiser.serialise(timeseries);
+			System.out.println(timeseriesFile.getAbsolutePath());
+			FileUtils.writeStringToFile(timeseriesFile, json, Charset.forName("UTF8"));
 		}
 	}
 

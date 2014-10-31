@@ -1,5 +1,7 @@
 {
   "cdid": "IKBH",
+  "note1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quam leo, blandit a turpis non, varius feugiat mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In posuere lectus eu laoreet ultrices. Donec ac sodales libero, eget fermentum arcu.",
+  "note2": "Fusce pharetra, libero in imperdiet ultricies, ex erat tempor dolor, vitae aliquet magna velit in urna. Duis finibus augue velit, ut consectetur risus imperdiet in. Sed tempus congue ante, ac cursus diam porttitor vitae. Vivamus arcu leo, volutpat in mauris ac, lacinia fermentum velit. Sed dictum tortor justo, aliquet facilisis lorem dictum a.",
   "number": "121965",
   "unit": "m",
   "preUnit": "£",
@@ -1233,5 +1235,20 @@
   "uri": "/businessindustryandtrade/internationaltrade/timeseries/ikbh",
   "type": "timeseries",
   "name": "Total exports of goods and services ",
-  "fileName": "ikbh"
+  "fileName": "ikbh",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Business, Industry and Trade",
+      "fileName": "businessindustryandtrade"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "International Trade",
+      "fileName": "internationaltrade",
+      "breadcrumb": []
+    }
+  ]
 }

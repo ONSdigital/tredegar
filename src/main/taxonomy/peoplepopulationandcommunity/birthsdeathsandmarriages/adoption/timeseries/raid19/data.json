@@ -165,5 +165,26 @@
   "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/adoption/timeseries/raid19",
   "type": "timeseries",
   "name": "Adoptions in England and Wales",
-  "fileName": "raid19"
+  "fileName": "raid19",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "People, Population and Community",
+      "fileName": "peoplepopulationandcommunity"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Births, Deaths and Marriages",
+      "fileName": "birthsdeathsandmarriages"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Adoption",
+      "fileName": "adoption",
+      "breadcrumb": []
+    }
+  ]
 }

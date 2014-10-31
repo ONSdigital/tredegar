@@ -1822,5 +1822,20 @@
   "uri": "/economy/inflationandpriceindices/timeseries/d7bt",
   "type": "timeseries",
   "name": "CPI: Consumer Prices Index (2005 \u003d 100)",
-  "fileName": "d7bt"
+  "fileName": "d7bt",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Inflation and Price Indices",
+      "fileName": "inflationandpriceindices",
+      "breadcrumb": []
+    }
+  ]
 }
