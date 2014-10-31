@@ -1,6 +1,7 @@
 package com.github.onsdigital.generator.data;
 
 import java.io.IOException;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
@@ -70,12 +71,39 @@ class NonCdidCSV {
 							timeseries.note1 = StringUtils.trim(row[1]);
 							break data;
 
-						} else {
+						} else if (StringUtils.isNotEmpty(date) && StringUtils.isNotEmpty(figure)) {
 
-							TimeseriesValue timeSeriesValue = new TimeseriesValue();
-							timeSeriesValue.date = date;
-							timeSeriesValue.value = figure;
-							timeseries.data.add(timeSeriesValue);
+							TimeseriesValue timeseriesValue = new TimeseriesValue();
+
+							// Prevent decimal points on the date for years,
+							// e.g. 2014.0.
+							// This is due to the way numbers come out of
+							// Excel.
+							if (date.endsWith(".0")) {
+								date = date.substring(0, date.length() - 2);
+							}
+
+							// Sanity-check that the figure really is a number:
+							try {
+								Double.parseDouble(figure);
+							} catch (NumberFormatException e) {
+								System.out.println(" ! The figure for " + cdid + " is " + figure);
+							}
+
+							// Give the figure a sensible format.
+							// This is due to the way numbers come out of
+							// Excel.
+							if (StringUtils.isNotBlank(figure) && figure.contains("E") && figure.contains(".")) {
+								DecimalFormat format = new DecimalFormat("###,###,###,##0.00");
+								figure = format.format(Double.parseDouble(figure));
+								if (figure.endsWith(".00")) {
+									figure = figure.substring(0, figure.length() - 3);
+								}
+							}
+
+							timeseriesValue.date = date;
+							timeseriesValue.value = figure;
+							timeseries.data.add(timeseriesValue);
 						}
 					}
 				}

@@ -6,13 +6,13 @@ import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
 
-import com.github.onsdigital.generator.CSV;
 import com.github.onsdigital.generator.Folder;
+import com.github.onsdigital.generator.data.Csv;
 import com.github.onsdigital.json.bulletin.Bulletin;
 
 public class BulletinContent {
 
-	private static List<Map<String, String>> rows;
+	private static Csv rows;
 
 	public static List<Bulletin> getBulletins(Folder folder) throws IOException {
 		List<Bulletin> result = null;
@@ -33,7 +33,10 @@ public class BulletinContent {
 	public static Bulletin getHeadlineBulletin(Folder folder) throws IOException {
 		Bulletin result = null;
 
-		parseCsv();
+		if (rows == null) {
+			parseCsv();
+		}
+
 		BulletinNode node = getNode(folder);
 		if (node != null) {
 			result = node.bulletinList().headline;
@@ -62,7 +65,9 @@ public class BulletinContent {
 	}
 
 	private static void parseCsv() throws IOException {
-		rows = CSV.parse("/Alpha bulletin content.csv");
+		rows = new Csv("/Alpha bulletin content.csv");
+		rows.read();
+		rows.getHeadings();
 		// String[] headings = { "Theme", "Level 2", "Level 3", "Name", "Key",
 		// "Units", "CDID", "Path", "Link", "Notes" };
 
@@ -101,6 +106,10 @@ public class BulletinContent {
 				bulletin.headline3 = row.get("Headline3");
 			}
 
+			if (StringUtils.isNotBlank(row.get("Summary"))) {
+				bulletin.summary = row.get("Summary");
+			}
+
 			node.addBulletin(bulletin, isHeadline);
 			BulletinData.bulletins.add(bulletin);
 		}
@@ -108,13 +117,10 @@ public class BulletinContent {
 
 	public static void main(String[] args) throws IOException {
 		Folder theme = new Folder();
-		theme.name = "Business, Industry and Trade";
+		theme.name = "Economy";
 		Folder level2 = new Folder();
-		level2.name = "Business Activity, Size and Location";
+		level2.name = "Inflation and Price Indices";
 		level2.parent = theme;
-		Folder level3 = new Folder();
-		level3.name = "Activity, Size and Location";
-		level3.parent = level2;
-		System.out.println(getBulletins(level3));
+		System.out.println(getBulletins(level2));
 	}
 }

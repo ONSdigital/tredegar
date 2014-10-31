@@ -2,6 +2,7 @@ package com.github.onsdigital.generator.data;
 
 import java.io.IOException;
 import java.net.URI;
+import java.text.DecimalFormat;
 import java.util.Map;
 
 import org.apache.commons.lang.ArrayUtils;
@@ -71,7 +72,6 @@ class AlphaContentCSV {
 			Timeseries timeseries = Data.timeseries(cdid);
 			if (timeseries == null) {
 				// We haven't seen this one before, so add it:
-				System.out.println(resourceName + ": new CDID found - " + cdid);
 				timeseries = Data.addTimeseries(cdid);
 
 			}
@@ -90,8 +90,32 @@ class AlphaContentCSV {
 			folder.timeserieses.add(timeseries);
 			timeseries.preUnit = row.get(PREUNIT);
 			timeseries.unit = row.get(UNITS);
-			timeseries.number = row.get(FIGURE);
-			timeseries.date = row.get(PERIOD);
+
+			// Clean up numbers - this is because of the way they come out of
+			// Excel.
+			String date = row.get(PERIOD);
+			if (date.endsWith(".0")) {
+				date = date.substring(0, date.length() - 2);
+			} else {
+				System.out.println(date);
+			}
+			timeseries.date = date;
+
+			// Give the figure a sensible format.
+			// This is due to the way numbers come out of
+			// Excel.
+			String figure = row.get(FIGURE);
+			if (StringUtils.isNotBlank(figure) && figure.contains("E") && figure.contains(".")) {
+				DecimalFormat format = new DecimalFormat("###,###,###,##0.00");
+				figure = format.format(Double.parseDouble(figure));
+			}
+			if (figure.endsWith(".00")) {
+				figure = figure.substring(0, figure.length() - 3);
+			}
+			if (figure.endsWith(".0")) {
+				figure = figure.substring(0, figure.length() - 2);
+			}
+			timeseries.number = figure;
 		}
 	}
 

@@ -1,6 +1,7 @@
 package com.github.onsdigital.api.taxonomy;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URI;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
@@ -45,7 +46,9 @@ public class Data {
 		response.setCharacterEncoding("UTF8");
 		if (data != null) {
 			response.setContentType("application/json");
-			IOUtils.copy(Files.newInputStream(data), response.getOutputStream());
+			try (InputStream input = Files.newInputStream(data)) {
+				IOUtils.copy(input, response.getOutputStream());
+			}
 		} else {
 			response.setStatus(HttpStatus.NOT_FOUND_404);
 			response.setContentType("text/plain");

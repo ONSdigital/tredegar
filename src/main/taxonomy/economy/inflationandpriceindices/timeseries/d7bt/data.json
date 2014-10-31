@@ -1,7 +1,6 @@
 {
   "cdid": "D7BT",
   "seasonalAdjustment": "Not seasonally adjusted",
-  "units": "Weights (parts per 1000)",
   "mainMeasure": "Consumer Prices Index",
   "description": "Consumer price indices are important indicators of how the UK economy is performing.\n\nThe indices are used in many ways by the government, businesses, and society in general. They can affect interest rates, tax allowances, wages, state benefits, pensions, maintenance, contracts and many other payments. They also show the impact of inflation on family budgets and affect the value of the pound in your pocket.",
   "note1": "Inflation rates prior to 1997 and index levels prior to 1996 are estimated.\n",
@@ -10,9 +9,6 @@
   "unit": "Index",
   "preUnit": "",
   "date": "September 2014",
-  "lastUpated": "16 Sep 2014",
-  "nextUpdate": "14 Oct 2014",
-  "note": "2005 \u003d 100. Not seasonally adjusted",
   "data": [
     {
       "date": "1988",
@@ -1825,6 +1821,6 @@
   ],
   "uri": "/economy/inflationandpriceindices/timeseries/d7bt",
   "type": "timeseries",
-  "name": "CPI: Consumer Prices Index, 2005 \u003d 100",
+  "name": "CPI: Consumer Prices Index (2005 \u003d 100)",
   "fileName": "d7bt"
 }

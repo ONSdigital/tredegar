@@ -6,13 +6,14 @@ import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
 
-import com.github.onsdigital.generator.CSV;
 import com.github.onsdigital.generator.Folder;
+import com.github.onsdigital.generator.data.Csv;
 import com.github.onsdigital.json.Dataset;
+import com.github.onsdigital.json.DownloadSection;
 
 public class DatasetContent {
 
-	private static List<Map<String, String>> rows;
+	private static Csv rows;
 
 	public static List<Dataset> getDatasets(Folder folder) throws IOException {
 		List<Dataset> result = null;
@@ -50,7 +51,9 @@ public class DatasetContent {
 	}
 
 	private static void parseCsv() throws IOException {
-		rows = CSV.parse("/Alpha dataset content.csv");
+		rows = new Csv("/Alpha dataset content.csv");
+		rows.read();
+		rows.getHeadings();
 		// String[] headings = { "Theme", "Level 2", "Level 3", "Name", "Key",
 		// "Units", "CDID", "Path", "Link", "Notes" };
 
@@ -74,6 +77,17 @@ public class DatasetContent {
 			dataset.name = StringUtils.trim(row.get("Name"));
 			dataset.title = dataset.name;
 			dataset.fileName = dataset.name.toLowerCase();
+			if (StringUtils.isNotBlank(row.get("Summary"))) {
+				dataset.summary = row.get("Summary");
+			}
+
+			if (StringUtils.isNotBlank(row.get("Link (latest)"))) {
+				DownloadSection downloadSection = new DownloadSection();
+				downloadSection.title = dataset.name;
+				downloadSection.xls = row.get("Link (latest)");
+				dataset.download.add(downloadSection);
+			}
+
 			node.addDataset(dataset);
 			DatasetData.datasets.add(dataset);
 		}

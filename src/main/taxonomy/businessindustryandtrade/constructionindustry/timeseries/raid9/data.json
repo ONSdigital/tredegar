@@ -1,332 +1,245 @@
 {
   "cdid": "RAID9",
-  "seasonalAdjustment": "Not seasonally adjusted",
-  "units": "Weights (parts per 1000)",
-  "mainMeasure": "Consumer Prices Index",
-  "description": "Consumer price indices are important indicators of how the UK economy is performing.\nThe indices are used in many ways by the government, businesses, and society in general. They can affect interest rates, tax allowances, wages, state benefits, pensions, maintenance, contracts and many other payments. They also show the impact of inflation on family budgets and affect the value of the pound in your pocket.",
-  "note2": "Changes in the internal purchasing power of a currency may be defined as  the \u0027inverse\u0027 of changes in the levels of prices; when prices go up, the  amount which can be purchased with a given sum of money goes down. The  monthly figures of the all items RPI can be used to obtain estimates of the  changes in prices or in purchasing power between any 2 months. To find the  purchasing power of the pound in one month, given that it was 100p in a  previous month the calculation is:  100p multiplied by the earlier month RPI then divided by the later month RPI.",
   "number": "11185",
-  "unit": "million",
+  "unit": "m",
   "preUnit": "£",
   "date": "June 2014",
-  "lastUpated": "16 Sep 2014",
-  "nextUpdate": "14 Oct 2014",
-  "note": "2005 \u003d 100. Not seasonally adjusted",
   "data": [
     {
-      "date": "",
-      "value": "Business, Industry and Trade"
-    },
-    {
-      "date": "",
-      "value": "Construction Industry"
-    },
-    {
-      "date": "",
-      "value": ""
-    },
-    {
-      "value": "Value of construction output  - all new work"
-    },
-    {
-      "value": "Y"
-    },
-    {
-      "value": "£ Million"
-    },
-    {
-      "value": "RAID9"
-    },
-    {
-      "value": "Business,IndustryandTrade"
-    },
-    {
-      "value": "BusinessIndustryandTrade"
-    },
-    {
-      "value": "ConstructionIndustry"
-    },
-    {
-      "value": "ConstructionIndustry"
-    },
-    {
-      "value": ""
-    },
-    {
-      "value": ""
-    },
-    {
-      "value": ""
-    },
-    {
-      "value": ""
-    },
-    {
-      "value": "/BusinessIndustryandTrade/ConstructionIndustry/timeseries/RAID9"
-    },
-    {
-      "value": "/BusinessIndustryandTrade/ConstructionIndustry//timeseries/RAID9"
-    },
-    {
-      "value": "/BusinessIndustryandTrade/ConstructionIndustry/timeseries/RAID9"
-    },
-    {
-      "value": "/BusinessIndustryandTrade/ConstructionIndustry/timeseries/RAID9"
-    },
-    {
-      "value": "/businessindustryandtrade/constructionindustry/timeseries/raid9"
-    },
-    {
-      "value": "/businessindustryandtrade/constructionindustry/timeseries/raid9"
-    },
-    {
-      "value": "/businessindustryandtrade/constructionindustry/timeseries/raid9"
-    },
-    {
-      "value": "/businessindustryandtrade/constructionindustry/timeseries/raid9"
-    },
-    {
-      "value": "http://www.ons.gov.uk/ons/rel/construction/output-in-the-construction-industry/june-and-q2-2014/rft-output-tables-june-2014.xls"
-    },
-    {
-      "date": "1958.0",
+      "date": "1958",
       "value": "1807.0"
     },
     {
-      "date": "1958.0",
+      "date": "1958",
       "value": "2055.0"
     },
     {
-      "date": "1958.0",
+      "date": "1958",
       "value": "2146.0"
     },
     {
-      "date": "1958.0",
+      "date": "1958",
       "value": "2215.0"
     },
     {
-      "date": "1959.0",
+      "date": "1959",
       "value": "2403.0"
     },
     {
-      "date": "1960.0",
+      "date": "1960",
       "value": "2615.0"
     },
     {
-      "date": "1961.0",
+      "date": "1961",
       "value": "2915.0"
     },
     {
-      "date": "1962.0",
+      "date": "1962",
       "value": "3116.0"
     },
     {
-      "date": "1963.0",
+      "date": "1963",
       "value": "3274.0"
     },
     {
-      "date": "1964.0",
+      "date": "1964",
       "value": "3784.0"
     },
     {
-      "date": "1965.0",
+      "date": "1965",
       "value": "4120.0"
     },
     {
-      "date": "1966.0",
+      "date": "1966",
       "value": "4391.0"
     },
     {
-      "date": "1967.0",
+      "date": "1967",
       "value": "4687.0"
     },
     {
-      "date": "1968.0",
+      "date": "1968",
       "value": "5083.0"
     },
     {
-      "date": "1969.0",
+      "date": "1969",
       "value": "5257.0"
     },
     {
-      "date": "1970.0",
+      "date": "1970",
       "value": "5580.0"
     },
     {
-      "date": "1971.0",
+      "date": "1971",
       "value": "6175.0"
     },
     {
-      "date": "1972.0",
+      "date": "1972",
       "value": "7032.0"
     },
     {
-      "date": "1973.0",
+      "date": "1973",
       "value": "8969.0"
     },
     {
-      "date": "1974.0",
+      "date": "1974",
       "value": "10134.0"
     },
     {
-      "date": "1975.0",
+      "date": "1975",
       "value": "11534.0"
     },
     {
-      "date": "1976.0",
+      "date": "1976",
       "value": "12680.0"
     },
     {
-      "date": "1977.0",
+      "date": "1977",
       "value": "13869.0"
     },
     {
-      "date": "1978.0",
+      "date": "1978",
       "value": "16361.0"
     },
     {
-      "date": "1979.0",
+      "date": "1979",
       "value": "19668.0"
     },
     {
-      "date": "1980.0",
+      "date": "1980",
       "value": "23058.0"
     },
     {
-      "date": "1981.0",
+      "date": "1981",
       "value": "22513.0"
     },
     {
-      "date": "1982.0",
+      "date": "1982",
       "value": "23971.0"
     },
     {
-      "date": "1983.0",
+      "date": "1983",
       "value": "26623.0"
     },
     {
-      "date": "1984.0",
+      "date": "1984",
       "value": "28990.0"
     },
     {
-      "date": "1985.0",
+      "date": "1985",
       "value": "30957.0"
     },
     {
-      "date": "1986.0",
+      "date": "1986",
       "value": "33427.0"
     },
     {
-      "date": "1987.0",
+      "date": "1987",
       "value": "39143.0"
     },
     {
-      "date": "1988.0",
+      "date": "1988",
       "value": "46811.0"
     },
     {
-      "date": "1989.0",
+      "date": "1989",
       "value": "54391.0"
     },
     {
-      "date": "1990.0",
+      "date": "1990",
       "value": "57673.0"
     },
     {
-      "date": "1991.0",
+      "date": "1991",
       "value": "53378.0"
     },
     {
-      "date": "1992.0",
+      "date": "1992",
       "value": "49602.0"
     },
     {
-      "date": "1993.0",
+      "date": "1993",
       "value": "48431.0"
     },
     {
-      "date": "1994.0",
+      "date": "1994",
       "value": "51647.0"
     },
     {
-      "date": "1995.0",
+      "date": "1995",
       "value": "55013.0"
     },
     {
-      "date": "1996.0",
+      "date": "1996",
       "value": "57749.0"
     },
     {
-      "date": "1997.0",
+      "date": "1997",
       "value": "60990.0"
     },
     {
-      "date": "1998.0",
+      "date": "1998",
       "value": "64829.0"
     },
     {
-      "date": "1999.0",
+      "date": "1999",
       "value": "68582.0"
     },
     {
-      "date": "2000.0",
+      "date": "2000",
       "value": "72714.0"
     },
     {
-      "date": "2001.0",
+      "date": "2001",
       "value": "77958.0"
     },
     {
-      "date": "2002.0",
+      "date": "2002",
       "value": "87218.0"
     },
     {
-      "date": "2003.0",
+      "date": "2003",
       "value": "97259.0"
     },
     {
-      "date": "2004.0",
+      "date": "2004",
       "value": "106657.0"
     },
     {
-      "date": "2005.0",
+      "date": "2005",
       "value": "111494.0"
     },
     {
-      "date": "2006.0",
+      "date": "2006",
       "value": "118320.0"
     },
     {
-      "date": "2007.0",
+      "date": "2007",
       "value": "127062.0"
     },
     {
-      "date": "2008.0",
+      "date": "2008",
       "value": "128641.0"
     },
     {
-      "date": "2009.0",
+      "date": "2009",
       "value": "111079.0"
     },
     {
-      "date": "2010.0",
+      "date": "2010",
       "value": "117385.0"
     },
     {
-      "date": "2011.0",
+      "date": "2011",
       "value": "121737.0"
     },
     {
-      "date": "2012.0",
+      "date": "2012",
       "value": "116021.0"
     },
     {
-      "date": "2013.0",
+      "date": "2013",
       "value": "121698.0"
-    },
-    {
-      "date": "",
-      "value": ""
     },
     {
       "date": "1955 Q1",
@@ -1279,10 +1192,6 @@
     {
       "date": "2014 Q2",
       "value": "32507.0"
-    },
-    {
-      "date": "",
-      "value": ""
     },
     {
       "date": "2010 JAN",

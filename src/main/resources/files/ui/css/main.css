@@ -4733,43 +4733,63 @@ ol > li > div.list--table__item__body.list--table__item__body--stat.no_align{
 
 
 .tooltips {
-    outline: none;
+  outline: none;
 }
 .tooltips:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 .tooltips span {
-    z-index: 10;
-    display: none;
-    padding: 0.8rem;
-    padding: 8px;
-    margin-top: 2.5px;
-    margin-left: 5px;
-    width: 20%;
-    max-width:200px;
+  z-index: 10;
+  display: none;
+  padding: 0.8rem;
+  padding: 8px;
+  margin-top: 0px;
+  margin-left: 7px;
+  width: 20%;
+  max-width:200px;
+  border-radius:4px;
+    
 }
 .tooltips:hover span {
-    display: inline;
-    position: absolute;
-    border: 2px solid #E1E1DF;
-    background: #FFF;
-    color: #333; 
-    line-height: 15px;
-    font-family: "open-sans-n4", "open-sans", sans-serif;
-    font-size: 1.3rem;
-    font-size: 13px;
+  display: inline;
+  position: absolute;
+  border: 2px solid #E1E1DF;
+  background: #FFF;
+  color: #333; 
+  line-height: 15px;
+  font-family: "open-sans-n4", "open-sans", sans-serif;
+  font-size: 1.3rem;
+  font-size: 13px;
 }
 
-.callout {
-    z-index: 20;
-    position: absolute;
-    top: 10px;
-    border: 0;
-    left: -12px;
+.tooltips span:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 12px;
+  right: 100%;
+  width: 90px;
+  height: 0;
+  border-color: transparent #fff transparent transparent ;
+  border-style: solid;
+  border-width: 10px;
+}
+
+.tooltips span:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 9px;
+  right: 100%;
+  width: 0;
+  height: 0;
+  border-color: transparent #e1e1df transparent transparent ;
+  border-style: solid;
+  border-width: 13px;
 }
 
 /*CSS3 extras
-a.tooltips span
+tooltips span
 {
    border-radius:4px;
    box-shadow: 5px 5px 8px #CCC;
