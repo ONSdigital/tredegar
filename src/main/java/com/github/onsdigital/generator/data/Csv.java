@@ -142,8 +142,9 @@ public class Csv implements Iterable<Map<String, String>> {
 
 						// So... we do some acrobatics here for Alpha purposes
 						// only.
-						// TODO: Burn this code in Beta. Then find a solution to
-						// dealing with Microsoft's high regard for standards.
+						// TODO: Burn this code. In Beta, please find a way
+						// of dealing with Microsoft's high regard for
+						// standards.
 
 						// Format numbers as strings to try and get the value as
 						// displayed in the spreadsheet:
@@ -189,17 +190,24 @@ public class Csv implements Iterable<Map<String, String>> {
 							value = cell.toString();
 						}
 
-						// Last-resort tweak.
+						// Last-resort tweaks.
 						// This seems to be needed if the cell format is
 						// "General"
+						// The raw numbers appear as 123.4000000003 or
+						// 123.399999997,
+						// so rounding needs to be guestimated.
 						if (value.contains("00000")) {
 							value = value.substring(0, value.indexOf("00000"));
 						}
 						if (value.contains("99999")) {
-							// Not strictly correct (should round up), but good
-							// enough for now:
-							value = value.substring(0, value.indexOf("99999"));
-							// TODO: get this to round correctly.
+							String decimalFormat = "0.";
+							int decimalPlaces = value.substring(value.indexOf(".") + 1, value.indexOf("99999")).length();
+							for (int i = 0; i < decimalPlaces; i++) {
+								decimalFormat += "0";
+							}
+							NumberFormat format = new DecimalFormat(decimalFormat);
+							double d = Double.parseDouble(value);
+							value = format.format(d);
 						}
 
 						if (cell.getCellType() == Cell.CELL_TYPE_NUMERIC) {
