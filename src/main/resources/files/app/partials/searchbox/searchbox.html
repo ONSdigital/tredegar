@@ -1,13 +1,12 @@
 <div class="slate--mid-grey_new search-wrapper">
-    <form ng-submit="goToSearch(searchTerm)" class="nav-search" ng-class="nav.hideSearch ? 'nav-search--hidden' : ''"  >
-        <div class="nav-search__container">
-            <label for="nav-search" class="visuallyhidden">Search term:</label>
-            <input id="nav-search" type="text" class="input--full  search_reduction" name="q" ng-model="searchTerm" placeholder="Search for keyword or time series id">
-            <button type="submit" class="btn btn--primary btn--small btn--form--large-icon input--lede-btn-icon align_middle no_left_margin " id="nav-search-submit">
-                <span class="icon icon-search-1" role="presentational">
-                    <span class="visuallyhidden">Search</span>
-                </span>
-            </button>
-        </div>
+    <form  ng-class="hideSearch ? 'nav-search--hidden' : '' "  ng-submit="goToSearch(searchTerm)" class="nav-search ng-pristine ng-valid" id="searchBar" aria-expanded="false">
+      <div class="nav-search__container">
+        <label class="visuallyhidden" for="nav-search">Search for keyword or time series ID</label>
+        <input type="search" class="nav-search__field" id="nav-search" name="nav-search" value="" name="q" ng-model="searchTerm" placeholder="Enter keyword or time series ID">
+      </div>
+      <button type="submit" class="btn btn--primary btn--nav-search" id="nav-search-submit">
+        <span class="icon-search-1" role="presentational"></span>
+        <span class="visuallyhidden">Search</span>
+      </button>
     </form>
 </div>

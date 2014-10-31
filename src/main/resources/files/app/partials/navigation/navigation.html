@@ -1,6 +1,6 @@
 <span ng-controller="NavigationController as nav">
-    <ons-nav trigger="nav.toggleSearch()">
-        <ons-nav-item nav-label="Home" href="#!" class="nav nav--multi nav--block nav--primary"></ons-nav-item>
+    <ons-nav>
+        <ons-nav-item nav-label="Home" href="#!" class="nav--primary__hide-small-med"></ons-nav-item>
         <ons-nav-item ng-repeat="item in navigation" expandable="true" nav-label="{{item.name}}" class="nav__expandable js-expandable" href="#!{{item.url}}">
             <ons-nav-sub-item ng-repeat="subitem in item.children" nav-label="{{subitem.name}}" href="#!{{subitem.url}}"></ons-nav-sub-item>
         </ons-nav-item>
@@ -9,5 +9,5 @@
         <ons-nav-item nav-label="Methodology" class="nav--primary__secondary-content" href="#!"></ons-nav-item>
         <ons-nav-item nav-label="About" class="nav--primary__secondary-content" href="#!"></ons-nav-item>
     </ons-nav>
-    <search-box></search-box>
 </span>
+

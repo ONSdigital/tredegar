@@ -13,7 +13,7 @@
       transclude: true,
       scope: {
         class: '@',
-        trigger:'&'
+        trigger: '&'
       },
       controller: NavigationController,
       controllerAs: 'navigation',
@@ -26,6 +26,38 @@
       navigation.expandablePanes = []
       resolveScreenType()
       bindResize()
+      $scope.hideSearch=true
+
+      init()
+
+      function init() {
+        var path = $location.$$path
+        navigation.rootPath = getRootPath(path)
+      }
+
+      function getRootPath(path) {
+        var tokens = path.split('/')
+        if (tokens.length < 2) {
+          return "/"
+        } else {
+          return tokens[1]
+        }
+      }
+
+      function getCurrentPage() {
+        return $location.$$path
+      }
+
+      function isCurrentRoot(page) {
+        var result = navigation.rootPath === getRootPath(page)
+        return result
+      }
+
+
+      function isCurrentPage(page) {
+        var result = getCurrentPage() === page.split('#!')[1]
+        return result
+      }
 
       function addPane(pane) {
         navigation.expandablePanes[pane.navLabel] = pane
@@ -33,11 +65,14 @@
 
       function toggleMenu() {
         navigation.showMenu = !navigation.showMenu
+        if(navigation.showMenu) {
+          $scope.hideSearch = true
+        }
       }
 
       function gotoPage(path) {
         $location.path(path.substr(2))
-        navigation.showMenu=false
+        navigation.showMenu = false
       }
 
       //Listens resize event to switch screen type to mobile or desktop
@@ -57,14 +92,21 @@
       }
 
       function toggleSearch() {
-        $scope.trigger()
+        $scope.hideSearch = !$scope.hideSearch
+        //If search is shown hide menu
+        if(!$scope.hideSearch) {
+          navigation.showMenu = false
+        }
       }
+
 
       angular.extend(navigation, {
         addPane: addPane,
         toggleMenu: toggleMenu,
         gotoPage: gotoPage,
-        toggleSearch:toggleSearch
+        toggleSearch: toggleSearch,
+        isCurrentPage: isCurrentPage,
+        isCurrentRoot: isCurrentRoot
       })
 
     }
@@ -103,9 +145,15 @@
         return navigation.mobile
       }
 
+      function isCurrentRoot() {
+        var result = navigation.isCurrentRoot(scope.href)
+        return result
+      }
+
       angular.extend(scope, {
         toggle: toggle,
-        isMobile: isMobile
+        isMobile: isMobile,
+        isCurrentRoot: isCurrentRoot
       })
 
 
@@ -123,8 +171,24 @@
         href: '@',
         class: '@'
       },
+      link: NavigationSubItemLink,
       templateUrl: 'app/components/navigation/navigationsubitem.html'
     }
+
+
+    function NavigationSubItemLink(scope, element, attrs, navigation) {
+
+      function isCurrentPage() {
+        var result = navigation.isCurrentPage(scope.href)
+        return result
+      }
+
+      angular.extend(scope, {
+        isCurrentPage: isCurrentPage
+      })
+
+    }
   }
+
 
 })()

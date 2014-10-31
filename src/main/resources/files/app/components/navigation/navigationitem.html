@@ -1,7 +1,5 @@
-<li ng-class="class" ng-click="toggle()" >
-    <a href="">
-        <span ng-class="labelClass" >{{navLabel}}</span>
-    </a>
+<li ng-class="(isCurrentRoot() ? ' nav--primary__active ' : '') +  (expanded ? 'js-expandable-active ' : '')  + class" ng-click="toggle()" >
+        <a href="" ng-class="labelClass" >{{navLabel}}
     <ul ng-if="expandable" class="nav--primary__sub js-expandable__content" ng-class="expanded ? '' : 'js-nav-hidden'" >
 		<li ng-show="isMobile()"> 
     		<a href="{{href}}">{{navLabel}}</a>
@@ -9,3 +7,4 @@
 		<span ng-transclude ></span>
     </ul>
 </li>
+
