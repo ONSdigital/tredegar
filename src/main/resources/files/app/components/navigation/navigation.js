@@ -26,15 +26,16 @@
       navigation.expandablePanes = []
       resolveScreenType()
       bindResize()
+      $scope.hideSearch=true
 
       init()
 
       function init() {
         var path = $location.$$path
-        navigation.location = getPath(path)
+        navigation.rootPath = getRootPath(path)
       }
 
-      function getPath(path) {
+      function getRootPath(path) {
         var tokens = path.split('/')
         if (tokens.length < 2) {
           return "/"
@@ -43,10 +44,19 @@
         }
       }
 
-      function isCurrentPage(page) {
-        var result =  navigation.location === getPath(page)
-        return result
+      function getCurrentPage() {
+        return $location.$$path
+      }
 
+      function isCurrentRoot(page) {
+        var result = navigation.rootPath === getRootPath(page)
+        return result
+      }
+
+
+      function isCurrentPage(page) {
+        var result = getCurrentPage() === page.split('#!')[1]
+        return result
       }
 
       function addPane(pane) {
@@ -55,6 +65,9 @@
 
       function toggleMenu() {
         navigation.showMenu = !navigation.showMenu
+        if(navigation.showMenu) {
+          $scope.hideSearch = true
+        }
       }
 
       function gotoPage(path) {
@@ -79,15 +92,21 @@
       }
 
       function toggleSearch() {
-        $scope.trigger()
+        $scope.hideSearch = !$scope.hideSearch
+        //If search is shown hide menu
+        if(!$scope.hideSearch) {
+          navigation.showMenu = false
+        }
       }
+
 
       angular.extend(navigation, {
         addPane: addPane,
         toggleMenu: toggleMenu,
         gotoPage: gotoPage,
         toggleSearch: toggleSearch,
-        isCurrentPage: isCurrentPage
+        isCurrentPage: isCurrentPage,
+        isCurrentRoot: isCurrentRoot
       })
 
     }
@@ -126,15 +145,15 @@
         return navigation.mobile
       }
 
-      function isCurrentPage() {
-        var result = navigation.isCurrentPage(scope.href)
+      function isCurrentRoot() {
+        var result = navigation.isCurrentRoot(scope.href)
         return result
       }
 
       angular.extend(scope, {
         toggle: toggle,
         isMobile: isMobile,
-        isCurrentPage: isCurrentPage
+        isCurrentRoot: isCurrentRoot
       })
 
 
@@ -152,8 +171,24 @@
         href: '@',
         class: '@'
       },
+      link: NavigationSubItemLink,
       templateUrl: 'app/components/navigation/navigationsubitem.html'
     }
+
+
+    function NavigationSubItemLink(scope, element, attrs, navigation) {
+
+      function isCurrentPage() {
+        var result = navigation.isCurrentPage(scope.href)
+        return result
+      }
+
+      angular.extend(scope, {
+        isCurrentPage: isCurrentPage
+      })
+
+    }
   }
+
 
 })()
