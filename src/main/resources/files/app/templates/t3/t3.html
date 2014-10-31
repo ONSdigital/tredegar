@@ -206,6 +206,7 @@
           <a class="" href="#!{{getPath()}}/collection?contentType=datasets">View more datasets</a>
         </header>
         <div class="grid-wrap">
+        <div ng-if="(taxonomy.data.keyDatasets).length == 0">
           <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
             <article class="box box--padded sectioned lifted border-defined">
               <header class="box__header">
@@ -290,6 +291,95 @@
               </footer> -->
             </article>
             <!-- /box -->
+          </div>
+        </div>
+        <div ng-repeat="dataset in taxonomy.data.keyDatasets track by $index">
+				<!-- /box -->
+			<div ng-if="$index == 0" class="grid-col desktop-grid-one-third tablet-grid-one-half">
+            <article class="box box--padded sectioned lifted border-defined">
+              <header class="box__header">
+                <h3 class="gamma">
+                    <a href=#!{{dataset.uri}}>{{dataset.name}}</a>
+                </h3>
+              </header>
+              <!-- /box__header -->
+              <div class="box__content">
+                <ul class="list--table">
+                  <li class="">{{dataset.summary}}</li>
+                  <!-- <li>Between 1997 and 2011 the contribution of building to total GVA decreased in each of the NUTS1 regions.</li> -->
+                </ul>
+                <p class="lozenge">Dataset</p>
+                <!-- /list- -bullet -->
+              </div>
+              <!-- /box__content -->
+              <!-- <footer class="box__footer box__actions">
+                <a class="btn btn--primary btn--small btn--narrow align_right" href="#">
+            Download .xls
+            <span class="icon icon-download icon--button-inline"></span>
+          </a>
+              </footer> -->
+              <!-- /box__actions -->
+            </article>
+            <!-- /box -->
+          </div>
+          <!-- /grid-col -->
+          <div ng-if="$index == 1" class="grid-col desktop-grid-one-third tablet-grid-one-half">
+            <article class="box box--padded sectioned lifted border-defined">
+              <header class="box__header">
+                <h3 class="gamma">
+                  <a href=#!{{dataset.uri}}>{{dataset.name}}</a>
+                </h3>
+              </header>
+              <!-- /box__header -->
+              <div class="box__content">
+                <ul class="list--table">
+                  <li>{{dataset.summary}}</li>
+                  <!-- <li>Falls in transport services costs, notably air fares</li> -->
+                </ul>
+                <p class="lozenge">Dataset</p>
+                <!-- /list- -bullet -->
+              </div>
+              <!-- /box__content -->
+              <!-- <footer class="box__footer box__actions">
+                <a class="btn btn--primary btn--small btn--narrow align_right" href="#">
+            Download .xls
+            <span class="icon icon-download icon--button-inline"></span>
+          </a>
+              </footer> -->
+            </article>
+            <!-- /box -->
+          </div>
+          <!-- /grid-col -->
+          <div ng-if="$index == 2" class="grid-col desktop-grid-one-third tablet-grid-one-half tablet-grid-clear">
+            <article class="box box--padded sectioned lifted border-defined">
+              <header class="box__header">
+                <h3 class="gamma">
+                  <a href="#!{{dataset.uri}}">{{dataset.name}}</a>
+                </h3>
+              </header>
+              <!-- /box__header -->
+              <div class="box__content">
+                <ul class="list--table">
+                  <li>{{dataset.summary}}</li>
+                  <!-- <li>Between 1997 and 2011 the contribution of building to total GVA
+                    decreased in each of the NUTS1 regions.</li>
+                  <li>In 2012 the South East had the largest increase in GVA</li>
+                  <li>Between 1997 and 2011 the contribution of building to total GVA
+                    decreased in each of the NUTS1 regions.</li> -->
+                </ul>
+                <p class="lozenge">Dataset</p>
+                <!-- /list- -bullet -->
+              </div>
+              <!-- /box__content -->
+              <!-- <footer class="box__footer box__actions">
+                <a class="btn btn--primary btn--small btn--narrow align_right" href="#">
+            Download .xls
+            <span class="icon icon-download icon--button-inline"></span>
+          </a>
+              </footer> -->
+            </article>
+            <!-- /box -->
+          </div>
           </div>
           <!-- /grid-col -->
           <div class="grid-col hide-large">

@@ -19,6 +19,7 @@ public class BulletinContent {
 
 		// Parse the data:
 		if (rows == null) {
+			System.out.println("WTF: rows is null");
 			parseCsv();
 		}
 
@@ -33,7 +34,10 @@ public class BulletinContent {
 	public static Bulletin getHeadlineBulletin(Folder folder) throws IOException {
 		Bulletin result = null;
 
-		parseCsv();
+		if (rows == null) {
+			parseCsv();
+		}
+
 		BulletinNode node = getNode(folder);
 		if (node != null) {
 			result = node.bulletinList().headline;
@@ -101,6 +105,10 @@ public class BulletinContent {
 				bulletin.headline3 = row.get("Headline3");
 			}
 
+			if (StringUtils.isNotBlank(row.get("Summary"))) {
+				bulletin.summary = row.get("Summary");
+			}
+
 			node.addBulletin(bulletin, isHeadline);
 			BulletinData.bulletins.add(bulletin);
 		}
@@ -108,13 +116,10 @@ public class BulletinContent {
 
 	public static void main(String[] args) throws IOException {
 		Folder theme = new Folder();
-		theme.name = "Business, Industry and Trade";
+		theme.name = "Economy";
 		Folder level2 = new Folder();
-		level2.name = "Business Activity, Size and Location";
+		level2.name = "Inflation and Price Indices";
 		level2.parent = theme;
-		Folder level3 = new Folder();
-		level3.name = "Activity, Size and Location";
-		level3.parent = level2;
-		System.out.println(getBulletins(level3));
+		System.out.println(getBulletins(level2));
 	}
 }

@@ -9,6 +9,7 @@ import java.util.Map;
 import org.apache.commons.lang3.StringUtils;
 
 import com.github.onsdigital.json.timeseries.Timeseries;
+import com.github.onsdigital.json.bulletin.Bulletin;
 
 public class Folder {
 
@@ -20,6 +21,7 @@ public class Folder {
 	public String more;
 	public Timeseries headline;
 	public List<Timeseries> timeserieses = new ArrayList<>();
+	public List<Bulletin> bulletins = new ArrayList<>();
 
 	/**
 	 * Sanitises folder names to <code>[a-zA-Z0-9]</code>.

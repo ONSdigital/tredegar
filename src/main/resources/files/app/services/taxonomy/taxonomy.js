@@ -19,9 +19,13 @@
 					resolveSections(data)
 				} else if(data.level === 't3') {
 					data.itemData = []
+					data.statsBulletinData = []
+					data.keyDatasets = []
 					loadItems(data, data.items)
 					loadHeadline(data)
 					loadStatsBulletinHeadline(data)
+					loadStatsBulletins(data)
+					loadDatasets(data)
 				}
 				if (callback) {
 					callback(service.data)
@@ -90,6 +94,36 @@
 				$log.debug('Loaded data.statsBulletinHeadlineData: ', statsBulletinPath, ' ', bulletin)
 			})
 		}
+		
+		function loadStatsBulletins(data) {
+			var bulletins = data.statsBulletins;
+			
+			for (var i = 0; i < bulletins.length; i++) {
+				var bulletin = bulletins[i]
+				var statsBulletinPath = dataPath + bulletin
+				$log.debug('statsBulletinPath: ' + statsBulletinPath)
+				load(statsBulletinPath, function(statsBulletin) {
+					$log.debug('Loaded stats bulletin: ', statsBulletinPath, ' ', statsBulletin)
+					data.statsBulletinData.push(statsBulletin)
+				})
+			}
+			console.log('statsBulletinData: ' + data.statsBulletinData)
+		}	
+		
+		function loadDatasets(data) {
+			var datasets = data.datasets;
+			
+			for (var i = 0; i < datasets.length; i++) {
+				var dataset = datasets[i]
+				var datasetPath = dataPath + dataset
+				$log.debug('datasetPath: ' + datasetPath)
+				load(datasetPath, function(keyDataset) {
+					$log.debug('Loaded keyDataset: ', datasetPath, ' ', keyDataset)
+					data.keyDatasets.push(keyDataset)
+				})
+			}
+			console.log('keyDatasets: ' + data.keyDatasets.length)
+		}	
 
 		//Loads and attaches data to given parent element with given property name
 		function load(path, callback) {

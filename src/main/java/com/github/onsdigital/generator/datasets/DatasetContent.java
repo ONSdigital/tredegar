@@ -9,6 +9,7 @@ import org.apache.commons.lang3.StringUtils;
 import com.github.onsdigital.generator.CSV;
 import com.github.onsdigital.generator.Folder;
 import com.github.onsdigital.json.Dataset;
+import com.github.onsdigital.json.DownloadSection;
 
 public class DatasetContent {
 
@@ -70,10 +71,22 @@ public class DatasetContent {
 				node = node.getChild(row.get("Level 3"));
 			}
 
+
 			Dataset dataset = new Dataset();
 			dataset.name = StringUtils.trim(row.get("Name"));
 			dataset.title = dataset.name;
 			dataset.fileName = dataset.name.toLowerCase();
+			if (StringUtils.isNotBlank(row.get("Summary"))) {
+				dataset.summary = row.get("Summary");
+			}
+
+			if (StringUtils.isNotBlank(row.get("Link (latest)"))) {
+				DownloadSection downloadSection = new DownloadSection();
+				downloadSection.title = dataset.name;
+				downloadSection.xls = row.get("Link (latest)");
+				dataset.download.add(downloadSection);
+			}
+
 			node.addDataset(dataset);
 			DatasetData.datasets.add(dataset);
 		}

@@ -12,6 +12,9 @@ public class T3 extends TaxonomyHome {
 	public URI headline;
 	public List<URI> items = new ArrayList<>();
 	public URI statsBulletinHeadline;
+	public List<URI> statsBulletins = new ArrayList();
+	public List<URI> datasets = new ArrayList();
+
 
 	public T3(Folder folder) {
 		super(folder);
@@ -30,6 +33,12 @@ public class T3 extends TaxonomyHome {
 		items.add(URI.create("/economy/inflationandpriceindices/timeseries/kvr9"));
 
 		statsBulletinHeadline = URI.create("/economy/inflationandpriceindices/bulletins/consumerpriceinflation");
+		statsBulletins.add(URI.create("/economy/inflationandpriceindices/bulletins/consumerpriceinflation"));
+		statsBulletins.add(URI.create("/economy/inflationandpriceindices/bulletins/housepriceindex"));
+
+		datasets.add(URI.create("/economy/inflationandpriceindices/datasets/inflationsummary"));
+		datasets.add(URI.create("/economy/inflationandpriceindices/datasets/producerpricesindex"));
+
 	}
 
 }
