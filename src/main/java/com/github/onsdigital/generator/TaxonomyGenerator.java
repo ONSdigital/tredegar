@@ -32,7 +32,6 @@ import com.github.onsdigital.json.taxonomy.T1;
 import com.github.onsdigital.json.taxonomy.T2;
 import com.github.onsdigital.json.taxonomy.T3;
 import com.github.onsdigital.json.timeseries.Timeseries;
-import com.github.onsdigital.json.timeseries.TimeseriesValue;
 
 public class TaxonomyGenerator {
 
@@ -432,12 +431,6 @@ public class TaxonomyGenerator {
 				timeseriesFolder.mkdirs();
 			}
 
-			Set<TimeseriesValue> data = TimeseriesData.getData(timeseries.cdid());
-			if (data != null) {
-				timeseries.data = new ArrayList<>(data);
-			} else {
-				System.out.println("No data for " + timeseries.cdid());
-			}
 			timeseries.setBreadcrumb(t3);
 			if (timeseries.data.size() == 0) {
 				noData.add(timeseries);
