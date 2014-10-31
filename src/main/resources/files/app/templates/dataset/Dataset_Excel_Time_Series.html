@@ -44,9 +44,8 @@
 
             <tbody>
                 <tr ng-repeat="row in dataset.download">
+                    <td><a href="{{row.csv}}" class="btn btn--primary btn--small"><span class="table__action__text">Download as .CSV</span><span class="icon-download" role="presentation"></span></a></td>
                     <td><a href="{{row.xls}}" class="btn btn--primary btn--small"><span class="table__action__text">Download as .XLS</span><span class="icon-download" role="presentation"></span></a></td>
-                    <td><a href="{{row.csv}}" class="btn btn--primary btn--small"><span class="table__action__text">Download as .CSV</span><span class="icon-download" role="presentation"></span></a>
-                    </td>
 
                 </tr>
             </tbody>

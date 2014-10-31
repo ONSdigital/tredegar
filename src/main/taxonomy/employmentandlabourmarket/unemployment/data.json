@@ -11,8 +11,16 @@
     "/employmentandlabourmarket/unemployment/timeseries/dpaf",
     "/employmentandlabourmarket/unemployment/timeseries/dpae"
   ],
+<<<<<<< HEAD
   "statsBulletinHeadline": "/economy/inflationandpriceindices/bulletins/consumerpriceinflation",
   "statsBulletins": [],
+=======
+  "statsBulletinHeadline": "/employmentandlabourmarket/unemployment/bulletins/uklabourmarket",
+  "statsBulletins": [
+    "/employmentandlabourmarket/unemployment/bulletins/uklabourmarket",
+    "/employmentandlabourmarket/unemployment/bulletins/youngpeoplenotineducationemploymentortrainingneet"
+  ],
+>>>>>>> ba7a70a058d5e5f34a13c62a3fa3773e111d332c
   "datasets": [],
   "level": "t3",
   "index": 1,

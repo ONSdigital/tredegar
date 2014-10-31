@@ -1648,12 +1648,12 @@
                             <label class="btn btn--secondary btn--small btn--narrow btn--thin" ng-class="{'btn--secondary--active': !chartTable}" ng-click="changeChartType('table')">Table</label>
                         </div>
                         <div class="button-group chart-area__controls__timespan">
-                            <label class="btn btn--secondary btn--small btn--narrow btn--thin" ng-if="hasYData" ng-class="{'btn--secondary--active': yqm === 0}" ng-click="changeChartTime('year')">Year</label>
-                            <label class="btn btn--secondary btn--small btn--narrow btn--thin" ng-if="hasQData" ng-class="{'btn--secondary--active': yqm === 1}" ng-click="changeChartTime('quarter')">Quarter</label>
-                            <label class="btn btn--secondary btn--small btn--narrow btn--thin " ng-if="hasMData" ng-class="{'btn--secondary--active': yqm === 2}" ng-click="changeChartTime('month')">Month</label>
+                            <label class="btn btn--secondary btn--small btn--narrow btn--thin" ng-if="hasYData" ng-class="{'btn--secondary--active': yqm === 0}" ng-click="changeTime('year')">Year</label>
+                            <label class="btn btn--secondary btn--small btn--narrow btn--thin" ng-if="hasQData" ng-class="{'btn--secondary--active': yqm === 1}" ng-click="changeTime('quarter')">Quarter</label>
+                            <label class="btn btn--secondary btn--small btn--narrow btn--thin " ng-if="hasMData" ng-class="{'btn--secondary--active': yqm === 2}" ng-click="changeTime('month')">Month</label>
                         </div>
                     </div>
-                    <div class="button-group chart-area__controls__time">
+<!--                     <div class="button-group chart-area__controls__time">
                         <span class="chart-area__controls__time__label">Time period:</span>
                         <ul class="nav flush--top chart-area__controls__time__ranges">
                             <li>
@@ -1673,9 +1673,9 @@
                             </li>
                         </ul>
                     </div>
-
+ -->
                     <!-- Selector for chart -->
-                    <div ng-show="chartTable" class="chart-area__controls__custom">
+<!--                     <div ng-show="chartTable" class="chart-area__controls__custom">
                         <div class="chart-area__controls__custom__errors"></div>
                         <div class="chart-area__controls__custom__container">
                             <div class="chart-area__controls__dropdowns">
@@ -1696,7 +1696,7 @@
                             </div>
                         </div>
                         <br></br>
-                    </div>
+                    </div> -->
 
                     <!-- Selector for table -->
                     <div ng-show="!chartTable" class="chart-area__controls__custom">
@@ -1733,7 +1733,9 @@
 
                 <!-- chart -->
                 <div ng-if="chartTable">
-                    <highchart class="highcharts-background" id="chart_prices" config="chartData"></highchart>
+                    <highchart class="highcharts-background" id="chart_prices" config="chartData">
+                        <span  ng-repeat="data in graphValue" class="invisible"></span>
+                    </highchart>
                 </div>
 
                 <!-- table -->
