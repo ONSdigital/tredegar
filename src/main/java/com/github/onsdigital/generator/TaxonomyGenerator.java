@@ -325,6 +325,32 @@ public class TaxonomyGenerator {
 		if (statsBulletinHeadline != null) {
 			t3.statsBulletinHeadline = statsBulletinHeadline;
 		}
+		
+		t3.statsBulletins.clear();
+		List<Bulletin> bulletins = BulletinContent.getBulletins(folder);
+
+		if (bulletins != null) {
+			System.out.println("bulletins: " + bulletins.size());
+			for (Bulletin bulletin : bulletins) {
+				if (bulletin.summary != null) {
+					URI bulletinUri = toStatsBulletinUri(folder, bulletin);
+					t3.statsBulletins.add(bulletinUri);
+				}
+			}
+		}
+
+		t3.datasets.clear();
+		List<Dataset> datasets = DatasetContent.getDatasets(folder);
+
+		if (datasets != null) {
+			System.out.println("datasets: " + datasets.size());
+			for (Dataset dataset : datasets) {
+				if (dataset.summary != null) {
+					URI datasetUri = toDatasetUri(folder, dataset);
+					t3.datasets.add(datasetUri);
+				}
+			}
+		}
 
 		// Serialise
 		String json = Serialiser.serialise(t3);
@@ -353,6 +379,28 @@ public class TaxonomyGenerator {
 				bulletin.uri = URI.create(baseUri + "/" + StringUtils.deleteWhitespace(sanitizedBulletinFileName));
 			}
 			result = bulletin.uri;
+		}
+
+		return result;
+	}
+
+	private static URI toDatasetUri(Folder folder, Dataset dataset) {
+		URI result = null;
+
+		if (dataset != null) {
+			if (dataset.uri == null) {
+				String baseUri = "/" + folder.filename();
+				Folder parent = folder.parent;
+				while (parent != null) {
+					baseUri = "/" + parent.filename() + baseUri;
+					parent = parent.parent;
+				}
+				baseUri += "/datasets";
+				String datasetFileName = dataset.fileName;
+				String sanitizedDatasetFileName = datasetFileName.replaceAll("\\W", "");
+				dataset.uri = URI.create(baseUri + "/" + StringUtils.deleteWhitespace(sanitizedDatasetFileName));
+			}
+			result = dataset.uri;
 		}
 
 		return result;

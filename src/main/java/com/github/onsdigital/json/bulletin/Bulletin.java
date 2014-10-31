@@ -27,6 +27,7 @@ public class Bulletin extends CollectionItem {
 	public String headline1 = "Duis ut laoreet felis";
 	public String headline2 = "Morbi sed sem at magna";
 	public String headline3 = "Auctor gravida sed non enim";
+	public String summary = "Summary section";
 
 	/**
 	 * Sets up some basic content.

@@ -8,50 +8,93 @@
               </article>
             </div>
             <!-- /box -->
-            <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
-              <article class="box">
-                <header class="box__header">
-                  <h3>
-                    <a href="#!/economy/inflationandpriceindices/bulletins/consumerpriceinflation/">Quisque varius rutrum, August 2014</a>
-                  </h3>
-                </header>
-                <!-- /box__header -->
-                <div class="box__content">
-                  <p>
-                    Aliquam tincidunt, mi et aliquam dictum, quam urna vulputate odio, sit amet commodo risus enim et purus.
-                  </p>
-                  <p class="description mini"></p>
-                  <p>
-                  <span class="lozenge">Statistical bulletin</span>
-                </p>
-                </div>
-                <!-- /box__content -->
-              </article>
-              <!-- /box -->
+            <div ng-if="(taxonomy.data.statsBulletinData) == null">
+	            <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
+	              <article class="box">
+	                <header class="box__header">
+	                  <h3>
+	                    <a href="#">Quisque varius rutrum, August 2014</a>
+	                  </h3>
+	                </header>
+	                /box__header
+	                <div class="box__content">
+	                  <p>
+						Aliquam tincidunt, mi et aliquam dictum, quam urna vulputate odio, sit amet commodo risus enim et purus.
+	                  </p>
+	                  <p class="description mini"></p>
+	                  <p>
+	                  <span class="lozenge">Statistical bulletin</span>
+	                </p>
+	                </div>
+	              </article>
+	            </div>
+	            <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
+	              <article class="box">
+	                <header class="box__header">
+	                  <h3>
+	                    <a href="#">Vestibulum venenati, August 2014</a>
+	                  </h3>
+	                </header>
+	                /box__header
+	                <div class="box__content">
+	                  <p>
+						Fusce et ante dapibus purus imperdiet dapibus. Morbi dolor est, ultricies ac commodo in.
+	                  </p>
+	                  <p class="description mini"></p>
+	                  <p>
+	                  <span class="lozenge">Statistical bulletin</span>
+	                </p>
+	                </div>
+	              </article>
+	            </div>	              
             </div>
-            <!-- /grid-col -->
-            <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
-              <article class="box box--padded-vertical rem_pad_top">
-                <header class="box__header">
-                  <h3>
-                    <a href="#">House Price Index August 2014</a>
-                  </h3>
-                </header>
-                <!-- /box__header -->
-                <div class="box__content">
-                  <p>
-                    The ONS House Price Index (HPI) is a monthly release that publishes figures for
-                    mix-adjusted average house prices.
-                  </p>
-                  <p class="description mini"></p>
-                  <p>
-                  <span class="lozenge">Statistical bulletin</span>
-                </p>
-                </div>
-                <!-- /box__content -->
-              </article>
-              <!-- /box -->
-            </div>
+            <div ng-repeat="bulletin in taxonomy.data.statsBulletinData track by $index">
+            {{results}}
+	            <div ng-if="$index < 2" class="grid-col desktop-grid-one-third tablet-grid-one-half">
+	              <article class="box">
+	                <header class="box__header">
+	                  <h3>
+	                    <a href=#!{{bulletin.uri}}>{{bulletin.name}}</a>
+	                  </h3>
+	                </header>
+	                <!-- /box__header -->
+	                <div class="box__content">
+	                  <p>
+	                    {{bulletin.summary}}
+	                  </p>
+	                  <p class="description mini"></p>
+	                  <p>
+	                  <span class="lozenge">Statistical bulletin</span>
+	                </p>
+	                </div>
+	                <!-- /box__content -->
+	              </article>
+	              <!-- /box -->
+	            </div>
+	            <!-- /grid-col -->
+<!-- 	            <div class="grid-col desktop-grid-one-third tablet-grid-one-half"> -->
+<!-- 	              <article class="box box--padded-vertical rem_pad_top"> -->
+<!-- 	                <header class="box__header"> -->
+<!-- 	                  <h3> -->
+<!-- 	                    <a href="#">House Price Index August 2014</a> -->
+<!-- 	                  </h3> -->
+<!-- 	                </header> -->
+<!-- 	                /box__header -->
+<!-- 	                <div class="box__content"> -->
+<!-- 	                  <p> -->
+<!-- 	                    The ONS House Price Index (HPI) is a monthly release that publishes figures for -->
+<!-- 	                    mix-adjusted average house prices. -->
+<!-- 	                  </p> -->
+<!-- 	                  <p class="description mini"></p> -->
+<!-- 	                  <p> -->
+<!-- 	                  <span class="lozenge">Statistical bulletin</span> -->
+<!-- 	                </p> -->
+<!-- 	                </div> -->
+<!-- 	                /box__content -->
+<!-- 	              </article> -->
+<!-- 	              /box -->
+<!-- 	            </div> -->
+	        </div>
             <!-- /grid-col -->
             <div class="grid-col hide-large">
               <p class="box box--padded-top">
