@@ -14,6 +14,7 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+import java.util.TreeSet;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -115,7 +116,7 @@ public class MetadataCSV {
 	}
 
 	private static Collection<Path> getFiles() throws IOException {
-		Set<Path> result = new HashSet<>();
+		Set<Path> result = new TreeSet<>();
 
 		try {
 			URL resource = MetadataCSV.class.getResource(resourceName);

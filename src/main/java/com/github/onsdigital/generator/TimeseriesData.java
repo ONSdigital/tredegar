@@ -10,11 +10,11 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Collection;
-import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
+import java.util.TreeSet;
 
 import org.apache.commons.lang3.StringUtils;
 
@@ -68,7 +68,7 @@ public class TimeseriesData {
 	}
 
 	private static Collection<Path> getFiles() throws IOException {
-		Set<Path> result = new HashSet<>();
+		Set<Path> result = new TreeSet<>();
 
 		try {
 			URL resource = TimeseriesData.class.getResource("/data");
