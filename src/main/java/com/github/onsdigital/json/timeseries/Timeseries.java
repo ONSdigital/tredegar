@@ -11,7 +11,7 @@ import com.github.onsdigital.json.ContentType;
 import com.github.onsdigital.json.DataItem;
 import com.github.onsdigital.json.TaxonomyHome;
 
-public class Timeseries extends DataItem {
+public class Timeseries extends DataItem implements Comparable<Timeseries> {
 
 	// Spreadsheet headings
 	private String cdid;
@@ -91,5 +91,10 @@ public class Timeseries extends DataItem {
 			return false;
 		}
 		return StringUtils.equalsIgnoreCase(((Timeseries) obj).cdid, cdid);
+	}
+
+	@Override
+	public int compareTo(Timeseries o) {
+		return this.cdid.compareTo(o.cdid);
 	}
 }

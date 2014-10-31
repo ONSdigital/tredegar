@@ -12,6 +12,7 @@ import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.TreeSet;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.ArrayUtils;
@@ -36,6 +37,7 @@ import com.github.onsdigital.json.timeseries.TimeseriesValue;
 public class TaxonomyGenerator {
 
 	static File root;
+	static Set<Timeseries> noData = new TreeSet<>();
 
 	/**
 	 * Parses the taxonomy CSV file and generates a file structure..
@@ -195,6 +197,7 @@ public class TaxonomyGenerator {
 		}
 
 		// System.out.println(Data.getDateLabels());
+		System.out.println("Timeseries with no data: " + noData + " (" + noData.size() + ")");
 		System.out.println("You have a grand total of " + Data.size() + " timeseries. Wow.");
 	}
 
@@ -436,6 +439,9 @@ public class TaxonomyGenerator {
 				System.out.println("No data for " + timeseries.cdid());
 			}
 			timeseries.setBreadcrumb(t3);
+			if (timeseries.data.size() == 0) {
+				noData.add(timeseries);
+			}
 			String json = Serialiser.serialise(timeseries);
 			System.out.println(timeseriesFile.getAbsolutePath());
 			FileUtils.writeStringToFile(timeseriesFile, json, Charset.forName("UTF8"));
