@@ -19,7 +19,6 @@ public class BulletinContent {
 
 		// Parse the data:
 		if (rows == null) {
-			System.out.println("WTF: rows is null");
 			parseCsv();
 		}
 
