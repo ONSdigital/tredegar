@@ -7,7 +7,7 @@
                 <span class="nav--controls__text">Menu</span>
             </a>
         </li>
-        <li class="nav--controls__search" ng-click="navigation.toggleSearch()">
+        <li class="nav--controls__search" ng-click="navigation.toggleSearch()" ng-class="hideSearch? '' : 'search-is-expanded'">
             <a href="" id="search-toggle" aria-controls="nav-search">
                 <span class="nav--controls__icon icon--inline icon--large" ng-class="hideSearch ? 'icon-search-1' : 'icon-cancel'" role="presentation"></span>
                 <span class="nav--controls__text">{{hideSearch ? 'Search' : 'Hide' }}</span>

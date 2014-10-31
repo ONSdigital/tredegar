@@ -3976,6 +3976,10 @@ table actions
 
 .padded--med{ padding: 1.2em; }
 
+.search{
+  min-height: 20em;
+}
+
 .search .lozenge {
   float: right;
   display: inline-block;
@@ -4055,9 +4059,7 @@ table actions
   margin: 0.77em 0em 0.5em 0em;
   position: relative; 
   float: right;
-  
-
- }
+  }
 
 .search-sorting-grid{ padding-left: 10px;
                       float: right;
