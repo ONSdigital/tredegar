@@ -53,10 +53,11 @@
 			downloadRequest.urlList = getFileList()
 			$http.post('/download', downloadRequest)
 				.success(function(data) {
+					console.log(data)
 					var file = new Blob([data], {
-						type: 'application/xls'
+						type: 'application/xlsx'
 					});
-					saveAs(file, 'datafile.xls');
+					saveAs(file, 'datafile.xlsx');
 				});
 		}
 
