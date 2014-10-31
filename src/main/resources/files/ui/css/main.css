@@ -499,6 +499,7 @@ img {
 .icon-right-open-big:before { content: '\e886'; } /* '' */
 .icon-up-open-big:before { content: '\e885'; } /* '' */
 .icon-down-open-big:before { content: '\e888'; } /* '' */
+.icon-menu:before { content: '\e810'; } /* '' */
 
 /*Original code from CX*/
 
@@ -2839,7 +2840,7 @@ lesser , applied styles
 
 .nav--dark a {
   color: #303030;
-  text-decoration: underline; }
+  /*text-decoration: underline; */}
   .nav--dark a:hover {
     color: #636363; }
 
@@ -2875,6 +2876,7 @@ lesser , applied styles
   text-decoration: none; }
 
 .ons-nav {
+  position: relative;
   background-color: #333333; }
 /*
 .nav--primary {
@@ -2941,7 +2943,7 @@ lesser , applied styles
 
 
 
-    .nav--primary > li:hover > .nav--primary__sub,
+   ? .nav--primary > li:hover > .nav--primary__sub,
     .nav--primary .menu-focus {
       position: absolute;
       top: 100%;

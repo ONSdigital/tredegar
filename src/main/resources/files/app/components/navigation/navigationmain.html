@@ -1,7 +1,7 @@
 <nav class="ons-nav">
 
     <ul class="nav nav--controls" ng-class="class" >
-        <li class="nav--controls__menu">
+        <li class="nav--controls__menu" ng-class="navigation.showMenu?'menu-is-expanded': '' ">
             <a href="" id="menu-toggle" aria-controls="nav-primary" ng-click="navigation.toggleMenu()" >
                 <span class="nav--controls__icon icon-menu icon--inline icon--large" role="presentation"></span>
                 <span class="nav--controls__text">Menu</span>
@@ -19,3 +19,4 @@
     </ul>
     <search-box></search-box>
 </nav>
+
