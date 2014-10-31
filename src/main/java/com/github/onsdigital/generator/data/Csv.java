@@ -146,7 +146,7 @@ public class Csv implements Iterable<Map<String, String>> {
 
 			@Override
 			public boolean hasNext() {
-				return index < rows.size();
+				return rows != null && index < rows.size();
 			}
 
 			@Override
