@@ -13,7 +13,7 @@
       transclude: true,
       scope: {
         class: '@',
-        trigger:'&'
+        trigger: '&'
       },
       controller: NavigationController,
       controllerAs: 'navigation',
@@ -27,6 +27,28 @@
       resolveScreenType()
       bindResize()
 
+      init()
+
+      function init() {
+        var path = $location.$$path
+        navigation.location = getPath(path)
+      }
+
+      function getPath(path) {
+        var tokens = path.split('/')
+        if (tokens.length < 2) {
+          return "/"
+        } else {
+          return tokens[1]
+        }
+      }
+
+      function isCurrentPage(page) {
+        var result =  navigation.location === getPath(page)
+        return result
+
+      }
+
       function addPane(pane) {
         navigation.expandablePanes[pane.navLabel] = pane
       }
@@ -37,7 +59,7 @@
 
       function gotoPage(path) {
         $location.path(path.substr(2))
-        navigation.showMenu=false
+        navigation.showMenu = false
       }
 
       //Listens resize event to switch screen type to mobile or desktop
@@ -64,7 +86,8 @@
         addPane: addPane,
         toggleMenu: toggleMenu,
         gotoPage: gotoPage,
-        toggleSearch:toggleSearch
+        toggleSearch: toggleSearch,
+        isCurrentPage: isCurrentPage
       })
 
     }
@@ -103,9 +126,15 @@
         return navigation.mobile
       }
 
+      function isCurrentPage() {
+        var result = navigation.isCurrentPage(scope.href)
+        return result
+      }
+
       angular.extend(scope, {
         toggle: toggle,
-        isMobile: isMobile
+        isMobile: isMobile,
+        isCurrentPage: isCurrentPage
       })
 
 
