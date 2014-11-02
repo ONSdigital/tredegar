@@ -1,0 +1,50 @@
+{
+  "cdid": "KND5",
+  "note1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quam leo, blandit a turpis non, varius feugiat mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In posuere lectus eu laoreet ultrices. Donec ac sodales libero, eget fermentum arcu.",
+  "note2": "Fusce pharetra, libero in imperdiet ultricies, ex erat tempor dolor, vitae aliquet magna velit in urna. Duis finibus augue velit, ut consectetur risus imperdiet in. Sed tempus congue ante, ac cursus diam porttitor vitae. Vivamus arcu leo, volutpat in mauris ac, lacinia fermentum velit. Sed dictum tortor justo, aliquet facilisis lorem dictum a.",
+  "data": [
+    {
+      "date": "2007",
+      "value": "-23"
+    },
+    {
+      "date": "2008",
+      "value": "-8"
+    },
+    {
+      "date": "2009",
+      "value": "-3"
+    },
+    {
+      "date": "2010",
+      "value": "-28"
+    },
+    {
+      "date": "2011",
+      "value": "4"
+    },
+    {
+      "date": "2012",
+      "value": "42"
+    }
+  ],
+  "uri": "/economy/nationalaccounts/timeseries/knd5",
+  "type": "timeseries",
+  "name": "BoP: balance: current account: serbia",
+  "fileName": "knd5",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "National Accounts",
+      "fileName": "nationalaccounts",
+      "breadcrumb": []
+    }
+  ]
+}
