@@ -12,8 +12,8 @@ public class T3 extends TaxonomyHome {
 	public URI headline;
 	public List<URI> items = new ArrayList<>();
 	public URI statsBulletinHeadline;
-	public List<URI> statsBulletins = new ArrayList();
-	public List<URI> datasets = new ArrayList();
+	public List<URI> statsBulletins = new ArrayList<>();
+	public List<URI> datasets = new ArrayList<>();
 
 
 	public T3(Folder folder) {
