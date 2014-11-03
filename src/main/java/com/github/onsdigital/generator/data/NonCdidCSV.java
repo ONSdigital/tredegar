@@ -50,7 +50,7 @@ class NonCdidCSV {
 				if (timeseries == null) {
 					// System.out.println("Sheet " + sheetIndex + ", column " +
 					// c + " - new timeseries " + cdid);
-					timeseries = Data.addTimeseries(cdid);
+					timeseries = Data.addTimeseries(cdid, null);
 					timeseries.data = new ArrayList<>();
 				}
 

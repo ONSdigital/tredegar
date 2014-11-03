@@ -66,6 +66,12 @@ public class Timeseries extends DataItem implements Comparable<Timeseries> {
 		}
 		this.cdid = StringUtils.trim(cdid);
 		fileName = StringUtils.lowerCase(this.cdid.toLowerCase());
+
+		// We don't have metadata for all of the datasets,so
+		// this provides a basic fallback by setting the CDID as the name:
+		if (StringUtils.isBlank(name)) {
+			name = cdid;
+		}
 	}
 
 	@Override

@@ -72,7 +72,7 @@ class AlphaContentCSV {
 			Timeseries timeseries = Data.timeseries(cdid);
 			if (timeseries == null) {
 				// We haven't seen this one before, so add it:
-				timeseries = Data.addTimeseries(cdid);
+				timeseries = Data.addTimeseries(cdid, null);
 
 			}
 
@@ -120,7 +120,7 @@ class AlphaContentCSV {
 		}
 	}
 
-	private static URI toUri(Folder folder, Timeseries timeseries) {
+	static URI toUri(Folder folder, Timeseries timeseries) {
 		URI result = null;
 
 		if (timeseries != null) {

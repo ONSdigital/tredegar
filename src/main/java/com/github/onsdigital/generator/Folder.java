@@ -5,13 +5,14 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.apache.commons.lang3.StringUtils;
 
-import com.github.onsdigital.json.timeseries.Timeseries;
 import com.github.onsdigital.json.bulletin.Bulletin;
+import com.github.onsdigital.json.timeseries.Timeseries;
 
-public class Folder {
+public class Folder implements Comparable<Folder> {
 
 	public int index;
 	public String name;
@@ -21,6 +22,7 @@ public class Folder {
 	public String more;
 	public Timeseries headline;
 	public List<Timeseries> timeserieses = new ArrayList<>();
+	public List<Set<Timeseries>> oldDataset = new ArrayList<Set<Timeseries>>();
 	public List<Bulletin> bulletins = new ArrayList<>();
 
 	/**
@@ -59,6 +61,15 @@ public class Folder {
 		return children.values();
 	}
 
+	public String path() {
+		String result = filename();
+		Folder parent = this;
+		while ((parent = parent.parent) != null) {
+			result = parent.filename() + "/" + result;
+		}
+		return result;
+	}
+
 	@Override
 	public int hashCode() {
 		return name == null ? 0 : name.hashCode();
@@ -67,6 +78,16 @@ public class Folder {
 	@Override
 	public boolean equals(Object obj) {
 		return StringUtils.equals(name, ((Folder) obj).name);
+	}
+
+	@Override
+	public String toString() {
+		return name;
+	}
+
+	@Override
+	public int compareTo(Folder o) {
+		return name.compareTo(o.name);
 	}
 
 }

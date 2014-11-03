@@ -24,6 +24,7 @@ import com.github.davidcarboni.ResourceUtils;
 import com.github.davidcarboni.restolino.json.Serialiser;
 import com.github.onsdigital.generator.bulletin.BulletinContent;
 import com.github.onsdigital.generator.data.Data;
+import com.github.onsdigital.generator.data.DatasetMappingsCSV;
 import com.github.onsdigital.generator.datasets.DatasetContent;
 import com.github.onsdigital.json.Dataset;
 import com.github.onsdigital.json.HomeSection;
@@ -36,6 +37,8 @@ import com.github.onsdigital.json.timeseries.Timeseries;
 public class TaxonomyGenerator {
 
 	static File root;
+	static Set<Timeseries> created = new HashSet<>();
+	static List<Folder> oldDatasetsCreated = new ArrayList<>();
 	static Set<Timeseries> noData = new TreeSet<>();
 
 	/**
@@ -195,9 +198,68 @@ public class TaxonomyGenerator {
 			}
 		}
 
+		// Print out metrics and warnings that provide information on whether
+		// the process is working as expected:
+
 		// System.out.println(Data.getDateLabels());
 		System.out.println("Timeseries with no data: " + noData + " (" + noData.size() + ")");
-		System.out.println("You have a grand total of " + Data.size() + " timeseries. Wow.");
+		System.out.println("You have a grand total of " + created.size() + " timeseries, out of a total possible " + Data.size() + " parsed timeseries.");
+		System.out.println("There are a total of " + Data.sizeDatasets() + " CDIDs classified into one or more datasets.");
+		Set<String> unmappedDatasets = Data.unmappedDatasets();
+		if (unmappedDatasets.size() > 0) {
+			System.out.println("To increase this number, please add mappings for the following datasets: " + unmappedDatasets);
+			for (String datasetName : unmappedDatasets) {
+				if (!"other".equals(datasetName)) {
+					System.out.println(" - " + datasetName + " contains " + Data.dataset(datasetName).size());
+				}
+			}
+		}
+		if (Data.dataset("other") != null) {
+			System.out.println("The 'other' dataset contains " + Data.dataset("other").size() + " timeseries.");
+		}
+
+		Set<Folder> mapped = new TreeSet<>();
+		for (Folder folder : DatasetMappingsCSV.mappedFolders.values()) {
+			mapped.add(folder);
+		}
+		if (oldDatasetsCreated.size() != mapped.size()) {
+			System.out.println(oldDatasetsCreated.size() + " old datasets have been created, from a total of " + Data.sizeDatasetsCount());
+			Collections.sort(oldDatasetsCreated);
+			for (Folder folder : oldDatasetsCreated) {
+				System.out.println(" - " + folder.path());
+			}
+			System.out.println("Expected the following:");
+			for (Folder folder : mapped) {
+				System.out.println(" - " + folder.path());
+			}
+		}
+
+		int yes = 0;
+		int no = 0;
+		int missing = 0;
+		for (Timeseries timeseries : new Data()) {
+			if (timeseries.uri == null) {
+				missing++;
+			} else {
+				File path = new File(root, timeseries.uri.toString());
+				path = new File(path, "data.json");
+				if (path.exists()) {
+					yes++;
+				} else {
+					no++;
+				}
+			}
+			if (!timeseries.cdid().matches("[A-Z0-9]{3,8}")) {
+				throw new RuntimeException("CDID " + timeseries + " is not in the expected format.");
+			}
+		}
+		System.out.println(yes + " timeseries have been verified to exist on disk.");
+		if (no > 0) {
+			System.out.println("Warning: " + no + " timeseries don't actually exist on disk");
+		}
+		if (missing > 0) {
+			System.out.println(missing + " timeseries have no URI set (suggesting they can't be written to the taxonomy)");
+		}
 	}
 
 	private static void createHomePage(Folder folder, File file) throws IOException {
@@ -210,6 +272,9 @@ public class TaxonomyGenerator {
 		}
 		String json = Serialiser.serialise(t1);
 		FileUtils.writeStringToFile(new File(file, "data.json"), json);
+		if (folder.oldDataset.size() > 0) {
+			throw new RuntimeException("A dataset has been mapped to " + folder + " but this folder is the homepage.");
+		}
 	}
 
 	private static void createT2(Folder folder, File file) throws IOException {
@@ -226,6 +291,9 @@ public class TaxonomyGenerator {
 
 			String json = Serialiser.serialise(t2);
 			FileUtils.writeStringToFile(new File(file, "data.json"), json);
+		}
+		if (folder.oldDataset.size() > 0) {
+			throw new RuntimeException("A dataset has been mapped to " + folder + " but this folder is a T2.");
 		}
 	}
 
@@ -267,8 +335,6 @@ public class TaxonomyGenerator {
 		for (Folder t3Folder : t3Folders) {
 			if (t3Folder.headline != null) {
 				result.add(t3Folder.headline.uri);
-			} else {
-				System.out.println("No headline timeseries on " + t3Folder.name);
 			}
 		}
 
@@ -305,6 +371,10 @@ public class TaxonomyGenerator {
 			t3.headline = folder.headline.uri;
 		} else {
 			System.out.println("No headline URI set for " + folder.name);
+			if (folder.timeserieses.size() > 0 && folder.timeserieses.get(0).uri != null) {
+				t3.headline = folder.timeserieses.get(0).uri;
+				System.out.println("Using the first item from the timeseries list instead: " + t3.headline);
+			}
 		}
 		List<Timeseries> timeserieses = folder.timeserieses;
 		t3.items.clear();
@@ -419,26 +489,73 @@ public class TaxonomyGenerator {
 	 */
 	private static void createTimeseries(Folder folder, File file, T3 t3) throws IOException {
 
-		List<Timeseries> timeserieses = folder.timeserieses;
+		int created = 0;
 
+		Set<Timeseries> timeserieses = new HashSet<>(folder.timeserieses);
+		if (folder.headline != null) {
+			timeserieses.add(folder.headline);
+		}
+
+		// Write out timeseries specified by the Alpha Content spreadsheet:
 		for (Timeseries timeseries : timeserieses) {
 
-			URI uri = timeseries.uri;
-			File timeseriesFolder = new File(root, uri.toString());
-			File timeseriesFile = new File(timeseriesFolder, "data.json");
-
-			if (!timeseriesFile.exists()) {
-				timeseriesFolder.mkdirs();
+			if (createTimeseries(timeseries, t3)) {
+				created++;
 			}
+		}
 
+		// TODO: Other timeseries mappings are commented out to minimise volume
+		// of files for now:
+		// // Write out timeseries mapped according to the "old dataset"
+		// // taxonomy map:
+		// Set<Timeseries> total = new HashSet<Timeseries>(timeserieses);
+		// if (folder.oldDataset.size() > 0) {
+		// oldDatasetsCreated.add(folder);
+		// for (Set<Timeseries> dataset : folder.oldDataset) {
+		// for (Timeseries timeseries : dataset) {
+		//
+		// if (createTimeseries(timeseries, t3)) {
+		// created++;
+		// }
+		// }
+		// total.addAll(dataset);
+		// }
+		//
+		// System.out.println("Referenced CDIDs vs. total CDIDs at this node: "
+		// + timeserieses.size() + "/" + total.size() + " (" + created +
+		// " created)");
+		// }
+	}
+
+	private static boolean createTimeseries(Timeseries timeseries, T3 t3) throws IOException {
+		boolean result = false;
+
+		URI uri = timeseries.uri;
+		File timeseriesFolder = new File(root, uri.toString());
+		File timeseriesFile = new File(timeseriesFolder, "data.json");
+
+		// Only create the timeseries if it doesn't already exist:
+		if (!timeseriesFile.exists()) {
+			timeseriesFolder.mkdirs();
+
+			// Set the breadcrumb:
+			// NB cross-referenced timeseries will produce unexpected
+			// breadcrumbs. The user will come from a home page in one area of
+			// the taxonomy, but the breadcrumb on the timeseries page will be
+			// for a different area of the taxonomy.
+			// TODO: find a better way of handling breadcrumbs on timeseries
+			// pages.
 			timeseries.setBreadcrumb(t3);
 			if (timeseries.data.size() == 0) {
 				noData.add(timeseries);
 			}
 			String json = Serialiser.serialise(timeseries);
-			System.out.println(timeseriesFile.getAbsolutePath());
 			FileUtils.writeStringToFile(timeseriesFile, json, Charset.forName("UTF8"));
+			created.add(timeseries);
+			result = true;
 		}
+
+		return result;
 	}
 
 	private static void createArticle(Folder folder, File file) throws IOException {

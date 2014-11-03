@@ -11,13 +11,13 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Collection;
-import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import au.com.bytecode.opencsv.CSVReader;
@@ -62,14 +62,11 @@ public class MetadataCSV {
 		Csv csv = new Csv(resourceName + "/TimeseriesMetadata - CPI.csv");
 		csv.read();
 		csv.getHeadings();
-		int updates = 0;
-		int other = 0;
 		for (Map<String, String> row : csv) {
 			String cdid = row.get("CDID");
 			Timeseries timeseries = Data.timeseries(cdid);
 			if (timeseries == null) {
-				timeseries = addOther(cdid);
-				other++;
+				throw new RuntimeException("Unknown CDID " + cdid);
 			}
 			timeseries.name = row.get("Name");
 			timeseries.seasonalAdjustment = row.get("Seasonal adjustment");
@@ -78,33 +75,29 @@ public class MetadataCSV {
 			timeseries.description = row.get("Description");
 			timeseries.note1 = StringUtils.defaultIfBlank(row.get("Note 1"), timeseries.note1);
 			timeseries.note2 = StringUtils.defaultIfBlank(row.get("Note 2"), timeseries.note2);
-			updates++;
-		}
-		System.out.println("Updated " + updates + " timeseries with Rob's metadata.");
-		if (other > 0) {
-			System.out.println(other + " of those aren't in a dataset.");
 		}
 	}
 
 	private static void read(Path file) throws IOException {
 		try (CSVReader csvReader = new CSVReader(new BufferedReader(new InputStreamReader(Files.newInputStream(file), Charset.forName("UTF8"))))) {
 
+			String datasetName = FilenameUtils.getBaseName(file.getFileName().toString()).replace("_", "");
+			Set<Timeseries> dataset = Data.dataset(datasetName);
+			if (dataset == null) {
+				dataset = Data.addDataset(datasetName);
+			}
+
 			// There are no header rows in these CSVs.
 			// Column 0 is CDID, column 1 is the name:
 			String[] row;
 			int ok = 0;
-			boolean splat = false;
 			while ((row = csvReader.readNext()) != null) {
 				// Add the name to each timeseries:
 				String cdid = row[0];
 				String name = row[1];
 				Timeseries timeseries = Data.timeseries(cdid);
 				if (timeseries == null) {
-					if (!splat) {
-						System.out.println("Found a timeseries that has no data in " + file.getFileName() + ": " + cdid);
-						splat = true;
-					}
-					timeseries = addOther(cdid);
+					timeseries = Data.addTimeseries(cdid, datasetName);
 				} else {
 					ok++;
 				}
@@ -138,24 +131,5 @@ public class MetadataCSV {
 		}
 
 		return result;
-	}
-
-	/**
-	 * Adds the given timeseries to the "other" dataset.
-	 * 
-	 * @param timeseries
-	 */
-	private static Timeseries addOther(String cdid) {
-
-		Timeseries timeseries = Data.addTimeseries(cdid);
-
-		Set<Timeseries> dataset = Data.dataset("other");
-		if (dataset == null) {
-			dataset = new HashSet<>();
-			Data.addDataset("other", dataset);
-		}
-		dataset.add(timeseries);
-
-		return timeseries;
 	}
 }
