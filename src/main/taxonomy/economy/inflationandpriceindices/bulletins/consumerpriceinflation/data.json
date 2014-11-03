@@ -25,5 +25,20 @@
   "releaseDate": "19 August 2014",
   "type": "bulletin",
   "name": "Consumer Price Inflation",
-  "fileName": "consumer price inflation"
+  "fileName": "consumer price inflation",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Inflation and Price Indices",
+      "fileName": "inflationandpriceindices",
+      "breadcrumb": []
+    }
+  ]
 }

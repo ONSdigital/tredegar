@@ -25,5 +25,26 @@
   "releaseDate": "19 August 2014",
   "type": "bulletin",
   "name": "Deaths Registered in England and Wales, 2013",
-  "fileName": "deaths registered in england and wales, 2013"
+  "fileName": "deaths registered in england and wales, 2013",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "People, Population and Community",
+      "fileName": "peoplepopulationandcommunity"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Births, Deaths and Marriages",
+      "fileName": "birthsdeathsandmarriages"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Deaths",
+      "fileName": "deaths",
+      "breadcrumb": []
+    }
+  ]
 }

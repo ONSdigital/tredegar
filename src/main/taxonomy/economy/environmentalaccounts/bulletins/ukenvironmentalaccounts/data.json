@@ -25,5 +25,20 @@
   "releaseDate": "19 August 2014",
   "type": "bulletin",
   "name": "UK Environmental Accounts",
-  "fileName": "uk environmental accounts"
+  "fileName": "uk environmental accounts",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Environmental Accounts",
+      "fileName": "environmentalaccounts",
+      "breadcrumb": []
+    }
+  ]
 }
