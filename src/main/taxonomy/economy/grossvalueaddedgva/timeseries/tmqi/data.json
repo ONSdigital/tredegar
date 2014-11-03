@@ -1,11 +1,94 @@
 {
   "cdid": "TMQI",
+  "note1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quam leo, blandit a turpis non, varius feugiat mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In posuere lectus eu laoreet ultrices. Donec ac sodales libero, eget fermentum arcu.",
+  "note2": "Fusce pharetra, libero in imperdiet ultricies, ex erat tempor dolor, vitae aliquet magna velit in urna. Duis finibus augue velit, ut consectetur risus imperdiet in. Sed tempus congue ante, ac cursus diam porttitor vitae. Vivamus arcu leo, volutpat in mauris ac, lacinia fermentum velit. Sed dictum tortor justo, aliquet facilisis lorem dictum a.",
   "number": "29410",
   "unit": "m",
   "preUnit": "£",
   "date": "2012",
+  "data": [
+    {
+      "date": "1997",
+      "value": "16568"
+    },
+    {
+      "date": "1998",
+      "value": "17303"
+    },
+    {
+      "date": "1999",
+      "value": "18616"
+    },
+    {
+      "date": "2000",
+      "value": "19789"
+    },
+    {
+      "date": "2001",
+      "value": "20363"
+    },
+    {
+      "date": "2002",
+      "value": "20968"
+    },
+    {
+      "date": "2003",
+      "value": "23433"
+    },
+    {
+      "date": "2004",
+      "value": "24393"
+    },
+    {
+      "date": "2005",
+      "value": "25482"
+    },
+    {
+      "date": "2006",
+      "value": "27295"
+    },
+    {
+      "date": "2007",
+      "value": "29697"
+    },
+    {
+      "date": "2008",
+      "value": "29388"
+    },
+    {
+      "date": "2009",
+      "value": "28447"
+    },
+    {
+      "date": "2010",
+      "value": "28945"
+    },
+    {
+      "date": "2011",
+      "value": "29063"
+    },
+    {
+      "date": "2012",
+      "value": "29410"
+    }
+  ],
   "uri": "/economy/grossvalueaddedgva/timeseries/tmqi",
   "type": "timeseries",
   "name": "Northern Ireland Gross Value Added",
-  "fileName": "tmqi"
+  "fileName": "tmqi",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Gross Value Added (GVA)",
+      "fileName": "grossvalueaddedgva",
+      "breadcrumb": []
+    }
+  ]
 }

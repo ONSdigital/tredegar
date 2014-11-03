@@ -14,6 +14,7 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+import java.util.TreeSet;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -75,8 +76,8 @@ public class MetadataCSV {
 			timeseries.unit = row.get("Units");
 			timeseries.mainMeasure = row.get("Main measure");
 			timeseries.description = row.get("Description");
-			timeseries.note1 = row.get("Note 1");
-			timeseries.note2 = row.get("Note 2");
+			timeseries.note1 = StringUtils.defaultIfBlank(row.get("Note 1"), timeseries.note1);
+			timeseries.note2 = StringUtils.defaultIfBlank(row.get("Note 2"), timeseries.note2);
 			updates++;
 		}
 		System.out.println("Updated " + updates + " timeseries with Rob's metadata.");
@@ -115,7 +116,7 @@ public class MetadataCSV {
 	}
 
 	private static Collection<Path> getFiles() throws IOException {
-		Set<Path> result = new HashSet<>();
+		Set<Path> result = new TreeSet<>();
 
 		try {
 			URL resource = MetadataCSV.class.getResource(resourceName);

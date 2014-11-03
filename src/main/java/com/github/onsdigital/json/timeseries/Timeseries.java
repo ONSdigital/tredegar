@@ -1,14 +1,17 @@
 package com.github.onsdigital.json.timeseries;
 
 import java.net.URI;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
 
+import com.github.onsdigital.generator.Folder;
 import com.github.onsdigital.json.ContentType;
 import com.github.onsdigital.json.DataItem;
+import com.github.onsdigital.json.TaxonomyHome;
 
-public class Timeseries extends DataItem {
+public class Timeseries extends DataItem implements Comparable<Timeseries> {
 
 	// Spreadsheet headings
 	private String cdid;
@@ -16,8 +19,8 @@ public class Timeseries extends DataItem {
 	public String units;
 	public String mainMeasure;
 	public String description;
-	public String note1;
-	public String note2;
+	public String note1 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quam leo, blandit a turpis non, varius feugiat mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In posuere lectus eu laoreet ultrices. Donec ac sodales libero, eget fermentum arcu.";
+	public String note2 = "Fusce pharetra, libero in imperdiet ultricies, ex erat tempor dolor, vitae aliquet magna velit in urna. Duis finibus augue velit, ut consectetur risus imperdiet in. Sed tempus congue ante, ac cursus diam porttitor vitae. Vivamus arcu leo, volutpat in mauris ac, lacinia fermentum velit. Sed dictum tortor justo, aliquet facilisis lorem dictum a.";
 
 	// Additional information
 	public String number;
@@ -32,7 +35,7 @@ public class Timeseries extends DataItem {
 	public String note;
 
 	// The nectar, the goodness, the very juice of the fireflower: data.
-	public List<TimeseriesValue> data;
+	public List<TimeseriesValue> data = new ArrayList<>();
 
 	// The URI of this timeseries.
 	// This is useful when it is referenced from more than one place in the
@@ -43,6 +46,14 @@ public class Timeseries extends DataItem {
 	public Timeseries() {
 		type = ContentType.timeseries;
 		name = "People not in Work";
+	}
+
+	public void setBreadcrumb(TaxonomyHome t3) {
+		breadcrumb = new ArrayList<>(t3.breadcrumb);
+		Folder folder = new Folder();
+		folder.name = t3.name;
+		TaxonomyHome extra = new TaxonomyHome(folder);
+		breadcrumb.add(extra);
 	}
 
 	public String cdid() {
@@ -80,5 +91,10 @@ public class Timeseries extends DataItem {
 			return false;
 		}
 		return StringUtils.equalsIgnoreCase(((Timeseries) obj).cdid, cdid);
+	}
+
+	@Override
+	public int compareTo(Timeseries o) {
+		return this.cdid.compareTo(o.cdid);
 	}
 }

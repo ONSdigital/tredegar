@@ -3,8 +3,8 @@
   "seasonalAdjustment": "Not seasonally adjusted",
   "mainMeasure": "Retail Prices Index calculated using the Jevons formula (RPIJ)",
   "description": "Consumer price indices are important indicators of how the UK economy is performing.\n\nThe indices are used in many ways by the government, businesses, and society in general. They can affect interest rates, tax allowances, wages, state benefits, pensions, maintenance, contracts and many other payments. They also show the impact of inflation on family budgets and affect the value of the pound in your pocket.",
-  "note1": "",
-  "note2": "",
+  "note1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quam leo, blandit a turpis non, varius feugiat mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In posuere lectus eu laoreet ultrices. Donec ac sodales libero, eget fermentum arcu.",
+  "note2": "Fusce pharetra, libero in imperdiet ultricies, ex erat tempor dolor, vitae aliquet magna velit in urna. Duis finibus augue velit, ut consectetur risus imperdiet in. Sed tempus congue ante, ac cursus diam porttitor vitae. Vivamus arcu leo, volutpat in mauris ac, lacinia fermentum velit. Sed dictum tortor justo, aliquet facilisis lorem dictum a.",
   "number": "238.8",
   "unit": "Index",
   "preUnit": "",
@@ -1198,5 +1198,20 @@
   "uri": "/economy/inflationandpriceindices/timeseries/kvr8",
   "type": "timeseries",
   "name": "RPIJ Index (1987 \u003d 100)",
-  "fileName": "kvr8"
+  "fileName": "kvr8",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Inflation and Price Indices",
+      "fileName": "inflationandpriceindices",
+      "breadcrumb": []
+    }
+  ]
 }

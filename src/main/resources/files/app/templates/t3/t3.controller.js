@@ -1,12 +1,12 @@
 (function() {
 
 	angular.module('onsTemplates')
-		.controller('T3Controller', ['$scope', '$http', T3Controller])
+		.controller('T3Controller', ['$scope', '$http', 'Downloader', T3Controller])
 		.directive('stSelectAll', [SelectAllDirective])
 		.directive('stSelect', [SelectDirective])
 
 
-	function T3Controller($scope, $http) {
+	function T3Controller($scope, $http, Downloader) {
 		var ctrl = this
 		var items = $scope.taxonomy.data.itemData
 		ctrl.allSelected = false
@@ -36,7 +36,7 @@
 				return
 			}
 
-			download('xls')
+			download('xlsx')
 		}
 
 		function downloadCsv() {
@@ -50,26 +50,21 @@
 			var downloadRequest = {
 				type: type
 			}
-			downloadRequest.urlList = getFileList()
-			$http.post('/download', downloadRequest)
-				.success(function(data) {
-					var file = new Blob([data], {
-						type: 'application/xls'
-					});
-					saveAs(file, 'datafile.xls');
-				});
+			downloadRequest.uriList = getFileList()
+			var fileName = $scope.getPage() + '.' + downloadRequest.type;
+			Downloader.downloadFile(downloadRequest,fileName)
+			
 		}
 
 		function getFileList() {
-			var urlList = []
+			var uriList = []
 			for (var i = 0; i < items.length; i++) {
 				if (items[i].isSelected) {
-					urlList.push(items[i].url)
+					uriList.push(items[i].url)
 				}
 			}
-			return urlList
+			return uriList
 		}
-
 
 		angular.extend(ctrl, {
 			toggleSelectAll: toggleSelectAll,

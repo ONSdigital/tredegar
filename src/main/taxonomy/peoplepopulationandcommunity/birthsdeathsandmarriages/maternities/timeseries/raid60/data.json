@@ -1,5 +1,7 @@
 {
   "cdid": "RAID60",
+  "note1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quam leo, blandit a turpis non, varius feugiat mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In posuere lectus eu laoreet ultrices. Donec ac sodales libero, eget fermentum arcu.",
+  "note2": "Fusce pharetra, libero in imperdiet ultricies, ex erat tempor dolor, vitae aliquet magna velit in urna. Duis finibus augue velit, ut consectetur risus imperdiet in. Sed tempus congue ante, ac cursus diam porttitor vitae. Vivamus arcu leo, volutpat in mauris ac, lacinia fermentum velit. Sed dictum tortor justo, aliquet facilisis lorem dictum a.",
   "number": "690820",
   "unit": "",
   "preUnit": "",
@@ -313,5 +315,26 @@
   "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/maternities/timeseries/raid60",
   "type": "timeseries",
   "name": "Number of maternities",
-  "fileName": "raid60"
+  "fileName": "raid60",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "People, Population and Community",
+      "fileName": "peoplepopulationandcommunity"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Births, Deaths and Marriages",
+      "fileName": "birthsdeathsandmarriages"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Maternities",
+      "fileName": "maternities",
+      "breadcrumb": []
+    }
+  ]
 }

@@ -1,6 +1,7 @@
 {
   "cdid": "RAID1",
   "note1": "VAT and/or PAYE based enterprises",
+  "note2": "Fusce pharetra, libero in imperdiet ultricies, ex erat tempor dolor, vitae aliquet magna velit in urna. Duis finibus augue velit, ut consectetur risus imperdiet in. Sed tempus congue ante, ac cursus diam porttitor vitae. Vivamus arcu leo, volutpat in mauris ac, lacinia fermentum velit. Sed dictum tortor justo, aliquet facilisis lorem dictum a.",
   "number": "2167580",
   "unit": "m",
   "preUnit": "",
@@ -30,5 +31,20 @@
   "uri": "/businessindustryandtrade/businessactivitysizeandlocation/timeseries/raid1",
   "type": "timeseries",
   "name": "UK businesses",
-  "fileName": "raid1"
+  "fileName": "raid1",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Business, Industry and Trade",
+      "fileName": "businessindustryandtrade"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Business Activity, Size and Location",
+      "fileName": "businessactivitysizeandlocation",
+      "breadcrumb": []
+    }
+  ]
 }

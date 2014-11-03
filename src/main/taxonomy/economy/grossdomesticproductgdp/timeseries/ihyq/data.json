@@ -1,5 +1,7 @@
 {
   "cdid": "IHYQ",
+  "note1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quam leo, blandit a turpis non, varius feugiat mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In posuere lectus eu laoreet ultrices. Donec ac sodales libero, eget fermentum arcu.",
+  "note2": "Fusce pharetra, libero in imperdiet ultricies, ex erat tempor dolor, vitae aliquet magna velit in urna. Duis finibus augue velit, ut consectetur risus imperdiet in. Sed tempus congue ante, ac cursus diam porttitor vitae. Vivamus arcu leo, volutpat in mauris ac, lacinia fermentum velit. Sed dictum tortor justo, aliquet facilisis lorem dictum a.",
   "number": "0.9",
   "unit": "%",
   "preUnit": "",
@@ -931,11 +933,11 @@
     },
     {
       "date": "2013 Q1",
-      "value": "0.4"
+      "value": "0.5"
     },
     {
       "date": "2013 Q2",
-      "value": "0.8"
+      "value": "0.7"
     },
     {
       "date": "2013 Q3",
@@ -948,10 +950,29 @@
     {
       "date": "2014 Q1",
       "value": "0.8"
+    },
+    {
+      "date": "2014 Q2",
+      "value": "0.8"
     }
   ],
   "uri": "/economy/grossdomesticproductgdp/timeseries/ihyq",
   "type": "timeseries",
   "name": "GDP Quarter on Quarter growth (CVM)",
-  "fileName": "ihyq"
+  "fileName": "ihyq",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Gross Domestic Product (GDP)",
+      "fileName": "grossdomesticproductgdp",
+      "breadcrumb": []
+    }
+  ]
 }

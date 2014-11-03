@@ -40,9 +40,11 @@
 
             <tbody>
                 <tr ng-repeat="row in dataset.download">
-                    <td data-th="Download Category">{{row.title}}</td>
+                    <td data-th="Download Category" ng-if=row.title>{{row.title}}</td>
+                    <td data-th="Download Category" ng-if=!row.title>Lorem ipsum</td>
+                    <td ng-if="row.csv"><a href="{{row.csv}}" class="btn btn--primary btn--small"><span class="table__action__text">Download as .CSV</span><span class="icon-download" role="presentation"></span></a>
+                    <td ng-if="!row.csv"><a href="" class="btn btn--primary btn--small download_responsive_btn"><span class="table__action__text">Download as .CSV</span><span class="icon-download" role="presentation"></span></a>
                     <td><a href="{{row.xls}}" class="btn btn--primary btn--small"><span class="table__action__text">Download as .XLS</span><span class="icon-download" role="presentation"></span></a></td>
-                    <td><a href="{{row.csv}}" class="btn btn--primary btn--small"><span class="table__action__text">Download as .CSV</span><span class="icon-download" role="presentation"></span></a>
                     </td>
 
                 </tr>

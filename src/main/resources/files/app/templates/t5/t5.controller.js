@@ -1,11 +1,36 @@
 angular.module('onsTemplates')
-
-
-.controller('T5Ctrl', ['$scope',
-    function($scope) {
+.controller('T5Ctrl', ['$scope', 'Downloader',
+    function($scope, Downloader) {
+        
+        var t5 = this
         $scope.header = "Time Series";
         $scope.sidebar = true;
         $scope.sidebarUrl = "/app/templates/t5/t5sidebar.html";
+
+
+        function downloadXls() {
+            download('xlsx')
+        }
+
+        function downloadCsv() {
+            download('csv')
+        }
+
+        function download(type) {
+            var downloadRequest = {
+                type: type
+            }
+            downloadRequest.uriList = [$scope.getPath()]
+            var fileName = $scope.getPage() + '.' + downloadRequest.type;
+            Downloader.downloadFile(downloadRequest,fileName)
+            
+        }
+
+        angular.extend(t5, {
+            downloadXls:downloadXls,
+            downloadCsv:downloadCsv
+        })
+
     }
 ])
 

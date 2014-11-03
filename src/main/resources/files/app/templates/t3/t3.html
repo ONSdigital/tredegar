@@ -77,9 +77,12 @@
               <div id="statsBulletinHeadlines" class="divider__half">
                 <h3 class="body-type lede flush--bottom navpanel-list-heading">Statistical Bulletin Headlines</h3>
                 <ul class="list--bullet mini flush--half--top navpanel-list">
-                  <li>{{taxonomy.data.statsBulletinHeadlineData.headline1}}</li>
-                  <li>{{taxonomy.data.statsBulletinHeadlineData.headline2}}</li>
-                  <li>{{taxonomy.data.statsBulletinHeadlineData.headline3}}</li>
+                  <li ng-if="taxonomy.data.statsBulletinHeadlineData.headline1">{{taxonomy.data.statsBulletinHeadlineData.headline1}}</li>
+                  <li ng-if="taxonomy.data.statsBulletinHeadlineData.headline1">{{taxonomy.data.statsBulletinHeadlineData.headline2}}</li>
+                  <li ng-if="taxonomy.data.statsBulletinHeadlineData.headline1">{{taxonomy.data.statsBulletinHeadlineData.headline3}}</li>
+                  <li ng-if="!taxonomy.data.statsBulletinHeadlineData">Lorem ipsum dolor sit amet, vel oporteat percipitur ex, quando persecuti id mea, pri at nihil essent aliquid.</li>
+                  <li ng-if="!taxonomy.data.statsBulletinHeadlineData">Lorem ipsum dolor sit amet, vel oporteat percipitur ex, quando persecuti id mea, pri at nihil essent aliquid.</li>
+                  <li ng-if="!taxonomy.data.statsBulletinHeadlineData">Lorem ipsum dolor sit amet, vel oporteat percipitur ex, quando persecuti id mea, pri at nihil essent aliquid.</li>                  
                   </ul>
                     <a class="div_panel_link" href=#!{{taxonomy.data.statsBulletinHeadlineData.url}}>
                       View the statistical bulletin &gt;                   
@@ -169,15 +172,25 @@
 <!-- Bottom options for downloading table contents -->  
 
     <tr class="list--table__item list--table datatable-row">
-      <td colspan="4" class="datatable-downloads"> 
-        <a href="" ng-click="t3.downloadCsv()" class="btn btn--primary btn--small download_responsive_btn">
+      <td colspan="4" ng-if="t3.selectedCount > 0" class="datatable-downloads"> 
+        <a href="" style="opacity:1" ng-click="t3.downloadCsv()" class="btn btn--primary btn--small download_responsive_btn">
           <span class="table__action__text">.CSV</span>
             <span class="icon-download" role="presentation"></span>
         </a>
-        <a href="" ng-click="t3.downloadXls()" class="btn btn--primary btn--small download_responsive_btn">
-          <span class="table__action__text">.XLS</span>
+        <a href="" style="opacity:1"  ng-click="t3.downloadXls()" class="btn btn--primary btn--small download_responsive_btn">
+          <span class="table__action__text">.XLSX</span>
             <span class="icon-download" role="presentation"></span>
         </a>          
+      </td>
+      <td colspan="4" ng-if="t3.selectedCount === 0" class="datatable-downloads"> 
+        <span class="btn btn--primary btn--small download_responsive_btn">
+          <span class="table__action__text">.CSV</span>
+            <span class="icon-download" role="presentation"></span>
+        </span>
+        <span href="" ng-click="t3.downloadXls()" class="btn btn--primary btn--small download_responsive_btn">
+          <span class="table__action__text">.XLSX</span>
+            <span class="icon-download" role="presentation"></span>
+        </span>          
       </td>
        <!-- /table-actions -->
     </tr>
@@ -201,7 +214,7 @@
             <article class="box box--padded sectioned lifted border-defined">
               <header class="box__header">
                 <h3 class="gamma">
-                    <a href="#!/economy/inflationandpriceindices/datasets/inflationsummary/">Lorem ipsum</a>
+                    <a href="#">Lorem ipsum</a>
                 </h3>
               </header>
               <!-- /box__header -->

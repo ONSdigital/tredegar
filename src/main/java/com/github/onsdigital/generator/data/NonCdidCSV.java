@@ -52,9 +52,6 @@ class NonCdidCSV {
 					// c + " - new timeseries " + cdid);
 					timeseries = Data.addTimeseries(cdid);
 					timeseries.data = new ArrayList<>();
-					// Clear the note1 and note2 fields
-					timeseries.note1 = null;
-					timeseries.note2 = null;
 				}
 
 				// Read the values from this column:

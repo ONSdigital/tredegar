@@ -56,7 +56,7 @@ public class Data {
 		}
 	}
 
-	public Path getData(String uriString) {
+	public static Path getData(String uriString) {
 		Path result = null;
 
 		// Standardise the path:
@@ -86,7 +86,7 @@ public class Data {
 	 * @return The URI path, lowercasted, without the endpoint name or trailing
 	 *         slash.
 	 */
-	String cleanPath(URI uri) {
+	static String cleanPath(URI uri) {
 
 		// It would be nice to use StringBuilder,
 		// but it doesn't have the manipulation methods we need
@@ -101,7 +101,7 @@ public class Data {
 		}
 
 		// Remove endpoint name:
-		String endpointName = getClass().getSimpleName().toLowerCase() + "/";
+		String endpointName = Data.class.getSimpleName().toLowerCase() + "/";
 		if (result.startsWith(endpointName)) {
 			result = result.substring(endpointName.length());
 		}
