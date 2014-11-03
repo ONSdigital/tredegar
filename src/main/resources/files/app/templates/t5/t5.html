@@ -1691,7 +1691,7 @@
                                     <legend class="chart-area__controls__date__label">From</legend>
                                     <select ng-change="changeChartRange()" class="chart-area__controls__month" ng-model="chartDataFrom">
                                         <option value="">Show all</option>
-                                        <option ng-repeat="data in graphValue[0] track by $index" value="{{data}}">{{data}}</option>
+                                        <option ng-repeat="data in graphValue[2] track by $index" value="{{data}}">{{graphValue[0][$index]}}</option>
                                     </select>
                                 </fieldset>
 
@@ -1699,7 +1699,7 @@
                                     <legend class="chart-area__controls__date__label">To</legend>
                                     <select ng-change="changeChartRange()" class="chart-area__controls__month" ng-model="chartDataTo">
                                         <option value="">Show all</option>
-                                        <option ng-repeat="data in graphValue[0] track by $index" value="{{data}}">{{data}}</option>
+                                        <option ng-repeat="data in graphValue[2] track by $index" value="{{data}}">{{graphValue[0][$index]}}</option>
                                     </select>
                                 </fieldset>
 
