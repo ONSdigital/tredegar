@@ -4,10 +4,12 @@ import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.github.onsdigital.generator.Folder;
 import com.github.onsdigital.json.CollectionItem;
 import com.github.onsdigital.json.ContentType;
 import com.github.onsdigital.json.Email;
 import com.github.onsdigital.json.Section;
+import com.github.onsdigital.json.TaxonomyHome;
 
 public class Bulletin extends CollectionItem {
 
@@ -58,6 +60,14 @@ public class Bulletin extends CollectionItem {
 				+ "\n\n"
 				+ "Proin sed facilisis sapien. Nunc hendrerit dignissim sapien, vel consequat mi rhoncus eget. Maecenas et tellus convallis, tristique risus vitae.";
 		sections.add(whatIs);
+	}
+
+	public void setBreadcrumb(TaxonomyHome t3) {
+		breadcrumb = new ArrayList<>(t3.breadcrumb);
+		Folder folder = new Folder();
+		folder.name = t3.name;
+		TaxonomyHome extra = new TaxonomyHome(folder);
+		breadcrumb.add(extra);
 	}
 
 }

@@ -403,7 +403,6 @@ public class TaxonomyGenerator {
 		List<Bulletin> bulletins = BulletinContent.getBulletins(folder);
 
 		if (bulletins != null) {
-			System.out.println("bulletins: " + bulletins.size());
 			for (Bulletin bulletin : bulletins) {
 				if (bulletin.summary != null) {
 					URI bulletinUri = toStatsBulletinUri(folder, bulletin);
@@ -416,7 +415,6 @@ public class TaxonomyGenerator {
 		List<Dataset> datasets = DatasetContent.getDatasets(folder);
 
 		if (datasets != null) {
-			System.out.println("datasets: " + datasets.size());
 			for (Dataset dataset : datasets) {
 				if (dataset.summary != null) {
 					URI datasetUri = toDatasetUri(folder, dataset);
@@ -430,7 +428,7 @@ public class TaxonomyGenerator {
 		FileUtils.writeStringToFile(new File(file, "data.json"), json);
 
 		createArticle(folder, file);
-		createBulletin(folder, file);
+		createBulletin(folder, file, t3);
 		createDataset(folder, file);
 		createTimeseries(folder, file, t3);
 	}
@@ -564,7 +562,7 @@ public class TaxonomyGenerator {
 		// removed generation pending refactor to reuse AlphaContent approach
 	}
 
-	private static void createBulletin(Folder folder, File file) throws IOException {
+	private static void createBulletin(Folder folder, File file, T3 t3) throws IOException {
 
 		List<Bulletin> bulletins = BulletinContent.getBulletins(folder);
 
@@ -572,6 +570,7 @@ public class TaxonomyGenerator {
 			File bulletinsFolder = new File(file, "bulletins");
 			bulletinsFolder.mkdir();
 			for (Bulletin bulletin : bulletins) {
+				bulletin.setBreadcrumb(t3);
 				String bulletinFileName = bulletin.fileName;
 				String sanitizedBulletinFileName = bulletinFileName.replaceAll("\\W", "");
 				File bulletinFolder = new File(bulletinsFolder, StringUtils.deleteWhitespace(sanitizedBulletinFileName.toLowerCase()));
