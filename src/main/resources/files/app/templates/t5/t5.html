@@ -1672,31 +1672,33 @@
                                 </a>
                             </li>
                         </ul>
-                    </div>
- -->
+                    </div> -->
+
                     <!-- Selector for chart -->
-<!--                     <div ng-show="chartTable" class="chart-area__controls__custom">
+                    <div ng-show="chartTable" class="chart-area__controls__custom">
                         <div class="chart-area__controls__custom__errors"></div>
                         <div class="chart-area__controls__custom__container">
                             <div class="chart-area__controls__dropdowns">
                                 <fieldset class="chart-area__controls__date">
                                     <legend class="chart-area__controls__date__label">From</legend>
-                                    <select class="chart-area__controls__month" ng-model="chartDataFrom" ng-options="date for date in chartData.options.xAxis.categories">
+                                    <select class="chart-area__controls__month" ng-model="chartDataFrom">
                                         <option value="">Show all</option>
+                                        <option ng-repeat="data in graphValue[0] track by $index" value="{{data}}">{{data}}</option>
                                     </select>
                                 </fieldset>
 
                                 <fieldset class="chart-area__controls__date">
                                     <legend class="chart-area__controls__date__label">To</legend>
-                                    <select class="chart-area__controls__month" ng-model="chartDataTo" ng-options="date for date in chartData.options.xAxis.categories">
+                                    <select class="chart-area__controls__month" ng-model="chartDataTo">
                                         <option value="">Show all</option>
+                                        <option ng-repeat="data in graphValue[0] track by $index" value="{{data}}">{{data}}</option>
                                     </select>
                                 </fieldset>
 
                             </div>
                         </div>
                         <br></br>
-                    </div> -->
+                    </div>
 
                     <!-- Selector for table -->
                     <div ng-show="!chartTable" class="chart-area__controls__custom">
