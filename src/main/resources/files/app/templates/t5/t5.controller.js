@@ -32,12 +32,12 @@ angular.module('onsTemplates')
         $scope.tableValue = makeTableObj(categoriesY, seriesDataY, categoriesYnum);
 
         $scope.graphValue = makeGraphValue(categoriesY, seriesDataY);
+        console.log($scope.graphValue[1]);
+
 
         function makeGraphValue(x, y) {
             return [x , y];
         }
-
-        console.log($scope.graphValue[0][0]);
 
         //Takes data from json file and transforms it in an array to be read by Highcharts
         function makeArray(jsonData) {
@@ -140,6 +140,8 @@ angular.module('onsTemplates')
         }
 
         $scope.chartData = getData();
+        // year by default
+        $scope.chartData.options.xAxis.tickInterval = tickInterval(categoriesY.length);
 
         //If true shows graph, else table.
         $scope.chartTable = true;
@@ -241,7 +243,7 @@ angular.module('onsTemplates')
                     },
                     xAxis: {
                         categories: $scope.graphValue[0],
-                        tickInterval: 1,
+                        // tickInterval: 1,
                         labels: {
                             formatter: function() {
                                 var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
