@@ -206,7 +206,7 @@ angular.module('onsTemplates')
             }
             $scope.graphValue = makeGraphValue(categoriesRange, seriesRange, sorterRange);
             $scope.chartData.options.xAxis.categories = $scope.graphValue[0];
-            $scope.chartData.options.xAxis.tickInterval = tickInterval(categoriesY.length);
+            $scope.chartData.options.xAxis.tickInterval = tickInterval(categoriesRange.length);
             $scope.chartData.series[0].data = $scope.graphValue[1];
         };
 
