@@ -9,7 +9,7 @@
             </div>
             <!-- /box -->
             <div ng-if="(taxonomy.data.statsBulletinData) == null">
-	            <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
+	            <div ng-if="getPage() != 'economy'" class="grid-col desktop-grid-one-third tablet-grid-one-half">
 	              <article class="box">
 	                <header class="box__header">
 	                  <h3>
@@ -19,6 +19,24 @@
 	                <div class="box__content">
 	                  <p>
 						Aliquam tincidunt, mi et aliquam dictum, quam urna vulputate odio, sit amet commodo risus enim et purus.
+	                  </p>
+	                  <p class="description mini"></p>
+	                  <p>
+	                  <span class="lozenge">Statistical bulletin</span>
+	                </p>
+	                </div>
+	              </article>
+	            </div>
+	            <div ng-if="getPage() === 'economy'" class="grid-col desktop-grid-one-third tablet-grid-one-half">
+	              <article class="box">
+	                <header class="box__header">
+	                  <h3>
+	                    <a href="#!/economy/inflationandpriceindices/bulletins/consumerpriceinflation">Consumer Price Inflation</a>
+	                  </h3>
+	                </header>
+	                <div class="box__content">
+	                  <p>
+						CPI, CPIH, RPI and RPIJ inflation price indices for September 2014 - brief description and analysis
 	                  </p>
 	                  <p class="description mini"></p>
 	                  <p>
