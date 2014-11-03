@@ -1,38 +1,36 @@
 angular.module('onsTemplates')
-.controller('T5Ctrl', ['$scope', 'Downloader',
-    function($scope, Downloader) {
-        
-        var t5 = this
-        $scope.header = "Time Series";
-        $scope.sidebar = true;
-        $scope.sidebarUrl = "/app/templates/t5/t5sidebar.html";
+    .controller('T5Ctrl', ['$scope', 'Downloader',
+        function($scope, Downloader) {
 
+            var t5 = this;
+            $scope.header = "Time Series";
+            $scope.sidebar = true;
+            $scope.sidebarUrl = "/app/templates/t5/t5sidebar.html";
 
-        function downloadXls() {
-            download('xlsx')
-        }
-
-        function downloadCsv() {
-            download('csv')
-        }
-
-        function download(type) {
-            var downloadRequest = {
-                type: type
+            function downloadXls() {
+                download('xlsx');
             }
-            downloadRequest.uriList = [$scope.getPath()]
-            var fileName = $scope.getPage() + '.' + downloadRequest.type;
-            Downloader.downloadFile(downloadRequest,fileName)
-            
+
+            function downloadCsv() {
+                download('csv');
+            }
+
+            function download(type) {
+                var downloadRequest = {
+                    type: type
+                };
+                downloadRequest.uriList = [$scope.getPath()];
+                var fileName = $scope.getPage() + '.' + downloadRequest.type;
+                Downloader.downloadFile(downloadRequest, fileName);
+            }
+
+            angular.extend(t5, {
+                downloadXls: downloadXls,
+                downloadCsv: downloadCsv
+            });
+
         }
-
-        angular.extend(t5, {
-            downloadXls:downloadXls,
-            downloadCsv:downloadCsv
-        })
-
-    }
-])
+    ])
 
 .controller('chartController', ['$scope', '$location',
     function($scope, $location) {
@@ -46,6 +44,8 @@ angular.module('onsTemplates')
         var categoriesM = [];
         var categoriesMnum = [];
         var seriesDataM = [];
+        var currentCategories;
+        var currentSeries;
         var reY = new RegExp('^[0-9]{4}$');
         var reQ = new RegExp('^[0-9]{4}.[Q1-4]{2}$');
         var reM = new RegExp('^[0-9]{4}.[A-Z]{3}$');
@@ -56,12 +56,15 @@ angular.module('onsTemplates')
         // Year by default
         $scope.tableValue = makeTableObj(categoriesY, seriesDataY, categoriesYnum);
 
+        currentCategories = categoriesY;
+        currentSeries = seriesDataY;
+
         $scope.graphValue = makeGraphValue(categoriesY, seriesDataY);
         console.log($scope.graphValue[1]);
 
 
         function makeGraphValue(x, y) {
-            return [x , y];
+            return [x, y];
         }
 
         //Takes data from json file and transforms it in an array to be read by Highcharts
@@ -164,6 +167,47 @@ angular.module('onsTemplates')
             return x;
         }
 
+        $scope.changeChartRange = function changeChartRange() {
+            var from = $scope.chartDataFrom;
+            var to = $scope.chartDataTo;
+            var x;
+            var y;
+            var categoriesRange = [];
+            var seriesRange = [];
+
+            for (var i = 0; i < currentCategories.length; i++) {
+                x = currentCategories[i];
+                y = currentSeries[i];
+                if (from && to) {
+                    if (x >= from && x <= to) {
+                        categoriesRange.push(x);
+                        seriesRange.push(y);
+                    }
+                } else if (from) {
+                    if (x >= from) {
+                        categoriesRange.push(x);
+                        seriesRange.push(y);
+                    }
+                } else if (to) {
+                    if (x <= to) {
+                        categoriesRange.push(x);
+                        seriesRange.push(y);
+                    }
+                } else {
+                    categoriesRange.push(x);
+                    seriesRange.push(y);
+                }
+
+            }
+
+            $scope.graphValue = makeGraphValue(categoriesRange, seriesRange);
+            $scope.chartData.options.xAxis.categories = $scope.graphValue[0];
+            $scope.chartData.options.xAxis.tickInterval = tickInterval(categoriesY.length);
+            $scope.chartData.series[0].data = $scope.graphValue[1];
+        };
+
+
+
         $scope.chartData = getData();
         // year by default
         $scope.chartData.options.xAxis.tickInterval = tickInterval(categoriesY.length);
@@ -190,6 +234,8 @@ angular.module('onsTemplates')
                 $scope.chartData.options.xAxis.categories = $scope.graphValue[0];
                 $scope.chartData.options.xAxis.tickInterval = tickInterval(categoriesY.length);
                 $scope.chartData.series[0].data = $scope.graphValue[1];
+                currentCategories=categoriesY;
+                currentSeries=seriesDataY;
             }
             if (time === 'quarter') {
                 $scope.tableValue = makeTableObj(categoriesQ, seriesDataQ, categoriesQnum);
@@ -198,6 +244,8 @@ angular.module('onsTemplates')
                 $scope.chartData.options.xAxis.categories = $scope.graphValue[0];
                 $scope.chartData.options.xAxis.tickInterval = tickInterval(categoriesQ.length);
                 $scope.chartData.series[0].data = $scope.graphValue[1];
+                currentCategories=categoriesQ;
+                currentSeries=seriesDataQ;
             }
             if (time === 'month') {
                 $scope.tableValue = makeTableObj(categoriesM, seriesDataM, categoriesMnum);
@@ -206,6 +254,8 @@ angular.module('onsTemplates')
                 $scope.chartData.options.xAxis.categories = $scope.graphValue[0];
                 $scope.chartData.options.xAxis.tickInterval = tickInterval(categoriesM.length);
                 $scope.chartData.series[0].data = $scope.graphValue[1];
+                currentCategories=categoriesM;
+                currentSeries=seriesDataM;
             }
         };
 
@@ -249,21 +299,22 @@ angular.module('onsTemplates')
                     },
                     navigation: {
                         buttonOptions: {
-                            verticalAlign: 'bottom',
-                            y: 0,
-                            text: 'Image',
-                            theme: {
-                                fill: '#0054aa',
-                                r: 0,
-                                states: {
-                                    hover: {
-                                        fill: '#004790'
-                                    },
-                                    select: {
-                                        fill: '#004790'
-                                    }
-                                }
-                            }
+                            enabled: false
+                        //     verticalAlign: 'bottom',
+                        //     y: 0,
+                        //     text: 'Image',
+                        //     theme: {
+                        //         fill: '#0054aa',
+                        //         r: 0,
+                        //         states: {
+                        //             hover: {
+                        //                 fill: '#004790'
+                        //             },
+                        //             select: {
+                        //                 fill: '#004790'
+                        //             }
+                                // }
+                             // }
                         }
                     },
                     xAxis: {
@@ -412,5 +463,10 @@ angular.module('onsTemplates')
             };
             return data;
         }
+            // the button handler
+            $('#imgExp').click(function() {
+                var chartExp = $('#chart_prices').highcharts();
+                chartExp.exportChart();
+            });
     }
 ]);
