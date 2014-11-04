@@ -1225,6 +1225,9 @@
     }
   ],
   "uri": "/economy/grossdomesticproductgdp/timeseries/nmru",
+  "relatedBulletins": [
+    "/economy/grossdomesticproductgdp/bulletins/grossdomesticproductpreliminaryestimate"
+  ],
   "type": "timeseries",
   "name": "Expenditure Measure: General Government",
   "fileName": "nmru",

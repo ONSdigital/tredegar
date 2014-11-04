@@ -357,6 +357,9 @@
     }
   ],
   "uri": "/economy/grossdomesticproductgdp/timeseries/abpf",
+  "relatedBulletins": [
+    "/economy/grossdomesticproductgdp/bulletins/grossdomesticproductpreliminaryestimate"
+  ],
   "type": "timeseries",
   "name": "Expenditure Measure: Households",
   "fileName": "abpf",

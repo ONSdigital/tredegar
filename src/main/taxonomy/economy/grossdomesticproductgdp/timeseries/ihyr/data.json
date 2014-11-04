@@ -941,6 +941,9 @@
     }
   ],
   "uri": "/economy/grossdomesticproductgdp/timeseries/ihyr",
+  "relatedBulletins": [
+    "/economy/grossdomesticproductgdp/bulletins/grossdomesticproductpreliminaryestimate"
+  ],
   "type": "timeseries",
   "name": "GDP Change on same Quarter a year ago (CVM)",
   "fileName": "ihyr",

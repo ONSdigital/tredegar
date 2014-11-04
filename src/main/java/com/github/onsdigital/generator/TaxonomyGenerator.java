@@ -424,28 +424,68 @@ public class TaxonomyGenerator {
 
 		for (Timeseries timeseries : timeserieses) {
 
-			URI uri = timeseries.uri;
-			File timeseriesFolder = new File(root, uri.toString());
-			File timeseriesFile = new File(timeseriesFolder, "data.json");
-
-			if (!timeseriesFile.exists()) {
-				timeseriesFolder.mkdirs();
+			if (createTimeseries(timeseries, folder, t3)) {
+				// created++;
 			}
-
-			Set<TimeseriesValue> data = TimeseriesData.getData(timeseries.cdid());
-			if (data != null) {
-				timeseries.data = new ArrayList<>(data);
-			} else {
-				System.out.println("No data for " + timeseries.cdid());
-			}
-			timeseries.setBreadcrumb(t3);
-			if (timeseries.data.size() == 0) {
-				noData.add(timeseries);
-			}
-			String json = Serialiser.serialise(timeseries);
-			System.out.println(timeseriesFile.getAbsolutePath());
-			FileUtils.writeStringToFile(timeseriesFile, json, Charset.forName("UTF8"));
 		}
+
+		// TODO: Other timeseries mappings are commented out to minimise volume
+		// of files for now:
+		// // Write out timeseries mapped according to the "old dataset"
+		// // taxonomy map:
+		// Set<Timeseries> total = new HashSet<Timeseries>(timeserieses);
+		// if (folder.oldDataset.size() > 0) {
+		// oldDatasetsCreated.add(folder);
+		// for (Set<Timeseries> dataset : folder.oldDataset) {
+		// for (Timeseries timeseries : dataset) {
+		//
+		// if (createTimeseries(timeseries, t3)) {
+		// created++;
+		// }
+		// }
+		// total.addAll(dataset);
+		// }
+		//
+		// System.out.println("Referenced CDIDs vs. total CDIDs at this node: "
+		// + timeserieses.size() + "/" + total.size() + " (" + created +
+		// " created)");
+		// }
+	}
+
+	private static boolean createTimeseries(Timeseries timeseries, Folder folder, T3 t3) throws IOException {
+		boolean result = false;
+
+		URI uri = timeseries.uri;
+		File timeseriesFolder = new File(root, uri.toString());
+		File timeseriesFile = new File(timeseriesFolder, "data.json");
+
+		if (!timeseriesFile.exists()) {
+			timeseriesFolder.mkdirs();
+		}
+
+		Set<TimeseriesValue> data = TimeseriesData.getData(timeseries.cdid());
+		if (data != null) {
+			timeseries.data = new ArrayList<>(data);
+		} else {
+			System.out.println("No data for " + timeseries.cdid());
+		}
+		timeseries.setBreadcrumb(t3);
+		if (timeseries.data.size() == 0) {
+			noData.add(timeseries);
+		}
+
+		List<Bulletin> bulletins = BulletinContent.getBulletins(folder);
+		if (bulletins != null) {
+			for (Bulletin bulletin : bulletins) {
+				timeseries.relatedBulletins.add(bulletin.uri);
+			}
+		}
+
+		String json = Serialiser.serialise(timeseries);
+		System.out.println(timeseriesFile.getAbsolutePath());
+		FileUtils.writeStringToFile(timeseriesFile, json, Charset.forName("UTF8"));
+
+		return result;
 	}
 
 	private static void createArticle(Folder folder, File file) throws IOException {

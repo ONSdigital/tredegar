@@ -107,7 +107,6 @@
 					data.statsBulletinData.push(statsBulletin)
 				})
 			}
-			console.log('statsBulletinData: ' + data.statsBulletinData)
 		}	
 		
 		function loadDatasets(data) {
@@ -122,7 +121,6 @@
 					data.keyDatasets.push(keyDataset)
 				})
 			}
-			console.log('keyDatasets: ' + data.keyDatasets.length)
 		}	
 
 		//Loads and attaches data to given parent element with given property name
@@ -152,7 +150,8 @@
 
 		//Expose public api
 		angular.extend(service, {
-			loadData: loadData
+			loadData: loadData,
+			load: load
 		})
 
 	}

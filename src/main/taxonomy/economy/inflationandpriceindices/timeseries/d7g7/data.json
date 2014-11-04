@@ -1752,6 +1752,10 @@
     }
   ],
   "uri": "/economy/inflationandpriceindices/timeseries/d7g7",
+  "relatedBulletins": [
+    "/economy/inflationandpriceindices/bulletins/consumerpriceinflation",
+    "/economy/inflationandpriceindices/bulletins/housepriceindex"
+  ],
   "type": "timeseries",
   "name": "CPI: Consumer Prices Index",
   "fileName": "d7g7",

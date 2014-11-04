@@ -177,6 +177,10 @@
     }
   ],
   "uri": "/employmentandlabourmarket/unemployment/timeseries/mgsc",
+  "relatedBulletins": [
+    "/employmentandlabourmarket/unemployment/bulletins/uklabourmarket",
+    "/employmentandlabourmarket/unemployment/bulletins/youngpeoplenotineducationemploymentortrainingneet"
+  ],
   "type": "timeseries",
   "name": "Unemployment 16+",
   "fileName": "mgsc",

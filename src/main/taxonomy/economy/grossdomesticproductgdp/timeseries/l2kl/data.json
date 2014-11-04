@@ -493,6 +493,9 @@
     }
   ],
   "uri": "/economy/grossdomesticproductgdp/timeseries/l2kl",
+  "relatedBulletins": [
+    "/economy/economicoutputandproductivity/bulletins/quarterlynationalaccounts"
+  ],
   "type": "timeseries",
   "name": "Agriculture, Forestry and Fishing",
   "fileName": "l2kl",

@@ -493,6 +493,9 @@
     }
   ],
   "uri": "/economy/grossdomesticproductgdp/timeseries/l2nc",
+  "relatedBulletins": [
+    "/economy/economicoutputandproductivity/bulletins/quarterlynationalaccounts"
+  ],
   "type": "timeseries",
   "name": "Services Index",
   "fileName": "l2nc",

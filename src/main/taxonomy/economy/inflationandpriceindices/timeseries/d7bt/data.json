@@ -1820,6 +1820,10 @@
     }
   ],
   "uri": "/economy/inflationandpriceindices/timeseries/d7bt",
+  "relatedBulletins": [
+    "/economy/inflationandpriceindices/bulletins/consumerpriceinflation",
+    "/economy/inflationandpriceindices/bulletins/housepriceindex"
+  ],
   "type": "timeseries",
   "name": "CPI: Consumer Prices Index (2005 \u003d 100)",
   "fileName": "d7bt",
