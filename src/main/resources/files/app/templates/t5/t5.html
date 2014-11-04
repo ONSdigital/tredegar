@@ -1144,6 +1144,8 @@
     .chart-area {
         padding: 5px;
         padding: 0.5rem;
+        padding-bottom: 70px;
+        padding-bottom: 7rem !important;
     }
     @media screen and (min-width: 21em) {
         .chart-area {
@@ -1731,25 +1733,6 @@
                                         <option ng-repeat="data in graphValue[2] track by $index" value="{{data}}">{{graphValue[0][$index]}}</option>
                                     </select>
                                 </fieldset>
-
-
-                                <!-- <fieldset class="chart-area__controls__date">
-                                    <legend class="chart-area__controls__date__label">From</legend>
-                                    <label class="visuallyhidden">Date</label>
-                                    <select class="chart-area__controls__month" ng-model="tableValueFrom">
-                                        <option value="">Show all</option>
-                                        <option ng-repeat="item in tableValue" value="{{item.number}}">{{item.date}}</option>
-                                    </select>
-                                </fieldset>
-
-                                <fieldset class="chart-area__controls__date">
-                                    <legend class="chart-area__controls__date__label">To</legend>
-                                    <label class="visuallyhidden">Date</label>
-                                    <select class="chart-area__controls__month" ng-model="tableValueTo">
-                                        <option value="">Show all</option>
-                                        <option ng-repeat="item in tableValue" value="{{item.number}}">{{item.date}}</option>
-                                    </select>
-                                </fieldset> -->
                             </div>
                         </div>
                         <br></br>
@@ -1789,15 +1772,19 @@
             <div class="chart-area__footer">
                 <span class="chart-area__footer__label">Download custom data</span>
                 <div class="chart-area__footer__actions">
-                    <a id="imgExp" class="btn btn--primary btn--small" href="#">
+                    <a id="imgExp" class="btn btn--primary btn--small" href="">
                     Image
                     <span class="icon-download icon--button-inline" role="presentation"></span>
                     </a>
-                    <a class="btn btn--primary btn--small" href="#">
+                    <a class="btn btn--primary btn--small" href="">
                     .csv
                     <span class="icon-download icon--button-inline" role="presentation"></span>
                     </a>
-                    <a class="btn btn--primary btn--small" href="#">
+                    <!-- <a class="btn btn--primary btn--small" href="" ng-click="t5.downloadCsv()">
+              .csv
+              <span class="icon-download icon--button-inline" role="presentation"></span>
+            </a> -->
+                    <a class="btn btn--primary btn--small" href="">
                     .xlsx
                     <span class="icon-download icon--button-inline" role="presentation"></span>
                     </a>
