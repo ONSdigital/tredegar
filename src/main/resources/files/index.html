@@ -116,7 +116,8 @@ markup: false
 </head>
 
 <!-- id set to ng-app to make older IE happy with Angular ngInclude directive -->
-<body id="ng-app" ng-view ng-controller="MainCtrl" class="js">
+<!-- Autoscroll solves the issue mentioned on https://stackoverflow.com/questions/21055952/changing-route-doesnt-scroll-to-top-in-the-new-page -->
+<body id="ng-app" ng-view ng-controller="MainCtrl" autoscroll="true" class="js">
 <noscript>
 <main id="main" role="main" class="ONS_border">
   <div style="margin: 20px;">
