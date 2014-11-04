@@ -21,5 +21,26 @@
   "releaseDate": "19 February 2014",
   "type": "dataset",
   "name": "Religion",
-  "fileName": "religion"
+  "fileName": "religion",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "People, Population and Community",
+      "fileName": "peoplepopulationandcommunity"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Cultural Identity",
+      "fileName": "culturalidentity"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Religion",
+      "fileName": "religion",
+      "breadcrumb": []
+    }
+  ]
 }

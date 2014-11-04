@@ -429,7 +429,7 @@ public class TaxonomyGenerator {
 
 		createArticle(folder, file);
 		createBulletin(folder, file, t3);
-		createDataset(folder, file);
+		createDataset(folder, file, t3);
 		createTimeseries(folder, file, t3);
 	}
 
@@ -587,13 +587,14 @@ public class TaxonomyGenerator {
 		}
 	}
 
-	private static void createDataset(Folder folder, File file) throws IOException {
+	private static void createDataset(Folder folder, File file, T3 t3) throws IOException {
 		List<Dataset> datasets = DatasetContent.getDatasets(folder);
 
 		if (datasets != null && datasets.size() > 0) {
 			File datasetsFolder = new File(file, "datasets");
 			datasetsFolder.mkdir();
 			for (Dataset dataset : datasets) {
+				dataset.setBreadcrumb(t3);
 				String datasetFileName = dataset.fileName.replaceAll("\\W", "");
 				File datasetFolder = new File(datasetsFolder, StringUtils.deleteWhitespace(datasetFileName.toLowerCase()));
 				String json = Serialiser.serialise(dataset);
