@@ -21,5 +21,26 @@
   "releaseDate": "19 February 2014",
   "type": "dataset",
   "name": "Average Weekly Earnings (AWE)",
-  "fileName": "average weekly earnings (awe)"
+  "fileName": "average weekly earnings (awe)",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Employment and Labour Market",
+      "fileName": "employmentandlabourmarket"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "People in Work",
+      "fileName": "peopleinwork"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Earnings and Working Hours",
+      "fileName": "earningsandworkinghours",
+      "breadcrumb": []
+    }
+  ]
 }

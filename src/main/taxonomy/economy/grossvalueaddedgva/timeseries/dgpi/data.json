@@ -73,6 +73,9 @@
     }
   ],
   "uri": "/economy/grossvalueaddedgva/timeseries/dgpi",
+  "relatedBulletins": [
+    "/economy/grossvalueaddedgva/bulletins/regionalgrossvalueaddedincomeapproach"
+  ],
   "type": "timeseries",
   "name": "London Gross Value Added",
   "fileName": "dgpi",

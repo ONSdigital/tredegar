@@ -43,6 +43,8 @@ public class Timeseries extends DataItem implements Comparable<Timeseries> {
 	// place.
 	public URI uri;
 
+	public List<URI> relatedBulletins = new ArrayList<>();
+
 	public Timeseries() {
 		type = ContentType.timeseries;
 		name = "People not in Work";
@@ -66,6 +68,12 @@ public class Timeseries extends DataItem implements Comparable<Timeseries> {
 		}
 		this.cdid = StringUtils.trim(cdid);
 		fileName = StringUtils.lowerCase(this.cdid.toLowerCase());
+
+		// We don't have metadata for all of the datasets,so
+		// this provides a basic fallback by setting the CDID as the name:
+		if (StringUtils.isBlank(name)) {
+			name = cdid;
+		}
 	}
 
 	@Override

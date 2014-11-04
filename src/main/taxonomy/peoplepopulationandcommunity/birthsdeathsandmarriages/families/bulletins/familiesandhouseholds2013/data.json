@@ -25,5 +25,26 @@
   "releaseDate": "19 August 2014",
   "type": "bulletin",
   "name": "Families and Households, 2013",
-  "fileName": "families and households, 2013"
+  "fileName": "families and households, 2013",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "People, Population and Community",
+      "fileName": "peoplepopulationandcommunity"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Births, Deaths and Marriages",
+      "fileName": "birthsdeathsandmarriages"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Families",
+      "fileName": "families",
+      "breadcrumb": []
+    }
+  ]
 }

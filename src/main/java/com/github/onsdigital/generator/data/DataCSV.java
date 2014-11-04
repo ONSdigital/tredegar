@@ -12,7 +12,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.concurrent.ExecutorService;
@@ -56,18 +55,25 @@ public class DataCSV {
 			// Now apply the data from the manually-prepared CSV:
 			URL resource = DataCSV.class.getResource(resourceName + "/" + "Timeseries data - MM23_CSDB_DS.csdb.csv");
 			Path manuallyEditedCsv = Paths.get(resource.toURI());
-			read(manuallyEditedCsv);
+			read(manuallyEditedCsv, "MM23");
 		} catch (URISyntaxException e) {
 			throw new IOException(e);
 		}
 	}
 
-	private static void read(Path file) throws IOException {
+	private static void read(Path file, String... alternativeName) throws IOException {
 		try (CSVReader csvReader = new CSVReader(new BufferedReader(new InputStreamReader(Files.newInputStream(file), Charset.forName("CP1252"))))) {
 
-			String name = FilenameUtils.getBaseName(file.getFileName().toString());
-			Set<Timeseries> dataset = new HashSet<Timeseries>();
-			Data.addDataset(name, dataset);
+			String name;
+			if (alternativeName.length > 0) {
+				name = alternativeName[0];
+			} else {
+				name = FilenameUtils.getBaseName(file.getFileName().toString());
+			}
+			Set<Timeseries> dataset = Data.dataset(name);
+			if (dataset == null) {
+				dataset = Data.addDataset(name);
+			}
 
 			// Check all the CDIDs in the header row:
 			int duplicates = 0;
@@ -75,7 +81,7 @@ public class DataCSV {
 			for (int i = 1; i < header.length; i++) {
 				Timeseries timeseries = Data.timeseries(header[i]);
 				if (timeseries == null) {
-					timeseries = Data.addTimeseries(header[i]);
+					timeseries = Data.addTimeseries(header[i], name);
 					timeseries.data = new ArrayList<>();
 				} else if (timeseries.data != null && timeseries.data.size() > 0) {
 					// Don't process this timeseries - it's a duplicate.

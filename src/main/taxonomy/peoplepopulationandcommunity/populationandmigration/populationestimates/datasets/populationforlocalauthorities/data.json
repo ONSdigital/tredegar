@@ -18,5 +18,26 @@
   "releaseDate": "19 February 2014",
   "type": "dataset",
   "name": "Population for Local Authorities",
-  "fileName": "population for local authorities"
+  "fileName": "population for local authorities",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "People, Population and Community",
+      "fileName": "peoplepopulationandcommunity"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Population and Migration",
+      "fileName": "populationandmigration"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Population Estimates",
+      "fileName": "populationestimates",
+      "breadcrumb": []
+    }
+  ]
 }

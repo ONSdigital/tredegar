@@ -1233,6 +1233,9 @@
     }
   ],
   "uri": "/economy/nationalaccounts/timeseries/hbop",
+  "relatedBulletins": [
+    "/economy/nationalaccounts/bulletins/balanceofpayments"
+  ],
   "type": "timeseries",
   "name": "Balance of Payments: Current balance",
   "fileName": "hbop",

@@ -21,5 +21,26 @@
   "releaseDate": "19 February 2014",
   "type": "dataset",
   "name": "Alcohol-related deaths, UK",
-  "fileName": "alcohol-related deaths, uk"
+  "fileName": "alcohol-related deaths, uk",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "People, Population and Community",
+      "fileName": "peoplepopulationandcommunity"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Health and Social Care",
+      "fileName": "healthandsocialcare"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Drug use, Alcohol and Smoking",
+      "fileName": "drugusealcoholandsmoking",
+      "breadcrumb": []
+    }
+  ]
 }

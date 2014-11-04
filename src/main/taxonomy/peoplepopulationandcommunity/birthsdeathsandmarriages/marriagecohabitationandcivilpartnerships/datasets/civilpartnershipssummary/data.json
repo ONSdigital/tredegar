@@ -21,5 +21,26 @@
   "releaseDate": "19 February 2014",
   "type": "dataset",
   "name": "Civil partnerships summary",
-  "fileName": "civil partnerships summary"
+  "fileName": "civil partnerships summary",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "People, Population and Community",
+      "fileName": "peoplepopulationandcommunity"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Births, Deaths and Marriages",
+      "fileName": "birthsdeathsandmarriages"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Marriage, Cohabitation and Civil Partnerships",
+      "fileName": "marriagecohabitationandcivilpartnerships",
+      "breadcrumb": []
+    }
+  ]
 }

@@ -73,6 +73,9 @@
     }
   ],
   "uri": "/economy/grossdomesticproductgdp/timeseries/l2nc",
+  "relatedBulletins": [
+    "/economy/economicoutputandproductivity/bulletins/quarterlynationalaccounts"
+  ],
   "type": "timeseries",
   "name": "Services Index",
   "fileName": "l2nc",
@@ -86,8 +89,8 @@
     {
       "index": 0,
       "type": "home",
-      "name": "Gross Domestic Product (GDP)",
-      "fileName": "grossdomesticproductgdp",
+      "name": "Economic Output and Productivity",
+      "fileName": "economicoutputandproductivity",
       "breadcrumb": []
     }
   ]

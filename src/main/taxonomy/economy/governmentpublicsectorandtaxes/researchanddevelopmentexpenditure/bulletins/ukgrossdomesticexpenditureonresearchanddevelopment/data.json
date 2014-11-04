@@ -25,5 +25,26 @@
   "releaseDate": "19 August 2014",
   "type": "bulletin",
   "name": "UK Gross Domestic Expenditure on Research and Development",
-  "fileName": "uk gross domestic expenditure on research and development"
+  "fileName": "uk gross domestic expenditure on research and development",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Government, Public Sector and Taxes",
+      "fileName": "governmentpublicsectorandtaxes"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Research and Development Expenditure",
+      "fileName": "researchanddevelopmentexpenditure",
+      "breadcrumb": []
+    }
+  ]
 }

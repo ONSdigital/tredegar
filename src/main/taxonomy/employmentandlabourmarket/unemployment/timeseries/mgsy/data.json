@@ -2965,6 +2965,10 @@
     }
   ],
   "uri": "/employmentandlabourmarket/unemployment/timeseries/mgsy",
+  "relatedBulletins": [
+    "/employmentandlabourmarket/unemployment/bulletins/uklabourmarket",
+    "/employmentandlabourmarket/unemployment/bulletins/youngpeoplenotineducationemploymentortrainingneet"
+  ],
   "type": "timeseries",
   "name": "Unemployment Rate (aged 16-64) Male",
   "fileName": "mgsy",

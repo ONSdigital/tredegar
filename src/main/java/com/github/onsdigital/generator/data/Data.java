@@ -6,9 +6,12 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.TreeMap;
 import java.util.TreeSet;
 
 import org.apache.commons.lang3.StringUtils;
@@ -28,11 +31,12 @@ import com.github.onsdigital.json.timeseries.TimeseriesValue;
  * @author david
  *
  */
-public class Data {
+public class Data implements Iterable<Timeseries> {
 
 	private static Set<Folder> folders;
-	private static Map<String, Set<Timeseries>> datasets = new HashMap<>();
+	private static Map<String, Set<Timeseries>> datasets = new TreeMap<>();
 	private static Map<String, Timeseries> timeserieses = new HashMap<>();
+	private static Set<String> mappedDatasets = new HashSet<>();
 
 	/**
 	 * Sets the taxonomy folder structure and triggers parsing of CSV data.
@@ -60,6 +64,7 @@ public class Data {
 		DataCSV.parse();
 		MetadataCSV.parse();
 		AlphaContentCSV.parse();
+		DatasetMappingsCSV.parse();
 		System.out.println("Parsing complete.");
 	}
 
@@ -133,6 +138,7 @@ public class Data {
 	 * @return The specified dataset, or null if it is not present.
 	 */
 	public static Set<Timeseries> dataset(String name) {
+
 		return datasets.get(toKey(name));
 	}
 
@@ -154,11 +160,22 @@ public class Data {
 	 * @param timeseries
 	 *            The timeseries.
 	 */
-	public static void addTimeseries(Timeseries timeseries) {
+	public static void addTimeseries(Timeseries timeseries, String datasetName) {
 		if (timeserieses.containsKey(toKey(timeseries.cdid()))) {
 			throw new IllegalArgumentException("Duplicate timeseries: " + timeseries);
 		}
 		timeserieses.put(toKey(timeseries.cdid()), timeseries);
+
+		Set<Timeseries> dataset;
+		if (datasetName != null) {
+			dataset = dataset(datasetName);
+			if (dataset == null) {
+				throw new RuntimeException("There's no dataset called " + datasetName + " to add " + timeseries + " to.");
+			}
+		} else {
+			dataset = (dataset("other") == null) ? addDataset("other") : dataset("other");
+		}
+		dataset.add(timeseries);
 	}
 
 	/**
@@ -169,10 +186,10 @@ public class Data {
 	 *            The timeseries CDID.
 	 * @return The new timeseries.
 	 */
-	public static Timeseries addTimeseries(String cdid) {
+	public static Timeseries addTimeseries(String cdid, String datasetName) {
 		Timeseries timeseries = new Timeseries();
 		timeseries.setCdid(cdid);
-		addTimeseries(timeseries);
+		addTimeseries(timeseries, datasetName);
 		return timeseries;
 	}
 
@@ -189,7 +206,36 @@ public class Data {
 		if (datasets.containsKey(toKey(name))) {
 			throw new IllegalArgumentException("Duplicate dataset: " + name);
 		}
+		if (name.equalsIgnoreCase("am")) {
+			System.out.println("Adding am as " + dataset);
+		}
 		datasets.put(StringUtils.lowerCase(name), dataset);
+	}
+
+	/**
+	 * Creates and adds a new dataset. If the dataset is already present, an
+	 * {@link IllegalArgumentException} is thrown.
+	 * 
+	 * @param name
+	 *            The dataset name.
+	 * @return
+	 */
+	public static Set<Timeseries> addDataset(String name) {
+		Set<Timeseries> dataset = new HashSet<>();
+		addDataset(name, dataset);
+		return dataset;
+	}
+
+	public static void addMappedDataset(String name) {
+		mappedDatasets.add(toKey(name));
+	}
+
+	public static Set<String> unmappedDatasets() {
+		Set<String> result = new HashSet<>(datasets.keySet());
+		for (String mapped : mappedDatasets) {
+			result.remove(toKey(mapped));
+		}
+		return result;
 	}
 
 	/**
@@ -197,6 +243,24 @@ public class Data {
 	 */
 	public static int size() {
 		return timeserieses.size();
+	}
+
+	/**
+	 * @return The total number of timeseries currently held.
+	 */
+	public static int sizeDatasets() {
+		Set<String> cdids = new HashSet<>();
+		for (String dataset : datasets.keySet()) {
+			cdids.add(dataset);
+		}
+		return timeserieses.size();
+	}
+
+	/**
+	 * @return The total number of timeseries currently held.
+	 */
+	public static int sizeDatasetsCount() {
+		return datasets.size();
 	}
 
 	public static Collection<String> getDateLabels() {
@@ -276,4 +340,27 @@ public class Data {
 		return StringUtils.lowerCase(StringUtils.trim(string));
 	}
 
+	@Override
+	public Iterator<Timeseries> iterator() {
+		return new Iterator<Timeseries>() {
+
+			int index = 0;
+			List<String> items = new ArrayList<>(timeserieses.keySet());
+
+			@Override
+			public boolean hasNext() {
+				return index < items.size();
+			}
+
+			@Override
+			public Timeseries next() {
+				return timeserieses.get(items.get(index++));
+			}
+
+			@Override
+			public void remove() {
+				throw new UnsupportedOperationException();
+			}
+		};
+	}
 }
