@@ -502,7 +502,7 @@ public class TaxonomyGenerator {
 			File bulletinsFolder = new File(file, "bulletins");
 			bulletinsFolder.mkdir();
 			for (Bulletin bulletin : bulletins) {
-				// bulletin.setBreadcrumb(t3);
+				bulletin.setBreadcrumb(t3);
 				String bulletinFileName = bulletin.fileName;
 				String sanitizedBulletinFileName = bulletinFileName.replaceAll("\\W", "");
 				File bulletinFolder = new File(bulletinsFolder, StringUtils.deleteWhitespace(sanitizedBulletinFileName.toLowerCase()));
