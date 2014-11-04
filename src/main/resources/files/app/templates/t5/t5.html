@@ -1,6 +1,6 @@
 <div id="t5" ng-controller="chartController">
 
-    <style>
+<style>
     .chart {
         height: 440px;
     }
@@ -1259,8 +1259,9 @@
         padding-top: 1rem;
         padding-right: 12px;
         padding-right: 1.2rem;
-        padding-bottom: 10px;
-        padding-bottom: 1rem;
+        padding-bottom: 0;
+        /*padding-bottom: 10px;*/
+        /*padding-bottom: 1rem;*/
         clear: both;
         background-color: #dedfdc;
     }
@@ -1572,7 +1573,7 @@
     .button-bar > .button-group:last-of-type {
         margin-right: 0;
     }
-    </style>
+</style>
 
 
     <!-- Title and release date -->
@@ -1631,10 +1632,6 @@
             <!-- This title will need to be dynamically generated on the server -->
             <h2 class="actionable-header--tight__title gamma flush--bottom body-type--heavy">Download this entire time series</h2>
             <div class="actionable-header--tight__action actionable-header--tight__action--left">
-                <a id="imgExp" class="btn btn--primary btn--small" href="">
-              Image
-              <span class="icon-download icon--button-inline" role="presentation"></span>
-            </a>
                 <a class="btn btn--primary btn--small" href="" ng-click="t5.downloadCsv()">
               .csv
               <span class="icon-download icon--button-inline" role="presentation"></span>
@@ -1661,10 +1658,10 @@
                             <label class="btn btn--secondary btn--small btn--narrow btn--thin " ng-if="hasMData" ng-class="{'btn--secondary--active': yqm === 2}" ng-click="changeTime('month')">Month</label>
                         </div>
                     </div>
-                    <!--                     <div class="button-group chart-area__controls__time">
+                    <div class="button-group chart-area__controls__time">
                         <span class="chart-area__controls__time__label">Time period:</span>
                         <ul class="nav flush--top chart-area__controls__time__ranges">
-                            <li>
+                            <!-- <li>
                                 <a href="#">All</a>
                             </li>
                             <li>
@@ -1672,15 +1669,16 @@
                             </li>
                             <li>
                                 <a href="#">Last 5 yrs</a>
-                            </li>
+                            </li> -->
                             <li class="chart-area__controls__custom--active">
                                 <a href="#" class="link-complex">
                                     <span class="link-complex__target">Custom</span>
                                     <span class="icon-down-open-big icon--inline" role="presentation"></span>
                                 </a>
+                                <!-- <a href="" expand-label="Custom" collapse-label="Custom" toggler="more" class="link-complex"></a> -->
                             </li>
                         </ul>
-                    </div> -->
+                    </div>
 
                     <!-- Selector for chart -->
                     <div ng-show="chartTable" class="chart-area__controls__custom">
@@ -1754,8 +1752,10 @@
                         <thead>
                             <tr>
                                 <th><a href="" ng-click="sortField = 'number'; reverse = !reverse">Period</a>
+                                    <span class="icon-down-dir icon--button-inline" role="presentation"></span>
                                 </th>
                                 <th><a href="" ng-click="sortField = 'values'; reverse = !reverse">{{chart.cdid}}</a>
+                                    <span class="icon-down-dir icon--button-inline" role="presentation"></span>
                                 </th>
                             </tr>
                         </thead>
@@ -1766,6 +1766,24 @@
                             </tr>
                         </tbody>
                     </table>
+                </div>
+            </div>
+            <!-- Custom downloads -->
+            <div class="chart-area__footer">
+                <span class="chart-area__footer__label">Download custom data</span>
+                <div class="chart-area__footer__actions">
+                    <a class="btn btn--primary btn--small" href="#">
+                    Image
+                    <span class="icon-download icon--button-inline" role="presentation"></span>
+                    </a>
+                    <a class="btn btn--primary btn--small" href="#">
+                    .csv
+                    <span class="icon-download icon--button-inline" role="presentation"></span>
+                    </a>
+                    <a class="btn btn--primary btn--small" href="#">
+                    .xlsx
+                    <span class="icon-download icon--button-inline" role="presentation"></span>
+                    </a>
                 </div>
             </div>
         </div>
