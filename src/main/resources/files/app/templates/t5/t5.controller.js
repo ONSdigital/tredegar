@@ -7,9 +7,9 @@ angular.module('onsTemplates')
             $scope.sidebar = true;
             $scope.sidebarUrl = "/app/templates/t5/t5sidebar.html";
 
-            var data = $scope.taxonomy.data;
-            // data.relatedBulletinData = [];
-            // loadRelatedBulletins(data);
+            var data = $scope.taxonomy.data
+            data.relatedBulletinData = []
+            loadRelatedBulletins(data)
 
             function downloadXls() {
                 download('xlsx');
@@ -28,21 +28,21 @@ angular.module('onsTemplates')
                 Downloader.downloadFile(downloadRequest, fileName);
             }
 
-    		// function loadRelatedBulletins(data) {
-    		// 	var dataPath = '/data';
-    		// 	var bulletins = data.relatedBulletins;
+    		function loadRelatedBulletins(data) {
+    			var dataPath = '/data'
+    			var bulletins = data.relatedBulletins;
 
-    		// 	if (bulletins !== null) {
-    		// 		for (var i = 0; i < bulletins.length; i++) {
-    		// 			var bulletin = bulletins[i];
-    		// 			var relatedBulletinPath = dataPath + bulletin;
-    		// 			Taxonomy.load(relatedBulletinPath, function(relatedBulletin) {
-    		// 				console.log('Loaded related bulletin: ', relatedBulletinPath, ' ', relatedBulletin);
-    		// 				data.relatedBulletinData.push(relatedBulletin);
-    		// 			});
-    		// 		}
-    		// 	}
-    		// }
+    			if (bulletins != null) {
+    				for (var i = 0; i < bulletins.length; i++) {
+    					var bulletin = bulletins[i]
+    					var relatedBulletinPath = dataPath + bulletin
+    					Taxonomy.load(relatedBulletinPath, function(relatedBulletin) {
+    						console.log('Loaded related bulletin: ', relatedBulletinPath, ' ', relatedBulletin)
+    						data.relatedBulletinData.push(relatedBulletin)
+    					})
+    				}
+    			}
+    		}
 
             angular.extend(t5, {
                 downloadXls: downloadXls,
