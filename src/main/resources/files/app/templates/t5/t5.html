@@ -1671,17 +1671,17 @@
                                 <a href="#">Last 5 yrs</a>
                             </li> -->
                             <li class="chart-area__controls__custom--active">
-                                <!-- <a href="#" class="link-complex">
+                                <a href="" class="link-complex">
                                     <span class="link-complex__target">Custom</span>
                                     <span class="icon-down-open-big icon--inline" role="presentation"></span>
-                                </a> -->
-                                <a href="" expand-label="Custom" collapse-label="Custom" toggler="more" class="link-complex"></a>
+                                </a>
+                               <!--  <a href="" expand-label="Custom" collapse-label="Custom" toggler="more" class="link-complex"></a> -->
                             </li>
                         </ul>
                     </div>
 
                     <!-- Selector for chart -->
-                    <div ng-show="chartTable" class="chart-area__controls__custom" toggleable="more">
+                    <div ng-show="chartTable" class="chart-area__controls__custom">
                         <div class="chart-area__controls__custom__errors"></div>
                         <div class="chart-area__controls__custom__container">
                             <div class="chart-area__controls__dropdowns">
@@ -1718,6 +1718,23 @@
 
                                 <fieldset class="chart-area__controls__date">
                                     <legend class="chart-area__controls__date__label">From</legend>
+                                    <select ng-change="changeChartRange()" class="chart-area__controls__month" ng-model="chartDataFrom">
+                                        <option value="">Show all</option>
+                                        <option ng-repeat="data in graphValue[2] track by $index" value="{{data}}">{{graphValue[0][$index]}}</option>
+                                    </select>
+                                </fieldset>
+
+                                <fieldset class="chart-area__controls__date">
+                                    <legend class="chart-area__controls__date__label">To</legend>
+                                    <select ng-change="changeChartRange()" class="chart-area__controls__month" ng-model="chartDataTo">
+                                        <option value="">Show all</option>
+                                        <option ng-repeat="data in graphValue[2] track by $index" value="{{data}}">{{graphValue[0][$index]}}</option>
+                                    </select>
+                                </fieldset>
+
+
+                                <!-- <fieldset class="chart-area__controls__date">
+                                    <legend class="chart-area__controls__date__label">From</legend>
                                     <label class="visuallyhidden">Date</label>
                                     <select class="chart-area__controls__month" ng-model="tableValueFrom">
                                         <option value="">Show all</option>
@@ -1732,7 +1749,7 @@
                                         <option value="">Show all</option>
                                         <option ng-repeat="item in tableValue" value="{{item.number}}">{{item.date}}</option>
                                     </select>
-                                </fieldset>
+                                </fieldset> -->
                             </div>
                         </div>
                         <br></br>
@@ -1772,7 +1789,7 @@
             <div class="chart-area__footer">
                 <span class="chart-area__footer__label">Download custom data</span>
                 <div class="chart-area__footer__actions">
-                    <a class="btn btn--primary btn--small" href="#">
+                    <a id="imgExp" class="btn btn--primary btn--small" href="#">
                     Image
                     <span class="icon-download icon--button-inline" role="presentation"></span>
                     </a>
