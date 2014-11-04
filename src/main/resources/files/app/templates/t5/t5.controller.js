@@ -1,12 +1,12 @@
 angular.module('onsTemplates')
     .controller('T5Ctrl', ['$scope', 'Downloader', 'Taxonomy',
         function($scope, Downloader, Taxonomy) {
-    	
+
             var t5 = this;
             $scope.header = "Time Series";
             $scope.sidebar = true;
             $scope.sidebarUrl = "/app/templates/t5/t5sidebar.html";
-            
+
             var data = $scope.taxonomy.data
             data.relatedBulletinData = []
             loadRelatedBulletins(data)
@@ -27,11 +27,11 @@ angular.module('onsTemplates')
                 var fileName = $scope.getPage() + '.' + downloadRequest.type;
                 Downloader.downloadFile(downloadRequest, fileName);
             }
-            
+
     		function loadRelatedBulletins(data) {
     			var dataPath = '/data'
     			var bulletins = data.relatedBulletins;
-    			
+
     			if (bulletins != null) {
     				for (var i = 0; i < bulletins.length; i++) {
     					var bulletin = bulletins[i]
@@ -42,7 +42,7 @@ angular.module('onsTemplates')
     					})
     				}
     			}
-    		}            
+    		}
 
             angular.extend(t5, {
                 downloadXls: downloadXls,
@@ -74,18 +74,19 @@ angular.module('onsTemplates')
         $scope.chart = data;
 
         makeArray($scope.chart.data);
-        // Year by default
-        $scope.tableValue = makeTableObj(categoriesY, seriesDataY, categoriesYnum);
 
+        // Year by default
         currentCategories = categoriesY;
         currentSeries = seriesDataY;
         currentSorter = categoriesYnum;
 
-        $scope.graphValue = makeGraphValue(categoriesY, seriesDataY, categoriesYnum);
+        $scope.graphValue = makeGraphValue(currentCategories, currentSeries, currentSorter);
 
         function makeGraphValue(x, y, sorter) {
             return [x, y, sorter];
         }
+
+        $scope.tableValue = makeTableObj($scope.graphValue);
 
         //Takes data from json file and transforms it in an array to be read by Highcharts
         function makeArray(jsonData) {
@@ -171,7 +172,10 @@ angular.module('onsTemplates')
         }
 
         // Creates an object for angular table control
-        function makeTableObj(key, values, number) {
+        function makeTableObj(arrayChart) {
+            var key = arrayChart[0];
+            var values = arrayChart[1];
+            var number = arrayChart[2];
             var obj = [];
             var x = [];
             for (var i = 0; i < key.length; i++) {
@@ -228,6 +232,7 @@ angular.module('onsTemplates')
             $scope.chartData.options.xAxis.categories = $scope.graphValue[0];
             $scope.chartData.options.xAxis.tickInterval = tickInterval(categoriesRange.length);
             $scope.chartData.series[0].data = $scope.graphValue[1];
+            $scope.tableValue = makeTableObj($scope.graphValue);
         };
 
 
@@ -252,8 +257,8 @@ angular.module('onsTemplates')
         $scope.yqm = 0;
         $scope.changeTime = function(time) {
             if (time === 'year') {
-                $scope.tableValue = makeTableObj(categoriesY, seriesDataY, categoriesYnum);
                 $scope.graphValue = makeGraphValue(categoriesY, seriesDataY, categoriesYnum);
+                $scope.tableValue = makeTableObj($scope.graphValue);
                 $scope.yqm = 0;
                 $scope.chartData.options.xAxis.categories = $scope.graphValue[0];
                 $scope.chartData.options.xAxis.tickInterval = tickInterval(categoriesY.length);
@@ -263,8 +268,8 @@ angular.module('onsTemplates')
                 currentSorter = categoriesYnum;
             }
             if (time === 'quarter') {
-                $scope.tableValue = makeTableObj(categoriesQ, seriesDataQ, categoriesQnum);
                 $scope.graphValue = makeGraphValue(categoriesQ, seriesDataQ, categoriesQnum);
+                $scope.tableValue = makeTableObj($scope.graphValue);
                 $scope.yqm = 1;
                 $scope.chartData.options.xAxis.categories = $scope.graphValue[0];
                 $scope.chartData.options.xAxis.tickInterval = tickInterval(categoriesQ.length);
@@ -274,8 +279,8 @@ angular.module('onsTemplates')
                 currentSorter = categoriesQnum;
             }
             if (time === 'month') {
-                $scope.tableValue = makeTableObj(categoriesM, seriesDataM, categoriesMnum);
                 $scope.graphValue = makeGraphValue(categoriesM, seriesDataM, categoriesMnum);
+                $scope.tableValue = makeTableObj($scope.graphValue);
                 $scope.yqm = 2;
                 $scope.chartData.options.xAxis.categories = $scope.graphValue[0];
                 $scope.chartData.options.xAxis.tickInterval = tickInterval(categoriesM.length);
@@ -327,21 +332,6 @@ angular.module('onsTemplates')
                     navigation: {
                         buttonOptions: {
                             enabled: false
-                        //     verticalAlign: 'bottom',
-                        //     y: 0,
-                        //     text: 'Image',
-                        //     theme: {
-                        //         fill: '#0054aa',
-                        //         r: 0,
-                        //         states: {
-                        //             hover: {
-                        //                 fill: '#004790'
-                        //             },
-                        //             select: {
-                        //                 fill: '#004790'
-                        //             }
-                                // }
-                             // }
                         }
                     },
                     xAxis: {
