@@ -23,5 +23,20 @@
   "releaseDate": "19 February 2014",
   "type": "dataset",
   "name": "Claimant Count Summary",
-  "fileName": "claimant count summary"
+  "fileName": "claimant count summary",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Employment and Labour Market",
+      "fileName": "employmentandlabourmarket"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Unemployment",
+      "fileName": "unemployment",
+      "breadcrumb": []
+    }
+  ]
 }
