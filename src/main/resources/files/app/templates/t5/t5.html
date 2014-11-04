@@ -274,12 +274,12 @@
     .tooltip-tall {
         height: 100px;
     }
+
     /*****************************************
     *
     * Changed this to adapt to different sizes
     *
     ******************************************/
-
     .maintext {
         font-family: "open-sans-n7", "open-sans", sans-serif;
         padding: 10px 0 0 40px;
@@ -292,7 +292,6 @@
     * Added this class
     *
     ******************************************/
-
     .maintext__title {
         font-family: "open-sans-n7", "open-sans", sans-serif;
         margin-bottom: 5px;
@@ -1259,9 +1258,8 @@
         padding-top: 1rem;
         padding-right: 12px;
         padding-right: 1.2rem;
-        padding-bottom: 0;
-        /*padding-bottom: 10px;*/
-        /*padding-bottom: 1rem;*/
+        padding-bottom: 10px;
+        padding-bottom: 1rem;
         clear: both;
         background-color: #dedfdc;
     }
@@ -1296,18 +1294,17 @@
         box-shadow: 0 0 1px 2px #e2383f;
     }
     @media screen and (min-width: 62em) {
-        /*****************************************
+    /*****************************************
     *
     * Changed this to adapt to table/graph
     *
     ******************************************/
-
-        .chart-area__controls__custom__container__table {
+    .chart-area__controls__custom__container__table {
             width: 660px;
             width: 66rem;
             float: right;
         }
-        .chart-area__controls__custom__container {
+    .chart-area__controls__custom__container {
             width: 440px;
             width: 44rem;
             float: right;
@@ -1334,7 +1331,6 @@
     * Changed this to adapt to different sizes
     *
     ******************************************/
-
     .chart-area__controls__date__label {
         float: left;
         width: 50px;
@@ -1421,7 +1417,6 @@
         display: inline-block;
         width: auto;
         /*padding: 1em 2em;*/
-
         border: 0 none;
         border-radius: 3px;
         font-size: 16px;
@@ -1578,7 +1573,7 @@
 
     <!-- Title and release date -->
     <div class="page-header page-header--article page-header--time-series slate--green">
-        <ons-breadcrumb data="breadcrumb"></ons-breadcrumb>
+     <ons-breadcrumb data="breadcrumb"></ons-breadcrumb>
         <div class="wrapper wrapper--article">
             <p class="page-header__title page-header--time-series-desc">
                 <strong>{{header}}</strong>
@@ -1591,7 +1586,7 @@
                         <strong>{{chart.lastUpated}}</strong>
                         <span class="page-header-box-link">
                             <a href="#">
-                                <strong>View previous versions</strong>
+                                <strong>View latest version</strong>
                             </a>
                         </span>
                     </p>
@@ -1632,7 +1627,7 @@
             <!-- This title will need to be dynamically generated on the server -->
             <h2 class="actionable-header--tight__title gamma flush--bottom body-type--heavy">Download this entire time series</h2>
             <div class="actionable-header--tight__action actionable-header--tight__action--left">
-                <a class="btn btn--primary btn--small" href="" ng-click="t5.downloadCsv()">
+                <a class="btn btn--primary btn--small" href="" ng-click="t5.downloadCsv()" >
               .csv
               <span class="icon-download icon--button-inline" role="presentation"></span>
             </a>
@@ -1658,10 +1653,10 @@
                             <label class="btn btn--secondary btn--small btn--narrow btn--thin " ng-if="hasMData" ng-class="{'btn--secondary--active': yqm === 2}" ng-click="changeTime('month')">Month</label>
                         </div>
                     </div>
-                    <div class="button-group chart-area__controls__time">
+<!--                     <div class="button-group chart-area__controls__time">
                         <span class="chart-area__controls__time__label">Time period:</span>
                         <ul class="nav flush--top chart-area__controls__time__ranges">
-                            <!-- <li>
+                            <li>
                                 <a href="#">All</a>
                             </li>
                             <li>
@@ -1669,42 +1664,39 @@
                             </li>
                             <li>
                                 <a href="#">Last 5 yrs</a>
-                            </li> -->
+                            </li>
                             <li class="chart-area__controls__custom--active">
-                                <a href="" class="link-complex">
+                                <a href="#" class="link-complex">
                                     <span class="link-complex__target">Custom</span>
                                     <span class="icon-down-open-big icon--inline" role="presentation"></span>
                                 </a>
-                               <!--  <a href="" expand-label="Custom" collapse-label="Custom" toggler="more" class="link-complex"></a> -->
                             </li>
                         </ul>
                     </div>
-
+ -->
                     <!-- Selector for chart -->
-                    <div ng-show="chartTable" class="chart-area__controls__custom">
+<!--                     <div ng-show="chartTable" class="chart-area__controls__custom">
                         <div class="chart-area__controls__custom__errors"></div>
                         <div class="chart-area__controls__custom__container">
                             <div class="chart-area__controls__dropdowns">
                                 <fieldset class="chart-area__controls__date">
                                     <legend class="chart-area__controls__date__label">From</legend>
-                                    <select ng-change="changeChartRange()" class="chart-area__controls__month" ng-model="chartDataFrom">
+                                    <select class="chart-area__controls__month" ng-model="chartDataFrom" ng-options="date for date in chartData.options.xAxis.categories">
                                         <option value="">Show all</option>
-                                        <option ng-repeat="data in graphValue[2] track by $index" value="{{data}}">{{graphValue[0][$index]}}</option>
                                     </select>
                                 </fieldset>
 
                                 <fieldset class="chart-area__controls__date">
                                     <legend class="chart-area__controls__date__label">To</legend>
-                                    <select ng-change="changeChartRange()" class="chart-area__controls__month" ng-model="chartDataTo">
+                                    <select class="chart-area__controls__month" ng-model="chartDataTo" ng-options="date for date in chartData.options.xAxis.categories">
                                         <option value="">Show all</option>
-                                        <option ng-repeat="data in graphValue[2] track by $index" value="{{data}}">{{graphValue[0][$index]}}</option>
                                     </select>
                                 </fieldset>
 
                             </div>
                         </div>
                         <br></br>
-                    </div>
+                    </div> -->
 
                     <!-- Selector for table -->
                     <div ng-show="!chartTable" class="chart-area__controls__custom">
@@ -1713,27 +1705,10 @@
                             <div class="chart-area__controls__dropdowns">
                                 <fieldset ng-show="!chartTable" class="chart-area__controls__date">
                                     <legend class="chart-area__controls__date__label">Find</legend>
-                                    <input ng-model="query" type="test" />
+                                    <input ng-model="query" type="test"/>
                                 </fieldset>
 
                                 <fieldset class="chart-area__controls__date">
-                                    <legend class="chart-area__controls__date__label">From</legend>
-                                    <select ng-change="changeChartRange()" class="chart-area__controls__month" ng-model="chartDataFrom">
-                                        <option value="">Show all</option>
-                                        <option ng-repeat="data in graphValue[2] track by $index" value="{{data}}">{{graphValue[0][$index]}}</option>
-                                    </select>
-                                </fieldset>
-
-                                <fieldset class="chart-area__controls__date">
-                                    <legend class="chart-area__controls__date__label">To</legend>
-                                    <select ng-change="changeChartRange()" class="chart-area__controls__month" ng-model="chartDataTo">
-                                        <option value="">Show all</option>
-                                        <option ng-repeat="data in graphValue[2] track by $index" value="{{data}}">{{graphValue[0][$index]}}</option>
-                                    </select>
-                                </fieldset>
-
-
-                                <!-- <fieldset class="chart-area__controls__date">
                                     <legend class="chart-area__controls__date__label">From</legend>
                                     <label class="visuallyhidden">Date</label>
                                     <select class="chart-area__controls__month" ng-model="tableValueFrom">
@@ -1745,11 +1720,11 @@
                                 <fieldset class="chart-area__controls__date">
                                     <legend class="chart-area__controls__date__label">To</legend>
                                     <label class="visuallyhidden">Date</label>
-                                    <select class="chart-area__controls__month" ng-model="tableValueTo">
+                                    <select class="chart-area__controls__month" ng-model="tableValueTo" >
                                         <option value="">Show all</option>
                                         <option ng-repeat="item in tableValue" value="{{item.number}}">{{item.date}}</option>
                                     </select>
-                                </fieldset> -->
+                                </fieldset>
                             </div>
                         </div>
                         <br></br>
@@ -1759,7 +1734,7 @@
                 <!-- chart -->
                 <div ng-if="chartTable">
                     <highchart class="highcharts-background" id="chart_prices" config="chartData">
-                        <!-- <span  ng-repeat="data in graphValue" class="invisible"></span> -->
+                        <span  ng-repeat="data in graphValue" class="invisible"></span>
                     </highchart>
                 </div>
 
@@ -1768,39 +1743,17 @@
                     <table class="tablesaw">
                         <thead>
                             <tr>
-                                <th><a href="" ng-click="sortField = 'number'; reverse = !reverse">Period</a>
-                                    <span class="icon-down-dir icon--button-inline" role="presentation"></span>
-                                </th>
-                                <th><a href="" ng-click="sortField = 'values'; reverse = !reverse">{{chart.cdid}}</a>
-                                    <span class="icon-down-dir icon--button-inline" role="presentation"></span>
-                                </th>
+                                <th><a href="" ng-click="sortField = 'number'; reverse = !reverse">Period</a></th>
+                                <th><a href="" ng-click="sortField = 'values'; reverse = !reverse">{{chart.cdid}}</a></th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr ng-repeat="data in tableValue | filter:query | orderBy:sortField:reverse | rangeDate:tableValueFrom:tableValueTo:'number'">
+                            <tr ng-repeat="data in tableValue | filter:query | orderBy:sortField:reverse | rangeDate:tableValueFrom:tableValueTo:'number'" >
                                 <th>{{data.date}}</th>
                                 <td>{{data.values}}</td>
                             </tr>
                         </tbody>
                     </table>
-                </div>
-            </div>
-            <!-- Custom downloads -->
-            <div class="chart-area__footer">
-                <span class="chart-area__footer__label">Download custom data</span>
-                <div class="chart-area__footer__actions">
-                    <a id="imgExp" class="btn btn--primary btn--small" href="#">
-                    Image
-                    <span class="icon-download icon--button-inline" role="presentation"></span>
-                    </a>
-                    <a class="btn btn--primary btn--small" href="#">
-                    .csv
-                    <span class="icon-download icon--button-inline" role="presentation"></span>
-                    </a>
-                    <a class="btn btn--primary btn--small" href="#">
-                    .xlsx
-                    <span class="icon-download icon--button-inline" role="presentation"></span>
-                    </a>
                 </div>
             </div>
         </div>
@@ -1816,13 +1769,11 @@
                             {{chart.description}}
                         </p>
                     </div>
-                    <div ng-if="chart.note1">
-                        <h3>Important Notes and Usage Information</h3>
-                        <ol class="dataset_usage">
-                            <li>{{chart.note1}}</li>
-                            <li>{{chart.note2}}</li>
-                        </ol>
-                    </div>
+                    <h3>Important Notes and Usage Information</h3>
+                    <ol class="dataset_usage">
+                        <li>{{chart.note1}}</li>
+                        <li>{{chart.note2}}</li>
+                    </ol>
                 </div>
             </div>
             <!-- Sidebar -->
