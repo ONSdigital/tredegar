@@ -2965,6 +2965,10 @@
     }
   ],
   "uri": "/employmentandlabourmarket/unemployment/timeseries/mgsx",
+  "relatedBulletins": [
+    "/employmentandlabourmarket/unemployment/bulletins/uklabourmarket",
+    "/employmentandlabourmarket/unemployment/bulletins/youngpeoplenotineducationemploymentortrainingneet"
+  ],
   "type": "timeseries",
   "name": "Unemployment rate (aged 16-64)",
   "fileName": "mgsx",

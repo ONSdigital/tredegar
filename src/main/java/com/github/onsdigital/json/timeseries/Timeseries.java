@@ -43,6 +43,8 @@ public class Timeseries extends DataItem implements Comparable<Timeseries> {
 	// place.
 	public URI uri;
 
+	public List<URI> relatedBulletins = new ArrayList<>();
+
 	public Timeseries() {
 		type = ContentType.timeseries;
 		name = "People not in Work";

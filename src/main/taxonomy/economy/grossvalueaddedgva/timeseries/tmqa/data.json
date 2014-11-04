@@ -73,6 +73,9 @@
     }
   ],
   "uri": "/economy/grossvalueaddedgva/timeseries/tmqa",
+  "relatedBulletins": [
+    "/economy/grossvalueaddedgva/bulletins/regionalgrossvalueaddedincomeapproach"
+  ],
   "type": "timeseries",
   "name": "West Midlands Gross Value Added",
   "fileName": "tmqa",

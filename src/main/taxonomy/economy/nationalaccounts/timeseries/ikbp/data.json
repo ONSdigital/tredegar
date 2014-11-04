@@ -1233,6 +1233,9 @@
     }
   ],
   "uri": "/economy/nationalaccounts/timeseries/ikbp",
+  "relatedBulletins": [
+    "/economy/nationalaccounts/bulletins/balanceofpayments"
+  ],
   "type": "timeseries",
   "name": "Current Transfers",
   "fileName": "ikbp",

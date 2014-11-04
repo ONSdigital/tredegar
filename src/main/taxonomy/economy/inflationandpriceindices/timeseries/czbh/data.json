@@ -4508,6 +4508,10 @@
     }
   ],
   "uri": "/economy/inflationandpriceindices/timeseries/czbh",
+  "relatedBulletins": [
+    "/economy/inflationandpriceindices/bulletins/consumerpriceinflation",
+    "/economy/inflationandpriceindices/bulletins/housepriceindex"
+  ],
   "type": "timeseries",
   "name": "RPI: Retail Price Index",
   "fileName": "czbh",

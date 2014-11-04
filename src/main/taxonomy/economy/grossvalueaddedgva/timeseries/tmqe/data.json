@@ -73,6 +73,9 @@
     }
   ],
   "uri": "/economy/grossvalueaddedgva/timeseries/tmqe",
+  "relatedBulletins": [
+    "/economy/grossvalueaddedgva/bulletins/regionalgrossvalueaddedincomeapproach"
+  ],
   "type": "timeseries",
   "name": "South West Gross Value Added",
   "fileName": "tmqe",

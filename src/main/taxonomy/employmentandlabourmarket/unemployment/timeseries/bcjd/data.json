@@ -2981,6 +2981,10 @@
     }
   ],
   "uri": "/employmentandlabourmarket/unemployment/timeseries/bcjd",
+  "relatedBulletins": [
+    "/employmentandlabourmarket/unemployment/bulletins/uklabourmarket",
+    "/employmentandlabourmarket/unemployment/bulletins/youngpeoplenotineducationemploymentortrainingneet"
+  ],
   "type": "timeseries",
   "name": "Total Claimant Count",
   "fileName": "bcjd",

@@ -57,15 +57,11 @@ angular.module('onsComponents')
       return {
         restrict: 'A',
         transclude: true,
-        scope: {
-          show: '@'
-        },
         link: function(scope, elem, attrs) {
           scope.toggle = function() {
             scope.visible = !scope.visible;
           }
 
-          scope.visible = (scope.show === 'true')
           scope.key = attrs.toggleable
           toggleService.registerToggleable(scope);
         },
