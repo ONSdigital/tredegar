@@ -1128,6 +1128,10 @@
     }
   ],
   "uri": "/economy/inflationandpriceindices/timeseries/kvr9",
+  "relatedBulletins": [
+    "/economy/inflationandpriceindices/bulletins/consumerpriceinflation",
+    "/economy/inflationandpriceindices/bulletins/housepriceindex"
+  ],
   "type": "timeseries",
   "name": "RPIJ",
   "fileName": "kvr9",

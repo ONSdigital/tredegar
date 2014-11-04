@@ -269,6 +269,9 @@
     }
   ],
   "uri": "/economy/grossdomesticproductgdp/timeseries/abmi",
+  "relatedBulletins": [
+    "/economy/grossdomesticproductgdp/bulletins/grossdomesticproductpreliminaryestimate"
+  ],
   "type": "timeseries",
   "name": "Gross Domestic Product (CVM)",
   "fileName": "abmi",

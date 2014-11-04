@@ -497,7 +497,7 @@ public class TaxonomyGenerator {
 		// Write out timeseries specified by the Alpha Content spreadsheet:
 		for (Timeseries timeseries : timeserieses) {
 
-			if (createTimeseries(timeseries, t3)) {
+			if (createTimeseries(timeseries, folder, t3)) {
 				created++;
 			}
 		}
@@ -525,7 +525,7 @@ public class TaxonomyGenerator {
 		// }
 	}
 
-	private static boolean createTimeseries(Timeseries timeseries, T3 t3) throws IOException {
+	private static boolean createTimeseries(Timeseries timeseries, Folder folder, T3 t3) throws IOException {
 		boolean result = false;
 
 		URI uri = timeseries.uri;
@@ -547,12 +547,19 @@ public class TaxonomyGenerator {
 			if (timeseries.data.size() == 0) {
 				noData.add(timeseries);
 			}
+
+			List<Bulletin> bulletins = BulletinContent.getBulletins(folder);
+			if (bulletins != null) {
+				for (Bulletin bulletin : bulletins) {
+					timeseries.relatedBulletins.add(bulletin.uri);
+				}
+			}
+
 			String json = Serialiser.serialise(timeseries);
 			FileUtils.writeStringToFile(timeseriesFile, json, Charset.forName("UTF8"));
 			created.add(timeseries);
 			result = true;
 		}
-
 		return result;
 	}
 

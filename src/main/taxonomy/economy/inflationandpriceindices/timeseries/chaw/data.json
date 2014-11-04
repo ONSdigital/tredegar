@@ -1888,6 +1888,10 @@
     }
   ],
   "uri": "/economy/inflationandpriceindices/timeseries/chaw",
+  "relatedBulletins": [
+    "/economy/inflationandpriceindices/bulletins/consumerpriceinflation",
+    "/economy/inflationandpriceindices/bulletins/housepriceindex"
+  ],
   "type": "timeseries",
   "name": "RPI: Retail Price Index (1987 \u003d 100)",
   "fileName": "chaw",

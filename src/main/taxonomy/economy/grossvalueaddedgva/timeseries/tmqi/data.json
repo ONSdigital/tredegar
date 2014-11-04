@@ -73,6 +73,9 @@
     }
   ],
   "uri": "/economy/grossvalueaddedgva/timeseries/tmqi",
+  "relatedBulletins": [
+    "/economy/grossvalueaddedgva/bulletins/regionalgrossvalueaddedincomeapproach"
+  ],
   "type": "timeseries",
   "name": "Northern Ireland Gross Value Added",
   "fileName": "tmqi",

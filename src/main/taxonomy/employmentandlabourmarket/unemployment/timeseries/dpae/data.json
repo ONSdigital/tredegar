@@ -2981,6 +2981,10 @@
     }
   ],
   "uri": "/employmentandlabourmarket/unemployment/timeseries/dpae",
+  "relatedBulletins": [
+    "/employmentandlabourmarket/unemployment/bulletins/uklabourmarket",
+    "/employmentandlabourmarket/unemployment/bulletins/youngpeoplenotineducationemploymentortrainingneet"
+  ],
   "type": "timeseries",
   "name": "Total Claimant Count Male",
   "fileName": "dpae",
