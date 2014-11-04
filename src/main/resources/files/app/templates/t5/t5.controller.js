@@ -257,8 +257,8 @@ angular.module('onsTemplates')
         $scope.yqm = 0;
         $scope.changeTime = function(time) {
             if (time === 'year') {
-                $scope.tableValue = makeTableObj(categoriesY, seriesDataY, categoriesYnum);
                 $scope.graphValue = makeGraphValue(categoriesY, seriesDataY, categoriesYnum);
+                $scope.tableValue = makeTableObj($scope.graphValue);
                 $scope.yqm = 0;
                 $scope.chartData.options.xAxis.categories = $scope.graphValue[0];
                 $scope.chartData.options.xAxis.tickInterval = tickInterval(categoriesY.length);
@@ -268,8 +268,8 @@ angular.module('onsTemplates')
                 currentSorter = categoriesYnum;
             }
             if (time === 'quarter') {
-                $scope.tableValue = makeTableObj(categoriesQ, seriesDataQ, categoriesQnum);
                 $scope.graphValue = makeGraphValue(categoriesQ, seriesDataQ, categoriesQnum);
+                $scope.tableValue = makeTableObj($scope.graphValue);
                 $scope.yqm = 1;
                 $scope.chartData.options.xAxis.categories = $scope.graphValue[0];
                 $scope.chartData.options.xAxis.tickInterval = tickInterval(categoriesQ.length);
@@ -279,8 +279,8 @@ angular.module('onsTemplates')
                 currentSorter = categoriesQnum;
             }
             if (time === 'month') {
-                $scope.tableValue = makeTableObj(categoriesM, seriesDataM, categoriesMnum);
                 $scope.graphValue = makeGraphValue(categoriesM, seriesDataM, categoriesMnum);
+                $scope.tableValue = makeTableObj($scope.graphValue);
                 $scope.yqm = 2;
                 $scope.chartData.options.xAxis.categories = $scope.graphValue[0];
                 $scope.chartData.options.xAxis.tickInterval = tickInterval(categoriesM.length);
@@ -332,21 +332,6 @@ angular.module('onsTemplates')
                     navigation: {
                         buttonOptions: {
                             enabled: false
-                        //     verticalAlign: 'bottom',
-                        //     y: 0,
-                        //     text: 'Image',
-                        //     theme: {
-                        //         fill: '#0054aa',
-                        //         r: 0,
-                        //         states: {
-                        //             hover: {
-                        //                 fill: '#004790'
-                        //             },
-                        //             select: {
-                        //                 fill: '#004790'
-                        //             }
-                                // }
-                             // }
                         }
                     },
                     xAxis: {
