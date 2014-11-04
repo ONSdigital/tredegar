@@ -957,6 +957,9 @@
     }
   ],
   "uri": "/economy/grossdomesticproductgdp/timeseries/ihyq",
+  "relatedBulletins": [
+    "/economy/grossdomesticproductgdp/bulletins/grossdomesticproductpreliminaryestimate"
+  ],
   "type": "timeseries",
   "name": "GDP Quarter on Quarter growth (CVM)",
   "fileName": "ihyq",
