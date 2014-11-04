@@ -1197,6 +1197,9 @@
     }
   ],
   "uri": "/economy/nationalaccounts/timeseries/hboj",
+  "relatedBulletins": [
+    "/economy/nationalaccounts/bulletins/balanceofpayments"
+  ],
   "type": "timeseries",
   "name": "Balance of Payments: Total income",
   "fileName": "hboj",

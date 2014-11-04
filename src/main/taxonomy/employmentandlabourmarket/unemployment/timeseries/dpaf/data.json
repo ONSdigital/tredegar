@@ -2981,6 +2981,10 @@
     }
   ],
   "uri": "/employmentandlabourmarket/unemployment/timeseries/dpaf",
+  "relatedBulletins": [
+    "/employmentandlabourmarket/unemployment/bulletins/uklabourmarket",
+    "/employmentandlabourmarket/unemployment/bulletins/youngpeoplenotineducationemploymentortrainingneet"
+  ],
   "type": "timeseries",
   "name": "Total Claimant Count Female",
   "fileName": "dpaf",

@@ -1,11 +1,15 @@
 angular.module('onsTemplates')
-    .controller('T5Ctrl', ['$scope', 'Downloader',
-        function($scope, Downloader) {
-
+    .controller('T5Ctrl', ['$scope', 'Downloader', 'Taxonomy',
+        function($scope, Downloader, Taxonomy) {
+    	
             var t5 = this;
             $scope.header = "Time Series";
             $scope.sidebar = true;
             $scope.sidebarUrl = "/app/templates/t5/t5sidebar.html";
+            
+            var data = $scope.taxonomy.data
+            data.relatedBulletinData = []
+            loadRelatedBulletins(data)
 
             function downloadXls() {
                 download('xlsx');
@@ -23,6 +27,22 @@ angular.module('onsTemplates')
                 var fileName = $scope.getPage() + '.' + downloadRequest.type;
                 Downloader.downloadFile(downloadRequest, fileName);
             }
+            
+    		function loadRelatedBulletins(data) {
+    			var dataPath = '/data'
+    			var bulletins = data.relatedBulletins;
+    			
+    			if (bulletins != null) {
+    				for (var i = 0; i < bulletins.length; i++) {
+    					var bulletin = bulletins[i]
+    					var relatedBulletinPath = dataPath + bulletin
+    					Taxonomy.load(relatedBulletinPath, function(relatedBulletin) {
+    						console.log('Loaded related bulletin: ', relatedBulletinPath, ' ', relatedBulletin)
+    						data.relatedBulletinData.push(relatedBulletin)
+    					})
+    				}
+    			}
+    		}            
 
             angular.extend(t5, {
                 downloadXls: downloadXls,

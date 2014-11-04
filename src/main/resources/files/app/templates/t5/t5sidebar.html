@@ -42,14 +42,20 @@
         </header>
         <!-- /box__header -->
         <div class="box__content">
-            <p><a href="">Veritus feugait sea in, January 2014</a>
-            </p>
-            <p><a href="">Assum efficiantur eum cu, January 2014</a>
-            </p>
-            <p><a href="">Ne his tractatos disputando, January 2014</a>
-            </p>
-            <p><a href="">Vel ut soleat mollis meliore (6) publications</a>
-            </p>
+        	<div ng-if="(taxonomy.data.relatedBulletinData).length === 0">
+ 	            <p>
+ 	            	<a href="">Assum efficiantur eum cu, January 2014</a>
+	            </p>
+	            <p>
+	            	<a href="">Ne his tractatos disputando, January 2014</a>
+	            </p>
+	            <p>
+	            	<a href="">Vel ut soleat mollis meliore (6) publications</a>
+	            </p>
+        	</div>
+        	<div ng-repeat="bulletin in taxonomy.data.relatedBulletinData">
+	            <p><a href=#!{{bulletin.uri}}>{{bulletin.name}}</a>
+			</div>
 
             <!-- /list- -bullet -->
         </div>

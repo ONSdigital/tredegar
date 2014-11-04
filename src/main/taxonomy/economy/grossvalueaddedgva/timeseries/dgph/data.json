@@ -73,6 +73,9 @@
     }
   ],
   "uri": "/economy/grossvalueaddedgva/timeseries/dgph",
+  "relatedBulletins": [
+    "/economy/grossvalueaddedgva/bulletins/regionalgrossvalueaddedincomeapproach"
+  ],
   "type": "timeseries",
   "name": "East of England Gross Value Added",
   "fileName": "dgph",

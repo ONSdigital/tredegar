@@ -596,6 +596,10 @@
     }
   ],
   "uri": "/economy/inflationandpriceindices/timeseries/l55o",
+  "relatedBulletins": [
+    "/economy/inflationandpriceindices/bulletins/consumerpriceinflation",
+    "/economy/inflationandpriceindices/bulletins/housepriceindex"
+  ],
   "type": "timeseries",
   "name": "CPIH",
   "fileName": "l55o",

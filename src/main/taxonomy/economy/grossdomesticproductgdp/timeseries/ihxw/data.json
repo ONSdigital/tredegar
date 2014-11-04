@@ -269,6 +269,9 @@
     }
   ],
   "uri": "/economy/grossdomesticproductgdp/timeseries/ihxw",
+  "relatedBulletins": [
+    "/economy/grossdomesticproductgdp/bulletins/grossdomesticproductpreliminaryestimate"
+  ],
   "type": "timeseries",
   "name": "GDP (average) per head, Chained Volume Measures (CVM) market prices",
   "fileName": "ihxw",
