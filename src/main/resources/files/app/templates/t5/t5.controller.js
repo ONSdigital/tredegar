@@ -171,7 +171,7 @@ angular.module('onsTemplates')
             }
         }
 
-        // Creates an object for angular table control
+        // Creates an object for angular table control from the graph arrays
         function makeTableObj(arrayChart) {
             var key = arrayChart[0];
             var values = arrayChart[1];
@@ -191,7 +191,7 @@ angular.module('onsTemplates')
             return x;
         }
 
-        $scope.changeChartRange = function changeChartRange() {
+        $scope.changeChartRange = function() {
             var from = $scope.chartDataFrom;
             var to = $scope.chartDataTo;
             var w;
@@ -250,6 +250,18 @@ angular.module('onsTemplates')
             }
             if (type === "table") {
                 $scope.chartTable = false;
+            }
+        };
+
+        $scope.backToAll = function() {
+            if ($scope.yqm === 0) {
+                return $scope.changeTime('year');
+            }
+            if ($scope.yqm === 1) {
+                return $scope.changeTime('quarter');
+            }
+            if ($scope.yqm === 2) {
+                return $scope.changeTime('month');
             }
         };
 
