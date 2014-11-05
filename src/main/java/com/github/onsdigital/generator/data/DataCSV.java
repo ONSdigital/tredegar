@@ -126,19 +126,11 @@ public class DataCSV {
 			// Check all the CDIDs in the header row:
 			// int duplicates = 0;
 			String[] header = csvReader.readNext();
-			// System.out.println(file.getFileName() + " has " + header.length +
-			// " cells in the header row.");
 			for (int i = 1; i < header.length; i++) {
 				Timeseries timeseries = Data.timeseries(header[i]);
 				if (timeseries == null) {
 					timeseries = Data.addTimeseries(header[i], name);
 				}
-				// else if (timeseries.data != null && timeseries.data.size() >
-				// 0 && !"MGSC".equalsIgnoreCase(header[i])) {
-				// // Don't process this timeseries - it's a duplicate.
-				// duplicates++;
-				// header[i] = null;
-				// }
 				dataset.add(timeseries);
 			}
 
@@ -169,9 +161,6 @@ public class DataCSV {
 						timeseriesValue.date = StringUtils.trim(date);
 						timeseriesValue.value = StringUtils.trim(value);
 						timeseries.add(timeseriesValue);
-						if ("mgsc".equalsIgnoreCase(cdid)) {
-							System.out.println(file.getFileName() + " mgsc: " + date + "\t" + value);
-						}
 					}
 				}
 			}
