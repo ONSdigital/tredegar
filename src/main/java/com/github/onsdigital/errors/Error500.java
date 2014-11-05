@@ -18,7 +18,9 @@ public class Error500 implements Boom {
 	@Override
 	public Object handle(HttpServletRequest req, HttpServletResponse res, RequestHandler requestHandler, Throwable t) throws IOException {
 
-		System.out.println("Error in " + requestHandler.endpointClass.getName() + " (" + requestHandler.method.getName() + ")");
+		if (requestHandler != null) {
+			System.out.println("Error in " + requestHandler.endpointClass.getName() + " (" + requestHandler.method.getName() + ")");
+		}
 		System.out.println(ExceptionUtils.getStackTrace(t));
 		try (Reader input = ResourceUtils.getReader("/files/500.html")) {
 			res.setCharacterEncoding("UTF8");
