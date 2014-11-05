@@ -6,32 +6,30 @@
   "unit": "per week",
   "preUnit": "£",
   "date": "2012",
-  "data": [
-    {
-      "date": "2010",
-      "value": "664"
-    },
-    {
-      "date": "2011",
-      "value": "677.3"
-    },
-    {
-      "date": "2012",
-      "value": "677.8"
-    }
-  ],
   "years": [
     {
       "date": "2010",
-      "value": "664"
+      "value": "664",
+      "timestamp": 1262304000000,
+      "year": "2010",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2011",
-      "value": "677.3"
+      "value": "677.3",
+      "timestamp": 1293840000000,
+      "year": "2011",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2012",
-      "value": "677.8"
+      "value": "677.8",
+      "timestamp": 1325376000000,
+      "year": "2012",
+      "month": "January",
+      "quarter": "Q1"
     }
   ],
   "quarters": [],

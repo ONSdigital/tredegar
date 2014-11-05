@@ -6,2268 +6,4042 @@
   "unit": "bn",
   "preUnit": "£",
   "date": "Q2 2014",
-  "data": [
-    {
-      "date": "1998",
-      "value": "-6764"
-    },
-    {
-      "date": "1999",
-      "value": "-15200"
-    },
-    {
-      "date": "2000",
-      "value": "-20138"
-    },
-    {
-      "date": "2001",
-      "value": "-24898"
-    },
-    {
-      "date": "2002",
-      "value": "-30039"
-    },
-    {
-      "date": "2003",
-      "value": "-27234"
-    },
-    {
-      "date": "2004",
-      "value": "-35386"
-    },
-    {
-      "date": "2005",
-      "value": "-34643"
-    },
-    {
-      "date": "2006",
-      "value": "-33219"
-    },
-    {
-      "date": "2007",
-      "value": "-40694"
-    },
-    {
-      "date": "2008",
-      "value": "-44901"
-    },
-    {
-      "date": "2009",
-      "value": "-28115"
-    },
-    {
-      "date": "2010",
-      "value": "-37058"
-    },
-    {
-      "date": "2011",
-      "value": "-23825"
-    },
-    {
-      "date": "2012",
-      "value": "-34469"
-    },
-    {
-      "date": "2013",
-      "value": "-32100"
-    },
-    {
-      "date": "1998 Q1",
-      "value": "-780"
-    },
-    {
-      "date": "1998 Q2",
-      "value": "-1579"
-    },
-    {
-      "date": "1998 Q3",
-      "value": "-1747"
-    },
-    {
-      "date": "1998 Q4",
-      "value": "-2658"
-    },
-    {
-      "date": "1999 Q1",
-      "value": "-3522"
-    },
-    {
-      "date": "1999 Q2",
-      "value": "-3799"
-    },
-    {
-      "date": "1999 Q3",
-      "value": "-4513"
-    },
-    {
-      "date": "1999 Q4",
-      "value": "-3366"
-    },
-    {
-      "date": "2000 Q1",
-      "value": "-5062"
-    },
-    {
-      "date": "2000 Q2",
-      "value": "-5630"
-    },
-    {
-      "date": "2000 Q3",
-      "value": "-3174"
-    },
-    {
-      "date": "2000 Q4",
-      "value": "-6272"
-    },
-    {
-      "date": "2001 Q1",
-      "value": "-5697"
-    },
-    {
-      "date": "2001 Q2",
-      "value": "-5361"
-    },
-    {
-      "date": "2001 Q3",
-      "value": "-7164"
-    },
-    {
-      "date": "2001 Q4",
-      "value": "-6676"
-    },
-    {
-      "date": "2002 Q1",
-      "value": "-6590"
-    },
-    {
-      "date": "2002 Q2",
-      "value": "-7975"
-    },
-    {
-      "date": "2002 Q3",
-      "value": "-8756"
-    },
-    {
-      "date": "2002 Q4",
-      "value": "-6718"
-    },
-    {
-      "date": "2003 Q1",
-      "value": "-6761"
-    },
-    {
-      "date": "2003 Q2",
-      "value": "-7411"
-    },
-    {
-      "date": "2003 Q3",
-      "value": "-6037"
-    },
-    {
-      "date": "2003 Q4",
-      "value": "-7025"
-    },
-    {
-      "date": "2004 Q1",
-      "value": "-6523"
-    },
-    {
-      "date": "2004 Q2",
-      "value": "-9981"
-    },
-    {
-      "date": "2004 Q3",
-      "value": "-10237"
-    },
-    {
-      "date": "2004 Q4",
-      "value": "-8645"
-    },
-    {
-      "date": "2005 Q1",
-      "value": "-9784"
-    },
-    {
-      "date": "2005 Q2",
-      "value": "-9766"
-    },
-    {
-      "date": "2005 Q3",
-      "value": "-8117"
-    },
-    {
-      "date": "2005 Q4",
-      "value": "-6976"
-    },
-    {
-      "date": "2006 Q1",
-      "value": "-7400"
-    },
-    {
-      "date": "2006 Q2",
-      "value": "-5916"
-    },
-    {
-      "date": "2006 Q3",
-      "value": "-8742"
-    },
-    {
-      "date": "2006 Q4",
-      "value": "-11161"
-    },
-    {
-      "date": "2007 Q1",
-      "value": "-10834"
-    },
-    {
-      "date": "2007 Q2",
-      "value": "-9745"
-    },
-    {
-      "date": "2007 Q3",
-      "value": "-10460"
-    },
-    {
-      "date": "2007 Q4",
-      "value": "-9655"
-    },
-    {
-      "date": "2008 Q1",
-      "value": "-13238"
-    },
-    {
-      "date": "2008 Q2",
-      "value": "-10820"
-    },
-    {
-      "date": "2008 Q3",
-      "value": "-11691"
-    },
-    {
-      "date": "2008 Q4",
-      "value": "-9152"
-    },
-    {
-      "date": "2009 Q1",
-      "value": "-7929"
-    },
-    {
-      "date": "2009 Q2",
-      "value": "-7152"
-    },
-    {
-      "date": "2009 Q3",
-      "value": "-5684"
-    },
-    {
-      "date": "2009 Q4",
-      "value": "-7350"
-    },
-    {
-      "date": "2010 Q1",
-      "value": "-8886"
-    },
-    {
-      "date": "2010 Q2",
-      "value": "-7818"
-    },
-    {
-      "date": "2010 Q3",
-      "value": "-11038"
-    },
-    {
-      "date": "2010 Q4",
-      "value": "-9316"
-    },
-    {
-      "date": "2011 Q1",
-      "value": "-5677"
-    },
-    {
-      "date": "2011 Q2",
-      "value": "-4735"
-    },
-    {
-      "date": "2011 Q3",
-      "value": "-7041"
-    },
-    {
-      "date": "2011 Q4",
-      "value": "-6372"
-    },
-    {
-      "date": "2012 Q1",
-      "value": "-9657"
-    },
-    {
-      "date": "2012 Q2",
-      "value": "-8836"
-    },
-    {
-      "date": "2012 Q3",
-      "value": "-7496"
-    },
-    {
-      "date": "2012 Q4",
-      "value": "-8480"
-    },
-    {
-      "date": "2013 Q1",
-      "value": "-7288"
-    },
-    {
-      "date": "2013 Q2",
-      "value": "-4533"
-    },
-    {
-      "date": "2013 Q3",
-      "value": "-11356"
-    },
-    {
-      "date": "2013 Q4",
-      "value": "-8923"
-    },
-    {
-      "date": "2014 Q1",
-      "value": "-7411"
-    },
-    {
-      "date": "2014 Q2",
-      "value": "-6461"
-    },
-    {
-      "date": "1998 JAN",
-      "value": "252"
-    },
-    {
-      "date": "1998 FEB",
-      "value": "-536"
-    },
-    {
-      "date": "1998 MAR",
-      "value": "-496"
-    },
-    {
-      "date": "1998 APR",
-      "value": "-286"
-    },
-    {
-      "date": "1998 MAY",
-      "value": "-670"
-    },
-    {
-      "date": "1998 JUN",
-      "value": "-623"
-    },
-    {
-      "date": "1998 JUL",
-      "value": "-600"
-    },
-    {
-      "date": "1998 AUG",
-      "value": "-250"
-    },
-    {
-      "date": "1998 SEP",
-      "value": "-897"
-    },
-    {
-      "date": "1998 OCT",
-      "value": "-767"
-    },
-    {
-      "date": "1998 NOV",
-      "value": "-1050"
-    },
-    {
-      "date": "1998 DEC",
-      "value": "-841"
-    },
-    {
-      "date": "1999 JAN",
-      "value": "-1447"
-    },
-    {
-      "date": "1999 FEB",
-      "value": "-1173"
-    },
-    {
-      "date": "1999 MAR",
-      "value": "-902"
-    },
-    {
-      "date": "1999 APR",
-      "value": "-1238"
-    },
-    {
-      "date": "1999 MAY",
-      "value": "-738"
-    },
-    {
-      "date": "1999 JUN",
-      "value": "-1823"
-    },
-    {
-      "date": "1999 JUL",
-      "value": "-2021"
-    },
-    {
-      "date": "1999 AUG",
-      "value": "-1479"
-    },
-    {
-      "date": "1999 SEP",
-      "value": "-1013"
-    },
-    {
-      "date": "1999 OCT",
-      "value": "-880"
-    },
-    {
-      "date": "1999 NOV",
-      "value": "-1063"
-    },
-    {
-      "date": "1999 DEC",
-      "value": "-1423"
-    },
-    {
-      "date": "2000 JAN",
-      "value": "-1800"
-    },
-    {
-      "date": "2000 FEB",
-      "value": "-1842"
-    },
-    {
-      "date": "2000 MAR",
-      "value": "-1420"
-    },
-    {
-      "date": "2000 APR",
-      "value": "-2447"
-    },
-    {
-      "date": "2000 MAY",
-      "value": "-2026"
-    },
-    {
-      "date": "2000 JUN",
-      "value": "-1157"
-    },
-    {
-      "date": "2000 JUL",
-      "value": "-1643"
-    },
-    {
-      "date": "2000 AUG",
-      "value": "-609"
-    },
-    {
-      "date": "2000 SEP",
-      "value": "-922"
-    },
-    {
-      "date": "2000 OCT",
-      "value": "-1453"
-    },
-    {
-      "date": "2000 NOV",
-      "value": "-2239"
-    },
-    {
-      "date": "2000 DEC",
-      "value": "-2580"
-    },
-    {
-      "date": "2001 JAN",
-      "value": "-2272"
-    },
-    {
-      "date": "2001 FEB",
-      "value": "-1958"
-    },
-    {
-      "date": "2001 MAR",
-      "value": "-1467"
-    },
-    {
-      "date": "2001 APR",
-      "value": "-1586"
-    },
-    {
-      "date": "2001 MAY",
-      "value": "-1730"
-    },
-    {
-      "date": "2001 JUN",
-      "value": "-2045"
-    },
-    {
-      "date": "2001 JUL",
-      "value": "-1970"
-    },
-    {
-      "date": "2001 AUG",
-      "value": "-3230"
-    },
-    {
-      "date": "2001 SEP",
-      "value": "-1964"
-    },
-    {
-      "date": "2001 OCT",
-      "value": "-2053"
-    },
-    {
-      "date": "2001 NOV",
-      "value": "-2017"
-    },
-    {
-      "date": "2001 DEC",
-      "value": "-2606"
-    },
-    {
-      "date": "2002 JAN",
-      "value": "-2118"
-    },
-    {
-      "date": "2002 FEB",
-      "value": "-2258"
-    },
-    {
-      "date": "2002 MAR",
-      "value": "-2214"
-    },
-    {
-      "date": "2002 APR",
-      "value": "-2834"
-    },
-    {
-      "date": "2002 MAY",
-      "value": "-2303"
-    },
-    {
-      "date": "2002 JUN",
-      "value": "-2838"
-    },
-    {
-      "date": "2002 JUL",
-      "value": "-3466"
-    },
-    {
-      "date": "2002 AUG",
-      "value": "-3169"
-    },
-    {
-      "date": "2002 SEP",
-      "value": "-2121"
-    },
-    {
-      "date": "2002 OCT",
-      "value": "-2309"
-    },
-    {
-      "date": "2002 NOV",
-      "value": "-2648"
-    },
-    {
-      "date": "2002 DEC",
-      "value": "-1761"
-    },
-    {
-      "date": "2003 JAN",
-      "value": "-2069"
-    },
-    {
-      "date": "2003 FEB",
-      "value": "-1564"
-    },
-    {
-      "date": "2003 MAR",
-      "value": "-3128"
-    },
-    {
-      "date": "2003 APR",
-      "value": "-1386"
-    },
-    {
-      "date": "2003 MAY",
-      "value": "-2757"
-    },
-    {
-      "date": "2003 JUN",
-      "value": "-3268"
-    },
-    {
-      "date": "2003 JUL",
-      "value": "-1728"
-    },
-    {
-      "date": "2003 AUG",
-      "value": "-1609"
-    },
-    {
-      "date": "2003 SEP",
-      "value": "-2700"
-    },
-    {
-      "date": "2003 OCT",
-      "value": "-2240"
-    },
-    {
-      "date": "2003 NOV",
-      "value": "-2577"
-    },
-    {
-      "date": "2003 DEC",
-      "value": "-2208"
-    },
-    {
-      "date": "2004 JAN",
-      "value": "-3059"
-    },
-    {
-      "date": "2004 FEB",
-      "value": "-1685"
-    },
-    {
-      "date": "2004 MAR",
-      "value": "-1779"
-    },
-    {
-      "date": "2004 APR",
-      "value": "-2612"
-    },
-    {
-      "date": "2004 MAY",
-      "value": "-3571"
-    },
-    {
-      "date": "2004 JUN",
-      "value": "-3798"
-    },
-    {
-      "date": "2004 JUL",
-      "value": "-3851"
-    },
-    {
-      "date": "2004 AUG",
-      "value": "-3728"
-    },
-    {
-      "date": "2004 SEP",
-      "value": "-2658"
-    },
-    {
-      "date": "2004 OCT",
-      "value": "-3596"
-    },
-    {
-      "date": "2004 NOV",
-      "value": "-2540"
-    },
-    {
-      "date": "2004 DEC",
-      "value": "-2509"
-    },
-    {
-      "date": "2005 JAN",
-      "value": "-3417"
-    },
-    {
-      "date": "2005 FEB",
-      "value": "-2752"
-    },
-    {
-      "date": "2005 MAR",
-      "value": "-3615"
-    },
-    {
-      "date": "2005 APR",
-      "value": "-4260"
-    },
-    {
-      "date": "2005 MAY",
-      "value": "-3235"
-    },
-    {
-      "date": "2005 JUN",
-      "value": "-2271"
-    },
-    {
-      "date": "2005 JUL",
-      "value": "-2622"
-    },
-    {
-      "date": "2005 AUG",
-      "value": "-3422"
-    },
-    {
-      "date": "2005 SEP",
-      "value": "-2073"
-    },
-    {
-      "date": "2005 OCT",
-      "value": "-1787"
-    },
-    {
-      "date": "2005 NOV",
-      "value": "-2985"
-    },
-    {
-      "date": "2005 DEC",
-      "value": "-2204"
-    },
-    {
-      "date": "2006 JAN",
-      "value": "-3132"
-    },
-    {
-      "date": "2006 FEB",
-      "value": "-2926"
-    },
-    {
-      "date": "2006 MAR",
-      "value": "-1342"
-    },
-    {
-      "date": "2006 APR",
-      "value": "-2029"
-    },
-    {
-      "date": "2006 MAY",
-      "value": "-1905"
-    },
-    {
-      "date": "2006 JUN",
-      "value": "-1982"
-    },
-    {
-      "date": "2006 JUL",
-      "value": "-2924"
-    },
-    {
-      "date": "2006 AUG",
-      "value": "-3090"
-    },
-    {
-      "date": "2006 SEP",
-      "value": "-2728"
-    },
-    {
-      "date": "2006 OCT",
-      "value": "-3544"
-    },
-    {
-      "date": "2006 NOV",
-      "value": "-3760"
-    },
-    {
-      "date": "2006 DEC",
-      "value": "-3857"
-    },
-    {
-      "date": "2007 JAN",
-      "value": "-3897"
-    },
-    {
-      "date": "2007 FEB",
-      "value": "-3686"
-    },
-    {
-      "date": "2007 MAR",
-      "value": "-3251"
-    },
-    {
-      "date": "2007 APR",
-      "value": "-2870"
-    },
-    {
-      "date": "2007 MAY",
-      "value": "-3521"
-    },
-    {
-      "date": "2007 JUN",
-      "value": "-3354"
-    },
-    {
-      "date": "2007 JUL",
-      "value": "-3529"
-    },
-    {
-      "date": "2007 AUG",
-      "value": "-3781"
-    },
-    {
-      "date": "2007 SEP",
-      "value": "-3150"
-    },
-    {
-      "date": "2007 OCT",
-      "value": "-2738"
-    },
-    {
-      "date": "2007 NOV",
-      "value": "-3617"
-    },
-    {
-      "date": "2007 DEC",
-      "value": "-3300"
-    },
-    {
-      "date": "2008 JAN",
-      "value": "-4002"
-    },
-    {
-      "date": "2008 FEB",
-      "value": "-3839"
-    },
-    {
-      "date": "2008 MAR",
-      "value": "-5397"
-    },
-    {
-      "date": "2008 APR",
-      "value": "-4282"
-    },
-    {
-      "date": "2008 MAY",
-      "value": "-3685"
-    },
-    {
-      "date": "2008 JUN",
-      "value": "-2853"
-    },
-    {
-      "date": "2008 JUL",
-      "value": "-3447"
-    },
-    {
-      "date": "2008 AUG",
-      "value": "-4617"
-    },
-    {
-      "date": "2008 SEP",
-      "value": "-3627"
-    },
-    {
-      "date": "2008 OCT",
-      "value": "-3766"
-    },
-    {
-      "date": "2008 NOV",
-      "value": "-3083"
-    },
-    {
-      "date": "2008 DEC",
-      "value": "-2303"
-    },
-    {
-      "date": "2009 JAN",
-      "value": "-3436"
-    },
-    {
-      "date": "2009 FEB",
-      "value": "-2531"
-    },
-    {
-      "date": "2009 MAR",
-      "value": "-1962"
-    },
-    {
-      "date": "2009 APR",
-      "value": "-2637"
-    },
-    {
-      "date": "2009 MAY",
-      "value": "-2270"
-    },
-    {
-      "date": "2009 JUN",
-      "value": "-2245"
-    },
-    {
-      "date": "2009 JUL",
-      "value": "-1693"
-    },
-    {
-      "date": "2009 AUG",
-      "value": "-1513"
-    },
-    {
-      "date": "2009 SEP",
-      "value": "-2478"
-    },
-    {
-      "date": "2009 OCT",
-      "value": "-2510"
-    },
-    {
-      "date": "2009 NOV",
-      "value": "-2157"
-    },
-    {
-      "date": "2009 DEC",
-      "value": "-2683"
-    },
-    {
-      "date": "2010 JAN",
-      "value": "-3265"
-    },
-    {
-      "date": "2010 FEB",
-      "value": "-1476"
-    },
-    {
-      "date": "2010 MAR",
-      "value": "-4145"
-    },
-    {
-      "date": "2010 APR",
-      "value": "-1984"
-    },
-    {
-      "date": "2010 MAY",
-      "value": "-2925"
-    },
-    {
-      "date": "2010 JUN",
-      "value": "-2909"
-    },
-    {
-      "date": "2010 JUL",
-      "value": "-4180"
-    },
-    {
-      "date": "2010 AUG",
-      "value": "-3598"
-    },
-    {
-      "date": "2010 SEP",
-      "value": "-3260"
-    },
-    {
-      "date": "2010 OCT",
-      "value": "-2923"
-    },
-    {
-      "date": "2010 NOV",
-      "value": "-2777"
-    },
-    {
-      "date": "2010 DEC",
-      "value": "-3616"
-    },
-    {
-      "date": "2011 JAN",
-      "value": "-2063"
-    },
-    {
-      "date": "2011 FEB",
-      "value": "-1231"
-    },
-    {
-      "date": "2011 MAR",
-      "value": "-2383"
-    },
-    {
-      "date": "2011 APR",
-      "value": "-1308"
-    },
-    {
-      "date": "2011 MAY",
-      "value": "-1039"
-    },
-    {
-      "date": "2011 JUN",
-      "value": "-2388"
-    },
-    {
-      "date": "2011 JUL",
-      "value": "-2560"
-    },
-    {
-      "date": "2011 AUG",
-      "value": "-1324"
-    },
-    {
-      "date": "2011 SEP",
-      "value": "-3157"
-    },
-    {
-      "date": "2011 OCT",
-      "value": "-2186"
-    },
-    {
-      "date": "2011 NOV",
-      "value": "-2971"
-    },
-    {
-      "date": "2011 DEC",
-      "value": "-1215"
-    },
-    {
-      "date": "2012 JAN",
-      "value": "-3385"
-    },
-    {
-      "date": "2012 FEB",
-      "value": "-2839"
-    },
-    {
-      "date": "2012 MAR",
-      "value": "-3433"
-    },
-    {
-      "date": "2012 APR",
-      "value": "-4081"
-    },
-    {
-      "date": "2012 MAY",
-      "value": "-1509"
-    },
-    {
-      "date": "2012 JUN",
-      "value": "-3246"
-    },
-    {
-      "date": "2012 JUL",
-      "value": "-1129"
-    },
-    {
-      "date": "2012 AUG",
-      "value": "-3867"
-    },
-    {
-      "date": "2012 SEP",
-      "value": "-2500"
-    },
-    {
-      "date": "2012 OCT",
-      "value": "-2350"
-    },
-    {
-      "date": "2012 NOV",
-      "value": "-3600"
-    },
-    {
-      "date": "2012 DEC",
-      "value": "-2530"
-    },
-    {
-      "date": "2013 JAN",
-      "value": "-1905"
-    },
-    {
-      "date": "2013 FEB",
-      "value": "-2665"
-    },
-    {
-      "date": "2013 MAR",
-      "value": "-2718"
-    },
-    {
-      "date": "2013 APR",
-      "value": "-2144"
-    },
-    {
-      "date": "2013 MAY",
-      "value": "-2470"
-    },
-    {
-      "date": "2013 JUN",
-      "value": "81"
-    },
-    {
-      "date": "2013 JUL",
-      "value": "-3642"
-    },
-    {
-      "date": "2013 AUG",
-      "value": "-3521"
-    },
-    {
-      "date": "2013 SEP",
-      "value": "-4193"
-    },
-    {
-      "date": "2013 OCT",
-      "value": "-3572"
-    },
-    {
-      "date": "2013 NOV",
-      "value": "-3528"
-    },
-    {
-      "date": "2013 DEC",
-      "value": "-1823"
-    },
-    {
-      "date": "2014 JAN",
-      "value": "-3474"
-    },
-    {
-      "date": "2014 FEB",
-      "value": "-2607"
-    },
-    {
-      "date": "2014 MAR",
-      "value": "-1330"
-    },
-    {
-      "date": "2014 APR",
-      "value": "-2052"
-    },
-    {
-      "date": "2014 MAY",
-      "value": "-2123"
-    },
-    {
-      "date": "2014 JUN",
-      "value": "-2286"
-    },
-    {
-      "date": "2014 JUL",
-      "value": "-3079"
-    },
-    {
-      "date": "2014 AUG",
-      "value": "-1917"
-    }
-  ],
   "years": [
     {
+      "date": "1948",
+      "value": "-216",
+      "timestamp": -694310400000,
+      "year": "1948",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1949",
+      "value": "-180",
+      "timestamp": -662688000000,
+      "year": "1949",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1950",
+      "value": "-58",
+      "timestamp": -631152000000,
+      "year": "1950",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1951",
+      "value": "-660",
+      "timestamp": -599616000000,
+      "year": "1951",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1952",
+      "value": "-149",
+      "timestamp": -568080000000,
+      "year": "1952",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1953",
+      "value": "-121",
+      "timestamp": -536457600000,
+      "year": "1953",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1954",
+      "value": "-95",
+      "timestamp": -504921600000,
+      "year": "1954",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1955",
+      "value": "-273",
+      "timestamp": -473385600000,
+      "year": "1955",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1956",
+      "value": "76",
+      "timestamp": -441849600000,
+      "year": "1956",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1957",
+      "value": "92",
+      "timestamp": -410227200000,
+      "year": "1957",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1958",
+      "value": "153",
+      "timestamp": -378691200000,
+      "year": "1958",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1959",
+      "value": "2",
+      "timestamp": -347155200000,
+      "year": "1959",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1960",
+      "value": "-365",
+      "timestamp": -315619200000,
+      "year": "1960",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1961",
+      "value": "-93",
+      "timestamp": -283996800000,
+      "year": "1961",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1962",
+      "value": "-54",
+      "timestamp": -252460800000,
+      "year": "1962",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1963",
+      "value": "-119",
+      "timestamp": -220924800000,
+      "year": "1963",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1964",
+      "value": "-585",
+      "timestamp": -189388800000,
+      "year": "1964",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1965",
+      "value": "-329",
+      "timestamp": -157766400000,
+      "year": "1965",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1966",
+      "value": "-67",
+      "timestamp": -126230400000,
+      "year": "1966",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1967",
+      "value": "-444",
+      "timestamp": -94694400000,
+      "year": "1967",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1968",
+      "value": "-367",
+      "timestamp": -63158400000,
+      "year": "1968",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1969",
+      "value": "178",
+      "timestamp": -31539600000,
+      "year": "1969",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1970",
+      "value": "437",
+      "timestamp": -3600000,
+      "year": "1970",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1971",
+      "value": "822",
+      "timestamp": 31532400000,
+      "year": "1971",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1972",
+      "value": "-14",
+      "timestamp": 63072000000,
+      "year": "1972",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1973",
+      "value": "-1666",
+      "timestamp": 94694400000,
+      "year": "1973",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1974",
+      "value": "-3949",
+      "timestamp": 126230400000,
+      "year": "1974",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1975",
+      "value": "-1537",
+      "timestamp": 157766400000,
+      "year": "1975",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1976",
+      "value": "-1058",
+      "timestamp": 189302400000,
+      "year": "1976",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1977",
+      "value": "1433",
+      "timestamp": 220924800000,
+      "year": "1977",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1978",
+      "value": "2681",
+      "timestamp": 252460800000,
+      "year": "1978",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1979",
+      "value": "1247",
+      "timestamp": 283996800000,
+      "year": "1979",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1980",
+      "value": "5743",
+      "timestamp": 315532800000,
+      "year": "1980",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1981",
+      "value": "8014",
+      "timestamp": 347155200000,
+      "year": "1981",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1982",
+      "value": "6140",
+      "timestamp": 378691200000,
+      "year": "1982",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1983",
+      "value": "3788",
+      "timestamp": 410227200000,
+      "year": "1983",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1984",
+      "value": "692",
+      "timestamp": 441763200000,
+      "year": "1984",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1985",
+      "value": "5083",
+      "timestamp": 473385600000,
+      "year": "1985",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1986",
+      "value": "-1435",
+      "timestamp": 504921600000,
+      "year": "1986",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1987",
+      "value": "-2535",
+      "timestamp": 536457600000,
+      "year": "1987",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1988",
+      "value": "-14047",
+      "timestamp": 567993600000,
+      "year": "1988",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1989",
+      "value": "-17181",
+      "timestamp": 599616000000,
+      "year": "1989",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1990",
+      "value": "-9828",
+      "timestamp": 631152000000,
+      "year": "1990",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1991",
+      "value": "-1117",
+      "timestamp": 662688000000,
+      "year": "1991",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1992",
+      "value": "-3344",
+      "timestamp": 694224000000,
+      "year": "1992",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1993",
+      "value": "-980",
+      "timestamp": 725846400000,
+      "year": "1993",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1994",
+      "value": "1506",
+      "timestamp": 757382400000,
+      "year": "1994",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1995",
+      "value": "4172",
+      "timestamp": 788918400000,
+      "year": "1995",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1996",
+      "value": "3527",
+      "timestamp": 820454400000,
+      "year": "1996",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1997",
+      "value": "5723",
+      "timestamp": 852076800000,
+      "year": "1997",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
       "date": "1998",
-      "value": "-6764"
+      "value": "-6764",
+      "timestamp": 883612800000,
+      "year": "1998",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "1999",
-      "value": "-15200"
+      "value": "-15200",
+      "timestamp": 915148800000,
+      "year": "1999",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2000",
-      "value": "-20138"
+      "value": "-20138",
+      "timestamp": 946684800000,
+      "year": "2000",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2001",
-      "value": "-24898"
+      "value": "-24898",
+      "timestamp": 978307200000,
+      "year": "2001",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2002",
-      "value": "-30039"
+      "value": "-30039",
+      "timestamp": 1009843200000,
+      "year": "2002",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2003",
-      "value": "-27234"
+      "value": "-27234",
+      "timestamp": 1041379200000,
+      "year": "2003",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2004",
-      "value": "-35386"
+      "value": "-35386",
+      "timestamp": 1072915200000,
+      "year": "2004",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2005",
-      "value": "-34643"
+      "value": "-34643",
+      "timestamp": 1104537600000,
+      "year": "2005",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2006",
-      "value": "-33219"
+      "value": "-33219",
+      "timestamp": 1136073600000,
+      "year": "2006",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2007",
-      "value": "-40694"
+      "value": "-40694",
+      "timestamp": 1167609600000,
+      "year": "2007",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2008",
-      "value": "-44901"
+      "value": "-44901",
+      "timestamp": 1199145600000,
+      "year": "2008",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2009",
-      "value": "-28115"
+      "value": "-28115",
+      "timestamp": 1230768000000,
+      "year": "2009",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2010",
-      "value": "-37058"
+      "value": "-37058",
+      "timestamp": 1262304000000,
+      "year": "2010",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2011",
-      "value": "-23825"
+      "value": "-23825",
+      "timestamp": 1293840000000,
+      "year": "2011",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2012",
-      "value": "-34469"
+      "value": "-34469",
+      "timestamp": 1325376000000,
+      "year": "2012",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2013",
-      "value": "-32100"
+      "value": "-32100",
+      "timestamp": 1356998400000,
+      "year": "2013",
+      "month": "January",
+      "quarter": "Q1"
     }
   ],
   "quarters": [
     {
+      "date": "1955 Q1",
+      "value": "-75",
+      "timestamp": -473385600000,
+      "year": "1955",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1955 Q2",
+      "value": "-69",
+      "timestamp": -465609600000,
+      "year": "1955",
+      "month": "April",
+      "quarter": "Q2"
+    },
+    {
+      "date": "1955 Q3",
+      "value": "-76",
+      "timestamp": -457750800000,
+      "year": "1955",
+      "month": "July",
+      "quarter": "Q3"
+    },
+    {
+      "date": "1955 Q4",
+      "value": "-53",
+      "timestamp": -449802000000,
+      "year": "1955",
+      "month": "October",
+      "quarter": "Q4"
+    },
+    {
+      "date": "1956 Q1",
+      "value": "0",
+      "timestamp": -441849600000,
+      "year": "1956",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1956 Q2",
+      "value": "35",
+      "timestamp": -433987200000,
+      "year": "1956",
+      "month": "April",
+      "quarter": "Q2"
+    },
+    {
+      "date": "1956 Q3",
+      "value": "10",
+      "timestamp": -426128400000,
+      "year": "1956",
+      "month": "July",
+      "quarter": "Q3"
+    },
+    {
+      "date": "1956 Q4",
+      "value": "31",
+      "timestamp": -418179600000,
+      "year": "1956",
+      "month": "October",
+      "quarter": "Q4"
+    },
+    {
+      "date": "1957 Q1",
+      "value": "5",
+      "timestamp": -410227200000,
+      "year": "1957",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1957 Q2",
+      "value": "14",
+      "timestamp": -402451200000,
+      "year": "1957",
+      "month": "April",
+      "quarter": "Q2"
+    },
+    {
+      "date": "1957 Q3",
+      "value": "17",
+      "timestamp": -394592400000,
+      "year": "1957",
+      "month": "July",
+      "quarter": "Q3"
+    },
+    {
+      "date": "1957 Q4",
+      "value": "56",
+      "timestamp": -386643600000,
+      "year": "1957",
+      "month": "October",
+      "quarter": "Q4"
+    },
+    {
+      "date": "1958 Q1",
+      "value": "74",
+      "timestamp": -378691200000,
+      "year": "1958",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1958 Q2",
+      "value": "27",
+      "timestamp": -370915200000,
+      "year": "1958",
+      "month": "April",
+      "quarter": "Q2"
+    },
+    {
+      "date": "1958 Q3",
+      "value": "34",
+      "timestamp": -363056400000,
+      "year": "1958",
+      "month": "July",
+      "quarter": "Q3"
+    },
+    {
+      "date": "1958 Q4",
+      "value": "18",
+      "timestamp": -355107600000,
+      "year": "1958",
+      "month": "October",
+      "quarter": "Q4"
+    },
+    {
+      "date": "1959 Q1",
+      "value": "10",
+      "timestamp": -347155200000,
+      "year": "1959",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1959 Q2",
+      "value": "8",
+      "timestamp": -339379200000,
+      "year": "1959",
+      "month": "April",
+      "quarter": "Q2"
+    },
+    {
+      "date": "1959 Q3",
+      "value": "10",
+      "timestamp": -331520400000,
+      "year": "1959",
+      "month": "July",
+      "quarter": "Q3"
+    },
+    {
+      "date": "1959 Q4",
+      "value": "-26",
+      "timestamp": -323571600000,
+      "year": "1959",
+      "month": "October",
+      "quarter": "Q4"
+    },
+    {
+      "date": "1960 Q1",
+      "value": "-46",
+      "timestamp": -315619200000,
+      "year": "1960",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1960 Q2",
+      "value": "-109",
+      "timestamp": -307756800000,
+      "year": "1960",
+      "month": "April",
+      "quarter": "Q2"
+    },
+    {
+      "date": "1960 Q3",
+      "value": "-110",
+      "timestamp": -299898000000,
+      "year": "1960",
+      "month": "July",
+      "quarter": "Q3"
+    },
+    {
+      "date": "1960 Q4",
+      "value": "-100",
+      "timestamp": -291949200000,
+      "year": "1960",
+      "month": "October",
+      "quarter": "Q4"
+    },
+    {
+      "date": "1961 Q1",
+      "value": "-46",
+      "timestamp": -283996800000,
+      "year": "1961",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1961 Q2",
+      "value": "-50",
+      "timestamp": -276224400000,
+      "year": "1961",
+      "month": "April",
+      "quarter": "Q2"
+    },
+    {
+      "date": "1961 Q3",
+      "value": "7",
+      "timestamp": -268362000000,
+      "year": "1961",
+      "month": "July",
+      "quarter": "Q3"
+    },
+    {
+      "date": "1961 Q4",
+      "value": "-4",
+      "timestamp": -260413200000,
+      "year": "1961",
+      "month": "October",
+      "quarter": "Q4"
+    },
+    {
+      "date": "1962 Q1",
+      "value": "-17",
+      "timestamp": -252460800000,
+      "year": "1962",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1962 Q2",
+      "value": "-3",
+      "timestamp": -244688400000,
+      "year": "1962",
+      "month": "April",
+      "quarter": "Q2"
+    },
+    {
+      "date": "1962 Q3",
+      "value": "-25",
+      "timestamp": -236826000000,
+      "year": "1962",
+      "month": "July",
+      "quarter": "Q3"
+    },
+    {
+      "date": "1962 Q4",
+      "value": "-9",
+      "timestamp": -228877200000,
+      "year": "1962",
+      "month": "October",
+      "quarter": "Q4"
+    },
+    {
+      "date": "1963 Q1",
+      "value": "11",
+      "timestamp": -220924800000,
+      "year": "1963",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1963 Q2",
+      "value": "-24",
+      "timestamp": -213152400000,
+      "year": "1963",
+      "month": "April",
+      "quarter": "Q2"
+    },
+    {
+      "date": "1963 Q3",
+      "value": "-40",
+      "timestamp": -205290000000,
+      "year": "1963",
+      "month": "July",
+      "quarter": "Q3"
+    },
+    {
+      "date": "1963 Q4",
+      "value": "-66",
+      "timestamp": -197341200000,
+      "year": "1963",
+      "month": "October",
+      "quarter": "Q4"
+    },
+    {
+      "date": "1964 Q1",
+      "value": "-159",
+      "timestamp": -189388800000,
+      "year": "1964",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1964 Q2",
+      "value": "-114",
+      "timestamp": -181530000000,
+      "year": "1964",
+      "month": "April",
+      "quarter": "Q2"
+    },
+    {
+      "date": "1964 Q3",
+      "value": "-153",
+      "timestamp": -173667600000,
+      "year": "1964",
+      "month": "July",
+      "quarter": "Q3"
+    },
+    {
+      "date": "1964 Q4",
+      "value": "-159",
+      "timestamp": -165718800000,
+      "year": "1964",
+      "month": "October",
+      "quarter": "Q4"
+    },
+    {
+      "date": "1965 Q1",
+      "value": "-70",
+      "timestamp": -157766400000,
+      "year": "1965",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1965 Q2",
+      "value": "-96",
+      "timestamp": -149994000000,
+      "year": "1965",
+      "month": "April",
+      "quarter": "Q2"
+    },
+    {
+      "date": "1965 Q3",
+      "value": "-91",
+      "timestamp": -142131600000,
+      "year": "1965",
+      "month": "July",
+      "quarter": "Q3"
+    },
+    {
+      "date": "1965 Q4",
+      "value": "-72",
+      "timestamp": -134182800000,
+      "year": "1965",
+      "month": "October",
+      "quarter": "Q4"
+    },
+    {
+      "date": "1966 Q1",
+      "value": "-91",
+      "timestamp": -126230400000,
+      "year": "1966",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1966 Q2",
+      "value": "-66",
+      "timestamp": -118458000000,
+      "year": "1966",
+      "month": "April",
+      "quarter": "Q2"
+    },
+    {
+      "date": "1966 Q3",
+      "value": "-45",
+      "timestamp": -110595600000,
+      "year": "1966",
+      "month": "July",
+      "quarter": "Q3"
+    },
+    {
+      "date": "1966 Q4",
+      "value": "135",
+      "timestamp": -102646800000,
+      "year": "1966",
+      "month": "October",
+      "quarter": "Q4"
+    },
+    {
+      "date": "1967 Q1",
+      "value": "-4",
+      "timestamp": -94694400000,
+      "year": "1967",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1967 Q2",
+      "value": "-64",
+      "timestamp": -86922000000,
+      "year": "1967",
+      "month": "April",
+      "quarter": "Q2"
+    },
+    {
+      "date": "1967 Q3",
+      "value": "-61",
+      "timestamp": -79059600000,
+      "year": "1967",
+      "month": "July",
+      "quarter": "Q3"
+    },
+    {
+      "date": "1967 Q4",
+      "value": "-315",
+      "timestamp": -71110800000,
+      "year": "1967",
+      "month": "October",
+      "quarter": "Q4"
+    },
+    {
+      "date": "1968 Q1",
+      "value": "-138",
+      "timestamp": -63158400000,
+      "year": "1968",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1968 Q2",
+      "value": "-136",
+      "timestamp": -55299600000,
+      "year": "1968",
+      "month": "April",
+      "quarter": "Q2"
+    },
+    {
+      "date": "1968 Q3",
+      "value": "-58",
+      "timestamp": -47437200000,
+      "year": "1968",
+      "month": "July",
+      "quarter": "Q3"
+    },
+    {
+      "date": "1968 Q4",
+      "value": "-35",
+      "timestamp": -39488400000,
+      "year": "1968",
+      "month": "October",
+      "quarter": "Q4"
+    },
+    {
+      "date": "1969 Q1",
+      "value": "-68",
+      "timestamp": -31539600000,
+      "year": "1969",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1969 Q2",
+      "value": "35",
+      "timestamp": -23763600000,
+      "year": "1969",
+      "month": "April",
+      "quarter": "Q2"
+    },
+    {
+      "date": "1969 Q3",
+      "value": "141",
+      "timestamp": -15901200000,
+      "year": "1969",
+      "month": "July",
+      "quarter": "Q3"
+    },
+    {
+      "date": "1969 Q4",
+      "value": "70",
+      "timestamp": -7952400000,
+      "year": "1969",
+      "month": "October",
+      "quarter": "Q4"
+    },
+    {
+      "date": "1970 Q1",
+      "value": "220",
+      "timestamp": -3600000,
+      "year": "1970",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1970 Q2",
+      "value": "48",
+      "timestamp": 7772400000,
+      "year": "1970",
+      "month": "April",
+      "quarter": "Q2"
+    },
+    {
+      "date": "1970 Q3",
+      "value": "23",
+      "timestamp": 15634800000,
+      "year": "1970",
+      "month": "July",
+      "quarter": "Q3"
+    },
+    {
+      "date": "1970 Q4",
+      "value": "146",
+      "timestamp": 23583600000,
+      "year": "1970",
+      "month": "October",
+      "quarter": "Q4"
+    },
+    {
+      "date": "1971 Q1",
+      "value": "104",
+      "timestamp": 31532400000,
+      "year": "1971",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1971 Q2",
+      "value": "183",
+      "timestamp": 39308400000,
+      "year": "1971",
+      "month": "April",
+      "quarter": "Q2"
+    },
+    {
+      "date": "1971 Q3",
+      "value": "304",
+      "timestamp": 47170800000,
+      "year": "1971",
+      "month": "July",
+      "quarter": "Q3"
+    },
+    {
+      "date": "1971 Q4",
+      "value": "231",
+      "timestamp": 55119600000,
+      "year": "1971",
+      "month": "October",
+      "quarter": "Q4"
+    },
+    {
+      "date": "1972 Q1",
+      "value": "78",
+      "timestamp": 63072000000,
+      "year": "1972",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1972 Q2",
+      "value": "91",
+      "timestamp": 70930800000,
+      "year": "1972",
+      "month": "April",
+      "quarter": "Q2"
+    },
+    {
+      "date": "1972 Q3",
+      "value": "-165",
+      "timestamp": 78793200000,
+      "year": "1972",
+      "month": "July",
+      "quarter": "Q3"
+    },
+    {
+      "date": "1972 Q4",
+      "value": "-18",
+      "timestamp": 86742000000,
+      "year": "1972",
+      "month": "October",
+      "quarter": "Q4"
+    },
+    {
+      "date": "1973 Q1",
+      "value": "-226",
+      "timestamp": 94694400000,
+      "year": "1973",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1973 Q2",
+      "value": "-263",
+      "timestamp": 102466800000,
+      "year": "1973",
+      "month": "April",
+      "quarter": "Q2"
+    },
+    {
+      "date": "1973 Q3",
+      "value": "-457",
+      "timestamp": 110329200000,
+      "year": "1973",
+      "month": "July",
+      "quarter": "Q3"
+    },
+    {
+      "date": "1973 Q4",
+      "value": "-720",
+      "timestamp": 118278000000,
+      "year": "1973",
+      "month": "October",
+      "quarter": "Q4"
+    },
+    {
+      "date": "1974 Q1",
+      "value": "-959",
+      "timestamp": 126230400000,
+      "year": "1974",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1974 Q2",
+      "value": "-1101",
+      "timestamp": 134002800000,
+      "year": "1974",
+      "month": "April",
+      "quarter": "Q2"
+    },
+    {
+      "date": "1974 Q3",
+      "value": "-938",
+      "timestamp": 141865200000,
+      "year": "1974",
+      "month": "July",
+      "quarter": "Q3"
+    },
+    {
+      "date": "1974 Q4",
+      "value": "-951",
+      "timestamp": 149814000000,
+      "year": "1974",
+      "month": "October",
+      "quarter": "Q4"
+    },
+    {
+      "date": "1975 Q1",
+      "value": "-482",
+      "timestamp": 157766400000,
+      "year": "1975",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1975 Q2",
+      "value": "-252",
+      "timestamp": 165538800000,
+      "year": "1975",
+      "month": "April",
+      "quarter": "Q2"
+    },
+    {
+      "date": "1975 Q3",
+      "value": "-624",
+      "timestamp": 173401200000,
+      "year": "1975",
+      "month": "July",
+      "quarter": "Q3"
+    },
+    {
+      "date": "1975 Q4",
+      "value": "-179",
+      "timestamp": 181350000000,
+      "year": "1975",
+      "month": "October",
+      "quarter": "Q4"
+    },
+    {
+      "date": "1976 Q1",
+      "value": "146",
+      "timestamp": 189302400000,
+      "year": "1976",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1976 Q2",
+      "value": "-396",
+      "timestamp": 197161200000,
+      "year": "1976",
+      "month": "April",
+      "quarter": "Q2"
+    },
+    {
+      "date": "1976 Q3",
+      "value": "-475",
+      "timestamp": 205023600000,
+      "year": "1976",
+      "month": "July",
+      "quarter": "Q3"
+    },
+    {
+      "date": "1976 Q4",
+      "value": "-333",
+      "timestamp": 212972400000,
+      "year": "1976",
+      "month": "October",
+      "quarter": "Q4"
+    },
+    {
+      "date": "1977 Q1",
+      "value": "-89",
+      "timestamp": 220924800000,
+      "year": "1977",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1977 Q2",
+      "value": "39",
+      "timestamp": 228697200000,
+      "year": "1977",
+      "month": "April",
+      "quarter": "Q2"
+    },
+    {
+      "date": "1977 Q3",
+      "value": "777",
+      "timestamp": 236559600000,
+      "year": "1977",
+      "month": "July",
+      "quarter": "Q3"
+    },
+    {
+      "date": "1977 Q4",
+      "value": "706",
+      "timestamp": 244508400000,
+      "year": "1977",
+      "month": "October",
+      "quarter": "Q4"
+    },
+    {
+      "date": "1978 Q1",
+      "value": "448",
+      "timestamp": 252460800000,
+      "year": "1978",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1978 Q2",
+      "value": "809",
+      "timestamp": 260233200000,
+      "year": "1978",
+      "month": "April",
+      "quarter": "Q2"
+    },
+    {
+      "date": "1978 Q3",
+      "value": "597",
+      "timestamp": 268095600000,
+      "year": "1978",
+      "month": "July",
+      "quarter": "Q3"
+    },
+    {
+      "date": "1978 Q4",
+      "value": "827",
+      "timestamp": 276044400000,
+      "year": "1978",
+      "month": "October",
+      "quarter": "Q4"
+    },
+    {
+      "date": "1979 Q1",
+      "value": "-406",
+      "timestamp": 283996800000,
+      "year": "1979",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1979 Q2",
+      "value": "543",
+      "timestamp": 291769200000,
+      "year": "1979",
+      "month": "April",
+      "quarter": "Q2"
+    },
+    {
+      "date": "1979 Q3",
+      "value": "631",
+      "timestamp": 299631600000,
+      "year": "1979",
+      "month": "July",
+      "quarter": "Q3"
+    },
+    {
+      "date": "1979 Q4",
+      "value": "479",
+      "timestamp": 307580400000,
+      "year": "1979",
+      "month": "October",
+      "quarter": "Q4"
+    },
+    {
+      "date": "1980 Q1",
+      "value": "654",
+      "timestamp": 315532800000,
+      "year": "1980",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1980 Q2",
+      "value": "790",
+      "timestamp": 323391600000,
+      "year": "1980",
+      "month": "April",
+      "quarter": "Q2"
+    },
+    {
+      "date": "1980 Q3",
+      "value": "1968",
+      "timestamp": 331254000000,
+      "year": "1980",
+      "month": "July",
+      "quarter": "Q3"
+    },
+    {
+      "date": "1980 Q4",
+      "value": "2331",
+      "timestamp": 339202800000,
+      "year": "1980",
+      "month": "October",
+      "quarter": "Q4"
+    },
+    {
+      "date": "1981 Q1",
+      "value": "2946",
+      "timestamp": 347155200000,
+      "year": "1981",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1981 Q2",
+      "value": "2340",
+      "timestamp": 354927600000,
+      "year": "1981",
+      "month": "April",
+      "quarter": "Q2"
+    },
+    {
+      "date": "1981 Q3",
+      "value": "1180",
+      "timestamp": 362790000000,
+      "year": "1981",
+      "month": "July",
+      "quarter": "Q3"
+    },
+    {
+      "date": "1981 Q4",
+      "value": "1548",
+      "timestamp": 370738800000,
+      "year": "1981",
+      "month": "October",
+      "quarter": "Q4"
+    },
+    {
+      "date": "1982 Q1",
+      "value": "1518",
+      "timestamp": 378691200000,
+      "year": "1982",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1982 Q2",
+      "value": "1091",
+      "timestamp": 386463600000,
+      "year": "1982",
+      "month": "April",
+      "quarter": "Q2"
+    },
+    {
+      "date": "1982 Q3",
+      "value": "1490",
+      "timestamp": 394326000000,
+      "year": "1982",
+      "month": "July",
+      "quarter": "Q3"
+    },
+    {
+      "date": "1982 Q4",
+      "value": "2041",
+      "timestamp": 402274800000,
+      "year": "1982",
+      "month": "October",
+      "quarter": "Q4"
+    },
+    {
+      "date": "1983 Q1",
+      "value": "1145",
+      "timestamp": 410227200000,
+      "year": "1983",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1983 Q2",
+      "value": "649",
+      "timestamp": 417999600000,
+      "year": "1983",
+      "month": "April",
+      "quarter": "Q2"
+    },
+    {
+      "date": "1983 Q3",
+      "value": "1193",
+      "timestamp": 425862000000,
+      "year": "1983",
+      "month": "July",
+      "quarter": "Q3"
+    },
+    {
+      "date": "1983 Q4",
+      "value": "801",
+      "timestamp": 433810800000,
+      "year": "1983",
+      "month": "October",
+      "quarter": "Q4"
+    },
+    {
+      "date": "1984 Q1",
+      "value": "1022",
+      "timestamp": 441763200000,
+      "year": "1984",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1984 Q2",
+      "value": "-31",
+      "timestamp": 449622000000,
+      "year": "1984",
+      "month": "April",
+      "quarter": "Q2"
+    },
+    {
+      "date": "1984 Q3",
+      "value": "9",
+      "timestamp": 457484400000,
+      "year": "1984",
+      "month": "July",
+      "quarter": "Q3"
+    },
+    {
+      "date": "1984 Q4",
+      "value": "-308",
+      "timestamp": 465433200000,
+      "year": "1984",
+      "month": "October",
+      "quarter": "Q4"
+    },
+    {
+      "date": "1985 Q1",
+      "value": "-138",
+      "timestamp": 473385600000,
+      "year": "1985",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1985 Q2",
+      "value": "1968",
+      "timestamp": 481158000000,
+      "year": "1985",
+      "month": "April",
+      "quarter": "Q2"
+    },
+    {
+      "date": "1985 Q3",
+      "value": "1724",
+      "timestamp": 489020400000,
+      "year": "1985",
+      "month": "July",
+      "quarter": "Q3"
+    },
+    {
+      "date": "1985 Q4",
+      "value": "1529",
+      "timestamp": 496969200000,
+      "year": "1985",
+      "month": "October",
+      "quarter": "Q4"
+    },
+    {
+      "date": "1986 Q1",
+      "value": "675",
+      "timestamp": 504921600000,
+      "year": "1986",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1986 Q2",
+      "value": "-281",
+      "timestamp": 512694000000,
+      "year": "1986",
+      "month": "April",
+      "quarter": "Q2"
+    },
+    {
+      "date": "1986 Q3",
+      "value": "-1016",
+      "timestamp": 520556400000,
+      "year": "1986",
+      "month": "July",
+      "quarter": "Q3"
+    },
+    {
+      "date": "1986 Q4",
+      "value": "-813",
+      "timestamp": 528505200000,
+      "year": "1986",
+      "month": "October",
+      "quarter": "Q4"
+    },
+    {
+      "date": "1987 Q1",
+      "value": "514",
+      "timestamp": 536457600000,
+      "year": "1987",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1987 Q2",
+      "value": "-537",
+      "timestamp": 544230000000,
+      "year": "1987",
+      "month": "April",
+      "quarter": "Q2"
+    },
+    {
+      "date": "1987 Q3",
+      "value": "-735",
+      "timestamp": 552092400000,
+      "year": "1987",
+      "month": "July",
+      "quarter": "Q3"
+    },
+    {
+      "date": "1987 Q4",
+      "value": "-1777",
+      "timestamp": 560041200000,
+      "year": "1987",
+      "month": "October",
+      "quarter": "Q4"
+    },
+    {
+      "date": "1988 Q1",
+      "value": "-2417",
+      "timestamp": 567993600000,
+      "year": "1988",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1988 Q2",
+      "value": "-2960",
+      "timestamp": 575852400000,
+      "year": "1988",
+      "month": "April",
+      "quarter": "Q2"
+    },
+    {
+      "date": "1988 Q3",
+      "value": "-3735",
+      "timestamp": 583714800000,
+      "year": "1988",
+      "month": "July",
+      "quarter": "Q3"
+    },
+    {
+      "date": "1988 Q4",
+      "value": "-4935",
+      "timestamp": 591663600000,
+      "year": "1988",
+      "month": "October",
+      "quarter": "Q4"
+    },
+    {
+      "date": "1989 Q1",
+      "value": "-4714",
+      "timestamp": 599616000000,
+      "year": "1989",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1989 Q2",
+      "value": "-4696",
+      "timestamp": 607388400000,
+      "year": "1989",
+      "month": "April",
+      "quarter": "Q2"
+    },
+    {
+      "date": "1989 Q3",
+      "value": "-4828",
+      "timestamp": 615250800000,
+      "year": "1989",
+      "month": "July",
+      "quarter": "Q3"
+    },
+    {
+      "date": "1989 Q4",
+      "value": "-2943",
+      "timestamp": 623199600000,
+      "year": "1989",
+      "month": "October",
+      "quarter": "Q4"
+    },
+    {
+      "date": "1990 Q1",
+      "value": "-3585",
+      "timestamp": 631152000000,
+      "year": "1990",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1990 Q2",
+      "value": "-3250",
+      "timestamp": 638924400000,
+      "year": "1990",
+      "month": "April",
+      "quarter": "Q2"
+    },
+    {
+      "date": "1990 Q3",
+      "value": "-1802",
+      "timestamp": 646786800000,
+      "year": "1990",
+      "month": "July",
+      "quarter": "Q3"
+    },
+    {
+      "date": "1990 Q4",
+      "value": "-1191",
+      "timestamp": 654735600000,
+      "year": "1990",
+      "month": "October",
+      "quarter": "Q4"
+    },
+    {
+      "date": "1991 Q1",
+      "value": "-934",
+      "timestamp": 662688000000,
+      "year": "1991",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1991 Q2",
+      "value": "39",
+      "timestamp": 670460400000,
+      "year": "1991",
+      "month": "April",
+      "quarter": "Q2"
+    },
+    {
+      "date": "1991 Q3",
+      "value": "-11",
+      "timestamp": 678322800000,
+      "year": "1991",
+      "month": "July",
+      "quarter": "Q3"
+    },
+    {
+      "date": "1991 Q4",
+      "value": "-211",
+      "timestamp": 686271600000,
+      "year": "1991",
+      "month": "October",
+      "quarter": "Q4"
+    },
+    {
+      "date": "1992 Q1",
+      "value": "68",
+      "timestamp": 694224000000,
+      "year": "1992",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1992 Q2",
+      "value": "-627",
+      "timestamp": 702082800000,
+      "year": "1992",
+      "month": "April",
+      "quarter": "Q2"
+    },
+    {
+      "date": "1992 Q3",
+      "value": "-1625",
+      "timestamp": 709945200000,
+      "year": "1992",
+      "month": "July",
+      "quarter": "Q3"
+    },
+    {
+      "date": "1992 Q4",
+      "value": "-1160",
+      "timestamp": 717894000000,
+      "year": "1992",
+      "month": "October",
+      "quarter": "Q4"
+    },
+    {
+      "date": "1993 Q1",
+      "value": "-235",
+      "timestamp": 725846400000,
+      "year": "1993",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1993 Q2",
+      "value": "-831",
+      "timestamp": 733618800000,
+      "year": "1993",
+      "month": "April",
+      "quarter": "Q2"
+    },
+    {
+      "date": "1993 Q3",
+      "value": "-217",
+      "timestamp": 741481200000,
+      "year": "1993",
+      "month": "July",
+      "quarter": "Q3"
+    },
+    {
+      "date": "1993 Q4",
+      "value": "303",
+      "timestamp": 749430000000,
+      "year": "1993",
+      "month": "October",
+      "quarter": "Q4"
+    },
+    {
+      "date": "1994 Q1",
+      "value": "344",
+      "timestamp": 757382400000,
+      "year": "1994",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1994 Q2",
+      "value": "-213",
+      "timestamp": 765154800000,
+      "year": "1994",
+      "month": "April",
+      "quarter": "Q2"
+    },
+    {
+      "date": "1994 Q3",
+      "value": "716",
+      "timestamp": 773017200000,
+      "year": "1994",
+      "month": "July",
+      "quarter": "Q3"
+    },
+    {
+      "date": "1994 Q4",
+      "value": "659",
+      "timestamp": 780966000000,
+      "year": "1994",
+      "month": "October",
+      "quarter": "Q4"
+    },
+    {
+      "date": "1995 Q1",
+      "value": "3470",
+      "timestamp": 788918400000,
+      "year": "1995",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1995 Q2",
+      "value": "-47",
+      "timestamp": 796690800000,
+      "year": "1995",
+      "month": "April",
+      "quarter": "Q2"
+    },
+    {
+      "date": "1995 Q3",
+      "value": "-391",
+      "timestamp": 804553200000,
+      "year": "1995",
+      "month": "July",
+      "quarter": "Q3"
+    },
+    {
+      "date": "1995 Q4",
+      "value": "1140",
+      "timestamp": 812502000000,
+      "year": "1995",
+      "month": "October",
+      "quarter": "Q4"
+    },
+    {
+      "date": "1996 Q1",
+      "value": "-65",
+      "timestamp": 820454400000,
+      "year": "1996",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1996 Q2",
+      "value": "666",
+      "timestamp": 828313200000,
+      "year": "1996",
+      "month": "April",
+      "quarter": "Q2"
+    },
+    {
+      "date": "1996 Q3",
+      "value": "1205",
+      "timestamp": 836175600000,
+      "year": "1996",
+      "month": "July",
+      "quarter": "Q3"
+    },
+    {
+      "date": "1996 Q4",
+      "value": "1721",
+      "timestamp": 844124400000,
+      "year": "1996",
+      "month": "October",
+      "quarter": "Q4"
+    },
+    {
+      "date": "1997 Q1",
+      "value": "2219",
+      "timestamp": 852076800000,
+      "year": "1997",
+      "month": "January",
+      "quarter": "Q1"
+    },
+    {
+      "date": "1997 Q2",
+      "value": "1214",
+      "timestamp": 859849200000,
+      "year": "1997",
+      "month": "April",
+      "quarter": "Q2"
+    },
+    {
+      "date": "1997 Q3",
+      "value": "2154",
+      "timestamp": 867711600000,
+      "year": "1997",
+      "month": "July",
+      "quarter": "Q3"
+    },
+    {
+      "date": "1997 Q4",
+      "value": "136",
+      "timestamp": 875660400000,
+      "year": "1997",
+      "month": "October",
+      "quarter": "Q4"
+    },
+    {
       "date": "1998 Q1",
-      "value": "-780"
+      "value": "-780",
+      "timestamp": 883612800000,
+      "year": "1998",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "1998 Q2",
-      "value": "-1579"
+      "value": "-1579",
+      "timestamp": 891385200000,
+      "year": "1998",
+      "month": "April",
+      "quarter": "Q2"
     },
     {
       "date": "1998 Q3",
-      "value": "-1747"
+      "value": "-1747",
+      "timestamp": 899247600000,
+      "year": "1998",
+      "month": "July",
+      "quarter": "Q3"
     },
     {
       "date": "1998 Q4",
-      "value": "-2658"
+      "value": "-2658",
+      "timestamp": 907196400000,
+      "year": "1998",
+      "month": "October",
+      "quarter": "Q4"
     },
     {
       "date": "1999 Q1",
-      "value": "-3522"
+      "value": "-3522",
+      "timestamp": 915148800000,
+      "year": "1999",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "1999 Q2",
-      "value": "-3799"
+      "value": "-3799",
+      "timestamp": 922921200000,
+      "year": "1999",
+      "month": "April",
+      "quarter": "Q2"
     },
     {
       "date": "1999 Q3",
-      "value": "-4513"
+      "value": "-4513",
+      "timestamp": 930783600000,
+      "year": "1999",
+      "month": "July",
+      "quarter": "Q3"
     },
     {
       "date": "1999 Q4",
-      "value": "-3366"
+      "value": "-3366",
+      "timestamp": 938732400000,
+      "year": "1999",
+      "month": "October",
+      "quarter": "Q4"
     },
     {
       "date": "2000 Q1",
-      "value": "-5062"
+      "value": "-5062",
+      "timestamp": 946684800000,
+      "year": "2000",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2000 Q2",
-      "value": "-5630"
+      "value": "-5630",
+      "timestamp": 954543600000,
+      "year": "2000",
+      "month": "April",
+      "quarter": "Q2"
     },
     {
       "date": "2000 Q3",
-      "value": "-3174"
+      "value": "-3174",
+      "timestamp": 962406000000,
+      "year": "2000",
+      "month": "July",
+      "quarter": "Q3"
     },
     {
       "date": "2000 Q4",
-      "value": "-6272"
+      "value": "-6272",
+      "timestamp": 970354800000,
+      "year": "2000",
+      "month": "October",
+      "quarter": "Q4"
     },
     {
       "date": "2001 Q1",
-      "value": "-5697"
+      "value": "-5697",
+      "timestamp": 978307200000,
+      "year": "2001",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2001 Q2",
-      "value": "-5361"
+      "value": "-5361",
+      "timestamp": 986079600000,
+      "year": "2001",
+      "month": "April",
+      "quarter": "Q2"
     },
     {
       "date": "2001 Q3",
-      "value": "-7164"
+      "value": "-7164",
+      "timestamp": 993942000000,
+      "year": "2001",
+      "month": "July",
+      "quarter": "Q3"
     },
     {
       "date": "2001 Q4",
-      "value": "-6676"
+      "value": "-6676",
+      "timestamp": 1001890800000,
+      "year": "2001",
+      "month": "October",
+      "quarter": "Q4"
     },
     {
       "date": "2002 Q1",
-      "value": "-6590"
+      "value": "-6590",
+      "timestamp": 1009843200000,
+      "year": "2002",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2002 Q2",
-      "value": "-7975"
+      "value": "-7975",
+      "timestamp": 1017615600000,
+      "year": "2002",
+      "month": "April",
+      "quarter": "Q2"
     },
     {
       "date": "2002 Q3",
-      "value": "-8756"
+      "value": "-8756",
+      "timestamp": 1025478000000,
+      "year": "2002",
+      "month": "July",
+      "quarter": "Q3"
     },
     {
       "date": "2002 Q4",
-      "value": "-6718"
+      "value": "-6718",
+      "timestamp": 1033426800000,
+      "year": "2002",
+      "month": "October",
+      "quarter": "Q4"
     },
     {
       "date": "2003 Q1",
-      "value": "-6761"
+      "value": "-6761",
+      "timestamp": 1041379200000,
+      "year": "2003",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2003 Q2",
-      "value": "-7411"
+      "value": "-7411",
+      "timestamp": 1049151600000,
+      "year": "2003",
+      "month": "April",
+      "quarter": "Q2"
     },
     {
       "date": "2003 Q3",
-      "value": "-6037"
+      "value": "-6037",
+      "timestamp": 1057014000000,
+      "year": "2003",
+      "month": "July",
+      "quarter": "Q3"
     },
     {
       "date": "2003 Q4",
-      "value": "-7025"
+      "value": "-7025",
+      "timestamp": 1064962800000,
+      "year": "2003",
+      "month": "October",
+      "quarter": "Q4"
     },
     {
       "date": "2004 Q1",
-      "value": "-6523"
+      "value": "-6523",
+      "timestamp": 1072915200000,
+      "year": "2004",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2004 Q2",
-      "value": "-9981"
+      "value": "-9981",
+      "timestamp": 1080774000000,
+      "year": "2004",
+      "month": "April",
+      "quarter": "Q2"
     },
     {
       "date": "2004 Q3",
-      "value": "-10237"
+      "value": "-10237",
+      "timestamp": 1088636400000,
+      "year": "2004",
+      "month": "July",
+      "quarter": "Q3"
     },
     {
       "date": "2004 Q4",
-      "value": "-8645"
+      "value": "-8645",
+      "timestamp": 1096585200000,
+      "year": "2004",
+      "month": "October",
+      "quarter": "Q4"
     },
     {
       "date": "2005 Q1",
-      "value": "-9784"
+      "value": "-9784",
+      "timestamp": 1104537600000,
+      "year": "2005",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2005 Q2",
-      "value": "-9766"
+      "value": "-9766",
+      "timestamp": 1112310000000,
+      "year": "2005",
+      "month": "April",
+      "quarter": "Q2"
     },
     {
       "date": "2005 Q3",
-      "value": "-8117"
+      "value": "-8117",
+      "timestamp": 1120172400000,
+      "year": "2005",
+      "month": "July",
+      "quarter": "Q3"
     },
     {
       "date": "2005 Q4",
-      "value": "-6976"
+      "value": "-6976",
+      "timestamp": 1128121200000,
+      "year": "2005",
+      "month": "October",
+      "quarter": "Q4"
     },
     {
       "date": "2006 Q1",
-      "value": "-7400"
+      "value": "-7400",
+      "timestamp": 1136073600000,
+      "year": "2006",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2006 Q2",
-      "value": "-5916"
+      "value": "-5916",
+      "timestamp": 1143846000000,
+      "year": "2006",
+      "month": "April",
+      "quarter": "Q2"
     },
     {
       "date": "2006 Q3",
-      "value": "-8742"
+      "value": "-8742",
+      "timestamp": 1151708400000,
+      "year": "2006",
+      "month": "July",
+      "quarter": "Q3"
     },
     {
       "date": "2006 Q4",
-      "value": "-11161"
+      "value": "-11161",
+      "timestamp": 1159657200000,
+      "year": "2006",
+      "month": "October",
+      "quarter": "Q4"
     },
     {
       "date": "2007 Q1",
-      "value": "-10834"
+      "value": "-10834",
+      "timestamp": 1167609600000,
+      "year": "2007",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2007 Q2",
-      "value": "-9745"
+      "value": "-9745",
+      "timestamp": 1175382000000,
+      "year": "2007",
+      "month": "April",
+      "quarter": "Q2"
     },
     {
       "date": "2007 Q3",
-      "value": "-10460"
+      "value": "-10460",
+      "timestamp": 1183244400000,
+      "year": "2007",
+      "month": "July",
+      "quarter": "Q3"
     },
     {
       "date": "2007 Q4",
-      "value": "-9655"
+      "value": "-9655",
+      "timestamp": 1191193200000,
+      "year": "2007",
+      "month": "October",
+      "quarter": "Q4"
     },
     {
       "date": "2008 Q1",
-      "value": "-13238"
+      "value": "-13238",
+      "timestamp": 1199145600000,
+      "year": "2008",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2008 Q2",
-      "value": "-10820"
+      "value": "-10820",
+      "timestamp": 1207004400000,
+      "year": "2008",
+      "month": "April",
+      "quarter": "Q2"
     },
     {
       "date": "2008 Q3",
-      "value": "-11691"
+      "value": "-11691",
+      "timestamp": 1214866800000,
+      "year": "2008",
+      "month": "July",
+      "quarter": "Q3"
     },
     {
       "date": "2008 Q4",
-      "value": "-9152"
+      "value": "-9152",
+      "timestamp": 1222815600000,
+      "year": "2008",
+      "month": "October",
+      "quarter": "Q4"
     },
     {
       "date": "2009 Q1",
-      "value": "-7929"
+      "value": "-7929",
+      "timestamp": 1230768000000,
+      "year": "2009",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2009 Q2",
-      "value": "-7152"
+      "value": "-7152",
+      "timestamp": 1238540400000,
+      "year": "2009",
+      "month": "April",
+      "quarter": "Q2"
     },
     {
       "date": "2009 Q3",
-      "value": "-5684"
+      "value": "-5684",
+      "timestamp": 1246402800000,
+      "year": "2009",
+      "month": "July",
+      "quarter": "Q3"
     },
     {
       "date": "2009 Q4",
-      "value": "-7350"
+      "value": "-7350",
+      "timestamp": 1254351600000,
+      "year": "2009",
+      "month": "October",
+      "quarter": "Q4"
     },
     {
       "date": "2010 Q1",
-      "value": "-8886"
+      "value": "-8886",
+      "timestamp": 1262304000000,
+      "year": "2010",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2010 Q2",
-      "value": "-7818"
+      "value": "-7818",
+      "timestamp": 1270076400000,
+      "year": "2010",
+      "month": "April",
+      "quarter": "Q2"
     },
     {
       "date": "2010 Q3",
-      "value": "-11038"
+      "value": "-11038",
+      "timestamp": 1277938800000,
+      "year": "2010",
+      "month": "July",
+      "quarter": "Q3"
     },
     {
       "date": "2010 Q4",
-      "value": "-9316"
+      "value": "-9316",
+      "timestamp": 1285887600000,
+      "year": "2010",
+      "month": "October",
+      "quarter": "Q4"
     },
     {
       "date": "2011 Q1",
-      "value": "-5677"
+      "value": "-5677",
+      "timestamp": 1293840000000,
+      "year": "2011",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2011 Q2",
-      "value": "-4735"
+      "value": "-4735",
+      "timestamp": 1301612400000,
+      "year": "2011",
+      "month": "April",
+      "quarter": "Q2"
     },
     {
       "date": "2011 Q3",
-      "value": "-7041"
+      "value": "-7041",
+      "timestamp": 1309474800000,
+      "year": "2011",
+      "month": "July",
+      "quarter": "Q3"
     },
     {
       "date": "2011 Q4",
-      "value": "-6372"
+      "value": "-6372",
+      "timestamp": 1317423600000,
+      "year": "2011",
+      "month": "October",
+      "quarter": "Q4"
     },
     {
       "date": "2012 Q1",
-      "value": "-9657"
+      "value": "-9657",
+      "timestamp": 1325376000000,
+      "year": "2012",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2012 Q2",
-      "value": "-8836"
+      "value": "-8836",
+      "timestamp": 1333234800000,
+      "year": "2012",
+      "month": "April",
+      "quarter": "Q2"
     },
     {
       "date": "2012 Q3",
-      "value": "-7496"
+      "value": "-7496",
+      "timestamp": 1341097200000,
+      "year": "2012",
+      "month": "July",
+      "quarter": "Q3"
     },
     {
       "date": "2012 Q4",
-      "value": "-8480"
+      "value": "-8480",
+      "timestamp": 1349046000000,
+      "year": "2012",
+      "month": "October",
+      "quarter": "Q4"
     },
     {
       "date": "2013 Q1",
-      "value": "-7288"
+      "value": "-7288",
+      "timestamp": 1356998400000,
+      "year": "2013",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2013 Q2",
-      "value": "-4533"
+      "value": "-4533",
+      "timestamp": 1364770800000,
+      "year": "2013",
+      "month": "April",
+      "quarter": "Q2"
     },
     {
       "date": "2013 Q3",
-      "value": "-11356"
+      "value": "-11356",
+      "timestamp": 1372633200000,
+      "year": "2013",
+      "month": "July",
+      "quarter": "Q3"
     },
     {
       "date": "2013 Q4",
-      "value": "-8923"
+      "value": "-8923",
+      "timestamp": 1380582000000,
+      "year": "2013",
+      "month": "October",
+      "quarter": "Q4"
     },
     {
       "date": "2014 Q1",
-      "value": "-7411"
+      "value": "-7411",
+      "timestamp": 1388534400000,
+      "year": "2014",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2014 Q2",
-      "value": "-6461"
+      "value": "-6461",
+      "timestamp": 1396306800000,
+      "year": "2014",
+      "month": "April",
+      "quarter": "Q2"
     }
   ],
   "months": [
     {
       "date": "1998 JAN",
-      "value": "252"
+      "value": "252",
+      "timestamp": 883612800000,
+      "year": "1998",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "1998 FEB",
-      "value": "-536"
+      "value": "-536",
+      "timestamp": 886291200000,
+      "year": "1998",
+      "month": "February",
+      "quarter": "Q1"
     },
     {
       "date": "1998 MAR",
-      "value": "-496"
+      "value": "-496",
+      "timestamp": 888710400000,
+      "year": "1998",
+      "month": "March",
+      "quarter": "Q1"
     },
     {
       "date": "1998 APR",
-      "value": "-286"
+      "value": "-286",
+      "timestamp": 891385200000,
+      "year": "1998",
+      "month": "April",
+      "quarter": "Q2"
     },
     {
       "date": "1998 MAY",
-      "value": "-670"
+      "value": "-670",
+      "timestamp": 893977200000,
+      "year": "1998",
+      "month": "May",
+      "quarter": "Q2"
     },
     {
       "date": "1998 JUN",
-      "value": "-623"
+      "value": "-623",
+      "timestamp": 896655600000,
+      "year": "1998",
+      "month": "June",
+      "quarter": "Q2"
     },
     {
       "date": "1998 JUL",
-      "value": "-600"
+      "value": "-600",
+      "timestamp": 899247600000,
+      "year": "1998",
+      "month": "July",
+      "quarter": "Q3"
     },
     {
       "date": "1998 AUG",
-      "value": "-250"
+      "value": "-250",
+      "timestamp": 901926000000,
+      "year": "1998",
+      "month": "August",
+      "quarter": "Q3"
     },
     {
       "date": "1998 SEP",
-      "value": "-897"
+      "value": "-897",
+      "timestamp": 904604400000,
+      "year": "1998",
+      "month": "September",
+      "quarter": "Q3"
     },
     {
       "date": "1998 OCT",
-      "value": "-767"
+      "value": "-767",
+      "timestamp": 907196400000,
+      "year": "1998",
+      "month": "October",
+      "quarter": "Q4"
     },
     {
       "date": "1998 NOV",
-      "value": "-1050"
+      "value": "-1050",
+      "timestamp": 909878400000,
+      "year": "1998",
+      "month": "November",
+      "quarter": "Q4"
     },
     {
       "date": "1998 DEC",
-      "value": "-841"
+      "value": "-841",
+      "timestamp": 912470400000,
+      "year": "1998",
+      "month": "December",
+      "quarter": "Q4"
     },
     {
       "date": "1999 JAN",
-      "value": "-1447"
+      "value": "-1447",
+      "timestamp": 915148800000,
+      "year": "1999",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "1999 FEB",
-      "value": "-1173"
+      "value": "-1173",
+      "timestamp": 917827200000,
+      "year": "1999",
+      "month": "February",
+      "quarter": "Q1"
     },
     {
       "date": "1999 MAR",
-      "value": "-902"
+      "value": "-902",
+      "timestamp": 920246400000,
+      "year": "1999",
+      "month": "March",
+      "quarter": "Q1"
     },
     {
       "date": "1999 APR",
-      "value": "-1238"
+      "value": "-1238",
+      "timestamp": 922921200000,
+      "year": "1999",
+      "month": "April",
+      "quarter": "Q2"
     },
     {
       "date": "1999 MAY",
-      "value": "-738"
+      "value": "-738",
+      "timestamp": 925513200000,
+      "year": "1999",
+      "month": "May",
+      "quarter": "Q2"
     },
     {
       "date": "1999 JUN",
-      "value": "-1823"
+      "value": "-1823",
+      "timestamp": 928191600000,
+      "year": "1999",
+      "month": "June",
+      "quarter": "Q2"
     },
     {
       "date": "1999 JUL",
-      "value": "-2021"
+      "value": "-2021",
+      "timestamp": 930783600000,
+      "year": "1999",
+      "month": "July",
+      "quarter": "Q3"
     },
     {
       "date": "1999 AUG",
-      "value": "-1479"
+      "value": "-1479",
+      "timestamp": 933462000000,
+      "year": "1999",
+      "month": "August",
+      "quarter": "Q3"
     },
     {
       "date": "1999 SEP",
-      "value": "-1013"
+      "value": "-1013",
+      "timestamp": 936140400000,
+      "year": "1999",
+      "month": "September",
+      "quarter": "Q3"
     },
     {
       "date": "1999 OCT",
-      "value": "-880"
+      "value": "-880",
+      "timestamp": 938732400000,
+      "year": "1999",
+      "month": "October",
+      "quarter": "Q4"
     },
     {
       "date": "1999 NOV",
-      "value": "-1063"
+      "value": "-1063",
+      "timestamp": 941414400000,
+      "year": "1999",
+      "month": "November",
+      "quarter": "Q4"
     },
     {
       "date": "1999 DEC",
-      "value": "-1423"
+      "value": "-1423",
+      "timestamp": 944006400000,
+      "year": "1999",
+      "month": "December",
+      "quarter": "Q4"
     },
     {
       "date": "2000 JAN",
-      "value": "-1800"
+      "value": "-1800",
+      "timestamp": 946684800000,
+      "year": "2000",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2000 FEB",
-      "value": "-1842"
+      "value": "-1842",
+      "timestamp": 949363200000,
+      "year": "2000",
+      "month": "February",
+      "quarter": "Q1"
     },
     {
       "date": "2000 MAR",
-      "value": "-1420"
+      "value": "-1420",
+      "timestamp": 951868800000,
+      "year": "2000",
+      "month": "March",
+      "quarter": "Q1"
     },
     {
       "date": "2000 APR",
-      "value": "-2447"
+      "value": "-2447",
+      "timestamp": 954543600000,
+      "year": "2000",
+      "month": "April",
+      "quarter": "Q2"
     },
     {
       "date": "2000 MAY",
-      "value": "-2026"
+      "value": "-2026",
+      "timestamp": 957135600000,
+      "year": "2000",
+      "month": "May",
+      "quarter": "Q2"
     },
     {
       "date": "2000 JUN",
-      "value": "-1157"
+      "value": "-1157",
+      "timestamp": 959814000000,
+      "year": "2000",
+      "month": "June",
+      "quarter": "Q2"
     },
     {
       "date": "2000 JUL",
-      "value": "-1643"
+      "value": "-1643",
+      "timestamp": 962406000000,
+      "year": "2000",
+      "month": "July",
+      "quarter": "Q3"
     },
     {
       "date": "2000 AUG",
-      "value": "-609"
+      "value": "-609",
+      "timestamp": 965084400000,
+      "year": "2000",
+      "month": "August",
+      "quarter": "Q3"
     },
     {
       "date": "2000 SEP",
-      "value": "-922"
+      "value": "-922",
+      "timestamp": 967762800000,
+      "year": "2000",
+      "month": "September",
+      "quarter": "Q3"
     },
     {
       "date": "2000 OCT",
-      "value": "-1453"
+      "value": "-1453",
+      "timestamp": 970354800000,
+      "year": "2000",
+      "month": "October",
+      "quarter": "Q4"
     },
     {
       "date": "2000 NOV",
-      "value": "-2239"
+      "value": "-2239",
+      "timestamp": 973036800000,
+      "year": "2000",
+      "month": "November",
+      "quarter": "Q4"
     },
     {
       "date": "2000 DEC",
-      "value": "-2580"
+      "value": "-2580",
+      "timestamp": 975628800000,
+      "year": "2000",
+      "month": "December",
+      "quarter": "Q4"
     },
     {
       "date": "2001 JAN",
-      "value": "-2272"
+      "value": "-2272",
+      "timestamp": 978307200000,
+      "year": "2001",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2001 FEB",
-      "value": "-1958"
+      "value": "-1958",
+      "timestamp": 980985600000,
+      "year": "2001",
+      "month": "February",
+      "quarter": "Q1"
     },
     {
       "date": "2001 MAR",
-      "value": "-1467"
+      "value": "-1467",
+      "timestamp": 983404800000,
+      "year": "2001",
+      "month": "March",
+      "quarter": "Q1"
     },
     {
       "date": "2001 APR",
-      "value": "-1586"
+      "value": "-1586",
+      "timestamp": 986079600000,
+      "year": "2001",
+      "month": "April",
+      "quarter": "Q2"
     },
     {
       "date": "2001 MAY",
-      "value": "-1730"
+      "value": "-1730",
+      "timestamp": 988671600000,
+      "year": "2001",
+      "month": "May",
+      "quarter": "Q2"
     },
     {
       "date": "2001 JUN",
-      "value": "-2045"
+      "value": "-2045",
+      "timestamp": 991350000000,
+      "year": "2001",
+      "month": "June",
+      "quarter": "Q2"
     },
     {
       "date": "2001 JUL",
-      "value": "-1970"
+      "value": "-1970",
+      "timestamp": 993942000000,
+      "year": "2001",
+      "month": "July",
+      "quarter": "Q3"
     },
     {
       "date": "2001 AUG",
-      "value": "-3230"
+      "value": "-3230",
+      "timestamp": 996620400000,
+      "year": "2001",
+      "month": "August",
+      "quarter": "Q3"
     },
     {
       "date": "2001 SEP",
-      "value": "-1964"
+      "value": "-1964",
+      "timestamp": 999298800000,
+      "year": "2001",
+      "month": "September",
+      "quarter": "Q3"
     },
     {
       "date": "2001 OCT",
-      "value": "-2053"
+      "value": "-2053",
+      "timestamp": 1001890800000,
+      "year": "2001",
+      "month": "October",
+      "quarter": "Q4"
     },
     {
       "date": "2001 NOV",
-      "value": "-2017"
+      "value": "-2017",
+      "timestamp": 1004572800000,
+      "year": "2001",
+      "month": "November",
+      "quarter": "Q4"
     },
     {
       "date": "2001 DEC",
-      "value": "-2606"
+      "value": "-2606",
+      "timestamp": 1007164800000,
+      "year": "2001",
+      "month": "December",
+      "quarter": "Q4"
     },
     {
       "date": "2002 JAN",
-      "value": "-2118"
+      "value": "-2118",
+      "timestamp": 1009843200000,
+      "year": "2002",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2002 FEB",
-      "value": "-2258"
+      "value": "-2258",
+      "timestamp": 1012521600000,
+      "year": "2002",
+      "month": "February",
+      "quarter": "Q1"
     },
     {
       "date": "2002 MAR",
-      "value": "-2214"
+      "value": "-2214",
+      "timestamp": 1014940800000,
+      "year": "2002",
+      "month": "March",
+      "quarter": "Q1"
     },
     {
       "date": "2002 APR",
-      "value": "-2834"
+      "value": "-2834",
+      "timestamp": 1017615600000,
+      "year": "2002",
+      "month": "April",
+      "quarter": "Q2"
     },
     {
       "date": "2002 MAY",
-      "value": "-2303"
+      "value": "-2303",
+      "timestamp": 1020207600000,
+      "year": "2002",
+      "month": "May",
+      "quarter": "Q2"
     },
     {
       "date": "2002 JUN",
-      "value": "-2838"
+      "value": "-2838",
+      "timestamp": 1022886000000,
+      "year": "2002",
+      "month": "June",
+      "quarter": "Q2"
     },
     {
       "date": "2002 JUL",
-      "value": "-3466"
+      "value": "-3466",
+      "timestamp": 1025478000000,
+      "year": "2002",
+      "month": "July",
+      "quarter": "Q3"
     },
     {
       "date": "2002 AUG",
-      "value": "-3169"
+      "value": "-3169",
+      "timestamp": 1028156400000,
+      "year": "2002",
+      "month": "August",
+      "quarter": "Q3"
     },
     {
       "date": "2002 SEP",
-      "value": "-2121"
+      "value": "-2121",
+      "timestamp": 1030834800000,
+      "year": "2002",
+      "month": "September",
+      "quarter": "Q3"
     },
     {
       "date": "2002 OCT",
-      "value": "-2309"
+      "value": "-2309",
+      "timestamp": 1033426800000,
+      "year": "2002",
+      "month": "October",
+      "quarter": "Q4"
     },
     {
       "date": "2002 NOV",
-      "value": "-2648"
+      "value": "-2648",
+      "timestamp": 1036108800000,
+      "year": "2002",
+      "month": "November",
+      "quarter": "Q4"
     },
     {
       "date": "2002 DEC",
-      "value": "-1761"
+      "value": "-1761",
+      "timestamp": 1038700800000,
+      "year": "2002",
+      "month": "December",
+      "quarter": "Q4"
     },
     {
       "date": "2003 JAN",
-      "value": "-2069"
+      "value": "-2069",
+      "timestamp": 1041379200000,
+      "year": "2003",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2003 FEB",
-      "value": "-1564"
+      "value": "-1564",
+      "timestamp": 1044057600000,
+      "year": "2003",
+      "month": "February",
+      "quarter": "Q1"
     },
     {
       "date": "2003 MAR",
-      "value": "-3128"
+      "value": "-3128",
+      "timestamp": 1046476800000,
+      "year": "2003",
+      "month": "March",
+      "quarter": "Q1"
     },
     {
       "date": "2003 APR",
-      "value": "-1386"
+      "value": "-1386",
+      "timestamp": 1049151600000,
+      "year": "2003",
+      "month": "April",
+      "quarter": "Q2"
     },
     {
       "date": "2003 MAY",
-      "value": "-2757"
+      "value": "-2757",
+      "timestamp": 1051743600000,
+      "year": "2003",
+      "month": "May",
+      "quarter": "Q2"
     },
     {
       "date": "2003 JUN",
-      "value": "-3268"
+      "value": "-3268",
+      "timestamp": 1054422000000,
+      "year": "2003",
+      "month": "June",
+      "quarter": "Q2"
     },
     {
       "date": "2003 JUL",
-      "value": "-1728"
+      "value": "-1728",
+      "timestamp": 1057014000000,
+      "year": "2003",
+      "month": "July",
+      "quarter": "Q3"
     },
     {
       "date": "2003 AUG",
-      "value": "-1609"
+      "value": "-1609",
+      "timestamp": 1059692400000,
+      "year": "2003",
+      "month": "August",
+      "quarter": "Q3"
     },
     {
       "date": "2003 SEP",
-      "value": "-2700"
+      "value": "-2700",
+      "timestamp": 1062370800000,
+      "year": "2003",
+      "month": "September",
+      "quarter": "Q3"
     },
     {
       "date": "2003 OCT",
-      "value": "-2240"
+      "value": "-2240",
+      "timestamp": 1064962800000,
+      "year": "2003",
+      "month": "October",
+      "quarter": "Q4"
     },
     {
       "date": "2003 NOV",
-      "value": "-2577"
+      "value": "-2577",
+      "timestamp": 1067644800000,
+      "year": "2003",
+      "month": "November",
+      "quarter": "Q4"
     },
     {
       "date": "2003 DEC",
-      "value": "-2208"
+      "value": "-2208",
+      "timestamp": 1070236800000,
+      "year": "2003",
+      "month": "December",
+      "quarter": "Q4"
     },
     {
       "date": "2004 JAN",
-      "value": "-3059"
+      "value": "-3059",
+      "timestamp": 1072915200000,
+      "year": "2004",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2004 FEB",
-      "value": "-1685"
+      "value": "-1685",
+      "timestamp": 1075593600000,
+      "year": "2004",
+      "month": "February",
+      "quarter": "Q1"
     },
     {
       "date": "2004 MAR",
-      "value": "-1779"
+      "value": "-1779",
+      "timestamp": 1078099200000,
+      "year": "2004",
+      "month": "March",
+      "quarter": "Q1"
     },
     {
       "date": "2004 APR",
-      "value": "-2612"
+      "value": "-2612",
+      "timestamp": 1080774000000,
+      "year": "2004",
+      "month": "April",
+      "quarter": "Q2"
     },
     {
       "date": "2004 MAY",
-      "value": "-3571"
+      "value": "-3571",
+      "timestamp": 1083366000000,
+      "year": "2004",
+      "month": "May",
+      "quarter": "Q2"
     },
     {
       "date": "2004 JUN",
-      "value": "-3798"
+      "value": "-3798",
+      "timestamp": 1086044400000,
+      "year": "2004",
+      "month": "June",
+      "quarter": "Q2"
     },
     {
       "date": "2004 JUL",
-      "value": "-3851"
+      "value": "-3851",
+      "timestamp": 1088636400000,
+      "year": "2004",
+      "month": "July",
+      "quarter": "Q3"
     },
     {
       "date": "2004 AUG",
-      "value": "-3728"
+      "value": "-3728",
+      "timestamp": 1091314800000,
+      "year": "2004",
+      "month": "August",
+      "quarter": "Q3"
     },
     {
       "date": "2004 SEP",
-      "value": "-2658"
+      "value": "-2658",
+      "timestamp": 1093993200000,
+      "year": "2004",
+      "month": "September",
+      "quarter": "Q3"
     },
     {
       "date": "2004 OCT",
-      "value": "-3596"
+      "value": "-3596",
+      "timestamp": 1096585200000,
+      "year": "2004",
+      "month": "October",
+      "quarter": "Q4"
     },
     {
       "date": "2004 NOV",
-      "value": "-2540"
+      "value": "-2540",
+      "timestamp": 1099267200000,
+      "year": "2004",
+      "month": "November",
+      "quarter": "Q4"
     },
     {
       "date": "2004 DEC",
-      "value": "-2509"
+      "value": "-2509",
+      "timestamp": 1101859200000,
+      "year": "2004",
+      "month": "December",
+      "quarter": "Q4"
     },
     {
       "date": "2005 JAN",
-      "value": "-3417"
+      "value": "-3417",
+      "timestamp": 1104537600000,
+      "year": "2005",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2005 FEB",
-      "value": "-2752"
+      "value": "-2752",
+      "timestamp": 1107216000000,
+      "year": "2005",
+      "month": "February",
+      "quarter": "Q1"
     },
     {
       "date": "2005 MAR",
-      "value": "-3615"
+      "value": "-3615",
+      "timestamp": 1109635200000,
+      "year": "2005",
+      "month": "March",
+      "quarter": "Q1"
     },
     {
       "date": "2005 APR",
-      "value": "-4260"
+      "value": "-4260",
+      "timestamp": 1112310000000,
+      "year": "2005",
+      "month": "April",
+      "quarter": "Q2"
     },
     {
       "date": "2005 MAY",
-      "value": "-3235"
+      "value": "-3235",
+      "timestamp": 1114902000000,
+      "year": "2005",
+      "month": "May",
+      "quarter": "Q2"
     },
     {
       "date": "2005 JUN",
-      "value": "-2271"
+      "value": "-2271",
+      "timestamp": 1117580400000,
+      "year": "2005",
+      "month": "June",
+      "quarter": "Q2"
     },
     {
       "date": "2005 JUL",
-      "value": "-2622"
+      "value": "-2622",
+      "timestamp": 1120172400000,
+      "year": "2005",
+      "month": "July",
+      "quarter": "Q3"
     },
     {
       "date": "2005 AUG",
-      "value": "-3422"
+      "value": "-3422",
+      "timestamp": 1122850800000,
+      "year": "2005",
+      "month": "August",
+      "quarter": "Q3"
     },
     {
       "date": "2005 SEP",
-      "value": "-2073"
+      "value": "-2073",
+      "timestamp": 1125529200000,
+      "year": "2005",
+      "month": "September",
+      "quarter": "Q3"
     },
     {
       "date": "2005 OCT",
-      "value": "-1787"
+      "value": "-1787",
+      "timestamp": 1128121200000,
+      "year": "2005",
+      "month": "October",
+      "quarter": "Q4"
     },
     {
       "date": "2005 NOV",
-      "value": "-2985"
+      "value": "-2985",
+      "timestamp": 1130803200000,
+      "year": "2005",
+      "month": "November",
+      "quarter": "Q4"
     },
     {
       "date": "2005 DEC",
-      "value": "-2204"
+      "value": "-2204",
+      "timestamp": 1133395200000,
+      "year": "2005",
+      "month": "December",
+      "quarter": "Q4"
     },
     {
       "date": "2006 JAN",
-      "value": "-3132"
+      "value": "-3132",
+      "timestamp": 1136073600000,
+      "year": "2006",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2006 FEB",
-      "value": "-2926"
+      "value": "-2926",
+      "timestamp": 1138752000000,
+      "year": "2006",
+      "month": "February",
+      "quarter": "Q1"
     },
     {
       "date": "2006 MAR",
-      "value": "-1342"
+      "value": "-1342",
+      "timestamp": 1141171200000,
+      "year": "2006",
+      "month": "March",
+      "quarter": "Q1"
     },
     {
       "date": "2006 APR",
-      "value": "-2029"
+      "value": "-2029",
+      "timestamp": 1143846000000,
+      "year": "2006",
+      "month": "April",
+      "quarter": "Q2"
     },
     {
       "date": "2006 MAY",
-      "value": "-1905"
+      "value": "-1905",
+      "timestamp": 1146438000000,
+      "year": "2006",
+      "month": "May",
+      "quarter": "Q2"
     },
     {
       "date": "2006 JUN",
-      "value": "-1982"
+      "value": "-1982",
+      "timestamp": 1149116400000,
+      "year": "2006",
+      "month": "June",
+      "quarter": "Q2"
     },
     {
       "date": "2006 JUL",
-      "value": "-2924"
+      "value": "-2924",
+      "timestamp": 1151708400000,
+      "year": "2006",
+      "month": "July",
+      "quarter": "Q3"
     },
     {
       "date": "2006 AUG",
-      "value": "-3090"
+      "value": "-3090",
+      "timestamp": 1154386800000,
+      "year": "2006",
+      "month": "August",
+      "quarter": "Q3"
     },
     {
       "date": "2006 SEP",
-      "value": "-2728"
+      "value": "-2728",
+      "timestamp": 1157065200000,
+      "year": "2006",
+      "month": "September",
+      "quarter": "Q3"
     },
     {
       "date": "2006 OCT",
-      "value": "-3544"
+      "value": "-3544",
+      "timestamp": 1159657200000,
+      "year": "2006",
+      "month": "October",
+      "quarter": "Q4"
     },
     {
       "date": "2006 NOV",
-      "value": "-3760"
+      "value": "-3760",
+      "timestamp": 1162339200000,
+      "year": "2006",
+      "month": "November",
+      "quarter": "Q4"
     },
     {
       "date": "2006 DEC",
-      "value": "-3857"
+      "value": "-3857",
+      "timestamp": 1164931200000,
+      "year": "2006",
+      "month": "December",
+      "quarter": "Q4"
     },
     {
       "date": "2007 JAN",
-      "value": "-3897"
+      "value": "-3897",
+      "timestamp": 1167609600000,
+      "year": "2007",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2007 FEB",
-      "value": "-3686"
+      "value": "-3686",
+      "timestamp": 1170288000000,
+      "year": "2007",
+      "month": "February",
+      "quarter": "Q1"
     },
     {
       "date": "2007 MAR",
-      "value": "-3251"
+      "value": "-3251",
+      "timestamp": 1172707200000,
+      "year": "2007",
+      "month": "March",
+      "quarter": "Q1"
     },
     {
       "date": "2007 APR",
-      "value": "-2870"
+      "value": "-2870",
+      "timestamp": 1175382000000,
+      "year": "2007",
+      "month": "April",
+      "quarter": "Q2"
     },
     {
       "date": "2007 MAY",
-      "value": "-3521"
+      "value": "-3521",
+      "timestamp": 1177974000000,
+      "year": "2007",
+      "month": "May",
+      "quarter": "Q2"
     },
     {
       "date": "2007 JUN",
-      "value": "-3354"
+      "value": "-3354",
+      "timestamp": 1180652400000,
+      "year": "2007",
+      "month": "June",
+      "quarter": "Q2"
     },
     {
       "date": "2007 JUL",
-      "value": "-3529"
+      "value": "-3529",
+      "timestamp": 1183244400000,
+      "year": "2007",
+      "month": "July",
+      "quarter": "Q3"
     },
     {
       "date": "2007 AUG",
-      "value": "-3781"
+      "value": "-3781",
+      "timestamp": 1185922800000,
+      "year": "2007",
+      "month": "August",
+      "quarter": "Q3"
     },
     {
       "date": "2007 SEP",
-      "value": "-3150"
+      "value": "-3150",
+      "timestamp": 1188601200000,
+      "year": "2007",
+      "month": "September",
+      "quarter": "Q3"
     },
     {
       "date": "2007 OCT",
-      "value": "-2738"
+      "value": "-2738",
+      "timestamp": 1191193200000,
+      "year": "2007",
+      "month": "October",
+      "quarter": "Q4"
     },
     {
       "date": "2007 NOV",
-      "value": "-3617"
+      "value": "-3617",
+      "timestamp": 1193875200000,
+      "year": "2007",
+      "month": "November",
+      "quarter": "Q4"
     },
     {
       "date": "2007 DEC",
-      "value": "-3300"
+      "value": "-3300",
+      "timestamp": 1196467200000,
+      "year": "2007",
+      "month": "December",
+      "quarter": "Q4"
     },
     {
       "date": "2008 JAN",
-      "value": "-4002"
+      "value": "-4002",
+      "timestamp": 1199145600000,
+      "year": "2008",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2008 FEB",
-      "value": "-3839"
+      "value": "-3839",
+      "timestamp": 1201824000000,
+      "year": "2008",
+      "month": "February",
+      "quarter": "Q1"
     },
     {
       "date": "2008 MAR",
-      "value": "-5397"
+      "value": "-5397",
+      "timestamp": 1204329600000,
+      "year": "2008",
+      "month": "March",
+      "quarter": "Q1"
     },
     {
       "date": "2008 APR",
-      "value": "-4282"
+      "value": "-4282",
+      "timestamp": 1207004400000,
+      "year": "2008",
+      "month": "April",
+      "quarter": "Q2"
     },
     {
       "date": "2008 MAY",
-      "value": "-3685"
+      "value": "-3685",
+      "timestamp": 1209596400000,
+      "year": "2008",
+      "month": "May",
+      "quarter": "Q2"
     },
     {
       "date": "2008 JUN",
-      "value": "-2853"
+      "value": "-2853",
+      "timestamp": 1212274800000,
+      "year": "2008",
+      "month": "June",
+      "quarter": "Q2"
     },
     {
       "date": "2008 JUL",
-      "value": "-3447"
+      "value": "-3447",
+      "timestamp": 1214866800000,
+      "year": "2008",
+      "month": "July",
+      "quarter": "Q3"
     },
     {
       "date": "2008 AUG",
-      "value": "-4617"
+      "value": "-4617",
+      "timestamp": 1217545200000,
+      "year": "2008",
+      "month": "August",
+      "quarter": "Q3"
     },
     {
       "date": "2008 SEP",
-      "value": "-3627"
+      "value": "-3627",
+      "timestamp": 1220223600000,
+      "year": "2008",
+      "month": "September",
+      "quarter": "Q3"
     },
     {
       "date": "2008 OCT",
-      "value": "-3766"
+      "value": "-3766",
+      "timestamp": 1222815600000,
+      "year": "2008",
+      "month": "October",
+      "quarter": "Q4"
     },
     {
       "date": "2008 NOV",
-      "value": "-3083"
+      "value": "-3083",
+      "timestamp": 1225497600000,
+      "year": "2008",
+      "month": "November",
+      "quarter": "Q4"
     },
     {
       "date": "2008 DEC",
-      "value": "-2303"
+      "value": "-2303",
+      "timestamp": 1228089600000,
+      "year": "2008",
+      "month": "December",
+      "quarter": "Q4"
     },
     {
       "date": "2009 JAN",
-      "value": "-3436"
+      "value": "-3436",
+      "timestamp": 1230768000000,
+      "year": "2009",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2009 FEB",
-      "value": "-2531"
+      "value": "-2531",
+      "timestamp": 1233446400000,
+      "year": "2009",
+      "month": "February",
+      "quarter": "Q1"
     },
     {
       "date": "2009 MAR",
-      "value": "-1962"
+      "value": "-1962",
+      "timestamp": 1235865600000,
+      "year": "2009",
+      "month": "March",
+      "quarter": "Q1"
     },
     {
       "date": "2009 APR",
-      "value": "-2637"
+      "value": "-2637",
+      "timestamp": 1238540400000,
+      "year": "2009",
+      "month": "April",
+      "quarter": "Q2"
     },
     {
       "date": "2009 MAY",
-      "value": "-2270"
+      "value": "-2270",
+      "timestamp": 1241132400000,
+      "year": "2009",
+      "month": "May",
+      "quarter": "Q2"
     },
     {
       "date": "2009 JUN",
-      "value": "-2245"
+      "value": "-2245",
+      "timestamp": 1243810800000,
+      "year": "2009",
+      "month": "June",
+      "quarter": "Q2"
     },
     {
       "date": "2009 JUL",
-      "value": "-1693"
+      "value": "-1693",
+      "timestamp": 1246402800000,
+      "year": "2009",
+      "month": "July",
+      "quarter": "Q3"
     },
     {
       "date": "2009 AUG",
-      "value": "-1513"
+      "value": "-1513",
+      "timestamp": 1249081200000,
+      "year": "2009",
+      "month": "August",
+      "quarter": "Q3"
     },
     {
       "date": "2009 SEP",
-      "value": "-2478"
+      "value": "-2478",
+      "timestamp": 1251759600000,
+      "year": "2009",
+      "month": "September",
+      "quarter": "Q3"
     },
     {
       "date": "2009 OCT",
-      "value": "-2510"
+      "value": "-2510",
+      "timestamp": 1254351600000,
+      "year": "2009",
+      "month": "October",
+      "quarter": "Q4"
     },
     {
       "date": "2009 NOV",
-      "value": "-2157"
+      "value": "-2157",
+      "timestamp": 1257033600000,
+      "year": "2009",
+      "month": "November",
+      "quarter": "Q4"
     },
     {
       "date": "2009 DEC",
-      "value": "-2683"
+      "value": "-2683",
+      "timestamp": 1259625600000,
+      "year": "2009",
+      "month": "December",
+      "quarter": "Q4"
     },
     {
       "date": "2010 JAN",
-      "value": "-3265"
+      "value": "-3265",
+      "timestamp": 1262304000000,
+      "year": "2010",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2010 FEB",
-      "value": "-1476"
+      "value": "-1476",
+      "timestamp": 1264982400000,
+      "year": "2010",
+      "month": "February",
+      "quarter": "Q1"
     },
     {
       "date": "2010 MAR",
-      "value": "-4145"
+      "value": "-4145",
+      "timestamp": 1267401600000,
+      "year": "2010",
+      "month": "March",
+      "quarter": "Q1"
     },
     {
       "date": "2010 APR",
-      "value": "-1984"
+      "value": "-1984",
+      "timestamp": 1270076400000,
+      "year": "2010",
+      "month": "April",
+      "quarter": "Q2"
     },
     {
       "date": "2010 MAY",
-      "value": "-2925"
+      "value": "-2925",
+      "timestamp": 1272668400000,
+      "year": "2010",
+      "month": "May",
+      "quarter": "Q2"
     },
     {
       "date": "2010 JUN",
-      "value": "-2909"
+      "value": "-2909",
+      "timestamp": 1275346800000,
+      "year": "2010",
+      "month": "June",
+      "quarter": "Q2"
     },
     {
       "date": "2010 JUL",
-      "value": "-4180"
+      "value": "-4180",
+      "timestamp": 1277938800000,
+      "year": "2010",
+      "month": "July",
+      "quarter": "Q3"
     },
     {
       "date": "2010 AUG",
-      "value": "-3598"
+      "value": "-3598",
+      "timestamp": 1280617200000,
+      "year": "2010",
+      "month": "August",
+      "quarter": "Q3"
     },
     {
       "date": "2010 SEP",
-      "value": "-3260"
+      "value": "-3260",
+      "timestamp": 1283295600000,
+      "year": "2010",
+      "month": "September",
+      "quarter": "Q3"
     },
     {
       "date": "2010 OCT",
-      "value": "-2923"
+      "value": "-2923",
+      "timestamp": 1285887600000,
+      "year": "2010",
+      "month": "October",
+      "quarter": "Q4"
     },
     {
       "date": "2010 NOV",
-      "value": "-2777"
+      "value": "-2777",
+      "timestamp": 1288569600000,
+      "year": "2010",
+      "month": "November",
+      "quarter": "Q4"
     },
     {
       "date": "2010 DEC",
-      "value": "-3616"
+      "value": "-3616",
+      "timestamp": 1291161600000,
+      "year": "2010",
+      "month": "December",
+      "quarter": "Q4"
     },
     {
       "date": "2011 JAN",
-      "value": "-2063"
+      "value": "-2063",
+      "timestamp": 1293840000000,
+      "year": "2011",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2011 FEB",
-      "value": "-1231"
+      "value": "-1231",
+      "timestamp": 1296518400000,
+      "year": "2011",
+      "month": "February",
+      "quarter": "Q1"
     },
     {
       "date": "2011 MAR",
-      "value": "-2383"
+      "value": "-2383",
+      "timestamp": 1298937600000,
+      "year": "2011",
+      "month": "March",
+      "quarter": "Q1"
     },
     {
       "date": "2011 APR",
-      "value": "-1308"
+      "value": "-1308",
+      "timestamp": 1301612400000,
+      "year": "2011",
+      "month": "April",
+      "quarter": "Q2"
     },
     {
       "date": "2011 MAY",
-      "value": "-1039"
+      "value": "-1039",
+      "timestamp": 1304204400000,
+      "year": "2011",
+      "month": "May",
+      "quarter": "Q2"
     },
     {
       "date": "2011 JUN",
-      "value": "-2388"
+      "value": "-2388",
+      "timestamp": 1306882800000,
+      "year": "2011",
+      "month": "June",
+      "quarter": "Q2"
     },
     {
       "date": "2011 JUL",
-      "value": "-2560"
+      "value": "-2560",
+      "timestamp": 1309474800000,
+      "year": "2011",
+      "month": "July",
+      "quarter": "Q3"
     },
     {
       "date": "2011 AUG",
-      "value": "-1324"
+      "value": "-1324",
+      "timestamp": 1312153200000,
+      "year": "2011",
+      "month": "August",
+      "quarter": "Q3"
     },
     {
       "date": "2011 SEP",
-      "value": "-3157"
+      "value": "-3157",
+      "timestamp": 1314831600000,
+      "year": "2011",
+      "month": "September",
+      "quarter": "Q3"
     },
     {
       "date": "2011 OCT",
-      "value": "-2186"
+      "value": "-2186",
+      "timestamp": 1317423600000,
+      "year": "2011",
+      "month": "October",
+      "quarter": "Q4"
     },
     {
       "date": "2011 NOV",
-      "value": "-2971"
+      "value": "-2971",
+      "timestamp": 1320105600000,
+      "year": "2011",
+      "month": "November",
+      "quarter": "Q4"
     },
     {
       "date": "2011 DEC",
-      "value": "-1215"
+      "value": "-1215",
+      "timestamp": 1322697600000,
+      "year": "2011",
+      "month": "December",
+      "quarter": "Q4"
     },
     {
       "date": "2012 JAN",
-      "value": "-3385"
+      "value": "-3385",
+      "timestamp": 1325376000000,
+      "year": "2012",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2012 FEB",
-      "value": "-2839"
+      "value": "-2839",
+      "timestamp": 1328054400000,
+      "year": "2012",
+      "month": "February",
+      "quarter": "Q1"
     },
     {
       "date": "2012 MAR",
-      "value": "-3433"
+      "value": "-3433",
+      "timestamp": 1330560000000,
+      "year": "2012",
+      "month": "March",
+      "quarter": "Q1"
     },
     {
       "date": "2012 APR",
-      "value": "-4081"
+      "value": "-4081",
+      "timestamp": 1333234800000,
+      "year": "2012",
+      "month": "April",
+      "quarter": "Q2"
     },
     {
       "date": "2012 MAY",
-      "value": "-1509"
+      "value": "-1509",
+      "timestamp": 1335826800000,
+      "year": "2012",
+      "month": "May",
+      "quarter": "Q2"
     },
     {
       "date": "2012 JUN",
-      "value": "-3246"
+      "value": "-3246",
+      "timestamp": 1338505200000,
+      "year": "2012",
+      "month": "June",
+      "quarter": "Q2"
     },
     {
       "date": "2012 JUL",
-      "value": "-1129"
+      "value": "-1129",
+      "timestamp": 1341097200000,
+      "year": "2012",
+      "month": "July",
+      "quarter": "Q3"
     },
     {
       "date": "2012 AUG",
-      "value": "-3867"
+      "value": "-3867",
+      "timestamp": 1343775600000,
+      "year": "2012",
+      "month": "August",
+      "quarter": "Q3"
     },
     {
       "date": "2012 SEP",
-      "value": "-2500"
+      "value": "-2500",
+      "timestamp": 1346454000000,
+      "year": "2012",
+      "month": "September",
+      "quarter": "Q3"
     },
     {
       "date": "2012 OCT",
-      "value": "-2350"
+      "value": "-2350",
+      "timestamp": 1349046000000,
+      "year": "2012",
+      "month": "October",
+      "quarter": "Q4"
     },
     {
       "date": "2012 NOV",
-      "value": "-3600"
+      "value": "-3600",
+      "timestamp": 1351728000000,
+      "year": "2012",
+      "month": "November",
+      "quarter": "Q4"
     },
     {
       "date": "2012 DEC",
-      "value": "-2530"
+      "value": "-2530",
+      "timestamp": 1354320000000,
+      "year": "2012",
+      "month": "December",
+      "quarter": "Q4"
     },
     {
       "date": "2013 JAN",
-      "value": "-1905"
+      "value": "-1905",
+      "timestamp": 1356998400000,
+      "year": "2013",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2013 FEB",
-      "value": "-2665"
+      "value": "-2665",
+      "timestamp": 1359676800000,
+      "year": "2013",
+      "month": "February",
+      "quarter": "Q1"
     },
     {
       "date": "2013 MAR",
-      "value": "-2718"
+      "value": "-2718",
+      "timestamp": 1362096000000,
+      "year": "2013",
+      "month": "March",
+      "quarter": "Q1"
     },
     {
       "date": "2013 APR",
-      "value": "-2144"
+      "value": "-2144",
+      "timestamp": 1364770800000,
+      "year": "2013",
+      "month": "April",
+      "quarter": "Q2"
     },
     {
       "date": "2013 MAY",
-      "value": "-2470"
+      "value": "-2470",
+      "timestamp": 1367362800000,
+      "year": "2013",
+      "month": "May",
+      "quarter": "Q2"
     },
     {
       "date": "2013 JUN",
-      "value": "81"
+      "value": "81",
+      "timestamp": 1370041200000,
+      "year": "2013",
+      "month": "June",
+      "quarter": "Q2"
     },
     {
       "date": "2013 JUL",
-      "value": "-3642"
+      "value": "-3642",
+      "timestamp": 1372633200000,
+      "year": "2013",
+      "month": "July",
+      "quarter": "Q3"
     },
     {
       "date": "2013 AUG",
-      "value": "-3521"
+      "value": "-3521",
+      "timestamp": 1375311600000,
+      "year": "2013",
+      "month": "August",
+      "quarter": "Q3"
     },
     {
       "date": "2013 SEP",
-      "value": "-4193"
+      "value": "-4193",
+      "timestamp": 1377990000000,
+      "year": "2013",
+      "month": "September",
+      "quarter": "Q3"
     },
     {
       "date": "2013 OCT",
-      "value": "-3572"
+      "value": "-3572",
+      "timestamp": 1380582000000,
+      "year": "2013",
+      "month": "October",
+      "quarter": "Q4"
     },
     {
       "date": "2013 NOV",
-      "value": "-3528"
+      "value": "-3528",
+      "timestamp": 1383264000000,
+      "year": "2013",
+      "month": "November",
+      "quarter": "Q4"
     },
     {
       "date": "2013 DEC",
-      "value": "-1823"
+      "value": "-1823",
+      "timestamp": 1385856000000,
+      "year": "2013",
+      "month": "December",
+      "quarter": "Q4"
     },
     {
       "date": "2014 JAN",
-      "value": "-3474"
+      "value": "-3474",
+      "timestamp": 1388534400000,
+      "year": "2014",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2014 FEB",
-      "value": "-2607"
+      "value": "-2607",
+      "timestamp": 1391212800000,
+      "year": "2014",
+      "month": "February",
+      "quarter": "Q1"
     },
     {
       "date": "2014 MAR",
-      "value": "-1330"
+      "value": "-1330",
+      "timestamp": 1393632000000,
+      "year": "2014",
+      "month": "March",
+      "quarter": "Q1"
     },
     {
       "date": "2014 APR",
-      "value": "-2052"
+      "value": "-2052",
+      "timestamp": 1396306800000,
+      "year": "2014",
+      "month": "April",
+      "quarter": "Q2"
     },
     {
       "date": "2014 MAY",
-      "value": "-2123"
+      "value": "-2123",
+      "timestamp": 1398898800000,
+      "year": "2014",
+      "month": "May",
+      "quarter": "Q2"
     },
     {
       "date": "2014 JUN",
-      "value": "-2286"
+      "value": "-2286",
+      "timestamp": 1401577200000,
+      "year": "2014",
+      "month": "June",
+      "quarter": "Q2"
     },
     {
       "date": "2014 JUL",
-      "value": "-3079"
+      "value": "-3079",
+      "timestamp": 1404169200000,
+      "year": "2014",
+      "month": "July",
+      "quarter": "Q3"
     },
     {
       "date": "2014 AUG",
-      "value": "-1917"
+      "value": "-1917",
+      "timestamp": 1406847600000,
+      "year": "2014",
+      "month": "August",
+      "quarter": "Q3"
     }
   ],
   "uri": "/businessindustryandtrade/internationaltrade/timeseries/ikbj",

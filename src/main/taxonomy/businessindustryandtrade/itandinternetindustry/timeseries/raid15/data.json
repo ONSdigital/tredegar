@@ -6,48 +6,46 @@
   "unit": "bn",
   "preUnit": "£",
   "date": "2012",
-  "data": [
-    {
-      "date": "2008",
-      "value": "334.6"
-    },
-    {
-      "date": "2009",
-      "value": "374.1"
-    },
-    {
-      "date": "2010",
-      "value": "418.5"
-    },
-    {
-      "date": "2011",
-      "value": "483.8"
-    },
-    {
-      "date": "2012",
-      "value": "491.7"
-    }
-  ],
   "years": [
     {
       "date": "2008",
-      "value": "334.6"
+      "value": "334.6",
+      "timestamp": 1199145600000,
+      "year": "2008",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2009",
-      "value": "374.1"
+      "value": "374.1",
+      "timestamp": 1230768000000,
+      "year": "2009",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2010",
-      "value": "418.5"
+      "value": "418.5",
+      "timestamp": 1262304000000,
+      "year": "2010",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2011",
-      "value": "483.8"
+      "value": "483.8",
+      "timestamp": 1293840000000,
+      "year": "2011",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2012",
-      "value": "491.7"
+      "value": "491.7",
+      "timestamp": 1325376000000,
+      "year": "2012",
+      "month": "January",
+      "quarter": "Q1"
     }
   ],
   "quarters": [],

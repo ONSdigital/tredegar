@@ -6,24 +6,22 @@
   "unit": "m",
   "preUnit": "",
   "date": "2013",
-  "data": [
-    {
-      "date": "2012",
-      "value": "46353871"
-    },
-    {
-      "date": "2013",
-      "value": "46139940"
-    }
-  ],
   "years": [
     {
       "date": "2012",
-      "value": "46353871"
+      "value": "46353871",
+      "timestamp": 1325376000000,
+      "year": "2012",
+      "month": "January",
+      "quarter": "Q1"
     },
     {
       "date": "2013",
-      "value": "46139940"
+      "value": "46139940",
+      "timestamp": 1356998400000,
+      "year": "2013",
+      "month": "January",
+      "quarter": "Q1"
     }
   ],
   "quarters": [],
