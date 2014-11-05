@@ -1364,8 +1364,9 @@
         width: 70px;
         width: 7rem;
     }
+    /*Changed float to right*/
     .chart-area__controls__dropdowns {
-        float: left;
+        float: right;
         margin-right: 10px;
         margin-right: 1rem;
         margin-left: 10px;
@@ -1377,8 +1378,18 @@
             margin-top: 0.33rem;
             margin-right: 0;
         }
+        .chart-area__controls__custom {
+        clear: both;
+        display: block;
+        padding-top: 5px;
+        padding-top: 0.5rem;
+        padding-bottom: 5px;
+        padding-bottom: 0.5rem;
+        background-color: #dedfdc;
     }
-    .chart-area__controls__submit {
+    }
+    /*we don't need this with AngularJS*/
+/*    .chart-area__controls__submit {
         float: left;
         padding-top: 12px;
         padding-top: 1.25rem;
@@ -1392,7 +1403,7 @@
         .chart-area__controls__submit {
             float: right;
         }
-    }
+    }*/
     .chart-area__footer {
         float: right;
         margin-top: 10px;
@@ -1682,37 +1693,12 @@
                         </ul>
                     </div>
 
-                    <!-- Selector for chart -->
-                    <div ng-show="chartTable" class="chart-area__controls__custom">
-                        <div class="chart-area__controls__custom__errors"></div>
-                        <div class="chart-area__controls__custom__container">
-                            <div class="chart-area__controls__dropdowns">
-                                <fieldset class="chart-area__controls__date">
-                                    <legend class="chart-area__controls__date__label">From</legend>
-                                    <select ng-change="changeChartRange()" class="chart-area__controls__month" ng-model="chartDataFrom">
-                                        <option value="">Show all</option>
-                                        <option ng-repeat="data in graphValue[2] track by $index" value="{{data}}">{{graphValue[0][$index]}}</option>
-                                    </select>
-                                </fieldset>
-
-                                <fieldset class="chart-area__controls__date">
-                                    <legend class="chart-area__controls__date__label">To</legend>
-                                    <select ng-change="changeChartRange()" class="chart-area__controls__month" ng-model="chartDataTo">
-                                        <option value="">Show all</option>
-                                        <option ng-repeat="data in graphValue[2] track by $index" value="{{data}}">{{graphValue[0][$index]}}</option>
-                                    </select>
-                                </fieldset>
-
-                            </div>
-                        </div>
-                        <br></br>
-                    </div>
-
-                    <!-- Selector for table -->
-                    <div ng-show="!chartTable" class="chart-area__controls__custom">
+                    <!-- selector for table and chart -->
+                    <div class="chart-area__controls__custom">
                         <div class="chart-area__controls__custom__errors"></div>
                         <div class="chart-area__controls__custom__container__table">
                             <div class="chart-area__controls__dropdowns">
+                                <!-- Selector for table only -->
                                 <fieldset ng-show="!chartTable" class="chart-area__controls__date">
                                     <legend class="chart-area__controls__date__label">Find</legend>
                                     <input ng-model="query" type="test" />
@@ -1742,7 +1728,6 @@
                 <!-- chart -->
                 <div ng-if="chartTable">
                     <highchart class="highcharts-background" id="chart_prices" config="chartData">
-                        <!-- <span  ng-repeat="data in graphValue" class="invisible"></span> -->
                     </highchart>
                 </div>
 
@@ -1780,10 +1765,6 @@
                     .csv
                     <span class="icon-download icon--button-inline" role="presentation"></span>
                     </a>
-                    <!-- <a class="btn btn--primary btn--small" href="" ng-click="t5.downloadCsv()">
-              .csv
-              <span class="icon-download icon--button-inline" role="presentation"></span>
-            </a> -->
                     <a class="btn btn--primary btn--small" href="">
                     .xlsx
                     <span class="icon-download icon--button-inline" role="presentation"></span>
