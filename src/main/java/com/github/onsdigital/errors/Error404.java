@@ -16,6 +16,9 @@ public class Error404 implements NotFound {
 	@Override
 	public Object handle(HttpServletRequest req, HttpServletResponse res) throws IOException {
 
+		// Ensure ResourceUtils "sees" the reloadable classloader in
+		// development:
+		ResourceUtils.classLoaderClass = Error404.class;
 		try (Reader input = ResourceUtils.getReader("/files/404.html")) {
 			res.setCharacterEncoding("UTF8");
 			IOUtils.copy(input, res.getWriter());
