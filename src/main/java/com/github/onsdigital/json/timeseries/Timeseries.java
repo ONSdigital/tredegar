@@ -67,34 +67,34 @@ public class Timeseries extends DataItem implements Comparable<Timeseries> {
 	}
 
 	public void add(TimeseriesValue value) {
+
 		try {
-			// Populate the components:
+
+			// Get the date represented by this value:
 			Calendar calendar = Calendar.getInstance(Locale.UK);
 			calendar.setTime(value.toDate());
-			value.timestamp = calendar.getTimeInMillis();
-			value.year = String.valueOf(calendar.get(Calendar.YEAR));
-			// Months are zero based, which actually makes the quarter
-			// calculation a bit easier:
-			value.month = calendar.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.UK);
-			value.quarter = "Q" + ((calendar.get(Calendar.MONTH) / 3) + 1);
 
-			// Now add it to the correct list:
+			// Populate the year. This is needed whether it's
+			// yearly, quarterly or monthly:
+			value.year = String.valueOf(calendar.get(Calendar.YEAR));
+
+			// Set any other date components and
+			// add it to the correct list:
 			String key = StringUtils.lowerCase(StringUtils.trim(value.date));
-			if (year.matcher(key).matches()) {
+			if (year.matcher(key).matches() || yearInterval.matcher(key).matches() || yearPair.matcher(key).matches()) {
 				years.add(value);
-			} else if (yearInterval.matcher(key).matches()) {
-				years.add(value);
-			} else if (yearPair.matcher(key).matches()) {
-				years.add(value);
-			} else if (yearEnd.matcher(key).matches()) {
+			} else if (yearEnd.matcher(key).matches() || quarter.matcher(key).matches()) {
+				// Months are zero based, which actually makes the quarter
+				// calculation a bit easier:
+				value.quarter = "Q" + ((calendar.get(Calendar.MONTH) / 3) + 1);
 				quarters.add(value);
 			} else if (month.matcher(key).matches()) {
+				value.month = calendar.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.UK);
 				months.add(value);
-			} else if (quarter.matcher(key).matches()) {
-				quarters.add(value);
 			} else {
 				throw new ParseException("Unknown format: '" + value.date + "'", 0);
 			}
+
 		} catch (ParseException e) {
 			throw new RuntimeException("Error parsing date " + value.date, e);
 		}

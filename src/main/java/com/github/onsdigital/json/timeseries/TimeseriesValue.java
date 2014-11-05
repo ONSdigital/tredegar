@@ -14,7 +14,7 @@ public class TimeseriesValue implements Comparable<TimeseriesValue> {
 	public String value;
 
 	// Values split out into explicit components:
-	public long timestamp;
+	// public long timestamp;
 	public String year;
 	public String month;
 	public String quarter;
