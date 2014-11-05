@@ -5,14 +5,22 @@ import java.io.Reader;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.ws.rs.GET;
 
 import org.apache.commons.io.IOUtils;
 
 import com.github.davidcarboni.ResourceUtils;
 import com.github.davidcarboni.restolino.api.RequestHandler;
 import com.github.davidcarboni.restolino.framework.Boom;
+import com.github.davidcarboni.restolino.framework.Endpoint;
 
+@Endpoint
 public class Error500 implements Boom {
+
+	@GET
+	public void demo(HttpServletRequest req, HttpServletResponse res) throws IOException {
+		handle(req, res, null, new RuntimeException("Error page demonstration."));
+	}
 
 	@Override
 	public Object handle(HttpServletRequest req, HttpServletResponse res, RequestHandler requestHandler, Throwable t) throws IOException {

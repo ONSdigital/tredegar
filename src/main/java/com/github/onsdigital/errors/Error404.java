@@ -5,13 +5,21 @@ import java.io.Reader;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.ws.rs.GET;
 
 import org.apache.commons.io.IOUtils;
 
 import com.github.davidcarboni.ResourceUtils;
+import com.github.davidcarboni.restolino.framework.Endpoint;
 import com.github.davidcarboni.restolino.framework.NotFound;
 
+@Endpoint
 public class Error404 implements NotFound {
+
+	@GET
+	public void demo(HttpServletRequest req, HttpServletResponse res) throws IOException {
+		handle(req, res);
+	}
 
 	@Override
 	public Object handle(HttpServletRequest req, HttpServletResponse res) throws IOException {
