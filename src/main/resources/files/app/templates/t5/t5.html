@@ -1357,12 +1357,12 @@
     }
     .chart-area__controls__month {
         text-align: center;
-        width: 100px;
-        width: 10rem;
+        width: 50px;
+        width: 5rem;
     }
     .chart-area__controls__year {
-        width: 70px;
-        width: 7rem;
+        width: 60px;
+        width: 6rem;
     }
     /*Changed float to right*/
     .chart-area__controls__dropdowns {
@@ -1389,7 +1389,7 @@
     }
     }
     /*we don't need this with AngularJS*/
-/*    .chart-area__controls__submit {
+    /*    .chart-area__controls__submit {
         float: left;
         padding-top: 12px;
         padding-top: 1.25rem;
@@ -1703,8 +1703,8 @@
                                     <legend class="chart-area__controls__date__label">Find</legend>
                                     <input ng-model="query" type="test" />
                                 </fieldset>
-
-                                <fieldset class="chart-area__controls__date">
+                                    <!-- working code -->
+                                <!-- <fieldset class="chart-area__controls__date">
                                     <legend class="chart-area__controls__date__label">From</legend>
                                     <select ng-change="changeChartRange()" class="chart-area__controls__month" ng-model="chartDataFrom">
                                         <option value="">Show all</option>
@@ -1717,6 +1717,22 @@
                                     <select ng-change="changeChartRange()" class="chart-area__controls__month" ng-model="chartDataTo">
                                         <option value="">Show all</option>
                                         <option ng-repeat="data in graphValue[2] track by $index" value="{{data}}">{{graphValue[0][$index]}}</option>
+                                    </select>
+                                </fieldset> -->
+
+                                <fieldset class="chart-area__controls__date">
+                                    <legend class="chart-area__controls__date__label">From</legend>
+                                    <select ng-if="!(yqm === 0)" class="chart-area__controls__month" ng-model="chartDataFrom1" ng-options="data.value as data.name for data in chartData1" ng-change="changeChartRange()">
+                                    </select>
+                                    <select class="chart-area__controls__year" ng-model="chartDataFrom0" ng-options="data for data in chartData0" ng-change="changeChartRange()">
+                                    </select>
+                                </fieldset>
+
+                                <fieldset class="chart-area__controls__date">
+                                    <legend class="chart-area__controls__date__label">To</legend>
+                                    <select ng-if="!(yqm === 0)" class="chart-area__controls__month" ng-model="chartDataTo1" ng-options="data.value as data.name for data in chartData1" ng-change="changeChartRange()">
+                                    </select>
+                                    <select class="chart-area__controls__year" ng-model="chartDataTo0" ng-options="data for data in chartData0" ng-change="changeChartRange()">
                                     </select>
                                 </fieldset>
                             </div>

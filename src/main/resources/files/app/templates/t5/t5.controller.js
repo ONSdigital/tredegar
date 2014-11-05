@@ -28,21 +28,21 @@ angular.module('onsTemplates')
                 Downloader.downloadFile(downloadRequest, fileName);
             }
 
-    		function loadRelatedBulletins(data) {
-    			var dataPath = '/data'
-    			var bulletins = data.relatedBulletins;
+            function loadRelatedBulletins(data) {
+                var dataPath = '/data'
+                var bulletins = data.relatedBulletins;
 
-    			if (bulletins != null) {
-    				for (var i = 0; i < bulletins.length; i++) {
-    					var bulletin = bulletins[i]
-    					var relatedBulletinPath = dataPath + bulletin
-    					Taxonomy.load(relatedBulletinPath, function(relatedBulletin) {
-    						console.log('Loaded related bulletin: ', relatedBulletinPath, ' ', relatedBulletin)
-    						data.relatedBulletinData.push(relatedBulletin)
-    					})
-    				}
-    			}
-    		}
+                if (bulletins != null) {
+                    for (var i = 0; i < bulletins.length; i++) {
+                        var bulletin = bulletins[i]
+                        var relatedBulletinPath = dataPath + bulletin
+                        Taxonomy.load(relatedBulletinPath, function(relatedBulletin) {
+                            console.log('Loaded related bulletin: ', relatedBulletinPath, ' ', relatedBulletin)
+                            data.relatedBulletinData.push(relatedBulletin)
+                        })
+                    }
+                }
+            }
 
             angular.extend(t5, {
                 downloadXls: downloadXls,
@@ -192,8 +192,10 @@ angular.module('onsTemplates')
         }
 
         $scope.changeChartRange = function() {
-            var from = $scope.chartDataFrom;
-            var to = $scope.chartDataTo;
+            var from = $scope.chartDataFrom0 + $scope.chartDataFrom1;
+            var to = $scope.chartDataTo0 + $scope.chartDataTo1;
+                        alert("0: " + $scope.chartDataFrom0);
+                        alert("1: " + $scope.chartDataFrom1);
             var w;
             var x;
             var y;
@@ -236,7 +238,6 @@ angular.module('onsTemplates')
         };
 
 
-
         $scope.chartData = getData();
         // year by default
         $scope.chartData.options.xAxis.tickInterval = tickInterval(categoriesY.length);
@@ -266,7 +267,7 @@ angular.module('onsTemplates')
         };
 
         //year (0, by Default), quarter (1) or month (2)
-        $scope.yqm = 0;
+        $scope.yqm = 1;
         $scope.changeTime = function(time) {
             if (time === 'year') {
                 $scope.graphValue = makeGraphValue(categoriesY, seriesDataY, categoriesYnum);
@@ -275,8 +276,8 @@ angular.module('onsTemplates')
                 $scope.chartData.options.xAxis.categories = $scope.graphValue[0];
                 $scope.chartData.options.xAxis.tickInterval = tickInterval(categoriesY.length);
                 $scope.chartData.series[0].data = $scope.graphValue[1];
-                currentCategories=categoriesY;
-                currentSeries=seriesDataY;
+                currentCategories = categoriesY;
+                currentSeries = seriesDataY;
                 currentSorter = categoriesYnum;
             }
             if (time === 'quarter') {
@@ -286,8 +287,8 @@ angular.module('onsTemplates')
                 $scope.chartData.options.xAxis.categories = $scope.graphValue[0];
                 $scope.chartData.options.xAxis.tickInterval = tickInterval(categoriesQ.length);
                 $scope.chartData.series[0].data = $scope.graphValue[1];
-                currentCategories=categoriesQ;
-                currentSeries=seriesDataQ;
+                currentCategories = categoriesQ;
+                currentSeries = seriesDataQ;
                 currentSorter = categoriesQnum;
             }
             if (time === 'month') {
@@ -297,11 +298,92 @@ angular.module('onsTemplates')
                 $scope.chartData.options.xAxis.categories = $scope.graphValue[0];
                 $scope.chartData.options.xAxis.tickInterval = tickInterval(categoriesM.length);
                 $scope.chartData.series[0].data = $scope.graphValue[1];
-                currentCategories=categoriesM;
-                currentSeries=seriesDataM;
+                currentCategories = categoriesM;
+                currentSeries = seriesDataM;
                 currentSorter = categoriesMnum;
             }
         };
+
+        $scope.separateQM = function() {
+            var monthOpt = [{
+                name: "JAN",
+                value: 0.01
+            }, {
+                name: "FEB",
+                value: 0.02
+            }, {
+                name: "MAR",
+                value: 0.03
+            }, {
+                name: "APR",
+                value: 0.04
+            }, {
+                name: "MAY",
+                value: 0.05
+            }, {
+                name: "JUN",
+                value: 0.06
+            }, {
+                name: "JUL",
+                value: 0.07
+            }, {
+                name: "AUG",
+                value: 0.08
+            }, {
+                name: "SEP",
+                value: 0.09
+            }, {
+                name: "OCT",
+                value: 0.1
+            }, {
+                name: "NOV",
+                value: 0.11
+            }, {
+                name: "DEC",
+                value: 0.12
+            }];
+
+            var quarterOpt = [{
+                name: "Q1",
+                value: 0.1
+            }, {
+                name: "Q2",
+                value: 0.2
+            }, {
+                name: "Q3",
+                value: 0.3
+            }, {
+                name: "Q4",
+                value: 0.4
+            }];
+
+            var yearOpt = categoriesYnum;
+            if ($scope.yqm === 0) {
+                return [yearOpt, yearOpt];
+            }
+            if ($scope.yqm === 1) {
+                return [yearOpt, quarterOpt];
+            }
+            if ($scope.yqm === 2) {
+                return [yearOpt, monthOpt];
+            }
+        };
+
+        console.log($scope.separateQM()[1]);
+
+        $scope.chartData0 = $scope.separateQM()[0];
+        $scope.chartData1 = $scope.separateQM()[1];
+        // $scope.chartDataFrom = function(value1, value2) {
+        //     value1 = $scope.chartDataFrom0;
+        //     value2 = $scope.chartDataFrom1.value;
+        //     return (value1 + value2);
+        // };
+
+        // $scope.chartDataTo = function(value1, value2) {
+        //     value1 = $scope.chartDataTo0;
+        //     value2 = $scope.chartDataTo1.value;
+        //     return (value1 + value2);
+        // };
 
         //Defines the intervals in xAxis according to data
         function tickInterval(categories) {
@@ -328,174 +410,174 @@ angular.module('onsTemplates')
         }
 
         function getData() {
-            var data = {
-                options: {
-                    chart: {
-                        type: 'line',
-                    },
-                    colors: ['#007dc3', '#409ed2', '#7fbee1', '#007dc3', '#409ed2', '#7fbee1'],
+                var data = {
+                    options: {
+                        chart: {
+                            type: 'line',
+                        },
+                        colors: ['#007dc3', '#409ed2', '#7fbee1', '#007dc3', '#409ed2', '#7fbee1'],
 
-                    title: {
-                        text: ''
-                    },
-                    subtitle: {
-                        text: ''
-                    },
-                    navigation: {
-                        buttonOptions: {
-                            enabled: false
-                        }
-                    },
-                    xAxis: {
-                        categories: $scope.graphValue[0],
-                        // tickInterval: 1,
-                        labels: {
-                            formatter: function() {
-                                var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-                                var response = "";
-                                if (w < 768) {
-                                    if (this.isFirst) {
-                                        count = 0;
-                                    }
-                                    if (count % 3 === 0) {
+                        title: {
+                            text: ''
+                        },
+                        subtitle: {
+                            text: ''
+                        },
+                        navigation: {
+                            buttonOptions: {
+                                enabled: false
+                            }
+                        },
+                        xAxis: {
+                            categories: $scope.graphValue[0],
+                            // tickInterval: 1,
+                            labels: {
+                                formatter: function() {
+                                    var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+                                    var response = "";
+                                    if (w < 768) {
+                                        if (this.isFirst) {
+                                            count = 0;
+                                        }
+                                        if (count % 3 === 0) {
+                                            response = this.value;
+                                        }
+                                        count++;
+                                    } else {
                                         response = this.value;
                                     }
-                                    count++;
-                                } else {
-                                    response = this.value;
-                                }
-                                return response;
+                                    return response;
+                                },
                             },
+                            tickmarkPlacement: 'on'
                         },
-                        tickmarkPlacement: 'on'
-                    },
-                    yAxis: {
-                        title: {
-                            text: $scope.chart.units
-                        }
-                    },
+                        yAxis: {
+                            title: {
+                                text: $scope.chart.units
+                            }
+                        },
 
-                    credits: {
-                        enabled: false
-                    },
+                        credits: {
+                            enabled: false
+                        },
 
-                    plotOptions: {
-                        series: {
-                            shadow: false,
-                            states: {
-                                hover: {
-                                    enabled: true,
-                                    shadow: false,
-                                    lineWidth: 3,
-                                    lineWidthPlus: 0,
-                                    marker: {
-                                        height: 0,
-                                        width: 0,
-                                        halo: false,
+                        plotOptions: {
+                            series: {
+                                shadow: false,
+                                states: {
+                                    hover: {
                                         enabled: true,
-                                        fillColor: null,
-                                        radiusPlus: null,
+                                        shadow: false,
                                         lineWidth: 3,
-                                        lineWidthPlus: 0
+                                        lineWidthPlus: 0,
+                                        marker: {
+                                            height: 0,
+                                            width: 0,
+                                            halo: false,
+                                            enabled: true,
+                                            fillColor: null,
+                                            radiusPlus: null,
+                                            lineWidth: 3,
+                                            lineWidthPlus: 0
+                                        }
                                     }
                                 }
                             }
-                        }
-                    },
-                    tooltip: {
-                        shared: true,
-                        width: '150px',
-                        crosshairs: {
-                            width: 2,
-                            color: '#f37121'
                         },
-                        positioner: function(labelWidth, labelHeight, point) {
-                            var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-                            var points = {
-                                x: 30,
-                                y: 42
-                            };
-                            var tooltipX, tooltipY;
-                            var chart = Highcharts.charts[Highcharts.charts.length - 1];
-                            if (w > 768) {
+                        tooltip: {
+                            shared: true,
+                            width: '150px',
+                            crosshairs: {
+                                width: 2,
+                                color: '#f37121'
+                            },
+                            positioner: function(labelWidth, labelHeight, point) {
+                                var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+                                var points = {
+                                    x: 30,
+                                    y: 42
+                                };
+                                var tooltipX, tooltipY;
+                                var chart = Highcharts.charts[Highcharts.charts.length - 1];
+                                if (w > 768) {
 
-                                if (point.plotX + labelWidth > chart.plotWidth) {
-                                    tooltipX = point.plotX + chart.plotLeft - labelWidth - 20;
-                                    $("#custom-tooltip").removeClass('tooltip-left');
+                                    if (point.plotX + labelWidth > chart.plotWidth) {
+                                        tooltipX = point.plotX + chart.plotLeft - labelWidth - 20;
+                                        $("#custom-tooltip").removeClass('tooltip-left');
+                                    } else {
+                                        tooltipX = point.plotX + chart.plotLeft + 20;
+                                        $("#custom-tooltip").removeClass('tooltip-right');
+                                    }
+
+                                    tooltipY = 50;
+                                    points = {
+                                        x: tooltipX,
+                                        y: tooltipY
+                                    };
                                 } else {
-                                    tooltipX = point.plotX + chart.plotLeft + 20;
+                                    $("#custom-tooltip").removeClass('tooltip-left');
                                     $("#custom-tooltip").removeClass('tooltip-right');
                                 }
 
-                                tooltipY = 50;
-                                points = {
-                                    x: tooltipX,
-                                    y: tooltipY
-                                };
-                            } else {
-                                $("#custom-tooltip").removeClass('tooltip-left');
-                                $("#custom-tooltip").removeClass('tooltip-right');
-                            }
+                                return points;
+                            },
 
-                            return points;
-                        },
+                            formatter: function() {
+                                var id = '<div id="custom-tooltip" class="tooltip-left tooltip-right">';
+                                var block = id + "<div class='sidebar' >";
+                                var title = '<b class="title">' + this.x + ': </b><br/>';
+                                var symbol = ['<div class="circle">●</div>', '<div class="square">■</div>', '<div class="diamond">♦</div>', '<div class="triangle">▲</div>', '<div class="triangle">▼</div>'];
 
-                        formatter: function() {
-                            var id = '<div id="custom-tooltip" class="tooltip-left tooltip-right">';
-                            var block = id + "<div class='sidebar' >";
-                            var title = '<b class="title">' + this.x + ': </b><br/>';
-                            var symbol = ['<div class="circle">●</div>', '<div class="square">■</div>', '<div class="diamond">♦</div>', '<div class="triangle">▲</div>', '<div class="triangle">▼</div>'];
+                                var content = block + "<div class='title'>&nbsp;</div>";
 
-                            var content = block + "<div class='title'>&nbsp;</div>";
+                                // symbols
+                                $.each(this.points, function(i, val) {
+                                    content += symbol[i];
+                                });
 
-                            // symbols
-                            $.each(this.points, function(i, val) {
-                                content += symbol[i];
-                            });
+                                content += "</div>";
+                                content += "<div class='mainText'>";
+                                content += title;
 
-                            content += "</div>";
-                            content += "<div class='mainText'>";
-                            content += title;
+                                // series names and values
+                                $.each(this.points, function(i, val) {
+                                    content += '<div class="tiptext"><i>' + val.point.series.chart.series[i].name + "</i><br/><b>Value: " + Highcharts.numberFormat(val.y, 2) + '</b></div>';
+                                });
+                                content += "</div>";
+                                return content;
+                            },
 
-                            // series names and values
-                            $.each(this.points, function(i, val) {
-                                content += '<div class="tiptext"><i>' + val.point.series.chart.series[i].name + "</i><br/><b>Value: " + Highcharts.numberFormat(val.y, 2) + '</b></div>';
-                            });
-                            content += "</div>";
-                            return content;
-                        },
+                            backgroundColor: 'rgba(255, 255, 255, 0)',
+                            borderWidth: 0,
+                            borderColor: 'rgba(255, 255, 255, 0)',
+                            shadow: false,
+                            useHTML: true
 
-                        backgroundColor: 'rgba(255, 255, 255, 0)',
-                        borderWidth: 0,
-                        borderColor: 'rgba(255, 255, 255, 0)',
-                        shadow: false,
-                        useHTML: true
-
-                    }
-                },
-
-                series: [{
-                    name: $scope.chart.name,
-                    data: $scope.graphValue[1],
-                    marker: {
-                        symbol: "circle",
-                        states: {
-                            hover: {
-                                fillColor: '#007dc3',
-                                radiusPlus: 0,
-                                lineWidthPlus: 0
-                            }
                         }
                     },
-                    dashStyle: 'Solid',
-                }]
-            };
-            return data;
-        }
+
+                    series: [{
+                        name: $scope.chart.name,
+                        data: $scope.graphValue[1],
+                        marker: {
+                            symbol: "circle",
+                            states: {
+                                hover: {
+                                    fillColor: '#007dc3',
+                                    radiusPlus: 0,
+                                    lineWidthPlus: 0
+                                }
+                            }
+                        },
+                        dashStyle: 'Solid',
+                    }]
+                };
+                return data;
+            }
             // the button handler
-            $('#imgExp').click(function() {
-                var chartExp = $('#chart_prices').highcharts();
-                chartExp.exportChart();
-            });
+        $('#imgExp').click(function() {
+            var chartExp = $('#chart_prices').highcharts();
+            chartExp.exportChart();
+        });
     }
 ]);
