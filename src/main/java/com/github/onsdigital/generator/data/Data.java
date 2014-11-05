@@ -1,14 +1,19 @@
 package com.github.onsdigital.generator.data;
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
@@ -37,6 +42,50 @@ public class Data implements Iterable<Timeseries> {
 	private static Map<String, Set<Timeseries>> datasets = new TreeMap<>();
 	private static Map<String, Timeseries> timeserieses = new HashMap<>();
 	private static Set<String> mappedDatasets = new HashSet<>();
+	static Map<String, String> years = new TreeMap<>();
+	static Map<String, String> months = new TreeMap<>();
+	static Map<String, String> quarters = new TreeMap<>();
+	private static Map<String, String> timeseriesDates = new TreeMap<>();
+
+	public static void addDateOption(String date) {
+		try {
+			String key = toKey(date);
+			String year = "\\d{4}";
+			String month = "\\d{4} \\w{3}";
+			String quarter = "\\d{4} \\w[1-4]";
+			if (key.matches(year)) {
+				key = key + "-0";
+				years.put(key, date);
+			} else if (key.matches(month)) {
+				Date parsed = new SimpleDateFormat("yyyy MMM").parse(key);
+				Calendar calendar = Calendar.getInstance(Locale.UK);
+				calendar.setTime(parsed);
+				key = new SimpleDateFormat("yyyy-MM").format(calendar.getTime());
+				months.put(key, date);
+			} else if (key.matches(quarter)) {
+				Date parsed = new SimpleDateFormat("yyyy").parse(key);
+				Calendar calendar = Calendar.getInstance(Locale.UK);
+				calendar.setTime(parsed);
+				if (key.endsWith("1")) {
+					calendar.set(Calendar.MONTH, Calendar.JANUARY);
+				} else if (key.endsWith("2")) {
+					calendar.set(Calendar.MONTH, Calendar.APRIL);
+				} else if (key.endsWith("3")) {
+					calendar.set(Calendar.MONTH, Calendar.JULY);
+				} else if (key.endsWith("4")) {
+					calendar.set(Calendar.MONTH, Calendar.OCTOBER);
+				} else {
+					throw new RuntimeException("Didn't detect quarter in " + key);
+				}
+				key = new SimpleDateFormat("yyyy-MM").format(calendar.getTime());
+				quarters.put(key, date);
+			} else {
+				Data.timeseriesDates.put(key, date);
+			}
+		} catch (ParseException e) {
+			throw new RuntimeException("Error parsing date " + date, e);
+		}
+	}
 
 	/**
 	 * Sets the taxonomy folder structure and triggers parsing of CSV data.
@@ -66,6 +115,14 @@ public class Data implements Iterable<Timeseries> {
 		AlphaContentCSV.parse();
 		DatasetMappingsCSV.parse();
 		System.out.println("Parsing complete.");
+		System.out.println("Years:");
+		System.out.println(years);
+		System.out.println("Quarters:");
+		System.out.println(quarters);
+		System.out.println("Months:");
+		System.out.println(months);
+		System.out.println("Others:");
+		System.out.println(timeseriesDates);
 	}
 
 	/**

@@ -2,7 +2,6 @@ package com.github.onsdigital.generator.data;
 
 import java.io.IOException;
 import java.text.DecimalFormat;
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -51,7 +50,7 @@ class NonCdidCSV {
 					// System.out.println("Sheet " + sheetIndex + ", column " +
 					// c + " - new timeseries " + cdid);
 					timeseries = Data.addTimeseries(cdid, null);
-					timeseries.data = new ArrayList<>();
+					timeseries.data = new HashSet<>();
 				}
 
 				// Read the values from this column:

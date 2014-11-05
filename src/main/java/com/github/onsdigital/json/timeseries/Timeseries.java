@@ -2,7 +2,9 @@ package com.github.onsdigital.json.timeseries;
 
 import java.net.URI;
 import java.util.ArrayList;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
 
 import org.apache.commons.lang3.StringUtils;
 
@@ -35,7 +37,10 @@ public class Timeseries extends DataItem implements Comparable<Timeseries> {
 	public String note;
 
 	// The nectar, the goodness, the very juice of the fireflower: data.
-	public List<TimeseriesValue> data = new ArrayList<>();
+	public Set<TimeseriesValue> data = new LinkedHashSet<>();
+	public Set<TimeseriesValue> years = new LinkedHashSet<>();
+	public Set<TimeseriesValue> quarters = new LinkedHashSet<>();
+	public Set<TimeseriesValue> months = new LinkedHashSet<>();
 
 	// The URI of this timeseries.
 	// This is useful when it is referenced from more than one place in the

@@ -30,7 +30,7 @@ public class CSVGenerator {
 	}
 
 	public void write(OutputStream output) throws IOException {
-		try(CSVWriter writer = new CSVWriter(new OutputStreamWriter(output, Charset.forName("UTF8")), CSV_DELIMTER)) {
+		try (CSVWriter writer = new CSVWriter(new OutputStreamWriter(output, Charset.forName("UTF8")), CSV_DELIMTER)) {
 			generateCsvHeaders(writer);
 			generateCsvRows(writer);
 		} catch (Exception e) {
@@ -108,7 +108,7 @@ public class CSVGenerator {
 		for (Timeseries timeseries : timeseriesList) {
 			if (timeseries.data == null) {
 				// Temporary fix for timeseries with no data
-				timeseries.data = Collections.emptyList();
+				timeseries.data = Collections.emptySet();
 			}
 			iterators.add(timeseries.data.iterator());
 		}
