@@ -12,7 +12,7 @@ import com.github.onsdigital.json.Dataset;
 import com.github.onsdigital.json.DownloadSection;
 
 public class DatasetContent {
-
+	static final String resourceName = "/Alpha content master.xlsx";
 	private static Csv rows;
 
 	public static List<Dataset> getDatasets(Folder folder) throws IOException {
@@ -51,8 +51,8 @@ public class DatasetContent {
 	}
 
 	private static void parseCsv() throws IOException {
-		rows = new Csv("/Alpha dataset content.csv");
-		rows.read();
+		rows = new Csv(resourceName);
+		rows.read(1);
 		rows.getHeadings();
 		// String[] headings = { "Theme", "Level 2", "Level 3", "Name", "Key",
 		// "Units", "CDID", "Path", "Link", "Notes" };
