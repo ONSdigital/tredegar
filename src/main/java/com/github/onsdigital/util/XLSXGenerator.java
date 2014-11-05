@@ -3,7 +3,6 @@ package com.github.onsdigital.util;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
@@ -106,11 +105,11 @@ public class XLSXGenerator {
 	private List<Iterator<TimeseriesValue>> getIterators(List<Timeseries> timeseriesList) {
 		List<Iterator<TimeseriesValue>> iterators = new ArrayList<Iterator<TimeseriesValue>>();
 		for (Timeseries timeseries : timeseriesList) {
-			if (timeseries.data == null) {
-				// Temporary fix for timeseries with no data
-				timeseries.data = Collections.emptySet();
-			}
-			iterators.add(timeseries.data.iterator());
+			List<TimeseriesValue> values = new ArrayList<TimeseriesValue>();
+			values.addAll(timeseries.years);
+			values.addAll(timeseries.quarters);
+			values.addAll(timeseries.months);
+			iterators.add(values.iterator());
 		}
 		return iterators;
 	}

@@ -11,11 +11,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Collection;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedHashSet;
-import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.concurrent.ExecutorService;
@@ -53,50 +48,54 @@ public class DataCSV {
 
 		readManuallyEditedCsv();
 
-		// Now sort and arrange all the data:
-		for (Timeseries timeseries : new Data()) {
-
-			// Get the values:
-			Map<String, TimeseriesValue> dataMap = new HashMap<>();
-			for (TimeseriesValue value : timeseries.data) {
-				dataMap.put(StringUtils.lowerCase(StringUtils.trim(value.date)), value);
-			}
-
-			// Now [re]initialise all the sets:
-			timeseries.data = new LinkedHashSet<>();
-			timeseries.years = new LinkedHashSet<>();
-			timeseries.quarters = new LinkedHashSet<>();
-			timeseries.months = new LinkedHashSet<>();
-
-			// Add the keys in order, from years to quarters, to months:
-			// System.out.println("Sorting years..");
-			for (Entry<String, String> year : Data.years.entrySet()) {
-				String key = StringUtils.lowerCase(StringUtils.trim(year.getValue()));
-				if (dataMap.containsKey(key)) {
-					TimeseriesValue value = dataMap.get(key);
-					timeseries.data.add(value);
-					timeseries.years.add(value);
-				}
-			}
-			// System.out.println("Sorting quarters..");
-			for (Entry<String, String> quarter : Data.quarters.entrySet()) {
-				String key = StringUtils.lowerCase(StringUtils.trim(quarter.getValue()));
-				if (dataMap.containsKey(key)) {
-					TimeseriesValue value = dataMap.get(key);
-					timeseries.data.add(value);
-					timeseries.quarters.add(value);
-				}
-			}
-			// System.out.println("Sorting months..");
-			for (Entry<String, String> month : Data.months.entrySet()) {
-				String key = StringUtils.lowerCase(StringUtils.trim(month.getValue()));
-				if (dataMap.containsKey(key)) {
-					TimeseriesValue value = dataMap.get(key);
-					timeseries.data.add(value);
-					timeseries.months.add(value);
-				}
-			}
-		}
+		// // Now sort and arrange all the data:
+		// for (Timeseries timeseries : new Data()) {
+		//
+		// // Get the values:
+		// Map<String, TimeseriesValue> dataMap = new HashMap<>();
+		// for (TimeseriesValue value : timeseries.data) {
+		// dataMap.put(StringUtils.lowerCase(StringUtils.trim(value.date)),
+		// value);
+		// }
+		//
+		// // Now [re]initialise all the sets:
+		// timeseries.data = new LinkedHashSet<>();
+		// timeseries.years = new LinkedHashSet<>();
+		// timeseries.quarters = new LinkedHashSet<>();
+		// timeseries.months = new LinkedHashSet<>();
+		//
+		// // Add the keys in order, from years to quarters, to months:
+		// // System.out.println("Sorting years..");
+		// for (Entry<String, String> year : Data.years.entrySet()) {
+		// String key =
+		// StringUtils.lowerCase(StringUtils.trim(year.getValue()));
+		// if (dataMap.containsKey(key)) {
+		// TimeseriesValue value = dataMap.get(key);
+		// timeseries.data.add(value);
+		// timeseries.years.add(value);
+		// }
+		// }
+		// // System.out.println("Sorting quarters..");
+		// for (Entry<String, String> quarter : Data.quarters.entrySet()) {
+		// String key =
+		// StringUtils.lowerCase(StringUtils.trim(quarter.getValue()));
+		// if (dataMap.containsKey(key)) {
+		// TimeseriesValue value = dataMap.get(key);
+		// timeseries.data.add(value);
+		// timeseries.quarters.add(value);
+		// }
+		// }
+		// // System.out.println("Sorting months..");
+		// for (Entry<String, String> month : Data.months.entrySet()) {
+		// String key =
+		// StringUtils.lowerCase(StringUtils.trim(month.getValue()));
+		// if (dataMap.containsKey(key)) {
+		// TimeseriesValue value = dataMap.get(key);
+		// timeseries.data.add(value);
+		// timeseries.months.add(value);
+		// }
+		// }
+		// }
 	}
 
 	private static void readManuallyEditedCsv() throws IOException {
@@ -125,19 +124,21 @@ public class DataCSV {
 			}
 
 			// Check all the CDIDs in the header row:
-			int duplicates = 0;
+			// int duplicates = 0;
 			String[] header = csvReader.readNext();
-			System.out.println(file.getFileName() + " has " + header.length + " cells in the header row.");
+			// System.out.println(file.getFileName() + " has " + header.length +
+			// " cells in the header row.");
 			for (int i = 1; i < header.length; i++) {
 				Timeseries timeseries = Data.timeseries(header[i]);
 				if (timeseries == null) {
 					timeseries = Data.addTimeseries(header[i], name);
-					timeseries.data = new HashSet<>();
-				} else if (timeseries.data != null && timeseries.data.size() > 0 && !"MGSC".equalsIgnoreCase(header[i])) {
-					// Don't process this timeseries - it's a duplicate.
-					duplicates++;
-					header[i] = null;
 				}
+				// else if (timeseries.data != null && timeseries.data.size() >
+				// 0 && !"MGSC".equalsIgnoreCase(header[i])) {
+				// // Don't process this timeseries - it's a duplicate.
+				// duplicates++;
+				// header[i] = null;
+				// }
 				dataset.add(timeseries);
 			}
 
@@ -167,7 +168,7 @@ public class DataCSV {
 						TimeseriesValue timeseriesValue = new TimeseriesValue();
 						timeseriesValue.date = StringUtils.trim(date);
 						timeseriesValue.value = StringUtils.trim(value);
-						timeseries.data.add(timeseriesValue);
+						timeseries.add(timeseriesValue);
 						if ("mgsc".equalsIgnoreCase(cdid)) {
 							System.out.println(file.getFileName() + " mgsc: " + date + "\t" + value);
 						}
@@ -179,16 +180,17 @@ public class DataCSV {
 			for (int i = 1; i < header.length; i++) {
 				if (StringUtils.isNotBlank(header[i])) {
 					Timeseries timeseries = Data.timeseries(header[i]);
-					if (timeseries.data.size() == 0) {
+					if (timeseries.years.size() == 0 && timeseries.quarters.size() == 0 && timeseries.months.size() == 0) {
 						System.out.println(timeseries + " has no data.");
 					}
 				}
 			}
-			if (duplicates > 0) {
-				System.out.println(name + " contains " + dataset.size() + " timeseries (" + duplicates + " duplicates)");
-			} else {
-				System.out.println(name + " contains " + dataset.size() + " timeseries");
-			}
+			// if (duplicates > 0) {
+			// System.out.println(name + " contains " + dataset.size() +
+			// " timeseries (" + duplicates + " duplicates)");
+			// } else {
+			System.out.println(name + " contains " + dataset.size() + " timeseries");
+			// }
 		}
 	}
 
@@ -204,7 +206,6 @@ public class DataCSV {
 				// Iterate the paths in this directory:
 				for (Path item : stream) {
 					if (!StringUtils.equals(item.getFileName().toString(), "Timeseries data - MM23_CSDB_DS.csdb.csv")) {
-						System.out.println("Ohai, " + item.getFileName() + "!");
 						result.add(item);
 					}
 				}

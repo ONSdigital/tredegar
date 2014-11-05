@@ -544,7 +544,7 @@ public class TaxonomyGenerator {
 			// TODO: find a better way of handling breadcrumbs on timeseries
 			// pages.
 			timeseries.setBreadcrumb(t3);
-			if (timeseries.data.size() == 0) {
+			if (timeseries.months.size() == 0 && timeseries.quarters.size() == 0 && timeseries.years.size() == 0) {
 				noData.add(timeseries);
 			}
 

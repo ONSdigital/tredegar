@@ -50,7 +50,6 @@ class NonCdidCSV {
 					// System.out.println("Sheet " + sheetIndex + ", column " +
 					// c + " - new timeseries " + cdid);
 					timeseries = Data.addTimeseries(cdid, null);
-					timeseries.data = new HashSet<>();
 				}
 
 				// Read the values from this column:
@@ -68,6 +67,8 @@ class NonCdidCSV {
 							break data;
 
 						} else if (StringUtils.isNotEmpty(date) && StringUtils.isNotEmpty(figure)) {
+
+							Data.addDateOption(date);
 
 							TimeseriesValue timeseriesValue = new TimeseriesValue();
 
@@ -99,7 +100,7 @@ class NonCdidCSV {
 
 							timeseriesValue.date = date;
 							timeseriesValue.value = figure;
-							timeseries.data.add(timeseriesValue);
+							timeseries.add(timeseriesValue);
 						}
 					}
 				}
