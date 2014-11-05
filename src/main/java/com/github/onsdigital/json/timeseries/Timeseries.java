@@ -20,12 +20,12 @@ import com.github.onsdigital.json.TaxonomyHome;
 public class Timeseries extends DataItem implements Comparable<Timeseries> {
 
 	// Regexes (what might the plural be?)
-	static Pattern year = Pattern.compile("\\d{4}");
-	static Pattern yearEnd = Pattern.compile("ye \\w{3} \\d{2}");
-	static Pattern yearInterval = Pattern.compile("\\d{4}-\\d{2,4}");
-	static Pattern yearPair = Pattern.compile("\\d{4}/\\d{2}");
-	static Pattern month = Pattern.compile("\\d{4} \\w{3}");
-	static Pattern quarter = Pattern.compile("\\d{4} \\w[1-4]");
+	public static Pattern year = Pattern.compile("\\d{4}");
+	public static Pattern yearEnd = Pattern.compile("ye \\w{3} \\d{2}");
+	public static Pattern yearInterval = Pattern.compile("\\d{4}-\\d{2,4}");
+	public static Pattern yearPair = Pattern.compile("\\d{4}/\\d{2}");
+	public static Pattern month = Pattern.compile("\\d{4} \\w{3}");
+	public static Pattern quarter = Pattern.compile("\\d{4} \\w[1-4]");
 
 	// Spreadsheet headings
 	private String cdid;
