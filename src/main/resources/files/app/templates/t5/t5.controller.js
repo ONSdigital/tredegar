@@ -388,12 +388,10 @@
 
 
         function downloadXls() {
-            alert("Ahoy")
             download('xlsx');
         }
 
         function downloadCsv() {
-            alert("Ahoy")
             download('csv');
         }
 
