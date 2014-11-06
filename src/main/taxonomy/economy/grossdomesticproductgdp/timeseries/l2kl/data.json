@@ -721,7 +721,7 @@
   "months": [],
   "uri": "/economy/grossdomesticproductgdp/timeseries/l2kl",
   "relatedBulletins": [
-    "/economy/economicoutputandproductivity/bulletins/quarterlynationalaccounts"
+    "/economy/grossdomesticproductgdp/bulletins/grossdomesticproductpreliminaryestimate"
   ],
   "type": "timeseries",
   "name": "Agriculture, Forestry and Fishing",
@@ -736,8 +736,8 @@
     {
       "index": 0,
       "type": "home",
-      "name": "Economic Output and Productivity",
-      "fileName": "economicoutputandproductivity",
+      "name": "Gross Domestic Product (GDP)",
+      "fileName": "grossdomesticproductgdp",
       "breadcrumb": []
     }
   ]

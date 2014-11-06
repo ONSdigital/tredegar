@@ -71,7 +71,7 @@
         ctrl.chartVisible = true
         ctrl.tableVisible = false
         ctrl.renderChart = false
-
+        ctrl.tenYears
         ctrl.quarters = ['Q1', 'Q2', 'Q3', 'Q4']
         ctrl.months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 
@@ -102,10 +102,21 @@
             ctrl.chartData = filterValues()
             ctrl.chartConfig.series[0].data = ctrl.chartData
             ctrl.years = getYears()
+            ctrl.tenYears = tenYears(ctrl.years)
             ctrl.chartConfig.options.xAxis.tickInterval = tickInterval(ctrl.chartData.length);
 
             $log.debug("Chart:")
             $log.debug(ctrl.chartConfig)
+            $log.debug("10y = " + ctrl.tenYears)
+
+
+            function tenYears(array) {
+                if ((getLast(array) - getFirst(array)) < 10) {
+                    return false
+                } else {
+                    return true
+                }
+            }
 
             function tickInterval(length) {
                 var tick;
