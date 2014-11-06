@@ -47,6 +47,10 @@
                     templateUrl: 'app/templates/dataset/Dataset_Excel_Time_Series.html',
                     controller: "DatasetCtrl"
                 }).
+                when('/dataversions', {
+                    templateUrl: 'app/templates/dataversions/dataversions.html',
+                    controller: "DataversionsCtrl"
+                }).
                 when('/methodology', {
                     templateUrl: 'app/templates/methodology/methodology.html',
                     controller: 'MethodologyCtrl'

@@ -87,12 +87,13 @@
 		}
 		
 		function loadStatsBulletinHeadline(data) {
-			var statsBulletinPath = dataPath + data.statsBulletinHeadline
-			load(statsBulletinPath, function(bulletin) {
-				bulletin.url = data.statsBulletinHeadline
-				data.statsBulletinHeadlineData = bulletin
-				$log.debug('Loaded data.statsBulletinHeadlineData: ', statsBulletinPath, ' ', bulletin)
-			})
+			if (data.statsBulletinHeadline != null) {
+				var statsBulletinPath = dataPath + data.statsBulletinHeadline
+				load(statsBulletinPath, function(bulletin) {
+					bulletin.url = data.statsBulletinHeadline
+					data.statsBulletinHeadlineData = bulletin
+				})
+			}
 		}
 		
 		function loadStatsBulletins(data) {
@@ -101,9 +102,7 @@
 			for (var i = 0; i < bulletins.length; i++) {
 				var bulletin = bulletins[i]
 				var statsBulletinPath = dataPath + bulletin
-				$log.debug('statsBulletinPath: ' + statsBulletinPath)
 				load(statsBulletinPath, function(statsBulletin) {
-					$log.debug('Loaded stats bulletin: ', statsBulletinPath, ' ', statsBulletin)
 					data.statsBulletinData.push(statsBulletin)
 				})
 			}
@@ -115,9 +114,7 @@
 			for (var i = 0; i < datasets.length; i++) {
 				var dataset = datasets[i]
 				var datasetPath = dataPath + dataset
-				$log.debug('datasetPath: ' + datasetPath)
 				load(datasetPath, function(keyDataset) {
-					$log.debug('Loaded keyDataset: ', datasetPath, ' ', keyDataset)
 					data.keyDatasets.push(keyDataset)
 				})
 			}
