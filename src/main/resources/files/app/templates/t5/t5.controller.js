@@ -1,583 +1,555 @@
-angular.module('onsTemplates')
-    .controller('T5Ctrl', ['$scope', 'Downloader', 'Taxonomy',
-        function($scope, Downloader, Taxonomy) {
+(function() {
 
-            var t5 = this;
-            $scope.header = "Time Series";
-            $scope.sidebar = true;
-            $scope.sidebarUrl = "/app/templates/t5/t5sidebar.html";
+    angular.module('onsTemplates')
+        .controller('T5Controller', ['$scope', 'Downloader', 'Taxonomy', T5Controller])
+        .controller('ChartController', ['$scope', '$location', '$log', ChartController])
 
-            var data = $scope.taxonomy.data
-            data.relatedBulletinData = []
-            loadRelatedBulletins(data)
+    function T5Controller($scope, Downloader, Taxonomy) {
 
-            function downloadXls() {
-                download('xlsx');
-            }
+        var t5 = this;
+        $scope.header = "Time Series";
+        $scope.sidebar = true;
+        $scope.sidebarUrl = "/app/templates/t5/t5sidebar.html";
 
-            function downloadCsv() {
-                download('csv');
-            }
+        var data = $scope.taxonomy.data
+        data.relatedBulletinData = []
+        loadRelatedBulletins(data)
 
-            function download(type) {
-                var downloadRequest = {
-                    type: type
-                };
-                downloadRequest.uriList = [$scope.getPath()];
-                var fileName = $scope.getPage() + '.' + downloadRequest.type;
-                Downloader.downloadFile(downloadRequest, fileName);
-            }
-
-            function loadRelatedBulletins(data) {
-                var dataPath = '/data'
-                var bulletins = data.relatedBulletins;
-
-                if (bulletins != null) {
-                    for (var i = 0; i < bulletins.length; i++) {
-                        var bulletin = bulletins[i]
-                        var relatedBulletinPath = dataPath + bulletin
-                        Taxonomy.load(relatedBulletinPath, function(relatedBulletin) {
-                            console.log('Loaded related bulletin: ', relatedBulletinPath, ' ', relatedBulletin)
-                            data.relatedBulletinData.push(relatedBulletin)
-                        })
-                    }
-                }
-            }
-
-            angular.extend(t5, {
-                downloadXls: downloadXls,
-                downloadCsv: downloadCsv
-            });
-
-        }
-    ])
-
-.controller('chartController', ['$scope', '$location',
-    function($scope, $location) {
-        var data = $scope.taxonomy.data;
-        var categoriesY = [];
-        var categoriesYnum = [];
-        var seriesDataY = [];
-        var categoriesQ = [];
-        var categoriesQnum = [];
-        var seriesDataQ = [];
-        var categoriesM = [];
-        var categoriesMnum = [];
-        var seriesDataM = [];
-        var currentSorter;
-        var currentCategories;
-        var currentSeries;
-        var reY = new RegExp('^[0-9]{4}$');
-        var reQ = new RegExp('^[0-9]{4}.[Q1-4]{2}$');
-        var reM = new RegExp('^[0-9]{4}.[A-Z]{3}$');
-
-        $scope.chart = data;
-
-        makeArray($scope.chart.data);
-
-        // Year by default
-        currentCategories = categoriesY;
-        currentSeries = seriesDataY;
-        currentSorter = categoriesYnum;
-
-        $scope.graphValue = makeGraphValue(currentCategories, currentSeries, currentSorter);
-
-        function makeGraphValue(x, y, sorter) {
-            return [x, y, sorter];
+        function downloadXls() {
+            download('xlsx');
         }
 
-        $scope.tableValue = makeTableObj($scope.graphValue);
+        function downloadCsv() {
+            download('csv');
+        }
 
-        //Takes data from json file and transforms it in an array to be read by Highcharts
-        function makeArray(jsonData) {
-            // Will make the buttons for y,q,m appear or not
-            $scope.hasYData = false;
-            $scope.hasQData = false;
-            $scope.hasMData = false;
-            for (var i = 0; i < jsonData.length; i++) {
-                if (reY.test(jsonData[i].date)) {
-                    categoriesY.push(jsonData[i].date);
-                    categoriesYnum.push(Number(jsonData[i].date));
-                    seriesDataY.push(Number(jsonData[i].value));
-                    $scope.hasYData = true;
-                }
-                if (reQ.test(jsonData[i].date)) {
-                    categoriesQ.push(jsonData[i].date);
-                    categoriesQnum.push(QtoNum(jsonData[i].date));
-                    seriesDataQ.push(Number(jsonData[i].value));
-                    $scope.hasQData = true;
-                }
-                if (reM.test(jsonData[i].date)) {
-                    categoriesM.push(jsonData[i].date);
-                    categoriesMnum.push(MtoNum(jsonData[i].date));
-                    seriesDataM.push(Number(jsonData[i].value));
-                    $scope.hasMData = true;
+        function download(type) {
+            var downloadRequest = {
+                type: type
+            };
+            downloadRequest.uriList = [$scope.getPath()];
+            var fileName = $scope.getPage() + '.' + downloadRequest.type;
+            Downloader.downloadFile(downloadRequest, fileName);
+        }
+
+        function loadRelatedBulletins(data) {
+            var dataPath = '/data'
+            var bulletins = data.relatedBulletins;
+
+            if (bulletins != null) {
+                for (var i = 0; i < bulletins.length; i++) {
+                    var bulletin = bulletins[i]
+                    var relatedBulletinPath = dataPath + bulletin
+                    Taxonomy.load(relatedBulletinPath, function(relatedBulletin) {
+                        console.log('Loaded related bulletin: ', relatedBulletinPath, ' ', relatedBulletin)
+                        data.relatedBulletinData.push(relatedBulletin)
+                    })
                 }
             }
         }
 
-        /* ****************************************
-        WARNING!!!!
-        THIS WILL FAIL IF THE DATA FORMAT CHANGES
-        ******************************************* */
-        // helper to sort table by quarter
-        function QtoNum(quarter) {
-            return Number(quarter.replace(' Q', '.'));
+        angular.extend(t5, {
+            downloadXls: downloadXls,
+            downloadCsv: downloadCsv
+        });
+
+    }
+
+
+    function ChartController($scope, $location, $log) {
+        var ctrl = this
+        ctrl.timeseries = $scope.taxonomy.data
+        ctrl.chartConfig = getChart()
+        ctrl.showYearly = false
+        ctrl.showMonthly = false
+        ctrl.showQuarterly = false
+        ctrl.activeChart = '' //years, months , quarters
+        ctrl.timePeriod = 'A' //All by default
+        ctrl.chartData = []
+        ctrl.years = []
+        ctrl.showCustomFilters = false
+        ctrl.chartVisible = true
+        ctrl.tableVisible = false
+
+        ctrl.quarters = ['Q1', 'Q2', 'Q3', 'Q4']
+        ctrl.months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+
+        initialize()
+        changeChartType(ctrl.activeChart)
+
+        function changeChartType(chartType) {
+            $log.debug("Changing chart type to " + chartType)
+            ctrl.activeChart = chartType
+            changeTimePeriod('A') //List all data on chart data change
         }
 
 
-        /* ****************************************
-        WARNING!!!!
-        THIS WILL FAIL IF THE DATA FORMAT CHANGES
-        ******************************************* */
-        // helper to sort table by month
-        function MtoNum(months) {
-            var month = months.match(/ [A-Z]{3}/i);
-            if (month[0].toUpperCase() === ' JAN') {
-                return Number(months.replace(month[0], '.01'));
-            }
-            if (month[0].toUpperCase() === ' FEB') {
-                return Number(months.replace(month[0], '.02'));
-            }
-            if (month[0].toUpperCase() === ' MAR') {
-                return Number(months.replace(month[0], '.03'));
-            }
-            if (month[0].toUpperCase() === ' APR') {
-                return Number(months.replace(month[0], '.04'));
-            }
-            if (month[0].toUpperCase() === ' MAY') {
-                return Number(months.replace(month[0], '.05'));
-            }
-            if (month[0].toUpperCase() === ' JUN') {
-                return Number(months.replace(month[0], '.06'));
-            }
-            if (month[0].toUpperCase() === ' JUL') {
-                return Number(months.replace(month[0], '.07'));
-            }
-            if (month[0].toUpperCase() === ' AUG') {
-                return Number(months.replace(month[0], '.08'));
-            }
-            if (month[0].toUpperCase() === ' SEP') {
-                return Number(months.replace(month[0], '.09'));
-            }
-            if (month[0].toUpperCase() === ' OCT') {
-                return Number(months.replace(month[0], '.10'));
-            }
-            if (month[0].toUpperCase() === ' NOV') {
-                return Number(months.replace(month[0], '.11'));
-            }
-            if (month[0].toUpperCase() === ' DEC') {
-                return Number(months.replace(month[0], '.12'));
-            }
+        function changeTimePeriod(timePeriod) {
+
+            timePeriod = timePeriod || 'Custom'
+            $log.debug("Changing time period to " + timePeriod)
+
+            ctrl.timePeriod = timePeriod
+            prepareData()
         }
 
-        // Creates an object for angular table control from the graph arrays
-        function makeTableObj(arrayChart) {
-            var key = arrayChart[0];
-            var values = arrayChart[1];
-            var number = arrayChart[2];
-            var obj = [];
-            var x = [];
-            for (var i = 0; i < key.length; i++) {
-                obj[0] = key[i];
-                obj[1] = values[i];
-                obj[2] = number[i];
-                x.push({
-                    "date": obj[0],
-                    "values": obj[1],
-                    "number": obj[2]
-                });
-            }
-            return x;
-        }
+        function prepareData() {
+            resolveFilters()
+            ctrl.chartData = filterValues()
+            ctrl.chartConfig.series[0].data = ctrl.chartData
+            ctrl.years = getYears()
+            ctrl.chartConfig.options.xAxis.tickInterval = tickInterval(ctrl.chartData.length);
 
-        $scope.changeChartRange = function() {
-            var from = $scope.chartDataFrom0 + $scope.chartDataFrom1;
-            var to = $scope.chartDataTo0 + $scope.chartDataTo1;
-                        alert("0: " + $scope.chartDataFrom0);
-                        alert("1: " + $scope.chartDataFrom1);
-            var w;
-            var x;
-            var y;
-            var categoriesRange = [];
-            var seriesRange = [];
-            var sorterRange = [];
-            for (var i = 0; i < currentCategories.length; i++) {
-                w = currentSorter[i];
-                x = currentCategories[i];
-                y = currentSeries[i];
-                if (from && to) {
-                    if (w >= from && w <= to) {
-                        categoriesRange.push(x);
-                        seriesRange.push(y);
-                        sorterRange.push(w);
-                    }
-                } else if (from) {
-                    if (w >= from) {
-                        categoriesRange.push(x);
-                        seriesRange.push(y);
-                        sorterRange.push(w);
-                    }
-                } else if (to) {
-                    if (w <= to) {
-                        categoriesRange.push(x);
-                        seriesRange.push(y);
-                        sorterRange.push(w);
-                    }
+            $log.debug("Chart:")
+            $log.debug(ctrl.chartConfig)
+
+            function tickInterval(length) {
+                var tick;
+                if (length <= 20) {
+                    return 1;
+                } else if (length <= 80) {
+                    return 4;
+                } else if (length <= 240) {
+                    return 12;
+                } else if (length <= 480) {
+                    return 48;
+                } else if (length <= 960) {
+                    return 96;
                 } else {
-                    categoriesRange.push(x);
-                    seriesRange.push(y);
-                    sorterRange.push(w);
+                    return 192;
                 }
             }
-            $scope.graphValue = makeGraphValue(categoriesRange, seriesRange, sorterRange);
-            $scope.chartData.options.xAxis.categories = $scope.graphValue[0];
-            $scope.chartData.options.xAxis.tickInterval = tickInterval(categoriesRange.length);
-            $scope.chartData.series[0].data = $scope.graphValue[1];
-            $scope.tableValue = makeTableObj($scope.graphValue);
-        };
 
+            function filterValues() {
+                var data = getAllValues()
+                var current
+                var i
+                var filteredValues = []
+                var from
+                var to
 
-        $scope.chartData = getData();
-        // year by default
-        $scope.chartData.options.xAxis.tickInterval = tickInterval(categoriesY.length);
+                from = ctrl.fromYear + (ctrl.fromQuarter ? quarterVal(ctrl.fromQuarter) : '') + (ctrl.fromMonth ? monthVal(ctrl.fromMonth) : '')
+                to = ctrl.toYear + (ctrl.toQuarter ? quarterVal(ctrl.toQuarter) : '') + (ctrl.toMonth ? monthVal(ctrl.toMonth) : '')
+                from = +from //Cast to number
+                to = +to
+                $log.debug("From: ", from)
+                $log.debug("To: ", to)
+                for (i = 0; i < data.length; i++) {
+                    current = data[i]
+                    if (current.value >= from && current.value <= to) {
+                        filteredValues.push(current)
+                    }
 
-        //If true shows graph, else table.
-        $scope.chartTable = true;
+                }
+                return filteredValues
+            }
 
-        $scope.changeChartType = function(type) {
-            if (type === "line") {
-                $scope.chartTable = true;
-            }
-            if (type === "table") {
-                $scope.chartTable = false;
-            }
-        };
+            function resolveFilters() {
+                var first = getFirst(getAllValues())
+                var last = getLast(getAllValues())
+                var now = new Date()
+                var currentYear = now.getFullYear()
+                var tenYearsAgo = currentYear - 10
+                var fiveYearsAgo = currentYear - 5
+                switch (ctrl.timePeriod) {
 
-        $scope.backToAll = function() {
-            if ($scope.yqm === 0) {
-                return $scope.changeTime('year');
-            }
-            if ($scope.yqm === 1) {
-                return $scope.changeTime('quarter');
-            }
-            if ($scope.yqm === 2) {
-                return $scope.changeTime('month');
-            }
-        };
+                    case 'A': //All
+                        ctrl.fromYear = first.year
+                        ctrl.fromMonth = first.month ? first.month.slice(0, 3) : first.month
+                        ctrl.fromQuarter = first.quarter
+                        break
+                    case '10':
+                        if (tenYearsAgo < first.year) { //Use first if within 10 years
+                            ctrl.fromYear = first.year
+                            ctrl.fromMonth = first.month ? first.month.slice(0, 3) : first.month
+                            ctrl.fromQuarter = first.quarter
+                        } else {
+                            ctrl.fromYear = '' + tenYearsAgo
+                            ctrl.fromQuarter = isActive('quarters') ? 'Q1' : undefined
+                            ctrl.fromMonth = isActive('months') ? 'Jan' : undefined
+                        }
+                        break
+                    case '5':
+                        if (fiveYearsAgo < first.year) { //Use first if within 10 years
+                            ctrl.fromYear = first.year
+                            ctrl.fromMonth = first.month ? first.month.slice(0, 3) : first.month
+                            ctrl.fromQuarter = first.quarter
+                        } else {
+                            ctrl.fromYear = '' + fiveYearsAgo
+                            ctrl.fromQuarter = isActive('quarters') ? 'Q1' : undefined
+                            ctrl.fromMonth = isActive('months') ? 'Jan' : undefined
+                        }
+                        break
+                    case 'Custom':
+                        return
+                    default:
 
-        //year (0, by Default), quarter (1) or month (2)
-        $scope.yqm = 1;
-        $scope.changeTime = function(time) {
-            if (time === 'year') {
-                $scope.graphValue = makeGraphValue(categoriesY, seriesDataY, categoriesYnum);
-                $scope.tableValue = makeTableObj($scope.graphValue);
-                $scope.yqm = 0;
-                $scope.chartData.options.xAxis.categories = $scope.graphValue[0];
-                $scope.chartData.options.xAxis.tickInterval = tickInterval(categoriesY.length);
-                $scope.chartData.series[0].data = $scope.graphValue[1];
-                currentCategories = categoriesY;
-                currentSeries = seriesDataY;
-                currentSorter = categoriesYnum;
-            }
-            if (time === 'quarter') {
-                $scope.graphValue = makeGraphValue(categoriesQ, seriesDataQ, categoriesQnum);
-                $scope.tableValue = makeTableObj($scope.graphValue);
-                $scope.yqm = 1;
-                $scope.chartData.options.xAxis.categories = $scope.graphValue[0];
-                $scope.chartData.options.xAxis.tickInterval = tickInterval(categoriesQ.length);
-                $scope.chartData.series[0].data = $scope.graphValue[1];
-                currentCategories = categoriesQ;
-                currentSeries = seriesDataQ;
-                currentSorter = categoriesQnum;
-            }
-            if (time === 'month') {
-                $scope.graphValue = makeGraphValue(categoriesM, seriesDataM, categoriesMnum);
-                $scope.tableValue = makeTableObj($scope.graphValue);
-                $scope.yqm = 2;
-                $scope.chartData.options.xAxis.categories = $scope.graphValue[0];
-                $scope.chartData.options.xAxis.tickInterval = tickInterval(categoriesM.length);
-                $scope.chartData.series[0].data = $scope.graphValue[1];
-                currentCategories = categoriesM;
-                currentSeries = seriesDataM;
-                currentSorter = categoriesMnum;
-            }
-        };
+                }
 
-        $scope.separateQM = function() {
-            var monthOpt = [{
-                name: "JAN",
-                value: 0.01
-            }, {
-                name: "FEB",
-                value: 0.02
-            }, {
-                name: "MAR",
-                value: 0.03
-            }, {
-                name: "APR",
-                value: 0.04
-            }, {
-                name: "MAY",
-                value: 0.05
-            }, {
-                name: "JUN",
-                value: 0.06
-            }, {
-                name: "JUL",
-                value: 0.07
-            }, {
-                name: "AUG",
-                value: 0.08
-            }, {
-                name: "SEP",
-                value: 0.09
-            }, {
-                name: "OCT",
-                value: 0.1
-            }, {
-                name: "NOV",
-                value: 0.11
-            }, {
-                name: "DEC",
-                value: 0.12
-            }];
-
-            var quarterOpt = [{
-                name: "Q1",
-                value: 0.1
-            }, {
-                name: "Q2",
-                value: 0.2
-            }, {
-                name: "Q3",
-                value: 0.3
-            }, {
-                name: "Q4",
-                value: 0.4
-            }];
-
-            var yearOpt = categoriesYnum;
-            if ($scope.yqm === 0) {
-                return [yearOpt, yearOpt];
+                ctrl.toYear = last.year
+                ctrl.toMonth = last.month ? last.month.slice(0, 3) : last.month
+                ctrl.toQuarter = last.quarter
             }
-            if ($scope.yqm === 1) {
-                return [yearOpt, quarterOpt];
-            }
-            if ($scope.yqm === 2) {
-                return [yearOpt, monthOpt];
-            }
-        };
-
-        console.log($scope.separateQM()[1]);
-
-        $scope.chartData0 = $scope.separateQM()[0];
-        $scope.chartData1 = $scope.separateQM()[1];
-        // $scope.chartDataFrom = function(value1, value2) {
-        //     value1 = $scope.chartDataFrom0;
-        //     value2 = $scope.chartDataFrom1.value;
-        //     return (value1 + value2);
-        // };
-
-        // $scope.chartDataTo = function(value1, value2) {
-        //     value1 = $scope.chartDataTo0;
-        //     value2 = $scope.chartDataTo1.value;
-        //     return (value1 + value2);
-        // };
-
-        //Defines the intervals in xAxis according to data
-        function tickInterval(categories) {
-            var tick;
-            if (categories <= 20) {
-                tick = 1;
-            }
-            if (categories > 20 && categories <= 80) {
-                tick = 4;
-            }
-            if (categories > 80) {
-                tick = 12;
-            }
-            if (categories > 240) {
-                tick = 48;
-            }
-            if (categories > 480) {
-                tick = 96;
-            }
-            if (categories > 960) {
-                tick = 192;
-            }
-            return tick;
         }
 
-        function getData() {
-                var data = {
-                    options: {
-                        chart: {
-                            type: 'line',
-                        },
-                        colors: ['#007dc3', '#409ed2', '#7fbee1', '#007dc3', '#409ed2', '#7fbee1'],
 
-                        title: {
-                            text: ''
-                        },
-                        subtitle: {
-                            text: ''
-                        },
-                        navigation: {
-                            buttonOptions: {
-                                enabled: false
-                            }
-                        },
-                        xAxis: {
-                            categories: $scope.graphValue[0],
-                            // tickInterval: 1,
-                            labels: {
-                                formatter: function() {
-                                    var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-                                    var response = "";
-                                    if (w < 768) {
-                                        if (this.isFirst) {
-                                            count = 0;
-                                        }
-                                        if (count % 3 === 0) {
-                                            response = this.value;
-                                        }
-                                        count++;
-                                    } else {
-                                        response = this.value;
-                                    }
-                                    return response;
-                                },
-                            },
-                            tickmarkPlacement: 'on'
-                        },
-                        yAxis: {
-                            title: {
-                                text: $scope.chart.units
-                            }
-                        },
+        function toggleCustomFilters() {
+            ctrl.showCustomFilters = !ctrl.showCustomFilters
+        }
 
-                        credits: {
-                            enabled: false
-                        },
+        function isActive(chartType) {
+            return chartType === ctrl.activeChart
+        }
 
-                        plotOptions: {
-                            series: {
-                                shadow: false,
-                                states: {
-                                    hover: {
-                                        enabled: true,
-                                        shadow: false,
-                                        lineWidth: 3,
-                                        lineWidthPlus: 0,
-                                        marker: {
-                                            height: 0,
-                                            width: 0,
-                                            halo: false,
-                                            enabled: true,
-                                            fillColor: null,
-                                            radiusPlus: null,
-                                            lineWidth: 3,
-                                            lineWidthPlus: 0
-                                        }
-                                    }
-                                }
-                            }
-                        },
-                        tooltip: {
-                            shared: true,
-                            width: '150px',
-                            crosshairs: {
-                                width: 2,
-                                color: '#f37121'
-                            },
-                            positioner: function(labelWidth, labelHeight, point) {
-                                var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-                                var points = {
-                                    x: 30,
-                                    y: 42
-                                };
-                                var tooltipX, tooltipY;
-                                var chart = Highcharts.charts[Highcharts.charts.length - 1];
-                                if (w > 768) {
 
-                                    if (point.plotX + labelWidth > chart.plotWidth) {
-                                        tooltipX = point.plotX + chart.plotLeft - labelWidth - 20;
-                                        $("#custom-tooltip").removeClass('tooltip-left');
-                                    } else {
-                                        tooltipX = point.plotX + chart.plotLeft + 20;
-                                        $("#custom-tooltip").removeClass('tooltip-right');
-                                    }
-
-                                    tooltipY = 50;
-                                    points = {
-                                        x: tooltipX,
-                                        y: tooltipY
-                                    };
-                                } else {
-                                    $("#custom-tooltip").removeClass('tooltip-left');
-                                    $("#custom-tooltip").removeClass('tooltip-right');
-                                }
-
-                                return points;
-                            },
-
-                            formatter: function() {
-                                var id = '<div id="custom-tooltip" class="tooltip-left tooltip-right">';
-                                var block = id + "<div class='sidebar' >";
-                                var title = '<b class="title">' + this.x + ': </b><br/>';
-                                var symbol = ['<div class="circle">●</div>', '<div class="square">■</div>', '<div class="diamond">♦</div>', '<div class="triangle">▲</div>', '<div class="triangle">▼</div>'];
-
-                                var content = block + "<div class='title'>&nbsp;</div>";
-
-                                // symbols
-                                $.each(this.points, function(i, val) {
-                                    content += symbol[i];
-                                });
-
-                                content += "</div>";
-                                content += "<div class='mainText'>";
-                                content += title;
-
-                                // series names and values
-                                $.each(this.points, function(i, val) {
-                                    content += '<div class="tiptext"><i>' + val.point.series.chart.series[i].name + "</i><br/><b>Value: " + Highcharts.numberFormat(val.y, 2) + '</b></div>';
-                                });
-                                content += "</div>";
-                                return content;
-                            },
-
-                            backgroundColor: 'rgba(255, 255, 255, 0)',
-                            borderWidth: 0,
-                            borderColor: 'rgba(255, 255, 255, 0)',
-                            shadow: false,
-                            useHTML: true
-
-                        }
-                    },
-
-                    series: [{
-                        name: $scope.chart.name,
-                        data: $scope.graphValue[1],
-                        marker: {
-                            symbol: "circle",
-                            states: {
-                                hover: {
-                                    fillColor: '#007dc3',
-                                    radiusPlus: 0,
-                                    lineWidthPlus: 0
-                                }
-                            }
-                        },
-                        dashStyle: 'Solid',
-                    }]
-                };
-                return data;
+        function showTable() {
+            if (ctrl.tableVisible) {
+                return
             }
-            // the button handler
+
+            ctrl.tableVisible = true
+            ctrl.chartVisible = false
+        }
+
+        function showChart() {
+            if (ctrl.chartVisible) {
+                return
+            }
+            ctrl.chartVisible = true
+            ctrl.tableVisible = false
+        }
+
+        function getAllValues() {
+            return ctrl.timeseries[ctrl.activeChart].values
+        }
+
+        function getYears() {
+            return ctrl.timeseries[ctrl.activeChart].years
+        }
+
+        //Initialize controller and configuration
+        function initialize() {
+            resolveChartTypes()
+            ctrl.chartConfig.series[0].name = ctrl.timeseries.name
+            prepareData()
+
+            function resolveChartTypes() {
+                var data = ctrl.timeseries
+                ctrl.showYearly = isNotEmpty(data.years)
+                ctrl.showMonthly = isNotEmpty(data.months)
+                ctrl.showQuarterly = isNotEmpty(data.quarters)
+
+
+                if (ctrl.showMonthly) {
+                    ctrl.activeChart = 'months'
+                    data.months = formatData(data.months)
+                }
+
+                if (ctrl.showQuarterly) {
+                    ctrl.activeChart = 'quarters'
+                    data.quarters = formatData(data.quarters)
+
+                }
+
+                if (ctrl.showYearly) {
+                    ctrl.activeChart = 'years'
+                    data.years = formatData(data.years)
+                }
+
+
+            }
+
+            //Format data into high charts compatible format
+            function formatData(timeseriesValues) {
+                var data = {
+                    values: [],
+                    years: []
+                }
+                var current
+                var i
+
+                for (i = 0; i < timeseriesValues.length; i++) {
+                    current = timeseriesValues[i]
+                    data.values.push(enrichData(current, i))
+                    data.years.push(current.year)
+                }
+                toUnique(data.years)
+                return data
+            }
+
+            function enrichData(timeseriesValue) {
+                var quarter = timeseriesValue.quarter
+                var year = timeseriesValue.year
+                var month = timeseriesValue.month
+
+                timeseriesValue.y = +timeseriesValue.value //Cast to number
+                timeseriesValue.value = +(year + (quarter ? quarterVal(quarter) : '') + (month ? monthVal(month) : ''))
+                timeseriesValue.name = timeseriesValue.date //Appears on x axis
+                delete timeseriesValue.date
+
+                return timeseriesValue
+            }
+
+            function toUnique(a) { //array,placeholder,placeholder
+                var b = a.length;
+                var c
+                while (c = --b) {
+                    while (c--) {
+                        a[b] !== a[c] || a.splice(c, 1);
+                    }
+                }
+            }
+
+
+        }
+
+
+        function getFirst(array) {
+            if (isNotEmpty(array)) {
+                return array[0]
+            }
+        }
+
+
+        function getLast(array) {
+            if (isNotEmpty(array)) {
+                return array[array.length - 1]
+            }
+        }
+
+        function isNotEmpty(array) {
+            return (array && array.length > 0)
+        }
+
+        function monthVal(mon) {
+            switch (mon.slice(0, 3).toUpperCase()) {
+                case 'JAN':
+                    return 01
+                case 'FEB':
+                    return 02
+                case 'MAR':
+                    return 03
+                case 'APR':
+                    return 04
+                case 'MAY':
+                    return 05
+                case 'JUN':
+                    return 06
+                case 'JUL':
+                    return 07
+                case 'AUG':
+                    return 08
+                case 'SEP':
+                    return 09
+                case 'OCT':
+                    return 10
+                case 'NOV':
+                    return 11
+                case 'DEC':
+                    return 12
+                default:
+                    throw 'Invalid Month:' + mon
+
+            }
+        }
+
+        function quarterVal(quarter) {
+            switch (quarter) {
+                case 'Q1':
+                    return 1
+                case 'Q2':
+                    return 2
+                case 'Q3':
+                    return 3
+                case 'Q4':
+                    return 4
+                default:
+                    throw 'Invalid Quarter:' + quarter
+
+            }
+        }
+
+
+        // the button handler
         $('#imgExp').click(function() {
             var chartExp = $('#chart_prices').highcharts();
             chartExp.exportChart();
         });
+
+        angular.extend(ctrl, {
+            isActive: isActive,
+            changeChartType: changeChartType,
+            showTable: showTable,
+            showChart: showChart,
+            changeTimePeriod: changeTimePeriod,
+            toggleCustomFilters: toggleCustomFilters
+        })
     }
-]);
+
+    function getChart() {
+        var data = {
+            options: {
+                chart: {
+                    type: 'line',
+                },
+                colors: ['#007dc3', '#409ed2', '#7fbee1', '#007dc3', '#409ed2', '#7fbee1'],
+
+                title: {
+                    text: ''
+                },
+                subtitle: {
+                    text: ''
+                },
+                navigation: {
+                    buttonOptions: {
+                        enabled: false
+                    }
+                },
+                xAxis: {
+                    categories: [],
+                    // tickInterval: 1,
+                    labels: {
+                        formatter: function() {
+                            var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+                            var response = "";
+                            if (w < 768) {
+                                if (this.isFirst) {
+                                    count = 0;
+                                }
+                                if (count % 3 === 0) {
+                                    response = this.value;
+                                }
+                                count++;
+                            } else {
+                                response = this.value;
+                            }
+                            return response;
+                        },
+                    },
+                    tickmarkPlacement: 'on'
+                },
+                yAxis: {
+                    title: {
+                        text: ""
+                    }
+                },
+
+                credits: {
+                    enabled: false
+                },
+
+                plotOptions: {
+                    series: {
+                        shadow: false,
+                        states: {
+                            hover: {
+                                enabled: true,
+                                shadow: false,
+                                lineWidth: 3,
+                                lineWidthPlus: 0,
+                                marker: {
+                                    height: 0,
+                                    width: 0,
+                                    halo: false,
+                                    enabled: true,
+                                    fillColor: null,
+                                    radiusPlus: null,
+                                    lineWidth: 3,
+                                    lineWidthPlus: 0
+                                }
+                            }
+                        }
+                    }
+                },
+                tooltip: {
+                    shared: true,
+                    width: '150px',
+                    crosshairs: {
+                        width: 2,
+                        color: '#f37121'
+                    },
+                    positioner: function(labelWidth, labelHeight, point) {
+                        var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+                        var points = {
+                            x: 30,
+                            y: 42
+                        };
+                        var tooltipX, tooltipY;
+                        var chart = Highcharts.charts[Highcharts.charts.length - 1];
+                        if (w > 768) {
+
+                            if (point.plotX + labelWidth > chart.plotWidth) {
+                                tooltipX = point.plotX + chart.plotLeft - labelWidth - 20;
+                                $("#custom-tooltip").removeClass('tooltip-left');
+                            } else {
+                                tooltipX = point.plotX + chart.plotLeft + 20;
+                                $("#custom-tooltip").removeClass('tooltip-right');
+                            }
+
+                            tooltipY = 50;
+                            points = {
+                                x: tooltipX,
+                                y: tooltipY
+                            };
+                        } else {
+                            $("#custom-tooltip").removeClass('tooltip-left');
+                            $("#custom-tooltip").removeClass('tooltip-right');
+                        }
+
+                        return points;
+                    },
+
+                    formatter: function() {
+                        var id = '<div id="custom-tooltip" class="tooltip-left tooltip-right">';
+                        var block = id + "<div class='sidebar' >";
+                        var title = '<b class="title">' + this.points[0].key + ': </b><br/>';
+                        var symbol = ['<div class="circle">●</div>', '<div class="square">■</div>', '<div class="diamond">♦</div>', '<div class="triangle">▲</div>', '<div class="triangle">▼</div>'];
+
+                        var content = block + "<div class='title'>&nbsp;</div>";
+
+                        // symbols
+                        $.each(this.points, function(i, val) {
+                            content += symbol[i];
+                        });
+
+                        content += "</div>";
+                        content += "<div class='mainText'>";
+                        content += title;
+
+                        // series names and values
+                        $.each(this.points, function(i, val) {
+                            content += '<div class="tiptext"><i>' + val.point.series.chart.series[i].name + "</i><br/><b>Value: " + Highcharts.numberFormat(val.y, 2) + '</b></div>';
+                        });
+                        content += "</div>";
+                        return content;
+                    },
+
+                    backgroundColor: 'rgba(255, 255, 255, 0)',
+                    borderWidth: 0,
+                    borderColor: 'rgba(255, 255, 255, 0)',
+                    shadow: false,
+                    useHTML: true
+
+                }
+            },
+
+            series: [{
+                name: "",
+                data: [],
+                marker: {
+                    symbol: "circle",
+                    states: {
+                        hover: {
+                            fillColor: '#007dc3',
+                            radiusPlus: 0,
+                            lineWidthPlus: 0
+                        }
+                    }
+                },
+                dashStyle: 'Solid',
+            }]
+        };
+        return data;
+    }
+
+})();
