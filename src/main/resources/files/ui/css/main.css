@@ -4571,7 +4571,7 @@ ol.toc-columns
   background-color: #fafafb;
 }*/
 
-#search > dl > dd {padding: 0 0 0.85em 0em;}
+#search > dl > dd {padding: 0 0 1em 0em;}
 
 #frequency{font-weight: bold;}
 
@@ -4908,7 +4908,14 @@ td.datatable-downloads{
 
 .download_responsive_btn{
   opacity: 0.5;
+  cursor: auto;
 }
+
+.download_responsive_btn:hover{
+  background-color: #0054aa;
+}
+
+
 
 .datatable-row{
   border-top: 2px solid #dedfdc;
@@ -5061,6 +5068,7 @@ td.datatable-downloads{
   background-image: none !important;
   background: none !important;
   border: none !important;
+  font-size: 1.8rem;
 }
 
 .table_clear_border{
@@ -5076,8 +5084,16 @@ td.datatable-downloads{
   padding-left: 0 !important;
 }
 
+.data_version_sub{
+  font-size: 2rem;
+  font-family: "DaxlinePro", sans-serif;
+  border-bottom: 2px solid #dedfdc;
+}
 
-
+.data_version_header{
+  max-width: 95%;
+  padding-left: 0.7em;
+}
 
 /*------------------------------------*\
  CX STYLES TO MAKE HEADER WORK
@@ -5484,7 +5500,7 @@ td.datatable-downloads{
 /* -------- /end -------- */
 
 /*------------------------------------*\
- CX STYLES TO MAKE TABLES WORK
+ CX STYLES TO MAKE TABLES WORK -- some changes all  are highlighted **
 \*------------------------------------*/
 
 
@@ -5518,10 +5534,10 @@ table.tablesaw {
   padding: .5em .7em;
 }
 
-.tablesaw thead tr:first-child th {
+/*.tablesaw thead tr:first-child th {
   padding-top: .9em;
   padding-bottom: .7em;
-}
+}*/
 
 
 
@@ -5850,15 +5866,15 @@ table.tablesaw tbody th {
   font-weight: bold;
 }
 
-table.tablesaw thead th,
+/*table.tablesaw thead th,
 table.tablesaw thead td {
   color: #444;
   font-size: .9em;
-}
+}*/
 
 .tablesaw th,
 .tablesaw td {
-  line-height: 1em;
+/*  line-height: 1em;*/
   text-align: left;
   vertical-align: middle;
 }
@@ -5875,27 +5891,27 @@ table.tablesaw thead td {
   margin: 0;
 }
 
-.tablesaw thead {
+/*.tablesaw thead {
   border: 1px solid #e5e5e4;
   background: #e2dfdc;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#e2dfdc));
   background-image: -webkit-linear-gradient(top, #fff, #e2dfdc);
   background-image: linear-gradient(to bottom, #fff, #e2dfdc);
-}
+}*/
 
-.tablesaw thead th {
+/*.tablesaw thead th {
   font-weight: 100;
   color: #777;
   text-transform: uppercase;
   text-shadow: 0 1px 0 #fff;
   text-align: left;
-}
+}*/
 
-.tablesaw thead tr:first-child th {
+/*.tablesaw thead tr:first-child th {
   font-weight: normal;
   font-family: sans-serif;
   border-right: 1px solid #e4e1de;
-}
+}*/
 
 /* Table rows have a gray bottom stroke by default */
 
