@@ -4,9 +4,9 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.nio.charset.Charset;
-import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 
 import au.com.bytecode.opencsv.CSVWriter;
 
@@ -21,15 +21,17 @@ import com.github.onsdigital.json.timeseries.TimeseriesValue;
  *
  */
 public class CSVGenerator {
-	public static final char CSV_DELIMTER = ',';
-	public List<Timeseries> timeseriesList;
 
-	public CSVGenerator(List<Timeseries> timeseriesList) {
-		this.timeseriesList = timeseriesList;
+	private List<Timeseries> timeseries;
+	public Map<String, TimeseriesValue[]> data;
+
+	public CSVGenerator(List<Timeseries> timeseries, Map<String, TimeseriesValue[]> data) {
+		this.timeseries = timeseries;
+		this.data = data;
 	}
 
 	public void write(OutputStream output) throws IOException {
-		try (CSVWriter writer = new CSVWriter(new OutputStreamWriter(output, Charset.forName("UTF8")), CSV_DELIMTER)) {
+		try (CSVWriter writer = new CSVWriter(new OutputStreamWriter(output, Charset.forName("UTF8")), ',')) {
 			generateCsvHeaders(writer);
 			generateCsvRows(writer);
 		} catch (Exception e) {
@@ -38,77 +40,39 @@ public class CSVGenerator {
 	}
 
 	private void generateCsvRows(CSVWriter writer) {
-		List<Iterator<TimeseriesValue>> iterators = getIterators(timeseriesList);
-		int size = timeseriesList.size() * 3;
 		String[] row;
 
-		while (hasMoreData(iterators)) { // Check if any of the lists has more
-			// data left
+		for (Entry<String, TimeseriesValue[]> rowData : data.entrySet()) {
+			int size = rowData.getValue().length + 1;
 			int i = 0;
 			row = newRow(size);
-			for (Iterator<TimeseriesValue> iterator : iterators) {
-				if (iterator.hasNext()) {
-					TimeseriesValue timeseriesValue = iterator.next();
-					row[i++] = timeseriesValue.date;
-					row[i++] = timeseriesValue.value;
-				} else {
-					row[i++] = "";
-					row[i++] = "";
-				}
-				row[i++] = "";
+			row[i++] = rowData.getKey();
+			for (TimeseriesValue timeseriesValue : rowData.getValue()) {
+				row[i++] = timeseriesValue.value;
 			}
 			writer.writeNext(row);
 		}
 	}
 
-	@SuppressWarnings("unused")
 	private void generateCsvHeaders(CSVWriter writer) {
-		int size = timeseriesList.size() * 3;
-		String[] row = newRow(size);
+
+		int size = timeseries.size() + 1;
+		String[] names = newRow(size);
+		String[] cdids = newRow(size);
+
 		int i = 0;
-		for (Timeseries timeseries : timeseriesList) {
-			row[i++] = timeseries.name;
-			row[i++] = "";
-			row[i++] = "";
+		names[i] = "";
+		cdids[i++] = "Date";
+		for (Timeseries timeseries : this.timeseries) {
+			names[i] = timeseries.name;
+			cdids[i++] = timeseries.cdid();
 			System.out.println("Geneararing CSV for: " + timeseries.name + " at: " + timeseries.uri);
 		}
-		writer.writeNext(row);
-
-		row = newRow(size);
-		i = 0;
-		for (Timeseries timeseries : timeseriesList) {
-			row[i++] = "Date";
-			row[i++] = "Value";
-			row[i++] = "";
-		}
-		writer.writeNext(row);
-
-	}
-
-	@SuppressWarnings("rawtypes")
-	private boolean hasMoreData(List<Iterator<TimeseriesValue>> iterators) {
-		// Go through all the iterators see if any of them has any value left
-		for (Iterator iterator : iterators) {
-			if (iterator.hasNext()) {
-				return true;
-			}
-		}
-		return false; // No more data in non of the lists
+		writer.writeNext(names);
+		writer.writeNext(cdids);
 	}
 
 	private String[] newRow(int size) {
 		return new String[size];
-	}
-
-	private List<Iterator<TimeseriesValue>> getIterators(List<Timeseries> timeseriesList) {
-		List<Iterator<TimeseriesValue>> iterators = new ArrayList<Iterator<TimeseriesValue>>();
-		for (Timeseries timeseries : timeseriesList) {
-			List<TimeseriesValue> values = new ArrayList<TimeseriesValue>();
-			values.addAll(timeseries.years);
-			values.addAll(timeseries.quarters);
-			values.addAll(timeseries.months);
-			iterators.add(values.iterator());
-		}
-		return iterators;
 	}
 }

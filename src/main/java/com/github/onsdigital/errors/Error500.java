@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.GET;
 
 import org.apache.commons.io.IOUtils;
+import org.apache.commons.lang3.exception.ExceptionUtils;
 
 import com.github.davidcarboni.ResourceUtils;
 import com.github.davidcarboni.restolino.api.RequestHandler;
@@ -24,6 +25,8 @@ public class Error500 implements Boom {
 
 	@Override
 	public Object handle(HttpServletRequest req, HttpServletResponse res, RequestHandler requestHandler, Throwable t) throws IOException {
+
+		System.out.println(ExceptionUtils.getStackTrace(t));
 
 		// Ensure ResourceUtils "sees" the reloadable classloader in
 		// development:
