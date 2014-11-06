@@ -2,6 +2,7 @@ package com.github.onsdigital.generator.data;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -29,37 +30,37 @@ import com.github.onsdigital.json.timeseries.TimeseriesValue;
  */
 public class Data implements Iterable<Timeseries> {
 
-	static Map<String, String> years = new TreeMap<>();
-	static Map<String, String> yearEnds = new TreeMap<>();
-	static Map<String, String> yearIntervals = new TreeMap<>();
-	static Map<String, String> yearPairs = new TreeMap<>();
-	static Map<String, String> months = new TreeMap<>();
-	static Map<String, String> quarters = new TreeMap<>();
+	public static Map<Date, String> years = new TreeMap<>();
+	public static Map<Date, String> yearEnds = new TreeMap<>();
+	public static Map<Date, String> yearIntervals = new TreeMap<>();
+	public static Map<Date, String> yearPairs = new TreeMap<>();
+	public static Map<Date, String> quarters = new TreeMap<>();
+	public static Map<Date, String> months = new TreeMap<>();
 
 	private static Set<Folder> folders;
 	private static Map<String, Set<Timeseries>> datasets = new TreeMap<>();
 	private static Map<String, Timeseries> timeserieses = new HashMap<>();
 	private static Set<String> mappedDatasets = new HashSet<>();
-	private static Map<String, String> timeseriesDates = new TreeMap<>();
 
 	public static void addDateOption(String date) {
 
-		String key = toKey(date);
 		TimeseriesValue value = new TimeseriesValue();
 		value.date = date;
+		Date key = value.toDate();
+		String standardised = toKey(date);
 
 		// Pick the correct list for this option:
-		if (Timeseries.year.matcher(key).matches()) {
+		if (Timeseries.year.matcher(toKey(date)).matches()) {
 			years.put(key, date);
-		} else if (Timeseries.yearEnd.matcher(key).matches()) {
+		} else if (Timeseries.yearEnd.matcher(standardised).matches()) {
 			yearEnds.put(key, date);
-		} else if (Timeseries.yearInterval.matcher(key).matches()) {
+		} else if (Timeseries.yearInterval.matcher(standardised).matches()) {
 			yearIntervals.put(key, date);
-		} else if (Timeseries.yearPair.matcher(key).matches()) {
+		} else if (Timeseries.yearPair.matcher(standardised).matches()) {
 			yearPairs.put(key, date);
-		} else if (Timeseries.month.matcher(key).matches()) {
+		} else if (Timeseries.month.matcher(standardised).matches()) {
 			months.put(key, date);
-		} else if (Timeseries.quarter.matcher(key).matches()) {
+		} else if (Timeseries.quarter.matcher(standardised).matches()) {
 			quarters.put(key, date);
 		} else {
 			throw new IllegalArgumentException("Unknow date format: '" + date + "'");
