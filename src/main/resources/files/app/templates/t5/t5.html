@@ -1640,7 +1640,7 @@
     </div>
 
     <!-- Download whole series section -->
-    <div class="wrapper">
+    <div class="wrapper" ng-if="chart.renderChart">
         <div class="actionable-header--tight panel--mar-small">
             <!-- This title will need to be dynamically generated on the server -->
             <h2 class="actionable-header--tight__title gamma flush--bottom body-type--heavy">Download this entire time series</h2>
@@ -1767,11 +1767,11 @@
                     Image
                     <span class="icon-download icon--button-inline" role="presentation"></span>
                     </a>
-                    <a class="btn btn--primary btn--small" href="">
+                    <a class="btn btn--primary btn--small" href="" ng-click="chart.downloadCsv()">
                     .csv
                     <span class="icon-download icon--button-inline" role="presentation"></span>
                     </a>
-                    <a class="btn btn--primary btn--small" href="">
+                    <a class="btn btn--primary btn--small" href="" ng-click="chart.downloadXls()">
                     .xlsx
                     <span class="icon-download icon--button-inline" role="presentation"></span>
                     </a>

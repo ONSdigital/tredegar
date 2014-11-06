@@ -2,7 +2,7 @@
 
     angular.module('onsTemplates')
         .controller('T5Controller', ['$scope', 'Downloader', 'Taxonomy', T5Controller])
-        .controller('ChartController', ['$scope', '$location', '$log', ChartController])
+        .controller('ChartController', ['$scope', '$location', '$log', 'Downloader', ChartController])
 
     function T5Controller($scope, Downloader, Taxonomy) {
 
@@ -56,7 +56,7 @@
     }
 
 
-    function ChartController($scope, $location, $log) {
+    function ChartController($scope, $location, $log, Downloader) {
         var ctrl = this
         ctrl.timeseries = $scope.taxonomy.data
         ctrl.chartConfig = getChart()
@@ -70,6 +70,7 @@
         ctrl.showCustomFilters = false
         ctrl.chartVisible = true
         ctrl.tableVisible = false
+        ctrl.renderChart = false
 
         ctrl.quarters = ['Q1', 'Q2', 'Q3', 'Q4']
         ctrl.months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
@@ -94,6 +95,9 @@
         }
 
         function prepareData() {
+            if (!ctrl.renderChart) {
+                return
+            }
             resolveFilters()
             ctrl.chartData = filterValues()
             ctrl.chartConfig.series[0].data = ctrl.chartData
@@ -239,7 +243,6 @@
                 ctrl.showMonthly = isNotEmpty(data.months)
                 ctrl.showQuarterly = isNotEmpty(data.quarters)
 
-
                 if (ctrl.showMonthly) {
                     ctrl.activeChart = 'months'
                     data.months = formatData(data.months)
@@ -256,6 +259,9 @@
                     data.years = formatData(data.years)
                 }
 
+                if ((ctrl.showMonthly || ctrl.showYearly || ctrl.showQuarterly)) {
+                    ctrl.renderChart = true
+                }
 
             }
 
@@ -370,6 +376,37 @@
         }
 
 
+        function downloadXls() {
+            alert("Ahoy")
+            download('xlsx');
+        }
+
+        function downloadCsv() {
+            alert("Ahoy")
+            download('csv');
+        }
+
+        function download(type) {
+            var downloadRequest = {
+                type: type,
+                from: {
+                    year: ctrl.fromYear,
+                    month: ctrl.fromMonth,
+                    quarter: ctrl.fromQuarter
+                },
+                to: {
+                    year: ctrl.toYear,
+                    month: ctrl.toMonth,
+                    quarter: ctrl.toQuarter
+                }
+
+            };
+            downloadRequest.uriList = [$scope.getPath()];
+            var fileName = $scope.getPage() + '.' + downloadRequest.type;
+            Downloader.downloadFile(downloadRequest, fileName);
+        }
+
+
         // the button handler
         $('#imgExp').click(function() {
             var chartExp = $('#chart_prices').highcharts();
@@ -382,7 +419,9 @@
             showTable: showTable,
             showChart: showChart,
             changeTimePeriod: changeTimePeriod,
-            toggleCustomFilters: toggleCustomFilters
+            toggleCustomFilters: toggleCustomFilters,
+            downloadCsv:downloadCsv,
+            downloadXls:downloadXls
         })
     }
 
