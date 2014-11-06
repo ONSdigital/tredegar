@@ -1,4 +1,4 @@
-<div id="t5" ng-controller="chartController">
+<div id="t5" ng-controller="ChartController as chart">
 
 <style>
     .chart {
@@ -1596,31 +1596,31 @@
             <p class="page-header__title page-header--time-series-desc">
                 <strong>{{header}}</strong>
             </p>
-            <h1 class="page-header__title flush--half--bottom">{{chart.name}}</h1>
+            <h1 class="page-header__title flush--half--bottom">{{chart.timeseries.name}}</h1>
             <div class="grid-wrap">
                 <div class="grid-col desktop-grid-one-half">
                     <img src="/ui/img/nslogo.png" class="page-header-image" alt="ONS logo">
                     <p>
-                        <strong>{{chart.lastUpated}}</strong>
+                        <strong>{{chart.timeseries.lastUpated}}</strong>
                         <span class="page-header-box-link">
                             <a href="#">
                                 <strong>View previous versions</strong>
                             </a>
                         </span>
                     </p>
-                    <p>Next release: {{chart.nextUpdate}} (provisional)</p>
+                    <p>Next release: {{chart.timeseries.nextUpdate}} (provisional)</p>
                     <p>Contact: <a href="mailto:jukesie@hotmail.com">Juksie</a>
                     </p>
                 </div>
                 <div class="grid-col desktop-grid-one-quarter invisible">.</div>
                 <div class="grid-col desktop-grid-one-quarter">
                     <p>
-                        <strong>Series ID: {{chart.cdid}}</strong>
+                        <strong>Series ID: {{chart.timeseries.cdid}}</strong>
                     </p>
                     <p>
-                        <strong>Unit: {{chart.units}}</strong>
+                        <strong>Unit: {{chart.timeseries.units}}</strong>
                     </p>
-                    <p>{{chart.seasonalAdjustment}}</p>
+                    <p>{{chart.timeseries.seasonalAdjustment}}</p>
                 </div>
             </div>
             <div class="page-header__icons">
@@ -1640,7 +1640,7 @@
     </div>
 
     <!-- Download whole series section -->
-    <div class="wrapper">
+    <div class="wrapper" ng-if="chart.renderChart">
         <div class="actionable-header--tight panel--mar-small">
             <!-- This title will need to be dynamically generated on the server -->
             <h2 class="actionable-header--tight__title gamma flush--bottom body-type--heavy">Download this entire time series</h2>
@@ -1662,31 +1662,34 @@
                 <form>
                     <div class="button-bar chart-area__controls__buttons">
                         <div class="button-group chart-area__controls__type">
-                            <label class="btn btn--secondary btn--small btn--narrow btn--thin" ng-class="{'btn--secondary--active': chartTable}" ng-click="changeChartType('line')">Chart</label>
-                            <label class="btn btn--secondary btn--small btn--narrow btn--thin" ng-class="{'btn--secondary--active': !chartTable}" ng-click="changeChartType('table')">Table</label>
+                            <label class="btn btn--secondary btn--small btn--narrow btn--thin" ng-class="{'btn--secondary--active': chart.chartVisible}" ng-click="chart.showChart()">Chart</label>
+                            <label class="btn btn--secondary btn--small btn--narrow btn--thin" ng-class="{'btn--secondary--active': chart.tableVisible}" ng-click="chart.showTable()">Table</label>
                         </div>
                         <div class="button-group chart-area__controls__timespan">
-                            <label class="btn btn--secondary btn--small btn--narrow btn--thin" ng-if="hasYData" ng-class="{'btn--secondary--active': yqm === 0}" ng-click="changeTime('year')">Year</label>
-                            <label class="btn btn--secondary btn--small btn--narrow btn--thin" ng-if="hasQData" ng-class="{'btn--secondary--active': yqm === 1}" ng-click="changeTime('quarter')">Quarter</label>
-                            <label class="btn btn--secondary btn--small btn--narrow btn--thin " ng-if="hasMData" ng-class="{'btn--secondary--active': yqm === 2}" ng-click="changeTime('month')">Month</label>
+                            <label class="btn btn--secondary btn--small btn--narrow btn--thin" ng-if="chart.showYearly" ng-class="{'btn--secondary--active': chart.isActive('years')}" ng-click="chart.changeChartType('years')">Year</label>
+                            <label class="btn btn--secondary btn--small btn--narrow btn--thin" ng-if="chart.showQuarterly" ng-class="{'btn--secondary--active': chart.isActive('quarters')}" ng-click="chart.changeChartType('quarters')">Quarter</label>
+                            <label class="btn btn--secondary btn--small btn--narrow btn--thin " ng-if="chart.showMonthly" ng-class="{'btn--secondary--active': chart.isActive('months')}" ng-click="chart.changeChartType('months')">Month</label>
                         </div>
                     </div>
                     <div class="button-group chart-area__controls__time">
                         <span class="chart-area__controls__time__label">Time period:</span>
                         <ul class="nav flush--top chart-area__controls__time__ranges">
                             <li>
-                                <a href="" ng-click="backToAll()">All</a>
-                            </li>
-                       <!--      <li>
-                                <a href="#">Last 10 yrs</a>
+                                <a href="" ng-if="chart.timePeriod != 'A'" ng-click="chart.changeTimePeriod('A')" >All</a>
+                                <span  ng-if="chart.timePeriod === 'A'">All</span>
                             </li>
                             <li>
-                                <a href="#">Last 5 yrs</a>
-                            </li> -->
-                            <li class="chart-area__controls__custom--active">
+                                <a href="" ng-if="chart.timePeriod != '10'" ng-click="chart.changeTimePeriod('10')">Last 10 yrs</a>
+                                <span  ng-if="chart.timePeriod === '10'">Last 10 yrs</span>
+                            </li>
+                            <li>
+                                <a href="" ng-if="chart.timePeriod != '5'" ng-click="chart.changeTimePeriod('5')">Last 5 yrs</a>
+                                <span  ng-if="chart.timePeriod === '5'">Last 5 yrs</span>
+                            </li>
+                            <li ng-class="chart.showCustomFilters ? 'chart-area__controls__custom--active' : ''" ng-click="chart.toggleCustomFilters()">
                                 <a href="" class="link-complex">
                                     <span class="link-complex__target">Custom</span>
-                                    <span class="icon-down-open-big icon--inline" role="presentation"></span>
+                                    <span ng-class="chart.showCustomFilters  ? 'icon-up-open-big icon--inline' : 'icon-down-open-big icon--inline' " role="presentation"></span>
                                 </a>
                                <!--  <a href="" expand-label="Custom" collapse-label="Custom" toggler="more" class="link-complex"></a> -->
                             </li>
@@ -1694,45 +1697,32 @@
                     </div>
 
                     <!-- selector for table and chart -->
-                    <div class="chart-area__controls__custom">
+                    <div ng-show="chart.showCustomFilters" class="chart-area__controls__custom">
                         <div class="chart-area__controls__custom__errors"></div>
                         <div class="chart-area__controls__custom__container__table">
                             <div class="chart-area__controls__dropdowns">
                                 <!-- Selector for table only -->
-                                <fieldset ng-show="!chartTable" class="chart-area__controls__date">
+                                <fieldset ng-show="chart.tableVisible" class="chart-area__controls__date">
                                     <legend class="chart-area__controls__date__label">Find</legend>
                                     <input ng-model="query" type="test" />
                                 </fieldset>
-                                    <!-- working code -->
-                                <!-- <fieldset class="chart-area__controls__date">
+                                <fieldset class="chart-area__controls__date">
                                     <legend class="chart-area__controls__date__label">From</legend>
-                                    <select ng-change="changeChartRange()" class="chart-area__controls__month" ng-model="chartDataFrom">
-                                        <option value="">Show all</option>
-                                        <option ng-repeat="data in graphValue[2] track by $index" value="{{data}}">{{graphValue[0][$index]}}</option>
+                                    <select ng-if="chart.isActive('quarters')" class="chart-area__controls__month" ng-model="chart.fromQuarter" ng-options="q for q in chart.quarters" ng-change="chart.changeTimePeriod()">
+                                    </select>
+                                    <select ng-if="chart.isActive('months')" class="chart-area__controls__month" ng-model="chart.fromMonth" ng-options="m for m in chart.months" ng-change="chart.changeTimePeriod()">
+                                    </select>
+                                    <select class="chart-area__controls__year" ng-model="chart.fromYear" ng-options="y for y in chart.years" ng-change="chart.changeTimePeriod()">
                                     </select>
                                 </fieldset>
 
                                 <fieldset class="chart-area__controls__date">
                                     <legend class="chart-area__controls__date__label">To</legend>
-                                    <select ng-change="changeChartRange()" class="chart-area__controls__month" ng-model="chartDataTo">
-                                        <option value="">Show all</option>
-                                        <option ng-repeat="data in graphValue[2] track by $index" value="{{data}}">{{graphValue[0][$index]}}</option>
+                                    <select ng-if="chart.isActive('quarters')" class="chart-area__controls__month" ng-model="chart.toQuarter" ng-options="q for q in chart.quarters" ng-change="chart.changeTimePeriod()">
                                     </select>
-                                </fieldset> -->
-
-                                <fieldset class="chart-area__controls__date">
-                                    <legend class="chart-area__controls__date__label">From</legend>
-                                    <select ng-if="!(yqm === 0)" class="chart-area__controls__month" ng-model="chartDataFrom1" ng-options="data.value as data.name for data in chartData1" ng-change="changeChartRange()">
+                                    <select ng-if="chart.isActive('months')" class="chart-area__controls__month" ng-model="chart.toMonth" ng-options="m for m in chart.months" ng-change="chart.changeTimePeriod()">
                                     </select>
-                                    <select class="chart-area__controls__year" ng-model="chartDataFrom0" ng-options="data for data in chartData0" ng-change="changeChartRange()">
-                                    </select>
-                                </fieldset>
-
-                                <fieldset class="chart-area__controls__date">
-                                    <legend class="chart-area__controls__date__label">To</legend>
-                                    <select ng-if="!(yqm === 0)" class="chart-area__controls__month" ng-model="chartDataTo1" ng-options="data.value as data.name for data in chartData1" ng-change="changeChartRange()">
-                                    </select>
-                                    <select class="chart-area__controls__year" ng-model="chartDataTo0" ng-options="data for data in chartData0" ng-change="changeChartRange()">
+                                    <select class="chart-area__controls__year" ng-model="chart.toYear" ng-options="y for y in chart.years" ng-change="chart.changeTimePeriod()">
                                     </select>
                                 </fieldset>
                             </div>
@@ -1742,46 +1732,46 @@
                 </form>
 
                 <!-- chart -->
-                <div ng-if="chartTable">
-                    <highchart class="highcharts-background" id="chart_prices" config="chartData">
+                <div ng-if="chart.chartVisible">
+                    <highchart class="highcharts-background" id="chart_prices" config="chart.chartConfig">
                     </highchart>
                 </div>
 
                 <!-- table -->
-                <div ng-if="!chartTable">
+                <div ng-if="chart.tableVisible">
                     <table class="tablesaw">
                         <thead>
                             <tr>
-                                <th><a href="" ng-click="sortField = 'number'; reverse = !reverse">Period</a>
+                                <th><a href="" ng-click="sortField = 'value'; reverse = !reverse">Period</a>
                                     <span class="icon-down-dir icon--button-inline" role="presentation"></span>
                                 </th>
-                                <th><a href="" ng-click="sortField = 'values'; reverse = !reverse">{{chart.cdid}}</a>
+                                <th><a href="" ng-click="sortField = 'y'; reverse = !reverse">{{chart.timeseries.cdid}}</a>
                                     <span class="icon-down-dir icon--button-inline" role="presentation"></span>
                                 </th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr ng-repeat="data in tableValue | filter:query | orderBy:sortField:reverse | rangeDate:tableValueFrom:tableValueTo:'number'">
-                                <th>{{data.date}}</th>
-                                <td>{{data.values}}</td>
+                            <tr ng-repeat="data in chart.chartData | filter:query | orderBy:sortField:reverse">
+                                <td>{{data.name}}</td>
+                                <td>{{data.y}}</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
             <!-- Custom downloads -->
-            <div class="chart-area__footer">
+            <div  ng-if="chart.timePeriod != 'A'" class="chart-area__footer">
                 <span class="chart-area__footer__label">Download custom data</span>
                 <div class="chart-area__footer__actions">
                     <a id="imgExp" class="btn btn--primary btn--small" href="">
                     Image
                     <span class="icon-download icon--button-inline" role="presentation"></span>
                     </a>
-                    <a class="btn btn--primary btn--small" href="">
+                    <a class="btn btn--primary btn--small" href="" ng-click="chart.downloadCsv()">
                     .csv
                     <span class="icon-download icon--button-inline" role="presentation"></span>
                     </a>
-                    <a class="btn btn--primary btn--small" href="">
+                    <a class="btn btn--primary btn--small" href="" ng-click="chart.downloadXls()">
                     .xlsx
                     <span class="icon-download icon--button-inline" role="presentation"></span>
                     </a>
@@ -1797,14 +1787,14 @@
                 <div class="panel--bottom-mar">
                     <div class="lede">
                         <p>
-                            {{chart.description}}
+                            {{chart.timeseries.description}}
                         </p>
                     </div>
-                    <div ng-if="chart.note1">
+                    <div ng-if="chart.timeseries.note1">
                         <h3>Important Notes and Usage Information</h3>
                         <ol class="dataset_usage">
-                            <li>{{chart.note1}}</li>
-                            <li>{{chart.note2}}</li>
+                            <li>{{chart.timeseries.note1}}</li>
+                            <li>{{chart.timeseries.note2}}</li>
                         </ol>
                     </div>
                 </div>

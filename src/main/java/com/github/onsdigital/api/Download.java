@@ -34,6 +34,7 @@ public class Download {
 	public void get(@Context HttpServletRequest request, @Context HttpServletResponse response) throws IOException {
 		try {
 			DownloadRequest downloadRequest = Serialiser.deserialise(request, DownloadRequest.class);
+			System.out.println("Download request recieved" + downloadRequest);
 			response.setHeader("Content-Disposition", "attachment; filename=data." + downloadRequest.type);
 			response.setCharacterEncoding("UTF8");
 			response.setContentType("application/" + downloadRequest.type);

@@ -49,7 +49,6 @@ public class CSVGenerator {
 			for (Iterator<TimeseriesValue> iterator : iterators) {
 				if (iterator.hasNext()) {
 					TimeseriesValue timeseriesValue = iterator.next();
-					System.out.println(timeseriesValue.date + "\t" + timeseriesValue.value);
 					row[i++] = timeseriesValue.date;
 					row[i++] = timeseriesValue.value;
 				} else {
@@ -59,7 +58,6 @@ public class CSVGenerator {
 				row[i++] = "";
 			}
 			writer.writeNext(row);
-			System.out.println("\n");
 		}
 	}
 
