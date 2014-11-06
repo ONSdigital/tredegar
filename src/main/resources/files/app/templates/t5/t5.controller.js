@@ -418,11 +418,11 @@
         }
 
 
-        // the button handler
-        $('#imgExp').click(function() {
+        function exportImage() {
             var chartExp = $('#chart_prices').highcharts();
+            console.log(chartExp)
             chartExp.exportChart();
-        });
+        }
 
         angular.extend(ctrl, {
             isActive: isActive,
@@ -432,7 +432,8 @@
             changeTimePeriod: changeTimePeriod,
             toggleCustomFilters: toggleCustomFilters,
             downloadCsv:downloadCsv,
-            downloadXls:downloadXls
+            downloadXls:downloadXls,
+            exportImage: exportImage
         })
     }
 
