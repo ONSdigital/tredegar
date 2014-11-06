@@ -548,15 +548,6 @@ public class TaxonomyGenerator {
 			if (!timeseriesFile.exists()) {
 				timeseriesFolder.mkdirs();
 
-				// Set the breadcrumb:
-				// NB cross-referenced timeseries will produce unexpected
-				// breadcrumbs. The user will come from a home page in one area
-				// of
-				// the taxonomy, but the breadcrumb on the timeseries page will
-				// be
-				// for a different area of the taxonomy.
-				// TODO: find a better way of handling breadcrumbs on timeseries
-				// pages.
 				timeseries.setBreadcrumb(t3);
 				if (timeseries.months.size() == 0 && timeseries.quarters.size() == 0 && timeseries.years.size() == 0) {
 					noData.add(timeseries);
