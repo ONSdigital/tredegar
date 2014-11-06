@@ -1763,7 +1763,7 @@
             <div  ng-if="chart.timePeriod != 'A'" class="chart-area__footer">
                 <span class="chart-area__footer__label">Download custom data</span>
                 <div class="chart-area__footer__actions">
-                    <a id="imgExp" class="btn btn--primary btn--small" href="">
+                    <a id="imgExp" ng-click="chart.exportImage()" class="btn btn--primary btn--small" href="">
                     Image
                     <span class="icon-download icon--button-inline" role="presentation"></span>
                     </a>
