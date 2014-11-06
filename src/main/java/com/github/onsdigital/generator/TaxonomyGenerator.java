@@ -393,24 +393,22 @@ public class TaxonomyGenerator {
 			}
 		}
 
-		// Stats bulletin references:
-		URI statsBulletinHeadline = toStatsBulletinUri(folder, BulletinContent.getHeadlineBulletin(folder));
-		if (statsBulletinHeadline != null) {
-			t3.statsBulletinHeadline = statsBulletinHeadline;
-		}
+		// creating associated data for t3
+		createStatsBulletinHeadline(folder, t3);
+		createStatsBulletins(folder, t3);
+		createDatasets(folder, t3);
 
-		t3.statsBulletins.clear();
-		List<Bulletin> bulletins = BulletinContent.getBulletins(folder);
+		// Serialise
+		String json = Serialiser.serialise(t3);
+		FileUtils.writeStringToFile(new File(file, "data.json"), json);
 
-		if (bulletins != null) {
-			for (Bulletin bulletin : bulletins) {
-				if (bulletin.summary != null) {
-					URI bulletinUri = toStatsBulletinUri(folder, bulletin);
-					t3.statsBulletins.add(bulletinUri);
-				}
-			}
-		}
+		createArticle(folder, file);
+		createBulletin(folder, file, t3);
+		createDataset(folder, file, t3);
+		createTimeseries(folder, file, t3);
+	}
 
+	private static void createDatasets(Folder folder, T3 t3) throws IOException {
 		t3.datasets.clear();
 		List<Dataset> datasets = DatasetContent.getDatasets(folder);
 
@@ -422,15 +420,28 @@ public class TaxonomyGenerator {
 				}
 			}
 		}
+	}
 
-		// Serialise
-		String json = Serialiser.serialise(t3);
-		FileUtils.writeStringToFile(new File(file, "data.json"), json);
+	private static void createStatsBulletins(Folder folder, T3 t3) throws IOException {
+		t3.statsBulletins.clear();
+		List<Bulletin> bulletins = BulletinContent.getBulletins(folder);
 
-		createArticle(folder, file);
-		createBulletin(folder, file, t3);
-		createDataset(folder, file, t3);
-		createTimeseries(folder, file, t3);
+		if (bulletins != null) {
+			for (Bulletin bulletin : bulletins) {
+				if (bulletin.summary != null) {
+					URI bulletinUri = toStatsBulletinUri(folder, bulletin);
+					t3.statsBulletins.add(bulletinUri);
+				}
+			}
+		}
+	}
+
+	private static void createStatsBulletinHeadline(Folder folder, T3 t3) throws IOException {
+		// Stats bulletin references:
+		URI statsBulletinHeadline = toStatsBulletinUri(folder, BulletinContent.getHeadlineBulletin(folder));
+		if (statsBulletinHeadline != null) {
+			t3.statsBulletinHeadline = statsBulletinHeadline;
+		}
 	}
 
 	private static URI toStatsBulletinUri(Folder folder, Bulletin bulletin) {
@@ -532,33 +543,28 @@ public class TaxonomyGenerator {
 		File timeseriesFolder = new File(root, uri.toString());
 		File timeseriesFile = new File(timeseriesFolder, "data.json");
 
-		// Only create the timeseries if it doesn't already exist:
-		if (!timeseriesFile.exists()) {
-			timeseriesFolder.mkdirs();
+		if (uri.toString().contains(t3.fileName)) {
+			// Only create the timeseries if it doesn't already exist:
+			if (!timeseriesFile.exists()) {
+				timeseriesFolder.mkdirs();
 
-			// Set the breadcrumb:
-			// NB cross-referenced timeseries will produce unexpected
-			// breadcrumbs. The user will come from a home page in one area of
-			// the taxonomy, but the breadcrumb on the timeseries page will be
-			// for a different area of the taxonomy.
-			// TODO: find a better way of handling breadcrumbs on timeseries
-			// pages.
-			timeseries.setBreadcrumb(t3);
-			if (timeseries.months.size() == 0 && timeseries.quarters.size() == 0 && timeseries.years.size() == 0) {
-				noData.add(timeseries);
-			}
-
-			List<Bulletin> bulletins = BulletinContent.getBulletins(folder);
-			if (bulletins != null) {
-				for (Bulletin bulletin : bulletins) {
-					timeseries.relatedBulletins.add(bulletin.uri);
+				timeseries.setBreadcrumb(t3);
+				if (timeseries.months.size() == 0 && timeseries.quarters.size() == 0 && timeseries.years.size() == 0) {
+					noData.add(timeseries);
 				}
-			}
 
-			String json = Serialiser.serialise(timeseries);
-			FileUtils.writeStringToFile(timeseriesFile, json, Charset.forName("UTF8"));
-			created.add(timeseries);
-			result = true;
+				List<Bulletin> bulletins = BulletinContent.getBulletins(folder);
+				if (bulletins != null) {
+					for (Bulletin bulletin : bulletins) {
+						timeseries.relatedBulletins.add(bulletin.uri);
+					}
+				}
+
+				String json = Serialiser.serialise(timeseries);
+				FileUtils.writeStringToFile(timeseriesFile, json, Charset.forName("UTF8"));
+				created.add(timeseries);
+				result = true;
+			}
 		}
 		return result;
 	}

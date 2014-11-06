@@ -2902,7 +2902,7 @@
   ],
   "uri": "/businessindustryandtrade/tourismindustry/timeseries/gmbb",
   "relatedBulletins": [
-    "/peoplepopulationandcommunity/leisureandtourism/bulletins/overseastravelandtourismprovisionalresultsformay2014"
+    "/businessindustryandtrade/tourismindustry/bulletins/overseastravelandtourism"
   ],
   "type": "timeseries",
   "name": "UK visits abroad Expenditure",
@@ -2911,14 +2911,14 @@
     {
       "index": 0,
       "type": "home",
-      "name": "People, Population and Community",
-      "fileName": "peoplepopulationandcommunity"
+      "name": "Business, Industry and Trade",
+      "fileName": "businessindustryandtrade"
     },
     {
       "index": 0,
       "type": "home",
-      "name": "Leisure and Tourism",
-      "fileName": "leisureandtourism",
+      "name": "Tourism Industry",
+      "fileName": "tourismindustry",
       "breadcrumb": []
     }
   ]
