@@ -3,7 +3,6 @@ package com.github.onsdigital.util;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
@@ -22,11 +21,11 @@ import com.github.onsdigital.json.timeseries.TimeseriesValue;
 
 public class XLSXGenerator {
 	public List<Timeseries> timeseriesList;
-	
+
 	public XLSXGenerator(List<Timeseries> timeseriesList) {
 		this.timeseriesList = timeseriesList;
 	}
-	
+
 	public void write(OutputStream output) throws IOException {
 
 		Workbook wb = new XSSFWorkbook();
@@ -91,8 +90,7 @@ public class XLSXGenerator {
 			i++; // Empty column
 		}
 	}
-	
-	
+
 	@SuppressWarnings("rawtypes")
 	private boolean hasMoreData(List<Iterator<TimeseriesValue>> iterators) {
 		// Go through all the iterators see if any of them has any value left
@@ -103,15 +101,15 @@ public class XLSXGenerator {
 		}
 		return false; // No more data in non of the lists
 	}
-	
+
 	private List<Iterator<TimeseriesValue>> getIterators(List<Timeseries> timeseriesList) {
 		List<Iterator<TimeseriesValue>> iterators = new ArrayList<Iterator<TimeseriesValue>>();
 		for (Timeseries timeseries : timeseriesList) {
-			if (timeseries.data == null) {
-				// Temporary fix for timeseries with no data
-				timeseries.data = Collections.emptyList();
-			}
-			iterators.add(timeseries.data.iterator());
+			List<TimeseriesValue> values = new ArrayList<TimeseriesValue>();
+			values.addAll(timeseries.years);
+			values.addAll(timeseries.quarters);
+			values.addAll(timeseries.months);
+			iterators.add(values.iterator());
 		}
 		return iterators;
 	}

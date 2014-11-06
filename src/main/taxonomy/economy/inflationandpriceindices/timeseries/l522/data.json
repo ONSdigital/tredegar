@@ -9,658 +9,979 @@
   "unit": "Index",
   "preUnit": "",
   "date": "September 2014",
-  "data": [
+  "years": [
     {
       "date": "2005",
-      "value": "100"
+      "value": "100",
+      "year": "2005"
     },
     {
       "date": "2006",
-      "value": "102.3"
+      "value": "102.3",
+      "year": "2006"
     },
     {
       "date": "2007",
-      "value": "104.6"
+      "value": "104.6",
+      "year": "2007"
     },
     {
       "date": "2008",
-      "value": "108.1"
+      "value": "108.1",
+      "year": "2008"
     },
     {
       "date": "2009",
-      "value": "110.3"
+      "value": "110.3",
+      "year": "2009"
     },
     {
       "date": "2010",
-      "value": "113.4"
+      "value": "113.4",
+      "year": "2010"
     },
     {
       "date": "2011",
-      "value": "118"
+      "value": "118",
+      "year": "2011"
     },
     {
       "date": "2012",
-      "value": "121.2"
+      "value": "121.2",
+      "year": "2012"
     },
     {
       "date": "2013",
-      "value": "124.1"
-    },
+      "value": "124.1",
+      "year": "2013"
+    }
+  ],
+  "quarters": [
     {
       "date": "2005 Q1",
-      "value": "99"
+      "value": "99",
+      "year": "2005",
+      "quarter": "Q1"
     },
     {
       "date": "2005 Q2",
-      "value": "99.9"
+      "value": "99.9",
+      "year": "2005",
+      "quarter": "Q2"
     },
     {
       "date": "2005 Q3",
-      "value": "100.3"
+      "value": "100.3",
+      "year": "2005",
+      "quarter": "Q3"
     },
     {
       "date": "2005 Q4",
-      "value": "100.8"
+      "value": "100.8",
+      "year": "2005",
+      "quarter": "Q4"
     },
     {
       "date": "2006 Q1",
-      "value": "100.8"
+      "value": "100.8",
+      "year": "2006",
+      "quarter": "Q1"
     },
     {
       "date": "2006 Q2",
-      "value": "102.1"
+      "value": "102.1",
+      "year": "2006",
+      "quarter": "Q2"
     },
     {
       "date": "2006 Q3",
-      "value": "102.7"
+      "value": "102.7",
+      "year": "2006",
+      "quarter": "Q3"
     },
     {
       "date": "2006 Q4",
-      "value": "103.4"
+      "value": "103.4",
+      "year": "2006",
+      "quarter": "Q4"
     },
     {
       "date": "2007 Q1",
-      "value": "103.6"
+      "value": "103.6",
+      "year": "2007",
+      "quarter": "Q1"
     },
     {
       "date": "2007 Q2",
-      "value": "104.6"
+      "value": "104.6",
+      "year": "2007",
+      "quarter": "Q2"
     },
     {
       "date": "2007 Q3",
-      "value": "104.5"
+      "value": "104.5",
+      "year": "2007",
+      "quarter": "Q3"
     },
     {
       "date": "2007 Q4",
-      "value": "105.5"
+      "value": "105.5",
+      "year": "2007",
+      "quarter": "Q4"
     },
     {
       "date": "2008 Q1",
-      "value": "106"
+      "value": "106",
+      "year": "2008",
+      "quarter": "Q1"
     },
     {
       "date": "2008 Q2",
-      "value": "107.9"
+      "value": "107.9",
+      "year": "2008",
+      "quarter": "Q2"
     },
     {
       "date": "2008 Q3",
-      "value": "109.2"
+      "value": "109.2",
+      "year": "2008",
+      "quarter": "Q3"
     },
     {
       "date": "2008 Q4",
-      "value": "109.3"
+      "value": "109.3",
+      "year": "2008",
+      "quarter": "Q4"
     },
     {
       "date": "2009 Q1",
-      "value": "109"
+      "value": "109",
+      "year": "2009",
+      "quarter": "Q1"
     },
     {
       "date": "2009 Q2",
-      "value": "110"
+      "value": "110",
+      "year": "2009",
+      "quarter": "Q2"
     },
     {
       "date": "2009 Q3",
-      "value": "110.7"
+      "value": "110.7",
+      "year": "2009",
+      "quarter": "Q3"
     },
     {
       "date": "2009 Q4",
-      "value": "111.3"
+      "value": "111.3",
+      "year": "2009",
+      "quarter": "Q4"
     },
     {
       "date": "2010 Q1",
-      "value": "112.1"
+      "value": "112.1",
+      "year": "2010",
+      "quarter": "Q1"
     },
     {
       "date": "2010 Q2",
-      "value": "113.3"
+      "value": "113.3",
+      "year": "2010",
+      "quarter": "Q2"
     },
     {
       "date": "2010 Q3",
-      "value": "113.6"
+      "value": "113.6",
+      "year": "2010",
+      "quarter": "Q3"
     },
     {
       "date": "2010 Q4",
-      "value": "114.7"
+      "value": "114.7",
+      "year": "2010",
+      "quarter": "Q4"
     },
     {
       "date": "2011 Q1",
-      "value": "116.2"
+      "value": "116.2",
+      "year": "2011",
+      "quarter": "Q1"
     },
     {
       "date": "2011 Q2",
-      "value": "117.8"
+      "value": "117.8",
+      "year": "2011",
+      "quarter": "Q2"
     },
     {
       "date": "2011 Q3",
-      "value": "118.5"
+      "value": "118.5",
+      "year": "2011",
+      "quarter": "Q3"
     },
     {
       "date": "2011 Q4",
-      "value": "119.6"
+      "value": "119.6",
+      "year": "2011",
+      "quarter": "Q4"
     },
     {
       "date": "2012 Q1",
-      "value": "120"
+      "value": "120",
+      "year": "2012",
+      "quarter": "Q1"
     },
     {
       "date": "2012 Q2",
-      "value": "120.9"
+      "value": "120.9",
+      "year": "2012",
+      "quarter": "Q2"
     },
     {
       "date": "2012 Q3",
-      "value": "121.3"
+      "value": "121.3",
+      "year": "2012",
+      "quarter": "Q3"
     },
     {
       "date": "2012 Q4",
-      "value": "122.6"
+      "value": "122.6",
+      "year": "2012",
+      "quarter": "Q4"
     },
     {
       "date": "2013 Q1",
-      "value": "123.1"
+      "value": "123.1",
+      "year": "2013",
+      "quarter": "Q1"
     },
     {
       "date": "2013 Q2",
-      "value": "123.9"
+      "value": "123.9",
+      "year": "2013",
+      "quarter": "Q2"
     },
     {
       "date": "2013 Q3",
-      "value": "124.3"
+      "value": "124.3",
+      "year": "2013",
+      "quarter": "Q3"
     },
     {
       "date": "2013 Q4",
-      "value": "125"
+      "value": "125",
+      "year": "2013",
+      "quarter": "Q4"
     },
     {
       "date": "2014 Q1",
-      "value": "125.1"
+      "value": "125.1",
+      "year": "2014",
+      "quarter": "Q1"
     },
     {
       "date": "2014 Q2",
-      "value": "125.9"
-    },
+      "value": "125.9",
+      "year": "2014",
+      "quarter": "Q2"
+    }
+  ],
+  "months": [
     {
       "date": "2005 JAN",
-      "value": "98.7"
+      "value": "98.7",
+      "year": "2005",
+      "month": "January"
     },
     {
       "date": "2005 FEB",
-      "value": "98.9"
+      "value": "98.9",
+      "year": "2005",
+      "month": "February"
     },
     {
       "date": "2005 MAR",
-      "value": "99.3"
+      "value": "99.3",
+      "year": "2005",
+      "month": "March"
     },
     {
       "date": "2005 APR",
-      "value": "99.7"
+      "value": "99.7",
+      "year": "2005",
+      "month": "April"
     },
     {
       "date": "2005 MAY",
-      "value": "100"
+      "value": "100",
+      "year": "2005",
+      "month": "May"
     },
     {
       "date": "2005 JUN",
-      "value": "100"
+      "value": "100",
+      "year": "2005",
+      "month": "June"
     },
     {
       "date": "2005 JUL",
-      "value": "100.1"
+      "value": "100.1",
+      "year": "2005",
+      "month": "July"
     },
     {
       "date": "2005 AUG",
-      "value": "100.4"
+      "value": "100.4",
+      "year": "2005",
+      "month": "August"
     },
     {
       "date": "2005 SEP",
-      "value": "100.5"
+      "value": "100.5",
+      "year": "2005",
+      "month": "September"
     },
     {
       "date": "2005 OCT",
-      "value": "100.7"
+      "value": "100.7",
+      "year": "2005",
+      "month": "October"
     },
     {
       "date": "2005 NOV",
-      "value": "100.7"
+      "value": "100.7",
+      "year": "2005",
+      "month": "November"
     },
     {
       "date": "2005 DEC",
-      "value": "101"
+      "value": "101",
+      "year": "2005",
+      "month": "December"
     },
     {
       "date": "2006 JAN",
-      "value": "100.6"
+      "value": "100.6",
+      "year": "2006",
+      "month": "January"
     },
     {
       "date": "2006 FEB",
-      "value": "100.9"
+      "value": "100.9",
+      "year": "2006",
+      "month": "February"
     },
     {
       "date": "2006 MAR",
-      "value": "101.1"
+      "value": "101.1",
+      "year": "2006",
+      "month": "March"
     },
     {
       "date": "2006 APR",
-      "value": "101.6"
+      "value": "101.6",
+      "year": "2006",
+      "month": "April"
     },
     {
       "date": "2006 MAY",
-      "value": "102.2"
+      "value": "102.2",
+      "year": "2006",
+      "month": "May"
     },
     {
       "date": "2006 JUN",
-      "value": "102.4"
+      "value": "102.4",
+      "year": "2006",
+      "month": "June"
     },
     {
       "date": "2006 JUL",
-      "value": "102.4"
+      "value": "102.4",
+      "year": "2006",
+      "month": "July"
     },
     {
       "date": "2006 AUG",
-      "value": "102.8"
+      "value": "102.8",
+      "year": "2006",
+      "month": "August"
     },
     {
       "date": "2006 SEP",
-      "value": "102.9"
+      "value": "102.9",
+      "year": "2006",
+      "month": "September"
     },
     {
       "date": "2006 OCT",
-      "value": "103.1"
+      "value": "103.1",
+      "year": "2006",
+      "month": "October"
     },
     {
       "date": "2006 NOV",
-      "value": "103.3"
+      "value": "103.3",
+      "year": "2006",
+      "month": "November"
     },
     {
       "date": "2006 DEC",
-      "value": "103.9"
+      "value": "103.9",
+      "year": "2006",
+      "month": "December"
     },
     {
       "date": "2007 JAN",
-      "value": "103.2"
+      "value": "103.2",
+      "year": "2007",
+      "month": "January"
     },
     {
       "date": "2007 FEB",
-      "value": "103.6"
+      "value": "103.6",
+      "year": "2007",
+      "month": "February"
     },
     {
       "date": "2007 MAR",
-      "value": "104"
+      "value": "104",
+      "year": "2007",
+      "month": "March"
     },
     {
       "date": "2007 APR",
-      "value": "104.3"
+      "value": "104.3",
+      "year": "2007",
+      "month": "April"
     },
     {
       "date": "2007 MAY",
-      "value": "104.6"
+      "value": "104.6",
+      "year": "2007",
+      "month": "May"
     },
     {
       "date": "2007 JUN",
-      "value": "104.8"
+      "value": "104.8",
+      "year": "2007",
+      "month": "June"
     },
     {
       "date": "2007 JUL",
-      "value": "104.3"
+      "value": "104.3",
+      "year": "2007",
+      "month": "July"
     },
     {
       "date": "2007 AUG",
-      "value": "104.6"
+      "value": "104.6",
+      "year": "2007",
+      "month": "August"
     },
     {
       "date": "2007 SEP",
-      "value": "104.7"
+      "value": "104.7",
+      "year": "2007",
+      "month": "September"
     },
     {
       "date": "2007 OCT",
-      "value": "105.2"
+      "value": "105.2",
+      "year": "2007",
+      "month": "October"
     },
     {
       "date": "2007 NOV",
-      "value": "105.4"
+      "value": "105.4",
+      "year": "2007",
+      "month": "November"
     },
     {
       "date": "2007 DEC",
-      "value": "106"
+      "value": "106",
+      "year": "2007",
+      "month": "December"
     },
     {
       "date": "2008 JAN",
-      "value": "105.4"
+      "value": "105.4",
+      "year": "2008",
+      "month": "January"
     },
     {
       "date": "2008 FEB",
-      "value": "106.1"
+      "value": "106.1",
+      "year": "2008",
+      "month": "February"
     },
     {
       "date": "2008 MAR",
-      "value": "106.5"
+      "value": "106.5",
+      "year": "2008",
+      "month": "March"
     },
     {
       "date": "2008 APR",
-      "value": "107.3"
+      "value": "107.3",
+      "year": "2008",
+      "month": "April"
     },
     {
       "date": "2008 MAY",
-      "value": "107.9"
+      "value": "107.9",
+      "year": "2008",
+      "month": "May"
     },
     {
       "date": "2008 JUN",
-      "value": "108.6"
+      "value": "108.6",
+      "year": "2008",
+      "month": "June"
     },
     {
       "date": "2008 JUL",
-      "value": "108.6"
+      "value": "108.6",
+      "year": "2008",
+      "month": "July"
     },
     {
       "date": "2008 AUG",
-      "value": "109.2"
+      "value": "109.2",
+      "year": "2008",
+      "month": "August"
     },
     {
       "date": "2008 SEP",
-      "value": "109.8"
+      "value": "109.8",
+      "year": "2008",
+      "month": "September"
     },
     {
       "date": "2008 OCT",
-      "value": "109.5"
+      "value": "109.5",
+      "year": "2008",
+      "month": "October"
     },
     {
       "date": "2008 NOV",
-      "value": "109.4"
+      "value": "109.4",
+      "year": "2008",
+      "month": "November"
     },
     {
       "date": "2008 DEC",
-      "value": "109.1"
+      "value": "109.1",
+      "year": "2008",
+      "month": "December"
     },
     {
       "date": "2009 JAN",
-      "value": "108.4"
+      "value": "108.4",
+      "year": "2009",
+      "month": "January"
     },
     {
       "date": "2009 FEB",
-      "value": "109.2"
+      "value": "109.2",
+      "year": "2009",
+      "month": "February"
     },
     {
       "date": "2009 MAR",
-      "value": "109.4"
+      "value": "109.4",
+      "year": "2009",
+      "month": "March"
     },
     {
       "date": "2009 APR",
-      "value": "109.6"
+      "value": "109.6",
+      "year": "2009",
+      "month": "April"
     },
     {
       "date": "2009 MAY",
-      "value": "110.1"
+      "value": "110.1",
+      "year": "2009",
+      "month": "May"
     },
     {
       "date": "2009 JUN",
-      "value": "110.4"
+      "value": "110.4",
+      "year": "2009",
+      "month": "June"
     },
     {
       "date": "2009 JUL",
-      "value": "110.4"
+      "value": "110.4",
+      "year": "2009",
+      "month": "July"
     },
     {
       "date": "2009 AUG",
-      "value": "110.8"
+      "value": "110.8",
+      "year": "2009",
+      "month": "August"
     },
     {
       "date": "2009 SEP",
-      "value": "110.8"
+      "value": "110.8",
+      "year": "2009",
+      "month": "September"
     },
     {
       "date": "2009 OCT",
-      "value": "111"
+      "value": "111",
+      "year": "2009",
+      "month": "October"
     },
     {
       "date": "2009 NOV",
-      "value": "111.3"
+      "value": "111.3",
+      "year": "2009",
+      "month": "November"
     },
     {
       "date": "2009 DEC",
-      "value": "111.8"
+      "value": "111.8",
+      "year": "2009",
+      "month": "December"
     },
     {
       "date": "2010 JAN",
-      "value": "111.6"
+      "value": "111.6",
+      "year": "2010",
+      "month": "January"
     },
     {
       "date": "2010 FEB",
-      "value": "112"
+      "value": "112",
+      "year": "2010",
+      "month": "February"
     },
     {
       "date": "2010 MAR",
-      "value": "112.6"
+      "value": "112.6",
+      "year": "2010",
+      "month": "March"
     },
     {
       "date": "2010 APR",
-      "value": "113.1"
+      "value": "113.1",
+      "year": "2010",
+      "month": "April"
     },
     {
       "date": "2010 MAY",
-      "value": "113.4"
+      "value": "113.4",
+      "year": "2010",
+      "month": "May"
     },
     {
       "date": "2010 JUN",
-      "value": "113.5"
+      "value": "113.5",
+      "year": "2010",
+      "month": "June"
     },
     {
       "date": "2010 JUL",
-      "value": "113.3"
+      "value": "113.3",
+      "year": "2010",
+      "month": "July"
     },
     {
       "date": "2010 AUG",
-      "value": "113.8"
+      "value": "113.8",
+      "year": "2010",
+      "month": "August"
     },
     {
       "date": "2010 SEP",
-      "value": "113.8"
+      "value": "113.8",
+      "year": "2010",
+      "month": "September"
     },
     {
       "date": "2010 OCT",
-      "value": "114.1"
+      "value": "114.1",
+      "year": "2010",
+      "month": "October"
     },
     {
       "date": "2010 NOV",
-      "value": "114.5"
+      "value": "114.5",
+      "year": "2010",
+      "month": "November"
     },
     {
       "date": "2010 DEC",
-      "value": "115.5"
+      "value": "115.5",
+      "year": "2010",
+      "month": "December"
     },
     {
       "date": "2011 JAN",
-      "value": "115.6"
+      "value": "115.6",
+      "year": "2011",
+      "month": "January"
     },
     {
       "date": "2011 FEB",
-      "value": "116.4"
+      "value": "116.4",
+      "year": "2011",
+      "month": "February"
     },
     {
       "date": "2011 MAR",
-      "value": "116.7"
+      "value": "116.7",
+      "year": "2011",
+      "month": "March"
     },
     {
       "date": "2011 APR",
-      "value": "117.7"
+      "value": "117.7",
+      "year": "2011",
+      "month": "April"
     },
     {
       "date": "2011 MAY",
-      "value": "117.9"
+      "value": "117.9",
+      "year": "2011",
+      "month": "May"
     },
     {
       "date": "2011 JUN",
-      "value": "117.9"
+      "value": "117.9",
+      "year": "2011",
+      "month": "June"
     },
     {
       "date": "2011 JUL",
-      "value": "117.9"
+      "value": "117.9",
+      "year": "2011",
+      "month": "July"
     },
     {
       "date": "2011 AUG",
-      "value": "118.5"
+      "value": "118.5",
+      "year": "2011",
+      "month": "August"
     },
     {
       "date": "2011 SEP",
-      "value": "119.2"
+      "value": "119.2",
+      "year": "2011",
+      "month": "September"
     },
     {
       "date": "2011 OCT",
-      "value": "119.3"
+      "value": "119.3",
+      "year": "2011",
+      "month": "October"
     },
     {
       "date": "2011 NOV",
-      "value": "119.5"
+      "value": "119.5",
+      "year": "2011",
+      "month": "November"
     },
     {
       "date": "2011 DEC",
-      "value": "120"
+      "value": "120",
+      "year": "2011",
+      "month": "December"
     },
     {
       "date": "2012 JAN",
-      "value": "119.5"
+      "value": "119.5",
+      "year": "2012",
+      "month": "January"
     },
     {
       "date": "2012 FEB",
-      "value": "120.1"
+      "value": "120.1",
+      "year": "2012",
+      "month": "February"
     },
     {
       "date": "2012 MAR",
-      "value": "120.5"
+      "value": "120.5",
+      "year": "2012",
+      "month": "March"
     },
     {
       "date": "2012 APR",
-      "value": "121.1"
+      "value": "121.1",
+      "year": "2012",
+      "month": "April"
     },
     {
       "date": "2012 MAY",
-      "value": "121.1"
+      "value": "121.1",
+      "year": "2012",
+      "month": "May"
     },
     {
       "date": "2012 JUN",
-      "value": "120.6"
+      "value": "120.6",
+      "year": "2012",
+      "month": "June"
     },
     {
       "date": "2012 JUL",
-      "value": "120.8"
+      "value": "120.8",
+      "year": "2012",
+      "month": "July"
     },
     {
       "date": "2012 AUG",
-      "value": "121.3"
+      "value": "121.3",
+      "year": "2012",
+      "month": "August"
     },
     {
       "date": "2012 SEP",
-      "value": "121.7"
+      "value": "121.7",
+      "year": "2012",
+      "month": "September"
     },
     {
       "date": "2012 OCT",
-      "value": "122.3"
+      "value": "122.3",
+      "year": "2012",
+      "month": "October"
     },
     {
       "date": "2012 NOV",
-      "value": "122.5"
+      "value": "122.5",
+      "year": "2012",
+      "month": "November"
     },
     {
       "date": "2012 DEC",
-      "value": "123"
+      "value": "123",
+      "year": "2012",
+      "month": "December"
     },
     {
       "date": "2013 JAN",
-      "value": "122.5"
+      "value": "122.5",
+      "year": "2013",
+      "month": "January"
     },
     {
       "date": "2013 FEB",
-      "value": "123.2"
+      "value": "123.2",
+      "year": "2013",
+      "month": "February"
     },
     {
       "date": "2013 MAR",
-      "value": "123.6"
+      "value": "123.6",
+      "year": "2013",
+      "month": "March"
     },
     {
       "date": "2013 APR",
-      "value": "123.8"
+      "value": "123.8",
+      "year": "2013",
+      "month": "April"
     },
     {
       "date": "2013 MAY",
-      "value": "124"
+      "value": "124",
+      "year": "2013",
+      "month": "May"
     },
     {
       "date": "2013 JUN",
-      "value": "123.8"
+      "value": "123.8",
+      "year": "2013",
+      "month": "June"
     },
     {
       "date": "2013 JUL",
-      "value": "123.8"
+      "value": "123.8",
+      "year": "2013",
+      "month": "July"
     },
     {
       "date": "2013 AUG",
-      "value": "124.3"
+      "value": "124.3",
+      "year": "2013",
+      "month": "August"
     },
     {
       "date": "2013 SEP",
-      "value": "124.7"
+      "value": "124.7",
+      "year": "2013",
+      "month": "September"
     },
     {
       "date": "2013 OCT",
-      "value": "124.8"
+      "value": "124.8",
+      "year": "2013",
+      "month": "October"
     },
     {
       "date": "2013 NOV",
-      "value": "124.8"
+      "value": "124.8",
+      "year": "2013",
+      "month": "November"
     },
     {
       "date": "2013 DEC",
-      "value": "125.3"
+      "value": "125.3",
+      "year": "2013",
+      "month": "December"
     },
     {
       "date": "2014 JAN",
-      "value": "124.7"
+      "value": "124.7",
+      "year": "2014",
+      "month": "January"
     },
     {
       "date": "2014 FEB",
-      "value": "125.2"
+      "value": "125.2",
+      "year": "2014",
+      "month": "February"
     },
     {
       "date": "2014 MAR",
-      "value": "125.5"
+      "value": "125.5",
+      "year": "2014",
+      "month": "March"
     },
     {
       "date": "2014 APR",
-      "value": "125.8"
+      "value": "125.8",
+      "year": "2014",
+      "month": "April"
     },
     {
       "date": "2014 MAY",
-      "value": "125.8"
+      "value": "125.8",
+      "year": "2014",
+      "month": "May"
     },
     {
       "date": "2014 JUN",
-      "value": "126"
+      "value": "126",
+      "year": "2014",
+      "month": "June"
     },
     {
       "date": "2014 JUL",
-      "value": "125.7"
+      "value": "125.7",
+      "year": "2014",
+      "month": "July"
     },
     {
       "date": "2014 AUG",
-      "value": "126.1"
+      "value": "126.1",
+      "year": "2014",
+      "month": "August"
     }
   ],
   "uri": "/economy/inflationandpriceindices/timeseries/l522",

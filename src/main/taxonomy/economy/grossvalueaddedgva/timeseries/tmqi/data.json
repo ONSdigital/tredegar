@@ -6,72 +6,90 @@
   "unit": "m",
   "preUnit": "£",
   "date": "2012",
-  "data": [
+  "years": [
     {
       "date": "1997",
-      "value": "16568"
+      "value": "16568",
+      "year": "1997"
     },
     {
       "date": "1998",
-      "value": "17303"
+      "value": "17303",
+      "year": "1998"
     },
     {
       "date": "1999",
-      "value": "18616"
+      "value": "18616",
+      "year": "1999"
     },
     {
       "date": "2000",
-      "value": "19789"
+      "value": "19789",
+      "year": "2000"
     },
     {
       "date": "2001",
-      "value": "20363"
+      "value": "20363",
+      "year": "2001"
     },
     {
       "date": "2002",
-      "value": "20968"
+      "value": "20968",
+      "year": "2002"
     },
     {
       "date": "2003",
-      "value": "23433"
+      "value": "23433",
+      "year": "2003"
     },
     {
       "date": "2004",
-      "value": "24393"
+      "value": "24393",
+      "year": "2004"
     },
     {
       "date": "2005",
-      "value": "25482"
+      "value": "25482",
+      "year": "2005"
     },
     {
       "date": "2006",
-      "value": "27295"
+      "value": "27295",
+      "year": "2006"
     },
     {
       "date": "2007",
-      "value": "29697"
+      "value": "29697",
+      "year": "2007"
     },
     {
       "date": "2008",
-      "value": "29388"
+      "value": "29388",
+      "year": "2008"
     },
     {
       "date": "2009",
-      "value": "28447"
+      "value": "28447",
+      "year": "2009"
     },
     {
       "date": "2010",
-      "value": "28945"
+      "value": "28945",
+      "year": "2010"
     },
     {
       "date": "2011",
-      "value": "29063"
+      "value": "29063",
+      "year": "2011"
     },
     {
       "date": "2012",
-      "value": "29410"
+      "value": "29410",
+      "year": "2012"
     }
   ],
+  "quarters": [],
+  "months": [],
   "uri": "/economy/grossvalueaddedgva/timeseries/tmqi",
   "relatedBulletins": [
     "/economy/grossvalueaddedgva/bulletins/regionalgrossvalueaddedincomeapproach"

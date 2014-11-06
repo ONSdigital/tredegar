@@ -6,20 +6,25 @@
   "unit": "per week",
   "preUnit": "£",
   "date": "2012",
-  "data": [
+  "years": [
     {
       "date": "2010",
-      "value": "664"
+      "value": "664",
+      "year": "2010"
     },
     {
       "date": "2011",
-      "value": "677.3"
+      "value": "677.3",
+      "year": "2011"
     },
     {
       "date": "2012",
-      "value": "677.8"
+      "value": "677.8",
+      "year": "2012"
     }
   ],
+  "quarters": [],
+  "months": [],
   "uri": "/peoplepopulationandcommunity/personalandhouseholdfinances/expenditure/timeseries/raid114",
   "relatedBulletins": [
     "/peoplepopulationandcommunity/personalandhouseholdfinances/expenditure/bulletins/nobulletinavailable"

@@ -11,7 +11,7 @@ import com.github.onsdigital.generator.data.Csv;
 import com.github.onsdigital.json.bulletin.Bulletin;
 
 public class BulletinContent {
-
+	static final String resourceName = "/Alpha content master.xlsx";
 	private static Csv rows;
 
 	public static List<Bulletin> getBulletins(Folder folder) throws IOException {
@@ -65,8 +65,8 @@ public class BulletinContent {
 	}
 
 	private static void parseCsv() throws IOException {
-		rows = new Csv("/Alpha bulletin content.csv");
-		rows.read();
+		rows = new Csv(resourceName);
+		rows.read(2);
 		rows.getHeadings();
 		// String[] headings = { "Theme", "Level 2", "Level 3", "Name", "Key",
 		// "Units", "CDID", "Path", "Link", "Notes" };
@@ -113,6 +113,7 @@ public class BulletinContent {
 			node.addBulletin(bulletin, isHeadline);
 			BulletinData.bulletins.add(bulletin);
 		}
+		System.out.println(BulletinData.bulletins.size());
 	}
 
 	public static void main(String[] args) throws IOException {

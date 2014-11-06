@@ -6,320 +6,463 @@
   "unit": "m",
   "preUnit": "",
   "date": "Q2 2014",
-  "data": [
+  "years": [
     {
       "date": "1999",
-      "value": "4324"
+      "value": "4324",
+      "year": "1999"
     },
     {
       "date": "2000",
-      "value": "4374"
+      "value": "4374",
+      "year": "2000"
     },
     {
       "date": "2001",
-      "value": "4443"
+      "value": "4443",
+      "year": "2001"
     },
     {
       "date": "2002",
-      "value": "4538"
+      "value": "4538",
+      "year": "2002"
     },
     {
       "date": "2003",
-      "value": "4671"
+      "value": "4671",
+      "year": "2003"
     },
     {
       "date": "2004",
-      "value": "4775"
+      "value": "4775",
+      "year": "2004"
     },
     {
       "date": "2005",
-      "value": "4861"
+      "value": "4861",
+      "year": "2005"
     },
     {
       "date": "2006",
-      "value": "4852"
+      "value": "4852",
+      "year": "2006"
     },
     {
       "date": "2007",
-      "value": "4830"
+      "value": "4830",
+      "year": "2007"
     },
     {
       "date": "2008",
-      "value": "4830"
+      "value": "4830",
+      "year": "2008"
     },
     {
       "date": "2009",
-      "value": "5112"
+      "value": "5112",
+      "year": "2009"
     },
     {
       "date": "2010",
-      "value": "5119"
+      "value": "5119",
+      "year": "2010"
     },
     {
       "date": "2011",
-      "value": "4947"
+      "value": "4947",
+      "year": "2011"
     },
     {
       "date": "2012",
-      "value": "4705"
+      "value": "4705",
+      "year": "2012"
     },
     {
       "date": "2013",
-      "value": "4665"
+      "value": "4665",
+      "year": "2013"
     },
     {
       "date": "2014",
-      "value": "4408"
-    },
+      "value": "4408",
+      "year": "2014"
+    }
+  ],
+  "quarters": [
     {
       "date": "1999 Q1",
-      "value": "4318"
+      "value": "4318",
+      "year": "1999",
+      "quarter": "Q1"
     },
     {
       "date": "1999 Q2",
-      "value": "4324"
+      "value": "4324",
+      "year": "1999",
+      "quarter": "Q2"
     },
     {
       "date": "1999 Q3",
-      "value": "4338"
+      "value": "4338",
+      "year": "1999",
+      "quarter": "Q3"
     },
     {
       "date": "1999 Q4",
-      "value": "4356"
+      "value": "4356",
+      "year": "1999",
+      "quarter": "Q4"
     },
     {
       "date": "2000 Q1",
-      "value": "4361"
+      "value": "4361",
+      "year": "2000",
+      "quarter": "Q1"
     },
     {
       "date": "2000 Q2",
-      "value": "4374"
+      "value": "4374",
+      "year": "2000",
+      "quarter": "Q2"
     },
     {
       "date": "2000 Q3",
-      "value": "4391"
+      "value": "4391",
+      "year": "2000",
+      "quarter": "Q3"
     },
     {
       "date": "2000 Q4",
-      "value": "4404"
+      "value": "4404",
+      "year": "2000",
+      "quarter": "Q4"
     },
     {
       "date": "2001 Q1",
-      "value": "4422"
+      "value": "4422",
+      "year": "2001",
+      "quarter": "Q1"
     },
     {
       "date": "2001 Q2",
-      "value": "4443"
+      "value": "4443",
+      "year": "2001",
+      "quarter": "Q2"
     },
     {
       "date": "2001 Q3",
-      "value": "4456"
+      "value": "4456",
+      "year": "2001",
+      "quarter": "Q3"
     },
     {
       "date": "2001 Q4",
-      "value": "4480"
+      "value": "4480",
+      "year": "2001",
+      "quarter": "Q4"
     },
     {
       "date": "2002 Q1",
-      "value": "4513"
+      "value": "4513",
+      "year": "2002",
+      "quarter": "Q1"
     },
     {
       "date": "2002 Q2",
-      "value": "4538"
+      "value": "4538",
+      "year": "2002",
+      "quarter": "Q2"
     },
     {
       "date": "2002 Q3",
-      "value": "4560"
+      "value": "4560",
+      "year": "2002",
+      "quarter": "Q3"
     },
     {
       "date": "2002 Q4",
-      "value": "4597"
+      "value": "4597",
+      "year": "2002",
+      "quarter": "Q4"
     },
     {
       "date": "2003 Q1",
-      "value": "4637"
+      "value": "4637",
+      "year": "2003",
+      "quarter": "Q1"
     },
     {
       "date": "2003 Q2",
-      "value": "4671"
+      "value": "4671",
+      "year": "2003",
+      "quarter": "Q2"
     },
     {
       "date": "2003 Q3",
-      "value": "4701"
+      "value": "4701",
+      "year": "2003",
+      "quarter": "Q3"
     },
     {
       "date": "2003 Q4",
-      "value": "4728"
+      "value": "4728",
+      "year": "2003",
+      "quarter": "Q4"
     },
     {
       "date": "2004 Q1",
-      "value": "4763"
+      "value": "4763",
+      "year": "2004",
+      "quarter": "Q1"
     },
     {
       "date": "2004 Q2",
-      "value": "4775"
+      "value": "4775",
+      "year": "2004",
+      "quarter": "Q2"
     },
     {
       "date": "2004 Q3",
-      "value": "4797"
+      "value": "4797",
+      "year": "2004",
+      "quarter": "Q3"
     },
     {
       "date": "2004 Q4",
-      "value": "4806"
+      "value": "4806",
+      "year": "2004",
+      "quarter": "Q4"
     },
     {
       "date": "2005 Q1",
-      "value": "4834"
+      "value": "4834",
+      "year": "2005",
+      "quarter": "Q1"
     },
     {
       "date": "2005 Q2",
-      "value": "4861"
+      "value": "4861",
+      "year": "2005",
+      "quarter": "Q2"
     },
     {
       "date": "2005 Q3",
-      "value": "4877"
+      "value": "4877",
+      "year": "2005",
+      "quarter": "Q3"
     },
     {
       "date": "2005 Q4",
-      "value": "4868"
+      "value": "4868",
+      "year": "2005",
+      "quarter": "Q4"
     },
     {
       "date": "2006 Q1",
-      "value": "4857"
+      "value": "4857",
+      "year": "2006",
+      "quarter": "Q1"
     },
     {
       "date": "2006 Q2",
-      "value": "4852"
+      "value": "4852",
+      "year": "2006",
+      "quarter": "Q2"
     },
     {
       "date": "2006 Q3",
-      "value": "4850"
+      "value": "4850",
+      "year": "2006",
+      "quarter": "Q3"
     },
     {
       "date": "2006 Q4",
-      "value": "4854"
+      "value": "4854",
+      "year": "2006",
+      "quarter": "Q4"
     },
     {
       "date": "2007 Q1",
-      "value": "4841"
+      "value": "4841",
+      "year": "2007",
+      "quarter": "Q1"
     },
     {
       "date": "2007 Q2",
-      "value": "4830"
+      "value": "4830",
+      "year": "2007",
+      "quarter": "Q2"
     },
     {
       "date": "2007 Q3",
-      "value": "4833"
+      "value": "4833",
+      "year": "2007",
+      "quarter": "Q3"
     },
     {
       "date": "2007 Q4",
-      "value": "4836"
+      "value": "4836",
+      "year": "2007",
+      "quarter": "Q4"
     },
     {
       "date": "2008 Q1",
-      "value": "4812"
+      "value": "4812",
+      "year": "2008",
+      "quarter": "Q1"
     },
     {
       "date": "2008 Q2",
-      "value": "4830"
+      "value": "4830",
+      "year": "2008",
+      "quarter": "Q2"
     },
     {
       "date": "2008 Q3",
-      "value": "4868"
+      "value": "4868",
+      "year": "2008",
+      "quarter": "Q3"
     },
     {
       "date": "2008 Q4",
-      "value": "5104"
+      "value": "5104",
+      "year": "2008",
+      "quarter": "Q4"
     },
     {
       "date": "2009 Q1",
-      "value": "5115"
+      "value": "5115",
+      "year": "2009",
+      "quarter": "Q1"
     },
     {
       "date": "2009 Q2",
-      "value": "5112"
+      "value": "5112",
+      "year": "2009",
+      "quarter": "Q2"
     },
     {
       "date": "2009 Q3",
-      "value": "5140"
+      "value": "5140",
+      "year": "2009",
+      "quarter": "Q3"
     },
     {
       "date": "2009 Q4",
-      "value": "5149"
+      "value": "5149",
+      "year": "2009",
+      "quarter": "Q4"
     },
     {
       "date": "2010 Q1",
-      "value": "5128"
+      "value": "5128",
+      "year": "2010",
+      "quarter": "Q1"
     },
     {
       "date": "2010 Q2",
-      "value": "5119"
+      "value": "5119",
+      "year": "2010",
+      "quarter": "Q2"
     },
     {
       "date": "2010 Q3",
-      "value": "5074"
+      "value": "5074",
+      "year": "2010",
+      "quarter": "Q3"
     },
     {
       "date": "2010 Q4",
-      "value": "5035"
+      "value": "5035",
+      "year": "2010",
+      "quarter": "Q4"
     },
     {
       "date": "2011 Q1",
-      "value": "5015"
+      "value": "5015",
+      "year": "2011",
+      "quarter": "Q1"
     },
     {
       "date": "2011 Q2",
-      "value": "4947"
+      "value": "4947",
+      "year": "2011",
+      "quarter": "Q2"
     },
     {
       "date": "2011 Q3",
-      "value": "4927"
+      "value": "4927",
+      "year": "2011",
+      "quarter": "Q3"
     },
     {
       "date": "2011 Q4",
-      "value": "4892"
+      "value": "4892",
+      "year": "2011",
+      "quarter": "Q4"
     },
     {
       "date": "2012 Q1",
-      "value": "4867"
+      "value": "4867",
+      "year": "2012",
+      "quarter": "Q1"
     },
     {
       "date": "2012 Q2",
-      "value": "4705"
+      "value": "4705",
+      "year": "2012",
+      "quarter": "Q2"
     },
     {
       "date": "2012 Q3",
-      "value": "4692"
+      "value": "4692",
+      "year": "2012",
+      "quarter": "Q3"
     },
     {
       "date": "2012 Q4",
-      "value": "4695"
+      "value": "4695",
+      "year": "2012",
+      "quarter": "Q4"
     },
     {
       "date": "2013 Q1",
-      "value": "4673"
+      "value": "4673",
+      "year": "2013",
+      "quarter": "Q1"
     },
     {
       "date": "2013 Q2",
-      "value": "4665"
+      "value": "4665",
+      "year": "2013",
+      "quarter": "Q2"
     },
     {
       "date": "2013 Q3",
-      "value": "4659"
+      "value": "4659",
+      "year": "2013",
+      "quarter": "Q3"
     },
     {
       "date": "2013 Q4",
-      "value": "4516"
+      "value": "4516",
+      "year": "2013",
+      "quarter": "Q4"
     },
     {
       "date": "2014 Q1",
-      "value": "4419"
+      "value": "4419",
+      "year": "2014",
+      "quarter": "Q1"
     },
     {
       "date": "2014 Q2",
-      "value": "4408"
+      "value": "4408",
+      "year": "2014",
+      "quarter": "Q2"
     }
   ],
+  "months": [],
   "uri": "/employmentandlabourmarket/publicsectorpersonnel/timeseries/g7g3",
   "relatedBulletins": [
     "/employmentandlabourmarket/publicsectorpersonnel/bulletins/publicsectoremploymentq12014"

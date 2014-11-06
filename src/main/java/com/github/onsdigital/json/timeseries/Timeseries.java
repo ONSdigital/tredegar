@@ -1,8 +1,14 @@
 package com.github.onsdigital.json.timeseries;
 
 import java.net.URI;
+import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
+import java.util.Locale;
+import java.util.Set;
+import java.util.TreeSet;
+import java.util.regex.Pattern;
 
 import org.apache.commons.lang3.StringUtils;
 
@@ -12,6 +18,14 @@ import com.github.onsdigital.json.DataItem;
 import com.github.onsdigital.json.TaxonomyHome;
 
 public class Timeseries extends DataItem implements Comparable<Timeseries> {
+
+	// Regexes (what might the plural be?)
+	static Pattern year = Pattern.compile("\\d{4}");
+	static Pattern yearEnd = Pattern.compile("ye \\w{3} \\d{2}");
+	static Pattern yearInterval = Pattern.compile("\\d{4}-\\d{2,4}");
+	static Pattern yearPair = Pattern.compile("\\d{4}/\\d{2}");
+	static Pattern month = Pattern.compile("\\d{4} \\w{3}");
+	static Pattern quarter = Pattern.compile("\\d{4} \\w[1-4]");
 
 	// Spreadsheet headings
 	private String cdid;
@@ -35,7 +49,9 @@ public class Timeseries extends DataItem implements Comparable<Timeseries> {
 	public String note;
 
 	// The nectar, the goodness, the very juice of the fireflower: data.
-	public List<TimeseriesValue> data = new ArrayList<>();
+	public Set<TimeseriesValue> years = new TreeSet<>();
+	public Set<TimeseriesValue> quarters = new TreeSet<>();
+	public Set<TimeseriesValue> months = new TreeSet<>();
 
 	// The URI of this timeseries.
 	// This is useful when it is referenced from more than one place in the
@@ -48,6 +64,40 @@ public class Timeseries extends DataItem implements Comparable<Timeseries> {
 	public Timeseries() {
 		type = ContentType.timeseries;
 		name = "People not in Work";
+	}
+
+	public void add(TimeseriesValue value) {
+
+		try {
+
+			// Get the date represented by this value:
+			Calendar calendar = Calendar.getInstance(Locale.UK);
+			calendar.setTime(value.toDate());
+
+			// Populate the year. This is needed whether it's
+			// yearly, quarterly or monthly:
+			value.year = String.valueOf(calendar.get(Calendar.YEAR));
+
+			// Set any other date components and
+			// add it to the correct list:
+			String key = StringUtils.lowerCase(StringUtils.trim(value.date));
+			if (year.matcher(key).matches() || yearInterval.matcher(key).matches() || yearPair.matcher(key).matches()) {
+				years.add(value);
+			} else if (yearEnd.matcher(key).matches() || quarter.matcher(key).matches()) {
+				// Months are zero based, which actually makes the quarter
+				// calculation a bit easier:
+				value.quarter = "Q" + ((calendar.get(Calendar.MONTH) / 3) + 1);
+				quarters.add(value);
+			} else if (month.matcher(key).matches()) {
+				value.month = calendar.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.UK);
+				months.add(value);
+			} else {
+				throw new ParseException("Unknown format: '" + value.date + "'", 0);
+			}
+
+		} catch (ParseException e) {
+			throw new RuntimeException("Error parsing date " + value.date, e);
+		}
 	}
 
 	public void setBreadcrumb(TaxonomyHome t3) {

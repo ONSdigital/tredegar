@@ -226,7 +226,7 @@ public class Csv implements Iterable<Map<String, String>> {
 						// System.out.println("WAT?!");
 						// }
 
-						cells[c] = value;
+						cells[c] = value.trim();
 					}
 				}
 				result.add(cells);

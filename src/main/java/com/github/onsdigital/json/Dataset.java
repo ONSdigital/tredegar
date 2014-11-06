@@ -4,6 +4,8 @@ import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.github.onsdigital.generator.Folder;
+
 public class Dataset extends CollectionItem {
 	public String nextRelease = "21 November 2014";
 	public Email contact = new Email();
@@ -36,6 +38,14 @@ public class Dataset extends CollectionItem {
 		NotesSection notesSection = new NotesSection();
 		notesSection.data = "These estimates are rounded to the nearest hundred and are different to the unrounded estimates in other published tables.";
 		notes.add(notesSection);
+	}
+
+	public void setBreadcrumb(TaxonomyHome t3) {
+		breadcrumb = new ArrayList<>(t3.breadcrumb);
+		Folder folder = new Folder();
+		folder.name = t3.name;
+		TaxonomyHome extra = new TaxonomyHome(folder);
+		breadcrumb.add(extra);
 	}
 
 

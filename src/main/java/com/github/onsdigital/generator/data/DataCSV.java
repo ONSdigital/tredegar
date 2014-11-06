@@ -10,7 +10,6 @@ import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Set;
 import java.util.TreeSet;
@@ -48,6 +47,55 @@ public class DataCSV {
 		}
 
 		readManuallyEditedCsv();
+
+		// // Now sort and arrange all the data:
+		// for (Timeseries timeseries : new Data()) {
+		//
+		// // Get the values:
+		// Map<String, TimeseriesValue> dataMap = new HashMap<>();
+		// for (TimeseriesValue value : timeseries.data) {
+		// dataMap.put(StringUtils.lowerCase(StringUtils.trim(value.date)),
+		// value);
+		// }
+		//
+		// // Now [re]initialise all the sets:
+		// timeseries.data = new LinkedHashSet<>();
+		// timeseries.years = new LinkedHashSet<>();
+		// timeseries.quarters = new LinkedHashSet<>();
+		// timeseries.months = new LinkedHashSet<>();
+		//
+		// // Add the keys in order, from years to quarters, to months:
+		// // System.out.println("Sorting years..");
+		// for (Entry<String, String> year : Data.years.entrySet()) {
+		// String key =
+		// StringUtils.lowerCase(StringUtils.trim(year.getValue()));
+		// if (dataMap.containsKey(key)) {
+		// TimeseriesValue value = dataMap.get(key);
+		// timeseries.data.add(value);
+		// timeseries.years.add(value);
+		// }
+		// }
+		// // System.out.println("Sorting quarters..");
+		// for (Entry<String, String> quarter : Data.quarters.entrySet()) {
+		// String key =
+		// StringUtils.lowerCase(StringUtils.trim(quarter.getValue()));
+		// if (dataMap.containsKey(key)) {
+		// TimeseriesValue value = dataMap.get(key);
+		// timeseries.data.add(value);
+		// timeseries.quarters.add(value);
+		// }
+		// }
+		// // System.out.println("Sorting months..");
+		// for (Entry<String, String> month : Data.months.entrySet()) {
+		// String key =
+		// StringUtils.lowerCase(StringUtils.trim(month.getValue()));
+		// if (dataMap.containsKey(key)) {
+		// TimeseriesValue value = dataMap.get(key);
+		// timeseries.data.add(value);
+		// timeseries.months.add(value);
+		// }
+		// }
+		// }
 	}
 
 	private static void readManuallyEditedCsv() throws IOException {
@@ -76,17 +124,12 @@ public class DataCSV {
 			}
 
 			// Check all the CDIDs in the header row:
-			int duplicates = 0;
+			// int duplicates = 0;
 			String[] header = csvReader.readNext();
 			for (int i = 1; i < header.length; i++) {
 				Timeseries timeseries = Data.timeseries(header[i]);
 				if (timeseries == null) {
 					timeseries = Data.addTimeseries(header[i], name);
-					timeseries.data = new ArrayList<>();
-				} else if (timeseries.data != null && timeseries.data.size() > 0) {
-					// Don't process this timeseries - it's a duplicate.
-					duplicates++;
-					header[i] = null;
 				}
 				dataset.add(timeseries);
 			}
@@ -104,6 +147,7 @@ public class DataCSV {
 
 				// Add data to timeseries:
 				String date = row[0];
+				Data.addDateOption(date);
 				for (int i = 1; i < Math.min(header.length, row.length); i++) {
 					if (StringUtils.isNotBlank(header[i]) && StringUtils.isNotBlank(row[i])) {
 						Timeseries timeseries = Data.timeseries(header[i]);
@@ -114,9 +158,9 @@ public class DataCSV {
 						}
 						String value = row[i];
 						TimeseriesValue timeseriesValue = new TimeseriesValue();
-						timeseriesValue.date = date;
-						timeseriesValue.value = value;
-						timeseries.data.add(timeseriesValue);
+						timeseriesValue.date = StringUtils.trim(date);
+						timeseriesValue.value = StringUtils.trim(value);
+						timeseries.add(timeseriesValue);
 					}
 				}
 			}
@@ -125,16 +169,17 @@ public class DataCSV {
 			for (int i = 1; i < header.length; i++) {
 				if (StringUtils.isNotBlank(header[i])) {
 					Timeseries timeseries = Data.timeseries(header[i]);
-					if (timeseries.data.size() == 0) {
+					if (timeseries.years.size() == 0 && timeseries.quarters.size() == 0 && timeseries.months.size() == 0) {
 						System.out.println(timeseries + " has no data.");
 					}
 				}
 			}
-			if (duplicates > 0) {
-				System.out.println(name + " contains " + dataset.size() + " timeseries (" + duplicates + " duplicates)");
-			} else {
-				System.out.println(name + " contains " + dataset.size() + " timeseries");
-			}
+			// if (duplicates > 0) {
+			// System.out.println(name + " contains " + dataset.size() +
+			// " timeseries (" + duplicates + " duplicates)");
+			// } else {
+			System.out.println(name + " contains " + dataset.size() + " timeseries");
+			// }
 		}
 	}
 

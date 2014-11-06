@@ -5,7 +5,6 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
@@ -30,7 +29,7 @@ public class CSVGenerator {
 	}
 
 	public void write(OutputStream output) throws IOException {
-		try(CSVWriter writer = new CSVWriter(new OutputStreamWriter(output, Charset.forName("UTF8")), CSV_DELIMTER)) {
+		try (CSVWriter writer = new CSVWriter(new OutputStreamWriter(output, Charset.forName("UTF8")), CSV_DELIMTER)) {
 			generateCsvHeaders(writer);
 			generateCsvRows(writer);
 		} catch (Exception e) {
@@ -50,7 +49,6 @@ public class CSVGenerator {
 			for (Iterator<TimeseriesValue> iterator : iterators) {
 				if (iterator.hasNext()) {
 					TimeseriesValue timeseriesValue = iterator.next();
-					System.out.println(timeseriesValue.date + "\t" + timeseriesValue.value);
 					row[i++] = timeseriesValue.date;
 					row[i++] = timeseriesValue.value;
 				} else {
@@ -60,7 +58,6 @@ public class CSVGenerator {
 				row[i++] = "";
 			}
 			writer.writeNext(row);
-			System.out.println("\n");
 		}
 	}
 
@@ -106,11 +103,11 @@ public class CSVGenerator {
 	private List<Iterator<TimeseriesValue>> getIterators(List<Timeseries> timeseriesList) {
 		List<Iterator<TimeseriesValue>> iterators = new ArrayList<Iterator<TimeseriesValue>>();
 		for (Timeseries timeseries : timeseriesList) {
-			if (timeseries.data == null) {
-				// Temporary fix for timeseries with no data
-				timeseries.data = Collections.emptyList();
-			}
-			iterators.add(timeseries.data.iterator());
+			List<TimeseriesValue> values = new ArrayList<TimeseriesValue>();
+			values.addAll(timeseries.years);
+			values.addAll(timeseries.quarters);
+			values.addAll(timeseries.months);
+			iterators.add(values.iterator());
 		}
 		return iterators;
 	}

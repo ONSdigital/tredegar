@@ -21,9 +21,9 @@ angular.module('onsComponents')
                 element
                     .find("blockquote").find("p")
                     .addClass("box--padded--highlight");
-                element
-                    .find("ul").addClass("list--neutral box--cyan--separated-left")
-                    .find("ul").find("li").addClass("big");
+                // element
+                //     .find("ul").addClass("list--neutral box--cyan--separated-left")
+                //     .find("ul").find("li").addClass("big");
             });
         }
     };
