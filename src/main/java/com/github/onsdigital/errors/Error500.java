@@ -26,17 +26,20 @@ public class Error500 implements Boom {
 	@Override
 	public Object handle(HttpServletRequest req, HttpServletResponse res, RequestHandler requestHandler, Throwable t) throws IOException {
 
-		System.out.println(ExceptionUtils.getStackTrace(t));
-
 		// Ensure ResourceUtils "sees" the reloadable classloader in
 		// development:
 		ResourceUtils.classLoaderClass = Error500.class;
 		if (requestHandler != null) {
 			System.out.println("Error in " + requestHandler.endpointClass.getName() + " (" + requestHandler.method.getName() + ")");
+			System.out.println(ExceptionUtils.getStackTrace(t));
 		}
 		try (Reader input = ResourceUtils.getReader("/files/500.html")) {
 			res.setCharacterEncoding("UTF8");
 			IOUtils.copy(input, res.getWriter());
+		} catch (IOException e) {
+			// A [partial] response may have been written before the error
+			// occurred, or it may not be possible to access the 500 content.
+			System.out.println("Error sending error page to response.");
 		}
 		return null;
 	}
