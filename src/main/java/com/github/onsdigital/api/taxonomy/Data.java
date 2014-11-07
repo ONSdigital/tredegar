@@ -6,6 +6,8 @@ import java.net.URI;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -25,7 +27,7 @@ public class Data {
 	static boolean validated;
 
 	@GET
-	public void getData(@Context HttpServletRequest request, @Context HttpServletResponse response) throws IOException {
+	public Map<String, String> getData(@Context HttpServletRequest request, @Context HttpServletResponse response) throws IOException {
 
 		// Ensures ResourceUtils gets the right classloader when running
 		// reloadable in development:
@@ -44,15 +46,18 @@ public class Data {
 		// Output directly to the response
 		// (rather than deserialise and re-serialise)
 		response.setCharacterEncoding("UTF8");
+		response.setContentType("application/json");
 		if (data != null) {
-			response.setContentType("application/json");
 			try (InputStream input = Files.newInputStream(data)) {
 				IOUtils.copy(input, response.getOutputStream());
 			}
+			return null;
 		} else {
 			response.setStatus(HttpStatus.NOT_FOUND_404);
-			response.setContentType("text/plain");
-			response.getWriter().write("These are not the data you are looking for.");
+			Map<String, String> error404 = new HashMap<>();
+			error404.put("message", "These are not the data you are looking for.");
+			error404.put("status", String.valueOf(HttpStatus.NOT_FOUND_404));
+			return error404;
 		}
 	}
 
