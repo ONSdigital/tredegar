@@ -4,8 +4,7 @@
         .controller('T2Ctrl', ['$scope',
             function($scope) {
 
-                $scope.taxonomy.data.highlightedSections = convertToTable($scope.taxonomy.data.sections, 3) 
-
+                $scope.taxonomy.data.highlightedSections = convertToTable($scope.taxonomy.data.sections, 3)
                 //Converts list into two dimensonal array for easy handling on view
                 function convertToTable(children, numberOfItems) {
                     var result = []
@@ -22,7 +21,6 @@
                     }
                     return result
                 }
-
             }
         ])
 })()

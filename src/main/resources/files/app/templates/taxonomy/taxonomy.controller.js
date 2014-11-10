@@ -6,8 +6,7 @@
 		.controller('TaxonomyController', ['$scope', 'Taxonomy',
 			TaxonomyController
 		])
-
-	function TaxonomyController($scope, Taxonomy) {
+    function TaxonomyController($scope, Taxonomy) {
 		var taxonomy = this
 		Taxonomy.loadData(function(data) {
 			taxonomy.data = data
