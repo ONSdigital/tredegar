@@ -31,6 +31,16 @@ import com.github.onsdigital.search.ElasticSearchServer;
 @Endpoint
 public class LoadIndex {
 
+	static {
+		try {
+			System.out.println("Loading Search Index ...");
+			loadIndex();
+			System.out.println("Completed load of Search Index");
+		} catch (IOException ioe) {
+			throw new RuntimeException("Failed to load Search index at startup");
+		}
+	}
+
 	@GET
 	public Object get(@Context HttpServletRequest httpServletRequest, @Context HttpServletResponse httpServletResponse) throws IOException {
 
@@ -44,7 +54,7 @@ public class LoadIndex {
 
 	}
 
-	public void loadIndex() throws IOException {
+	public static void loadIndex() throws IOException {
 		List<String> absoluteFilePaths = LoadIndexHelper.getAbsoluteFilePaths(Configuration.getTaxonomyPath());
 		if (absoluteFilePaths.isEmpty()) {
 			throw new IllegalStateException("No items were found for indexing");
@@ -52,7 +62,7 @@ public class LoadIndex {
 		indexDocuments(ElasticSearchServer.getClient(), absoluteFilePaths);
 	}
 
-	private void indexDocuments(Client client, List<String> absoluteFilePaths) throws IOException {
+	private static void indexDocuments(Client client, List<String> absoluteFilePaths) throws IOException {
 
 		// Set up the synonyms
 		client.admin().indices().prepareCreate("ons").setSettings(buildSettings()).execute();
@@ -68,7 +78,7 @@ public class LoadIndex {
 		}
 	}
 
-	private void buildDocument(Client client, Map<String, String> documentMap, int idCounter) throws IOException {
+	private static void buildDocument(Client client, Map<String, String> documentMap, int idCounter) throws IOException {
 
 		client.prepareIndex(StringUtils.lowerCase("ons"), StringUtils.lowerCase(documentMap.get("type")), String.valueOf(idCounter))
 				.setSource(jsonBuilder().startObject().field("title", documentMap.get("title")).field("url", documentMap.get("url")).field("path", documentMap.get("tags")).endObject()).execute()
@@ -76,7 +86,7 @@ public class LoadIndex {
 
 	}
 
-	private Map<String, String> buildSettings() throws IOException {
+	private static Map<String, String> buildSettings() throws IOException {
 		ImmutableSettings.Builder settingsBuilder = ImmutableSettings.settingsBuilder();
 
 		List<String> synonymList = getSynonyms(settingsBuilder);
@@ -85,7 +95,7 @@ public class LoadIndex {
 		return settingsBuilder.build().getAsMap();
 	}
 
-	private void getSettingsBuilder(ImmutableSettings.Builder settingsBuilder, List<String> synonymList) {
+	private static void getSettingsBuilder(ImmutableSettings.Builder settingsBuilder, List<String> synonymList) {
 		String[] synonyms = new String[synonymList.size()];
 		synonymList.toArray(synonyms);
 
@@ -97,11 +107,11 @@ public class LoadIndex {
 		settingsBuilder.put(settings);
 	}
 
-	private List<String> getSynonyms(ImmutableSettings.Builder settingsBuilder) throws IOException {
+	private static List<String> getSynonyms(ImmutableSettings.Builder settingsBuilder) throws IOException {
 		String[] filters = { "lowercase", "ons_synonym_filter" };
 		settingsBuilder.putArray("analysis.analyzer.ons_synonyms.filter", filters);
 
-		InputStream inputStream = getClass().getResourceAsStream("/synonym.txt");
+		InputStream inputStream = LoadIndex.class.getResourceAsStream("/synonym.txt");
 		BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
 		List<String> synonymList = new ArrayList<String>();
 		String contents = null;
@@ -110,4 +120,5 @@ public class LoadIndex {
 		}
 		return synonymList;
 	}
+
 }
