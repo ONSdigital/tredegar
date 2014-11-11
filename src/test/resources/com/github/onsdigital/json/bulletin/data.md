@@ -1,3 +1,6 @@
+Theme  : Economy
+Level 2: Government, Public Sector and Taxes
+Level 3: Public Sector Finance
 Lede: man
 More: nation
 Summary: summarizor
@@ -8,7 +11,7 @@ Contact name: Jukesie
 Contact email: jukesie@gmail.com
 Next release: soon
 
-# Titular
+# What happened to all the money?
 
 ## Section one
 Jarogonium est jargonius et dameleie statisticum seculum mondi.
