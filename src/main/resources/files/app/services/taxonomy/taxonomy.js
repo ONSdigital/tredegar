@@ -12,9 +12,9 @@
 		var dataPath = '/data'
 
 		function loadData(callback) {
-			load(resolvePath(), function(data) {
+            load(resolvePath(), function(data) {
 				service.data = data
-				
+
 				if(data.level === 't1' || data.level === 't2') {
 					resolveSections(data)
 				} else if(data.level === 't3') {
@@ -37,7 +37,7 @@
 			$log.debug('Taxonomy Service: Resolving sections of ', data.name)
 			var level =  data.level
 			var sections =  data.sections
-			
+
 			if (!sections) {
 				return
 			}
@@ -52,7 +52,7 @@
 						sections[i].name="Employment"
 					} else if (sections[i].name.indexOf("Population")!=-1) {
 						sections[i].name="Population"
-					} 
+					}
 				}
 				sections[i].itemData = []
 				loadItems(sections[i], sections[i].items)
@@ -85,7 +85,7 @@
 				data.headlineData = timeseries
 			})
 		}
-		
+
 		function loadStatsBulletinHeadline(data) {
 			if (data.statsBulletinHeadline != null) {
 				var statsBulletinPath = dataPath + data.statsBulletinHeadline
@@ -95,10 +95,10 @@
 				})
 			}
 		}
-		
+
 		function loadStatsBulletins(data) {
 			var bulletins = data.statsBulletins;
-			
+
 			for (var i = 0; i < bulletins.length; i++) {
 				var bulletin = bulletins[i]
 				var statsBulletinPath = dataPath + bulletin
@@ -106,11 +106,11 @@
 					data.statsBulletinData.push(statsBulletin)
 				})
 			}
-		}	
-		
+		}
+
 		function loadDatasets(data) {
 			var datasets = data.datasets;
-			
+
 			for (var i = 0; i < datasets.length; i++) {
 				var dataset = datasets[i]
 				var datasetPath = dataPath + dataset
@@ -118,7 +118,7 @@
 					data.keyDatasets.push(keyDataset)
 				})
 			}
-		}	
+		}
 
 		//Loads and attaches data to given parent element with given property name
 		function load(path, callback) {

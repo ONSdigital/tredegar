@@ -4,7 +4,7 @@
 (function() {
 
     // Components are to be injected to onsComponents module
-    var onsComponents = angular.module('onsComponents', ['onsAccordion', 'onsNavigation', 'onsPaginator',  'highcharts-ng'])
+    var onsComponents = angular.module('onsComponents', ['onsAccordion', 'onsNavigation', 'onsPaginator',  'highcharts-ng', 'angularLoadingBar'])
 
     //Filters, services and other helpers are to be injected to onsHelpers module
     var onsHelpers = angular.module('onsHelpers', ['onsFilters', 'onsTaxonomy','onsDownloader'])
@@ -24,8 +24,8 @@
     ])
 
     onsApp
-        .config(['$routeProvider', '$locationProvider',
-            function($routeProvider, $locationProvider) {
+        .config(['$routeProvider', '$locationProvider', '$httpProvider',
+            function($routeProvider, $locationProvider, $httpProvider) {
                 $routeProvider.
                 when('/article', {
                     templateUrl: 'app/templates/article/article.html',
@@ -58,7 +58,7 @@
                 when('/release', {
                     templateUrl: 'app/templates/release/release.html'
                 }).
-                when('/search', {
+                when('/search/', {
                     templateUrl: 'app/templates/search-results/search-results.html',
                     controller: 'SearchCtrl'
                 }).
@@ -66,6 +66,12 @@
                     templateUrl: 'app/templates/t6/t6.html',
                     controller: "T6Ctrl"
                 }).
+                when('/404', {
+                    templateUrl: '/app/partials/error-pages/error404.html'
+                }).   
+                when('/500', {
+                    templateUrl: '/500.html'
+                }).                 
                 otherwise({
                     resolve: {
                         // https://stackoverflow.com/questions/15975646/angularjs-routing-to-empty-route-doesnt-work-in-ie7
@@ -94,6 +100,8 @@
                     controller: 'TaxonomyController',
                     controllerAs: 'taxonomy'
                 })
+                // TODO: add interceptor to capture 404 scenarios, pending confirmation of requirement
+//                $httpProvider.responseInterceptors.push('OnsHttpInterceptor')
 
             }
         ])
@@ -133,5 +141,24 @@
                 }
             }
         ])
+        
+        onsApp.factory('OnsHttpInterceptor', function($q, $location) {
+            return function (promise) {
+            	// pass success (e.g. response.status === 200) through
+                return promise.then(function (response) {
+                    return response
+                },
+                // otherwise deal with any error scenarios
+                function (response) {
+                    if (response.status === 500) {
+                        $location.url('/500')
+                    }
+                    if (response.status === 404) {
+                        $location.url('/404')
+                    }                    
+                    return $q.reject(response)
+                });
+            };
+        });        
 
 })()
