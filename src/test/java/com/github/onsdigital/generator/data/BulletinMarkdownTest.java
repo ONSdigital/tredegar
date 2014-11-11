@@ -1,4 +1,4 @@
-package com.github.onsdigital.json.bulletin;
+package com.github.onsdigital.generator.data;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -7,16 +7,18 @@ import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
 import java.io.IOException;
-import java.io.Reader;
+import java.net.URISyntaxException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 import org.apache.commons.lang3.StringUtils;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.github.davidcarboni.ResourceUtils;
 import com.github.onsdigital.json.Section;
+import com.github.onsdigital.json.bulletin.Bulletin;
 
-public class BulletinTest {
+public class BulletinMarkdownTest {
 
 	Bulletin bulletin;
 
@@ -26,11 +28,12 @@ public class BulletinTest {
 	}
 
 	@Test
-	public void shouldReadBulletin() throws IOException {
+	public void shouldReadBulletin() throws IOException, URISyntaxException {
 
 		// Given
-		String resourceName = "/com/github/onsdigital/json/bulletin/data.md";
-		Reader markdown = ResourceUtils.getReader(resourceName);
+		String theme = "Economy";
+		String level2 = "Government, Public Sector and Taxes";
+		String level3 = "Public Sector Finance";
 		String lede = "man";
 		String more = "nation";
 		String summary = "summarizor";
@@ -40,13 +43,19 @@ public class BulletinTest {
 		String contactName = "Jukesie";
 		String contactEmail = "jukesie@gmail.com";
 		String nextRelease = "soon";
+		ClassLoader classLoader = BulletinMarkdownTest.class.getClassLoader();
+		String resourceName = "com/github/onsdigital/json/bulletin/data.md";
+		Path path = Paths.get(classLoader.getResource(resourceName).toURI());
 
 		// When
-		bulletin = new Bulletin(markdown);
+		bulletin = BulletinMarkdown.read(path);
 
 		// Then
 
 		// Header block
+		assertEquals(theme, bulletin.theme);
+		assertEquals(level2, bulletin.level2);
+		assertEquals(level3, bulletin.level3);
 		assertEquals(lede, bulletin.lede);
 		assertEquals(more, bulletin.more);
 		assertEquals(summary, bulletin.summary);
@@ -58,7 +67,7 @@ public class BulletinTest {
 		assertEquals(nextRelease, bulletin.nextRelease);
 
 		// Title
-		assertEquals("Titular", bulletin.title);
+		assertEquals("What happened to all the money?", bulletin.title);
 
 		// Sections
 		assertEquals(2, bulletin.sections.size());
@@ -81,11 +90,11 @@ public class BulletinTest {
 		bulletin.title = "";
 
 		// When
-		boolean result = bulletin.matchTitle(markdown);
+		String result = BulletinMarkdown.matchTitle(markdown);
 
 		// Then
-		assertTrue(result);
-		assertEquals(title, bulletin.title);
+		assertNotNull(result);
+		assertEquals(title, result);
 	}
 
 	@Test
@@ -97,11 +106,11 @@ public class BulletinTest {
 		bulletin.title = "";
 
 		// When
-		boolean result = bulletin.matchTitle(markdown);
+		String result = BulletinMarkdown.matchTitle(markdown);
 
 		// Then
-		assertTrue(result);
-		assertEquals(title, bulletin.title);
+		assertNotNull(result);
+		assertEquals(title, result);
 	}
 
 	@Test
@@ -113,10 +122,10 @@ public class BulletinTest {
 		bulletin.title = "already here";
 
 		// When
-		boolean result = bulletin.matchTitle(markdown);
+		String result = BulletinMarkdown.matchTitle(markdown);
 
 		// Then
-		assertFalse(result);
+		assertNull(result);
 		assertFalse(StringUtils.isEmpty(bulletin.title));
 	}
 
@@ -129,10 +138,10 @@ public class BulletinTest {
 		bulletin.title = "";
 
 		// When
-		boolean result = bulletin.matchTitle(markdown);
+		String result = BulletinMarkdown.matchTitle(markdown);
 
 		// Then
-		assertFalse(result);
+		assertNull(result);
 		assertTrue(StringUtils.isEmpty(bulletin.title));
 	}
 
@@ -144,7 +153,7 @@ public class BulletinTest {
 		String markdown = "## \t" + heading;
 
 		// When
-		Section section = bulletin.matchHeading(markdown);
+		Section section = BulletinMarkdown.matchHeading(markdown);
 
 		// Then
 		assertNotNull(section);
@@ -159,7 +168,7 @@ public class BulletinTest {
 		String markdown = "## \t" + title;
 
 		// When
-		Section section = bulletin.matchHeading(markdown);
+		Section section = BulletinMarkdown.matchHeading(markdown);
 
 		// Then
 		assertNotNull(section);
@@ -175,7 +184,7 @@ public class BulletinTest {
 		bulletin.title = "already here";
 
 		// When
-		Section section = bulletin.matchHeading(markdown);
+		Section section = BulletinMarkdown.matchHeading(markdown);
 
 		// Then
 		assertNull(section);
@@ -190,7 +199,7 @@ public class BulletinTest {
 		bulletin.title = "";
 
 		// When
-		Section section = bulletin.matchHeading(markdown);
+		Section section = BulletinMarkdown.matchHeading(markdown);
 
 		// Then
 		assertNull(section);
@@ -205,7 +214,7 @@ public class BulletinTest {
 		String line = name + ":" + value;
 
 		// When
-		String[] property = bulletin.readProperty(line);
+		String[] property = BulletinMarkdown.readProperty(line);
 
 		// Then
 		assertEquals(2, property.length);
@@ -222,7 +231,7 @@ public class BulletinTest {
 		String line = "   " + name + " :  " + value + "\t";
 
 		// When
-		String[] property = bulletin.readProperty(line);
+		String[] property = BulletinMarkdown.readProperty(line);
 
 		// Then
 		assertEquals(2, property.length);
@@ -237,10 +246,9 @@ public class BulletinTest {
 		String line = "";
 
 		// When
-		String[] property = bulletin.readProperty(line);
+		String[] property = BulletinMarkdown.readProperty(line);
 
 		// Then
 		assertEquals(2, property.length);
 	}
-
 }

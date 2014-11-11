@@ -90,10 +90,16 @@ public class Data implements Iterable<Timeseries> {
 	 */
 	private static void parse() throws IOException {
 		NonCdidCSV.parse();
+		BulletinMarkdown.parse();
 		DataCSV.parse();
 		MetadataCSV.parse();
 		AlphaContentCSV.parse();
 		DatasetMappingsCSV.parse();
+
+		// Only call this if you want to reset bulletin content using the
+		// bulletins sheet of the Alpha Content Spreadsheet.
+		// BulletinContent.parseCsv();
+
 		System.out.println("Parsing complete.");
 	}
 

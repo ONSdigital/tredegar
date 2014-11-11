@@ -22,7 +22,6 @@ import au.com.bytecode.opencsv.CSVReader;
 
 import com.github.davidcarboni.ResourceUtils;
 import com.github.davidcarboni.restolino.json.Serialiser;
-import com.github.onsdigital.generator.bulletin.BulletinContent;
 import com.github.onsdigital.generator.data.Data;
 import com.github.onsdigital.generator.data.DatasetMappingsCSV;
 import com.github.onsdigital.generator.datasets.DatasetContent;
@@ -424,24 +423,21 @@ public class TaxonomyGenerator {
 
 	private static void createStatsBulletins(Folder folder, T3 t3) throws IOException {
 		t3.statsBulletins.clear();
-		List<Bulletin> bulletins = BulletinContent.getBulletins(folder);
 
-		if (bulletins != null) {
-			for (Bulletin bulletin : bulletins) {
-				// Summary is used as a trigger to determine whether or not to
-				// add this bulletin to the list of related bulletins. This is a
-				// bit of a workaround for now.
-				if (bulletin.summary != null) {
-					URI bulletinUri = toStatsBulletinUri(folder, bulletin);
-					t3.statsBulletins.add(bulletinUri);
-				}
+		for (Bulletin bulletin : folder.bulletins) {
+			// Summary is used as a trigger to determine whether or not to
+			// add this bulletin to the list of related bulletins. This is a
+			// bit of a workaround for now.
+			if (bulletin.summary != null) {
+				URI bulletinUri = toStatsBulletinUri(folder, bulletin);
+				t3.statsBulletins.add(bulletinUri);
 			}
 		}
 	}
 
 	private static void createStatsBulletinHeadline(Folder folder, T3 t3) throws IOException {
 		// Stats bulletin references:
-		URI statsBulletinHeadline = toStatsBulletinUri(folder, BulletinContent.getHeadlineBulletin(folder));
+		URI statsBulletinHeadline = toStatsBulletinUri(folder, folder.headlineBulletin);
 		if (statsBulletinHeadline != null) {
 			t3.statsBulletinHeadline = statsBulletinHeadline;
 		}
@@ -460,6 +456,9 @@ public class TaxonomyGenerator {
 				}
 				baseUri += "/bulletins";
 				String bulletinFileName = bulletin.fileName;
+				if (bulletinFileName == null) {
+					System.out.println("No filename for : " + bulletin.name);
+				}
 				String sanitizedBulletinFileName = bulletinFileName.replaceAll("\\W", "");
 				bulletin.uri = URI.create(baseUri + "/" + StringUtils.deleteWhitespace(sanitizedBulletinFileName));
 			}
@@ -556,11 +555,8 @@ public class TaxonomyGenerator {
 					noData.add(timeseries);
 				}
 
-				List<Bulletin> bulletins = BulletinContent.getBulletins(folder);
-				if (bulletins != null) {
-					for (Bulletin bulletin : bulletins) {
-						timeseries.relatedBulletins.add(bulletin.uri);
-					}
+				for (Bulletin bulletin : folder.bulletins) {
+					timeseries.relatedBulletins.add(bulletin.uri);
 				}
 
 				String json = Serialiser.serialise(timeseries);
@@ -579,13 +575,10 @@ public class TaxonomyGenerator {
 	}
 
 	private static void createBulletin(Folder folder, File file, T3 t3) throws IOException {
-
-		List<Bulletin> bulletins = BulletinContent.getBulletins(folder);
-
-		if (bulletins != null && bulletins.size() > 0) {
+		if (folder.bulletins != null && folder.bulletins.size() > 0) {
 			File bulletinsFolder = new File(file, "bulletins");
 			bulletinsFolder.mkdir();
-			for (Bulletin bulletin : bulletins) {
+			for (Bulletin bulletin : folder.bulletins) {
 				bulletin.setBreadcrumb(t3);
 				String bulletinFileName = bulletin.fileName;
 				String sanitizedBulletinFileName = bulletinFileName.replaceAll("\\W", "");
