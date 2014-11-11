@@ -428,6 +428,9 @@ public class TaxonomyGenerator {
 
 		if (bulletins != null) {
 			for (Bulletin bulletin : bulletins) {
+				// Summary is used as a trigger to determine whether or not to
+				// add this bulletin to the list of related bulletins. This is a
+				// bit of a workaround for now.
 				if (bulletin.summary != null) {
 					URI bulletinUri = toStatsBulletinUri(folder, bulletin);
 					t3.statsBulletins.add(bulletinUri);
