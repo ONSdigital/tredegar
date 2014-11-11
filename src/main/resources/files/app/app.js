@@ -58,7 +58,7 @@
                 when('/release', {
                     templateUrl: 'app/templates/release/release.html'
                 }).
-                when('/search', {
+                when('/search/', {
                     templateUrl: 'app/templates/search-results/search-results.html',
                     controller: 'SearchCtrl'
                 }).
