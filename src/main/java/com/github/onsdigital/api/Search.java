@@ -41,6 +41,7 @@ public class Search {
 				.setFields(getTitle(), "path");
 		SearchResult searchResult = new SearchHelper(ElasticSearchServer.getClient()).search(queryBuilder);
 		if (searchResult.getNumberOfResults() == 0) {
+			System.out.println("Attempting search against timeseries type as no results found for: " + query);
 			ONSQueryBuilder timeSeriesQueryBuilder = new ONSQueryBuilder("ons").setType(ContentType.timeseries.name()).setPage(page).setSearchTerm(query).setFields(getTitle(), "path");
 			searchResult = new SearchHelper(ElasticSearchServer.getClient()).search(timeSeriesQueryBuilder);
 		}
