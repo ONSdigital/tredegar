@@ -9,25 +9,26 @@
     <script type="text/javascript" src="app/components/accordion/accordion.js"></script>
     <script type="text/javascript" src="app/components/paginator/paginator.js"></script>
     <script type="text/javascript" src="app/components/navigation/navigation.js"></script>
+    <script type="text/javascript" src="app/components/tabs/tabs.js"></script>
 
 
 </head>
 
-<body id="ng-app" class="js">
+<body id="ng-app" class="js" ng-controller="TestCtrl">
 
     <!-- Paginator -->
     <h1>Paginator</h1>
     <ons-paginator page-count=10></ons-paginator>
 
 
-    <div ng-controller="TestCtrl">
+    <div>
 
         <h1>Navigation</h1>
         <ons-nav>
             <ons-nav-item nav-label="Home" href="#!" class="nav nav--multi nav--block nav--primary" ></ons-nav-item>
             <ons-nav-item ng-repeat="item in navigation" expandable="true" nav-label="{{item.name}}" class="nav__expandable js-expandable" href="#!{{item.url}}">
                 <ons-nav-sub-item ng-repeat="subitem in item.children" nav-label="{{subitem.name}}" href="#!{{subitem.url}}"></ons-nav-sub-item>
-            </ons-nav-item>
+            </ons-nav-item>onsTabs
             <ons-nav-item nav-label="Respondents" class="nav--primary__respondents"  label-class="icon-users icon--inline" href="#!" ></ons-nav-item>
             <ons-nav-item nav-label="Release calendar" class="nav--primary__secondary-content" href="#!" ></ons-nav-item>
             <ons-nav-item nav-label="Methodology" class="nav--primary__secondary-content" href="#!" ></ons-nav-item>
@@ -50,11 +51,21 @@
 
     <!-- Tabs -->
     <h1>Tabs</h1>
-    <ons-tabs>
-        <ons-tab title="First Tab">I am first</ons-tab>
-        <ons-tab title="Second Tab">I am second</ons-tab>
-    </ons-tabs>
+    <a href="" ng-click="printTab()">Print Tab</a>
+<!-- TODO: Figure out how to pass aria-controls -->
+<div ons-tabs key-var="selected" class="tab-pane tab-pane--dual lifted" >
+    <ul role="tablist" class="nav tab-pane__tabs-container">
+        <li ons-tab-control="firsttab" role="presentation" class="tab-pane__tab-container">
+            <a href="" ng-class="{'tab-pane__tab--selected':  selected === 'firsttab' }" class="tab-pane__tab" role="tab" aria-selected="{{selected === 'firsttab' ? true : false}}"><br class="tab-pane__tab__break">Tab 1</a>
+        </li>
+        <li ons-tab-control="secondtab" role="presentation" class="tab-pane__tab-container">
+            <a href="" ng-class="{'tab-pane__tab--selected': selected === 'secondtab'}" class="tab-pane__tab" role="tab" aria-selected="{{selected === 'secondtab' ? true : false}}"><br class="tab-pane__tab__break">Tab 2</a>
+        </li>
+    </ul>
 
+    <h3 ons-tab="firsttab" >THE FIRST </h3>
+    <h3 ons-tab="secondtab" >The SECOND </h3>
+</div>
     <!-- Accordion -->
     <h1>Accordion</h1>
     <ons-accordion multiple="true">
@@ -103,8 +114,9 @@
 </body>
 
 <script type="text/javascript">
-angular.module('testModule', ['onsAccordion', 'onsPaginator', 'onsNavigation'])
+angular.module('testModule', ['onsPaginator', 'onsTabs', 'onsAccordion',  'onsNavigation'])
     .controller('TestCtrl', ['$scope', '$http', function($scope, $http) {
+        
         $http.get("/navigation").success(function(data) {
             $scope.navigation = data
         })
@@ -112,6 +124,12 @@ angular.module('testModule', ['onsAccordion', 'onsPaginator', 'onsNavigation'])
         $http.get("/data/economy/inflationandpriceindices").success(function(data) {
             $scope.ipi = data
         })
+
+
+        $scope.printTab= function(){
+        console.log("Tab Contoller? :")
+        console.log($scope)
+        }
     }])
 </script>
 
