@@ -6383,3 +6383,13 @@ margin: 0 auto -4em;
 .global-footer, .push {
 height: 4em;
 }
+
+.sticky-wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -9.1em;
+}
+.sticky-footer {
+  height: 9.1em;
+}
