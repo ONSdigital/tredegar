@@ -24,7 +24,7 @@ export BONSAI_TRANSPORT_PORT=9300
 #Generate taxonomy
 mvn clean compile dependency:copy-dependencies && \
 rm -rf src/main/taxonomy && \
-java -cp "target/classes:target/dependency/*" com.github.onsdigital.generator.TaxonomyGenerator
+java -Xmx2048m -cp "target/classes:target/dependency/*" com.github.onsdigital.generator.TaxonomyGenerator
 
 # Now build the JAR:
 mvn process-resources && \
