@@ -1,8 +1,12 @@
 package com.github.onsdigital.json.bulletin;
 
+import java.io.Reader;
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
+
+import org.apache.commons.lang3.StringUtils;
 
 import com.github.onsdigital.generator.Folder;
 import com.github.onsdigital.json.CollectionItem;
@@ -60,6 +64,191 @@ public class Bulletin extends CollectionItem {
 				+ "\n\n"
 				+ "Proin sed facilisis sapien. Nunc hendrerit dignissim sapien, vel consequat mi rhoncus eget. Maecenas et tellus convallis, tristique risus vitae.";
 		sections.add(whatIs);
+	}
+
+	/**
+	 * Sets up a bulletin according to the given content.
+	 */
+	public Bulletin(Reader markdown) {
+		this();
+
+		// Reinitialise the bulletin:
+		title = StringUtils.EMPTY;
+		sections.clear();
+
+		// Read the markdown
+		try (Scanner scanner = new Scanner(markdown)) {
+			readHeader(scanner);
+			readContent(scanner);
+		}
+	}
+
+	/**
+	 * Reads the "header" information about the bulletin. Information is
+	 * expected in the form "key : value" and the header block should be
+	 * terminated with an empty line. The recognised keys are as follows.
+	 * <ul>
+	 * <li>Next release</li>
+	 * <li>Contact name</li>
+	 * <li>Contact email</li>
+	 * <li>Lede</li>
+	 * <li>More</li>
+	 * <li>Headline 1</li>
+	 * <li>Headline 2</li>
+	 * <li>Headline 3</li>
+	 * </ul>
+	 * 
+	 * @param scanner
+	 *            The {@link Scanner} to read lines from.
+	 */
+	private void readHeader(Scanner scanner) {
+
+		// Property keys:
+		String lede = "Lede";
+		String more = "More";
+		String summary = "Summary";
+		String headline1 = "Headline 1";
+		String headline2 = "Headline 2";
+		String headline3 = "Headline 3";
+		String contactName = "Contact name";
+		String contactEmail = "Contact email";
+		String nextRelease = "Next release";
+
+		String line;
+		while (scanner.hasNextLine() && StringUtils.isNotBlank(line = scanner.nextLine())) {
+
+			// Extract property values:
+			String[] property = readProperty(line);
+			if (StringUtils.equalsIgnoreCase(property[0], lede)) {
+				this.lede = property[1];
+			} else if (StringUtils.equalsIgnoreCase(property[0], more)) {
+				this.more = property[1];
+			} else if (StringUtils.equalsIgnoreCase(property[0], summary)) {
+				this.summary = property[1];
+			} else if (StringUtils.equalsIgnoreCase(property[0], headline1)) {
+				this.headline1 = property[1];
+			} else if (StringUtils.equalsIgnoreCase(property[0], headline2)) {
+				this.headline2 = property[1];
+			} else if (StringUtils.equalsIgnoreCase(property[0], headline3)) {
+				this.headline3 = property[1];
+			} else if (StringUtils.equalsIgnoreCase(property[0], contactName)) {
+				this.contact.name = property[1];
+			} else if (StringUtils.equalsIgnoreCase(property[0], contactEmail)) {
+				this.contact.email = property[1];
+			} else if (StringUtils.equalsIgnoreCase(property[0], nextRelease)) {
+				this.nextRelease = property[1];
+			} else {
+				System.out.println("Key not recognised: " + property[0] + " (for value '" + property[1] + "')");
+			}
+
+		}
+	}
+
+	/**
+	 * Parses the markdown content of the bulletin into title and sections;
+	 * 
+	 * @param scanner
+	 *            The {@link Scanner} to read lines from.
+	 */
+	private void readContent(Scanner scanner) {
+
+		Section currentSection = null;
+
+		while (scanner.hasNextLine()) {
+
+			String line = scanner.nextLine();
+
+			// Extract content structure:
+			boolean matched = matchTitle(line);
+			if (!matched) {
+				Section newSection = matchHeading(line);
+				if (newSection != null) {
+					sections.add(newSection);
+					currentSection = newSection;
+					matched = true;
+				}
+			}
+			if (!matched && currentSection != null) {
+				if (StringUtils.isNotBlank(currentSection.markdown)) {
+					currentSection.markdown += "\n";
+				}
+				currentSection.markdown += line;
+			}
+
+		}
+
+	}
+
+	/**
+	 * Extracts a property key and value from the given line.
+	 * 
+	 * @param line
+	 *            The String to be parsed.
+	 * @return A two-element String array. If the line can't be parsed the
+	 *         elements of the array will be null.
+	 */
+	String[] readProperty(String line) {
+		String[] result = new String[2];
+
+		int separatorIndex = line.indexOf(':');
+		if (separatorIndex > 0) {
+			result[0] = StringUtils.trim(line.substring(0, separatorIndex));
+			if (line.length() > separatorIndex + 1) {
+				result[1] = line.substring(separatorIndex + 1);
+			}
+		}
+
+		result[0] = StringUtils.trim(result[0]);
+		result[1] = StringUtils.trim(result[1]);
+		return result;
+	}
+
+	/**
+	 * If the given line matches markdown H1 syntax (atx only, not Setext), sets
+	 * the bulletin title to the title text, unless the title has already been
+	 * set.
+	 * 
+	 * @param line
+	 *            The line to be matched.
+	 * @return
+	 * @see <a
+	 *      href="http://daringfireball.net/projects/markdown/syntax">http://daringfireball.net/projects/markdown/syntax</a>
+	 */
+	boolean matchTitle(String line) {
+		boolean result = false;
+
+		// Set the title
+		String h1Regex = "#\\s+";
+		if (StringUtils.isEmpty(title) && line.matches(h1Regex + ".*")) {
+			title = line.replaceFirst(h1Regex, "");
+			result = true;
+		}
+
+		return result;
+	}
+
+	/**
+	 * If the given line matches markdown H1 syntax (atx only, not Setext), sets
+	 * the bulletin title to the title text, unless the title has already been
+	 * set.
+	 * 
+	 * @param line
+	 *            The line to be matched.
+	 * @see <a
+	 *      href="http://daringfireball.net/projects/markdown/syntax">http://daringfireball.net/projects/markdown/syntax</a>
+	 */
+	Section matchHeading(String line) {
+		Section result = null;
+
+		// Set the section title
+		String h2Regex = "##\\s+";
+		if (line.matches(h2Regex + ".*")) {
+			result = new Section();
+			result.title = line.replaceFirst(h2Regex, "");
+			result.markdown = StringUtils.EMPTY;
+		}
+
+		return result;
 	}
 
 	public void setBreadcrumb(TaxonomyHome t3) {
