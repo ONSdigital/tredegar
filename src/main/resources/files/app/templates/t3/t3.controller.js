@@ -2,8 +2,8 @@
 
 	angular.module('onsTemplates')
 		.controller('T3Controller', ['$scope', '$http', 'Downloader', T3Controller])
-		.controller('T3ChartController', ['$scope', '$location', '$log', 'Downloader', 'Taxonomy', T3ChartController])
-		.controller('T3RepeatItemController', ['$scope', '$location', '$log', 'Downloader', 'Taxonomy', T3RepeatItemController])
+		.controller('T3ChartController', ['$scope', '$location', '$log', 'Downloader', 'Taxonomy', 'Chart', T3ChartController])
+		.controller('T3RepeatItemController', ['$scope', '$location', '$log', 'Downloader', 'Taxonomy', 'Chart', T3RepeatItemController])
 		.directive('stSelectAll', [SelectAllDirective])
 		.directive('stSelect', [SelectDirective])
 
@@ -77,12 +77,12 @@
 		
 	}
 	
-	function T3ChartController($scope, $location, $log, Downloader, Taxonomy) {
+	function T3ChartController($scope, $location, $log, Downloader, Taxonomy, Chart) {
         var ctrl = this
         var dataPath = '/data' + $scope.taxonomy.data.headline
         Taxonomy.load(dataPath, function(timeseries) {
             ctrl.timeseries = timeseries
-            ctrl.chartConfig = getChart()
+            ctrl.chartConfig = Chart.getSparkline()
             ctrl.showYearly = false
             ctrl.showMonthly = false
             ctrl.showQuarterly = false
@@ -423,7 +423,7 @@
 	}
 	
 
-	function T3RepeatItemController($scope, $location, $log, Downloader, Taxonomy) {
+	function T3RepeatItemController($scope, $location, $log, Downloader, Taxonomy, Chart) {
 		var scopedTimeseries = $scope.taxonomy.data.items[$scope.$index]
 		console.log('scopedTimeseries: ' + scopedTimeseries)
         var ctrl = this
@@ -434,7 +434,7 @@
         promise.then(function(payload) {
         	console.log('T3RepeateItemController promise for: ' + dataPath + ' loading payload of: ' + JSON.stringify(payload.data.uri))
             ctrl.timeseries = payload.data
-            ctrl.chartConfig = getChart()
+            ctrl.chartConfig = Chart.getSparkline()
             ctrl.showYearly = false
             ctrl.showMonthly = false
             ctrl.showQuarterly = false
@@ -660,6 +660,11 @@
                         values: [],
                         years: []
                     }
+                    
+                    if (timeseriesValues.length > 10) {
+                    	timeseriesValues = timeseriesValues.slice(Math.max(timeseriesValues.length - 10, 1))
+                    }
+                    
                     var current
                     var i
 
@@ -768,133 +773,6 @@
 
 	}
 	
-    function getChart() {
-        var data = {
-            options: {
-                chart: {
-                    backgroundColor: null,
-                    borderWidth: 0,
-                    type: 'area',
-                    margin: [0, 0, 0, 0],
-                    width: 140,
-                    height: 100,
-                    style: {
-                        overflow: 'visible'
-                    },
-                    skipClone: true
-                },
-                title: {
-                    text: ''
-                },
-                subtitle: {
-                    text: '',
-                    y: 110
-                },
-                credits: {
-                    enabled: false
-                },
-                xAxis: {
-                    labels: {
-                        enabled: false
-                    },
-                    title: {
-                        text: null
-                    },
-                    startOnTick: false,
-                    endOnTick: false,
-                    tickPositions: []
-                },
-                yAxis: {
-                    endOnTick: false,
-                    startOnTick: false,
-                    labels: {
-                        enabled: false
-                    },
-                    title: {
-                        text: null
-                    },
-                    tickPositions: [0]
-                },
-                legend: {
-                    enabled: false
-                },
-                tooltip: {
-                    formatter: function() {
-                        var id = '<div id="custom-tooltip" class="tooltip-left tooltip-right">';
-                        var block = id + "<div class='sidebar' >";
-                        var title = '<b class="title">' + this.points[0].key + ': </b>';
-                        var content = block + "<div class='title'>&nbsp;</div>";
-
-                        content += "</div>";
-                        content += "<div class='mainText'>";
-                        content += title;
-
-                        // series names and values
-                        $.each(this.points, function(i, val) {
-                        	content += '<div class="tiptext">' + Highcharts.numberFormat(val.y, 2) + '</div>';
-//                            content += '<div class="tiptext"><i>' + val.point.series.chart.series[i].name + "</i><br/><b>Value: " + Highcharts.numberFormat(val.y, 2) + '</b></div>';
-                        });
-                        content += "</div>";
-                        return content;
-                    },
-                    backgroundColor: null,
-                    borderWidth: 0,
-                    shadow: false,
-                    useHTML: true,
-                    hideDelay: 0,
-                    shared: true,
-                    padding: 0,
-                    positioner: function (w, h, point) {
-                        return { x: point.plotX - w / 2, y: point.plotY - h};
-                    }
-                },
-                plotOptions: {
-                    series: {
-                        animation: false,
-                        lineWidth: 1,
-                        shadow: false,
-                        states: {
-                            hover: {
-                                lineWidth: 1
-                            }
-                        },
-                        marker: {
-                            radius: 1,
-                            states: {
-                                hover: {
-                                    radius: 2
-                                }
-                            }
-                        },
-                        fillOpacity: 0.25
-                    },
-                    column: {
-                        negativeColor: '#910000',
-                        borderColor: 'silver'
-                    }
-                },
-                exporting: {enabled: false}
-            },
-            series: [{
-                name: "",
-                data: [],
-                marker: {
-                    symbol: "circle",
-                    states: {
-                        hover: {
-                            fillColor: '#007dc3',
-                            radiusPlus: 0,
-                            lineWidthPlus: 0
-                        }
-                    }
-                },
-                dashStyle: 'Solid',
-            }]
-        };
-        return data;
-    }
-	
-
 	function SelectAllDirective() {
 		return {
 			restrict: 'A',

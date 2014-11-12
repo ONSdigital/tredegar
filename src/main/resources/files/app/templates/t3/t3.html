@@ -55,7 +55,7 @@
                   </div>
                 </div>
                 <!-- spark line -->
-  				<div class="box box--inline box--padded muted--dark">
+  				<div class="box box--inline box--padded">
                   <div class="stat stat--headline">
                     <div class="stat__figure">
 		                <div ng-controller="T3ChartController as chart">
@@ -169,17 +169,16 @@
 <!--         </div> -->
 <!--       </td> -->
     
-<!--     <td colspan="3"> -->
-<!--       <div> -->
-<!--       	{{item.uri}} -->
-<!--         <div ng-controller="T3RepeatItemController as chart"> -->
-<!-- 	        <div ng-if="chart.chartVisible"> -->
-<!-- 	            <highchart class="highcharts-background" id="chart_prices" config="chart.chartConfig"> -->
-<!-- 	            </highchart> -->
-<!-- 	        </div> -->
-<!-- 		</div> -->
-<!--       </div> -->
-<!--     </td> -->
+    <td colspan="3">
+      <div>
+        <div ng-controller="T3RepeatItemController as chart">
+	        <div ng-if="chart.chartVisible">
+	            <highchart class="highcharts-background" id="chart_prices" config="chart.chartConfig">
+	            </highchart>
+	        </div>
+		</div>
+      </div>
+    </td>
 
     </tr>
     <!-- /table__row_repeat -->
