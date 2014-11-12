@@ -4407,6 +4407,17 @@ background-color: #edeeee !important;/* altered on phil's advice--change this ov
   border-color: #A8A1A1;
 }
 
+.clearfix:after {
+    content: ".";
+    display: table;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+ 
+
+
 /*------------------------------------*\
   Stats Bulletin Classes
 \*------------------------------------*/
@@ -5392,7 +5403,8 @@ td.datatable-downloads{
     min-width: 160px;
     min-width: 16rem; }
     .nav--primary__respondents > a {
-      color: #fff;
+      /*color: #fff; switched off until angular nav controller is fixed */
+      color: #b2bb1c;
       text-align: left; }
     .nav--primary__respondents [class^='icon'] {
       float: left;
