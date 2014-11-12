@@ -2,74 +2,84 @@
 <html ng-app="testModule">
 
 <head>
-
     <link href="ui/css/main.css" rel="stylesheet" type="text/css">
-
     <script type="text/javascript" src="ui/js/lib/angular.js"></script>
     <script type="text/javascript" src="app/components/accordion/accordion.js"></script>
     <script type="text/javascript" src="app/components/paginator/paginator.js"></script>
     <script type="text/javascript" src="app/components/navigation/navigation.js"></script>
     <script type="text/javascript" src="app/components/tabs/tabs.js"></script>
-
-
 </head>
 
 <body id="ng-app" class="js" ng-controller="TestCtrl">
-
     <!-- Paginator -->
     <h1>Paginator</h1>
     <ons-paginator page-count=10></ons-paginator>
-
-
     <div>
-
         <h1>Navigation</h1>
-        <ons-nav>
-            <ons-nav-item nav-label="Home" href="#!" class="nav nav--multi nav--block nav--primary" ></ons-nav-item>
-            <ons-nav-item ng-repeat="item in navigation" expandable="true" nav-label="{{item.name}}" class="nav__expandable js-expandable" href="#!{{item.url}}">
-                <ons-nav-sub-item ng-repeat="subitem in item.children" nav-label="{{subitem.name}}" href="#!{{subitem.url}}"></ons-nav-sub-item>
-            </ons-nav-item>onsTabs
-            <ons-nav-item nav-label="Respondents" class="nav--primary__respondents"  label-class="icon-users icon--inline" href="#!" ></ons-nav-item>
-            <ons-nav-item nav-label="Release calendar" class="nav--primary__secondary-content" href="#!" ></ons-nav-item>
-            <ons-nav-item nav-label="Methodology" class="nav--primary__secondary-content" href="#!" ></ons-nav-item>
-            <ons-nav-item nav-label="About" class="nav--primary__secondary-content" href="#!" ></ons-nav-item>
-        </ons-nav>
-            <div class="slate--mid-grey_new search-wrapper">
-            <form ng-submit="goToSearch(searchTerm)" class="nav-search nav-search--hidden" id="searchBar">
-                <div class="nav-search__container">
-                    <label for="nav-search" class="visuallyhidden">Search term:</label>
-                    <input id="nav-search" type="text" class="input--full  search_reduction" name="q" ng-model="searchTerm" placeholder="Search for keyword or time series id">
-                    <button type="submit" class="btn btn--primary btn--small btn--form--large-icon input--lede-btn-icon align_middle no_left_margin " id="nav-search-submit">
-                        <span class="icon icon-search-1" role="presentational">
-                            <span class="visuallyhidden">Search</span>
-                        </span>
-                    </button>
-                </div>
-            </form>
-        </div>
+        <nav class="ons-nav" ons-nav>
+            <ul class="nav nav--controls">
+                <li class="nav--controls__menu menu-is-expanded">
+                    <a href="" id="menu-toggle" aria-controls="nav-primary" ng-click="navigation.toggleMenu()">
+                        <span class="nav--controls__icon icon-menu icon--inline icon--large" role="presentation"></span>
+                        <span class="nav--controls__text">Menu</span>
+                    </a>
+                </li>
+                <li class="nav--controls__search search-is-expanded">
+                    <a href="" id="search-toggle" aria-controls="nav-search">
+                        <span class="nav--controls__icon icon--inline icon--large icon-search-1" role="presentation"></span>
+                        <span class="nav--controls__text">Search</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav nav--multi nav--block nav--primary" id="nav-primary" aria-expanded="{{navigation.showMenu}}">
+                <li class="nav--primary__hide-small-med">
+                    <a href="#!">Home</a>
+                </li>
+                <li ng-repeat="n in navigation" class="nav__expandable js-expandable js-expandable-active nav--primary__active">
+                    <a href="#!{{n.url}}">{{n.name}}</a>
+                    <ul class="nav--primary__sub js-expandable__content js-nav-hidden">
+                        <!-- <a href="#!{{n.url}}">{{navLabel}}</a> -->
+                        <li ng-repeat="c in n.children" class="nav--primary__active ">
+                            <a href="#!{{c.url}}">{{c.name}}</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav--primary__respondents">
+                    <a href="#!"><span class="icon-comment icon--inline"></span> Taking part in a survey?</a>
+                </li>
+                <li class="nav--primary__secondary-content">
+                    <a href="#!">Release Calendar</a>
+                </li>
+                <li class="nav--primary__secondary-content">
+                    <a href="#!">Methodology</a>
+                </li>
+                <li class="nav--primary__secondary-content">
+                    <a href="#!">About</a>
+                </li>
+            </ul>
+        </nav>
     </div>
-
-    <!-- Tabs -->
-    <h1>Tabs</h1>
-    <a href="" ng-click="printTab()">Print Tab</a>
-<!-- TODO: Figure out how to pass aria-controls -->
-<div ons-tabs key-var="selected" class="tab-pane tab-pane--dual lifted" >
-    <ul role="tablist" class="nav tab-pane__tabs-container">
-        <li ons-tab-control="firsttab" role="presentation" class="tab-pane__tab-container">
-            <a href="" ng-class="{'tab-pane__tab--selected':  selected === 'firsttab' }" class="tab-pane__tab" role="tab" aria-selected="{{selected === 'firsttab' ? true : false}}"><br class="tab-pane__tab__break">Tab 1</a>
-        </li>
-        <li ons-tab-control="secondtab" role="presentation" class="tab-pane__tab-container">
-            <a href="" ng-class="{'tab-pane__tab--selected': selected === 'secondtab'}" class="tab-pane__tab" role="tab" aria-selected="{{selected === 'secondtab' ? true : false}}"><br class="tab-pane__tab__break">Tab 2</a>
-        </li>
-    </ul>
-
-    <h3 ons-tab="firsttab" >THE FIRST </h3>
-    <h3 ons-tab="secondtab" >The SECOND </h3>
-</div>
+    <!-- Tabs
+        <h1>Tabs</h1>
+        <a href="" ng-click="printTab()">Print Tab</a>
+        <!-- TODO: Figure out how to pass aria-controls -->
+    <div ons-tabs key-var="selected" class="tab-pane tab-pane--dual lifted">
+        <ul role="tablist" class="nav tab-pane__tabs-container">
+            <li ons-tab-control="firsttab" role="presentation" class="tab-pane__tab-container">
+                <a href="" ng-class="{'tab-pane__tab--selected':  selected === 'firsttab' }" class="tab-pane__tab" role="tab" aria-selected="{{selected === 'firsttab' ? true : false}}">
+                    <br class="tab-pane__tab__break">Tab 1</a>
+            </li>
+            <li ons-tab-control="secondtab" role="presentation" class="tab-pane__tab-container">
+                <a href="" ng-class="{'tab-pane__tab--selected': selected === 'secondtab'}" class="tab-pane__tab" role="tab" aria-selected="{{selected === 'secondtab' ? true : false}}">
+                    <br class="tab-pane__tab__break">Tab 2</a>
+            </li>
+        </ul>
+        <h3 ons-tab="firsttab">THE FIRST</h3>
+        <h3 ons-tab="secondtab">The SECOND</h3>
+    </div>
     <!-- Accordion -->
     <h1>Accordion</h1>
     <ons-accordion multiple="true">
-
         <article class="box border-horizontal-single">
             <ons-accordion-item header="Background notes and Methodology">
                 <div class="box__content">
@@ -81,10 +91,8 @@
                         </li>
                     </ul>
                 </div>
-
             </ons-accordion-item>
         </article>
-
         <article class="box border-horizontal-single">
             <ons-accordion-item header="References">
                 <div class="box__content">
@@ -100,35 +108,26 @@
                     </p>
                 </div>
             </ons-accordion-item>
-
         </article>
     </ons-accordion>
-
-
     <h1>Toggle</h1>
     <a href="" toggler="theToggle">Click me to toggle</a>
     <div toggleable="theToggle">
         Hey
     </div>
-
 </body>
-
 <script type="text/javascript">
-angular.module('testModule', ['onsPaginator', 'onsTabs', 'onsAccordion',  'onsNavigation'])
+angular.module('testModule', ['onsPaginator', 'onsTabs', 'onsAccordion', 'onsNavigation'])
     .controller('TestCtrl', ['$scope', '$http', function($scope, $http) {
-        
         $http.get("/navigation").success(function(data) {
             $scope.navigation = data
         })
-
         $http.get("/data/economy/inflationandpriceindices").success(function(data) {
             $scope.ipi = data
         })
-
-
-        $scope.printTab= function(){
-        console.log("Tab Contoller? :")
-        console.log($scope)
+        $scope.printTab = function() {
+            console.log("Tab Contoller? :")
+            console.log($scope)
         }
     }])
 </script>
