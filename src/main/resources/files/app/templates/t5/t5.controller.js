@@ -104,7 +104,8 @@
             ctrl.years = getYears()
             ctrl.tenYears = tenYears(ctrl.years)
             ctrl.chartConfig.options.xAxis.tickInterval = tickInterval(ctrl.chartData.length);
-
+            ctrl.chartConfig.options.title.text = ctrl.timeseries.name
+            ctrl.chartConfig.options.yAxis.title.text = ctrl.timeseries.unit
             $log.debug("Chart:")
             $log.debug(ctrl.chartConfig)
             $log.debug("10y = " + ctrl.tenYears)
@@ -439,7 +440,7 @@
         var data = {
             options: {
                 chart: {
-                    type: 'line',
+                    type: 'line'
                 },
                 colors: ['#007dc3', '#409ed2', '#7fbee1', '#007dc3', '#409ed2', '#7fbee1'],
 
@@ -479,7 +480,11 @@
                 },
                 yAxis: {
                     title: {
-                        text: ""
+                        align: 'high',
+                        rotation: 0,
+                        textAlign: 'left',
+                        x: 10,
+                        y: -10
                     }
                 },
 
