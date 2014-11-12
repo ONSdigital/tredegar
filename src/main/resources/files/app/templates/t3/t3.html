@@ -55,11 +55,17 @@
                   </div>
                 </div>
                 <!-- spark line -->
-                <div ng-controller="T3ChartController as chart">
-	               <div ng-if="chart.chartVisible">
-	                   <highchart class="highcharts-background" id="chart_prices" config="chart.chartConfig">
-	                   </highchart>
-	               </div>
+  				<div class="box box--inline box--padded muted--dark">
+                  <div class="stat stat--headline">
+                    <div class="stat__figure">
+		                <div ng-controller="T3ChartController as chart">
+			               <div ng-if="chart.chartVisible">
+			                   <highchart class="highcharts-background" id="chart_prices" config="chart.chartConfig">
+			                   </highchart>
+			               </div>
+						</div>
+					</div>
+				  </div>
 				</div>
                 <!-- /box -->
                 <dl class="definition mini">
@@ -125,7 +131,7 @@
       </thead>
 
     <tbody>
-      <tr ng-repeat="item in taxonomy.data.itemData track by $index" class="list--table__item list--table__body datatable-row">
+      <tr ng-repeat="item in taxonomy.data.itemData" class="list--table__item list--table__body datatable-row">
         <td class="data_table_section-title">
           <div class="list--table__item__body list--table__item__body--caption responsive_large_width">
             <h3 class="nav-panel__heading">
@@ -163,16 +169,17 @@
 <!--         </div> -->
 <!--       </td> -->
     
-    <td colspan="3">
-      <div>
-        <div ng-controller="T3RepeatItemController as chart">
-	        <div ng-if="chart.chartVisible">
-	            <highchart class="highcharts-background" id="chart_prices" config="chart.chartConfig">
-	            </highchart>
-	        </div>
-		</div>
-      </div>
-    </td>
+<!--     <td colspan="3"> -->
+<!--       <div> -->
+<!--       	{{item.uri}} -->
+<!--         <div ng-controller="T3RepeatItemController as chart"> -->
+<!-- 	        <div ng-if="chart.chartVisible"> -->
+<!-- 	            <highchart class="highcharts-background" id="chart_prices" config="chart.chartConfig"> -->
+<!-- 	            </highchart> -->
+<!-- 	        </div> -->
+<!-- 		</div> -->
+<!--       </div> -->
+<!--     </td> -->
 
     </tr>
     <!-- /table__row_repeat -->

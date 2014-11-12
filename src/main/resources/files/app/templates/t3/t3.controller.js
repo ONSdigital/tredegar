@@ -299,7 +299,9 @@
                         ctrl.renderChart = true
                         console.log('ctrl.renderChart: ' + ctrl.renderChart)
                     }
-
+                    
+                    // Set the chart label to match the period type, e.g. 'years' 
+                    ctrl.chartConfig.options.subtitle.text = ctrl.activeChart
                 }
 
                 //Format data into high charts compatible format
@@ -308,9 +310,13 @@
                         values: [],
                         years: []
                     }
+                    
+                    if (timeseriesValues.length > 10) {
+                    	timeseriesValues = timeseriesValues.slice(Math.max(timeseriesValues.length - 10, 1))
+                    }
+                    
                     var current
                     var i
-
                     for (i = 0; i < timeseriesValues.length; i++) {
                         current = timeseriesValues[i]
                         data.values.push(enrichData(current, i))
@@ -418,10 +424,16 @@
 	
 
 	function T3RepeatItemController($scope, $location, $log, Downloader, Taxonomy) {
+		var scopedTimeseries = $scope.taxonomy.data.items[$scope.$index]
+		console.log('scopedTimeseries: ' + scopedTimeseries)
         var ctrl = this
         var dataPath = '/data' + $scope.taxonomy.data.items[$scope.$index]
-        Taxonomy.load(dataPath, function(timeseries) {
-            ctrl.timeseries = timeseries
+        console.log('T3RepeateItemController loading: ' + dataPath + ' for uri: ' + JSON.stringify($scope.taxonomy.data.items[$scope.$index]))
+        var promise = Taxonomy.loadWithoutCallback(dataPath)
+        console.log('T3RepeateItemController received: ' + JSON.stringify(promise))
+        promise.then(function(payload) {
+        	console.log('T3RepeateItemController promise for: ' + dataPath + ' loading payload of: ' + JSON.stringify(payload.data.uri))
+            ctrl.timeseries = payload.data
             ctrl.chartConfig = getChart()
             ctrl.showYearly = false
             ctrl.showMonthly = false
@@ -756,87 +768,113 @@
 
 	}
 	
-	
     function getChart() {
         var data = {
             options: {
                 chart: {
-                    type: 'line',
+                    backgroundColor: null,
+                    borderWidth: 0,
+                    type: 'area',
+                    margin: [0, 0, 0, 0],
+                    width: 140,
+                    height: 100,
+                    style: {
+                        overflow: 'visible'
+                    },
+                    skipClone: true
                 },
-                colors: ['#007dc3', '#409ed2', '#7fbee1', '#007dc3', '#409ed2', '#7fbee1'],
-
                 title: {
                     text: ''
                 },
                 subtitle: {
-                    text: ''
+                    text: '',
+                    y: 110
                 },
-                navigation: {
-                    buttonOptions: {
-                        enabled: false
-                    }
-                },
-                xAxis: {
-                    categories: [],
-                    // tickInterval: 1,
-                    labels: {
-                        formatter: function() {
-                            var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-                            var response = "";
-                            if (w < 768) {
-                                if (this.isFirst) {
-                                    count = 0;
-                                }
-                                if (count % 3 === 0) {
-                                    response = this.value;
-                                }
-                                count++;
-                            } else {
-                                response = this.value;
-                            }
-                            return response;
-                        },
-                    },
-                    tickmarkPlacement: 'on'
-                },
-                yAxis: {
-                    title: {
-                        text: ""
-                    }
-                },
-
                 credits: {
                     enabled: false
                 },
+                xAxis: {
+                    labels: {
+                        enabled: false
+                    },
+                    title: {
+                        text: null
+                    },
+                    startOnTick: false,
+                    endOnTick: false,
+                    tickPositions: []
+                },
+                yAxis: {
+                    endOnTick: false,
+                    startOnTick: false,
+                    labels: {
+                        enabled: false
+                    },
+                    title: {
+                        text: null
+                    },
+                    tickPositions: [0]
+                },
+                legend: {
+                    enabled: false
+                },
+                tooltip: {
+                    formatter: function() {
+                        var id = '<div id="custom-tooltip" class="tooltip-left tooltip-right">';
+                        var block = id + "<div class='sidebar' >";
+                        var title = '<b class="title">' + this.points[0].key + ': </b>';
+                        var content = block + "<div class='title'>&nbsp;</div>";
 
+                        content += "</div>";
+                        content += "<div class='mainText'>";
+                        content += title;
+
+                        // series names and values
+                        $.each(this.points, function(i, val) {
+                        	content += '<div class="tiptext">' + Highcharts.numberFormat(val.y, 2) + '</div>';
+//                            content += '<div class="tiptext"><i>' + val.point.series.chart.series[i].name + "</i><br/><b>Value: " + Highcharts.numberFormat(val.y, 2) + '</b></div>';
+                        });
+                        content += "</div>";
+                        return content;
+                    },
+                    backgroundColor: null,
+                    borderWidth: 0,
+                    shadow: false,
+                    useHTML: true,
+                    hideDelay: 0,
+                    shared: true,
+                    padding: 0,
+                    positioner: function (w, h, point) {
+                        return { x: point.plotX - w / 2, y: point.plotY - h};
+                    }
+                },
                 plotOptions: {
                     series: {
+                        animation: false,
+                        lineWidth: 1,
                         shadow: false,
                         states: {
                             hover: {
-                                enabled: true,
-                                shadow: false,
-                                lineWidth: 3,
-                                lineWidthPlus: 0,
-                                marker: {
-                                    height: 0,
-                                    width: 0,
-                                    halo: false,
-                                    enabled: true,
-                                    fillColor: null,
-                                    radiusPlus: null,
-                                    lineWidth: 3,
-                                    lineWidthPlus: 0
+                                lineWidth: 1
+                            }
+                        },
+                        marker: {
+                            radius: 1,
+                            states: {
+                                hover: {
+                                    radius: 2
                                 }
                             }
-                        }
+                        },
+                        fillOpacity: 0.25
+                    },
+                    column: {
+                        negativeColor: '#910000',
+                        borderColor: 'silver'
                     }
                 },
-                tooltip: {
-                	enabled: false  
-                }
+                exporting: {enabled: false}
             },
-
             series: [{
                 name: "",
                 data: [],

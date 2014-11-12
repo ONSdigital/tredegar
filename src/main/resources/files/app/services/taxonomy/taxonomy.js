@@ -129,6 +129,12 @@
 				$log.error('Taxonomy Service : Failed loading data at ' + path)
 			})
 		}
+		
+		//Loads and attaches data to given parent element with given property name
+		function loadWithoutCallback(path) {
+			console.log('loadWithoutCallback: ' + path)
+			return $http.get(path)
+		}
 
 		function resolvePath() {
 			var path = $location.$$path
@@ -148,7 +154,8 @@
 		//Expose public api
 		angular.extend(service, {
 			loadData: loadData,
-			load: load
+			load: load,
+			loadWithoutCallback: loadWithoutCallback
 		})
 
 	}
