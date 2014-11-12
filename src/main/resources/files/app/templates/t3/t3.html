@@ -52,9 +52,15 @@
                       {{taxonomy.data.headlineData.number}}
                       <span class="stat__figure__unit"> {{taxonomy.data.headlineData.unit}}</span>
                     </div>
-
                   </div>
                 </div>
+                <!-- spark line -->
+                <div ng-controller="T3ChartController as chart">
+	               <div ng-if="chart.chartVisible">
+	                   <highchart class="highcharts-background" id="chart_prices" config="chart.chartConfig">
+	                   </highchart>
+	               </div>
+				</div>
                 <!-- /box -->
                 <dl class="definition mini">
                   <dt>Last updated:</dt>
@@ -108,18 +114,18 @@
             <h2> Statistics Related to {{taxonomy.data.name}}</h2>
           </div>
         </th>
-        <th colspan="1" class="datatable-select">Select All
-          <div class="list--table__item__body--centred ">
-            <label class="list--table__item__body--centred ">
-              <span class="visuallyhidden">Select statistic</span>
-                <input st-select-all ng-model="t3.allSelected" type="checkbox">
-            </label>
-          </div>
-        </th>
+<!--         <th colspan="1" class="datatable-select">Select All -->
+<!--           <div class="list--table__item__body--centred "> -->
+<!--             <label class="list--table__item__body--centred "> -->
+<!--               <span class="visuallyhidden">Select statistic</span> -->
+<!--                 <input st-select-all ng-model="t3.allSelected" type="checkbox"> -->
+<!--             </label> -->
+<!--           </div> -->
+<!--         </th> -->
       </thead>
 
     <tbody>
-      <tr ng-repeat="item in taxonomy.data.itemData" class="list--table__item list--table__body datatable-row">
+      <tr ng-repeat="item in taxonomy.data.itemData track by $index" class="list--table__item list--table__body datatable-row">
         <td class="data_table_section-title">
           <div class="list--table__item__body list--table__item__body--caption responsive_large_width">
             <h3 class="nav-panel__heading">
@@ -151,49 +157,26 @@
           </div>
         </td>   
   
-      <td class="update_responsive">
-        <div class="micro list--table__item__body list--table__item__body--update  body_update_desk">Last updated: {{item.lastUpated}} <br>
-          Next Updated: <span class="red_highlight"> {{item.nextUpdate}} </span>
-        </div>
-      </td>
+<!--       <td class="update_responsive"> -->
+<!--         <div class="micro list--table__item__body list--table__item__body--update  body_update_desk">Last updated: {{item.lastUpated}} <br> -->
+<!--           Next Updated: <span class="red_highlight"> {{item.nextUpdate}} </span> -->
+<!--         </div> -->
+<!--       </td> -->
     
-    <td class="datatable--checkbox">
-      <div class="list--table__item">
-        <label class="list--table__item__body list--table__item__body--select">
-          <span class="visuallyhidden">Select statistic</span>
-              <input type="checkbox" st-select ng-model="item.isSelected">
-        </label>
+    <td colspan="3">
+      <div>
+        <div ng-controller="T3RepeatItemController as chart">
+	        <div ng-if="chart.chartVisible">
+	            <highchart class="highcharts-background" id="chart_prices" config="chart.chartConfig">
+	            </highchart>
+	        </div>
+		</div>
       </div>
     </td>
 
     </tr>
     <!-- /table__row_repeat -->
 
-<!-- Bottom options for downloading table contents -->  
-
-    <tr class="list--table__item list--table datatable-row">
-      <td colspan="4" ng-if="t3.selectedCount > 0" class="datatable-downloads"> 
-        <a href="" style="opacity:1" ng-click="t3.downloadCsv()" class="btn btn--primary btn--small download_responsive_btn">
-          <span class="table__action__text">.CSV</span>
-            <span class="icon-download" role="presentation"></span>
-        </a>
-        <a href="" style="opacity:1"  ng-click="t3.downloadXls()" class="btn btn--primary btn--small download_responsive_btn">
-          <span class="table__action__text">.XLSX</span>
-            <span class="icon-download" role="presentation"></span>
-        </a>          
-      </td>
-      <td colspan="4" ng-if="t3.selectedCount === 0" class="datatable-downloads"> 
-        <span class="btn btn--primary btn--small download_responsive_btn">
-          <span class="table__action__text">.CSV</span>
-            <span class="icon-download" role="presentation"></span>
-        </span>
-        <span href="" ng-click="t3.downloadXls()" class="btn btn--primary btn--small download_responsive_btn">
-          <span class="table__action__text">.XLSX</span>
-            <span class="icon-download" role="presentation"></span>
-        </span>          
-      </td>
-       <!-- /table-actions -->
-    </tr>
       <!--  /list-table__item__body -->
   </tbody>
     <!--  /table -->
