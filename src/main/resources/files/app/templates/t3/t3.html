@@ -144,6 +144,17 @@
             </div>
           </div>
         </td>
+        
+	    <td colspan="3">
+	      <div>
+	        <div ng-controller="T3RepeatItemController as chart">
+		        <div ng-if="chart.chartVisible">
+		            <highchart class="highcharts-background" id="chart_prices" config="chart.chartConfig">
+		            </highchart>
+		        </div>
+			</div>
+	      </div>
+	    </td>        
 
         <td class="data_table_section">
          <div class="list--table__item__body list--table__item__body--stat stat  responsive_med_width">
@@ -168,17 +179,6 @@
 <!--           Next Updated: <span class="red_highlight"> {{item.nextUpdate}} </span> -->
 <!--         </div> -->
 <!--       </td> -->
-    
-    <td colspan="3">
-      <div>
-        <div ng-controller="T3RepeatItemController as chart">
-	        <div ng-if="chart.chartVisible">
-	            <highchart class="highcharts-background" id="chart_prices" config="chart.chartConfig">
-	            </highchart>
-	        </div>
-		</div>
-      </div>
-    </td>
 
     </tr>
     <!-- /table__row_repeat -->

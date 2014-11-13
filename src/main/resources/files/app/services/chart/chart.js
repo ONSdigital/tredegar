@@ -211,15 +211,18 @@
 	                    enabled: false
 	                },
 	                xAxis: {
+	                	categories: [],
 	                    labels: {
-	                        enabled: false
+	                        formatter: function() {
+	                        	if (this.isFirst) {
+	                        		return this.value
+	                        	}
+	                        	if (this.isLast) {
+	                        		return this.value
+	                        	}
+	                        }
 	                    },
-	                    title: {
-	                        text: null
-	                    },
-	                    startOnTick: false,
-	                    endOnTick: false,
-	                    tickPositions: []
+	                	tickLength: 0
 	                },
 	                yAxis: {
 	                    endOnTick: false,
@@ -236,33 +239,7 @@
 	                    enabled: false
 	                },
 	                tooltip: {
-	                    formatter: function() {
-	                        var id = '<div id="custom-tooltip" class="tooltip-left tooltip-right">';
-	                        var block = id + "<div class='sidebar' >";
-	                        var title = '<b class="title">' + this.points[0].key + ': </b>';
-	                        var content = block + "<div class='title'>&nbsp;</div>";
-
-	                        content += "</div>";
-	                        content += "<div class='mainText'>";
-	                        content += title;
-
-	                        // series names and values
-	                        $.each(this.points, function(i, val) {
-	                        	content += '<div class="tiptext">' + Highcharts.numberFormat(val.y, 2) + '</div>';
-	                        });
-	                        content += "</div>";
-	                        return content;
-	                    },
-	                    backgroundColor: null,
-	                    borderWidth: 0,
-	                    shadow: false,
-	                    useHTML: true,
-	                    hideDelay: 0,
-	                    shared: true,
-	                    padding: 0,
-	                    positioner: function (w, h, point) {
-	                        return { x: point.plotX - w / 2, y: point.plotY - h};
-	                    }
+	                	enabled: false
 	                },
 	                plotOptions: {
 	                    series: {
@@ -282,7 +259,8 @@
 	                                }
 	                            }
 	                        },
-	                        fillOpacity: 0.25
+	                        fillOpacity: 0.25,
+	                        enableMouseTracking: false,
 	                    },
 	                    column: {
 	                        negativeColor: '#910000',
@@ -294,6 +272,22 @@
 	            series: [{
 	                name: "",
 	                data: [],
+//	                dataLabels: {
+//	                    enabled:true,
+//	                    formatter: function(){
+//	                    	if(this.point === this.series.data[this.series.data.length - 1]) {
+//		                    	var lastPoint = this.series.data[this.series.data.length - 1]
+//		                    	var lastPointDate = lastPoint.name
+//	                            return lastPointDate
+//	                        }
+//
+//	                    	if(this.point === this.series.data[0]) {
+//		                    	var firstPoint = this.series.data[0]
+//		                    	var firstPointDate = firstPoint.name
+//	                            return firstPointDate
+//	                        }
+//	                    } 
+//	                },	                
 	                marker: {
 	                    symbol: "circle",
 	                    states: {
@@ -404,9 +398,9 @@
                 years: []
             }
             
-            if (tenOrLess && timeseriesValues.length > 10) {
-            	timeseriesValues = timeseriesValues.slice(Math.max(timeseriesValues.length - 10, 1))
-            }
+//            if (tenOrLess && timeseriesValues.length > 10) {
+//            	timeseriesValues = timeseriesValues.slice(Math.max(timeseriesValues.length - 10, 1))
+//            }
             
             var current
             var i

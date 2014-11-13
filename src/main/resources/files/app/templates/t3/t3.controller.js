@@ -133,7 +133,6 @@
                 console.log(ctrl.chartConfig)
                 console.log("10y = " + ctrl.tenYears)
 
-
                 function tenYears(array) {
                     if ((Chart.getLast(array) - Chart.getFirst(array)) < 10) {
                         return false
@@ -300,8 +299,9 @@
                         console.log('ctrl.renderChart: ' + ctrl.renderChart)
                     }
                     
-                    // Set the chart label to match the period type, e.g. 'years' 
-                    ctrl.chartConfig.options.subtitle.text = ctrl.activeChart
+//                    var firstPoint = Chart.getFirst(getAllValues())
+//                    var lastPoint = Chart.getLast(getAllValues())
+//                    ctrl.chartConfig.options.xAxis.title.text = firstPoint.value + ' to ' + lastPoint.value
                 }
 
             }
@@ -541,7 +541,6 @@
                     }
 
                 }
-
             }
 
         })
