@@ -1,28 +1,26 @@
 <div ng-controller="ContentCtrl">
 
-
     <!-- title and social icons -->
-    <div class="page-header slate">
-     <ons-breadcrumb data="breadcrumb"></ons-breadcrumb>
+    <div class="page-header page-header--article page-header--stat-bulletin slate--blue">
+        <ons-breadcrumb data="breadcrumb"></ons-breadcrumb>
         <div class="wrapper">
-            <p>
+            <p class="page-header__title page-header--stat-bulletin-desc">
                 <strong>{{header}}</strong>
             </p>
             <h1 class="page-header__title flush--half--bottom">{{content.title}}</h1>
-            <!-- Content type is : {{contentType}} -->
             <div class="grid-wrap" ng-show="{{contentType != 'methodology'}}">
                 <div class="grid-col desktop-grid-two-thirds">
                     <img src="/ui/img/nslogo.png" class="page-header-image">
                     <p>
-                        <strong>Release date: 19 February 2014</strong>
+                        <strong>Release date: {{content.releaseDate}}</strong>
                         <span class="page-header-box-link">
-                            <a href="#">
+                            <!-- <a href="#">
                                 <strong>View latest version</strong>
-                            </a>
+                            </a> -->
                         </span>
                     </p>
-                    <p>Next release: 21 November 2014</p>
-                    <p>Contact: <a href="mailto:jukesie@hotmail.com">Juksie</a>
+                    <p>Next release: {{content.nextRelease}}</p>
+                    <p>Contact: <a href="mailto:{{content.contact.email}}">{{content.contact.name}}</a>
                     </p>
                 </div>
                 <div class="grid-col desktop-grid-one-third">
@@ -74,10 +72,10 @@
     <!-- Table of contents -->
     <div class="wrapper">
         <article class="box border-horizontal-single">
-            <h3>Table of contents</h3>
+            <h3 id="top">Table of contents</h3>
             <div id="toc-content">
                 <ol class="toc-columns">
-                    <li ng-repeat="section in content.sections.notes track by $index" ng-if="$even"><a href="" ng-click="scrollTo('section' + (($index + 1)/2 | number : 0))">{{section.title}}</a>
+                    <li ng-repeat="section in content.sections track by $index"><a ng-click="scrollTo('section' + ($index + 1))">{{section.title}}</a>
                     </li>
                 </ol>
             </div>
@@ -88,106 +86,40 @@
     <div class="wrapper panel--bottom-mar">
         <div class="grid-wrap">
             <div class="grid-col {{sidebar ? 'desktop-grid-two-thirds tablet-grid-two-thirds' : ''}}">
-                <article ng-repeat="section in content.sections.notes">
+                <article class="box border-horizontal-single" ng-repeat="section in content.sections">
                     <header class="box__header">
-                        <h2 ng-if="$even" id="section{{($index + 1)/2 | number : 0}}">{{($index + 1)/2 | number : 0}}. {{section.title}}</h2>
+                        <h2 id="section{{$index + 1}}">{{$index + 1}}. {{section.title}}</h2>
+                    <!-- Check this in the static version -->
+                        <!-- <h2>
+                        <a id="Summary"></a>1. Summary</h2> -->
                     </header>
                     <!-- /box__header -->
-
-                    <div ng-repeat="item in section.content">
-                        <div ng-switch on="item.content_type">
-                            <div ng-switch-when="image" class="">
-                                <div class="">
-                                    <span>
-                                        <img ng-src="{{item.data}}" alt="entry photo">
-                                    </span>
-                                </div>
-                                <div>
-                                    <div class="">{{item.imgtitle}}</div>
-                                    <div class="">{{item.description}}</div>
-                                </div>
-                            </div>
-
-                            <div ng-switch-when="graphic" class="">
-                                <div class="">
-                                    <span>
-                                        <img ng-src="{{item.data}}" alt="entry photo">
-                                    </span>
-                                </div>
-                                <div>
-                                    <div class="">{{item.grptitle}}</div>
-                                    <div class="">{{item.description}}</div>
-                                </div>
-                            </div>
-
-                            <div ng-switch-when="notes" class="">
-                                <div class="">
-                                    <!-- <div class="">{{item.title}}</div> -->
-                                    <div markdown link="{{item.data}}" class=""></div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="box__content">
+                        <div markdown link="{{section.markdown}}"></div>
                     </div>
-
-
-                    <!-- Responsive Table (if any) -->
-                    <div ng-if="section.table" class="wrapper panel--bottom-mar">
-                        <div class="grid-wrap">
-                            <div class="grid-col desktop-grid-two-thirds tablet-grid-two-thirds">
-                                <table id="myTable" class="tablesorter resp-table">
-                                    <thead>
-                                        <tr>
-                                            <th ng-repeat="title in section.table.col">
-                                                {{title}}
-                                                <!-- Title One -->
-                                            </th>
-                                            <!--   <th>First Name</th>
-                                        <th>Email</th>
-                                        <th>Due</th>
-                                        <th>Web Site</th>
-                                        <th>Address</th> -->
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr ng-repeat="cell in section.table.row">
-                                            <td ng-repeat="data in cell.data" data-th="{{section.table.col[$index%section.table.col.length]}}">{{data}}</td>
-                                        </tr>
-                                        <!-- <tr>
-                                        <td data-th="Last Name">Bach</td>
-                                        <td data-th="First Name">Frank</td>
-                                        <td data-th="Email">fbach@yahoo.com</td>
-                                        <td data-th="Due">$50.00</td>
-                                        <td data-th="Web Site">http://www.frank.com</td>
-                                        <td data-th="Address">123 Kew Hill. SO1 4EZ</td>
-                                    </tr> -->
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end of table -->
-                    <footer class="box__footer"></footer>
+                    <!-- <br></br> -->
+                    <a ng-click="scrollTo('top')">Back to Table of Contents</a>
+                    <!-- /box__content -->
+                <!-- Not used in static version -->
+                    <!-- <footer class="box__footer"></footer> -->
                     <!-- /box__actions -->
                 </article>
 
                 <!-- Accordion -->
-                <!-- Needs info from json -->
-                <!-- Needs an ng-repeat for the different tabs -->
-                <!-- Empty article to create an horizontal line -->
-                <article class="box border-horizontal-single"></article>
-
+<!--                 <article class="box border-horizontal-single"></article>
+ -->
                 <ons-accordion multiple="true">
                     <article class="box border-horizontal-single">
                         <ons-accordion-item header="Background notes and Methodology">
                             <!-- /box__header -->
                             <div class="box__content">
-                                <ul class="list--neutral">
+                                <!-- <ul class="list--neutral">
                                     <li><a href="#"> Quality and Methodology Information (QMI)</a> (PDF 95.6 kb)</li>
                                     <li><a href="#">Impact of Rebasing the Consumer Price Index to 2010=100</a>
                                     </li>
                                     <li><a href="#">Consumer Price Index and Retail Price Index Methodology</a>
                                     </li>
-                                </ul>
+                                </ul> -->
                             </div>
                         </ons-accordion-item>
                         <!-- /box__content -->
@@ -200,14 +132,14 @@
                         <ons-accordion-item header="References">
                             <!-- /box__header -->
                             <div class="box__content">
-                                <ul class="list--neutral">
+                                <!-- <ul class="list--neutral">
                                     <li><a href="#">BRITISH STANDARDS INSTITUTE. (1990). BS5605:1990. Recommendations for citing and referencing published material. Milton Keynes: BSI.</a>
                                     </li>
                                     <li><a href="#">NEVILLE, C. (2010). The Complete Guide to Referencing and Avoiding Plagiarism.2ND edition. Open UP Study Skills. Maidenhead: Open University Press.</a>
                                     </li>
                                     <li><a href="#">PEARS, R & SHIELDS, G. (2006) Cite Them Right: The Essential Guide to Referencing and Plagiarism. Newcastle-upon-Tyne: Northumbria University Press.</a>
                                     </li>
-                                </ul>
+                                </ul> -->
                             </div>
                         </ons-accordion-item>
                         <!-- /box__content -->
@@ -220,13 +152,13 @@
                         <ons-accordion-item header="Footnotes">
                             <!-- /box__header -->
                             <div class="box__content">
-                                <ul class="list--neutral">
+                                <!-- <ul class="list--neutral">
                                     <li><a href="#"> Quality and Methodology Information (QMI)</a> (PDF 95.6 kb)</li>
                                     <li><a href="#">Impact of Rebasing the Consumer Price Index to 2010=100</a>
                                     </li>
                                     <li><a href="#">Consumer Price Index and Retail Price Index Methodology</a>
                                     </li>
-                                </ul>
+                                </ul> -->
                             </div>
                         </ons-accordion-item>
 
@@ -236,9 +168,7 @@
                     </article>
                     <!-- /article__content -->
                 </ons-accordion>
-
             </div>
-
             <div ng-if="sidebar">
                 <div ng-include="sidebarUrl"></div>
             </div>
@@ -272,12 +202,12 @@
                     <article class="box box--blue box--blue--separated-left">
                         <div class="box__inner border box--padded">
                             <div class="box__section">
-                                <h3 class="box__section__header">More on <a href="#">Inflation</a> 
+                                <h3 class="box__section__header">More on <a href="#">Inflation</a>
                                 </h3>
                                 <p>See lorem ipsum dolor sit amet sadipscing consectrue</p>
                             </div>
                             <div class="box__section">
-                                <h3 class="box__section__header">More on <a href="#">Basket of Goods</a> 
+                                <h3 class="box__section__header">More on <a href="#">Basket of Goods</a>
                                 </h3>
                                 <p>See lorem ipsum dolor sit amet sadipscing consectrue</p>
                             </div>
@@ -289,6 +219,67 @@
         </div>
         <!-- /bottom-panel -->
     </div>
-
 </div>
 <!-- /ng-controller -->
+
+
+
+<!-- Not in use due to deprecated json format. To delete when new format works -->
+
+       <!-- Table of contents -->
+ <!--    <div class="wrapper">
+        <article class="box border-horizontal-single">
+            <h3>Table of contents</h3>
+            <div id="toc-content">
+                <ol class="toc-columns">
+                    <li ng-repeat="section in content.sections.notes track by $index" ng-if="$even"><a href="" ng-click="scrollTo('section' + (($index + 1)/2 | number : 0))">{{section.title}}</a>
+                    </li>
+                </ol>
+            </div>
+        </article>
+    </div> -->
+
+    <!-- Body Sections -->
+    <!-- <div class="wrapper panel--bottom-mar">
+        <div class="grid-wrap">
+            <div class="grid-col {{sidebar ? 'desktop-grid-two-thirds tablet-grid-two-thirds' : ''}}">
+                <article ng-repeat="section in content.sections.notes">
+                    <header class="box__header">
+                        <h2 ng-if="$even" id="section{{($index + 1)/2 | number : 0}}">{{($index + 1)/2 | number : 0}}. {{section.title}}</h2>
+                    </header> -->
+                    <!-- /box__header -->
+
+  <!--                   <div ng-repeat="item in section.content">
+                        <div ng-switch on="item.content_type">
+                            <div ng-switch-when="image" class="">
+                                <div class="">
+                                    <span>
+                                        <img ng-src="{{item.data}}" alt="entry photo">
+                                    </span>
+                                </div>
+                                <div>
+                                    <div class="">{{item.imgtitle}}</div>
+                                    <div class="">{{item.description}}</div>
+                                </div>
+                            </div>
+
+                            <div ng-switch-when="graphic" class="">
+                                <div class="">
+                                    <span>
+                                        <img ng-src="{{item.data}}" alt="entry photo">
+                                    </span>
+                                </div>
+                                <div>
+                                    <div class="">{{item.grptitle}}</div>
+                                    <div class="">{{item.description}}</div>
+                                </div>
+                            </div>
+
+                            <div ng-switch-when="notes" class="">
+                                <div class="">
+           -->                          <!-- <div class="">{{item.title}}</div> -->
+                 <!--                    <div markdown link="{{item.data}}" class=""></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
