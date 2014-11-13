@@ -113,7 +113,6 @@ public class BulletinMarkdown {
 				bulletin.name = property[1];
 				bulletin.title = property[1];
 				bulletin.fileName = toFilename(property[1]);
-				System.out.println(" &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& " + bulletin.fileName + " (" + bulletin.name + ")");
 			} else if (StringUtils.equalsIgnoreCase(property[0], more)) {
 				bulletin.more = property[1];
 			} else if (StringUtils.equalsIgnoreCase(property[0], summary)) {
@@ -166,7 +165,11 @@ public class BulletinMarkdown {
 			if (!matched) {
 				Section newSection = matchHeading(line);
 				if (newSection != null) {
-					bulletin.sections.add(newSection);
+					if (StringUtils.startsWithIgnoreCase(newSection.title, "[accordion]")) {
+						bulletin.accordion.add(newSection);
+					} else {
+						bulletin.sections.add(newSection);
+					}
 					currentSection = newSection;
 					matched = true;
 				}
@@ -248,7 +251,7 @@ public class BulletinMarkdown {
 		String h2Regex = "##\\s+";
 		if (line.matches(h2Regex + ".*")) {
 			result = new Section();
-			result.title = line.replaceFirst(h2Regex, "");
+			result.title = line.replaceFirst(h2Regex, "").trim();
 			result.markdown = StringUtils.EMPTY;
 		}
 
