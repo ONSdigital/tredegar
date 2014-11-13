@@ -691,7 +691,7 @@ img {
   margin: 0 !important; }
 
  .flush--padding {
-  padding: 0 !important; } 
+  padding: 0 !important; }
 
 .flush--top {
   margin-top: 0 !important; }
@@ -3913,7 +3913,7 @@ table actions
   Search Page Styles
 \*------------------------------------*/
 
-.aside-highlighted{ 
+.aside-highlighted{
   color: #004790;
   word-wrap: break-word;
 }
@@ -4071,7 +4071,7 @@ table actions
 
 .search-sorting{
   margin: 0.77em 0em 0.5em 0em;
-  position: relative; 
+  position: relative;
   float: right;
   }
 
@@ -4777,14 +4777,14 @@ ol > li > div.list--table__item__body.list--table__item__body--stat.no_align{
   width: 20%;
   max-width:200px;
   border-radius:4px;
-    
+
 }
 .tooltips:hover span {
   display: inline;
   position: absolute;
   border: 2px solid #E1E1DF;
   background: #FFF;
-  color: #333; 
+  color: #333;
   line-height: 15px;
   font-family: "open-sans-n4", "open-sans", sans-serif;
   font-size: 1.3rem;
@@ -5082,7 +5082,7 @@ td.datatable-downloads{
   bottom: 10px;
   font-weight: bolder;
   font-size: 2.5rem;
-  font-weight: bolder; 
+  font-weight: bolder;
 }
 
 .home_nav_boxes{
@@ -6422,4 +6422,964 @@ height: 4em;
 }
 .sticky-footer {
   height: 9.1em;
+}
+
+/*------------------------------------*\
+        ALPHA HEADER STYLES
+\*------------------------------------*/
+
+.alpha-header {
+/*    background: linear-gradient( to bottom, #f6ba52, #f6ba52 50%, #ffd180 50%, #ffd180);*/
+    background-color: #ffd180;
+    background-size: 100%;
+    color: black;
+    padding: 5px 25px;
+    width: 100%;
+    height: 45px;
+    position: relative;
+}
+.alpha-header div {
+    /*display: inline;*/
+    /*float: left;*/
+    position: absolute;
+    color: gray;
+    margin: 0 0 0 -153px;
+    left: 50%;
+
+}
+.alpha-header ul {
+    padding: 0;
+    margin: 0;
+    float: right;
+}
+.alpha-header ul li {
+    display: inline;
+    padding-left: 50px;
+}
+.alpha-header span {
+    color: red;
+    font-size: 22px;
+    font-weight: 700;
+}
+.alpha-header a {
+    color: black;
+}
+/*@media screen and (max-width: 66em) {
+    .alpha-header {
+        font-size: 14px;
+        line-height: 1;
+        padding: 5px 10px;
+    }
+    .alpha-header div {
+        font-size: 12px;
+    }
+    .alpha-header ul {
+        float: right;
+    }
+    .alpha-header span {
+        font-size: 14px;
+    }
+    .alpha-header ul li {
+        display: inline;
+        padding: 5px 20px 0 0;
+    }
+}
+@media screen and (max-width: 24em) {
+    .alpha-header {
+        font-size: 10px;
+        line-height: 1;
+        padding: 2px 5px;
+    }
+    .alpha-header ul {
+        float: left;
+    }
+    .alpha-header span {
+        font-size: 12px;
+    }
+    .alpha-header ul li {
+        display: inline;
+        padding:5px 10px 0 0;
+    }
+}
+*/
+
+/*------------------------------------*\
+       ******** T5 css *********
+\*------------------------------------*/
+.chart {
+    height: 440px;
+}
+/* CHART: tooltip side bar */
+
+.sidebar {
+    width: 30px;
+    height: 100px;
+    margin-right: 5px;
+    float: left;
+    background-color: #ddd;
+}
+.title {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+#custom-tooltip {
+    display: block;
+    height: 100px;
+    width: 190px;
+    border: 1px solid #ddd;
+    background-color: rgba(255, 255, 255, 1);
+}
+.maintext {
+    display: block;
+    word-wrap: normal;
+    white-space: normal;
+    width: 100px;
+    height: auto;
+    overflow-x: auto;
+    background-color: rgba(255, 255, 255, 1);
+}
+.tiptext {
+    word-wrap: normal;
+    white-space: normal;
+    width: 150px;
+    height: auto;
+    overflow-x: auto;
+    margin: 0px;
+    padding: 0px;
+    padding-top: 1px;
+    left: 0px;
+    text-align: left;
+}
+.circle {
+    margin: 0px;
+    margin-left: 9px;
+    padding: 0px;
+    height: 14px;
+    font-size: 22px;
+    color: #8FBED8;
+    line-height: 13px;
+    clear: both;
+}
+.square {
+    margin: 0px;
+    margin-left: 9px;
+    padding: 0px;
+    height: 21px;
+    font-size: 20px;
+    color: #5296C3;
+    line-height: 21px;
+    clear: both;
+}
+.diamond {
+    margin: 0px;
+    margin-left: 10px;
+    padding: 0px;
+    height: 19px;
+    font-size: 20px;
+    color: #1377B2;
+    line-height: 19px;
+    clear: both;
+}
+.triangle {
+    margin: 0px;
+    margin-left: 9px;
+    padding: 0px;
+    height: 16px;
+    font-size: 14px;
+    color: #1673AC;
+    line-height: 20px;
+    clear: both;
+}
+.tip {
+    padding: 0px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+.tiptext {
+    margin: 0px;
+    padding: 0px;
+    padding-top: 1px;
+    left: 0px;
+    text-align: left;
+}
+.tooltip-right {
+    width: 90px;
+    height: 50px;
+    position: relative;
+}
+.tooltip-right:after {
+    content: "";
+    border-color: transparent transparent transparent #ddd;
+    border-style: solid;
+    border-width: 10px;
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 15px;
+    left: 189px
+}
+.tooltip-left {
+    width: 190px;
+    height: 50px;
+    position: relative;
+}
+.tooltip-left:after {
+    content: "";
+    border-color: transparent #ddd transparent transparent;
+    border-style: solid;
+    border-width: 10px;
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 15px;
+    left: -21px
+}
+
+.highcharts-title {
+    font-size: 24px !important;
+    font-size: 2.4rem !important;
+    font-family: "DaxlinePro", sans-serif !important;
+}
+.chart {
+    height: 480px;
+    background-color: #fff;
+}
+/* CHART: tooltip side bar */
+
+.sidebar {
+    width: 30px;
+    height: 100%;
+    margin-right: 5px;
+    float: left;
+    background-color: #ddd;
+    padding-top: 18px;
+}
+.title {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+#custom-tooltip {
+    display: block;
+    width: 220px;
+    border: 1px solid #ddd;
+    background-color: white;
+}
+.tooltip-short {
+    height: 70px;
+}
+.tooltip-tall {
+    height: 100px;
+}
+/*****************************************
+*
+* Changed this to adapt to different sizes
+*
+******************************************/
+
+.maintext {
+    font-family: "open-sans-n7", "open-sans", sans-serif;
+    padding: 10px 0 0 40px;
+    display: block;
+    width: 220px;
+    height: 100%;
+}
+/*****************************************
+*
+* Added this class
+*
+******************************************/
+
+.maintext__title {
+    font-family: "open-sans-n7", "open-sans", sans-serif;
+    margin-bottom: 5px;
+}
+.circle {
+    margin: 0px;
+    margin-left: 9px;
+    padding: 0px;
+    height: 14px;
+    font-size: 22px;
+    color: #8FBED8;
+    line-height: 13px;
+    clear: both;
+}
+.square {
+    margin: 0px;
+    margin-left: 9px;
+    padding: 0px;
+    height: 21px;
+    font-size: 20px;
+    color: #5296C3;
+    line-height: 21px;
+    clear: both;
+}
+.diamond {
+    margin: 0px;
+    margin-left: 10px;
+    padding: 0px;
+    height: 19px;
+    font-size: 20px;
+    color: #1377B2;
+    line-height: 19px;
+    clear: both;
+}
+.triangle {
+    margin: 0px;
+    margin-left: 9px;
+    padding: 0px;
+    height: 16px;
+    font-size: 14px;
+    color: #1673AC;
+    line-height: 20px;
+    clear: both;
+}
+.tip {
+    padding: 0px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+.tiptext {
+    margin: 0px;
+    padding: 0px;
+    padding-top: 1px;
+    left: 0px;
+    text-align: left;
+}
+.tooltip-right {
+    position: relative;
+}
+.tooltip-right:after {
+    content: "";
+    border-color: transparent transparent transparent #ddd;
+    border-style: solid;
+    border-width: 10px;
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 15px;
+    left: 219px;
+}
+.tooltip-left {
+    position: relative;
+}
+.tooltip-left:after {
+    content: "";
+    border-color: transparent #ddd transparent transparent;
+    border-style: solid;
+    border-width: 10px;
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 15px;
+    left: -20px;
+}
+.actionable-header {
+    position: relative;
+    margin-bottom: 15px;
+    margin-bottom: 1.5rem;
+}
+@media screen and (min-width: 38em) {
+    .actionable-header {
+        margin-bottom: 35px;
+        margin-bottom: 3.5rem;
+    }
+}
+.actionable-header__title {
+    margin-bottom: 0;
+}
+.actionable-header__action {
+    font-family: "open-sans-n7", "open-sans", sans-serif;
+    color: #f37121;
+}
+.actionable-header__action:hover {
+    color: #f79d6a;
+}
+@media screen and (min-width: 34.5em) {
+    .actionable-header {
+        display: table;
+        width: 100%;
+    }
+    .actionable-header__title {
+        line-height: 1;
+    }
+    .actionable-header__title,
+    .actionable-header__action {
+        display: table-cell;
+        vertical-align: bottom;
+    }
+    .actionable-header__action {
+        line-height: 1.5;
+        text-align: right;
+    }
+}
+.actionable-header--tight {
+    text-align: right;
+    margin-top: 25px;
+    margin-top: 2.5em;
+}
+.actionable-header--tight__title,
+.actionable-header--tight__action {
+    display: inline-block;
+}
+.actionable-header--tight__title {
+    vertical-align: middle;
+}
+.actionable-header--tight__action {
+    margin-left: 10px;
+    margin-left: 1rem;
+}
+/*! Tablesaw - v0.1.6 - 2014-07-23
+* https://github.com/filamentgroup/tablesaw
+* Copyright (c) 2014 Filament Group; Licensed MIT */
+
+.tablesaw {
+    background: #fff;
+}
+
+.tablesaw thead tr:first-child th,
+.tablesaw thead {
+    background-color: #dedfdc;
+    background-image: -webkit-linear-gradient(#e8e9e7, #dedfdc);
+    background-image: linear-gradient(#e8e9e7, #dedfdc);
+}
+
+table.tablesaw {
+    empty-cells: show;
+    max-width: 100%;
+    width: 100%;
+}
+.tablesaw {
+    border-collapse: collapse;
+    width: 100%;
+}
+/* Structure */
+
+.tablesaw {
+    border: 0;
+    padding: 0;
+}
+.tablesaw th,
+.tablesaw td {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: .5em .7em;
+}
+.tablesaw thead tr:first-child th {
+    padding-top: .9em;
+    padding-bottom: .7em;
+}
+
+table.tablesaw tbody th {
+    font-weight: bold;
+}
+table.tablesaw thead th,
+table.tablesaw thead td {
+    color: #444;
+    font-size: .9em;
+}
+.tablesaw th,
+.tablesaw td {
+    line-height: 1em;
+    text-align: left;
+    vertical-align: middle;
+}
+.tablesaw td,
+.tablesaw tbody th {
+    vertical-align: middle;
+    font-size: 1.17em;
+    /* 19px */
+}
+.tablesaw td .btn,
+.tablesaw tbody th .btn {
+    margin: 0;
+}
+.tablesaw thead {
+    border: 1px solid #e5e5e4;
+    background: #e2dfdc;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#e2dfdc));
+    background-image: -webkit-linear-gradient(top, #fff, #e2dfdc);
+    background-image: linear-gradient(to bottom, #fff, #e2dfdc);
+}
+.tablesaw thead th {
+    font-weight: 100;
+    color: #777;
+    text-transform: uppercase;
+    text-shadow: 0 1px 0 #fff;
+    text-align: left;
+}
+.tablesaw thead tr:first-child th {
+    font-weight: normal;
+    font-family: sans-serif;
+    border-right: 1px solid #e4e1de;
+}
+/* Table rows have a gray bottom stroke by default */
+
+.tablesaw tbody tr {
+    border-bottom: 1px solid #dfdfdf;
+}
+.tablesaw caption {
+    text-align: left;
+    margin-bottom: 1.4em;
+    opacity: .5;
+    filter: alpha(opacity=50);
+}
+
+@media (min-width: 40em) {
+    .tablesaw td {
+        line-height: 2em;
+    }
+}
+
+.chart-area {
+    padding: 5px;
+    padding: 0.5rem;
+/*        padding-bottom: 70px;
+    padding-bottom: 7rem !important;*/
+}
+@media screen and (min-width: 21em) {
+    .chart-area {
+        padding: 5px 10px;
+        padding: 0.5rem 1rem;
+    }
+}
+@media screen and (min-width: 38em) {
+    .chart-area {
+        padding: 10px 20px;
+        padding: 1rem 2rem;
+    }
+}
+.chart-area__controls {
+    padding-bottom: 5px;
+    padding-bottom: 0.5rem;
+    font-size: 14px;
+    font-size: 1.4rem;
+}
+.chart-area__controls__time {
+    margin: 5px 0 0;
+    margin: 0.5rem 0 0;
+}
+@media screen and (min-width: 62em) {
+    .chart-area__controls__time {
+        float: right;
+        margin: 0 0 0 5px;
+        margin: 0 0 0 0.5rem;
+        line-height: 1.75;
+    }
+}
+.chart-area__controls__time__label {
+    margin-right: 10px;
+    margin-right: 1rem;
+    font-family: "open-sans-n7", "open-sans", sans-serif;
+}
+@media screen and (min-width: 28em) {
+    .chart-area__controls__time__label {
+        padding-top: 5px;
+        padding-top: 0.5rem;
+    }
+}
+@media screen and (min-width: 32em) {
+    .chart-area__controls__time__label {
+        margin-right: 10px;
+        margin-right: 1rem;
+    }
+}
+@media screen and (min-width: 62em) {
+    .chart-area__controls__time__label {
+        margin-right: 10px;
+        margin-right: 1rem;
+    }
+}
+@media screen and (min-width: 28em) {
+    .chart-area__controls__time__label,
+    .chart-area__controls__time__ranges {
+        float: left;
+    }
+}
+@media screen and (min-width: 62em) {
+    .chart-area__controls__time__label,
+    .chart-area__controls__time__ranges {
+        float: none;
+        display: inline-block;
+    }
+}
+.chart-area__controls__time__ranges {
+    margin-bottom: 0;
+}
+.chart-area__controls__time__ranges a {
+    display: inline-block;
+    padding-top: 5px;
+    padding-top: 0.5rem;
+    padding-bottom: 10px;
+    padding-bottom: 1rem;
+}
+    .chart-area__controls__time__ranges div {
+    display: inline-block;
+    padding: 5px 10px 10px 10px;
+    padding: 0.5rem 1rem 1rem 1rem;
+}
+@media screen and (min-width: 19em) {
+    .chart-area__controls__time__ranges a {
+        padding-left: 5px;
+        padding-left: 0.5rem;
+        padding-right: 5px;
+        padding-right: 0.5rem;
+    }
+}
+@media screen and (min-width: 22em) {
+    .chart-area__controls__time__ranges a {
+        padding-left: 10px;
+        padding-left: 1rem;
+        padding-right: 10px;
+        padding-right: 1rem;
+    }
+}
+@media screen and (max-width: 28.9375em) {
+    .chart-area__controls__time__ranges li:first-of-type > a {
+        padding-left: 0;
+    }
+}
+.chart-area__controls__custom--active {
+    background-color: #dedfdc;
+}
+.chart-area__controls__active,
+.chart-area__controls__active:visited {
+    color: #303030;
+}
+@media screen and (min-width: 62em) {
+    .chart-area__controls__buttons {
+        float: left;
+    }
+}
+.chart-area__controls__custom {
+    display: block;
+    padding-top: 10px;
+    padding-top: 1rem;
+    padding-right: 12px;
+    padding-right: 1.2rem;
+    padding-bottom: 0;
+    /*padding-bottom: 10px;*/
+    /*padding-bottom: 1rem;*/
+    clear: both;
+    background-color: #dedfdc;
+}
+.chart-area__controls__custom__errors {
+    margin-bottom: 5px;
+    margin-bottom: 0.5rem;
+    font-family: "open-sans-n7", "open-sans", sans-serif;
+    color: #e2383f;
+}
+@media screen and (min-width: 62em) {
+    .chart-area__controls__custom__errors {
+        margin-top: 3px;
+        margin-top: 0.33rem;
+        margin-left: 10px;
+        margin-left: 1rem;
+        margin-bottom: 0;
+        float: left;
+        width: 410px;
+        width: 41rem;
+    }
+}
+.chart-area__controls__custom__errors p {
+    margin: 0;
+}
+.chart-area__controls__error {
+    color: #e2383f;
+    /* IE8 can't render box shadows, so set color as red as a fallback
+* and return to black using rgba
+*/
+
+    color: #303030;
+    box-shadow: 0 0 1px 2px #e2383f;
+}
+@media screen and (min-width: 62em) {
+/*****************************************
+*
+* Changed this to adapt to table/graph
+*
+******************************************/
+
+    .chart-area__controls__custom__container__table {
+        width: 660px;
+        width: 66rem;
+        float: right;
+    }
+    .chart-area__controls__custom__container {
+        width: 440px;
+        width: 44rem;
+        float: right;
+    }
+}
+.chart-area__controls__date {
+    padding: 0;
+    margin: 0 0 5px;
+    margin: 0 0 0.5rem;
+    border: 0;
+}
+.chart-area__controls__date:last-of-type {
+    margin-bottom: 0;
+}
+@media screen and (min-width: 32em) {
+    .chart-area__controls__date {
+        float: left;
+        margin: 0 10px 0 0;
+        margin: 0 1rem 0 0;
+    }
+}
+/*****************************************
+*
+* Changed this to adapt to different sizes
+*
+******************************************/
+
+.chart-area__controls__date__label {
+    float: left;
+    width: 50px;
+    width: 5rem;
+    padding-left: 10px;
+    font-family: "open-sans-n7", "open-sans", sans-serif;
+}
+@media screen and (min-width: 32em) {
+    .chart-area__controls__date__label {
+        width: auto;
+        margin-right: 10px;
+        margin-right: 1rem;
+    }
+}
+.chart-area__controls__month,
+.chart-area__controls__year {
+    text-indent: 0;
+}
+.chart-area__controls__month {
+    text-align: center;
+    width: 53px;
+    width: 5.3rem;
+}
+.chart-area__controls__year {
+    width: 60px;
+    width: 6rem;
+}
+/*Changed float to right*/
+.chart-area__controls__dropdowns {
+    float: right;
+    margin-right: 10px;
+    margin-right: 1rem;
+    margin-left: 10px;
+    margin-left: 1rem;
+}
+@media screen and (min-width: 32em) {
+    .chart-area__controls__dropdowns {
+        margin-top: 3px;
+        margin-top: 0.33rem;
+        margin-right: 0;
+    }
+    .chart-area__controls__custom {
+    clear: both;
+    display: block;
+    padding-top: 5px;
+    padding-top: 0.5rem;
+    padding-bottom: 5px;
+    padding-bottom: 0.5rem;
+    background-color: #dedfdc;
+}
+}
+/*we don't need this with AngularJS*/
+/*    .chart-area__controls__submit {
+    float: left;
+    padding-top: 12px;
+    padding-top: 1.25rem;
+}
+@media screen and (min-width: 32em) {
+    .chart-area__controls__submit {
+        padding-top: 0;
+    }
+}
+@media screen and (min-width: 62em) {
+    .chart-area__controls__submit {
+        float: right;
+    }
+}*/
+.chart-area__footer {
+    float: right;
+    margin-top: 10px;
+    margin-top: 1rem;
+}
+.chart-area__footer .btn {
+    margin-top: 5px;
+    margin-top: 0.5rem;
+    margin-bottom: 5px;
+    margin-bottom: 0.5rem;
+}
+.chart-area__footer__label,
+.chart-area__footer__actions {
+    display: inline-block;
+}
+.chart-area__footer__label {
+    margin-right: 20px;
+    margin-right: 2rem;
+    font-family: "open-sans-n7", "open-sans", sans-serif;
+}
+/*
+============================
+Button styles
+============================
+*/
+
+.btn {
+    display: inline-block;
+    width: auto;
+    /*padding: 1em 2em;*/
+
+    border: 0 none;
+    border-radius: 3px;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    -webkit-transition-duration: 200ms;
+    transition-duration: 200ms;
+    -webkit-transition-property: background-color, color;
+    transition-property: background-color, color;
+    -webkit-transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+.btn:focus {
+    outline: 0;
+}
+/*-----------------------------------
+lesser , applied styles
+*/
+
+.btn--primary {
+    font-family: "open-sans-n7", "open-sans", sans-serif;
+    color: #fff;
+    background: #0054aa;
+}
+.btn--primary:visited {
+    color: #fff;
+}
+.btn--primary:hover,
+.btn--primary:focus {
+    color: #fff;
+    background-color: #00356a;
+}
+.btn--primary:focus {
+    box-shadow: 0 0 9px 3px #f37121;
+}
+.btn--secondary {
+    border: 2px solid #bababa;
+    font-family: "open-sans-n7", "open-sans", sans-serif;
+    color: #0054aa;
+    background: #c5c7c1;
+/*        background: -webkit-radial-gradient(center, ellipse, #d5d6d2 0%, #c8c9c4 100%);
+    background: radial-gradient(ellipse at center, #d5d6d2 0%, #c8c9c4 100%);*/
+}
+.btn--secondary:hover,
+.btn--secondary:focus {
+    color: #0054aa;
+    background: #e1e1e1;
+}
+.btn--secondary--active {
+    background-color: #f7f7f7;
+    color:#303030;
+}
+.btn--secondary--active,
+.btn--secondary--active:visited,
+.btn--secondary--active:hover {
+    color: #303030;
+}
+.btn--secondary--active:hover,
+.btn--secondary--active:focus {
+    background: #fff;
+/*        background: -webkit-radial-gradient(center, ellipse, #bcbeb7 0%, #afb1a9 100%);
+    background: radial-gradient(ellipse at center, #bcbeb7 0%, #afb1a9 100%);*/
+}
+.btn--thin {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+.btn--small {
+    font-size: 12px;
+    font-size: 1.2rem;
+}
+.btn--narrow {
+    padding-right: 1em;
+    padding-left: 1em;
+}
+.btn--wide {
+    padding-right: 3em;
+    padding-left: 3em;
+}
+.btn--form {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0 0.5em;
+    line-height: 3.33;
+    vertical-align: top;
+}
+@media screen and (max-width: 40em) {
+    .btn--form {
+        display: block;
+        margin: 0.875em 0;
+    }
+}
+.btn--form--large-icon {
+    padding: 0 15px;
+    padding: 0 1.5rem;
+    margin-left: 5px;
+    margin-left: 0.5rem;
+    line-height: 2.45;
+    vertical-align: top;
+}
+.btn--form--large-icon > .icon {
+    font-size: 1.5em;
+}
+.btn--block {
+    display: block;
+    width: 100%;
+}
+.btn--flex {
+    padding: 1em;
+}
+@media screen and (min-width: 38em) {
+    .btn--flex {
+        display: inline-block;
+        width: auto;
+        padding: 1em 2em;
+    }
+}
+.button-group {
+    padding-left: 0;
+    list-style: none;
+}
+.button-group .btn {
+    float: left;
+    margin: 0;
+    border-radius: 0;
+}
+.button-group .btn:first-of-type {
+    border-radius: 3px 0 0 3px;
+}
+.button-group .btn:last-of-type {
+    border-radius: 0 3px 3px 0;
+}
+.button-group .btn--primary:focus {
+    box-shadow: none;
+}
+.button-group .btn--secondary + .btn--secondary {
+    margin-left: -2px;
+}
+.js .button-group input {
+    display: none;
+}
+.button-bar > .button-group {
+    display: inline-block;
+    margin-right: 10px;
+    margin-right: 1rem;
+}
+.button-bar > .button-group:last-of-type {
+    margin-right: 0;
 }
