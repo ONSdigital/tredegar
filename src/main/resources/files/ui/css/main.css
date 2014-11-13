@@ -503,6 +503,9 @@ img {
 .icon-menu:before { content: '\e810'; } /* '' */
 .icon-cancel:before { content: '\e813'; } /* '' */
 .icon-comment:before { content: '\e82e'; } /* '' */
+.icon-linkedin:before { content: '\e908'; } /* '' */
+.icon-linkedin-circled:before { content: '\e909'; } /* '' */
+
 /*Original code from CX*/
 
 
@@ -6427,13 +6430,24 @@ height: 4em;
 
 .alpha-header {
 /*    background: linear-gradient( to bottom, #f6ba52, #f6ba52 50%, #ffd180 50%, #ffd180);*/
-    background-color: #ffd180;
+    background-color: #f37121; /* ONS colors: box--orange */
     background-size: 100%;
     color: black;
     padding: 5px 25px;
     width: 100%;
-    height: 45px;
+    height: 39px; /* Golden ratio to the span font-size of 24px (38.8px) */
     position: relative;
+}
+.alpha-header__link {
+/* From: http://stackoverflow.com/questions/796087/make-a-div-into-a-link */
+	position:absolute; 
+	width:100%;
+	height:100%;
+	top:0;
+	left: 0;
+	z-index: 1;
+	/* Fixes overlap error in IE7/8 */
+	background-image: url('/ui/img/transparent.gif');
 }
 .alpha-header div {
     /*display: inline;*/
@@ -6454,12 +6468,14 @@ height: 4em;
     padding-left: 50px;
 }
 .alpha-header span {
-    color: red;
-    font-size: 22px;
-    font-weight: 700;
+    color: #f3f3f3; /* ONS colors: Off-white */
+    /* Font family, size and weight to match nav-panel__header */
+    font-family: DaxlinePro, sans-serif;
+    font-size: 24px;
+    font-weight: 100;
 }
 .alpha-header a {
-    color: black;
+    color: #303030; /* ONS colors: Black */
 }
 /*@media screen and (max-width: 66em) {
     .alpha-header {
