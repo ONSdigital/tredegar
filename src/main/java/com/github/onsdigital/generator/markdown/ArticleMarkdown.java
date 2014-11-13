@@ -31,7 +31,7 @@ public class ArticleMarkdown {
 
 		for (Path file : files) {
 			Article article = read(file);
-			System.out.println("Processing: " + article.name + " / " + article.title);
+			System.out.println("Processing article: " + article.title);
 			Folder folder = Data.getFolder(article.theme, article.level2, article.level3);
 			folder.articles.add(article);
 		}
@@ -113,7 +113,7 @@ public class ArticleMarkdown {
 			} else if (StringUtils.equalsIgnoreCase(property[0], nextRelease)) {
 				article.nextRelease = property[1];
 			} else {
-				System.out.println("Key not recognised: " + property[0] + " (for value '" + property[1] + "')");
+				System.out.println("Article key not recognised: " + property[0] + " (for value '" + property[1] + "')");
 			}
 
 		}

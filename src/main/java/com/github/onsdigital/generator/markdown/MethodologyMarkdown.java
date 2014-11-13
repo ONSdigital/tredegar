@@ -31,7 +31,7 @@ public class MethodologyMarkdown {
 
 		for (Path file : files) {
 			Methodology methodology = read(file);
-			System.out.println("Processing: " + methodology.name + " / " + methodology.title);
+			System.out.println("Processing methodology: " + methodology.title);
 			Folder folder = Data.getFolder(methodology.theme, methodology.level2, methodology.level3);
 			folder.methodology.add(methodology);
 		}
@@ -104,7 +104,7 @@ public class MethodologyMarkdown {
 			} else if (StringUtils.equalsIgnoreCase(property[0], more)) {
 				methodology.more = property[1];
 			} else {
-				System.out.println("Key not recognised: " + property[0] + " (for value '" + property[1] + "')");
+				System.out.println("Methodology key not recognised: " + property[0] + " (for value '" + property[1] + "')");
 			}
 
 		}

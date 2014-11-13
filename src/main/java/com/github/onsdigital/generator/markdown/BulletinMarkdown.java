@@ -31,7 +31,7 @@ public class BulletinMarkdown {
 
 		for (Path file : files) {
 			Bulletin bulletin = read(file);
-			System.out.println("Processing: " + bulletin.name + " / " + bulletin.title);
+			System.out.println("Processing bulletin: " + bulletin.title);
 			Folder folder = Data.getFolder(bulletin.theme, bulletin.level2, bulletin.level3);
 			folder.bulletins.add(bulletin);
 			if (StringUtils.isNotBlank(bulletin.headline1)) {
@@ -132,7 +132,7 @@ public class BulletinMarkdown {
 			} else if (StringUtils.equalsIgnoreCase(property[0], nextRelease)) {
 				bulletin.nextRelease = property[1];
 			} else {
-				System.out.println("Key not recognised: " + property[0] + " (for value '" + property[1] + "')");
+				System.out.println("Bulletin key not recognised: " + property[0] + " (for value '" + property[1] + "')");
 			}
 
 		}
