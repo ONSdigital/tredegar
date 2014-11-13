@@ -8,21 +8,18 @@
    */
 
   angular.module('onsTabs', [])
-    .directive('onsTabs', TabsDirective)
-    .directive('onsTabControl', TabControlDirective)
-    .directive('onsTab', TabDirective)
+    .directive('onsTabs', Tabs)
+    .directive('onsTabControl', TabControl)
+    .directive('onsTab', Tab)
 
-  function TabsDirective() {
+  function Tabs() {
     return {
       restrict: 'A',
-      transclude: true,
-      replace: true,
       scope: {
-        keyVar: "@"
+        tabsActiveVar: "@"
       },
       controller: TabsController,
-      controllerAs: 'tabs',
-      template: '<div ng-transclude></div>'
+      controllerAs: 'tabs'
     }
 
     function TabsController($scope) {
@@ -42,8 +39,8 @@
         var selectedPane = panes[key]
         selectedPane.selected = true; //Show selected pane
         
-        if ($scope.keyVar) {
-          $scope.$parent[$scope.keyVar] = selectedPane.key
+        if ($scope.tabsActiveVar) {
+          $scope.$parent[$scope.tabsActiveVar] = selectedPane.key
         }
       }
 
@@ -75,12 +72,10 @@
   }
 
 
-  function TabControlDirective() {
+  function TabControl() {
     return {
       require: '^onsTabs',
       restrict: 'A',
-      transclude: true,
-      replace: true,
       scope: {},
       link: function(scope, element, attrs, tabsController) {
         scope.key = attrs.onsTabControl
@@ -97,13 +92,12 @@
             })
           })
         }
-      },
-      template: '<div ng-transclude></div>'
+      }
     }
   }
 
   //Represents tab pane within tabs directive
-  function TabDirective() {
+  function Tab() {
     return {
       require: '^onsTabs',
       restrict: 'A',

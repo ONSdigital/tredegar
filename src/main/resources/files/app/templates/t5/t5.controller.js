@@ -67,9 +67,6 @@
         ctrl.timePeriod = 'A' //All by default
         ctrl.chartData = []
         ctrl.years = []
-        ctrl.showCustomFilters = false
-        ctrl.chartVisible = true
-        ctrl.tableVisible = false
         ctrl.renderChart = false
         ctrl.tenYears
         ctrl.quarters = ['Q1', 'Q2', 'Q3', 'Q4']
@@ -210,33 +207,10 @@
             }
         }
 
-
-        function toggleCustomFilters() {
-            ctrl.showCustomFilters = !ctrl.showCustomFilters
-        }
-
         function isActive(chartType) {
             return chartType === ctrl.activeChart
         }
-
-
-        function showTable() {
-            if (ctrl.tableVisible) {
-                return
-            }
-
-            ctrl.tableVisible = true
-            ctrl.chartVisible = false
-        }
-
-        function showChart() {
-            if (ctrl.chartVisible) {
-                return
-            }
-            ctrl.chartVisible = true
-            ctrl.tableVisible = false
-        }
-
+    
         function getAllValues() {
             return ctrl.timeseries[ctrl.activeChart].values
         }
@@ -402,10 +376,7 @@
         angular.extend(ctrl, {
             isActive: isActive,
             changeChartType: changeChartType,
-            showTable: showTable,
-            showChart: showChart,
             changeTimePeriod: changeTimePeriod,
-            toggleCustomFilters: toggleCustomFilters,
             downloadCsv:downloadCsv,
             downloadXls:downloadXls,
             exportImage: exportImage

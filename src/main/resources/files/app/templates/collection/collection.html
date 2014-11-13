@@ -14,7 +14,9 @@
 			<div class="content-reveal">
 				<p> 
             {{content.lede}}
-          <a href="" expand-label="Show more" collapse-label="Show less"  toggler="more" ng-if="data.more" class="content-reveal__action"></a> </p>
+          <a href="" toggler="more" ng-if="data.more" toggler-widget-var="w_toggler" class="content-reveal__action">
+            {{w_toggler.isVisible() ? 'Show less' : 'Show more'}}
+          </a> </p>
 				<div toggleable="more"  class="content-reveal__hidden">
 				    <p>
             {{content.more}}    

@@ -8,6 +8,7 @@
     <script type="text/javascript" src="app/components/paginator/paginator.js"></script>
     <script type="text/javascript" src="app/components/navigation/navigation.js"></script>
     <script type="text/javascript" src="app/components/tabs/tabs.js"></script>
+    <script type="text/javascript" src="app/components/toggler/toggler.js"></script>
     
     <script type="text/javascript" src="app/helpers/util.js"></script>
 </head>
@@ -18,7 +19,7 @@
     <ons-paginator page-count=10></ons-paginator>
     <div>
         <h1>Navigation</h1>
-        <nav class="ons-nav" ons-nav nav-active-class="nav--primary__active" nav-widget="w_nav">
+        <nav class="ons-nav" ons-nav nav-active-class="nav--primary__active" nav-widget-var="w_nav">
             <ul ons-nav-mobile nav-active-class="nav--primary__active" class="nav nav--controls">
                 <li class="nav--controls__menu" ng-class="{'menu-is-expanded' : w_nav.showOnMobile}" ng-click="w_nav.toggleMobileMenu()" >
                     <a href="" id="menu-toggle" aria-controls="nav-primary" >
@@ -115,13 +116,13 @@
         </article>
     </ons-accordion>
     <h1>Toggle</h1>
-    <a href="" toggler="theToggle">Click me to toggle</a>
+    <a href="" toggler-widget-var="w_toggler" toggler="theToggle" >{{w_toggler.isVisible() ? 'Hide' : 'Show'}} </a>
     <div toggleable="theToggle">
         Hey
     </div>
 </body>
 <script type="text/javascript">
-angular.module('testModule', ['onsPaginator', 'onsTabs', 'onsAccordion', 'onsNavigation' , 'onsUtils'])
+angular.module('testModule', ['onsPaginator', 'onsTabs', 'onsAccordion', 'onsNavigation' , 'onsUtils', 'onsToggler'])
     .controller('TestCtrl', ['$scope', '$http', function($scope, $http) {
         $http.get("/navigation").success(function(data) {
             $scope.navigation = data

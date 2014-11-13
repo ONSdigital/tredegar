@@ -1,6 +1,6 @@
 <span ng-controller="NavigationController as nav">
-    <nav class="ons-nav" ons-nav nav-active-class="nav--primary__active" nav-widget="w_nav">
-        <ul ons-nav-mobile nav-active-class="nav--primary__active" class="nav nav--controls">
+    <nav class="ons-nav" ons-nav nav-active-class="nav--primary__active" nav-widget-var="w_nav">
+        <ul ons-nav-mobile class="nav nav--controls">
             <li class="nav--controls__menu" ng-class="{'menu-is-expanded' : w_nav.showOnMobile}" ng-click="w_nav.toggleMobileMenu()">
                 <a href="" id="menu-toggle" aria-controls="nav-primary">
                     <span class="nav--controls__icon icon-menu icon--inline icon--large" role="presentation"></span>
@@ -43,6 +43,6 @@
                 <a href="#!">About</a>
             </li>
         </ul>
-        <search-box ng-hide="nav.hideSearch" ></search-box>
+        <search-box ng-hide="nav.hideSearch"></search-box>
     </nav>
 </span>

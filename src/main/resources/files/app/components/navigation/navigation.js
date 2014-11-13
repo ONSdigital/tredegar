@@ -17,7 +17,7 @@
       return {
         restrict: 'A',
         scope: {
-          navWidget: '@',
+          navWidgetVar: '@',
           activeClass: '@navActiveClass'
         },
         controller: NavController,
@@ -36,8 +36,8 @@
           resolveScreenType()
           listenResize()
             //Injected to parent scope to be used as a widget.
-          if ($scope.navWidget) {
-            $scope.$parent[$scope.navWidget] = navigation
+          if ($scope.navWidgetVar) {
+            $scope.$parent[$scope.navWidgetVar] = navigation
           }
           watchLocation()
         }

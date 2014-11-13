@@ -5,7 +5,7 @@
             <h1 class="page-header__title flush--half--bottom">{{taxonomy.data.name}}</h1>
             <div class="content-reveal lede">
                 <p>{{taxonomy.data.lede}}
-                    <a href="" expand-label="Show more" collapse-label="Show less" toggler="more" ng-if="taxonomy.data.more" class="content-reveal__action"></a>
+                    <a href="" toggler="more" toggler-widget-var="w_toggler" ng-if="taxonomy.data.more" class="content-reveal__action">{{w_toggler.isVisible() ? 'Show less' : 'Show more'}}</a>
                 </p>
                 <div toggleable="more" class="content-reveal__hidden">
                     <p>
