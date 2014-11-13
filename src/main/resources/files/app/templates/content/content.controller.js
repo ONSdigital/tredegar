@@ -1,11 +1,7 @@
 angular.module('onsTemplates')
 	.controller('ContentCtrl', ['$scope', '$location', '$http',
 		function($scope, $location, $http) {
-			
-			getData("/" + $scope.getPage() + ".json", function(data) {
-				$scope.content = data
-			})
-
+            $scope.content = $scope.taxonomy.data
 			$scope.scroll = function() {
 				anchorSmoothScroll.scrollTo($location.hash())
 			}
