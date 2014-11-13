@@ -51,6 +51,10 @@
                     templateUrl: 'app/templates/dataversions/dataversions.html',
                     controller: "DataversionsCtrl"
                 }).
+                when('/localstats', {
+                    templateUrl: 'app/templates/generic/local-stats.html',
+                    controller: "LocalStatsController"
+                }).
                 when('/methodology', {
                     templateUrl: 'app/templates/methodology/methodology.html',
                     controller: 'MethodologyCtrl'
@@ -68,10 +72,10 @@
                 }).
                 when('/404', {
                     templateUrl: '/app/partials/error-pages/error404.html'
-                }).   
+                }).
                 when('/500', {
                     templateUrl: '/500.html'
-                }).                 
+                }).
                 otherwise({
                     resolve: {
                         // https://stackoverflow.com/questions/15975646/angularjs-routing-to-empty-route-doesnt-work-in-ie7
@@ -141,7 +145,7 @@
                 }
             }
         ])
-        
+
         onsApp.factory('OnsHttpInterceptor', function($q, $location) {
             return function (promise) {
             	// pass success (e.g. response.status === 200) through
@@ -155,10 +159,10 @@
                     }
                     if (response.status === 404) {
                         $location.url('/404')
-                    }                    
+                    }
                     return $q.reject(response)
                 });
             };
-        });        
+        });
 
 })()
