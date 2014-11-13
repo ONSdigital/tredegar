@@ -14,6 +14,7 @@ import java.util.TreeMap;
 import org.apache.commons.lang3.StringUtils;
 
 import com.github.onsdigital.generator.Folder;
+import com.github.onsdigital.generator.markdown.BulletinMarkdown;
 import com.github.onsdigital.json.timeseries.Timeseries;
 import com.github.onsdigital.json.timeseries.TimeseriesValue;
 

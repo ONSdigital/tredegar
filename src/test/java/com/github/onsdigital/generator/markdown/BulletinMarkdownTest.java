@@ -1,4 +1,4 @@
-package com.github.onsdigital.generator.data;
+package com.github.onsdigital.generator.markdown;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -16,7 +16,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.github.onsdigital.json.Section;
-import com.github.onsdigital.json.bulletin.Bulletin;
+import com.github.onsdigital.json.markdown.Bulletin;
 
 public class BulletinMarkdownTest {
 

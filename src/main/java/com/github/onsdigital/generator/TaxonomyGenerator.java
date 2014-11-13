@@ -27,7 +27,9 @@ import com.github.onsdigital.generator.data.DatasetMappingsCSV;
 import com.github.onsdigital.generator.datasets.DatasetContent;
 import com.github.onsdigital.json.Dataset;
 import com.github.onsdigital.json.HomeSection;
-import com.github.onsdigital.json.bulletin.Bulletin;
+import com.github.onsdigital.json.markdown.Article;
+import com.github.onsdigital.json.markdown.Bulletin;
+import com.github.onsdigital.json.markdown.Methodology;
 import com.github.onsdigital.json.taxonomy.T1;
 import com.github.onsdigital.json.taxonomy.T2;
 import com.github.onsdigital.json.taxonomy.T3;
@@ -401,8 +403,9 @@ public class TaxonomyGenerator {
 		String json = Serialiser.serialise(t3);
 		FileUtils.writeStringToFile(new File(file, "data.json"), json);
 
-		createArticle(folder, file);
 		createBulletin(folder, file, t3);
+		createArticle(folder, file, t3);
+		createMethodology(folder, file, t3);
 		createDataset(folder, file, t3);
 		createTimeseries(folder, file, t3);
 	}
@@ -568,22 +571,40 @@ public class TaxonomyGenerator {
 		return result;
 	}
 
-	private static void createArticle(Folder folder, File file) throws IOException {
-		File articles = new File(file, "articles");
-		articles.mkdir();
-		// removed generation pending refactor to reuse AlphaContent approach
-	}
-
 	private static void createBulletin(Folder folder, File file, T3 t3) throws IOException {
-		if (folder.bulletins != null && folder.bulletins.size() > 0) {
+		if (folder.bulletins.size() > 0) {
 			File bulletinsFolder = new File(file, "bulletins");
 			bulletinsFolder.mkdir();
 			for (Bulletin bulletin : folder.bulletins) {
 				bulletin.setBreadcrumb(t3);
-				String bulletinFileName = bulletin.fileName;
-				String sanitizedBulletinFileName = bulletinFileName.replaceAll("\\W", "");
-				File bulletinFolder = new File(bulletinsFolder, StringUtils.deleteWhitespace(sanitizedBulletinFileName.toLowerCase()));
+				File bulletinFolder = new File(bulletinsFolder, StringUtils.deleteWhitespace(bulletin.fileName));
 				String json = Serialiser.serialise(bulletin);
+				FileUtils.writeStringToFile(new File(bulletinFolder, "data.json"), json, Charset.forName("UTF8"));
+			}
+		}
+	}
+
+	private static void createArticle(Folder folder, File file, T3 t3) throws IOException {
+		if (folder.articles.size() > 0) {
+			File articlesFolder = new File(file, "articles");
+			articlesFolder.mkdir();
+			for (Article article : folder.articles) {
+				article.setBreadcrumb(t3);
+				File bulletinFolder = new File(articlesFolder, StringUtils.deleteWhitespace(article.fileName));
+				String json = Serialiser.serialise(article);
+				FileUtils.writeStringToFile(new File(bulletinFolder, "data.json"), json, Charset.forName("UTF8"));
+			}
+		}
+	}
+
+	private static void createMethodology(Folder folder, File file, T3 t3) throws IOException {
+		if (folder.methodology.size() > 0) {
+			File methodologyFolder = new File(file, "methodology");
+			methodologyFolder.mkdir();
+			for (Methodology methodology : folder.methodology) {
+				methodology.setBreadcrumb(t3);
+				File bulletinFolder = new File(methodologyFolder, StringUtils.deleteWhitespace(methodology.fileName));
+				String json = Serialiser.serialise(methodology);
 				FileUtils.writeStringToFile(new File(bulletinFolder, "data.json"), json, Charset.forName("UTF8"));
 			}
 		}

@@ -1,4 +1,4 @@
-package com.github.onsdigital.generator.data;
+package com.github.onsdigital.generator.markdown;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -17,54 +17,49 @@ import java.util.TreeSet;
 import org.apache.commons.lang3.StringUtils;
 
 import com.github.onsdigital.generator.Folder;
+import com.github.onsdigital.generator.data.Data;
+import com.github.onsdigital.generator.data.DataCSV;
 import com.github.onsdigital.json.Section;
-import com.github.onsdigital.json.bulletin.Bulletin;
+import com.github.onsdigital.json.markdown.Article;
 
-public class BulletinMarkdown {
+public class ArticleMarkdown {
 
-	static final String resourceName = "/bulletins";
+	static final String resourceName = "/articles";
 
 	public static void parse() throws IOException {
 		Collection<Path> files = getFiles();
 
 		for (Path file : files) {
-			Bulletin bulletin = read(file);
-			System.out.println("Processing: " + bulletin.name + " / " + bulletin.title);
-			Folder folder = Data.getFolder(bulletin.theme, bulletin.level2, bulletin.level3);
-			folder.bulletins.add(bulletin);
-			if (StringUtils.isNotBlank(bulletin.headline1)) {
-				folder.headlineBulletin = bulletin;
-			}
+			Article article = read(file);
+			System.out.println("Processing: " + article.name + " / " + article.title);
+			Folder folder = Data.getFolder(article.theme, article.level2, article.level3);
+			folder.articles.add(article);
 		}
 
 	}
 
-	static Bulletin read(Path file) throws IOException {
+	static Article read(Path file) throws IOException {
 
 		try (Reader reader = new InputStreamReader(Files.newInputStream(file))) {
-			Bulletin bulletin = new Bulletin();
-
-			// Reinitialise the bulletin:
-			bulletin.title = StringUtils.EMPTY;
-			bulletin.sections.clear();
+			Article article = new Article();
 
 			// Read the markdown
 			try (Scanner scanner = new Scanner(reader)) {
-				readHeader(scanner, bulletin);
-				readContent(scanner, bulletin);
+				readHeader(scanner, article);
+				readContent(scanner, article);
 			}
 
-			bulletin.fileName = toFilename(bulletin.name);
+			article.fileName = toFilename(article.name);
 
-			return bulletin;
+			return article;
 		}
 
 	}
 
 	/**
-	 * Reads the "header" information about the bulletin. Information is
-	 * expected in the form "key : value" and the header block should be
-	 * terminated with an empty line. The recognised keys are as follows.
+	 * Reads the "header" information about the article. Information is expected
+	 * in the form "key : value" and the header block should be terminated with
+	 * an empty line. The recognised keys are as follows.
 	 * <ul>
 	 * <li>Next release</li>
 	 * <li>Contact name</li>
@@ -79,7 +74,7 @@ public class BulletinMarkdown {
 	 * @param scanner
 	 *            The {@link Scanner} to read lines from.
 	 */
-	private static void readHeader(Scanner scanner, Bulletin bulletin) {
+	private static void readHeader(Scanner scanner, Article article) {
 
 		// Property keys:
 		String theme = "Theme";
@@ -88,10 +83,6 @@ public class BulletinMarkdown {
 		String title = "Title";
 		String lede = "Lede";
 		String more = "More";
-		String summary = "Summary";
-		String headline1 = "Headline 1";
-		String headline2 = "Headline 2";
-		String headline3 = "Headline 3";
 		String contactName = "Contact name";
 		String contactEmail = "Contact email";
 		String nextRelease = "Next release";
@@ -102,33 +93,25 @@ public class BulletinMarkdown {
 			// Extract property values:
 			String[] property = readProperty(line);
 			if (StringUtils.equalsIgnoreCase(property[0], theme)) {
-				bulletin.theme = property[1];
+				article.theme = property[1];
 			} else if (StringUtils.equalsIgnoreCase(property[0], level2)) {
-				bulletin.level2 = property[1];
+				article.level2 = property[1];
 			} else if (StringUtils.equalsIgnoreCase(property[0], level3)) {
-				bulletin.level3 = property[1];
+				article.level3 = property[1];
 			} else if (StringUtils.equalsIgnoreCase(property[0], lede)) {
-				bulletin.lede = property[1];
+				article.lede = property[1];
 			} else if (StringUtils.equalsIgnoreCase(property[0], title)) {
-				bulletin.name = property[1];
-				bulletin.title = property[1];
-				bulletin.fileName = toFilename(property[1]);
+				article.name = property[1];
+				article.title = property[1];
+				article.fileName = toFilename(property[1]);
 			} else if (StringUtils.equalsIgnoreCase(property[0], more)) {
-				bulletin.more = property[1];
-			} else if (StringUtils.equalsIgnoreCase(property[0], summary)) {
-				bulletin.summary = property[1];
-			} else if (StringUtils.equalsIgnoreCase(property[0], headline1)) {
-				bulletin.headline1 = property[1];
-			} else if (StringUtils.equalsIgnoreCase(property[0], headline2)) {
-				bulletin.headline2 = property[1];
-			} else if (StringUtils.equalsIgnoreCase(property[0], headline3)) {
-				bulletin.headline3 = property[1];
+				article.more = property[1];
 			} else if (StringUtils.equalsIgnoreCase(property[0], contactName)) {
-				bulletin.contact.name = property[1];
+				article.contact.name = property[1];
 			} else if (StringUtils.equalsIgnoreCase(property[0], contactEmail)) {
-				bulletin.contact.email = property[1];
+				article.contact.email = property[1];
 			} else if (StringUtils.equalsIgnoreCase(property[0], nextRelease)) {
-				bulletin.nextRelease = property[1];
+				article.nextRelease = property[1];
 			} else {
 				System.out.println("Key not recognised: " + property[0] + " (for value '" + property[1] + "')");
 			}
@@ -137,12 +120,12 @@ public class BulletinMarkdown {
 	}
 
 	/**
-	 * Parses the markdown content of the bulletin into title and sections;
+	 * Parses the markdown content of the article into title and sections;
 	 * 
 	 * @param scanner
 	 *            The {@link Scanner} to read lines from.
 	 */
-	private static void readContent(Scanner scanner, Bulletin bulletin) {
+	private static void readContent(Scanner scanner, Article article) {
 
 		Section currentSection = null;
 
@@ -152,11 +135,11 @@ public class BulletinMarkdown {
 
 			// Title
 			Boolean matched = false;
-			if (StringUtils.isBlank(bulletin.title)) {
+			if (StringUtils.isBlank(article.title)) {
 				String title = matchTitle(line);
 				if (StringUtils.isNotBlank(title)) {
-					bulletin.name = title;
-					bulletin.title = title;
+					article.name = title;
+					article.title = title;
 					matched = true;
 				}
 			}
@@ -169,9 +152,9 @@ public class BulletinMarkdown {
 						// Remove the marker, case insensitively with "(?i)"
 						// and add the section to the accordion list:
 						newSection.title = newSection.title.replaceFirst("(?i)\\[accordion\\]\\s*", "");
-						bulletin.accordion.add(newSection);
+						article.accordion.add(newSection);
 					} else {
-						bulletin.sections.add(newSection);
+						article.sections.add(newSection);
 					}
 					currentSection = newSection;
 					matched = true;
@@ -216,7 +199,7 @@ public class BulletinMarkdown {
 
 	/**
 	 * If the given line matches markdown H1 syntax (atx only, not Setext), sets
-	 * the bulletin title to the title text, unless the title has already been
+	 * the article title to the title text, unless the title has already been
 	 * set.
 	 * 
 	 * @param line
@@ -239,7 +222,7 @@ public class BulletinMarkdown {
 
 	/**
 	 * If the given line matches markdown H1 syntax (atx only, not Setext), sets
-	 * the bulletin title to the title text, unless the title has already been
+	 * the article title to the title text, unless the title has already been
 	 * set.
 	 * 
 	 * @param line
@@ -285,7 +268,7 @@ public class BulletinMarkdown {
 	}
 
 	/**
-	 * Sanitises a bulletin name to <code>[a-zA-Z0-9]</code>.
+	 * Sanitises an article name to <code>[a-zA-Z0-9]</code>.
 	 * 
 	 * @param name
 	 *            The string to be sanitised.

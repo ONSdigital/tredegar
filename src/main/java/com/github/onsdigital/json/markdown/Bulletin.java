@@ -1,4 +1,4 @@
-package com.github.onsdigital.json.bulletin;
+package com.github.onsdigital.json.markdown;
 
 import java.net.URI;
 import java.util.ArrayList;
