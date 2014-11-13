@@ -208,6 +208,21 @@
                             <li>{{chart.timeseries.note2}}</li>
                         </ol>
                     </div>
+                    <br></br>
+                    <div ng-if="chart.timeseries.note1"> <!-- Another field goes here for condition -->
+                        <h3>Related series</h3>
+                        <div class="padded">
+                            <div>
+                                <a>Example here</a>
+                            </div>
+                            <div>
+                                <a>Example here</a>
+                            </div>
+                            <div>
+                                <a>Example here</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- Sidebar -->
@@ -215,6 +230,7 @@
                 <div ng-include="sidebarUrl"></div>
             </div>
         </div>
+        <contact-details></contact-details>
     </div>
 
 </div>
