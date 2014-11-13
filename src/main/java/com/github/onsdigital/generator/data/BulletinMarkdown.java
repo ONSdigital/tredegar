@@ -165,7 +165,7 @@ public class BulletinMarkdown {
 			if (!matched) {
 				Section newSection = matchHeading(line);
 				if (newSection != null) {
-					if (StringUtils.startsWithIgnoreCase(newSection.title, "[accordion]  ")) {
+					if (newSection.title.matches("\\[accordion\\].*")) {
 						// Remove the marker, case insensitively with "(?i)"
 						// and add the section to the accordion list:
 						newSection.title = newSection.title.replaceFirst("(?i)\\[accordion\\]\\s*", "");
