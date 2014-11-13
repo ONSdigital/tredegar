@@ -6365,15 +6365,21 @@ height: 4em;
 .alpha-header {
 /*    background: linear-gradient( to bottom, #f6ba52, #f6ba52 50%, #ffd180 50%, #ffd180);*/
     background-color: #ffd180;
-    background-size: 100% 5px;
+    background-size: 100%;
     color: black;
     padding: 5px 25px;
     width: 100%;
+    height: 45px;
+    position: relative;
 }
 .alpha-header div {
-    display: inline;
-    float: left;
+    /*display: inline;*/
+    /*float: left;*/
+    position: absolute;
     color: gray;
+    margin: 0 0 0 -153px;
+    left: 50%;
+
 }
 .alpha-header ul {
     padding: 0;
@@ -6387,11 +6393,12 @@ height: 4em;
 .alpha-header span {
     color: red;
     font-size: 22px;
+    font-weight: 700;
 }
 .alpha-header a {
     color: black;
 }
-@media screen and (max-width: 66em) {
+/*@media screen and (max-width: 66em) {
     .alpha-header {
         font-size: 14px;
         line-height: 1;
@@ -6428,3 +6435,4 @@ height: 4em;
         padding:5px 10px 0 0;
     }
 }
+*/
