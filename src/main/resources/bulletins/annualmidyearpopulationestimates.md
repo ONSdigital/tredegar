@@ -22,3 +22,9 @@ Lorem ipsum dolor sit amet.
 ## Section three
 
 Lorem ipsum dolor sit amet.
+
+## [accordion] Background Notes
+
+## [accordion] References
+
+## [accordion] Footnotes

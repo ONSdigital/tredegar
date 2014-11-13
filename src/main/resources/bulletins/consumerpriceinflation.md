@@ -114,12 +114,15 @@ In September 2014, the 12-month rate for RPIJ stood at 1.6%, down from 1.8% in t
 
 The RPI 12-month rate for September 2014 stood at 2.3%, meaning that it was 0.7 percentage points higher than it would have been had it used formulae that meet international standards.
 
+## [accordion] Background Notes
 
-## Background Notes
+[Consumer Price Indices Technical Manual: 2014 Edition (PDF)](http://www.ons.gov.uk/ons/guide-method/user-guidance/prices/cpi-and-rpi/cpi-technical-manual/consumer-price-indices-technical-manual--2014.pdf) 691KB
 
-- [Consumer Price Indices Technical Manual: 2014 Edition (PDF)](http://www.ons.gov.uk/ons/guide-method/user-guidance/prices/cpi-and-rpi/cpi-technical-manual/consumer-price-indices-technical-manual--2014.pdf)
+[Consumer Price Inflation including CPI, CPIH, RPIJ & RPI: Quality & Methodology Information (PDF)](http://www.ons.gov.uk/ons/guide-method/method-quality/quality/quality-information/economic-statistics/summary-quality-report-for-cpi.pdf) 145KB
 
-- [Consumer Price Inflation including CPI, CPIH, RPIJ & RPI: Quality & Methodology Information (PDF)](http://www.ons.gov.uk/ons/guide-method/method-quality/quality/quality-information/economic-statistics/summary-quality-report-for-cpi.pdf)
+[Report on the Triennial Review of the Consumer Prices Index 
+and Retail Prices Index Central Collection of Prices: Spring 2012 (PDF)](http://www.ons.gov.uk/ons/guide-method/method-quality/quality/reviews/report-of-the-triennial-review-of-the-consumer-prices-index-and-retail-prices-index-central-collection-of-prices-2012.pdf) 1.8MB
 
-- [Report on the Triennial Review of the Consumer Prices Index 
-and Retail Prices Index Central Collection of Prices: Spring 2012 (PDF)](http://www.ons.gov.uk/ons/guide-method/method-quality/quality/reviews/report-of-the-triennial-review-of-the-consumer-prices-index-and-retail-prices-index-central-collection-of-prices-2012.pdf) 
+## [accordion] References
+
+## [accordion] Footnotes
