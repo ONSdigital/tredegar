@@ -25,6 +25,7 @@ public class Bulletin extends CollectionItem {
 
 	// Table of contents
 	public List<Section> sections = new ArrayList<Section>();
+	public List<Section> accordion = new ArrayList<Section>();
 	public URI uri;
 	public String headline1 = "Duis ut laoreet felis";
 	public String headline2 = "Morbi sed sem at magna";
