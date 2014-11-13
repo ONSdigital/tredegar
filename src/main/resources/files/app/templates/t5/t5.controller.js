@@ -256,18 +256,18 @@
 
                 if (ctrl.showMonthly) {
                     ctrl.activeChart = 'months'
-                    data.months = Chart.formatData(data.months, false)
+                    data.months = Chart.formatData(data.months)
                 }
 
                 if (ctrl.showQuarterly) {
                     ctrl.activeChart = 'quarters'
-                    data.quarters = Chart.formatData(data.quarters, false)
+                    data.quarters = Chart.formatData(data.quarters)
 
                 }
 
                 if (ctrl.showYearly) {
                     ctrl.activeChart = 'years'
-                    data.years = Chart.formatData(data.years, false)
+                    data.years = Chart.formatData(data.years)
                 }
 
                 if ((ctrl.showMonthly || ctrl.showYearly || ctrl.showQuarterly)) {

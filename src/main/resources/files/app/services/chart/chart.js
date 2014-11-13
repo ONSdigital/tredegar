@@ -272,22 +272,6 @@
 	            series: [{
 	                name: "",
 	                data: [],
-//	                dataLabels: {
-//	                    enabled:true,
-//	                    formatter: function(){
-//	                    	if(this.point === this.series.data[this.series.data.length - 1]) {
-//		                    	var lastPoint = this.series.data[this.series.data.length - 1]
-//		                    	var lastPointDate = lastPoint.name
-//	                            return lastPointDate
-//	                        }
-//
-//	                    	if(this.point === this.series.data[0]) {
-//		                    	var firstPoint = this.series.data[0]
-//		                    	var firstPointDate = firstPoint.name
-//	                            return firstPointDate
-//	                        }
-//	                    } 
-//	                },	                
 	                marker: {
 	                    symbol: "circle",
 	                    states: {
@@ -392,15 +376,11 @@
         }  
         
         //Format data into high charts compatible format
-        function formatData(timeseriesValues, tenOrLess) {
+        function formatData(timeseriesValues) {
             var data = {
                 values: [],
                 years: []
             }
-            
-//            if (tenOrLess && timeseriesValues.length > 10) {
-//            	timeseriesValues = timeseriesValues.slice(Math.max(timeseriesValues.length - 10, 1))
-//            }
             
             var current
             var i

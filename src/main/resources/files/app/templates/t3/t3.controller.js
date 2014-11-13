@@ -280,28 +280,24 @@
 
                     if (ctrl.showMonthly) {
                         ctrl.activeChart = 'months'
-                        data.months = Chart.formatData(data.months, true)
+                        data.months = Chart.formatData(data.months)
                     }
 
                     if (ctrl.showQuarterly) {
                         ctrl.activeChart = 'quarters'
-                        data.quarters = Chart.formatData(data.quarters, true)
+                        data.quarters = Chart.formatData(data.quarters)
 
                     }
 
                     if (ctrl.showYearly) {
                         ctrl.activeChart = 'years'
-                        data.years = Chart.formatData(data.years, true)
+                        data.years = Chart.formatData(data.years)
                     }
 
                     if ((ctrl.showMonthly || ctrl.showYearly || ctrl.showQuarterly)) {
                         ctrl.renderChart = true
                         console.log('ctrl.renderChart: ' + ctrl.renderChart)
                     }
-                    
-//                    var firstPoint = Chart.getFirst(getAllValues())
-//                    var lastPoint = Chart.getLast(getAllValues())
-//                    ctrl.chartConfig.options.xAxis.title.text = firstPoint.value + ' to ' + lastPoint.value
                 }
 
             }
@@ -521,18 +517,18 @@
 
                     if (ctrl.showMonthly) {
                         ctrl.activeChart = 'months'
-                        data.months = Chart.formatData(data.months, true)
+                        data.months = Chart.formatData(data.months)
                     }
 
                     if (ctrl.showQuarterly) {
                         ctrl.activeChart = 'quarters'
-                        data.quarters = Chart.formatData(data.quarters, true)
+                        data.quarters = Chart.formatData(data.quarters)
 
                     }
 
                     if (ctrl.showYearly) {
                         ctrl.activeChart = 'years'
-                        data.years = Chart.formatData(data.years, true)
+                        data.years = Chart.formatData(data.years)
                     }
 
                     if ((ctrl.showMonthly || ctrl.showYearly || ctrl.showQuarterly)) {
