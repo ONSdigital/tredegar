@@ -8,6 +8,8 @@
     <script type="text/javascript" src="app/components/paginator/paginator.js"></script>
     <script type="text/javascript" src="app/components/navigation/navigation.js"></script>
     <script type="text/javascript" src="app/components/tabs/tabs.js"></script>
+    
+    <script type="text/javascript" src="app/helpers/util.js"></script>
 </head>
 
 <body id="ng-app" class="js" ng-controller="TestCtrl">
@@ -16,10 +18,10 @@
     <ons-paginator page-count=10></ons-paginator>
     <div>
         <h1>Navigation</h1>
-        <nav class="ons-nav" ons-nav>
-            <ul class="nav nav--controls">
-                <li class="nav--controls__menu menu-is-expanded">
-                    <a href="" id="menu-toggle" aria-controls="nav-primary" ng-click="navigation.toggleMenu()">
+        <nav class="ons-nav" ons-nav nav-active-class="nav--primary__active" nav-widget="w_nav">
+            <ul ons-nav-mobile nav-active-class="nav--primary__active" class="nav nav--controls">
+                <li class="nav--controls__menu" ng-class="{'menu-is-expanded' : w_nav.showOnMobile}" ng-click="w_nav.toggleMobileMenu()" >
+                    <a href="" id="menu-toggle" aria-controls="nav-primary" >
                         <span class="nav--controls__icon icon-menu icon--inline icon--large" role="presentation"></span>
                         <span class="nav--controls__text">Menu</span>
                     </a>
@@ -31,15 +33,17 @@
                     </a>
                 </li>
             </ul>
-            <ul class="nav nav--multi nav--block nav--primary" id="nav-primary" aria-expanded="{{navigation.showMenu}}">
+            <ul class="nav nav--multi nav--block nav--primary" id="nav-primary" aria-expanded="{{w_nav.showOnMobile}}" ng-class="w_nav.showOnMobile ? '' : 'nav-main--hidden'  ">
                 <li class="nav--primary__hide-small-med">
                     <a href="#!">Home</a>
                 </li>
-                <li ng-repeat="n in navigation" class="nav__expandable js-expandable js-expandable-active nav--primary__active">
-                    <a href="#!{{n.url}}">{{n.name}}</a>
-                    <ul class="nav--primary__sub js-expandable__content js-nav-hidden">
-                        <!-- <a href="#!{{n.url}}">{{navLabel}}</a> -->
-                        <li ng-repeat="c in n.children" class="nav--primary__active ">
+                <li ons-nav-item="{{n.url}}" expandable="true" ons-nav-expand-class="js-expandable-active" ng-repeat="n in navigation" class="nav__expandable js-expandable">
+                    <a ng-href="{{w_nav.mobile ? '' : ('#!' + n.url)}}">{{n.name}}</a>
+                    <ul  class="nav--primary__sub js-expandable__content" ons-nav-collapse-class="js-nav-hidden">
+                        <li ons-nav-item ons-nav-mobile>
+                            <a href="#!{{n.url}}">{{n.name}}</a>
+                        </li>
+                        <li ons-nav-item="{{c.url}}" ng-repeat="c in n.children">
                             <a href="#!{{c.url}}">{{c.name}}</a>
                         </li>
                     </ul>
@@ -117,7 +121,7 @@
     </div>
 </body>
 <script type="text/javascript">
-angular.module('testModule', ['onsPaginator', 'onsTabs', 'onsAccordion', 'onsNavigation'])
+angular.module('testModule', ['onsPaginator', 'onsTabs', 'onsAccordion', 'onsNavigation' , 'onsUtils'])
     .controller('TestCtrl', ['$scope', '$http', function($scope, $http) {
         $http.get("/navigation").success(function(data) {
             $scope.navigation = data
@@ -130,6 +134,11 @@ angular.module('testModule', ['onsPaginator', 'onsTabs', 'onsAccordion', 'onsNav
             console.log($scope)
         }
     }])
+    .config(['$locationProvider',
+            function($locationProvider) {
+                $locationProvider.html5Mode(false).hashPrefix('!');
+            }
+        ])
 </script>
 
 </html>

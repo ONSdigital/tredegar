@@ -2,7 +2,7 @@
 
     angular.module('onsTemplates')
         .controller('T5Controller', ['$scope', 'Downloader', 'Taxonomy', T5Controller])
-        .controller('ChartController', ['$scope', '$location', '$log', 'Downloader', ChartController])
+        .controller('ChartController', ['$scope', '$location', '$log', 'Downloader', 'ArrayUtil', ChartController])
 
     function T5Controller($scope, Downloader, Taxonomy) {
 
@@ -56,7 +56,7 @@
     }
 
 
-    function ChartController($scope, $location, $log, Downloader) {
+    function ChartController($scope, $location, $log, Downloader, ArrayUtil) {
         var ctrl = this
         ctrl.timeseries = $scope.taxonomy.data
         ctrl.chartConfig = getChart()
@@ -111,7 +111,9 @@
 
 
             function tenYears(array) {
-                if ((getLast(array) - getFirst(array)) < 10) {
+                      console.log("Array Util getFirst")
+                console.log(ArrayUtil)
+                if ((ArrayUtil.getLast(array) - ArrayUtil.getFirst(array)) < 10) {
                     return false
                 } else {
                     return true
@@ -160,8 +162,8 @@
             }
 
             function resolveFilters() {
-                var first = getFirst(getAllValues())
-                var last = getLast(getAllValues())
+                var first = ArrayUtil.getFirst(getAllValues())
+                var last = ArrayUtil.getLast(getAllValues())
                 var now = new Date()
                 var currentYear = now.getFullYear()
                 var tenYearsAgo = currentYear - 10
@@ -244,15 +246,17 @@
 
         //Initialize controller and configuration
         function initialize() {
-            resolveChartTypes()
+            resolveChartTypes(ArrayUtil)
             ctrl.chartConfig.series[0].name = ctrl.timeseries.name
             prepareData()
 
-            function resolveChartTypes() {
+            function resolveChartTypes(ArrayUtil) {
                 var data = ctrl.timeseries
-                ctrl.showYearly = isNotEmpty(data.years)
-                ctrl.showMonthly = isNotEmpty(data.months)
-                ctrl.showQuarterly = isNotEmpty(data.quarters)
+                console.log("Array Util is")
+                console.log(ArrayUtil)
+                ctrl.showYearly = ArrayUtil.isNotEmpty(data.years)
+                ctrl.showMonthly = ArrayUtil.isNotEmpty(data.months)
+                ctrl.showQuarterly = ArrayUtil.isNotEmpty(data.quarters)
 
                 if (ctrl.showMonthly) {
                     ctrl.activeChart = 'months'
@@ -290,7 +294,7 @@
                     data.values.push(enrichData(current, i))
                     data.years.push(current.year)
                 }
-                toUnique(data.years)
+                ArrayUtil.toUnique(data.years)
                 return data
             }
 
@@ -306,38 +310,10 @@
 
                 return timeseriesValue
             }
-
-            function toUnique(a) { //array,placeholder,placeholder
-                var b = a.length;
-                var c
-                while (c = --b) {
-                    while (c--) {
-                        a[b] !== a[c] || a.splice(c, 1);
-                    }
-                }
-            }
-
-
         }
 
 
-        function getFirst(array) {
-            if (isNotEmpty(array)) {
-                return array[0]
-            }
-        }
-
-
-        function getLast(array) {
-            if (isNotEmpty(array)) {
-                return array[array.length - 1]
-            }
-        }
-
-        function isNotEmpty(array) {
-            return (array && array.length > 0)
-        }
-
+        
         function monthVal(mon) {
             switch (mon.slice(0, 3).toUpperCase()) {
                 case 'JAN':

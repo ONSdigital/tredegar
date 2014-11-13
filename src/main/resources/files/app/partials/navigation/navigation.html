@@ -1,13 +1,48 @@
 <span ng-controller="NavigationController as nav">
-    <ons-nav>
-        <ons-nav-item nav-label="Home" href="#!" class="nav--primary__hide-small-med"></ons-nav-item>
-        <ons-nav-item ng-repeat="item in navigation" expandable="true" nav-label="{{item.name}}" class="nav__expandable js-expandable" href="#!{{item.url}}">
-            <ons-nav-sub-item ng-repeat="subitem in item.children" nav-label="{{subitem.name}}" href="#!{{subitem.url}}"></ons-nav-sub-item>
-        </ons-nav-item>
-        <ons-nav-item nav-label="Respondents" class="nav--primary__respondents" label-class="icon-users icon--inline" href="#!"></ons-nav-item>
-        <ons-nav-item nav-label="Release calendar" class="nav--primary__secondary-content" href="#!"></ons-nav-item>
-        <ons-nav-item nav-label="Methodology" class="nav--primary__secondary-content" href="#!"></ons-nav-item>
-        <ons-nav-item nav-label="About" class="nav--primary__secondary-content" href="#!"></ons-nav-item>
-    </ons-nav>
+    <nav class="ons-nav" ons-nav nav-active-class="nav--primary__active" nav-widget="w_nav">
+        <ul ons-nav-mobile nav-active-class="nav--primary__active" class="nav nav--controls">
+            <li class="nav--controls__menu" ng-class="{'menu-is-expanded' : w_nav.showOnMobile}" ng-click="w_nav.toggleMobileMenu()">
+                <a href="" id="menu-toggle" aria-controls="nav-primary">
+                    <span class="nav--controls__icon icon-menu icon--inline icon--large" role="presentation"></span>
+                    <span class="nav--controls__text">Menu</span>
+                </a>
+            </li>
+            <li class="nav--controls__search" ng-click="nav.toggleSearch()" ng-class="{'search-is-expanded' : !nav.hideSearch}">
+                <a href="" id="search-toggle" aria-controls="nav-search">
+                    <span class="nav--controls__icon icon--inline icon--large" ng-class="nav.hideSearch ? 'icon-search-1' : 'icon-cancel'" role="presentation"></span>
+                    <span class="nav--controls__text">{{nav.hideSearch? 'Search' : 'Hide'}}</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="nav nav--multi nav--block nav--primary" id="nav-primary" aria-expanded="{{w_nav.showOnMobile}}" ng-class="w_nav.showOnMobile ? '' : 'nav-main--hidden'  ">
+            <li class="nav--primary__hide-small-med">
+                <a href="#!">Home</a>
+            </li>
+            <li ons-nav-item="{{n.url}}" expandable="true" ons-nav-expand-class="js-expandable-active" ng-repeat="n in navigation" class="nav__expandable js-expandable">
+                <a ng-href="{{w_nav.mobile ? '' : ('#!' + n.url)}}">{{n.name}}</a>
+                <ul class="nav--primary__sub js-expandable__content" ons-nav-collapse-class="js-nav-hidden">
+                    <li ons-nav-item ons-nav-mobile>
+                        <a href="#!{{n.url}}">{{n.name}}</a>
+                    </li>
+                    <li ons-nav-item="{{c.url}}" ng-repeat="c in n.children">
+                        <a href="#!{{c.url}}">{{c.name}}</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav--primary__respondents">
+                <a href="#!">
+                    <span class="icon-comment icon--inline"></span>Taking part in a survey?</a>
+            </li>
+            <li class="nav--primary__secondary-content">
+                <a href="#!">Release Calendar</a>
+            </li>
+            <li class="nav--primary__secondary-content">
+                <a href="#!">Methodology</a>
+            </li>
+            <li class="nav--primary__secondary-content">
+                <a href="#!">About</a>
+            </li>
+        </ul>
+        <search-box ng-hide="nav.hideSearch" ></search-box>
+    </nav>
 </span>
-
