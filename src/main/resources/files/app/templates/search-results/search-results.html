@@ -73,56 +73,29 @@
           <!-- /end of results list grid-col -->
 
           <!--Start of aside, grid col one third-->
+   <div class="grid-col desktop-grid-one-third tablet-grid-one-third search-aside" ng-show="relatedDepartment">
+               <aside class="box sectioned padded border-defined">
 
-   <div class="grid-col desktop-grid-one-third tablet-grid-one-third search-aside">
-              <article class="box box--orange lifted--dark">
-                <div class="box__inner border box--padded box--orange--separated-left">
-                  <header class="box__header">
-                    <h2 class="gamma">
-                      <a href="#">
-                  Who we are
-                  
-                </a>
-                    </h2>
-                  </header>
-                  <!-- /box__header -->
-                  <div class="box__content">
-                    <p>
-                      More on the ONS, the UK's largest independent producer of official statistics
-                    </p>
-                  </div>
-                  <!-- /box__content -->
-                </div>
-              </article>
+              <a href="#"><img src="{{relatedDepartment.departmentLogo}}" alt="departmentlogo" class="aside-logo"/></a>
+              <p class="aside-highlighted"> Also try {{relatedDepartment.departmentName}} for more information relating to {{searchTerm}} </p>
+              <a href="{{relatedDepartment.departmentLink}}" class="aside-links"> {{relatedDepartment.departmentLink}}</a>
+              <img src="ui/img/openinnewwindow.png" alt="open in new window" class="open-in-new-window"/>
+
+          <!-- /grid-col -->
+
+        <!-- /aside -->
+      </aside>
               <!-- /box -->
             </div>
 
 
-          
-          <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
-              <article class="box box--orange lifted--dark">
-                <div class="box__inner border box--padded box--orange--separated-left">
-                  <header class="box__header">
-                    <h2 class="gamma">
-                      <a href="#">
-                  Sign up for email alerts
-                  
-                </a>
-                    </h2>
-                  </header>
-                  <!-- /box__header -->
-                  <div class="box__content">
-                    <p>
-                      Keep abreast of the latest statistical bulletins and releases from the ONS
-                    </p>
-                  </div>
-                  <!-- /box__content -->
-                </div>
-              </article>
-              <!-- /box -->
-            </div>
       </div>
    <!--End of right col aside, grid col one third-->
       </div>
   </div>
 <ons-footer></ons-footer>
+
+
+     <div class="grid-col tablet-wide-grid-one-third">
+      
+      </div>

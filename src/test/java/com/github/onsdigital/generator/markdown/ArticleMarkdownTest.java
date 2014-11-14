@@ -16,15 +16,15 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.github.onsdigital.json.Section;
-import com.github.onsdigital.json.markdown.Bulletin;
+import com.github.onsdigital.json.markdown.Article;
 
-public class BulletinMarkdownTest {
+public class ArticleMarkdownTest {
 
-	Bulletin bulletin;
+	Article article;
 
 	@Before
 	public void setup() {
-		bulletin = new Bulletin();
+		article = new Article();
 	}
 
 	@Test
@@ -36,49 +36,41 @@ public class BulletinMarkdownTest {
 		String level3 = "Public Sector Finance";
 		String lede = "man";
 		String more = "nation";
-		String summary = "summarizor";
-		String headline1 = "Old English revived";
-		String headline2 = "leed";
-		String headline3 = "leode";
 		String contactName = "Jukesie";
 		String contactEmail = "jukesie@gmail.com";
 		String nextRelease = "soon";
-		ClassLoader classLoader = BulletinMarkdownTest.class.getClassLoader();
-		String resourceName = "com/github/onsdigital/json/markdown/bulletin.md";
+		ClassLoader classLoader = ArticleMarkdownTest.class.getClassLoader();
+		String resourceName = "com/github/onsdigital/json/markdown/article.md";
 		Path path = Paths.get(classLoader.getResource(resourceName).toURI());
 
 		// When
-		bulletin = BulletinMarkdown.read(path);
+		article = ArticleMarkdown.read(path);
 
 		// Then
 
 		// Header block
-		assertEquals(theme, bulletin.theme);
-		assertEquals(level2, bulletin.level2);
-		assertEquals(level3, bulletin.level3);
-		assertEquals(lede, bulletin.lede);
-		assertEquals(more, bulletin.more);
-		assertEquals(summary, bulletin.summary);
-		assertEquals(headline1, bulletin.headline1);
-		assertEquals(headline2, bulletin.headline2);
-		assertEquals(headline3, bulletin.headline3);
-		assertEquals(contactName, bulletin.contact.name);
-		assertEquals(contactEmail, bulletin.contact.email);
-		assertEquals(nextRelease, bulletin.nextRelease);
+		assertEquals(theme, article.theme);
+		assertEquals(level2, article.level2);
+		assertEquals(level3, article.level3);
+		assertEquals(lede, article.lede);
+		assertEquals(more, article.more);
+		assertEquals(contactName, article.contact.name);
+		assertEquals(contactEmail, article.contact.email);
+		assertEquals(nextRelease, article.nextRelease);
 
 		// Title
-		assertEquals("Analysis of consumer price inflation", bulletin.title);
+		assertEquals("What happened to all the money?", article.title);
 
 		// Sections
-		assertEquals(2, bulletin.sections.size());
-		assertEquals("Section one", bulletin.sections.get(0).title);
+		assertEquals(2, article.sections.size());
+		assertEquals("Section one", article.sections.get(0).title);
 		String markdown1 = "Jarogonium est jargonius et dameleie statisticum seculum mondi.\n";
-		assertEquals(markdown1, bulletin.sections.get(0).markdown);
-		assertEquals("Section two", bulletin.sections.get(1).title);
+		assertEquals(markdown1, article.sections.get(0).markdown);
+		assertEquals("Section two", article.sections.get(1).title);
 		String markdown2 = "Lorem ipsum\n";
 		markdown2 += " * bullet1\n";
 		markdown2 += " * bullet2";
-		assertEquals(markdown2, bulletin.sections.get(1).markdown);
+		assertEquals(markdown2, article.sections.get(1).markdown);
 	}
 
 	@Test
@@ -87,10 +79,10 @@ public class BulletinMarkdownTest {
 		// Given
 		String title = "Title titel titre titolo";
 		String markdown = "# \t" + title;
-		bulletin.title = "";
+		article.title = "";
 
 		// When
-		String result = BulletinMarkdown.matchTitle(markdown);
+		String result = ArticleMarkdown.matchTitle(markdown);
 
 		// Then
 		assertNotNull(result);
@@ -103,10 +95,10 @@ public class BulletinMarkdownTest {
 		// Given
 		String title = "Title titel titre # titolo";
 		String markdown = "# \t" + title;
-		bulletin.title = "";
+		article.title = "";
 
 		// When
-		String result = BulletinMarkdown.matchTitle(markdown);
+		String result = ArticleMarkdown.matchTitle(markdown);
 
 		// Then
 		assertNotNull(result);
@@ -119,14 +111,14 @@ public class BulletinMarkdownTest {
 		// Given
 		String title = "Title titel titre titolo";
 		String markdown = " # " + title;
-		bulletin.title = "already here";
+		article.title = "already here";
 
 		// When
-		String result = BulletinMarkdown.matchTitle(markdown);
+		String result = ArticleMarkdown.matchTitle(markdown);
 
 		// Then
 		assertNull(result);
-		assertFalse(StringUtils.isEmpty(bulletin.title));
+		assertFalse(StringUtils.isEmpty(article.title));
 	}
 
 	@Test
@@ -135,14 +127,14 @@ public class BulletinMarkdownTest {
 		// Given
 		String title = "Title titel titre titolo";
 		String markdown = " # " + title;
-		bulletin.title = "";
+		article.title = "";
 
 		// When
-		String result = BulletinMarkdown.matchTitle(markdown);
+		String result = ArticleMarkdown.matchTitle(markdown);
 
 		// Then
 		assertNull(result);
-		assertTrue(StringUtils.isEmpty(bulletin.title));
+		assertTrue(StringUtils.isEmpty(article.title));
 	}
 
 	@Test
@@ -153,7 +145,7 @@ public class BulletinMarkdownTest {
 		String markdown = "## \t" + heading;
 
 		// When
-		Section section = BulletinMarkdown.matchHeading(markdown);
+		Section section = ArticleMarkdown.matchHeading(markdown);
 
 		// Then
 		assertNotNull(section);
@@ -168,7 +160,7 @@ public class BulletinMarkdownTest {
 		String markdown = "## \t" + title;
 
 		// When
-		Section section = BulletinMarkdown.matchHeading(markdown);
+		Section section = ArticleMarkdown.matchHeading(markdown);
 
 		// Then
 		assertNotNull(section);
@@ -181,10 +173,10 @@ public class BulletinMarkdownTest {
 		// Given
 		String title = "Title titel titre titolo";
 		String markdown = " # " + title;
-		bulletin.title = "already here";
+		article.title = "already here";
 
 		// When
-		Section section = BulletinMarkdown.matchHeading(markdown);
+		Section section = ArticleMarkdown.matchHeading(markdown);
 
 		// Then
 		assertNull(section);
@@ -196,10 +188,10 @@ public class BulletinMarkdownTest {
 		// Given
 		String title = "Title titel titre titolo";
 		String markdown = " ## " + title;
-		bulletin.title = "";
+		article.title = "";
 
 		// When
-		Section section = BulletinMarkdown.matchHeading(markdown);
+		Section section = ArticleMarkdown.matchHeading(markdown);
 
 		// Then
 		assertNull(section);
@@ -214,7 +206,7 @@ public class BulletinMarkdownTest {
 		String line = name + ":" + value;
 
 		// When
-		String[] property = BulletinMarkdown.readProperty(line);
+		String[] property = ArticleMarkdown.readProperty(line);
 
 		// Then
 		assertEquals(2, property.length);
@@ -231,7 +223,7 @@ public class BulletinMarkdownTest {
 		String line = "   " + name + " :  " + value + "\t";
 
 		// When
-		String[] property = BulletinMarkdown.readProperty(line);
+		String[] property = ArticleMarkdown.readProperty(line);
 
 		// Then
 		assertEquals(2, property.length);
@@ -246,7 +238,7 @@ public class BulletinMarkdownTest {
 		String line = "";
 
 		// When
-		String[] property = BulletinMarkdown.readProperty(line);
+		String[] property = ArticleMarkdown.readProperty(line);
 
 		// Then
 		assertEquals(2, property.length);
