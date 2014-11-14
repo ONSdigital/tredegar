@@ -67,7 +67,7 @@ public class BulletinMarkdownTest {
 		assertEquals(nextRelease, bulletin.nextRelease);
 
 		// Title
-		assertEquals("What happened to all the money?", bulletin.title);
+		assertEquals("Analysis of consumer price inflation", bulletin.title);
 
 		// Sections
 		assertEquals(2, bulletin.sections.size());

@@ -11,7 +11,7 @@ Contact name: Jukesie
 Contact email: jukesie@gmail.com
 Next release: soon
 
-# What happened to all the money?
+# Analysis of consumer price inflation
 
 ## Section one
 Jarogonium est jargonius et dameleie statisticum seculum mondi.
