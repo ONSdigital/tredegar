@@ -988,8 +988,11 @@
   "relatedBulletins": [
     "/economy/inflationandpriceindices/bulletins/consumerpriceinflation"
   ],
+  "relatedTimeseries": [
+    "/economy/inflationandpriceindices/timeseries/l55o"
+  ],
   "type": "timeseries",
-  "name": "CPIH Index (2005 \u003d 100)",
+  "name": "CPIH",
   "fileName": "l522",
   "breadcrumb": [
     {

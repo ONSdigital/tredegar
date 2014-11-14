@@ -4399,6 +4399,10 @@
   ],
   "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/lf24",
   "relatedBulletins": [],
+  "relatedTimeseries": [
+    "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgrz"
+  ],
+  "source": "Labour Force Survey",
   "type": "timeseries",
   "name": "Employment rate (aged 16-64)",
   "fileName": "lf24",

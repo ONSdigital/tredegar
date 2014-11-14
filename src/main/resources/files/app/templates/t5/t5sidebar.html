@@ -35,6 +35,41 @@
 
                 </div>
                 <div class="grid-col desktop-grid-five-sixths">
+                    <h3>Related Timeseries</h3>
+                </div>
+            </div>
+            <div class="padded"></div>
+        </header>
+        <!-- /box__header -->
+        <div class="box__content">
+        	<div ng-if="(taxonomy.data.relatedTimeseriesData).length === 0">
+ 	            <p>
+ 	            	<a href="">Assum efficiantur eum cu, January 2014</a>
+	            </p>
+	            <p>
+	            	<a href="">Ne his tractatos disputando, January 2014</a>
+	            </p>
+	            <p>
+	            	<a href="">Vel ut soleat mollis meliore (6) publications</a>
+	            </p>
+        	</div>
+        	<div ng-repeat="relatedTimeseries in taxonomy.data.relatedTimeseriesData">
+	            <p><a href=#!{{relatedTimeseries.uri}}>{{relatedTimeseries.name}}</a>
+			</div>
+
+            <!-- /list- -bullet -->
+        </div>
+        <!-- /box__content -->
+    </article>
+
+    <!-- article__content -->
+    <article class="box box--padded slate sectioned">
+        <header class="box__header">
+            <div class="grid-wrap ">
+                <div class="grid-col desktop-grid-one-sixth">
+
+                </div>
+                <div class="grid-col desktop-grid-five-sixths">
                     <h3>Related Bulletins</h3>
                 </div>
             </div>

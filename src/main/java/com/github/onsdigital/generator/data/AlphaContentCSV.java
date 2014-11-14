@@ -3,6 +3,8 @@ package com.github.onsdigital.generator.data;
 import java.io.IOException;
 import java.net.URI;
 import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.lang.ArrayUtils;
@@ -35,7 +37,9 @@ class AlphaContentCSV {
 	static String FIGURE = "Figure";
 	static String PERIOD = "Period";
 	static String CDID = "CDID";
-	static String[] columns = { THEME, LEVEL2, LEVEL3, NAME, KEY, PREUNIT, UNITS, FIGURE, PERIOD, CDID };
+	static String RELATED_CDID = "Related CDID";
+	static String SOURCE = "Source";
+	static String[] columns = { THEME, LEVEL2, LEVEL3, NAME, KEY, PREUNIT, UNITS, FIGURE, PERIOD, CDID, RELATED_CDID, SOURCE };
 
 	static Csv csv;
 
@@ -117,6 +121,21 @@ class AlphaContentCSV {
 				figure = figure.substring(0, figure.length() - 2);
 			}
 			timeseries.number = figure;
+
+			String relatedCdidColumn = row.get(RELATED_CDID);
+			if (StringUtils.isNotBlank(relatedCdidColumn)) {
+				String[] relatedCdidTokens = relatedCdidColumn.split(",");
+				List<String> relatedCdids = new ArrayList<String>();
+				for (String relatedCdid : relatedCdidTokens) {
+					relatedCdids.add(relatedCdid.trim());
+				}
+				Data.addRelatedTimeseries(cdid, relatedCdids);
+			}
+
+			String source = row.get(SOURCE);
+			if (StringUtils.isNotBlank(source)) {
+				timeseries.source = source;
+			}
 		}
 	}
 

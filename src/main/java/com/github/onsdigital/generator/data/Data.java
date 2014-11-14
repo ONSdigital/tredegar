@@ -45,6 +45,8 @@ public class Data implements Iterable<Timeseries> {
 	private static Map<String, Timeseries> timeserieses = new HashMap<>();
 	private static Set<String> mappedDatasets = new HashSet<>();
 
+	public static Map<String, List<String>> relatedTimeseries = new HashMap<>();
+
 	public static void addDateOption(String date) {
 
 		TimeseriesValue value = new TimeseriesValue();
@@ -276,6 +278,18 @@ public class Data implements Iterable<Timeseries> {
 			result.remove(toKey(mapped));
 		}
 		return result;
+	}
+
+	public static void addRelatedTimeseries(String cdid, List<String> relatedCdids) {
+		relatedTimeseries.put(cdid, relatedCdids);
+	}
+
+	public static List<String> relatedTimeseries(String cdid) {
+		return relatedTimeseries.get(cdid);
+	}
+
+	public static Map<String, List<String>> getRelatedTimeseries() {
+		return relatedTimeseries;
 	}
 
 	/**

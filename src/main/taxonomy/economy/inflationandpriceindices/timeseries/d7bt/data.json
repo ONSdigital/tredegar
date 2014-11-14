@@ -2705,8 +2705,11 @@
   "relatedBulletins": [
     "/economy/inflationandpriceindices/bulletins/consumerpriceinflation"
   ],
+  "relatedTimeseries": [
+    "/economy/inflationandpriceindices/timeseries/d7g7"
+  ],
   "type": "timeseries",
-  "name": "CPI: Consumer Prices Index (2005 \u003d 100)",
+  "name": "CPI: Consumer Prices Index",
   "fileName": "d7bt",
   "breadcrumb": [
     {

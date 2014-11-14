@@ -4408,6 +4408,11 @@
     "/employmentandlabourmarket/unemployment/bulletins/uklabourmarket",
     "/employmentandlabourmarket/unemployment/bulletins/youngpeoplenotineducationemploymentortrainingneet"
   ],
+  "relatedTimeseries": [
+    "/employmentandlabourmarket/unemployment/timeseries/mgse",
+    "/employmentandlabourmarket/unemployment/timeseries/mgsc"
+  ],
+  "source": "Labour Force Survey",
   "type": "timeseries",
   "name": "Unemployment 16+ Male",
   "fileName": "mgsd",

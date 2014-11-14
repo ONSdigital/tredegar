@@ -4405,6 +4405,11 @@
   ],
   "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgsa",
   "relatedBulletins": [],
+  "relatedTimeseries": [
+    "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgsb",
+    "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgrz"
+  ],
+  "source": "Labour Force Survey",
   "type": "timeseries",
   "name": "Employment 16+ Male",
   "fileName": "mgsa",

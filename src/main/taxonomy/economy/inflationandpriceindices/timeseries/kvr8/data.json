@@ -1779,8 +1779,11 @@
   "relatedBulletins": [
     "/economy/inflationandpriceindices/bulletins/consumerpriceinflation"
   ],
+  "relatedTimeseries": [
+    "/economy/inflationandpriceindices/timeseries/kvr9"
+  ],
   "type": "timeseries",
-  "name": "RPIJ Index (1987 \u003d 100)",
+  "name": "RPIJ",
   "fileName": "kvr8",
   "breadcrumb": [
     {

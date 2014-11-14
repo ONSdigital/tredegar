@@ -14,6 +14,8 @@
         var data = $scope.taxonomy.data
         data.relatedBulletinData = []
         loadRelatedBulletins(data)
+        data.relatedTimeseriesData = []
+        loadRelatedTimeseries(data)
 
         function downloadXls() {
             download('xlsx');
@@ -43,6 +45,22 @@
                     Taxonomy.load(relatedBulletinPath, function(relatedBulletin) {
                         console.log('Loaded related bulletin: ', relatedBulletinPath, ' ', relatedBulletin)
                         data.relatedBulletinData.push(relatedBulletin)
+                    })
+                }
+            }
+        }
+        
+        function loadRelatedTimeseries(data) {
+            var dataPath = '/data'
+            var relatedTimeserieses = data.relatedTimeseries;
+
+            if (relatedTimeserieses != null) {
+                for (var i = 0; i < relatedTimeserieses.length; i++) {
+                    var timeseries = relatedTimeserieses[i]
+                    var relatedTimeseriesPath = dataPath + timeseries
+                    Taxonomy.load(relatedTimeseriesPath, function(relatedTimeseries) {
+                        console.log('Loaded related timeseries: ', relatedTimeseriesPath, ' ', relatedTimeseries)
+                        data.relatedTimeseriesData.push(relatedTimeseries)
                     })
                 }
             }

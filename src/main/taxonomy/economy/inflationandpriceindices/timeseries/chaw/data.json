@@ -2806,8 +2806,11 @@
   "relatedBulletins": [
     "/economy/inflationandpriceindices/bulletins/consumerpriceinflation"
   ],
+  "relatedTimeseries": [
+    "/economy/inflationandpriceindices/timeseries/czbh"
+  ],
   "type": "timeseries",
-  "name": "RPI: Retail Price Index (1987 \u003d 100)",
+  "name": "RPI: Retail Price Index",
   "fileName": "chaw",
   "breadcrumb": [
     {

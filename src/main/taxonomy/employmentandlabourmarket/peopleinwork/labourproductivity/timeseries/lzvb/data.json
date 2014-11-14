@@ -3,7 +3,7 @@
   "note1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quam leo, blandit a turpis non, varius feugiat mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In posuere lectus eu laoreet ultrices. Donec ac sodales libero, eget fermentum arcu.",
   "note2": "Fusce pharetra, libero in imperdiet ultricies, ex erat tempor dolor, vitae aliquet magna velit in urna. Duis finibus augue velit, ut consectetur risus imperdiet in. Sed tempus congue ante, ac cursus diam porttitor vitae. Vivamus arcu leo, volutpat in mauris ac, lacinia fermentum velit. Sed dictum tortor justo, aliquet facilisis lorem dictum a.",
   "number": "98.4",
-  "unit": "Index, 2010 \u003d 100",
+  "unit": "Index",
   "preUnit": "",
   "date": "Q2 2014",
   "years": [
@@ -520,6 +520,8 @@
   "relatedBulletins": [
     "/employmentandlabourmarket/peopleinwork/labourproductivity/bulletins/labourproductivityq12014"
   ],
+  "relatedTimeseries": [],
+  "source": "Labour Force Survey",
   "type": "timeseries",
   "name": "Output per hour",
   "fileName": "lzvb",
