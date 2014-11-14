@@ -29,7 +29,7 @@
                         <strong>Series ID: {{chart.timeseries.cdid}}</strong>
                     </p>
                     <p>
-                        <strong>Unit: {{chart.timeseries.units}}</strong>
+                        <strong>Unit: {{chart.timeseries.unit}}</strong>
                     </p>
                     <p>{{chart.timeseries.seasonalAdjustment}}</p>
                 </div>
@@ -112,10 +112,10 @@
                         <div class="chart-area__controls__custom__container__table">
                             <div class="chart-area__controls__dropdowns">
                                 <!-- Selector for table only -->
-                                <fieldset ng-show="chart.tableVisible" class="chart-area__controls__date">
+                                <!-- <fieldset ng-show="chart.tableVisible" class="chart-area__controls__date">
                                     <legend class="chart-area__controls__date__label">Find</legend>
                                     <input ng-model="query" type="test" />
-                                </fieldset>
+                                </fieldset> -->
 
                                 <fieldset class="chart-area__controls__date">
                                     <legend class="chart-area__controls__date__label">From</legend>
@@ -212,14 +212,13 @@
                     <div ng-if="chart.timeseries.note1"> <!-- Another field goes here for condition -->
                         <h3>Related series</h3>
                         <div class="padded">
-                            <div>
-                                <a>Example here</a>
+                            <div><a>CPI: Consumer Prices Index</a>
                             </div>
                             <div>
-                                <a>Example here</a>
+                                <a>RPIJ</a>
                             </div>
                             <div>
-                                <a>Example here</a>
+                                <a>Output of manufactured product Index</a>
                             </div>
                         </div>
                     </div>
