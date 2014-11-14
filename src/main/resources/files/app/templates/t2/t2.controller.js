@@ -3,8 +3,13 @@
     angular.module('onsTemplates')
         .controller('T2Ctrl', ['$scope',
             function($scope) {
+                var lastSection= {
+                    nondata:true
+                }
 
+                $scope.taxonomy.data.sections.push(lastSection)
                 $scope.taxonomy.data.sections = convertToTable($scope.taxonomy.data.sections)
+                
                 //Converts list into 3 column arrays for easy handling on view
                 function convertToTable(children) {
                     var result = []
