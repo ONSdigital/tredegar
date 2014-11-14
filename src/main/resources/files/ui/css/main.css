@@ -1971,10 +1971,6 @@ a {
   margin-top: 20px;
   margin-top: 2rem; }
 
-.box__bottom {
-  margin-bottom: 7px;
-  margin-bottom: .7rem; }
-
 /** padding classes               */
 .box--padded {
   padding: 25px;
@@ -7369,4 +7365,18 @@ lesser , applied styles
 }
 .button-bar > .button-group:last-of-type {
     margin-right: 0;
+}
+
+/**************************************\
+        ***** Content Page *****
+\**************************************/
+.content-section {
+    position: relative;
+    padding-bottom: 20px;
+}
+.content-section--bottom {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding-bottom: 7px;
 }

@@ -86,7 +86,7 @@
     <div class="wrapper panel--bottom-mar">
         <div class="grid-wrap">
             <div class="grid-col {{sidebar ? 'desktop-grid-two-thirds tablet-grid-two-thirds' : ''}}">
-                <article class="box border-horizontal-single" ng-repeat="section in content.sections">
+                <article class="box border-horizontal-single content-section" ng-repeat="section in content.sections">
                     <header class="box__header">
                         <h2 id="section{{$index + 1}}">{{$index + 1}}. {{section.title}}</h2>
                     <!-- Check this in the static version -->
@@ -98,9 +98,7 @@
                         <div markdown link="{{section.markdown}}"></div>
                     </div>
                     <!-- <br></br> -->
-                    <div class="box__bottom grid-c">
-                    <a ng-click="scrollTo('top')">Back to Table of Contents</a>
-                    </div>
+                    <a class="content-section--bottom" ng-click="scrollTo('top')">Back to Table of Contents</a>
                     <!-- /box__content -->
                 <!-- Not used in static version -->
                     <!-- <footer class="box__footer"></footer> -->
