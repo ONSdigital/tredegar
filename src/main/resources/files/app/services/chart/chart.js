@@ -1,3 +1,5 @@
+'use strict';
+
 (function() {
 
 	angular.module('onsChart', [])
@@ -220,7 +222,8 @@
 	                        	if (this.isLast) {
 	                        		return this.value
 	                        	}
-	                        }
+	                        },
+	                        step: 1
 	                    },
 	                	tickLength: 0
 	                },
@@ -323,23 +326,23 @@
         function monthVal(mon) {
             switch (mon.slice(0, 3).toUpperCase()) {
                 case 'JAN':
-                    return 01
+                    return 1
                 case 'FEB':
-                    return 02
+                    return 2
                 case 'MAR':
-                    return 03
+                    return 3
                 case 'APR':
-                    return 04
+                    return 4
                 case 'MAY':
-                    return 05
+                    return 5
                 case 'JUN':
-                    return 06
+                    return 6
                 case 'JUL':
-                    return 07
+                    return 7
                 case 'AUG':
-                    return 08
+                    return 8
                 case 'SEP':
-                    return 09
+                    return 9
                 case 'OCT':
                     return 10
                 case 'NOV':
