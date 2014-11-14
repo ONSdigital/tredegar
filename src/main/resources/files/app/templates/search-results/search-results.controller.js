@@ -21,32 +21,32 @@ angular.module("onsTemplates")
                                 ];
       var relatedDepartments= {
         dfe: {
-          departmentName: "Department for Education",
+          departmentName: "the Department for Education",
           departmentLink: "https://www.gov.uk/government/statistics?keywords=&topics%5B%5D=all&departments%5B%5D=department-for-education",
           departmentLogo: "ui/img/dfe.png"
         },
         bis: {
-          departmentName: "Department for Business, Innovation & Skills",
+          departmentName: "the Department for Business, Innovation & Skills",
           departmentLink: "https://www.gov.uk/government/statistics?keywords=&topics%5B%5D=all&departments%5B%5D=department-for-business-innovation-skills",
           departmentLogo: "ui/img/bis.png"
         },
         decc: {
-          departmentName: "Department of Energy & Climate Change",
+          departmentName: "the Department of Energy & Climate Change",
           departmentLink: "https://www.gov.uk/government/statistics?keywords=&topics%5B%5D=all&departments%5B%5D=department-of-energy-climate-change",
           departmentLogo: "ui/img/decc.png"
         },
         defra: {
-          departmentName: "Department for Environment, Food & Rural Affairs",
+          departmentName: "the Department for Environment, Food & Rural Affairs",
           departmentLink: "https://www.gov.uk/government/statistics?keywords=&topics%5B%5D=all&departments%5B%5D=department-for-environment-food-rural-affairs",
           departmentLogo: "ui/img/defra.png"
         },
         hmrc: {
-          departmentName: "HM Revenue & Customs ",
+          departmentName: "HM Revenue & Customs",
           departmentLink: "https://www.gov.uk/government/statistics?keywords=&topics%5B%5D=all&departments%5B%5D=hm-revenue-customs",
           departmentLogo: "ui/img/hmrc.png"
         },
         ho: {
-          departmentName: "Home Office",
+          departmentName: "the Home Office",
           departmentLink: "https://www.gov.uk/government/statistics?keywords=&topics%5B%5D=all&departments%5B%5D=home-office",
           departmentLogo: "ui/img/ho.png"
         }
