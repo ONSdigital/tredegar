@@ -3158,6 +3158,9 @@ lesser , applied styles
 .slate--blue {
   background-color: #e5fcff; }
 
+  .slate--orange {
+  background-color: #fef5ed; }
+
 .slate--hero-banner {
   background-color: #e4e5e3;
   /*background-image: url("/ui/img/hero-banner.jpg");*/
@@ -4430,7 +4433,7 @@ background-color: #edeeee !important;/* altered on phil's advice--change this ov
     line-height: 0;
     height: 0;
 }
- 
+
 
 
 /*------------------------------------*\
@@ -5017,6 +5020,9 @@ td.datatable-downloads{
 .page-header--time-series:after {
   background-color: #b2bb1c; }
 
+.page-header--local-stats:after {
+  background-color: #f37121; }
+
 .page-header--expert-analysis-desc {
   color: #757575; }
 
@@ -5025,6 +5031,9 @@ td.datatable-downloads{
 
 .page-header--time-series-desc {
   color: #b2bb1c; }
+
+.page-header--local-stats-desc {
+  color: #f37121; }
 
 .slate--green {
   background-color: #fafbe7; }
