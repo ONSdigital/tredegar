@@ -12,7 +12,6 @@
 		taxonomy.data = data
 		prepareBreadcrumb($scope, data)
 
-
 		function prepareBreadcrumb($scope, data) {
 			if (data.level === 't1') {
 				return

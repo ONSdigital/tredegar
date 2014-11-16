@@ -2,38 +2,49 @@
 	'use strict';
 
 	angular.module('onsTaxonomy', [])
-		.service('Taxonomy', ['$log', '$location', 'DataLoader', 'StringUtil', 'ArrayUtil',
+		.service('Taxonomy', ['$log', '$location', '$q', 'DataLoader', 'StringUtil', 'ArrayUtil',
 			TaxonomyService
 		])
 
-	function TaxonomyService($log, $location, DataLoader, StringUtil, ArrayUtil) {
+	function TaxonomyService($log, $location, $q, DataLoader, StringUtil, ArrayUtil) {
 
 		var service = this
 		var dataPath = '/data'
 		var bulkDataPath = '/datalist'
+		var loadSynchronously = false
 
 		function loadData() {
-
+			var q = [] //Promise array
 			var promise = DataLoader.load(resolvePath()).then(function(data) {
 				service.data = data
 
 				switch (data.level) {
 					case 't1':
-						resolveSections(data)
+						q = resolveSections(data)
+						if (loadSynchronously) {
+							return $q.all(q).then(function() {
+								return data
+							})
+						}
 						break
 					case 't3':
 						data.itemData = []
 						data.statsBulletinData = []
 						data.keyDatasets = []
-						loadItem(data, data.headline, 'headlineData')
-						loadItem(data, data.statsBulletinHeadline, 'statsBulletinHeadlineData')
-						loadItems(data, data.items, 'itemData')
-						loadItems(data, data.statsBulletins, 'statsBulletinData')
-						loadItems(data, data.datasets, 'keyDatasets')
+						q.push(loadItem(data, data.headline, 'headlineData'))
+						q.push(loadItem(data, data.statsBulletinHeadline, 'statsBulletinHeadlineData'))
+						q.push.apply(q, loadItems(data, data.items, 'itemData'))
+						q.push.apply(q, loadItems(data, data.statsBulletins, 'statsBulletinData'))
+						q.push.apply(q, loadItems(data, data.datasets, 'keyDatasets'))
+						if (loadSynchronously) {
+							return $q.all(q)
+								.then(function() {
+									return data
+								})
+						}
 						break
 					default:
 				}
-
 				return data
 			})
 
@@ -44,6 +55,7 @@
 			$log.debug('Taxonomy Service: Resolving sections of ', data.name)
 			var level = data.level
 			var sections = data.sections
+			var promises = []
 
 			if (!sections) {
 				return
@@ -62,15 +74,16 @@
 					}
 				}
 
-				loadItems(sections[i], sections[i].items, 'itemData')
-
+				promises.push.apply(promises, loadItems(sections[i], sections[i].items, 'itemData'))
 			}
+
+			return promises
 		}
 
 		//Load single item and push into container's given variable, overrides if exists
 		function loadItem(container, item, varName) {
 			var path = dataPath + item
-			DataLoader.load(path).then(function(itemData) {
+			return DataLoader.load(path).then(function(itemData) {
 				itemData.url = item
 					//Create array if not available
 				container[varName] = itemData
@@ -83,15 +96,21 @@
 				return
 			}
 
+			var promises = []
+
 			container[arrayName] = []
 			for (var i = 0; i < items.length; i++) {
 				var item = items[i]
 				var itemPath = dataPath + item
-				DataLoader.load(itemPath).then(function(itemData) {
+				var promise = DataLoader.load(itemPath).
+				then(function(itemData) {
 					itemData.url = item
 					container[arrayName].push(itemData)
 				})
+				promises.push(promise)
 			}
+
+			return promises
 		}
 
 

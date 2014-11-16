@@ -18,7 +18,7 @@
             <li class="nav--primary__hide-small-med">
                 <a href="#!">Home</a>
             </li>
-            <li ons-nav-item="{{n.url}}" expandable="true" ons-nav-expand-class="js-expandable-active" ng-repeat="n in navigation" class="nav__expandable js-expandable">
+            <li ons-nav-item="{{n.url}}" expandable="true" ons-nav-expand-class="js-expandable-active" ng-repeat="n in nav.links" class="nav__expandable js-expandable">
                 <a ng-href="{{w_nav.mobile ? '' : ('#!' + n.url)}}">{{n.name}}</a>
                 <ul class="nav--primary__sub js-expandable__content" ons-nav-collapse-class="js-nav-hidden">
                     <li ons-nav-item ons-nav-mobile>

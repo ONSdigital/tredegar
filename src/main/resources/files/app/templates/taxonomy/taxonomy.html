@@ -1,32 +1,38 @@
-<!-- T1, T2 , T3 -->
-<span ng-if="taxonomy.data.type === 'home'">
-    <span ng-if="taxonomy.data.level === 't2'" ng-controller="T2Ctrl" >
-        <span ng-include="'app/templates/t2/t2.html'"></span>
+<ons-header></ons-header>
+<div class="wrap">
+
+    <!-- T1, T2 , T3 -->
+    <span ng-if="taxonomy.data.type === 'home'">
+        <span ng-if="taxonomy.data.level === 't2'" ng-controller="T2Ctrl">
+            <span ng-include="'app/templates/t2/t2.html'"></span>
+        </span>
+        <span ng-if="taxonomy.data.level === 't1'">
+            <span ng-include="'app/templates/t1new/t1new.html'"></span>
+        </span>
+        <span ng-if="taxonomy.data.level === 't3'" ng-controller="T3Controller as t3">
+            <span ng-include="'app/templates/t3/t3.html'"></span>
+        </span>
     </span>
-    <span ng-if="taxonomy.data.level === 't1'">
-        <span ng-include="'app/templates/t1new/t1new.html'"></span>
+
+    <!-- Bulletin -->
+    <span ng-if="taxonomy.data.type === 'bulletin'" ng-controller="BulletinCtrl">
+        <span ng-include="'app/templates/bulletin/bulletin.html'"></span>
     </span>
-    <span ng-if="taxonomy.data.level === 't3'" ng-controller="T3Controller as t3">
-        <span ng-include="'app/templates/t3/t3.html'"></span>
+
+    <!-- T5- Timeseries -->
+    <span ng-if="taxonomy.data.type === 'timeseries'" ng-controller="T5Controller as t5">
+        <span ng-include="'app/templates/t5/t5.html'"></span>
     </span>
-</span>
 
-<!-- Bulletin -->
-<span ng-if="taxonomy.data.type === 'bulletin'" ng-controller="BulletinCtrl">
-    <span ng-include="'app/templates/bulletin/bulletin.html'"></span>
-</span>
+    <!-- Article -->
+    <span ng-if="taxonomy.data.type === 'article'">
+        <span ng-include="'app/templates/t5/t5.html'"></span>
+    </span>
 
-<!-- T5- Timeseries -->
-<span ng-if="taxonomy.data.type === 'timeseries'" ng-controller="T5Controller as t5">
-    <span ng-include="'app/templates/t5/t5.html'"></span>
-</span>
+    <!-- Dataset -->
+    <span ng-if="taxonomy.data.type === 'dataset'" ng-controller="DatasetCtrl">
+        <span ng-include="'app/templates/dataset/Dataset_Excelcrosssection.html'"></span>
+    </span>
+</div>
+<ons-footer></ons-footer>
 
-<!-- Article -->
-<span ng-if="taxonomy.data.type === 'article'">
-    <span ng-include="'app/templates/t5/t5.html'"></span>
-</span>
-
-<!-- Dataset -->
-<span ng-if="taxonomy.data.type === 'dataset'" ng-controller="DatasetCtrl">
-    <span ng-include="'app/templates/dataset/Dataset_Excelcrosssection.html'"></span>
-</span>
