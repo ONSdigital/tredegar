@@ -1,10 +1,10 @@
 (function() {
 
     angular.module('onsTemplates')
-        .controller('T5Controller', ['$scope', 'Downloader', 'Taxonomy', T5Controller])
+        .controller('T5Controller', ['$scope', 'Downloader', 'DataLoader', T5Controller])
         .controller('ChartController', ['$scope', '$location', '$log', 'Downloader', 'ArrayUtil', ChartController])
 
-    function T5Controller($scope, Downloader, Taxonomy) {
+    function T5Controller($scope, Downloader, DataLoader) {
 
         var t5 = this;
         $scope.header = "Time Series";
@@ -40,7 +40,7 @@
                 for (var i = 0; i < bulletins.length; i++) {
                     var bulletin = bulletins[i]
                     var relatedBulletinPath = dataPath + bulletin
-                    Taxonomy.load(relatedBulletinPath, function(relatedBulletin) {
+                    DataLoader.load(relatedBulletinPath, function(relatedBulletin) {
                         console.log('Loaded related bulletin: ', relatedBulletinPath, ' ', relatedBulletin)
                         data.relatedBulletinData.push(relatedBulletin)
                     })

@@ -1,4 +1,4 @@
-package com.github.onsdigital.util;
+package com.github.onsdigital.search.util;
 
 import org.apache.commons.lang3.math.NumberUtils;
 

@@ -1,4 +1,5 @@
-package com.github.onsdigital.json;
+package com.github.onsdigital.json.partial;
+
 
 public class Contact {
 	public Email email = new Email();

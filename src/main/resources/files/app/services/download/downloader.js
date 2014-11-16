@@ -3,12 +3,12 @@
 
 	angular.module('onsDownloader', [])
 		.service('Downloader', ['$http', '$log', '$location',
-			DownloaderService
+			Downloader
 		])
 
 
 
-	function DownloaderService($http, $log) {
+	function Downloader($http, $log) {
 
 		var downloader = this
 

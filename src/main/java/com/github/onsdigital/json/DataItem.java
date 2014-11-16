@@ -2,6 +2,8 @@ package com.github.onsdigital.json;
 
 import java.util.List;
 
+import com.github.onsdigital.json.taxonomy.TaxonomyHome;
+
 /**
  * The minimal fields required by the data about every item on the website.
  * 

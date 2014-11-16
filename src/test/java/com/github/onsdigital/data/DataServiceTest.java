@@ -1,4 +1,4 @@
-package com.github.onsdigital.api.taxonomy;
+package com.github.onsdigital.data;
 
 import static org.junit.Assert.assertEquals;
 
@@ -6,7 +6,10 @@ import java.net.URI;
 
 import org.junit.Test;
 
-public class DataTest {
+import com.github.onsdigital.api.taxonomy.Data;
+import com.github.onsdigital.data.DataService;
+
+public class DataServiceTest {
 
 	Data data = new Data();
 
@@ -17,7 +20,7 @@ public class DataTest {
 		String uri = "cats/MEOW";
 
 		// When
-		String path = data.cleanPath(URI.create(uri));
+		String path = DataService.cleanPath(URI.create(uri));
 
 		// Then
 		assertEquals(uri.toLowerCase(), path);
@@ -30,7 +33,7 @@ public class DataTest {
 		String uri = "dogs/woof/";
 
 		// When
-		String path = data.cleanPath(URI.create(uri));
+		String path = DataService.cleanPath(URI.create(uri));
 
 		// Then
 		assertEquals(uri.substring(0, uri.length() - 1), path);
@@ -43,7 +46,7 @@ public class DataTest {
 		String uri = "/data/is/awesome";
 
 		// When
-		String path = data.cleanPath(URI.create(uri));
+		String path = DataService.cleanPath(URI.create(uri));
 
 		// Then
 		assertEquals(uri.replace("/data/", ""), path);

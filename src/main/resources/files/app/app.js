@@ -4,10 +4,25 @@
 (function() {
 
     // Components are to be injected to onsComponents module
-    var onsComponents = angular.module('onsComponents', ['onsAccordion', 'onsNavigation', 'onsPaginator', 'onsTabs', 'highcharts-ng', 'angularLoadingBar', 'onsToggler'])
+    var onsComponents = angular.module('onsComponents', [
+        'onsAccordion',
+        'onsNavigation',
+        'onsPaginator',
+        'onsTabs',
+        'highcharts-ng',
+        // 'angularLoadingBar',
+        'onsToggler'
+    ])
 
     //Filters, services and other helpers are to be injected to onsHelpers module
-    var onsHelpers = angular.module('onsHelpers', ['onsFilters', 'onsTaxonomy','onsDownloader', 'onsUtils'])
+    var onsHelpers = angular.module('onsHelpers', [
+        'onsFilters',
+        'onsTaxonomy',
+        'onsDownloader',
+        'onsUtils',
+        'onsDataLoader',
+        'angular-data.DSCacheFactory'
+    ])
 
     //Template related components are to be registered to onsTemplates module
     var onsTemplates = angular.module('onsTemplates', [])
@@ -19,13 +34,14 @@
         'onsComponents',
         'onsHelpers',
         'onsTemplates',
-        'googlechart',
         'smart-table'
     ])
 
     onsApp
         .config(['$routeProvider', '$locationProvider', '$httpProvider',
             function($routeProvider, $locationProvider, $httpProvider) {
+
+
                 $routeProvider.
                 when('/article', {
                     templateUrl: 'app/templates/article/article.html',
@@ -68,40 +84,40 @@
                 }).
                 when('/404', {
                     templateUrl: '/app/partials/error-pages/error404.html'
-                }).   
+                }).
                 when('/500', {
                     templateUrl: '/500.html'
-                }).                 
+                }).
                 otherwise({
-                    resolve: {
-                        // https://stackoverflow.com/questions/15975646/angularjs-routing-to-empty-route-doesnt-work-in-ie7
-                        // Here we ensure that our route has the document fragment (#), or more specifically that it has #/ at a minimum.
-                        // If accessing the base URL without a trailing '/' in IE7 it will execute the otherwise route instead of the signin
-                        // page, so this check will ensure that '#/' exists and if not redirect accordingly which fixes the URL.
-                        redirectCheck: ['$location',
-                            function($location) {
-                                var absoluteLocation = $location.absUrl();
-                                if (absoluteLocation.indexOf('#!/') === -1) {
-                                    $location.path('/');
-                                }
-                            }
-                        ]
-                        // ,
-                        // theData: ['Taxonomy',
-                        //     function(Taxonomy) {
-                        //         Taxonomy.loadData(function(data) {
-                        //             return data
-                        //         });
-                        //     }
-                        // ]
+                        resolve: {
+                            // https://stackoverflow.com/questions/15975646/angularjs-routing-to-empty-route-doesnt-work-in-ie7
+                            // Here we ensure that our route has the document fragment (#), or more specifically that it has #/ at a minimum.
+                            // If accessing the base URL without a trailing '/' in IE7 it will execute the otherwise route instead of the signin
+                            // page, so this check will ensure that '#/' exists and if not redirect accordingly which fixes the URL.
+                            redirectCheck: ['$location',
+                                    function($location) {
+                                        var absoluteLocation = $location.absUrl();
+                                        if (absoluteLocation.indexOf('#!/') === -1) {
+                                            $location.path('/');
+                                        }
+                                    }
+                                ]
+                                // ,
+                                // theData: ['Taxonomy',
+                                //     function(Taxonomy) {
+                                //         Taxonomy.loadData(function(data) {
+                                //             return data
+                                //         });
+                                //     }
+                                // ]
 
-                    },
-                    templateUrl: 'app/templates/taxonomy/taxonomy.html',
-                    controller: 'TaxonomyController',
-                    controllerAs: 'taxonomy'
-                })
-                // TODO: add interceptor to capture 404 scenarios, pending confirmation of requirement
-//                $httpProvider.responseInterceptors.push('OnsHttpInterceptor')
+                        },
+                        templateUrl: 'app/templates/taxonomy/taxonomy.html',
+                        controller: 'TaxonomyController',
+                        controllerAs: 'taxonomy'
+                    })
+                    // TODO: add interceptor to capture 404 scenarios, pending confirmation of requirement
+                    //                $httpProvider.responseInterceptors.push('OnsHttpInterceptor')
 
             }
         ])
@@ -114,7 +130,11 @@
                 loadNavigation()
 
                 function loadNavigation() {
-                    $http.get("/navigation").success(function(data) {
+                    $http.get("/navigation", {
+                        params: {
+                            hey: "sup?"
+                        }
+                    }).success(function(data) {
                         $log.debug('Main Ctrl: Loading navigation data')
                         $scope.navigation = data
                         $log.debug('Main Ctrl: navigation data loaded successfully ', data)
@@ -141,24 +161,24 @@
                 }
             }
         ])
-        
-        onsApp.factory('OnsHttpInterceptor', function($q, $location) {
-            return function (promise) {
-            	// pass success (e.g. response.status === 200) through
-                return promise.then(function (response) {
+
+    onsApp.factory('OnsHttpInterceptor', function($q, $location) {
+        return function(promise) {
+            // pass success (e.g. response.status === 200) through
+            return promise.then(function(response) {
                     return response
                 },
                 // otherwise deal with any error scenarios
-                function (response) {
+                function(response) {
                     if (response.status === 500) {
                         $location.url('/500')
                     }
                     if (response.status === 404) {
                         $location.url('/404')
-                    }                    
+                    }
                     return $q.reject(response)
                 });
-            };
-        });        
+        };
+    });
 
 })()

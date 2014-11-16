@@ -50,6 +50,11 @@
 			return (array && array.length > 0)
 		}
 
+
+		function isEmpty(array) {
+			return (!array || array.length === 0)
+		}
+
 		//Remove duplicate values in given array
 		function toUnique(a) { //array,placeholder,placeholder
 			var b = a.length;
@@ -65,6 +70,7 @@
 			getLast:getLast,
 			getFirst:getFirst,
 			isNotEmpty:isNotEmpty,
+			isEmpty:isEmpty,
 			toUnique:toUnique
 		})
 

@@ -1,9 +1,12 @@
-package com.github.onsdigital.json;
+package com.github.onsdigital.json.release;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import com.github.onsdigital.generator.Folder;
+import com.github.onsdigital.json.ContentType;
+import com.github.onsdigital.json.partial.Contact;
+import com.github.onsdigital.json.taxonomy.TaxonomyHome;
 
 /**
  * Java entity representation of the json that holds links to the articles,

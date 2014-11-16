@@ -12,7 +12,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import com.github.onsdigital.bean.CollectionSearchResult;
+import com.github.onsdigital.search.bean.CollectionSearchResult;
 
 /**
  * Exercises the scanning of a specific part of the taxonomy file system to

@@ -1,4 +1,4 @@
-package com.github.onsdigital.json;
+package com.github.onsdigital.json.partial;
 
 /**
  * Represents a contact name to be rendered as an email link.

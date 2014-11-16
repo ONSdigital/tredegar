@@ -5,7 +5,7 @@ import java.util.Set;
 
 import org.apache.commons.lang3.StringUtils;
 
-import com.github.onsdigital.json.Dataset;
+import com.github.onsdigital.json.dataset.Dataset;
 
 class DatasetNode {
 

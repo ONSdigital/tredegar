@@ -16,7 +16,7 @@ import org.w3c.dom.DOMException;
 
 import com.github.davidcarboni.restolino.json.Serialiser;
 import com.github.onsdigital.configuration.Configuration;
-import com.github.onsdigital.json.TaxonomyHome;
+import com.github.onsdigital.json.taxonomy.TaxonomyHome;
 import com.google.gson.JsonSyntaxException;
 
 public class NavigationUtil {
