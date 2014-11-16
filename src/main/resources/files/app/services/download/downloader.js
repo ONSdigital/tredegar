@@ -2,7 +2,7 @@
 	'use strict';
 
 	angular.module('onsDownloader', [])
-		.service('Downloader', ['$http', '$log', '$location',
+		.service('Downloader', ['$http', '$log',
 			Downloader
 		])
 

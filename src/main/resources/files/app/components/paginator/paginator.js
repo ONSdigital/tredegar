@@ -24,7 +24,7 @@ pageCount field is mandatory
       restrict: 'E',
       templateUrl: 'app/components/paginator/paginator.html',
       scope: {
-        pageCount: '@',
+        pageCount: '=',
         maxVisible: '@'
       },
       controller: PaginatorController,
@@ -32,15 +32,30 @@ pageCount field is mandatory
     }
 
     function PaginatorController($scope) {
-      var PAGE_PARAM = 'page'
       var paginator = this
+      var PAGE_PARAM = 'page'
       var maxVisible = $scope.maxVisible || 10
       var currentPage = +$location.search()[PAGE_PARAM] || 1
-      var pageCount = $scope.pageCount
-      var show = paginator.show = pageCount > 1
+      paginator.show
+      paginator.start
+      paginator.end
+      init()
+      watchPageCount()
+
+      function init() {
+        paginator.start = getStart()
+        paginator.end = getEnd()
+        paginator.show = $scope.pageCount > 1
+      }
+
+      function watchPageCount() {
+        $scope.$watch('pageCount', function() {
+            init()
+        })
+      }
 
       function getStart() {
-        if (pageCount <= maxVisible) {
+        if ($scope.pageCount <= maxVisible) {
           return 1
         }
         var end = getEnd()
@@ -50,7 +65,7 @@ pageCount field is mandatory
       }
 
       function getEnd() {
-        var max = pageCount
+        var max = $scope.pageCount
         if (max <= maxVisible) {
           return max
         }
@@ -82,7 +97,7 @@ pageCount field is mandatory
       }
 
       function isNextVisible() {
-        return (currentPage != pageCount)
+        return (currentPage != $scope.pageCount)
       }
 
       function isPrevVisible() {
@@ -97,9 +112,7 @@ pageCount field is mandatory
         isCurrent: isCurrent,
         prev: prev,
         next: next,
-        selectPage: selectPage,
-        getStart: getStart,
-        getEnd: getEnd
+        selectPage: selectPage
       })
 
     }

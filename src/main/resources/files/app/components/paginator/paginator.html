@@ -3,7 +3,7 @@
     <li ng-show="paginator.isPrevVisible()">
       <a href="" ng-click="paginator.prev()" class="page-link previous" >Prev</a>
     </li>
-    <li ng-repeat="i in [] | range:paginator.getStart():paginator.getEnd()" >
+    <li ng-repeat="i in [] | range:paginator.start:paginator.end" >
       <span ng-show="paginator.isCurrent(i)" class="current">{{i}}</span>
       <a href="" ng-click="paginator.selectPage(i)" ng-hide="paginator.isCurrent(i)" class="page-link" >{{i}}</a>
     </li>

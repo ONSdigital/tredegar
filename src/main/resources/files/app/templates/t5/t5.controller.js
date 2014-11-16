@@ -1,10 +1,10 @@
 (function() {
 
     angular.module('onsTemplates')
-        .controller('T5Controller', ['$scope', 'Downloader', 'DataLoader', T5Controller])
+        .controller('T5Controller', ['$scope', '$log', 'Downloader', 'DataLoader', T5Controller])
         .controller('ChartController', ['$scope', '$location', '$log', 'Downloader', 'ArrayUtil', ChartController])
 
-    function T5Controller($scope, Downloader, DataLoader) {
+    function T5Controller($scope, $log, Downloader, DataLoader) {
 
         var t5 = this;
         $scope.header = "Time Series";
@@ -40,10 +40,11 @@
                 for (var i = 0; i < bulletins.length; i++) {
                     var bulletin = bulletins[i]
                     var relatedBulletinPath = dataPath + bulletin
-                    DataLoader.load(relatedBulletinPath, function(relatedBulletin) {
-                        console.log('Loaded related bulletin: ', relatedBulletinPath, ' ', relatedBulletin)
-                        data.relatedBulletinData.push(relatedBulletin)
-                    })
+                    DataLoader.load(relatedBulletinPath)
+                        .then(function(relatedBulletin) {
+                            $log.debug('Loaded related bulletin: ', relatedBulletinPath, ' ', relatedBulletin)
+                            data.relatedBulletinData.push(relatedBulletin)
+                        })
                 }
             }
         }
@@ -109,8 +110,6 @@
 
 
             function tenYears(array) {
-                      console.log("Array Util getFirst")
-                console.log(ArrayUtil)
                 if ((ArrayUtil.getLast(array) - ArrayUtil.getFirst(array)) < 10) {
                     return false
                 } else {
@@ -210,7 +209,7 @@
         function isActive(chartType) {
             return chartType === ctrl.activeChart
         }
-    
+
         function getAllValues() {
             return ctrl.timeseries[ctrl.activeChart].values
         }
@@ -227,8 +226,6 @@
 
             function resolveChartTypes(ArrayUtil) {
                 var data = ctrl.timeseries
-                console.log("Array Util is")
-                console.log(ArrayUtil)
                 ctrl.showYearly = ArrayUtil.isNotEmpty(data.years)
                 ctrl.showMonthly = ArrayUtil.isNotEmpty(data.months)
                 ctrl.showQuarterly = ArrayUtil.isNotEmpty(data.quarters)
@@ -288,7 +285,7 @@
         }
 
 
-        
+
         function monthVal(mon) {
             switch (mon.slice(0, 3).toUpperCase()) {
                 case 'JAN':
@@ -369,7 +366,6 @@
 
         function exportImage() {
             var chartExp = $('#chart_prices').highcharts();
-            console.log(chartExp)
             chartExp.exportChart();
         }
 
@@ -377,8 +373,8 @@
             isActive: isActive,
             changeChartType: changeChartType,
             changeTimePeriod: changeTimePeriod,
-            downloadCsv:downloadCsv,
-            downloadXls:downloadXls,
+            downloadCsv: downloadCsv,
+            downloadXls: downloadXls,
             exportImage: exportImage
         })
     }

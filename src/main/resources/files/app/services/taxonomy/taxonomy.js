@@ -2,18 +2,19 @@
 	'use strict';
 
 	angular.module('onsTaxonomy', [])
-		.service('Taxonomy', ['$http', '$log', '$location', 'DataLoader', 'StringUtil', 'ArrayUtil',
+		.service('Taxonomy', ['$log', '$location', 'DataLoader', 'StringUtil', 'ArrayUtil',
 			TaxonomyService
 		])
 
-	function TaxonomyService($http, $log, $location, DataLoader, StringUtil, ArrayUtil) {
+	function TaxonomyService($log, $location, DataLoader, StringUtil, ArrayUtil) {
 
 		var service = this
 		var dataPath = '/data'
 		var bulkDataPath = '/datalist'
 
-		function loadData(callback) {
-			DataLoader.load(resolvePath(), function(data) {
+		function loadData() {
+
+			var promise = DataLoader.load(resolvePath()).then(function(data) {
 				service.data = data
 
 				switch (data.level) {
@@ -24,18 +25,19 @@
 						data.itemData = []
 						data.statsBulletinData = []
 						data.keyDatasets = []
-						loadItem(data,  data.headline, 'headlineData')
-						loadItem(data,  data.statsBulletinHeadline, 'statsBulletinHeadlineData')
-						loadItems(data, data.items,'itemData')
-						loadItems(data, data.statsBulletins,'statsBulletinData')
+						loadItem(data, data.headline, 'headlineData')
+						loadItem(data, data.statsBulletinHeadline, 'statsBulletinHeadlineData')
+						loadItems(data, data.items, 'itemData')
+						loadItems(data, data.statsBulletins, 'statsBulletinData')
 						loadItems(data, data.datasets, 'keyDatasets')
 						break
 					default:
 				}
-				if (callback) {
-					callback(service.data)
-				}
+
+				return data
 			})
+
+			return promise
 		}
 
 		function resolveSections(data) {
@@ -68,9 +70,9 @@
 		//Load single item and push into container's given variable, overrides if exists
 		function loadItem(container, item, varName) {
 			var path = dataPath + item
-			DataLoader.load(path, function(itemData) {
+			DataLoader.load(path).then(function(itemData) {
 				itemData.url = item
-				//Create array if not available
+					//Create array if not available
 				container[varName] = itemData
 			})
 		}
@@ -85,7 +87,8 @@
 			for (var i = 0; i < items.length; i++) {
 				var item = items[i]
 				var itemPath = dataPath + item
-				DataLoader.load(itemPath, function(itemData) {
+				DataLoader.load(itemPath).then(function(itemData) {
+					itemData.url = item
 					container[arrayName].push(itemData)
 				})
 			}
@@ -102,7 +105,7 @@
 				uriList: items
 			}
 			container[arrayName] = []
-			DataLoader.loadPost(bulkDataPath, request, function(data) {
+			DataLoader.loadPost(bulkDataPath, request).then(function(data) {
 				for (var i = 0; i < data.length; i++) {
 					data[i].url = items[i]
 					container.itemData.push(data[i])

@@ -3,15 +3,15 @@
 	'use strict';
 
 	angular.module('onsTemplates')
-		.controller('TaxonomyController', ['$scope', 'Taxonomy',
+		.controller('TaxonomyController', ['$scope', 'data',
 			TaxonomyController
 		])
-    function TaxonomyController($scope, Taxonomy) {
+
+	function TaxonomyController($scope, data) {
 		var taxonomy = this
-		Taxonomy.loadData(function(data) {
-			taxonomy.data = data
-			prepareBreadcrumb($scope, data)
-		})
+		taxonomy.data = data
+		prepareBreadcrumb($scope, data)
+
 
 		function prepareBreadcrumb($scope, data) {
 			if (data.level === 't1') {

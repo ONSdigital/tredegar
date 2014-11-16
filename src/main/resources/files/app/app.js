@@ -10,7 +10,7 @@
         'onsPaginator',
         'onsTabs',
         'highcharts-ng',
-        // 'angularLoadingBar',
+        'angularLoadingBar',
         'onsToggler'
     ])
 
@@ -78,67 +78,66 @@
                     templateUrl: 'app/templates/search-results/search-results.html',
                     controller: 'SearchCtrl'
                 }).
-                when('/t6', {
-                    templateUrl: 'app/templates/t6/t6.html',
-                    controller: "T6Ctrl"
-                }).
                 when('/404', {
                     templateUrl: '/app/partials/error-pages/error404.html'
                 }).
                 when('/500', {
                     templateUrl: '/500.html'
                 }).
-                otherwise({
+                otherwise(resolveTaxonomyTemplate())
+
+                function resolveTaxonomyTemplate() {
+                    var routeConfig = {
                         resolve: {
                             // https://stackoverflow.com/questions/15975646/angularjs-routing-to-empty-route-doesnt-work-in-ie7
-                            // Here we ensure that our route has the document fragment (#), or more specifically that it has #/ at a minimum.
+                            // Here we ensure that our route has the document fragment (#!), or more specifically that it has #!/ at a minimum.
                             // If accessing the base URL without a trailing '/' in IE7 it will execute the otherwise route instead of the signin
-                            // page, so this check will ensure that '#/' exists and if not redirect accordingly which fixes the URL.
+                            // page, so this check will ensure that '#!/' exists and if not redirect accordingly which fixes the URL.
                             redirectCheck: ['$location',
-                                    function($location) {
-                                        var absoluteLocation = $location.absUrl();
-                                        if (absoluteLocation.indexOf('#!/') === -1) {
-                                            $location.path('/');
-                                        }
+                                function($location) {
+                                    var absoluteLocation = $location.absUrl();
+                                    if (absoluteLocation.indexOf('#!/') === -1) {
+                                        $location.path('/');
                                     }
-                                ]
-                                // ,
-                                // theData: ['Taxonomy',
-                                //     function(Taxonomy) {
-                                //         Taxonomy.loadData(function(data) {
-                                //             return data
-                                //         });
-                                //     }
-                                // ]
-
+                                }
+                            ],
+                            data: ['Taxonomy',
+                                function(Taxonomy) {
+                                    return Taxonomy.loadData()
+                                }
+                            ]
                         },
                         templateUrl: 'app/templates/taxonomy/taxonomy.html',
                         controller: 'TaxonomyController',
                         controllerAs: 'taxonomy'
-                    })
-                    // TODO: add interceptor to capture 404 scenarios, pending confirmation of requirement
-                    //                $httpProvider.responseInterceptors.push('OnsHttpInterceptor')
+
+
+                    }
+
+                    return routeConfig
+
+                }
+                // TODO: add interceptor to capture 404 scenarios, pending confirmation of requirement
+                //                $httpProvider.responseInterceptors.push('OnsHttpInterceptor')
 
             }
         ])
 
     onsApp
-        .controller('MainCtrl', ['$scope', '$log', '$http', '$location', 'PathService', '$anchorScroll',
-            function($scope, $log, $http, $location, PathService, $anchorScroll) {
+        .controller('MainCtrl', ['$scope', '$log', '$http', '$location', 'PathService', 'DataLoader', '$anchorScroll',
+            function($scope, $log, $http, $location, PathService, DataLoader, $anchorScroll) {
                 var ctrl = this
 
                 loadNavigation()
 
                 function loadNavigation() {
-                    $http.get("/navigation", {
-                        params: {
-                            hey: "sup?"
-                        }
-                    }).success(function(data) {
+
+                    DataLoader.load('/navigation').then(function(data) {
                         $log.debug('Main Ctrl: Loading navigation data')
                         $scope.navigation = data
                         $log.debug('Main Ctrl: navigation data loaded successfully ', data)
                     })
+
                 }
 
                 $scope.getPath = function() {

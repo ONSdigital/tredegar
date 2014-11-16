@@ -2,35 +2,36 @@
 
 (function() {
 	angular.module('onsDataLoader', [])
-		.service('DataLoader', ['$http', '$log', 'DSCacheFactory', DataLoader])
+		.service('DataLoader', ['$http', '$log', '$q', 'DSCacheFactory', DataLoader])
 
 
 	/*
 	Data Loader Service caches each http call to local storage if available, otherwise uses angular cache. see config.js for details
 	*/
-	function DataLoader($http, $log, DSCacheFactory) {
+	function DataLoader($http, $log, $q, DSCacheFactory) {
 		var dataLoader = this
 		var cache = DSCacheFactory.get('dataCache')
 
-		function load(path, callback) {
+		function load(path) {
+			var deferred = $q.defer()
+
 			var data = loadFromCache(path)
-			if(data && callback) { //Cache hit
+			if (data) { //Cache hit
 				$log.debug('Data Loader : Cached data hit for ', path, ' ', data)
-				callback(data)
-				return
-			}	
+				deferred.resolve(data)
+			} else { //No cache hit, load
+				$http.get(path).success(function(data) {
+					$log.debug('Data Loader : Successfully loaded data at ', path, ' ', data)
+					cache.put(path, data)
+					deferred.resolve(data)
+				}).error(function(err) {
+					$log.error('Data Loader : Failed loading data at ' + path)
+					deferred.reject(err)
+				})
+			}
 
-			//No hit
-			$http.get(path).success(function(data) {
-				$log.debug('Data Loader : Successfully loaded data at ', path, ' ', data)
-				cache.put(path, data)
-				if (callback) {
-					callback(data)
-				}
-			}).error(function() {
-				$log.error('Data Loader : Failed loading data at ' + path)
-			})
 
+			return deferred.promise
 		}
 
 		function loadFromCache(key) {
@@ -39,17 +40,20 @@
 
 		/* Load data using post request
 		 */
-		function loadPost(path, requestData, callback) {
+		function loadPost(path, requestData, options) {
 			$log.debug('Data Loader Post: Loading data at ', path, ' ,requesting ', requestData)
 
-			$http.post(path, requestData).success(function(data) {
+			var deferred = $q.defer()
+
+			$http.post(path, requestData, options).success(function(data) {
 				$log.debug('Data Loader Post: Successfully loaded data at ', path, ' ', data)
-				if (callback) {
-					callback(data)
-				}
-			}).error(function() {
+				deferred.resolve(data)
+			}).error(function(err) {
 				$log.error('Data Loader Post : Failed loading data at ' + path)
+				deferred.resolve(err)
 			})
+
+			return deferred.promise
 		}
 
 		//Expose API

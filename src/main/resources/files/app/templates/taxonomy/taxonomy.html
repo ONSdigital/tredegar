@@ -1,7 +1,3 @@
-<ons-header></ons-header>
-
-<div class="wrap">
-
 <!-- T1, T2 , T3 -->
 <span ng-if="taxonomy.data.type === 'home'">
     <span ng-if="taxonomy.data.level === 't2'" ng-controller="T2Ctrl" >
@@ -34,9 +30,3 @@
 <span ng-if="taxonomy.data.type === 'dataset'" ng-controller="DatasetCtrl">
     <span ng-include="'app/templates/dataset/Dataset_Excelcrosssection.html'"></span>
 </span>
-
-<div class="push"></div>
-</div>
-<ons-footer></ons-footer>
-
-

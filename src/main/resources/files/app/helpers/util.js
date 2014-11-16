@@ -12,6 +12,7 @@
 		var title = 'Office Of National Statistics';
 
 		function title() {
+			alert('Reading title')
 			return title;
 		}
 
