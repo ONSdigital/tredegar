@@ -4927,7 +4927,8 @@ div.grid-col.desktop-grid-two-thirds.tablet-grid-two-thirds > div > ol > li {
 
 .datatable-select{
   color: white !important;
-  background-color: #757575;
+  background-color: #757575 !important;
+  background-image: none !important;
   width: 12%;
   font-size: 1.4rem;
   text-align: -webkit-center;
@@ -5139,6 +5140,13 @@ td.datatable-downloads{
   max-width: 95%;
   padding-left: 0.7em;
 }
+
+/*.tablesaw thead tr:first-child th,
+.tablesaw thead {
+    background-color: #dedfdc;
+    background-image: -webkit-linear-gradient(#e8e9e7, #dedfdc);
+    background-image: linear-gradient(#e8e9e7, #dedfdc);
+}*/
 
 /*------------------------------------*\
  CX STYLES TO MAKE HEADER WORK
@@ -6856,12 +6864,12 @@ height: 4em;
     background: #fff;
 }
 
-/*.tablesaw thead tr:first-child th,
+.tablesaw thead tr:first-child th,
 .tablesaw thead {
     background-color: #dedfdc;
     background-image: -webkit-linear-gradient(#e8e9e7, #dedfdc);
     background-image: linear-gradient(#e8e9e7, #dedfdc);
-}turned off to aid styling with dataversions page*/
+}
 
 table.tablesaw {
     empty-cells: show;
