@@ -100,11 +100,9 @@
 
 			container[arrayName] = []
 			for (var i = 0; i < items.length; i++) {
-				var item = items[i]
-				var itemPath = dataPath + item
+				var itemPath = dataPath + items[i]
 				var promise = DataLoader.load(itemPath).
 				then(function(itemData) {
-					itemData.url = item
 					container[arrayName].push(itemData)
 				})
 				promises.push(promise)
