@@ -36,11 +36,12 @@ public class Search {
 	}
 
 	private Object search(String query, int page, String type) throws Exception {
+		System.out.println("Type is " + type);
 		ONSQueryBuilder queryBuilder = new ONSQueryBuilder("ons").setType(type)
 				.setPage(page).setSearchTerm(query)
 				.setFields(getTitle(), "path");
 		SearchResult searchResult = new SearchHelper(ElasticSearchServer.getClient()).search(queryBuilder);
-		if (searchResult.getNumberOfResults() == 0) {
+		if (searchResult.getNumberOfResults() == 0 && type == null) {//If type is set don't search for timeseries
 			System.out.println("Attempting search against timeseries type as no results found for: " + query);
 			ONSQueryBuilder timeSeriesQueryBuilder = new ONSQueryBuilder("ons").setType(ContentType.timeseries.name()).setPage(page).setSearchTerm(query).setFields(getTitle(), "path");
 			searchResult = new SearchHelper(ElasticSearchServer.getClient()).search(timeSeriesQueryBuilder);

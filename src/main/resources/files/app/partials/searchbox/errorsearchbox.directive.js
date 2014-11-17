@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('onsComponents')
+angular.module('onsTemplates')
 	.directive('errorSearchBox', ['$location', '$route',
 		function($location, $route) {
 			return {
