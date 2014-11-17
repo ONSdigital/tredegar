@@ -82,6 +82,10 @@
 
 		//Load single item and push into container's given variable, overrides if exists
 		function loadItem(container, item, varName) {
+			// if data is undefined then break out of this method
+			if (!item) {
+				return
+			}
 			var path = dataPath + item
 			return DataLoader.load(path).then(function(itemData) {
 				itemData.url = item
