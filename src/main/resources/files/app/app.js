@@ -77,8 +77,11 @@
                     }
                 }).
                 when('/localstats', {
-                    templateUrl: 'app/templates/generic/local-stats.html',
-                    controller: "LocalStatsController"
+                    templateUrl: 'app/templates/localstats/local-stats.html',
+                    controller: "LocalStatsController",
+                    resolve: {
+                        navigation: ['DataLoader', getNavigatinLinks]
+                    }
                 }).
                 when('/methodology', {
                     templateUrl: 'app/templates/methodology/methodology.html',
