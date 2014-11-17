@@ -2,7 +2,7 @@
 
     angular.module('onsTemplates')
         .controller('T5Controller', ['$scope', '$log', 'Downloader', 'DataLoader', T5Controller])
-        .controller('ChartController', ['$scope', '$location', '$log', 'Downloader', 'ArrayUtil', ChartController])
+        .controller('ChartController', ['$scope', '$location', '$log', 'Downloader', 'ArrayUtil', 'Chart', ChartController])
 
     function T5Controller($scope, $log, Downloader, DataLoader) {
 
@@ -57,7 +57,7 @@
     }
 
 
-    function ChartController($scope, $location, $log, Downloader, Chart, ArrayUtil) {
+    function ChartController($scope, $location, $log, Downloader, ArrayUtil, Chart) {
         var ctrl = this
         ctrl.timeseries = $scope.taxonomy.data
         ctrl.chartConfig = Chart.getChart()

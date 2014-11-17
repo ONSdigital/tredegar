@@ -148,7 +148,6 @@
 		//Expose public api
 		angular.extend(service, {
 			loadData: loadData,
-			load: load,
 			loadWithoutCallback: loadWithoutCallback
 		})
 
