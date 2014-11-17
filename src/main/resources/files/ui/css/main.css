@@ -3922,68 +3922,69 @@ table actions
   Methods Digital Style Additions
 \\*------------------------------------*/
 
-
 /*------------------------------------*\
-  Search Page Styles
+ Search Page Styles
 \*------------------------------------*/
 
 .aside-highlighted{
-  color: #004790;
-  word-wrap: break-word;
+ color: #004790 ;
+ word-wrap: break-word;
 }
 
 .aside-links{
-  color: #bac044 !important;
-  font-size: 0.9em;
-  word-break: break-all;
+ color: #bac044  !important;
+ font-size: 0.9em;
+ word-wrap: break-word;
 }
 
 .aside-logo{
   height: 4.3em;
-  width: 6.4em;
-  margin-right: 1.5em;
+  width: 7.4em;
+  margin-right: 10em;
   float: left;
+  margin-bottom: 0.7em;
 }
 
+
 .left{
-  padding-left: 0em !important;
-  height: 10em;
-  font-weight: bold;
+ padding-left: 0em !important;
+ height: 10em;
+ font-weight: bold;
 }
 
 .lozenge-blue{
-  /*background-color: #3684cd;
-  color: blue;*/
-  border: solid 1px;
-  margin-left: 0.5rem;
+ /*background-color: #3684cd ;
+ color: blue;*/
+ border: solid 1px;
+ margin-left: 0.5rem;
 }
 
 .lozenge-green{
-  /*background-color: #327563;
-  color: blue;*/
-  border: solid 1px;
+ /*background-color: #327563 ;
+ color: blue;*/
+ border: solid 1px;
 }
 
 .lozenge-red{
-  /*background-color: #e75f64;
-  color: blue;*/
-  border: solid 1px;
+ /*background-color: #e75f64 ;
+ color: blue;*/
+ border: solid 1px;
 }
 
 .lozenge-grey{
-  /*background-color: #e75f64;
-  color: blue;*/
-  border: solid 1px;
+ /*background-color: #e75f64 ;
+ color: blue;*/
+ border: solid 1px;
 }
 
 .lozenge-spacer{ margin: 0.8em; }
 
 .open-in-new-window{
-  height: 1.5em;
-  width: 1.3em;
-  display: block;
-  vertical-align: bottom;
-  margin-left: 93%;
+ height: 1.5em;
+ width: 1.3em;
+ display: block;
+ vertical-align: bottom;
+ margin-left: 93%;
 }
 
 .padded{ padding: 0.6em; }
@@ -3991,48 +3992,55 @@ table actions
 .padded--med{ padding: 1.2em; }
 
 .search{
-  min-height: 13em;
+ min-height: 13em;
 }
 
 .search .lozenge {
-  float: right;
-  display: inline-block;
-  padding: 3px 5px;
-  padding: .3rem .5rem;
-  font-size: 10px;
-  font-size: 1rem;
-  letter-spacing: .1em;
-  border: solid 1px;
-  border-radius: 2px;
-  /*color: white;
-  text-transform: uppercase;
-  cursor: pointer;
-  background-color: #adafa7;
-  border: 0 none;
-  border-radius: 2px; original code
+ display: inline-block;
+ padding: 3px 5px;
+ padding: .3rem .5rem;
+ font-size: 10px;
+ font-size: 1rem;
+ letter-spacing: .1em;
+ border: solid 1px;
+ border-radius: 2px;
+ margin-bottom: 0.8rem;
+ /*color: white;
+ text-transform: uppercase;
+ cursor: pointer;
+ background-color: #adafa7 ;
+ border: 0 none;
+ border-radius: 2px; original code
 }*/
-  color: #888;
-  text-transform: uppercase;}
+ color: #888;
+ text-transform: uppercase;}
 
 
 .search .lozenge.is-collapsed {
-  display: inline-block;
-  max-width: inherit;
-  vertical-align: top;
+ display: inline-block;
+ max-width: inherit;
+ vertical-align: top;
 }
 
 /*--Stops strange lozenge behaviour on click--*/
 /*.search .lozenge:hover, .lozenge:active, .lozenge:focus {
-  color: white;
-  text-decoration: none !important;
-  background-color: #a1a39a;
-  outline: 0;
+ color: white;
+ text-decoration: none !important;
+ background-color: #a1a39a ;
+ outline: 0;
 }*/
 
 #search > dl > dt:nth-child(1){
-  font-size: 1.35em;
-/*  background-color: #fafafb;*/
+ font-size: 1.35em;
+/*  background-color: #fafafb ;*/
 /*  padding: 0 0 0 0.3em; Commented out to align collection results*/
+}
+
+.search-summary{/*border-bottom: 1px solid #d3d3d3 ;*/
+               padding: 0 0 3.2em 0;  }
+
+.search-link{
+ margin-right: 0.8rem;
 }
 
 .search .microcopy { font-size: 0.85em; color: #999; padding:0em; }
@@ -4042,42 +4050,50 @@ table actions
 .search a:hover { text-decoration: underline; }
 
 .search dd {
-  margin: 0;
-  color: #090909;
-  padding: 0 0 1.1em 0;
+ margin: 0;
+ color: #090909 ;
+ padding: 0 0 1.1em 0;
 }
 
-.search dl {border-bottom: 1px solid #d3d3d3;}
+/*.search dd {border-bottom: 1px solid #d3d3d3 ;}*/
+
+.search dl {border-bottom: 1px solid #d3d3d3 ;}
 
 .search dt {
-  font-weight: bold;
-  font-size: 1.125em;
-  color: #016db9;
+ font-weight: bold;
+ font-size: 1.125em;
+ color: #016db9 ;
+ margin-right: 1.25em;
 }
+
+.search dt:not(:first-child) {
+   padding-top: 1.25em;
+}
+
 
 .search-filters{ margin-top: 0.5em; z-index: -1; }
 
 @media screen and (min-width: 920px){
-  .search-filters{width: 100%;}
+ .search-filters{width: 100%;}
 }
 
 .search-results-total{
-  text-align: left;
-  padding: 0em;
-  margin-right: 0em;
-  margin-bottom: 1.2em;
+ text-align: left;
+ padding: 0em;
+ margin-right: 0em;
+ margin-bottom: 1.2em;
 }
 
 .search-sorting{
-  margin: 0.77em 0em 0.5em 0em;
-  position: relative;
-  float: right;
-  }
+ margin: 0.77em 0em 0.5em 0em;
+ position: relative;
+ float: right;
+ }
 
 .search-sorting-grid{ padding-left: 10px;
-                      float: right;
-                      min-width: 18em;
-                      /*display: inline-table; */}
+                     float: right;
+                     min-width: 18em;
+                     /*display: inline-table; */}
 
 .search-aside{margin-top: 1em;}
 
@@ -4085,38 +4101,38 @@ table actions
 .sorting{ width: 14em !important; margin-left: 0.7em; }
 
 .results-total{ font-size: 2em;
-                font-weight: bolder; }
+               font-weight: bolder; }
 
 .results-search-term{ font-size: 1.5em; }
 
 .took{
-  padding: 0.75em 0em;
+ padding: 0.75em 0em;
 }
 
 /*.search{
-  border-color: #dedfdc;
-  border-style: solid;
-  border-width: 0.125em 0em 0em 0em;
+ border-color: #dedfdc ;
+ border-style: solid;
+ border-width: 0.125em 0em 0em 0em;
 } to integrate new page style 2510*/
 
 ul.simple-pagination {
-  list-style: none;
+ list-style: none;
 }
 .simple-pagination {
-  display: block;
-  overflow: hidden;
-  padding: 0 5px 5px 0;
-  margin: 0;
+ display: block;
+ overflow: hidden;
+ padding: 0 5px 5px 0;
+ margin: 0;
 }
 .simple-pagination ul {
-  list-style: none;
-  margin: 0;
+ list-style: none;
+ margin: 0;
 }
 .simple-pagination li {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  float: left;
+ list-style: none;
+ padding: 0;
+ margin: 0;
+ float: left;
 }
 /*------------------------------------*\
   Pagination Styles
@@ -4593,6 +4609,10 @@ ol.toc-columns
 #search > dl > dd {padding: 0 0 1em 0em;}
 
 #frequency{font-weight: bold;}
+
+.paragraph-flush{
+  margin: 0em;
+}
 
 /*------------------------------------*\
   Nav Bar Styles
