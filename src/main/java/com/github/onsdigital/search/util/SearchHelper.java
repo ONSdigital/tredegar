@@ -6,8 +6,8 @@ import org.elasticsearch.action.search.SearchRequestBuilder;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.Client;
 
-import com.github.onsdigital.bean.SearchResult;
 import com.github.onsdigital.json.ContentType;
+import com.github.onsdigital.search.bean.SearchResult;
 
 /**
  * 

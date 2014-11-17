@@ -5,7 +5,7 @@
             <h1 class="page-header__title flush--half--bottom">{{taxonomy.data.name}}</h1>
             <div class="content-reveal lede">
                 <p>{{taxonomy.data.lede}}
-                    <a href="" expand-label="Show more" collapse-label="Show less" toggler="more" ng-if="taxonomy.data.more" class="content-reveal__action"></a>
+                    <a href="" toggler="more" toggler-widget-var="w_toggler" ng-if="taxonomy.data.more" class="content-reveal__action">{{w_toggler.isVisible() ? 'Show less' : 'Show more'}}</a>
                 </p>
                 <div toggleable="more" class="content-reveal__hidden">
                     <p>
@@ -87,7 +87,7 @@
 <section class="panel panel--pad panel--bottom-mar  wrapper flush--bottom">
     <div class="grid-wrap" ng-repeat="sections in taxonomy.data.sections">
         <div ng-repeat="section in sections" class="grid-col tablet-grid-one-third clearfix">
-            <article class="box box--padded-vertical">
+            <article ng-if="!section.nondata" class="box box--padded-vertical">
                 <header class="box__header">
                     <h3>
                         <a href="#!{{getPath()}}/{{section.link}}">{{section.name}}</a>
@@ -103,25 +103,18 @@
                     </p>
                 </div>
             </article>
-        </div>
-    </div>
-    <!-- /grid-wrap -->
 
-    <!-- /wrapper -->
-</section>
-
-<div class="page-header slate_original ng-scope">
-    <div class="wrapper">
-        <div class="grid-wrap">
-            
-                
-            <div class="grid-col desktop-grid-one-third">
-                <article class="box box--blue box--blue--separated-left">
-                  <div class="box__inner border box--padded">
-                        <div class="box__section">
-                            <h3 class="box__section__header">Looking for Local Statistics?
-                            </h3>
-                            </br>
+            <article ng-if="section.nondata" class="box box--orange box--orange--separated-left">
+                  <div class="box__inner border box--padded-horizontal box--padded-vertical-small">
+                        <header class="box__header">
+                    <h3>
+                      <a class="no_underline" href="#">
+                  Looking for local statistics?
+                </a>
+                    </h3>
+                  </header>
+                  <div class="box__content">
+                   
                             <p>We produce a number of local statistics along with our partner websites. We have a handy guide to let you know where you need to go for which statistics.</p>
                
                         
@@ -129,10 +122,17 @@
                   </div>
                     <!-- /box__inner -->
                 </article>
-            </div>
         </div>
+
     </div>
-    <!-- /bottom-panel -->
-</div>
+    <div class="grid-wrap">
+ 
+        </div>
+    <!-- /grid-wrap -->
+
+    <!-- /wrapper -->
+</section>
+
 
 </div>
+

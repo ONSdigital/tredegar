@@ -4,10 +4,25 @@
 (function() {
 
     // Components are to be injected to onsComponents module
-    var onsComponents = angular.module('onsComponents', ['onsAccordion', 'onsNavigation', 'onsPaginator',  'highcharts-ng', 'angularLoadingBar'])
+    var onsComponents = angular.module('onsComponents', [
+        'onsAccordion',
+        'onsNavigation',
+        'onsPaginator',
+        'onsTabs',
+        'highcharts-ng',
+        'angularLoadingBar',
+        'onsToggler'
+    ])
 
     //Filters, services and other helpers are to be injected to onsHelpers module
-    var onsHelpers = angular.module('onsHelpers', ['onsFilters', 'onsTaxonomy','onsDownloader'])
+    var onsHelpers = angular.module('onsHelpers', [
+        'onsFilters',
+        'onsTaxonomy',
+        'onsDownloader',
+        'onsUtils',
+        'onsDataLoader',
+        'angular-data.DSCacheFactory'
+    ])
 
     //Template related components are to be registered to onsTemplates module
     var onsTemplates = angular.module('onsTemplates', [])
@@ -19,13 +34,14 @@
         'onsComponents',
         'onsHelpers',
         'onsTemplates',
-        'googlechart',
         'smart-table'
     ])
 
     onsApp
         .config(['$routeProvider', '$locationProvider', '$httpProvider',
             function($routeProvider, $locationProvider, $httpProvider) {
+
+
                 $routeProvider.
                 when('/article', {
                     templateUrl: 'app/templates/article/article.html',
@@ -33,11 +49,17 @@
                 }).
                 when(':collectionPath*\/collection', {
                     templateUrl: 'app/templates/collection/collection.html',
-                    controller: "CollectionCtrl"
+                    controller: "CollectionCtrl",
+                    resolve: {
+                        navigation: ['DataLoader', getNavigatinLinks]
+                    }
                 }).
                 when('/contactus', {
                     templateUrl: 'app/templates/contact/contactus.html',
-                    controller: "ContactUsController"
+                    controller: "ContactUsController",
+                    resolve: {
+                        navigation: ['DataLoader', getNavigatinLinks]
+                    }
                 }).
                 when('/dataset', {
                     templateUrl: 'app/templates/dataset/Dataset_Excelcrosssection.html',
@@ -49,7 +71,10 @@
                 }).
                 when('/dataversions', {
                     templateUrl: 'app/templates/dataversions/dataversions.html',
-                    controller: "DataversionsCtrl"
+                    controller: "DataversionsCtrl",
+                    resolve: {
+                        navigation: ['DataLoader', getNavigatinLinks]
+                    }
                 }).
                 when('/localstats', {
                     templateUrl: 'app/templates/generic/local-stats.html',
@@ -60,70 +85,92 @@
                     controller: 'MethodologyCtrl'
                 }).
                 when('/release', {
-                    templateUrl: 'app/templates/release/release.html'
+                    templateUrl: 'app/templates/release/release.html',
+                    resolve: {
+                        navigation: ['DataLoader', getNavigatinLinks]
+                    }
                 }).
                 when('/search/', {
                     templateUrl: 'app/templates/search-results/search-results.html',
-                    controller: 'SearchCtrl'
-                }).
-                when('/t6', {
-                    templateUrl: 'app/templates/t6/t6.html',
-                    controller: "T6Ctrl"
+                    controller: 'SearchCtrl',
+                    resolve: {
+                        navigation: ['DataLoader', getNavigatinLinks]
+                    }
                 }).
                 when('/404', {
-                    templateUrl: '/app/partials/error-pages/error404.html'
+                    templateUrl: '/app/partials/error-pages/error404.html',
+                    resolve: {
+                        navigation: ['DataLoader', getNavigatinLinks]
+                    }
                 }).
                 when('/500', {
-                    templateUrl: '/500.html'
-                }).
-                otherwise({
+                    templateUrl: '/500.html',
                     resolve: {
-                        // https://stackoverflow.com/questions/15975646/angularjs-routing-to-empty-route-doesnt-work-in-ie7
-                        // Here we ensure that our route has the document fragment (#), or more specifically that it has #/ at a minimum.
-                        // If accessing the base URL without a trailing '/' in IE7 it will execute the otherwise route instead of the signin
-                        // page, so this check will ensure that '#/' exists and if not redirect accordingly which fixes the URL.
-                        redirectCheck: ['$location',
-                            function($location) {
-                                var absoluteLocation = $location.absUrl();
-                                if (absoluteLocation.indexOf('#!/') === -1) {
-                                    $location.path('/');
-                                }
-                            }
-                        ]
-                        // ,
-                        // theData: ['Taxonomy',
-                        //     function(Taxonomy) {
-                        //         Taxonomy.loadData(function(data) {
-                        //             return data
-                        //         });
-                        //     }
-                        // ]
+                        navigation: ['DataLoader', getNavigatinLinks]
+                    }
+                }).
+                otherwise(resolveTaxonomyTemplate())
 
-                    },
-                    templateUrl: 'app/templates/taxonomy/taxonomy.html',
-                    controller: 'TaxonomyController',
-                    controllerAs: 'taxonomy'
-                })
+                function resolveTaxonomyTemplate() {
+                    var routeConfig = {
+                        resolve: {
+                            // https://stackoverflow.com/questions/15975646/angularjs-routing-to-empty-route-doesnt-work-in-ie7
+                            // Here we ensure that our route has the document fragment (#!), or more specifically that it has #!/ at a minimum.
+                            // If accessing the base URL without a trailing '/' in IE7 it will execute the otherwise route instead of the signin
+                            // page, so this check will ensure that '#!/' exists and if not redirect accordingly which fixes the URL.
+                            redirectCheck: ['$location',
+                                function($location) {
+                                    var absoluteLocation = $location.absUrl();
+                                    if (absoluteLocation.indexOf('#!/') === -1) {
+                                        $location.path('/');
+                                    }
+                                }
+                            ],
+                            data: ['Taxonomy',
+                                function(Taxonomy) {
+                                    return Taxonomy.loadData()
+                                }
+                            ],
+                            navigation: ['DataLoader', getNavigatinLinks]
+                        },
+                        templateUrl: 'app/templates/taxonomy/taxonomy.html',
+                        controller: 'TaxonomyController',
+                        controllerAs: 'taxonomy'
+
+
+                    }
+
+                    return routeConfig
+
+                }
+
+                function getNavigatinLinks(DataLoader) {
+                    return DataLoader.load('/navigation')
+                }
+
+
                 // TODO: add interceptor to capture 404 scenarios, pending confirmation of requirement
-//                $httpProvider.responseInterceptors.push('OnsHttpInterceptor')
+                //                $httpProvider.responseInterceptors.push('OnsHttpInterceptor')
 
             }
         ])
 
     onsApp
-        .controller('MainCtrl', ['$scope', '$log', '$http', '$location', 'PathService', '$anchorScroll',
-            function($scope, $log, $http, $location, PathService, $anchorScroll) {
+        .controller('MainCtrl', ['$scope', '$log', '$http', '$location', 'PathService', 'DataLoader', '$anchorScroll',
+            function($scope, $log, $http, $location, PathService, DataLoader, $anchorScroll) {
                 var ctrl = this
 
-                loadNavigation()
+                // loadNavigation()
 
-                function loadNavigation() {
-                    $http.get("/navigation").success(function(data) {
-                        $log.debug('Main Ctrl: Loading navigation data')
-                        $scope.navigation = data
-                        $log.debug('Main Ctrl: navigation data loaded successfully ', data)
-                    })
-                }
+                // function loadNavigation() {
+
+                //     DataLoader.load('/navigation').then(function(data) {
+                //         $log.debug('Main Ctrl: Loading navigation data')
+                //         $scope.navigation = data
+                //         $log.debug('Main Ctrl: navigation data loaded successfully ', data)
+                //     })
+
+                // }
 
                 $scope.getPath = function() {
                     return PathService.getPath()
@@ -146,14 +193,14 @@
             }
         ])
 
-        onsApp.factory('OnsHttpInterceptor', function($q, $location) {
-            return function (promise) {
-            	// pass success (e.g. response.status === 200) through
-                return promise.then(function (response) {
+    onsApp.factory('OnsHttpInterceptor', function($q, $location) {
+        return function(promise) {
+            // pass success (e.g. response.status === 200) through
+            return promise.then(function(response) {
                     return response
                 },
                 // otherwise deal with any error scenarios
-                function (response) {
+                function(response) {
                     if (response.status === 500) {
                         $location.url('/500')
                     }
@@ -162,7 +209,7 @@
                     }
                     return $q.reject(response)
                 });
-            };
-        });
+        };
+    });
 
 })()

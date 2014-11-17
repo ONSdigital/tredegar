@@ -8,8 +8,8 @@ import org.apache.commons.lang3.StringUtils;
 
 import com.github.onsdigital.generator.Folder;
 import com.github.onsdigital.generator.data.Csv;
-import com.github.onsdigital.json.Dataset;
-import com.github.onsdigital.json.DownloadSection;
+import com.github.onsdigital.json.dataset.Dataset;
+import com.github.onsdigital.json.dataset.DownloadSection;
 
 public class DatasetContent {
 	static final String resourceName = "/Alpha content master.xlsx";

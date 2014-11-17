@@ -18,13 +18,11 @@ Accordion component
   function AccordionDirective() {
     return {
       restrict: 'E',
-      transclude: true,
       scope: {
-        multiple: '@'
+        multiple: '=?'
       },
       controller: AccordionController,
-      controllerAs: 'accordion',
-      template: '<div ng-transclude></div>'
+      controllerAs: 'accordion'
     }
   }
 
@@ -33,22 +31,23 @@ Accordion component
     init()
 
     function init() {
-      accordion.multiple = $scope.multiple === 'true' ? true : false
-      accordion.panes = $scope.panes = []
+      accordion.multiple = $scope.multiple
+      accordion.panes =  []
     }
 
     function addPane(pane) {
       if (accordion.panes.length === 0) {
-        this.toggle(pane)
+        toggle(pane)
       }
       accordion.panes.push(pane)
+     
     }
 
     function toggle(pane) {
       // Hide all other  panes if multiple not wanted to be seen
       if (!accordion.multiple) {
-        angular.forEach(panes, function(pane) {
-          pane.selected = false
+        angular.forEach(accordion.panes, function(p) {
+          p.selected = false
         })
       }
       pane.selected = !pane.selected

@@ -2,13 +2,13 @@
 	'use strict';
 
 	angular.module('onsDownloader', [])
-		.service('Downloader', ['$http', '$log', '$location',
-			DownloaderService
+		.service('Downloader', ['$http', '$log',
+			Downloader
 		])
 
 
 
-	function DownloaderService($http, $log) {
+	function Downloader($http, $log) {
 
 		var downloader = this
 

@@ -14,6 +14,9 @@ import java.util.TreeMap;
 import org.apache.commons.lang3.StringUtils;
 
 import com.github.onsdigital.generator.Folder;
+import com.github.onsdigital.generator.markdown.ArticleMarkdown;
+import com.github.onsdigital.generator.markdown.BulletinMarkdown;
+import com.github.onsdigital.generator.markdown.MethodologyMarkdown;
 import com.github.onsdigital.json.timeseries.Timeseries;
 import com.github.onsdigital.json.timeseries.TimeseriesValue;
 
@@ -90,10 +93,18 @@ public class Data implements Iterable<Timeseries> {
 	 */
 	private static void parse() throws IOException {
 		NonCdidCSV.parse();
+		BulletinMarkdown.parse();
+		ArticleMarkdown.parse();
+		MethodologyMarkdown.parse();
 		DataCSV.parse();
 		MetadataCSV.parse();
 		AlphaContentCSV.parse();
 		DatasetMappingsCSV.parse();
+
+		// Only call this if you want to reset bulletin content using the
+		// bulletins sheet of the Alpha Content Spreadsheet.
+		// BulletinContent.parseCsv();
+
 		System.out.println("Parsing complete.");
 	}
 

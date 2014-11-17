@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('onsComponents')
-.directive('markdown', function($http) {
+.directive('markdown', function() {
     var converter = new Showdown.converter();
     return {
         restrict: 'A',
