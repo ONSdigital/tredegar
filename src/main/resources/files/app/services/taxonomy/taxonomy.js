@@ -11,7 +11,7 @@
 		var service = this
 		var dataPath = '/data'
 		var bulkDataPath = '/datalist'
-		var loadSynchronously = false
+		var loadSynchronously = true
 
 		function loadData() {
 			var q = [] //Promise array
