@@ -6856,12 +6856,12 @@ height: 4em;
     background: #fff;
 }
 
-.tablesaw thead tr:first-child th,
+/*.tablesaw thead tr:first-child th,
 .tablesaw thead {
     background-color: #dedfdc;
     background-image: -webkit-linear-gradient(#e8e9e7, #dedfdc);
     background-image: linear-gradient(#e8e9e7, #dedfdc);
-}
+}turned off to aid styling with dataversions page*/
 
 table.tablesaw {
     empty-cells: show;
