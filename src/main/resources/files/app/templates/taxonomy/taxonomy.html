@@ -14,9 +14,24 @@
         </span>
     </span>
 
+    <!-- Article -->
+    <span ng-if="taxonomy.data.type === 'article'" ng-controller="ArticleCtrl">
+        <span ng-include="'app/templates/article/article.html'"></span>
+    </span>
+
     <!-- Bulletin -->
     <span ng-if="taxonomy.data.type === 'bulletin'" ng-controller="BulletinCtrl">
         <span ng-include="'app/templates/bulletin/bulletin.html'"></span>
+    </span>
+
+    <!-- Dataset -->
+    <span ng-if="taxonomy.data.type === 'dataset'" ng-controller="DatasetCtrl">
+        <span ng-include="'app/templates/dataset/Dataset_Excelcrosssection.html'"></span>
+    </span>
+
+    <!-- Methodology -->
+    <span ng-if="taxonomy.data.type === 'methodology'" ng-controller="MethodologyCtrl">
+        <span ng-include="'app/templates/methodology/methodology.html'"></span>
     </span>
 
     <!-- T5- Timeseries -->
@@ -24,15 +39,5 @@
         <span ng-include="'app/templates/t5/t5.html'"></span>
     </span>
 
-    <!-- Article -->
-    <span ng-if="taxonomy.data.type === 'article'">
-        <span ng-include="'app/templates/t5/t5.html'"></span>
-    </span>
-
-    <!-- Dataset -->
-    <span ng-if="taxonomy.data.type === 'dataset'" ng-controller="DatasetCtrl">
-        <span ng-include="'app/templates/dataset/Dataset_Excelcrosssection.html'"></span>
-    </span>
 </div>
 <ons-footer></ons-footer>
-

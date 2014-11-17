@@ -1971,10 +1971,6 @@ a {
   margin-top: 20px;
   margin-top: 2rem; }
 
-.box__bottom {
-  margin-bottom: 7px;
-  margin-bottom: .7rem; }
-
 /** padding classes               */
 .box--padded {
   padding: 25px;
@@ -2095,7 +2091,7 @@ a {
   border-left-color: #f37121; }
 
 .box--blue--separated-left:before {
-  border-left-color: #0054aa; }
+  border-left-color: #008998; }
 
 .box--green--separated-left:before {
   border-left-color: #b2bb1c; }
@@ -4452,8 +4448,6 @@ background-color: #edeeee !important;/* altered on phil's advice--change this ov
     height: 0;
 }
 
-
-
 /*------------------------------------*\
   Stats Bulletin Classes
 \*------------------------------------*/
@@ -4941,7 +4935,8 @@ div.grid-col.desktop-grid-two-thirds.tablet-grid-two-thirds > div > ol > li {
 
 .datatable-select{
   color: white !important;
-  background-color: #757575;
+  background-color: #757575 !important;
+  background-image: none !important;
   width: 12%;
   font-size: 1.4rem;
   text-align: -webkit-center;
@@ -5159,6 +5154,13 @@ td.datatable-downloads{
   max-width: 95%;
   padding-left: 0.7em;
 }
+
+/*.tablesaw thead tr:first-child th,
+.tablesaw thead {
+    background-color: #dedfdc;
+    background-image: -webkit-linear-gradient(#e8e9e7, #dedfdc);
+    background-image: linear-gradient(#e8e9e7, #dedfdc);
+}*/
 
 /*------------------------------------*\
  CX STYLES TO MAKE HEADER WORK
@@ -6467,7 +6469,7 @@ height: 4em;
 }
 .alpha-header__link {
 /* From: http://stackoverflow.com/questions/796087/make-a-div-into-a-link */
-	position:absolute; 
+	position:absolute;
 	width:100%;
 	height:100%;
 	top:0;
@@ -7422,4 +7424,18 @@ lesser , applied styles
 }
 .button-bar > .button-group:last-of-type {
     margin-right: 0;
+}
+
+/**************************************\
+        ***** Content Page *****
+\**************************************/
+.content-section {
+    position: relative;
+    padding-bottom: 20px;
+}
+.content-section--bottom {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding-bottom: 7px;
 }
