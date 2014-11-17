@@ -1971,6 +1971,10 @@ a {
   margin-top: 20px;
   margin-top: 2rem; }
 
+.box__bottom {
+  margin-bottom: 7px;
+  margin-bottom: .7rem; }
+
 /** padding classes               */
 .box--padded {
   padding: 25px;
@@ -1981,6 +1985,19 @@ a {
   padding-top: 2.5rem;
   padding-bottom: 25px;
   padding-bottom: 2.5rem; }
+
+.box--padded-vertical-small {
+  padding-top: 5px;
+  padding-top: 0.5rem;
+  padding-bottom: 5px;
+  padding-bottom: 0.5rem; }
+
+
+.box--padded-horizontal {
+  padding-left: 25px;
+  padding-left: 2.5rem;
+  padding-right: 25px;
+  padding-right: 2.5rem; }
 
 .box--padded-top {
   padding-top: 25px;
@@ -3918,12 +3935,12 @@ table actions
 .aside-links{
   color: #bac044 !important;
   font-size: 0.9em;
-  word-wrap: break-word;
+  word-break: break-all;
 }
 
 .aside-logo{
-  height: 4.1em;
-  width: 4.8em;
+  height: 4.3em;
+  width: 6.4em;
   margin-right: 1.5em;
   float: left;
 }
@@ -3977,7 +3994,7 @@ table actions
   min-height: 13em;
 }
 
-.search .lozenge {
+.search .lozenge {  
   display: inline-block;
   padding: 3px 5px;
   padding: .3rem .5rem;
@@ -4430,8 +4447,6 @@ background-color: #edeeee !important;/* altered on phil's advice--change this ov
     line-height: 0;
     height: 0;
 }
-
-
 
 /*------------------------------------*\
   Stats Bulletin Classes
@@ -5418,8 +5433,7 @@ td.datatable-downloads{
     min-width: 160px;
     min-width: 16rem; }
     .nav--primary__respondents > a {
-      /*color: #fff; switched off until angular nav controller is fixed */
-      color: #b2bb1c;
+      color: #fff;
       text-align: left; }
     .nav--primary__respondents [class^='icon'] {
       float: left;
@@ -6427,13 +6441,24 @@ height: 4em;
 
 .alpha-header {
 /*    background: linear-gradient( to bottom, #f6ba52, #f6ba52 50%, #ffd180 50%, #ffd180);*/
-    background-color: #ffd180;
+    background-color: #a8233e; /* ONS colors: Dark red */
     background-size: 100%;
     color: black;
     padding: 5px 25px;
     width: 100%;
-    height: 45px;
+    height: 39px; /* Golden ratio to the span font-size of 24px (38.8px) */
     position: relative;
+}
+.alpha-header__link {
+/* From: http://stackoverflow.com/questions/796087/make-a-div-into-a-link */
+	position:absolute; 
+	width:100%;
+	height:100%;
+	top:0;
+	left: 0;
+	z-index: 1;
+	/* Fixes overlap error in IE7/8 */
+	background-image: url('/ui/img/transparent.gif');
 }
 .alpha-header div {
     /*display: inline;*/
@@ -6454,12 +6479,14 @@ height: 4em;
     padding-left: 50px;
 }
 .alpha-header span {
-    color: red;
-    font-size: 22px;
-    font-weight: 700;
+    color: #f3f3f3; /* ONS colors: Off-white */
+    /* Font family, size and weight to match nav-panel__header */
+    font-family: DaxlinePro, sans-serif;
+    font-size: 24px;
+    font-weight: 100;
 }
 .alpha-header a {
-    color: black;
+    color: #303030; /* ONS colors: Black */
 }
 /*@media screen and (max-width: 66em) {
     .alpha-header {

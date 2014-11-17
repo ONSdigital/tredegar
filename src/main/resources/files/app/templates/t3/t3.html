@@ -7,7 +7,7 @@
           <h1 class="page-header__title flush--half--bottom">{{taxonomy.data.name}}</h1>
           <div class="content-reveal lede">
             <p>{{taxonomy.data.lede}}
-              <a href="" expand-label="Show more" collapse-label="Show less"  toggler="more" ng-if="taxonomy.data.more" class="content-reveal__action"></a>
+              <a href=""  toggler="more" toggler-widget-var="w_toggler" ng-if="taxonomy.data.more" class="content-reveal__action">{{w_toggler.isVisible() ? 'Show less' : 'Show more'}}</a>
             </p>
             <div toggleable="more" class="content-reveal__hidden">
               <p>
@@ -27,6 +27,7 @@
                 <span class="visuallyhidden">Share on Facebook</span>
               </span>
             </a>
+            <a href="#" class="link-complex"><span class="icon icon-linkedin icon--grey"><span class="visuallyhidden">Share on linkedin</span></span></a>
           </div>
 
         </div>
@@ -123,7 +124,7 @@
         <td class="data_table_section-title">
           <div class="list--table__item__body list--table__item__body--caption responsive_large_width">
             <h3 class="nav-panel__heading">
-              <a href="#!{{item.url}}"> {{item.name}}</a>
+              <a href="#!{{item.uri}}"> {{item.name}}</a>
               <!-- CPI Index -->
                 <span tabindex="0" class="tooltip icon-info-circled icon--warm icon--inline tooltipstered"></span>
             </h3>
@@ -395,4 +396,4 @@
       <latest-bulletins></latest-bulletins>
       <related-articles></related-articles>
       <contact-details></contact-details>
-      <ons-tools-pane></tools-tools-pane>
+      

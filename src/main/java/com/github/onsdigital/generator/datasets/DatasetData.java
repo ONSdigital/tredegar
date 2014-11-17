@@ -3,7 +3,7 @@ package com.github.onsdigital.generator.datasets;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.github.onsdigital.json.Dataset;
+import com.github.onsdigital.json.dataset.Dataset;
 
 class DatasetData {
 

@@ -2,153 +2,144 @@
 	'use strict';
 
 	angular.module('onsTaxonomy', [])
-		.service('Taxonomy', ['$http', '$log', '$location',
+		.service('Taxonomy', ['$log', '$location', '$q', 'DataLoader', 'StringUtil', 'ArrayUtil',
 			TaxonomyService
 		])
 
-	function TaxonomyService($http, $log, $location) {
+	function TaxonomyService($log, $location, $q, DataLoader, StringUtil, ArrayUtil) {
 
 		var service = this
 		var dataPath = '/data'
+		var bulkDataPath = '/datalist'
+		var loadSynchronously = false
 
-		function loadData(callback) {
-            load(resolvePath(), function(data) {
+		function loadData() {
+			var q = [] //Promise array
+			var promise = DataLoader.load(resolvePath()).then(function(data) {
 				service.data = data
 
-				if(data.level === 't1' || data.level === 't2') {
-					resolveSections(data)
-				} else if(data.level === 't3') {
-					data.itemData = []
-					data.statsBulletinData = []
-					data.keyDatasets = []
-					loadItems(data, data.items)
-					loadHeadline(data)
-					loadStatsBulletinHeadline(data)
-					loadStatsBulletins(data)
-					loadDatasets(data)
+				switch (data.level) {
+					case 't1':
+						q = resolveSections(data)
+						if (loadSynchronously) {
+							return $q.all(q).then(function() {
+								return data
+							})
+						}
+						break
+					case 't3':
+						data.itemData = []
+						data.statsBulletinData = []
+						data.keyDatasets = []
+						q.push(loadItem(data, data.headline, 'headlineData'))
+						q.push(loadItem(data, data.statsBulletinHeadline, 'statsBulletinHeadlineData'))
+						q.push.apply(q, loadItems(data, data.items, 'itemData'))
+						q.push.apply(q, loadItems(data, data.statsBulletins, 'statsBulletinData'))
+						q.push.apply(q, loadItems(data, data.datasets, 'keyDatasets'))
+						if (loadSynchronously) {
+							return $q.all(q)
+								.then(function() {
+									return data
+								})
+						}
+						break
+					default:
 				}
-				if (callback) {
-					callback(service.data)
-				}
+				return data
 			})
+
+			return promise
 		}
 
 		function resolveSections(data) {
 			$log.debug('Taxonomy Service: Resolving sections of ', data.name)
-			var level =  data.level
-			var sections =  data.sections
+			var level = data.level
+			var sections = data.sections
+			var promises = []
 
 			if (!sections) {
 				return
 			}
 			for (var i = 0; i < sections.length; i++) {
-				if(data.level === 't1') {
+				if (data.level === 't1') {
 					// Shorten section names for T1:
-					if (sections[i].name.indexOf("Economy")!=-1) {
-						sections[i].name="Economy"
-					} else if (sections[i].name.indexOf("Business")!=-1) {
-						sections[i].name="Business"
-					} else if (sections[i].name.indexOf("Employment")!=-1) {
-						sections[i].name="Employment"
-					} else if (sections[i].name.indexOf("Population")!=-1) {
-						sections[i].name="Population"
+					if (sections[i].name.indexOf("Economy") != -1) {
+						sections[i].name = "Economy"
+					} else if (sections[i].name.indexOf("Business") != -1) {
+						sections[i].name = "Business"
+					} else if (sections[i].name.indexOf("Employment") != -1) {
+						sections[i].name = "Employment"
+					} else if (sections[i].name.indexOf("Population") != -1) {
+						sections[i].name = "Population"
 					}
 				}
-				sections[i].itemData = []
-				loadItems(sections[i], sections[i].items)
+
+				promises.push.apply(promises, loadItems(sections[i], sections[i].items, 'itemData'))
 			}
 
+			return promises
 		}
 
-		function loadItems(section, items) {
-			if (!items) {
+		//Load single item and push into container's given variable, overrides if exists
+		function loadItem(container, item, varName) {
+			var path = dataPath + item
+			return DataLoader.load(path).then(function(itemData) {
+				itemData.url = item
+					//Create array if not available
+				container[varName] = itemData
+			})
+		}
+
+		//Loads given items asynchronously and pushes into given array. Overrides array if exists
+		function loadItems(container, items, arrayName) {
+			if (ArrayUtil.isEmpty(items)) {
 				return
 			}
+
+			var promises = []
+
+			container[arrayName] = []
 			for (var i = 0; i < items.length; i++) {
-				loadItem(section, items[i])
-			}
-		}
-
-		function loadItem(section, item) {
-			var path = dataPath + item
-			load(path, function(data) {
-				data.url = item
-				section.itemData.push(data)
-			})
-		}
-
-
-		function loadHeadline(data) {
-			var timeseriesPath = dataPath + data.headline
-			load(timeseriesPath, function(timeseries) {
-				timeseries.url = data.headline
-				data.headlineData = timeseries
-			})
-		}
-
-		function loadStatsBulletinHeadline(data) {
-			if (data.statsBulletinHeadline != null) {
-				var statsBulletinPath = dataPath + data.statsBulletinHeadline
-				load(statsBulletinPath, function(bulletin) {
-					bulletin.url = data.statsBulletinHeadline
-					data.statsBulletinHeadlineData = bulletin
+				var itemPath = dataPath + items[i]
+				var promise = DataLoader.load(itemPath).
+				then(function(itemData) {
+					container[arrayName].push(itemData)
 				})
+				promises.push(promise)
 			}
+
+			return promises
 		}
 
-		function loadStatsBulletins(data) {
-			var bulletins = data.statsBulletins;
 
-			for (var i = 0; i < bulletins.length; i++) {
-				var bulletin = bulletins[i]
-				var statsBulletinPath = dataPath + bulletin
-				load(statsBulletinPath, function(statsBulletin) {
-					data.statsBulletinData.push(statsBulletin)
-				})
+		//Bulk loads items with a single call and pushes into given array. Overrides array if exists
+		function loadItemsBulk(container, items, arrayName) {
+			if (ArrayUtil.isEmpty(items)) {
+				return
 			}
-		}
 
-		function loadDatasets(data) {
-			var datasets = data.datasets;
-
-			for (var i = 0; i < datasets.length; i++) {
-				var dataset = datasets[i]
-				var datasetPath = dataPath + dataset
-				load(datasetPath, function(keyDataset) {
-					data.keyDatasets.push(keyDataset)
-				})
+			var request = {
+				uriList: items
 			}
-		}
-
-		//Loads and attaches data to given parent element with given property name
-		function load(path, callback) {
-			var result = $http.get(path).success(function(data) {
-				$log.debug('Taxonomy Service : Successfully loaded data at ', path, ' ', data)
-				callback(data)
-			}).error(function() {
-				$log.error('Taxonomy Service : Failed loading data at ' + path)
+			container[arrayName] = []
+			DataLoader.loadPost(bulkDataPath, request).then(function(data) {
+				for (var i = 0; i < data.length; i++) {
+					data[i].url = items[i]
+					container.itemData.push(data[i])
+				};
 			})
 		}
 
 		function resolvePath() {
 			var path = $location.$$path
-			path = endsWith(path, '/') ? path : (path + '/')
+			path = StringUtil.endsWith(path, '/') ? path : (path + '/')
 			path = dataPath + path
 			return path
 		}
 
-		function endsWith(str, suffix) {
-			if (str.length === 0) {
-				return false
-			}
-			return str.indexOf(suffix, str.length - suffix.length) !== -1;
-		}
-
-
 		//Expose public api
 		angular.extend(service, {
-			loadData: loadData,
-			load: load
+			loadData: loadData
 		})
 
 	}

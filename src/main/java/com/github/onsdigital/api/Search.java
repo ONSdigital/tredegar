@@ -8,13 +8,13 @@ import javax.ws.rs.core.Context;
 import org.apache.commons.lang3.StringUtils;
 
 import com.github.davidcarboni.restolino.framework.Endpoint;
-import com.github.onsdigital.bean.SearchResult;
 import com.github.onsdigital.configuration.ElasticSearchProperties;
 import com.github.onsdigital.json.ContentType;
 import com.github.onsdigital.search.ElasticSearchServer;
+import com.github.onsdigital.search.bean.SearchResult;
+import com.github.onsdigital.search.util.ElasticSearchFieldUtil;
 import com.github.onsdigital.search.util.ONSQueryBuilder;
 import com.github.onsdigital.search.util.SearchHelper;
-import com.github.onsdigital.util.ElasticSearchFieldUtil;
 import com.github.onsdigital.util.ValidatorUtil;
 
 /**

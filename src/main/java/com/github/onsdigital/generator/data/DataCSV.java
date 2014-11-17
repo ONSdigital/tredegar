@@ -48,54 +48,6 @@ public class DataCSV {
 
 		readManuallyEditedCsv();
 
-		// // Now sort and arrange all the data:
-		// for (Timeseries timeseries : new Data()) {
-		//
-		// // Get the values:
-		// Map<String, TimeseriesValue> dataMap = new HashMap<>();
-		// for (TimeseriesValue value : timeseries.data) {
-		// dataMap.put(StringUtils.lowerCase(StringUtils.trim(value.date)),
-		// value);
-		// }
-		//
-		// // Now [re]initialise all the sets:
-		// timeseries.data = new LinkedHashSet<>();
-		// timeseries.years = new LinkedHashSet<>();
-		// timeseries.quarters = new LinkedHashSet<>();
-		// timeseries.months = new LinkedHashSet<>();
-		//
-		// // Add the keys in order, from years to quarters, to months:
-		// // System.out.println("Sorting years..");
-		// for (Entry<String, String> year : Data.years.entrySet()) {
-		// String key =
-		// StringUtils.lowerCase(StringUtils.trim(year.getValue()));
-		// if (dataMap.containsKey(key)) {
-		// TimeseriesValue value = dataMap.get(key);
-		// timeseries.data.add(value);
-		// timeseries.years.add(value);
-		// }
-		// }
-		// // System.out.println("Sorting quarters..");
-		// for (Entry<String, String> quarter : Data.quarters.entrySet()) {
-		// String key =
-		// StringUtils.lowerCase(StringUtils.trim(quarter.getValue()));
-		// if (dataMap.containsKey(key)) {
-		// TimeseriesValue value = dataMap.get(key);
-		// timeseries.data.add(value);
-		// timeseries.quarters.add(value);
-		// }
-		// }
-		// // System.out.println("Sorting months..");
-		// for (Entry<String, String> month : Data.months.entrySet()) {
-		// String key =
-		// StringUtils.lowerCase(StringUtils.trim(month.getValue()));
-		// if (dataMap.containsKey(key)) {
-		// TimeseriesValue value = dataMap.get(key);
-		// timeseries.data.add(value);
-		// timeseries.months.add(value);
-		// }
-		// }
-		// }
 	}
 
 	private static void readManuallyEditedCsv() throws IOException {

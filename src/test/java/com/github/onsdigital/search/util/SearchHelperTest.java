@@ -9,8 +9,8 @@ import org.elasticsearch.common.settings.ImmutableSettings;
 import org.elasticsearch.common.settings.Settings;
 import org.junit.Assert;
 
-import com.github.onsdigital.bean.SearchResult;
 import com.github.onsdigital.search.EmbeddedElasticSearchServer;
+import com.github.onsdigital.search.bean.SearchResult;
 
 public class SearchHelperTest {
 
