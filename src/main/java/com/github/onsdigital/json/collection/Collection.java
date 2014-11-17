@@ -1,6 +1,8 @@
-package com.github.onsdigital.json;
+package com.github.onsdigital.json.collection;
 
-public class Collection {
+import com.github.onsdigital.json.DataItem;
+
+public class Collection extends DataItem  {
 
 	// Top section
 	public String title = "Inflation and Price Indices";

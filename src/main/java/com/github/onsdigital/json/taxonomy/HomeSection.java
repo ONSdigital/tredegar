@@ -1,4 +1,4 @@
-package com.github.onsdigital.json;
+package com.github.onsdigital.json.taxonomy;
 
 import java.net.URI;
 import java.util.ArrayList;

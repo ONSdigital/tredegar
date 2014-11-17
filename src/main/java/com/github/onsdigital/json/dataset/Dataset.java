@@ -1,10 +1,14 @@
-package com.github.onsdigital.json;
+package com.github.onsdigital.json.dataset;
 
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 
 import com.github.onsdigital.generator.Folder;
+import com.github.onsdigital.json.ContentType;
+import com.github.onsdigital.json.collection.CollectionItem;
+import com.github.onsdigital.json.partial.Email;
+import com.github.onsdigital.json.taxonomy.TaxonomyHome;
 
 public class Dataset extends CollectionItem {
 	public String nextRelease = "21 November 2014";

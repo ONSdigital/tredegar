@@ -1,4 +1,4 @@
-package com.github.onsdigital.bean;
+package com.github.onsdigital.search.bean;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.github.davidcarboni.restolino.json.Serialiser;
-import com.github.onsdigital.json.CollectionItem;
+import com.github.onsdigital.json.collection.CollectionItem;
 
 /**
  * Holds the details for a collection of content types

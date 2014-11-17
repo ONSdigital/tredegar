@@ -7,7 +7,6 @@
 		.directive('stSelectAll', [SelectAllDirective])
 		.directive('stSelect', [SelectDirective])
 
-
 	function T3Controller($scope, $http, Downloader, $log) {
 		var t3 = this
 		var items = $scope.taxonomy.data.itemData

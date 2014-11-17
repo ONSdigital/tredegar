@@ -11,6 +11,8 @@ import java.util.Map;
 import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
 
+import com.github.onsdigital.search.bean.CollectionSearchResult;
+
 /**
  * Exercises creation of a collection of content types
  */

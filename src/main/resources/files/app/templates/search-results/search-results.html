@@ -1,99 +1,99 @@
+<!--Search filters, sorting and results description, grid col two thirds, left class removes padding and crates space within the div-->
+
 <ons-header></ons-header>
-<!--Breadcrumbs, grid col two thirds-->
- 
-
-
-    <!--Search filters, sorting and results description, grid col two thirds, left class removes padding and crates space within the div-->
-  
 <div class="page-header slate">
-        <div class="wrapper nav-panels">
-         <div class="grid-wrap">
-          
-          <div class="grid-col tablet-wide">
-             <span ng-show="isLoading()" >Loading ...</span>
-              <div ng-show="searchResponse" id="search-results-total" class="search-results-total">
-                 <span class='results-total'>
-          {{searchResponse.numberOfResults}}
-        </span>results for<span class='results-search-term'>
-           '{{searchTermOneTime}}'
-           <span>
-                  </div>
-                  <div class="grid-wrap">
+    <div class="wrapper nav-panels">
+        <div class="grid-wrap">
+
+            <div class="grid-col tablet-wide">
+                <span ng-show="isLoading()">Loading ...</span>
+                <div ng-show="searchResponse" id="search-results-total" class="search-results-total">
+                    <span class='results-total'>
+                        {{searchResponse.numberOfResults}}
+                    </span>results for
+                    <span class='results-search-term'>
+                        '{{searchTermOneTime}}'
+                        </span>
+                </div>
+                <div class="grid-wrap">
                     <div class="grid-col desktop-grid-two-thirds">
-                      <div class="search-filters">
-                        <p> Filter by:  <span class="lozenge lozenge-spacer lozenge-blue">STATISTICAL BULLETIN</span><span class="lozenge lozenge-spacer lozenge-red">DATASET</span><span class="lozenge lozenge-grey lozenge-spacer">ARTICLE</span><span class="lozenge lozenge-spacer lozenge-green">METHODOLOGY</span>
-                        </p>
-                      </div>
+                        <div class="search-filters">
+                            <p>Filter by:
+                                <span class="lozenge lozenge-spacer lozenge-blue">STATISTICAL BULLETIN</span>
+                                <span class="lozenge lozenge-spacer lozenge-red">DATASET</span>
+                                <span class="lozenge lozenge-grey lozenge-spacer">ARTICLE</span>
+                                <span class="lozenge lozenge-spacer lozenge-green">METHODOLOGY</span>
+                            </p>
+                        </div>
                     </div>
                     <div class="grid-col desktop-grid-one-third search-sorting-grid">
-                      <div class="search-sorting">
-              <div class="field field--spaced">
-          <form action="#" class="form"> Sort by:
-            <select class="input input--mini sorting" name="search" id="select1">
-              <option value="" selected> Relevance </option>
-                <option value="">Date Released </option>
-            </select>
-          </form>
+                        <div class="search-sorting">
+                            <div class="field field--spaced">
+                                <form action="#" class="form">Sort by:
+                                    <select class="input input--mini sorting" name="search" id="select1">
+                                        <option value="" selected>Relevance</option>
+                                        <option value="">Date Released</option>
+                                    </select>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
-      </div>
-      </div>
-
-      </div>
     </div>
+</div>
+
+
+<!--Search Results List, grid col two thirds-->
+<div class="wrapper nav-panels">
+    <div class="grid-wrap">
+        <div class="grid-col tablet-wide-grid-two-thirds">
+            <article class="box">
+
+                <div id="search" class="search">
+                    <span ng-show="isLoading()">Loading ...</span>
+
+                    <dl>
+
+                        <dt ng-repeat-start="item in searchResponse.results" class="">
+                            <a class="search-link" href="#!{{item.url}}">{{item.title}}</a>
+                            <span ng-if="item.type != 'home'" class="lozenge" href="">{{item.type === 'bulletin' ? 'Statistical Bulletin' : item.type}}</span>
+                        </dt>
+                        <dd class="microcopy">Released...</dd>
+                        <dd ng-repeat-end class="search-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet diam vel est congue eleifend non eget sem. Nam enim ipsum, vestibulum sed facilisis ut, commodo et nulla.</dd>
+
+                    </dl>
+                </div>
+
+                <ons-paginator page-count="pageCount"></ons-paginator>
+
+            </article>
+        </div>
+        <!-- /end of results list grid-col -->
+
+        <!--Start of aside, grid col one third-->
+        <div class="grid-col desktop-grid-one-third tablet-grid-one-third search-aside" ng-show="relatedDepartment">
+            <aside class="box sectioned padded border-defined">
+
+                <a href="#">
+                    <img src="{{relatedDepartment.departmentLogo}}" alt="departmentlogo" class="aside-logo" />
+                </a>
+                <p>
+                    <a href="{{relatedDepartment.departmentLink}}" class="aside-highlighted"> Also try {{relatedDepartment.departmentName}} for more information relating to {{searchTerm}} </a>
+                </p>
+
+                <!-- /grid-col -->
+
+                <!-- /aside -->
+            </aside>
+            <!-- /box -->
+        </div>
+
+
     </div>
-    </div>
-    </div>
+    <!--End of right col aside, grid col one third-->
+</div>
 
-
- <!--Search Results List, grid col two thirds-->
-<div  class="wrapper nav-panels">
-  <div class="grid-wrap">
-      <div class="grid-col tablet-wide-grid-two-thirds">
-          <article class="box">
-
-            <div id="search" class="search">
-              <span ng-show="isLoading()" >Loading ...</span>
-
-              <dl>
-                 
-                  <dt ng-repeat-start="item in searchResponse.results" class="">
-                    <a class="search-link" href="#!{{item.url}}">{{item.title}}</a>
-                    <span ng-if="item.type != 'home'" class="lozenge" href="">{{item.type === 'bulletin' ? 'Statistical Bulletin' : item.type}}</span>
-                  </dt>
-                  <dd class="microcopy"> Released...</dd>
-                  <dd ng-repeat-end class="search-summary" > Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet diam vel est congue eleifend non eget sem. Nam enim ipsum, vestibulum sed facilisis ut, commodo et nulla.  </dd>
-         
-              </dl>
-            </div>
-            
-            <ons-paginator page-count="{{pageCount}}" ></ons-paginator>
-
-          </article>
-      </div>
-          <!-- /end of results list grid-col -->
-
-          <!--Start of aside, grid col one third-->
-   <div class="grid-col desktop-grid-one-third tablet-grid-one-third search-aside" ng-show="relatedDepartment">
-               <aside class="box sectioned padded border-defined">
-
-              <a href="#"><img src="{{relatedDepartment.departmentLogo}}" alt="departmentlogo" class="aside-logo"/></a><p>
-              <a href="{{relatedDepartment.departmentLink}}" class="aside-highlighted"> Also try {{relatedDepartment.departmentName}} for more information relating to {{searchTerm}} </a></p>
-
-          <!-- /grid-col -->
-
-        <!-- /aside -->
-      </aside>
-              <!-- /box -->
-            </div>
-
-
-      </div>
-   <!--End of right col aside, grid col one third-->
-      </div>
-  </div>
 <ons-footer></ons-footer>
-
-
-     <div class="grid-col tablet-wide-grid-one-third">
-      
-      </div>

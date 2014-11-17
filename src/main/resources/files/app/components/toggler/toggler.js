@@ -5,67 +5,88 @@ Toggler
 
 @author Brn
  */
+(function() {
 
-angular.module('onsComponents')
-  .service('toggleService', function() {
+  angular.module('onsToggler', [])
+    .service('toggleService', ToggleService)
+    .directive('toggler', ['toggleService', Toggler])
+    .directive('toggleable', ['toggleService', Toggleable])
+
+  function ToggleService() {
+    var service = this
     var toggleables = {};
 
-    this.registerToggleable = function(toggleable) {
+    function registerToggleable(toggleable) {
       toggleables[toggleable.key] = toggleable;
     }
 
-    this.toggle = function(key) {
+    function toggle(key) {
       toggleables[key].toggle();
     }
 
-    this.isVisible=function(key) {
+    function isVisible(key) {
       var pane = toggleables[key];
       return pane ? pane.visible : false
     }
-  })
-  .directive('toggler', ['toggleService',
-    function(toggleService) {
-      return {
-        restrict: 'A',
-        scope:{
-          expandLabel:'@',
-          collapseLabel:'@'
-        },
-        link: function(scope, elem, attrs) {
-          var ctrl = this
-          scope.key = attrs.toggler
-          bindClick()
 
-          function bindClick() {
-            elem.bind("click", function() {
-              toggleService.toggle(attrs.toggler)
-              scope.$apply() // Trigger Angular cycle
-            })
-          }
+    angular.extend(service, {
+      registerToggleable: registerToggleable,
+      toggle: toggle,
+      isVisible: isVisible
+    })
+  }
 
-          scope.isVisible=function(){
-            return toggleService.isVisible(scope.key)
-          }
-        },
-        template:'{{isVisible() ?  collapseLabel  : expandLabel}}',
-        controllerAs: 'ToggleCtrl'
-      }
+  function Toggler(toggleService) {
+    return {
+      restrict: 'A',
+      scope: {
+        togglerWidgetVar: '@'
+      },
+      link: TogglerLink
     }
-  ])
-  .directive('toggleable', ['toggleService',
-    function(toggleService) {
-      return {
-        restrict: 'A',
-        transclude: true,
-        link: function(scope, elem, attrs) {
-          scope.toggle = function() {
-            scope.visible = !scope.visible;
-          }
 
-          scope.key = attrs.toggleable
-          toggleService.registerToggleable(scope);
-        },
-        templateUrl: 'app/components/toggler/toggleable.html'
+    function TogglerLink(scope, elem, attrs) {
+      var toggler = scope
+      toggler.key = attrs.toggler
+      bindClick()
+      if (scope.togglerWidgetVar) {
+        scope.$parent[scope.togglerWidgetVar] = toggler
       }
+
+      function bindClick() {
+        elem.bind("click", function() {
+          toggleService.toggle(attrs.toggler)
+          scope.$apply() // Trigger Angular cycle
+        })
+      }
+
+      function isVisible() {
+        return toggleService.isVisible(toggler.key)
+      }
+
+      angular.extend(toggler, {
+        isVisible:isVisible
+      })
     }
-  ]);
+
+  }
+
+  function Toggleable(toggleService) {
+    return {
+      restrict: 'A',
+      transclude: true,
+      scope:{},
+      link: function(scope, elem, attrs) {
+        scope.toggle = function() {
+          scope.visible = !scope.visible;
+        }
+
+        scope.key = attrs.toggleable
+        toggleService.registerToggleable(scope);
+      },
+      template: '<div ng-transclude ng-show="visible"></div>'
+    }
+  }
+
+
+})()

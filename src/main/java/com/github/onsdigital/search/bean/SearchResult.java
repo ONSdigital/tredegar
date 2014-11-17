@@ -1,4 +1,4 @@
-package com.github.onsdigital.bean;
+package com.github.onsdigital.search.bean;
 
 import java.util.ArrayList;
 import java.util.HashMap;

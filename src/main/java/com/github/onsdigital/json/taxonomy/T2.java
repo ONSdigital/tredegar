@@ -3,8 +3,6 @@ package com.github.onsdigital.json.taxonomy;
 import java.util.List;
 
 import com.github.onsdigital.generator.Folder;
-import com.github.onsdigital.json.HomeSection;
-import com.github.onsdigital.json.TaxonomyHome;
 
 public class T2 extends TaxonomyHome {
 

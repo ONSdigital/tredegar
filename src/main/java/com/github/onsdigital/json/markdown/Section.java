@@ -1,4 +1,4 @@
-package com.github.onsdigital.json;
+package com.github.onsdigital.json.markdown;
 
 /**
  * Represents a section in a stats bulletin - heading as text and body as

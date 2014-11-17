@@ -1,10 +1,10 @@
 (function() {
 
     angular.module('onsTemplates')
-        .controller('T5Controller', ['$scope', 'Downloader', 'Taxonomy', T5Controller])
-        .controller('ChartController', ['$scope', '$location', '$log', 'Downloader', 'Chart', ChartController])
+        .controller('T5Controller', ['$scope', '$log', 'Downloader', 'DataLoader', T5Controller])
+        .controller('ChartController', ['$scope', '$location', '$log', 'Downloader', 'ArrayUtil', ChartController])
 
-    function T5Controller($scope, Downloader, Taxonomy) {
+    function T5Controller($scope, $log, Downloader, DataLoader) {
 
         var t5 = this;
         $scope.header = "Time Series";
@@ -40,10 +40,11 @@
                 for (var i = 0; i < bulletins.length; i++) {
                     var bulletin = bulletins[i]
                     var relatedBulletinPath = dataPath + bulletin
-                    Taxonomy.load(relatedBulletinPath, function(relatedBulletin) {
-                        console.log('Loaded related bulletin: ', relatedBulletinPath, ' ', relatedBulletin)
-                        data.relatedBulletinData.push(relatedBulletin)
-                    })
+                    DataLoader.load(relatedBulletinPath)
+                        .then(function(relatedBulletin) {
+                            $log.debug('Loaded related bulletin: ', relatedBulletinPath, ' ', relatedBulletin)
+                            data.relatedBulletinData.push(relatedBulletin)
+                        })
                 }
             }
         }
@@ -56,7 +57,7 @@
     }
 
 
-    function ChartController($scope, $location, $log, Downloader, Chart) {
+    function ChartController($scope, $location, $log, Downloader, Chart, ArrayUtil) {
         var ctrl = this
         ctrl.timeseries = $scope.taxonomy.data
         ctrl.chartConfig = Chart.getChart()
@@ -104,7 +105,8 @@
             ctrl.years = getYears()
             ctrl.tenYears = tenYears(ctrl.years)
             ctrl.chartConfig.options.xAxis.tickInterval = tickInterval(ctrl.chartData.length);
-
+            ctrl.chartConfig.options.title.text = ctrl.timeseries.name
+            ctrl.chartConfig.options.yAxis.title.text = ctrl.timeseries.unit
             $log.debug("Chart:")
             $log.debug(ctrl.chartConfig)
             $log.debug("10y = " + ctrl.tenYears)

@@ -37,7 +37,7 @@ import com.github.davidcarboni.restolino.framework.Endpoint;
 import com.github.davidcarboni.restolino.json.Serialiser;
 import com.github.onsdigital.configuration.Configuration;
 import com.github.onsdigital.json.ContentType;
-import com.github.onsdigital.json.TaxonomyHome;
+import com.github.onsdigital.json.taxonomy.TaxonomyHome;
 
 /**
  * Sitemap endpoint that reflects the taxonomy structure:

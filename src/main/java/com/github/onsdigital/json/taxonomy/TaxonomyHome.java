@@ -1,8 +1,10 @@
-package com.github.onsdigital.json;
+package com.github.onsdigital.json.taxonomy;
 
 import java.util.ArrayList;
 
 import com.github.onsdigital.generator.Folder;
+import com.github.onsdigital.json.ContentType;
+import com.github.onsdigital.json.DataItem;
 
 /**
  * Represents a home page in the taxonomy - T1-T3.
