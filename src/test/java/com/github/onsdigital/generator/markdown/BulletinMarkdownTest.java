@@ -15,8 +15,8 @@ import org.apache.commons.lang3.StringUtils;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.github.onsdigital.json.Section;
 import com.github.onsdigital.json.markdown.Bulletin;
+import com.github.onsdigital.json.markdown.Section;
 
 public class BulletinMarkdownTest {
 
@@ -44,7 +44,7 @@ public class BulletinMarkdownTest {
 		String contactEmail = "jukesie@gmail.com";
 		String nextRelease = "soon";
 		ClassLoader classLoader = BulletinMarkdownTest.class.getClassLoader();
-		String resourceName = "com/github/onsdigital/json/bulletin/data.md";
+		String resourceName = "com/github/onsdigital/json/markdown/bulletin.md";
 		Path path = Paths.get(classLoader.getResource(resourceName).toURI());
 
 		// When
@@ -67,7 +67,7 @@ public class BulletinMarkdownTest {
 		assertEquals(nextRelease, bulletin.nextRelease);
 
 		// Title
-		assertEquals("What happened to all the money?", bulletin.title);
+		assertEquals("Analysis of consumer price inflation", bulletin.title);
 
 		// Sections
 		assertEquals(2, bulletin.sections.size());

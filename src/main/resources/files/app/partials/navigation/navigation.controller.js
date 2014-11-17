@@ -2,20 +2,44 @@
 (function() {
 	'use strict';
 	angular.module('onsTemplates')
-		.controller('NavigationController', ['$scope',
+		.controller('NavigationController', ['$scope', '$route',
 			NavigationController
 		])
 
-	function NavigationController($scope) {
-		var ctrl = this
-		ctrl.hideSearch=true
+	function NavigationController($scope, $route) {
+		var navigation = this
+		navigation.hideSearch = false
+		navigation.links = $route.current.locals.navigation
+		watchMenu()
 
 		function toggleSearch() {
-			ctrl.hideSearch = !ctrl.hideSearch
+			navigation.hideSearch = !navigation.hideSearch
+			if (!navigation.hideSearch) {
+				hideMenu()
+			}
 		}
 
-		angular.extend(ctrl,{
-			toggleSearch:toggleSearch
+		function isMobileMenuVisible() {
+			if ($scope.w_nav) {
+				return $scope.w_nav.showOnMobile
+			}
+			return false
+
+		}
+
+		function watchMenu() {
+			$scope.$watch('w_nav.showOnMobile', function() {
+				if (isMobileMenuVisible()) {
+					navigation.hideSearch = true
+				}
+			})
+		}
+
+		function hideMenu() {
+			$scope.w_nav.showOnMobile = false
+		}
+		angular.extend(navigation, {
+			toggleSearch: toggleSearch
 		})
 
 	}

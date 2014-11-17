@@ -1,51 +1,118 @@
 'use strict';
 
-/*
+(function() {
 
-Tabs component
+  /*
+  Tabs component
+  @author Brn
+   */
 
-@author Brn
- */
+  angular.module('onsTabs', [])
+    .directive('onsTabs', Tabs)
+    .directive('onsTabControl', TabControl)
+    .directive('onsTab', Tab)
 
-
-//Based on example on https://docs.angularjs.org/guide/directive
-angular.module('onsComponents')
-  .directive('onsTabs', function() {
+  function Tabs() {
     return {
-      restrict: 'E',
-      transclude: true,
-      scope: {},
-      controller: function($scope) {
-        var panes = $scope.panes = []
+      restrict: 'A',
+      scope: {
+        tabsActiveVar: "@"
+      },
+      controller: TabsController,
+      controllerAs: 'tabs'
+    }
 
-        $scope.select = function(pane) {
-          angular.forEach(panes, function(pane) {
-            pane.selected = false;
-          });
-          pane.selected = true;
+    function TabsController($scope) {
+
+      var tabs = this
+      var panes = tabs.panes = {} //Tab panes
+      var numberOfPanes = this.numberOfPanes = 0
+
+
+      function select(key) {
+        for (var p in panes) { //Hide all panes  
+          if (panes.hasOwnProperty(p)) {
+            panes[p].selected = false;
+          }
         }
 
-        this.addPane = function(pane) {
-          if (panes.length === 0) {
-            $scope.select(pane)
-          }
-          panes.push(pane)
-        };
+        var selectedPane = panes[key]
+        selectedPane.selected = true; //Show selected pane
+        
+        if ($scope.tabsActiveVar) {
+          $scope.$parent[$scope.tabsActiveVar] = selectedPane.key
+        }
+      }
 
-      },
-      templateUrl: 'app/components/tabs/tabs.html'
+      function isSelected(key) {
+        var pane = panes[key]
+        if (pane) {
+          return pane.selected
+        }
+        return false
+      }
+
+
+
+      function registerTabPane(pane) {
+        panes[pane.key] = pane
+        if (numberOfPanes === 0) {
+          select(pane.key)
+        }
+        numberOfPanes++
+      }
+
+      //Expose functions
+      angular.extend(tabs, {
+        registerTabPane: registerTabPane,
+        select: select,
+        isSelected: isSelected
+      })
     }
-  }).directive('onsTab', function() {
+  }
+
+
+  function TabControl() {
     return {
       require: '^onsTabs',
-      restrict: 'E',
-      transclude: true,
-      scope: {
-        title: '@'
-      },
-      link: function(scope, element, attrs, contentCtrl) {
-        contentCtrl.addPane(scope)
-      },
-      templateUrl: 'app/components/tabs/pane.html'
+      restrict: 'A',
+      scope: {},
+      link: function(scope, element, attrs, tabsController) {
+        scope.key = attrs.onsTabControl
+        if (!scope.key) {
+          throw 'tab control key can not be empty'
+        }
+
+        bindClick()
+
+        function bindClick() {
+          element.bind("click", function() {
+            scope.$apply(function() { // Trigger Angular digest cycle to process changed values
+              tabsController.select(scope.key)
+            })
+          })
+        }
+      }
     }
-  })
+  }
+
+  //Represents tab pane within tabs directive
+  function Tab() {
+    return {
+      require: '^onsTabs',
+      restrict: 'A',
+      scope: {},
+      transclude: true,
+      replace: true,
+      link: function(scope, element, attrs, tabsController) {
+        scope.key = attrs.onsTab
+        if (!scope.key) {
+          throw 'tab key can not be empty"'
+        }
+        tabsController.registerTabPane(scope)
+      },
+      template: '<div ng-transclude ng-show="selected"> </div>'
+    }
+  }
+
+})()

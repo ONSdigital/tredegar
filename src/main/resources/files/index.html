@@ -6,34 +6,35 @@
 <!--[if gt IE 8]><!-->
 <html ng-app="onsApp">
 <!--<![endif]-->
+
 <head>
-<title ng-bind="Page.title()"></title>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta charset="UTF-8">
-<meta content="width=device-width,initial-scale=1.0" name="viewport" />
-<meta content="on" http-equiv="cleartype" />
-<meta name="format-detection" content="telephone=no">
-<!-- http://www.phpied.com/conditional-comments-block-downloads/ -->
-<!--[if IE]><![endif]-->
-<!-- build:css /ui/css/oldie.css-->
-<!--[if lte IE 8]>
+    <title ng-bind="PageUtil.title()"></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1.0" name="viewport" />
+    <meta content="on" http-equiv="cleartype" />
+    <meta name="format-detection" content="telephone=no">
+    <!-- http://www.phpied.com/conditional-comments-block-downloads/ -->
+    <!--[if IE]><![endif]-->
+    <!-- build:css /ui/css/oldie.css-->
+    <!--[if lte IE 8]>
   <link rel="stylesheet" href="../ui/css/oldie.css" />
 <![endif]-->
-<!-- endbuild -->
-<!-- build:css ui/css/main.css-->
-<!--[if gt IE 8]><!-->
-<!-- <link rel="stylesheet" href="ui/css/main.css" /> -->
-<link href="/ui/css/main.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
-<link href="/ui/css/lib/loading-bar.css" rel="stylesheet" type="text/css">
+    <!-- endbuild -->
+    <!-- build:css ui/css/main.css-->
+    <!--[if gt IE 8]><!-->
+    <!-- <link rel="stylesheet" href="ui/css/main.css" /> -->
+    <link href="/ui/css/main.css" rel="stylesheet" type="text/css">
+    <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/css/jquery-ui.min.css"> -->
+    <link href="/ui/css/lib/loading-bar.css" rel="stylesheet" type="text/css">
 
-<!--<![endif]-->
-<!-- endbuild -->
-<!--[if (!IE)|(gt IE 8)]>><!-->
-<!-- <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/tooltipster/3.0.5/js/jquery.tooltipster.min.js" defer></script> -->
-<!--<![endif]-->
+    <!--<![endif]-->
+    <!-- endbuild -->
+    <!--[if (!IE)|(gt IE 8)]>><!-->
+    <!-- <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/tooltipster/3.0.5/js/jquery.tooltipster.min.js" defer></script> -->
+    <!--<![endif]-->
 
-<!--[if lte IE 8]>
+    <!--[if lte IE 8]>
       <script>
         document.createElement('ng-include');
         document.createElement('ng-pluralize');
@@ -46,71 +47,72 @@
       </script>
     <![endif]-->
 
-<script type="text/javascript" src="ui/js/lib/jquery.min.js" defer></script>
-<script type="text/javascript" src="ui/js/lib/angular.js" defer></script>
-<!-- <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js" defer></script> -->
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-route.min.js" defer></script>
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular-sanitize.js" defer></script>
-<script type="text/javascript" src="
-//cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js"></script>
+    <script type="text/javascript" src="/ui/js/lib/jquery.min.js" defer></script>
+    <script type="text/javascript" src="/ui/js/lib/angular.js" defer></script>
+    <!-- <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js" defer></script> -->
+    <script type="text/javascript" src="/ui/js/lib/angular-route.min.js" defer></script>
+    <script type="text/javascript" src="/ui/js/lib/angular-sanitize.min.js" defer></script>
+    <script type="text/javascript" src="/ui/js/lib/angular-cache.min.js" defer></script>
+    <script type="text/javascript" src="/ui/js/lib/showdown.min.js"></script>
 
 
-<script type="text/javascript" src="ui/js/lib/modernizr.min.js" defer></script>
-<script type="text/javascript" src="ui/js/lib/jquery-ui.min.js" defer></script>
+    <!-- <script type="text/javascript" src="ui/js/lib/modernizr.min.js" defer></script> -->
+    <!-- <script type="text/javascript" src="ui/js/lib/jquery-ui.min.js" defer></script> -->
 
-<script type="text/javascript" src="app/app.js" defer></script>
-<script type="text/javascript" src="app/config/config.js" defer></script>
-<script type="text/javascript" src="app/services/taxonomy/taxonomy.js" defer></script>
-<script type="text/javascript" src="app/services/download/downloader.js" defer></script>
-<script type="text/javascript" src="app/templates/taxonomy/taxonomy.controller.js" defer></script>
-<script type="text/javascript" src="app/templates/t2/t2.controller.js" defer></script>
-<script type="text/javascript" src="app/templates/t3/t3.controller.js" defer></script>
-<script type="text/javascript" src="app/templates/t5/t5.controller.js" defer></script>
-<script type="text/javascript" src="app/templates/t6/t6.controller.js" defer></script>
-<script type="text/javascript" src="app/templates/search-results/search-results.controller.js" defer></script>
-<script type="text/javascript" src="app/templates/content/content.controller.js" defer></script>
-<script type="text/javascript" src="app/templates/article/article.controller.js" defer></script>
-<script type="text/javascript" src="app/templates/bulletin/bulletin.controller.js" defer></script>
-<script type="text/javascript" src="app/templates/methodology/methodology.controller.js" defer></script>
-<script type="text/javascript" src="app/templates/release/release.controller.js" defer></script>
-<script type="text/javascript" src="app/templates/collection/collection.controller.js" defer></script>
-<script type="text/javascript" src="app/templates/dataset/dataset.controller.js" defer></script>
-<script type="text/javascript" src="app/templates/contact/contact.controller.js" defer></script>
-<script type="text/javascript" src="app/partials/header/header.js" defer></script>
-<script type="text/javascript" src="app/partials/footer/footer.js" defer></script>
-<script type="text/javascript" src="app/partials/navigation/navigation.controller.js" defer></script>
-<script type="text/javascript" src="app/partials/searchbox/searchbox.directive.js" defer></script>
-<script type="text/javascript" src="app/partials/latest-bulletins/latest-bulletins.directive.js" defer></script>
-<script type="text/javascript" src="app/partials/release-pane/release-pane.directive.js" defer></script>
-<script type="text/javascript" src="app/partials/related-articles/related-articles.directive.js" defer></script>
-<script type="text/javascript" src="app/partials/contact-details/contact-details.directive.js" defer></script>
-<script type="text/javascript" src="app/partials/tools-pane/tools-pane.directive.js" defer></script>
-<script type="text/javascript" src="app/components/breadcrumb/breadcrumb.js" defer></script>
-<script type="text/javascript" src="app/components/navigation/navigation.js" defer></script>
-<script type="text/javascript" src="app/components/paginator/paginator.js" defer></script>
-<script type="text/javascript" src="app/components/toggler/toggler.js" defer></script>
-<script type="text/javascript" src="app/components/accordion/accordion.js" defer></script>
-<script type="text/javascript" src="app/components/tabs/tabs.js" defer></script>
-<script type="text/javascript" src="app/components/tooltip/tooltip.directive.js" defer></script>
-<script type="text/javascript" src="app/components/markdown/markdown.directive.js" defer></script>
-<script type="text/javascript" src="app/components/charts/charts.js" defer></script>
-<script type="text/javascript" src="app/components/charts/highcharts-ng.js" defer></script>
-<script type="text/javascript" src="app/helpers/filters.js" defer></script>
-<script type="text/javascript" src="app/helpers/titleService.js" defer></script>
-<script type="text/javascript" src="app/helpers/pathService.js" defer></script>
-<script type="text/javascript" src="ui/js/lib/smart-table.min.js" defer></script>
-<script type="text/javascript" src="/ui/js/lib/highcharts.js" defer></script>
-<script type="text/javascript" src="http://code.highcharts.com/modules/exporting.js" defer></script>
-<script type="text/javascript" src="/ui/js/lib/loading-bar.js" defer></script>
+    <script type="text/javascript" src="app/app.js" defer></script>
+    <script type="text/javascript" src="app/config/config.js" defer></script>
+    <script type="text/javascript" src="app/services/taxonomy/taxonomy.js" defer></script>
+    <script type="text/javascript" src="app/services/download/downloader.js" defer></script>
+    <script type="text/javascript" src="app/services/data/dataloader.js" defer></script>
+    <script type="text/javascript" src="app/templates/taxonomy/taxonomy.controller.js" defer></script>
+    <script type="text/javascript" src="app/templates/t2/t2.controller.js" defer></script>
+    <script type="text/javascript" src="app/templates/t3/t3.controller.js" defer></script>
+    <script type="text/javascript" src="app/templates/t5/t5.controller.js" defer></script>
+    <script type="text/javascript" src="app/templates/t6/t6.controller.js" defer></script>
+    <script type="text/javascript" src="app/templates/search-results/search-results.controller.js" defer></script>
+    <script type="text/javascript" src="app/templates/content/content.controller.js" defer></script>
+    <script type="text/javascript" src="app/templates/article/article.controller.js" defer></script>
+    <script type="text/javascript" src="app/templates/bulletin/bulletin.controller.js" defer></script>
+    <script type="text/javascript" src="app/templates/methodology/methodology.controller.js" defer></script>
+    <script type="text/javascript" src="app/templates/release/release.controller.js" defer></script>
+    <script type="text/javascript" src="app/templates/collection/collection.controller.js" defer></script>
+    <script type="text/javascript" src="app/templates/dataset/dataset.controller.js" defer></script>
+    <script type="text/javascript" src="app/templates/contact/contact.controller.js" defer></script>
+    <script type="text/javascript" src="app/partials/header/header.js" defer></script>
+    <script type="text/javascript" src="app/partials/footer/footer.js" defer></script>
+    <script type="text/javascript" src="app/partials/navigation/navigation.controller.js" defer></script>
+    <script type="text/javascript" src="app/partials/searchbox/searchbox.directive.js" defer></script>
+    <script type="text/javascript" src="app/partials/latest-bulletins/latest-bulletins.directive.js" defer></script>
+    <script type="text/javascript" src="app/partials/release-pane/release-pane.directive.js" defer></script>
+    <script type="text/javascript" src="app/partials/related-articles/related-articles.directive.js" defer></script>
+    <script type="text/javascript" src="app/partials/contact-details/contact-details.directive.js" defer></script>
+    <script type="text/javascript" src="app/partials/tools-pane/tools-pane.directive.js" defer></script>
+    <script type="text/javascript" src="app/components/breadcrumb/breadcrumb.js" defer></script>
+    <script type="text/javascript" src="app/components/navigation/navigation.js" defer></script>
+    <script type="text/javascript" src="app/components/paginator/paginator.js" defer></script>
+    <script type="text/javascript" src="app/components/toggler/toggler.js" defer></script>
+    <script type="text/javascript" src="app/components/accordion/accordion.js" defer></script>
+    <script type="text/javascript" src="app/components/tabs/tabs.js" defer></script>
+    <script type="text/javascript" src="app/components/tooltip/tooltip.directive.js" defer></script>
+    <script type="text/javascript" src="app/components/markdown/markdown.directive.js" defer></script>
+    <!-- <script type="text/javascript" src="app/components/charts/charts.js" defer></script> -->
+    <script type="text/javascript" src="app/components/charts/highcharts-ng.js" defer></script>
+    <script type="text/javascript" src="app/helpers/filters.js" defer></script>
+    <script type="text/javascript" src="app/helpers/util.js" defer></script>
+    <script type="text/javascript" src="app/helpers/pathService.js" defer></script>
+    <script type="text/javascript" src="/ui/js/lib/smart-table.min.js" defer></script>
+    <script type="text/javascript" src="/ui/js/lib/highcharts.js" defer></script>
+    <script type="text/javascript" src="/ui/js/lib/exporting.js" defer></script>
+    <script type="text/javascript" src="/ui/js/lib/loading-bar.js" defer></script>
 
 
-<!-- <script type="text/javascript" src="ui/js/app/nav.js" defer></script>
+    <!-- <script type="text/javascript" src="ui/js/app/nav.js" defer></script>
 <script type="text/javascript" src="ui/js/app/supporting-content.js" defer></script>
 <script type="text/javascript" src="ui/js/app/tables.js" defer></script>
 <script type="text/javascript" src="ui/js/custom-autocomplete.js" defer></script>
  -->
 
-<!---
+    <!---
 title: Angular app page
 external: true
 type: template
@@ -121,28 +123,32 @@ markup: false
 
 <!-- id set to ng-app to make older IE happy with Angular ngInclude directive -->
 <!-- Autoscroll solves the issue mentioned on https://stackoverflow.com/questions/21055952/changing-route-doesnt-scroll-to-top-in-the-new-page -->
-<body id="ng-app" ng-view ng-controller="MainCtrl" autoscroll="true" class="js">
-<noscript>
-<main id="main" role="main" class="ONS_border">
-  <div style="margin: 20px;">
-    <p><img class="clearfix" src="/ui/img/ons-logo.svg" alt="Office for National Statistics" width="300" class="media__img"></p>
-  </div>
-  <hr/>
-  <div style="margin: 20px;">
-    <p>
-    <h2>This page needs JavaScript to be displayed.</h2>
-    </p>
-  </div>
-  <div style="padding-left: 20px;">
-    <p>You can either:</p>
-    <ul>
-      <li>enable Javascript as follows: <a href="http://www.enable-javascript.com/">Enabling JavaScript</a> </li>
-      <li>or browse to a <a href="/static">simplified HTML version</a> of the site (this may be up to a day out of date)</li>
-    </ul>
-    <p>If you are having difficulty accessing this site, please send a Tweet to <a href="https://twitter.com/jukesie">@jukesie</a>.</p>
-  </div>
-  <hr/>
-</main>
-</noscript>
+
+<body id="ng-app" ng-controller="MainCtrl" ng-view autoscroll="true"  class="js" >
+
+    <noscript>
+        <main id="main" role="main" class="ONS_border">
+            <div style="margin: 20px;">
+                <p>
+                    <img class="clearfix" src="/ui/img/ons-logo.svg" alt="Office for National Statistics" width="300" class="media__img">
+                </p>
+            </div>
+            <hr/>
+            <div style="margin: 20px;">
+                <h2>This page needs JavaScript to be displayed.</h2>
+            </div>
+            <div style="padding-left: 20px;">
+                <p>You can either:</p>
+                <ul>
+                    <li>enable Javascript as follows: <a href="http://www.enable-javascript.com/">Enabling JavaScript</a> 
+                    </li>
+                    <li>or browse to a <a href="/static">simplified HTML version</a> of the site (this may be up to a day out of date)</li>
+                </ul>
+                <p>If you are having difficulty accessing this site, please send a Tweet to <a href="https://twitter.com/jukesie">@jukesie</a>.</p>
+            </div>
+            <hr/>
+        </main>
+    </noscript>
 </body>
+
 </html>

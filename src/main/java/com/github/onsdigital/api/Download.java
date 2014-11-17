@@ -3,7 +3,6 @@ package com.github.onsdigital.api;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.LinkedHashMap;
@@ -27,9 +26,9 @@ import org.eclipse.jetty.http.HttpStatus;
  */
 import com.github.davidcarboni.restolino.framework.Endpoint;
 import com.github.davidcarboni.restolino.json.Serialiser;
-import com.github.onsdigital.api.taxonomy.Data;
 import com.github.onsdigital.bean.DateVal;
 import com.github.onsdigital.bean.DownloadRequest;
+import com.github.onsdigital.data.DataService;
 import com.github.onsdigital.json.timeseries.Timeseries;
 import com.github.onsdigital.json.timeseries.TimeseriesValue;
 import com.github.onsdigital.util.CSVGenerator;
@@ -39,7 +38,7 @@ import com.github.onsdigital.util.XLSXGenerator;
 public class Download {
 
 	@POST
-	public void get(@Context HttpServletRequest request, @Context HttpServletResponse response) throws IOException {
+	public void post(@Context HttpServletRequest request, @Context HttpServletResponse response) throws IOException {
 		try {
 			DownloadRequest downloadRequest = Serialiser.deserialise(request, DownloadRequest.class);
 			System.out.println("Download request recieved" + downloadRequest);
@@ -59,7 +58,7 @@ public class Download {
 		// Get the timeseries:
 		List<Timeseries> timeseries = new ArrayList<Timeseries>();
 		for (String uri : downloadRequest.uriList) {
-			try (InputStream input = Files.newInputStream(Data.getData(uri))) {
+			try (InputStream input = DataService.getDataStream(uri)) {
 				timeseries.add(Serialiser.deserialise(input, Timeseries.class));
 			}
 		}

@@ -19,8 +19,8 @@ import org.apache.commons.lang3.StringUtils;
 import com.github.onsdigital.generator.Folder;
 import com.github.onsdigital.generator.data.Data;
 import com.github.onsdigital.generator.data.DataCSV;
-import com.github.onsdigital.json.Section;
 import com.github.onsdigital.json.markdown.Article;
+import com.github.onsdigital.json.markdown.Section;
 
 public class ArticleMarkdown {
 

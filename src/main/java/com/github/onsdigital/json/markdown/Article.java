@@ -5,11 +5,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.github.onsdigital.generator.Folder;
-import com.github.onsdigital.json.CollectionItem;
 import com.github.onsdigital.json.ContentType;
-import com.github.onsdigital.json.Email;
-import com.github.onsdigital.json.Section;
-import com.github.onsdigital.json.TaxonomyHome;
+import com.github.onsdigital.json.collection.CollectionItem;
+import com.github.onsdigital.json.partial.Email;
+import com.github.onsdigital.json.taxonomy.TaxonomyHome;
 
 public class Article extends CollectionItem {
 

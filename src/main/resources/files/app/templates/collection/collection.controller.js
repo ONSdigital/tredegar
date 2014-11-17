@@ -1,16 +1,17 @@
 //Collection Controller
 angular.module('onsTemplates')
-  .controller('CollectionCtrl', ['$scope', '$location', '$http',
-    function($scope, $location, $http) {
-	  console.log('CollectionCtrl invoked')
-	  
-      getData("/collection.json", function(data) {
-        $scope.content = data
-      })
-	  var url = $location.$$path
-	  var lastIndex = url.lastIndexOf('/');
-	  var searchTerm = url.substr(0, lastIndex)
-	  console.log('Searching for collections from: ' + searchTerm)
+  .controller('CollectionCtrl', ['$scope', '$location', '$log', 'DataLoader',
+    function($scope, $location, $log, DataLoader) {
+      $log.debug('CollectionCtrl invoked')
+
+      DataLoader.load("/collection.json")
+        .then(function(data) {
+          $scope.content = data
+        })
+      var url = $location.$$path
+      var lastIndex = url.lastIndexOf('/');
+      var searchTerm = url.substr(0, lastIndex)
+      $log.debug('Searching for collections from: ' + searchTerm)
 
       var getParam = $scope.getUrlParam
       var page = getParam('page')
@@ -26,16 +27,10 @@ angular.module('onsTemplates')
 
       function searchCollection(loc, type, pageNumber) {
         var collectionSearchString = "?loc=" + loc + (contentType ? "&contentType=" + contentType : "") + "&page=" + pageNumber
-        getData("/collectiontaxonomyfilesystem" + collectionSearchString, function(data) {
+        DataLoader.load("/collectiontaxonomyfilesystem" + collectionSearchString).then(function(data) {
           $scope.searchResponse = data
-          console.log(data)
           $scope.pageCount = Math.ceil(data.numberOfResults / 10)
         })
-      }
-
-      function getData(path, callback) {
-           console.log("Loading data at " + path)
-           $http.get(path).success(callback)
       }
 
 
