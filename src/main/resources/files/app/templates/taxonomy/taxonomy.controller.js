@@ -24,32 +24,32 @@
 	
 	function T1RepeatItemController($scope, $location, $log, Downloader, Taxonomy, Chart) {
 		var scopedTimeseries = $scope.item
-        var ctrl = this
-        ctrl.timeseries = scopedTimeseries
-//        console.log('T1RepeatItemController scopedTimeseries data: ' + JSON.stringify(scopedTimeseries))
-        ctrl.chartConfig = Chart.getSparkline(false)
-        ctrl.showYearly = false
-        ctrl.showMonthly = false
-        ctrl.showQuarterly = false
-        ctrl.activeChart = '' //years, months , quarters
-        ctrl.timePeriod = 'A' //All by default
-        ctrl.chartData = []
-        ctrl.years = []
-        ctrl.showCustomFilters = false
-        ctrl.chartVisible = true
-        ctrl.tableVisible = false
-        ctrl.renderChart = false
-        ctrl.tenYears
-        ctrl.quarters = ['Q1', 'Q2', 'Q3', 'Q4']
-        ctrl.months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        var t1 = this
+        t1.timeseries = scopedTimeseries
+        console.log('T1RepeatItemController scopedTimeseries data: ' + JSON.stringify(scopedTimeseries))
+        t1.chartConfig = Chart.getSparkline(false)
+        t1.showYearly = false
+        t1.showMonthly = false
+        t1.showQuarterly = false
+        t1.activeChart = '' //years, months , quarters
+        t1.timePeriod = 'A' //All by default
+        t1.chartData = []
+        t1.years = []
+        t1.showCustomFilters = false
+        t1.chartVisible = true
+        t1.tableVisible = false
+        t1.renderChart = false
+        t1.tenYears
+        t1.quarters = ['Q1', 'Q2', 'Q3', 'Q4']
+        t1.months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 
         initialize()
-        changeChartType(ctrl.activeChart)
+        changeChartType(t1.activeChart)
 
         function changeChartType(chartType) {
         	console.log('chartType: ' + chartType)
             console.log("Changing chart type to " + chartType)
-            ctrl.activeChart = chartType
+            t1.activeChart = chartType
             changeTimePeriod('A') //List all data on chart data change
         }
 
@@ -59,24 +59,24 @@
             timePeriod = timePeriod || 'Custom'
             console.log("Changing time period to " + timePeriod)
 
-            ctrl.timePeriod = timePeriod
+            t1.timePeriod = timePeriod
             prepareData()
         }
 
         function prepareData() {
-            if (!ctrl.renderChart) {
+            if (!t1.renderChart) {
                 return
             }
             resolveFilters()
-            ctrl.chartData = filterValues()
-            ctrl.chartConfig.series[0].data = ctrl.chartData
-            ctrl.years = getYears()
-            ctrl.tenYears = tenYears(ctrl.years)
-            ctrl.chartConfig.options.xAxis.tickInterval = tickInterval(ctrl.chartData.length);
+            t1.chartData = filterValues()
+            t1.chartConfig.series[0].data = t1.chartData
+            t1.years = getYears()
+            t1.tenYears = tenYears(t1.years)
+            t1.chartConfig.options.xAxis.tickInterval = tickInterval(t1.chartData.length);
 
             console.log("Chart:")
-            console.log(ctrl.chartConfig)
-            console.log("10y = " + ctrl.tenYears)
+            console.log(t1.chartConfig)
+            console.log("10y = " + t1.tenYears)
 
 
             function tenYears(array) {
@@ -112,8 +112,8 @@
                 var from
                 var to
 
-                from = ctrl.fromYear + (ctrl.fromQuarter ? Chart.quarterVal(ctrl.fromQuarter) : '') + (ctrl.fromMonth ? Chart.monthVal(ctrl.fromMonth) : '')
-                to = ctrl.toYear + (ctrl.toQuarter ? Chart.quarterVal(ctrl.toQuarter) : '') + (ctrl.toMonth ? Chart.monthVal(ctrl.toMonth) : '')
+                from = t1.fromYear + (t1.fromQuarter ? Chart.quarterVal(t1.fromQuarter) : '') + (t1.fromMonth ? Chart.monthVal(t1.fromMonth) : '')
+                to = t1.toYear + (t1.toQuarter ? Chart.quarterVal(t1.toQuarter) : '') + (t1.toMonth ? Chart.monthVal(t1.toMonth) : '')
                 from = +from //Cast to number
                 to = +to
                 console.log("From: ", from)
@@ -135,33 +135,33 @@
                 var currentYear = now.getFullYear()
                 var tenYearsAgo = currentYear - 10
                 var fiveYearsAgo = currentYear - 5
-                switch (ctrl.timePeriod) {
+                switch (t1.timePeriod) {
 
                     case 'A': //All
-                        ctrl.fromYear = first.year
-                        ctrl.fromMonth = first.month ? first.month.slice(0, 3) : first.month
-                        ctrl.fromQuarter = first.quarter
+                        t1.fromYear = first.year
+                        t1.fromMonth = first.month ? first.month.slice(0, 3) : first.month
+                        t1.fromQuarter = first.quarter
                         break
                     case '10':
                         if (tenYearsAgo < first.year) { //Use first if within 10 years
-                            ctrl.fromYear = first.year
-                            ctrl.fromMonth = first.month ? first.month.slice(0, 3) : first.month
-                            ctrl.fromQuarter = first.quarter
+                            t1.fromYear = first.year
+                            t1.fromMonth = first.month ? first.month.slice(0, 3) : first.month
+                            t1.fromQuarter = first.quarter
                         } else {
-                            ctrl.fromYear = '' + tenYearsAgo
-                            ctrl.fromQuarter = isActive('quarters') ? 'Q1' : undefined
-                            ctrl.fromMonth = isActive('months') ? 'Jan' : undefined
+                            t1.fromYear = '' + tenYearsAgo
+                            t1.fromQuarter = isActive('quarters') ? 'Q1' : undefined
+                            t1.fromMonth = isActive('months') ? 'Jan' : undefined
                         }
                         break
                     case '5':
                         if (fiveYearsAgo < first.year) { //Use first if within 10 years
-                            ctrl.fromYear = first.year
-                            ctrl.fromMonth = first.month ? first.month.slice(0, 3) : first.month
-                            ctrl.fromQuarter = first.quarter
+                            t1.fromYear = first.year
+                            t1.fromMonth = first.month ? first.month.slice(0, 3) : first.month
+                            t1.fromQuarter = first.quarter
                         } else {
-                            ctrl.fromYear = '' + fiveYearsAgo
-                            ctrl.fromQuarter = isActive('quarters') ? 'Q1' : undefined
-                            ctrl.fromMonth = isActive('months') ? 'Jan' : undefined
+                            t1.fromYear = '' + fiveYearsAgo
+                            t1.fromQuarter = isActive('quarters') ? 'Q1' : undefined
+                            t1.fromMonth = isActive('months') ? 'Jan' : undefined
                         }
                         break
                     case 'Custom':
@@ -170,81 +170,81 @@
 
                 }
 
-                ctrl.toYear = last.year
-                ctrl.toMonth = last.month ? last.month.slice(0, 3) : last.month
-                ctrl.toQuarter = last.quarter
+                t1.toYear = last.year
+                t1.toMonth = last.month ? last.month.slice(0, 3) : last.month
+                t1.toQuarter = last.quarter
             }
         }
 
 
         function toggleCustomFilters() {
-            ctrl.showCustomFilters = !ctrl.showCustomFilters
+            t1.showCustomFilters = !t1.showCustomFilters
         }
 
         function isActive(chartType) {
-            return chartType === ctrl.activeChart
+            return chartType === t1.activeChart
         }
 
 
         function showTable() {
-            if (ctrl.tableVisible) {
+            if (t1.tableVisible) {
                 return
             }
 
-            ctrl.tableVisible = true
-            ctrl.chartVisible = false
+            t1.tableVisible = true
+            t1.chartVisible = false
         }
 
         function showChart() {
-            if (ctrl.chartVisible) {
+            if (t1.chartVisible) {
                 return
             }
-            ctrl.chartVisible = true
-            ctrl.tableVisible = false
+            t1.chartVisible = true
+            t1.tableVisible = false
         }
 
         function getAllValues() {
-            return ctrl.timeseries[ctrl.activeChart].values
+            return t1.timeseries[t1.activeChart].values
         }
 
         function getYears() {
-            return ctrl.timeseries[ctrl.activeChart].years
+            return t1.timeseries[t1.activeChart].years
         }
 
         //Initialize controller and configuration
         function initialize() {
             resolveChartTypes()
-            ctrl.chartConfig.series[0].name = ctrl.timeseries.name
+            t1.chartConfig.series[0].name = t1.timeseries.name
             prepareData()
 
             function resolveChartTypes() {
-                var data = ctrl.timeseries
+                var data = t1.timeseries
                 
-//                console.log('ctrl: ' + JSON.stringify(ctrl.timeseries))
+//                console.log('t1: ' + JSON.stringify(t1.timeseries))
                 
-                ctrl.showYearly = Chart.isNotEmpty(data.years)
-                ctrl.showMonthly = Chart.isNotEmpty(data.months)
-                ctrl.showQuarterly = Chart.isNotEmpty(data.quarters)
+                t1.showYearly = Chart.isNotEmpty(data.years)
+                t1.showMonthly = Chart.isNotEmpty(data.months)
+                t1.showQuarterly = Chart.isNotEmpty(data.quarters)
                 
-                if (ctrl.showMonthly) {
-                    ctrl.activeChart = 'months'
+                if (t1.showMonthly) {
+                    t1.activeChart = 'months'
                     data.months = Chart.formatData(data.months)
                 }
 
-                if (ctrl.showQuarterly) {
-                    ctrl.activeChart = 'quarters'
+                if (t1.showQuarterly) {
+                    t1.activeChart = 'quarters'
                     data.quarters = Chart.formatData(data.quarters)
 
                 }
 
-                if (ctrl.showYearly) {
-                    ctrl.activeChart = 'years'
+                if (t1.showYearly) {
+                    t1.activeChart = 'years'
                     data.years = Chart.formatData(data.years)
                 }
 
-                if ((ctrl.showMonthly || ctrl.showYearly || ctrl.showQuarterly)) {
-                    ctrl.renderChart = true
-                    console.log('ctrl.renderChart: ' + ctrl.renderChart)
+                if ((t1.showMonthly || t1.showYearly || t1.showQuarterly)) {
+                    t1.renderChart = true
+                    console.log('t1.renderChart: ' + t1.renderChart)
                 }
 
             }
