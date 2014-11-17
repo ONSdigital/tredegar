@@ -30,7 +30,14 @@
               </header>
               <section ng-repeat="item in section.itemData" class="nav-panel__roomy">
                 <p><a href="#!{{item.uri}}">{{item.name}}</a></p>
-
+		      <div>
+		        <div ng-controller="T1RepeatItemController as chart">
+			        <div ng-if="chart.chartVisible">
+			            <highchart class="highcharts-background" id="chart_prices" config="chart.chartConfig">
+			            </highchart>
+			        </div>
+				</div>
+		      </div> 
               <div class="box box--inline flush--bottom">
                   <div class="stat">
                     <div class="stat--small stat__figure">
@@ -41,6 +48,7 @@
                   </div>
                   <p> {{item.date}}  <span tabindex="0" class="tooltips icon-info-circled icon--warm icon--inline icon--large icon--med tooltipstered"></span>
               </div>
+             
               </section>
                 </div>
               <footer class="nav-panel__footer">

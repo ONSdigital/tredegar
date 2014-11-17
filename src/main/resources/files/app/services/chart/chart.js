@@ -184,7 +184,7 @@
 				widthValue = 140
 				heightValue = 100
 			} else {
-				widthValue = 140
+				widthValue = 50
 				heightValue = 50
 			}
 			
