@@ -11,4 +11,9 @@ describe('services', function() {
   it('check the existence of Chart service', inject(function(Chart) {
       expect(Chart).toBeDefined();
     }));
+  
+  // Test service availability
+//  it('check the existence of ArrayUtil service', inject(function(ArrayUtil) {
+//      expect(Chart).toBeDefined();
+//    }));
 });
