@@ -48,7 +48,7 @@ public class Download {
 		} catch (IOException e) {
 			response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR_500);
 			response.setContentType("text/plain");
-			response.getWriter().write("An error occured while processing download request");
+			response.getWriter().write("An error occured while processing this download request");
 		}
 	}
 
