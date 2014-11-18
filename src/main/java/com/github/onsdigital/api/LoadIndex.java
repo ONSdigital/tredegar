@@ -88,7 +88,8 @@ public class LoadIndex {
 
 			Map<String, String> documentMap = LoadIndexHelper
 					.getDocumentMap(absoluteFilePath);
-			if (documentMap != null) {
+			if (documentMap != null
+					&& StringUtils.isNotEmpty(documentMap.get("title"))) {
 				buildDocument(client, documentMap, idCounter);
 			}
 		}
