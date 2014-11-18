@@ -1,11 +1,23 @@
 {
-  "headline": "/peoplepopulationandcommunity/populationandmigration/populationprojections/timeseries/raid130",
+  "headline": {
+    "name": "Mid-2037 UK population projected to reach",
+    "uri": "/peoplepopulationandcommunity/populationandmigration/populationprojections/timeseries/raid130"
+  },
   "items": [
-    "/peoplepopulationandcommunity/populationandmigration/populationprojections/timeseries/raid130"
+    {
+      "name": "Mid-2037 UK population projected to reach",
+      "uri": "/peoplepopulationandcommunity/populationandmigration/populationprojections/timeseries/raid130"
+    }
   ],
-  "statsBulletinHeadline": "/peoplepopulationandcommunity/populationandmigration/populationprojections/bulletins/nationalpopulationprojections2012based",
+  "statsBulletinHeadline": {
+    "name": "National Population Projections, 2012-based",
+    "uri": "/peoplepopulationandcommunity/populationandmigration/populationprojections/bulletins/nationalpopulationprojections2012based"
+  },
   "statsBulletins": [
-    "/peoplepopulationandcommunity/populationandmigration/populationprojections/bulletins/nationalpopulationprojections2012based"
+    {
+      "name": "National Population Projections, 2012-based",
+      "uri": "/peoplepopulationandcommunity/populationandmigration/populationprojections/bulletins/nationalpopulationprojections2012based"
+    }
   ],
   "datasets": [],
   "level": "t3",

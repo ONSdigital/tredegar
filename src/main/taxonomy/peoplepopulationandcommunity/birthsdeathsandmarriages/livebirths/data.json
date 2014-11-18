@@ -1,10 +1,25 @@
 {
-  "headline": "/peoplepopulationandcommunity/birthsdeathsandmarriages/livebirths/timeseries/raid53",
+  "headline": {
+    "name": "Live births in England and Wales",
+    "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/livebirths/timeseries/raid53"
+  },
   "items": [
-    "/peoplepopulationandcommunity/birthsdeathsandmarriages/livebirths/timeseries/raid53",
-    "/peoplepopulationandcommunity/birthsdeathsandmarriages/livebirths/timeseries/raid54",
-    "/peoplepopulationandcommunity/birthsdeathsandmarriages/livebirths/timeseries/raid55",
-    "/peoplepopulationandcommunity/birthsdeathsandmarriages/livebirths/timeseries/raid56"
+    {
+      "name": "Live births in England and Wales",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/livebirths/timeseries/raid53"
+    },
+    {
+      "name": "Total fertility rate",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/livebirths/timeseries/raid54"
+    },
+    {
+      "name": "Live births outside marriage",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/livebirths/timeseries/raid55"
+    },
+    {
+      "name": "Live births to non-UK born mothers",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/livebirths/timeseries/raid56"
+    }
   ],
   "statsBulletins": [],
   "datasets": [],

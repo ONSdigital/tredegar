@@ -1,7 +1,13 @@
 {
-  "headline": "/peoplepopulationandcommunity/birthsdeathsandmarriages/maternities/timeseries/raid60",
+  "headline": {
+    "name": "Number of maternities",
+    "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/maternities/timeseries/raid60"
+  },
   "items": [
-    "/peoplepopulationandcommunity/birthsdeathsandmarriages/maternities/timeseries/raid60"
+    {
+      "name": "Number of maternities",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/maternities/timeseries/raid60"
+    }
   ],
   "statsBulletins": [],
   "datasets": [],

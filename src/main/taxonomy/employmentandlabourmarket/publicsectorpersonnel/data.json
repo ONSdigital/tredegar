@@ -1,16 +1,43 @@
 {
-  "headline": "/employmentandlabourmarket/publicsectorpersonnel/timeseries/g7au",
+  "headline": {
+    "name": "Total public sector employees: Head count",
+    "uri": "/employmentandlabourmarket/publicsectorpersonnel/timeseries/g7au"
+  },
   "items": [
-    "/employmentandlabourmarket/publicsectorpersonnel/timeseries/g7au",
-    "/employmentandlabourmarket/publicsectorpersonnel/timeseries/g7g3",
-    "/employmentandlabourmarket/publicsectorpersonnel/timeseries/g6nq",
-    "/employmentandlabourmarket/publicsectorpersonnel/timeseries/g7fp",
-    "/employmentandlabourmarket/publicsectorpersonnel/timeseries/g6nt",
-    "/employmentandlabourmarket/publicsectorpersonnel/timeseries/g7fs"
+    {
+      "name": "Total public sector employees: Head count",
+      "uri": "/employmentandlabourmarket/publicsectorpersonnel/timeseries/g7au"
+    },
+    {
+      "name": "Total public sector employees: Full time equivalent",
+      "uri": "/employmentandlabourmarket/publicsectorpersonnel/timeseries/g7g3"
+    },
+    {
+      "name": "Central government: Head count",
+      "uri": "/employmentandlabourmarket/publicsectorpersonnel/timeseries/g6nq"
+    },
+    {
+      "name": "Central government: Full time equivalent",
+      "uri": "/employmentandlabourmarket/publicsectorpersonnel/timeseries/g7fp"
+    },
+    {
+      "name": "Local government: Head count",
+      "uri": "/employmentandlabourmarket/publicsectorpersonnel/timeseries/g6nt"
+    },
+    {
+      "name": "Local government: Full time equivalent",
+      "uri": "/employmentandlabourmarket/publicsectorpersonnel/timeseries/g7fs"
+    }
   ],
-  "statsBulletinHeadline": "/employmentandlabourmarket/publicsectorpersonnel/bulletins/publicsectoremploymentq12014",
+  "statsBulletinHeadline": {
+    "name": "Public Sector Employment, Q1 2014",
+    "uri": "/employmentandlabourmarket/publicsectorpersonnel/bulletins/publicsectoremploymentq12014"
+  },
   "statsBulletins": [
-    "/employmentandlabourmarket/publicsectorpersonnel/bulletins/publicsectoremploymentq12014"
+    {
+      "name": "Public Sector Employment, Q1 2014",
+      "uri": "/employmentandlabourmarket/publicsectorpersonnel/bulletins/publicsectoremploymentq12014"
+    }
   ],
   "datasets": [],
   "level": "t3",

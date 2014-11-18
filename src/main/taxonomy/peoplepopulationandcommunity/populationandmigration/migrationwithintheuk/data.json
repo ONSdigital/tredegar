@@ -1,11 +1,23 @@
 {
-  "headline": "/peoplepopulationandcommunity/populationandmigration/migrationwithintheuk/timeseries/raid120",
+  "headline": {
+    "name": "Residents moving between local authorities",
+    "uri": "/peoplepopulationandcommunity/populationandmigration/migrationwithintheuk/timeseries/raid120"
+  },
   "items": [
-    "/peoplepopulationandcommunity/populationandmigration/migrationwithintheuk/timeseries/raid120"
+    {
+      "name": "Residents moving between local authorities",
+      "uri": "/peoplepopulationandcommunity/populationandmigration/migrationwithintheuk/timeseries/raid120"
+    }
   ],
-  "statsBulletinHeadline": "/peoplepopulationandcommunity/populationandmigration/migrationwithintheuk/bulletins/internalmigrationenglandandwalesyearendingjune2013",
+  "statsBulletinHeadline": {
+    "name": "Internal Migration, England and Wales, Year Ending June 2013",
+    "uri": "/peoplepopulationandcommunity/populationandmigration/migrationwithintheuk/bulletins/internalmigrationenglandandwalesyearendingjune2013"
+  },
   "statsBulletins": [
-    "/peoplepopulationandcommunity/populationandmigration/migrationwithintheuk/bulletins/internalmigrationenglandandwalesyearendingjune2013"
+    {
+      "name": "Internal Migration, England and Wales, Year Ending June 2013",
+      "uri": "/peoplepopulationandcommunity/populationandmigration/migrationwithintheuk/bulletins/internalmigrationenglandandwalesyearendingjune2013"
+    }
   ],
   "datasets": [],
   "level": "t3",

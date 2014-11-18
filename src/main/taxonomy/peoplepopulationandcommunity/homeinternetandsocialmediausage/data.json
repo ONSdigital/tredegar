@@ -1,12 +1,27 @@
 {
-  "headline": "/peoplepopulationandcommunity/homeinternetandsocialmediausage/timeseries/raid101",
+  "headline": {
+    "name": "Adults in the UK that have used the Internet",
+    "uri": "/peoplepopulationandcommunity/homeinternetandsocialmediausage/timeseries/raid101"
+  },
   "items": [
-    "/peoplepopulationandcommunity/homeinternetandsocialmediausage/timeseries/raid101",
-    "/peoplepopulationandcommunity/homeinternetandsocialmediausage/timeseries/raid102"
+    {
+      "name": "Adults in the UK that have used the Internet",
+      "uri": "/peoplepopulationandcommunity/homeinternetandsocialmediausage/timeseries/raid101"
+    },
+    {
+      "name": "Adults that have never used the Internet",
+      "uri": "/peoplepopulationandcommunity/homeinternetandsocialmediausage/timeseries/raid102"
+    }
   ],
-  "statsBulletinHeadline": "/peoplepopulationandcommunity/homeinternetandsocialmediausage/bulletins/internetaccessquarterlyupdateq12014",
+  "statsBulletinHeadline": {
+    "name": "Internet Access Quarterly Update, Q1 2014",
+    "uri": "/peoplepopulationandcommunity/homeinternetandsocialmediausage/bulletins/internetaccessquarterlyupdateq12014"
+  },
   "statsBulletins": [
-    "/peoplepopulationandcommunity/homeinternetandsocialmediausage/bulletins/internetaccessquarterlyupdateq12014"
+    {
+      "name": "Internet Access Quarterly Update, Q1 2014",
+      "uri": "/peoplepopulationandcommunity/homeinternetandsocialmediausage/bulletins/internetaccessquarterlyupdateq12014"
+    }
   ],
   "datasets": [],
   "level": "t3",

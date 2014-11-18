@@ -31,14 +31,14 @@
             <div class="divider">
               <div class="divider__half divider__half--border divider__half--border-first">
                 <h2 tooltip="Percentage change over 12 months <br><br> Not seasonally adjusted" tooltip-class="icon--inline--large-text icon--small"  class="beta">
-                    <a href="#!{{taxonomy.data.headlineData.uri}}">{{taxonomy.data.headlineData.name}}</a>
+                    <a href="#!{{taxonomy.data.headlineData.uri}}">{{taxonomy.data.headline.name}}</a>
                 </h2>
                 <div class="box box--inline box--padded muted--dark">
                   <div class="stat stat--headline">
                     <div class="stat__figure">
-                  	  <span class="stat__figure__unit">{{taxonomy.data.headlineData.preUnit}}</span>
-                      {{taxonomy.data.headlineData.number}}
-                      <span class="stat__figure__unit"> {{taxonomy.data.headlineData.unit}}</span>
+                  	  <span class="stat__figure__unit">{{taxonomy.data.headline.data.preUnit}}</span>
+                      {{taxonomy.data.headline.data.number}}
+                      <span class="stat__figure__unit"> {{taxonomy.data.headline.data.unit}}</span>
                     </div>
 
                   </div>
@@ -47,12 +47,12 @@
                 <dl class="definition mini">
                   <dt>Last updated:</dt>
                   <dd>
-                  {{taxonomy.data.headlineData.lastUpated}}
+                  {{taxonomy.data.headline.data.lastUpated}}
                   <!-- 16 Sep 2014 -->
                   </dd>
                   <dt>Next update:</dt>
                   <dd>
-                  {{taxonomy.data.headlineData.nextUpdate}}
+                  {{taxonomy.data.headline.data.nextUpdate}}
                   <!-- 14 Oct 2014 -->
                   </dd>
                 </dl>
@@ -65,14 +65,14 @@
               <div id="statsBulletinHeadlines" class="divider__half">
                 <h3 class="body-type lede flush--bottom navpanel-list-heading">Statistical Bulletin Headlines</h3>
                 <ul class="list--bullet mini flush--half--top navpanel-list">
-                  <li ng-if="taxonomy.data.statsBulletinHeadlineData.headline1">{{taxonomy.data.statsBulletinHeadlineData.headline1}}</li>
-                  <li ng-if="taxonomy.data.statsBulletinHeadlineData.headline1">{{taxonomy.data.statsBulletinHeadlineData.headline2}}</li>
-                  <li ng-if="taxonomy.data.statsBulletinHeadlineData.headline1">{{taxonomy.data.statsBulletinHeadlineData.headline3}}</li>
-                  <li ng-if="!taxonomy.data.statsBulletinHeadlineData">Lorem ipsum dolor sit amet, vel oporteat percipitur ex, quando persecuti id mea, pri at nihil essent aliquid.</li>
-                  <li ng-if="!taxonomy.data.statsBulletinHeadlineData">Lorem ipsum dolor sit amet, vel oporteat percipitur ex, quando persecuti id mea, pri at nihil essent aliquid.</li>
-                  <li ng-if="!taxonomy.data.statsBulletinHeadlineData">Lorem ipsum dolor sit amet, vel oporteat percipitur ex, quando persecuti id mea, pri at nihil essent aliquid.</li>
+                  <li ng-if="taxonomy.data.statsBulletinHeadline.data.headline1">{{taxonomy.data.statsBulletinHeadline.data.headline1}}</li>
+                  <li ng-if="taxonomy.data.statsBulletinHeadline.data.headline1">{{taxonomy.data.statsBulletinHeadline.data.headline2}}</li>
+                  <li ng-if="taxonomy.data.statsBulletinHeadline.data.headline1">{{taxonomy.data.statsBulletinHeadline.data.headline3}}</li>
+                  <li ng-if="!taxonomy.data.statsBulletinHeadline.data">Lorem ipsum dolor sit amet, vel oporteat percipitur ex, quando persecuti id mea, pri at nihil essent aliquid.</li>
+                  <li ng-if="!taxonomy.data.statsBulletinHeadline.data">Lorem ipsum dolor sit amet, vel oporteat percipitur ex, quando persecuti id mea, pri at nihil essent aliquid.</li>
+                  <li ng-if="!taxonomy.data.statsBulletinHeadline.data">Lorem ipsum dolor sit amet, vel oporteat percipitur ex, quando persecuti id mea, pri at nihil essent aliquid.</li>
                   </ul>
-                    <a class="div_panel_link" href="#!{{taxonomy.data.statsBulletinHeadlineData.uri ? taxonomy.data.statsBulletinHeadlineData.uri : '/economy/inflationandpriceindices/bulletins/consumerpriceinflation'}}">
+                    <a class="div_panel_link" href="#!{{taxonomy.data.statsBulletinHeadline.data.uri ? taxonomy.data.statsBulletinHeadline.data.uri : '/economy/inflationandpriceindices/bulletins/consumerpriceinflation'}}">
                       View the statistical bulletin &gt;
                     </a>
               </div>
@@ -89,7 +89,7 @@
 <!-- List/Table with data -->
   <section id="timeseries" class="panel--large wrapper">
 
-    <table table id="Datatable" st-table="taxonomy.data.itemData" class=" tablesorter data-table list--table list--table--complex table--striped-light table-light--sectioned">
+    <table table id="Datatable" st-table="taxonomy.data.items" class=" tablesorter data-table list--table list--table--complex table--striped-light table-light--sectioned">
       <thead>
         <th colspan="4" >
           <div class="list--table-header split__title">
@@ -107,7 +107,7 @@
       </thead>
 
     <tbody>
-      <tr ng-repeat="item in taxonomy.data.itemData" class="list--table__item list--table__body datatable-row">
+      <tr ng-repeat="item in taxonomy.data.items" class="list--table__item list--table__body datatable-row">
         <td class="data_table_section-title">
           <div class="list--table__item__body list--table__item__body--caption responsive_large_width">
             <h3 class="nav-panel__heading">
@@ -115,8 +115,8 @@
               <!-- CPI Index -->
                 <span tabindex="0" class="tooltip icon-info-circled icon--warm icon--inline tooltipstered"></span>
             </h3>
-            <div class="micro list--table__item__body body_update_media body_update_media">Last updated: {{item.lastUpated}} <br>
-               Next Updated: <span class="red_highlight"> {{item.nextUpdate}} </span>
+            <div class="micro list--table__item__body body_update_media body_update_media">Last updated: {{item.data.lastUpated}} <br>
+               Next Update: <span class="red_highlight"> {{item.data.nextUpdate}} </span>
             </div>
           </div>
         </td>
@@ -125,14 +125,14 @@
          <div class="list--table__item__body list--table__item__body--stat stat  responsive_med_width">
             <div class="list--table__item__body--centred">
               <div class="stat__figure stat__tight">
-                 <span class="stat__figure__unit">{{item.preUnit}}</span>
+                 <span class="stat__figure__unit">{{item.data.preUnit}}</span>
                  <!-- % -->
-                 {{item.number}}
+                 {{item.data.number}}
                  <!-- 1.5 -->
-                 <span class="stat__figure__unit">{{item.unit}}</span>
+                 <span class="stat__figure__unit">{{item.data.unit}}</span>
                  <!-- % -->
               </div>
-              <time class="stat__description" datetime="2014-01">{{item.date}}
+              <time class="stat__description" datetime="2014-01">{{item.data.date}}
               <!-- January 2014 -->
               </time>
             </div>
@@ -140,8 +140,8 @@
         </td>
 
       <td class="update_responsive">
-        <div class="micro list--table__item__body list--table__item__body--update  body_update_desk">Last updated: {{item.lastUpated}} <br>
-          Next Updated: <span class="red_highlight"> {{item.nextUpdate}} </span>
+        <div class="micro list--table__item__body list--table__item__body--update  body_update_desk">Last updated: {{item.data.lastUpated}} <br>
+          Next Update: <span class="red_highlight"> {{item.data.nextUpdate}} </span>
         </div>
       </td>
 
@@ -197,7 +197,7 @@
           <a class="" href="#!{{getPath()}}/collection?contentType=datasets">View more datasets</a>
         </header>
         <div class="grid-wrap">
-        <div ng-if="(taxonomy.data.keyDatasets).length == 0">
+        <div ng-if="(taxonomy.data.datasets).length == 0">
           <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
             <article class="box box--padded sectioned lifted border-defined">
               <header class="box__header">
@@ -284,9 +284,8 @@
             <!-- /box -->
           </div>
         </div>
-        <div ng-repeat="dataset in taxonomy.data.keyDatasets track by $index">
 				<!-- /box -->
-			<div ng-if="$index == 0" class="grid-col desktop-grid-one-third tablet-grid-one-half">
+			<div ng-repeat="dataset in taxonomy.data.datasets track by $index" class="grid-col desktop-grid-one-third tablet-grid-one-half">
             <article class="box box--padded sectioned lifted border-defined">
               <header class="box__header">
                 <h3 class="gamma">
@@ -296,7 +295,7 @@
               <!-- /box__header -->
               <div class="box__content">
                 <ul class="list--table">
-                  <li class="">{{dataset.summary}}</li>
+                  <li class="">{{dataset.data.summary}}</li>
                   <!-- <li>Between 1997 and 2011 the contribution of building to total GVA decreased in each of the NUTS1 regions.</li> -->
                 </ul>
                 <p class="lozenge">Dataset</p>
@@ -312,65 +311,6 @@
               <!-- /box__actions -->
             </article>
             <!-- /box -->
-          </div>
-          <!-- /grid-col -->
-          <div ng-if="$index == 1" class="grid-col desktop-grid-one-third tablet-grid-one-half">
-            <article class="box box--padded sectioned lifted border-defined">
-              <header class="box__header">
-                <h3 class="gamma">
-                  <a href=#!{{dataset.uri}}>{{dataset.name}}</a>
-                </h3>
-              </header>
-              <!-- /box__header -->
-              <div class="box__content">
-                <ul class="list--table">
-                  <li>{{dataset.summary}}</li>
-                  <!-- <li>Falls in transport services costs, notably air fares</li> -->
-                </ul>
-                <p class="lozenge">Dataset</p>
-                <!-- /list- -bullet -->
-              </div>
-              <!-- /box__content -->
-              <!-- <footer class="box__footer box__actions">
-                <a class="btn btn--primary btn--small btn--narrow align_right" href="#">
-            Download .xls
-            <span class="icon icon-download icon--button-inline"></span>
-          </a>
-              </footer> -->
-            </article>
-            <!-- /box -->
-          </div>
-          <!-- /grid-col -->
-          <div ng-if="$index == 2" class="grid-col desktop-grid-one-third tablet-grid-one-half tablet-grid-clear">
-            <article class="box box--padded sectioned lifted border-defined">
-              <header class="box__header">
-                <h3 class="gamma">
-                  <a href="#!{{dataset.uri}}">{{dataset.name}}</a>
-                </h3>
-              </header>
-              <!-- /box__header -->
-              <div class="box__content">
-                <ul class="list--table">
-                  <li>{{dataset.summary}}</li>
-                  <!-- <li>Between 1997 and 2011 the contribution of building to total GVA
-                    decreased in each of the NUTS1 regions.</li>
-                  <li>In 2012 the South East had the largest increase in GVA</li>
-                  <li>Between 1997 and 2011 the contribution of building to total GVA
-                    decreased in each of the NUTS1 regions.</li> -->
-                </ul>
-                <p class="lozenge">Dataset</p>
-                <!-- /list- -bullet -->
-              </div>
-              <!-- /box__content -->
-              <!-- <footer class="box__footer box__actions">
-                <a class="btn btn--primary btn--small btn--narrow align_right" href="#">
-            Download .xls
-            <span class="icon icon-download icon--button-inline"></span>
-          </a>
-              </footer> -->
-            </article>
-            <!-- /box -->
-          </div>
           </div>
           <!-- /grid-col -->
           <div class="grid-col hide-large">
