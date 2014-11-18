@@ -210,11 +210,12 @@
       return {
         restrict: 'A',
         require: '^onsNav',
-        link: NavMobileLink
+        link: NavMobileLink,
+        transclude:true,
+        template : '<span ng-transclude ng-show="isMobile()"></span>'
       }
 
       function NavMobileLink(scope, element, attrs, navigation) {
-        element.attr('ng-show', 'isMobile()')
 
         function isMobile() {
           return navigation.mobile
@@ -232,11 +233,12 @@
       return {
         restrict: 'A',
         require: '^onsNav',
-        link: NavDesktopLink
+        link: NavDesktopLink,
+        transclude:true,
+        template : '<span ng-transclude ng-show="isDesktop()"></span>'
       }
 
       function NavDesktopLink(scope, element, attrs, navigation) {
-        element.attr('ng-show', 'isDesktop()')
 
         function isDesktop() {
           return !navigation.mobile

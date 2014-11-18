@@ -30,6 +30,8 @@ public class LoadIndexHelper {
 	private static final String TAGS = "tags";
 	private static final String TITLE = "title";
 	private static final String TYPE = "type";
+	private static final String LEDE = "lede";
+	private static final String NOTE = "note1";
 	private static final String URL = "url";
 	private static final String DELIMITTER = "/";
 
@@ -71,34 +73,36 @@ public class LoadIndexHelper {
 		ContentType contentType = ContentType.valueOf(type);
 		String splitUrl = url.substring(0, url.indexOf(fileName));
 		String title = getField(jsonObject, TITLE);
-
+		String lede = getField(jsonObject, LEDE);
 		switch (contentType) {
 		case home:
 			String name = getField(jsonObject, NAME);
-			documentMap = buildDocumentMap(splitUrl, splitPath, type, name);
+			documentMap = buildDocumentMap(splitUrl, splitPath, type, name,lede);
 			break;
 		case timeseries:
 			String cdid = getField(jsonObject, CDID);
-			documentMap = buildDocumentMap(splitUrl, splitPath, type, cdid);
+			lede = getField(jsonObject, NOTE);
+			documentMap = buildDocumentMap(splitUrl, splitPath, type, cdid,lede);
 			break;
 		case unknown:
 			System.out.println("json file: " + absoluteFilePath + "has unknown content type: " + contentType);
 			break;
 		default:
-			documentMap = buildDocumentMap(splitUrl, splitPath, type, title);
+			documentMap = buildDocumentMap(splitUrl, splitPath, type, title, lede);
 			break;
 		}
 
 		return documentMap;
 	}
 
-	private static Map<String, String> buildDocumentMap(String url, String[] splitPath, String type, String title) {
+	private static Map<String, String> buildDocumentMap(String url, String[] splitPath, String type, String title, String lede) {
 
 		Map<String, String> documentMap = new HashMap<String, String>();
 		documentMap.put(URL, url);
 		documentMap.put(TYPE, type);
 		documentMap.put(TITLE, title);
 		documentMap.put(TAGS, Arrays.toString(splitPath));
+		documentMap.put(LEDE, lede);
 		return documentMap;
 	}
 

@@ -60,7 +60,7 @@
 			var uriList = []
 			for (var i = 0; i < items.length; i++) {
 				if (items[i].isSelected) {
-					uriList.push(items[i].url)
+					uriList.push(items[i].uri)
 				}
 			}
 			return uriList

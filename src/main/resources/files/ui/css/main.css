@@ -1971,10 +1971,6 @@ a {
   margin-top: 20px;
   margin-top: 2rem; }
 
-.box__bottom {
-  margin-bottom: 7px;
-  margin-bottom: .7rem; }
-
 /** padding classes               */
 .box--padded {
   padding: 25px;
@@ -2095,7 +2091,7 @@ a {
   border-left-color: #f37121; }
 
 .box--blue--separated-left:before {
-  border-left-color: #0054aa; }
+  border-left-color: #008998; }
 
 .box--teal--separated-left:before {
   border-left-color: #008998; }
@@ -2654,13 +2650,29 @@ lesser , applied styles
   letter-spacing: .1em;
   color: #888;
   text-transform: uppercase;
-  /*cursor: pointer; Commented out as part of Lozenge redesign
-  /*background-color: #adafa7;*/}
-  /*.lozenge:hover, .lozenge:active, .lozenge:focus {
+  cursor: pointer; /*Commented out as part of Lozenge redesign*/
+  /*background-color: #adafa7;*/
+}
+.lozenge--label {
+  display: inline-block;
+  padding: 3px 5px;
+  padding: .3rem .5rem;
+  border: solid 1px;
+  border-radius: 2px;
+  font-size: 10px;
+  font-size: 1rem;
+  letter-spacing: .1em;
+  color: #888;
+  text-transform: uppercase;
+  /*cursor: pointer; Commented out as part of Lozenge redesign*/
+  /*background-color: #adafa7;*/
+}
+  .lozenge:hover, .lozenge:active, .lozenge:focus, .lozenge--active {
     color: white;
     text-decoration: none !important;
     background-color: #a1a39a;
-    outline: 0; }*/
+    outline: 0; 
+  }
   .lozenge.is-collapsed {
     display: inline-block;
     max-width: inherit;
@@ -4042,11 +4054,11 @@ table actions
 /*  padding: 0 0 0 0.3em; Commented out to align collection results*/
 }
 
-.search-summary{/*border-bottom: 1px solid #d3d3d3 ;*/
-               padding: 0 0 3.2em 0;  }
+.search-summary{/*border-bottom: 1px solid #d3d3d3;*/
+                padding: 0 0 3.2em 0;  }
 
 .search-link{
- margin-right: 0.8rem;
+  margin-right: 0.8rem;
 }
 
 .search .microcopy { font-size: 0.85em; color: #999; padding:0em; }
@@ -4075,7 +4087,6 @@ table actions
 .search dt:not(:first-child) {
    padding-top: 1.25em;
 }
-
 
 .search-filters{ margin-top: 0.5em; z-index: -1; }
 
@@ -4482,6 +4493,15 @@ background-color: #edeeee !important;/* altered on phil's advice--change this ov
 
 .border-defined{
   border-color: #A8A1A1;
+}
+
+.clearfix:after {
+    content: ".";
+    display: table;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
 }
 
 /*------------------------------------*\
@@ -6502,7 +6522,7 @@ height: 4em;
 }
 .alpha-header__link {
 /* From: http://stackoverflow.com/questions/796087/make-a-div-into-a-link */
-	position:absolute; 
+	position:absolute;
 	width:100%;
 	height:100%;
 	top:0;
@@ -7457,4 +7477,18 @@ lesser , applied styles
 }
 .button-bar > .button-group:last-of-type {
     margin-right: 0;
+}
+
+/**************************************\
+        ***** Content Page *****
+\**************************************/
+.content-section {
+    position: relative;
+    padding-bottom: 20px;
+}
+.content-section--bottom {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding-bottom: 7px;
 }

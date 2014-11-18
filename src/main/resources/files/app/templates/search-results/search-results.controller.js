@@ -4,13 +4,13 @@
 (function() {
 
   angular.module("onsTemplates")
-    .controller("SearchCtrl", ['$scope', '$location', '$log', 'DataLoader', SearchController])
+    .controller("SearchController", ['$scope', '$location', '$log', 'DataLoader', 'PageUtil', SearchController])
 
 
-  function SearchController($scope, $location, $log, DataLoader) {
-    var page = getUrlParam("page")
-    var searchTerm = $scope.searchTerm = getUrlParam("q")
-    var type = $scope.type = getUrlParam("type")
+  function SearchController($scope, $location, $log, DataLoader, PageUtil) {
+    var page = PageUtil.getUrlParam("page")
+    var searchTerm = $scope.searchTerm = PageUtil.getUrlParam("q")
+    var type = $scope.type = PageUtil.getUrlParam("type")
     var departmentHandoff = [
       ["dfe", "education", "gcse", "a level", "degree", "nvq", "school", "college", "university", "national curriculum", "qualification"],
       ["bis", "business", "apprenticeship", "building", "construction", "higher education", "insolvency", "trade union"],
@@ -60,28 +60,32 @@
       page = 1
     }
 
-    search(searchTerm, type, page, function(data) {
-      $scope.searchTermOneTime = searchTerm
-      resolveRelatedDepartment(searchTerm)
-    })
+    search(searchTerm, type, page)
 
-    $scope.isLoading = function() {
+    function isLoading() {
       return ($scope.searchTerm && !$scope.searchResponse)
     }
 
-    function search(q, type, pageNumber, callback) {
+    function search(q, type, pageNumber) {
       var searchString = "?q=" + q + (type ? "&type=" + type : "") + "&page=" + pageNumber
       DataLoader.load("/search" + searchString)
         .then(function(data) {
           $scope.searchResponse = data
           $scope.pageCount = Math.ceil(data.numberOfResults / 10)
-          callback(data)
+          $scope.searchTermOneTime = q
+          resolveRelatedDepartment(q)
         })
     }
 
-    function getUrlParam(paramName) {
-      var params = $location.search()
-      return params[paramName]
+    function filter(type) {
+      //Clear page parameter if any
+      $location.search('page', null)
+      $location.search('type', type)
+    }
+
+    function isActive(type) {
+      var result = PageUtil.getUrlParam("type") === type
+      return result
     }
 
     function resolveRelatedDepartment(searchTerm) {
@@ -101,6 +105,13 @@
       }
       $scope.relatedDepartment = undefined
     }
+
+    //Expose API
+    angular.extend($scope, {
+      isLoading:isLoading,
+      filter:filter,
+      isActive:isActive
+    })
   }
 
 })()
