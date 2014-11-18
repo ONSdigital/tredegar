@@ -7,7 +7,7 @@
           <h1 class="page-header__title flush--half--bottom">{{taxonomy.data.name}}</h1>
           <div class="content-reveal lede">
             <p>{{taxonomy.data.lede}}
-              <a href="" expand-label="Show more" collapse-label="Show less"  toggler="more" ng-if="taxonomy.data.more" class="content-reveal__action"></a>
+              <a href=""  toggler="more" toggler-widget-var="w_toggler" ng-if="taxonomy.data.more" class="content-reveal__action">{{w_toggler.isVisible() ? 'Show less' : 'Show more'}}</a>
             </p>
             <div toggleable="more" class="content-reveal__hidden">
               <p>
@@ -44,7 +44,7 @@
             <div class="divider">
               <div class="divider__half divider__half--border divider__half--border-first">
                 <h2 tooltip="Percentage change over 12 months <br><br> Not seasonally adjusted" tooltip-class="icon--inline--large-text icon--small"  class="beta">
-                    <a href="#!{{taxonomy.data.headlineData.url}}">{{taxonomy.data.headlineData.name}}</a>
+                    <a href="#!{{taxonomy.data.headlineData.uri}}">{{taxonomy.data.headlineData.name}}</a>
                 </h2>
                 <div class="box box--inline box--padded muted--dark">
                   <div class="stat stat--headline">
@@ -85,7 +85,7 @@
                   <li ng-if="!taxonomy.data.statsBulletinHeadlineData">Lorem ipsum dolor sit amet, vel oporteat percipitur ex, quando persecuti id mea, pri at nihil essent aliquid.</li>
                   <li ng-if="!taxonomy.data.statsBulletinHeadlineData">Lorem ipsum dolor sit amet, vel oporteat percipitur ex, quando persecuti id mea, pri at nihil essent aliquid.</li>                  
                   </ul>
-                    <a class="div_panel_link" href="#!{{taxonomy.data.statsBulletinHeadlineData.url ? taxonomy.data.statsBulletinHeadlineData.url : '/economy/inflationandpriceindices/bulletins/consumerpriceinflation'}}">
+                    <a class="div_panel_link" href="#!{{taxonomy.data.statsBulletinHeadlineData.uri ? taxonomy.data.statsBulletinHeadlineData.uri : '/economy/inflationandpriceindices/bulletins/consumerpriceinflation'}}">
                       View the statistical bulletin &gt;                   
                     </a>                
               </div>
@@ -124,7 +124,7 @@
         <td class="data_table_section-title">
           <div class="list--table__item__body list--table__item__body--caption responsive_large_width">
             <h3 class="nav-panel__heading">
-              <a href="#!{{item.url}}"> {{item.name}}</a>
+              <a href="#!{{item.uri}}"> {{item.name}}</a>
               <!-- CPI Index -->
                 <span tabindex="0" class="tooltip icon-info-circled icon--warm icon--inline tooltipstered"></span>
             </h3>

@@ -29,7 +29,7 @@
                         <strong>Series ID: {{chart.timeseries.cdid}}</strong>
                     </p>
                     <p>
-                        <strong>Unit: {{chart.timeseries.units}}</strong>
+                        <strong>Unit: {{chart.timeseries.unit}}</strong>
                     </p>
                     <p>{{chart.timeseries.seasonalAdjustment}}</p>
                 </div>
@@ -68,13 +68,13 @@
         </div>
 
         <!-- Chart in Highcharts -->
-        <div class="cf chart-area slate">
+        <div ons-tabs tabs-active-var="selectedKey" class="cf chart-area slate">
             <div class="chart-area__controls">
                 <form>
                     <div class="button-bar chart-area__controls__buttons">
                         <div class="button-group chart-area__controls__type">
-                            <label class="btn btn--secondary btn--small btn--narrow btn--thin" ng-class="{'btn--secondary--active': chart.chartVisible}" ng-click="chart.showChart()">Chart</label>
-                            <label class="btn btn--secondary btn--small btn--narrow btn--thin" ng-class="{'btn--secondary--active': chart.tableVisible}" ng-click="chart.showTable()">Table</label>
+                            <label ons-tab-control="chart" class="btn btn--secondary btn--small btn--narrow btn--thin" ng-class="{'btn--secondary--active': selectedKey === 'chart'}" ng-click="chart.showChart()">Chart</label>
+                            <label ons-tab-control="table" class="btn btn--secondary btn--small btn--narrow btn--thin" ng-class="{'btn--secondary--active': selectedKey === 'table'}" ng-click="chart.showTable()">Table</label>
                         </div>
                         <div class="button-group chart-area__controls__timespan">
                             <label class="btn btn--secondary btn--small btn--narrow btn--thin" ng-if="chart.showYearly" ng-class="{'btn--secondary--active': chart.isActive('years')}" ng-click="chart.changeChartType('years')">Year</label>
@@ -97,25 +97,25 @@
                                 <a href="" ng-if="chart.timePeriod != '5'" ng-click="chart.changeTimePeriod('5')">Last 5 yrs</a>
                                 <div ng-if="chart.timePeriod === '5'">Last 5 yrs</div>
                             </li>
-                            <li ng-class="chart.showCustomFilters ? 'chart-area__controls__custom--active' : ''" ng-click="chart.toggleCustomFilters()">
+                            <li toggler="custom-filters" toggler-widget-var="w_toggler" ng-class="w_toggler.isVisible() ? 'chart-area__controls__custom--active' : ''">
                                 <a href="" class="link-complex">
                                     <span class="link-complex__target">Custom</span>
-                                    <span ng-class="chart.showCustomFilters  ? 'icon-up-open-big icon--inline' : 'icon-down-open-big icon--inline' " role="presentation"></span>
+                                    <span ng-class="w_toggler.isVisible()  ? 'icon-up-open-big icon--inline' : 'icon-down-open-big icon--inline' " role="presentation"></span>
                                 </a>
                             </li>
                         </ul>
                     </div>
 
                     <!-- selector for table and chart -->
-                    <div ng-show="chart.showCustomFilters" class="chart-area__controls__custom">
+                    <div toggleable="custom-filters" class="chart-area__controls__custom">
                         <div class="chart-area__controls__custom__errors"></div>
                         <div class="chart-area__controls__custom__container__table">
                             <div class="chart-area__controls__dropdowns">
                                 <!-- Selector for table only -->
-                                <fieldset ng-show="chart.tableVisible" class="chart-area__controls__date">
+                                <!-- <fieldset ng-show="chart.tableVisible" class="chart-area__controls__date">
                                     <legend class="chart-area__controls__date__label">Find</legend>
                                     <input ng-model="query" type="test" />
-                                </fieldset>
+                                </fieldset> -->
 
                                 <fieldset class="chart-area__controls__date">
                                     <legend class="chart-area__controls__date__label">From</legend>
@@ -143,13 +143,13 @@
                 </form>
 
                 <!-- chart -->
-                <div ng-if="chart.chartVisible">
+                <div ons-tab="chart">
                     <highchart class="highcharts-background" id="chart_prices" config="chart.chartConfig">
                     </highchart>
                 </div>
 
                 <!-- table -->
-                <div ng-if="chart.tableVisible">
+                <div ons-tab="table">
                     <table class="tablesaw">
                         <thead>
                             <tr>
@@ -208,6 +208,20 @@
                             <li>{{chart.timeseries.note2}}</li>
                         </ol>
                     </div>
+                    <br></br>
+                    <div ng-if="chart.timeseries.note1"> <!-- Another field goes here for condition -->
+                        <h3>Related series</h3>
+                        <div class="padded">
+                            <div><a>CPI: Consumer Prices Index</a>
+                            </div>
+                            <div>
+                                <a>RPIJ</a>
+                            </div>
+                            <div>
+                                <a>Output of manufactured product Index</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- Sidebar -->
@@ -215,6 +229,7 @@
                 <div ng-include="sidebarUrl"></div>
             </div>
         </div>
+        <contact-details></contact-details>
     </div>
 
 </div>

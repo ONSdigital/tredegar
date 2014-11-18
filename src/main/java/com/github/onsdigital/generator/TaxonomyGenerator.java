@@ -25,11 +25,11 @@ import com.github.davidcarboni.restolino.json.Serialiser;
 import com.github.onsdigital.generator.data.Data;
 import com.github.onsdigital.generator.data.DatasetMappingsCSV;
 import com.github.onsdigital.generator.datasets.DatasetContent;
-import com.github.onsdigital.json.Dataset;
-import com.github.onsdigital.json.HomeSection;
+import com.github.onsdigital.json.dataset.Dataset;
 import com.github.onsdigital.json.markdown.Article;
 import com.github.onsdigital.json.markdown.Bulletin;
 import com.github.onsdigital.json.markdown.Methodology;
+import com.github.onsdigital.json.taxonomy.HomeSection;
 import com.github.onsdigital.json.taxonomy.T1;
 import com.github.onsdigital.json.taxonomy.T2;
 import com.github.onsdigital.json.taxonomy.T3;
@@ -304,11 +304,13 @@ public class TaxonomyGenerator {
 			HomeSection section = new HomeSection(child.name, child.filename());
 			section.index = child.index;
 			t2.sections.add(section);
-			List<Folder> t3Folders = getT3Folders(child);
-			Collection<URI> timeserieses = getTimeseries(t3Folders);
-			for (URI timeseries : timeserieses) {
-				section.items.add(timeseries);
-			}
+			
+			//Loading timeseries for t2 is no longer needed
+//			List<Folder> t3Folders = getT3Folders(child);
+//			Collection<URI> timeserieses = getTimeseries(t3Folders);
+//			for (URI timeseries : timeserieses) {
+//				section.items.add(timeseries);
+//			}
 		}
 		Collections.sort(t2.sections);
 	}

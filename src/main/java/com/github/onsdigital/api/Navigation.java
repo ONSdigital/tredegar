@@ -19,12 +19,13 @@ import com.github.onsdigital.util.NavigationUtil;
 @Endpoint
 public class Navigation {
 
-	static String encoding = "UTF8";
-
 	@GET
 	public static Object get(@Context HttpServletRequest request,
 			@Context HttpServletResponse response) throws IOException {
 
+		response.setCharacterEncoding("UTF8");
+		response.setContentType("application/json");
+		
 		return NavigationUtil.getNavigationNodes();
 
 	}

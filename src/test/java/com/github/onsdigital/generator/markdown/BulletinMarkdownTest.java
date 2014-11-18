@@ -15,8 +15,8 @@ import org.apache.commons.lang3.StringUtils;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.github.onsdigital.json.Section;
 import com.github.onsdigital.json.markdown.Bulletin;
+import com.github.onsdigital.json.markdown.Section;
 
 public class BulletinMarkdownTest {
 

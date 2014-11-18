@@ -8,13 +8,13 @@ import javax.ws.rs.core.Context;
 import org.apache.commons.lang3.StringUtils;
 
 import com.github.davidcarboni.restolino.framework.Endpoint;
-import com.github.onsdigital.bean.SearchResult;
 import com.github.onsdigital.configuration.ElasticSearchProperties;
 import com.github.onsdigital.json.ContentType;
 import com.github.onsdigital.search.ElasticSearchServer;
+import com.github.onsdigital.search.bean.SearchResult;
+import com.github.onsdigital.search.util.ElasticSearchFieldUtil;
 import com.github.onsdigital.search.util.ONSQueryBuilder;
 import com.github.onsdigital.search.util.SearchHelper;
-import com.github.onsdigital.util.ElasticSearchFieldUtil;
 import com.github.onsdigital.util.ValidatorUtil;
 
 /**
@@ -36,11 +36,12 @@ public class Search {
 	}
 
 	private Object search(String query, int page, String type) throws Exception {
+		System.out.println("Type is " + type);
 		ONSQueryBuilder queryBuilder = new ONSQueryBuilder("ons").setType(type)
 				.setPage(page).setSearchTerm(query)
 				.setFields(getTitle(), "path");
 		SearchResult searchResult = new SearchHelper(ElasticSearchServer.getClient()).search(queryBuilder);
-		if (searchResult.getNumberOfResults() == 0) {
+		if (searchResult.getNumberOfResults() == 0 && type == null) {//If type is set don't search for timeseries
 			System.out.println("Attempting search against timeseries type as no results found for: " + query);
 			ONSQueryBuilder timeSeriesQueryBuilder = new ONSQueryBuilder("ons").setType(ContentType.timeseries.name()).setPage(page).setSearchTerm(query).setFields(getTitle(), "path");
 			searchResult = new SearchHelper(ElasticSearchServer.getClient()).search(timeSeriesQueryBuilder);

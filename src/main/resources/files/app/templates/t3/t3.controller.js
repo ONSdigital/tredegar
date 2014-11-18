@@ -1,12 +1,12 @@
 (function() {
 
 	angular.module('onsTemplates')
-		.controller('T3Controller', ['$scope', '$http', 'Downloader', T3Controller])
+		.controller('T3Controller', ['$scope', 'Downloader', T3Controller])
 		.directive('stSelectAll', [SelectAllDirective])
 		.directive('stSelect', [SelectDirective])
 
 
-	function T3Controller($scope, $http, Downloader) {
+	function T3Controller($scope, Downloader) {
 		var ctrl = this
 		var items = $scope.taxonomy.data.itemData
 		ctrl.allSelected = false
@@ -60,7 +60,7 @@
 			var uriList = []
 			for (var i = 0; i < items.length; i++) {
 				if (items[i].isSelected) {
-					uriList.push(items[i].url)
+					uriList.push(items[i].uri)
 				}
 			}
 			return uriList

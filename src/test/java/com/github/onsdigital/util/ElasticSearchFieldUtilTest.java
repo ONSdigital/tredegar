@@ -4,6 +4,8 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
+import com.github.onsdigital.search.util.ElasticSearchFieldUtil;
+
 /**
  * Checks that formatted search field includes/excludes boost as appropriate
  */

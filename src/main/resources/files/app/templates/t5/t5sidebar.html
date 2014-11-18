@@ -1,133 +1,115 @@
 <div class="grid-col desktop-grid-one-third tablet-grid-one-third">
     <!-- article__content -->
-    <article class="box box--padded slate sectioned">
-        <header class="box__header">
-            <div class="grid-wrap ">
-                <div class="grid-col desktop-grid-one-sixth">
-
+    <article class="box box--green box--green--separated-left lifted">
+        <div class="box__inner border box--padded border--large-left">
+            <header class="box__header">
+                <div class="grid-wrap ">
+                    <!-- <div class="grid-col desktop-grid-one-sixth">
+                        <h2>
+                            <span class="icon icon-info-circled icon--grey"></span>
+                        </h2>
+                    </div> -->
+                    <div class="grid-col desktop-grid-five-sixths">
+                        <h3>Datasets that contain this and related time series</h3>
+                    </div>
                 </div>
-                <div class="grid-col desktop-grid-five-sixths">
-                    <h3>Related Data</h3>
+                <div class="padded"></div>
+            </header>
+            <!-- /box__header -->
+            <div class="box__content">
+                <div>
+                    <p><a href="">At graecis maluisset pro</a>
+                    </p>
+                    <p><a href="">Per an omnis dicat libris</a>
+                    </p>
+                    <p><a href="">Pro ad case probo nostro</a>
+                    </p>
+                    <!-- /list- -bullet -->
                 </div>
-                <div class="grid-col desktop-grid-five-sixths">This data is also available in these larger datasets:</div>
             </div>
-            <div class="padded"></div>
-        </header>
-        <!-- /box__header -->
-        <div class="box__content">
-            <p><a href="">At graecis maluisset pro</a>
-            </p>
-            <p><a href="">Per an omnis dicat libris</a>
-            </p>
-            <p><a href="">Pro ad case probo nostro</a>
-            </p>
-            <!-- /list- -bullet -->
+            <!-- /box__content -->
+            <footer class="box__footer box__actions">
+                <!-- <p class="right"> <a href="#" title="Opens in new window">View all contacts</a>
+                    <span class="icon icon-book icon--blue"></span>
+                </p> -->
+            </footer>
         </div>
-        <!-- /box__content -->
     </article>
     <!-- /article__content -->
 
-    <!-- article__content -->
-    <article class="box box--padded slate sectioned">
-        <header class="box__header">
-            <div class="grid-wrap ">
-                <div class="grid-col desktop-grid-one-sixth">
-
-                </div>
-                <div class="grid-col desktop-grid-five-sixths">
-                    <h3>Related Timeseries</h3>
-                </div>
-            </div>
-            <div class="padded"></div>
-        </header>
-        <!-- /box__header -->
-        <div class="box__content">
-        	<div ng-if="(taxonomy.data.relatedTimeseriesData).length === 0">
- 	            <p>
- 	            	<a href="">Assum efficiantur eum cu, January 2014</a>
-	            </p>
-	            <p>
-	            	<a href="">Ne his tractatos disputando, January 2014</a>
-	            </p>
-	            <p>
-	            	<a href="">Vel ut soleat mollis meliore (6) publications</a>
-	            </p>
-        	</div>
-        	<div ng-repeat="relatedTimeseries in taxonomy.data.relatedTimeseriesData">
-	            <p><a href=#!{{relatedTimeseries.uri}}>{{relatedTimeseries.name}}</a>
-			</div>
-
-            <!-- /list- -bullet -->
-        </div>
-        <!-- /box__content -->
-    </article>
 
     <!-- article__content -->
-    <article class="box box--padded slate sectioned">
-        <header class="box__header">
-            <div class="grid-wrap ">
-                <div class="grid-col desktop-grid-one-sixth">
-
+    <article class="box box--blue box--blue--separated-left lifted">
+        <div class="box__inner border box--padded border--large-left">
+            <header class="box__header">
+                <div class="grid-wrap ">
+                    <!-- <div class="grid-col desktop-grid-one-sixth">
+                        <h2>
+                            <span class="icon icon-info-circled icon--grey"></span>
+                        </h2>
+                    </div> -->
+                    <div class="grid-col desktop-grid-five-sixths">
+                        <h3>Statistical Bulletins and articles that use this time series</h3>
+                    </div>
                 </div>
-                <div class="grid-col desktop-grid-five-sixths">
-                    <h3>Related Bulletins</h3>
+                <div class="padded"></div>
+            </header>
+            <!-- /box__header -->
+            <div class="box__content">
+                <div ng-if="(taxonomy.data.relatedBulletinData).length === 0">
+                    <p>
+                        <a href="">Assum efficiantur eum cu, January 2014</a>
+                    </p>
+                    <p>
+                        <a href="">Ne his tractatos disputando, January 2014</a>
+                    </p>
+                    <p>
+                        <a href="">Vel ut soleat mollis meliore (6) publications</a>
+                    </p>
                 </div>
+                <div ng-repeat="bulletin in taxonomy.data.relatedBulletinData">
+                    <p><a href=#!{{bulletin.uri}}>{{bulletin.name}}</a>
+                </div>
+                <!-- /list- -bullet -->
             </div>
-            <div class="padded"></div>
-        </header>
-        <!-- /box__header -->
-        <div class="box__content">
-        	<div ng-if="(taxonomy.data.relatedBulletinData).length === 0">
- 	            <p>
- 	            	<a href="">Assum efficiantur eum cu, January 2014</a>
-	            </p>
-	            <p>
-	            	<a href="">Ne his tractatos disputando, January 2014</a>
-	            </p>
-	            <p>
-	            	<a href="">Vel ut soleat mollis meliore (6) publications</a>
-	            </p>
-        	</div>
-        	<div ng-repeat="bulletin in taxonomy.data.relatedBulletinData">
-	            <p><a href=#!{{bulletin.uri}}>{{bulletin.name}}</a>
-			</div>
-
-            <!-- /list- -bullet -->
+            <!-- /box__content -->
+            <footer class="box__footer box__actions">
+                <!-- <p class="right"> <a href="#" title="Opens in new window">View all contacts</a>
+                    <span class="icon icon-book icon--blue"></span>
+                </p> -->
+            </footer>
         </div>
-        <!-- /box__content -->
     </article>
     <!-- /article__content -->
     <!-- article__content -->
-    <article class="box box--padded sectioned">
-        <header class="box__header">
-            <div class="grid-wrap ">
-                <div class="grid-col desktop-grid-one-sixth">
-                    <h2>
-                        <span class="icon icon-info-circled icon--grey"></span>
-                    </h2>
+    <article class="box box--orange box--orange--separated-left lifted">
+        <div class="box__inner border box--padded border--large-left">
+            <header class="box__header">
+                <div class="grid-wrap ">
+                    <!-- <div class="grid-col desktop-grid-one-sixth">
+                        <h2>
+                            <span class="icon icon-info-circled icon--grey"></span>
+                        </h2>
+                    </div> -->
+                    <div class="grid-col desktop-grid-five-sixths">
+                        <h3><a>Looking for local statistics?</a></h3>
+                    </div>
                 </div>
-                <div class="grid-col desktop-grid-five-sixths">
-                    <h3>Contact details for this {{contentType}}</h3>
-                </div>
+                <div class="padded"></div>
+            </header>
+            <!-- /box__header -->
+            <div class="box__content">
+                <p>A handy guide to let you know where to find local statistics available to you
+                </p>
+                <!-- /list- -bullet -->
             </div>
-            <div class="padded"></div>
-        </header>
-        <!-- /box__header -->
-        <div class="box__content">
-            <p>Philip Wales
-                <br/>Business Prices
-                <br/>
-                <a href="mailto:philipwales@ons.gsi.gov.uk">philipwales@ons.gsi.gov.uk</a>
-                <br/>Telephone: +44 (0)1633 456468</p>
-            <!-- /list- -bullet -->
+            <!-- /box__content -->
+            <footer class="box__footer box__actions">
+                <!-- <p class="right"> <a href="#" title="Opens in new window">View all contacts</a>
+                    <span class="icon icon-book icon--blue"></span>
+                </p> -->
+            </footer>
         </div>
-        <!-- /box__content -->
-
-        <footer class="box__footer box__actions">
-            <p class="right"> <a href="#" title="Opens in new window">View all contacts</a>
-                <span class="icon icon-book icon--blue"></span>
-            </p>
-        </footer>
     </article>
 
 </div>

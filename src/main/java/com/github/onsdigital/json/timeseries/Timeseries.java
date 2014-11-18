@@ -15,7 +15,7 @@ import org.apache.commons.lang3.StringUtils;
 import com.github.onsdigital.generator.Folder;
 import com.github.onsdigital.json.ContentType;
 import com.github.onsdigital.json.DataItem;
-import com.github.onsdigital.json.TaxonomyHome;
+import com.github.onsdigital.json.taxonomy.TaxonomyHome;
 
 public class Timeseries extends DataItem implements Comparable<Timeseries> {
 

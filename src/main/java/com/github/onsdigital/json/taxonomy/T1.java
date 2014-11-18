@@ -5,8 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.github.onsdigital.generator.Folder;
-import com.github.onsdigital.json.HomeSection;
-import com.github.onsdigital.json.TaxonomyHome;
 
 public class T1 extends TaxonomyHome {
 

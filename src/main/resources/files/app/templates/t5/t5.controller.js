@@ -1,10 +1,10 @@
 (function() {
 
     angular.module('onsTemplates')
-        .controller('T5Controller', ['$scope', 'Downloader', 'Taxonomy', T5Controller])
-        .controller('ChartController', ['$scope', '$location', '$log', 'Downloader', ChartController])
+        .controller('T5Controller', ['$scope', '$log', 'Downloader', 'DataLoader', T5Controller])
+        .controller('ChartController', ['$scope', '$location', '$log', 'Downloader', 'ArrayUtil', ChartController])
 
-    function T5Controller($scope, Downloader, Taxonomy) {
+    function T5Controller($scope, $log, Downloader, DataLoader) {
 
         var t5 = this;
         $scope.header = "Time Series";
@@ -42,10 +42,11 @@
                 for (var i = 0; i < bulletins.length; i++) {
                     var bulletin = bulletins[i]
                     var relatedBulletinPath = dataPath + bulletin
-                    Taxonomy.load(relatedBulletinPath, function(relatedBulletin) {
-                        console.log('Loaded related bulletin: ', relatedBulletinPath, ' ', relatedBulletin)
-                        data.relatedBulletinData.push(relatedBulletin)
-                    })
+                    DataLoader.load(relatedBulletinPath)
+                        .then(function(relatedBulletin) {
+                            $log.debug('Loaded related bulletin: ', relatedBulletinPath, ' ', relatedBulletin)
+                            data.relatedBulletinData.push(relatedBulletin)
+                        })
                 }
             }
         }
@@ -74,7 +75,7 @@
     }
 
 
-    function ChartController($scope, $location, $log, Downloader) {
+    function ChartController($scope, $location, $log, Downloader, ArrayUtil) {
         var ctrl = this
         ctrl.timeseries = $scope.taxonomy.data
         ctrl.chartConfig = getChart()
@@ -85,9 +86,6 @@
         ctrl.timePeriod = 'A' //All by default
         ctrl.chartData = []
         ctrl.years = []
-        ctrl.showCustomFilters = false
-        ctrl.chartVisible = true
-        ctrl.tableVisible = false
         ctrl.renderChart = false
         ctrl.tenYears
         ctrl.quarters = ['Q1', 'Q2', 'Q3', 'Q4']
@@ -130,7 +128,7 @@
 
 
             function tenYears(array) {
-                if ((getLast(array) - getFirst(array)) < 10) {
+                if ((ArrayUtil.getLast(array) - ArrayUtil.getFirst(array)) < 10) {
                     return false
                 } else {
                     return true
@@ -179,8 +177,8 @@
             }
 
             function resolveFilters() {
-                var first = getFirst(getAllValues())
-                var last = getLast(getAllValues())
+                var first = ArrayUtil.getFirst(getAllValues())
+                var last = ArrayUtil.getLast(getAllValues())
                 var now = new Date()
                 var currentYear = now.getFullYear()
                 var tenYearsAgo = currentYear - 10
@@ -226,31 +224,8 @@
             }
         }
 
-
-        function toggleCustomFilters() {
-            ctrl.showCustomFilters = !ctrl.showCustomFilters
-        }
-
         function isActive(chartType) {
             return chartType === ctrl.activeChart
-        }
-
-
-        function showTable() {
-            if (ctrl.tableVisible) {
-                return
-            }
-
-            ctrl.tableVisible = true
-            ctrl.chartVisible = false
-        }
-
-        function showChart() {
-            if (ctrl.chartVisible) {
-                return
-            }
-            ctrl.chartVisible = true
-            ctrl.tableVisible = false
         }
 
         function getAllValues() {
@@ -263,15 +238,15 @@
 
         //Initialize controller and configuration
         function initialize() {
-            resolveChartTypes()
+            resolveChartTypes(ArrayUtil)
             ctrl.chartConfig.series[0].name = ctrl.timeseries.name
             prepareData()
 
-            function resolveChartTypes() {
+            function resolveChartTypes(ArrayUtil) {
                 var data = ctrl.timeseries
-                ctrl.showYearly = isNotEmpty(data.years)
-                ctrl.showMonthly = isNotEmpty(data.months)
-                ctrl.showQuarterly = isNotEmpty(data.quarters)
+                ctrl.showYearly = ArrayUtil.isNotEmpty(data.years)
+                ctrl.showMonthly = ArrayUtil.isNotEmpty(data.months)
+                ctrl.showQuarterly = ArrayUtil.isNotEmpty(data.quarters)
 
                 if (ctrl.showMonthly) {
                     ctrl.activeChart = 'months'
@@ -309,7 +284,7 @@
                     data.values.push(enrichData(current, i))
                     data.years.push(current.year)
                 }
-                toUnique(data.years)
+                ArrayUtil.toUnique(data.years)
                 return data
             }
 
@@ -325,37 +300,9 @@
 
                 return timeseriesValue
             }
-
-            function toUnique(a) { //array,placeholder,placeholder
-                var b = a.length;
-                var c
-                while (c = --b) {
-                    while (c--) {
-                        a[b] !== a[c] || a.splice(c, 1);
-                    }
-                }
-            }
-
-
         }
 
 
-        function getFirst(array) {
-            if (isNotEmpty(array)) {
-                return array[0]
-            }
-        }
-
-
-        function getLast(array) {
-            if (isNotEmpty(array)) {
-                return array[array.length - 1]
-            }
-        }
-
-        function isNotEmpty(array) {
-            return (array && array.length > 0)
-        }
 
         function monthVal(mon) {
             switch (mon.slice(0, 3).toUpperCase()) {
@@ -437,19 +384,15 @@
 
         function exportImage() {
             var chartExp = $('#chart_prices').highcharts();
-            console.log(chartExp)
             chartExp.exportChart();
         }
 
         angular.extend(ctrl, {
             isActive: isActive,
             changeChartType: changeChartType,
-            showTable: showTable,
-            showChart: showChart,
             changeTimePeriod: changeTimePeriod,
-            toggleCustomFilters: toggleCustomFilters,
-            downloadCsv:downloadCsv,
-            downloadXls:downloadXls,
+            downloadCsv: downloadCsv,
+            downloadXls: downloadXls,
             exportImage: exportImage
         })
     }

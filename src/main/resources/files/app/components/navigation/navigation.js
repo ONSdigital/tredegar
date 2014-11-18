@@ -1,194 +1,253 @@
-(function() {
   'use strict';
 
-  angular.module('onsNavigation', [])
-    .directive('onsNav', ['$location', '$window', NavigationDirective])
-    .directive('onsNavItem', [NavigationItemDirective])
-    .directive('onsNavSubItem', [NavigationSubItemDirective])
+  (function() {
 
-  function NavigationDirective($location, $window) {
-    return {
-      restrict: 'E',
-      replace: true,
-      transclude: true,
-      scope: {
-        class: '@',
-        trigger: '&'
-      },
-      controller: NavigationController,
-      controllerAs: 'navigation',
-      templateUrl: 'app/components/navigation/navigationmain.html'
-    }
+    angular.module('onsNavigation', [])
+      .directive('onsNav', ['$window', '$rootScope', Nav])
+      .directive('onsNavItem', ['$location', 'StringUtil', NavItem])
+      .directive('onsNavCollapseClass', [NavCollapseClass])
+      .directive('onsNavExpandClass', [NavExpandClass])
+      .directive('onsNavMobile', [NavMobile]) //Show on mobile
+      .directive('onsNavDesktop', [NavDesktopDirective]) //Show on desktop
 
-    function NavigationController($scope, $element, $attrs) {
-      var navigation = this
-      navigation.showMenu = false
-      navigation.expandablePanes = []
-      resolveScreenType()
-      bindResize()
-      $scope.hideSearch=true
-
-      init()
-
-      function init() {
-        var path = $location.$$path
-        navigation.rootPath = getRootPath(path)
+    /*
+    Adds responsive navigation functionality with expandable menus on mobile
+    */
+    function Nav($window, $rootScope) {
+      return {
+        restrict: 'A',
+        scope: {
+          navWidgetVar: '@',
+          activeClass: '@navActiveClass'
+        },
+        controller: NavController,
+        controllerAs: 'navigation',
       }
 
-      function getRootPath(path) {
-        var tokens = path.split('/')
-        if (tokens.length < 2) {
-          return "/"
-        } else {
-          return tokens[1]
-        }
-      }
+      function NavController($scope, $element, $attrs) {
+        var navigation = this
+        navigation.activeClass = $scope.activeClass
+        navigation.showOnMobile = false
+        navigation.mobile = false //Screen type
+        var items = []
+        init()
 
-      function getCurrentPage() {
-        return $location.$$path
-      }
-
-      function isCurrentRoot(page) {
-        var result = navigation.rootPath === getRootPath(page)
-        return result
-      }
-
-
-      function isCurrentPage(page) {
-        var result = getCurrentPage() === page.split('#!')[1]
-        return result
-      }
-
-      function addPane(pane) {
-        navigation.expandablePanes[pane.navLabel] = pane
-      }
-
-      function toggleMenu() {
-        navigation.showMenu = !navigation.showMenu
-        if(navigation.showMenu) {
-          $scope.hideSearch = true
-        }
-      }
-
-      function gotoPage(path) {
-        $location.path(path.substr(2))
-        navigation.showMenu = false
-      }
-
-      //Listens resize event to switch screen type to mobile or desktop
-      function bindResize() {
-        angular.element($window).bind('resize', function() {
+        function init() {
           resolveScreenType()
-          $scope.$apply()
+          listenResize()
+            //Injected to parent scope to be used as a widget.
+          if ($scope.navWidgetVar) {
+            $scope.$parent[$scope.navWidgetVar] = navigation
+          }
+          watchLocation()
+        }
+
+        function watchLocation() {
+          $rootScope.$on('$locationChangeSuccess', function(event) {
+              for (var i = 0; i < items.length; i++) {
+                items[i].resolveClass()
+                items[i].expanded = false
+              };
+          })
+        }
+
+        function toggleMobileMenu() {
+          navigation.showOnMobile = !navigation.showOnMobile
+        }
+
+        //Listens resize event to switch screen type to mobile or desktop
+        function listenResize() {
+          angular.element($window).bind('resize', function() {
+            resolveScreenType()
+            $scope.$apply()
+          })
+        }
+
+        function resolveScreenType() {
+          if ($window.innerWidth < 800) {
+            navigation.mobile = true
+          } else {
+            navigation.mobile = false
+          }
+        }
+
+        function registerItem(item) {
+          items.push(item)
+        }
+
+        angular.extend(navigation, {
+          toggleMobileMenu: toggleMobileMenu,
+          registerItem: registerItem
+
         })
       }
+    }
 
-      function resolveScreenType() {
-        if ($window.innerWidth < 800) {
-          navigation.mobile = true
-        } else {
-          navigation.mobile = false
+    function NavItem($location, StringUtil) {
+      return {
+        restrict: 'A',
+        require: '^onsNav',
+        scope: {
+          expandable: '=?'
+        },
+        controller: NavItemController,
+        controllerAs: 'navItem',
+        link: NavItemLink
+      }
+
+      function NavItemLink(scope, element, attrs, navigation) {
+        scope.url = attrs.onsNavItem || ''
+        scope.currentPage = false
+        initialize()
+
+        function initialize() {
+          navigation.registerItem(scope)
+
+          if (scope.expandable) {
+            scope.expanded = false
+            bindClick()
+          }
+
+          resolveClass()
+        }
+
+        function resolveClass() {
+          if (isCurrentPage()) {
+            element.addClass(navigation.activeClass)
+          } else {
+            element.removeClass(navigation.activeClass)
+          }
+        }
+
+        function bindClick() {
+          element.bind("click", function(event) {
+            if (isMobile()) {
+              scope.expanded = !scope.expanded
+            }
+            scope.$apply() // Trigger Angular digest cycle to process changed values
+          })
+        }
+
+        function isMobile() {
+          return navigation.mobile
+        }
+
+        function isCurrentPage() {
+          return (scope.url && (StringUtil.startsWith($location.$$path, scope.url)))
+        }
+
+        angular.extend(scope, {
+          resolveClass:resolveClass
+        }) 
+      }
+
+      function NavItemController($scope) {
+        var navItem = this
+
+        function isExpanded() {
+          return $scope.expanded
+        }
+
+        angular.extend(navItem, {
+          isExpanded: isExpanded
+        })
+      }
+    }
+
+    function NavCollapseClass() {
+      return {
+        restrict: 'A',
+        require: '^onsNavItem',
+        scope: {},
+        link: NavCollapseClassLink
+      }
+
+      function NavCollapseClassLink(scope, element, attrs, expandable) {
+        var collapseClass = scope.collapseClass = attrs.onsNavCollapseClass
+        if (collapseClass) {
+          watchExpand()
+        }
+
+        function watchExpand() {
+          scope.$watch(expandable.isExpanded, function() {
+            if (expandable.isExpanded()) {
+              element.removeClass(collapseClass)
+            } else {
+              element.addClass(collapseClass)
+            }
+          })
         }
       }
+    }
 
-      function toggleSearch() {
-        $scope.hideSearch = !$scope.hideSearch
-        //If search is shown hide menu
-        if(!$scope.hideSearch) {
-          navigation.showMenu = false
+    function NavExpandClass() {
+      return {
+        restrict: 'A',
+        require: '^onsNavItem',
+        link: NavExpandClassLink
+      }
+
+      function NavExpandClassLink(scope, element, attrs, navItem) {
+        var expandClass = scope.expandClass = attrs.onsNavExpandClass
+        if (expandClass) {
+          watchExpand()
+        }
+
+        function watchExpand() {
+          scope.$watch(navItem.isExpanded, function() {
+            if (navItem.isExpanded()) {
+              element.addClass(expandClass)
+            } else {
+              element.removeClass(expandClass)
+            }
+          })
         }
       }
-
-
-      angular.extend(navigation, {
-        addPane: addPane,
-        toggleMenu: toggleMenu,
-        gotoPage: gotoPage,
-        toggleSearch: toggleSearch,
-        isCurrentPage: isCurrentPage,
-        isCurrentRoot: isCurrentRoot
-      })
-
-    }
-  }
-
-  function NavigationItemDirective() {
-    return {
-      restrict: 'E',
-      replace: true,
-      require: '^onsNav',
-      transclude: true,
-      scope: {
-        navLabel: '@',
-        labelClass: '@',
-        href: '@',
-        expandable: '@',
-        class: '@'
-      },
-      link: NavigationItemLink,
-      templateUrl: 'app/components/navigation/navigationitem.html'
     }
 
-    function NavigationItemLink(scope, element, attrs, navigation) {
-      scope.expanded = false
-      navigation.addPane(scope)
+    /*Shows element only on mobile screens*/
+    function NavMobile() {
+      return {
+        restrict: 'A',
+        require: '^onsNav',
+        link: NavMobileLink,
+        transclude:true,
+        template : '<span ng-transclude ng-show="isMobile()"></span>'
+      }
 
-      function toggle() {
-        if (isMobile()) {
-          scope.expanded = !scope.expanded
-        } else {
-          navigation.gotoPage(scope.href)
+      function NavMobileLink(scope, element, attrs, navigation) {
+
+        function isMobile() {
+          return navigation.mobile
         }
+
+        angular.extend(scope, {
+          isMobile: isMobile
+        })
       }
-
-      function isMobile() {
-        return navigation.mobile
-      }
-
-      function isCurrentRoot() {
-        var result = navigation.isCurrentRoot(scope.href)
-        return result
-      }
-
-      angular.extend(scope, {
-        toggle: toggle,
-        isMobile: isMobile,
-        isCurrentRoot: isCurrentRoot
-      })
-
-
-    }
-  }
-
-  function NavigationSubItemDirective() {
-    return {
-      restrict: 'E',
-      replace: true,
-      require: '^onsNav',
-      transclude: true,
-      scope: {
-        navLabel: '@',
-        href: '@',
-        class: '@'
-      },
-      link: NavigationSubItemLink,
-      templateUrl: 'app/components/navigation/navigationsubitem.html'
     }
 
 
-    function NavigationSubItemLink(scope, element, attrs, navigation) {
-
-      function isCurrentPage() {
-        var result = navigation.isCurrentPage(scope.href)
-        return result
+    /*Shows element only on desktop screens*/
+    function NavDesktopDirective() {
+      return {
+        restrict: 'A',
+        require: '^onsNav',
+        link: NavDesktopLink,
+        transclude:true,
+        template : '<span ng-transclude ng-show="isDesktop()"></span>'
       }
 
-      angular.extend(scope, {
-        isCurrentPage: isCurrentPage
-      })
+      function NavDesktopLink(scope, element, attrs, navigation) {
 
+        function isDesktop() {
+          return !navigation.mobile
+        }
+
+        angular.extend(scope, {
+          isDesktop: isDesktop
+        })
+      }
     }
-  }
 
-
-})()
+  })()
