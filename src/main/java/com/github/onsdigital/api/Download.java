@@ -41,7 +41,7 @@ public class Download {
 	public void post(@Context HttpServletRequest request, @Context HttpServletResponse response, DownloadRequest downloadRequest) throws IOException {
 		try {
 			System.out.println("Download request recieved" + downloadRequest);
-			response.setHeader("Content-Disposition", "attachment; filename=data." + downloadRequest.type);
+			response.setHeader("Content-Disposition", "attachment; filename=\"data." + downloadRequest.type + "\"");
 			response.setCharacterEncoding("UTF8");
 			response.setContentType("application/" + downloadRequest.type);
 			processRequest(response.getOutputStream(), downloadRequest);
