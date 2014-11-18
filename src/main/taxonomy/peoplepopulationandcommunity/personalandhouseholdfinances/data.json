@@ -4,19 +4,57 @@
       "name": "Debt",
       "link": "debt",
       "index": 0,
-      "items": []
+      "items": [],
+      "children": [
+        {
+          "name": "Total household debt",
+          "uri": "/peoplepopulationandcommunity/personalandhouseholdfinances/debt/timeseries/raid109"
+        },
+        {
+          "name": "Financial debt",
+          "uri": "/peoplepopulationandcommunity/personalandhouseholdfinances/debt/timeseries/raid110"
+        },
+        {
+          "name": "Property debt",
+          "uri": "/peoplepopulationandcommunity/personalandhouseholdfinances/debt/timeseries/raid111"
+        },
+        {
+          "name": "Median household financial debt",
+          "uri": "/peoplepopulationandcommunity/personalandhouseholdfinances/debt/timeseries/raid112"
+        },
+        {
+          "name": "Median household property debt",
+          "uri": "/peoplepopulationandcommunity/personalandhouseholdfinances/debt/timeseries/raid113"
+        }
+      ]
     },
     {
       "name": "Expenditure",
       "link": "expenditure",
       "index": 1,
-      "items": []
+      "items": [],
+      "children": [
+        {
+          "name": "Average total housing expenditure",
+          "uri": "/peoplepopulationandcommunity/personalandhouseholdfinances/expenditure/timeseries/raid114"
+        }
+      ]
     },
     {
       "name": "Income and Wealth",
       "link": "incomeandwealth",
       "index": 2,
-      "items": []
+      "items": [],
+      "children": [
+        {
+          "name": "Median household income",
+          "uri": "/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/timeseries/raid115"
+        },
+        {
+          "name": "Median household wealth",
+          "uri": "/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/timeseries/raid116"
+        }
+      ]
     }
   ],
   "level": "t2",

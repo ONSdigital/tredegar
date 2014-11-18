@@ -4,13 +4,45 @@
       "name": "Business Births, Deaths and Survival Rates",
       "link": "businessbirthsdeathsandsurvivalrates",
       "index": 0,
-      "items": []
+      "items": [],
+      "children": [
+        {
+          "name": "Business births",
+          "uri": "/businessindustryandtrade/changestobusiness/businessbirthsdeathsandsurvivalrates/timeseries/raid6"
+        },
+        {
+          "name": "Business deaths",
+          "uri": "/businessindustryandtrade/changestobusiness/businessbirthsdeathsandsurvivalrates/timeseries/raid7"
+        },
+        {
+          "name": "Survival rate for businesses born in 2007 and 2012",
+          "uri": "/businessindustryandtrade/changestobusiness/businessbirthsdeathsandsurvivalrates/timeseries/raid8"
+        }
+      ]
     },
     {
       "name": "Mergers and Acquisitions",
       "link": "mergersandacquisitions",
       "index": 1,
-      "items": []
+      "items": [],
+      "children": [
+        {
+          "name": "Number of acquisitions",
+          "uri": "/businessindustryandtrade/changestobusiness/mergersandacquisitions/timeseries/cbaq"
+        },
+        {
+          "name": "Value of acquisitions",
+          "uri": "/businessindustryandtrade/changestobusiness/mergersandacquisitions/timeseries/cbbi"
+        },
+        {
+          "name": "Number of disposals",
+          "uri": "/businessindustryandtrade/changestobusiness/mergersandacquisitions/timeseries/cbas"
+        },
+        {
+          "name": "Value of disposals",
+          "uri": "/businessindustryandtrade/changestobusiness/mergersandacquisitions/timeseries/cbbt"
+        }
+      ]
     }
   ],
   "level": "t2",

@@ -4,19 +4,101 @@
       "name": "People in Work",
       "link": "peopleinwork",
       "index": 0,
-      "items": []
+      "items": [],
+      "children": [
+        {
+          "name": "Labour Productivity",
+          "uri": "labourproductivity"
+        },
+        {
+          "name": "Workplace Disputes and Working Conditions",
+          "uri": "workplacedisputesandworkingconditions"
+        },
+        {
+          "name": "Earnings and Working Hours",
+          "uri": "earningsandworkinghours"
+        },
+        {
+          "name": "Employment and Employee Types",
+          "uri": "employmentandemployeetypes"
+        }
+      ]
     },
     {
       "name": "Unemployment",
       "link": "unemployment",
       "index": 1,
-      "items": []
+      "items": [],
+      "children": [
+        {
+          "name": "Unemployment rate (aged 16-64)",
+          "uri": "/employmentandlabourmarket/unemployment/timeseries/mgsx"
+        },
+        {
+          "name": "Unemployment 16+",
+          "uri": "/employmentandlabourmarket/unemployment/timeseries/mgsc"
+        },
+        {
+          "name": "Unemployment 16+ Female",
+          "uri": "/employmentandlabourmarket/unemployment/timeseries/mgse"
+        },
+        {
+          "name": "Unemployment 16+ Male",
+          "uri": "/employmentandlabourmarket/unemployment/timeseries/mgsd"
+        },
+        {
+          "name": "Unemployment Rate (aged 16-64) Female",
+          "uri": "/employmentandlabourmarket/unemployment/timeseries/mgsz"
+        },
+        {
+          "name": "Unemployment Rate (aged 16-64) Male",
+          "uri": "/employmentandlabourmarket/unemployment/timeseries/mgsy"
+        },
+        {
+          "name": "Total Claimant Count",
+          "uri": "/employmentandlabourmarket/unemployment/timeseries/bcjd"
+        },
+        {
+          "name": "Total Claimant Count Female",
+          "uri": "/employmentandlabourmarket/unemployment/timeseries/dpaf"
+        },
+        {
+          "name": "Total Claimant Count Male",
+          "uri": "/employmentandlabourmarket/unemployment/timeseries/dpae"
+        }
+      ]
     },
     {
       "name": "Public Sector Personnel",
       "link": "publicsectorpersonnel",
       "index": 2,
-      "items": []
+      "items": [],
+      "children": [
+        {
+          "name": "Total public sector employees: Head count",
+          "uri": "/employmentandlabourmarket/publicsectorpersonnel/timeseries/g7au"
+        },
+        {
+          "name": "Total public sector employees: Full time equivalent",
+          "uri": "/employmentandlabourmarket/publicsectorpersonnel/timeseries/g7g3"
+        },
+        {
+          "name": "Central government: Head count",
+          "uri": "/employmentandlabourmarket/publicsectorpersonnel/timeseries/g6nq"
+        },
+        {
+          "name": "Central government: Full time equivalent",
+          "uri": "/employmentandlabourmarket/publicsectorpersonnel/timeseries/g7fp"
+        },
+        {
+          "name": "Local government: Head count",
+          "uri": "/employmentandlabourmarket/publicsectorpersonnel/timeseries/g6nt"
+        },
+        {
+          "name": "Local government: Full time equivalent",
+          "uri": "/employmentandlabourmarket/publicsectorpersonnel/timeseries/g7fs"
+        }
+      ]
     }
   ],
   "level": "t2",
