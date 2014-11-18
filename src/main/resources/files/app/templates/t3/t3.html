@@ -15,23 +15,10 @@
               </p>
             </div>
           </div>
-            <div class="page-header__icons">
-            <!--<a href="#" class="link-complex">
-              <span class="icon icon-twitter icon-grey">
-                <span class="visuallyhidden">Share on Twitter</span>
-              </span>
-            </a>!-->
-            <a href="#" class="link-complex"><span class="icon icon-twitter icon--grey"><span class="visuallyhidden">Share on Twitter</span></span></a>
-            <a href="#" class="link-complex">
-              <span class="icon icon-facebook icon--grey">
-                <span class="visuallyhidden">Share on Facebook</span>
-              </span>
-            </a>
-            <a href="#" class="link-complex"><span class="icon icon-linkedin icon--grey"><span class="visuallyhidden">Share on linkedin</span></span></a>
-          </div>
+
+            <social-links></social-links>
 
         </div>
-         
     </div>
         <!-- /wrapper -->
 
@@ -97,6 +84,7 @@
                   <li ng-if="!taxonomy.data.statsBulletinHeadlineData">Lorem ipsum dolor sit amet, vel oporteat percipitur ex, quando persecuti id mea, pri at nihil essent aliquid.</li>
                   <li ng-if="!taxonomy.data.statsBulletinHeadlineData">Lorem ipsum dolor sit amet, vel oporteat percipitur ex, quando persecuti id mea, pri at nihil essent aliquid.</li>                  
                 </ul>
+
               </div>
             </div>
           </div>
@@ -171,8 +159,8 @@
               </time>
             </div>
           </div>
-        </td>   
-  
+        </td>
+
       <td class="update_responsive">
         <div class="micro list--table__item__body list--table__item__body--update  body_update_desk">Last updated: {{item.lastUpated}} <br>
           Next Updated: <span class="red_highlight"> {{item.nextUpdate}} </span>
@@ -383,4 +371,4 @@
       <latest-bulletins></latest-bulletins>
       <related-articles></related-articles>
       <contact-details></contact-details>
-      
+

@@ -52,6 +52,7 @@
 				type: type
 			}
 			downloadRequest.uriList = getFileList()
+			console.log(JSON.stringify(downloadRequest))
 			var fileName = $scope.getPage() + '.' + downloadRequest.type;
 			Downloader.downloadFile(downloadRequest,fileName)
 			
