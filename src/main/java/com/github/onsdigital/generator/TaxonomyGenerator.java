@@ -6,7 +6,6 @@ import java.io.Reader;
 import java.net.URI;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
@@ -29,6 +28,7 @@ import com.github.onsdigital.json.dataset.Dataset;
 import com.github.onsdigital.json.markdown.Article;
 import com.github.onsdigital.json.markdown.Bulletin;
 import com.github.onsdigital.json.markdown.Methodology;
+import com.github.onsdigital.json.taxonomy.Child;
 import com.github.onsdigital.json.taxonomy.HomeSection;
 import com.github.onsdigital.json.taxonomy.T1;
 import com.github.onsdigital.json.taxonomy.T2;
@@ -82,7 +82,9 @@ public class TaxonomyGenerator {
 			// System.out.println("Theme=" + themeIndex + " Subject=" +
 			// subjectIndex + " Topic=" + topicIndex + " Subtopic=" +
 			// subTopicIndex);
-			System.out.println("Theme=" + themeIndex + " Subject=" + subjectIndex + " Topic=" + topicIndex + " Lede=" + ledeIndex + " More=" + moreIndex);
+			System.out.println("Theme=" + themeIndex + " Subject="
+					+ subjectIndex + " Topic=" + topicIndex + " Lede="
+					+ ledeIndex + " More=" + moreIndex);
 
 			// Theme Subject Topic
 			String[] row;
@@ -152,7 +154,8 @@ public class TaxonomyGenerator {
 				// topicFolder.children.add(subTopicFolder);
 				// }
 
-				String path = StringUtils.join(new String[] { theme, subject, topic }, '/');
+				String path = StringUtils.join(new String[] { theme, subject,
+						topic }, '/');
 				while (StringUtils.endsWith(path, "/")) {
 					path = path.substring(0, path.length() - 1);
 				}
@@ -203,20 +206,28 @@ public class TaxonomyGenerator {
 		// the process is working as expected:
 
 		// System.out.println(Data.getDateLabels());
-		System.out.println("Timeseries with no data: " + noData + " (" + noData.size() + ")");
-		System.out.println("You have a grand total of " + created.size() + " timeseries, out of a total possible " + Data.size() + " parsed timeseries.");
-		System.out.println("There are a total of " + Data.sizeDatasets() + " CDIDs classified into one or more datasets.");
+		System.out.println("Timeseries with no data: " + noData + " ("
+				+ noData.size() + ")");
+		System.out.println("You have a grand total of " + created.size()
+				+ " timeseries, out of a total possible " + Data.size()
+				+ " parsed timeseries.");
+		System.out.println("There are a total of " + Data.sizeDatasets()
+				+ " CDIDs classified into one or more datasets.");
 		Set<String> unmappedDatasets = Data.unmappedDatasets();
 		if (unmappedDatasets.size() > 0) {
-			System.out.println("To increase this number, please add mappings for the following datasets: " + unmappedDatasets);
+			System.out
+					.println("To increase this number, please add mappings for the following datasets: "
+							+ unmappedDatasets);
 			for (String datasetName : unmappedDatasets) {
 				if (!"other".equals(datasetName)) {
-					System.out.println(" - " + datasetName + " contains " + Data.dataset(datasetName).size());
+					System.out.println(" - " + datasetName + " contains "
+							+ Data.dataset(datasetName).size());
 				}
 			}
 		}
 		if (Data.dataset("other") != null) {
-			System.out.println("The 'other' dataset contains " + Data.dataset("other").size() + " timeseries.");
+			System.out.println("The 'other' dataset contains "
+					+ Data.dataset("other").size() + " timeseries.");
 		}
 
 		Set<Folder> mapped = new TreeSet<>();
@@ -224,7 +235,9 @@ public class TaxonomyGenerator {
 			mapped.add(folder);
 		}
 		if (oldDatasetsCreated.size() != mapped.size()) {
-			System.out.println(oldDatasetsCreated.size() + " old datasets have been created, from a total of " + Data.sizeDatasetsCount());
+			System.out.println(oldDatasetsCreated.size()
+					+ " old datasets have been created, from a total of "
+					+ Data.sizeDatasetsCount());
 			Collections.sort(oldDatasetsCreated);
 			for (Folder folder : oldDatasetsCreated) {
 				System.out.println(" - " + folder.path());
@@ -251,19 +264,25 @@ public class TaxonomyGenerator {
 				}
 			}
 			if (!timeseries.cdid().matches("[A-Z0-9]{3,8}")) {
-				throw new RuntimeException("CDID " + timeseries + " is not in the expected format.");
+				throw new RuntimeException("CDID " + timeseries
+						+ " is not in the expected format.");
 			}
 		}
-		System.out.println(yes + " timeseries have been verified to exist on disk.");
+		System.out.println(yes
+				+ " timeseries have been verified to exist on disk.");
 		if (no > 0) {
-			System.out.println("Warning: " + no + " timeseries don't actually exist on disk");
+			System.out.println("Warning: " + no
+					+ " timeseries don't actually exist on disk");
 		}
 		if (missing > 0) {
-			System.out.println(missing + " timeseries have no URI set (suggesting they can't be written to the taxonomy)");
+			System.out
+					.println(missing
+							+ " timeseries have no URI set (suggesting they can't be written to the taxonomy)");
 		}
 	}
 
-	private static void createHomePage(Folder folder, File file) throws IOException {
+	private static void createHomePage(Folder folder, File file)
+			throws IOException {
 		// The folder needs to be at the root path:
 		T1 t1 = new T1(folder);
 		t1.fileName = "/";
@@ -274,12 +293,15 @@ public class TaxonomyGenerator {
 		String json = Serialiser.serialise(t1);
 		FileUtils.writeStringToFile(new File(file, "data.json"), json);
 		if (folder.oldDataset.size() > 0) {
-			throw new RuntimeException("A dataset has been mapped to " + folder + " but this folder is the homepage.");
+			throw new RuntimeException("A dataset has been mapped to " + folder
+					+ " but this folder is the homepage.");
 		}
 	}
 
 	private static void createT2(Folder folder, File file) throws IOException {
-		if (folder.name.equals("Releases") || (folder.parent != null && folder.parent.name.equals("Releases"))) {
+		if (folder.name.equals("Releases")
+				|| (folder.parent != null && folder.parent.name
+						.equals("Releases"))) {
 			System.out.println("Do not create json for Releases createT2");
 		} else {
 			T2 t2 = new T2(folder, folder.index);
@@ -294,23 +316,38 @@ public class TaxonomyGenerator {
 			FileUtils.writeStringToFile(new File(file, "data.json"), json);
 		}
 		if (folder.oldDataset.size() > 0) {
-			throw new RuntimeException("A dataset has been mapped to " + folder + " but this folder is a T2.");
+			throw new RuntimeException("A dataset has been mapped to " + folder
+					+ " but this folder is a T2.");
 		}
 	}
 
-	private static void buildT2Sections(T2 t2, Folder folder) throws IOException {
+	private static void buildT2Sections(T2 t2, Folder folder)
+			throws IOException {
 		t2.sections = new ArrayList<HomeSection>();
+
 		for (Folder child : folder.getChildren()) {
 			HomeSection section = new HomeSection(child.name, child.filename());
 			section.index = child.index;
 			t2.sections.add(section);
-			
-			//Loading timeseries for t2 is no longer needed
-//			List<Folder> t3Folders = getT3Folders(child);
-//			Collection<URI> timeserieses = getTimeseries(t3Folders);
-//			for (URI timeseries : timeserieses) {
-//				section.items.add(timeseries);
-//			}
+			if (child.getChildren().size() > 0) { // t2 page at level below
+				// Add child of sections to t2 page
+				for (Folder grandChild : child.getChildren()) {
+					section.children.add(new Child(grandChild.name, URI
+							.create(grandChild.filename())));
+				}
+			} else { // T3 page at below level
+				for (Timeseries grandChild : child.timeserieses) {
+					section.children.add(new Child(grandChild.name,
+							grandChild.uri));
+				}
+			}
+
+			// Loading timeseries for t2 is no longer needed
+			// List<Folder> t3Folders = getT3Folders(child);
+			// Collection<URI> timeserieses = getTimeseries(t3Folders);
+			// for (URI timeseries : timeserieses) {
+			// section.items.add(timeseries);
+			// }
 		}
 		Collections.sort(t2.sections);
 	}
@@ -330,7 +367,8 @@ public class TaxonomyGenerator {
 		return result;
 	}
 
-	private static Set<URI> getTimeseries(List<Folder> t3Folders) throws IOException {
+	private static Set<URI> getTimeseries(List<Folder> t3Folders)
+			throws IOException {
 		// Keep keys in the order they are added, but allow for de-duplication:
 		Set<URI> result = new LinkedHashSet<>();
 
@@ -351,7 +389,8 @@ public class TaxonomyGenerator {
 					if (timeseries.uri != null) {
 						result.add(timeseries.uri);
 					} else {
-						System.out.println("No URI defined for " + timeseries + " when scanning to " + t3Folder);
+						System.out.println("No URI defined for " + timeseries
+								+ " when scanning to " + t3Folder);
 					}
 				}
 			}
@@ -374,9 +413,12 @@ public class TaxonomyGenerator {
 			t3.headline = folder.headline.uri;
 		} else {
 			System.out.println("No headline URI set for " + folder.name);
-			if (folder.timeserieses.size() > 0 && folder.timeserieses.get(0).uri != null) {
+			if (folder.timeserieses.size() > 0
+					&& folder.timeserieses.get(0).uri != null) {
 				t3.headline = folder.timeserieses.get(0).uri;
-				System.out.println("Using the first item from the timeseries list instead: " + t3.headline);
+				System.out
+						.println("Using the first item from the timeseries list instead: "
+								+ t3.headline);
 			}
 		}
 		List<Timeseries> timeserieses = folder.timeserieses;
@@ -426,7 +468,8 @@ public class TaxonomyGenerator {
 		}
 	}
 
-	private static void createStatsBulletins(Folder folder, T3 t3) throws IOException {
+	private static void createStatsBulletins(Folder folder, T3 t3)
+			throws IOException {
 		t3.statsBulletins.clear();
 
 		for (Bulletin bulletin : folder.bulletins) {
@@ -440,9 +483,11 @@ public class TaxonomyGenerator {
 		}
 	}
 
-	private static void createStatsBulletinHeadline(Folder folder, T3 t3) throws IOException {
+	private static void createStatsBulletinHeadline(Folder folder, T3 t3)
+			throws IOException {
 		// Stats bulletin references:
-		URI statsBulletinHeadline = toStatsBulletinUri(folder, folder.headlineBulletin);
+		URI statsBulletinHeadline = toStatsBulletinUri(folder,
+				folder.headlineBulletin);
 		if (statsBulletinHeadline != null) {
 			t3.statsBulletinHeadline = statsBulletinHeadline;
 		}
@@ -464,8 +509,12 @@ public class TaxonomyGenerator {
 				if (bulletinFileName == null) {
 					System.out.println("No filename for : " + bulletin.name);
 				}
-				String sanitizedBulletinFileName = bulletinFileName.replaceAll("\\W", "");
-				bulletin.uri = URI.create(baseUri + "/" + StringUtils.deleteWhitespace(sanitizedBulletinFileName));
+				String sanitizedBulletinFileName = bulletinFileName.replaceAll(
+						"\\W", "");
+				bulletin.uri = URI.create(baseUri
+						+ "/"
+						+ StringUtils
+								.deleteWhitespace(sanitizedBulletinFileName));
 			}
 			result = bulletin.uri;
 		}
@@ -486,8 +535,12 @@ public class TaxonomyGenerator {
 				}
 				baseUri += "/datasets";
 				String datasetFileName = dataset.fileName;
-				String sanitizedDatasetFileName = datasetFileName.replaceAll("\\W", "");
-				dataset.uri = URI.create(baseUri + "/" + StringUtils.deleteWhitespace(sanitizedDatasetFileName));
+				String sanitizedDatasetFileName = datasetFileName.replaceAll(
+						"\\W", "");
+				dataset.uri = URI.create(baseUri
+						+ "/"
+						+ StringUtils
+								.deleteWhitespace(sanitizedDatasetFileName));
 			}
 			result = dataset.uri;
 		}
@@ -503,7 +556,8 @@ public class TaxonomyGenerator {
 	 * @param t3
 	 * @throws IOException
 	 */
-	private static void createTimeseries(Folder folder, File file, T3 t3) throws IOException {
+	private static void createTimeseries(Folder folder, File file, T3 t3)
+			throws IOException {
 
 		int created = 0;
 
@@ -543,7 +597,8 @@ public class TaxonomyGenerator {
 		// }
 	}
 
-	private static boolean createTimeseries(Timeseries timeseries, Folder folder, T3 t3) throws IOException {
+	private static boolean createTimeseries(Timeseries timeseries,
+			Folder folder, T3 t3) throws IOException {
 		boolean result = false;
 
 		URI uri = timeseries.uri;
@@ -556,7 +611,9 @@ public class TaxonomyGenerator {
 				timeseriesFolder.mkdirs();
 
 				timeseries.setBreadcrumb(t3);
-				if (timeseries.months.size() == 0 && timeseries.quarters.size() == 0 && timeseries.years.size() == 0) {
+				if (timeseries.months.size() == 0
+						&& timeseries.quarters.size() == 0
+						&& timeseries.years.size() == 0) {
 					noData.add(timeseries);
 				}
 
@@ -565,7 +622,8 @@ public class TaxonomyGenerator {
 				}
 
 				String json = Serialiser.serialise(timeseries);
-				FileUtils.writeStringToFile(timeseriesFile, json, Charset.forName("UTF8"));
+				FileUtils.writeStringToFile(timeseriesFile, json,
+						Charset.forName("UTF8"));
 				created.add(timeseries);
 				result = true;
 			}
@@ -573,46 +631,56 @@ public class TaxonomyGenerator {
 		return result;
 	}
 
-	private static void createBulletin(Folder folder, File file, T3 t3) throws IOException {
+	private static void createBulletin(Folder folder, File file, T3 t3)
+			throws IOException {
 		if (folder.bulletins.size() > 0) {
 			File bulletinsFolder = new File(file, "bulletins");
 			bulletinsFolder.mkdir();
 			for (Bulletin bulletin : folder.bulletins) {
 				bulletin.setBreadcrumb(t3);
-				File bulletinFolder = new File(bulletinsFolder, StringUtils.deleteWhitespace(bulletin.fileName));
+				File bulletinFolder = new File(bulletinsFolder,
+						StringUtils.deleteWhitespace(bulletin.fileName));
 				String json = Serialiser.serialise(bulletin);
-				FileUtils.writeStringToFile(new File(bulletinFolder, "data.json"), json, Charset.forName("UTF8"));
+				FileUtils.writeStringToFile(new File(bulletinFolder,
+						"data.json"), json, Charset.forName("UTF8"));
 			}
 		}
 	}
 
-	private static void createArticle(Folder folder, File file, T3 t3) throws IOException {
+	private static void createArticle(Folder folder, File file, T3 t3)
+			throws IOException {
 		if (folder.articles.size() > 0) {
 			File articlesFolder = new File(file, "articles");
 			articlesFolder.mkdir();
 			for (Article article : folder.articles) {
 				article.setBreadcrumb(t3);
-				File bulletinFolder = new File(articlesFolder, StringUtils.deleteWhitespace(article.fileName));
+				File bulletinFolder = new File(articlesFolder,
+						StringUtils.deleteWhitespace(article.fileName));
 				String json = Serialiser.serialise(article);
-				FileUtils.writeStringToFile(new File(bulletinFolder, "data.json"), json, Charset.forName("UTF8"));
+				FileUtils.writeStringToFile(new File(bulletinFolder,
+						"data.json"), json, Charset.forName("UTF8"));
 			}
 		}
 	}
 
-	private static void createMethodology(Folder folder, File file, T3 t3) throws IOException {
+	private static void createMethodology(Folder folder, File file, T3 t3)
+			throws IOException {
 		if (folder.methodology.size() > 0) {
 			File methodologyFolder = new File(file, "methodology");
 			methodologyFolder.mkdir();
 			for (Methodology methodology : folder.methodology) {
 				methodology.setBreadcrumb(t3);
-				File bulletinFolder = new File(methodologyFolder, StringUtils.deleteWhitespace(methodology.fileName));
+				File bulletinFolder = new File(methodologyFolder,
+						StringUtils.deleteWhitespace(methodology.fileName));
 				String json = Serialiser.serialise(methodology);
-				FileUtils.writeStringToFile(new File(bulletinFolder, "data.json"), json, Charset.forName("UTF8"));
+				FileUtils.writeStringToFile(new File(bulletinFolder,
+						"data.json"), json, Charset.forName("UTF8"));
 			}
 		}
 	}
 
-	private static void createDataset(Folder folder, File file, T3 t3) throws IOException {
+	private static void createDataset(Folder folder, File file, T3 t3)
+			throws IOException {
 		List<Dataset> datasets = DatasetContent.getDatasets(folder);
 
 		if (datasets != null && datasets.size() > 0) {
@@ -621,9 +689,13 @@ public class TaxonomyGenerator {
 			for (Dataset dataset : datasets) {
 				dataset.setBreadcrumb(t3);
 				String datasetFileName = dataset.fileName.replaceAll("\\W", "");
-				File datasetFolder = new File(datasetsFolder, StringUtils.deleteWhitespace(datasetFileName.toLowerCase()));
+				File datasetFolder = new File(datasetsFolder,
+						StringUtils.deleteWhitespace(datasetFileName
+								.toLowerCase()));
 				String json = Serialiser.serialise(dataset);
-				FileUtils.writeStringToFile(new File(datasetFolder, "data.json"), json, Charset.forName("UTF8"));
+				FileUtils.writeStringToFile(
+						new File(datasetFolder, "data.json"), json,
+						Charset.forName("UTF8"));
 			}
 		}
 	}
