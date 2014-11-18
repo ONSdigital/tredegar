@@ -209,18 +209,11 @@
                         </ol>
                     </div>
                     <br></br>
-                    <div ng-if="chart.timeseries.note1"> <!-- Another field goes here for condition -->
-                        <h3>Related series</h3>
+                    <h3>Related series</h3>
+                    <div ng-repeat="relatedTimeseries in taxonomy.data.relatedTimeseriesData">
                         <div class="padded">
-                            <div><a>CPI: Consumer Prices Index</a>
-                            </div>
-                            <div>
-                                <a>RPIJ</a>
-                            </div>
-                            <div>
-                                <a>Output of manufactured product Index</a>
-                            </div>
-                        </div>
+				            <a href=#!{{relatedTimeseries.uri}}>{{relatedTimeseries.name}}</a>
+						</div>
                     </div>
                 </div>
             </div>

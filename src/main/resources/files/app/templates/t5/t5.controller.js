@@ -59,10 +59,11 @@
                 for (var i = 0; i < relatedTimeserieses.length; i++) {
                     var timeseries = relatedTimeserieses[i]
                     var relatedTimeseriesPath = dataPath + timeseries
-                    Taxonomy.load(relatedTimeseriesPath, function(relatedTimeseries) {
-                        console.log('Loaded related timeseries: ', relatedTimeseriesPath, ' ', relatedTimeseries)
-                        data.relatedTimeseriesData.push(relatedTimeseries)
-                    })
+                    DataLoader.load(relatedTimeseriesPath)
+                    	.then(function(relatedTimeseries) {
+                        	console.log('Loaded related timeseries: ', relatedTimeseriesPath, ' ', relatedTimeseries)
+                        	data.relatedTimeseriesData.push(relatedTimeseries)
+                    	})
                 }
             }
         }
