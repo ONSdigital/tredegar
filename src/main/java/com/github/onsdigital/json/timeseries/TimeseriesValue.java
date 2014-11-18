@@ -96,4 +96,10 @@ public class TimeseriesValue implements Comparable<TimeseriesValue> {
 
 		return result;
 	}
+
+	@Override
+	public String toString() {
+		return date + ":" + value;
+	}
+
 }
