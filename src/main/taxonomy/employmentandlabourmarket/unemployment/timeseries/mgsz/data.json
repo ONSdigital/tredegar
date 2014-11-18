@@ -4408,10 +4408,14 @@
     "/employmentandlabourmarket/unemployment/bulletins/uklabourmarket",
     "/employmentandlabourmarket/unemployment/bulletins/youngpeoplenotineducationemploymentortrainingneet"
   ],
-  "relatedTimeseries": [],
+  "relatedTimeseries": [
+    "/employmentandlabourmarket/unemployment/timeseries/mgsx",
+    "/employmentandlabourmarket/unemployment/timeseries/mgsy",
+    "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/lf25"
+  ],
   "source": "Labour Force Survey",
   "type": "timeseries",
-  "name": "Unemployment Rate (aged 16-64) Female",
+  "name": "Female Unemployment Rate (aged 16-64)",
   "fileName": "mgsz",
   "breadcrumb": [
     {

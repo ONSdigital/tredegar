@@ -902,7 +902,9 @@
   "relatedBulletins": [
     "/peoplepopulationandcommunity/housing/bulletins/housepriceindex"
   ],
-  "relatedTimeseries": [],
+  "relatedTimeseries": [
+    "/peoplepopulationandcommunity/housing/timeseries/raid104"
+  ],
   "type": "timeseries",
   "name": "UK average house price",
   "fileName": "raid103",

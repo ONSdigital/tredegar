@@ -4408,10 +4408,14 @@
     "/employmentandlabourmarket/unemployment/bulletins/uklabourmarket",
     "/employmentandlabourmarket/unemployment/bulletins/youngpeoplenotineducationemploymentortrainingneet"
   ],
-  "relatedTimeseries": [],
+  "relatedTimeseries": [
+    "/employmentandlabourmarket/unemployment/timeseries/mgsz",
+    "/employmentandlabourmarket/unemployment/timeseries/mgsx",
+    "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgsv"
+  ],
   "source": "Labour Force Survey",
   "type": "timeseries",
-  "name": "Unemployment Rate (aged 16-64) Male",
+  "name": "Male Unemployment Rate (aged 16-64)",
   "fileName": "mgsy",
   "breadcrumb": [
     {

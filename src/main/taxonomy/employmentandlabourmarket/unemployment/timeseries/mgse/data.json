@@ -4410,11 +4410,12 @@
   ],
   "relatedTimeseries": [
     "/employmentandlabourmarket/unemployment/timeseries/mgsd",
-    "/employmentandlabourmarket/unemployment/timeseries/mgsc"
+    "/employmentandlabourmarket/unemployment/timeseries/mgsc",
+    "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgsb"
   ],
   "source": "Labour Force Survey",
   "type": "timeseries",
-  "name": "Unemployment 16+ Female",
+  "name": "Female Unemployment 16+",
   "fileName": "mgse",
   "breadcrumb": [
     {

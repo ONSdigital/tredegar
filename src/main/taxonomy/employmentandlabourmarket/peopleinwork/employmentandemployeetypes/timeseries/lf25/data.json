@@ -4399,10 +4399,14 @@
   ],
   "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/lf25",
   "relatedBulletins": [],
-  "relatedTimeseries": [],
+  "relatedTimeseries": [
+    "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgsv",
+    "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/lf24",
+    "/employmentandlabourmarket/unemployment/timeseries/mgsz"
+  ],
   "source": "Labour Force Survey",
   "type": "timeseries",
-  "name": "Employment Rate (aged 16-64) Female",
+  "name": "Female Employment rate (aged 16-64)",
   "fileName": "lf25",
   "breadcrumb": [
     {

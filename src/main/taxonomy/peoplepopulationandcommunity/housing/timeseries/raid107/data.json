@@ -13,7 +13,9 @@
   "relatedBulletins": [
     "/peoplepopulationandcommunity/housing/bulletins/housepriceindex"
   ],
-  "relatedTimeseries": [],
+  "relatedTimeseries": [
+    "/peoplepopulationandcommunity/housing/timeseries/raid104"
+  ],
   "type": "timeseries",
   "name": "Scotland average house price",
   "fileName": "raid107",

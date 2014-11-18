@@ -765,9 +765,11 @@
   "relatedBulletins": [
     "/economy/regionalaccounts/bulletins/regionalgrossdisposablehouseholdincomegdhi"
   ],
-  "relatedTimeseries": [],
+  "relatedTimeseries": [
+    "/economy/regionalaccounts/timeseries/c92r"
+  ],
   "type": "timeseries",
-  "name": "Gross Disposable Household Income United Kingdom",
+  "name": "United Kingdom Gross Disposable Household Income",
   "fileName": "qwnd",
   "breadcrumb": [
     {

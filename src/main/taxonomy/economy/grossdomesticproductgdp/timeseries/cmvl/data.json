@@ -1773,7 +1773,11 @@
   "relatedBulletins": [
     "/economy/grossdomesticproductgdp/bulletins/grossdomesticproductpreliminaryestimate"
   ],
-  "relatedTimeseries": [],
+  "relatedTimeseries": [
+    "/economy/grossdomesticproductgdp/timeseries/dtwm",
+    "/economy/grossdomesticproductgdp/timeseries/cgbz",
+    "/economy/grossdomesticproductgdp/timeseries/cgbx"
+  ],
   "type": "timeseries",
   "name": "Income Measure: Taxes less Subsidies",
   "fileName": "cmvl",

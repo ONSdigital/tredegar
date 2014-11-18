@@ -6654,7 +6654,11 @@
   "relatedBulletins": [
     "/employmentandlabourmarket/peopleinwork/workplacedisputesandworkingconditions/bulletins/uklabourmarketjuly2014"
   ],
-  "relatedTimeseries": [],
+  "relatedTimeseries": [
+    "/employmentandlabourmarket/peopleinwork/workplacedisputesandworkingconditions/timeseries/f8xz",
+    "/employmentandlabourmarket/peopleinwork/workplacedisputesandworkingconditions/timeseries/f8y2",
+    "/employmentandlabourmarket/peopleinwork/workplacedisputesandworkingconditions/timeseries/bluu"
+  ],
   "source": "Labour Force Survey",
   "type": "timeseries",
   "name": "Working days lost",

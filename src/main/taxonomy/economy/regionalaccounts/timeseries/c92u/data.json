@@ -95,10 +95,13 @@
     "/economy/regionalaccounts/bulletins/regionalgrossdisposablehouseholdincomegdhi"
   ],
   "relatedTimeseries": [
-    "/economy/regionalaccounts/timeseries/qwnd"
+    "/economy/regionalaccounts/timeseries/qwnd",
+    "/economy/regionalaccounts/timeseries/c92q",
+    "/economy/regionalaccounts/timeseries/c92s",
+    "/economy/regionalaccounts/timeseries/c92t"
   ],
   "type": "timeseries",
-  "name": "Gross Disposable Household Income Northern Ireland",
+  "name": "Northern Ireland Gross Disposable Household Income",
   "fileName": "c92u",
   "breadcrumb": [
     {

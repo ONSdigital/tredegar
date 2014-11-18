@@ -45,7 +45,7 @@ public class Data implements Iterable<Timeseries> {
 	private static Map<String, Timeseries> timeserieses = new HashMap<>();
 	private static Set<String> mappedDatasets = new HashSet<>();
 
-	public static Map<String, List<String>> relatedTimeseries = new HashMap<>();
+	public static Map<Timeseries, List<Timeseries>> relatedTimeseries = new HashMap<>();
 
 	public static void addDateOption(String date) {
 
@@ -280,15 +280,15 @@ public class Data implements Iterable<Timeseries> {
 		return result;
 	}
 
-	public static void addRelatedTimeseries(String cdid, List<String> relatedCdids) {
-		relatedTimeseries.put(cdid, relatedCdids);
+	public static void addRelatedTimeseries(Timeseries timeseries, List<Timeseries> relatedTimeserieses) {
+		relatedTimeseries.put(timeseries, relatedTimeserieses);
 	}
 
-	public static List<String> relatedTimeseries(String cdid) {
-		return relatedTimeseries.get(cdid);
+	public static List<Timeseries> relatedTimeseries(Timeseries timeseries) {
+		return relatedTimeseries.get(timeseries);
 	}
 
-	public static Map<String, List<String>> getRelatedTimeseries() {
+	public static Map<Timeseries, List<Timeseries>> getRelatedTimeseries() {
 		return relatedTimeseries;
 	}
 

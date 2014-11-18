@@ -6,7 +6,6 @@ import java.io.Reader;
 import java.net.URI;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
@@ -564,11 +563,12 @@ public class TaxonomyGenerator {
 					timeseries.relatedBulletins.add(bulletin.uri);
 				}
 
-				List<String> relatedCdids = Data.relatedTimeseries(timeseries.cdid());
-				if (relatedCdids != null && !relatedCdids.isEmpty())
-				for (String relatedCdid : relatedCdids) {
-					Timeseries relatedTimeseries = Data.timeseries(relatedCdid);
-					timeseries.relatedTimeseries.add(relatedTimeseries.uri);
+				List<Timeseries> relatedCdids = Data.relatedTimeseries(timeseries);
+				if (relatedCdids != null && !relatedCdids.isEmpty()) {
+					for (Timeseries relatedCdid : relatedCdids) {
+						Timeseries relatedTimeseries = Data.timeseries(relatedCdid.cdid());
+						timeseries.relatedTimeseries.add(relatedTimeseries.uri);
+					}
 				}
 
 				String json = Serialiser.serialise(timeseries);

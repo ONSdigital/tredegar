@@ -4409,7 +4409,10 @@
     "/employmentandlabourmarket/unemployment/bulletins/youngpeoplenotineducationemploymentortrainingneet"
   ],
   "relatedTimeseries": [
-    "/employmentandlabourmarket/unemployment/timeseries/mgsc"
+    "/employmentandlabourmarket/unemployment/timeseries/mgsz",
+    "/employmentandlabourmarket/unemployment/timeseries/mgsy",
+    "/employmentandlabourmarket/unemployment/timeseries/mgsc",
+    "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/lf24"
   ],
   "source": "Labour Force Survey",
   "type": "timeseries",

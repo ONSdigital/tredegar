@@ -1436,7 +1436,10 @@
   "relatedBulletins": [
     "/economy/grossdomesticproductgdp/bulletins/grossdomesticproductpreliminaryestimate"
   ],
-  "relatedTimeseries": [],
+  "relatedTimeseries": [
+    "/economy/grossdomesticproductgdp/timeseries/ybha",
+    "/economy/grossdomesticproductgdp/timeseries/ihyo"
+  ],
   "type": "timeseries",
   "name": "GDP Quarter on Quarter growth (CP)",
   "fileName": "ihyn",

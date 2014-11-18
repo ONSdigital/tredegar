@@ -125,11 +125,17 @@ class AlphaContentCSV {
 			String relatedCdidColumn = row.get(RELATED_CDID);
 			if (StringUtils.isNotBlank(relatedCdidColumn)) {
 				String[] relatedCdidTokens = relatedCdidColumn.split(",");
-				List<String> relatedCdids = new ArrayList<String>();
+				List<Timeseries> relatedTimeserieses = new ArrayList<Timeseries>();
 				for (String relatedCdid : relatedCdidTokens) {
-					relatedCdids.add(relatedCdid.trim());
+					Timeseries relatedTimeseries = Data.timeseries(relatedCdid);
+					if (relatedTimeseries == null) {
+						// We haven't seen this one before, so add it:
+						relatedTimeseries = Data.addTimeseries(relatedCdid.trim(), null);
+
+					}
+					relatedTimeserieses.add(relatedTimeseries);
 				}
-				Data.addRelatedTimeseries(cdid, relatedCdids);
+				Data.addRelatedTimeseries(timeseries, relatedTimeserieses);
 			}
 
 			String source = row.get(SOURCE);

@@ -13,7 +13,9 @@
   "relatedBulletins": [
     "/businessindustryandtrade/businessactivitysizeandlocation/bulletins/ukbusinessactivitysizeandlocation"
   ],
-  "relatedTimeseries": [],
+  "relatedTimeseries": [
+    "/businessindustryandtrade/businessactivitysizeandlocation/timeseries/raid2"
+  ],
   "type": "timeseries",
   "name": "Wales businesses",
   "fileName": "raid5",

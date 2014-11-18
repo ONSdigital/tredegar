@@ -210,11 +210,13 @@
                     </div>
                     <br></br>
                     <h3>Related series</h3>
-                    <div ng-repeat="relatedTimeseries in taxonomy.data.relatedTimeseriesData">
-                        <div class="padded">
-				            <a href=#!{{relatedTimeseries.uri}}>{{relatedTimeseries.name}}</a>
-						</div>
-                    </div>
+                    <div class="padded">
+	                    <div ng-repeat="relatedTimeseries in taxonomy.data.relatedTimeseriesData">
+	 						<div>
+					            <a href=#!{{relatedTimeseries.uri}}>{{relatedTimeseries.name}}</a>
+							</div>
+	                    </div>
+	                </div>
                 </div>
             </div>
             <!-- Sidebar -->

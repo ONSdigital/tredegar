@@ -810,7 +810,10 @@
   "relatedBulletins": [
     "/businessindustryandtrade/changestobusiness/mergersandacquisitions/bulletins/mergersandacquisitionsinvolvingukcompanies"
   ],
-  "relatedTimeseries": [],
+  "relatedTimeseries": [
+    "/businessindustryandtrade/changestobusiness/mergersandacquisitions/timeseries/cbas",
+    "/businessindustryandtrade/changestobusiness/mergersandacquisitions/timeseries/cbbi"
+  ],
   "type": "timeseries",
   "name": "Number of acquisitions",
   "fileName": "cbaq",

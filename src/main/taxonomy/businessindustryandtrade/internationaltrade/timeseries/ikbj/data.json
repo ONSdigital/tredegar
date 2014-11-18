@@ -2974,7 +2974,10 @@
   "relatedBulletins": [
     "/businessindustryandtrade/internationaltrade/bulletins/uktrade"
   ],
-  "relatedTimeseries": [],
+  "relatedTimeseries": [
+    "/businessindustryandtrade/internationaltrade/timeseries/ikbh",
+    "/businessindustryandtrade/internationaltrade/timeseries/ikbi"
+  ],
   "type": "timeseries",
   "name": "Trade in goods and services deficit (or surplus)",
   "fileName": "ikbj",

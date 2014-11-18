@@ -39,7 +39,9 @@
   "relatedBulletins": [
     "/businessindustryandtrade/businessactivitysizeandlocation/bulletins/ukbusinessactivitysizeandlocation"
   ],
-  "relatedTimeseries": [],
+  "relatedTimeseries": [
+    "/businessindustryandtrade/businessactivitysizeandlocation/timeseries/raid2"
+  ],
   "type": "timeseries",
   "name": "UK businesses",
   "fileName": "raid1",

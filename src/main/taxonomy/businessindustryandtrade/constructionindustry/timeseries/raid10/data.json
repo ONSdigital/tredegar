@@ -13,7 +13,11 @@
   "relatedBulletins": [
     "/businessindustryandtrade/constructionindustry/bulletins/outputintheconstructionindustry"
   ],
-  "relatedTimeseries": [],
+  "relatedTimeseries": [
+    "/businessindustryandtrade/constructionindustry/timeseries/raid13",
+    "/businessindustryandtrade/constructionindustry/timeseries/raid9",
+    "/businessindustryandtrade/constructionindustry/timeseries/raid11"
+  ],
   "type": "timeseries",
   "name": "Value of construction output - all work",
   "fileName": "raid10",

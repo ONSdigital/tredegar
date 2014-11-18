@@ -4410,11 +4410,12 @@
   ],
   "relatedTimeseries": [
     "/employmentandlabourmarket/unemployment/timeseries/mgse",
-    "/employmentandlabourmarket/unemployment/timeseries/mgsc"
+    "/employmentandlabourmarket/unemployment/timeseries/mgsc",
+    "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgsa"
   ],
   "source": "Labour Force Survey",
   "type": "timeseries",
-  "name": "Unemployment 16+ Male",
+  "name": "Male Unemployment 16+",
   "fileName": "mgsd",
   "breadcrumb": [
     {

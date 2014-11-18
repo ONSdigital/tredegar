@@ -987,7 +987,9 @@
     "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/annualsurveyofhoursandearnings2013provisionalresults",
     "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/annualsurveyofhoursandearningspensiontables2013provisionalresults"
   ],
-  "relatedTimeseries": [],
+  "relatedTimeseries": [
+    "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/timeseries/kai7"
+  ],
   "source": "Labour Force Survey",
   "type": "timeseries",
   "name": "Average weekly earning growth rate (regular pay)",
