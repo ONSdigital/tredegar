@@ -2,9 +2,9 @@
     'use strict';
     //Local Statistics Controller
     angular.module('onsTemplates')
-        .controller('LocalStatsController', ['$scope', LocalStatsController]);
+        .controller('LocalStatsCtlr', ['$scope', LocalStatsCtlr]);
 
-    function LocalStatsController($scope) {
+    function LocalStatsCtlr($scope) {
         $scope.breadcrumb = {
             parent: [],
             current: "Local Statistics"

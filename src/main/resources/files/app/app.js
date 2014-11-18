@@ -77,8 +77,8 @@
                     }
                 }).
                 when('/localstats', {
-                    templateUrl: 'app/templates/localstats/local-stats.html',
-                    controller: "LocalStatsController",
+                    templateUrl: 'app/templates/localstats/localstats.html',
+                    controller: "LocalStatsCtlr",
                     resolve: {
                         navigation: ['DataLoader', getNavigatinLinks]
                     }
