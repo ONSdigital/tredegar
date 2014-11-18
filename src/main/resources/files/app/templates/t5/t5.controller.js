@@ -222,6 +222,7 @@
         function initialize() {
             resolveChartTypes(ArrayUtil)
             ctrl.chartConfig.series[0].name = ctrl.timeseries.name
+            ctrl.chartConfig.series[0].id = ctrl.timeseries.unit
             prepareData()
 
             function resolveChartTypes(ArrayUtil) {
@@ -497,8 +498,8 @@
                     },
 
                     formatter: function() {
-                        var id = '<div id="custom-tooltip" class="tooltip-left tooltip-right">';
-                        var block = id + "<div class='sidebar' >";
+                        var id1 = '<div id="custom-tooltip" class="tooltip-left tooltip-right">';
+                        var block = id1 + "<div class='sidebar' >";
                         var title = '<b class="title">' + this.points[0].key + ': </b><br/>';
                         var symbol = ['<div class="circle">●</div>', '<div class="square">■</div>', '<div class="diamond">♦</div>', '<div class="triangle">▲</div>', '<div class="triangle">▼</div>'];
 
@@ -515,7 +516,8 @@
 
                         // series names and values
                         $.each(this.points, function(i, val) {
-                            content += '<div class="tiptext"><i>' + val.point.series.chart.series[i].name + "</i><br/><b>Value: " + Highcharts.numberFormat(val.y, 2) + '</b></div>';
+                            content += '<div class="tiptext"><i>' + val.point.series.chart.series[i].name + "</i><br/><b>Value: " + Highcharts.numberFormat(val.y, 2) + " " + val.point.series.chart.series[i].options.id + '</b></div>';
+                            // console.log(val)
                         });
                         content += "</div>";
                         return content;
@@ -532,6 +534,7 @@
 
             series: [{
                 name: "",
+                id: "",
                 data: [],
                 marker: {
                     symbol: "circle",
