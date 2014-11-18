@@ -46,7 +46,7 @@
 	                  </div>
 	                </div>
 	                <div class="box box--padded--small">
-			            <div ng-controller="T3ChartController as chart">
+			            <div ng-controller="T3HeadlineChartController as chart">
 				           <div ng-if="chart.chartVisible">
 				               <highchart class="highcharts-background" id="chart_prices" config="chart.chartConfig">
 				               </highchart>
@@ -134,7 +134,7 @@
         
 	    <td colspan="2">
 	      <div>
-	        <div ng-controller="T3RepeatItemController as chart">
+	        <div ng-controller="T3TableChartController as chart">
 		        <div ng-if="chart.chartVisible">
 		            <highchart class="highcharts-background" id="chart_prices" config="chart.chartConfig">
 		            </highchart>

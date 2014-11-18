@@ -3,11 +3,11 @@
 (function() {
 
 	angular.module('onsChart', [])
-		.service('Chart', ['$http', '$log', '$location',
+		.service('Chart', ['$http', '$log', '$location', 'ArrayUtil',
 			ChartService
 		])
 
-	function ChartService($http, $log, $location) {
+	function ChartService($http, $log, $location, ArrayUtil) {
 		var service = this
 		
 	    function getChart() {
@@ -291,22 +291,6 @@
 	        return data;
 	    }
 		
-        function isNotEmpty(array) {
-            return (array && array.length > 0)
-        }
-        
-        function getLast(array) {
-            if (isNotEmpty(array)) {
-                return array[array.length - 1]
-            }
-        }
-        
-        function getFirst(array) {
-            if (isNotEmpty(array)) {
-                return array[0]
-            }
-        }
-        
         function quarterVal(quarter) {
             switch (quarter) {
                 case 'Q1':
@@ -355,16 +339,6 @@
             }
         }       
         
-        function toUnique(a) { //array,placeholder,placeholder
-            var b = a.length;
-            var c
-            while (c = --b) {
-                while (c--) {
-                    a[b] !== a[c] || a.splice(c, 1);
-                }
-            }
-        }
-        
         function enrichData(timeseriesValue) {
             var quarter = timeseriesValue.quarter
             var year = timeseriesValue.year
@@ -393,22 +367,247 @@
                 data.values.push(enrichData(current, i))
                 data.years.push(current.year)
             }
-            toUnique(data.years)
+            ArrayUtil.toUnique(data.years)
             return data
-        }        
+        }  
+        
+        function buildChart(ctrl, timeseries, isHeadlineData) {
+        	// if headline data is not available then return, the watcher will deal with this scenario
+        	if (!timeseries) {
+        		return
+        	}
+        	
+        	ctrl.timeseries = timeseries
+        	ctrl.chartConfig = getSparkline(isHeadlineData)
+            ctrl.showYearly = false
+            ctrl.showMonthly = false
+            ctrl.showQuarterly = false
+            ctrl.activeChart = '' //years, months , quarters
+            ctrl.timePeriod = 'A' //All by default
+            ctrl.chartData = []
+            ctrl.years = []
+        	ctrl.showCustomFilters = false
+        	ctrl.chartVisible = true
+        	ctrl.tableVisible = false
+        	ctrl.renderChart = false
+        	ctrl.tenYears
+        	ctrl.quarters = ['Q1', 'Q2', 'Q3', 'Q4']
+        	ctrl.months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+
+            initialize()
+            changeChartType(ctrl.activeChart)
+
+            function changeChartType(chartType) {
+            	console.log('chartType: ' + chartType)
+                console.log("Changing chart type to " + chartType)
+                ctrl.activeChart = chartType
+                changeTimePeriod('A') //List all data on chart data change
+            }
+
+
+            function changeTimePeriod(timePeriod) {
+
+                timePeriod = timePeriod || 'Custom'
+                console.log("Changing time period to " + timePeriod)
+
+                ctrl.timePeriod = timePeriod
+                prepareData()
+            }
+
+            function prepareData() {
+                if (!ctrl.renderChart) {
+                    return
+                }
+                resolveFilters()
+                ctrl.chartData = filterValues()
+                ctrl.chartConfig.series[0].data = ctrl.chartData
+                ctrl.years = getYears()
+                ctrl.tenYears = tenYears(ctrl.years)
+                ctrl.chartConfig.options.xAxis.tickInterval = tickInterval(ctrl.chartData.length);
+
+                console.log("Chart:")
+                console.log(ctrl.chartConfig)
+                console.log("10y = " + ctrl.tenYears)
+
+                function tenYears(array) {
+                    if ((ArrayUtil.getLast(array) - ArrayUtil.getFirst(array)) < 10) {
+                        return false
+                    } else {
+                        return true
+                    }
+                }
+
+                function tickInterval(length) {
+                    var tick;
+                    if (length <= 20) {
+                        return 1;
+                    } else if (length <= 80) {
+                        return 4;
+                    } else if (length <= 240) {
+                        return 12;
+                    } else if (length <= 480) {
+                        return 48;
+                    } else if (length <= 960) {
+                        return 96;
+                    } else {
+                        return 192;
+                    }
+                }
+
+                function filterValues() {
+                    var data = getAllValues()
+                    var current
+                    var i
+                    var filteredValues = []
+                    var from
+                    var to
+
+                    from = ctrl.fromYear + (ctrl.fromQuarter ? quarterVal(ctrl.fromQuarter) : '') + (ctrl.fromMonth ? monthVal(ctrl.fromMonth) : '')
+                    to = ctrl.toYear + (ctrl.toQuarter ? quarterVal(ctrl.toQuarter) : '') + (ctrl.toMonth ? monthVal(ctrl.toMonth) : '')
+                    from = +from //Cast to number
+                    to = +to
+                    console.log("From: ", from)
+                    console.log("To: ", to)
+                    for (i = 0; i < data.length; i++) {
+                        current = data[i]
+                        if (current.value >= from && current.value <= to) {
+                            filteredValues.push(current)
+                        }
+
+                    }
+                    return filteredValues
+                }
+
+                function resolveFilters() {
+                    var first = ArrayUtil.getFirst(getAllValues())
+                    var last = ArrayUtil.getLast(getAllValues())
+                    var now = new Date()
+                    var currentYear = now.getFullYear()
+                    var tenYearsAgo = currentYear - 10
+                    var fiveYearsAgo = currentYear - 5
+                    switch (ctrl.timePeriod) {
+
+                        case 'A': //All
+                        	ctrl.fromYear = first.year
+                        	ctrl.fromMonth = first.month ? first.month.slice(0, 3) : first.month
+                        			ctrl.fromQuarter = first.quarter
+                            break
+                        case '10':
+                            if (tenYearsAgo < first.year) { //Use first if within 10 years
+                            	ctrl.fromYear = first.year
+                            	ctrl.fromMonth = first.month ? first.month.slice(0, 3) : first.month
+                            	ctrl.fromQuarter = first.quarter
+                            } else {
+                            	ctrl.fromYear = '' + tenYearsAgo
+                            	ctrl.fromQuarter = isActive('quarters') ? 'Q1' : undefined
+                            	ctrl.fromMonth = isActive('months') ? 'Jan' : undefined
+                            }
+                            break
+                        case '5':
+                            if (fiveYearsAgo < first.year) { //Use first if within 10 years
+                            	ctrl.fromYear = first.year
+                            	ctrl.fromMonth = first.month ? first.month.slice(0, 3) : first.month
+                            	ctrl.fromQuarter = first.quarter
+                            } else {
+                            	ctrl.fromYear = '' + fiveYearsAgo
+                            	ctrl.fromQuarter = isActive('quarters') ? 'Q1' : undefined
+                            	ctrl.fromMonth = isActive('months') ? 'Jan' : undefined
+                            }
+                            break
+                        case 'Custom':
+                            return
+                        default:
+
+                    }
+
+                    ctrl.toYear = last.year
+                    ctrl.toMonth = last.month ? last.month.slice(0, 3) : last.month
+                    		ctrl.toQuarter = last.quarter
+                }
+            }
+
+
+            function toggleCustomFilters() {
+            	ctrl.showCustomFilters = !ctrl.showCustomFilters
+            }
+
+            function isActive(chartType) {
+                return chartType === ctrl.activeChart
+            }
+
+
+            function showTable() {
+                if (ctrl.tableVisible) {
+                    return
+                }
+
+                ctrl.tableVisible = true
+                ctrl.chartVisible = false
+            }
+
+            function showChart() {
+                if (ctrl.chartVisible) {
+                    return
+                }
+                ctrl.chartVisible = true
+                ctrl.tableVisible = false
+            }
+
+            function getAllValues() {
+                return ctrl.timeseries[ctrl.activeChart].values
+            }
+
+            function getYears() {
+                return ctrl.timeseries[ctrl.activeChart].years
+            }
+
+            //Initialize controller and configuration
+            function initialize() {
+                resolveChartTypes()
+                ctrl.chartConfig.series[0].name = ctrl.timeseries.name
+                prepareData()
+
+                function resolveChartTypes() {
+                    var data = ctrl.timeseries
+                    
+                    ctrl.showYearly = ArrayUtil.isNotEmpty(data.years)
+                    ctrl.showMonthly = ArrayUtil.isNotEmpty(data.months)
+                    ctrl.showQuarterly = ArrayUtil.isNotEmpty(data.quarters)
+
+                    if (ctrl.showMonthly) {
+                    	ctrl.activeChart = 'months'
+                        data.months = formatData(data.months)
+                    }
+
+                    if (ctrl.showQuarterly) {
+                    	ctrl.activeChart = 'quarters'
+                        data.quarters = formatData(data.quarters)
+
+                    }
+
+                    if (ctrl.showYearly) {
+                    	ctrl.activeChart = 'years'
+                        data.years = formatData(data.years)
+                    }
+
+                    if ((ctrl.showMonthly || ctrl.showYearly || ctrl.showQuarterly)) {
+                    	ctrl.renderChart = true
+                        console.log('ctrl.renderChart: ' + ctrl.renderChart)
+                    }
+                }
+
+            }
+        }
 
 		//Expose public api
 		angular.extend(service, {
 			getChart: getChart,
 			getSparkline: getSparkline,
-			isNotEmpty: isNotEmpty,
-			getFirst: getFirst,
-			getLast: getLast,
 			quarterVal: quarterVal,
 			monthVal: monthVal,
-			toUnique: toUnique,
 			enrichData: enrichData,
-			formatData: formatData
+			formatData: formatData,
+			buildChart: buildChart
 		})
 
 	}
