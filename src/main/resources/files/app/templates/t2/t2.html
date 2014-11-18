@@ -95,12 +95,12 @@
                 </header>
                 <!-- /box__header -->
                 <div class="box__content">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis nibh vel auctor molestie.
+                    <p >
+                       Includes: {{section.children | join:', ': 'name' | charLimit:120:'...'}}
+                       <a href="#!{{getPath()}}/{{section.link}}">More</a>
                     </p>
-                    <p class="description mini"></p>
-                    <p>
-                    </p>
+                    
+                    
                 </div>
             </article>
 
