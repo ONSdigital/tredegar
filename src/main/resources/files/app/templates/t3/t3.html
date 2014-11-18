@@ -15,23 +15,10 @@
               </p>
             </div>
           </div>
-            <div class="page-header__icons">
-            <!--<a href="#" class="link-complex">
-              <span class="icon icon-twitter icon-grey">
-                <span class="visuallyhidden">Share on Twitter</span>
-              </span>
-            </a>!-->
-            <a href="#" class="link-complex"><span class="icon icon-twitter icon--grey"><span class="visuallyhidden">Share on Twitter</span></span></a>
-            <a href="#" class="link-complex">
-              <span class="icon icon-facebook icon--grey">
-                <span class="visuallyhidden">Share on Facebook</span>
-              </span>
-            </a>
-            <a href="#" class="link-complex"><span class="icon icon-linkedin icon--grey"><span class="visuallyhidden">Share on linkedin</span></span></a>
-          </div>
+
+            <social-links></social-links>
 
         </div>
-         
     </div>
         <!-- /wrapper -->
 
@@ -83,11 +70,11 @@
                   <li ng-if="taxonomy.data.statsBulletinHeadlineData.headline1">{{taxonomy.data.statsBulletinHeadlineData.headline3}}</li>
                   <li ng-if="!taxonomy.data.statsBulletinHeadlineData">Lorem ipsum dolor sit amet, vel oporteat percipitur ex, quando persecuti id mea, pri at nihil essent aliquid.</li>
                   <li ng-if="!taxonomy.data.statsBulletinHeadlineData">Lorem ipsum dolor sit amet, vel oporteat percipitur ex, quando persecuti id mea, pri at nihil essent aliquid.</li>
-                  <li ng-if="!taxonomy.data.statsBulletinHeadlineData">Lorem ipsum dolor sit amet, vel oporteat percipitur ex, quando persecuti id mea, pri at nihil essent aliquid.</li>                  
+                  <li ng-if="!taxonomy.data.statsBulletinHeadlineData">Lorem ipsum dolor sit amet, vel oporteat percipitur ex, quando persecuti id mea, pri at nihil essent aliquid.</li>
                   </ul>
                     <a class="div_panel_link" href="#!{{taxonomy.data.statsBulletinHeadlineData.uri ? taxonomy.data.statsBulletinHeadlineData.uri : '/economy/inflationandpriceindices/bulletins/consumerpriceinflation'}}">
-                      View the statistical bulletin &gt;                   
-                    </a>                
+                      View the statistical bulletin &gt;
+                    </a>
               </div>
             </div>
           </div>
@@ -150,14 +137,14 @@
               </time>
             </div>
           </div>
-        </td>   
-  
+        </td>
+
       <td class="update_responsive">
         <div class="micro list--table__item__body list--table__item__body--update  body_update_desk">Last updated: {{item.lastUpated}} <br>
           Next Updated: <span class="red_highlight"> {{item.nextUpdate}} </span>
         </div>
       </td>
-    
+
     <td class="datatable--checkbox">
       <div class="list--table__item">
         <label class="list--table__item__body list--table__item__body--select">
@@ -170,10 +157,10 @@
     </tr>
     <!-- /table__row_repeat -->
 
-<!-- Bottom options for downloading table contents -->  
+<!-- Bottom options for downloading table contents -->
 
     <tr class="list--table__item list--table datatable-row">
-      <td colspan="4" ng-if="t3.selectedCount > 0" class="datatable-downloads"> 
+      <td colspan="4" ng-if="t3.selectedCount > 0" class="datatable-downloads">
         <a href="" style="opacity:1" ng-click="t3.downloadCsv()" class="btn btn--primary btn--small download_responsive_btn">
           <span class="table__action__text">.CSV</span>
             <span class="icon-download" role="presentation"></span>
@@ -181,9 +168,9 @@
         <a href="" style="opacity:1"  ng-click="t3.downloadXls()" class="btn btn--primary btn--small download_responsive_btn">
           <span class="table__action__text">.XLSX</span>
             <span class="icon-download" role="presentation"></span>
-        </a>          
+        </a>
       </td>
-      <td colspan="4" ng-if="t3.selectedCount === 0" class="datatable-downloads"> 
+      <td colspan="4" ng-if="t3.selectedCount === 0" class="datatable-downloads">
         <span class="btn btn--primary btn--small download_responsive_btn">
           <span class="table__action__text">.CSV</span>
             <span class="icon-download" role="presentation"></span>
@@ -191,7 +178,7 @@
         <span href="" ng-click="t3.downloadXls()" class="btn btn--primary btn--small download_responsive_btn">
           <span class="table__action__text">.XLSX</span>
             <span class="icon-download" role="presentation"></span>
-        </span>          
+        </span>
       </td>
        <!-- /table-actions -->
     </tr>
@@ -396,4 +383,4 @@
       <latest-bulletins></latest-bulletins>
       <related-articles></related-articles>
       <contact-details></contact-details>
-      
+
