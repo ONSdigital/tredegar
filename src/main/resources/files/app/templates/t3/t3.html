@@ -39,56 +39,56 @@
 <!-- Top header box -->
       <!-- /page-header -->
       <div class="wrapper">
-        <section id="headline" class="box box--padded-vertical box--blue box--green--separated-left solid border lifted offset-top border-defined">
-          <div class="box__content">
-            <div class="divider">
-              <div class="divider__half divider__half--border divider__half--border-first">
-                <h2 tooltip="Percentage change over 12 months <br><br> Not seasonally adjusted" tooltip-class="icon--inline--large-text icon--small"  class="beta">
-                    <a href="#!{{taxonomy.data.headlineData.uri}}">{{taxonomy.data.headlineData.name}}</a>
-                </h2>
-                <div class="box box--inline box--padded muted--dark">
-                  <div class="stat stat--headline">
-                    <div class="stat__figure">
-                  	  <span class="stat__figure__unit">{{taxonomy.data.headlineData.preUnit}}</span>
-                      {{taxonomy.data.headlineData.number}}
-                      <span class="stat__figure__unit"> {{taxonomy.data.headlineData.unit}}</span>
-                    </div>
-                  </div>
-                </div>
-                <!-- spark line -->
-  				<div class="box box--inline box--padded">
-                  <div class="stat stat--headline">
-                    <div class="stat__figure">
-		                <div ng-controller="T3ChartController as chart">
-			               <div ng-if="chart.chartVisible">
-			                   <highchart class="highcharts-background" id="chart_prices" config="chart.chartConfig">
-			                   </highchart>
-			               </div>
-						</div>
+        <section id="headline" class="box box--padded-vertical box--padded-horizontal box--blue  solid border lifted offset-top border-defined">
+          	<div class="grid-wrap">
+	          <div class="grid-col tablet-grid-one-half">
+	            <div class="box box--padded--med box--green--separated-left box--inline">
+	              <header class="box___section">      
+	                <h3 class="beta nav_title">
+	                  <a href="#!{{taxonomy.data.headlineData.uri}}">{{taxonomy.data.headlineData.name}}</a>
+	                  <span tabindex="0" class="tooltips icon-info-circled icon--warm icon--inline icon--inline--large-text icon--small tooltipstered"><span>Percentage change over 12 months<br><br> Not seasonally adjusted</span></span>
+	                </h3>
+	                </header> 
+	                <div class="box box--inline box--padded muted--dark">
+	                  <div class="stat stat--headline">
+	                    <div class="stat__figure">
+	                      {{taxonomy.data.headlineData.number}}
+	                      <span class="stat__figure__unit">{{taxonomy.data.headlineData.unit}}</span>
+	                    </div>
+	
+	                  </div>
+	                </div>
+	                <div class="box box--padded--small">
+			            <div ng-controller="T3ChartController as chart">
+				           <div ng-if="chart.chartVisible">
+				               <highchart class="highcharts-background" id="chart_prices" config="chart.chartConfig">
+				               </highchart>
+				           </div>
+						</div>                
 					</div>
-				  </div>
-				</div>
-                <!-- /box -->
-                <dl class="definition mini">
-                  <dt>Last updated:</dt>
-                  <dd>
-                  {{taxonomy.data.headlineData.lastUpated}}
-                  <!-- 16 Sep 2014 -->
-                  </dd>
-                  <dt>Next update:</dt>
-                  <dd>
-                  {{taxonomy.data.headlineData.nextUpdate}}
-                  <!-- 14 Oct 2014 -->
-                  </dd>
-                </dl>
-              </div>
-        <!-- /box -->
+	                <!-- /box -->
+	                <dl class="definition mini">
+	                  <dt>Last updated:</dt>
+	                  <dd>
+	                  {{taxonomy.data.headlineData.lastUpated}}
+	                  <!-- 16 Sep 2014 -->
+	                  </dd>
+	                  <dt>Next update:</dt>
+	                  <dd>
+	                  {{taxonomy.data.headlineData.nextUpdate}}
+	                  <!-- 14 Oct 2014 -->
+	                  </dd>
+	                </dl>
+	                </div>
+	             
+	              </div>
 
                 <!-- /box -->
 
-    <!-- Explanation of the numbers -->
-              <div id="statsBulletinHeadlines" class="divider__half">
-                <h3 class="body-type lede flush--bottom navpanel-list-heading">Statistical Bulletin Headlines</h3>
+               <div class="grid-col tablet-grid-one-half">
+               <div class="box box--padded solid  arrow_box">
+              <div id="statsBulletinHeadlines">
+                <a href="#!{{taxonomy.data.statsBulletinHeadlineData.uri ? taxonomy.data.statsBulletinHeadlineData.uri : '/economy/inflationandpriceindices/bulletins/consumerpriceinflation'}}"><h3 class="body-type lede flush--bottom navpanel-list-heading">Statistical Bulletin Headlines</h3></a>
                 <ul class="list--bullet mini flush--half--top navpanel-list">
                   <li ng-if="taxonomy.data.statsBulletinHeadlineData.headline1">{{taxonomy.data.statsBulletinHeadlineData.headline1}}</li>
                   <li ng-if="taxonomy.data.statsBulletinHeadlineData.headline1">{{taxonomy.data.statsBulletinHeadlineData.headline2}}</li>
@@ -96,12 +96,10 @@
                   <li ng-if="!taxonomy.data.statsBulletinHeadlineData">Lorem ipsum dolor sit amet, vel oporteat percipitur ex, quando persecuti id mea, pri at nihil essent aliquid.</li>
                   <li ng-if="!taxonomy.data.statsBulletinHeadlineData">Lorem ipsum dolor sit amet, vel oporteat percipitur ex, quando persecuti id mea, pri at nihil essent aliquid.</li>
                   <li ng-if="!taxonomy.data.statsBulletinHeadlineData">Lorem ipsum dolor sit amet, vel oporteat percipitur ex, quando persecuti id mea, pri at nihil essent aliquid.</li>                  
-                  </ul>
-                    <a class="div_panel_link" href="#!{{taxonomy.data.statsBulletinHeadlineData.uri ? taxonomy.data.statsBulletinHeadlineData.uri : '/economy/inflationandpriceindices/bulletins/consumerpriceinflation'}}">
-                      View the statistical bulletin &gt;                   
-                    </a>                
+                </ul>
               </div>
             </div>
+          </div>
           </div>
           <!-- /box__content -->
         </section>
@@ -146,7 +144,7 @@
           </div>
         </td>
         
-	    <td colspan="3">
+	    <td colspan="2">
 	      <div>
 	        <div ng-controller="T3RepeatItemController as chart">
 		        <div ng-if="chart.chartVisible">
@@ -175,11 +173,11 @@
           </div>
         </td>   
   
-<!--       <td class="update_responsive"> -->
-<!--         <div class="micro list--table__item__body list--table__item__body--update  body_update_desk">Last updated: {{item.lastUpated}} <br> -->
-<!--           Next Updated: <span class="red_highlight"> {{item.nextUpdate}} </span> -->
-<!--         </div> -->
-<!--       </td> -->
+      <td class="update_responsive">
+        <div class="micro list--table__item__body list--table__item__body--update  body_update_desk">Last updated: {{item.lastUpated}} <br>
+          Next Updated: <span class="red_highlight"> {{item.nextUpdate}} </span>
+        </div>
+      </td>
 
     </tr>
     <!-- /table__row_repeat -->

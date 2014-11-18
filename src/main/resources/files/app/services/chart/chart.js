@@ -181,7 +181,7 @@
 			var widthValue
 			var heightValue
 			if (isHeadlineData) {
-				widthValue = 140
+				widthValue = 170
 				heightValue = 100
 			} else {
 				widthValue = 140
