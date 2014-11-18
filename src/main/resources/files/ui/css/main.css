@@ -2644,13 +2644,29 @@ lesser , applied styles
   letter-spacing: .1em;
   color: #888;
   text-transform: uppercase;
-  /*cursor: pointer; Commented out as part of Lozenge redesign
-  /*background-color: #adafa7;*/}
-  /*.lozenge:hover, .lozenge:active, .lozenge:focus {
+  cursor: pointer; /*Commented out as part of Lozenge redesign*/
+  /*background-color: #adafa7;*/
+}
+.lozenge--label {
+  display: inline-block;
+  padding: 3px 5px;
+  padding: .3rem .5rem;
+  border: solid 1px;
+  border-radius: 2px;
+  font-size: 10px;
+  font-size: 1rem;
+  letter-spacing: .1em;
+  color: #888;
+  text-transform: uppercase;
+  /*cursor: pointer; Commented out as part of Lozenge redesign*/
+  /*background-color: #adafa7;*/
+}
+  .lozenge:hover, .lozenge:active, .lozenge:focus, .lozenge--active {
     color: white;
     text-decoration: none !important;
     background-color: #a1a39a;
-    outline: 0; }*/
+    outline: 0; 
+  }
   .lozenge.is-collapsed {
     display: inline-block;
     max-width: inherit;

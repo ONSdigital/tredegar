@@ -1,7 +1,7 @@
 //Collection Controller
 angular.module('onsTemplates')
-  .controller('CollectionCtrl', ['$scope', '$location', '$log', 'DataLoader',
-    function($scope, $location, $log, DataLoader) {
+  .controller('CollectionCtrl', ['$scope', '$location', '$log', 'DataLoader', 'PageUtil',
+    function($scope, $location, $log, DataLoader, PageUtil) {
       $log.debug('CollectionCtrl invoked')
 
       DataLoader.load("/collection.json")
@@ -13,9 +13,8 @@ angular.module('onsTemplates')
       var searchTerm = url.substr(0, lastIndex)
       $log.debug('Searching for collections from: ' + searchTerm)
 
-      var getParam = $scope.getUrlParam
-      var page = getParam('page')
-      var contentType = getParam('contentType')
+      var page = PageUtil.getUrlParam('page')
+      var contentType = PageUtil.getUrlParam('contentType')
       if (!searchTerm) {
         return
       }
@@ -26,6 +25,7 @@ angular.module('onsTemplates')
       searchCollection(searchTerm, contentType, page)
 
       function searchCollection(loc, type, pageNumber) {
+        console.log("searching for "+ loc + " " + type + " " + pageNumber )
         var collectionSearchString = "?loc=" + loc + (contentType ? "&contentType=" + contentType : "") + "&page=" + pageNumber
         DataLoader.load("/collectiontaxonomyfilesystem" + collectionSearchString).then(function(data) {
           $scope.searchResponse = data

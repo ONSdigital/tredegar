@@ -19,10 +19,10 @@
                     <div class="grid-col desktop-grid-two-thirds">
                         <div class="search-filters">
                             <p>Filter by:
-                                <span class="lozenge lozenge-spacer lozenge-blue">STATISTICAL BULLETIN</span>
-                                <span class="lozenge lozenge-spacer lozenge-red">DATASET</span>
-                                <span class="lozenge lozenge-grey lozenge-spacer">ARTICLE</span>
-                                <span class="lozenge lozenge-spacer lozenge-green">METHODOLOGY</span>
+                                <span ng-click="filter('bulletin')" ng-class="{'lozenge--active' : isActive('bulletin')}" class="lozenge lozenge-spacer lozenge-blue">STATISTICAL BULLETIN</span>
+                                <span ng-click="filter('dataset')" ng-class="{'lozenge--active' : isActive('dataset')}" class="lozenge lozenge-spacer lozenge-red">DATASET</span>
+                                <span ng-click="filter('article')" ng-class="{'lozenge--active' : isActive('article')}" class="lozenge lozenge-grey lozenge-spacer">ARTICLE</span>
+                                <span ng-click="filter('methodology')" ng-class="{'lozenge--active' : isActive('methodology')}"class="lozenge lozenge-spacer lozenge-green">METHODOLOGY</span>
                             </p>
                         </div>
                     </div>
@@ -32,7 +32,7 @@
                                 <form action="#" class="form">Sort by:
                                     <select class="input input--mini sorting" name="search" id="select1">
                                         <option value="" selected>Relevance</option>
-                                        <option value="">Date Released</option>
+                                        <option value="">Release Date</option>
                                     </select>
                                 </form>
                             </div>
@@ -59,10 +59,10 @@
 
                         <dt ng-repeat-start="item in searchResponse.results" class="">
                             <a class="search-link" href="#!{{item.url}}">{{item.title}}</a>
-                            <span ng-if="item.type != 'home'" class="lozenge" href="">{{item.type === 'bulletin' ? 'Statistical Bulletin' : item.type}}</span>
+                            <span ng-if="item.type != 'home'" class="lozenge--label" href="">{{item.type === 'bulletin' ? 'Statistical Bulletin' : item.type}}</span>
                         </dt>
-                        <dd class="microcopy">Released...</dd>
-                        <dd ng-repeat-end class="search-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet diam vel est congue eleifend non eget sem. Nam enim ipsum, vestibulum sed facilisis ut, commodo et nulla.</dd>
+                        <dd class="microcopy">Released</dd>
+                        <dd ng-repeat-end class="search-summary">{{item.lede}}</dd>
 
                     </dl>
                 </div>
