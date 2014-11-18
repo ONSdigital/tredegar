@@ -32,6 +32,8 @@ public class Search {
 
 	@GET
 	public Object get(@Context HttpServletRequest request, @Context HttpServletResponse response) throws Exception {
+		response.setCharacterEncoding("UTF8");
+		response.setContentType("application/json");
 		return search(extractQuery(request), extractPage(request), request.getParameter("type"));
 	}
 

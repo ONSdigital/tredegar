@@ -62,7 +62,7 @@
                             <span ng-if="item.type != 'home'" class="lozenge--label" href="">{{item.type === 'bulletin' ? 'Statistical Bulletin' : item.type}}</span>
                         </dt>
                         <dd class="microcopy">Released</dd>
-                        <dd ng-repeat-end class="search-summary">{{item.lede}}</dd>
+                        <dd ng-repeat-end class="search-summary">{{item.lede | charLimit:300:'...'}}</dd>
 
                     </dl>
                 </div>
