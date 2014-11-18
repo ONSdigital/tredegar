@@ -18,6 +18,7 @@ public class HomeSection implements Comparable<HomeSection> {
 	public int index;
 	// References to items listed in section
 	public List<URI> items = new ArrayList<>();
+	public List<Child> children = new ArrayList<Child>();
 
 	public HomeSection(String name, String link) {
 		this.name = name;

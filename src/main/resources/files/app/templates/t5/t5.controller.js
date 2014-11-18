@@ -113,7 +113,7 @@
 
 
             function tenYears(array) {
-                if ((Chart.getLast(array) - Chart.getFirst(array)) < 10) {
+                if ((ArrayUtil.getLast(array) - ArrayUtil.getFirst(array)) < 10) {
                     return false
                 } else {
                     return true
@@ -162,8 +162,8 @@
             }
 
             function resolveFilters() {
-                var first = Chart.getFirst(getAllValues())
-                var last = Chart.getLast(getAllValues())
+                var first = ArrayUtil.getFirst(getAllValues())
+                var last = ArrayUtil.getLast(getAllValues())
                 var now = new Date()
                 var currentYear = now.getFullYear()
                 var tenYearsAgo = currentYear - 10
@@ -246,15 +246,16 @@
 
         //Initialize controller and configuration
         function initialize() {
-            resolveChartTypes()
+            resolveChartTypes(ArrayUtil)
             ctrl.chartConfig.series[0].name = ctrl.timeseries.name
+            ctrl.chartConfig.series[0].id = ctrl.timeseries.unit
             prepareData()
 
-            function resolveChartTypes() {
+            function resolveChartTypes(ArrayUtil) {
                 var data = ctrl.timeseries
-                ctrl.showYearly = Chart.isNotEmpty(data.years)
-                ctrl.showMonthly = Chart.isNotEmpty(data.months)
-                ctrl.showQuarterly = Chart.isNotEmpty(data.quarters)
+                ctrl.showYearly = ArrayUtil.isNotEmpty(data.years)
+                ctrl.showMonthly = ArrayUtil.isNotEmpty(data.months)
+                ctrl.showQuarterly = ArrayUtil.isNotEmpty(data.quarters)
 
                 if (ctrl.showMonthly) {
                     ctrl.activeChart = 'months'
@@ -311,7 +312,6 @@
 
         function exportImage() {
             var chartExp = $('#chart_prices').highcharts();
-            console.log(chartExp)
             chartExp.exportChart();
         }
 
