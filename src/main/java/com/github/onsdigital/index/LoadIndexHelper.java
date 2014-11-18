@@ -2,6 +2,7 @@ package com.github.onsdigital.index;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -30,6 +31,8 @@ public class LoadIndexHelper {
 	private static final String TAGS = "tags";
 	private static final String TITLE = "title";
 	private static final String TYPE = "type";
+	private static final String LEDE = "lede";
+	private static final String NOTE = "note1";
 	private static final String URL = "url";
 	private static final String DELIMITTER = "/";
 
@@ -40,7 +43,8 @@ public class LoadIndexHelper {
 	 * @throws IOException
 	 *             if any file io operations failed
 	 */
-	public static List<String> getAbsoluteFilePaths(String path) throws IOException {
+	public static List<String> getAbsoluteFilePaths(String path)
+			throws IOException {
 		List<String> fileNames = new ArrayList<String>();
 		final Path rootDir = Paths.get(path);
 		fileNames = ScanFileSystem.getFileNames(fileNames, rootDir);
@@ -57,8 +61,11 @@ public class LoadIndexHelper {
 	 * @throws JsonSyntaxException
 	 * @throws JsonIOException
 	 */
-	public static Map<String, String> getDocumentMap(String absoluteFilePath) throws JsonIOException, JsonSyntaxException, IOException {
-		String url = absoluteFilePath.substring(absoluteFilePath.indexOf(Configuration.getTaxonomyPath()) + Configuration.getTaxonomyPath().length());
+	public static Map<String, String> getDocumentMap(String absoluteFilePath)
+			throws JsonIOException, JsonSyntaxException, IOException {
+		String url = absoluteFilePath.substring(absoluteFilePath
+				.indexOf(Configuration.getTaxonomyPath())
+				+ Configuration.getTaxonomyPath().length());
 		String[] splitPath = url.split(DELIMITTER);
 		int splitPathLength = splitPath.length;
 		int fileNameTokenIndex = splitPathLength - 1;
@@ -71,43 +78,53 @@ public class LoadIndexHelper {
 		ContentType contentType = ContentType.valueOf(type);
 		String splitUrl = url.substring(0, url.indexOf(fileName));
 		String title = getField(jsonObject, TITLE);
-
+		String lede = getField(jsonObject, LEDE);
 		switch (contentType) {
 		case home:
 			String name = getField(jsonObject, NAME);
-			documentMap = buildDocumentMap(splitUrl, splitPath, type, name);
+			documentMap = buildDocumentMap(splitUrl, splitPath, type, name,
+					lede);
 			break;
 		case timeseries:
 			String cdid = getField(jsonObject, CDID);
-			documentMap = buildDocumentMap(splitUrl, splitPath, type, cdid);
+			lede = getField(jsonObject, NOTE);
+			documentMap = buildDocumentMap(splitUrl, splitPath, type, cdid,
+					lede);
 			break;
 		case unknown:
-			System.out.println("json file: " + absoluteFilePath + "has unknown content type: " + contentType);
+			System.out.println("json file: " + absoluteFilePath
+					+ "has unknown content type: " + contentType);
 			break;
 		default:
-			documentMap = buildDocumentMap(splitUrl, splitPath, type, title);
+			documentMap = buildDocumentMap(splitUrl, splitPath, type, title,
+					lede);
 			break;
 		}
 
 		return documentMap;
 	}
 
-	private static Map<String, String> buildDocumentMap(String url, String[] splitPath, String type, String title) {
+	private static Map<String, String> buildDocumentMap(String url,
+			String[] splitPath, String type, String title, String lede) {
 
 		Map<String, String> documentMap = new HashMap<String, String>();
 		documentMap.put(URL, url);
 		documentMap.put(TYPE, type);
 		documentMap.put(TITLE, title);
 		documentMap.put(TAGS, Arrays.toString(splitPath));
+		documentMap.put(LEDE, lede);
 		return documentMap;
 	}
 
 	private static JsonObject getJsonObject(String absoluteFilePath) {
 		JsonObject jsonObject;
 		try {
-			jsonObject = new JsonParser().parse(FileUtils.readFileToString(new File(absoluteFilePath))).getAsJsonObject();
+			jsonObject = new JsonParser().parse(
+					FileUtils.readFileToString(new File(absoluteFilePath),
+							Charset.forName("UTF-8"))).getAsJsonObject();
 		} catch (JsonSyntaxException | IOException e) {
-			throw new RuntimeException("Failed to parse json: " + absoluteFilePath, e);
+			throw new RuntimeException("Failed to parse json: "
+					+ absoluteFilePath, e);
 		}
 		return jsonObject;
 	}

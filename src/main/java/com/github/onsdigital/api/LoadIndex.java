@@ -17,8 +17,10 @@ import javax.ws.rs.GET;
 import javax.ws.rs.core.Context;
 
 import org.apache.commons.lang3.StringUtils;
+import org.elasticsearch.action.admin.indices.create.CreateIndexRequestBuilder;
 import org.elasticsearch.client.Client;
 import org.elasticsearch.common.settings.ImmutableSettings;
+import org.elasticsearch.common.xcontent.XContentBuilder;
 
 import com.github.davidcarboni.restolino.framework.Endpoint;
 import com.github.onsdigital.configuration.Configuration;
@@ -42,7 +44,9 @@ public class LoadIndex {
 	}
 
 	@GET
-	public Object get(@Context HttpServletRequest httpServletRequest, @Context HttpServletResponse httpServletResponse) throws IOException {
+	public Object get(@Context HttpServletRequest httpServletRequest,
+			@Context HttpServletResponse httpServletResponse)
+			throws IOException {
 
 		try {
 			loadIndex();
@@ -55,39 +59,59 @@ public class LoadIndex {
 	}
 
 	public static void loadIndex() throws IOException {
-		List<String> absoluteFilePaths = LoadIndexHelper.getAbsoluteFilePaths(Configuration.getTaxonomyPath());
+		List<String> absoluteFilePaths = LoadIndexHelper
+				.getAbsoluteFilePaths(Configuration.getTaxonomyPath());
 		if (absoluteFilePaths.isEmpty()) {
 			throw new IllegalStateException("No items were found for indexing");
 		}
 		indexDocuments(ElasticSearchServer.getClient(), absoluteFilePaths);
 	}
 
-	private static void indexDocuments(Client client, List<String> absoluteFilePaths) throws IOException {
+	private static void indexDocuments(Client client,
+			List<String> absoluteFilePaths) throws IOException {
+
+		// System.out.println("Creating index");
+		// // Disable indexing for lede field
+		// XContentBuilder builder = jsonBuilder().startObject("ons")
+		// .startObject("dataset").startObject("properties").startObject("lede")
+		// .field("type", "string").field("index", "no").endObject()
+		// .endObject().endObject().endObject();
 
 		// Set up the synonyms
-		client.admin().indices().prepareCreate("ons").setSettings(buildSettings()).execute();
+		CreateIndexRequestBuilder indexBuilder = client.admin().indices()
+				.prepareCreate("ons").setSettings(buildSettings());
+		indexBuilder.execute();
 
 		int idCounter = 0;
 		for (String absoluteFilePath : absoluteFilePaths) {
 			idCounter++;
 
-			Map<String, String> documentMap = LoadIndexHelper.getDocumentMap(absoluteFilePath);
+			Map<String, String> documentMap = LoadIndexHelper
+					.getDocumentMap(absoluteFilePath);
 			if (documentMap != null) {
 				buildDocument(client, documentMap, idCounter);
 			}
 		}
 	}
 
-	private static void buildDocument(Client client, Map<String, String> documentMap, int idCounter) throws IOException {
+	private static void buildDocument(Client client,
+			Map<String, String> documentMap, int idCounter) throws IOException {
 
-		client.prepareIndex(StringUtils.lowerCase("ons"), StringUtils.lowerCase(documentMap.get("type")), String.valueOf(idCounter))
-				.setSource(jsonBuilder().startObject().field("title", documentMap.get("title")).field("url", documentMap.get("url")).field("path", documentMap.get("tags")).endObject()).execute()
+		XContentBuilder source = jsonBuilder().startObject()
+				.field("title", documentMap.get("title"))
+				.field("url", documentMap.get("url"))
+				.field("path", documentMap.get("tags"))
+				.field("lede", documentMap.get("lede")).endObject();
+		client.prepareIndex(StringUtils.lowerCase("ons"),
+				StringUtils.lowerCase(documentMap.get("type")),
+				String.valueOf(idCounter)).setSource(source).execute()
 				.actionGet();
 
 	}
 
 	private static Map<String, String> buildSettings() throws IOException {
-		ImmutableSettings.Builder settingsBuilder = ImmutableSettings.settingsBuilder();
+		ImmutableSettings.Builder settingsBuilder = ImmutableSettings
+				.settingsBuilder();
 
 		List<String> synonymList = getSynonyms(settingsBuilder);
 		getSettingsBuilder(settingsBuilder, synonymList);
@@ -95,11 +119,13 @@ public class LoadIndex {
 		return settingsBuilder.build().getAsMap();
 	}
 
-	private static void getSettingsBuilder(ImmutableSettings.Builder settingsBuilder, List<String> synonymList) {
+	private static void getSettingsBuilder(
+			ImmutableSettings.Builder settingsBuilder, List<String> synonymList) {
 		String[] synonyms = new String[synonymList.size()];
 		synonymList.toArray(synonyms);
 
-		settingsBuilder.putArray("analysis.filter.ons_synonym_filter.synonyms", synonyms);
+		settingsBuilder.putArray("analysis.filter.ons_synonym_filter.synonyms",
+				synonyms);
 
 		Map<String, String> settings = new HashMap<>();
 		settings.put("analysis.analyzer.ons_synonyms.tokenizer", "standard");
@@ -107,12 +133,16 @@ public class LoadIndex {
 		settingsBuilder.put(settings);
 	}
 
-	private static List<String> getSynonyms(ImmutableSettings.Builder settingsBuilder) throws IOException {
+	private static List<String> getSynonyms(
+			ImmutableSettings.Builder settingsBuilder) throws IOException {
 		String[] filters = { "lowercase", "ons_synonym_filter" };
-		settingsBuilder.putArray("analysis.analyzer.ons_synonyms.filter", filters);
+		settingsBuilder.putArray("analysis.analyzer.ons_synonyms.filter",
+				filters);
 
-		InputStream inputStream = LoadIndex.class.getResourceAsStream("/synonym.txt");
-		BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+		InputStream inputStream = LoadIndex.class
+				.getResourceAsStream("/synonym.txt");
+		BufferedReader reader = new BufferedReader(new InputStreamReader(
+				inputStream));
 		List<String> synonymList = new ArrayList<String>();
 		String contents = null;
 		while ((contents = reader.readLine()) != null) {

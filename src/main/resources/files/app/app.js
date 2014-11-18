@@ -93,9 +93,9 @@
                         navigation: ['DataLoader', getNavigatinLinks]
                     }
                 }).
-                when('/search/', {
+                when('/search', {
                     templateUrl: 'app/templates/search-results/search-results.html',
-                    controller: 'SearchCtrl',
+                    controller: 'SearchController',
                     resolve: {
                         navigation: ['DataLoader', getNavigatinLinks]
                     }
@@ -159,39 +159,18 @@
         ])
 
     onsApp
-        .controller('MainCtrl', ['$scope', '$log', '$http', '$location', 'PathService', 'DataLoader', '$anchorScroll',
-            function($scope, $log, $http, $location, PathService, DataLoader, $anchorScroll) {
+        .controller('MainCtrl', ['$scope','PageUtil', '$location', '$anchorScroll',
+            function($scope, PageUtil, $location, $anchorScroll) {
                 var ctrl = this
-
-                // loadNavigation()
-
-                // function loadNavigation() {
-
-                //     DataLoader.load('/navigation').then(function(data) {
-                //         $log.debug('Main Ctrl: Loading navigation data')
-                //         $scope.navigation = data
-                //         $log.debug('Main Ctrl: navigation data loaded successfully ', data)
-                //     })
-
-                // }
-
-                $scope.getPath = function() {
-                    return PathService.getPath()
-                }
-
-                $scope.getPage = function() {
-                    return PathService.getPage()
-                }
-
-                $scope.getUrlParam = function(paramName) {
-                    var params = $location.search()
-                    return params[paramName]
-                }
 
                 $scope.scrollTo = function(id) {
                     $location.hash(id)
                     $anchorScroll()
                     $location.hash(null)
+                }
+
+                $scope.getPath = function(){
+                    return PageUtil.getPath()
                 }
             }
         ])

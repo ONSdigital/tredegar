@@ -18,71 +18,8 @@
         <!-- /wrapper -->
     </div>
     <!-- /page-header -->
-
-    <!--<div class="wrapper offset-top nav-panels">
-        <div ng-repeat="highlightedSections in taxonomy.data.highlightedSections track by $index" class="grid-wrap">
-          <div ng-repeat="section in highlightedSections" ng-show="section" class="grid-col tablet-wide-grid-one-half">
-            <article class="nav-panel nav-panel--stats sectioned lifted border-defined">
-              <header class="nav-panel__header nav-panel__roomy">
-                <h2>{{section.name}}</h2>
-              </header>
-              <section class="nav-panel__roomy">
-                <ul class="list--neutral">
-                <!-- Here it starts a line in the panel -->
-    <!--<li ng-repeat="item in section.itemData | limitTo:4" class="nav-panel__item">
-                    <dl>
-                      <dt class="nav-panel__title">
-                        <h3 class="nav-panel__heading">
-                          <a href="#!{{item.url}}">
-                        {{item.name}}
-                      </a>
-                          <span tabindex="0" title="" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin"></span>
-                        </h3>
-                      </dt>
-                      <dd class="nav-panel__value">
-                        <div class="stat stat--small">
-                          <div class="stat__figure">
-                            {{item.number}}
-                            <span class="stat__figure__unit">{{item.unit}}</span>
-                          </div>
-                          <div class="stat__description">
-                            {{item.date}}
-                          </div>
-                        </div>
-                      </dd>
-                    </dl>
-                  </li> <!-- Here the line finishes -->
-    <!-- </ul>
-              </section>
-              <footer class="nav-panel__footer">
-                <div class="nav-panel__action ">
-                  <a class="nav-panel__roomy no_underline" href="#!{{getPath()}}/{{section.link}}">View all {{section.name}}</a>
-                </div>
-              </footer>
-            </article>
-            <!-- /nav-panel -->
 </div>
 <!-- /grid-col -->
-<!-- <div ng-show="$index === 1 && taxonomy.data.sections.length > 3" class="grid-col tablet-wide-grid-one-half">
-              <article class="nav-panel nav-panel--stats sectioned lifted border-defined">
-                <header class="nav-panel__header nav-panel__roomy">
-                  <h2>Other {{taxonomy.data.name}} Categories</h2>
-                </header>
-                <footer ng-repeat="other in taxonomy.data.sections | slice:3" class="nav-panel__footer">
-                  <div class="nav-panel__action ">
-                    <a class="nav-panel__roomy no_underline" href="#!{{getPath()}}/{{other.link}}">{{other.name}}</a>
-                  </div>
-                </footer>
-              </article>
-              <!-- /nav-panel -->
-<!--</div>
-          <!-- /grid-col -->
-<!--</div>
-        <!-- /grid-wrap -->
-<!--</div>
-      <!-- /wrapper -->
-
-
 
 <section class="panel panel--pad panel--bottom-mar  wrapper flush--bottom">
     <div class="grid-wrap" ng-repeat="sections in taxonomy.data.sections">
@@ -95,12 +32,11 @@
                 </header>
                 <!-- /box__header -->
                 <div class="box__content">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis nibh vel auctor molestie.
+                    <p >
+                       Includes: {{section.children | join:', ': 'name' | charLimit:120:'...'}}
                     </p>
-                    <p class="description mini"></p>
-                    <p>
-                    </p>
+                    
+                    
                 </div>
             </article>
 
