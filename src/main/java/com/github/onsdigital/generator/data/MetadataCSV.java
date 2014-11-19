@@ -70,7 +70,10 @@ public class MetadataCSV {
 			}
 			timeseries.name = row.get("Name");
 			timeseries.seasonalAdjustment = row.get("Seasonal adjustment");
-			timeseries.unit = row.get("Units");
+			// Slightly counterintuitive, but the values in the "Units" column
+			// are in the :Additional text" column in the Alpha Content
+			// spreadsheet:
+			timeseries.additionalText = row.get("Units");
 			timeseries.mainMeasure = row.get("Main measure");
 			timeseries.description = row.get("Description");
 			timeseries.note1 = StringUtils.defaultIfBlank(row.get("Note 1"), timeseries.note1);
