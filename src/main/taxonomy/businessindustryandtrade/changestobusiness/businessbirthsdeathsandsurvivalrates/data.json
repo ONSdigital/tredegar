@@ -1,13 +1,31 @@
 {
-  "headline": "/businessindustryandtrade/changestobusiness/businessbirthsdeathsandsurvivalrates/timeseries/raid6",
+  "headline": {
+    "name": "Business births",
+    "uri": "/businessindustryandtrade/changestobusiness/businessbirthsdeathsandsurvivalrates/timeseries/raid6"
+  },
   "items": [
-    "/businessindustryandtrade/changestobusiness/businessbirthsdeathsandsurvivalrates/timeseries/raid6",
-    "/businessindustryandtrade/changestobusiness/businessbirthsdeathsandsurvivalrates/timeseries/raid7",
-    "/businessindustryandtrade/changestobusiness/businessbirthsdeathsandsurvivalrates/timeseries/raid8"
+    {
+      "name": "Business births",
+      "uri": "/businessindustryandtrade/changestobusiness/businessbirthsdeathsandsurvivalrates/timeseries/raid6"
+    },
+    {
+      "name": "Business deaths",
+      "uri": "/businessindustryandtrade/changestobusiness/businessbirthsdeathsandsurvivalrates/timeseries/raid7"
+    },
+    {
+      "name": "Survival rate for businesses born in 2007 and 2012",
+      "uri": "/businessindustryandtrade/changestobusiness/businessbirthsdeathsandsurvivalrates/timeseries/raid8"
+    }
   ],
-  "statsBulletinHeadline": "/businessindustryandtrade/changestobusiness/businessbirthsdeathsandsurvivalrates/bulletins/businessdemography",
+  "statsBulletinHeadline": {
+    "name": "Business Demography",
+    "uri": "/businessindustryandtrade/changestobusiness/businessbirthsdeathsandsurvivalrates/bulletins/businessdemography"
+  },
   "statsBulletins": [
-    "/businessindustryandtrade/changestobusiness/businessbirthsdeathsandsurvivalrates/bulletins/businessdemography"
+    {
+      "name": "Business Demography",
+      "uri": "/businessindustryandtrade/changestobusiness/businessbirthsdeathsandsurvivalrates/bulletins/businessdemography"
+    }
   ],
   "datasets": [],
   "level": "t3",

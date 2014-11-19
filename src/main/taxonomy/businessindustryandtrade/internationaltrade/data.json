@@ -1,16 +1,43 @@
 {
-  "headline": "/businessindustryandtrade/internationaltrade/timeseries/ikbj",
+  "headline": {
+    "name": "Trade in goods and services deficit (or surplus)",
+    "uri": "/businessindustryandtrade/internationaltrade/timeseries/ikbj"
+  },
   "items": [
-    "/businessindustryandtrade/internationaltrade/timeseries/ikbj",
-    "/businessindustryandtrade/internationaltrade/timeseries/ikbi",
-    "/businessindustryandtrade/internationaltrade/timeseries/ikbh",
-    "/businessindustryandtrade/internationaltrade/timeseries/mhn9",
-    "/businessindustryandtrade/internationaltrade/timeseries/l87q",
-    "/businessindustryandtrade/internationaltrade/timeseries/l87k"
+    {
+      "name": "Trade in goods and services deficit (or surplus)",
+      "uri": "/businessindustryandtrade/internationaltrade/timeseries/ikbj"
+    },
+    {
+      "name": "Total imports of goods and services",
+      "uri": "/businessindustryandtrade/internationaltrade/timeseries/ikbi"
+    },
+    {
+      "name": "Total exports of goods and services",
+      "uri": "/businessindustryandtrade/internationaltrade/timeseries/ikbh"
+    },
+    {
+      "name": "Balance of trade in goods from EMU member",
+      "uri": "/businessindustryandtrade/internationaltrade/timeseries/mhn9"
+    },
+    {
+      "name": "Balance of trade in goods from all EU",
+      "uri": "/businessindustryandtrade/internationaltrade/timeseries/l87q"
+    },
+    {
+      "name": "Balance of trade in goods from all Non-EU",
+      "uri": "/businessindustryandtrade/internationaltrade/timeseries/l87k"
+    }
   ],
-  "statsBulletinHeadline": "/businessindustryandtrade/internationaltrade/bulletins/uktrade",
+  "statsBulletinHeadline": {
+    "name": "UK Trade",
+    "uri": "/businessindustryandtrade/internationaltrade/bulletins/uktrade"
+  },
   "statsBulletins": [
-    "/businessindustryandtrade/internationaltrade/bulletins/uktrade"
+    {
+      "name": "UK Trade",
+      "uri": "/businessindustryandtrade/internationaltrade/bulletins/uktrade"
+    }
   ],
   "datasets": [],
   "level": "t3",

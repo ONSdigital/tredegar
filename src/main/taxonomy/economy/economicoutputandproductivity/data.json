@@ -1,15 +1,39 @@
 {
-  "headline": "/economy/grossdomesticproductgdp/timeseries/l2kq",
+  "headline": {
+    "name": "Output Measure: Production",
+    "uri": "/economy/grossdomesticproductgdp/timeseries/l2kq"
+  },
   "items": [
-    "/economy/grossdomesticproductgdp/timeseries/l2kq",
-    "/economy/grossdomesticproductgdp/timeseries/l2kx",
-    "/economy/grossdomesticproductgdp/timeseries/l2kl",
-    "/economy/grossdomesticproductgdp/timeseries/l2n8",
-    "/economy/grossdomesticproductgdp/timeseries/l2nc"
+    {
+      "name": "Output Measure: Production",
+      "uri": "/economy/grossdomesticproductgdp/timeseries/l2kq"
+    },
+    {
+      "name": "Output Measure: Manufacturing",
+      "uri": "/economy/grossdomesticproductgdp/timeseries/l2kx"
+    },
+    {
+      "name": "Output Measure: Agriculture, Forestry and Fishing",
+      "uri": "/economy/grossdomesticproductgdp/timeseries/l2kl"
+    },
+    {
+      "name": "Output Measure: Construction",
+      "uri": "/economy/grossdomesticproductgdp/timeseries/l2n8"
+    },
+    {
+      "name": "Output Measure: Services",
+      "uri": "/economy/grossdomesticproductgdp/timeseries/l2nc"
+    }
   ],
-  "statsBulletinHeadline": "/economy/economicoutputandproductivity/bulletins/quarterlynationalaccounts",
+  "statsBulletinHeadline": {
+    "name": "Quarterly National Accounts",
+    "uri": "/economy/economicoutputandproductivity/bulletins/quarterlynationalaccounts"
+  },
   "statsBulletins": [
-    "/economy/economicoutputandproductivity/bulletins/quarterlynationalaccounts"
+    {
+      "name": "Quarterly National Accounts",
+      "uri": "/economy/economicoutputandproductivity/bulletins/quarterlynationalaccounts"
+    }
   ],
   "datasets": [],
   "level": "t3",

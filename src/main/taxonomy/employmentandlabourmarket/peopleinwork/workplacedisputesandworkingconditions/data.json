@@ -1,14 +1,35 @@
 {
-  "headline": "/employmentandlabourmarket/peopleinwork/workplacedisputesandworkingconditions/timeseries/bbfw",
+  "headline": {
+    "name": "Working days lost",
+    "uri": "/employmentandlabourmarket/peopleinwork/workplacedisputesandworkingconditions/timeseries/bbfw"
+  },
   "items": [
-    "/employmentandlabourmarket/peopleinwork/workplacedisputesandworkingconditions/timeseries/bbfw",
-    "/employmentandlabourmarket/peopleinwork/workplacedisputesandworkingconditions/timeseries/f8xz",
-    "/employmentandlabourmarket/peopleinwork/workplacedisputesandworkingconditions/timeseries/f8y2",
-    "/employmentandlabourmarket/peopleinwork/workplacedisputesandworkingconditions/timeseries/bluu"
+    {
+      "name": "Working days lost",
+      "uri": "/employmentandlabourmarket/peopleinwork/workplacedisputesandworkingconditions/timeseries/bbfw"
+    },
+    {
+      "name": "Working days lost in the Public Sector",
+      "uri": "/employmentandlabourmarket/peopleinwork/workplacedisputesandworkingconditions/timeseries/f8xz"
+    },
+    {
+      "name": "Working days lost in the Private Sector",
+      "uri": "/employmentandlabourmarket/peopleinwork/workplacedisputesandworkingconditions/timeseries/f8y2"
+    },
+    {
+      "name": "Number of stoppages",
+      "uri": "/employmentandlabourmarket/peopleinwork/workplacedisputesandworkingconditions/timeseries/bluu"
+    }
   ],
-  "statsBulletinHeadline": "/employmentandlabourmarket/peopleinwork/workplacedisputesandworkingconditions/bulletins/uklabourmarketjuly2014",
+  "statsBulletinHeadline": {
+    "name": "UK Labour Market, July 2014",
+    "uri": "/employmentandlabourmarket/peopleinwork/workplacedisputesandworkingconditions/bulletins/uklabourmarketjuly2014"
+  },
   "statsBulletins": [
-    "/employmentandlabourmarket/peopleinwork/workplacedisputesandworkingconditions/bulletins/uklabourmarketjuly2014"
+    {
+      "name": "UK Labour Market, July 2014",
+      "uri": "/employmentandlabourmarket/peopleinwork/workplacedisputesandworkingconditions/bulletins/uklabourmarketjuly2014"
+    }
   ],
   "datasets": [],
   "level": "t3",

@@ -8,7 +8,7 @@
 
 	function T3Controller($scope, Downloader) {
 		var ctrl = this
-		var items = $scope.taxonomy.data.itemData
+		var items = $scope.taxonomy.data.items
 		ctrl.allSelected = false
 		ctrl.selectedCount = 0
 
@@ -51,10 +51,8 @@
 				type: type
 			}
 			downloadRequest.uriList = getFileList()
-			console.log(JSON.stringify(downloadRequest))
 			var fileName = $scope.getPage() + '.' + downloadRequest.type;
 			Downloader.downloadFile(downloadRequest,fileName)
-			
 		}
 
 		function getFileList() {

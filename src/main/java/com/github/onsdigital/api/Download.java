@@ -38,18 +38,17 @@ import com.github.onsdigital.util.XLSXGenerator;
 public class Download {
 
 	@POST
-	public void post(@Context HttpServletRequest request, @Context HttpServletResponse response) throws IOException {
+	public void post(@Context HttpServletRequest request, @Context HttpServletResponse response, DownloadRequest downloadRequest) throws IOException {
 		try {
-			DownloadRequest downloadRequest = Serialiser.deserialise(request, DownloadRequest.class);
 			System.out.println("Download request recieved" + downloadRequest);
-			response.setHeader("Content-Disposition", "attachment; filename=data." + downloadRequest.type);
+			response.setHeader("Content-Disposition", "attachment; filename=\"data." + downloadRequest.type + "\"");
 			response.setCharacterEncoding("UTF8");
 			response.setContentType("application/" + downloadRequest.type);
 			processRequest(response.getOutputStream(), downloadRequest);
 		} catch (IOException e) {
 			response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR_500);
 			response.setContentType("text/plain");
-			response.getWriter().write("An error occured while processing download request");
+			response.getWriter().write("An error occured while processing this download request");
 		}
 	}
 
@@ -95,14 +94,18 @@ public class Download {
 	}
 
 	private Date toDate(DateVal from) {
-		String date = String.valueOf(from.year);
-		if (StringUtils.isNotBlank(from.month)) {
-			date += " " + from.month;
+		Date result = null;
+		if (from != null) {
+			String date = String.valueOf(from.year);
+			if (StringUtils.isNotBlank(from.month)) {
+				date += " " + from.month;
+			}
+			if (StringUtils.isNotBlank(from.quarter)) {
+				date += " " + from.quarter;
+			}
+			result = TimeseriesValue.toDate(date);
 		}
-		if (StringUtils.isNotBlank(from.quarter)) {
-			date += " " + from.quarter;
-		}
-		return TimeseriesValue.toDate(date);
+		return result;
 	}
 
 	/**
@@ -121,15 +124,17 @@ public class Download {
 		boolean quarter = true;
 		boolean month = true;
 
-		if (StringUtils.isNotBlank(downloadRequest.from.quarter)) {
-			year = false;
-			month = false;
-		} else if (StringUtils.isNotBlank(downloadRequest.from.month)) {
-			year = false;
-			quarter = false;
-		} else if (downloadRequest.from.year > 0) {
-			quarter = false;
-			month = false;
+		if (downloadRequest.from != null) {
+			if (StringUtils.isNotBlank(downloadRequest.from.quarter)) {
+				year = false;
+				month = false;
+			} else if (StringUtils.isNotBlank(downloadRequest.from.month)) {
+				year = false;
+				quarter = false;
+			} else if (downloadRequest.from.year > 0) {
+				quarter = false;
+				month = false;
+			}
 		}
 
 		if (year) {
@@ -176,12 +181,13 @@ public class Download {
 		boolean add = false;
 		for (String key : data.keySet()) {
 			Date date = TimeseriesValue.toDate(key);
-			if (date.equals(from)) {
+			// Start adding if no from date has been sperified:
+			if ((!add && from == null) || date.equals(from)) {
 				System.out.println("Starting range at " + key);
 				add = true;
 			}
 			if (add) {
-				System.out.print(".");
+				// System.out.print(".");
 				result.put(key, data.get(key));
 			}
 			if (date.equals(to)) {

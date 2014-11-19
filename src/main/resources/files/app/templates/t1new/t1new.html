@@ -28,18 +28,18 @@
               <header class="nav-panel__header nav-panel__roomy">
                 <h2 class="delta">{{section.name}}</h2>
               </header>
-              <section ng-repeat="item in section.itemData" class="nav-panel__roomy">
+              <section ng-repeat="item in section.items" class="nav-panel__roomy">
                 <p><a href="#!{{item.uri}}">{{item.name}}</a></p>
 
               <div class="box box--inline flush--bottom">
                   <div class="stat">
                     <div class="stat--small stat__figure">
-                      {{item.number}}
-                      <span class="stat__figure__unit">{{item.unit}}</span>
+                      {{item.data.number}}
+                      <span class="stat__figure__unit">{{item.data.unit}}</span>
                     </div>
 
                   </div>
-                  <p> {{item.date}}  <span tabindex="0" class="tooltips icon-info-circled icon--warm icon--inline icon--large icon--med tooltipstered"></span>
+                  <p> {{item.data.date}}  <span tabindex="0" class="tooltips icon-info-circled icon--warm icon--inline icon--large icon--med tooltipstered"></span>
               </div>
               </section>
                 </div>
