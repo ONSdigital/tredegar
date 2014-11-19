@@ -8,19 +8,26 @@
 	function T3Controller($scope, Taxonomy) {
 		var t3 = this
 		var data = $scope.taxonomy.data
-
+		var timeseriesCount = data.items.length
+		var timeseriesDefaultLimit = 5
+		t3.loadedTimseriesCount = 0 
+		var loadingMore = false
 		initialize()
 
 		function initialize() {
 			loadItem(data.headline) //Load headline
 			loadItem(data.statsBulletinHeadline) //Load stats bulletins related to headline
-			loadItems(data.items) //Load timeseries
+			loadItems(data.items, timeseriesDefaultLimit) //Load timeseries
 			loadItems(data.statsBulletins) //Load timeseries
+			loadItems(data.datasets) //Load datasets
 		}
 
 
-		function loadItems(items) {
-			for (var i = 0; i < items.length; i++) {
+		function loadItems(items,  limit) {
+			limit = limit || items.length
+			// Load all items if less than limit
+			limit = limit > items.length ? items.length : limit 
+			for (var i = 0; i < limit; i++) {
 				loadItem(items[i])
 			};
 		}
@@ -29,7 +36,12 @@
 			Taxonomy.loadItem(item)
 				.then(function(data) {
 					if (data.type === "timeseries") {
+						t3.loadedTimseriesCount++
+						if(!hasMore()) {
+							loadingMore=false
+						}
 						item.chartData = Taxonomy.resolveChartData(item)
+
 					}
 				}, handleDataLoadError)
 		}
@@ -41,11 +53,22 @@
 
 
 		function isLoading() {
-			return true
+			return loadingMore
+		}
+
+		function hasMore() {
+			return timeseriesCount > t3.loadedTimseriesCount
+		}
+
+		function loadAll() {
+			loadingMore=true
+			loadItems(data.items.slice(t3.loadedTimseriesCount))
 		}
 
 		angular.extend(t3, {
-			isLoading: isLoading
+			isLoading: isLoading,
+			hasMore:hasMore,
+			loadAll:loadAll
 		})
 	}
 

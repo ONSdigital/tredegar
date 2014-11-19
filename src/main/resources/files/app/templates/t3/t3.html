@@ -107,7 +107,7 @@
             </label>
         </li>
         <!-- /list- -table__head -->
-        <li ng-repeat="item in taxonomy.data.items" class="list--table__item list--table__body">
+        <li ng-repeat="item in taxonomy.data.items | limitTo:t3.loadedTimseriesCount" class="list--table__item list--table__body">
             <div class="list--table__item__body list--table__item__body--caption">
                 <h3 class="list--table__item__header">
                     <a href="#!{{item.uri}}" class="no_underline"> {{item.name}}</a>
@@ -118,17 +118,6 @@
                 </h3>
                 <p class="list--table__item__description">{{item.data.seasonalAdjustment}}</p>
             </div>
-            <!-- <div class="list--table__item__body list--table__item__body--stat">
-                <div class="stat list--table__item__body--centred">
-                    <span ng-if="!item.data">Loading...</span>
-                    <div class="stat__figure stat__tight">
-                        <span class="stat__figure__unit">{{item.data.preUnit}}</span>
-                        {{item.data.number}}
-                        <span class="stat__figure__unit">{{item.data.unit}}</span>
-                    </div>
-                    <time class="stat__description">{{item.data.date}}</time>
-                </div>
-            </div> -->
             <div class="list--table__item__body list--table__item__body--stat">
                 <ons-loading condition="!item.data" class="stat list--table__item__body--centred"></ons-loading>
                 <ons-sparkline chart-data="item.chartData" ></ons-sparkline>
@@ -157,7 +146,7 @@
         <li class="list--table__item list--table__footer">
             <div class="list--table__item__body">
                 <div class="table__actions split">
-                    <a class="table__action split__title link-muted" href="#">
+                    <a ng-if="t3.hasMore()" class="table__action split__title link-muted" href="" ng-click="t3.loadAll()">
                         <span class="table__action__text">View all {{taxonomy.data.items.length}} time series</span>
                     </a>
                 </div>
@@ -249,7 +238,7 @@
 
     <!-- Dynamic Content -->
     <div ng-if="(taxonomy.data.datasets).length > 0" class="grid-wrap">
-        <div ng-repeat="dataset in taxonomy.data.datasets track by $index" class="grid-col desktop-grid-one-third tablet-grid-one-half">
+        <div ng-repeat="dataset in taxonomy.data.datasets" class="grid-col desktop-grid-one-third tablet-grid-one-half">
             <article class="box box--padded">
                 <header class="box__header">
                     <h3>
