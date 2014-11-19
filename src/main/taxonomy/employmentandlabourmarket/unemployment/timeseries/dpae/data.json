@@ -4432,6 +4432,11 @@
     "/employmentandlabourmarket/unemployment/bulletins/uklabourmarket",
     "/employmentandlabourmarket/unemployment/bulletins/youngpeoplenotineducationemploymentortrainingneet"
   ],
+  "relatedTimeseries": [
+    "/employmentandlabourmarket/unemployment/timeseries/dpaf",
+    "/employmentandlabourmarket/unemployment/timeseries/bcjd"
+  ],
+  "source": "Labour Force Survey",
   "type": "timeseries",
   "name": "Total Claimant Count Male",
   "fileName": "dpae",

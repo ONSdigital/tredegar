@@ -1436,6 +1436,10 @@
   "relatedBulletins": [
     "/economy/grossdomesticproductgdp/bulletins/grossdomesticproductpreliminaryestimate"
   ],
+  "relatedTimeseries": [
+    "/economy/grossdomesticproductgdp/timeseries/abmi",
+    "/economy/grossdomesticproductgdp/timeseries/ihyr"
+  ],
   "type": "timeseries",
   "name": "GDP Quarter on Quarter growth (CVM)",
   "fileName": "ihyq",

@@ -4408,6 +4408,13 @@
     "/employmentandlabourmarket/unemployment/bulletins/uklabourmarket",
     "/employmentandlabourmarket/unemployment/bulletins/youngpeoplenotineducationemploymentortrainingneet"
   ],
+  "relatedTimeseries": [
+    "/employmentandlabourmarket/unemployment/timeseries/mgse",
+    "/employmentandlabourmarket/unemployment/timeseries/mgsd",
+    "/employmentandlabourmarket/unemployment/timeseries/mgsx",
+    "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgrz"
+  ],
+  "source": "Labour Force Survey",
   "type": "timeseries",
   "name": "Unemployment 16+",
   "fileName": "mgsc",

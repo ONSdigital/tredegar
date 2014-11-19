@@ -40,6 +40,7 @@ public class Data implements Iterable<Timeseries> {
 	public static Map<Date, String> yearPairs = new TreeMap<>();
 	public static Map<Date, String> quarters = new TreeMap<>();
 	public static Map<Date, String> months = new TreeMap<>();
+	public static Map<Timeseries, List<Timeseries>> relatedTimeseries = new HashMap<>();
 
 	private static Set<Folder> folders;
 	private static Map<String, Set<Timeseries>> datasets = new TreeMap<>();
@@ -292,6 +293,18 @@ public class Data implements Iterable<Timeseries> {
 			result.remove(toKey(mapped));
 		}
 		return result;
+	}
+
+	public static void addRelatedTimeseries(Timeseries timeseries, List<Timeseries> relatedTimeserieses) {
+		relatedTimeseries.put(timeseries, relatedTimeserieses);
+	}
+
+	public static List<Timeseries> relatedTimeseries(Timeseries timeseries) {
+		return relatedTimeseries.get(timeseries);
+	}
+
+	public static Map<Timeseries, List<Timeseries>> getRelatedTimeseries() {
+		return relatedTimeseries;
 	}
 
 	/**

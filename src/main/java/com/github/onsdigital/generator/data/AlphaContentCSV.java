@@ -3,6 +3,8 @@ package com.github.onsdigital.generator.data;
 import java.io.IOException;
 import java.net.URI;
 import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.lang.ArrayUtils;
@@ -36,7 +38,9 @@ class AlphaContentCSV {
 	static String MULTIPLY = "multiply";
 	static String PERIOD = "Period";
 	static String CDID = "CDID";
-	static String[] columns = { THEME, LEVEL2, LEVEL3, NAME, KEY, PREUNIT, UNITS, FIGURE, MULTIPLY, PERIOD, CDID };
+	static String RELATED_CDID = "Related CDID";
+	static String SOURCE = "Source";
+	static String[] columns = { THEME, LEVEL2, LEVEL3, NAME, KEY, PREUNIT, UNITS, FIGURE, MULTIPLY, PERIOD, CDID, RELATED_CDID, SOURCE };
 
 	static Csv sheet;
 
@@ -120,6 +124,26 @@ class AlphaContentCSV {
 			String multiply = row.get(MULTIPLY);
 			if (StringUtils.isNotBlank(multiply)) {
 				timeseries.setScaleFactor(Integer.parseInt(multiply));
+			}
+
+			String relatedCdidColumn = row.get(RELATED_CDID);
+			if (StringUtils.isNotBlank(relatedCdidColumn)) {
+				String[] relatedCdidTokens = relatedCdidColumn.split(",");
+				List<Timeseries> relatedTimeserieses = new ArrayList<Timeseries>();
+				for (String relatedCdid : relatedCdidTokens) {
+					Timeseries relatedTimeseries = Data.timeseries(relatedCdid);
+					if (relatedTimeseries == null) {
+						// We haven't seen this one before, so add it:
+						relatedTimeseries = Data.addTimeseries(relatedCdid.trim());
+					}
+					relatedTimeserieses.add(relatedTimeseries);
+				}
+				Data.addRelatedTimeseries(timeseries, relatedTimeserieses);
+			}
+
+			String source = row.get(SOURCE);
+			if (StringUtils.isNotBlank(source)) {
+				timeseries.source = source;
 			}
 		}
 	}

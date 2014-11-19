@@ -60,6 +60,8 @@ public class Timeseries extends DataItem implements Comparable<Timeseries> {
 	public URI uri;
 
 	public List<URI> relatedBulletins = new ArrayList<>();
+	public List<URI> relatedTimeseries = new ArrayList<>();
+	public String source;
 
 	// Enables the raw CSV values to be scaled to match the units defined here.
 	// E.g. this might be 1000 to convert million-scale in the CSV to

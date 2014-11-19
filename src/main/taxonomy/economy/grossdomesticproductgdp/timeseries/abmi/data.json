@@ -1773,6 +1773,10 @@
   "relatedBulletins": [
     "/economy/grossdomesticproductgdp/bulletins/grossdomesticproductpreliminaryestimate"
   ],
+  "relatedTimeseries": [
+    "/economy/grossdomesticproductgdp/timeseries/ihyq",
+    "/economy/grossdomesticproductgdp/timeseries/ihyr"
+  ],
   "type": "timeseries",
   "name": "Gross Domestic Product (CVM)",
   "fileName": "abmi",

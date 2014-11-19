@@ -1773,6 +1773,11 @@
   "relatedBulletins": [
     "/economy/grossdomesticproductgdp/bulletins/grossdomesticproductpreliminaryestimate"
   ],
+  "relatedTimeseries": [
+    "/economy/grossdomesticproductgdp/timeseries/abnu",
+    "/economy/grossdomesticproductgdp/timeseries/nmru",
+    "/economy/grossdomesticproductgdp/timeseries/npqr"
+  ],
   "type": "timeseries",
   "name": "Expenditure Measure: Households",
   "fileName": "abpf",

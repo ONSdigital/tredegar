@@ -1773,6 +1773,10 @@
   "relatedBulletins": [
     "/economy/grossdomesticproductgdp/bulletins/grossdomesticproductpreliminaryestimate"
   ],
+  "relatedTimeseries": [
+    "/economy/grossdomesticproductgdp/timeseries/ihyn",
+    "/economy/grossdomesticproductgdp/timeseries/ihyo"
+  ],
   "type": "timeseries",
   "name": "Gross Domestic Product (CP)",
   "fileName": "ybha",

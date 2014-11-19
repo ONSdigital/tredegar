@@ -2604,6 +2604,10 @@
   "relatedBulletins": [
     "/economy/inflationandpriceindices/bulletins/consumerpriceinflation"
   ],
+  "relatedTimeseries": [
+    "/economy/inflationandpriceindices/timeseries/d7bt",
+    "/economy/inflationandpriceindices/timeseries/l55o"
+  ],
   "type": "timeseries",
   "name": "CPI: Consumer Prices Index",
   "fileName": "d7g7",

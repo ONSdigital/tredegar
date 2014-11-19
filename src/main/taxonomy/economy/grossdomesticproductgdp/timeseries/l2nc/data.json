@@ -723,6 +723,12 @@
   "relatedBulletins": [
     "/economy/grossdomesticproductgdp/bulletins/grossdomesticproductpreliminaryestimate"
   ],
+  "relatedTimeseries": [
+    "/economy/grossdomesticproductgdp/timeseries/l2kq",
+    "/economy/grossdomesticproductgdp/timeseries/l2kx",
+    "/economy/grossdomesticproductgdp/timeseries/l2kl",
+    "/economy/grossdomesticproductgdp/timeseries/l2n8"
+  ],
   "type": "timeseries",
   "name": "Output Measure: Services",
   "fileName": "l2nc",

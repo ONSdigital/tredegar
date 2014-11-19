@@ -11,9 +11,11 @@
             $scope.sidebar = true;
             $scope.sidebarUrl = "/app/templates/t5/t5sidebar.html";
 
-            var data = $scope.taxonomy.data
-            data.relatedBulletinData = []
-            loadRelatedBulletins(data)
+	        var data = $scope.taxonomy.data
+	        data.relatedBulletinData = []
+	        loadRelatedBulletins(data)
+	        data.relatedTimeseriesData = []
+	        loadRelatedTimeseries(data)
 
             function downloadXls() {
                 download('xlsx');
@@ -48,6 +50,23 @@
                     }
                 }
             }
+        
+	        function loadRelatedTimeseries(data) {
+	            var dataPath = '/data'
+	            var relatedTimeserieses = data.relatedTimeseries;
+	
+	            if (relatedTimeserieses != null) {
+	                for (var i = 0; i < relatedTimeserieses.length; i++) {
+	                    var timeseries = relatedTimeserieses[i]
+	                    var relatedTimeseriesPath = dataPath + timeseries
+	                    DataLoader.load(relatedTimeseriesPath)
+	                    	.then(function(relatedTimeseries) {
+	                    		$log.debug('Loaded related timeseries: ', relatedTimeseriesPath, ' ', relatedTimeseries)
+	                        	data.relatedTimeseriesData.push(relatedTimeseries)
+	                    	})
+	                }
+	            }
+	        }
 
             angular.extend(t5, {
                 downloadXls: downloadXls,
