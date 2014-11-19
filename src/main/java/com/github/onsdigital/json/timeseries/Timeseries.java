@@ -38,6 +38,9 @@ public class Timeseries extends DataItem implements Comparable<Timeseries> {
 
 	// Additional information
 	public String number;
+	// Enables the raw CSV values to be scaled to match the units defined here.
+	// E.g. this might be 1000 to convert million- to billion-:
+	public int multiply = 1;
 	public String unit;
 	// A unit that needs to go before the number, e.g. £
 	public String preUnit;
