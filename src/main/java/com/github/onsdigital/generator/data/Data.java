@@ -58,13 +58,22 @@ public class Data implements Iterable<Timeseries> {
 		System.out.println("Starting parsing of spreadsheets...");
 
 		folders = TaxonomyCsv.parse();
-		NonCdidCSV.parse();
+
+		// Basic data
+		MetadataCSV.parse();
+
+		// Main manually set-up spreadsheet
+		// may overwrite basic data:
+		AlphaContentCSV.parse();
+
+		// Markdown content:
 		BulletinMarkdown.parse();
 		ArticleMarkdown.parse();
 		MethodologyMarkdown.parse();
+
+		// Data
+		NonCdidCSV.parse();
 		DataCSV.parse();
-		MetadataCSV.parse();
-		AlphaContentCSV.parse();
 		DatasetMappingsCSV.parse();
 
 		// Only call this if you want to reset bulletin content using the
@@ -195,11 +204,38 @@ public class Data implements Iterable<Timeseries> {
 	 * @param timeseries
 	 *            The timeseries.
 	 */
-	public static void addTimeseries(Timeseries timeseries, String datasetName) {
+	public static void addTimeseries(Timeseries timeseries) {
 		if (timeserieses.containsKey(toKey(timeseries.cdid()))) {
 			throw new IllegalArgumentException("Duplicate timeseries: " + timeseries);
 		}
 		timeserieses.put(toKey(timeseries.cdid()), timeseries);
+	}
+
+	/**
+	 * Creates and adds a new timeseries. If the timeseries is already present,
+	 * an {@link IllegalArgumentException} is thrown.
+	 * 
+	 * @param cdid
+	 *            The timeseries CDID.
+	 * @return The new timeseries.
+	 */
+	public static Timeseries addTimeseries(String cdid) {
+		Timeseries timeseries = new Timeseries();
+		timeseries.setCdid(cdid);
+		addTimeseries(timeseries);
+		return timeseries;
+	}
+
+	/**
+	 * Adds a new dataset. If the dataset is already present, an
+	 * {@link IllegalArgumentException} is thrown.
+	 * 
+	 * @param name
+	 *            The dataset name.
+	 * @param dataset
+	 *            The dataset.
+	 */
+	public static void setDataset(Timeseries timeseries, String datasetName) {
 
 		Set<Timeseries> dataset;
 		if (datasetName != null) {
@@ -211,21 +247,6 @@ public class Data implements Iterable<Timeseries> {
 			dataset = (dataset("other") == null) ? addDataset("other") : dataset("other");
 		}
 		dataset.add(timeseries);
-	}
-
-	/**
-	 * Creates and adds a new timeseries. If the timeseries is already present,
-	 * an {@link IllegalArgumentException} is thrown.
-	 * 
-	 * @param cdid
-	 *            The timeseries CDID.
-	 * @return The new timeseries.
-	 */
-	public static Timeseries addTimeseries(String cdid, String datasetName) {
-		Timeseries timeseries = new Timeseries();
-		timeseries.setCdid(cdid);
-		addTimeseries(timeseries, datasetName);
-		return timeseries;
 	}
 
 	/**

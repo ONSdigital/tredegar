@@ -66,7 +66,7 @@ public class MetadataCSV {
 			String cdid = row.get("CDID");
 			Timeseries timeseries = Data.timeseries(cdid);
 			if (timeseries == null) {
-				throw new RuntimeException("Unknown CDID " + cdid);
+				timeseries = Data.addTimeseries(cdid);
 			}
 			timeseries.name = row.get("Name");
 			timeseries.seasonalAdjustment = row.get("Seasonal adjustment");
@@ -97,10 +97,11 @@ public class MetadataCSV {
 				String name = row[1];
 				Timeseries timeseries = Data.timeseries(cdid);
 				if (timeseries == null) {
-					timeseries = Data.addTimeseries(cdid, datasetName);
+					timeseries = Data.addTimeseries(cdid);
 				} else {
 					ok++;
 				}
+				dataset.add(timeseries);
 				// System.out.println(file.getFileName() + ": " + name);
 				timeseries.name = name;
 			}

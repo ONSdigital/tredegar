@@ -36,9 +36,9 @@ class AlphaContentCSV {
 	static String MULTIPLY = "multiply";
 	static String PERIOD = "Period";
 	static String CDID = "CDID";
-	static String[] columns = { THEME, LEVEL2, LEVEL3, NAME, KEY, PREUNIT, UNITS, FIGURE, PERIOD, CDID };
+	static String[] columns = { THEME, LEVEL2, LEVEL3, NAME, KEY, PREUNIT, UNITS, FIGURE, MULTIPLY, PERIOD, CDID };
 
-	static Csv csv;
+	static Csv sheet;
 
 	/**
 	 * Parses the CSV and validates headings.
@@ -48,9 +48,9 @@ class AlphaContentCSV {
 	public static void parse() throws IOException {
 
 		// Read the first worksheet - "Data":
-		csv = new Csv(resourceName);
-		csv.read(0);
-		String[] headings = csv.getHeadings();
+		sheet = new Csv(resourceName);
+		sheet.read(0);
+		String[] headings = sheet.getHeadings();
 
 		// Verify the headings:
 		for (String column : columns) {
@@ -60,7 +60,7 @@ class AlphaContentCSV {
 		}
 
 		// Process the rows
-		for (Map<String, String> row : csv) {
+		for (Map<String, String> row : sheet) {
 
 			// There are blank lines in the CSV that separate theme sections:
 			if (StringUtils.isBlank(row.get(THEME))) {
@@ -73,8 +73,7 @@ class AlphaContentCSV {
 			Timeseries timeseries = Data.timeseries(cdid);
 			if (timeseries == null) {
 				// We haven't seen this one before, so add it:
-				timeseries = Data.addTimeseries(cdid, null);
-
+				timeseries = Data.addTimeseries(cdid);
 			}
 
 			// Set the URI if necessary:
@@ -120,7 +119,7 @@ class AlphaContentCSV {
 			timeseries.number = figure;
 			String multiply = row.get(MULTIPLY);
 			if (StringUtils.isNotBlank(multiply)) {
-				timeseries.multiply = Integer.parseInt(multiply);
+				timeseries.setScaleFactor(Integer.parseInt(multiply));
 			}
 		}
 	}

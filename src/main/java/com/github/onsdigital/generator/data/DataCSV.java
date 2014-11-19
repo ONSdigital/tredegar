@@ -82,7 +82,7 @@ public class DataCSV {
 			for (int i = 1; i < header.length; i++) {
 				Timeseries timeseries = Data.timeseries(header[i]);
 				if (timeseries == null) {
-					timeseries = Data.addTimeseries(header[i], name);
+					timeseries = Data.addTimeseries(header[i]);
 				}
 				dataset.add(timeseries);
 			}
@@ -116,6 +116,10 @@ public class DataCSV {
 						timeseries.add(timeseriesValue);
 
 						// Scale values if necessary:
+						if (timeseries.cdid().equalsIgnoreCase("abmi")) {
+							// System.out.println("ABMI: " +
+							// timeseries.multiply());
+						}
 						scale(timeseriesValue, timeseries);
 					}
 				}
@@ -155,7 +159,7 @@ public class DataCSV {
 	static void scale(TimeseriesValue timeseriesValue, Timeseries timeseries) {
 
 		// If there's no scale, do nothing:
-		if (timeseries.multiply == 1) {
+		if (timeseries.getScaleFactor() == 1) {
 			return;
 		}
 
@@ -165,14 +169,16 @@ public class DataCSV {
 			int index = timeseriesValue.value.indexOf('.');
 			decimalPlaces = timeseriesValue.value.substring(index + 1).length();
 		}
-		int m = timeseries.multiply;
+		int m = timeseries.getScaleFactor();
 		do {
 			m /= 10;
 			decimalPlaces++;
 		} while (m > 1);
 
-		// Build the format string:
-		String format = "#";
+		// Build the format string.
+		// It will be of the form: 0.00, which ensures a leading 0 if the final
+		// value is less than 1 and the correct number of decimal places.
+		String format = "0";
 		if (decimalPlaces > 0) {
 			format += ".";
 			for (int i = 0; i < decimalPlaces; i++) {
@@ -182,7 +188,7 @@ public class DataCSV {
 
 		// Parse, scale and format the value:
 		double value = Double.parseDouble(timeseriesValue.value);
-		value = value / timeseries.multiply;
+		value = value / timeseries.getScaleFactor();
 		timeseriesValue.value = new DecimalFormat(format).format(value);
 	}
 

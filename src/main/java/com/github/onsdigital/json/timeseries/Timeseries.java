@@ -38,9 +38,6 @@ public class Timeseries extends DataItem implements Comparable<Timeseries> {
 
 	// Additional information
 	public String number;
-	// Enables the raw CSV values to be scaled to match the units defined here.
-	// E.g. this might be 1000 to convert million- to billion-:
-	public int multiply = 1;
 	public String unit;
 	// A unit that needs to go before the number, e.g. £
 	public String preUnit;
@@ -63,6 +60,23 @@ public class Timeseries extends DataItem implements Comparable<Timeseries> {
 	public URI uri;
 
 	public List<URI> relatedBulletins = new ArrayList<>();
+
+	// Enables the raw CSV values to be scaled to match the units defined here.
+	// E.g. this might be 1000 to convert million-scale in the CSV to
+	// billion-scale to match the scale of the headline figure and unit.
+	// It's only needed during parsing, so we don't want it serialised to json:
+	private transient Integer csvValueScaleFactor;
+
+	public void setScaleFactor(int multiply) {
+		this.csvValueScaleFactor = multiply;
+	}
+
+	public int getScaleFactor() {
+		if (this.csvValueScaleFactor == null) {
+			return 1;
+		}
+		return this.csvValueScaleFactor.intValue();
+	}
 
 	public Timeseries() {
 		type = ContentType.timeseries;
