@@ -33,6 +33,7 @@ class AlphaContentCSV {
 	static String PREUNIT = "Pre unit";
 	static String UNITS = "Units";
 	static String FIGURE = "Figure";
+	static String MULTIPLY = "multiply";
 	static String PERIOD = "Period";
 	static String CDID = "CDID";
 	static String[] columns = { THEME, LEVEL2, LEVEL3, NAME, KEY, PREUNIT, UNITS, FIGURE, PERIOD, CDID };
@@ -117,6 +118,10 @@ class AlphaContentCSV {
 				figure = figure.substring(0, figure.length() - 2);
 			}
 			timeseries.number = figure;
+			String multiply = row.get(MULTIPLY);
+			if (StringUtils.isNotBlank(multiply)) {
+				timeseries.multiply = Integer.parseInt(multiply);
+			}
 		}
 	}
 
