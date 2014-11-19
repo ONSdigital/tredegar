@@ -16,7 +16,7 @@ public class DataCSVTest {
 	public void shouldNotScaleInteger() {
 
 		// Given
-		timeseries.multiply = 1;
+		timeseries.setScaleFactor(1);
 		timeseriesValue.value = "100";
 
 		// When
@@ -30,7 +30,7 @@ public class DataCSVTest {
 	public void shouldNotScaleDecimal() {
 
 		// Given
-		timeseries.multiply = 1;
+		timeseries.setScaleFactor(1);
 		timeseriesValue.value = "1.00";
 
 		// When
@@ -44,7 +44,7 @@ public class DataCSVTest {
 	public void shouldScaleInteger() {
 
 		// Given
-		timeseries.multiply = 10;
+		timeseries.setScaleFactor(10);
 		timeseriesValue.value = "100";
 
 		// When
@@ -58,7 +58,7 @@ public class DataCSVTest {
 	public void shouldScaleDecimal() {
 
 		// Given
-		timeseries.multiply = 10;
+		timeseries.setScaleFactor(10);
 		timeseriesValue.value = "10.0";
 
 		// When
@@ -72,7 +72,7 @@ public class DataCSVTest {
 	public void shouldScaleBillionInteger() {
 
 		// Given
-		timeseries.multiply = 1000000;
+		timeseries.setScaleFactor(1000000);
 		timeseriesValue.value = "71780230712";
 
 		// When
@@ -86,7 +86,7 @@ public class DataCSVTest {
 	public void shouldScaleBillionDecimal() {
 
 		// Given
-		timeseries.multiply = 1000000;
+		timeseries.setScaleFactor(1000000);
 		timeseriesValue.value = "71780230.712";
 
 		// When
