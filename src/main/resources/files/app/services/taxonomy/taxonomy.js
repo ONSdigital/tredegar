@@ -130,7 +130,7 @@
 				};
 			})
 		}
-
+		
 		function resolvePath() {
 			var path = $location.$$path
 			path = StringUtil.endsWith(path, '/') ? path : (path + '/')
@@ -140,7 +140,7 @@
 
 		//Expose public api
 		angular.extend(service, {
-			loadData: loadData
+			loadData: loadData,
 		})
 
 	}

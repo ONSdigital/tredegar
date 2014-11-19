@@ -48,6 +48,14 @@
                             </div>
                         </div>
                     </div>
+                                 <div class="box box--padded--small">
+                        <div ng-controller="T3HeadlineChartController as chart">
+                           <div ng-if="chart.chartVisible">
+                               <highchart class="highcharts-background" id="chart_prices" config="chart.chartConfig">
+                               </highchart>
+                           </div>
+                        </div>                
+                    </div>
                     <!-- /box -->
                     <dl class="definition mini">
                         <dt>Last updated:</dt>
@@ -93,8 +101,6 @@
 <!-- /box -->
 <!-- /wrapper -->
 
-
-
 <!-- List/Table with data -->
 
 <section id="timeseries" class="panel--large wrapper">
@@ -117,7 +123,7 @@
                 </h3>
                 <p class="list--table__item__description">{{item.data.seasonalAdjustment}}</p>
             </div>
-            <div class="list--table__item__body list--table__item__body--stat">
+            <!-- <div class="list--table__item__body list--table__item__body--stat">
                 <div class="stat list--table__item__body--centred">
                     <span ng-if="!item.data">Loading...</span>
                     <div class="stat__figure stat__tight">
@@ -127,7 +133,15 @@
                     </div>
                     <time class="stat__description">{{item.data.date}}</time>
                 </div>
-            </div>
+            </div> -->
+                  <div class="list--table__item__body list--table__item__body--stat" >
+                    <div ng-controller="T3TableChartController as chart">
+                        <div class="stat list--table__item__body--centred" ng-if="chart.chartVisible">
+                            <highchart class="highcharts-background" id="chart_prices" config="chart.chartConfig">
+                            </highchart>
+                        </div>
+                    </div>
+                  </div>
             <div class="list--table__item__body list--table__item__body--update">
                 <dl class="micro definition-list definition-list--inline flush--half--vertical">
                     <dt>Last updated:</dt>
@@ -146,11 +160,8 @@
             <div class="list--table__item__body--centred">
                         <span>Loading ...</span>
                 </div>
-                <!-- /table-actions -->
-            </div>
             <!--  /list-table__item__body -->
         </li>
-
         <!-- /list- -table__body -->
         <li class="list--table__item list--table__footer">
             <div class="list--table__item__body">

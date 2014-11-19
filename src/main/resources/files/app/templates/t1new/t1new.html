@@ -30,7 +30,13 @@
               </header>
               <section ng-repeat="item in section.items" class="nav-panel__roomy">
                 <p><a href="#!{{item.uri}}">{{item.name}}</a></p>
-
+              <div ng-controller="T1ChartController as chart">
+			  	<div ng-if="chart.chartVisible">
+			    	<highchart class="highcharts-background" id="chart_prices" config="chart.chartConfig">
+			        </highchart>
+			    </div>
+			  </div> 
+			  <br/> 
               <div class="box box--inline flush--bottom">
                   <div class="stat">
                     <div class="stat--small stat__figure">

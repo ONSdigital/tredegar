@@ -1,17 +1,19 @@
+'use strict';
+
 (function() {
 
 	angular.module('onsTemplates')
 		.controller('T3Controller', ['$scope', 'Downloader', T3Controller])
 		// .directive('stSelectAll', [SelectAllDirective])
 		// .directive('stSelect', [SelectDirective])
-
+		.controller('T3HeadlineChartController', ['$scope', 'Chart', '$rootScope', T3HeadlineChartController])
+		.controller('T3TableChartController', ['$scope', 'Chart', '$rootScope', T3TableChartController])
 
 	function T3Controller($scope, Downloader) {
-		var ctrl = this
+		var t3 = this
 		var items = $scope.taxonomy.data.items
-		ctrl.allSelected = false
-		ctrl.selectedCount = 0
-
+		t3.allSelected = false
+		t3.selectedCount = 0
 
 		function isLoading() {
 			
@@ -73,17 +75,30 @@
 		// 	return uriList
 		// }
 
-		angular.extend(ctrl, {
+		angular.extend(t3, {
 			// toggleSelectAll: toggleSelectAll,
 			// toggleSelect: toggleSelect,
 			// downloadXls: downloadXls,
 			// downloadCsv: downloadCsv,
 			isLoading:isLoading
 		})
-
-
+		
 	}
-
+	
+	function T3HeadlineChartController($scope, Chart) {
+        var t3 = this
+        
+        // due to async nature of http load then the headline data may not be available
+        // so place a watch upon it
+        if (!$scope.taxonomy.data.headline.data) {
+        	$scope.$watch('taxonomy.data.headline.data', function() {
+        		Chart.buildChart(t3, $scope.taxonomy.data.headline.data, true)
+        	})
+        } else {
+        	Chart.buildChart(t3, $scope.taxonomy.data.headline.data, true)
+        } 
+	}
+	
 	// function SelectAllDirective() {
 	// 	return {
 	// 		restrict: 'A',
@@ -112,5 +127,46 @@
 	// 	}
 	// }
 
+	function T3TableChartController($scope, Chart) {
+		var ctrl = this
+		
+        // due to async nature of http load then the data may not be available
+        // so place a watch upon it
+        if (!$scope.item.data) {
+        	$scope.$watch('item.data', function() {
+        		Chart.buildChart(ctrl, $scope.item.data, false)
+        	})
+        } else {
+        	Chart.buildChart(ctrl, $scope.item.data, false)
+        } 
+	}
+	
+	function SelectAllDirective() {
+		return {
+			restrict: 'A',
+			link: function(scope, element, attr) {
+				element.bind('click', function() {
+					scope.$apply(function() {
+						scope.t3.toggleSelectAll()
+					})
+				})
+
+			}
+		}
+	}
+
+	function SelectDirective() {
+		return {
+			restrict: 'A',
+			link: function(scope, element, attr) {
+				element.bind('click', function() {
+					scope.$apply(function() {
+						scope.t3.toggleSelect(scope.item)
+					})
+				})
+
+			}
+		}
+	}
 
 })()

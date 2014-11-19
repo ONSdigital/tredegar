@@ -2087,6 +2087,10 @@ a {
 .box--padded--med {
   padding: 20px;
   padding: 2rem; }
+  
+.box--padded--small {
+  padding: 10px;
+  padding: 1rem; }  
 
 .box--callout {
   padding: 10px;
@@ -5271,7 +5275,7 @@ td.datatable-downloads{
 
 @media screen and (min-width: 800px){
   .navpanel_wrapper{
-  height: 17em;
+  height: 20em;
   /*line-height: 1.3;*/
   overflow: hidden;
   padding: 0;}

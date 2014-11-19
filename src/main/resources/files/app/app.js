@@ -21,9 +21,9 @@
         'onsDownloader',
         'onsUtils',
         'onsDataLoader',
-        'angular-data.DSCacheFactory'
+        'angular-data.DSCacheFactory',
+        'onsChart'
     ])
-
     //Template related components are to be registered to onsTemplates module
     var onsTemplates = angular.module('onsTemplates', [])
 
