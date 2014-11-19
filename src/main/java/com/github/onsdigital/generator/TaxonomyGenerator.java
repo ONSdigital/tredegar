@@ -197,13 +197,11 @@ public class TaxonomyGenerator {
 			if (child.getChildren().size() > 0) { // t2 page at level below
 				// Add child of sections to t2 page
 				for (Folder grandChild : child.getChildren()) {
-					section.items.add(new DataItemLink(grandChild.name, URI
-							.create(grandChild.filename())));
+					section.items.add(new DataItemLink(grandChild.name, URI.create(grandChild.filename())));
 				}
 			} else { // T3 page at below level
 				for (Timeseries grandChild : child.timeserieses) {
-					section.items.add(new DataItemLink(grandChild.name,
-							grandChild.uri));
+					section.items.add(new DataItemLink(grandChild.name, grandChild.uri));
 
 				}
 			}
@@ -274,17 +272,13 @@ public class TaxonomyGenerator {
 
 		// Timeseries references:
 		if (folder.headline != null && folder.headline.uri != null) {
-			t3.headline = new DataItemLink(folder.headline.name,
-					folder.headline.uri);
+			t3.headline = new DataItemLink(folder.headline.name, folder.headline.uri);
 		} else {
 			System.out.println("No headline URI set for " + folder.name);
-			if (folder.timeserieses.size() > 0
-					&& folder.timeserieses.get(0).uri != null) {
+			if (folder.timeserieses.size() > 0 && folder.timeserieses.get(0).uri != null) {
 				Timeseries headline = folder.timeserieses.get(0);
 				t3.headline = new DataItemLink(headline.name, headline.uri);
-				System.out
-						.println("Using the first item from the timeseries list instead: "
-								+ t3.headline);
+				System.out.println("Using the first item from the timeseries list instead: " + t3.headline);
 			}
 		}
 		List<Timeseries> timeserieses = folder.timeserieses;
@@ -343,8 +337,7 @@ public class TaxonomyGenerator {
 			// bit of a workaround for now.
 			if (bulletin.summary != null) {
 				URI bulletinUri = toStatsBulletinUri(folder, bulletin);
-				t3.statsBulletins.add(new DataItemLink(bulletin.name,
-						bulletinUri));
+				t3.statsBulletins.add(new DataItemLink(bulletin.name, bulletinUri));
 			}
 		}
 	}
@@ -352,10 +345,9 @@ public class TaxonomyGenerator {
 	private static void createStatsBulletinHeadline(Folder folder, T3 t3) throws IOException {
 		// Stats bulletin references:
 
-		URI statsBulletinHeadlineUri = toStatsBulletinUri(folder,
-				folder.headlineBulletin);
+		URI statsBulletinHeadlineUri = toStatsBulletinUri(folder, folder.headlineBulletin);
 		if (statsBulletinHeadlineUri != null) {
-			t3.statsBulletinHeadline = new DataItemLink(folder.headlineBulletin.name , statsBulletinHeadlineUri);
+			t3.statsBulletinHeadline = new DataItemLink(folder.headlineBulletin.name, statsBulletinHeadlineUri);
 		}
 	}
 

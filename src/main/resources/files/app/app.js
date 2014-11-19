@@ -13,7 +13,8 @@
         'angularLoadingBar',
         'onsToggler',
         'onsLoading',
-        'onsSparkline'
+        'onsSparkline',
+	'onsTooltip'
     ])
 
     //Filters, services and other helpers are to be injected to onsHelpers module
@@ -23,8 +24,7 @@
         'onsDownloader',
         'onsUtils',
         'onsDataLoader',
-        'angular-data.DSCacheFactory',
-        'onsChart'
+        'angular-data.DSCacheFactory'
     ])
     //Template related components are to be registered to onsTemplates module
     var onsTemplates = angular.module('onsTemplates', [])

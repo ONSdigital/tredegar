@@ -16,6 +16,7 @@
 
 		function initialize() {
 			loadItem(data.headline) //Load headline
+			t3.loadedTimseriesCount-- //Reset timeseries count after headline
 			loadItem(data.statsBulletinHeadline) //Load stats bulletins related to headline
 			loadItems(data.items, timeseriesDefaultLimit) //Load timeseries
 			loadItems(data.statsBulletins) //Load timeseries

@@ -66,11 +66,14 @@ public class MetadataCSV {
 			String cdid = row.get("CDID");
 			Timeseries timeseries = Data.timeseries(cdid);
 			if (timeseries == null) {
-				throw new RuntimeException("Unknown CDID " + cdid);
+				timeseries = Data.addTimeseries(cdid);
 			}
 			timeseries.name = row.get("Name");
 			timeseries.seasonalAdjustment = row.get("Seasonal adjustment");
-			timeseries.unit = row.get("Units");
+			// Slightly counterintuitive, but the values in the "Units" column
+			// are in the :Additional text" column in the Alpha Content
+			// spreadsheet:
+			timeseries.additionalText = row.get("Units");
 			timeseries.mainMeasure = row.get("Main measure");
 			timeseries.description = row.get("Description");
 			timeseries.note1 = StringUtils.defaultIfBlank(row.get("Note 1"), timeseries.note1);
@@ -97,10 +100,11 @@ public class MetadataCSV {
 				String name = row[1];
 				Timeseries timeseries = Data.timeseries(cdid);
 				if (timeseries == null) {
-					timeseries = Data.addTimeseries(cdid, datasetName);
+					timeseries = Data.addTimeseries(cdid);
 				} else {
 					ok++;
 				}
+				dataset.add(timeseries);
 				// System.out.println(file.getFileName() + ": " + name);
 				timeseries.name = name;
 			}
