@@ -32,15 +32,15 @@
 	            <div class="box box--padded--med box--green--separated-left box--inline">
 	              <header class="box___section">      
 	                <h3 class="beta nav_title">
-	                  <a href="#!{{taxonomy.data.headlineData.uri}}">{{taxonomy.data.headlineData.name}}</a>
+	                  <a href="#!{{taxonomy.data.headline.uri}}">{{taxonomy.data.headline.name}}</a>
 	                  <span tabindex="0" class="tooltips icon-info-circled icon--warm icon--inline icon--inline--large-text icon--small tooltipstered"><span>Percentage change over 12 months<br><br> Not seasonally adjusted</span></span>
 	                </h3>
 	                </header> 
 	                <div class="box box--inline box--padded muted--dark">
 	                  <div class="stat stat--headline">
 	                    <div class="stat__figure">
-	                      {{taxonomy.data.headlineData.number}}
-	                      <span class="stat__figure__unit">{{taxonomy.data.headlineData.unit}}</span>
+	                      {{taxonomy.data.headline.data.number}}
+	                      <span class="stat__figure__unit">{{taxonomy.data.headline.data.unit}}</span>
 	                    </div>
 	
 	                  </div>
@@ -57,12 +57,12 @@
 	                <dl class="definition mini">
 	                  <dt>Last updated:</dt>
 	                  <dd>
-	                  {{taxonomy.data.headlineData.lastUpated}}
+	                  {{taxonomy.data.headline.data.lastUpated}}
 	                  <!-- 16 Sep 2014 -->
 	                  </dd>
 	                  <dt>Next update:</dt>
 	                  <dd>
-	                  {{taxonomy.data.headlineData.nextUpdate}}
+	                  {{taxonomy.data.headline.data.nextUpdate}}
 	                  <!-- 14 Oct 2014 -->
 	                  </dd>
 	                </dl>

@@ -75,6 +75,7 @@
 
         }
 
+
         function ChartController($scope, $location, $log, Downloader, ArrayUtil) {
             var ctrl = this
             ctrl.timeseries = $scope.taxonomy.data
@@ -233,31 +234,8 @@
             }
         }
 
-
-        function toggleCustomFilters() {
-            ctrl.showCustomFilters = !ctrl.showCustomFilters
-        }
-
         function isActive(chartType) {
             return chartType === ctrl.activeChart
-        }
-
-
-        function showTable() {
-            if (ctrl.tableVisible) {
-                return
-            }
-
-            ctrl.tableVisible = true
-            ctrl.chartVisible = false
-        }
-
-        function showChart() {
-            if (ctrl.chartVisible) {
-                return
-            }
-            ctrl.chartVisible = true
-            ctrl.tableVisible = false
         }
 
         function getAllValues() {
@@ -283,18 +261,18 @@
 
                 if (ctrl.showMonthly) {
                     ctrl.activeChart = 'months'
-                    data.months = Chart.formatData(data.months)
+                    data.months = formatData(data.months)
                 }
 
                 if (ctrl.showQuarterly) {
                     ctrl.activeChart = 'quarters'
-                    data.quarters = Chart.formatData(data.quarters)
+                    data.quarters = formatData(data.quarters)
 
                 }
 
                 if (ctrl.showYearly) {
                     ctrl.activeChart = 'years'
-                    data.years = Chart.formatData(data.years)
+                    data.years = formatData(data.years)
                 }
 
                 if ((ctrl.showMonthly || ctrl.showYearly || ctrl.showQuarterly)) {
@@ -303,7 +281,88 @@
 
             }
 
+            //Format data into high charts compatible format
+            function formatData(timeseriesValues) {
+                var data = {
+                    values: [],
+                    years: []
+                }
+                var current
+                var i
+
+                for (i = 0; i < timeseriesValues.length; i++) {
+                    current = timeseriesValues[i]
+                    data.values.push(enrichData(current, i))
+                    data.years.push(current.year)
+                }
+                ArrayUtil.toUnique(data.years)
+                return data
+            }
+
+            function enrichData(timeseriesValue) {
+                var quarter = timeseriesValue.quarter
+                var year = timeseriesValue.year
+                var month = timeseriesValue.month
+
+                timeseriesValue.y = +timeseriesValue.value //Cast to number
+                timeseriesValue.value = +(year + (quarter ? quarterVal(quarter) : '') + (month ? monthVal(month) : ''))
+                timeseriesValue.name = timeseriesValue.date //Appears on x axis
+                delete timeseriesValue.date
+
+                return timeseriesValue
+            }
         }
+
+
+
+        function monthVal(mon) {
+            switch (mon.slice(0, 3).toUpperCase()) {
+                case 'JAN':
+                    return 01
+                case 'FEB':
+                    return 02
+                case 'MAR':
+                    return 03
+                case 'APR':
+                    return 04
+                case 'MAY':
+                    return 05
+                case 'JUN':
+                    return 06
+                case 'JUL':
+                    return 07
+                case 'AUG':
+                    return 08
+                case 'SEP':
+                    return 09
+                case 'OCT':
+                    return 10
+                case 'NOV':
+                    return 11
+                case 'DEC':
+                    return 12
+                default:
+                    throw 'Invalid Month:' + mon
+
+            }
+        }
+
+        function quarterVal(quarter) {
+            switch (quarter) {
+                case 'Q1':
+                    return 1
+                case 'Q2':
+                    return 2
+                case 'Q3':
+                    return 3
+                case 'Q4':
+                    return 4
+                default:
+                    throw 'Invalid Quarter:' + quarter
+
+            }
+        }
+
 
         function downloadXls() {
             download('xlsx');
@@ -342,12 +401,9 @@
         angular.extend(ctrl, {
             isActive: isActive,
             changeChartType: changeChartType,
-            showTable: showTable,
-            showChart: showChart,
             changeTimePeriod: changeTimePeriod,
-            toggleCustomFilters: toggleCustomFilters,
-            downloadCsv:downloadCsv,
-            downloadXls:downloadXls,
+            downloadCsv: downloadCsv,
+            downloadXls: downloadXls,
             exportImage: exportImage
         })
     }
