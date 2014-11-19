@@ -40,8 +40,11 @@ describe('services', function() {
 
 	// monthly values
 	it('check monthly values are returned', inject(function(Chart) {
-		var result = Chart.monthVal('JANUARY')
-		expect(result).toBe(1);
+		var months = ['JANUARY', 'FEBRUARY', 'MARCH', 'APRIL', 'MAY', 'JUNE', 'JULY', 'AUGUST', 'SEPTEMBER', 'OCTOBER', 'NOVEMBER', 'DECEMBER']
+		for (var i = 0; i < months.length; i++) {
+			var result = Chart.monthVal(months[i])
+			expect(result).toBe(++i)
+		}
 	}));
 
 	// monthly values exception handling
