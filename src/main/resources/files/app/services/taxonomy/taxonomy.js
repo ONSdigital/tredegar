@@ -134,12 +134,6 @@
 			})
 		}
 		
-		//Loads and attaches data to given parent element with given property name
-		function loadWithoutCallback(path) {
-			console.log('loadWithoutCallback: ' + path)
-			return $http.get(path)
-		}
-
 		function resolvePath() {
 			var path = $location.$$path
 			path = StringUtil.endsWith(path, '/') ? path : (path + '/')
@@ -150,7 +144,6 @@
 		//Expose public api
 		angular.extend(service, {
 			loadData: loadData,
-			loadWithoutCallback: loadWithoutCallback
 		})
 
 	}

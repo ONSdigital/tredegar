@@ -23,9 +23,18 @@
 	}
 	
 	function T1ChartController($scope, Chart) {
-		var scopedTimeseries = $scope.item
+		var scopedTimeseries = $scope.item.data
         var t1 = this
-        Chart.buildChart(t1, scopedTimeseries, false)
+        
+        // due to async nature of http load then the headline data may not be available
+        // so place a watch upon it
+        if (!$scope.item.data) {
+        	$scope.$watch('item.data', function() {
+        		Chart.buildChart(t1, $scope.item.data, false)
+        	})
+        } else {
+        	Chart.buildChart(t1, $scope.item.data, false)
+        }        
 	}
 
 })()

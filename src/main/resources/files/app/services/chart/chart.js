@@ -372,6 +372,7 @@
         }  
         
         function buildChart(ctrl, timeseries, isHeadlineData) {
+        	console.log('buildChart: ' + JSON.stringify(timeseries))
         	// if headline data is not available then return, the watcher will deal with this scenario
         	if (!timeseries) {
         		return

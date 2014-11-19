@@ -13,7 +13,7 @@
 		//Which is not necessary since DataLoader service caches data explicitly
 		$httpProvider.defaults.cache = false
 
-		$logProvider.debugEnabled(false)
+		$logProvider.debugEnabled(true)
 	}
 
 

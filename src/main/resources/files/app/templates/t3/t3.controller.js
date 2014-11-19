@@ -9,7 +9,7 @@
 
 	function T3Controller($scope, $http, Downloader, $log) {
 		var t3 = this
-		var items = $scope.taxonomy.data.itemData
+		var items = $scope.taxonomy.data.items
 		t3.allSelected = false
 		t3.selectedCount = 0
 
@@ -77,23 +77,34 @@
 	
 	function T3HeadlineChartController($scope, Chart) {
         var t3 = this
+        console.log('$scope.taxonomy.data.headline.data: ' + JSON.stringify($scope.taxonomy.data.headline.data))
 
         // due to async nature of http load then the headline data may not be available
         // so place a watch upon it
-        if (!$scope.taxonomy.data.headlineData) {
-        	$scope.$watch('taxonomy.data.headlineData', function() {
-        		Chart.buildChart(t3, $scope.taxonomy.data.headlineData, true)
+        if (!$scope.taxonomy.data.headline.data) {
+        	$scope.$watch('taxonomy.data.headline.data', function() {
+        		console.log('$watch.taxonomy.data.headline.data: ' + JSON.stringify($scope.taxonomy.data.headline.data))
+        		Chart.buildChart(t3, $scope.taxonomy.data.headline.data, true)
         	})
         } else {
-        	Chart.buildChart(t3, $scope.taxonomy.data.headlineData, true)
+        	Chart.buildChart(t3, $scope.taxonomy.data.headline.data, true)
         } 
 	}
 	
 
 	function T3TableChartController($scope, Chart) {
 		var ctrl = this
-		var scopedTimeseries = $scope.taxonomy.data.itemData[$scope.$index]
-		Chart.buildChart(ctrl, scopedTimeseries, false)
+		
+        // due to async nature of http load then the data may not be available
+        // so place a watch upon it
+        if (!$scope.item.data) {
+        	$scope.$watch('item.data', function() {
+        		console.log('$watch.item.data' + JSON.stringify($scope.item.data))
+        		Chart.buildChart(ctrl, $scope.item.data, false)
+        	})
+        } else {
+        	Chart.buildChart(ctrl, $scope.item.data, false)
+        } 
 	}
 	
 	function SelectAllDirective() {
