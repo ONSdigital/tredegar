@@ -99,7 +99,7 @@
 <section id="timeseries" class="panel--large wrapper">
     <h2 id="related" class="list--table-header">Time Series Related to {{taxonomy.data.name}}</h2>
     <ol class="list--table list--table--complex table--striped-light table--selectable table-light--sectioned lifted">
-            <li class="list--table__item list--table__head">
+        <li class="list--table__item list--table__head">
             <label class="list--table__item__body list--table__item__body--select-all nojs-hidden">Select all
                 <input type="checkbox" aria-label="Select" id="checkbox">
             </label>
@@ -119,9 +119,11 @@
             <div class="list--table__item__body list--table__item__body--stat">
                 <div class="stat list--table__item__body--centred">
                     <div class="stat__figure stat__tight">
-                        1.5
+                        <span class="stat__figure__unit">{{item.data.preUnit}}</span>
+                        {{item.data.number}}
+                        <span class="stat__figure__unit">{{item.data.unit}}</span>
                     </div>
-                    <time class="stat__description" datetime="2014-01">{{item.data.date}}</time>
+                    <time class="stat__description">{{item.data.date}}</time>
                 </div>
             </div>
             <div class="list--table__item__body list--table__item__body--update">
