@@ -61,7 +61,7 @@
 	                    var relatedTimeseriesPath = dataPath + timeseries
 	                    DataLoader.load(relatedTimeseriesPath)
 	                    	.then(function(relatedTimeseries) {
-	                        	console.log('Loaded related timeseries: ', relatedTimeseriesPath, ' ', relatedTimeseries)
+	                    		$log.debug('Loaded related timeseries: ', relatedTimeseriesPath, ' ', relatedTimeseries)
 	                        	data.relatedTimeseriesData.push(relatedTimeseries)
 	                    	})
 	                }
