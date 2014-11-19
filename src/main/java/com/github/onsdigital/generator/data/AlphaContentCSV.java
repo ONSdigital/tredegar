@@ -38,6 +38,7 @@ class AlphaContentCSV {
 	static String SCALE_FACTOR = "csv scale factor";
 	static String PERIOD = "Period";
 	static String CDID = "CDID";
+	static String ADDITIONAL_TEXT = "Additional text";
 	static String RELATED_CDID = "Related CDID";
 	static String SOURCE = "Source";
 	static String KEY_NOTE = "key note";
@@ -150,6 +151,11 @@ class AlphaContentCSV {
 			String keyNote = row.get(KEY_NOTE);
 			if (StringUtils.isNotBlank(keyNote)) {
 				timeseries.keyNote = keyNote;
+			}
+
+			String additionalText = row.get(ADDITIONAL_TEXT);
+			if (StringUtils.isNotBlank(additionalText)) {
+				timeseries.additionalText = additionalText;
 			}
 		}
 	}
