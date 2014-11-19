@@ -1,6 +1,7 @@
 package com.github.onsdigital.api;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.file.FileSystems;
 import java.nio.file.FileVisitResult;
 import java.nio.file.FileVisitor;
@@ -25,6 +26,7 @@ import org.apache.commons.lang3.StringUtils;
  * 
  */
 import com.github.davidcarboni.restolino.framework.Endpoint;
+import com.github.davidcarboni.restolino.json.Serialiser;
 import com.github.onsdigital.bean.CdidRequest;
 import com.github.onsdigital.configuration.Configuration;
 import com.github.onsdigital.json.timeseries.Timeseries;
@@ -47,10 +49,13 @@ public class Cdid {
 	private List<Timeseries> processRequest(CdidRequest cdidRequest) throws IOException {
 
 		List<Timeseries> result = new ArrayList<>();
-		result.add(new Timeseries());
 		List<Path> timeseriesPaths = findTimeseries(cdidRequest.cdids);
 		for (Path path : timeseriesPaths) {
-			System.out.println(path);
+			try (InputStream input = Files.newInputStream(path)) {
+				System.out.println(path);
+				Timeseries timeseries = Serialiser.deserialise(input, Timeseries.class);
+				result.add(timeseries);
+			}
 		}
 		return result;
 	}
