@@ -40,7 +40,8 @@ class AlphaContentCSV {
 	static String CDID = "CDID";
 	static String RELATED_CDID = "Related CDID";
 	static String SOURCE = "Source";
-	static String[] columns = { THEME, LEVEL2, LEVEL3, NAME, KEY, PREUNIT, UNITS, FIGURE, SCALE_FACTOR, PERIOD, CDID, RELATED_CDID, SOURCE };
+	static String KEY_NOTE = "key note";
+	static String[] columns = { THEME, LEVEL2, LEVEL3, NAME, KEY, PREUNIT, UNITS, FIGURE, SCALE_FACTOR, PERIOD, CDID, RELATED_CDID, SOURCE, KEY_NOTE };
 
 	static Csv sheet;
 
@@ -144,6 +145,11 @@ class AlphaContentCSV {
 			String source = row.get(SOURCE);
 			if (StringUtils.isNotBlank(source)) {
 				timeseries.source = source;
+			}
+
+			String keyNote = row.get(KEY_NOTE);
+			if (StringUtils.isNotBlank(keyNote)) {
+				timeseries.keyNote = keyNote;
 			}
 		}
 	}

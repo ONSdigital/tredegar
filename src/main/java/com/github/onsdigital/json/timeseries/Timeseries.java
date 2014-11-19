@@ -48,6 +48,13 @@ public class Timeseries extends DataItem implements Comparable<Timeseries> {
 	// e.g. "Not a national statistic" or "2005 = 100. Not seasonally adjusted"
 	public String note;
 
+	// Where a statistic comes from.
+	// Typically "Office for National Statistics"
+	public String source = "Office for National Statistics";
+
+	// This value is displayed in the "(i)" tooltips next to timeseries name:
+	public String keyNote;
+
 	// The nectar, the goodness, the very juice of the fireflower: data.
 	public Set<TimeseriesValue> years = new TreeSet<>();
 	public Set<TimeseriesValue> quarters = new TreeSet<>();
@@ -61,7 +68,6 @@ public class Timeseries extends DataItem implements Comparable<Timeseries> {
 
 	public List<URI> relatedBulletins = new ArrayList<>();
 	public List<URI> relatedTimeseries = new ArrayList<>();
-	public String source;
 
 	// Enables the raw CSV values to be scaled to match the units defined here.
 	// E.g. this might be 1000 to convert million-scale in the CSV to
