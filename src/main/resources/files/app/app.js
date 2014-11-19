@@ -11,7 +11,8 @@
         'onsTabs',
         'highcharts-ng',
         'angularLoadingBar',
-        'onsToggler'
+        'onsToggler',
+        'onsTooltip'
     ])
 
     //Filters, services and other helpers are to be injected to onsHelpers module
