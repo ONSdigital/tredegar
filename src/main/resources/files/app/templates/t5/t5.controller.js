@@ -1,160 +1,169 @@
 (function() {
 
-    angular.module('onsTemplates')
-        .controller('T5Controller', ['$scope', '$log', 'Downloader', 'DataLoader', T5Controller])
-        .controller('ChartController', ['$scope', '$location', '$log', 'Downloader', 'ArrayUtil', ChartController])
+        angular.module('onsTemplates')
+            .controller('T5Controller', ['$scope', '$log', 'Downloader', 'DataLoader', T5Controller])
+            .controller('ChartController', ['$scope', '$location', '$log', 'Downloader', 'ArrayUtil', ChartController])
 
-    function T5Controller($scope, $log, Downloader, DataLoader) {
+        function T5Controller($scope, $log, Downloader, DataLoader) {
 
-        var t5 = this;
-        $scope.header = "Time Series";
-        $scope.sidebar = true;
-        $scope.sidebarUrl = "/app/templates/t5/t5sidebar.html";
+            var t5 = this;
+            $scope.header = "Time Series";
+            $scope.sidebar = true;
+            $scope.sidebarUrl = "/app/templates/t5/t5sidebar.html";
 
-        var data = $scope.taxonomy.data
-        data.relatedBulletinData = []
-        loadRelatedBulletins(data)
+            var data = $scope.taxonomy.data
+            data.relatedBulletinData = []
+            loadRelatedBulletins(data)
 
-        function downloadXls() {
-            download('xlsx');
-        }
-
-        function downloadCsv() {
-            download('csv');
-        }
-
-        function download(type) {
-            var downloadRequest = {
-                type: type
-            };
-            downloadRequest.uriList = [$scope.getPath()];
-            var fileName = $scope.getPage() + '.' + downloadRequest.type;
-            Downloader.downloadFile(downloadRequest, fileName);
-        }
-
-        function loadRelatedBulletins(data) {
-            var dataPath = '/data'
-            var bulletins = data.relatedBulletins;
-
-            if (bulletins != null) {
-                for (var i = 0; i < bulletins.length; i++) {
-                    var bulletin = bulletins[i]
-                    var relatedBulletinPath = dataPath + bulletin
-                    DataLoader.load(relatedBulletinPath)
-                        .then(function(relatedBulletin) {
-                            $log.debug('Loaded related bulletin: ', relatedBulletinPath, ' ', relatedBulletin)
-                            data.relatedBulletinData.push(relatedBulletin)
-                        })
-                }
-            }
-        }
-
-        angular.extend(t5, {
-            downloadXls: downloadXls,
-            downloadCsv: downloadCsv
-        });
-
-    }
-
-
-    function ChartController($scope, $location, $log, Downloader, ArrayUtil) {
-        var ctrl = this
-        ctrl.timeseries = $scope.taxonomy.data
-        ctrl.chartConfig = getChart()
-        ctrl.showYearly = false
-        ctrl.showMonthly = false
-        ctrl.showQuarterly = false
-        ctrl.activeChart = '' //years, months , quarters
-        ctrl.timePeriod = 'A' //All by default
-        ctrl.chartData = []
-        ctrl.years = []
-        ctrl.renderChart = false
-        ctrl.tenYears
-        ctrl.quarters = ['Q1', 'Q2', 'Q3', 'Q4']
-        ctrl.months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-
-        initialize()
-        changeChartType(ctrl.activeChart)
-
-        function changeChartType(chartType) {
-            $log.debug("Changing chart type to " + chartType)
-            ctrl.activeChart = chartType
-            changeTimePeriod('A') //List all data on chart data change
-        }
-
-
-        function changeTimePeriod(timePeriod) {
-
-            timePeriod = timePeriod || 'Custom'
-            $log.debug("Changing time period to " + timePeriod)
-
-            ctrl.timePeriod = timePeriod
-            prepareData()
-        }
-
-        function prepareData() {
-            if (!ctrl.renderChart) {
-                return
-            }
-            resolveFilters()
-            ctrl.chartData = filterValues()
-            ctrl.chartConfig.series[0].data = ctrl.chartData
-            ctrl.years = getYears()
-            ctrl.tenYears = tenYears(ctrl.years)
-            ctrl.chartConfig.options.xAxis.tickInterval = tickInterval(ctrl.chartData.length);
-            ctrl.chartConfig.options.title.text = ctrl.timeseries.name
-            ctrl.chartConfig.options.yAxis.title.text = ctrl.timeseries.unit
-            $log.debug("Chart:")
-            $log.debug(ctrl.chartConfig)
-            $log.debug("10y = " + ctrl.tenYears)
-
-
-            function tenYears(array) {
-                if ((ArrayUtil.getLast(array) - ArrayUtil.getFirst(array)) < 10) {
-                    return false
-                } else {
-                    return true
-                }
+            function downloadXls() {
+                download('xlsx');
             }
 
-            function tickInterval(length) {
-                var tick;
-                if (length <= 20) {
-                    return 1;
-                } else if (length <= 80) {
-                    return 4;
-                } else if (length <= 240) {
-                    return 12;
-                } else if (length <= 480) {
-                    return 48;
-                } else if (length <= 960) {
-                    return 96;
-                } else {
-                    return 192;
-                }
+            function downloadCsv() {
+                download('csv');
             }
 
-            function filterValues() {
-                var data = getAllValues()
-                var current
-                var i
-                var filteredValues = []
-                var from
-                var to
+            function download(type) {
+                var downloadRequest = {
+                    type: type
+                };
+                downloadRequest.uriList = [$scope.getPath()];
+                var fileName = $scope.getPage() + '.' + downloadRequest.type;
+                Downloader.downloadFile(downloadRequest, fileName);
+            }
 
-                from = ctrl.fromYear + (ctrl.fromQuarter ? quarterVal(ctrl.fromQuarter) : '') + (ctrl.fromMonth ? monthVal(ctrl.fromMonth) : '')
-                to = ctrl.toYear + (ctrl.toQuarter ? quarterVal(ctrl.toQuarter) : '') + (ctrl.toMonth ? monthVal(ctrl.toMonth) : '')
-                from = +from //Cast to number
-                to = +to
-                $log.debug("From: ", from)
-                $log.debug("To: ", to)
-                for (i = 0; i < data.length; i++) {
-                    current = data[i]
-                    if (current.value >= from && current.value <= to) {
-                        filteredValues.push(current)
+            function loadRelatedBulletins(data) {
+                var dataPath = '/data'
+                var bulletins = data.relatedBulletins;
+
+                if (bulletins != null) {
+                    for (var i = 0; i < bulletins.length; i++) {
+                        var bulletin = bulletins[i]
+                        var relatedBulletinPath = dataPath + bulletin
+                        DataLoader.load(relatedBulletinPath)
+                            .then(function(relatedBulletin) {
+                                $log.debug('Loaded related bulletin: ', relatedBulletinPath, ' ', relatedBulletin)
+                                data.relatedBulletinData.push(relatedBulletin)
+                            })
                     }
-
                 }
+            }
+
+            angular.extend(t5, {
+                downloadXls: downloadXls,
+                downloadCsv: downloadCsv
+            });
+
+        }
+
+
+        function ChartController($scope, $location, $log, Downloader, ArrayUtil) {
+            var ctrl = this
+            ctrl.timeseries = $scope.taxonomy.data
+            ctrl.chartConfig = getChart()
+            ctrl.showYearly = false
+            ctrl.showMonthly = false
+            ctrl.showQuarterly = false
+            ctrl.activeChart = '' //years, months , quarters
+            ctrl.timePeriod = 'A' //All by default
+            ctrl.chartData = []
+            ctrl.years = []
+            ctrl.renderChart = false
+            ctrl.tenYears
+            ctrl.min
+            ctrl.quarters = ['Q1', 'Q2', 'Q3', 'Q4']
+            ctrl.months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+
+            initialize()
+            changeChartType(ctrl.activeChart)
+
+            function changeChartType(chartType) {
+                $log.debug("Changing chart type to " + chartType)
+                ctrl.activeChart = chartType
+                changeTimePeriod('A') //List all data on chart data change
+            }
+
+
+            function changeTimePeriod(timePeriod) {
+
+                timePeriod = timePeriod || 'Custom'
+                $log.debug("Changing time period to " + timePeriod)
+
+                ctrl.timePeriod = timePeriod
+                prepareData()
+            }
+
+            function prepareData() {
+                if (!ctrl.renderChart) {
+                    return
+                }
+                resolveFilters()
+                ctrl.chartData = filterValues()
+                ctrl.chartConfig.series[0].data = ctrl.chartData
+                ctrl.years = getYears()
+                ctrl.tenYears = tenYears(ctrl.years)
+                ctrl.chartConfig.options.xAxis.tickInterval = tickInterval(ctrl.chartData.length);
+                ctrl.chartConfig.options.title.text = ctrl.timeseries.name
+                ctrl.chartConfig.options.yAxis.title.text = ctrl.timeseries.unit
+                ctrl.chartConfig.options.yAxis.min = ctrl.min;
+                $log.debug("Chart:")
+                $log.debug(ctrl.chartConfig)
+                $log.debug("10y = " + ctrl.tenYears)
+
+                function tenYears(array) {
+                    if ((ArrayUtil.getLast(array) - ArrayUtil.getFirst(array)) < 10) {
+                        return false
+                    } else {
+                        return true
+                    }
+                }
+
+                function tickInterval(length) {
+                    var tick;
+                    if (length <= 20) {
+                        return 1;
+                    } else if (length <= 80) {
+                        return 4;
+                    } else if (length <= 240) {
+                        return 12;
+                    } else if (length <= 480) {
+                        return 48;
+                    } else if (length <= 960) {
+                        return 96;
+                    } else {
+                        return 192;
+                    }
+                }
+
+                function filterValues() {
+                    var data = getAllValues()
+                    var current
+                    var i
+                    var filteredValues = []
+                    var from
+                    var to
+                    var min = 0;
+
+                    from = ctrl.fromYear + (ctrl.fromQuarter ? quarterVal(ctrl.fromQuarter) : '') + (ctrl.fromMonth ? monthVal(ctrl.fromMonth) : '')
+                    to = ctrl.toYear + (ctrl.toQuarter ? quarterVal(ctrl.toQuarter) : '') + (ctrl.toMonth ? monthVal(ctrl.toMonth) : '')
+                    from = +from //Cast to number
+                    to = +to
+                    $log.debug("From: ", from)
+                    $log.debug("To: ", to)
+                    for (i = 0; i < data.length; i++) {
+                        current = data[i]
+                        if (current.value >= from && current.value <= to) {
+                            filteredValues.push(current)
+                            if (current.y < min) {
+                                min = current.y;
+                            }
+                        };
+                    }
+                    if (min < 0) {
+                        ctrl.min = min - 1;
+                    } else {
+                        ctrl.min = 0;
+                    }
                 return filteredValues
             }
 
@@ -516,7 +525,7 @@
 
                         // series names and values
                         $.each(this.points, function(i, val) {
-                            content += '<div class="tiptext"><i>' + val.point.series.chart.series[i].name + "</i><br/><b>Value: " + Highcharts.numberFormat(val.y, 2) + " " + val.point.series.chart.series[i].options.id + '</b></div>';
+                            content += '<div class="tiptext"><i>' + val.point.series.chart.series[i].name + "</i><br/><b>Value: " + val.y + " " + val.point.series.chart.series[i].options.id + '</b></div>';
                             // console.log(val)
                         });
                         content += "</div>";
