@@ -50,24 +50,23 @@
                     }
                 }
             }
-        }
         
-        function loadRelatedTimeseries(data) {
-            var dataPath = '/data'
-            var relatedTimeserieses = data.relatedTimeseries;
-
-            if (relatedTimeserieses != null) {
-                for (var i = 0; i < relatedTimeserieses.length; i++) {
-                    var timeseries = relatedTimeserieses[i]
-                    var relatedTimeseriesPath = dataPath + timeseries
-                    DataLoader.load(relatedTimeseriesPath)
-                    	.then(function(relatedTimeseries) {
-                        	console.log('Loaded related timeseries: ', relatedTimeseriesPath, ' ', relatedTimeseries)
-                        	data.relatedTimeseriesData.push(relatedTimeseries)
-                    	})
-                }
-            }
-        }
+	        function loadRelatedTimeseries(data) {
+	            var dataPath = '/data'
+	            var relatedTimeserieses = data.relatedTimeseries;
+	
+	            if (relatedTimeserieses != null) {
+	                for (var i = 0; i < relatedTimeserieses.length; i++) {
+	                    var timeseries = relatedTimeserieses[i]
+	                    var relatedTimeseriesPath = dataPath + timeseries
+	                    DataLoader.load(relatedTimeseriesPath)
+	                    	.then(function(relatedTimeseries) {
+	                        	console.log('Loaded related timeseries: ', relatedTimeseriesPath, ' ', relatedTimeseries)
+	                        	data.relatedTimeseriesData.push(relatedTimeseries)
+	                    	})
+	                }
+	            }
+	        }
 
             angular.extend(t5, {
                 downloadXls: downloadXls,

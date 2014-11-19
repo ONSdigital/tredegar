@@ -1,13 +1,37 @@
 {
-  "headline": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/lf24",
+  "headline": {
+    "name": "Employment rate (aged 16-64)",
+    "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/lf24"
+  },
   "items": [
-    "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/lf24",
-    "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgrz",
-    "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgsb",
-    "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgsa",
-    "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/lf25",
-    "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgsv",
-    "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/ap2y"
+    {
+      "name": "Employment rate (aged 16-64)",
+      "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/lf24"
+    },
+    {
+      "name": "Female Employment rate (aged 16-64)",
+      "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/lf25"
+    },
+    {
+      "name": "Male Employment rate (aged 16-64)",
+      "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgsv"
+    },
+    {
+      "name": "Employment 16+",
+      "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgrz"
+    },
+    {
+      "name": "Female Employment 16+",
+      "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgsb"
+    },
+    {
+      "name": "Male Employment 16+",
+      "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgsa"
+    },
+    {
+      "name": "Vacancies",
+      "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/ap2y"
+    }
   ],
   "statsBulletins": [],
   "datasets": [],
