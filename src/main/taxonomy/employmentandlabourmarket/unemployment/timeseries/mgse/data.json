@@ -4408,6 +4408,12 @@
     "/employmentandlabourmarket/unemployment/bulletins/uklabourmarket",
     "/employmentandlabourmarket/unemployment/bulletins/youngpeoplenotineducationemploymentortrainingneet"
   ],
+  "relatedTimeseries": [
+    "/employmentandlabourmarket/unemployment/timeseries/mgsd",
+    "/employmentandlabourmarket/unemployment/timeseries/mgsc",
+    "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgsb"
+  ],
+  "source": "Labour Force Survey",
   "type": "timeseries",
   "name": "Female Unemployment 16+",
   "fileName": "mgse",

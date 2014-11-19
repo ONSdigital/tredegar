@@ -1418,6 +1418,10 @@
   "relatedBulletins": [
     "/economy/grossdomesticproductgdp/bulletins/grossdomesticproductpreliminaryestimate"
   ],
+  "relatedTimeseries": [
+    "/economy/grossdomesticproductgdp/timeseries/ybha",
+    "/economy/grossdomesticproductgdp/timeseries/ihyn"
+  ],
   "type": "timeseries",
   "name": "GDP Change on same Quarter a year ago (CP)",
   "fileName": "ihyo",

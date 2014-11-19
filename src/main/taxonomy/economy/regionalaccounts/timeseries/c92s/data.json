@@ -94,6 +94,12 @@
   "relatedBulletins": [
     "/economy/regionalaccounts/bulletins/regionalgrossdisposablehouseholdincomegdhi"
   ],
+  "relatedTimeseries": [
+    "/economy/regionalaccounts/timeseries/qwnd",
+    "/economy/regionalaccounts/timeseries/c92q",
+    "/economy/regionalaccounts/timeseries/c92t",
+    "/economy/regionalaccounts/timeseries/c92u"
+  ],
   "type": "timeseries",
   "name": "Wales Gross Disposable Household Income",
   "fileName": "c92s",

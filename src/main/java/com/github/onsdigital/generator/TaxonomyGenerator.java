@@ -475,6 +475,14 @@ public class TaxonomyGenerator {
 					timeseries.relatedBulletins.add(bulletin.uri);
 				}
 
+				List<Timeseries> relatedCdids = Data.relatedTimeseries(timeseries);
+				if (relatedCdids != null && !relatedCdids.isEmpty()) {
+					for (Timeseries relatedCdid : relatedCdids) {
+						Timeseries relatedTimeseries = Data.timeseries(relatedCdid.cdid());
+						timeseries.relatedTimeseries.add(relatedTimeseries.uri);
+					}
+				}
+
 				String json = Serialiser.serialise(timeseries);
 				FileUtils.writeStringToFile(timeseriesFile, json, Charset.forName("UTF8"));
 				created.add(timeseries);

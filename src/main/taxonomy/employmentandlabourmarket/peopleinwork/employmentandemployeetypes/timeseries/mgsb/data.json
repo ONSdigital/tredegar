@@ -4405,6 +4405,12 @@
   ],
   "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgsb",
   "relatedBulletins": [],
+  "relatedTimeseries": [
+    "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgsa",
+    "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgrz",
+    "/employmentandlabourmarket/unemployment/timeseries/mgse"
+  ],
+  "source": "Labour Force Survey",
   "type": "timeseries",
   "name": "Female Employment 16+",
   "fileName": "mgsb",

@@ -1773,6 +1773,11 @@
   "relatedBulletins": [
     "/economy/grossdomesticproductgdp/bulletins/grossdomesticproductpreliminaryestimate"
   ],
+  "relatedTimeseries": [
+    "/economy/grossdomesticproductgdp/timeseries/cgbz",
+    "/economy/grossdomesticproductgdp/timeseries/cgbx",
+    "/economy/grossdomesticproductgdp/timeseries/cmvl"
+  ],
   "type": "timeseries",
   "name": "Income Measure: Compensation of Employees",
   "fileName": "dtwm",
