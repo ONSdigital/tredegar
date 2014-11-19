@@ -1,13 +1,31 @@
 {
-  "headline": "/peoplepopulationandcommunity/birthsdeathsandmarriages/divorce/timeseries/raid39",
+  "headline": {
+    "name": "Number of Divorces",
+    "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/divorce/timeseries/raid39"
+  },
   "items": [
-    "/peoplepopulationandcommunity/birthsdeathsandmarriages/divorce/timeseries/raid39",
-    "/peoplepopulationandcommunity/birthsdeathsandmarriages/divorce/timeseries/raid40",
-    "/peoplepopulationandcommunity/birthsdeathsandmarriages/divorce/timeseries/raid41"
+    {
+      "name": "Number of Divorces",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/divorce/timeseries/raid39"
+    },
+    {
+      "name": "Average age at divorce: Husband",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/divorce/timeseries/raid40"
+    },
+    {
+      "name": "Average age at divorce: Wife",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/divorce/timeseries/raid41"
+    }
   ],
-  "statsBulletinHeadline": "/peoplepopulationandcommunity/birthsdeathsandmarriages/divorce/bulletins/divorcesinenglandandwales2012",
+  "statsBulletinHeadline": {
+    "name": "Divorces in England and Wales, 2012",
+    "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/divorce/bulletins/divorcesinenglandandwales2012"
+  },
   "statsBulletins": [
-    "/peoplepopulationandcommunity/birthsdeathsandmarriages/divorce/bulletins/divorcesinenglandandwales2012"
+    {
+      "name": "Divorces in England and Wales, 2012",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/divorce/bulletins/divorcesinenglandandwales2012"
+    }
   ],
   "datasets": [],
   "level": "t3",

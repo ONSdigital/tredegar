@@ -2,7 +2,6 @@ package com.github.onsdigital.generator;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.Reader;
 import java.net.URI;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
@@ -14,12 +13,8 @@ import java.util.Set;
 import java.util.TreeSet;
 
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 
-import au.com.bytecode.opencsv.CSVReader;
-
-import com.github.davidcarboni.ResourceUtils;
 import com.github.davidcarboni.restolino.json.Serialiser;
 import com.github.onsdigital.generator.data.Data;
 import com.github.onsdigital.generator.data.DatasetMappingsCSV;
@@ -28,6 +23,7 @@ import com.github.onsdigital.json.dataset.Dataset;
 import com.github.onsdigital.json.markdown.Article;
 import com.github.onsdigital.json.markdown.Bulletin;
 import com.github.onsdigital.json.markdown.Methodology;
+import com.github.onsdigital.json.taxonomy.DataItemLink;
 import com.github.onsdigital.json.taxonomy.HomeSection;
 import com.github.onsdigital.json.taxonomy.T1;
 import com.github.onsdigital.json.taxonomy.T2;
@@ -50,122 +46,15 @@ public class TaxonomyGenerator {
 	public static void main(String[] args) throws IOException {
 
 		Serialiser.getBuilder().setPrettyPrinting();
-		Reader reader = ResourceUtils.getReader("/Taxonomy.csv");
-
-		String theme = null;
-		String subject = null;
-		String topic = null;
-		// String subTopic = null;
-		Folder themeFolder = null;
-		Folder subjectFolder = null;
-		Folder topicFolder = null;
-		// Folder subTopicFolder = null;
-		int themeCounter = 0;
-		int subjectCounter = 0;
-		int topicCounter = 0;
-		// int subTopicCounter = 0;
-
-		Set<Folder> folders = new HashSet<>();
-
-		try (CSVReader csvReader = new CSVReader(reader)) {
-
-			// Column positions:s
-			String[] headers = csvReader.readNext();
-			System.out.println(ArrayUtils.toString(headers));
-			int themeIndex = ArrayUtils.indexOf(headers, "Theme");
-			int subjectIndex = ArrayUtils.indexOf(headers, "Subject");
-			int topicIndex = ArrayUtils.indexOf(headers, "Topic");
-			// int subTopicIndex = ArrayUtils.indexOf(headers, "Subtopic");
-			int ledeIndex = ArrayUtils.indexOf(headers, "Lede");
-			int moreIndex = ArrayUtils.indexOf(headers, "More");
-			// System.out.println("Theme=" + themeIndex + " Subject=" +
-			// subjectIndex + " Topic=" + topicIndex + " Subtopic=" +
-			// subTopicIndex);
-			System.out.println("Theme=" + themeIndex + " Subject=" + subjectIndex + " Topic=" + topicIndex + " Lede=" + ledeIndex + " More=" + moreIndex);
-
-			// Theme Subject Topic
-			String[] row;
-			while ((row = csvReader.readNext()) != null) {
-
-				if (StringUtils.isNotBlank(row[themeIndex])) {
-					theme = row[themeIndex];
-					themeFolder = new Folder();
-					themeFolder.name = theme;
-					themeFolder.index = themeCounter++;
-					subjectCounter = 0;
-					topicCounter = 0;
-					// subTopicCounter = 0;
-					if (StringUtils.isNotBlank(row[ledeIndex])) {
-						themeFolder.lede = row[ledeIndex];
-					}
-					if (StringUtils.isNotBlank(row[moreIndex])) {
-						themeFolder.more = row[moreIndex];
-					}
-					folders.add(themeFolder);
-					subject = null;
-					topic = null;
-					// subTopic = null;
-				}
-
-				if (StringUtils.isNotBlank(row[subjectIndex])) {
-					subject = row[subjectIndex];
-					subjectFolder = new Folder();
-					subjectFolder.name = subject;
-					subjectFolder.parent = themeFolder;
-					subjectFolder.index = subjectCounter++;
-					topicCounter = 0;
-					// subTopicCounter = 0;
-					if (StringUtils.isNotBlank(row[ledeIndex])) {
-						subjectFolder.lede = row[ledeIndex];
-					}
-					if (StringUtils.isNotBlank(row[moreIndex])) {
-						subjectFolder.more = row[moreIndex];
-					}
-					themeFolder.addChild(subjectFolder);
-					topic = null;
-					// subTopic = null;
-				}
-
-				if (StringUtils.isNotBlank(row[topicIndex])) {
-					topic = row[topicIndex];
-					topicFolder = new Folder();
-					topicFolder.name = topic;
-					topicFolder.parent = subjectFolder;
-					topicFolder.index = topicCounter++;
-					subjectFolder.addChild(topicFolder);
-					// subTopic = null;
-					if (StringUtils.isNotBlank(row[ledeIndex])) {
-						topicFolder.lede = row[ledeIndex];
-					}
-					if (StringUtils.isNotBlank(row[moreIndex])) {
-						topicFolder.more = row[moreIndex];
-					}
-				}
-
-				// if (StringUtils.isNotBlank(row[subTopicIndex])) {
-				// subTopic = row[subTopicIndex];
-				// subTopicFolder = new Folder();
-				// subTopicFolder.name = subTopic;
-				// subTopicFolder.parent = topicFolder;
-				// subTopicFolder.index = subTopicCounter++;
-				// topicFolder.children.add(subTopicFolder);
-				// }
-
-				String path = StringUtils.join(new String[] { theme, subject, topic }, '/');
-				while (StringUtils.endsWith(path, "/")) {
-					path = path.substring(0, path.length() - 1);
-				}
-				System.out.println(path);
-			}
-		}
 
 		// Set up the taxonomy and trigger CSV parsing:
-		Data.setTaxonomy(folders);
+		Data.parse();
 
 		// Walk folder tree:
 		root = new File("src/main/taxonomy");
 		Folder rootFolder = new Folder();
 		rootFolder.name = "Home";
+		Set<Folder> folders = Data.folders();
 		rootFolder.addChildren(folders);
 		createHomePage(rootFolder, root);
 		File themeFile;
@@ -174,7 +63,7 @@ public class TaxonomyGenerator {
 		for (Folder t : folders) {
 			themeFile = new File(root, t.filename());
 			themeFile.mkdirs();
-			System.out.println(themeFile.getAbsolutePath());
+			System.out.println("Theme  : " + themeFile.getAbsolutePath());
 			createT2(t, themeFile);
 			for (Folder s : t.getChildren()) {
 				subjectFile = new File(themeFile, s.filename());
@@ -185,11 +74,11 @@ public class TaxonomyGenerator {
 				} else {
 					createT2(s, subjectFile);
 				}
-				System.out.println("\t" + subjectFile.getPath());
+				System.out.println("Subjet: \t" + subjectFile.getPath());
 				for (Folder o : s.getChildren()) {
 					topicFile = new File(subjectFile, o.filename());
 					topicFile.mkdirs();
-					System.out.println("\t\t" + topicFile.getPath());
+					System.out.println("Topic  :\t\t" + topicFile.getPath());
 					createT3(o, topicFile);
 					if (o.getChildren().size() == 0) {
 						// createContentFolders(o.name, topicFile);
@@ -299,17 +188,32 @@ public class TaxonomyGenerator {
 
 	private static void buildT2Sections(T2 t2, Folder folder) throws IOException {
 		t2.sections = new ArrayList<HomeSection>();
+
 		for (Folder child : folder.getChildren()) {
 			HomeSection section = new HomeSection(child.name, child.filename());
 			section.index = child.index;
 			t2.sections.add(section);
-			
-			//Loading timeseries for t2 is no longer needed
-//			List<Folder> t3Folders = getT3Folders(child);
-//			Collection<URI> timeserieses = getTimeseries(t3Folders);
-//			for (URI timeseries : timeserieses) {
-//				section.items.add(timeseries);
-//			}
+
+			if (child.getChildren().size() > 0) { // t2 page at level below
+				// Add child of sections to t2 page
+				for (Folder grandChild : child.getChildren()) {
+					section.items.add(new DataItemLink(grandChild.name, URI
+							.create(grandChild.filename())));
+				}
+			} else { // T3 page at below level
+				for (Timeseries grandChild : child.timeserieses) {
+					section.items.add(new DataItemLink(grandChild.name,
+							grandChild.uri));
+
+				}
+			}
+
+			// Loading timeseries for t2 is no longer needed
+			// List<Folder> t3Folders = getT3Folders(child);
+			// Collection<URI> timeserieses = getTimeseries(t3Folders);
+			// for (URI timeseries : timeserieses) {
+			// section.items.add(timeseries);
+			// }
 		}
 		Collections.sort(t2.sections);
 	}
@@ -370,12 +274,17 @@ public class TaxonomyGenerator {
 
 		// Timeseries references:
 		if (folder.headline != null && folder.headline.uri != null) {
-			t3.headline = folder.headline.uri;
+			t3.headline = new DataItemLink(folder.headline.name,
+					folder.headline.uri);
 		} else {
 			System.out.println("No headline URI set for " + folder.name);
-			if (folder.timeserieses.size() > 0 && folder.timeserieses.get(0).uri != null) {
-				t3.headline = folder.timeserieses.get(0).uri;
-				System.out.println("Using the first item from the timeseries list instead: " + t3.headline);
+			if (folder.timeserieses.size() > 0
+					&& folder.timeserieses.get(0).uri != null) {
+				Timeseries headline = folder.timeserieses.get(0);
+				t3.headline = new DataItemLink(headline.name, headline.uri);
+				System.out
+						.println("Using the first item from the timeseries list instead: "
+								+ t3.headline);
 			}
 		}
 		List<Timeseries> timeserieses = folder.timeserieses;
@@ -389,7 +298,7 @@ public class TaxonomyGenerator {
 		baseUri += "/timeseries";
 		for (Timeseries timeseries : timeserieses) {
 			if (timeseries.uri != null) {
-				t3.items.add(timeseries.uri);
+				t3.items.add(new DataItemLink(timeseries.name, timeseries.uri));
 			} else {
 				System.out.println("No URI set for " + timeseries);
 			}
@@ -419,7 +328,7 @@ public class TaxonomyGenerator {
 			for (Dataset dataset : datasets) {
 				if (dataset.summary != null) {
 					URI datasetUri = toDatasetUri(folder, dataset);
-					t3.datasets.add(datasetUri);
+					t3.datasets.add(new DataItemLink(dataset.name, datasetUri));
 				}
 			}
 		}
@@ -434,16 +343,19 @@ public class TaxonomyGenerator {
 			// bit of a workaround for now.
 			if (bulletin.summary != null) {
 				URI bulletinUri = toStatsBulletinUri(folder, bulletin);
-				t3.statsBulletins.add(bulletinUri);
+				t3.statsBulletins.add(new DataItemLink(bulletin.name,
+						bulletinUri));
 			}
 		}
 	}
 
 	private static void createStatsBulletinHeadline(Folder folder, T3 t3) throws IOException {
 		// Stats bulletin references:
-		URI statsBulletinHeadline = toStatsBulletinUri(folder, folder.headlineBulletin);
-		if (statsBulletinHeadline != null) {
-			t3.statsBulletinHeadline = statsBulletinHeadline;
+
+		URI statsBulletinHeadlineUri = toStatsBulletinUri(folder,
+				folder.headlineBulletin);
+		if (statsBulletinHeadlineUri != null) {
+			t3.statsBulletinHeadline = new DataItemLink(folder.headlineBulletin.name , statsBulletinHeadlineUri);
 		}
 	}
 

@@ -8,7 +8,7 @@
               </article>
             </div>
             <!-- /box -->
-            <div ng-if="(taxonomy.data.statsBulletinData) == null">
+            <div ng-if="!(taxonomy.data.statsBulletins)">
 	            <div ng-if="getPage() != 'economy'" class="grid-col desktop-grid-one-third tablet-grid-one-half">
 	              <article class="box">
 	                <header class="box__header">
@@ -64,7 +64,7 @@
 	              </article>
 	            </div>	              
             </div>
-            <div ng-repeat="bulletin in taxonomy.data.statsBulletinData track by $index">
+            <div ng-repeat="bulletin in taxonomy.data.statsBulletins track by $index">
             {{results}}
 	            <div ng-if="$index < 2" class="grid-col desktop-grid-one-third tablet-grid-one-half">
 	              <article class="box">
@@ -76,7 +76,7 @@
 	                <!-- /box__header -->
 	                <div class="box__content">
 	                  <p>
-	                    {{bulletin.summary}}
+	                    {{bulletin.data.summary}}
 	                  </p>
 	                  <p class="description mini"></p>
 	                  <p>
@@ -88,28 +88,6 @@
 	              <!-- /box -->
 	            </div>
 	            <!-- /grid-col -->
-<!-- 	            <div class="grid-col desktop-grid-one-third tablet-grid-one-half"> -->
-<!-- 	              <article class="box box--padded-vertical rem_pad_top"> -->
-<!-- 	                <header class="box__header"> -->
-<!-- 	                  <h3> -->
-<!-- 	                    <a href="#">House Price Index August 2014</a> -->
-<!-- 	                  </h3> -->
-<!-- 	                </header> -->
-<!-- 	                /box__header -->
-<!-- 	                <div class="box__content"> -->
-<!-- 	                  <p> -->
-<!-- 	                    The ONS House Price Index (HPI) is a monthly release that publishes figures for -->
-<!-- 	                    mix-adjusted average house prices. -->
-<!-- 	                  </p> -->
-<!-- 	                  <p class="description mini"></p> -->
-<!-- 	                  <p> -->
-<!-- 	                  <span class="lozenge">Statistical bulletin</span> -->
-<!-- 	                </p> -->
-<!-- 	                </div> -->
-<!-- 	                /box__content -->
-<!-- 	              </article> -->
-<!-- 	              /box -->
-<!-- 	            </div> -->
 	        </div>
             <!-- /grid-col -->
             <div class="grid-col hide-large">

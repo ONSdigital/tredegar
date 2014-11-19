@@ -4,55 +4,376 @@
       "name": "Gross Domestic Product (GDP)",
       "link": "grossdomesticproductgdp",
       "index": 0,
-      "items": []
+      "items": [
+        {
+          "name": "Gross Domestic Product (CVM)",
+          "uri": "/economy/grossdomesticproductgdp/timeseries/abmi"
+        },
+        {
+          "name": "GDP Quarter on Quarter growth (CVM)",
+          "uri": "/economy/grossdomesticproductgdp/timeseries/ihyq"
+        },
+        {
+          "name": "GDP Change on same Quarter a year ago (CVM)",
+          "uri": "/economy/grossdomesticproductgdp/timeseries/ihyr"
+        },
+        {
+          "name": "Gross Domestic Product (CP)",
+          "uri": "/economy/grossdomesticproductgdp/timeseries/ybha"
+        },
+        {
+          "name": "GDP Quarter on Quarter growth (CP)",
+          "uri": "/economy/grossdomesticproductgdp/timeseries/ihyn"
+        },
+        {
+          "name": "GDP Change on same Quarter a year ago (CP)",
+          "uri": "/economy/grossdomesticproductgdp/timeseries/ihyo"
+        },
+        {
+          "name": "Output Measure: Production",
+          "uri": "/economy/grossdomesticproductgdp/timeseries/l2kq"
+        },
+        {
+          "name": "Output Measure: Manufacturing",
+          "uri": "/economy/grossdomesticproductgdp/timeseries/l2kx"
+        },
+        {
+          "name": "Output Measure: Agriculture, Forestry and Fishing",
+          "uri": "/economy/grossdomesticproductgdp/timeseries/l2kl"
+        },
+        {
+          "name": "Output Measure: Construction",
+          "uri": "/economy/grossdomesticproductgdp/timeseries/l2n8"
+        },
+        {
+          "name": "Output Measure: Services",
+          "uri": "/economy/grossdomesticproductgdp/timeseries/l2nc"
+        },
+        {
+          "name": "Income Measure: Compensation of Employees",
+          "uri": "/economy/grossdomesticproductgdp/timeseries/dtwm"
+        },
+        {
+          "name": "Income Measure: Gross Operating Surplus",
+          "uri": "/economy/grossdomesticproductgdp/timeseries/cgbz"
+        },
+        {
+          "name": "Income Measure: Other Income",
+          "uri": "/economy/grossdomesticproductgdp/timeseries/cgbx"
+        },
+        {
+          "name": "Income Measure: Taxes less Subsidies",
+          "uri": "/economy/grossdomesticproductgdp/timeseries/cmvl"
+        },
+        {
+          "name": "Expenditure Measure: Households",
+          "uri": "/economy/grossdomesticproductgdp/timeseries/abpf"
+        },
+        {
+          "name": "Expenditure Measure: Non-profit institutions serving households (NPISHs)",
+          "uri": "/economy/grossdomesticproductgdp/timeseries/abnu"
+        },
+        {
+          "name": "Expenditure Measure: General Government",
+          "uri": "/economy/grossdomesticproductgdp/timeseries/nmru"
+        },
+        {
+          "name": "Expenditure Measure: Gross Fixed Capital Formation",
+          "uri": "/economy/grossdomesticproductgdp/timeseries/npqr"
+        },
+        {
+          "name": "GDP (average) per head, at current market prices",
+          "uri": "/economy/grossdomesticproductgdp/timeseries/ihxt"
+        },
+        {
+          "name": "GDP (average) per head, Chained Volume Measures (CVM) market prices",
+          "uri": "/economy/grossdomesticproductgdp/timeseries/ihxw"
+        }
+      ]
     },
     {
       "name": "Inflation and Price Indices",
       "link": "inflationandpriceindices",
       "index": 1,
-      "items": []
+      "items": [
+        {
+          "name": "CPI: Consumer Prices Index",
+          "uri": "/economy/inflationandpriceindices/timeseries/d7g7"
+        },
+        {
+          "name": "RPI: Retail Price Index",
+          "uri": "/economy/inflationandpriceindices/timeseries/czbh"
+        },
+        {
+          "name": "CPIH",
+          "uri": "/economy/inflationandpriceindices/timeseries/l55o"
+        },
+        {
+          "name": "RPIJ",
+          "uri": "/economy/inflationandpriceindices/timeseries/kvr9"
+        },
+        {
+          "name": "CPI: Consumer Prices Index",
+          "uri": "/economy/inflationandpriceindices/timeseries/d7bt"
+        },
+        {
+          "name": "RPI: Retail Price Index",
+          "uri": "/economy/inflationandpriceindices/timeseries/chaw"
+        },
+        {
+          "name": "CPIH",
+          "uri": "/economy/inflationandpriceindices/timeseries/l522"
+        },
+        {
+          "name": "RPIJ",
+          "uri": "/economy/inflationandpriceindices/timeseries/kvr8"
+        },
+        {
+          "name": "Output of manufactured product",
+          "uri": "/economy/inflationandpriceindices/timeseries/jvz7"
+        },
+        {
+          "name": "Input of all manufacturing",
+          "uri": "/economy/inflationandpriceindices/timeseries/k646"
+        }
+      ]
     },
     {
       "name": "National Accounts",
       "link": "nationalaccounts",
       "index": 2,
-      "items": []
+      "items": [
+        {
+          "name": "Balance of Payments: Current balance",
+          "uri": "/economy/nationalaccounts/timeseries/hbop"
+        },
+        {
+          "name": "Trade in goods and services deficit (or surplus)",
+          "uri": "/businessindustryandtrade/internationaltrade/timeseries/ikbj"
+        },
+        {
+          "name": "Balance of Payments: Total income",
+          "uri": "/economy/nationalaccounts/timeseries/hboj"
+        },
+        {
+          "name": "Total exports of goods and services",
+          "uri": "/businessindustryandtrade/internationaltrade/timeseries/ikbh"
+        },
+        {
+          "name": "Total imports of goods and services",
+          "uri": "/businessindustryandtrade/internationaltrade/timeseries/ikbi"
+        },
+        {
+          "name": "Current Transfers",
+          "uri": "/economy/nationalaccounts/timeseries/ikbp"
+        }
+      ]
     },
     {
       "name": "Government, Public Sector and Taxes",
       "link": "governmentpublicsectorandtaxes",
       "index": 3,
-      "items": []
+      "items": [
+        {
+          "name": "Public Sector Finance",
+          "uri": "publicsectorfinance"
+        },
+        {
+          "name": "Research and Development Expenditure",
+          "uri": "researchanddevelopmentexpenditure"
+        }
+      ]
     },
     {
       "name": "Economic Output and Productivity",
       "link": "economicoutputandproductivity",
       "index": 4,
-      "items": []
+      "items": [
+        {
+          "name": "Output Measure: Production",
+          "uri": "/economy/grossdomesticproductgdp/timeseries/l2kq"
+        },
+        {
+          "name": "Output Measure: Manufacturing",
+          "uri": "/economy/grossdomesticproductgdp/timeseries/l2kx"
+        },
+        {
+          "name": "Output Measure: Agriculture, Forestry and Fishing",
+          "uri": "/economy/grossdomesticproductgdp/timeseries/l2kl"
+        },
+        {
+          "name": "Output Measure: Construction",
+          "uri": "/economy/grossdomesticproductgdp/timeseries/l2n8"
+        },
+        {
+          "name": "Output Measure: Services",
+          "uri": "/economy/grossdomesticproductgdp/timeseries/l2nc"
+        }
+      ]
     },
     {
       "name": "Gross Value Added (GVA)",
       "link": "grossvalueaddedgva",
       "index": 5,
-      "items": []
+      "items": [
+        {
+          "name": "United Kingdom Gross Value Added (GVA)",
+          "uri": "/economy/grossvalueaddedgva/timeseries/abml"
+        },
+        {
+          "name": "North East Gross Value Added",
+          "uri": "/economy/grossvalueaddedgva/timeseries/tmpw"
+        },
+        {
+          "name": "North West Gross Value Added",
+          "uri": "/economy/grossvalueaddedgva/timeseries/tmpx"
+        },
+        {
+          "name": "Yorkshire and The Humber Gross Value Added",
+          "uri": "/economy/grossvalueaddedgva/timeseries/tmpy"
+        },
+        {
+          "name": "East Midlands Gross Value Added",
+          "uri": "/economy/grossvalueaddedgva/timeseries/tmpz"
+        },
+        {
+          "name": "West Midlands Gross Value Added",
+          "uri": "/economy/grossvalueaddedgva/timeseries/tmqa"
+        },
+        {
+          "name": "East of England Gross Value Added",
+          "uri": "/economy/grossvalueaddedgva/timeseries/dgph"
+        },
+        {
+          "name": "London Gross Value Added",
+          "uri": "/economy/grossvalueaddedgva/timeseries/dgpi"
+        },
+        {
+          "name": "South East Gross Value Added",
+          "uri": "/economy/grossvalueaddedgva/timeseries/dgpj"
+        },
+        {
+          "name": "South West Gross Value Added",
+          "uri": "/economy/grossvalueaddedgva/timeseries/tmqe"
+        },
+        {
+          "name": "Wales Gross Value Added",
+          "uri": "/economy/grossvalueaddedgva/timeseries/tmqg"
+        },
+        {
+          "name": "Scotland Gross Value Added",
+          "uri": "/economy/grossvalueaddedgva/timeseries/tmqh"
+        },
+        {
+          "name": "Northern Ireland Gross Value Added",
+          "uri": "/economy/grossvalueaddedgva/timeseries/tmqi"
+        }
+      ]
     },
     {
       "name": "Investments, Pensions and Trusts",
       "link": "investmentspensionsandtrusts",
       "index": 6,
-      "items": []
+      "items": [
+        {
+          "name": "Net investment flows into the UK",
+          "uri": "/economy/investmentspensionsandtrusts/timeseries/raid135"
+        },
+        {
+          "name": "Net flow of direct investment abroad by UK companies",
+          "uri": "/economy/investmentspensionsandtrusts/timeseries/raid136"
+        },
+        {
+          "name": "Net investment flows to Europe",
+          "uri": "/economy/investmentspensionsandtrusts/timeseries/raid137"
+        }
+      ]
     },
     {
       "name": "Regional Accounts",
       "link": "regionalaccounts",
       "index": 7,
-      "items": []
+      "items": [
+        {
+          "name": "United Kingdom Gross Disposable Household Income",
+          "uri": "/economy/regionalaccounts/timeseries/qwnd"
+        },
+        {
+          "name": "North East Gross Disposable Household Income",
+          "uri": "/economy/regionalaccounts/timeseries/c92i"
+        },
+        {
+          "name": "North West Gross Disposable Household Income",
+          "uri": "/economy/regionalaccounts/timeseries/c92j"
+        },
+        {
+          "name": "Yorkshire and The Humber Gross Disposable Household Income",
+          "uri": "/economy/regionalaccounts/timeseries/c92k"
+        },
+        {
+          "name": "East Midlands Gross Disposable Household Income",
+          "uri": "/economy/regionalaccounts/timeseries/c92l"
+        },
+        {
+          "name": "West Midlands Gross Disposable Household Income",
+          "uri": "/economy/regionalaccounts/timeseries/c92m"
+        },
+        {
+          "name": "East of England Gross Disposable Household Income",
+          "uri": "/economy/regionalaccounts/timeseries/c92n"
+        },
+        {
+          "name": "Income London Gross Disposable Household",
+          "uri": "/economy/regionalaccounts/timeseries/c92o"
+        },
+        {
+          "name": "South East Gross Disposable Household Income",
+          "uri": "/economy/regionalaccounts/timeseries/c92p"
+        },
+        {
+          "name": "South West Gross Disposable Household Income",
+          "uri": "/economy/regionalaccounts/timeseries/c92q"
+        },
+        {
+          "name": "England Gross Disposable Household Income",
+          "uri": "/economy/regionalaccounts/timeseries/c92r"
+        },
+        {
+          "name": "Wales Gross Disposable Household Income",
+          "uri": "/economy/regionalaccounts/timeseries/c92s"
+        },
+        {
+          "name": "Scotland Gross Disposable Household Income",
+          "uri": "/economy/regionalaccounts/timeseries/c92t"
+        },
+        {
+          "name": "Northern Ireland Gross Disposable Household Income",
+          "uri": "/economy/regionalaccounts/timeseries/c92u"
+        }
+      ]
     },
     {
       "name": "Environmental Accounts",
       "link": "environmentalaccounts",
       "index": 8,
-      "items": []
+      "items": [
+        {
+          "name": "Total energy consumption (oil equivalent)",
+          "uri": "/economy/environmentalaccounts/timeseries/raid138"
+        },
+        {
+          "name": "Greenhouse gas emissions (CO2 equivalent)",
+          "uri": "/economy/environmentalaccounts/timeseries/raid139"
+        },
+        {
+          "name": "Revenue from environmentally related taxes",
+          "uri": "/economy/environmentalaccounts/timeseries/raid140"
+        },
+        {
+          "name": "Spend on environmental protection activities",
+          "uri": "/economy/environmentalaccounts/timeseries/raid141"
+        }
+      ]
     }
   ],
   "level": "t2",

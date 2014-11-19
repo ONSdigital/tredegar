@@ -1,11 +1,23 @@
 {
-  "headline": "/peoplepopulationandcommunity/birthsdeathsandmarriages/stillbirths/timeseries/raid61",
+  "headline": {
+    "name": "Number of stillbirths",
+    "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/stillbirths/timeseries/raid61"
+  },
   "items": [
-    "/peoplepopulationandcommunity/birthsdeathsandmarriages/stillbirths/timeseries/raid61"
+    {
+      "name": "Number of stillbirths",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/stillbirths/timeseries/raid61"
+    }
   ],
-  "statsBulletinHeadline": "/peoplepopulationandcommunity/birthsdeathsandmarriages/stillbirths/bulletins/birthsinenglandandwales2013",
+  "statsBulletinHeadline": {
+    "name": "Births in England and Wales, 2013",
+    "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/stillbirths/bulletins/birthsinenglandandwales2013"
+  },
   "statsBulletins": [
-    "/peoplepopulationandcommunity/birthsdeathsandmarriages/stillbirths/bulletins/birthsinenglandandwales2013"
+    {
+      "name": "Births in England and Wales, 2013",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/stillbirths/bulletins/birthsinenglandandwales2013"
+    }
   ],
   "datasets": [],
   "level": "t3",

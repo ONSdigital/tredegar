@@ -1,13 +1,31 @@
 {
-  "headline": "/peoplepopulationandcommunity/healthandsocialcare/disability/timeseries/raid95",
+  "headline": {
+    "name": "Day-to-day activities limited a lot (UK)",
+    "uri": "/peoplepopulationandcommunity/healthandsocialcare/disability/timeseries/raid95"
+  },
   "items": [
-    "/peoplepopulationandcommunity/healthandsocialcare/disability/timeseries/raid95",
-    "/peoplepopulationandcommunity/healthandsocialcare/disability/timeseries/raid96",
-    "/peoplepopulationandcommunity/healthandsocialcare/disability/timeseries/raid97"
+    {
+      "name": "Day-to-day activities limited a lot (UK)",
+      "uri": "/peoplepopulationandcommunity/healthandsocialcare/disability/timeseries/raid95"
+    },
+    {
+      "name": "Day-to-day activities limited a little (UK)",
+      "uri": "/peoplepopulationandcommunity/healthandsocialcare/disability/timeseries/raid96"
+    },
+    {
+      "name": "Day-to-day activities not limited (UK)",
+      "uri": "/peoplepopulationandcommunity/healthandsocialcare/disability/timeseries/raid97"
+    }
   ],
-  "statsBulletinHeadline": "/peoplepopulationandcommunity/healthandsocialcare/disability/bulletins/keystatisticsandquickstatisticsforlocalauthoritiesintheunitedkingdom",
+  "statsBulletinHeadline": {
+    "name": "Key Statistics and Quick Statistics for local authorities in the United Kingdom",
+    "uri": "/peoplepopulationandcommunity/healthandsocialcare/disability/bulletins/keystatisticsandquickstatisticsforlocalauthoritiesintheunitedkingdom"
+  },
   "statsBulletins": [
-    "/peoplepopulationandcommunity/healthandsocialcare/disability/bulletins/keystatisticsandquickstatisticsforlocalauthoritiesintheunitedkingdom"
+    {
+      "name": "Key Statistics and Quick Statistics for local authorities in the United Kingdom",
+      "uri": "/peoplepopulationandcommunity/healthandsocialcare/disability/bulletins/keystatisticsandquickstatisticsforlocalauthoritiesintheunitedkingdom"
+    }
   ],
   "datasets": [],
   "level": "t3",

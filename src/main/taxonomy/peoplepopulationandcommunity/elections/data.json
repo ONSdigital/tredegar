@@ -1,12 +1,27 @@
 {
-  "headline": "/peoplepopulationandcommunity/elections/timeseries/raid87",
+  "headline": {
+    "name": "Parliamentary electors",
+    "uri": "/peoplepopulationandcommunity/elections/timeseries/raid87"
+  },
   "items": [
-    "/peoplepopulationandcommunity/elections/timeseries/raid87",
-    "/peoplepopulationandcommunity/elections/timeseries/raid88"
+    {
+      "name": "Parliamentary electors",
+      "uri": "/peoplepopulationandcommunity/elections/timeseries/raid87"
+    },
+    {
+      "name": "European / local government electors",
+      "uri": "/peoplepopulationandcommunity/elections/timeseries/raid88"
+    }
   ],
-  "statsBulletinHeadline": "/peoplepopulationandcommunity/elections/bulletins/electoralstatisticsforuk2013",
+  "statsBulletinHeadline": {
+    "name": "Electoral Statistics for UK, 2013",
+    "uri": "/peoplepopulationandcommunity/elections/bulletins/electoralstatisticsforuk2013"
+  },
   "statsBulletins": [
-    "/peoplepopulationandcommunity/elections/bulletins/electoralstatisticsforuk2013"
+    {
+      "name": "Electoral Statistics for UK, 2013",
+      "uri": "/peoplepopulationandcommunity/elections/bulletins/electoralstatisticsforuk2013"
+    }
   ],
   "datasets": [],
   "level": "t3",

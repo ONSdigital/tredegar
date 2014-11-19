@@ -1,14 +1,35 @@
 {
-  "headline": "/businessindustryandtrade/tourismindustry/timeseries/gmat",
+  "headline": {
+    "name": "Overseas visits to the UK",
+    "uri": "/businessindustryandtrade/tourismindustry/timeseries/gmat"
+  },
   "items": [
-    "/businessindustryandtrade/tourismindustry/timeseries/gmat",
-    "/businessindustryandtrade/tourismindustry/timeseries/gmax",
-    "/businessindustryandtrade/tourismindustry/timeseries/gmaz",
-    "/businessindustryandtrade/tourismindustry/timeseries/gmbb"
+    {
+      "name": "Overseas visits to the UK",
+      "uri": "/businessindustryandtrade/tourismindustry/timeseries/gmat"
+    },
+    {
+      "name": "UK visits abroad",
+      "uri": "/businessindustryandtrade/tourismindustry/timeseries/gmax"
+    },
+    {
+      "name": "Overseas visits to UK Earnings",
+      "uri": "/businessindustryandtrade/tourismindustry/timeseries/gmaz"
+    },
+    {
+      "name": "UK visits abroad Expenditure",
+      "uri": "/businessindustryandtrade/tourismindustry/timeseries/gmbb"
+    }
   ],
-  "statsBulletinHeadline": "/peoplepopulationandcommunity/leisureandtourism/bulletins/overseastravelandtourismprovisionalresultsformay2014",
+  "statsBulletinHeadline": {
+    "name": "Overseas Travel and Tourism, Provisional Results for May 2014",
+    "uri": "/peoplepopulationandcommunity/leisureandtourism/bulletins/overseastravelandtourismprovisionalresultsformay2014"
+  },
   "statsBulletins": [
-    "/peoplepopulationandcommunity/leisureandtourism/bulletins/overseastravelandtourismprovisionalresultsformay2014"
+    {
+      "name": "Overseas Travel and Tourism, Provisional Results for May 2014",
+      "uri": "/peoplepopulationandcommunity/leisureandtourism/bulletins/overseastravelandtourismprovisionalresultsformay2014"
+    }
   ],
   "datasets": [],
   "level": "t3",

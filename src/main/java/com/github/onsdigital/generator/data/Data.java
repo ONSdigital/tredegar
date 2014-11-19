@@ -17,6 +17,7 @@ import com.github.onsdigital.generator.Folder;
 import com.github.onsdigital.generator.markdown.ArticleMarkdown;
 import com.github.onsdigital.generator.markdown.BulletinMarkdown;
 import com.github.onsdigital.generator.markdown.MethodologyMarkdown;
+import com.github.onsdigital.generator.taxonomy.TaxonomyCsv;
 import com.github.onsdigital.json.timeseries.Timeseries;
 import com.github.onsdigital.json.timeseries.TimeseriesValue;
 
@@ -39,13 +40,40 @@ public class Data implements Iterable<Timeseries> {
 	public static Map<Date, String> yearPairs = new TreeMap<>();
 	public static Map<Date, String> quarters = new TreeMap<>();
 	public static Map<Date, String> months = new TreeMap<>();
+	public static Map<Timeseries, List<Timeseries>> relatedTimeseries = new HashMap<>();
 
 	private static Set<Folder> folders;
 	private static Map<String, Set<Timeseries>> datasets = new TreeMap<>();
 	private static Map<String, Timeseries> timeserieses = new HashMap<>();
 	private static Set<String> mappedDatasets = new HashSet<>();
 
-	public static Map<Timeseries, List<Timeseries>> relatedTimeseries = new HashMap<>();
+	/**
+	 * Triggers parsing of {@link NonCdidCSV}, {@link DataCSV},
+	 * {@link MetadataCSV} and {@link AlphaContentCSV}.
+	 * 
+	 * @throws IOException
+	 *             If an error occurs during parsing.
+	 */
+	public static void parse() throws IOException {
+
+		System.out.println("Starting parsing of spreadsheets...");
+
+		folders = TaxonomyCsv.parse();
+		NonCdidCSV.parse();
+		BulletinMarkdown.parse();
+		ArticleMarkdown.parse();
+		MethodologyMarkdown.parse();
+		DataCSV.parse();
+		MetadataCSV.parse();
+		AlphaContentCSV.parse();
+		DatasetMappingsCSV.parse();
+
+		// Only call this if you want to reset bulletin content using the
+		// bulletins sheet of the Alpha Content Spreadsheet.
+		// BulletinContent.parseCsv();
+
+		System.out.println("Parsing complete.");
+	}
 
 	public static void addDateOption(String date) {
 
@@ -72,42 +100,8 @@ public class Data implements Iterable<Timeseries> {
 		}
 	}
 
-	/**
-	 * Sets the taxonomy folder structure and triggers parsing of CSV data.
-	 * 
-	 * @param folders
-	 *            The taxonomy folder structure.
-	 * @throws IOException
-	 *             If an error occurs in parsing CSVs.
-	 */
-	public static void setTaxonomy(Set<Folder> folders) throws IOException {
-		Data.folders = folders;
-		// Now we have the taxonomy, parse the data:
-		parse();
-	}
-
-	/**
-	 * Triggers parsing of {@link NonCdidCSV}, {@link DataCSV},
-	 * {@link MetadataCSV} and {@link AlphaContentCSV}.
-	 * 
-	 * @throws IOException
-	 *             If an error occurs during parsing.
-	 */
-	private static void parse() throws IOException {
-		NonCdidCSV.parse();
-		BulletinMarkdown.parse();
-		ArticleMarkdown.parse();
-		MethodologyMarkdown.parse();
-		DataCSV.parse();
-		MetadataCSV.parse();
-		AlphaContentCSV.parse();
-		DatasetMappingsCSV.parse();
-
-		// Only call this if you want to reset bulletin content using the
-		// bulletins sheet of the Alpha Content Spreadsheet.
-		// BulletinContent.parseCsv();
-
-		System.out.println("Parsing complete.");
+	public static Set<Folder> folders() {
+		return folders;
 	}
 
 	/**

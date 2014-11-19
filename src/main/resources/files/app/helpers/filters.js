@@ -2,7 +2,9 @@
     angular.module('onsFilters', [])
         .filter('slice', slice)
         .filter('range', range)
-        .filter('rangeDate', rangeDate);
+        .filter('rangeDate', rangeDate)
+        .filter('join', join)
+        .filter('charLimit', charLimit)
 
 
     // Slice filter used to get a part of given array, can be used with ng-repeat
@@ -22,6 +24,39 @@
                 input.push(i);
             return input;
         };
+    }
+
+    //Joins given text array or property of object array with given seperator if any
+    function join() {
+        return function(list, seperator, propertyName) {
+            seperator = seperator || '';
+            if (!propertyName) {
+                return list.join(seperator)
+            }
+
+            result = '';
+            for (var i = 0; i < list.length - 1; i++) {
+                result += list[i][propertyName] + seperator
+            }
+
+            result += list[i][propertyName] // No seperator after last element
+            return result
+        }
+    }
+
+      //Limits character number to given number, attaches overflow text if given
+    function charLimit() {
+        return function(text, limit, overflowText) {
+            text = text || ''
+            limit = limit || text.length
+            overflowText = overflowText|| ''
+
+            if(text.length <= limit) {
+                return text
+            }            
+
+            return text.substr(0, limit) + overflowText
+        }
     }
 
     function rangeDate() {

@@ -4,13 +4,71 @@
       "name": "Public Sector Finance",
       "link": "publicsectorfinance",
       "index": 0,
-      "items": []
+      "items": [
+        {
+          "name": "Public sector net borrowing excluding financial interventions",
+          "uri": "/economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/annx"
+        },
+        {
+          "name": "Public Sector net debt excluding banks",
+          "uri": "/economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/rutn"
+        },
+        {
+          "name": "Public Sector net debt excluding banks as a percentage of GDP",
+          "uri": "/economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/ruto"
+        },
+        {
+          "name": "Public Sector current budget excluding banks",
+          "uri": "/economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/hf6w"
+        },
+        {
+          "name": "Public Sector net lending excluding banks",
+          "uri": "/economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/hf6x"
+        },
+        {
+          "name": "Public Sector current budget",
+          "uri": "/economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/anmu"
+        },
+        {
+          "name": "Public Sector net investment",
+          "uri": "/economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/annw"
+        },
+        {
+          "name": "Public Sector Net Cash Requirement (NCR)",
+          "uri": "/economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/rurq"
+        }
+      ]
     },
     {
       "name": "Research and Development Expenditure",
       "link": "researchanddevelopmentexpenditure",
       "index": 1,
-      "items": []
+      "items": [
+        {
+          "name": "Gross domestic expenditure on research and development",
+          "uri": "/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/timeseries/glba"
+        },
+        {
+          "name": "Government expenditure on research and development",
+          "uri": "/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/timeseries/glbk"
+        },
+        {
+          "name": "Research Councils expenditure on research and development",
+          "uri": "/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/timeseries/dmrs"
+        },
+        {
+          "name": "Business Enterprise expenditure on research and development",
+          "uri": "/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/timeseries/glbl"
+        },
+        {
+          "name": "Higher Education expenditure on research and development",
+          "uri": "/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/timeseries/glbm"
+        },
+        {
+          "name": "Private Non-Profit expenditure on research and development",
+          "uri": "/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/timeseries/glbn"
+        }
+      ]
     }
   ],
   "level": "t2",

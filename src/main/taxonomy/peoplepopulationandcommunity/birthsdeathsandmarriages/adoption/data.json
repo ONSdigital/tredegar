@@ -1,15 +1,39 @@
 {
-  "headline": "/peoplepopulationandcommunity/birthsdeathsandmarriages/adoption/timeseries/raid19",
+  "headline": {
+    "name": "Adoptions in England and Wales",
+    "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/adoption/timeseries/raid19"
+  },
   "items": [
-    "/peoplepopulationandcommunity/birthsdeathsandmarriages/adoption/timeseries/raid19",
-    "/peoplepopulationandcommunity/birthsdeathsandmarriages/adoption/timeseries/raid20",
-    "/peoplepopulationandcommunity/birthsdeathsandmarriages/adoption/timeseries/raid21",
-    "/peoplepopulationandcommunity/birthsdeathsandmarriages/adoption/timeseries/raid22",
-    "/peoplepopulationandcommunity/birthsdeathsandmarriages/adoption/timeseries/raid23"
+    {
+      "name": "Adoptions in England and Wales",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/adoption/timeseries/raid19"
+    },
+    {
+      "name": "Adoptions in England and Wales: Males",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/adoption/timeseries/raid20"
+    },
+    {
+      "name": "Adoptions in England and Wales: Females",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/adoption/timeseries/raid21"
+    },
+    {
+      "name": "Adoptions of children born within marriage",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/adoption/timeseries/raid22"
+    },
+    {
+      "name": "Adoptions of children born outside marriage",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/adoption/timeseries/raid23"
+    }
   ],
-  "statsBulletinHeadline": "/peoplepopulationandcommunity/birthsdeathsandmarriages/adoption/bulletins/adoptionsinenglandandwales2012",
+  "statsBulletinHeadline": {
+    "name": "Adoptions in England and Wales, 2012",
+    "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/adoption/bulletins/adoptionsinenglandandwales2012"
+  },
   "statsBulletins": [
-    "/peoplepopulationandcommunity/birthsdeathsandmarriages/adoption/bulletins/adoptionsinenglandandwales2012"
+    {
+      "name": "Adoptions in England and Wales, 2012",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/adoption/bulletins/adoptionsinenglandandwales2012"
+    }
   ],
   "datasets": [],
   "level": "t3",

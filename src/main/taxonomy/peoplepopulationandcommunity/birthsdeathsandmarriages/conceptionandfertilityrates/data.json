@@ -1,16 +1,43 @@
 {
-  "headline": "/peoplepopulationandcommunity/birthsdeathsandmarriages/conceptionandfertilityrates/timeseries/raid28",
+  "headline": {
+    "name": "Conceptions (all ages)",
+    "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/conceptionandfertilityrates/timeseries/raid28"
+  },
   "items": [
-    "/peoplepopulationandcommunity/birthsdeathsandmarriages/conceptionandfertilityrates/timeseries/raid28",
-    "/peoplepopulationandcommunity/birthsdeathsandmarriages/conceptionandfertilityrates/timeseries/raid29",
-    "/peoplepopulationandcommunity/birthsdeathsandmarriages/conceptionandfertilityrates/timeseries/raid30",
-    "/peoplepopulationandcommunity/birthsdeathsandmarriages/conceptionandfertilityrates/timeseries/raid31",
-    "/peoplepopulationandcommunity/birthsdeathsandmarriages/conceptionandfertilityrates/timeseries/raid32"
+    {
+      "name": "Conceptions (all ages)",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/conceptionandfertilityrates/timeseries/raid28"
+    },
+    {
+      "name": "Under 18 conceptions",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/conceptionandfertilityrates/timeseries/raid29"
+    },
+    {
+      "name": "Under 18 conception rate",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/conceptionandfertilityrates/timeseries/raid30"
+    },
+    {
+      "name": "Average completed family size",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/conceptionandfertilityrates/timeseries/raid31"
+    },
+    {
+      "name": "Childlessness",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/conceptionandfertilityrates/timeseries/raid32"
+    }
   ],
-  "statsBulletinHeadline": "/peoplepopulationandcommunity/birthsdeathsandmarriages/conceptionandfertilityrates/bulletins/conceptionsinenglandandwales2012",
+  "statsBulletinHeadline": {
+    "name": "Conceptions in England and Wales, 2012",
+    "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/conceptionandfertilityrates/bulletins/conceptionsinenglandandwales2012"
+  },
   "statsBulletins": [
-    "/peoplepopulationandcommunity/birthsdeathsandmarriages/conceptionandfertilityrates/bulletins/cohortfertility2012",
-    "/peoplepopulationandcommunity/birthsdeathsandmarriages/conceptionandfertilityrates/bulletins/conceptionsinenglandandwales2012"
+    {
+      "name": "Cohort Fertility, 2012",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/conceptionandfertilityrates/bulletins/cohortfertility2012"
+    },
+    {
+      "name": "Conceptions in England and Wales, 2012",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/conceptionandfertilityrates/bulletins/conceptionsinenglandandwales2012"
+    }
   ],
   "datasets": [],
   "level": "t3",
