@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -42,6 +43,8 @@ import com.github.onsdigital.json.timeseries.Timeseries;
 @Endpoint
 public class Cdid {
 
+	static Map<String, Timeseries> cache = new ConcurrentHashMap<String, Timeseries>();
+
 	@POST
 	public Map<String, Timeseries> post(@Context HttpServletRequest request, @Context HttpServletResponse response, CdidRequest cdidRequest) throws IOException {
 		System.out.println("Download request recieved" + cdidRequest);
@@ -49,16 +52,34 @@ public class Cdid {
 	}
 
 	private Map<String, Timeseries> processRequest(CdidRequest cdidRequest) throws IOException {
-
 		Map<String, Timeseries> result = new HashMap<>();
-		List<Path> timeseriesPaths = findTimeseries(cdidRequest.cdids);
-		for (Path path : timeseriesPaths) {
-			try (InputStream input = Files.newInputStream(path)) {
-				System.out.println(path);
-				Timeseries timeseries = Serialiser.deserialise(input, Timeseries.class);
+
+		// Start with cache hits:
+		List<String> missing = new ArrayList<>();
+		for (String cdid : cdidRequest.cdids) {
+			Timeseries timeseries = cache.get(cdid.toUpperCase());
+			if (timeseries != null) {
+				System.out.println("Cache hit for : " + cdid);
 				result.put(timeseries.cdid(), timeseries);
+			} else {
+				System.out.println("Cache miss for : " + cdid);
+				missing.add(cdid);
 			}
 		}
+
+		// Load any missing items:
+		if (missing.size() > 0) {
+			List<Path> timeseriesPaths = findTimeseries(missing);
+			for (Path path : timeseriesPaths) {
+				try (InputStream input = Files.newInputStream(path)) {
+					System.out.println(path);
+					Timeseries timeseries = Serialiser.deserialise(input, Timeseries.class);
+					result.put(timeseries.cdid(), timeseries);
+					cache.put(timeseries.cdid(), timeseries);
+				}
+			}
+		}
+
 		return result;
 	}
 
