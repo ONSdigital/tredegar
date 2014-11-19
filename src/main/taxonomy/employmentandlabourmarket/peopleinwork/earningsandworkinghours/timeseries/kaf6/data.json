@@ -987,6 +987,10 @@
     "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/annualsurveyofhoursandearnings2013provisionalresults",
     "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/annualsurveyofhoursandearningspensiontables2013provisionalresults"
   ],
+  "relatedTimeseries": [
+    "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/timeseries/kaf4"
+  ],
+  "source": "Labour Force Survey",
   "type": "timeseries",
   "name": "Average weekly earning growth rate (bonus pay)",
   "fileName": "kaf6",

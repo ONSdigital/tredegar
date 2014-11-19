@@ -60,6 +60,8 @@ public class Timeseries extends DataItem implements Comparable<Timeseries> {
 	public URI uri;
 
 	public List<URI> relatedBulletins = new ArrayList<>();
+	public List<URI> relatedTimeseries = new ArrayList<>();
+	public String source;
 
 	public Timeseries() {
 		type = ContentType.timeseries;

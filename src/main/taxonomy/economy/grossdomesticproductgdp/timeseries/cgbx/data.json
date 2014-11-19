@@ -1773,6 +1773,11 @@
   "relatedBulletins": [
     "/economy/grossdomesticproductgdp/bulletins/grossdomesticproductpreliminaryestimate"
   ],
+  "relatedTimeseries": [
+    "/economy/grossdomesticproductgdp/timeseries/dtwm",
+    "/economy/grossdomesticproductgdp/timeseries/cgbz",
+    "/economy/grossdomesticproductgdp/timeseries/cmvl"
+  ],
   "type": "timeseries",
   "name": "Income Measure: Other Income",
   "fileName": "cgbx",

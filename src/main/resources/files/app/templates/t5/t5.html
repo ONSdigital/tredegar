@@ -21,7 +21,7 @@
                     <p>Next release: {{chart.timeseries.nextUpdate}}</p>
                     <p>Contact: <a href="mailto:jukesie@hotmail.com">Juksie</a>
                     </p>
-                    <p>Source: </p>
+                    <p>Source: {{chart.timeseries.source ? chart.timeseries.source : 'Office for National Statistics'}}</p>
                 </div>
                 <div class="grid-col desktop-grid-one-quarter invisible">.</div>
                 <div class="grid-col desktop-grid-one-quarter">
@@ -198,19 +198,14 @@
                         </ol>
                     </div>
                     <br></br>
-                    <div ng-if="chart.timeseries.note1"> <!-- Another field goes here for condition -->
-                        <h3>Related series</h3>
-                        <div class="padded">
-                            <div><a>CPI: Consumer Prices Index</a>
-                            </div>
-                            <div>
-                                <a>RPIJ</a>
-                            </div>
-                            <div>
-                                <a>Output of manufactured product Index</a>
-                            </div>
-                        </div>
-                    </div>
+                    <h3>Related series</h3>
+                    <div class="padded">
+	                    <div ng-repeat="relatedTimeseries in taxonomy.data.relatedTimeseriesData | orderBy:'name'">
+	 						<div>
+					            <a href=#!{{relatedTimeseries.uri}}>{{relatedTimeseries.name}}</a>
+							</div>
+	                    </div>
+	                </div>
                 </div>
             </div>
             <!-- Sidebar -->

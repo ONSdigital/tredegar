@@ -4405,6 +4405,12 @@
   ],
   "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgsv",
   "relatedBulletins": [],
+  "relatedTimeseries": [
+    "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/lf25",
+    "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/lf24",
+    "/employmentandlabourmarket/unemployment/timeseries/mgsy"
+  ],
+  "source": "Labour Force Survey",
   "type": "timeseries",
   "name": "Male Employment rate (aged 16-64)",
   "fileName": "mgsv",
