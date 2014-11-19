@@ -40,6 +40,7 @@
                     </header>
                     <div class="box box--inline box--padded muted--dark">
                         <div class="stat stat--headline">
+                            <span ng-if="!taxonomy.data.headline.data">Loading...</span>
                             <div class="stat__figure">
                                 <span class="stat__figure__unit">{{taxonomy.data.headline.data.preUnit}}</span>
                                 {{taxonomy.data.headline.data.number}}
@@ -139,6 +140,16 @@
                 <input st-select ng-model="item.isSelected" type="checkbox">
             </label> -->
         </li>
+        
+        <li  ng-show="t3.isLoading()" class="list--table__item list--table__footer">
+            <div class="list--table__item__body--centred">
+                        <span>Loading ...</span>
+                </div>
+                <!-- /table-actions -->
+            </div>
+            <!--  /list-table__item__body -->
+        </li>
+
         <!-- /list- -table__body -->
         <li class="list--table__item list--table__footer">
             <div class="list--table__item__body">

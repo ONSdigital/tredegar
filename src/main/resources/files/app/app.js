@@ -33,8 +33,7 @@
         'ngSanitize',
         'onsComponents',
         'onsHelpers',
-        'onsTemplates',
-        'smart-table'
+        'onsTemplates'
     ])
 
     onsApp
