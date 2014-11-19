@@ -10,7 +10,9 @@ import java.nio.file.Path;
 import java.nio.file.SimpleFileVisitor;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -41,20 +43,20 @@ import com.github.onsdigital.json.timeseries.Timeseries;
 public class Cdid {
 
 	@POST
-	public List<Timeseries> post(@Context HttpServletRequest request, @Context HttpServletResponse response, CdidRequest cdidRequest) throws IOException {
+	public Map<String, Timeseries> post(@Context HttpServletRequest request, @Context HttpServletResponse response, CdidRequest cdidRequest) throws IOException {
 		System.out.println("Download request recieved" + cdidRequest);
 		return processRequest(cdidRequest);
 	}
 
-	private List<Timeseries> processRequest(CdidRequest cdidRequest) throws IOException {
+	private Map<String, Timeseries> processRequest(CdidRequest cdidRequest) throws IOException {
 
-		List<Timeseries> result = new ArrayList<>();
+		Map<String, Timeseries> result = new HashMap<>();
 		List<Path> timeseriesPaths = findTimeseries(cdidRequest.cdids);
 		for (Path path : timeseriesPaths) {
 			try (InputStream input = Files.newInputStream(path)) {
 				System.out.println(path);
 				Timeseries timeseries = Serialiser.deserialise(input, Timeseries.class);
-				result.add(timeseries);
+				result.put(timeseries.cdid(), timeseries);
 			}
 		}
 		return result;
