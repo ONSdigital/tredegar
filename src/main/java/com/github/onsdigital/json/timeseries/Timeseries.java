@@ -30,7 +30,6 @@ public class Timeseries extends DataItem implements Comparable<Timeseries> {
 	// Spreadsheet headings
 	private String cdid;
 	public String seasonalAdjustment;
-	public String units;
 	public String mainMeasure;
 	public String description;
 	public String note1 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quam leo, blandit a turpis non, varius feugiat mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In posuere lectus eu laoreet ultrices. Donec ac sodales libero, eget fermentum arcu.";
@@ -54,6 +53,9 @@ public class Timeseries extends DataItem implements Comparable<Timeseries> {
 
 	// This value is displayed in the "(i)" tooltips next to timeseries name:
 	public String keyNote;
+
+	// This value is displayed beneath the timeseries name:
+	public String additionalText;
 
 	// The nectar, the goodness, the very juice of the fireflower: data.
 	public Set<TimeseriesValue> years = new TreeSet<>();
