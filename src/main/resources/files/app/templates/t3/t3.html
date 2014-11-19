@@ -119,6 +119,7 @@
             </div>
             <div class="list--table__item__body list--table__item__body--stat">
                 <div class="stat list--table__item__body--centred">
+                    <span ng-if="!item.data">Loading...</span>
                     <div class="stat__figure stat__tight">
                         <span class="stat__figure__unit">{{item.data.preUnit}}</span>
                         {{item.data.number}}
