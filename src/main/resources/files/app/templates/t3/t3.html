@@ -40,7 +40,7 @@
                     </header>
                     <div class="box box--inline box--padded muted--dark">
                         <div class="stat stat--headline">
-                            <span ng-if="!taxonomy.data.headline.data">Loading...</span>
+                            <ons-loading condition="!taxonomy.data.headline.data"></ons-loading>
                             <div class="stat__figure">
                                 <span class="stat__figure__unit">{{taxonomy.data.headline.data.preUnit}}</span>
                                 {{taxonomy.data.headline.data.number}}
@@ -48,13 +48,8 @@
                             </div>
                         </div>
                     </div>
-                                 <div class="box box--padded--small">
-                        <div ng-controller="T3HeadlineChartController as chart">
-                           <div ng-if="chart.chartVisible">
-                               <highchart class="highcharts-background" id="chart_prices" config="chart.chartConfig">
-                               </highchart>
-                           </div>
-                        </div>                
+                    <div class="box box--padded--small">
+                    <ons-sparkline chart-data="taxonomy.data.headline.chartData" headline="true" ></ons-sparkline>
                     </div>
                     <!-- /box -->
                     <dl class="definition mini">
@@ -134,14 +129,10 @@
                     <time class="stat__description">{{item.data.date}}</time>
                 </div>
             </div> -->
-                  <div class="list--table__item__body list--table__item__body--stat" >
-                    <div ng-controller="T3TableChartController as chart">
-                        <div class="stat list--table__item__body--centred" ng-if="chart.chartVisible">
-                            <highchart class="highcharts-background" id="chart_prices" config="chart.chartConfig">
-                            </highchart>
-                        </div>
-                    </div>
-                  </div>
+            <div class="list--table__item__body list--table__item__body--stat">
+                <ons-loading condition="!item.data" class="stat list--table__item__body--centred"></ons-loading>
+                <ons-sparkline chart-data="item.chartData" ></ons-sparkline>
+            </div>
             <div class="list--table__item__body list--table__item__body--update">
                 <dl class="micro definition-list definition-list--inline flush--half--vertical">
                     <dt>Last updated:</dt>
@@ -155,11 +146,11 @@
                 <input st-select ng-model="item.isSelected" type="checkbox">
             </label> -->
         </li>
-        
-        <li  ng-show="t3.isLoading()" class="list--table__item list--table__footer">
+
+        <li ng-show="t3.isLoading()" class="list--table__item list--table__footer">
             <div class="list--table__item__body--centred">
-                        <span>Loading ...</span>
-                </div>
+                <ons-loading></ons-loading>
+            </div>
             <!--  /list-table__item__body -->
         </li>
         <!-- /list- -table__body -->
