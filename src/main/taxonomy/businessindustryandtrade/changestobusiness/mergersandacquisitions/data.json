@@ -1,14 +1,35 @@
 {
-  "headline": "/businessindustryandtrade/changestobusiness/mergersandacquisitions/timeseries/cbaq",
+  "headline": {
+    "name": "Number of acquisitions",
+    "uri": "/businessindustryandtrade/changestobusiness/mergersandacquisitions/timeseries/cbaq"
+  },
   "items": [
-    "/businessindustryandtrade/changestobusiness/mergersandacquisitions/timeseries/cbaq",
-    "/businessindustryandtrade/changestobusiness/mergersandacquisitions/timeseries/cbas",
-    "/businessindustryandtrade/changestobusiness/mergersandacquisitions/timeseries/cbbi",
-    "/businessindustryandtrade/changestobusiness/mergersandacquisitions/timeseries/cbbt"
+    {
+      "name": "Number of acquisitions",
+      "uri": "/businessindustryandtrade/changestobusiness/mergersandacquisitions/timeseries/cbaq"
+    },
+    {
+      "name": "Number of disposals",
+      "uri": "/businessindustryandtrade/changestobusiness/mergersandacquisitions/timeseries/cbas"
+    },
+    {
+      "name": "Value of acquisitions",
+      "uri": "/businessindustryandtrade/changestobusiness/mergersandacquisitions/timeseries/cbbi"
+    },
+    {
+      "name": "Value of disposals",
+      "uri": "/businessindustryandtrade/changestobusiness/mergersandacquisitions/timeseries/cbbt"
+    }
   ],
-  "statsBulletinHeadline": "/businessindustryandtrade/changestobusiness/mergersandacquisitions/bulletins/mergersandacquisitionsinvolvingukcompanies",
+  "statsBulletinHeadline": {
+    "name": "Mergers and Acquisitions Involving UK Companies",
+    "uri": "/businessindustryandtrade/changestobusiness/mergersandacquisitions/bulletins/mergersandacquisitionsinvolvingukcompanies"
+  },
   "statsBulletins": [
-    "/businessindustryandtrade/changestobusiness/mergersandacquisitions/bulletins/mergersandacquisitionsinvolvingukcompanies"
+    {
+      "name": "Mergers and Acquisitions Involving UK Companies",
+      "uri": "/businessindustryandtrade/changestobusiness/mergersandacquisitions/bulletins/mergersandacquisitionsinvolvingukcompanies"
+    }
   ],
   "datasets": [],
   "level": "t3",

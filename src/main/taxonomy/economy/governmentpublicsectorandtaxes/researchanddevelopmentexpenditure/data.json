@@ -1,16 +1,43 @@
 {
-  "headline": "/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/timeseries/glba",
+  "headline": {
+    "name": "Gross domestic expenditure on research and development",
+    "uri": "/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/timeseries/glba"
+  },
   "items": [
-    "/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/timeseries/glba",
-    "/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/timeseries/glbk",
-    "/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/timeseries/dmrs",
-    "/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/timeseries/glbl",
-    "/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/timeseries/glbm",
-    "/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/timeseries/glbn"
+    {
+      "name": "Gross domestic expenditure on research and development",
+      "uri": "/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/timeseries/glba"
+    },
+    {
+      "name": "Government expenditure on research and development",
+      "uri": "/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/timeseries/glbk"
+    },
+    {
+      "name": "Research Councils expenditure on research and development",
+      "uri": "/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/timeseries/dmrs"
+    },
+    {
+      "name": "Business Enterprise expenditure on research and development",
+      "uri": "/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/timeseries/glbl"
+    },
+    {
+      "name": "Higher Education expenditure on research and development",
+      "uri": "/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/timeseries/glbm"
+    },
+    {
+      "name": "Private Non-Profit expenditure on research and development",
+      "uri": "/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/timeseries/glbn"
+    }
   ],
-  "statsBulletinHeadline": "/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/bulletins/ukgrossdomesticexpenditureonresearchanddevelopment",
+  "statsBulletinHeadline": {
+    "name": "UK Gross Domestic Expenditure on Research and Development",
+    "uri": "/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/bulletins/ukgrossdomesticexpenditureonresearchanddevelopment"
+  },
   "statsBulletins": [
-    "/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/bulletins/ukgrossdomesticexpenditureonresearchanddevelopment"
+    {
+      "name": "UK Gross Domestic Expenditure on Research and Development",
+      "uri": "/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/bulletins/ukgrossdomesticexpenditureonresearchanddevelopment"
+    }
   ],
   "datasets": [],
   "level": "t3",

@@ -28,14 +28,11 @@
 						}
 						break
 					case 't3':
-						data.itemData = []
-						data.statsBulletinData = []
-						data.keyDatasets = []
-						q.push(loadItem(data, data.headline, 'headlineData'))
-						q.push(loadItem(data, data.statsBulletinHeadline, 'statsBulletinHeadlineData'))
-						q.push.apply(q, loadItems(data, data.items, 'itemData'))
-						q.push.apply(q, loadItems(data, data.statsBulletins, 'statsBulletinData'))
-						q.push.apply(q, loadItems(data, data.datasets, 'keyDatasets'))
+						q.push(loadItem(data.headline))
+						q.push(loadItem(data.statsBulletinHeadline))
+						q.push.apply(q, loadItems(data.items))
+						q.push.apply(q, loadItems(data.statsBulletins))
+						q.push.apply(q, loadItems(data.datasets))
 						if (loadSynchronously) {
 							return $q.all(q)
 								.then(function() {
@@ -74,42 +71,39 @@
 					}
 				}
 
-				promises.push.apply(promises, loadItems(sections[i], sections[i].items, 'itemData'))
+				promises.push.apply(promises, loadItems(sections[i].items))
 			}
 
 			return promises
 		}
 
-		//Load single item and push into container's given variable, overrides if exists
-		function loadItem(container, item, varName) {
+		//Load single item and push data into item as data
+		function loadItem(item) {
 			// if data is undefined then break out of this method
 			if (!item) {
 				return
 			}
-			var path = dataPath + item
+			var path = dataPath + item.uri
 			return DataLoader.load(path).then(function(itemData) {
-				itemData.url = item
-					//Create array if not available
-				container[varName] = itemData
+				item.data = itemData
 			})
 		}
 
 		//Loads given items asynchronously and pushes into given array. Overrides array if exists
-		function loadItems(container, items, arrayName) {
+		function loadItems(items) {
 			if (ArrayUtil.isEmpty(items)) {
 				return
 			}
 
 			var promises = []
 
-			container[arrayName] = []
 			for (var i = 0; i < items.length; i++) {
-				var itemPath = dataPath + items[i]
-				var promise = DataLoader.load(itemPath).
-				then(function(itemData) {
-					container[arrayName].push(itemData)
-				})
-				promises.push(promise)
+				var itemPath = dataPath + items[i].uri
+				var promise = loadItem(items[i])
+				if (promise) {
+					promises.push(promise)
+				} 
+
 			}
 
 			return promises
@@ -117,19 +111,22 @@
 
 
 		//Bulk loads items with a single call and pushes into given array. Overrides array if exists
-		function loadItemsBulk(container, items, arrayName) {
+		function loadItemsBulk(items) {
 			if (ArrayUtil.isEmpty(items)) {
 				return
 			}
 
 			var request = {
-				uriList: items
+				uriList: []
 			}
-			container[arrayName] = []
+
+			for (var i = 0; i < items.length; i++) {
+				request.uriList.push(items[i].uri)
+			};
+			
 			DataLoader.loadPost(bulkDataPath, request).then(function(data) {
 				for (var i = 0; i < data.length; i++) {
-					data[i].url = items[i]
-					container.itemData.push(data[i])
+					items[i].data = data[i]
 				};
 			})
 		}

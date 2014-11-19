@@ -1,24 +1,69 @@
 {
-  "headline": "/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/raid121",
+  "headline": {
+    "name": "UK population",
+    "uri": "/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/raid121"
+  },
   "items": [
-    "/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/raid121",
-    "/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/raid123",
-    "/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/raid124",
-    "/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/raid125",
-    "/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/raid126",
-    "/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/raid127",
-    "/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/raid128",
-    "/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/raid129"
+    {
+      "name": "UK population",
+      "uri": "/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/raid121"
+    },
+    {
+      "name": "England and Wales population",
+      "uri": "/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/raid123"
+    },
+    {
+      "name": "England population",
+      "uri": "/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/raid124"
+    },
+    {
+      "name": "Scotland population",
+      "uri": "/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/raid125"
+    },
+    {
+      "name": "Wales population",
+      "uri": "/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/raid126"
+    },
+    {
+      "name": "Northern Ireland population",
+      "uri": "/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/raid127"
+    },
+    {
+      "name": "Males in the UK",
+      "uri": "/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/raid128"
+    },
+    {
+      "name": "Females in the UK",
+      "uri": "/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/raid129"
+    }
   ],
-  "statsBulletinHeadline": "/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/estimatesoftheveryoldincludingcentenarians",
+  "statsBulletinHeadline": {
+    "name": "Estimates of the Very Old (including Centenarians)",
+    "uri": "/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/estimatesoftheveryoldincludingcentenarians"
+  },
   "statsBulletins": [
-    "/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/annualmidyearpopulationestimates",
-    "/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/estimatesoftheveryoldincludingcentenarians"
+    {
+      "name": "Annual Mid-year Population Estimates",
+      "uri": "/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/annualmidyearpopulationestimates"
+    },
+    {
+      "name": "Estimates of the Very Old (including Centenarians)",
+      "uri": "/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/estimatesoftheveryoldincludingcentenarians"
+    }
   ],
   "datasets": [
-    "/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationdatacollection",
-    "/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationbyageandsex",
-    "/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationforlocalauthorities"
+    {
+      "name": "Population data collection",
+      "uri": "/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationdatacollection"
+    },
+    {
+      "name": "Population by Age and Sex",
+      "uri": "/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationbyageandsex"
+    },
+    {
+      "name": "Population for Local Authorities",
+      "uri": "/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationforlocalauthorities"
+    }
   ],
   "level": "t3",
   "index": 0,

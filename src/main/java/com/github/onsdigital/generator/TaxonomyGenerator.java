@@ -23,7 +23,7 @@ import com.github.onsdigital.json.dataset.Dataset;
 import com.github.onsdigital.json.markdown.Article;
 import com.github.onsdigital.json.markdown.Bulletin;
 import com.github.onsdigital.json.markdown.Methodology;
-import com.github.onsdigital.json.taxonomy.Child;
+import com.github.onsdigital.json.taxonomy.DataItemLink;
 import com.github.onsdigital.json.taxonomy.HomeSection;
 import com.github.onsdigital.json.taxonomy.T1;
 import com.github.onsdigital.json.taxonomy.T2;
@@ -197,11 +197,14 @@ public class TaxonomyGenerator {
 			if (child.getChildren().size() > 0) { // t2 page at level below
 				// Add child of sections to t2 page
 				for (Folder grandChild : child.getChildren()) {
-					section.children.add(new Child(grandChild.name, URI.create(grandChild.filename())));
+					section.items.add(new DataItemLink(grandChild.name, URI
+							.create(grandChild.filename())));
 				}
 			} else { // T3 page at below level
 				for (Timeseries grandChild : child.timeserieses) {
-					section.children.add(new Child(grandChild.name, grandChild.uri));
+					section.items.add(new DataItemLink(grandChild.name,
+							grandChild.uri));
+
 				}
 			}
 
@@ -271,12 +274,17 @@ public class TaxonomyGenerator {
 
 		// Timeseries references:
 		if (folder.headline != null && folder.headline.uri != null) {
-			t3.headline = folder.headline.uri;
+			t3.headline = new DataItemLink(folder.headline.name,
+					folder.headline.uri);
 		} else {
 			System.out.println("No headline URI set for " + folder.name);
-			if (folder.timeserieses.size() > 0 && folder.timeserieses.get(0).uri != null) {
-				t3.headline = folder.timeserieses.get(0).uri;
-				System.out.println("Using the first item from the timeseries list instead: " + t3.headline);
+			if (folder.timeserieses.size() > 0
+					&& folder.timeserieses.get(0).uri != null) {
+				Timeseries headline = folder.timeserieses.get(0);
+				t3.headline = new DataItemLink(headline.name, headline.uri);
+				System.out
+						.println("Using the first item from the timeseries list instead: "
+								+ t3.headline);
 			}
 		}
 		List<Timeseries> timeserieses = folder.timeserieses;
@@ -290,7 +298,7 @@ public class TaxonomyGenerator {
 		baseUri += "/timeseries";
 		for (Timeseries timeseries : timeserieses) {
 			if (timeseries.uri != null) {
-				t3.items.add(timeseries.uri);
+				t3.items.add(new DataItemLink(timeseries.name, timeseries.uri));
 			} else {
 				System.out.println("No URI set for " + timeseries);
 			}
@@ -320,7 +328,7 @@ public class TaxonomyGenerator {
 			for (Dataset dataset : datasets) {
 				if (dataset.summary != null) {
 					URI datasetUri = toDatasetUri(folder, dataset);
-					t3.datasets.add(datasetUri);
+					t3.datasets.add(new DataItemLink(dataset.name, datasetUri));
 				}
 			}
 		}
@@ -335,16 +343,19 @@ public class TaxonomyGenerator {
 			// bit of a workaround for now.
 			if (bulletin.summary != null) {
 				URI bulletinUri = toStatsBulletinUri(folder, bulletin);
-				t3.statsBulletins.add(bulletinUri);
+				t3.statsBulletins.add(new DataItemLink(bulletin.name,
+						bulletinUri));
 			}
 		}
 	}
 
 	private static void createStatsBulletinHeadline(Folder folder, T3 t3) throws IOException {
 		// Stats bulletin references:
-		URI statsBulletinHeadline = toStatsBulletinUri(folder, folder.headlineBulletin);
-		if (statsBulletinHeadline != null) {
-			t3.statsBulletinHeadline = statsBulletinHeadline;
+
+		URI statsBulletinHeadlineUri = toStatsBulletinUri(folder,
+				folder.headlineBulletin);
+		if (statsBulletinHeadlineUri != null) {
+			t3.statsBulletinHeadline = new DataItemLink(folder.headlineBulletin.name , statsBulletinHeadlineUri);
 		}
 	}
 
@@ -462,6 +473,14 @@ public class TaxonomyGenerator {
 
 				for (Bulletin bulletin : folder.bulletins) {
 					timeseries.relatedBulletins.add(bulletin.uri);
+				}
+
+				List<Timeseries> relatedCdids = Data.relatedTimeseries(timeseries);
+				if (relatedCdids != null && !relatedCdids.isEmpty()) {
+					for (Timeseries relatedCdid : relatedCdids) {
+						Timeseries relatedTimeseries = Data.timeseries(relatedCdid.cdid());
+						timeseries.relatedTimeseries.add(relatedTimeseries.uri);
+					}
 				}
 
 				String json = Serialiser.serialise(timeseries);

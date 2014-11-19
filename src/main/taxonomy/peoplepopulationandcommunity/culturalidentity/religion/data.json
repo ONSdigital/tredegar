@@ -1,17 +1,47 @@
 {
-  "headline": "/peoplepopulationandcommunity/culturalidentity/religion/timeseries/raid74",
+  "headline": {
+    "name": "Christian",
+    "uri": "/peoplepopulationandcommunity/culturalidentity/religion/timeseries/raid74"
+  },
   "items": [
-    "/peoplepopulationandcommunity/culturalidentity/religion/timeseries/raid74",
-    "/peoplepopulationandcommunity/culturalidentity/religion/timeseries/raid75",
-    "/peoplepopulationandcommunity/culturalidentity/religion/timeseries/raid76",
-    "/peoplepopulationandcommunity/culturalidentity/religion/timeseries/raid77",
-    "/peoplepopulationandcommunity/culturalidentity/religion/timeseries/raid78",
-    "/peoplepopulationandcommunity/culturalidentity/religion/timeseries/raid79",
-    "/peoplepopulationandcommunity/culturalidentity/religion/timeseries/raid80"
+    {
+      "name": "Christian",
+      "uri": "/peoplepopulationandcommunity/culturalidentity/religion/timeseries/raid74"
+    },
+    {
+      "name": "No religion",
+      "uri": "/peoplepopulationandcommunity/culturalidentity/religion/timeseries/raid75"
+    },
+    {
+      "name": "Muslim",
+      "uri": "/peoplepopulationandcommunity/culturalidentity/religion/timeseries/raid76"
+    },
+    {
+      "name": "Hindu",
+      "uri": "/peoplepopulationandcommunity/culturalidentity/religion/timeseries/raid77"
+    },
+    {
+      "name": "Sikh",
+      "uri": "/peoplepopulationandcommunity/culturalidentity/religion/timeseries/raid78"
+    },
+    {
+      "name": "Jewish",
+      "uri": "/peoplepopulationandcommunity/culturalidentity/religion/timeseries/raid79"
+    },
+    {
+      "name": "Buddhist",
+      "uri": "/peoplepopulationandcommunity/culturalidentity/religion/timeseries/raid80"
+    }
   ],
-  "statsBulletinHeadline": "/peoplepopulationandcommunity/culturalidentity/religion/bulletins/2011censuskeystatisticsforenglandandwalesmarch2011",
+  "statsBulletinHeadline": {
+    "name": "2011 Census: Key Statistics for England and Wales, March 2011",
+    "uri": "/peoplepopulationandcommunity/culturalidentity/religion/bulletins/2011censuskeystatisticsforenglandandwalesmarch2011"
+  },
   "statsBulletins": [
-    "/peoplepopulationandcommunity/culturalidentity/religion/bulletins/2011censuskeystatisticsforenglandandwalesmarch2011"
+    {
+      "name": "2011 Census: Key Statistics for England and Wales, March 2011",
+      "uri": "/peoplepopulationandcommunity/culturalidentity/religion/bulletins/2011censuskeystatisticsforenglandandwalesmarch2011"
+    }
   ],
   "datasets": [],
   "level": "t3",

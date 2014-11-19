@@ -7,7 +7,7 @@
 		.directive('stSelectAll', [SelectAllDirective])
 		.directive('stSelect', [SelectDirective])
 
-	function T3Controller($scope, $http, Downloader, $log) {
+	function T3Controller($scope, Downloader) {
 		var t3 = this
 		var items = $scope.taxonomy.data.items
 		t3.allSelected = false
@@ -77,13 +77,11 @@
 	
 	function T3HeadlineChartController($scope, Chart) {
         var t3 = this
-        console.log('$scope.taxonomy.data.headline.data: ' + JSON.stringify($scope.taxonomy.data.headline.data))
-
+        
         // due to async nature of http load then the headline data may not be available
         // so place a watch upon it
         if (!$scope.taxonomy.data.headline.data) {
         	$scope.$watch('taxonomy.data.headline.data', function() {
-        		console.log('$watch.taxonomy.data.headline.data: ' + JSON.stringify($scope.taxonomy.data.headline.data))
         		Chart.buildChart(t3, $scope.taxonomy.data.headline.data, true)
         	})
         } else {
@@ -99,7 +97,6 @@
         // so place a watch upon it
         if (!$scope.item.data) {
         	$scope.$watch('item.data', function() {
-        		console.log('$watch.item.data' + JSON.stringify($scope.item.data))
         		Chart.buildChart(ctrl, $scope.item.data, false)
         	})
         } else {

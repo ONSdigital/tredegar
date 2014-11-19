@@ -1,14 +1,35 @@
 {
-  "headline": "/economy/environmentalaccounts/timeseries/raid138",
+  "headline": {
+    "name": "Total energy consumption (oil equivalent)",
+    "uri": "/economy/environmentalaccounts/timeseries/raid138"
+  },
   "items": [
-    "/economy/environmentalaccounts/timeseries/raid138",
-    "/economy/environmentalaccounts/timeseries/raid139",
-    "/economy/environmentalaccounts/timeseries/raid140",
-    "/economy/environmentalaccounts/timeseries/raid141"
+    {
+      "name": "Total energy consumption (oil equivalent)",
+      "uri": "/economy/environmentalaccounts/timeseries/raid138"
+    },
+    {
+      "name": "Greenhouse gas emissions (CO2 equivalent)",
+      "uri": "/economy/environmentalaccounts/timeseries/raid139"
+    },
+    {
+      "name": "Revenue from environmentally related taxes",
+      "uri": "/economy/environmentalaccounts/timeseries/raid140"
+    },
+    {
+      "name": "Spend on environmental protection activities",
+      "uri": "/economy/environmentalaccounts/timeseries/raid141"
+    }
   ],
-  "statsBulletinHeadline": "/economy/environmentalaccounts/bulletins/ukenvironmentalaccounts",
+  "statsBulletinHeadline": {
+    "name": "UK Environmental Accounts",
+    "uri": "/economy/environmentalaccounts/bulletins/ukenvironmentalaccounts"
+  },
   "statsBulletins": [
-    "/economy/environmentalaccounts/bulletins/ukenvironmentalaccounts"
+    {
+      "name": "UK Environmental Accounts",
+      "uri": "/economy/environmentalaccounts/bulletins/ukenvironmentalaccounts"
+    }
   ],
   "datasets": [],
   "level": "t3",

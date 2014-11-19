@@ -1,15 +1,39 @@
 {
-  "headline": "/peoplepopulationandcommunity/healthandsocialcare/drugusealcoholandsmoking/timeseries/raid98",
+  "headline": {
+    "name": "Deaths from drug-related poisoning",
+    "uri": "/peoplepopulationandcommunity/healthandsocialcare/drugusealcoholandsmoking/timeseries/raid98"
+  },
   "items": [
-    "/peoplepopulationandcommunity/healthandsocialcare/drugusealcoholandsmoking/timeseries/raid98",
-    "/peoplepopulationandcommunity/healthandsocialcare/drugusealcoholandsmoking/timeseries/raid99",
-    "/peoplepopulationandcommunity/healthandsocialcare/drugusealcoholandsmoking/timeseries/raid100"
+    {
+      "name": "Deaths from drug-related poisoning",
+      "uri": "/peoplepopulationandcommunity/healthandsocialcare/drugusealcoholandsmoking/timeseries/raid98"
+    },
+    {
+      "name": "Deaths from drug misuse",
+      "uri": "/peoplepopulationandcommunity/healthandsocialcare/drugusealcoholandsmoking/timeseries/raid99"
+    },
+    {
+      "name": "Alcohol-related deaths",
+      "uri": "/peoplepopulationandcommunity/healthandsocialcare/drugusealcoholandsmoking/timeseries/raid100"
+    }
   ],
-  "statsBulletinHeadline": "/peoplepopulationandcommunity/healthandsocialcare/drugusealcoholandsmoking/bulletins/deathsrelatedtodrugpoisoninginenglandandwales2012",
+  "statsBulletinHeadline": {
+    "name": "Deaths Related to Drug Poisoning in England and Wales, 2012",
+    "uri": "/peoplepopulationandcommunity/healthandsocialcare/drugusealcoholandsmoking/bulletins/deathsrelatedtodrugpoisoninginenglandandwales2012"
+  },
   "statsBulletins": [
-    "/peoplepopulationandcommunity/healthandsocialcare/drugusealcoholandsmoking/bulletins/alcoholrelateddeathsintheunitedkingdom",
-    "/peoplepopulationandcommunity/healthandsocialcare/drugusealcoholandsmoking/bulletins/deathsregisteredinenglandandwales2013",
-    "/peoplepopulationandcommunity/healthandsocialcare/drugusealcoholandsmoking/bulletins/deathsrelatedtodrugpoisoninginenglandandwales2012"
+    {
+      "name": "Alcohol-related deaths in the United Kingdom",
+      "uri": "/peoplepopulationandcommunity/healthandsocialcare/drugusealcoholandsmoking/bulletins/alcoholrelateddeathsintheunitedkingdom"
+    },
+    {
+      "name": "Deaths Registered in England and Wales, 2013",
+      "uri": "/peoplepopulationandcommunity/healthandsocialcare/drugusealcoholandsmoking/bulletins/deathsregisteredinenglandandwales2013"
+    },
+    {
+      "name": "Deaths Related to Drug Poisoning in England and Wales, 2012",
+      "uri": "/peoplepopulationandcommunity/healthandsocialcare/drugusealcoholandsmoking/bulletins/deathsrelatedtodrugpoisoninginenglandandwales2012"
+    }
   ],
   "datasets": [],
   "level": "t3",

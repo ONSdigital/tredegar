@@ -1071,6 +1071,10 @@
     "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/annualsurveyofhoursandearnings2013provisionalresults",
     "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/annualsurveyofhoursandearningspensiontables2013provisionalresults"
   ],
+  "relatedTimeseries": [
+    "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/timeseries/kai9"
+  ],
+  "source": "Labour Force Survey",
   "type": "timeseries",
   "name": "Average weekly earning (regular pay)",
   "fileName": "kai7",

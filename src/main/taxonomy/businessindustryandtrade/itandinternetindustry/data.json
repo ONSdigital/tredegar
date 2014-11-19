@@ -1,14 +1,35 @@
 {
-  "headline": "/businessindustryandtrade/itandinternetindustry/timeseries/raid15",
+  "headline": {
+    "name": "Total e-commerce sales",
+    "uri": "/businessindustryandtrade/itandinternetindustry/timeseries/raid15"
+  },
   "items": [
-    "/businessindustryandtrade/itandinternetindustry/timeseries/raid15",
-    "/businessindustryandtrade/itandinternetindustry/timeseries/raid16",
-    "/businessindustryandtrade/itandinternetindustry/timeseries/raid17",
-    "/businessindustryandtrade/itandinternetindustry/timeseries/raid18"
+    {
+      "name": "Total e-commerce sales",
+      "uri": "/businessindustryandtrade/itandinternetindustry/timeseries/raid15"
+    },
+    {
+      "name": "E-commerce sales (% turnover)",
+      "uri": "/businessindustryandtrade/itandinternetindustry/timeseries/raid16"
+    },
+    {
+      "name": "Business with a website",
+      "uri": "/businessindustryandtrade/itandinternetindustry/timeseries/raid17"
+    },
+    {
+      "name": "Business with a broadband",
+      "uri": "/businessindustryandtrade/itandinternetindustry/timeseries/raid18"
+    }
   ],
-  "statsBulletinHeadline": "/businessindustryandtrade/itandinternetindustry/bulletins/ecommerceandictactivity",
+  "statsBulletinHeadline": {
+    "name": "E-Commerce and ICT Activity",
+    "uri": "/businessindustryandtrade/itandinternetindustry/bulletins/ecommerceandictactivity"
+  },
   "statsBulletins": [
-    "/businessindustryandtrade/itandinternetindustry/bulletins/ecommerceandictactivity"
+    {
+      "name": "E-Commerce and ICT Activity",
+      "uri": "/businessindustryandtrade/itandinternetindustry/bulletins/ecommerceandictactivity"
+    }
   ],
   "datasets": [],
   "level": "t3",

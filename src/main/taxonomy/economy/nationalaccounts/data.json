@@ -1,16 +1,43 @@
 {
-  "headline": "/economy/nationalaccounts/timeseries/hbop",
+  "headline": {
+    "name": "Balance of Payments: Current balance",
+    "uri": "/economy/nationalaccounts/timeseries/hbop"
+  },
   "items": [
-    "/economy/nationalaccounts/timeseries/hbop",
-    "/businessindustryandtrade/internationaltrade/timeseries/ikbj",
-    "/economy/nationalaccounts/timeseries/hboj",
-    "/businessindustryandtrade/internationaltrade/timeseries/ikbh",
-    "/businessindustryandtrade/internationaltrade/timeseries/ikbi",
-    "/economy/nationalaccounts/timeseries/ikbp"
+    {
+      "name": "Balance of Payments: Current balance",
+      "uri": "/economy/nationalaccounts/timeseries/hbop"
+    },
+    {
+      "name": "Trade in goods and services deficit (or surplus)",
+      "uri": "/businessindustryandtrade/internationaltrade/timeseries/ikbj"
+    },
+    {
+      "name": "Balance of Payments: Total income",
+      "uri": "/economy/nationalaccounts/timeseries/hboj"
+    },
+    {
+      "name": "Total exports of goods and services",
+      "uri": "/businessindustryandtrade/internationaltrade/timeseries/ikbh"
+    },
+    {
+      "name": "Total imports of goods and services",
+      "uri": "/businessindustryandtrade/internationaltrade/timeseries/ikbi"
+    },
+    {
+      "name": "Current Transfers",
+      "uri": "/economy/nationalaccounts/timeseries/ikbp"
+    }
   ],
-  "statsBulletinHeadline": "/economy/nationalaccounts/bulletins/balanceofpayments",
+  "statsBulletinHeadline": {
+    "name": "Balance of Payments",
+    "uri": "/economy/nationalaccounts/bulletins/balanceofpayments"
+  },
   "statsBulletins": [
-    "/economy/nationalaccounts/bulletins/balanceofpayments"
+    {
+      "name": "Balance of Payments",
+      "uri": "/economy/nationalaccounts/bulletins/balanceofpayments"
+    }
   ],
   "datasets": [],
   "level": "t3",

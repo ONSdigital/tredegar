@@ -1,18 +1,51 @@
 {
-  "headline": "/economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/annx",
+  "headline": {
+    "name": "Public sector net borrowing excluding financial interventions",
+    "uri": "/economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/annx"
+  },
   "items": [
-    "/economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/annx",
-    "/economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/rutn",
-    "/economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/ruto",
-    "/economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/hf6w",
-    "/economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/hf6x",
-    "/economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/anmu",
-    "/economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/annw",
-    "/economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/rurq"
+    {
+      "name": "Public sector net borrowing excluding financial interventions",
+      "uri": "/economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/annx"
+    },
+    {
+      "name": "Public Sector net debt excluding banks",
+      "uri": "/economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/rutn"
+    },
+    {
+      "name": "Public Sector net debt excluding banks as a percentage of GDP",
+      "uri": "/economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/ruto"
+    },
+    {
+      "name": "Public Sector current budget excluding banks",
+      "uri": "/economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/hf6w"
+    },
+    {
+      "name": "Public Sector net lending excluding banks",
+      "uri": "/economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/hf6x"
+    },
+    {
+      "name": "Public Sector current budget",
+      "uri": "/economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/anmu"
+    },
+    {
+      "name": "Public Sector net investment",
+      "uri": "/economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/annw"
+    },
+    {
+      "name": "Public Sector Net Cash Requirement (NCR)",
+      "uri": "/economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/rurq"
+    }
   ],
-  "statsBulletinHeadline": "/economy/governmentpublicsectorandtaxes/publicsectorfinance/bulletins/publicsectorfinances",
+  "statsBulletinHeadline": {
+    "name": "Public Sector Finances",
+    "uri": "/economy/governmentpublicsectorandtaxes/publicsectorfinance/bulletins/publicsectorfinances"
+  },
   "statsBulletins": [
-    "/economy/governmentpublicsectorandtaxes/publicsectorfinance/bulletins/publicsectorfinances"
+    {
+      "name": "Public Sector Finances",
+      "uri": "/economy/governmentpublicsectorandtaxes/publicsectorfinance/bulletins/publicsectorfinances"
+    }
   ],
   "datasets": [],
   "level": "t3",

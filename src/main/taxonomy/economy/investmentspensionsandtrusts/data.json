@@ -1,13 +1,31 @@
 {
-  "headline": "/economy/investmentspensionsandtrusts/timeseries/raid135",
+  "headline": {
+    "name": "Net investment flows into the UK",
+    "uri": "/economy/investmentspensionsandtrusts/timeseries/raid135"
+  },
   "items": [
-    "/economy/investmentspensionsandtrusts/timeseries/raid135",
-    "/economy/investmentspensionsandtrusts/timeseries/raid136",
-    "/economy/investmentspensionsandtrusts/timeseries/raid137"
+    {
+      "name": "Net investment flows into the UK",
+      "uri": "/economy/investmentspensionsandtrusts/timeseries/raid135"
+    },
+    {
+      "name": "Net flow of direct investment abroad by UK companies",
+      "uri": "/economy/investmentspensionsandtrusts/timeseries/raid136"
+    },
+    {
+      "name": "Net investment flows to Europe",
+      "uri": "/economy/investmentspensionsandtrusts/timeseries/raid137"
+    }
   ],
-  "statsBulletinHeadline": "/economy/investmentspensionsandtrusts/bulletins/foreigndirectinvestmentinvolvingukcompanies",
+  "statsBulletinHeadline": {
+    "name": "Foreign Direct Investment Involving UK Companies",
+    "uri": "/economy/investmentspensionsandtrusts/bulletins/foreigndirectinvestmentinvolvingukcompanies"
+  },
   "statsBulletins": [
-    "/economy/investmentspensionsandtrusts/bulletins/foreigndirectinvestmentinvolvingukcompanies"
+    {
+      "name": "Foreign Direct Investment Involving UK Companies",
+      "uri": "/economy/investmentspensionsandtrusts/bulletins/foreigndirectinvestmentinvolvingukcompanies"
+    }
   ],
   "datasets": [],
   "level": "t3",
