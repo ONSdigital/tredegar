@@ -9,10 +9,16 @@ Next release: soon
 
 # What happened to all the money?
 
+## Article summary
+Summarise article.
+
 ## Section one
 Jarogonium est jargonius et dameleie statisticum seculum mondi.
 
 ## Section two
-Lorem ipsum
+Lorem ipsum article
  * bullet1
  * bullet2
+
+## [accordion] Footnotes
+Article footer

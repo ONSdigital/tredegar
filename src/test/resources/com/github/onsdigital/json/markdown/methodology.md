@@ -6,10 +6,16 @@ More: nation
 
 # How do we work out the numbers?
 
+## Methodology summary
+Summarise methodology.
+
 ## Section one
 Jarogonium est jargonius et dameleie statisticum seculum mondi.
 
 ## Section two
-Lorem ipsum
+Lorem ipsum methodology
  * bullet1
  * bullet2
+
+## [accordion] Footnotes
+Methodology footer
