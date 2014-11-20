@@ -1,6 +1,28 @@
+<<<<<<< HEAD
+<section class="hero-banner">
+    <div class="panel--pad slate--hero-banner">
+        <div class="wrapper">
+            <div class="grid-wrap panel--bottom-mar-small">
+                <div class="grid-col tablet-grid-three-quarters home_hero_img" alt="manufacturing map">
+                </div>
+                <div class="grid-col tablet-grid-one-quarter hero-stat-box">
+                    <header>
+                        <h2 class="hero-banner__main-title panel--bottom-mar">Importers of UK manufactured goods</h2>
+                    </header>
+                    <p class="home_hero_comments">
+                        Which are the top 10 countries?
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+=======
 <!--New homepage starts here!-->
 
 
+>>>>>>> tredegar/T1redesign
 
       <div class="wrapper panel">
         <article class="box flush">
@@ -11,6 +33,32 @@
           </header>
         <!-- /box__header -->
 
+<<<<<<< HEAD
+<div class="wrapper offset-top nav-panels">
+    <div class="grid-wrap">
+        <div ng-repeat="section in taxonomy.data.sections" class="grid-col tablet-wide-grid-one-quarter">
+            <article class="nav-panel nav-panel--stats sectioned lifted border-defined">
+                <div class="navpanel_wrapper">
+                    <header class="nav-panel__header nav-panel__roomy">
+                        <h2 class="delta">{{section.name}}</h2>
+                    </header>
+                    <section ng-repeat="item in section.items" class="nav-panel__roomy">
+                        <p><a href="#!{{item.uri}}">{{item.name}}</a>
+                        </p>
+                        <ons-loading condition="!item.data"></ons-loading>
+                        <div class="box box--inline flush--bottom">
+                            <div class="stat">
+                                <div class="stat--small stat__figure">
+                                    {{item.data.number}}
+                                    <span class="stat__figure__unit">{{item.data.unit}}</span>
+                                </div>
+
+                  			</div>
+                  			<p> {{item.data.date}} <ons-info-tooltip tip="{{item.data.keyNote}}" tip-class="icon--large icon--med"></ons-info-tooltip></p>
+                        <ons-sparkline chart-data="item.chartData"></ons-sparkline>
+              			</div>
+              		</section>
+=======
         <div class="box__content">
             <p>Welcome to the Office for National Statistics website, the UK's largest independent producer of official statistics and the recognised national statistical institute of the UK.</p>
           <!--  /list-bullet -->
@@ -25,8 +73,8 @@
     <div class="panel slate--home--hero-banner">
       <div class="wrapper nav-panels">
         <div class="grid-wrap">
-          <div ng-repeat="section in taxonomy.data.sections" class="grid-col tablet-wide-grid-one-fifth">
-            <article ng-repeat="item in section.items" class="nav-panel nav-panel--stats sectioned">
+          <div ng-repeat="sections in taxonomy.data.sections" class="grid-col tablet-wide-grid-one-fifth">
+            <article ng-repeat="item in sections.items" class="nav-panel nav-panel--stats sectioned">
               <div  class="navpanel_wrapper_home">
                 <header class="nav-panel__header nav-panel__header_home nav-panel__roomy--med">
                   <h2 class="delta">{{item.name}}</h2>
@@ -34,7 +82,7 @@
                 <div class="nav-panel__roomy box flush">
                   <ul class="list--neutral">
                     <li class="nav-panel__body flush">
-                      <dl class="homeicon_{{section.link}} flush--bottom">
+                      <dl class="homeicon_{{sections.name}} flush--bottom">
                         <dd class="nav-panel__value">
                           <div class="stat">
                             <div class="stat__figure nav_home-stats">
@@ -45,8 +93,7 @@
                         </dd>
                       </dl>                    
                     </li>
-                    <li class="nav-panel__item">
-                      <ons-sparkline chart-data="item.chartData"></ons-sparkline>
+                    <li class="nav-panel__item homeicon_sparkline">
                     </li>
                   </ul>
                   <!-- /nav-panel__roomy -->
@@ -55,10 +102,25 @@
               </div>
               <footer class="nav-panel__footer-home">
                 <div class="nav-panel__action background_neutral ">
-                  <a class="nav-panel__roomy--med" href="#!{{getPath()}}{{section.link}}">Explore {{section.name}}</a>
+                  <a class="nav-panel__roomy--med" href="{{getPath()}}{{section.link}}">Explore {{sections.name}}</a>
+>>>>>>> tredegar/T1redesign
                 </div>
-              </footer>
+                <footer class="nav-panel__footer">
+                    <div class="nav-panel__action ">
+                        <a class="nav-panel__roomy no_underline" href="#!{{getPath()}}{{section.link}}">View all</a>
+                    </div>
+                </footer>
             </article>
+<<<<<<< HEAD
+
+            <!-- /nav-panel -->
+        </div>
+        <!-- /grid-col -->
+    </div>
+    <!-- /grid-wrap -->
+</div>
+<!-- /wrapper -->
+=======
           </div>
           <!-- /grid-wrap -->
         </div>
@@ -66,6 +128,7 @@
       </div>
       <!-- /panel-->      
     </div>
+>>>>>>> tredegar/T1redesign
 
     <!-- panel wrapper -->
     <section class="panel wrapper flush--bottom ">
@@ -94,6 +157,148 @@
             <!-- /grid-col -->
           </div>
 
+<<<<<<< HEAD
+<div class="wrapper panel--top-pad">
+    <div class="grid-wrap">
+        <div class="grid-col desktop-grid-one-half tablet-grid-one-half">
+            <article class="box box--orange box--orange--separated-left">
+                <div class="box__inner border box--padded home_box_img_left">
+                    <div class="grid-wrap">
+                        <div class="grid-col tablet-grid-one-half">
+
+                            <div class="media__body">
+                                <header class="box__header">
+                                    <h2 class="gamma">
+
+                                        <a class="no_underline" href="#"></a>
+                                    </h2>
+                                </header>
+                                <!-- /box__header -->
+                                <div class="box__content">
+                                    <p></p>
+                                </div>
+                                <!-- /box__content -->
+                            </div>
+                        </div>
+                        <div class="grid-col tablet-grid-one-half">
+
+                            <div class="media__body">
+                                <header class="box__header">
+                                    <h2 class="delta field--spaced">
+
+                                        <a class="no_underline" href="#">
+                          Baby names
+                        </a>
+                                    </h2>
+                                </header>
+                                <!-- /box__header -->
+                                <div class="box__content">
+                                    <p>
+                                        Harry and Amelia still topping the charts?
+                                    </p>
+                                </div>
+                                <!-- /box__content -->
+
+                            </div>
+                        </div>
+                        <a href="#">
+                            <span class="cta_chevron icon-right-open-big  icon--warm"></span>
+                        </a>
+                        <!-- /media -->
+                    </div>
+                    <!-- /box__inner -->
+                </div>
+            </article>
+            <!-- /grid-col -->
+        </div>
+
+
+
+
+        <div class="grid-col desktop-grid-one-half  tablet-grid-one-half">
+            <article class="box box--orange box--orange--separated-left">
+                <div class="box__inner border box--padded home_box_img_right">
+                    <div class="grid-wrap">
+                        <div class="grid-col tablet-grid-one-half">
+
+                            <div class="media__body">
+                                <header class="box__header">
+                                    <h2 class="gamma">
+                                        <a class="no_underline" href="#">
+                                        </a>
+                                    </h2>
+                                </header>
+                                <!-- /box__header -->
+                                <div class="box__content">
+                                    <p>
+                                    </p>
+                                </div>
+                                <!-- /box__content -->
+                            </div>
+                        </div>
+                        <div class="grid-col tablet-grid-one-half">
+                            <div class="media__body">
+                                <header class="box__header">
+                                    <h2 class="delta field--spaced">
+                                        <a class="no_underline" href="#">
+                          ONS Visual
+                          </a>
+                                    </h2>
+                                </header>
+                                <!-- /box__header -->
+                                <div class="box__content">
+                                    <p>
+                                        See our data in a new light
+                                    </p>
+                                </div>
+                                <!-- /box__content -->
+                            </div>
+                        </div>
+                        <a href="#">
+                            <span class="cta_chevron icon-right-open-big  icon--warm"></span>
+                        </a>
+
+                        <!-- /media -->
+                    </div>
+                    <!-- /box__inner -->
+                </div>
+            </article>
+            <!-- /box -->
+        </div>
+        <!-- /grid-col -->
+    </div>
+    <!-- /wrapper-->
+</div>
+
+
+<div class="wrapper">
+    <div class="panel--top-pad panel--bottom-mar-large panel--separated--top--large flush--bottom">
+        <div class="grid-wrap">
+            <div class="grid-col desktop-grid-one-third">
+                <h2 class="beta">Looking for local statistics?</h2>
+            </div>
+            <div class="grid-col desktop-grid-two-thirds">
+                <div class="grid-wrap">
+                    <div class="grid-col tablet-grid-one-third linkbox-padded">
+                        <h2><a class="no_underline" href="http://www.neighbourhood.statistics.gov.uk/dissemination/">NESS</a>
+                        </h2>
+                        <p>Neighbourhood statistics site</p>
+                    </div>
+
+                    <div class="grid-col tablet-grid-one-third linkbox-padded">
+                        <h2><a class="no_underline" href="https://www.nomisweb.co.uk/">NOMIS</a>
+                        </h2>
+                        <p>Labour market statistics</p>
+                    </div>
+
+                    <div class="grid-col tablet-grid-one-third linkbox-padded">
+                        <h2><a class="no_underline" href=" http://www.ons.gov.uk/ons/data/area-first/">Data Explorer</a>
+                        </h2>
+                        <p>Explore the Census 2011 outputs</p>
+                    </div>
+                </div>
+            </div>
+=======
           <!-- grid-col -->
           <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
           <article class="box--padded-vertical">
@@ -329,8 +534,44 @@
             </div>
           </article>
           <!-- /grid-col -->
+>>>>>>> tredegar/T1redesign
         </div>
+        <!-- /panel -->
+    </div>
 
+<<<<<<< HEAD
+    <div class="panel--top-pad panel--bottom-mar-large panel--separated--top--large">
+        <div class="grid-wrap">
+            <div class="grid-col desktop-grid-one-third">
+                <h2 class="beta">Other official statistics?</h2>
+            </div>
+            <div class="grid-col desktop-grid-two-thirds">
+                <div class="grid-wrap">
+                    <div class="grid-col tablet-grid-one-third linkbox-padded">
+                        <h2><a class="no_underline" href="https://www.gov.uk/government/statistics">GOV.UK</a>
+                        </h2>
+                        <p></p>
+                    </div>
+
+                    <div class="grid-col tablet-grid-one-third linkbox-padded">
+                        <h2><a class="no_underline" href="https://statswales.wales.gov.uk/Catalogue">StatsWales</a>
+                        </h2>
+                        <p></p>
+                    </div>
+
+                    <div class="grid-col tablet-grid-one-third linkbox-padded">
+                        <h2><a class="no_underline" href="http://www.scotland.gov.uk/Topics/Statistics">ScotStat</a>
+                        </h2>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /panel -->
+    </div>
+    <!-- /wrapper -->
+</div>
+=======
         
           <div class="grid-col desktop-grid-one-quarter tablet-grid-one-half tablet-grid-clear">
             <article class="box--padded-vertical">
@@ -378,3 +619,4 @@
 
 
   
+>>>>>>> tredegar/T1redesign
