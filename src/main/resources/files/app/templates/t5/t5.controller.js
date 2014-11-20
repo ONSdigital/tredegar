@@ -50,11 +50,11 @@
                     }
                 }
             }
-        
+
 	        function loadRelatedTimeseries(data) {
 	            var dataPath = '/data'
 	            var relatedTimeserieses = data.relatedTimeseries;
-	
+
 	            if (relatedTimeserieses != null) {
 	                for (var i = 0; i < relatedTimeserieses.length; i++) {
 	                    var timeseries = relatedTimeserieses[i]
@@ -259,20 +259,19 @@
                 ctrl.showMonthly = ArrayUtil.isNotEmpty(data.months)
                 ctrl.showQuarterly = ArrayUtil.isNotEmpty(data.quarters)
 
-                if (ctrl.showMonthly) {
-                    ctrl.activeChart = 'months'
-                    data.months = formatData(data.months)
+                if (ctrl.showYearly) {
+                    ctrl.activeChart = 'years'
+                    data.years = formatData(data.years)
                 }
 
                 if (ctrl.showQuarterly) {
                     ctrl.activeChart = 'quarters'
                     data.quarters = formatData(data.quarters)
-
                 }
 
-                if (ctrl.showYearly) {
-                    ctrl.activeChart = 'years'
-                    data.years = formatData(data.years)
+                if (ctrl.showMonthly) {
+                    ctrl.activeChart = 'months'
+                    data.months = formatData(data.months)
                 }
 
                 if ((ctrl.showMonthly || ctrl.showYearly || ctrl.showQuarterly)) {

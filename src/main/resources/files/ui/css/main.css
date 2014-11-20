@@ -1504,7 +1504,9 @@ textarea {
 
    .tablet-wide-grid-one-fifth,
     .tablet-wide-grid-set-one-fifth .tablet-wide-grid-col {
-      width: 20%; }
+      max-width: 19%;
+      width: 19%;
+      margin-right: 1% }
       .lt-ie8 .tablet-wide-grid-one-fifth, .lt-ie8
       .tablet-wide-grid-set-one-fifth .tablet-wide-grid-col {
         width: 16%; }
@@ -1856,6 +1858,14 @@ small, .definition {
     font-size: 27px;
     font-size: 2.7rem;
     line-height: 1.333333333; } }
+
+@media screen and (max-width: 1000px) and (min-width: 800px) {
+h3,
+.delta, .content-image__title {
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.105263158; }}
+
 
 @media screen and (min-width: 38em) {
   .lead,
@@ -2843,6 +2853,31 @@ lesser , applied styles
       padding-right: 30px;
       padding-right: 3rem; } }
 
+.nav-panel__roomy--med {
+  padding-right: 10px;
+  padding-right: 1rem;
+  padding-left: 10px;
+  padding-left: 1rem; }
+  @media screen and (min-width: 38em) {
+    .nav-panel__roomy--med {
+      padding-left: 10px;
+      padding-left: 1rem;
+      padding-right: 10px;
+      padding-right: 1rem; } }
+  @media screen and (min-width: 56em) {
+    .nav-panel__roomy--med {
+      /*padding-left: 14px;
+      padding-left: 1.4rem;*/
+      padding-right: 10px;
+      padding-right: 1.0rem; } }
+  @media screen and (max-width: 450px) {
+    .nav-panel__roomy--med {
+      /*padding-left: 14px;
+      padding-left: 1.4rem;*/
+      padding-right: 10px;
+      padding-right: 1.0rem;
+      padding-bottom: 2em; } }
+
 .nav-panel__body {
   padding-bottom: 15px;
   padding-bottom: 1.5rem; }
@@ -2854,7 +2889,9 @@ lesser , applied styles
   font-family: "open-sans-n7", "open-sans", sans-serif;
   font-size: 18px;
   font-size: 1.8rem;
-  background-color: #ddf3ff; }
+  /*background-color: #ddf3ff;*/
+  padding-top: 1rem;
+  padding-right: 1rem; }
   .nav-panel__action:hover:after {
     color: #007af6; }
   .nav-panel__action:after {
@@ -2876,7 +2913,12 @@ lesser , applied styles
     @media screen and (min-width: 38em) {
       .nav-panel__action:after {
         right: 15px;
-        right: 1.5rem; } }
+        right: 1.5rem;
+         } }
+    /*@media screen and (max-width: 770px) {
+      .nav-panel__action:after {
+        top: 50% !important;
+         } }*/     
   .nav-panel__action > a {
     position: relative;
     z-index: 10;
@@ -2890,12 +2932,14 @@ lesser , applied styles
     padding-bottom: 1.5rem; }
     @media screen and (min-width: 38em) {
       .nav-panel__action > a {
-        padding-right: 60px;
+      /*  padding-right: 60px;
         padding-right: 6rem; } }
     @media screen and (min-width: 56em) {
       .nav-panel__action > a {
-        padding-right: 70px;
-        padding-right: 7rem; } }
+        /*padding-right: 70px;
+        padding-right: 7rem; values changed to accomodate new homepage*/
+        padding-right: 20px;
+        padding-right: 2rem; } }
 
 .nav-panel__footer .nav-panel__action:after {
   font-size: 200%; }
@@ -2904,6 +2948,31 @@ lesser , applied styles
   padding-top: 3rem;
   padding-bottom: 30px;
   padding-bottom: 3rem; }
+
+.nav-panel__footer-home .nav-panel__action:after {
+  font-size: 200%; }
+.nav-panel__footer-home a {
+  padding-top: 30px;
+  padding-top: 3rem;
+  padding-bottom: 10px;
+  padding-bottom: 1rem; 
+  font-size: 70%;
+  height: 9.5rem }
+
+@media screen and (max-width: 800px){
+.nav-panel__footer-home .nav-panel__action:after {
+  font-size: 200%; }
+.nav-panel__footer-home a {
+  font-size: 95%;
+  padding: 1.7em;
+  }
+
+
+
+
+
+
+}  
 
 .nav-panel__title,
 .nav-panel__value {
@@ -3293,6 +3362,16 @@ lesser , applied styles
 
 .slate--hero-banner {
   background-color: #e4e5e3;
+ 
+  opacity: 15;
+  /*background-image: url("/ui/img/hero-banner.jpg");*/
+  background-position: 50% 50%;
+  background-size: cover; }
+
+.slate--home--hero-banner {
+  background-color: #f4f5dd;
+ 
+  opacity: 15;
   /*background-image: url("/ui/img/hero-banner.jpg");*/
   background-position: 50% 50%;
   background-size: cover; }
@@ -3433,9 +3512,18 @@ $SPLIT
   vertical-align: baseline; }
 
 .stat__description {
+  position: relative;
   display: block;
   font-size: 12px;
   font-size: 1.2rem; }
+
+.stat__description-large {
+  
+  display: block;
+  font-weight: normal;
+  font-size: 13.5px;
+  font-size: 1.35rem;
+  text-align: center;}
 
 .stat--headline .stat__figure {
   font-size: 40px;
@@ -4396,7 +4484,9 @@ ul.simple-pagination {
 }
 
 .div_panel_link{
-  float: right;
+  top: 170px;
+  position: absolute;
+  right: 30px;
 }
 
 
@@ -4574,9 +4664,9 @@ background-color: #edeeee !important;/* altered on phil's advice--change this ov
   min-width: 30%;
 }
 
-.pad_regional_header{
-  padding-left: 10rem;
-}
+/*.pad_regional_header{
+  padding: 5rem;
+}*/
 
 .link_head{
   /*float: left;
@@ -5226,10 +5316,12 @@ td.datatable-downloads{
   /*background-size: cover;*/
   height: 18rem }
 
-.home_box_img_right {
-  background-image: url("/ui/img/onsvisual.png");
+.homeicon_datavis {
+  background-image: url("/ui/img/Data_Vis.png");
   background-position: 25% 25%;
-  height: 18rem; }
+  background-size: cover;
+  height: 18rem }
+}
 
 .home_hero_img {
   background-image: url("/ui/img/hero1.png");
@@ -5239,6 +5331,128 @@ td.datatable-downloads{
   height: 25rem;
   overflow: hidden;
   }
+
+.homeicon_census{
+  background-image: url("/ui/img/Census.png");
+  background-position: 25% 25%;
+  background-size: cover;
+  height: 18rem }
+
+
+.homeicon_GDP{
+  background-image: url("/ui/img/CPI_GDP.png");
+  background-position: 35% -70%;
+  background-repeat: no-repeat;
+  height: 5.5em;
+} 
+
+.homeicon_employment{
+  background-image: url("/ui/img/Employment.png");
+  background-position: 35% -70%;
+  background-repeat: no-repeat;
+  height: 5.5em;
+  } 
+
+.homeicon_trade{
+  background-image: url("/ui/img/Trade.png");
+  background-position: 35% -70%;
+  background-repeat: no-repeat;
+  height: 5.5em;
+} 
+
+.homeicon_population{
+  background-image: url("/ui/img/Population.png");
+  background-position: 35% -70%;
+  background-repeat: no-repeat;
+  height: 5.5em;
+}
+
+.homeicon_sparkline{
+  background-image: url("/ui/img/sparkline.png");
+  background-position: 30%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 6.5em;
+  border: 0px;
+}
+
+@media screen and (max-width: 800px){
+  .homeicon_GDP{
+  background-image: url("/ui/img/CPI_GDP.png");
+  background-position: 0% -70%;
+  background-repeat: no-repeat;
+  height: 5.5em;
+} 
+
+.homeicon_employment{
+  background-image: url("/ui/img/Employment.png");
+  background-position: 0% -70%;
+  background-repeat: no-repeat;
+  height: 5.5em;
+  } 
+
+.homeicon_trade{
+  background-image: url("/ui/img/Trade.png");
+  background-position: 2% -70%;
+  background-repeat: no-repeat;
+  height: 5.5em;
+} 
+
+.homeicon_population{
+  background-image: url("/ui/img/Population.png");
+  background-position: 2% -70%;
+  background-repeat: no-repeat;
+  height: 5.5em;
+}
+
+.homeicon_sparkline{
+  background-image: url("/ui/img/sparkline.png");
+  background-position: 4% 30%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 6.5em;
+  border: 0px;
+}
+.nav-panel__body.flush{
+  position: relative;
+  left: 30%;
+}
+.nav-panel__item.homeicon_sparkline{
+ position: relative;
+left: 25%; 
+}
+}
+
+@media screen and (min-width: 800px){
+  .navpanel_link{
+    text-align: right;
+    margin-right: 35px;
+  }
+  .navpanel_wrapper{
+  height: 17em;
+
+  /*line-height: 1.3;*/
+  overflow: hidden;
+  padding: 0;}
+
+.navpanel_wrapper_home{
+  max-height: 25em;
+  height: 20em;
+  overflow: hidden;
+  padding: 0;}
+}
+
+
+.nav_home-stats{
+  padding-top: 0.5em;
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.home_callout{
+  min-height: 15em;
+}
 
 .hero-wrapper{
   width: 100%;
@@ -5269,13 +5483,41 @@ td.datatable-downloads{
   height: 25rem;
 }
 
-@media screen and (min-width: 800px){
-  .navpanel_wrapper{
-  height: 17em;
-  /*line-height: 1.3;*/
-  overflow: hidden;
-  padding: 0;}
+@media screen and (min-width: 900px){
+.callout-link{
+    position: relative;
+    padding-left: 20%;
+    padding-bottom: 10%}
+
+.background_neutral{
+  background-color: #fff !important;
 }
+
+.nav-panel--padsmall{
+  padding-right: 1rem !important;
+}
+
+.rem_border{
+  border: 0px;
+}
+
+.nav-panel__header_home{
+  height: 8rem;
+}
+}
+
+@media screen and (max-width: 900px) {
+.callout-header{
+  font-size: 1.4em;}
+}
+
+.text a {
+  position: relative;
+  top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);}
+
 
 /*------------------------------------*\
  DATA VERSIONS PAGE STLES
