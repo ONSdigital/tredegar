@@ -38,7 +38,7 @@ public class ArticleMarkdownTest {
 		Path path = Paths.get(classLoader.getResource(resourceName).toURI());
 
 		// When
-		article = new ArticleMarkdown().readArticle(path);
+		article = ArticleMarkdown.readArticle(path);
 
 		// Then
 

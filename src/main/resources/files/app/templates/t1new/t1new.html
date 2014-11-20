@@ -1,230 +1,384 @@
+<!--New homepage starts here!-->
 
-      <section class="hero-banner">
-        <div class="panel--pad slate--hero-banner">
-          <div class="wrapper">
-           <div class="grid-wrap panel--bottom-mar-small">
-            <div class="grid-col tablet-grid-three-quarters home_hero_img" alt="manufacturing map">
-            </div>
-            <div class="grid-col tablet-grid-one-quarter hero-stat-box">
-              <header>
-                <h2 class="hero-banner__main-title panel--bottom-mar">Importers of UK manufactured goods</h2>
-              </header>
-                <p class="home_hero_comments">
-                Which are the top 10 countries?
-                </p>
 
-            </div>
-            </div>
-          </div>
+
+      <div class="wrapper panel">
+        <article class="box flush">
+          <header class="box__header">
+            <h2>
+            Welcome to the Office for National Statistics
+            </h2>
+          </header>
+        <!-- /box__header -->
+
+        <div class="box__content">
+            <p>The UK's largest independent producer of official statistics and the recognised national statistical institute of the UK.</p>
+          <!--  /list-bullet -->
         </div>
-      </section>
+        <!-- /box__content -->
+       
+      </article>
+    </div>
+ 
 
-
-      <div class="wrapper offset-top nav-panels">
+    <!-- panel -->
+    <div class="panel slate--home--hero-banner">
+      <div class="wrapper nav-panels">
         <div class="grid-wrap">
-          <div ng-repeat="section in taxonomy.data.sections" class="grid-col tablet-wide-grid-one-quarter">
-            <article class="nav-panel nav-panel--stats sectioned lifted border-defined">
-              <div class="navpanel_wrapper">
-              <header class="nav-panel__header nav-panel__roomy">
-                <h2 class="delta">{{section.name}}</h2>
-              </header>
-              <section ng-repeat="item in section.items" class="nav-panel__roomy">
-                <p><a href="#!{{item.uri}}">{{item.name}}</a></p>
-
-              <div class="box box--inline flush--bottom">
-                  <div class="stat">
-                    <div class="stat--small stat__figure">
-                      {{item.data.number}}
-                      <span class="stat__figure__unit">{{item.data.unit}}</span>
-                    </div>
-
-                  </div>
-                  <p> {{item.data.date}}  <span tabindex="0" class="tooltips icon-info-circled icon--warm icon--inline icon--large icon--med tooltipstered"></span>
-              </div>
-              </section>
+          <div ng-repeat="section in taxonomy.data.sections" class="grid-col tablet-wide-grid-one-fifth">
+            <article ng-repeat="item in section.items" class="nav-panel nav-panel--stats sectioned">
+              <div  class="navpanel_wrapper_home">
+                <header class="nav-panel__header nav-panel__header_home nav-panel__roomy--med">
+                  <h2 class="delta">{{item.name}}</h2>
+                </header>
+                <div class="nav-panel__roomy box flush">
+                  <ul class="list--neutral">
+                    <li class="nav-panel__body flush">
+                      <dl class="homeicon_{{section.link}} flush--bottom">
+                        <dd class="nav-panel__value">
+                          <div class="stat">
+                            <div class="stat__figure nav_home-stats">
+                              {{item.data.number}} <span class="stat__figure__unit">{{item.data.unit}}</span>
+                              <div class="stat__description-large">{{item.data.date}}</div>
+                            </div>
+                          </div>
+                        </dd>
+                      </dl>                    
+                    </li>
+                    <li class="nav-panel__item homeicon_sparkline">
+                      <div style="height:30px"></div>
+                      <ons-sparkline chart-data="item.chartData" width="120" height="50" ></ons-sparkline>
+                    </li>
+                  </ul>
+                  <!-- /nav-panel__roomy -->
                 </div>
-              <footer class="nav-panel__footer">
-                <div class="nav-panel__action ">
-                  <a class="nav-panel__roomy no_underline" href="#!{{getPath()}}{{section.link}}">View all</a>
+                <!-- /navpanel_wrapper_home -->
+              </div>
+              <footer class="nav-panel__footer-home">
+                <div class="nav-panel__action background_neutral ">
+                  <a class="nav-panel__roomy--med" href="#!{{getPath()}}{{section.link}}">Explore {{section.name}}</a>
                 </div>
               </footer>
             </article>
-
-            <!-- /nav-panel -->
           </div>
-          <!-- /grid-col -->
+          <!-- /grid-wrap -->
         </div>
-        <!-- /grid-wrap -->
+        <!-- /wrapper -->        
       </div>
-      <!-- /wrapper -->
+      <!-- /panel-->      
+    </div>
 
-
-      <div class="wrapper panel--top-pad">
-        <div class="grid-wrap">
-          <div class="grid-col desktop-grid-one-half tablet-grid-one-half">
-            <article class="box box--blue box--ons-blue--separated-left">
-              <div class="box__inner border box--padded home_box_img_left">
-                <div class="grid-wrap">
-                  <div class="grid-col tablet-grid-one-half">
-
-                  <div class="media__body">
-                    <header class="box__header">
-                      <h2 class="gamma">
-
-                        <a class="no_underline" href="#"></a>
-                      </h2>
-                    </header>
-                    <!-- /box__header -->
-                    <div class="box__content">
-                      <p></p>
-                    </div>
-                    <!-- /box__content -->
-                  </div>
-                  </div>
-                <div class="grid-col tablet-grid-one-half">
-
-                  <div class="media__body">
-                    <header class="box__header">
-                      <h2 class="delta field--spaced">
-
-                        <a class="no_underline" href="#">
-                          Baby names
-                        </a>
-                      </h2>
-                    </header>
-                    <!-- /box__header -->
-                    <div class="box__content">
-                      <p>
-                        Harry and Amelia still topping the charts?
-                      </p>
-                    </div>
-                    <!-- /box__content -->
-
-                  </div>
-                </div>
-                <a href="#">
-                <span class="cta_chevron icon-right-open-big  icon--warm"></span>
-                </a>
-                <!-- /media -->
-                </div>
-              <!-- /box__inner -->
+    <!-- panel wrapper -->
+    <section class="panel wrapper flush--bottom ">
+      <header class="actionable-header__title">
+        <h2 class="actionable-header__title table-inline ">News this week view</h2>
+          <a class="hide-small" href="#">new and upcoming releases</a>
+      </header>
+      <div class="grid-wrap">
+        <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
+          <article class="box--padded-vertical">
+            <header class="box__header">
+              <h3>
+                <a href="#">Consumer Price Inflation</a>
+              </h3>
+              <!-- /box__header -->
+            </header>
+            
+              <div class="box__content">
+                <ul class="list--table">
+                  <li class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis.</li>
+                </ul>
+                 <!-- /box__content -->
               </div>
+              <!-- /box- -padded-vertical -->
             </article>
             <!-- /grid-col -->
           </div>
 
-
-
-
-        <div class="grid-col desktop-grid-one-half  tablet-grid-one-half">
-            <article class="box box--blue box--ons-blue--separated-left">
-              <div class="box__inner border box--padded home_box_img_right">
-                <div class="grid-wrap">
-                  <div class="grid-col tablet-grid-one-half">
-
-                    <div class="media__body">
-                      <header class="box__header">
-                        <h2 class="gamma">
-                          <a class="no_underline" href="#">
-                          </a>
-                        </h2>
-                      </header>
-                    <!-- /box__header -->
-                      <div class="box__content">
-                        <p>
-                        </p>
-                      </div>
-                    <!-- /box__content -->
-                    </div>
-                  </div>
-                  <div class="grid-col tablet-grid-one-half">
-                    <div class="media__body">
-                      <header class="box__header">
-                        <h2 class="delta field--spaced">
-                          <a class="no_underline" href="#">
-                          ONS Visual
-                          </a>
-                        </h2>
-                      </header>
-                    <!-- /box__header -->
-                      <div class="box__content">
-                        <p>
-                        See our data in a new light
-                        </p>
-                      </div>
-                    <!-- /box__content -->
-                    </div>
-                  </div>
-                  <a href="#">
-                  <span class="cta_chevron icon-right-open-big  icon--warm"></span>
-                  </a>
-
-                <!-- /media -->
+          <!-- grid-col -->
+          <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
+          <article class="box--padded-vertical">
+            <header class="box__header">
+              <h3>
+                <a href="#">Producer Price Index</a>
+              </h3>
+              <!-- /box__header -->
+            </header>
+            
+              <div class="box__content">
+                <ul class="list--table">
+                  <li class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis.</li>
+                </ul>
+                 <!-- /box__content -->
               </div>
-              <!-- /box__inner -->
+              <!-- /box- -padded-vertical -->
+            </article>
+            <!-- /grid-col -->
+          </div>
+          
+          <div class="grid-col desktop-grid-one-third tablet-grid-one-half tablet-grid-clear">
+            <article class="box--padded-vertical">
+            <header class="box__header">
+              <h3>
+                <a href="#">House Price Index</a>
+              </h3>
+              <!-- /box__header -->
+            </header>
+            
+              <div class="box__content">
+                <ul class="list--table">
+                  <li class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis.</li>
+                </ul>
+                 <!-- /box__content -->
+              </div>
+              <!-- /box- -padded-vertical -->
+            </article>
+            <!-- /grid-col -->
+          </div>
+          <div class="grid-col hide-large">
+            <a href="#">View more news items</a>
+          </div>
+          <!-- /grid-wrap -->
+        </div>
+        <!-- /section -->        
+      </section>
+       
+
+      <div class="wrapper panel flush--top">
+        <div class="grid-wrap">
+          <div class="grid-col desktop-grid-one-half tablet-grid-full-width">
+            <article class="box border home_callout homeicon_census">
+              <div class="box__inner box--padded">
+                <div class="grid-wrap">
+                  <div class="grid-col grid-one-half ">
+                    
+                  </div>
+                  <div class="grid-col grid-one-half floater-right ">
+                    <div class="media__body">
+                      <header class="box__header pad_regional_header">
+                        <h2 class="callout-header">
+                          <ul class="list--neutral">
+                            <li>Who we are.</li>
+                            <li>How we live.</li>
+                            <li>What we do.</li>
+                          </ul>
+                        </h2>
+                        <!-- /box__header -->
+                      </header>
+                    </div>
+                  </div>
+                  <div class="box__content list--table__item__body--icon div_panel_link">
+                    <a class="" href="#">2011 Census <span class="icon-right-open-big"></span></a>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <!-- /grid-col -->             
+          </div>
+              
+                
+          <div class="grid-col desktop-grid-one-half tablet-grid-full-width">
+            <article class="box border home_callout homeicon_datavis">
+              <div class="box__inner box--padded ">
+                <div class="grid-wrap">
+                  <div class="grid-col grid-one-half floater-right">
+                    <div class="media__body">
+                      <header class="box__header pad_regional_header">
+                        <h2 class="callout-header">
+                          <ul class="list--neutral">
+                            <li>ONS Data Visualisation</li>
+                          </ul>
+                        </h2>
+                        <!-- /box__header -->
+                      </header>
+                    </div>
+                  </div>
+                  <div class="media__body">
+                    <div class="box__content list--table__item__body--icon div_panel_link">
+                      <a class="" href="#">See our data in a new light <span class="icon-right-open-big"></span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>             
+          </div>
+          <!-- /grid-wrap-->
+        </div>
+        <!-- /wrapper-->
+      </div>
+
+        
+
+    <section class="panel wrapper">
+      <div class="box box--padded--med box--orange--separated-left solid border">
+        <header class="actionable-header__title">
+          <h2 class="actionable-header__title table-inline ">Looking for local statistics?</h2>
+        </header>
+        <div class="grid-wrap">
+          <div class="grid-col desktop-grid-one-quarter tablet-grid-one-half">
+            <article class="box--padded--med">
+              <header class="box__header">
+                <h3>
+                  <a href="#!/localstats">Local data explained </a>
+                </h3>
+                <!-- /box__header -->
+              </header>
+              
+              <div class="box__content">
+                <ul class="list--table">
+                  <li class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis. </li>
+                </ul>
+                <!-- /box__content -->
+              </div>
+              <!-- /article box- -padded- -med" -->
+            </article>
+            <!-- /box -->
+          </div>
+          <!-- /grid-col -->
+          <div class="grid-col desktop-grid-one-quarter tablet-grid-one-half">
+            <article class="box--padded--med">
+              <header class="box__header">
+                <h3>
+                  <a href="https://www.nomisweb.co.uk/">Labour Market data </a>
+                </h3>
+              </header>
+              <!-- /box__header -->
+              <div class="box__content">
+                <ul class="list--table">
+                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis. </li>
+                </ul>
+                <!-- /box__content -->                
               </div>
             </article>
             <!-- /box -->
           </div>
           <!-- /grid-col -->
-        </div>
-        <!-- /wrapper-->
-      </div>
-
-
-      <div class="wrapper">
-        <div class="panel--top-pad panel--bottom-mar-large panel--separated--top--large flush--bottom">
-          <div class="grid-wrap">
-            <div class="grid-col desktop-grid-one-third">
-              <h2 class="beta">Looking for local statistics?</h2>
-            </div>
-            <div class="grid-col desktop-grid-two-thirds">
-              <div class="grid-wrap">
-                <div class="grid-col tablet-grid-one-third linkbox-padded">
-                  <h2><a class="no_underline" href="http://www.neighbourhood.statistics.gov.uk/dissemination/">NESS</a></h2>
-                  <p>Neighbourhood statistics site</p>
-                </div>
-
-                <div class="grid-col tablet-grid-one-third linkbox-padded">
-                  <h2><a class="no_underline" href="https://www.nomisweb.co.uk/">NOMIS</a></h2>
-                  <p>Labour market statistics</p>
-                </div>
-
-                <div class="grid-col tablet-grid-one-third linkbox-padded">
-                  <h2><a class="no_underline" href=" http://www.ons.gov.uk/ons/data/area-first/">Data Explorer</a></h2>
-                  <p>Explore the Census 2011 outputs</p>
-                </div>
+          <div class="grid-col desktop-grid-one-quarter tablet-grid-one-half tablet-grid-clear">
+             <article class="box--padded--med">
+              <header class="box__header">
+                <h3>
+                  <a href="http://www.neighbourhood.statistics.gov.uk/dissemination/">Neighbourhood statistics </a>
+                </h3>
+              </header>
+              <!-- /box__header -->
+              <div class="box__content">
+                <ul class="list--table">
+                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis. </li>
+                </ul>
+                <!-- /box__content -->                
               </div>
-            </div>
+            </article>
+            <!-- /box -->
           </div>
-          <!-- /panel -->
-        </div>
 
-        <div class="panel--top-pad panel--bottom-mar-large panel--separated--top--large">
-           <div class="grid-wrap">
-            <div class="grid-col desktop-grid-one-third">
-              <h2 class="beta">Other official statistics?</h2>
-            </div>
-            <div class="grid-col desktop-grid-two-thirds">
-              <div class="grid-wrap">
-                <div class="grid-col tablet-grid-one-third linkbox-padded">
-                  <h2><a class="no_underline" href="https://www.gov.uk/government/statistics">GOV.UK</a></h2>
-                  <p></p>
-                </div>
 
-                <div class="grid-col tablet-grid-one-third linkbox-padded">
-                  <h2><a class="no_underline" href="https://statswales.wales.gov.uk/Catalogue">StatsWales</a></h2>
-                  <p></p>
-                </div>
-
-                <div class="grid-col tablet-grid-one-third linkbox-padded">
-                  <h2><a class="no_underline" href="http://www.scotland.gov.uk/Topics/Statistics">ScotStat</a></h2>
-                  <p></p>
-                </div>
+            <div class="grid-col desktop-grid-one-quarter tablet-grid-one-half tablet-grid-clear">
+             <article class="box--padded--med">
+              <header class="box__header">
+                <h3>
+                  <a href=" http://www.ons.gov.uk/ons/data/area-first/">Census 2011 Outputs</a>
+                </h3>
+              </header>
+              <!-- /box__header -->
+              <div class="box__content">
+                <ul class="list--table">
+                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis. </li>
+                </ul>
+                <!-- /box__content -->                
               </div>
-            </div>
-          </div>
-          <!-- /panel -->
-        </div>
-        <!-- /wrapper -->
+            </article>
+            <!-- /grid-col -->
+           </div>        
+        <!-- /grid-wrap -->
       </div>
+      <!-- /panel wrapper -->
+    </section>
+
+    <section class="panel wrapper box box--padded--med ">
+      <header class="actionable-header__title">
+        <h2 class="actionable-header__title table-inline ">Other Official Statistics?</h2>
+      </header>
+      <div class="grid-wrap">
+        <div class="grid-col desktop-grid-one-quarter tablet-grid-one-half">
+          <article class="box--padded-vertical">
+            <header class="box__header">
+              <h3 class="beta">
+                <a href="https://www.gov.uk/government/statistics">GOV.UK</a>
+              </h3>
+              <!-- /box__header -->
+            </header>
+              
+            <div class="box__content">
+              <ul class="list--table">
+                <li class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis. </li>
+              </ul>
+            </div>
+          </article>
+          <!-- /grid-col -->
+        </div>
+          
+          <div class="grid-col desktop-grid-one-quarter tablet-grid-one-half">
+          <article class="box--padded-vertical">
+            <header class="box__header">
+              <h3 class="beta">
+                <a href="https://statswales.wales.gov.uk/Catalogue">StatsWales</a>
+              </h3>
+              <!-- /box__header -->
+            </header>
+              
+            <div class="box__content">
+              <ul class="list--table">
+                <li class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis. </li>
+              </ul>
+            </div>
+          </article>
+          <!-- /grid-col -->
+        </div>
+
+        
+          <div class="grid-col desktop-grid-one-quarter tablet-grid-one-half tablet-grid-clear">
+            <article class="box--padded-vertical">
+            <header class="box__header">
+              <h3 class="beta">
+                <a href="http://www.scotland.gov.uk/Topics/Statistics">ScotStat</a>
+              </h3>
+              <!-- /box__header -->
+            </header>
+              
+            <div class="box__content">
+              <ul class="list--table">
+                <li class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis. </li>
+              </ul>
+            </div>
+          </article>
+          <!-- /grid-col -->
+        </div>
+
+
+          <div class="grid-col desktop-grid-one-quarter tablet-grid-one-half tablet-grid-clear">
+            <article class="box--padded-vertical">
+          <header class="box__header">
+            <h3 class="beta">
+              <a href="http://www.nisra.gov.uk/">NISRA</a>
+            </h3>
+            <!-- /box__header -->
+          </header>
+            
+          <div class="box__content">
+            <ul class="list--table">
+              <li class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis. </li>
+            </ul>
+          </div>
+        </article>
+        <!-- /grid-col -->
+      </div>
+      
+      </div>
+      <!-- /grid-wrap -->
+    </section>
+      
+
+
+
+
+  
