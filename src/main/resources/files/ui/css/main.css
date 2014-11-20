@@ -2691,12 +2691,10 @@ lesser , applied styles
         display: block; }
 
   .list--table__item__body--update {
-    width: 25%; }
+    width: 23%; }
 
   .list--table__item__body--stat {
-    width: 25%;
-    padding-right: 2.5%;
-    padding-left: 2.5%; }
+    width: 27%; }
 
   .list--table__item__body--select {
     width: 3.5%;
@@ -2716,13 +2714,15 @@ lesser , applied styles
   .list--table-header {
     max-width: 80%; } }
 @media screen and (min-width: 52em) {
-  .list--table__item__body--update,
+  .list--table__item__body--update {
+    width: 23%;
+    padding-right: 0; }
   .list--table__item__body--stat {
     width: 25%;
     padding-right: 0; }
 
   .list--table__item__body--caption {
-    width: 42.5%; } }
+    width: 37.5%; } }
 @media screen and (min-width: 56.5em) {
   .list--table--complex .list--table__body,
   .list--table--complex .list--table__footer {
@@ -2732,12 +2732,11 @@ lesser , applied styles
     padding-right: 32px;
     padding-right: 3.2rem; }
   .list--table--complex .list--table__item__body--update {
-    min-width: 200px;
-    min-width: 20rem; }
+    min-width: 170px;
+    min-width: 17rem; }
   .list--table--complex .list--table__item__body--stat {
-    width: 25%;
-    padding-right: 5%;
-    padding-left: 5%; }
+    min-width: 170px;
+    min-width: 17rem; }
   .list--table--complex .list--table__item__body--select {
     width: .5%; }
   .list--table--complex .list--table__item__body--caption {
@@ -5277,7 +5276,7 @@ td.datatable-downloads{
 
 @media screen and (min-width: 800px){
   .navpanel_wrapper{
-  height: 20em;
+  height: 21em;
   /*line-height: 1.3;*/
   overflow: hidden;
   padding: 0;}

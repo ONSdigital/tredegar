@@ -118,7 +118,7 @@
                 </h3>
                 <p class="list--table__item__description">{{item.data.seasonalAdjustment}}</p>
             </div>
-            <div class="list--table__item__body list--table__item__body">
+            <div class="list--table__item__body list--table__item__body--update">
                 <ons-sparkline chart-data="item.chartData"></ons-sparkline>
             </div>
             <div class="list--table__item__body list--table__item__body--stat">
@@ -137,10 +137,6 @@
                     <dd class="red_highlight">{{item.data.nextUpdate || 'Not Available'}}</dd>
                 </dl>
             </div>
-            <!--  <label class="list--table__item__body list--table__item__body--select">
-                <span class="visuallyhidden">Select statistic</span>
-                <input st-select ng-model="item.isSelected" type="checkbox">
-            </label> -->
         </li>
 
         <li ng-show="t3.isLoading()" class="list--table__item list--table__footer">
