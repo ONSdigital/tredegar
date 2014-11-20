@@ -1,230 +1,756 @@
+<!--New homepage starts here!-->
 
-      <section class="hero-banner">
-        <div class="panel--pad slate--hero-banner">
-          <div class="wrapper">
-           <div class="grid-wrap panel--bottom-mar-small">
-            <div class="grid-col tablet-grid-three-quarters home_hero_img" alt="manufacturing map">
-            </div>
-            <div class="grid-col tablet-grid-one-quarter hero-stat-box">
-              <header>
-                <h2 class="hero-banner__main-title panel--bottom-mar">Importers of UK manufactured goods</h2>
-              </header>
-                <p class="home_hero_comments">
-                Which are the top 10 countries?
-                </p>
 
-            </div>
-            </div>
-          </div>
+
+      <div class="wrapper panel">
+
+          <article class="box flush">
+        <header class="box__header">
+        <h2>
+          Welcome to the Office for National Statistics
+        </h2>
+        </header>
+        <!-- /box__header -->
+
+        <div class="box__content">
+            <p>Welcome to the Office for National Statistics website, the UK's largest independent producer of official statistics and the recognised national statistical institute of the UK.</p>
+          <!--  /list-bullet -->
         </div>
-      </section>
+        <!-- /box__content -->
+
+       
+        <!-- /box__actions -->
+      </article>
+    </div>
+ 
 
 
-      <div class="wrapper offset-top nav-panels">
+
+      <div class="panel slate--home--hero-banner">
+      <div class="wrapper nav-panels">
         <div class="grid-wrap">
-          <div ng-repeat="section in taxonomy.data.sections" class="grid-col tablet-wide-grid-one-quarter">
-            <article class="nav-panel nav-panel--stats sectioned lifted border-defined">
-              <div class="navpanel_wrapper">
-              <header class="nav-panel__header nav-panel__roomy">
-                <h2 class="delta">{{section.name}}</h2>
+
+
+          <div class="grid-col tablet-wide-grid-one-fifth">
+          <article class="nav-panel nav-panel--stats sectioned">
+           <div class="navpanel_wrapper_home">
+              <header class="nav-panel__header nav-panel__header_home nav-panel__roomy--med">
+                <h2 class="delta">CPI: Consumer Price Index</h2>
               </header>
-              <section ng-repeat="item in section.items" class="nav-panel__roomy">
-                <p><a href="#!{{item.uri}}">{{item.name}}</a></p>
+              <div class="nav-panel__roomy box flush">
+                <ul class="list--neutral">
+                  <li class="nav-panel__body flush">
+                    <dl class="homeicon_GDP flush--bottom">
+                     <dd class="nav-panel__value">
+                        <div class="stat">
+                          <div class="stat__figure nav_home-stats">
+                           1.2%
+                            <div class="stat__description-large">September 2014</div>
 
-              <div class="box box--inline flush--bottom">
-                  <div class="stat">
-                    <div class="stat--small stat__figure">
-                      {{item.data.number}}
-                      <span class="stat__figure__unit">{{item.data.unit}}</span>
-                    </div>
 
-                  </div>
-                  <p> {{item.data.date}}  <span tabindex="0" class="tooltips icon-info-circled icon--warm icon--inline icon--large icon--med tooltipstered"></span>
+                          </div>
+                         </div>
+                      </dd>
+                    </dl>                    
+                  </li>
+                 
+                        
+                
+                  <li class="nav-panel__item homeicon_sparkline">
+                    <dl>
+                      
+                      <dd class="nav-panel__value">
+                        <div class="stat stat--small">
+                          <div class="stat__figure">
+                         
+                         
+                          </div>
+                          
+                        </div>
+                      </dd>
+                    </dl>
+                  </li>
+                </ul>
               </div>
-              </section>
-                </div>
-              <footer class="nav-panel__footer">
-                <div class="nav-panel__action ">
-                  <a class="nav-panel__roomy no_underline" href="#!{{getPath()}}{{section.link}}">View all</a>
+              </div>
+              <footer class="nav-panel__footer-home">
+                <div class="nav-panel__action background_neutral ">
+                  <a class="nav-panel__roomy--med" href="#">Explore economy</a>
                 </div>
               </footer>
             </article>
+            </div>
+
+
+
+          <div class="grid-col tablet-wide-grid-one-fifth">
+          <article class="nav-panel nav-panel--stats sectioned">
+           <div class="navpanel_wrapper_home">
+              <header class="nav-panel__header nav-panel__header_home nav-panel__roomy--med">
+                <h2 class="delta">GDP: Gross Domestic Product</h2>
+              </header>
+              <div class="nav-panel__roomy box  flush">
+                <ul class="list--neutral">
+                  <li class="nav-panel__body flush">
+                    <dl class="homeicon_GDP flush--bottom">
+                     <dd class="nav-panel__value">
+                        <div class="stat">
+                          <div class="stat__figure nav_home-stats">
+                           0.7%
+                            <div class="stat__description-large">Q2 2014</div>
+
+
+                          </div>
+                         </div>
+                      </dd>
+                    </dl>                    
+                  </li>
+                 
+                        
+                
+                  <li class="nav-panel__item homeicon_sparkline">
+                    <dl>
                       
-            <!-- /nav-panel -->
-          </div>
-          <!-- /grid-col -->
-        </div>
+                      <dd class="nav-panel__value">
+                        <div class="stat stat--small">
+                          <div class="stat__figure">
+                         
+                         
+                          </div>
+                          
+                        </div>
+                      </dd>
+                    </dl>
+                  </li>
+                </ul>
+              </div>
+              </div>
+              <footer class="nav-panel__footer-home">
+                <div class="nav-panel__action background_neutral ">
+
+                  <a class="nav-panel__roomy--med" href="#">Explore economy</a>
+                </div>
+              </footer>
+            </article>
+            </div>
+
+
+ <div class="grid-col tablet-wide-grid-one-fifth">
+          <article class="nav-panel nav-panel--stats sectioned">
+           <div class="navpanel_wrapper_home">
+              <header class="nav-panel__header nav-panel__header_home nav-panel__roomy--med">
+                <h2 class="delta">Employment Rate (aged 16-64)</h2>
+              </header>
+              <div class="nav-panel__roomy box  flush">
+                <ul class="list--neutral">
+                  <li class="nav-panel__body flush">
+                    <dl class="homeicon_employment flush--bottom">
+                     <dd class="nav-panel__value">
+                        <div class="stat">
+                          <div class="stat__figure nav_home-stats">
+                           1.2%
+                            <div class="stat__description-large">July 2014</div>
+
+
+                          </div>
+                         </div>
+                      </dd>
+                    </dl>                    
+                  </li>
+                 
+                        
+                
+                  <li class="nav-panel__item homeicon_sparkline">
+                    <dl>
+                      
+                      <dd class="nav-panel__value">
+                        <div class="stat stat--small">
+                          <div class="stat__figure">
+                         
+                         
+                          </div>
+                          
+                        </div>
+                      </dd>
+                    </dl>
+                  </li>
+                </ul>
+              </div>
+              </div>
+              <footer class="nav-panel__footer-home">
+                <div class="nav-panel__action background_neutral ">
+                  <a class="nav-panel__roomy--med" href="#">Explore Employment &amp; Labour Market</a>
+                </div>
+              </footer>
+            </article>
+            </div>
+
+
+
+
+
+           <div class="grid-col tablet-wide-grid-one-fifth">
+          <article class="nav-panel nav-panel--stats sectioned">
+           <div class="navpanel_wrapper_home">
+              <header class="nav-panel__header nav-panel__header_home nav-panel__roomy--med">
+                <h2 class="delta">UK Population</h2>
+              </header>
+              <div class="nav-panel__roomy box flush">
+                <ul class="list--neutral">
+                  <li class="nav-panel__body flush">
+                    <dl class="homeicon_population flush--bottom">
+                     <dd class="nav-panel__value">
+                        <div class="stat">
+                          <div class="stat__figure nav_home-stats">
+                           64.1m
+                            <div class="stat__description-large">Mid-2013</div>
+
+
+                          </div>
+                         </div>
+                      </dd>
+                    </dl>                    
+                  </li>
+                 
+                        
+                
+                  <li class="nav-panel__item homeicon_sparkline">
+                    <dl>
+                      
+                      <dd class="nav-panel__value">
+                        <div class="stat stat--small">
+                          <div class="stat__figure">
+                         
+                         
+                          </div>
+                          
+                        </div>
+                      </dd>
+                    </dl>
+                  </li>
+                </ul>
+              </div>
+              </div>
+              <footer class="nav-panel__footer-home">
+                <div class="nav-panel__action background_neutral ">
+                  <a class="nav-panel__roomy--med" href="#">Explore People, Population &amp; Community</a>
+                </div>
+              </footer>
+            </article>
+            </div>
+
+
+
+           <div class="grid-col tablet-wide-grid-one-fifth">
+          <article class="nav-panel nav-panel--stats sectioned">
+           <div class="navpanel_wrapper_home">
+              <header class="nav-panel__header nav-panel__header_home nav-panel__roomy--med">
+                <h2 class="delta">Trade in Goods &amp; Services (or surplus)</h2>
+              </header>
+              <div class="nav-panel__roomy box  flush">
+                <ul class="list--neutral">
+                  <li class="nav-panel__body flush">
+                    <dl class="homeicon_trade flush--bottom">
+                     <dd class="nav-panel__value">
+                        <div class="stat">
+                          <div class="stat__figure nav_home-stats">
+                           -6.5m
+                            <div class="stat__description-large">Q2 2014</div>
+
+
+                          </div>
+                         </div>
+                      </dd>
+                    </dl>                    
+                  </li>
+                 
+                        
+                
+                  <li class="nav-panel__item homeicon_sparkline">
+                    <dl>
+                      
+                      <dd class="nav-panel__value">
+                        <div class="stat stat--small">
+                          <div class="stat__figure">
+                         
+                         
+                          </div>
+                          
+                        </div>
+                      </dd>
+                    </dl>
+                  </li>
+                </ul>
+              </div>
+              </div>
+              <footer class="nav-panel__footer-home">
+                <div class="nav-panel__action background_neutral ">
+                  <a class="nav-panel__roomy--med" href="#">Explore Business, Industry &amp; Trade</a>
+                </div>
+              </footer>
+            </article>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
         <!-- /grid-wrap -->
       </div>
       <!-- /wrapper -->
+      </div>
 
-
-      <div class="wrapper panel--top-pad">
+<section class="panel wrapper flush--bottom ">
+        <header class="actionable-header__title">
+          <h2 class="actionable-header__title table-inline ">News this week view</h2>
+          <a class="hide-small" href="#">new and upcoming releases</a>
+        </header>
         <div class="grid-wrap">
-          <div class="grid-col desktop-grid-one-half tablet-grid-one-half">
-            <article class="box box--orange box--orange--separated-left">
-              <div class="box__inner border box--padded home_box_img_left">
-                <div class="grid-wrap">
-                  <div class="grid-col tablet-grid-one-half">
-                  
-                  <div class="media__body">
-                    <header class="box__header">
-                      <h2 class="gamma">
-
-                        <a class="no_underline" href="#"></a>
-                      </h2>
-                    </header>
-                    <!-- /box__header -->
-                    <div class="box__content">
-                      <p></p>
-                    </div>
-                    <!-- /box__content -->
-                  </div>
-                  </div>
-                <div class="grid-col tablet-grid-one-half">
-                 
-                  <div class="media__body">
-                    <header class="box__header">
-                      <h2 class="delta field--spaced">
-                        
-                        <a class="no_underline" href="#">
-                          Baby names
-                        </a>
-                      </h2>
-                    </header>
-                    <!-- /box__header -->
-                    <div class="box__content">
-                      <p>
-                        Harry and Amelia still topping the charts?
-                      </p>
-                    </div>
-                    <!-- /box__content -->
-
-                  </div>
-                </div>
-                <a href="#">
-                <span class="cta_chevron icon-right-open-big  icon--warm"></span>
-                </a>               
-                <!-- /media -->
-                </div>
-              <!-- /box__inner -->
+          <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
+            <article class="box--padded-vertical">
+              <header class="box__header">
+                <h3 >
+                    <a href="#">Consumer Price Inflation</a>
+                </h3>
+              </header>
+              <!-- /box__header -->
+              <div class="box__content">
+                <ul class="list--table">
+                  <li class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis.</li>
+                  <!-- <li>Between 1997 and 2011 the contribution of building to total GVA decreased in each of the NUTS1 regions.</li> -->
+                </ul>
+                <!-- /list- -bullet -->
               </div>
-            </article>
-            <!-- /grid-col -->
-          </div>
-        
-
-
-
-        <div class="grid-col desktop-grid-one-half  tablet-grid-one-half">
-            <article class="box box--orange box--orange--separated-left">
-              <div class="box__inner border box--padded home_box_img_right">
-                <div class="grid-wrap">
-                  <div class="grid-col tablet-grid-one-half">
-                  
-                    <div class="media__body">
-                      <header class="box__header">
-                        <h2 class="gamma">
-                          <a class="no_underline" href="#">
-                          </a>
-                        </h2>
-                      </header>
-                    <!-- /box__header -->
-                      <div class="box__content">
-                        <p>
-                        </p>
-                      </div>
-                    <!-- /box__content -->
-                    </div>
-                  </div>
-                  <div class="grid-col tablet-grid-one-half">
-                    <div class="media__body">
-                      <header class="box__header">
-                        <h2 class="delta field--spaced">
-                          <a class="no_underline" href="#">
-                          ONS Visual
-                          </a>
-                        </h2>
-                      </header>
-                    <!-- /box__header -->
-                      <div class="box__content">
-                        <p>
-                        See our data in a new light
-                        </p>
-                      </div>
-                    <!-- /box__content -->
-                    </div>
-                  </div>
-                  <a href="#">
-                  <span class="cta_chevron icon-right-open-big  icon--warm"></span>
-                  </a>
-                  
-                <!-- /media -->
-              </div>
-              <!-- /box__inner -->
-              </div>
+              <!-- /box__content -->
+              <!-- <footer class="box__footer box__actions">
+                <a class="btn btn--primary btn--small btn--narrow align_right" href="#">
+            Download .xls
+            <span class="icon icon-download icon--button-inline"></span>
+          </a>
+              </footer> -->
+              <!-- /box__actions -->
             </article>
             <!-- /box -->
           </div>
-          <!-- /grid-col -->      
+          <!-- /grid-col -->
+          <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
+            <article class="box--padded-vertical">
+              <header class="box__header">
+                <h3 >
+                  <a href="#">Producer Price Index</a>
+                </h3>
+              </header>
+              <!-- /box__header -->
+              <div class="box__content">
+                <ul class="list--table">
+                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis.</li>
+                  <!-- <li>Falls in transport services costs, notably air fares</li> -->
+                </ul>
+                <!-- /list- -bullet -->
+              </div>
+              <!-- /box__content -->
+              <!-- <footer class="box__footer box__actions">
+                <a class="btn btn--primary btn--small btn--narrow align_right" href="#">
+            Download .xls
+            <span class="icon icon-download icon--button-inline"></span>
+          </a>
+              </footer> -->
+            </article>
+            <!-- /box -->
+          </div>
+          <!-- /grid-col -->
+          <div class="grid-col desktop-grid-one-third tablet-grid-one-half tablet-grid-clear">
+            <article class="box--padded-vertical">
+              <header class="box__header">
+                <h3 >
+                  <a href="#">House Price index </a>
+                </h3>
+              </header>
+              <!-- /box__header -->
+              <div class="box__content">
+                <ul class="list--table">
+                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis.</li>
+                  <!-- <li>Between 1997 and 2011 the contribution of building to total GVA
+                    decreased in each of the NUTS1 regions.</li>
+                  <li>In 2012 the South East had the largest increase in GVA</li>
+                  <li>Between 1997 and 2011 the contribution of building to total GVA
+                    decreased in each of the NUTS1 regions.</li> -->
+                </ul>
+                <!-- /list- -bullet -->
+              </div>
+              <!-- /box__content -->
+              <!-- <footer class="box__footer box__actions">
+                <a class="btn btn--primary btn--small btn--narrow align_right" href="#">
+            Download .xls
+            <span class="icon icon-download icon--button-inline"></span>
+          </a>
+              </footer> -->
+            </article>
+            <!-- /box -->
+          </div>
+          <!-- /grid-col -->
+          <div class="grid-col hide-large">
+            <a href="#">View more news items</a>
+          </div>
         </div>
+        <!-- /grid-wrap -->
+      </section>
+       <!-- /section -->
+
+      <div class="wrapper panel flush--top">
+        <div class="grid-wrap">
+          <div class="grid-col desktop-grid-one-half tablet-grid-one-half">
+            <article class="box border home_callout homeicon_census">
+            <div class="box__inner box--padded">
+            <div class="grid-wrap">
+              <div class="grid-col grid-one-half ">
+                  <div class="media__body">
+                    <header class="box__header pad_regional_header">
+                     <h2 class="callout-header">
+
+
+                    <ul class="list--neutral">
+                      <li>Who we are.</li>
+                      <li>How we live.</li>
+                      <li>What we do.</li>
+                    </ul>
+                    </h2>
+                    </header>
+                    <!-- /box__header -->
+                    
+                    </div>
+                    </div>
+                  
+               
+                 
+                    <!-- /box__header -->
+                    <div class="box__content list--table__item__body--icon div_panel_link">
+                      <a class="" href="#">2011 Census <span class="icon-right-open-big"></span></a>
+              
+                    </div>
+                   
+                   
+                    </div>
+                    </div>
+
+                 </article>             
+                <!-- /media -->
+                </div>
+              <!-- /box__inner -->
+                
+           <div class="grid-col desktop-grid-one-half tablet-grid-one-half">
+            <article class="box border home_callout homeicon_datavis">
+            <div class="box__inner box--padded ">
+            <div class="grid-wrap">
+              <div class="grid-col grid-three-quarters">
+                  <div class="media__body">
+                    <header class="box__header pad_regional_header">
+                     <h2 class="callout-header">
+
+
+                    <ul class="list--neutral">
+                      <li>ONS Data Visualisation</li>
+                    
+                    </ul>
+                    </h2>
+                    </header>
+                    <!-- /box__header -->
+                    
+                    </div>
+                    </div>
+                   
+                  <div class="media__body">
+                 
+                    <!-- /box__header -->
+                    <div class="box__content list--table__item__body--icon div_panel_link">
+                
+                    
+                      <a class="" href="#">See our data in a new light <span class="icon-right-open-big"></span></a>
+
+
+              
+                    </div>
+                    </div>
+                    
+                    </div>
+                    </div>
+
+                 </article>             
+                <!-- /media -->
+                </div>
+          
+            <!-- /grid-col -->
+      </div>
         <!-- /wrapper-->
       </div>
+
+        
+
+          
+
+
+
+      <section class="panel wrapper">
+      <div class="box box--padded--med box--orange--separated-left solid border">
+        <header class="actionable-header__title">
+          <h2 class="actionable-header__title table-inline ">Looking for local statistics?</h2>
+        
+        </header>
+        <div class="grid-wrap">
+          <div class="grid-col desktop-grid-one-quarter tablet-grid-one-half">
+            <article class="box--padded--med">
+              <header class="box__header">
+                <h3 >
+                    <a href="#">Local data explained </a>
+                </h3>
+              </header>
+              <!-- /box__header -->
+              <div class="box__content">
+                <ul class="list--table">
+                  <li class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis. </li>
+                 
+                </ul>
+                <!-- /list- -bullet -->
+              </div>
+              <!-- /box__content -->
+             
+              </footer> 
+              <!-- /box__actions -->
+            </article>
+            <!-- /box -->
+          </div>
+          <!-- /grid-col -->
+          <div class="grid-col desktop-grid-one-quarter tablet-grid-one-half">
+            <article class="box--padded--med">
+              <header class="box__header">
+                <h3 >
+                  <a href="#">Labour Market data </a>
+                </h3>
+              </header>
+              <!-- /box__header -->
+              <div class="box__content">
+                <ul class="list--table">
+                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis. </li>
+                  <!-- <li>Falls in transport services costs, notably air fares</li> -->
+                </ul>
+                <!-- /list- -bullet -->
+              </div>
+              <!-- /box__content -->
+              <!-- <footer class="box__footer box__actions">
+                <a class="btn btn--primary btn--small btn--narrow align_right" href="#">
+            Download .xls
+            <span class="icon icon-download icon--button-inline"></span>
+          </a>
+              </footer> -->
+            </article>
+            <!-- /box -->
+          </div>
+          <!-- /grid-col -->
+          <div class="grid-col desktop-grid-one-quarter tablet-grid-one-half tablet-grid-clear">
+            <article class="box--padded--med">
+              <header class="box__header">
+                <h3 >
+                  <a href="#">Neighbourhood statistics </a>
+                </h3>
+              </header>
+              <!-- /box__header -->
+              <div class="box__content">
+                <ul class="list--table">
+                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis. </li>
+                  <!-- <li>Between 1997 and 2011 the contribution of building to total GVA
+                    decreased in each of the NUTS1 regions.</li>
+                  <li>In 2012 the South East had the largest increase in GVA</li>
+                  <li>Between 1997 and 2011 the contribution of building to total GVA
+                    decreased in each of the NUTS1 regions.</li> -->
+                </ul>
+                <!-- /list- -bullet -->
+              </div>
+              <!-- /box__content -->
+              <!-- <footer class="box__footer box__actions">
+                <a class="btn btn--primary btn--small btn--narrow align_right" href="#">
+            Download .xls
+            <span class="icon icon-download icon--button-inline"></span>
+          </a>
+              </footer> -->
+            </article>
+            <!-- /box -->
+          </div>
+
+
+            <div class="grid-col desktop-grid-one-quarter tablet-grid-one-half tablet-grid-clear">
+            <article class="box--padded--med">
+              <header class="box__header">
+                <h3 >
+                  <a href="#">Census 2011 Outputs</a>
+                </h3>
+              </header>
+              <!-- /box__header -->
+              <div class="box__content">
+                <ul class="list--table">
+                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis. </li>
+                  <!-- <li>Between 1997 and 2011 the contribution of building to total GVA
+                    decreased in each of the NUTS1 regions.</li>
+                  <li>In 2012 the South East had the largest increase in GVA</li>
+                  <li>Between 1997 and 2011 the contribution of building to total GVA
+                    decreased in each of the NUTS1 regions.</li> -->
+                </ul>
+                <!-- /list- -bullet -->
+              </div>
+              <!-- /box__content -->
+              <!-- <footer class="box__footer box__actions">
+                <a class="btn btn--primary btn--small btn--narrow align_right" href="#">
+            Download .xls
+            <span class="icon icon-download icon--button-inline"></span>
+          </a>
+              </footer> -->
+            </article>
+            <!-- /box -->
+          </div>
+          <!-- /grid-col -->
+         
+        <!-- /grid-wrap -->
+        </div>
+      </section>
+
+        <section class="panel wrapper box box--padded--med ">
+        <header class="actionable-header__title">
+          <h2 class="actionable-header__title table-inline ">Other Official Statistics?</h2>
+        
+        </header>
+        <div class="grid-wrap">
+          <div class="grid-col desktop-grid-one-quarter tablet-grid-one-half">
+            <article class="box--padded-vertical">
+              <header class="box__header">
+                  <h3 class="beta">
+                    <a href="#">GOV.UK</a>
+                </h3>
+              </header>
+              <!-- /box__header -->
+              <div class="box__content">
+                <ul class="list--table">
+                  <li class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis. </li>
+                  <!-- <li>Between 1997 and 2011 the contribution of building to total GVA decreased in each of the NUTS1 regions.</li> -->
+                </ul>
+                <!-- /list- -bullet -->
+              </div>
+              <!-- /box__content -->
+              <!-- <footer class="box__footer box__actions">
+                <a class="btn btn--primary btn--small btn--narrow align_right" href="#">
+            Download .xls
+            <span class="icon icon-download icon--button-inline"></span>
+          </a>
+              </footer> -->
+              <!-- /box__actions -->
+            </article>
+            <!-- /box -->
+          </div>
+          <!-- /grid-col -->
+          <div class="grid-col desktop-grid-one-quarter tablet-grid-one-half">
+            <article class="box--padded-vertical">
+              <header class="box__header">
+                 <h3 class="beta">
+                  <a href="#">StatsWales</a>
+                </h3>
+              </header>
+              <!-- /box__header -->
+              <div class="box__content">
+                <ul class="list--table">
+                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis. </li>
+                  <!-- <li>Falls in transport services costs, notably air fares</li> -->
+                </ul>
+                <!-- /list- -bullet -->
+              </div>
+              <!-- /box__content -->
+              <!-- <footer class="box__footer box__actions">
+                <a class="btn btn--primary btn--small btn--narrow align_right" href="#">
+            Download .xls
+            <span class="icon icon-download icon--button-inline"></span>
+          </a>
+              </footer> -->
+            </article>
+            <!-- /box -->
+          </div>
+          <!-- /grid-col -->
+          <div class="grid-col desktop-grid-one-quarter tablet-grid-one-half tablet-grid-clear">
+            <article class="box--padded-vertical">
+              <header class="box__header">
+                 <h3 class="beta">
+                  <a href="#">ScotStat</a>
+                </h3>
+              </header>
+              <!-- /box__header -->
+              <div class="box__content">
+                <ul class="list--table">
+                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis. </li>
+                  <!-- <li>Between 1997 and 2011 the contribution of building to total GVA
+                    decreased in each of the NUTS1 regions.</li>
+                  <li>In 2012 the South East had the largest increase in GVA</li>
+                  <li>Between 1997 and 2011 the contribution of building to total GVA
+                    decreased in each of the NUTS1 regions.</li> -->
+                </ul>
+                <!-- /list- -bullet -->
+              </div>
+              <!-- /box__content -->
+              <!-- <footer class="box__footer box__actions">
+                <a class="btn btn--primary btn--small btn--narrow align_right" href="#">
+            Download .xls
+            <span class="icon icon-download icon--button-inline"></span>
+          </a>
+              </footer> -->
+            </article>
+            <!-- /box -->
+          </div>
+
+
+            <div class="grid-col desktop-grid-one-quarter tablet-grid-one-half tablet-grid-clear">
+            <article class="box--padded-vertical">
+              <header class="box__header">
+                <h3 class="beta">
+                  <a href="#">NISRA</a>
+                </h3>
+              </header>
+              <!-- /box__header -->
+              <div class="box__content">
+                <ul class="list--table">
+                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis. </li>
+                  <!-- <li>Between 1997 and 2011 the contribution of building to total GVA
+                    decreased in each of the NUTS1 regions.</li>
+                  <li>In 2012 the South East had the largest increase in GVA</li>
+                  <li>Between 1997 and 2011 the contribution of building to total GVA
+                    decreased in each of the NUTS1 regions.</li> -->
+                </ul>
+                <!-- /list- -bullet -->
+              </div>
+              <!-- /box__content -->
+              <!-- <footer class="box__footer box__actions">
+                <a class="btn btn--primary btn--small btn--narrow align_right" href="#">
+            Download .xls
+            <span class="icon icon-download icon--button-inline"></span>
+          </a>
+              </footer> -->
+            </article>
+            <!-- /box -->
+          </div>
+          <!-- /grid-col -->
+        
+        </div>
+        <!-- /grid-wrap -->
+      </section>
       
 
-      <div class="wrapper">
-        <div class="panel--top-pad panel--bottom-mar-large panel--separated--top--large flush--bottom">
-          <div class="grid-wrap">
-            <div class="grid-col desktop-grid-one-third">
-              <h2 class="beta">Looking for local statistics?</h2>
-            </div>
-            <div class="grid-col desktop-grid-two-thirds">
-              <div class="grid-wrap">
-                <div class="grid-col tablet-grid-one-third linkbox-padded">
-                  <h2><a class="no_underline" href="http://www.neighbourhood.statistics.gov.uk/dissemination/">NESS</a></h2>
-                  <p>Neighbourhood statistics site</p>
-                </div>
 
-                <div class="grid-col tablet-grid-one-third linkbox-padded">
-                  <h2><a class="no_underline" href="https://www.nomisweb.co.uk/">NOMIS</a></h2>
-                  <p>Labour market statistics</p>
-                </div>
 
-                <div class="grid-col tablet-grid-one-third linkbox-padded">
-                  <h2><a class="no_underline" href=" http://www.ons.gov.uk/ons/data/area-first/">Data Explorer</a></h2>
-                  <p>Explore the Census 2011 outputs</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- /panel -->
-        </div>
 
-        <div class="panel--top-pad panel--bottom-mar-large panel--separated--top--large">
-           <div class="grid-wrap">
-            <div class="grid-col desktop-grid-one-third">
-              <h2 class="beta">Other official statistics?</h2>
-            </div>
-            <div class="grid-col desktop-grid-two-thirds">
-              <div class="grid-wrap">
-                <div class="grid-col tablet-grid-one-third linkbox-padded">
-                  <h2><a class="no_underline" href="https://www.gov.uk/government/statistics">GOV.UK</a></h2>
-                  <p></p>
-                </div>
-
-                <div class="grid-col tablet-grid-one-third linkbox-padded">
-                  <h2><a class="no_underline" href="https://statswales.wales.gov.uk/Catalogue">StatsWales</a></h2>
-                  <p></p>
-                </div>
-
-                <div class="grid-col tablet-grid-one-third linkbox-padded">
-                  <h2><a class="no_underline" href="http://www.scotland.gov.uk/Topics/Statistics">ScotStat</a></h2>
-                  <p></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- /panel -->
-        </div>
-        <!-- /wrapper -->
-      </div>
+  
