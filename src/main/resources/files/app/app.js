@@ -47,6 +47,10 @@
                     templateUrl: 'app/templates/article/article.html',
                     controller: 'ArticleCtrl'
                 }).
+                when('/cdid', {
+                    templateUrl: 'app/templates/multiseries/multiseries.html',
+                    controller: "MultiseriesCtrl"
+                }).
                 when(':collectionPath*\/collection', {
                     templateUrl: 'app/templates/collection/collection.html',
                     controller: "CollectionCtrl",
