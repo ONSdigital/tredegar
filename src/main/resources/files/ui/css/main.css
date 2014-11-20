@@ -5559,6 +5559,12 @@ border: 0px important;
   font-size: 2rem  
 }
 
+@media screen and (max-width: 400px){
+.callout-header{  
+  font-size: 1.8rem;
+}
+}
+
 .floater-right{
   float: right;
 }
