@@ -2,13 +2,13 @@
     <!-- Title and release date -->
     <div class="page-header page-header--article page-header--time-series slate--green">
         <ons-breadcrumb data="breadcrumb"></ons-breadcrumb>
-        <div class="wrapper wrapper--article">
+        <div class="wrapper">
             <p class="page-header__title page-header--time-series-desc">
                 <strong>{{header}}</strong>
             </p>
             <h1 class="page-header__title flush--half--bottom">{{chart.timeseries.name}}</h1>
             <div class="grid-wrap">
-                <div class="grid-col desktop-grid-one-half">
+                <div class="grid-col desktop-grid-two-thirds">
                     <img src="/ui/img/nslogo.png" class="page-header-image" alt="ONS logo">
                     <p>
                         <strong>Release date: {{chart.timeseries.lastUpated}}</strong>
@@ -23,8 +23,8 @@
                     </p>
                     <p>Source: {{chart.timeseries.source ? chart.timeseries.source : 'Office for National Statistics'}}</p>
                 </div>
-                <div class="grid-col desktop-grid-one-quarter invisible">.</div>
-                <div class="grid-col desktop-grid-one-quarter">
+                <!-- <div class="grid-col desktop-grid-one-third invisible"></div> -->
+                <div class="grid-col desktop-grid-one-third">
                     <p>
                         <strong>Series ID: {{chart.timeseries.cdid}}</strong>
                     </p>
@@ -66,9 +66,9 @@
                             <label ons-tab-control="table" class="btn btn--secondary btn--small btn--narrow btn--thin" ng-class="{'btn--secondary--active': selectedKey === 'table'}" ng-click="chart.showTable()">Table</label>
                         </div>
                         <div class="button-group chart-area__controls__timespan">
-                            <label class="btn btn--secondary btn--small btn--narrow btn--thin" ng-if="chart.showYearly" ng-class="{'btn--secondary--active': chart.isActive('years')}" ng-click="chart.changeChartType('years')">Year</label>
-                            <label class="btn btn--secondary btn--small btn--narrow btn--thin" ng-if="chart.showQuarterly" ng-class="{'btn--secondary--active': chart.isActive('quarters')}" ng-click="chart.changeChartType('quarters')">Quarter</label>
                             <label class="btn btn--secondary btn--small btn--narrow btn--thin " ng-if="chart.showMonthly" ng-class="{'btn--secondary--active': chart.isActive('months')}" ng-click="chart.changeChartType('months')">Month</label>
+                            <label class="btn btn--secondary btn--small btn--narrow btn--thin" ng-if="chart.showQuarterly" ng-class="{'btn--secondary--active': chart.isActive('quarters')}" ng-click="chart.changeChartType('quarters')">Quarter</label>
+                            <label class="btn btn--secondary btn--small btn--narrow btn--thin" ng-if="chart.showYearly" ng-class="{'btn--secondary--active': chart.isActive('years')}" ng-click="chart.changeChartType('years')">Year</label>
                         </div>
                     </div>
                     <div class="button-group chart-area__controls__time">
