@@ -6,6 +6,7 @@
   "unit": "",
   "preUnit": "",
   "date": "Q1 2014",
+  "source": "Office for National Statistics",
   "years": [
     {
       "date": "1987",
@@ -792,6 +793,10 @@
   "uri": "/businessindustryandtrade/changestobusiness/mergersandacquisitions/timeseries/cbas",
   "relatedBulletins": [
     "/businessindustryandtrade/changestobusiness/mergersandacquisitions/bulletins/mergersandacquisitionsinvolvingukcompanies"
+  ],
+  "relatedTimeseries": [
+    "/businessindustryandtrade/changestobusiness/mergersandacquisitions/timeseries/cbaq",
+    "/businessindustryandtrade/changestobusiness/mergersandacquisitions/timeseries/cbbt"
   ],
   "type": "timeseries",
   "name": "Number of disposals",

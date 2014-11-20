@@ -1,13 +1,31 @@
 {
-  "headline": "/peoplepopulationandcommunity/crimeandjustice/timeseries/raid62",
+  "headline": {
+    "name": "Crimes recorded by police",
+    "uri": "/peoplepopulationandcommunity/crimeandjustice/timeseries/raid62"
+  },
   "items": [
-    "/peoplepopulationandcommunity/crimeandjustice/timeseries/raid62",
-    "/peoplepopulationandcommunity/crimeandjustice/timeseries/raid63",
-    "/peoplepopulationandcommunity/crimeandjustice/timeseries/raid64"
+    {
+      "name": "Crimes recorded by police",
+      "uri": "/peoplepopulationandcommunity/crimeandjustice/timeseries/raid62"
+    },
+    {
+      "name": "Incidents of anti-social behaviour",
+      "uri": "/peoplepopulationandcommunity/crimeandjustice/timeseries/raid63"
+    },
+    {
+      "name": "Crimes against households",
+      "uri": "/peoplepopulationandcommunity/crimeandjustice/timeseries/raid64"
+    }
   ],
-  "statsBulletinHeadline": "/peoplepopulationandcommunity/crimeandjustice/bulletins/crimeinenglandandwalesyearendingmarch2014",
+  "statsBulletinHeadline": {
+    "name": "Crime in England and Wales, Year Ending March 2014",
+    "uri": "/peoplepopulationandcommunity/crimeandjustice/bulletins/crimeinenglandandwalesyearendingmarch2014"
+  },
   "statsBulletins": [
-    "/peoplepopulationandcommunity/crimeandjustice/bulletins/crimeinenglandandwalesyearendingmarch2014"
+    {
+      "name": "Crime in England and Wales, Year Ending March 2014",
+      "uri": "/peoplepopulationandcommunity/crimeandjustice/bulletins/crimeinenglandandwalesyearendingmarch2014"
+    }
   ],
   "datasets": [],
   "level": "t3",

@@ -6,6 +6,7 @@
   "unit": "",
   "preUnit": "",
   "date": "July 2014",
+  "source": "Labour Force Survey",
   "years": [],
   "quarters": [],
   "months": [
@@ -1357,6 +1358,11 @@
   "uri": "/employmentandlabourmarket/peopleinwork/workplacedisputesandworkingconditions/timeseries/f8xz",
   "relatedBulletins": [
     "/employmentandlabourmarket/peopleinwork/workplacedisputesandworkingconditions/bulletins/uklabourmarketjuly2014"
+  ],
+  "relatedTimeseries": [
+    "/employmentandlabourmarket/peopleinwork/workplacedisputesandworkingconditions/timeseries/bbfw",
+    "/employmentandlabourmarket/peopleinwork/workplacedisputesandworkingconditions/timeseries/f8y2",
+    "/employmentandlabourmarket/peopleinwork/workplacedisputesandworkingconditions/timeseries/bluu"
   ],
   "type": "timeseries",
   "name": "Working days lost in the Public Sector",

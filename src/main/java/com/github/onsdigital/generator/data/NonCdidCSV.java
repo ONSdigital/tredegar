@@ -49,7 +49,8 @@ class NonCdidCSV {
 				if (timeseries == null) {
 					// System.out.println("Sheet " + sheetIndex + ", column " +
 					// c + " - new timeseries " + cdid);
-					timeseries = Data.addTimeseries(cdid, null);
+					timeseries = Data.addTimeseries(cdid);
+					Data.setDataset(timeseries, null);
 				}
 
 				// Read the values from this column:

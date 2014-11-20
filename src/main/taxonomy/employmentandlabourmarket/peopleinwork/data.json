@@ -4,31 +4,30 @@
       "name": "Employment and Employee Types",
       "link": "employmentandemployeetypes",
       "index": 0,
-      "items": [],
-      "children": [
+      "items": [
         {
           "name": "Employment rate (aged 16-64)",
           "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/lf24"
+        },
+        {
+          "name": "Female Employment rate (aged 16-64)",
+          "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/lf25"
+        },
+        {
+          "name": "Male Employment rate (aged 16-64)",
+          "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgsv"
         },
         {
           "name": "Employment 16+",
           "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgrz"
         },
         {
-          "name": "Employment 16+ Female",
+          "name": "Female Employment 16+",
           "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgsb"
         },
         {
-          "name": "Employment 16+ Male",
+          "name": "Male Employment 16+",
           "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgsa"
-        },
-        {
-          "name": "Employment Rate (aged 16-64) Female",
-          "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/lf25"
-        },
-        {
-          "name": "Employment Rate (aged 16-64) Male",
-          "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgsv"
         },
         {
           "name": "Vacancies",
@@ -40,27 +39,26 @@
       "name": "Earnings and Working Hours",
       "link": "earningsandworkinghours",
       "index": 1,
-      "items": [],
-      "children": [
+      "items": [
         {
           "name": "Average weekly earning (total pay)",
           "uri": "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/timeseries/kab9"
-        },
-        {
-          "name": "Average weekly earning growth rate (bonus pay)",
-          "uri": "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/timeseries/kaf6"
         },
         {
           "name": "Average weekly earning (regular pay)",
           "uri": "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/timeseries/kai7"
         },
         {
-          "name": "Average weekly earning growth rate (regular pay)",
-          "uri": "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/timeseries/kai9"
-        },
-        {
           "name": "Average weekly earning (bonus pay)",
           "uri": "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/timeseries/kaf4"
+        },
+        {
+          "name": "Average weekly earning growth rate (bonus pay)",
+          "uri": "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/timeseries/kaf6"
+        },
+        {
+          "name": "Average weekly earning growth rate (regular pay)",
+          "uri": "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/timeseries/kai9"
         },
         {
           "name": "Average weekly earning growth rate (bonus pay)",
@@ -80,8 +78,7 @@
       "name": "Labour Productivity",
       "link": "labourproductivity",
       "index": 2,
-      "items": [],
-      "children": [
+      "items": [
         {
           "name": "Output per worker",
           "uri": "/employmentandlabourmarket/peopleinwork/labourproductivity/timeseries/a4ym"
@@ -100,8 +97,7 @@
       "name": "Workplace Disputes and Working Conditions",
       "link": "workplacedisputesandworkingconditions",
       "index": 3,
-      "items": [],
-      "children": [
+      "items": [
         {
           "name": "Working days lost",
           "uri": "/employmentandlabourmarket/peopleinwork/workplacedisputesandworkingconditions/timeseries/bbfw"

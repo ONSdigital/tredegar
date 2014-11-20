@@ -6,6 +6,8 @@
   "unit": "index",
   "preUnit": "",
   "date": "Q2 2014",
+  "source": "Office for National Statistics",
+  "additionalText": "Index, 2010 \u003d 100",
   "years": [
     {
       "date": "1990",
@@ -722,6 +724,12 @@
   "uri": "/economy/grossdomesticproductgdp/timeseries/l2kx",
   "relatedBulletins": [
     "/economy/grossdomesticproductgdp/bulletins/grossdomesticproductpreliminaryestimate"
+  ],
+  "relatedTimeseries": [
+    "/economy/grossdomesticproductgdp/timeseries/l2kq",
+    "/economy/grossdomesticproductgdp/timeseries/l2kl",
+    "/economy/grossdomesticproductgdp/timeseries/l2n8",
+    "/economy/grossdomesticproductgdp/timeseries/l2nc"
   ],
   "type": "timeseries",
   "name": "Output Measure: Manufacturing",

@@ -1,11 +1,23 @@
 {
-  "headline": "/peoplepopulationandcommunity/personalandhouseholdfinances/expenditure/timeseries/raid114",
+  "headline": {
+    "name": "Average total housing expenditure",
+    "uri": "/peoplepopulationandcommunity/personalandhouseholdfinances/expenditure/timeseries/raid114"
+  },
   "items": [
-    "/peoplepopulationandcommunity/personalandhouseholdfinances/expenditure/timeseries/raid114"
+    {
+      "name": "Average total housing expenditure",
+      "uri": "/peoplepopulationandcommunity/personalandhouseholdfinances/expenditure/timeseries/raid114"
+    }
   ],
-  "statsBulletinHeadline": "/peoplepopulationandcommunity/personalandhouseholdfinances/expenditure/bulletins/nobulletinavailable",
+  "statsBulletinHeadline": {
+    "name": "No bulletin available",
+    "uri": "/peoplepopulationandcommunity/personalandhouseholdfinances/expenditure/bulletins/nobulletinavailable"
+  },
   "statsBulletins": [
-    "/peoplepopulationandcommunity/personalandhouseholdfinances/expenditure/bulletins/nobulletinavailable"
+    {
+      "name": "No bulletin available",
+      "uri": "/peoplepopulationandcommunity/personalandhouseholdfinances/expenditure/bulletins/nobulletinavailable"
+    }
   ],
   "datasets": [],
   "level": "t3",

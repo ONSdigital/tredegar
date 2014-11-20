@@ -3,6 +3,8 @@ package com.github.onsdigital.generator.data;
 import java.io.IOException;
 import java.net.URI;
 import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.lang.ArrayUtils;
@@ -33,11 +35,16 @@ class AlphaContentCSV {
 	static String PREUNIT = "Pre unit";
 	static String UNITS = "Units";
 	static String FIGURE = "Figure";
+	static String SCALE_FACTOR = "csv scale factor";
 	static String PERIOD = "Period";
 	static String CDID = "CDID";
-	static String[] columns = { THEME, LEVEL2, LEVEL3, NAME, KEY, PREUNIT, UNITS, FIGURE, PERIOD, CDID };
+	static String ADDITIONAL_TEXT = "Additional text";
+	static String RELATED_CDID = "Related CDID";
+	static String SOURCE = "Source";
+	static String KEY_NOTE = "key note";
+	static String[] columns = { THEME, LEVEL2, LEVEL3, NAME, KEY, PREUNIT, UNITS, FIGURE, SCALE_FACTOR, PERIOD, CDID, RELATED_CDID, SOURCE, KEY_NOTE };
 
-	static Csv csv;
+	static Csv sheet;
 
 	/**
 	 * Parses the CSV and validates headings.
@@ -47,9 +54,9 @@ class AlphaContentCSV {
 	public static void parse() throws IOException {
 
 		// Read the first worksheet - "Data":
-		csv = new Csv(resourceName);
-		csv.read(0);
-		String[] headings = csv.getHeadings();
+		sheet = new Csv(resourceName);
+		sheet.read(0);
+		String[] headings = sheet.getHeadings();
 
 		// Verify the headings:
 		for (String column : columns) {
@@ -59,7 +66,7 @@ class AlphaContentCSV {
 		}
 
 		// Process the rows
-		for (Map<String, String> row : csv) {
+		for (Map<String, String> row : sheet) {
 
 			// There are blank lines in the CSV that separate theme sections:
 			if (StringUtils.isBlank(row.get(THEME))) {
@@ -72,8 +79,7 @@ class AlphaContentCSV {
 			Timeseries timeseries = Data.timeseries(cdid);
 			if (timeseries == null) {
 				// We haven't seen this one before, so add it:
-				timeseries = Data.addTimeseries(cdid, null);
-
+				timeseries = Data.addTimeseries(cdid);
 			}
 
 			// Set the URI if necessary:
@@ -117,6 +123,40 @@ class AlphaContentCSV {
 				figure = figure.substring(0, figure.length() - 2);
 			}
 			timeseries.number = figure;
+			String scaleFactor = row.get(SCALE_FACTOR);
+			if (StringUtils.isNotBlank(scaleFactor)) {
+				timeseries.setScaleFactor(Integer.parseInt(scaleFactor));
+			}
+
+			String relatedCdidColumn = row.get(RELATED_CDID);
+			if (StringUtils.isNotBlank(relatedCdidColumn)) {
+				String[] relatedCdidTokens = relatedCdidColumn.split(",");
+				List<Timeseries> relatedTimeserieses = new ArrayList<Timeseries>();
+				for (String relatedCdid : relatedCdidTokens) {
+					Timeseries relatedTimeseries = Data.timeseries(relatedCdid);
+					if (relatedTimeseries == null) {
+						// We haven't seen this one before, so add it:
+						relatedTimeseries = Data.addTimeseries(relatedCdid.trim());
+					}
+					relatedTimeserieses.add(relatedTimeseries);
+				}
+				Data.addRelatedTimeseries(timeseries, relatedTimeserieses);
+			}
+
+			String source = row.get(SOURCE);
+			if (StringUtils.isNotBlank(source)) {
+				timeseries.source = source;
+			}
+
+			String keyNote = row.get(KEY_NOTE);
+			if (StringUtils.isNotBlank(keyNote)) {
+				timeseries.keyNote = keyNote;
+			}
+
+			String additionalText = row.get(ADDITIONAL_TEXT);
+			if (StringUtils.isNotBlank(additionalText)) {
+				timeseries.additionalText = additionalText;
+			}
 		}
 	}
 

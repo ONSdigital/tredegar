@@ -6,6 +6,8 @@
   "unit": "index",
   "preUnit": "",
   "date": "Q2 2014",
+  "source": "Labour Force Survey",
+  "additionalText": "Index, 2010 \u003d 100",
   "years": [
     {
       "date": "1997",
@@ -519,6 +521,10 @@
   "uri": "/employmentandlabourmarket/peopleinwork/labourproductivity/timeseries/a4ym",
   "relatedBulletins": [
     "/employmentandlabourmarket/peopleinwork/labourproductivity/bulletins/labourproductivityq12014"
+  ],
+  "relatedTimeseries": [
+    "/employmentandlabourmarket/peopleinwork/labourproductivity/timeseries/lnnn",
+    "/employmentandlabourmarket/peopleinwork/labourproductivity/timeseries/lzvb"
   ],
   "type": "timeseries",
   "name": "Output per worker",

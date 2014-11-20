@@ -1,13 +1,31 @@
 {
-  "headline": "/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/timeseries/raid89",
+  "headline": {
+    "name": "Number of newly diagnosed cancers",
+    "uri": "/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/timeseries/raid89"
+  },
   "items": [
-    "/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/timeseries/raid89",
-    "/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/timeseries/raid92",
-    "/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/timeseries/raid93"
+    {
+      "name": "Number of newly diagnosed cancers",
+      "uri": "/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/timeseries/raid89"
+    },
+    {
+      "name": "Deaths from MRSA",
+      "uri": "/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/timeseries/raid92"
+    },
+    {
+      "name": "Deaths Involving Clostridium difficile",
+      "uri": "/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/timeseries/raid93"
+    }
   ],
-  "statsBulletinHeadline": "/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/bulletins/cancerstatisticsregistrationsenglandseriesmb1no432012",
+  "statsBulletinHeadline": {
+    "name": "Cancer Statistics Registrations, England (Series MB1), No. 43, 2012",
+    "uri": "/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/bulletins/cancerstatisticsregistrationsenglandseriesmb1no432012"
+  },
   "statsBulletins": [
-    "/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/bulletins/cancerstatisticsregistrationsenglandseriesmb1no432012"
+    {
+      "name": "Cancer Statistics Registrations, England (Series MB1), No. 43, 2012",
+      "uri": "/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/bulletins/cancerstatisticsregistrationsenglandseriesmb1no432012"
+    }
   ],
   "datasets": [],
   "level": "t3",

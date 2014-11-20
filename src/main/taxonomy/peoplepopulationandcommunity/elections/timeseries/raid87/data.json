@@ -6,6 +6,7 @@
   "unit": "m",
   "preUnit": "",
   "date": "2013",
+  "source": "Office for National Statistics",
   "years": [
     {
       "date": "2012",
@@ -23,6 +24,9 @@
   "uri": "/peoplepopulationandcommunity/elections/timeseries/raid87",
   "relatedBulletins": [
     "/peoplepopulationandcommunity/elections/bulletins/electoralstatisticsforuk2013"
+  ],
+  "relatedTimeseries": [
+    "/peoplepopulationandcommunity/elections/timeseries/raid88"
   ],
   "type": "timeseries",
   "name": "Parliamentary electors",

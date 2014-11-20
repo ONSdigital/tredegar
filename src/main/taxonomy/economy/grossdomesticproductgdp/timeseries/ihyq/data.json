@@ -6,6 +6,8 @@
   "unit": "%",
   "preUnit": "",
   "date": "Q2 2014",
+  "source": "Office for National Statistics",
+  "additionalText": "Chained Volume Measures (CVM)",
   "years": [],
   "quarters": [
     {
@@ -1435,6 +1437,10 @@
   "uri": "/economy/grossdomesticproductgdp/timeseries/ihyq",
   "relatedBulletins": [
     "/economy/grossdomesticproductgdp/bulletins/grossdomesticproductpreliminaryestimate"
+  ],
+  "relatedTimeseries": [
+    "/economy/grossdomesticproductgdp/timeseries/abmi",
+    "/economy/grossdomesticproductgdp/timeseries/ihyr"
   ],
   "type": "timeseries",
   "name": "GDP Quarter on Quarter growth (CVM)",

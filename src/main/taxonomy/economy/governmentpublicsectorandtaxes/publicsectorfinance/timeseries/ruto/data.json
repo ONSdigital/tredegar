@@ -6,6 +6,7 @@
   "unit": "%",
   "preUnit": "",
   "date": "September 2014",
+  "source": "Office for National Statistics",
   "years": [
     {
       "date": "1993",
@@ -2304,6 +2305,9 @@
   "uri": "/economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/ruto",
   "relatedBulletins": [
     "/economy/governmentpublicsectorandtaxes/publicsectorfinance/bulletins/publicsectorfinances"
+  ],
+  "relatedTimeseries": [
+    "/economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/rutn"
   ],
   "type": "timeseries",
   "name": "Public Sector net debt excluding banks as a percentage of GDP",

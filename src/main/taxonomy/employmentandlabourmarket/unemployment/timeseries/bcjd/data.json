@@ -6,6 +6,7 @@
   "unit": "",
   "preUnit": "",
   "date": "September 2014",
+  "source": "Labour Force Survey",
   "years": [
     {
       "date": "1971",
@@ -4431,6 +4432,10 @@
   "relatedBulletins": [
     "/employmentandlabourmarket/unemployment/bulletins/uklabourmarket",
     "/employmentandlabourmarket/unemployment/bulletins/youngpeoplenotineducationemploymentortrainingneet"
+  ],
+  "relatedTimeseries": [
+    "/employmentandlabourmarket/unemployment/timeseries/dpaf",
+    "/employmentandlabourmarket/unemployment/timeseries/dpae"
   ],
   "type": "timeseries",
   "name": "Total Claimant Count",

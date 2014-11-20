@@ -9,6 +9,9 @@
   "unit": "%",
   "preUnit": "",
   "date": "September 2014",
+  "source": "Office for National Statistics",
+  "keyNote": "Percentage change over 12 months",
+  "additionalText": "percentage change over 12 months",
   "years": [
     {
       "date": "1999",
@@ -1677,6 +1680,9 @@
   "uri": "/economy/inflationandpriceindices/timeseries/kvr9",
   "relatedBulletins": [
     "/economy/inflationandpriceindices/bulletins/consumerpriceinflation"
+  ],
+  "relatedTimeseries": [
+    "/economy/inflationandpriceindices/timeseries/kvr8"
   ],
   "type": "timeseries",
   "name": "RPIJ",

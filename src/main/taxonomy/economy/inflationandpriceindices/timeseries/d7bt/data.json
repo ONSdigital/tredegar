@@ -9,6 +9,8 @@
   "unit": "index",
   "preUnit": "",
   "date": "September 2014",
+  "source": "Office for National Statistics",
+  "additionalText": "Index, 2005\u003d 100",
   "years": [
     {
       "date": "1988",
@@ -2704,6 +2706,9 @@
   "uri": "/economy/inflationandpriceindices/timeseries/d7bt",
   "relatedBulletins": [
     "/economy/inflationandpriceindices/bulletins/consumerpriceinflation"
+  ],
+  "relatedTimeseries": [
+    "/economy/inflationandpriceindices/timeseries/d7g7"
   ],
   "type": "timeseries",
   "name": "CPI: Consumer Prices Index",

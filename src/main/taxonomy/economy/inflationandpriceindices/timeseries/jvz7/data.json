@@ -6,6 +6,8 @@
   "unit": "index",
   "preUnit": "",
   "date": "September 2014",
+  "source": "Office for National Statistics",
+  "additionalText": "Index, 2005\u003d 100",
   "years": [
     {
       "date": "1996",
@@ -1905,6 +1907,9 @@
   "uri": "/economy/inflationandpriceindices/timeseries/jvz7",
   "relatedBulletins": [
     "/economy/inflationandpriceindices/bulletins/consumerpriceinflation"
+  ],
+  "relatedTimeseries": [
+    "/economy/inflationandpriceindices/timeseries/k646"
   ],
   "type": "timeseries",
   "name": "Output of manufactured product",

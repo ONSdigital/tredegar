@@ -1,16 +1,43 @@
 {
-  "headline": "/businessindustryandtrade/constructionindustry/timeseries/raid9",
+  "headline": {
+    "name": "Value of construction output  - all new work",
+    "uri": "/businessindustryandtrade/constructionindustry/timeseries/raid9"
+  },
   "items": [
-    "/businessindustryandtrade/constructionindustry/timeseries/raid9",
-    "/businessindustryandtrade/constructionindustry/timeseries/raid10",
-    "/businessindustryandtrade/constructionindustry/timeseries/raid11",
-    "/businessindustryandtrade/constructionindustry/timeseries/raid12",
-    "/businessindustryandtrade/constructionindustry/timeseries/raid13",
-    "/businessindustryandtrade/constructionindustry/timeseries/raid14"
+    {
+      "name": "Value of construction output  - all new work",
+      "uri": "/businessindustryandtrade/constructionindustry/timeseries/raid9"
+    },
+    {
+      "name": "Value of construction output - all work",
+      "uri": "/businessindustryandtrade/constructionindustry/timeseries/raid10"
+    },
+    {
+      "name": "Value of construction output - repair and maintenance",
+      "uri": "/businessindustryandtrade/constructionindustry/timeseries/raid11"
+    },
+    {
+      "name": "Construction output - all new work",
+      "uri": "/businessindustryandtrade/constructionindustry/timeseries/raid12"
+    },
+    {
+      "name": "Construction output - all work",
+      "uri": "/businessindustryandtrade/constructionindustry/timeseries/raid13"
+    },
+    {
+      "name": "Construction output - repair and maintenance",
+      "uri": "/businessindustryandtrade/constructionindustry/timeseries/raid14"
+    }
   ],
-  "statsBulletinHeadline": "/businessindustryandtrade/constructionindustry/bulletins/outputintheconstructionindustry",
+  "statsBulletinHeadline": {
+    "name": "Output in the Construction Industry",
+    "uri": "/businessindustryandtrade/constructionindustry/bulletins/outputintheconstructionindustry"
+  },
   "statsBulletins": [
-    "/businessindustryandtrade/constructionindustry/bulletins/outputintheconstructionindustry"
+    {
+      "name": "Output in the Construction Industry",
+      "uri": "/businessindustryandtrade/constructionindustry/bulletins/outputintheconstructionindustry"
+    }
   ],
   "datasets": [],
   "level": "t3",

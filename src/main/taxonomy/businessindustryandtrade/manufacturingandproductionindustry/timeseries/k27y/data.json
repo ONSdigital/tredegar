@@ -6,6 +6,7 @@
   "unit": "%",
   "preUnit": "",
   "date": "August 2014",
+  "source": "Office for National Statistics",
   "years": [
     {
       "date": "1949",
@@ -3693,6 +3694,9 @@
   "uri": "/businessindustryandtrade/manufacturingandproductionindustry/timeseries/k27y",
   "relatedBulletins": [
     "/businessindustryandtrade/manufacturingandproductionindustry/bulletins/indexofproduction"
+  ],
+  "relatedTimeseries": [
+    "/businessindustryandtrade/manufacturingandproductionindustry/timeseries/k22a"
   ],
   "type": "timeseries",
   "name": "Manufacturing",

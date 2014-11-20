@@ -4,8 +4,7 @@
       "name": "Gross Domestic Product (GDP)",
       "link": "grossdomesticproductgdp",
       "index": 0,
-      "items": [],
-      "children": [
+      "items": [
         {
           "name": "Gross Domestic Product (CVM)",
           "uri": "/economy/grossdomesticproductgdp/timeseries/abmi"
@@ -31,23 +30,23 @@
           "uri": "/economy/grossdomesticproductgdp/timeseries/ihyo"
         },
         {
-          "name": "Production Index",
+          "name": "Output Measure: Production",
           "uri": "/economy/grossdomesticproductgdp/timeseries/l2kq"
         },
         {
-          "name": "Manufacturing",
+          "name": "Output Measure: Manufacturing",
           "uri": "/economy/grossdomesticproductgdp/timeseries/l2kx"
         },
         {
-          "name": "Agriculture, Forestry and Fishing",
+          "name": "Output Measure: Agriculture, Forestry and Fishing",
           "uri": "/economy/grossdomesticproductgdp/timeseries/l2kl"
         },
         {
-          "name": "Construction Index",
+          "name": "Output Measure: Construction",
           "uri": "/economy/grossdomesticproductgdp/timeseries/l2n8"
         },
         {
-          "name": "Services Index",
+          "name": "Output Measure: Services",
           "uri": "/economy/grossdomesticproductgdp/timeseries/l2nc"
         },
         {
@@ -96,8 +95,7 @@
       "name": "Inflation and Price Indices",
       "link": "inflationandpriceindices",
       "index": 1,
-      "items": [],
-      "children": [
+      "items": [
         {
           "name": "CPI: Consumer Prices Index",
           "uri": "/economy/inflationandpriceindices/timeseries/d7g7"
@@ -115,27 +113,27 @@
           "uri": "/economy/inflationandpriceindices/timeseries/kvr9"
         },
         {
-          "name": "CPI: Consumer Prices Index (2005 \u003d 100)",
+          "name": "CPI: Consumer Prices Index",
           "uri": "/economy/inflationandpriceindices/timeseries/d7bt"
         },
         {
-          "name": "RPI: Retail Price Index (1987 \u003d 100)",
+          "name": "RPI: Retail Price Index",
           "uri": "/economy/inflationandpriceindices/timeseries/chaw"
         },
         {
-          "name": "CPIH Index (2005 \u003d 100)",
+          "name": "CPIH",
           "uri": "/economy/inflationandpriceindices/timeseries/l522"
         },
         {
-          "name": "RPIJ Index (1987 \u003d 100)",
+          "name": "RPIJ",
           "uri": "/economy/inflationandpriceindices/timeseries/kvr8"
         },
         {
-          "name": "Output of manufactured product Index (2005 \u003d 100)",
+          "name": "Output of manufactured product",
           "uri": "/economy/inflationandpriceindices/timeseries/jvz7"
         },
         {
-          "name": "Input of all manufacturing Index (2005 \u003d 100)",
+          "name": "Input of all manufacturing",
           "uri": "/economy/inflationandpriceindices/timeseries/k646"
         }
       ]
@@ -144,8 +142,7 @@
       "name": "National Accounts",
       "link": "nationalaccounts",
       "index": 2,
-      "items": [],
-      "children": [
+      "items": [
         {
           "name": "Balance of Payments: Current balance",
           "uri": "/economy/nationalaccounts/timeseries/hbop"
@@ -176,8 +173,7 @@
       "name": "Government, Public Sector and Taxes",
       "link": "governmentpublicsectorandtaxes",
       "index": 3,
-      "items": [],
-      "children": [
+      "items": [
         {
           "name": "Public Sector Finance",
           "uri": "publicsectorfinance"
@@ -192,26 +188,25 @@
       "name": "Economic Output and Productivity",
       "link": "economicoutputandproductivity",
       "index": 4,
-      "items": [],
-      "children": [
+      "items": [
         {
-          "name": "Production Index",
+          "name": "Output Measure: Production",
           "uri": "/economy/grossdomesticproductgdp/timeseries/l2kq"
         },
         {
-          "name": "Manufacturing",
+          "name": "Output Measure: Manufacturing",
           "uri": "/economy/grossdomesticproductgdp/timeseries/l2kx"
         },
         {
-          "name": "Agriculture, Forestry and Fishing",
+          "name": "Output Measure: Agriculture, Forestry and Fishing",
           "uri": "/economy/grossdomesticproductgdp/timeseries/l2kl"
         },
         {
-          "name": "Construction Index",
+          "name": "Output Measure: Construction",
           "uri": "/economy/grossdomesticproductgdp/timeseries/l2n8"
         },
         {
-          "name": "Services Index",
+          "name": "Output Measure: Services",
           "uri": "/economy/grossdomesticproductgdp/timeseries/l2nc"
         }
       ]
@@ -220,8 +215,7 @@
       "name": "Gross Value Added (GVA)",
       "link": "grossvalueaddedgva",
       "index": 5,
-      "items": [],
-      "children": [
+      "items": [
         {
           "name": "United Kingdom Gross Value Added (GVA)",
           "uri": "/economy/grossvalueaddedgva/timeseries/abml"
@@ -280,8 +274,7 @@
       "name": "Investments, Pensions and Trusts",
       "link": "investmentspensionsandtrusts",
       "index": 6,
-      "items": [],
-      "children": [
+      "items": [
         {
           "name": "Net investment flows into the UK",
           "uri": "/economy/investmentspensionsandtrusts/timeseries/raid135"
@@ -300,62 +293,61 @@
       "name": "Regional Accounts",
       "link": "regionalaccounts",
       "index": 7,
-      "items": [],
-      "children": [
+      "items": [
         {
-          "name": "Gross Disposable Household Income United Kingdom",
+          "name": "United Kingdom Gross Disposable Household Income",
           "uri": "/economy/regionalaccounts/timeseries/qwnd"
         },
         {
-          "name": "Gross Disposable Household Income North East",
+          "name": "North East Gross Disposable Household Income",
           "uri": "/economy/regionalaccounts/timeseries/c92i"
         },
         {
-          "name": "Gross Disposable Household Income North West",
+          "name": "North West Gross Disposable Household Income",
           "uri": "/economy/regionalaccounts/timeseries/c92j"
         },
         {
-          "name": "Gross Disposable Household Income Yorkshire and The Humber",
+          "name": "Yorkshire and The Humber Gross Disposable Household Income",
           "uri": "/economy/regionalaccounts/timeseries/c92k"
         },
         {
-          "name": "Gross Disposable Household Income East Midlands",
+          "name": "East Midlands Gross Disposable Household Income",
           "uri": "/economy/regionalaccounts/timeseries/c92l"
         },
         {
-          "name": "Gross Disposable Household Income West Midlands",
+          "name": "West Midlands Gross Disposable Household Income",
           "uri": "/economy/regionalaccounts/timeseries/c92m"
         },
         {
-          "name": "Gross Disposable Household Income East of England",
+          "name": "East of England Gross Disposable Household Income",
           "uri": "/economy/regionalaccounts/timeseries/c92n"
         },
         {
-          "name": "Gross Disposable Household Income London",
+          "name": "Income London Gross Disposable Household",
           "uri": "/economy/regionalaccounts/timeseries/c92o"
         },
         {
-          "name": "Gross Disposable Household Income South East",
+          "name": "South East Gross Disposable Household Income",
           "uri": "/economy/regionalaccounts/timeseries/c92p"
         },
         {
-          "name": "Gross Disposable Household Income South West",
+          "name": "South West Gross Disposable Household Income",
           "uri": "/economy/regionalaccounts/timeseries/c92q"
         },
         {
-          "name": "Gross Disposable Household Income England",
+          "name": "England Gross Disposable Household Income",
           "uri": "/economy/regionalaccounts/timeseries/c92r"
         },
         {
-          "name": "Gross Disposable Household Income Wales",
+          "name": "Wales Gross Disposable Household Income",
           "uri": "/economy/regionalaccounts/timeseries/c92s"
         },
         {
-          "name": "Gross Disposable Household Income Scotland",
+          "name": "Scotland Gross Disposable Household Income",
           "uri": "/economy/regionalaccounts/timeseries/c92t"
         },
         {
-          "name": "Gross Disposable Household Income Northern Ireland",
+          "name": "Northern Ireland Gross Disposable Household Income",
           "uri": "/economy/regionalaccounts/timeseries/c92u"
         }
       ]
@@ -364,8 +356,7 @@
       "name": "Environmental Accounts",
       "link": "environmentalaccounts",
       "index": 8,
-      "items": [],
-      "children": [
+      "items": [
         {
           "name": "Total energy consumption (oil equivalent)",
           "uri": "/economy/environmentalaccounts/timeseries/raid138"

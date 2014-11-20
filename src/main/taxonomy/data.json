@@ -5,36 +5,44 @@
       "link": "economy",
       "index": 0,
       "items": [
-        "/economy/inflationandpriceindices/timeseries/d7g7"
-      ],
-      "children": []
+        {
+          "name": "CPI: Consumer Prices Index",
+          "uri": "/economy/inflationandpriceindices/timeseries/d7g7"
+        }
+      ]
     },
     {
       "name": "Business, Industry and Trade",
       "link": "businessindustryandtrade",
       "index": 0,
       "items": [
-        "/businessindustryandtrade/internationaltrade/timeseries/ikbj"
-      ],
-      "children": []
+        {
+          "name": "Trade in goods and services deficit (or surplus)",
+          "uri": "/businessindustryandtrade/internationaltrade/timeseries/ikbj"
+        }
+      ]
     },
     {
       "name": "Employment and Labour Market",
       "link": "employmentandlabourmarket",
       "index": 0,
       "items": [
-        "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/lf24"
-      ],
-      "children": []
+        {
+          "name": "Employment rate (aged 16-64)",
+          "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/lf24"
+        }
+      ]
     },
     {
       "name": "People, Population and Community",
       "link": "peoplepopulationandcommunity",
       "index": 0,
       "items": [
-        "/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/raid121"
-      ],
-      "children": []
+        {
+          "name": "UK population",
+          "uri": "/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/raid121"
+        }
+      ]
     }
   ],
   "level": "t1",

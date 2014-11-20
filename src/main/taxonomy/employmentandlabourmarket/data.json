@@ -4,8 +4,7 @@
       "name": "People in Work",
       "link": "peopleinwork",
       "index": 0,
-      "items": [],
-      "children": [
+      "items": [
         {
           "name": "Labour Productivity",
           "uri": "labourproductivity"
@@ -28,31 +27,30 @@
       "name": "Unemployment",
       "link": "unemployment",
       "index": 1,
-      "items": [],
-      "children": [
+      "items": [
         {
           "name": "Unemployment rate (aged 16-64)",
           "uri": "/employmentandlabourmarket/unemployment/timeseries/mgsx"
+        },
+        {
+          "name": "Female Unemployment Rate (aged 16-64)",
+          "uri": "/employmentandlabourmarket/unemployment/timeseries/mgsz"
+        },
+        {
+          "name": "Male Unemployment Rate (aged 16-64)",
+          "uri": "/employmentandlabourmarket/unemployment/timeseries/mgsy"
         },
         {
           "name": "Unemployment 16+",
           "uri": "/employmentandlabourmarket/unemployment/timeseries/mgsc"
         },
         {
-          "name": "Unemployment 16+ Female",
+          "name": "Female Unemployment 16+",
           "uri": "/employmentandlabourmarket/unemployment/timeseries/mgse"
         },
         {
-          "name": "Unemployment 16+ Male",
+          "name": "Male Unemployment 16+",
           "uri": "/employmentandlabourmarket/unemployment/timeseries/mgsd"
-        },
-        {
-          "name": "Unemployment Rate (aged 16-64) Female",
-          "uri": "/employmentandlabourmarket/unemployment/timeseries/mgsz"
-        },
-        {
-          "name": "Unemployment Rate (aged 16-64) Male",
-          "uri": "/employmentandlabourmarket/unemployment/timeseries/mgsy"
         },
         {
           "name": "Total Claimant Count",
@@ -72,8 +70,7 @@
       "name": "Public Sector Personnel",
       "link": "publicsectorpersonnel",
       "index": 2,
-      "items": [],
-      "children": [
+      "items": [
         {
           "name": "Total public sector employees: Head count",
           "uri": "/employmentandlabourmarket/publicsectorpersonnel/timeseries/g7au"

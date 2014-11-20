@@ -6,6 +6,8 @@
   "unit": "%",
   "preUnit": "",
   "date": "Q2 2014",
+  "source": "Office for National Statistics",
+  "additionalText": "Current Prices (CP)",
   "years": [],
   "quarters": [
     {
@@ -1417,6 +1419,10 @@
   "uri": "/economy/grossdomesticproductgdp/timeseries/ihyo",
   "relatedBulletins": [
     "/economy/grossdomesticproductgdp/bulletins/grossdomesticproductpreliminaryestimate"
+  ],
+  "relatedTimeseries": [
+    "/economy/grossdomesticproductgdp/timeseries/ybha",
+    "/economy/grossdomesticproductgdp/timeseries/ihyn"
   ],
   "type": "timeseries",
   "name": "GDP Change on same Quarter a year ago (CP)",

@@ -6,6 +6,7 @@
   "unit": "%",
   "preUnit": "",
   "date": "July 2014",
+  "source": "Labour Force Survey",
   "years": [
     {
       "date": "1971",
@@ -4399,6 +4400,11 @@
   ],
   "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/lf25",
   "relatedBulletins": [],
+  "relatedTimeseries": [
+    "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgsv",
+    "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/lf24",
+    "/employmentandlabourmarket/unemployment/timeseries/mgsz"
+  ],
   "type": "timeseries",
   "name": "Female Employment rate (aged 16-64)",
   "fileName": "lf25",

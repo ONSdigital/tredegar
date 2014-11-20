@@ -32,11 +32,12 @@ public class Search {
 
 	@GET
 	public Object get(@Context HttpServletRequest request, @Context HttpServletResponse response) throws Exception {
+		response.setCharacterEncoding("UTF8");
+		response.setContentType("application/json");
 		return search(extractQuery(request), extractPage(request), request.getParameter("type"));
 	}
 
 	private Object search(String query, int page, String type) throws Exception {
-		System.out.println("Type is " + type);
 		ONSQueryBuilder queryBuilder = new ONSQueryBuilder("ons").setType(type)
 				.setPage(page).setSearchTerm(query)
 				.setFields(getTitle(), "path");
