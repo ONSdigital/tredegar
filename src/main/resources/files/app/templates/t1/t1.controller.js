@@ -2,13 +2,17 @@
 	'use strict';
 
 	angular.module('onsTemplates')
-		.controller('T1Controller', ['$scope', 'Taxonomy', T1Controller])
+		.controller('T1Controller', ['$scope', '$window', 'Taxonomy', T1Controller])
 
-	function T1Controller($scope, Taxonomy) {
+	function T1Controller($scope, $window, Taxonomy) {
 		var t1 = this
 		var sections = $scope.taxonomy.data.sections
-
+		t1.sparklineHeight = 50
+		t1.sparklineWidth = 120
 		initialize()
+		
+		// listenResize()
+
 
 		function initialize() {
 			for (var i = 0; i < sections.length; i++) {
@@ -28,6 +32,25 @@
 			};
 
 		}
+
+        //Listens resize event to switch screen type to mobile or desktop
+        function listenResize() {
+          angular.element($window).bind('resize', function() {
+          	console.log("Resized:" + $window.innerWidth)
+            resolveChartSize()
+            $scope.$apply()
+          })
+        }
+
+        function resolveChartSize() {
+          if ($window.innerWidth < 800) {
+            t1.sparklineHeight = 100
+            t1.sparklineWidth = 200
+          } else {
+            t1.sparklineHeight = 50
+            t1.sparklineWidth = 120
+          }
+        }
 
 		function loadItemData(item) {
 			Taxonomy.loadItem(item)
