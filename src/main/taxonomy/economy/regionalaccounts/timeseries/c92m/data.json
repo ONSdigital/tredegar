@@ -6,6 +6,7 @@
   "unit": "m",
   "preUnit": "£",
   "date": "2012",
+  "source": "Office for National Statistics",
   "years": [
     {
       "date": "1997",
@@ -93,6 +94,10 @@
   "uri": "/economy/regionalaccounts/timeseries/c92m",
   "relatedBulletins": [
     "/economy/regionalaccounts/bulletins/regionalgrossdisposablehouseholdincomegdhi"
+  ],
+  "relatedTimeseries": [
+    "/economy/regionalaccounts/timeseries/qwnd",
+    "/economy/regionalaccounts/timeseries/c92r"
   ],
   "type": "timeseries",
   "name": "West Midlands Gross Disposable Household Income",

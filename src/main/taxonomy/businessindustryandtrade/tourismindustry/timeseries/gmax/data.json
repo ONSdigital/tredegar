@@ -6,6 +6,7 @@
   "unit": "m",
   "preUnit": "",
   "date": "August 2014",
+  "source": "Office for National Statistics",
   "years": [
     {
       "date": "1986",
@@ -2903,6 +2904,9 @@
   "uri": "/businessindustryandtrade/tourismindustry/timeseries/gmax",
   "relatedBulletins": [
     "/businessindustryandtrade/tourismindustry/bulletins/overseastravelandtourism"
+  ],
+  "relatedTimeseries": [
+    "/businessindustryandtrade/tourismindustry/timeseries/gmat"
   ],
   "type": "timeseries",
   "name": "UK visits abroad",

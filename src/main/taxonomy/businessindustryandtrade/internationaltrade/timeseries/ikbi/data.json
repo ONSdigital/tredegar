@@ -6,6 +6,7 @@
   "unit": "m",
   "preUnit": "£",
   "date": "Q2 2014",
+  "source": "Office for National Statistics",
   "years": [
     {
       "date": "1946",
@@ -2983,6 +2984,9 @@
   "uri": "/businessindustryandtrade/internationaltrade/timeseries/ikbi",
   "relatedBulletins": [
     "/businessindustryandtrade/internationaltrade/bulletins/uktrade"
+  ],
+  "relatedTimeseries": [
+    "/businessindustryandtrade/internationaltrade/timeseries/ikbh"
   ],
   "type": "timeseries",
   "name": "Total imports of goods and services",

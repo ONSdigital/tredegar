@@ -1,13 +1,31 @@
 {
-  "headline": "/peoplepopulationandcommunity/populationandmigration/internationalmigration/timeseries/raid117",
+  "headline": {
+    "name": "Net long-term migration to the UK",
+    "uri": "/peoplepopulationandcommunity/populationandmigration/internationalmigration/timeseries/raid117"
+  },
   "items": [
-    "/peoplepopulationandcommunity/populationandmigration/internationalmigration/timeseries/raid117",
-    "/peoplepopulationandcommunity/populationandmigration/internationalmigration/timeseries/raid118",
-    "/peoplepopulationandcommunity/populationandmigration/internationalmigration/timeseries/raid119"
+    {
+      "name": "Net long-term migration to the UK",
+      "uri": "/peoplepopulationandcommunity/populationandmigration/internationalmigration/timeseries/raid117"
+    },
+    {
+      "name": "Immigration to the UK",
+      "uri": "/peoplepopulationandcommunity/populationandmigration/internationalmigration/timeseries/raid118"
+    },
+    {
+      "name": "Emigration from the UK",
+      "uri": "/peoplepopulationandcommunity/populationandmigration/internationalmigration/timeseries/raid119"
+    }
   ],
-  "statsBulletinHeadline": "/peoplepopulationandcommunity/populationandmigration/internationalmigration/bulletins/migrationstatisticsquarterlyreportmay2014",
+  "statsBulletinHeadline": {
+    "name": "Migration Statistics Quarterly Report, May 2014",
+    "uri": "/peoplepopulationandcommunity/populationandmigration/internationalmigration/bulletins/migrationstatisticsquarterlyreportmay2014"
+  },
   "statsBulletins": [
-    "/peoplepopulationandcommunity/populationandmigration/internationalmigration/bulletins/migrationstatisticsquarterlyreportmay2014"
+    {
+      "name": "Migration Statistics Quarterly Report, May 2014",
+      "uri": "/peoplepopulationandcommunity/populationandmigration/internationalmigration/bulletins/migrationstatisticsquarterlyreportmay2014"
+    }
   ],
   "datasets": [],
   "level": "t3",

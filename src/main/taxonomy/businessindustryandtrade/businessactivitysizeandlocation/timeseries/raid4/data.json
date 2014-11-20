@@ -3,15 +3,20 @@
   "note1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quam leo, blandit a turpis non, varius feugiat mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In posuere lectus eu laoreet ultrices. Donec ac sodales libero, eget fermentum arcu.",
   "note2": "Fusce pharetra, libero in imperdiet ultricies, ex erat tempor dolor, vitae aliquet magna velit in urna. Duis finibus augue velit, ut consectetur risus imperdiet in. Sed tempus congue ante, ac cursus diam porttitor vitae. Vivamus arcu leo, volutpat in mauris ac, lacinia fermentum velit. Sed dictum tortor justo, aliquet facilisis lorem dictum a.",
   "number": "1862095",
-  "unit": "m",
+  "unit": "",
   "preUnit": "",
   "date": "2013",
+  "source": "Office for National Statistics",
+  "keyNote": "Number of VAT and/or PAYE based enterprises",
   "years": [],
   "quarters": [],
   "months": [],
   "uri": "/businessindustryandtrade/businessactivitysizeandlocation/timeseries/raid4",
   "relatedBulletins": [
     "/businessindustryandtrade/businessactivitysizeandlocation/bulletins/ukbusinessactivitysizeandlocation"
+  ],
+  "relatedTimeseries": [
+    "/businessindustryandtrade/businessactivitysizeandlocation/timeseries/raid2"
   ],
   "type": "timeseries",
   "name": "England businesses",

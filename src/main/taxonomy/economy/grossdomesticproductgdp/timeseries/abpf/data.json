@@ -6,6 +6,7 @@
   "unit": "m",
   "preUnit": "£",
   "date": "Q2 2014",
+  "source": "Office for National Statistics",
   "years": [
     {
       "date": "1948",
@@ -1772,6 +1773,11 @@
   "uri": "/economy/grossdomesticproductgdp/timeseries/abpf",
   "relatedBulletins": [
     "/economy/grossdomesticproductgdp/bulletins/grossdomesticproductpreliminaryestimate"
+  ],
+  "relatedTimeseries": [
+    "/economy/grossdomesticproductgdp/timeseries/abnu",
+    "/economy/grossdomesticproductgdp/timeseries/nmru",
+    "/economy/grossdomesticproductgdp/timeseries/npqr"
   ],
   "type": "timeseries",
   "name": "Expenditure Measure: Households",

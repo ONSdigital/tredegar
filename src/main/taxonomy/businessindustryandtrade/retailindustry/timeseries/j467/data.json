@@ -6,6 +6,8 @@
   "unit": "index",
   "preUnit": "",
   "date": "September 2014",
+  "source": "Office for National Statistics",
+  "additionalText": "Index, 2010 \u003d 100",
   "years": [
     {
       "date": "1988",
@@ -2701,6 +2703,9 @@
   "uri": "/businessindustryandtrade/retailindustry/timeseries/j467",
   "relatedBulletins": [
     "/businessindustryandtrade/retailindustry/bulletins/retailsales"
+  ],
+  "relatedTimeseries": [
+    "/businessindustryandtrade/retailindustry/timeseries/j5ek"
   ],
   "type": "timeseries",
   "name": "Retail Sales Volume excluding automotive fuel ",

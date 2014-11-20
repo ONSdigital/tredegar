@@ -1,11 +1,29 @@
 {
-  "headline": "/peoplepopulationandcommunity/culturalidentity/ethnicity/timeseries/raid65",
+  "headline": {
+    "name": "White",
+    "uri": "/peoplepopulationandcommunity/culturalidentity/ethnicity/timeseries/raid65"
+  },
   "items": [
-    "/peoplepopulationandcommunity/culturalidentity/ethnicity/timeseries/raid65",
-    "/peoplepopulationandcommunity/culturalidentity/ethnicity/timeseries/raid67",
-    "/peoplepopulationandcommunity/culturalidentity/ethnicity/timeseries/raid68",
-    "/peoplepopulationandcommunity/culturalidentity/ethnicity/timeseries/raid66",
-    "/peoplepopulationandcommunity/culturalidentity/ethnicity/timeseries/raid69"
+    {
+      "name": "White",
+      "uri": "/peoplepopulationandcommunity/culturalidentity/ethnicity/timeseries/raid65"
+    },
+    {
+      "name": "Asian/Asian British",
+      "uri": "/peoplepopulationandcommunity/culturalidentity/ethnicity/timeseries/raid67"
+    },
+    {
+      "name": "Black/African/Caribbean/Black British",
+      "uri": "/peoplepopulationandcommunity/culturalidentity/ethnicity/timeseries/raid68"
+    },
+    {
+      "name": "Mixed/ Multiple Ethnic Groups",
+      "uri": "/peoplepopulationandcommunity/culturalidentity/ethnicity/timeseries/raid66"
+    },
+    {
+      "name": "Other Ethnic Group",
+      "uri": "/peoplepopulationandcommunity/culturalidentity/ethnicity/timeseries/raid69"
+    }
   ],
   "statsBulletins": [],
   "datasets": [],

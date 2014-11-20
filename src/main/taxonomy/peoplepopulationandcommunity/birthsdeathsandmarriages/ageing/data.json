@@ -1,14 +1,35 @@
 {
-  "headline": "/peoplepopulationandcommunity/birthsdeathsandmarriages/ageing/timeseries/raid24",
+  "headline": {
+    "name": "Centenarians in the UK",
+    "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/ageing/timeseries/raid24"
+  },
   "items": [
-    "/peoplepopulationandcommunity/birthsdeathsandmarriages/ageing/timeseries/raid24",
-    "/peoplepopulationandcommunity/birthsdeathsandmarriages/ageing/timeseries/raid25",
-    "/peoplepopulationandcommunity/birthsdeathsandmarriages/ageing/timeseries/raid26",
-    "/peoplepopulationandcommunity/birthsdeathsandmarriages/ageing/timeseries/raid27"
+    {
+      "name": "Centenarians in the UK",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/ageing/timeseries/raid24"
+    },
+    {
+      "name": "People aged 90 and over",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/ageing/timeseries/raid25"
+    },
+    {
+      "name": "Men aged 90 and over",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/ageing/timeseries/raid26"
+    },
+    {
+      "name": "Women aged 90 and over",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/ageing/timeseries/raid27"
+    }
   ],
-  "statsBulletinHeadline": "/peoplepopulationandcommunity/birthsdeathsandmarriages/ageing/bulletins/estimatesoftheveryoldincludingcentenariansfortheunitedkingdom20022012",
+  "statsBulletinHeadline": {
+    "name": "Estimates of the Very Old (including Centenarians) for the United Kingdom, 2002-2012",
+    "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/ageing/bulletins/estimatesoftheveryoldincludingcentenariansfortheunitedkingdom20022012"
+  },
   "statsBulletins": [
-    "/peoplepopulationandcommunity/birthsdeathsandmarriages/ageing/bulletins/estimatesoftheveryoldincludingcentenariansfortheunitedkingdom20022012"
+    {
+      "name": "Estimates of the Very Old (including Centenarians) for the United Kingdom, 2002-2012",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/ageing/bulletins/estimatesoftheveryoldincludingcentenariansfortheunitedkingdom20022012"
+    }
   ],
   "datasets": [],
   "level": "t3",

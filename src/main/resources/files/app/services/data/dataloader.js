@@ -2,20 +2,26 @@
 
 (function() {
 	angular.module('onsDataLoader', [])
-		.service('DataLoader', ['$http', '$log', '$q', 'DSCacheFactory', DataLoader])
+		.service('DataLoader', ['$http', '$log', '$q', 'DSCacheFactory', '$location', DataLoader])
 
 
 	/*
 	Data Loader Service caches each http call to local storage if available, otherwise uses angular cache. see config.js for details
 	*/
-	function DataLoader($http, $log, $q, DSCacheFactory) {
+	function DataLoader($http, $log, $q, DSCacheFactory, $location) {
 		var dataLoader = this
 		var cache = DSCacheFactory.get('dataCache')
 
 		function load(path) {
 			var deferred = $q.defer()
+			var data
 
-			var data = loadFromCache(path)
+			//Quick dirty hack to disable caching on localhost
+			if ($location.host() != 'localhost') {
+				data = loadFromCache(path)
+			}
+
+
 			if (data) { //Cache hit
 				$log.debug('Data Loader : Cached data hit for ', path, ' ', data)
 				deferred.resolve(data)

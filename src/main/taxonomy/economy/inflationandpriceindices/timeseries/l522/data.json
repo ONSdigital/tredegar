@@ -9,6 +9,8 @@
   "unit": "index",
   "preUnit": "",
   "date": "September 2014",
+  "source": "Office for National Statistics",
+  "additionalText": "Not a National Statistic. Index, 2005\u003d 100",
   "years": [
     {
       "date": "2005",
@@ -987,6 +989,9 @@
   "uri": "/economy/inflationandpriceindices/timeseries/l522",
   "relatedBulletins": [
     "/economy/inflationandpriceindices/bulletins/consumerpriceinflation"
+  ],
+  "relatedTimeseries": [
+    "/economy/inflationandpriceindices/timeseries/l55o"
   ],
   "type": "timeseries",
   "name": "CPIH",

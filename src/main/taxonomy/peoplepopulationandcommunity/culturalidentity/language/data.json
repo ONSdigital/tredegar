@@ -1,14 +1,35 @@
 {
-  "headline": "/peoplepopulationandcommunity/culturalidentity/language/timeseries/raid70",
+  "headline": {
+    "name": "English as main language",
+    "uri": "/peoplepopulationandcommunity/culturalidentity/language/timeseries/raid70"
+  },
   "items": [
-    "/peoplepopulationandcommunity/culturalidentity/language/timeseries/raid70",
-    "/peoplepopulationandcommunity/culturalidentity/language/timeseries/raid71",
-    "/peoplepopulationandcommunity/culturalidentity/language/timeseries/raid72",
-    "/peoplepopulationandcommunity/culturalidentity/language/timeseries/raid73"
+    {
+      "name": "English as main language",
+      "uri": "/peoplepopulationandcommunity/culturalidentity/language/timeseries/raid70"
+    },
+    {
+      "name": "English as main language",
+      "uri": "/peoplepopulationandcommunity/culturalidentity/language/timeseries/raid71"
+    },
+    {
+      "name": "English not main language",
+      "uri": "/peoplepopulationandcommunity/culturalidentity/language/timeseries/raid72"
+    },
+    {
+      "name": "English not main language",
+      "uri": "/peoplepopulationandcommunity/culturalidentity/language/timeseries/raid73"
+    }
   ],
-  "statsBulletinHeadline": "/peoplepopulationandcommunity/culturalidentity/language/bulletins/2011censusquickstatisticsforenglandandwalesmarch2011",
+  "statsBulletinHeadline": {
+    "name": "2011 Census: Quick Statistics for England and Wales, March 2011",
+    "uri": "/peoplepopulationandcommunity/culturalidentity/language/bulletins/2011censusquickstatisticsforenglandandwalesmarch2011"
+  },
   "statsBulletins": [
-    "/peoplepopulationandcommunity/culturalidentity/language/bulletins/2011censusquickstatisticsforenglandandwalesmarch2011"
+    {
+      "name": "2011 Census: Quick Statistics for England and Wales, March 2011",
+      "uri": "/peoplepopulationandcommunity/culturalidentity/language/bulletins/2011censusquickstatisticsforenglandandwalesmarch2011"
+    }
   ],
   "datasets": [],
   "level": "t3",

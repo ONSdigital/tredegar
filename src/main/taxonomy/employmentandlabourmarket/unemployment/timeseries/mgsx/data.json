@@ -6,6 +6,7 @@
   "unit": "%",
   "preUnit": "",
   "date": "July 2014",
+  "source": "Labour Force Survey",
   "years": [
     {
       "date": "1971",
@@ -4407,6 +4408,12 @@
   "relatedBulletins": [
     "/employmentandlabourmarket/unemployment/bulletins/uklabourmarket",
     "/employmentandlabourmarket/unemployment/bulletins/youngpeoplenotineducationemploymentortrainingneet"
+  ],
+  "relatedTimeseries": [
+    "/employmentandlabourmarket/unemployment/timeseries/mgsz",
+    "/employmentandlabourmarket/unemployment/timeseries/mgsy",
+    "/employmentandlabourmarket/unemployment/timeseries/mgsc",
+    "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/lf24"
   ],
   "type": "timeseries",
   "name": "Unemployment rate (aged 16-64)",

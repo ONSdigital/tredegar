@@ -1,23 +1,71 @@
 {
-  "headline": "/economy/grossvalueaddedgva/timeseries/abml",
+  "headline": {
+    "name": "United Kingdom Gross Value Added (GVA)",
+    "uri": "/economy/grossvalueaddedgva/timeseries/abml"
+  },
   "items": [
-    "/economy/grossvalueaddedgva/timeseries/abml",
-    "/economy/grossvalueaddedgva/timeseries/tmpw",
-    "/economy/grossvalueaddedgva/timeseries/tmpx",
-    "/economy/grossvalueaddedgva/timeseries/tmpy",
-    "/economy/grossvalueaddedgva/timeseries/tmpz",
-    "/economy/grossvalueaddedgva/timeseries/tmqa",
-    "/economy/grossvalueaddedgva/timeseries/dgph",
-    "/economy/grossvalueaddedgva/timeseries/dgpi",
-    "/economy/grossvalueaddedgva/timeseries/dgpj",
-    "/economy/grossvalueaddedgva/timeseries/tmqe",
-    "/economy/grossvalueaddedgva/timeseries/tmqg",
-    "/economy/grossvalueaddedgva/timeseries/tmqh",
-    "/economy/grossvalueaddedgva/timeseries/tmqi"
+    {
+      "name": "United Kingdom Gross Value Added (GVA)",
+      "uri": "/economy/grossvalueaddedgva/timeseries/abml"
+    },
+    {
+      "name": "North East Gross Value Added",
+      "uri": "/economy/grossvalueaddedgva/timeseries/tmpw"
+    },
+    {
+      "name": "North West Gross Value Added",
+      "uri": "/economy/grossvalueaddedgva/timeseries/tmpx"
+    },
+    {
+      "name": "Yorkshire and The Humber Gross Value Added",
+      "uri": "/economy/grossvalueaddedgva/timeseries/tmpy"
+    },
+    {
+      "name": "East Midlands Gross Value Added",
+      "uri": "/economy/grossvalueaddedgva/timeseries/tmpz"
+    },
+    {
+      "name": "West Midlands Gross Value Added",
+      "uri": "/economy/grossvalueaddedgva/timeseries/tmqa"
+    },
+    {
+      "name": "East of England Gross Value Added",
+      "uri": "/economy/grossvalueaddedgva/timeseries/dgph"
+    },
+    {
+      "name": "London Gross Value Added",
+      "uri": "/economy/grossvalueaddedgva/timeseries/dgpi"
+    },
+    {
+      "name": "South East Gross Value Added",
+      "uri": "/economy/grossvalueaddedgva/timeseries/dgpj"
+    },
+    {
+      "name": "South West Gross Value Added",
+      "uri": "/economy/grossvalueaddedgva/timeseries/tmqe"
+    },
+    {
+      "name": "Wales Gross Value Added",
+      "uri": "/economy/grossvalueaddedgva/timeseries/tmqg"
+    },
+    {
+      "name": "Scotland Gross Value Added",
+      "uri": "/economy/grossvalueaddedgva/timeseries/tmqh"
+    },
+    {
+      "name": "Northern Ireland Gross Value Added",
+      "uri": "/economy/grossvalueaddedgva/timeseries/tmqi"
+    }
   ],
-  "statsBulletinHeadline": "/economy/grossvalueaddedgva/bulletins/regionalgrossvalueaddedincomeapproach",
+  "statsBulletinHeadline": {
+    "name": "Regional Gross Value Added (Income Approach)",
+    "uri": "/economy/grossvalueaddedgva/bulletins/regionalgrossvalueaddedincomeapproach"
+  },
   "statsBulletins": [
-    "/economy/grossvalueaddedgva/bulletins/regionalgrossvalueaddedincomeapproach"
+    {
+      "name": "Regional Gross Value Added (Income Approach)",
+      "uri": "/economy/grossvalueaddedgva/bulletins/regionalgrossvalueaddedincomeapproach"
+    }
   ],
   "datasets": [],
   "level": "t3",

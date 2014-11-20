@@ -6,12 +6,17 @@
   "unit": "%",
   "preUnit": "",
   "date": "",
+  "source": "Office for National Statistics",
   "years": [],
   "quarters": [],
   "months": [],
   "uri": "/businessindustryandtrade/changestobusiness/businessbirthsdeathsandsurvivalrates/timeseries/raid8",
   "relatedBulletins": [
     "/businessindustryandtrade/changestobusiness/businessbirthsdeathsandsurvivalrates/bulletins/businessdemography"
+  ],
+  "relatedTimeseries": [
+    "/businessindustryandtrade/changestobusiness/businessbirthsdeathsandsurvivalrates/timeseries/raid6",
+    "/businessindustryandtrade/changestobusiness/businessbirthsdeathsandsurvivalrates/timeseries/raid7"
   ],
   "type": "timeseries",
   "name": "Survival rate for businesses born in 2007 and 2012",

@@ -9,6 +9,8 @@
   "unit": "index",
   "preUnit": "",
   "date": "September 2014",
+  "source": "Office for National Statistics",
+  "additionalText": "Not a National Statistic. Index, 1987\u003d 100",
   "years": [
     {
       "date": "1987",
@@ -2805,6 +2807,9 @@
   "uri": "/economy/inflationandpriceindices/timeseries/chaw",
   "relatedBulletins": [
     "/economy/inflationandpriceindices/bulletins/consumerpriceinflation"
+  ],
+  "relatedTimeseries": [
+    "/economy/inflationandpriceindices/timeseries/czbh"
   ],
   "type": "timeseries",
   "name": "RPI: Retail Price Index",

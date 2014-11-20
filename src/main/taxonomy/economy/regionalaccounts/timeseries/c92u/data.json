@@ -6,6 +6,7 @@
   "unit": "m",
   "preUnit": "£",
   "date": "2012",
+  "source": "Office for National Statistics",
   "years": [
     {
       "date": "1997",
@@ -93,6 +94,12 @@
   "uri": "/economy/regionalaccounts/timeseries/c92u",
   "relatedBulletins": [
     "/economy/regionalaccounts/bulletins/regionalgrossdisposablehouseholdincomegdhi"
+  ],
+  "relatedTimeseries": [
+    "/economy/regionalaccounts/timeseries/qwnd",
+    "/economy/regionalaccounts/timeseries/c92q",
+    "/economy/regionalaccounts/timeseries/c92s",
+    "/economy/regionalaccounts/timeseries/c92t"
   ],
   "type": "timeseries",
   "name": "Northern Ireland Gross Disposable Household Income",

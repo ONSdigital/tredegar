@@ -17,6 +17,7 @@ import com.github.onsdigital.generator.Folder;
 import com.github.onsdigital.generator.markdown.ArticleMarkdown;
 import com.github.onsdigital.generator.markdown.BulletinMarkdown;
 import com.github.onsdigital.generator.markdown.MethodologyMarkdown;
+import com.github.onsdigital.generator.taxonomy.TaxonomyCsv;
 import com.github.onsdigital.json.timeseries.Timeseries;
 import com.github.onsdigital.json.timeseries.TimeseriesValue;
 
@@ -39,11 +40,49 @@ public class Data implements Iterable<Timeseries> {
 	public static Map<Date, String> yearPairs = new TreeMap<>();
 	public static Map<Date, String> quarters = new TreeMap<>();
 	public static Map<Date, String> months = new TreeMap<>();
+	public static Map<Timeseries, List<Timeseries>> relatedTimeseries = new HashMap<>();
 
 	private static Set<Folder> folders;
 	private static Map<String, Set<Timeseries>> datasets = new TreeMap<>();
 	private static Map<String, Timeseries> timeserieses = new HashMap<>();
 	private static Set<String> mappedDatasets = new HashSet<>();
+
+	/**
+	 * Triggers parsing of {@link NonCdidCSV}, {@link DataCSV},
+	 * {@link MetadataCSV} and {@link AlphaContentCSV}.
+	 * 
+	 * @throws IOException
+	 *             If an error occurs during parsing.
+	 */
+	public static void parse() throws IOException {
+
+		System.out.println("Starting parsing of spreadsheets...");
+
+		folders = TaxonomyCsv.parse();
+
+		// Basic data
+		MetadataCSV.parse();
+
+		// Main manually set-up spreadsheet
+		// may overwrite basic data:
+		AlphaContentCSV.parse();
+
+		// Markdown content:
+		BulletinMarkdown.parse();
+		ArticleMarkdown.parse();
+		MethodologyMarkdown.parse();
+
+		// Data
+		NonCdidCSV.parse();
+		DataCSV.parse();
+		DatasetMappingsCSV.parse();
+
+		// Only call this if you want to reset bulletin content using the
+		// bulletins sheet of the Alpha Content Spreadsheet.
+		// BulletinContent.parseCsv();
+
+		System.out.println("Parsing complete.");
+	}
 
 	public static void addDateOption(String date) {
 
@@ -70,42 +109,8 @@ public class Data implements Iterable<Timeseries> {
 		}
 	}
 
-	/**
-	 * Sets the taxonomy folder structure and triggers parsing of CSV data.
-	 * 
-	 * @param folders
-	 *            The taxonomy folder structure.
-	 * @throws IOException
-	 *             If an error occurs in parsing CSVs.
-	 */
-	public static void setTaxonomy(Set<Folder> folders) throws IOException {
-		Data.folders = folders;
-		// Now we have the taxonomy, parse the data:
-		parse();
-	}
-
-	/**
-	 * Triggers parsing of {@link NonCdidCSV}, {@link DataCSV},
-	 * {@link MetadataCSV} and {@link AlphaContentCSV}.
-	 * 
-	 * @throws IOException
-	 *             If an error occurs during parsing.
-	 */
-	private static void parse() throws IOException {
-		NonCdidCSV.parse();
-		BulletinMarkdown.parse();
-		ArticleMarkdown.parse();
-		MethodologyMarkdown.parse();
-		DataCSV.parse();
-		MetadataCSV.parse();
-		AlphaContentCSV.parse();
-		DatasetMappingsCSV.parse();
-
-		// Only call this if you want to reset bulletin content using the
-		// bulletins sheet of the Alpha Content Spreadsheet.
-		// BulletinContent.parseCsv();
-
-		System.out.println("Parsing complete.");
+	public static Set<Folder> folders() {
+		return folders;
 	}
 
 	/**
@@ -200,11 +205,38 @@ public class Data implements Iterable<Timeseries> {
 	 * @param timeseries
 	 *            The timeseries.
 	 */
-	public static void addTimeseries(Timeseries timeseries, String datasetName) {
+	public static void addTimeseries(Timeseries timeseries) {
 		if (timeserieses.containsKey(toKey(timeseries.cdid()))) {
 			throw new IllegalArgumentException("Duplicate timeseries: " + timeseries);
 		}
 		timeserieses.put(toKey(timeseries.cdid()), timeseries);
+	}
+
+	/**
+	 * Creates and adds a new timeseries. If the timeseries is already present,
+	 * an {@link IllegalArgumentException} is thrown.
+	 * 
+	 * @param cdid
+	 *            The timeseries CDID.
+	 * @return The new timeseries.
+	 */
+	public static Timeseries addTimeseries(String cdid) {
+		Timeseries timeseries = new Timeseries();
+		timeseries.setCdid(cdid);
+		addTimeseries(timeseries);
+		return timeseries;
+	}
+
+	/**
+	 * Adds a new dataset. If the dataset is already present, an
+	 * {@link IllegalArgumentException} is thrown.
+	 * 
+	 * @param name
+	 *            The dataset name.
+	 * @param dataset
+	 *            The dataset.
+	 */
+	public static void setDataset(Timeseries timeseries, String datasetName) {
 
 		Set<Timeseries> dataset;
 		if (datasetName != null) {
@@ -216,21 +248,6 @@ public class Data implements Iterable<Timeseries> {
 			dataset = (dataset("other") == null) ? addDataset("other") : dataset("other");
 		}
 		dataset.add(timeseries);
-	}
-
-	/**
-	 * Creates and adds a new timeseries. If the timeseries is already present,
-	 * an {@link IllegalArgumentException} is thrown.
-	 * 
-	 * @param cdid
-	 *            The timeseries CDID.
-	 * @return The new timeseries.
-	 */
-	public static Timeseries addTimeseries(String cdid, String datasetName) {
-		Timeseries timeseries = new Timeseries();
-		timeseries.setCdid(cdid);
-		addTimeseries(timeseries, datasetName);
-		return timeseries;
 	}
 
 	/**
@@ -276,6 +293,18 @@ public class Data implements Iterable<Timeseries> {
 			result.remove(toKey(mapped));
 		}
 		return result;
+	}
+
+	public static void addRelatedTimeseries(Timeseries timeseries, List<Timeseries> relatedTimeserieses) {
+		relatedTimeseries.put(timeseries, relatedTimeserieses);
+	}
+
+	public static List<Timeseries> relatedTimeseries(Timeseries timeseries) {
+		return relatedTimeseries.get(timeseries);
+	}
+
+	public static Map<Timeseries, List<Timeseries>> getRelatedTimeseries() {
+		return relatedTimeseries;
 	}
 
 	/**

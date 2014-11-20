@@ -6,6 +6,7 @@
   "unit": "",
   "preUnit": "",
   "date": "July 2014",
+  "source": "Labour Force Survey",
   "years": [
     {
       "date": "1971",
@@ -4407,6 +4408,12 @@
   "relatedBulletins": [
     "/employmentandlabourmarket/unemployment/bulletins/uklabourmarket",
     "/employmentandlabourmarket/unemployment/bulletins/youngpeoplenotineducationemploymentortrainingneet"
+  ],
+  "relatedTimeseries": [
+    "/employmentandlabourmarket/unemployment/timeseries/mgse",
+    "/employmentandlabourmarket/unemployment/timeseries/mgsd",
+    "/employmentandlabourmarket/unemployment/timeseries/mgsx",
+    "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgrz"
   ],
   "type": "timeseries",
   "name": "Unemployment 16+",

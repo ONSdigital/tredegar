@@ -1,12 +1,33 @@
 {
-  "headline": "/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/timeseries/raid33",
+  "headline": {
+    "name": "UK deaths",
+    "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/timeseries/raid33"
+  },
   "items": [
-    "/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/timeseries/raid33",
-    "/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/timeseries/raid34",
-    "/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/timeseries/raid35",
-    "/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/timeseries/raid36",
-    "/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/timeseries/raid37",
-    "/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/timeseries/raid38"
+    {
+      "name": "UK deaths",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/timeseries/raid33"
+    },
+    {
+      "name": "England and Wales deaths",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/timeseries/raid34"
+    },
+    {
+      "name": "England deaths",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/timeseries/raid35"
+    },
+    {
+      "name": "Wales deaths",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/timeseries/raid36"
+    },
+    {
+      "name": "Scotland deaths",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/timeseries/raid37"
+    },
+    {
+      "name": "Northern Ireland deaths",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/timeseries/raid38"
+    }
   ],
   "statsBulletins": [],
   "datasets": [],

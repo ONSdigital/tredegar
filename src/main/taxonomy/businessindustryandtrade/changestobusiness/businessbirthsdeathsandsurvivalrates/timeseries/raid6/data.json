@@ -6,6 +6,7 @@
   "unit": "",
   "preUnit": "",
   "date": "2012",
+  "source": "Office for National Statistics",
   "years": [
     {
       "date": "2004",
@@ -58,6 +59,10 @@
   "uri": "/businessindustryandtrade/changestobusiness/businessbirthsdeathsandsurvivalrates/timeseries/raid6",
   "relatedBulletins": [
     "/businessindustryandtrade/changestobusiness/businessbirthsdeathsandsurvivalrates/bulletins/businessdemography"
+  ],
+  "relatedTimeseries": [
+    "/businessindustryandtrade/changestobusiness/businessbirthsdeathsandsurvivalrates/timeseries/raid7",
+    "/businessindustryandtrade/changestobusiness/businessbirthsdeathsandsurvivalrates/timeseries/raid8"
   ],
   "type": "timeseries",
   "name": "Business births",

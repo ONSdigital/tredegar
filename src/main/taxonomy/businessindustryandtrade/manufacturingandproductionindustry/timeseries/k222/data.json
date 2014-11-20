@@ -6,6 +6,8 @@
   "unit": "index",
   "preUnit": "",
   "date": "August 2014",
+  "source": "Office for National Statistics",
+  "additionalText": "Index, 2010 \u003d 100",
   "years": [
     {
       "date": "1948",
@@ -5301,6 +5303,9 @@
   "uri": "/businessindustryandtrade/manufacturingandproductionindustry/timeseries/k222",
   "relatedBulletins": [
     "/businessindustryandtrade/manufacturingandproductionindustry/bulletins/indexofproduction"
+  ],
+  "relatedTimeseries": [
+    "/businessindustryandtrade/manufacturingandproductionindustry/timeseries/k27q"
   ],
   "type": "timeseries",
   "name": "Index of Production",

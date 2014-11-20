@@ -30,7 +30,6 @@ public class Timeseries extends DataItem implements Comparable<Timeseries> {
 	// Spreadsheet headings
 	private String cdid;
 	public String seasonalAdjustment;
-	public String units;
 	public String mainMeasure;
 	public String description;
 	public String note1 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quam leo, blandit a turpis non, varius feugiat mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In posuere lectus eu laoreet ultrices. Donec ac sodales libero, eget fermentum arcu.";
@@ -48,6 +47,16 @@ public class Timeseries extends DataItem implements Comparable<Timeseries> {
 	// e.g. "Not a national statistic" or "2005 = 100. Not seasonally adjusted"
 	public String note;
 
+	// Where a statistic comes from.
+	// Typically "Office for National Statistics"
+	public String source = "Office for National Statistics";
+
+	// This value is displayed in the "(i)" tooltips next to timeseries name:
+	public String keyNote;
+
+	// This value is displayed beneath the timeseries name:
+	public String additionalText;
+
 	// The nectar, the goodness, the very juice of the fireflower: data.
 	public Set<TimeseriesValue> years = new TreeSet<>();
 	public Set<TimeseriesValue> quarters = new TreeSet<>();
@@ -60,6 +69,24 @@ public class Timeseries extends DataItem implements Comparable<Timeseries> {
 	public URI uri;
 
 	public List<URI> relatedBulletins = new ArrayList<>();
+	public List<URI> relatedTimeseries = new ArrayList<>();
+
+	// Enables the raw CSV values to be scaled to match the units defined here.
+	// E.g. this might be 1000 to convert million-scale in the CSV to
+	// billion-scale to match the scale of the headline figure and unit.
+	// It's only needed during parsing, so we don't want it serialised to json:
+	private transient Integer csvValueScaleFactor;
+
+	public void setScaleFactor(int multiply) {
+		this.csvValueScaleFactor = multiply;
+	}
+
+	public int getScaleFactor() {
+		if (this.csvValueScaleFactor == null) {
+			return 1;
+		}
+		return this.csvValueScaleFactor.intValue();
+	}
 
 	public Timeseries() {
 		type = ContentType.timeseries;

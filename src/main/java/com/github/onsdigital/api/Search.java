@@ -38,7 +38,6 @@ public class Search {
 	}
 
 	private Object search(String query, int page, String type) throws Exception {
-		System.out.println("Type is " + type);
 		ONSQueryBuilder queryBuilder = new ONSQueryBuilder("ons").setType(type)
 				.setPage(page).setSearchTerm(query)
 				.setFields(getTitle(), "path");

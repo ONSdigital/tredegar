@@ -172,6 +172,10 @@
                 $scope.getPath = function(){
                     return PageUtil.getPath()
                 }
+
+                $scope.getPage = function(){
+                    return PageUtil.getPage()
+                }
             }
         ])
 
