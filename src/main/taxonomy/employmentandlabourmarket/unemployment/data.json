@@ -1,25 +1,73 @@
 {
-  "headline": "/employmentandlabourmarket/unemployment/timeseries/mgsx",
+  "headline": {
+    "name": "Unemployment rate (aged 16-64)",
+    "uri": "/employmentandlabourmarket/unemployment/timeseries/mgsx"
+  },
   "items": [
-    "/employmentandlabourmarket/unemployment/timeseries/mgsx",
-    "/employmentandlabourmarket/unemployment/timeseries/mgsc",
-    "/employmentandlabourmarket/unemployment/timeseries/mgse",
-    "/employmentandlabourmarket/unemployment/timeseries/mgsd",
-    "/employmentandlabourmarket/unemployment/timeseries/mgsz",
-    "/employmentandlabourmarket/unemployment/timeseries/mgsy",
-    "/employmentandlabourmarket/unemployment/timeseries/bcjd",
-    "/employmentandlabourmarket/unemployment/timeseries/dpaf",
-    "/employmentandlabourmarket/unemployment/timeseries/dpae"
+    {
+      "name": "Unemployment rate (aged 16-64)",
+      "uri": "/employmentandlabourmarket/unemployment/timeseries/mgsx"
+    },
+    {
+      "name": "Female Unemployment Rate (aged 16-64)",
+      "uri": "/employmentandlabourmarket/unemployment/timeseries/mgsz"
+    },
+    {
+      "name": "Male Unemployment Rate (aged 16-64)",
+      "uri": "/employmentandlabourmarket/unemployment/timeseries/mgsy"
+    },
+    {
+      "name": "Unemployment 16+",
+      "uri": "/employmentandlabourmarket/unemployment/timeseries/mgsc"
+    },
+    {
+      "name": "Female Unemployment 16+",
+      "uri": "/employmentandlabourmarket/unemployment/timeseries/mgse"
+    },
+    {
+      "name": "Male Unemployment 16+",
+      "uri": "/employmentandlabourmarket/unemployment/timeseries/mgsd"
+    },
+    {
+      "name": "Total Claimant Count",
+      "uri": "/employmentandlabourmarket/unemployment/timeseries/bcjd"
+    },
+    {
+      "name": "Total Claimant Count Female",
+      "uri": "/employmentandlabourmarket/unemployment/timeseries/dpaf"
+    },
+    {
+      "name": "Total Claimant Count Male",
+      "uri": "/employmentandlabourmarket/unemployment/timeseries/dpae"
+    }
   ],
-  "statsBulletinHeadline": "/employmentandlabourmarket/unemployment/bulletins/youngpeoplenotineducationemploymentortrainingneet",
+  "statsBulletinHeadline": {
+    "name": "Young People Not in Education, Employment or Training (NEET)",
+    "uri": "/employmentandlabourmarket/unemployment/bulletins/youngpeoplenotineducationemploymentortrainingneet"
+  },
   "statsBulletins": [
-    "/employmentandlabourmarket/unemployment/bulletins/uklabourmarket",
-    "/employmentandlabourmarket/unemployment/bulletins/youngpeoplenotineducationemploymentortrainingneet"
+    {
+      "name": "UK Labour Market",
+      "uri": "/employmentandlabourmarket/unemployment/bulletins/uklabourmarket"
+    },
+    {
+      "name": "Young People Not in Education, Employment or Training (NEET)",
+      "uri": "/employmentandlabourmarket/unemployment/bulletins/youngpeoplenotineducationemploymentortrainingneet"
+    }
   ],
   "datasets": [
-    "/employmentandlabourmarket/unemployment/datasets/unemploymentsummary",
-    "/employmentandlabourmarket/unemployment/datasets/claimantcountsummary",
-    "/employmentandlabourmarket/unemployment/datasets/inactivitysummary"
+    {
+      "name": "Unemployment data collection",
+      "uri": "/employmentandlabourmarket/unemployment/datasets/unemploymentdatacollection"
+    },
+    {
+      "name": "Claimant Count data collection",
+      "uri": "/employmentandlabourmarket/unemployment/datasets/claimantcountdatacollection"
+    },
+    {
+      "name": "Inactivity data collection",
+      "uri": "/employmentandlabourmarket/unemployment/datasets/inactivitydatacollection"
+    }
   ],
   "level": "t3",
   "index": 1,

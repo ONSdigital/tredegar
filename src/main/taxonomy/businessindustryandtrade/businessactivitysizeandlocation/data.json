@@ -1,15 +1,39 @@
 {
-  "headline": "/businessindustryandtrade/businessactivitysizeandlocation/timeseries/raid1",
+  "headline": {
+    "name": "UK businesses",
+    "uri": "/businessindustryandtrade/businessactivitysizeandlocation/timeseries/raid1"
+  },
   "items": [
-    "/businessindustryandtrade/businessactivitysizeandlocation/timeseries/raid1",
-    "/businessindustryandtrade/businessactivitysizeandlocation/timeseries/raid2",
-    "/businessindustryandtrade/businessactivitysizeandlocation/timeseries/raid3",
-    "/businessindustryandtrade/businessactivitysizeandlocation/timeseries/raid4",
-    "/businessindustryandtrade/businessactivitysizeandlocation/timeseries/raid5"
+    {
+      "name": "UK businesses",
+      "uri": "/businessindustryandtrade/businessactivitysizeandlocation/timeseries/raid1"
+    },
+    {
+      "name": "GB businesses",
+      "uri": "/businessindustryandtrade/businessactivitysizeandlocation/timeseries/raid2"
+    },
+    {
+      "name": "England and Wales businesses",
+      "uri": "/businessindustryandtrade/businessactivitysizeandlocation/timeseries/raid3"
+    },
+    {
+      "name": "England businesses",
+      "uri": "/businessindustryandtrade/businessactivitysizeandlocation/timeseries/raid4"
+    },
+    {
+      "name": "Wales businesses",
+      "uri": "/businessindustryandtrade/businessactivitysizeandlocation/timeseries/raid5"
+    }
   ],
-  "statsBulletinHeadline": "/businessindustryandtrade/businessactivitysizeandlocation/bulletins/ukbusinessactivitysizeandlocation",
+  "statsBulletinHeadline": {
+    "name": "UK Business: Activity, Size and Location",
+    "uri": "/businessindustryandtrade/businessactivitysizeandlocation/bulletins/ukbusinessactivitysizeandlocation"
+  },
   "statsBulletins": [
-    "/businessindustryandtrade/businessactivitysizeandlocation/bulletins/ukbusinessactivitysizeandlocation"
+    {
+      "name": "UK Business: Activity, Size and Location",
+      "uri": "/businessindustryandtrade/businessactivitysizeandlocation/bulletins/ukbusinessactivitysizeandlocation"
+    }
   ],
   "datasets": [],
   "level": "t3",

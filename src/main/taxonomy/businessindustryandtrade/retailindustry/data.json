@@ -1,16 +1,43 @@
 {
-  "headline": "/businessindustryandtrade/retailindustry/timeseries/j5c4",
+  "headline": {
+    "name": "Retail Sales Value including automotive fuel ",
+    "uri": "/businessindustryandtrade/retailindustry/timeseries/j5c4"
+  },
   "items": [
-    "/businessindustryandtrade/retailindustry/timeseries/j5c4",
-    "/businessindustryandtrade/retailindustry/timeseries/j468",
-    "/businessindustryandtrade/retailindustry/timeseries/j5bs",
-    "/businessindustryandtrade/retailindustry/timeseries/j5ek",
-    "/businessindustryandtrade/retailindustry/timeseries/j467",
-    "/businessindustryandtrade/retailindustry/timeseries/j5eb"
+    {
+      "name": "Retail Sales Value including automotive fuel ",
+      "uri": "/businessindustryandtrade/retailindustry/timeseries/j5c4"
+    },
+    {
+      "name": "Retail Sales Value excluding automotive fuel ",
+      "uri": "/businessindustryandtrade/retailindustry/timeseries/j468"
+    },
+    {
+      "name": "Retail Sales Volume including automotive fuel ",
+      "uri": "/businessindustryandtrade/retailindustry/timeseries/j5ek"
+    },
+    {
+      "name": "Retail Sales Volume excluding automotive fuel ",
+      "uri": "/businessindustryandtrade/retailindustry/timeseries/j467"
+    },
+    {
+      "name": "Retail Sales Value including automotive fuel percentage change on same month a year earlier ",
+      "uri": "/businessindustryandtrade/retailindustry/timeseries/j5bs"
+    },
+    {
+      "name": "Retail Sales Volume including automotive fuel percentage change on same month a year earlier ",
+      "uri": "/businessindustryandtrade/retailindustry/timeseries/j5eb"
+    }
   ],
-  "statsBulletinHeadline": "/businessindustryandtrade/retailindustry/bulletins/retailsales",
+  "statsBulletinHeadline": {
+    "name": "Retail Sales",
+    "uri": "/businessindustryandtrade/retailindustry/bulletins/retailsales"
+  },
   "statsBulletins": [
-    "/businessindustryandtrade/retailindustry/bulletins/retailsales"
+    {
+      "name": "Retail Sales",
+      "uri": "/businessindustryandtrade/retailindustry/bulletins/retailsales"
+    }
   ],
   "datasets": [],
   "level": "t3",

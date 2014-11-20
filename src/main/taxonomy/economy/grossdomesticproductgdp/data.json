@@ -1,31 +1,103 @@
 {
-  "headline": "/economy/grossdomesticproductgdp/timeseries/abmi",
+  "headline": {
+    "name": "Gross Domestic Product (CVM)",
+    "uri": "/economy/grossdomesticproductgdp/timeseries/abmi"
+  },
   "items": [
-    "/economy/grossdomesticproductgdp/timeseries/abmi",
-    "/economy/grossdomesticproductgdp/timeseries/ihyq",
-    "/economy/grossdomesticproductgdp/timeseries/ihyr",
-    "/economy/grossdomesticproductgdp/timeseries/ybha",
-    "/economy/grossdomesticproductgdp/timeseries/ihyn",
-    "/economy/grossdomesticproductgdp/timeseries/ihyo",
-    "/economy/grossdomesticproductgdp/timeseries/l2kq",
-    "/economy/grossdomesticproductgdp/timeseries/l2kx",
-    "/economy/grossdomesticproductgdp/timeseries/l2kl",
-    "/economy/grossdomesticproductgdp/timeseries/l2n8",
-    "/economy/grossdomesticproductgdp/timeseries/l2nc",
-    "/economy/grossdomesticproductgdp/timeseries/dtwm",
-    "/economy/grossdomesticproductgdp/timeseries/cgbz",
-    "/economy/grossdomesticproductgdp/timeseries/cgbx",
-    "/economy/grossdomesticproductgdp/timeseries/cmvl",
-    "/economy/grossdomesticproductgdp/timeseries/abpf",
-    "/economy/grossdomesticproductgdp/timeseries/abnu",
-    "/economy/grossdomesticproductgdp/timeseries/nmru",
-    "/economy/grossdomesticproductgdp/timeseries/npqr",
-    "/economy/grossdomesticproductgdp/timeseries/ihxt",
-    "/economy/grossdomesticproductgdp/timeseries/ihxw"
+    {
+      "name": "Gross Domestic Product (CVM)",
+      "uri": "/economy/grossdomesticproductgdp/timeseries/abmi"
+    },
+    {
+      "name": "GDP Quarter on Quarter growth (CVM)",
+      "uri": "/economy/grossdomesticproductgdp/timeseries/ihyq"
+    },
+    {
+      "name": "GDP Change on same Quarter a year ago (CVM)",
+      "uri": "/economy/grossdomesticproductgdp/timeseries/ihyr"
+    },
+    {
+      "name": "Gross Domestic Product (CP)",
+      "uri": "/economy/grossdomesticproductgdp/timeseries/ybha"
+    },
+    {
+      "name": "GDP Quarter on Quarter growth (CP)",
+      "uri": "/economy/grossdomesticproductgdp/timeseries/ihyn"
+    },
+    {
+      "name": "GDP Change on same Quarter a year ago (CP)",
+      "uri": "/economy/grossdomesticproductgdp/timeseries/ihyo"
+    },
+    {
+      "name": "Output Measure: Production",
+      "uri": "/economy/grossdomesticproductgdp/timeseries/l2kq"
+    },
+    {
+      "name": "Output Measure: Manufacturing",
+      "uri": "/economy/grossdomesticproductgdp/timeseries/l2kx"
+    },
+    {
+      "name": "Output Measure: Agriculture, Forestry and Fishing",
+      "uri": "/economy/grossdomesticproductgdp/timeseries/l2kl"
+    },
+    {
+      "name": "Output Measure: Construction",
+      "uri": "/economy/grossdomesticproductgdp/timeseries/l2n8"
+    },
+    {
+      "name": "Output Measure: Services",
+      "uri": "/economy/grossdomesticproductgdp/timeseries/l2nc"
+    },
+    {
+      "name": "Income Measure: Compensation of Employees",
+      "uri": "/economy/grossdomesticproductgdp/timeseries/dtwm"
+    },
+    {
+      "name": "Income Measure: Gross Operating Surplus",
+      "uri": "/economy/grossdomesticproductgdp/timeseries/cgbz"
+    },
+    {
+      "name": "Income Measure: Other Income",
+      "uri": "/economy/grossdomesticproductgdp/timeseries/cgbx"
+    },
+    {
+      "name": "Income Measure: Taxes less Subsidies",
+      "uri": "/economy/grossdomesticproductgdp/timeseries/cmvl"
+    },
+    {
+      "name": "Expenditure Measure: Households",
+      "uri": "/economy/grossdomesticproductgdp/timeseries/abpf"
+    },
+    {
+      "name": "Expenditure Measure: Non-profit institutions serving households (NPISHs)",
+      "uri": "/economy/grossdomesticproductgdp/timeseries/abnu"
+    },
+    {
+      "name": "Expenditure Measure: General Government",
+      "uri": "/economy/grossdomesticproductgdp/timeseries/nmru"
+    },
+    {
+      "name": "Expenditure Measure: Gross Fixed Capital Formation",
+      "uri": "/economy/grossdomesticproductgdp/timeseries/npqr"
+    },
+    {
+      "name": "GDP (average) per head, at current market prices",
+      "uri": "/economy/grossdomesticproductgdp/timeseries/ihxt"
+    },
+    {
+      "name": "GDP (average) per head, Chained Volume Measures (CVM) market prices",
+      "uri": "/economy/grossdomesticproductgdp/timeseries/ihxw"
+    }
   ],
-  "statsBulletinHeadline": "/economy/grossdomesticproductgdp/bulletins/grossdomesticproductpreliminaryestimate",
+  "statsBulletinHeadline": {
+    "name": "Gross Domestic Product Preliminary Estimate",
+    "uri": "/economy/grossdomesticproductgdp/bulletins/grossdomesticproductpreliminaryestimate"
+  },
   "statsBulletins": [
-    "/economy/grossdomesticproductgdp/bulletins/grossdomesticproductpreliminaryestimate"
+    {
+      "name": "Gross Domestic Product Preliminary Estimate",
+      "uri": "/economy/grossdomesticproductgdp/bulletins/grossdomesticproductpreliminaryestimate"
+    }
   ],
   "datasets": [],
   "level": "t3",

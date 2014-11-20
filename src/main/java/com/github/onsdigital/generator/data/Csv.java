@@ -115,10 +115,16 @@ public class Csv implements Iterable<Map<String, String>> {
 		}
 
 		for (int r = 0; r < rowTotal; r++) {
+			// if (r == 44) {
+			// System.out.println("Row: " + r);
+			// }
 			String[] cells = new String[columnTotal];
 			XSSFRow row = worksheet.getRow(r);
 			if (row != null) {
 				for (int c = 0; c < columnTotal; c++) {
+					// if (c == 8) {
+					// System.out.println("Column: " + c);
+					// }
 					XSSFCell cell = row.getCell(c);
 					if (cell != null) {
 
@@ -196,10 +202,14 @@ public class Csv implements Iterable<Map<String, String>> {
 						// The raw numbers appear as 123.4000000003 or
 						// 123.399999997,
 						// so rounding needs to be guestimated.
-						if (value.contains("00000")) {
+						// We check that the guestimate is after a decimal point
+						// to
+						// avoid mangling numbers that are genuinely "1000000",
+						// like CSV 'multiply':
+						if (value.contains("00000") && value.contains(".") && value.indexOf("00000") > value.indexOf('.')) {
 							value = value.substring(0, value.indexOf("00000"));
 						}
-						if (value.contains("99999")) {
+						if (value.contains("99999") && value.contains(".") && value.indexOf("99999") > value.indexOf('.')) {
 							String decimalFormat = "0.";
 							int decimalPlaces = value.substring(value.indexOf(".") + 1, value.indexOf("99999")).length();
 							for (int i = 0; i < decimalPlaces; i++) {

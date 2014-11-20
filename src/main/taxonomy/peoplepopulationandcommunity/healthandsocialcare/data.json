@@ -4,19 +4,58 @@
       "name": "Disability",
       "link": "disability",
       "index": 0,
-      "items": []
+      "items": [
+        {
+          "name": "Day-to-day activities limited a lot (UK)",
+          "uri": "/peoplepopulationandcommunity/healthandsocialcare/disability/timeseries/raid95"
+        },
+        {
+          "name": "Day-to-day activities limited a little (UK)",
+          "uri": "/peoplepopulationandcommunity/healthandsocialcare/disability/timeseries/raid96"
+        },
+        {
+          "name": "Day-to-day activities not limited (UK)",
+          "uri": "/peoplepopulationandcommunity/healthandsocialcare/disability/timeseries/raid97"
+        }
+      ]
     },
     {
       "name": "Drug use, Alcohol and Smoking",
       "link": "drugusealcoholandsmoking",
       "index": 1,
-      "items": []
+      "items": [
+        {
+          "name": "Deaths from drug-related poisoning",
+          "uri": "/peoplepopulationandcommunity/healthandsocialcare/drugusealcoholandsmoking/timeseries/raid98"
+        },
+        {
+          "name": "Deaths from drug misuse",
+          "uri": "/peoplepopulationandcommunity/healthandsocialcare/drugusealcoholandsmoking/timeseries/raid99"
+        },
+        {
+          "name": "Alcohol-related deaths",
+          "uri": "/peoplepopulationandcommunity/healthandsocialcare/drugusealcoholandsmoking/timeseries/raid100"
+        }
+      ]
     },
     {
       "name": "Conditions and Diseases",
       "link": "conditionsanddiseases",
       "index": 2,
-      "items": []
+      "items": [
+        {
+          "name": "Number of newly diagnosed cancers",
+          "uri": "/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/timeseries/raid89"
+        },
+        {
+          "name": "Deaths from MRSA",
+          "uri": "/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/timeseries/raid92"
+        },
+        {
+          "name": "Deaths Involving Clostridium difficile",
+          "uri": "/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/timeseries/raid93"
+        }
+      ]
     }
   ],
   "level": "t2",

@@ -6,6 +6,7 @@
   "unit": "m",
   "preUnit": "£",
   "date": "2012",
+  "source": "Office for National Statistics",
   "years": [
     {
       "date": "1997",
@@ -93,6 +94,9 @@
   "uri": "/economy/grossvalueaddedgva/timeseries/dgpj",
   "relatedBulletins": [
     "/economy/grossvalueaddedgva/bulletins/regionalgrossvalueaddedincomeapproach"
+  ],
+  "relatedTimeseries": [
+    "/economy/grossvalueaddedgva/timeseries/abml"
   ],
   "type": "timeseries",
   "name": "South East Gross Value Added",

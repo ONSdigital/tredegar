@@ -6,6 +6,7 @@
   "unit": "",
   "preUnit": "£",
   "date": "Q2 2014",
+  "source": "Office for National Statistics",
   "years": [
     {
       "date": "1948",
@@ -1388,6 +1389,9 @@
   "uri": "/economy/grossdomesticproductgdp/timeseries/ihxt",
   "relatedBulletins": [
     "/economy/grossdomesticproductgdp/bulletins/grossdomesticproductpreliminaryestimate"
+  ],
+  "relatedTimeseries": [
+    "/economy/grossdomesticproductgdp/timeseries/ihxw"
   ],
   "type": "timeseries",
   "name": "GDP (average) per head, at current market prices",

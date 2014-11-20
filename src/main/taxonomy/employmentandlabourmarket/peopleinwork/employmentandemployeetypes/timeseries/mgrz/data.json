@@ -6,6 +6,7 @@
   "unit": "m",
   "preUnit": "",
   "date": "July 2014",
+  "source": "Labour Force Survey",
   "years": [
     {
       "date": "1971",
@@ -4405,6 +4406,12 @@
   ],
   "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgrz",
   "relatedBulletins": [],
+  "relatedTimeseries": [
+    "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgsa",
+    "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgsb",
+    "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/lf24",
+    "/employmentandlabourmarket/unemployment/timeseries/mgsc"
+  ],
   "type": "timeseries",
   "name": "Employment 16+",
   "fileName": "mgrz",

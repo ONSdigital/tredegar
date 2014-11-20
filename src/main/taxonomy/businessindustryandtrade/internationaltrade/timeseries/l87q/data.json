@@ -6,6 +6,7 @@
   "unit": "m",
   "preUnit": "£",
   "date": "Q1 2014",
+  "source": "Office for National Statistics",
   "years": [
     {
       "date": "1998",
@@ -1691,6 +1692,10 @@
   "uri": "/businessindustryandtrade/internationaltrade/timeseries/l87q",
   "relatedBulletins": [
     "/businessindustryandtrade/internationaltrade/bulletins/uktrade"
+  ],
+  "relatedTimeseries": [
+    "/businessindustryandtrade/internationaltrade/timeseries/mhn9",
+    "/businessindustryandtrade/internationaltrade/timeseries/l87k"
   ],
   "type": "timeseries",
   "name": "Balance of trade in goods from all EU",

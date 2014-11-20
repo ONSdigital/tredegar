@@ -6,6 +6,7 @@
   "unit": "m",
   "preUnit": "",
   "date": "July 2014",
+  "source": "Labour Force Survey",
   "years": [
     {
       "date": "1971",
@@ -4405,8 +4406,13 @@
   ],
   "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgsa",
   "relatedBulletins": [],
+  "relatedTimeseries": [
+    "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgsb",
+    "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgrz",
+    "/employmentandlabourmarket/unemployment/timeseries/mgsd"
+  ],
   "type": "timeseries",
-  "name": "Employment 16+ Male",
+  "name": "Male Employment 16+",
   "fileName": "mgsa",
   "breadcrumb": [
     {

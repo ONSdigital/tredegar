@@ -1,11 +1,29 @@
 {
-  "headline": "/peoplepopulationandcommunity/personalandhouseholdfinances/debt/timeseries/raid109",
+  "headline": {
+    "name": "Total household debt",
+    "uri": "/peoplepopulationandcommunity/personalandhouseholdfinances/debt/timeseries/raid109"
+  },
   "items": [
-    "/peoplepopulationandcommunity/personalandhouseholdfinances/debt/timeseries/raid109",
-    "/peoplepopulationandcommunity/personalandhouseholdfinances/debt/timeseries/raid110",
-    "/peoplepopulationandcommunity/personalandhouseholdfinances/debt/timeseries/raid111",
-    "/peoplepopulationandcommunity/personalandhouseholdfinances/debt/timeseries/raid112",
-    "/peoplepopulationandcommunity/personalandhouseholdfinances/debt/timeseries/raid113"
+    {
+      "name": "Total household debt",
+      "uri": "/peoplepopulationandcommunity/personalandhouseholdfinances/debt/timeseries/raid109"
+    },
+    {
+      "name": "Financial debt",
+      "uri": "/peoplepopulationandcommunity/personalandhouseholdfinances/debt/timeseries/raid110"
+    },
+    {
+      "name": "Property debt",
+      "uri": "/peoplepopulationandcommunity/personalandhouseholdfinances/debt/timeseries/raid111"
+    },
+    {
+      "name": "Median household financial debt",
+      "uri": "/peoplepopulationandcommunity/personalandhouseholdfinances/debt/timeseries/raid112"
+    },
+    {
+      "name": "Median household property debt",
+      "uri": "/peoplepopulationandcommunity/personalandhouseholdfinances/debt/timeseries/raid113"
+    }
   ],
   "statsBulletins": [],
   "datasets": [],

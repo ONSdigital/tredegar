@@ -4,67 +4,262 @@
       "name": "Population and Migration",
       "link": "populationandmigration",
       "index": 0,
-      "items": []
+      "items": [
+        {
+          "name": "Population Estimates",
+          "uri": "populationestimates"
+        },
+        {
+          "name": "Migration within the UK",
+          "uri": "migrationwithintheuk"
+        },
+        {
+          "name": "International Migration",
+          "uri": "internationalmigration"
+        },
+        {
+          "name": "Population Projections",
+          "uri": "populationprojections"
+        }
+      ]
     },
     {
       "name": "Births, Deaths and Marriages",
       "link": "birthsdeathsandmarriages",
       "index": 1,
-      "items": []
+      "items": [
+        {
+          "name": "Conception and Fertility Rates",
+          "uri": "conceptionandfertilityrates"
+        },
+        {
+          "name": "Adoption",
+          "uri": "adoption"
+        },
+        {
+          "name": "Marriage, Cohabitation and Civil Partnerships",
+          "uri": "marriagecohabitationandcivilpartnerships"
+        },
+        {
+          "name": "Maternities",
+          "uri": "maternities"
+        },
+        {
+          "name": "Stillbirths",
+          "uri": "stillbirths"
+        },
+        {
+          "name": "Deaths",
+          "uri": "deaths"
+        },
+        {
+          "name": "Divorce",
+          "uri": "divorce"
+        },
+        {
+          "name": "Live Births",
+          "uri": "livebirths"
+        },
+        {
+          "name": "Ageing",
+          "uri": "ageing"
+        },
+        {
+          "name": "Families",
+          "uri": "families"
+        },
+        {
+          "name": "Life Expectancies",
+          "uri": "lifeexpectancies"
+        }
+      ]
     },
     {
       "name": "Health and Social Care",
       "link": "healthandsocialcare",
       "index": 2,
-      "items": []
+      "items": [
+        {
+          "name": "Conditions and Diseases",
+          "uri": "conditionsanddiseases"
+        },
+        {
+          "name": "Disability",
+          "uri": "disability"
+        },
+        {
+          "name": "Drug use, Alcohol and Smoking",
+          "uri": "drugusealcoholandsmoking"
+        }
+      ]
     },
     {
       "name": "Crime and Justice",
       "link": "crimeandjustice",
       "index": 3,
-      "items": []
+      "items": [
+        {
+          "name": "Crimes recorded by police",
+          "uri": "/peoplepopulationandcommunity/crimeandjustice/timeseries/raid62"
+        },
+        {
+          "name": "Incidents of anti-social behaviour",
+          "uri": "/peoplepopulationandcommunity/crimeandjustice/timeseries/raid63"
+        },
+        {
+          "name": "Crimes against households",
+          "uri": "/peoplepopulationandcommunity/crimeandjustice/timeseries/raid64"
+        }
+      ]
     },
     {
       "name": "Cultural Identity",
       "link": "culturalidentity",
       "index": 4,
-      "items": []
+      "items": [
+        {
+          "name": "Religion",
+          "uri": "religion"
+        },
+        {
+          "name": "Language",
+          "uri": "language"
+        },
+        {
+          "name": "Sexuality",
+          "uri": "sexuality"
+        },
+        {
+          "name": "Ethnicity",
+          "uri": "ethnicity"
+        }
+      ]
     },
     {
       "name": "Elections",
       "link": "elections",
       "index": 5,
-      "items": []
+      "items": [
+        {
+          "name": "Parliamentary electors",
+          "uri": "/peoplepopulationandcommunity/elections/timeseries/raid87"
+        },
+        {
+          "name": "European / local government electors",
+          "uri": "/peoplepopulationandcommunity/elections/timeseries/raid88"
+        }
+      ]
     },
     {
       "name": "Home Internet and Social Media Usage",
       "link": "homeinternetandsocialmediausage",
       "index": 6,
-      "items": []
+      "items": [
+        {
+          "name": "Adults in the UK that have used the Internet",
+          "uri": "/peoplepopulationandcommunity/homeinternetandsocialmediausage/timeseries/raid101"
+        },
+        {
+          "name": "Adults that have never used the Internet",
+          "uri": "/peoplepopulationandcommunity/homeinternetandsocialmediausage/timeseries/raid102"
+        }
+      ]
     },
     {
       "name": "Housing",
       "link": "housing",
       "index": 7,
-      "items": []
+      "items": [
+        {
+          "name": "UK average house price",
+          "uri": "/peoplepopulationandcommunity/housing/timeseries/raid103"
+        },
+        {
+          "name": "UK house price change",
+          "uri": "/peoplepopulationandcommunity/housing/timeseries/raid104"
+        },
+        {
+          "name": "England average house price",
+          "uri": "/peoplepopulationandcommunity/housing/timeseries/raid105"
+        },
+        {
+          "name": "Wales average house price",
+          "uri": "/peoplepopulationandcommunity/housing/timeseries/raid106"
+        },
+        {
+          "name": "Scotland average house price",
+          "uri": "/peoplepopulationandcommunity/housing/timeseries/raid107"
+        },
+        {
+          "name": "Northern Ireland average house price",
+          "uri": "/peoplepopulationandcommunity/housing/timeseries/raid108"
+        }
+      ]
     },
     {
       "name": "Leisure and Tourism",
       "link": "leisureandtourism",
       "index": 8,
-      "items": []
+      "items": [
+        {
+          "name": "Overseas visits to the UK",
+          "uri": "/businessindustryandtrade/tourismindustry/timeseries/gmat"
+        },
+        {
+          "name": "UK visits abroad",
+          "uri": "/businessindustryandtrade/tourismindustry/timeseries/gmax"
+        },
+        {
+          "name": "Overseas visits to UK Earnings",
+          "uri": "/businessindustryandtrade/tourismindustry/timeseries/gmaz"
+        },
+        {
+          "name": "UK visits abroad Expenditure",
+          "uri": "/businessindustryandtrade/tourismindustry/timeseries/gmbb"
+        }
+      ]
     },
     {
       "name": "Personal and Household Finances",
       "link": "personalandhouseholdfinances",
       "index": 9,
-      "items": []
+      "items": [
+        {
+          "name": "Expenditure",
+          "uri": "expenditure"
+        },
+        {
+          "name": "Debt",
+          "uri": "debt"
+        },
+        {
+          "name": "Income and Wealth",
+          "uri": "incomeandwealth"
+        }
+      ]
     },
     {
       "name": "Well-being",
       "link": "wellbeing",
       "index": 10,
-      "items": []
+      "items": [
+        {
+          "name": "Life Satisfaction",
+          "uri": "/peoplepopulationandcommunity/wellbeing/timeseries/raid131"
+        },
+        {
+          "name": "Worthwhile",
+          "uri": "/peoplepopulationandcommunity/wellbeing/timeseries/raid132"
+        },
+        {
+          "name": "Happiness",
+          "uri": "/peoplepopulationandcommunity/wellbeing/timeseries/raid133"
+        },
+        {
+          "name": "Anxiety",
+          "uri": "/peoplepopulationandcommunity/wellbeing/timeseries/raid134"
+        }
+      ]
     }
   ],
   "level": "t2",

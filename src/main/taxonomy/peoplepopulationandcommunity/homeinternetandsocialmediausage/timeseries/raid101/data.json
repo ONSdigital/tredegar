@@ -6,6 +6,7 @@
   "unit": "%",
   "preUnit": "",
   "date": "2014 Q1",
+  "source": "Office for National Statistics",
   "years": [],
   "quarters": [
     {
@@ -55,6 +56,9 @@
   "uri": "/peoplepopulationandcommunity/homeinternetandsocialmediausage/timeseries/raid101",
   "relatedBulletins": [
     "/peoplepopulationandcommunity/homeinternetandsocialmediausage/bulletins/internetaccessquarterlyupdateq12014"
+  ],
+  "relatedTimeseries": [
+    "/peoplepopulationandcommunity/homeinternetandsocialmediausage/timeseries/raid102"
   ],
   "type": "timeseries",
   "name": "Adults in the UK that have used the Internet",

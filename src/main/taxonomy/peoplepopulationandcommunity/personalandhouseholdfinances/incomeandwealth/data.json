@@ -1,12 +1,27 @@
 {
-  "headline": "/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/timeseries/raid115",
+  "headline": {
+    "name": "Median household income",
+    "uri": "/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/timeseries/raid115"
+  },
   "items": [
-    "/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/timeseries/raid115",
-    "/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/timeseries/raid116"
+    {
+      "name": "Median household income",
+      "uri": "/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/timeseries/raid115"
+    },
+    {
+      "name": "Median household wealth",
+      "uri": "/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/timeseries/raid116"
+    }
   ],
-  "statsBulletinHeadline": "/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/wealthandincome201012",
+  "statsBulletinHeadline": {
+    "name": "Wealth and Income, 2010-12",
+    "uri": "/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/wealthandincome201012"
+  },
   "statsBulletins": [
-    "/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/wealthandincome201012"
+    {
+      "name": "Wealth and Income, 2010-12",
+      "uri": "/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/wealthandincome201012"
+    }
   ],
   "datasets": [],
   "level": "t3",

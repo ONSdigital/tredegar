@@ -2,10 +2,11 @@
   "cdid": "C92R",
   "note1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quam leo, blandit a turpis non, varius feugiat mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In posuere lectus eu laoreet ultrices. Donec ac sodales libero, eget fermentum arcu.",
   "note2": "Fusce pharetra, libero in imperdiet ultricies, ex erat tempor dolor, vitae aliquet magna velit in urna. Duis finibus augue velit, ut consectetur risus imperdiet in. Sed tempus congue ante, ac cursus diam porttitor vitae. Vivamus arcu leo, volutpat in mauris ac, lacinia fermentum velit. Sed dictum tortor justo, aliquet facilisis lorem dictum a.",
-  "number": "",
+  "number": "912946",
   "unit": "m",
   "preUnit": "£",
-  "date": "",
+  "date": "2012",
+  "source": "Office for National Statistics",
   "years": [
     {
       "date": "1997",
@@ -94,8 +95,14 @@
   "relatedBulletins": [
     "/economy/regionalaccounts/bulletins/regionalgrossdisposablehouseholdincomegdhi"
   ],
+  "relatedTimeseries": [
+    "/economy/regionalaccounts/timeseries/qwnd",
+    "/economy/regionalaccounts/timeseries/c92s",
+    "/economy/regionalaccounts/timeseries/c92t",
+    "/economy/regionalaccounts/timeseries/c92u"
+  ],
   "type": "timeseries",
-  "name": "Gross Disposable Household Income England",
+  "name": "England Gross Disposable Household Income",
   "fileName": "c92r",
   "breadcrumb": [
     {

@@ -43,28 +43,6 @@ public class Bulletin extends CollectionItem {
 		type = ContentType.bulletin;
 		title = "Consumer Price Inflation, August 2014";
 		releaseDate = "19 August 2014";
-		Section summary = new Section();
-		summary.title = "Summary";
-		summary.markdown = "Consectetur adipiscing elit. Suspendisse non tellus nibh. Duis tristique risus sed urna fringilla, eu facilisis orci fringilla. Nullam iaculis libero tempor vehicula ultricies"
-				+ "\n\n"
-				+ " * The annual rate of output producer price inflation remained low in June, while input prices continued to fall.\n"
-				+ " * The output price index for goods produced by UK manufacturers (factory gate prices) rose 0.2% in the year to June, compared with a rise of 0.5% in the year to May.\n"
-				+ " * Factory gate prices fell 0.2% between May and June, compared with a fall of 0.1% between April and May\n";
-		sections.add(summary);
-
-		Section whatIs = new Section();
-		whatIs.title = "What is Producer Price Inflation (PPI)?";
-
-		whatIs.markdown = "Etiam fringilla tellus arcu, quis dapibus lacus lacinia a. Vivamus in sollicitudin eros, sed ornare metus. Nam sapien augue, varius bibendum sagittis sed, malesuada quis augue."
-				+ "\n\n"
-				+ "> This is an explanation box Morbi orci nulla, lobortis pretium auctor non, varius eget mi. Mauris viverra diam quam, at auctor velit placerat sit amet. In sed erat quis elit eleifend tempus. Pellentesque vestibulum orci nec nulla accumsan egestas. Proin mauris ipsum, ornare posuere risus non, consectetur lobortis mi. Pellentesque mi ante, sodales sollicitudin pretium et, varius vel enim."
-				+ "\n\n"
-				+ "Etiam ac ultricies orci. Pellentesque et posuere tortor. Nunc quam risus, pharetra non condimentum at, pretium at dolor. Maecenas placerat, arcu non consequat venenatis, eros leo eleifend lorem."
-				+ "\n\n"
-				+ "    sample chart"
-				+ "\n\n"
-				+ "Proin sed facilisis sapien. Nunc hendrerit dignissim sapien, vel consequat mi rhoncus eget. Maecenas et tellus convallis, tristique risus vitae.";
-		sections.add(whatIs);
 	}
 
 	public void setBreadcrumb(TaxonomyHome t3) {

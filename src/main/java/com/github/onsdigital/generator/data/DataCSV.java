@@ -10,6 +10,7 @@ import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.text.DecimalFormat;
 import java.util.Collection;
 import java.util.Set;
 import java.util.TreeSet;
@@ -81,9 +82,10 @@ public class DataCSV {
 			for (int i = 1; i < header.length; i++) {
 				Timeseries timeseries = Data.timeseries(header[i]);
 				if (timeseries == null) {
-					timeseries = Data.addTimeseries(header[i], name);
+					timeseries = Data.addTimeseries(header[i]);
 				}
 				dataset.add(timeseries);
+				timeseries.datasets.add(name);
 			}
 
 			// Now read the data - each row *may* contain one additional value
@@ -112,7 +114,15 @@ public class DataCSV {
 						TimeseriesValue timeseriesValue = new TimeseriesValue();
 						timeseriesValue.date = StringUtils.trim(date);
 						timeseriesValue.value = StringUtils.trim(value);
+						timeseriesValue.sourceDataset = name;
 						timeseries.add(timeseriesValue);
+
+						// Scale values if necessary:
+						if (timeseries.cdid().equalsIgnoreCase("abmi")) {
+							// System.out.println("ABMI: " +
+							// timeseries.multiply());
+						}
+						scale(timeseriesValue, timeseries);
 					}
 				}
 			}
@@ -126,6 +136,7 @@ public class DataCSV {
 					}
 				}
 			}
+
 			// if (duplicates > 0) {
 			// System.out.println(name + " contains " + dataset.size() +
 			// " timeseries (" + duplicates + " duplicates)");
@@ -133,6 +144,54 @@ public class DataCSV {
 			System.out.println(name + " contains " + dataset.size() + " timeseries");
 			// }
 		}
+	}
+
+	/**
+	 * Scales this timeseries value to match the unit defined in the given
+	 * timeseries.
+	 * <p>
+	 * For example, the data value may be in thousands, but the timeseries unit
+	 * may be millions, in which case the data value must be divided by 1000.
+	 * 
+	 * @param timeseriesValue
+	 *            The value to be scaled.
+	 * @param timeseries
+	 *            The timeseries to match the scale of the value to.
+	 */
+	static void scale(TimeseriesValue timeseriesValue, Timeseries timeseries) {
+
+		// If there's no scale, do nothing:
+		if (timeseries.getScaleFactor() == 1) {
+			return;
+		}
+
+		// Work out the number of decimal places for the format string:
+		int decimalPlaces = 0;
+		if (timeseriesValue.value.contains(".")) {
+			int index = timeseriesValue.value.indexOf('.');
+			decimalPlaces = timeseriesValue.value.substring(index + 1).length();
+		}
+		int m = timeseries.getScaleFactor();
+		do {
+			m /= 10;
+			decimalPlaces++;
+		} while (m > 1);
+
+		// Build the format string.
+		// It will be of the form: 0.00, which ensures a leading 0 if the final
+		// value is less than 1 and the correct number of decimal places.
+		String format = "0";
+		if (decimalPlaces > 0) {
+			format += ".";
+			for (int i = 0; i < decimalPlaces; i++) {
+				format += "0";
+			}
+		}
+
+		// Parse, scale and format the value:
+		double value = Double.parseDouble(timeseriesValue.value);
+		value = value / timeseries.getScaleFactor();
+		timeseriesValue.value = new DecimalFormat(format).format(value);
 	}
 
 	private static Collection<Path> getFiles() throws IOException {

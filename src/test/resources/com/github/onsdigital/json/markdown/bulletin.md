@@ -13,10 +13,16 @@ Next release: soon
 
 # Analysis of consumer price inflation
 
+## Bulletin summary
+Summarise bulletin.
+
 ## Section one
 Jarogonium est jargonius et dameleie statisticum seculum mondi.
 
 ## Section two
-Lorem ipsum
+Lorem ipsum bulletin
  * bullet1
  * bullet2
+
+## [accordion] Footnotes
+Bulletin footer

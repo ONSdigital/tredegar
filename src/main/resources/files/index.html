@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<!-- This is the entry point for the Angular application. -->
+<!-- We've used Angular to implement the Alpha because it made the application quick to prototype. -->
+<!-- The Beta phase will probably use less Javascript and more progressive enhancement. -->
 <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
 <!--[if IE 7]><html class="no-js lt-ie9 lt-ie8 ie7"><![endif]-->
 <!--[if IE 8]><html class="no-js lt-ie9 ie8"><![endif]-->
@@ -46,6 +49,26 @@
         document.createElement('ng:view');
       </script>
     <![endif]-->
+    
+    <!-- Google Analytics -->
+    <script>
+		 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		 ga('create', 'UA-56892037-2', 'auto');
+		 ga('send', 'pageview');
+	</script>
+
+    <!-- Bugherd integration script: http://bugherd.com/documentation/installing-the-sidebar/ -->
+    <script type='text/javascript'>
+		(function (d, t) {
+			 var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];
+			 bh.type = 'text/javascript';
+			 bh.src = '//www.bugherd.com/sidebarv2.js?apikey=cwz4globzxvnj84jsovora';
+			 s.parentNode.insertBefore(bh, s);
+		 })(document, 'script');
+	</script>
 
     <script type="text/javascript" src="/ui/js/lib/jquery.min.js" defer></script>
     <script type="text/javascript" src="/ui/js/lib/angular.js" defer></script>
@@ -86,6 +109,7 @@
     <script type="text/javascript" src="app/partials/release-pane/release-pane.directive.js" defer></script>
     <script type="text/javascript" src="app/partials/related-articles/related-articles.directive.js" defer></script>
     <script type="text/javascript" src="app/partials/contact-details/contact-details.directive.js" defer></script>
+    <script type="text/javascript" src="app/partials/social-links/social-links.js" defer></script>
     <script type="text/javascript" src="app/partials/tools-pane/tools-pane.directive.js" defer></script>
     <script type="text/javascript" src="app/components/breadcrumb/breadcrumb.js" defer></script>
     <script type="text/javascript" src="app/components/navigation/navigation.js" defer></script>
@@ -139,7 +163,7 @@ markup: false
             <div style="padding-left: 20px;">
                 <p>You can either:</p>
                 <ul>
-                    <li>enable Javascript as follows: <a href="http://www.enable-javascript.com/">Enabling JavaScript</a> 
+                    <li>enable Javascript as follows: <a href="http://www.enable-javascript.com/">Enabling JavaScript</a>
                     </li>
                     <li>or browse to a <a href="/static">simplified HTML version</a> of the site (this may be up to a day out of date)</li>
                 </ul>

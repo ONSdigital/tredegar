@@ -1,16 +1,43 @@
 {
-  "headline": "/peoplepopulationandcommunity/housing/timeseries/raid103",
+  "headline": {
+    "name": "UK average house price",
+    "uri": "/peoplepopulationandcommunity/housing/timeseries/raid103"
+  },
   "items": [
-    "/peoplepopulationandcommunity/housing/timeseries/raid103",
-    "/peoplepopulationandcommunity/housing/timeseries/raid104",
-    "/peoplepopulationandcommunity/housing/timeseries/raid105",
-    "/peoplepopulationandcommunity/housing/timeseries/raid106",
-    "/peoplepopulationandcommunity/housing/timeseries/raid107",
-    "/peoplepopulationandcommunity/housing/timeseries/raid108"
+    {
+      "name": "UK average house price",
+      "uri": "/peoplepopulationandcommunity/housing/timeseries/raid103"
+    },
+    {
+      "name": "UK house price change",
+      "uri": "/peoplepopulationandcommunity/housing/timeseries/raid104"
+    },
+    {
+      "name": "England average house price",
+      "uri": "/peoplepopulationandcommunity/housing/timeseries/raid105"
+    },
+    {
+      "name": "Wales average house price",
+      "uri": "/peoplepopulationandcommunity/housing/timeseries/raid106"
+    },
+    {
+      "name": "Scotland average house price",
+      "uri": "/peoplepopulationandcommunity/housing/timeseries/raid107"
+    },
+    {
+      "name": "Northern Ireland average house price",
+      "uri": "/peoplepopulationandcommunity/housing/timeseries/raid108"
+    }
   ],
-  "statsBulletinHeadline": "/peoplepopulationandcommunity/housing/bulletins/housepriceindex",
+  "statsBulletinHeadline": {
+    "name": "House Price Index",
+    "uri": "/peoplepopulationandcommunity/housing/bulletins/housepriceindex"
+  },
   "statsBulletins": [
-    "/peoplepopulationandcommunity/housing/bulletins/housepriceindex"
+    {
+      "name": "House Price Index",
+      "uri": "/peoplepopulationandcommunity/housing/bulletins/housepriceindex"
+    }
   ],
   "datasets": [],
   "level": "t3",

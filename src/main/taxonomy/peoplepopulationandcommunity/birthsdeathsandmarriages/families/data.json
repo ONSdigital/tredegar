@@ -1,17 +1,47 @@
 {
-  "headline": "/peoplepopulationandcommunity/birthsdeathsandmarriages/families/timeseries/raid42",
+  "headline": {
+    "name": "Families",
+    "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/families/timeseries/raid42"
+  },
   "items": [
-    "/peoplepopulationandcommunity/birthsdeathsandmarriages/families/timeseries/raid42",
-    "/peoplepopulationandcommunity/birthsdeathsandmarriages/families/timeseries/raid43",
-    "/peoplepopulationandcommunity/birthsdeathsandmarriages/families/timeseries/raid44",
-    "/peoplepopulationandcommunity/birthsdeathsandmarriages/families/timeseries/raid45",
-    "/peoplepopulationandcommunity/birthsdeathsandmarriages/families/timeseries/raid46",
-    "/peoplepopulationandcommunity/birthsdeathsandmarriages/families/timeseries/raid47",
-    "/peoplepopulationandcommunity/birthsdeathsandmarriages/families/timeseries/raid48"
+    {
+      "name": "Families",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/families/timeseries/raid42"
+    },
+    {
+      "name": "Married or civil partner couple families (with dependent children)",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/families/timeseries/raid43"
+    },
+    {
+      "name": "Married or civil partner couple families (without dependent children)",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/families/timeseries/raid44"
+    },
+    {
+      "name": "Cohabiting couple families (with dependent children)",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/families/timeseries/raid45"
+    },
+    {
+      "name": "Cohabiting couple families (without dependent children)",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/families/timeseries/raid46"
+    },
+    {
+      "name": "Lone parent families (with dependent children)",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/families/timeseries/raid47"
+    },
+    {
+      "name": "Lone parent families (without dependent children)",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/families/timeseries/raid48"
+    }
   ],
-  "statsBulletinHeadline": "/peoplepopulationandcommunity/birthsdeathsandmarriages/families/bulletins/familiesandhouseholds2013",
+  "statsBulletinHeadline": {
+    "name": "Families and Households, 2013",
+    "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/families/bulletins/familiesandhouseholds2013"
+  },
   "statsBulletins": [
-    "/peoplepopulationandcommunity/birthsdeathsandmarriages/families/bulletins/familiesandhouseholds2013"
+    {
+      "name": "Families and Households, 2013",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/families/bulletins/familiesandhouseholds2013"
+    }
   ],
   "datasets": [],
   "level": "t3",

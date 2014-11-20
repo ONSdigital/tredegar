@@ -1,14 +1,35 @@
 {
-  "headline": "/peoplepopulationandcommunity/wellbeing/timeseries/raid131",
+  "headline": {
+    "name": "Life Satisfaction",
+    "uri": "/peoplepopulationandcommunity/wellbeing/timeseries/raid131"
+  },
   "items": [
-    "/peoplepopulationandcommunity/wellbeing/timeseries/raid131",
-    "/peoplepopulationandcommunity/wellbeing/timeseries/raid132",
-    "/peoplepopulationandcommunity/wellbeing/timeseries/raid133",
-    "/peoplepopulationandcommunity/wellbeing/timeseries/raid134"
+    {
+      "name": "Life Satisfaction",
+      "uri": "/peoplepopulationandcommunity/wellbeing/timeseries/raid131"
+    },
+    {
+      "name": "Worthwhile",
+      "uri": "/peoplepopulationandcommunity/wellbeing/timeseries/raid132"
+    },
+    {
+      "name": "Happiness",
+      "uri": "/peoplepopulationandcommunity/wellbeing/timeseries/raid133"
+    },
+    {
+      "name": "Anxiety",
+      "uri": "/peoplepopulationandcommunity/wellbeing/timeseries/raid134"
+    }
   ],
-  "statsBulletinHeadline": "/peoplepopulationandcommunity/wellbeing/bulletins/personalwellbeingacrosstheuk201213",
+  "statsBulletinHeadline": {
+    "name": "Personal Well-being Across the UK, 2012/13",
+    "uri": "/peoplepopulationandcommunity/wellbeing/bulletins/personalwellbeingacrosstheuk201213"
+  },
   "statsBulletins": [
-    "/peoplepopulationandcommunity/wellbeing/bulletins/personalwellbeingacrosstheuk201213"
+    {
+      "name": "Personal Well-being Across the UK, 2012/13",
+      "uri": "/peoplepopulationandcommunity/wellbeing/bulletins/personalwellbeingacrosstheuk201213"
+    }
   ],
   "datasets": [],
   "level": "t3",

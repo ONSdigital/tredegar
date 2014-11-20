@@ -16,10 +16,10 @@ pageCount field is mandatory
   'use strict';
 
   angular.module('onsPaginator', [])
-    .directive('onsPaginator', ['$location', PaginatorDirective])
+    .directive('onsPaginator', ['$location', Paginator])
     .filter('range', rangeFilter)
 
-  function PaginatorDirective($location) {
+  function Paginator($location) {
     return {
       restrict: 'E',
       templateUrl: 'app/components/paginator/paginator.html',
@@ -80,16 +80,19 @@ pageCount field is mandatory
       function selectPage(index) {
         currentPage = (index)
         $location.search(PAGE_PARAM, index)
+        init()
       }
 
       function next() {
         var page = currentPage += 1
         $location.search(PAGE_PARAM, page) //Set page
+        init()
       }
 
       function prev() {
         var page = currentPage -= 1
         $location.search(PAGE_PARAM, page) //Set page
+        init()
       }
 
       function isCurrent(index) {
@@ -97,11 +100,11 @@ pageCount field is mandatory
       }
 
       function isNextVisible() {
-        return (currentPage != $scope.pageCount)
+        return (currentPage < $scope.pageCount)
       }
 
       function isPrevVisible() {
-        return (currentPage != 1)
+        return (currentPage > 1)
       }
 
 

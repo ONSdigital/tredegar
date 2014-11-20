@@ -6,6 +6,7 @@
   "unit": "m",
   "preUnit": "£",
   "date": "Q2 2014",
+  "source": "Office for National Statistics",
   "years": [
     {
       "date": "1987",
@@ -798,6 +799,10 @@
   "uri": "/businessindustryandtrade/changestobusiness/mergersandacquisitions/timeseries/cbbi",
   "relatedBulletins": [
     "/businessindustryandtrade/changestobusiness/mergersandacquisitions/bulletins/mergersandacquisitionsinvolvingukcompanies"
+  ],
+  "relatedTimeseries": [
+    "/businessindustryandtrade/changestobusiness/mergersandacquisitions/timeseries/cbbt",
+    "/businessindustryandtrade/changestobusiness/mergersandacquisitions/timeseries/cbaq"
   ],
   "type": "timeseries",
   "name": "Value of acquisitions",

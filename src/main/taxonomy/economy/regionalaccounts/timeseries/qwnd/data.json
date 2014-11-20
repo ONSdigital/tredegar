@@ -6,6 +6,7 @@
   "unit": "m",
   "preUnit": "£",
   "date": "2012",
+  "source": "Office for National Statistics",
   "years": [
     {
       "date": "1948",
@@ -765,8 +766,11 @@
   "relatedBulletins": [
     "/economy/regionalaccounts/bulletins/regionalgrossdisposablehouseholdincomegdhi"
   ],
+  "relatedTimeseries": [
+    "/economy/regionalaccounts/timeseries/c92r"
+  ],
   "type": "timeseries",
-  "name": "Gross Disposable Household Income United Kingdom",
+  "name": "United Kingdom Gross Disposable Household Income",
   "fileName": "qwnd",
   "breadcrumb": [
     {

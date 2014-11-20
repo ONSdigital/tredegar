@@ -1,25 +1,73 @@
 {
-  "headline": "/economy/inflationandpriceindices/timeseries/d7g7",
+  "headline": {
+    "name": "CPI: Consumer Prices Index",
+    "uri": "/economy/inflationandpriceindices/timeseries/d7g7"
+  },
   "items": [
-    "/economy/inflationandpriceindices/timeseries/d7g7",
-    "/economy/inflationandpriceindices/timeseries/czbh",
-    "/economy/inflationandpriceindices/timeseries/l55o",
-    "/economy/inflationandpriceindices/timeseries/kvr9",
-    "/economy/inflationandpriceindices/timeseries/d7bt",
-    "/economy/inflationandpriceindices/timeseries/chaw",
-    "/economy/inflationandpriceindices/timeseries/l522",
-    "/economy/inflationandpriceindices/timeseries/kvr8",
-    "/economy/inflationandpriceindices/timeseries/jvz7",
-    "/economy/inflationandpriceindices/timeseries/k646"
+    {
+      "name": "CPI: Consumer Prices Index",
+      "uri": "/economy/inflationandpriceindices/timeseries/d7g7"
+    },
+    {
+      "name": "RPI: Retail Price Index",
+      "uri": "/economy/inflationandpriceindices/timeseries/czbh"
+    },
+    {
+      "name": "CPIH",
+      "uri": "/economy/inflationandpriceindices/timeseries/l55o"
+    },
+    {
+      "name": "RPIJ",
+      "uri": "/economy/inflationandpriceindices/timeseries/kvr9"
+    },
+    {
+      "name": "CPI: Consumer Prices Index",
+      "uri": "/economy/inflationandpriceindices/timeseries/d7bt"
+    },
+    {
+      "name": "RPI: Retail Price Index",
+      "uri": "/economy/inflationandpriceindices/timeseries/chaw"
+    },
+    {
+      "name": "CPIH",
+      "uri": "/economy/inflationandpriceindices/timeseries/l522"
+    },
+    {
+      "name": "RPIJ",
+      "uri": "/economy/inflationandpriceindices/timeseries/kvr8"
+    },
+    {
+      "name": "Output of manufactured product",
+      "uri": "/economy/inflationandpriceindices/timeseries/jvz7"
+    },
+    {
+      "name": "Input of all manufacturing",
+      "uri": "/economy/inflationandpriceindices/timeseries/k646"
+    }
   ],
-  "statsBulletinHeadline": "/economy/inflationandpriceindices/bulletins/consumerpriceinflation",
+  "statsBulletinHeadline": {
+    "name": "Consumer Price Inflation",
+    "uri": "/economy/inflationandpriceindices/bulletins/consumerpriceinflation"
+  },
   "statsBulletins": [
-    "/economy/inflationandpriceindices/bulletins/consumerpriceinflation"
+    {
+      "name": "Consumer Price Inflation",
+      "uri": "/economy/inflationandpriceindices/bulletins/consumerpriceinflation"
+    }
   ],
   "datasets": [
-    "/economy/inflationandpriceindices/datasets/inflationsummary",
-    "/economy/inflationandpriceindices/datasets/retailpricesindex",
-    "/economy/inflationandpriceindices/datasets/producerpricesinflation"
+    {
+      "name": "Inflation data collection",
+      "uri": "/economy/inflationandpriceindices/datasets/inflationdatacollection"
+    },
+    {
+      "name": "House Price Inflation",
+      "uri": "/economy/inflationandpriceindices/datasets/housepriceinflation"
+    },
+    {
+      "name": "Producer Prices Inflation",
+      "uri": "/economy/inflationandpriceindices/datasets/producerpricesinflation"
+    }
   ],
   "level": "t3",
   "index": 1,

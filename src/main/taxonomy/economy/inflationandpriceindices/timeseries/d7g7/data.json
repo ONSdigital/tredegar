@@ -9,6 +9,9 @@
   "unit": "%",
   "preUnit": "",
   "date": "September 2014",
+  "source": "Office for National Statistics",
+  "keyNote": "Percentage change over 12 months",
+  "additionalText": "Index 2005 \u003d 100",
   "years": [
     {
       "date": "1989",
@@ -2603,6 +2606,10 @@
   "uri": "/economy/inflationandpriceindices/timeseries/d7g7",
   "relatedBulletins": [
     "/economy/inflationandpriceindices/bulletins/consumerpriceinflation"
+  ],
+  "relatedTimeseries": [
+    "/economy/inflationandpriceindices/timeseries/d7bt",
+    "/economy/inflationandpriceindices/timeseries/l55o"
   ],
   "type": "timeseries",
   "name": "CPI: Consumer Prices Index",

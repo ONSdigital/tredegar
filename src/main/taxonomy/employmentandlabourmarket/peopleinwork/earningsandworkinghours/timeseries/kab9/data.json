@@ -6,6 +6,7 @@
   "unit": "",
   "preUnit": "£",
   "date": "July 2014",
+  "source": "Labour Force Survey",
   "years": [
     {
       "date": "2000",
@@ -1490,6 +1491,9 @@
   "relatedBulletins": [
     "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/annualsurveyofhoursandearnings2013provisionalresults",
     "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/annualsurveyofhoursandearningspensiontables2013provisionalresults"
+  ],
+  "relatedTimeseries": [
+    "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/timeseries/kaf6"
   ],
   "type": "timeseries",
   "name": "Average weekly earning (total pay)",

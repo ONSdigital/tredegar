@@ -6,6 +6,7 @@
   "unit": "",
   "preUnit": "",
   "date": "July 2014",
+  "source": "Labour Force Survey",
   "years": [
     {
       "date": "1891",
@@ -6653,6 +6654,11 @@
   "uri": "/employmentandlabourmarket/peopleinwork/workplacedisputesandworkingconditions/timeseries/bbfw",
   "relatedBulletins": [
     "/employmentandlabourmarket/peopleinwork/workplacedisputesandworkingconditions/bulletins/uklabourmarketjuly2014"
+  ],
+  "relatedTimeseries": [
+    "/employmentandlabourmarket/peopleinwork/workplacedisputesandworkingconditions/timeseries/f8xz",
+    "/employmentandlabourmarket/peopleinwork/workplacedisputesandworkingconditions/timeseries/f8y2",
+    "/employmentandlabourmarket/peopleinwork/workplacedisputesandworkingconditions/timeseries/bluu"
   ],
   "type": "timeseries",
   "name": "Working days lost",

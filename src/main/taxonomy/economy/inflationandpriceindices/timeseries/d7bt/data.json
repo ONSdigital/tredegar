@@ -6,9 +6,11 @@
   "note1": "Inflation rates prior to 1997 and index levels prior to 1996 are estimated.\n",
   "note2": "Fusce pharetra, libero in imperdiet ultricies, ex erat tempor dolor, vitae aliquet magna velit in urna. Duis finibus augue velit, ut consectetur risus imperdiet in. Sed tempus congue ante, ac cursus diam porttitor vitae. Vivamus arcu leo, volutpat in mauris ac, lacinia fermentum velit. Sed dictum tortor justo, aliquet facilisis lorem dictum a.",
   "number": "128.4",
-  "unit": "Index",
+  "unit": "index",
   "preUnit": "",
   "date": "September 2014",
+  "source": "Office for National Statistics",
+  "additionalText": "Index, 2005\u003d 100",
   "years": [
     {
       "date": "1988",
@@ -2705,8 +2707,11 @@
   "relatedBulletins": [
     "/economy/inflationandpriceindices/bulletins/consumerpriceinflation"
   ],
+  "relatedTimeseries": [
+    "/economy/inflationandpriceindices/timeseries/d7g7"
+  ],
   "type": "timeseries",
-  "name": "CPI: Consumer Prices Index (2005 \u003d 100)",
+  "name": "CPI: Consumer Prices Index",
   "fileName": "d7bt",
   "breadcrumb": [
     {

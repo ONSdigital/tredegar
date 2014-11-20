@@ -1,13 +1,31 @@
 {
-  "headline": "/employmentandlabourmarket/peopleinwork/labourproductivity/timeseries/a4ym",
+  "headline": {
+    "name": "Output per worker",
+    "uri": "/employmentandlabourmarket/peopleinwork/labourproductivity/timeseries/a4ym"
+  },
   "items": [
-    "/employmentandlabourmarket/peopleinwork/labourproductivity/timeseries/a4ym",
-    "/employmentandlabourmarket/peopleinwork/labourproductivity/timeseries/lnnn",
-    "/employmentandlabourmarket/peopleinwork/labourproductivity/timeseries/lzvb"
+    {
+      "name": "Output per worker",
+      "uri": "/employmentandlabourmarket/peopleinwork/labourproductivity/timeseries/a4ym"
+    },
+    {
+      "name": "Output per job",
+      "uri": "/employmentandlabourmarket/peopleinwork/labourproductivity/timeseries/lnnn"
+    },
+    {
+      "name": "Output per hour",
+      "uri": "/employmentandlabourmarket/peopleinwork/labourproductivity/timeseries/lzvb"
+    }
   ],
-  "statsBulletinHeadline": "/employmentandlabourmarket/peopleinwork/labourproductivity/bulletins/labourproductivityq12014",
+  "statsBulletinHeadline": {
+    "name": "Labour Productivity, Q1 2014",
+    "uri": "/employmentandlabourmarket/peopleinwork/labourproductivity/bulletins/labourproductivityq12014"
+  },
   "statsBulletins": [
-    "/employmentandlabourmarket/peopleinwork/labourproductivity/bulletins/labourproductivityq12014"
+    {
+      "name": "Labour Productivity, Q1 2014",
+      "uri": "/employmentandlabourmarket/peopleinwork/labourproductivity/bulletins/labourproductivityq12014"
+    }
   ],
   "datasets": [],
   "level": "t3",

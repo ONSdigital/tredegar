@@ -4,49 +4,205 @@
       "name": "Business Activity, Size and Location",
       "link": "businessactivitysizeandlocation",
       "index": 0,
-      "items": []
+      "items": [
+        {
+          "name": "UK businesses",
+          "uri": "/businessindustryandtrade/businessactivitysizeandlocation/timeseries/raid1"
+        },
+        {
+          "name": "GB businesses",
+          "uri": "/businessindustryandtrade/businessactivitysizeandlocation/timeseries/raid2"
+        },
+        {
+          "name": "England and Wales businesses",
+          "uri": "/businessindustryandtrade/businessactivitysizeandlocation/timeseries/raid3"
+        },
+        {
+          "name": "England businesses",
+          "uri": "/businessindustryandtrade/businessactivitysizeandlocation/timeseries/raid4"
+        },
+        {
+          "name": "Wales businesses",
+          "uri": "/businessindustryandtrade/businessactivitysizeandlocation/timeseries/raid5"
+        }
+      ]
     },
     {
       "name": "Retail Industry",
       "link": "retailindustry",
       "index": 1,
-      "items": []
+      "items": [
+        {
+          "name": "Retail Sales Value including automotive fuel ",
+          "uri": "/businessindustryandtrade/retailindustry/timeseries/j5c4"
+        },
+        {
+          "name": "Retail Sales Value excluding automotive fuel ",
+          "uri": "/businessindustryandtrade/retailindustry/timeseries/j468"
+        },
+        {
+          "name": "Retail Sales Volume including automotive fuel ",
+          "uri": "/businessindustryandtrade/retailindustry/timeseries/j5ek"
+        },
+        {
+          "name": "Retail Sales Volume excluding automotive fuel ",
+          "uri": "/businessindustryandtrade/retailindustry/timeseries/j467"
+        },
+        {
+          "name": "Retail Sales Value including automotive fuel percentage change on same month a year earlier ",
+          "uri": "/businessindustryandtrade/retailindustry/timeseries/j5bs"
+        },
+        {
+          "name": "Retail Sales Volume including automotive fuel percentage change on same month a year earlier ",
+          "uri": "/businessindustryandtrade/retailindustry/timeseries/j5eb"
+        }
+      ]
     },
     {
       "name": "International Trade",
       "link": "internationaltrade",
       "index": 2,
-      "items": []
+      "items": [
+        {
+          "name": "Trade in goods and services deficit (or surplus)",
+          "uri": "/businessindustryandtrade/internationaltrade/timeseries/ikbj"
+        },
+        {
+          "name": "Total imports of goods and services",
+          "uri": "/businessindustryandtrade/internationaltrade/timeseries/ikbi"
+        },
+        {
+          "name": "Total exports of goods and services",
+          "uri": "/businessindustryandtrade/internationaltrade/timeseries/ikbh"
+        },
+        {
+          "name": "Balance of trade in goods from EMU member",
+          "uri": "/businessindustryandtrade/internationaltrade/timeseries/mhn9"
+        },
+        {
+          "name": "Balance of trade in goods from all EU",
+          "uri": "/businessindustryandtrade/internationaltrade/timeseries/l87q"
+        },
+        {
+          "name": "Balance of trade in goods from all Non-EU",
+          "uri": "/businessindustryandtrade/internationaltrade/timeseries/l87k"
+        }
+      ]
     },
     {
       "name": "Construction Industry",
       "link": "constructionindustry",
       "index": 3,
-      "items": []
+      "items": [
+        {
+          "name": "Value of construction output  - all new work",
+          "uri": "/businessindustryandtrade/constructionindustry/timeseries/raid9"
+        },
+        {
+          "name": "Value of construction output - all work",
+          "uri": "/businessindustryandtrade/constructionindustry/timeseries/raid10"
+        },
+        {
+          "name": "Value of construction output - repair and maintenance",
+          "uri": "/businessindustryandtrade/constructionindustry/timeseries/raid11"
+        },
+        {
+          "name": "Construction output - all new work",
+          "uri": "/businessindustryandtrade/constructionindustry/timeseries/raid12"
+        },
+        {
+          "name": "Construction output - all work",
+          "uri": "/businessindustryandtrade/constructionindustry/timeseries/raid13"
+        },
+        {
+          "name": "Construction output - repair and maintenance",
+          "uri": "/businessindustryandtrade/constructionindustry/timeseries/raid14"
+        }
+      ]
     },
     {
       "name": "Changes to Business",
       "link": "changestobusiness",
       "index": 4,
-      "items": []
+      "items": [
+        {
+          "name": "Mergers and Acquisitions",
+          "uri": "mergersandacquisitions"
+        },
+        {
+          "name": "Business Births, Deaths and Survival Rates",
+          "uri": "businessbirthsdeathsandsurvivalrates"
+        }
+      ]
     },
     {
       "name": "IT and Internet Industry",
       "link": "itandinternetindustry",
       "index": 5,
-      "items": []
+      "items": [
+        {
+          "name": "Total e-commerce sales",
+          "uri": "/businessindustryandtrade/itandinternetindustry/timeseries/raid15"
+        },
+        {
+          "name": "E-commerce sales (% turnover)",
+          "uri": "/businessindustryandtrade/itandinternetindustry/timeseries/raid16"
+        },
+        {
+          "name": "Business with a website",
+          "uri": "/businessindustryandtrade/itandinternetindustry/timeseries/raid17"
+        },
+        {
+          "name": "Business with a broadband",
+          "uri": "/businessindustryandtrade/itandinternetindustry/timeseries/raid18"
+        }
+      ]
     },
     {
       "name": "Manufacturing and Production Industry",
       "link": "manufacturingandproductionindustry",
       "index": 6,
-      "items": []
+      "items": [
+        {
+          "name": "Index of Production",
+          "uri": "/businessindustryandtrade/manufacturingandproductionindustry/timeseries/k27q"
+        },
+        {
+          "name": "Index of Production",
+          "uri": "/businessindustryandtrade/manufacturingandproductionindustry/timeseries/k222"
+        },
+        {
+          "name": "Manufacturing",
+          "uri": "/businessindustryandtrade/manufacturingandproductionindustry/timeseries/k27y"
+        },
+        {
+          "name": "Manufacturing",
+          "uri": "/businessindustryandtrade/manufacturingandproductionindustry/timeseries/k22a"
+        }
+      ]
     },
     {
       "name": "Tourism Industry",
       "link": "tourismindustry",
       "index": 7,
-      "items": []
+      "items": [
+        {
+          "name": "Overseas visits to the UK",
+          "uri": "/businessindustryandtrade/tourismindustry/timeseries/gmat"
+        },
+        {
+          "name": "UK visits abroad",
+          "uri": "/businessindustryandtrade/tourismindustry/timeseries/gmax"
+        },
+        {
+          "name": "Overseas visits to UK Earnings",
+          "uri": "/businessindustryandtrade/tourismindustry/timeseries/gmaz"
+        },
+        {
+          "name": "UK visits abroad Expenditure",
+          "uri": "/businessindustryandtrade/tourismindustry/timeseries/gmbb"
+        }
+      ]
     }
   ],
   "level": "t2",

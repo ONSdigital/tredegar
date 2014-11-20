@@ -9,6 +9,9 @@
   "unit": "%",
   "preUnit": "",
   "date": "September 2014",
+  "source": "Office for National Statistics",
+  "keyNote": "Percentage change over 12 months",
+  "additionalText": "Not a National Statistic",
   "years": [
     {
       "date": "2006",
@@ -886,6 +889,10 @@
   "uri": "/economy/inflationandpriceindices/timeseries/l55o",
   "relatedBulletins": [
     "/economy/inflationandpriceindices/bulletins/consumerpriceinflation"
+  ],
+  "relatedTimeseries": [
+    "/economy/inflationandpriceindices/timeseries/l522",
+    "/economy/inflationandpriceindices/timeseries/d7g7"
   ],
   "type": "timeseries",
   "name": "CPIH",

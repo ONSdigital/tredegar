@@ -10,19 +10,29 @@ import org.apache.commons.lang3.StringUtils;
 
 public class TimeseriesValue implements Comparable<TimeseriesValue> {
 
+	// Display values:
+
 	public String date;
 	public String value;
 
 	// Values split out into explicit components:
-	// public long timestamp;
+
 	public String year;
 	public String month;
 	public String quarter;
 
-	// We don't want to serialise this,
-	// but it's useful to keep a cached copy because
-	// the regex and Calendar work is expensive, given
-	// the amount of data we need to handle.
+	/**
+	 * This field is here so that Rob can see which datasets have contributed
+	 * values. Please don't rely on it unless and until it has been designed
+	 * into the app with a genuine purpose.
+	 */
+	public String sourceDataset;
+
+	/**
+	 * We don't want to serialise this, but it's useful to keep a cached copy
+	 * because the regex and Calendar work is expensive, particularly given the
+	 * amount of data we need to handle.
+	 */
 	private transient Date toDate;
 
 	/**
@@ -96,4 +106,10 @@ public class TimeseriesValue implements Comparable<TimeseriesValue> {
 
 		return result;
 	}
+
+	@Override
+	public String toString() {
+		return date + ":" + value;
+	}
+
 }
