@@ -12,7 +12,9 @@
         'highcharts-ng',
         'angularLoadingBar',
         'onsToggler',
-        'onsTooltip'
+        'onsLoading',
+        'onsSparkline',
+	   'onsTooltip'
     ])
 
     //Filters, services and other helpers are to be injected to onsHelpers module
@@ -24,7 +26,6 @@
         'onsDataLoader',
         'angular-data.DSCacheFactory'
     ])
-
     //Template related components are to be registered to onsTemplates module
     var onsTemplates = angular.module('onsTemplates', [])
 
@@ -34,8 +35,7 @@
         'ngSanitize',
         'onsComponents',
         'onsHelpers',
-        'onsTemplates',
-        'smart-table'
+        'onsTemplates'
     ])
 
     onsApp

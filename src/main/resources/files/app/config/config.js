@@ -8,11 +8,6 @@
 		//Enable hashbang
 		$locationProvider.html5Mode(false).hashPrefix('!')
 
-		// Angular http cache is false by default. Configuration made explicit. 
-		//If enabled angular will cache all http get calls. 
-		//Which is not necessary since DataLoader service caches data explicitly
-		$httpProvider.defaults.cache = false
-
 		$logProvider.debugEnabled(false)
 	}
 

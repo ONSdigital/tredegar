@@ -1,101 +1,86 @@
-      <!-- Latest statistical bulletin -->
- <section class="panel--pad panel--bottom-mar slate wrapper flush--bottom">
-          <div class="grid-wrap">
-            <div class="grid-col desktop-grid-one-third tablet-grid-full">
-              <article class="box">
-                <h2 class="beta">Latest Statistical Bulletins</h2>
-                <a href="#!{{getPath()}}/collection?contentType=bulletins" id="viewAllStatsBulletins" class="action-link hide-med-down">View all statistical bulletins</a>
-              </article>
-            </div>
-            <!-- /box -->
-            <div ng-if="!(taxonomy.data.statsBulletins)">
-	            <div ng-if="getPage() != 'economy'" class="grid-col desktop-grid-one-third tablet-grid-one-half">
-	              <article class="box">
-	                <header class="box__header">
-	                  <h3>
-	                    <a href="#!/economy/inflationandpriceindices/bulletins/consumerpriceinflation">Quisque varius rutrum, August 2014</a>
-	                  </h3>
-	                </header>
-	                <div class="box__content">
-	                  <p>
-						Aliquam tincidunt, mi et aliquam dictum, quam urna vulputate odio, sit amet commodo risus enim et purus.
-	                  </p>
-	                  <p class="description mini"></p>
-	                  <p>
-	                  <span class="lozenge">Statistical bulletin</span>
-	                </p>
-	                </div>
-	              </article>
-	            </div>
-	            <div ng-if="getPage() === 'economy'" class="grid-col desktop-grid-one-third tablet-grid-one-half">
-	              <article class="box">
-	                <header class="box__header">
-	                  <h3>
-	                    <a href="#!/economy/inflationandpriceindices/bulletins/consumerpriceinflation">Consumer Price Inflation</a>
-	                  </h3>
-	                </header>
-	                <div class="box__content">
-	                  <p>
-						CPI, CPIH, RPI and RPIJ inflation price indices for September 2014 - brief description and analysis
-	                  </p>
-	                  <p class="description mini"></p>
-	                  <p>
-	                  <span class="lozenge">Statistical bulletin</span>
-	                </p>
-	                </div>
-	              </article>
-	            </div>
-	            <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
-	              <article class="box">
-	                <header class="box__header">
-	                  <h3>
-	                    <a href="#!/economy/inflationandpriceindices/bulletins/consumerpriceinflation">Vestibulum venenati, August 2014</a>
-	                  </h3>
-	                </header>
-	                <div class="box__content">
-	                  <p>
-						Fusce et ante dapibus purus imperdiet dapibus. Morbi dolor est, ultricies ac commodo in.
-	                  </p>
-	                  <p class="description mini"></p>
-	                  <p>
-	                  <span class="lozenge">Statistical bulletin</span>
-	                </p>
-	                </div>
-	              </article>
-	            </div>	              
-            </div>
-            <div ng-repeat="bulletin in taxonomy.data.statsBulletins track by $index">
-            {{results}}
-	            <div ng-if="$index < 2" class="grid-col desktop-grid-one-third tablet-grid-one-half">
-	              <article class="box">
-	                <header class="box__header">
-	                  <h3>
-	                    <a href="#!{{bulletin.uri}}">{{bulletin.name}}</a>
-	                  </h3>
-	                </header>
-	                <!-- /box__header -->
-	                <div class="box__content">
-	                  <p>
-	                    {{bulletin.data.summary}}
-	                  </p>
-	                  <p class="description mini"></p>
-	                  <p>
-	                  <span class="lozenge">Statistical bulletin</span>
-	                </p>
-	                </div>
-	                <!-- /box__content -->
-	              </article>
-	              <!-- /box -->
-	            </div>
-	            <!-- /grid-col -->
-	        </div>
-            <!-- /grid-col -->
-            <div class="grid-col hide-large">
-              <p class="box box--padded-top">
-                <a href="#" class="action-link hide-large">View all statistical bulletins</a>
-              </p>
-            </div>
-          </div>
-          <!-- /grid-wrap -->
-        <!-- /wrapper -->
-      </section>
+<!-- Latest statistical bulletins -->
+<section class="panel wrapper box box--padded--med box--teal--separated-left solid border">
+    <header class="actionable-header__title">
+        <h2 class="actionable-header__title table-inline ">Latest Statistical Bulletins</h2>
+        <a href="#!{{getPath()}}/collection?contentType=bulletins" id="viewAllStatsBulletins" class="hide-small">View all statistical bulletins</a>
+    </header>
+
+    <!-- Static Content if there is not related statats bulletin in the data -->
+    <div class="grid-wrap" ng-if="!(taxonomy.data.statsBulletins)">
+        <div ng-if="getPage() != 'economy'" class="grid-col desktop-grid-one-third tablet-grid-one-half">
+            <article class="box--padded">
+                <header class="box__header">
+                    <h3>
+                        <a href="#!/economy/inflationandpriceindices/bulletins/consumerpriceinflation">Quisque varius rutrum, August 2014</a>
+                    </h3>
+                </header>
+                <div class="box__content">
+                    <ul class="list--table">
+                        <li class="">Aliquam tincidunt, mi et aliquam dictum, quam urna vulputate odio, sit amet commodo risus enim et purus.</li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+
+        <div ng-if="getPage() === 'economy'" class="grid-col desktop-grid-one-third tablet-grid-one-half">
+            <article class="box--padded">
+                <header class="box__header">
+                    <h3>
+                        <a href="#!/economy/inflationandpriceindices/bulletins/consumerpriceinflation">Consumer Price Inflation</a>
+                    </h3>
+                </header>
+                <div class="box__content">
+                    <ul class="list--table">
+                        <li class="">CPI, CPIH, RPI and RPIJ inflation price indices for September 2014 - brief description and analysis.</li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+
+        <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
+            <article class="box--padded">
+                <header class="box__header">
+                    <h3>
+                        <a href="#!/economy/inflationandpriceindices/bulletins/consumerpriceinflation">Vestibulum venenati, August 2014</a>
+                    </h3>
+                </header>
+                <div class="box__content">
+                    <ul class="list--table">
+                        <li class="">Fusce et ante dapibus purus imperdiet dapibus. Morbi dolor est, ultricies ac commodo in..</li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+
+        <!-- /grid-col -->
+        <div class="grid-col hide-large">
+            <a href="#!{{getPath()}}/collection?contentType=bulletins" id="viewAllStatsBulletins">View all statistical bulletins</a>
+        </div>
+    </div>
+    <!-- /grid-wrap -->
+
+
+    <!-- Dynamic Content -->
+    <div class="grid-wrap" ng-if="(taxonomy.data.statsBulletins)">
+        <div ng-repeat="bulletin in taxonomy.data.statsBulletins track by $index" class="grid-col desktop-grid-one-third tablet-grid-one-half">
+            <article class="box--padded">
+                <header class="box__header">
+                    <h3>
+                        <a href="#!{{bulletin.uri}}">{{bulletin.name}}</a>
+                    </h3>
+                </header>
+                <div class="box__content">
+                    <ul class="list--table">
+
+                        <li class="">{{bulletin.data.summary}}.</li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+
+        <!-- /grid-col -->
+        <div class="grid-col hide-large">
+            <a href="#!{{getPath()}}/collection?contentType=bulletins" id="viewAllStatsBulletins">View all statistical bulletins</a>
+        </div>
+    </div>
+</section>

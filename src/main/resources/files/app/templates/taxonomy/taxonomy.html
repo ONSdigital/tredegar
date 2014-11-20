@@ -6,7 +6,7 @@
         <span ng-if="taxonomy.data.level === 't2'" ng-controller="T2Ctrl">
             <span ng-include="'app/templates/t2/t2.html'"></span>
         </span>
-        <span ng-if="taxonomy.data.level === 't1'">
+        <span ng-if="taxonomy.data.level === 't1'" ng-controller="T1Controller as t2">
             <span ng-include="'app/templates/t1new/t1new.html'"></span>
         </span>
         <span ng-if="taxonomy.data.level === 't3'" ng-controller="T3Controller as t3">
@@ -25,11 +25,11 @@
     </span>
 
     <!-- Article -->
-    <span ng-if="taxonomy.data.type === 'article'">
+    <span ng-if="taxonomy.data.type === 'article'" ng-controller="ArticleCtrl">
         <span ng-include="'app/templates/article/article.html'"></span>
     </span>
 
-    <span ng-if="taxonomy.data.type === 'methodology'">
+    <span ng-if="taxonomy.data.type === 'methodology'" ng-controller="MethodologyCtrl">
         <span ng-include="'app/templates/methodology/methodology.html'"></span>
     </span>
 

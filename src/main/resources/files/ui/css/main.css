@@ -2097,6 +2097,10 @@ a {
 .box--padded--med {
   padding: 20px;
   padding: 2rem; }
+  
+.box--padded--small {
+  padding: 10px;
+  padding: 1rem; }  
 
 .box--callout {
   padding: 10px;
@@ -2697,11 +2701,10 @@ lesser , applied styles
         display: block; }
 
   .list--table__item__body--update {
-    width: 25%; }
+    width: 23%; }
 
   .list--table__item__body--stat {
-    width: 25%;
-    padding-right: 2.5%; }
+    width: 27%; }
 
   .list--table__item__body--select {
     width: 3.5%;
@@ -2721,13 +2724,15 @@ lesser , applied styles
   .list--table-header {
     max-width: 80%; } }
 @media screen and (min-width: 52em) {
-  .list--table__item__body--update,
+  .list--table__item__body--update {
+    width: 23%;
+    padding-right: 0; }
   .list--table__item__body--stat {
     width: 25%;
     padding-right: 0; }
 
   .list--table__item__body--caption {
-    width: 42.5%; } }
+    width: 37.5%; } }
 @media screen and (min-width: 56.5em) {
   .list--table--complex .list--table__body,
   .list--table--complex .list--table__footer {
@@ -2737,11 +2742,11 @@ lesser , applied styles
     padding-right: 32px;
     padding-right: 3.2rem; }
   .list--table--complex .list--table__item__body--update {
-    min-width: 200px;
-    min-width: 20rem; }
+    min-width: 170px;
+    min-width: 17rem; }
   .list--table--complex .list--table__item__body--stat {
-    width: 25%;
-    padding-right: 5%; }
+    min-width: 170px;
+    min-width: 17rem; }
   .list--table--complex .list--table__item__body--select {
     width: .5%; }
   .list--table--complex .list--table__item__body--caption {
@@ -4572,9 +4577,9 @@ background-color: #edeeee !important;/* altered on phil's advice--change this ov
 .arrow_box {
   position: relative;
   border-left: 5px solid #008998;
-  border-top: 2px solid #A8A1A1 ;
+  /*border-top: 2px solid #A8A1A1 ;
   border-right: 2px solid #A8A1A1 ;
-  border-bottom: 2px solid #A8A1A1;
+  border-bottom: 2px solid #A8A1A1;*/
 }
 
 .arrow_box:after, .arrow_box:before {
@@ -5036,7 +5041,7 @@ ol > li > div.list--table__item__body.list--table__item__body--stat.no_align{
   padding: 8px;
   margin-top: 0px;
   margin-left: 7px;
-  width: 20%;
+  width: 45%;
   max-width:200px;
   border-radius:4px;
 
@@ -5483,7 +5488,7 @@ left: 25%;
   height: 25rem;
 }
 
-@media screen and (min-width: 900px){
+@media screen and (min-width: 800px){
 .callout-link{
     position: relative;
     padding-left: 20%;
@@ -5491,6 +5496,13 @@ left: 25%;
 
 .background_neutral{
   background-color: #fff !important;
+}
+
+  .navpanel_wrapper{
+  height: 17em;
+  /*line-height: 1.3;*/
+  overflow: hidden;
+  padding: 0;}
 }
 
 .nav-panel--padsmall{
