@@ -2316,8 +2316,10 @@ lesser , applied styles
   .btn--primary:hover, .btn--primary:focus {
     color: white;
     background-color: #00356a; }
-  .btn--primary:focus {
-    box-shadow: 0 0 9px 3px #f37121; }
+ 
+ /* --- removed re snagging requirement ---
+ .btn--primary:focus {
+    box-shadow: 0 0 9px 3px #f37121; }*/
 
 .btn--small {
   font-size: 12px;
@@ -7718,9 +7720,6 @@ lesser , applied styles
 .btn--primary:focus {
     color: #fff;
     background-color: #00356a;
-}
-.btn--primary:focus {
-    box-shadow: 0 0 9px 3px #f37121;
 }
 .btn--secondary {
     border: 2px solid #bababa;
