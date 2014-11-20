@@ -85,7 +85,7 @@ public class DataCSV {
 					timeseries = Data.addTimeseries(header[i]);
 				}
 				dataset.add(timeseries);
-				timeseries.datasets.add(name);
+				timeseries.sourceDatasets.add(name);
 			}
 
 			// Now read the data - each row *may* contain one additional value

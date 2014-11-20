@@ -91,7 +91,7 @@ public class Timeseries extends DataItem implements Comparable<Timeseries> {
 	 * values. Please don't rely on it unless and until it has been designed
 	 * into the app with a genuine purpose.
 	 */
-	public List<String> datasets = new ArrayList<String>();
+	public List<String> sourceDatasets = new ArrayList<String>();
 
 	public Timeseries() {
 		type = ContentType.timeseries;
