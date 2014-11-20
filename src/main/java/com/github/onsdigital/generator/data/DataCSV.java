@@ -85,6 +85,7 @@ public class DataCSV {
 					timeseries = Data.addTimeseries(header[i]);
 				}
 				dataset.add(timeseries);
+				timeseries.datasets.add(name);
 			}
 
 			// Now read the data - each row *may* contain one additional value
@@ -113,6 +114,7 @@ public class DataCSV {
 						TimeseriesValue timeseriesValue = new TimeseriesValue();
 						timeseriesValue.date = StringUtils.trim(date);
 						timeseriesValue.value = StringUtils.trim(value);
+						timeseriesValue.sourceDataset = name;
 						timeseries.add(timeseriesValue);
 
 						// Scale values if necessary:
