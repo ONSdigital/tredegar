@@ -3,13 +3,12 @@
 
 
       <div class="wrapper panel">
-
-          <article class="box flush">
-        <header class="box__header">
-        <h2>
-          Welcome to the Office for National Statistics
-        </h2>
-        </header>
+        <article class="box flush">
+          <header class="box__header">
+            <h2>
+            Welcome to the Office for National Statistics
+            </h2>
+          </header>
         <!-- /box__header -->
 
         <div class="box__content">
@@ -17,517 +16,216 @@
           <!--  /list-bullet -->
         </div>
         <!-- /box__content -->
-
        
-        <!-- /box__actions -->
       </article>
     </div>
  
 
-
-
-      <div class="panel slate--home--hero-banner">
+    <!-- panel -->
+    <div class="panel slate--home--hero-banner">
       <div class="wrapper nav-panels">
         <div class="grid-wrap">
-
-
-          <div class="grid-col tablet-wide-grid-one-fifth">
-          <article class="nav-panel nav-panel--stats sectioned">
-           <div class="navpanel_wrapper_home">
-              <header class="nav-panel__header nav-panel__header_home nav-panel__roomy--med">
-                <h2 class="delta">CPI: Consumer Price Index</h2>
-              </header>
-              <div class="nav-panel__roomy box flush">
-                <ul class="list--neutral">
-                  <li class="nav-panel__body flush">
-                    <dl class="homeicon_GDP flush--bottom">
-                     <dd class="nav-panel__value">
-                        <div class="stat">
-                          <div class="stat__figure nav_home-stats">
-                           1.2%
-                            <div class="stat__description-large">September 2014</div>
-
-
+          <div ng-repeat="sections in taxonomy.data.sections" class="grid-col tablet-wide-grid-one-fifth">
+            <article ng-repeat="item in sections.items" class="nav-panel nav-panel--stats sectioned">
+              <div  class="navpanel_wrapper_home">
+                <header class="nav-panel__header nav-panel__header_home nav-panel__roomy--med">
+                  <h2 class="delta">{{item.name}}</h2>
+                </header>
+                <div class="nav-panel__roomy box flush">
+                  <ul class="list--neutral">
+                    <li class="nav-panel__body flush">
+                      <dl class="homeicon_{{sections.name}} flush--bottom">
+                        <dd class="nav-panel__value">
+                          <div class="stat">
+                            <div class="stat__figure nav_home-stats">
+                              {{item.data.number}} <span class="stat__figure__unit">{{item.data.unit}}</span>
+                              <div class="stat__description-large">{{item.data.date}}</div>
+                            </div>
                           </div>
-                         </div>
-                      </dd>
-                    </dl>                    
-                  </li>
-                 
-                        
-                
-                  <li class="nav-panel__item homeicon_sparkline">
-                    <dl>
-                      
-                      <dd class="nav-panel__value">
-                        <div class="stat stat--small">
-                          <div class="stat__figure">
-                         
-                         
-                          </div>
-                          
-                        </div>
-                      </dd>
-                    </dl>
-                  </li>
-                </ul>
-              </div>
+                        </dd>
+                      </dl>                    
+                    </li>
+                    <li class="nav-panel__item homeicon_sparkline">
+                    </li>
+                  </ul>
+                  <!-- /nav-panel__roomy -->
+                </div>
+                <!-- /navpanel_wrapper_home -->
               </div>
               <footer class="nav-panel__footer-home">
                 <div class="nav-panel__action background_neutral ">
-                  <a class="nav-panel__roomy--med" href="#">Explore economy</a>
+                  <a class="nav-panel__roomy--med" href="{{getPath()}}{{section.link}}">Explore {{sections.name}}</a>
                 </div>
               </footer>
             </article>
-            </div>
-
-
-
-          <div class="grid-col tablet-wide-grid-one-fifth">
-          <article class="nav-panel nav-panel--stats sectioned">
-           <div class="navpanel_wrapper_home">
-              <header class="nav-panel__header nav-panel__header_home nav-panel__roomy--med">
-                <h2 class="delta">GDP: Gross Domestic Product</h2>
-              </header>
-              <div class="nav-panel__roomy box  flush">
-                <ul class="list--neutral">
-                  <li class="nav-panel__body flush">
-                    <dl class="homeicon_GDP flush--bottom">
-                     <dd class="nav-panel__value">
-                        <div class="stat">
-                          <div class="stat__figure nav_home-stats">
-                           0.7%
-                            <div class="stat__description-large">Q2 2014</div>
-
-
-                          </div>
-                         </div>
-                      </dd>
-                    </dl>                    
-                  </li>
-                 
-                        
-                
-                  <li class="nav-panel__item homeicon_sparkline">
-                    <dl>
-                      
-                      <dd class="nav-panel__value">
-                        <div class="stat stat--small">
-                          <div class="stat__figure">
-                         
-                         
-                          </div>
-                          
-                        </div>
-                      </dd>
-                    </dl>
-                  </li>
-                </ul>
-              </div>
-              </div>
-              <footer class="nav-panel__footer-home">
-                <div class="nav-panel__action background_neutral ">
-
-                  <a class="nav-panel__roomy--med" href="#">Explore economy</a>
-                </div>
-              </footer>
-            </article>
-            </div>
-
-
- <div class="grid-col tablet-wide-grid-one-fifth">
-          <article class="nav-panel nav-panel--stats sectioned">
-           <div class="navpanel_wrapper_home">
-              <header class="nav-panel__header nav-panel__header_home nav-panel__roomy--med">
-                <h2 class="delta">Employment Rate (aged 16-64)</h2>
-              </header>
-              <div class="nav-panel__roomy box  flush">
-                <ul class="list--neutral">
-                  <li class="nav-panel__body flush">
-                    <dl class="homeicon_employment flush--bottom">
-                     <dd class="nav-panel__value">
-                        <div class="stat">
-                          <div class="stat__figure nav_home-stats">
-                           1.2%
-                            <div class="stat__description-large">July 2014</div>
-
-
-                          </div>
-                         </div>
-                      </dd>
-                    </dl>                    
-                  </li>
-                 
-                        
-                
-                  <li class="nav-panel__item homeicon_sparkline">
-                    <dl>
-                      
-                      <dd class="nav-panel__value">
-                        <div class="stat stat--small">
-                          <div class="stat__figure">
-                         
-                         
-                          </div>
-                          
-                        </div>
-                      </dd>
-                    </dl>
-                  </li>
-                </ul>
-              </div>
-              </div>
-              <footer class="nav-panel__footer-home">
-                <div class="nav-panel__action background_neutral ">
-                  <a class="nav-panel__roomy--med" href="#">Explore Employment &amp; Labour Market</a>
-                </div>
-              </footer>
-            </article>
-            </div>
-
-
-
-
-
-           <div class="grid-col tablet-wide-grid-one-fifth">
-          <article class="nav-panel nav-panel--stats sectioned">
-           <div class="navpanel_wrapper_home">
-              <header class="nav-panel__header nav-panel__header_home nav-panel__roomy--med">
-                <h2 class="delta">UK Population</h2>
-              </header>
-              <div class="nav-panel__roomy box flush">
-                <ul class="list--neutral">
-                  <li class="nav-panel__body flush">
-                    <dl class="homeicon_population flush--bottom">
-                     <dd class="nav-panel__value">
-                        <div class="stat">
-                          <div class="stat__figure nav_home-stats">
-                           64.1m
-                            <div class="stat__description-large">Mid-2013</div>
-
-
-                          </div>
-                         </div>
-                      </dd>
-                    </dl>                    
-                  </li>
-                 
-                        
-                
-                  <li class="nav-panel__item homeicon_sparkline">
-                    <dl>
-                      
-                      <dd class="nav-panel__value">
-                        <div class="stat stat--small">
-                          <div class="stat__figure">
-                         
-                         
-                          </div>
-                          
-                        </div>
-                      </dd>
-                    </dl>
-                  </li>
-                </ul>
-              </div>
-              </div>
-              <footer class="nav-panel__footer-home">
-                <div class="nav-panel__action background_neutral ">
-                  <a class="nav-panel__roomy--med" href="#">Explore People, Population &amp; Community</a>
-                </div>
-              </footer>
-            </article>
-            </div>
-
-
-
-           <div class="grid-col tablet-wide-grid-one-fifth">
-          <article class="nav-panel nav-panel--stats sectioned">
-           <div class="navpanel_wrapper_home">
-              <header class="nav-panel__header nav-panel__header_home nav-panel__roomy--med">
-                <h2 class="delta">Trade in Goods &amp; Services (or surplus)</h2>
-              </header>
-              <div class="nav-panel__roomy box  flush">
-                <ul class="list--neutral">
-                  <li class="nav-panel__body flush">
-                    <dl class="homeicon_trade flush--bottom">
-                     <dd class="nav-panel__value">
-                        <div class="stat">
-                          <div class="stat__figure nav_home-stats">
-                           -6.5m
-                            <div class="stat__description-large">Q2 2014</div>
-
-
-                          </div>
-                         </div>
-                      </dd>
-                    </dl>                    
-                  </li>
-                 
-                        
-                
-                  <li class="nav-panel__item homeicon_sparkline">
-                    <dl>
-                      
-                      <dd class="nav-panel__value">
-                        <div class="stat stat--small">
-                          <div class="stat__figure">
-                         
-                         
-                          </div>
-                          
-                        </div>
-                      </dd>
-                    </dl>
-                  </li>
-                </ul>
-              </div>
-              </div>
-              <footer class="nav-panel__footer-home">
-                <div class="nav-panel__action background_neutral ">
-                  <a class="nav-panel__roomy--med" href="#">Explore Business, Industry &amp; Trade</a>
-                </div>
-              </footer>
-            </article>
-            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+          </div>
+          <!-- /grid-wrap -->
+        </div>
+        <!-- /wrapper -->        
       </div>
-        <!-- /grid-wrap -->
-      </div>
-      <!-- /wrapper -->
-      </div>
+      <!-- /panel-->      
+    </div>
 
-<section class="panel wrapper flush--bottom ">
-        <header class="actionable-header__title">
-          <h2 class="actionable-header__title table-inline ">News this week view</h2>
+    <!-- panel wrapper -->
+    <section class="panel wrapper flush--bottom ">
+      <header class="actionable-header__title">
+        <h2 class="actionable-header__title table-inline ">News this week view</h2>
           <a class="hide-small" href="#">new and upcoming releases</a>
-        </header>
-        <div class="grid-wrap">
-          <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
-            <article class="box--padded-vertical">
-              <header class="box__header">
-                <h3 >
-                    <a href="#">Consumer Price Inflation</a>
-                </h3>
-              </header>
+      </header>
+      <div class="grid-wrap">
+        <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
+          <article class="box--padded-vertical">
+            <header class="box__header">
+              <h3>
+                <a href="#">Consumer Price Inflation</a>
+              </h3>
               <!-- /box__header -->
+            </header>
+            
               <div class="box__content">
                 <ul class="list--table">
                   <li class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis.</li>
-                  <!-- <li>Between 1997 and 2011 the contribution of building to total GVA decreased in each of the NUTS1 regions.</li> -->
                 </ul>
-                <!-- /list- -bullet -->
+                 <!-- /box__content -->
               </div>
-              <!-- /box__content -->
-              <!-- <footer class="box__footer box__actions">
-                <a class="btn btn--primary btn--small btn--narrow align_right" href="#">
-            Download .xls
-            <span class="icon icon-download icon--button-inline"></span>
-          </a>
-              </footer> -->
-              <!-- /box__actions -->
+              <!-- /box- -padded-vertical -->
             </article>
-            <!-- /box -->
+            <!-- /grid-col -->
           </div>
-          <!-- /grid-col -->
+
+          <!-- grid-col -->
           <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
-            <article class="box--padded-vertical">
-              <header class="box__header">
-                <h3 >
-                  <a href="#">Producer Price Index</a>
-                </h3>
-              </header>
+          <article class="box--padded-vertical">
+            <header class="box__header">
+              <h3>
+                <a href="#">Producer Price Index</a>
+              </h3>
               <!-- /box__header -->
+            </header>
+            
               <div class="box__content">
                 <ul class="list--table">
-                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis.</li>
-                  <!-- <li>Falls in transport services costs, notably air fares</li> -->
+                  <li class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis.</li>
                 </ul>
-                <!-- /list- -bullet -->
+                 <!-- /box__content -->
               </div>
-              <!-- /box__content -->
-              <!-- <footer class="box__footer box__actions">
-                <a class="btn btn--primary btn--small btn--narrow align_right" href="#">
-            Download .xls
-            <span class="icon icon-download icon--button-inline"></span>
-          </a>
-              </footer> -->
+              <!-- /box- -padded-vertical -->
             </article>
-            <!-- /box -->
+            <!-- /grid-col -->
           </div>
-          <!-- /grid-col -->
+          
           <div class="grid-col desktop-grid-one-third tablet-grid-one-half tablet-grid-clear">
             <article class="box--padded-vertical">
-              <header class="box__header">
-                <h3 >
-                  <a href="#">House Price index </a>
-                </h3>
-              </header>
+            <header class="box__header">
+              <h3>
+                <a href="#">House Price Index</a>
+              </h3>
               <!-- /box__header -->
+            </header>
+            
               <div class="box__content">
                 <ul class="list--table">
-                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis.</li>
-                  <!-- <li>Between 1997 and 2011 the contribution of building to total GVA
-                    decreased in each of the NUTS1 regions.</li>
-                  <li>In 2012 the South East had the largest increase in GVA</li>
-                  <li>Between 1997 and 2011 the contribution of building to total GVA
-                    decreased in each of the NUTS1 regions.</li> -->
+                  <li class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis.</li>
                 </ul>
-                <!-- /list- -bullet -->
+                 <!-- /box__content -->
               </div>
-              <!-- /box__content -->
-              <!-- <footer class="box__footer box__actions">
-                <a class="btn btn--primary btn--small btn--narrow align_right" href="#">
-            Download .xls
-            <span class="icon icon-download icon--button-inline"></span>
-          </a>
-              </footer> -->
+              <!-- /box- -padded-vertical -->
             </article>
-            <!-- /box -->
+            <!-- /grid-col -->
           </div>
-          <!-- /grid-col -->
           <div class="grid-col hide-large">
             <a href="#">View more news items</a>
           </div>
+          <!-- /grid-wrap -->
         </div>
-        <!-- /grid-wrap -->
+        <!-- /section -->        
       </section>
-       <!-- /section -->
+       
 
       <div class="wrapper panel flush--top">
         <div class="grid-wrap">
           <div class="grid-col desktop-grid-one-half tablet-grid-one-half">
             <article class="box border home_callout homeicon_census">
-            <div class="box__inner box--padded">
-            <div class="grid-wrap">
-              <div class="grid-col grid-one-half ">
-                  <div class="media__body">
-                    <header class="box__header pad_regional_header">
-                     <h2 class="callout-header">
-
-
-                    <ul class="list--neutral">
-                      <li>Who we are.</li>
-                      <li>How we live.</li>
-                      <li>What we do.</li>
-                    </ul>
-                    </h2>
-                    </header>
-                    <!-- /box__header -->
-                    
+              <div class="box__inner box--padded">
+                <div class="grid-wrap">
+                  <div class="grid-col grid-one-half ">
+                    <div class="media__body">
+                      <header class="box__header pad_regional_header">
+                        <h2 class="callout-header">
+                          <ul class="list--neutral">
+                            <li>Who we are.</li>
+                            <li>How we live.</li>
+                            <li>What we do.</li>
+                          </ul>
+                        </h2>
+                        <!-- /box__header -->
+                      </header>
                     </div>
-                    </div>
-                  
-               
-                 
-                    <!-- /box__header -->
-                    <div class="box__content list--table__item__body--icon div_panel_link">
-                      <a class="" href="#">2011 Census <span class="icon-right-open-big"></span></a>
-              
-                    </div>
-                   
-                   
-                    </div>
-                    </div>
-
-                 </article>             
-                <!-- /media -->
+                  </div>
+                  <div class="box__content list--table__item__body--icon div_panel_link">
+                    <a class="" href="#">2011 Census <span class="icon-right-open-big"></span></a>
+                  </div>
                 </div>
-              <!-- /box__inner -->
+              </div>
+            </article>
+            <!-- /grid-col -->             
+          </div>
+              
                 
-           <div class="grid-col desktop-grid-one-half tablet-grid-one-half">
+          <div class="grid-col desktop-grid-one-half tablet-grid-one-half">
             <article class="box border home_callout homeicon_datavis">
-            <div class="box__inner box--padded ">
-            <div class="grid-wrap">
-              <div class="grid-col grid-three-quarters">
-                  <div class="media__body">
-                    <header class="box__header pad_regional_header">
-                     <h2 class="callout-header">
-
-
-                    <ul class="list--neutral">
-                      <li>ONS Data Visualisation</li>
-                    
-                    </ul>
-                    </h2>
-                    </header>
-                    <!-- /box__header -->
-                    
+              <div class="box__inner box--padded ">
+                <div class="grid-wrap">
+                  <div class="grid-col grid-three-quarters">
+                    <div class="media__body">
+                      <header class="box__header pad_regional_header">
+                        <h2 class="callout-header">
+                          <ul class="list--neutral">
+                            <li>ONS Data Visualisation</li>
+                          </ul>
+                        </h2>
+                        <!-- /box__header -->
+                      </header>
                     </div>
-                    </div>
-                   
+                  </div>
                   <div class="media__body">
-                 
-                    <!-- /box__header -->
                     <div class="box__content list--table__item__body--icon div_panel_link">
-                
-                    
                       <a class="" href="#">See our data in a new light <span class="icon-right-open-big"></span></a>
-
-
-              
                     </div>
-                    </div>
-                    
-                    </div>
-                    </div>
-
-                 </article>             
-                <!-- /media -->
+                  </div>
                 </div>
-          
-            <!-- /grid-col -->
-      </div>
+              </div>
+            </article>             
+          </div>
+          <!-- /grid-wrap-->
+        </div>
         <!-- /wrapper-->
       </div>
 
         
 
-          
-
-
-
-      <section class="panel wrapper">
+    <section class="panel wrapper">
       <div class="box box--padded--med box--orange--separated-left solid border">
         <header class="actionable-header__title">
           <h2 class="actionable-header__title table-inline ">Looking for local statistics?</h2>
-        
         </header>
         <div class="grid-wrap">
           <div class="grid-col desktop-grid-one-quarter tablet-grid-one-half">
             <article class="box--padded--med">
               <header class="box__header">
-                <h3 >
-                    <a href="#">Local data explained </a>
+                <h3>
+                  <a href="#">Local data explained </a>
                 </h3>
+                <!-- /box__header -->
               </header>
-              <!-- /box__header -->
+              
               <div class="box__content">
                 <ul class="list--table">
                   <li class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis. </li>
-                 
                 </ul>
-                <!-- /list- -bullet -->
+                <!-- /box__content -->
               </div>
-              <!-- /box__content -->
-             
-              </footer> 
-              <!-- /box__actions -->
+              <!-- /article box- -padded- -med" -->
             </article>
             <!-- /box -->
           </div>
@@ -535,219 +233,144 @@
           <div class="grid-col desktop-grid-one-quarter tablet-grid-one-half">
             <article class="box--padded--med">
               <header class="box__header">
-                <h3 >
-                  <a href="#">Labour Market data </a>
+                <h3>
+                  <a href="https://www.nomisweb.co.uk/">Labour Market data </a>
                 </h3>
               </header>
               <!-- /box__header -->
               <div class="box__content">
                 <ul class="list--table">
                   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis. </li>
-                  <!-- <li>Falls in transport services costs, notably air fares</li> -->
                 </ul>
-                <!-- /list- -bullet -->
+                <!-- /box__content -->                
               </div>
-              <!-- /box__content -->
-              <!-- <footer class="box__footer box__actions">
-                <a class="btn btn--primary btn--small btn--narrow align_right" href="#">
-            Download .xls
-            <span class="icon icon-download icon--button-inline"></span>
-          </a>
-              </footer> -->
             </article>
             <!-- /box -->
           </div>
           <!-- /grid-col -->
           <div class="grid-col desktop-grid-one-quarter tablet-grid-one-half tablet-grid-clear">
-            <article class="box--padded--med">
+             <article class="box--padded--med">
               <header class="box__header">
-                <h3 >
-                  <a href="#">Neighbourhood statistics </a>
+                <h3>
+                  <a href="http://www.neighbourhood.statistics.gov.uk/dissemination/">Neighbourhood statistics </a>
                 </h3>
               </header>
               <!-- /box__header -->
               <div class="box__content">
                 <ul class="list--table">
                   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis. </li>
-                  <!-- <li>Between 1997 and 2011 the contribution of building to total GVA
-                    decreased in each of the NUTS1 regions.</li>
-                  <li>In 2012 the South East had the largest increase in GVA</li>
-                  <li>Between 1997 and 2011 the contribution of building to total GVA
-                    decreased in each of the NUTS1 regions.</li> -->
                 </ul>
-                <!-- /list- -bullet -->
+                <!-- /box__content -->                
               </div>
-              <!-- /box__content -->
-              <!-- <footer class="box__footer box__actions">
-                <a class="btn btn--primary btn--small btn--narrow align_right" href="#">
-            Download .xls
-            <span class="icon icon-download icon--button-inline"></span>
-          </a>
-              </footer> -->
             </article>
             <!-- /box -->
           </div>
 
 
             <div class="grid-col desktop-grid-one-quarter tablet-grid-one-half tablet-grid-clear">
-            <article class="box--padded--med">
+             <article class="box--padded--med">
               <header class="box__header">
-                <h3 >
-                  <a href="#">Census 2011 Outputs</a>
+                <h3>
+                  <a href=" http://www.ons.gov.uk/ons/data/area-first/">Census 2011 Outputs</a>
                 </h3>
               </header>
               <!-- /box__header -->
               <div class="box__content">
                 <ul class="list--table">
                   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis. </li>
-                  <!-- <li>Between 1997 and 2011 the contribution of building to total GVA
-                    decreased in each of the NUTS1 regions.</li>
-                  <li>In 2012 the South East had the largest increase in GVA</li>
-                  <li>Between 1997 and 2011 the contribution of building to total GVA
-                    decreased in each of the NUTS1 regions.</li> -->
                 </ul>
-                <!-- /list- -bullet -->
+                <!-- /box__content -->                
               </div>
-              <!-- /box__content -->
-              <!-- <footer class="box__footer box__actions">
-                <a class="btn btn--primary btn--small btn--narrow align_right" href="#">
-            Download .xls
-            <span class="icon icon-download icon--button-inline"></span>
-          </a>
-              </footer> -->
             </article>
-            <!-- /box -->
-          </div>
-          <!-- /grid-col -->
-         
+            <!-- /grid-col -->
+           </div>        
         <!-- /grid-wrap -->
-        </div>
-      </section>
+      </div>
+      <!-- /panel wrapper -->
+    </section>
 
-        <section class="panel wrapper box box--padded--med ">
-        <header class="actionable-header__title">
-          <h2 class="actionable-header__title table-inline ">Other Official Statistics?</h2>
+    <section class="panel wrapper box box--padded--med ">
+      <header class="actionable-header__title">
+        <h2 class="actionable-header__title table-inline ">Other Official Statistics?</h2>
+      </header>
+      <div class="grid-wrap">
+        <div class="grid-col desktop-grid-one-quarter tablet-grid-one-half">
+          <article class="box--padded-vertical">
+            <header class="box__header">
+              <h3 class="beta">
+                <a href="https://www.gov.uk/government/statistics">GOV.UK</a>
+              </h3>
+              <!-- /box__header -->
+            </header>
+              
+            <div class="box__content">
+              <ul class="list--table">
+                <li class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis. </li>
+              </ul>
+            </div>
+          </article>
+          <!-- /grid-col -->
+        </div>
+          
+          <div class="grid-col desktop-grid-one-quarter tablet-grid-one-half">
+          <article class="box--padded-vertical">
+            <header class="box__header">
+              <h3 class="beta">
+                <a href="https://statswales.wales.gov.uk/Catalogue">StatsWales</a>
+              </h3>
+              <!-- /box__header -->
+            </header>
+              
+            <div class="box__content">
+              <ul class="list--table">
+                <li class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis. </li>
+              </ul>
+            </div>
+          </article>
+          <!-- /grid-col -->
+        </div>
+
         
-        </header>
-        <div class="grid-wrap">
-          <div class="grid-col desktop-grid-one-quarter tablet-grid-one-half">
-            <article class="box--padded-vertical">
-              <header class="box__header">
-                  <h3 class="beta">
-                    <a href="#">GOV.UK</a>
-                </h3>
-              </header>
-              <!-- /box__header -->
-              <div class="box__content">
-                <ul class="list--table">
-                  <li class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis. </li>
-                  <!-- <li>Between 1997 and 2011 the contribution of building to total GVA decreased in each of the NUTS1 regions.</li> -->
-                </ul>
-                <!-- /list- -bullet -->
-              </div>
-              <!-- /box__content -->
-              <!-- <footer class="box__footer box__actions">
-                <a class="btn btn--primary btn--small btn--narrow align_right" href="#">
-            Download .xls
-            <span class="icon icon-download icon--button-inline"></span>
-          </a>
-              </footer> -->
-              <!-- /box__actions -->
-            </article>
-            <!-- /box -->
-          </div>
-          <!-- /grid-col -->
-          <div class="grid-col desktop-grid-one-quarter tablet-grid-one-half">
-            <article class="box--padded-vertical">
-              <header class="box__header">
-                 <h3 class="beta">
-                  <a href="#">StatsWales</a>
-                </h3>
-              </header>
-              <!-- /box__header -->
-              <div class="box__content">
-                <ul class="list--table">
-                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis. </li>
-                  <!-- <li>Falls in transport services costs, notably air fares</li> -->
-                </ul>
-                <!-- /list- -bullet -->
-              </div>
-              <!-- /box__content -->
-              <!-- <footer class="box__footer box__actions">
-                <a class="btn btn--primary btn--small btn--narrow align_right" href="#">
-            Download .xls
-            <span class="icon icon-download icon--button-inline"></span>
-          </a>
-              </footer> -->
-            </article>
-            <!-- /box -->
-          </div>
-          <!-- /grid-col -->
           <div class="grid-col desktop-grid-one-quarter tablet-grid-one-half tablet-grid-clear">
             <article class="box--padded-vertical">
-              <header class="box__header">
-                 <h3 class="beta">
-                  <a href="#">ScotStat</a>
-                </h3>
-              </header>
+            <header class="box__header">
+              <h3 class="beta">
+                <a href="http://www.scotland.gov.uk/Topics/Statistics">ScotStat</a>
+              </h3>
               <!-- /box__header -->
-              <div class="box__content">
-                <ul class="list--table">
-                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis. </li>
-                  <!-- <li>Between 1997 and 2011 the contribution of building to total GVA
-                    decreased in each of the NUTS1 regions.</li>
-                  <li>In 2012 the South East had the largest increase in GVA</li>
-                  <li>Between 1997 and 2011 the contribution of building to total GVA
-                    decreased in each of the NUTS1 regions.</li> -->
-                </ul>
-                <!-- /list- -bullet -->
-              </div>
-              <!-- /box__content -->
-              <!-- <footer class="box__footer box__actions">
-                <a class="btn btn--primary btn--small btn--narrow align_right" href="#">
-            Download .xls
-            <span class="icon icon-download icon--button-inline"></span>
-          </a>
-              </footer> -->
-            </article>
-            <!-- /box -->
-          </div>
-
-
-            <div class="grid-col desktop-grid-one-quarter tablet-grid-one-half tablet-grid-clear">
-            <article class="box--padded-vertical">
-              <header class="box__header">
-                <h3 class="beta">
-                  <a href="#">NISRA</a>
-                </h3>
-              </header>
-              <!-- /box__header -->
-              <div class="box__content">
-                <ul class="list--table">
-                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis. </li>
-                  <!-- <li>Between 1997 and 2011 the contribution of building to total GVA
-                    decreased in each of the NUTS1 regions.</li>
-                  <li>In 2012 the South East had the largest increase in GVA</li>
-                  <li>Between 1997 and 2011 the contribution of building to total GVA
-                    decreased in each of the NUTS1 regions.</li> -->
-                </ul>
-                <!-- /list- -bullet -->
-              </div>
-              <!-- /box__content -->
-              <!-- <footer class="box__footer box__actions">
-                <a class="btn btn--primary btn--small btn--narrow align_right" href="#">
-            Download .xls
-            <span class="icon icon-download icon--button-inline"></span>
-          </a>
-              </footer> -->
-            </article>
-            <!-- /box -->
-          </div>
+            </header>
+              
+            <div class="box__content">
+              <ul class="list--table">
+                <li class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis. </li>
+              </ul>
+            </div>
+          </article>
           <!-- /grid-col -->
-        
         </div>
-        <!-- /grid-wrap -->
-      </section>
+
+
+          <div class="grid-col desktop-grid-one-quarter tablet-grid-one-half tablet-grid-clear">
+            <article class="box--padded-vertical">
+          <header class="box__header">
+            <h3 class="beta">
+              <a href="http://www.nisra.gov.uk/">NISRA</a>
+            </h3>
+            <!-- /box__header -->
+          </header>
+            
+          <div class="box__content">
+            <ul class="list--table">
+              <li class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis. </li>
+            </ul>
+          </div>
+        </article>
+        <!-- /grid-col -->
+      </div>
+      
+      </div>
+      <!-- /grid-wrap -->
+    </section>
       
 
 
