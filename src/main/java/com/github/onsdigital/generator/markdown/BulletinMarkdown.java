@@ -6,6 +6,8 @@ import java.util.Collection;
 import java.util.Map;
 import java.util.Scanner;
 
+import org.apache.commons.lang.StringUtils;
+
 import com.github.onsdigital.generator.Folder;
 import com.github.onsdigital.generator.data.Data;
 import com.github.onsdigital.json.markdown.Bulletin;
@@ -74,20 +76,20 @@ public class BulletinMarkdown {
 		Map<String, String> properties = markdown.properties;
 
 		// Location
-		bulletin.theme = properties.remove("Theme");
-		bulletin.level2 = properties.remove("Level 2");
-		bulletin.level3 = properties.remove("Level 3");
+		bulletin.theme = StringUtils.defaultIfBlank(properties.remove("Theme"), bulletin.theme);
+		bulletin.level2 = StringUtils.defaultIfBlank(properties.remove("Level 2"), bulletin.level2);
+		bulletin.level3 = StringUtils.defaultIfBlank(properties.remove("Level 3"), bulletin.level3);
 
 		// Additional details
-		bulletin.lede = properties.remove("Lede");
-		bulletin.more = properties.remove("More");
-		bulletin.summary = properties.remove("Summary");
-		bulletin.headline1 = properties.remove("Headline 1");
-		bulletin.headline2 = properties.remove("Headline 2");
-		bulletin.headline3 = properties.remove("Headline 3");
-		bulletin.contact.name = properties.remove("Contact name");
-		bulletin.contact.email = properties.remove("Contact email");
-		bulletin.nextRelease = properties.remove("Next release");
+		bulletin.lede = StringUtils.defaultIfBlank(properties.remove("Lede"), bulletin.lede);
+		bulletin.more = StringUtils.defaultIfBlank(properties.remove("More"), bulletin.more);
+		bulletin.summary = StringUtils.defaultIfBlank(properties.remove("Summary"), bulletin.summary);
+		bulletin.headline1 = StringUtils.defaultIfBlank(properties.remove("Headline 1"), bulletin.headline1);
+		bulletin.headline2 = StringUtils.defaultIfBlank(properties.remove("Headline 2"), bulletin.headline2);
+		bulletin.headline3 = StringUtils.defaultIfBlank(properties.remove("Headline 3"), bulletin.headline3);
+		bulletin.contact.name = StringUtils.defaultIfBlank(properties.remove("Contact name"), bulletin.contact.name);
+		bulletin.contact.email = StringUtils.defaultIfBlank(properties.remove("Contact email"), bulletin.contact.email);
+		bulletin.nextRelease = StringUtils.defaultIfBlank(properties.remove("Next release"), bulletin.nextRelease);
 
 		// Note any unexpected information
 		for (String property : properties.keySet()) {
