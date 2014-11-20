@@ -1,107 +1,80 @@
+'use strict';
+
 (function() {
 
 	angular.module('onsTemplates')
-		.controller('T3Controller', ['$scope', 'Downloader', T3Controller])
-		.directive('stSelectAll', [SelectAllDirective])
-		.directive('stSelect', [SelectDirective])
+		.controller('T3Controller', ['$scope', 'Taxonomy', T3Controller])
+
+	function T3Controller($scope, Taxonomy) {
+		var t3 = this
+		var data = $scope.taxonomy.data
+		var timeseriesCount = data.items.length
+		var timeseriesDefaultLimit = 5
+		t3.loadedTimseriesCount = 0
+		var loadingMore = false
+		initialize()
+
+		function initialize() {
+			loadItem(data.headline) //Load headline
+			t3.loadedTimseriesCount-- //Reset timeseries count after headline
+				loadItem(data.statsBulletinHeadline) //Load stats bulletins related to headline
+			loadItems(data.items, timeseriesDefaultLimit) //Load timeseries
+			loadItems(data.statsBulletins) //Load timeseries
+			loadItems(data.datasets) //Load datasets
+		}
 
 
-	function T3Controller($scope, Downloader) {
-		var ctrl = this
-		var items = $scope.taxonomy.data.items
-		ctrl.allSelected = false
-		ctrl.selectedCount = 0
-
-		function toggleSelectAll() {
-			ctrl.allSelected = !ctrl.allSelected
-			for (var i = 0; i < items.length; i++) {
-				items[i].isSelected = ctrl.allSelected
+		function loadItems(items, limit) {
+			limit = limit || items.length
+				// Load all items if less than limit
+			limit = limit > items.length ? items.length : limit
+			for (var i = 0; i < limit; i++) {
+				loadItem(items[i])
 			};
-
-			ctrl.selectedCount = ctrl.allSelected ? items.length : 0
 		}
 
-		function toggleSelect(row) {
-			row.isSelected = !row.isSelected
-			if (row.isSelected) {
-				ctrl.selectedCount++
-			} else {
-				ctrl.selectedCount--
+		function loadItem(item) {
+			var promise = Taxonomy.loadItem(item)
+			if (promise) {
+				promise
+					.then(function(data) {
+						if (data.type === "timeseries") {
+							t3.loadedTimseriesCount++
+								if (!hasMore()) {
+									loadingMore = false
+								}
+							item.chartData = Taxonomy.resolveChartData(item)
+
+						}
+					}, handleDataLoadError)
 			}
 
 		}
 
-		function downloadXls() {
-			if (ctrl.selectedCount <= 0) {
-				return
-			}
 
-			download('xlsx')
+		function handleDataLoadError(err) {
+			//Handle data load error
 		}
 
-		function downloadCsv() {
-			if (ctrl.selectedCount <= 0) {
-				return
-			}
-			download('csv')
+
+		function isLoading() {
+			return loadingMore
 		}
 
-		function download(type) {
-			var downloadRequest = {
-				type: type
-			}
-			downloadRequest.uriList = getFileList()
-			var fileName = $scope.getPage() + '.' + downloadRequest.type;
-			Downloader.downloadFile(downloadRequest,fileName)
+		function hasMore() {
+			return timeseriesCount > t3.loadedTimseriesCount
 		}
 
-		function getFileList() {
-			var uriList = []
-			for (var i = 0; i < items.length; i++) {
-				if (items[i].isSelected) {
-					uriList.push(items[i].uri)
-				}
-			}
-			return uriList
+		function loadAll() {
+			loadingMore = true
+			loadItems(data.items.slice(t3.loadedTimseriesCount))
 		}
 
-		angular.extend(ctrl, {
-			toggleSelectAll: toggleSelectAll,
-			toggleSelect: toggleSelect,
-			downloadXls: downloadXls,
-			downloadCsv: downloadCsv
+		angular.extend(t3, {
+			isLoading: isLoading,
+			hasMore: hasMore,
+			loadAll: loadAll
 		})
-
-
 	}
-
-	function SelectAllDirective() {
-		return {
-			restrict: 'A',
-			link: function(scope, element, attr) {
-				element.bind('click', function() {
-					scope.$apply(function() {
-						scope.t3.toggleSelectAll()
-					})
-				})
-
-			}
-		}
-	}
-
-	function SelectDirective() {
-		return {
-			restrict: 'A',
-			link: function(scope, element, attr) {
-				element.bind('click', function() {
-					scope.$apply(function() {
-						scope.t3.toggleSelect(scope.item)
-					})
-				})
-
-			}
-		}
-	}
-
 
 })()

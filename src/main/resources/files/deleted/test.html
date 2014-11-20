@@ -3,13 +3,18 @@
 
 <head>
     <link href="ui/css/main.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="/ui/js/lib/jquery.min.js"></script>
     <script type="text/javascript" src="ui/js/lib/angular.js"></script>
+    <script type="text/javascript" src="app/components/charts/highcharts-ng.js"></script>
+    <script type="text/javascript" src="/ui/js/lib/highcharts.js"></script>
     <script type="text/javascript" src="app/components/accordion/accordion.js"></script>
     <script type="text/javascript" src="app/components/paginator/paginator.js"></script>
     <script type="text/javascript" src="app/components/navigation/navigation.js"></script>
     <script type="text/javascript" src="app/components/tabs/tabs.js"></script>
     <script type="text/javascript" src="app/components/toggler/toggler.js"></script>
     <script type="text/javascript" src="app/components/autocomplete/autocomplete.js"></script>
+    <script type="text/javascript" src="app/components/sparkline/sparkline.js"></script>
+    <script type="text/javascript" src="app/components/loading/loading.js"></script>
 
     <script type="text/javascript" src="app/helpers/util.js"></script>
 </head>
@@ -146,9 +151,16 @@
     <div toggleable="theToggle">
         Hey
     </div>
-
     <div class="push"></div>
  
+    <h1>Loading </h1>
+    <ons-loading></ons-loading>
+    <div class="push"></div>
+    
+    <h1>Spark Line</h1>
+    <ons-sparkline chart-data="timeseries.years"></ons-sparkline>
+    <div class="push"></div>
+    
 
 </body>
 <script type="text/javascript">
@@ -158,7 +170,9 @@ angular.module('testModule', ['onsPaginator',
         'onsNavigation',
         'onsUtils',
         'onsToggler',
-        'onsAutocomplete'
+        'onsAutocomplete',
+        'onsLoading',
+        'onsSparkline'
     ])
     .controller('TestCtrl', ['$scope', '$http', function($scope, $http) {
         $http.get("/navigation").success(function(data) {
@@ -166,6 +180,9 @@ angular.module('testModule', ['onsPaginator',
         })
         $http.get("/data/economy/inflationandpriceindices").success(function(data) {
             $scope.ipi = data
+        })
+        $http.get("/data/economy/inflationandpriceindices/timeseries/d7g7").success(function(data) {
+            $scope.timeseries = data
         })
         $scope.printTab = function() {
             console.log("Tab Contoller? :")

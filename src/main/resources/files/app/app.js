@@ -11,7 +11,10 @@
         'onsTabs',
         'highcharts-ng',
         'angularLoadingBar',
-        'onsToggler'
+        'onsToggler',
+        'onsLoading',
+        'onsSparkline',
+	   'onsTooltip'
     ])
 
     //Filters, services and other helpers are to be injected to onsHelpers module
@@ -23,7 +26,6 @@
         'onsDataLoader',
         'angular-data.DSCacheFactory'
     ])
-
     //Template related components are to be registered to onsTemplates module
     var onsTemplates = angular.module('onsTemplates', [])
 
@@ -33,8 +35,7 @@
         'ngSanitize',
         'onsComponents',
         'onsHelpers',
-        'onsTemplates',
-        'smart-table'
+        'onsTemplates'
     ])
 
     onsApp
@@ -72,6 +73,13 @@
                 when('/dataversions', {
                     templateUrl: 'app/templates/dataversions/dataversions.html',
                     controller: "DataversionsCtrl",
+                    resolve: {
+                        navigation: ['DataLoader', getNavigatinLinks]
+                    }
+                }).
+                when('/localstats', {
+                    templateUrl: 'app/templates/localstats/localstats.html',
+                    controller: "LocalStatsCtlr",
                     resolve: {
                         navigation: ['DataLoader', getNavigatinLinks]
                     }
