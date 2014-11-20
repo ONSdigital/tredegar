@@ -4671,9 +4671,7 @@ background-color: #edeeee !important;/* altered on phil's advice--change this ov
   min-width: 30%;
 }
 
-/*.pad_regional_header{
-  padding: 5rem;
-}*/
+
 
 .link_head{
   /*float: left;
@@ -5346,7 +5344,7 @@ td.datatable-downloads{
   height: 18rem }
 
 
-.homeicon_economy{
+/*.homeicon_economy{
   background-image: url("/ui/img/CPI_GDP.png");
   background-position: 35% -70%;
   background-repeat: no-repeat;
@@ -5382,35 +5380,46 @@ td.datatable-downloads{
   height: 6.5em;
   border: 0px;
 }
+*/
+.nav-panel__body.flush{
+  padding-bottom: 5rem;
+}
+
+.nav-panel__body.graph{
+  max-width: 2rem;
+  text-align: center;
+  padding: 1rem;
+}
+
 
 @media screen and (max-width: 800px){
-.homeicon_Economy{
+/*.homeicon_economy{
   background-image: url("/ui/img/CPI_GDP.png");
   background-position: 0% -70%;
   background-repeat: no-repeat;
   height: 5.5em;
 } 
 
-.homeicon_Employment{
+.homeicon_employmentandlabourmarket{
   background-image: url("/ui/img/Employment.png");
   background-position: 0% -70%;
   background-repeat: no-repeat;
   height: 5.5em;
   } 
 
-.homeicon_Business{
+.homeicon_businessindustryandtrade{
   background-image: url("/ui/img/Trade.png");
   background-position: 0% -70%;
   background-repeat: no-repeat;
   height: 5.5em;
 } 
 
-.homeicon_Population{
+.homeicon_peoplepopulationandcommunity{
   background-image: url("/ui/img/Population.png");
   background-position: 1% -70%;
   background-repeat: no-repeat;
   height: 5.5em;
-}
+}*/
 
 .homeicon_sparkline{
   background-image: url("/ui/img/sparkline.png");
@@ -5520,17 +5529,20 @@ left: 25%;
 }
 }
 
-@media screen and (max-width: 900px) {
+
 .callout-header{
-  font-size: 1.4em;}
+  font-size: 2rem  
 }
 
+@media screen and (max-width: 48em)  {
+.callout-header{
+  font-size: 1.7rem;
+  /*padding-left: 2rem;*/
+  }
+}
 
-
-
-
-text-align: right;
-padding-right: 32px;
+.floater-right{
+  float: right;
 }
 
 
