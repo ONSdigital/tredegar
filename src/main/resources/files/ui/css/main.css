@@ -2725,8 +2725,8 @@ lesser , applied styles
 @media screen and (min-width: 56.5em) {
   .list--table--complex .list--table__body,
   .list--table--complex .list--table__footer {
-    padding: 15px 25px;
-    padding: 1.5rem 2.5rem; }
+    padding: 20px 25px;
+    padding: 2rem 2.5rem; }
   .list--table--complex .list--table__item__body--select-all {
     padding-right: 32px;
     padding-right: 3.2rem; }

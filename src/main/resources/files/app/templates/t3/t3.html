@@ -101,7 +101,7 @@
 
 <section id="timeseries" class="panel--large wrapper">
     <h2 id="related" class="list--table-header">Time Series Related to {{taxonomy.data.name}}</h2>
-    <ol class="list--table list--table--complex table--striped-light table--selectable table-light--sectioned lifted">
+    <ol class="list--table list--table--complex table--striped-light table-light--sectioned lifted">
         <li class="list--table__item list--table__head">
             <label class="list--table__item__body list--table__item__body--select-all nojs-hidden">Select all
                 <input type="checkbox" aria-label="Select" id="checkbox">
@@ -120,7 +120,7 @@
                 <p class="list--table__item__description">{{item.data.seasonalAdjustment}}</p>
             </div>
             <div class="list--table__item__body list--table__item__body--stat">
-                <ons-loading condition="!item.chartData" class="stat list--table__item__body--centred"></ons-loading>
+                <ons-loading condition="!item.data" class="stat list--table__item__body--centred"></ons-loading>
                 <ons-sparkline chart-data="item.chartData"></ons-sparkline>
             </div>
             <div class="list--table__item__body list--table__item__body--update">

@@ -11,9 +11,6 @@
          tipClass: '@',
          tip:'@'
        },
-       link: function(scope, elem, attrs) {
-        console.log(scope.tip)
-       },
        templateUrl: 'app/components/tooltip/tooltip.html'
      }
    }
