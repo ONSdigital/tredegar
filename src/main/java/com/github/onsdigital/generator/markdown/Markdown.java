@@ -24,12 +24,13 @@ import com.github.onsdigital.generator.data.DataCSV;
 import com.github.onsdigital.json.markdown.Section;
 
 class Markdown {
+
 	String title;
 	Map<String, String> properties = new HashMap<>();
 	List<Section> sections = new ArrayList<>();
 	List<Section> accordion = new ArrayList<>();
 
-	void read(Path file) throws IOException {
+	public Markdown(Path file) throws IOException {
 
 		// Read the markdown
 		try (Reader reader = new InputStreamReader(Files.newInputStream(file))) {
@@ -123,6 +124,24 @@ class Markdown {
 	}
 
 	/**
+	 * Sanitises an article name to <code>[a-zA-Z0-9]</code>.
+	 * 
+	 * @param name
+	 *            The string to be sanitised.
+	 * @return A sanitised string.
+	 */
+	String toFilename() {
+		StringBuilder result = new StringBuilder();
+		for (int i = 0; i < title.length(); i++) {
+			String character = title.substring(i, i + 1);
+			if (character.matches("[a-zA-Z0-9]")) {
+				result.append(character);
+			}
+		}
+		return result.toString().toLowerCase();
+	}
+
+	/**
 	 * Extracts a property key and value from the given line.
 	 * 
 	 * @param line
@@ -130,7 +149,7 @@ class Markdown {
 	 * @return A two-element String array. If the line can't be parsed the
 	 *         elements of the array will be null.
 	 */
-	String[] readProperty(String line) {
+	static String[] readProperty(String line) {
 		String[] result = new String[2];
 
 		int separatorIndex = line.indexOf(':');
@@ -157,7 +176,7 @@ class Markdown {
 	 * @see <a
 	 *      href="http://daringfireball.net/projects/markdown/syntax">http://daringfireball.net/projects/markdown/syntax</a>
 	 */
-	String matchTitle(String line) {
+	static String matchTitle(String line) {
 		String result = null;
 
 		// Set the title
@@ -179,7 +198,7 @@ class Markdown {
 	 * @see <a
 	 *      href="http://daringfireball.net/projects/markdown/syntax">http://daringfireball.net/projects/markdown/syntax</a>
 	 */
-	Section matchHeading(String line) {
+	static Section matchHeading(String line) {
 		Section result = null;
 
 		// Set the section title
@@ -193,7 +212,7 @@ class Markdown {
 		return result;
 	}
 
-	Collection<Path> getFiles(String resourceName) throws IOException {
+	static Collection<Path> getFiles(String resourceName) throws IOException {
 		Set<Path> result = new TreeSet<>();
 
 		try {
@@ -214,23 +233,5 @@ class Markdown {
 		}
 
 		return result;
-	}
-
-	/**
-	 * Sanitises an article name to <code>[a-zA-Z0-9]</code>.
-	 * 
-	 * @param name
-	 *            The string to be sanitised.
-	 * @return A sanitised string.
-	 */
-	String toFilename(String name) {
-		StringBuilder result = new StringBuilder();
-		for (int i = 0; i < name.length(); i++) {
-			String character = name.substring(i, i + 1);
-			if (character.matches("[a-zA-Z0-9]")) {
-				result.append(character);
-			}
-		}
-		return result.toString().toLowerCase();
 	}
 }

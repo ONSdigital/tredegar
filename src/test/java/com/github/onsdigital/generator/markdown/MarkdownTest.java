@@ -4,19 +4,11 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 
-import org.junit.Before;
 import org.junit.Test;
 
 import com.github.onsdigital.json.markdown.Section;
 
 public class MarkdownTest {
-
-	Markdown markdownParser;
-
-	@Before
-	public void setup() {
-		markdownParser = new Markdown();
-	}
 
 	@Test
 	public void shouldExtractTitle() {
@@ -26,7 +18,7 @@ public class MarkdownTest {
 		String markdown = "# \t" + title;
 
 		// When
-		String result = markdownParser.matchTitle(markdown);
+		String result = Markdown.matchTitle(markdown);
 
 		// Then
 		assertNotNull(result);
@@ -41,7 +33,7 @@ public class MarkdownTest {
 		String markdown = "# \t" + title;
 
 		// When
-		String result = markdownParser.matchTitle(markdown);
+		String result = Markdown.matchTitle(markdown);
 
 		// Then
 		assertNotNull(result);
@@ -56,7 +48,7 @@ public class MarkdownTest {
 		String markdown = " # " + title;
 
 		// When
-		String result = markdownParser.matchTitle(markdown);
+		String result = Markdown.matchTitle(markdown);
 
 		// Then
 		assertNull(result);
@@ -70,7 +62,7 @@ public class MarkdownTest {
 		String markdown = " # " + title;
 
 		// When
-		String result = markdownParser.matchTitle(markdown);
+		String result = Markdown.matchTitle(markdown);
 
 		// Then
 		assertNull(result);
@@ -84,7 +76,7 @@ public class MarkdownTest {
 		String markdown = "## \t" + heading;
 
 		// When
-		Section section = markdownParser.matchHeading(markdown);
+		Section section = Markdown.matchHeading(markdown);
 
 		// Then
 		assertNotNull(section);
@@ -99,7 +91,7 @@ public class MarkdownTest {
 		String markdown = "## \t" + title;
 
 		// When
-		Section section = markdownParser.matchHeading(markdown);
+		Section section = Markdown.matchHeading(markdown);
 
 		// Then
 		assertNotNull(section);
@@ -114,7 +106,7 @@ public class MarkdownTest {
 		String markdown = " # " + title;
 
 		// When
-		Section section = markdownParser.matchHeading(markdown);
+		Section section = Markdown.matchHeading(markdown);
 
 		// Then
 		assertNull(section);
@@ -128,7 +120,7 @@ public class MarkdownTest {
 		String markdown = " ## " + title;
 
 		// When
-		Section section = markdownParser.matchHeading(markdown);
+		Section section = Markdown.matchHeading(markdown);
 
 		// Then
 		assertNull(section);
@@ -143,7 +135,7 @@ public class MarkdownTest {
 		String line = name + ":" + value;
 
 		// When
-		String[] property = markdownParser.readProperty(line);
+		String[] property = Markdown.readProperty(line);
 
 		// Then
 		assertEquals(2, property.length);
@@ -160,7 +152,7 @@ public class MarkdownTest {
 		String line = "   " + name + " :  " + value + "\t";
 
 		// When
-		String[] property = markdownParser.readProperty(line);
+		String[] property = Markdown.readProperty(line);
 
 		// Then
 		assertEquals(2, property.length);
@@ -175,7 +167,7 @@ public class MarkdownTest {
 		String line = "";
 
 		// When
-		String[] property = markdownParser.readProperty(line);
+		String[] property = Markdown.readProperty(line);
 
 		// Then
 		assertEquals(2, property.length);

@@ -3,18 +3,19 @@ package com.github.onsdigital.generator.markdown;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.Collection;
+import java.util.Map;
 import java.util.Scanner;
 
 import com.github.onsdigital.generator.Folder;
 import com.github.onsdigital.generator.data.Data;
 import com.github.onsdigital.json.markdown.Article;
 
-public class ArticleMarkdown extends Markdown {
+public class ArticleMarkdown {
 
 	static final String resourceName = "/articles";
 
-	public void parse() throws IOException {
-		Collection<Path> files = getFiles(resourceName);
+	public static void parse() throws IOException {
+		Collection<Path> files = Markdown.getFiles(resourceName);
 
 		for (Path file : files) {
 
@@ -27,20 +28,20 @@ public class ArticleMarkdown extends Markdown {
 		}
 	}
 
-	Article readArticle(Path file) throws IOException {
+	static Article readArticle(Path file) throws IOException {
 
 		// Read the file
 		System.out.println("Processing article from: " + file);
-		read(file);
+		Markdown markdown = new Markdown(file);
 
 		// Set up the article
 		Article article = new Article();
-		article.name = title;
-		article.title = title;
-		setProperties(article);
-		article.sections.addAll(sections);
-		article.accordion.addAll(accordion);
-		article.fileName = toFilename(article.name);
+		article.name = markdown.title;
+		article.title = markdown.title;
+		setProperties(article, markdown);
+		article.sections.addAll(markdown.sections);
+		article.accordion.addAll(markdown.accordion);
+		article.fileName = markdown.toFilename();
 
 		return article;
 	}
@@ -63,7 +64,9 @@ public class ArticleMarkdown extends Markdown {
 	 * @param scanner
 	 *            The {@link Scanner} to read lines from.
 	 */
-	private void setProperties(Article article) {
+	private static void setProperties(Article article, Markdown markdown) {
+
+		Map<String, String> properties = markdown.properties;
 
 		// Location
 		article.theme = properties.remove("Theme");

@@ -3,18 +3,19 @@ package com.github.onsdigital.generator.markdown;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.Collection;
+import java.util.Map;
 import java.util.Scanner;
 
 import com.github.onsdigital.generator.Folder;
 import com.github.onsdigital.generator.data.Data;
 import com.github.onsdigital.json.markdown.Bulletin;
 
-public class BulletinMarkdown extends Markdown {
+public class BulletinMarkdown {
 
 	static final String resourceName = "/bulletins";
 
-	public void parse() throws IOException {
-		Collection<Path> files = getFiles(resourceName);
+	public static void parse() throws IOException {
+		Collection<Path> files = Markdown.getFiles(resourceName);
 
 		for (Path file : files) {
 
@@ -27,20 +28,21 @@ public class BulletinMarkdown extends Markdown {
 		}
 	}
 
-	Bulletin readBulletin(Path file) throws IOException {
+	static Bulletin readBulletin(Path file) throws IOException {
 
 		// Read the file
 		System.out.println("Processing bulletin from: " + file);
-		read(file);
+		Markdown markdown = new Markdown(file);
 
 		// Set up the bulletin
 		Bulletin bulletin = new Bulletin();
-		bulletin.name = title;
-		bulletin.title = title;
-		setProperties(bulletin);
-		bulletin.sections.addAll(sections);
-		bulletin.accordion.addAll(accordion);
-		bulletin.fileName = toFilename(bulletin.name);
+		bulletin.name = markdown.title;
+		bulletin.title = markdown.title;
+		setProperties(bulletin, markdown);
+		bulletin.sections.clear();
+		bulletin.sections.addAll(markdown.sections);
+		bulletin.accordion.addAll(markdown.accordion);
+		bulletin.fileName = markdown.toFilename();
 
 		return bulletin;
 	}
@@ -67,7 +69,9 @@ public class BulletinMarkdown extends Markdown {
 	 * @param scanner
 	 *            The {@link Scanner} to read lines from.
 	 */
-	private void setProperties(Bulletin bulletin) {
+	private static void setProperties(Bulletin bulletin, Markdown markdown) {
+
+		Map<String, String> properties = markdown.properties;
 
 		// Location
 		bulletin.theme = properties.remove("Theme");
@@ -91,5 +95,4 @@ public class BulletinMarkdown extends Markdown {
 		}
 
 	}
-
 }
