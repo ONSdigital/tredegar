@@ -5400,6 +5400,9 @@ td.datatable-downloads{
   padding: 1rem;
 }
 
+.nav-panel__item.homeicon_sparkline{
+  border: 0px !important;
+}
 
 @media screen and (max-width: 800px){
 /*.homeicon_economy{
@@ -5446,6 +5449,7 @@ td.datatable-downloads{
  position: relative;
 left: 30%; 
 text-align: center;
+border: 0px important;
 }
 }
 
