@@ -13,7 +13,8 @@
 			restrict: 'E',
 			scope: {
 				chartData: '=',
-				headline: '=?'
+				width: '=',
+				height: '='
 			},
 			controller: SparkLineController,
 			controllerAs: 'sparkline',
@@ -23,8 +24,11 @@
 		function SparkLineController($scope) {
 			var sparkline = this
 			sparkline.visible = false
-			sparkline.chartConfig = getSparkline($scope.headline)
+			// sparkline.padding=$scope.padding
+			sparkline.chartConfig = getSparkline($scope.width, $scope.height)
 			watchData()
+			// watchHeight()
+			// watchWidth()
 
 			function watchData() {
 				$scope.$watch('chartData', function() {
@@ -37,7 +41,19 @@
 				})
 			}
 
+			function watchHeight() {
+				$scope.$watch('height', function() {
+					console.log("height" + $scope.height)
+					sparkline.chartConfig.options.chart.height = $scope.height
+				})
+			}
 
+			function watchWidth() {
+				$scope.$watch('width', function() {
+					console.log("width" + $scope.width)
+					sparkline.chartConfig.options.chart.width = $scope.width
+				})
+			}
 
 			function buildChart(chartConfig, timeseries, isHeadline) {
 			
@@ -49,7 +65,7 @@
 
 					function tickInterval(length) {
 						if (length <= 20) {
-							return 1;
+							return 1;chartConfig
 						} else if (length <= 80) {
 							return 4;
 						} else if (length <= 240) {
@@ -91,16 +107,16 @@
 
 
 
-	function getSparkline(isHeadline) {
-		var widthValue
-		var heightValue
-		if (isHeadline) {
-			widthValue = 170
-			heightValue = 100
-		} else {
-			widthValue = 140
-			heightValue = 50
-		}
+	function getSparkline(width, height) {
+		// var widthValue
+		// var heightValue
+		// if (isHeadline) {
+		// 	widthValue = 170
+		// 	heightValue = 100
+		// } else {
+		// 	widthValue = 140
+		// 	heightValue = 50
+		// }
 
 		var data = {
 			options: {
@@ -109,8 +125,8 @@
 					borderWidth: 0,
 					type: 'area',
 					margin: [0, 0, 0, 0],
-					width: widthValue,
-					height: heightValue,
+					width: width,
+					height: height ,
 					style: {
 						overflow: 'visible'
 					},

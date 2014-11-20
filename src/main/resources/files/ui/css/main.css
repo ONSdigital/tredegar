@@ -5375,12 +5375,12 @@ td.datatable-downloads{
 }
 
 .homeicon_sparkline{
-  background-image: url("/ui/img/sparkline.png");
+  /*background-image: url("/ui/img/sparkline.png");
   background-position: 30%;
   background-repeat: no-repeat;
   background-size: contain;
   height: 6.5em;
-  border: 0px;
+  border: 0px;*/
 }
 
 @media screen and (max-width: 800px){
@@ -5413,12 +5413,12 @@ td.datatable-downloads{
 }
 
 .homeicon_sparkline{
-  background-image: url("/ui/img/sparkline.png");
+  /*background-image: url("/ui/img/sparkline.png");
   background-position: 4% 30%;
   background-repeat: no-repeat;
   background-size: contain;
   height: 6.5em;
-  border: 0px;
+  border: 0px;*/
 }
 .nav-panel__body.flush{
   position: relative;
@@ -5426,7 +5426,8 @@ td.datatable-downloads{
 }
 .nav-panel__item.homeicon_sparkline{
  position: relative;
-left: 25%; 
+left: 30%; 
+text-align: center;
 }
 }
 
