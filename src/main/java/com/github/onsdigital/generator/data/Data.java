@@ -68,9 +68,9 @@ public class Data implements Iterable<Timeseries> {
 		AlphaContentCSV.parse();
 
 		// Markdown content:
-		BulletinMarkdown.parse();
-		ArticleMarkdown.parse();
-		MethodologyMarkdown.parse();
+		new BulletinMarkdown().parse();
+		new ArticleMarkdown().parse();
+		new MethodologyMarkdown().parse();
 
 		// Data
 		NonCdidCSV.parse();
