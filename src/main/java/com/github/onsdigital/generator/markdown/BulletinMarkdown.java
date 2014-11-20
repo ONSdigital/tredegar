@@ -27,6 +27,9 @@ public class BulletinMarkdown {
 			// Add it to the taxonomy:
 			Folder folder = Data.getFolder(bulletin.theme, bulletin.level2, bulletin.level3);
 			folder.bulletins.add(bulletin);
+			if (StringUtils.isNotBlank(bulletin.headline1)) {
+				folder.headlineBulletin = bulletin;
+			}
 		}
 	}
 
