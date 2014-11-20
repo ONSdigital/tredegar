@@ -116,6 +116,11 @@ public class DataCSV {
 						timeseriesValue.value = StringUtils.trim(value);
 						timeseriesValue.sourceDataset = name;
 						timeseries.add(timeseriesValue);
+						// if ("404".equals(value)) {
+						// System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 404: "
+						// + cdid + ": " + timeseriesValue + " (" +
+						// timeseries.name + ")");
+						// }
 
 						// Scale values if necessary:
 						if (timeseries.cdid().equalsIgnoreCase("abmi")) {
