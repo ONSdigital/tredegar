@@ -11,7 +11,6 @@
 	function SparkLine($log) {
 		return {
 			restrict: 'E',
-			replace: true,
 			scope: {
 				chartData: '=',
 				headline: '=?'

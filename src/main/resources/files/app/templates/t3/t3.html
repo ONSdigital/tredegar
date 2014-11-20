@@ -122,6 +122,11 @@
             <div class="list--table__item__body list--table__item__body--stat">
                 <ons-loading condition="!item.data" class="stat list--table__item__body--centred"></ons-loading>
                 <ons-sparkline chart-data="item.chartData"></ons-sparkline>
+                <div class="stat__figure">
+                    <span class="stat__figure__unit">{{item.data.preUnit}}</span>
+                    {{item.data.number}}
+                    <span class="stat__figure__unit">{{item.data.unit}}</span>
+                </div>
             </div>
             <div class="list--table__item__body list--table__item__body--update">
                 <dl class="micro definition-list definition-list--inline flush--half--vertical">

@@ -2453,6 +2453,10 @@ lesser , applied styles
   margin-top: -10px;
   margin-top: -1rem; }
 
+.list--table--complex .list--table__body {
+    min-height: 100px;
+  }
+
 .list--table__item, .datatable__item {
   position: relative;
   padding: 5px 10px;
@@ -2722,11 +2726,15 @@ lesser , applied styles
 
   .list--table__item__body--caption {
     width: 42.5%; } }
+@media screen and (min-width: 24em) {
+  .list--table--complex .list--table__item__body--stat {
+    padding-bottom: 25px;
+    padding-bottom: 2.5rem }
 @media screen and (min-width: 56.5em) {
   .list--table--complex .list--table__body,
   .list--table--complex .list--table__footer {
-    padding: 25px 25px;
-    padding: 2.5rem 2.5rem; }
+    padding: 15px 25px;
+    padding: 1.5rem 2.5rem; }
   .list--table--complex .list--table__item__body--select-all {
     padding-right: 32px;
     padding-right: 3.2rem; }
@@ -2735,7 +2743,9 @@ lesser , applied styles
     min-width: 20rem; }
   .list--table--complex .list--table__item__body--stat {
     width: 25%;
-    padding-right: 5%; }
+    padding-right: 5%;
+    padding-bottom: 25px;
+    padding-bottom: 2.5rem }
   .list--table--complex .list--table__item__body--select {
     width: .5%; }
   .list--table--complex .list--table__item__body--caption {
@@ -4486,9 +4496,9 @@ background-color: #edeeee !important;/* altered on phil's advice--change this ov
 .arrow_box {
   position: relative;
   border-left: 5px solid #008998;
-  border-top: 2px solid #A8A1A1 ;
+  /*border-top: 2px solid #A8A1A1 ;
   border-right: 2px solid #A8A1A1 ;
-  border-bottom: 2px solid #A8A1A1;
+  border-bottom: 2px solid #A8A1A1;*/
 }
 
 .arrow_box:after, .arrow_box:before {
