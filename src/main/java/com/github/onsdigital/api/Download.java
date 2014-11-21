@@ -54,12 +54,23 @@ public class Download {
 
 	private void processRequest(OutputStream output, DownloadRequest downloadRequest) throws IOException {
 
-		// Get the timeseries:
+		// Normally only uriList or cdidList should be present in the request,
+		// but let's be lenient in what we'll accept:
 		List<Timeseries> timeseries = new ArrayList<Timeseries>();
-		for (String uri : downloadRequest.uriList) {
-			try (InputStream input = DataService.getDataStream(uri)) {
-				timeseries.add(Serialiser.deserialise(input, Timeseries.class));
+
+		// Process URIs
+		if (downloadRequest.uriList != null) {
+			for (String uri : downloadRequest.uriList) {
+				try (InputStream input = DataService.getDataStream(uri)) {
+					timeseries.add(Serialiser.deserialise(input, Timeseries.class));
+				}
 			}
+		}
+
+		// Process CDIDs
+		if (downloadRequest.cdidList != null) {
+			Map<String, Timeseries> timeseriesMap = Cdid.getTimeseries(downloadRequest.cdidList);
+			timeseries.addAll(timeseriesMap.values());
 		}
 
 		// Collate into a "grid":

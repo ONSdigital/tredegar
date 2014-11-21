@@ -52,11 +52,15 @@ public class Cdid {
 	}
 
 	private Map<String, Timeseries> processRequest(CdidRequest cdidRequest) throws IOException {
+		return getTimeseries(cdidRequest.cdids);
+	}
+
+	static Map<String, Timeseries> getTimeseries(List<String> cdids) throws IOException {
 		Map<String, Timeseries> result = new HashMap<>();
 
 		// Start with cache hits:
 		List<String> missing = new ArrayList<>();
-		for (String cdid : cdidRequest.cdids) {
+		for (String cdid : cdids) {
 			Timeseries timeseries = cache.get(cdid.toUpperCase());
 			if (timeseries != null) {
 				System.out.println("Cache hit for : " + cdid);
@@ -91,7 +95,7 @@ public class Cdid {
 	 * @return A list of paths for the given CDIDs, if found.
 	 * @throws IOException
 	 */
-	private List<Path> findTimeseries(final List<String> cdids) throws IOException {
+	private static List<Path> findTimeseries(final List<String> cdids) throws IOException {
 		final List<Path> result = new ArrayList<>();
 
 		Path taxonomy = FileSystems.getDefault().getPath(Configuration.getTaxonomyPath());
