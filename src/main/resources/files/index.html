@@ -54,24 +54,34 @@
     <![endif]-->
     
     <!-- Google Analytics -->
+    <!-- Angular application(single page) requires page changes sent using javascript. 
+    Configured in config.js, sendpage commented out to prevent pageview duplicate on load -->
     <script>
-		 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-		 ga('create', 'UA-56892037-2', 'auto');
-		 ga('send', 'pageview');
-	</script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-56892037-2', 'auto');
+    // ga('send', 'pageview');
+    </script>
 
     <!-- Bugherd integration script: http://bugherd.com/documentation/installing-the-sidebar/ -->
     <script type='text/javascript'>
-		(function (d, t) {
-			 var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];
-			 bh.type = 'text/javascript';
-			 bh.src = '//www.bugherd.com/sidebarv2.js?apikey=cwz4globzxvnj84jsovora';
-			 s.parentNode.insertBefore(bh, s);
-		 })(document, 'script');
-	</script>
+    (function(d, t) {
+        var bh = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        bh.type = 'text/javascript';
+        bh.src = '//www.bugherd.com/sidebarv2.js?apikey=cwz4globzxvnj84jsovora';
+        s.parentNode.insertBefore(bh, s);
+    })(document, 'script');
+    </script>
 
     <script type="text/javascript" src="/ui/js/lib/angular.js" defer></script>
     <!-- <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js" defer></script> -->
@@ -134,6 +144,7 @@
     <script type="text/javascript" src="/ui/js/lib/loading-bar.js" defer></script>
 
 
+
     <!-- <script type="text/javascript" src="ui/js/app/nav.js" defer></script>
 <script type="text/javascript" src="ui/js/app/supporting-content.js" defer></script>
 <script type="text/javascript" src="ui/js/app/tables.js" defer></script>
@@ -152,7 +163,7 @@ markup: false
 <!-- id set to ng-app to make older IE happy with Angular ngInclude directive -->
 <!-- Autoscroll solves the issue mentioned on https://stackoverflow.com/questions/21055952/changing-route-doesnt-scroll-to-top-in-the-new-page -->
 
-<body id="ng-app" ng-controller="MainCtrl" ng-view autoscroll="true"  class="js" >
+<body id="ng-app" ng-controller="MainCtrl" ng-view autoscroll="true" class="js">
 
     <noscript>
         <main id="main" role="main" class="ONS_border">
