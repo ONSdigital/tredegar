@@ -49,15 +49,19 @@ public class Timeseries extends DataItem implements Comparable<Timeseries> {
 	/** e.g. "Not a national statistic" or "2005 = 100. Not seasonally adjusted" */
 	public String note;
 
-	// Where a statistic comes from.
-	// Typically "Office for National Statistics"
+	/**
+	 * Where a statistic comes from. Typically "Office for National Statistics"
+	 */
 	public String source = "Office for National Statistics";
 
-	// This value is displayed in the "(i)" tooltips next to timeseries name:
+	/** This value is displayed in the "(i)" tooltips next to timeseries name. */
 	public String keyNote;
 
-	// This value is displayed beneath the timeseries name:
+	/** This value is displayed beneath the timeseries name: */
 	public String additionalText;
+
+	/** Whether this is a National Statistic: */
+	public boolean nationalStatistic;
 
 	/**
 	 * The nectar, the goodness, the very juice of the fireflower: data.
