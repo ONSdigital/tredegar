@@ -2097,10 +2097,10 @@ a {
 .box--padded--med {
   padding: 20px;
   padding: 2rem; }
-  
+
 .box--padded--small {
   padding: 10px;
-  padding: 1rem; }  
+  padding: 1rem; }
 
 .box--callout {
   padding: 10px;
@@ -2316,7 +2316,7 @@ lesser , applied styles
   .btn--primary:hover, .btn--primary:focus {
     color: white;
     background-color: #00356a; }
- 
+
  /* --- removed re snagging requirement ---
  .btn--primary:focus {
     box-shadow: 0 0 9px 3px #f37121; }*/
@@ -2925,7 +2925,7 @@ lesser , applied styles
     /*@media screen and (max-width: 770px) {
       .nav-panel__action:after {
         top: 50% !important;
-         } }*/     
+         } }*/
   .nav-panel__action > a {
     position: relative;
     z-index: 10;
@@ -2962,7 +2962,7 @@ lesser , applied styles
   padding-top: 30px;
   padding-top: 3rem;
   padding-bottom: 10px;
-  padding-bottom: 1rem; 
+  padding-bottom: 1rem;
   font-size: 70%;
   height: 9.5rem }
 
@@ -2979,7 +2979,7 @@ lesser , applied styles
 
 
 
-}  
+}
 
 .nav-panel__title,
 .nav-panel__value {
@@ -3372,7 +3372,7 @@ lesser , applied styles
 
 .slate--hero-banner {
   background-color: #e4e5e3;
- 
+
   opacity: 15;
   /*background-image: url("/ui/img/hero-banner.jpg");*/
   background-position: 50% 50%;
@@ -3380,7 +3380,7 @@ lesser , applied styles
 
 .slate--home--hero-banner {
   background-color: #f4f5dd;
- 
+
   opacity: 15;
   /*background-image: url("/ui/img/hero-banner.jpg");*/
   background-position: 50% 50%;
@@ -3528,7 +3528,7 @@ $SPLIT
   font-size: 1.2rem; }
 
 .stat__description-large {
-  
+
   display: block;
   font-weight: normal;
   font-size: 13.5px;
@@ -5358,21 +5358,21 @@ td.datatable-downloads{
   background-position: 35% -70%;
   background-repeat: no-repeat;
   height: 5.5em;
-} 
+}
 
 .homeicon_employmentandlabourmarket{
   background-image: url("/ui/img/Employment.png");
   background-position: 35% -70%;
   background-repeat: no-repeat;
   height: 5.5em;
-  } 
+  }
 
 .homeicon_businessindustryandtrade{
   background-image: url("/ui/img/Trade.png");
   background-position: 35% -70%;
   background-repeat: no-repeat;
   height: 5.5em;
-} 
+}
 
 .homeicon_peoplepopulationandcommunity{
   background-image: url("/ui/img/Population.png");
@@ -5410,21 +5410,21 @@ td.datatable-downloads{
   background-position: 0% -70%;
   background-repeat: no-repeat;
   height: 5.5em;
-} 
+}
 
 .homeicon_employmentandlabourmarket{
   background-image: url("/ui/img/Employment.png");
   background-position: 0% -70%;
   background-repeat: no-repeat;
   height: 5.5em;
-  } 
+  }
 
 .homeicon_businessindustryandtrade{
   background-image: url("/ui/img/Trade.png");
   background-position: 0% -70%;
   background-repeat: no-repeat;
   height: 5.5em;
-} 
+}
 
 .homeicon_peoplepopulationandcommunity{
   background-image: url("/ui/img/Population.png");
@@ -5447,7 +5447,7 @@ td.datatable-downloads{
 }
 .nav-panel__item.homeicon_sparkline{
  position: relative;
-left: 30%; 
+left: 30%;
 text-align: center;
 border: 0px important;
 }
@@ -5545,7 +5545,7 @@ border: 0px important;
 
 
 .callout-header{
-  font-size: 2rem  
+  font-size: 2rem
 }
 
 @media screen and (max-width: 48em)  {
@@ -7762,7 +7762,7 @@ lesser , applied styles
     background: #e1e1e1;
 }
 .btn--secondary--active {
-    background-color: #f7f7f7;
+    background-color: #fff;
     color:#303030;
 }
 .btn--secondary--active,
