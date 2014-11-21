@@ -14,7 +14,7 @@
         'onsToggler',
         'onsLoading',
         'onsSparkline',
-	   'onsTooltip'
+	    'onsTooltip'
     ])
 
     //Filters, services and other helpers are to be injected to onsHelpers module
@@ -87,6 +87,13 @@
                 when('/methodology', {
                     templateUrl: 'app/templates/methodology/methodology.html',
                     controller: 'MethodologyCtrl'
+                }).
+                when('/nationalstats', {
+                    templateUrl: 'app/templates/nationalstats/nationalstats.html',
+                    controller: "NationalStatsCtlr",
+                    resolve: {
+                        navigation: ['DataLoader', getNavigatinLinks]
+                    }
                 }).
                 when('/release', {
                     templateUrl: 'app/templates/release/release.html',

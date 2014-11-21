@@ -503,6 +503,7 @@ img {
 .icon-menu:before { content: '\e810'; } /* '' */
 .icon-cancel:before { content: '\e813'; } /* '' */
 .icon-comment:before { content: '\e82e'; } /* '' */
+.icon-help-circled:before { content: '\e81a'; } /* '' */
 /*Original code from CX*/
 
 
@@ -651,6 +652,8 @@ img {
 
 .icon--blue-alt {
   color: #0054aa; }
+  .icon--warm:hover {
+    color: #003b77; }
 
 .icon--grey {
   color: #adafa7; }
@@ -3367,7 +3370,10 @@ lesser , applied styles
 .slate--blue {
   background-color: #e5fcff; }
 
-  .slate--orange {
+.slate--green {
+  background-color: #fafbe7; }
+
+.slate--orange {
   background-color: #fef5ed; }
 
 .slate--hero-banner {
@@ -5276,7 +5282,8 @@ td.datatable-downloads{
   height: 5px;
   height: 0.5rem;
   margin: 0 auto;
-  content: ""; }
+  content: "";
+  background-color: #757575;}
   @media screen and (min-width: 62em) {
     .page-header--article:after {
       left: 0;
@@ -5312,9 +5319,6 @@ td.datatable-downloads{
 
 .page-header--error-desc {
   color: #a8233e; }
-
-.slate--green {
-  background-color: #fafbe7; }
 
 /*------------------------------------*\
   New Hompage Styles
