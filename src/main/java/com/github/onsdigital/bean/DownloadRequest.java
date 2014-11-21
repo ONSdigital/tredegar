@@ -16,12 +16,8 @@ public class DownloadRequest {
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
 		builder.append("\nType : ").append(type);
-		if (uriList != null) {
-			builder.append(" uriList: ").append(uriList);
-		}
-		if (cdidList != null) {
-			builder.append(" cdidList: ").append(cdidList);
-		}
+		builder.append(" uriList: ").append(uriList);
+		builder.append(" cdidList: ").append(cdidList);
 		builder.append(" From: ").append(ReflectionToStringBuilder.toString(from));
 		builder.append(" To: ").append(ReflectionToStringBuilder.toString(to));
 		return builder.toString();

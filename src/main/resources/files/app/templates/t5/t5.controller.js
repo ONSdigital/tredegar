@@ -544,7 +544,6 @@
                         // series names and values
                         $.each(this.points, function(i, val) {
                             content += '<div class="tiptext"><i>' + val.point.series.chart.series[i].name + "</i><br/><b>Value: " + val.y + " " + val.point.series.chart.series[i].options.id + '</b></div>';
-                            // console.log(val)
                         });
                         content += "</div>";
                         return content;

@@ -43,14 +43,12 @@
 
 			function watchHeight() {
 				$scope.$watch('height', function() {
-					console.log("height" + $scope.height)
 					sparkline.chartConfig.options.chart.height = $scope.height
 				})
 			}
 
 			function watchWidth() {
 				$scope.$watch('width', function() {
-					console.log("width" + $scope.width)
 					sparkline.chartConfig.options.chart.width = $scope.width
 				})
 			}
