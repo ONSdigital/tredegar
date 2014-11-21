@@ -503,6 +503,7 @@ img {
 .icon-menu:before { content: '\e810'; } /* '' */
 .icon-cancel:before { content: '\e813'; } /* '' */
 .icon-comment:before { content: '\e82e'; } /* '' */
+.icon-help:before { content: '\e817'; } /* '' */
 /*Original code from CX*/
 
 
@@ -4582,6 +4583,7 @@ background-color: #edeeee !important;/* altered on phil's advice--change this ov
 .arrow_box {
   position: relative;
   border-left: 5px solid #008998;
+  margin: auto 0;
   /*border-top: 2px solid #A8A1A1 ;
   border-right: 2px solid #A8A1A1 ;
   border-bottom: 2px solid #A8A1A1;*/
@@ -4609,6 +4611,15 @@ background-color: #edeeee !important;/* altered on phil's advice--change this ov
   border-right-color: #008998;
   border-width: 26px;
   margin-top: -26px;
+}
+
+
+.box-centred {
+  margin: auto; 
+  width: 95%;
+  height: 95%;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 /*------------------------------------*\
@@ -5387,9 +5398,9 @@ td.datatable-downloads{
   background-repeat: no-repeat;
   background-size: contain;
   height: 6.5em;
-  border: 0px;*/
+  border: 0px; commented out to remove icons on MJ's request*/
 }
-*/
+
 .nav-panel__body.flush{
   padding-bottom: 5rem;
 }
@@ -5403,6 +5414,82 @@ td.datatable-downloads{
 .nav-panel__item.homeicon_sparkline{
   border: 0px !important;
 }
+
+
+.navpanel_wrapper_home__link {
+/* From: http://stackoverflow.com/questions/796087/make-a-div-into-a-link */
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left: 0;
+    z-index: 1;
+    /* Fixes overlap error in IE7/8 */
+    background-image: url('/ui/img/transparent.gif');
+}
+
+
+.nav_home-stats{
+  padding-top: 0.5em;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.home_callout{
+  min-height: 15em;
+}
+
+.hero-wrapper{
+  width: 100%;
+  height: 80%;
+}
+
+.hero-stat-box{
+  height: 25rem;
+  background-color: #4d7495;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+.home_hero_comments{
+  font-size: 1.6rem;
+}
+
+.cta_chevron{
+  position: absolute;
+  right: 25px;
+  bottom: 10px;
+  font-weight: bolder;
+  font-size: 2.5rem;
+  font-weight: bolder;
+}
+
+.home_nav_boxes{
+  height: 25rem;}
+
+
+.nav-panel--padsmall{
+  padding-right: 1rem !important;
+}
+
+.rem_border{
+  border: 0px;
+}
+
+.callout-header{
+  font-size: 2.4rem;
+  padding-top:20px;  
+}
+
+
+
+.floater-right{
+  float: right;
+}
+
+/*.cta--box__header-pad-left{
+  padding-left: 20px;
+}*/
 
 @media screen and (max-width: 800px){
 /*.homeicon_economy{
@@ -5441,20 +5528,50 @@ td.datatable-downloads{
   height: 6.5em;
   border: 0px;*/
 }
+
 .nav-panel__body.flush{
   position: relative;
   left: 30%;
 }
 .nav-panel__item.homeicon_sparkline{
- position: relative;
-left: 30%; 
+position: relative;
+left: 29%; 
 text-align: center;
-border: 0px important;
+border: 0px;
+}
+}
+
+@media screen and (max-width: 400px){
+.callout-header{  
+  font-size: 1.6rem;
+  padding-top:20px;
+  padding-left: 10px;  
 }
 }
 
 @media screen and (min-width: 800px){
-  .navpanel_link{
+.callout-link{
+    position: relative;
+    padding-left: 20%;
+    padding-bottom: 10%}
+
+.background_neutral{
+  background-color: #fff !important;
+}
+
+.navpanel_wrapper{
+  height: 17em;
+  /*line-height: 1.3;*/
+  overflow: hidden;
+  padding: 0;}
+
+
+.nav-panel__header_home{
+  height: 8rem;
+  text-align: center;
+}
+
+.navpanel_link{
     text-align: right;
     margin-right: 35px;
   }
@@ -5470,104 +5587,12 @@ border: 0px important;
   height: 20em;
   overflow: hidden;
   padding: 0;}
-}
-.navpanel_wrapper_home__link {
-/* From: http://stackoverflow.com/questions/796087/make-a-div-into-a-link */
-    position:absolute;
-    width:100%;
-    height:100%;
-    top:0;
-    left: 0;
-    z-index: 1;
-    /* Fixes overlap error in IE7/8 */
-    background-image: url('/ui/img/transparent.gif');
-}
 
-
-.nav_home-stats{
-  padding-top: 0.5em;
-  margin: 0 auto;
-
-  text-align: center;
-}
-
-.home_callout{
-  min-height: 15em;
-}
-
-.hero-wrapper{
-  width: 100%;
-  height: 80%;
-}
-
-.hero-stat-box{
-  height: 25rem;
-  background-color: #4d7495;
-  padding: 2rem;
-  margin: 0 auto;
-}
-
-.home_hero_comments{
-  font-size: 1.6rem;
-}
-
-.cta_chevron{
-  position: absolute;
-  right: 25px;
-  bottom: 10px;
-  font-weight: bolder;
-  font-size: 2.5rem;
-  font-weight: bolder;
-}
-
-.home_nav_boxes{
-  height: 25rem;
-}
-
-@media screen and (min-width: 800px){
-.callout-link{
-    position: relative;
-    padding-left: 20%;
-    padding-bottom: 10%}
-
-.background_neutral{
-  background-color: #fff !important;
-}
-
-  .navpanel_wrapper{
-  height: 17em;
-  /*line-height: 1.3;*/
-  overflow: hidden;
-  padding: 0;}
-}
-
-.nav-panel--padsmall{
-  padding-right: 1rem !important;
-}
-
-.rem_border{
-  border: 0px;
-}
-
-.nav-panel__header_home{
-  height: 8rem;
+.navpanel_wrapper_home:hover{
+  background-color: #e9e9e9;
 }
 }
 
-
-.callout-header{
-  font-size: 2rem  
-}
-
-@media screen and (max-width: 400px){
-.callout-header{  
-  font-size: 1.8rem;
-}
-}
-
-.floater-right{
-  float: right;
-}
 
 
 /*------------------------------------*\
