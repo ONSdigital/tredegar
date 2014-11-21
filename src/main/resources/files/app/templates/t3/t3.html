@@ -39,7 +39,7 @@
                             <ons-info-tooltip tip="{{taxonomy.data.headline.data.keyNote}}" tip-class="icon--inline--large-text icon--small"></ons-info-tooltip>
                         </h3>
                     </header>
-                    <div class="box box--inline box--padded muted--dark">
+                    <div class="box box--inline box--padded muted--dark headline--stat-centred">
                         <div class="stat stat--headline">
                             <ons-loading condition="!taxonomy.data.headline.data"></ons-loading>
                             <div class="stat__figure">
@@ -49,7 +49,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="box box--padded--small">
+                    <div class="box box--padded--small headline--stat-centred">
                         <ons-sparkline width="170" height="100" chart-data="taxonomy.data.headline.chartData"></ons-sparkline>
                     </div>
                     <!-- /box -->
@@ -100,7 +100,7 @@
 <!-- List/Table with data -->
 
 <section id="timeseries" class="panel--large wrapper">
-    <h2 id="related" class="list--table-header">Time Series Related to {{taxonomy.data.name}}</h2>
+    <h2 id="related" class="list--table-header panel--pad-small">Time Series Related to {{taxonomy.data.name}}</h2>
     <ol class="list--table list--table--complex table--striped-light table-light--sectioned lifted">
         <li class="list--table__item list--table__head">
             <label class="list--table__item__body list--table__item__body--select-all nojs-hidden">
@@ -163,7 +163,7 @@
     <!-- /list- -table -->
 </section>
 
-<section class="panel wrapper box box--padded--med box--green--separated-left solid border">
+<section class="panel wrapper box box--padded--med panel--bottom-mar box--green--separated-left solid border">
     <header class="actionable-header__title">
         <h2 class="actionable-header__title table-inline ">Datasets</h2>
         <a class="hide-small" href="#!{{getPath()}}/collection?contentType=datasets">View more datasets</a>
