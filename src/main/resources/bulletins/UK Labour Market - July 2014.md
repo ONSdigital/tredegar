@@ -9,6 +9,8 @@ Contact name: Richard Clegg
 Contact email: labour.market@ons.gsi.gov.uk
 Next release: 13 August 2014
 
+# Labour market statistics
+
 ## (i) Summary of latest Labour Market Statistics
 Comparing March to May 2014 with December 2013 to February 2014, the number of people in employment increased by 254,000 (to 30.64 million), the number of unemployed people fell by 121,000 (to 2.12 million) and the number of people out of work but not seeking or available to work (economically inactive) aged from 16 to 64 fell by 67,000 (to 8.78 million).
 
