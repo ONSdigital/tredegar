@@ -54,23 +54,23 @@ public class XLSXGenerator {
 		Row cdid = sheet.createRow(row++);
 		Row preUnit = sheet.createRow(row++);
 		Row unit = sheet.createRow(row++);
+		Row source = sheet.createRow(row++);
 		Row keyNote = sheet.createRow(row++);
 		Row additionalText = sheet.createRow(row++);
-		Row source = sheet.createRow(row++);
 		Row note1 = sheet.createRow(row++);
 		Row note2 = sheet.createRow(row++);
 
 		// Labels
 		int column = 0;
 		name.createCell(column).setCellValue("Name");
-		cdid.createCell(column).setCellValue("CDID");
+		cdid.createCell(column).setCellValue("Series ID");
 		preUnit.createCell(column).setCellValue("Pre unit");
 		unit.createCell(column).setCellValue("Units");
-		keyNote.createCell(column).setCellValue("Key note");
-		additionalText.createCell(column).setCellValue("Date");
 		source.createCell(column).setCellValue("Source");
-		note1.createCell(column).setCellValue("Note 1");
-		note2.createCell(column).setCellValue("Note 2");
+		keyNote.createCell(column).setCellValue("Note 1");
+		additionalText.createCell(column).setCellValue("Note 2");
+		note1.createCell(column).setCellValue("Note 3");
+		note2.createCell(column).setCellValue("Note 4");
 		column++;
 
 		// Data
@@ -79,9 +79,9 @@ public class XLSXGenerator {
 			cdid.createCell(column).setCellValue(timeseries.cdid());
 			preUnit.createCell(column).setCellValue(timeseries.preUnit);
 			unit.createCell(column).setCellValue(timeseries.unit);
+			source.createCell(column).setCellValue(timeseries.source);
 			keyNote.createCell(column).setCellValue(timeseries.keyNote);
 			additionalText.createCell(column).setCellValue(timeseries.additionalText);
-			source.createCell(column).setCellValue(timeseries.source);
 			note1.createCell(column).setCellValue(timeseries.note1);
 			note2.createCell(column).setCellValue(timeseries.note2);
 			column++;
