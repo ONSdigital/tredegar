@@ -3,13 +3,13 @@
 (function() {
 
 	angular.module('onsTemplates')
-		.controller('T3Controller', ['$scope', 'Taxonomy', T3Controller])
+		.controller('T3Controller', ['$rootScope', '$scope', 'Taxonomy', T3Controller])
 
-	function T3Controller($scope, Taxonomy) {
+	function T3Controller($rootScope, $scope, Taxonomy) {
 		var t3 = this
 		var data = $scope.taxonomy.data
 		var timeseriesCount = data.items.length
-		t3.timeseriesDefaultLimit = 5
+		t3.timeseriesDefaultLimit = $rootScope.onsAlphaConfiguration.defaultTimeseriesCountOnT3
 		t3.loadedTimseriesCount = 0
 		t3.allVisible = false
 		t3.showToggle = timeseriesCount > t3.timeseriesDefaultLimit
@@ -45,7 +45,7 @@
 							t3.loadedTimseriesCount++
 								if (!hasMore()) {
 									loadingMore = false
-									t3.allVisible=true
+									t3.allVisible = true
 								}
 							item.chartData = Taxonomy.resolveChartData(item)
 

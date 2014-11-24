@@ -1,18 +1,33 @@
 (function() {
 
+	//Ons alpha global configuration, available throught $rootScope, use $rootScope.onsAlphaConfiguration to read
+	var onsAlphaConfiguration = {
+		//Disable cache on localhost or not
+		disableCacheOnLocal: true,
+
+		//Number of timeseries counts to be loaded by default on t3
+		defaultTimeseriesCountOnT3: 5,
+
+		//Debug logs
+		debugEnabled: false
+	}
+
 	angular.module('onsApp')
 		.config(['$locationProvider', '$httpProvider', '$logProvider', GeneralConfiguration])
 		.run(['$location', '$rootScope', 'DSCacheFactory', '$cacheFactory', '$log', RunConfiguration])
 
+
 	function GeneralConfiguration($locationProvider, $httpProvider, $logProvider) {
-		//Enable hashbang
+		console.log("Configuration")
+			//Enable hashbang
 		$locationProvider.html5Mode(false).hashPrefix('!')
 
-		$logProvider.debugEnabled(false)
+		$logProvider.debugEnabled(onsAlphaConfiguration.debugEnabled)
 	}
 
-
 	function RunConfiguration($location, $rootScope, DSCacheFactory, $cacheFactory, $log) {
+		$rootScope.onsAlphaConfiguration = onsAlphaConfiguration
+
 		configureCache(DSCacheFactory, $cacheFactory, $log)
 		configureGoogleAnalytics($rootScope, $location, $log)
 	}
@@ -21,7 +36,7 @@
 		$rootScope.$on('$routeChangeSuccess', function() {
 			var path = $location.path()
 			ga('send', 'pageview', path);
-			$log.debug('Google Analytics pageview sent :', path )
+			$log.debug('Google Analytics pageview sent :', path)
 		})
 	}
 
