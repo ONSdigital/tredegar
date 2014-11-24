@@ -1,32 +1,9 @@
 {
   "sections": [
     {
-      "name": "Population and Migration",
-      "link": "populationandmigration",
-      "index": 0,
-      "items": [
-        {
-          "name": "Population Estimates",
-          "uri": "populationestimates"
-        },
-        {
-          "name": "Migration within the UK",
-          "uri": "migrationwithintheuk"
-        },
-        {
-          "name": "International Migration",
-          "uri": "internationalmigration"
-        },
-        {
-          "name": "Population Projections",
-          "uri": "populationprojections"
-        }
-      ]
-    },
-    {
       "name": "Births, Deaths and Marriages",
       "link": "birthsdeathsandmarriages",
-      "index": 1,
+      "index": 0,
       "items": [
         {
           "name": "Conception and Fertility Rates",
@@ -75,6 +52,29 @@
       ]
     },
     {
+      "name": "Population and Migration",
+      "link": "populationandmigration",
+      "index": 1,
+      "items": [
+        {
+          "name": "Population Estimates",
+          "uri": "populationestimates"
+        },
+        {
+          "name": "Migration within the UK",
+          "uri": "migrationwithintheuk"
+        },
+        {
+          "name": "International Migration",
+          "uri": "internationalmigration"
+        },
+        {
+          "name": "Population Projections",
+          "uri": "populationprojections"
+        }
+      ]
+    },
+    {
       "name": "Health and Social Care",
       "link": "healthandsocialcare",
       "index": 2,
@@ -94,28 +94,9 @@
       ]
     },
     {
-      "name": "Crime and Justice",
-      "link": "crimeandjustice",
-      "index": 3,
-      "items": [
-        {
-          "name": "Crimes recorded by police",
-          "uri": "/peoplepopulationandcommunity/crimeandjustice/timeseries/raid62"
-        },
-        {
-          "name": "Incidents of anti-social behaviour",
-          "uri": "/peoplepopulationandcommunity/crimeandjustice/timeseries/raid63"
-        },
-        {
-          "name": "Crimes against households",
-          "uri": "/peoplepopulationandcommunity/crimeandjustice/timeseries/raid64"
-        }
-      ]
-    },
-    {
       "name": "Cultural Identity",
       "link": "culturalidentity",
-      "index": 4,
+      "index": 3,
       "items": [
         {
           "name": "Religion",
@@ -136,39 +117,28 @@
       ]
     },
     {
-      "name": "Elections",
-      "link": "elections",
-      "index": 5,
+      "name": "Crime and Justice",
+      "link": "crimeandjustice",
+      "index": 4,
       "items": [
         {
-          "name": "Parliamentary electors",
-          "uri": "/peoplepopulationandcommunity/elections/timeseries/raid87"
+          "name": "Crimes recorded by police",
+          "uri": "/peoplepopulationandcommunity/crimeandjustice/timeseries/raid62"
         },
         {
-          "name": "European / local government electors",
-          "uri": "/peoplepopulationandcommunity/elections/timeseries/raid88"
-        }
-      ]
-    },
-    {
-      "name": "Home Internet and Social Media Usage",
-      "link": "homeinternetandsocialmediausage",
-      "index": 6,
-      "items": [
-        {
-          "name": "Adults in the UK that have used the Internet",
-          "uri": "/peoplepopulationandcommunity/homeinternetandsocialmediausage/timeseries/raid101"
+          "name": "Incidents of anti-social behaviour",
+          "uri": "/peoplepopulationandcommunity/crimeandjustice/timeseries/raid63"
         },
         {
-          "name": "Adults that have never used the Internet",
-          "uri": "/peoplepopulationandcommunity/homeinternetandsocialmediausage/timeseries/raid102"
+          "name": "Crimes against households",
+          "uri": "/peoplepopulationandcommunity/crimeandjustice/timeseries/raid64"
         }
       ]
     },
     {
       "name": "Housing",
       "link": "housing",
-      "index": 7,
+      "index": 5,
       "items": [
         {
           "name": "UK average house price",
@@ -197,6 +167,48 @@
       ]
     },
     {
+      "name": "Personal and Household Finances",
+      "link": "personalandhouseholdfinances",
+      "index": 6,
+      "items": [
+        {
+          "name": "Expenditure",
+          "uri": "expenditure"
+        },
+        {
+          "name": "Debt",
+          "uri": "debt"
+        },
+        {
+          "name": "Income and Wealth",
+          "uri": "incomeandwealth"
+        }
+      ]
+    },
+    {
+      "name": "Well-being",
+      "link": "wellbeing",
+      "index": 7,
+      "items": [
+        {
+          "name": "Life Satisfaction",
+          "uri": "/peoplepopulationandcommunity/wellbeing/timeseries/raid131"
+        },
+        {
+          "name": "Worthwhile",
+          "uri": "/peoplepopulationandcommunity/wellbeing/timeseries/raid132"
+        },
+        {
+          "name": "Happiness",
+          "uri": "/peoplepopulationandcommunity/wellbeing/timeseries/raid133"
+        },
+        {
+          "name": "Anxiety",
+          "uri": "/peoplepopulationandcommunity/wellbeing/timeseries/raid134"
+        }
+      ]
+    },
+    {
       "name": "Leisure and Tourism",
       "link": "leisureandtourism",
       "index": 8,
@@ -220,44 +232,32 @@
       ]
     },
     {
-      "name": "Personal and Household Finances",
-      "link": "personalandhouseholdfinances",
+      "name": "Home Internet and Social Media Usage",
+      "link": "homeinternetandsocialmediausage",
       "index": 9,
       "items": [
         {
-          "name": "Expenditure",
-          "uri": "expenditure"
+          "name": "Adults in the UK that have used the Internet",
+          "uri": "/peoplepopulationandcommunity/homeinternetandsocialmediausage/timeseries/raid101"
         },
         {
-          "name": "Debt",
-          "uri": "debt"
-        },
-        {
-          "name": "Income and Wealth",
-          "uri": "incomeandwealth"
+          "name": "Adults that have never used the Internet",
+          "uri": "/peoplepopulationandcommunity/homeinternetandsocialmediausage/timeseries/raid102"
         }
       ]
     },
     {
-      "name": "Well-being",
-      "link": "wellbeing",
+      "name": "Elections",
+      "link": "elections",
       "index": 10,
       "items": [
         {
-          "name": "Life Satisfaction",
-          "uri": "/peoplepopulationandcommunity/wellbeing/timeseries/raid131"
+          "name": "Parliamentary electors",
+          "uri": "/peoplepopulationandcommunity/elections/timeseries/raid87"
         },
         {
-          "name": "Worthwhile",
-          "uri": "/peoplepopulationandcommunity/wellbeing/timeseries/raid132"
-        },
-        {
-          "name": "Happiness",
-          "uri": "/peoplepopulationandcommunity/wellbeing/timeseries/raid133"
-        },
-        {
-          "name": "Anxiety",
-          "uri": "/peoplepopulationandcommunity/wellbeing/timeseries/raid134"
+          "name": "European / local government electors",
+          "uri": "/peoplepopulationandcommunity/elections/timeseries/raid88"
         }
       ]
     }
