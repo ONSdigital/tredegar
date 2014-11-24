@@ -3536,6 +3536,9 @@ $SPLIT
   font-size: 13.5px;
   font-size: 1.35rem;
   text-align: center;}
+  
+.stat__updated {
+  text-align: left; }  
 
 .stat--headline .stat__figure {
   font-size: 40px;
