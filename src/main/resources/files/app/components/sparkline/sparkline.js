@@ -155,7 +155,8 @@
 						},
 						step: 1
 					},
-					tickLength: 0
+					tickLength: 0,
+					lineColor: 'transparent'
 				},
 				yAxis: {
 					endOnTick: false,
