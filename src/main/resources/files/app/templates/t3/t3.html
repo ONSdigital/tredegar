@@ -147,7 +147,7 @@
 
         <li ng-if="t3.showToggle" class="list--table__item list--table__footer" ng-click="t3.toggleTimeSeries()">
             <div class="table__actions box--inline ">
-                <a href=""><span ng-class="t3.allVisible ? 'icon-up-open-big':'icon-down-open-big'">view more time series </span> </a>
+                <a href=""><span ng-class="t3.allVisible ? 'icon-up-open-big':'icon-down-open-big'">view {{t3.allVisible?'less' : 'more'}} time series </span> </a>
             </div>
         </li>
     </ol>
