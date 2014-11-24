@@ -18,7 +18,7 @@
 					scope.condition = true
 				}
 			},
-			template: '<span ng-class="class" ng-if="condition">Loading...</span>'
+			template: '<span ng-class="class" ng-if="condition"><img src="/ui/img/loading.gif" width:"32" height="32" alt="Loading..." class="media__img"></span>'
 		}
 	}
 

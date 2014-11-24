@@ -99,10 +99,14 @@
 <!-- List/Table with data -->
 
 <section id="timeseries" class="panel--large wrapper">
-
-    <h2 id="related" class="list--table-header panel--pad">Time Series Related to {{taxonomy.data.name}}</h2>
-    <ol class="list--table list--table--complex table--striped-light table-light--sectioned small_top_mar">
-        <li ng-repeat="item in taxonomy.data.items | limitTo:t3.loadedTimseriesCount" class="list--table__item list--table__body">
+    <h2 id="related" class="list--table-header panel--pad-small">Time Series Related to {{taxonomy.data.name}}</h2>
+    <ol class="list--table list--table--complex table--striped-light table-light--sectioned lifted">
+        <li class="list--table__item list--table__head">
+            <label class="list--table__item__body list--table__item__body--select-all nojs-hidden">
+            </label>
+        </li>
+        <!-- /list- -table__head -->
+        <li ng-repeat="item in taxonomy.data.items | limitTo:(t3.allVisible?t3.loadedTimseriesCount : t3.timeseriesDefaultLimit)" class="list--table__item list--table__body">
             <div class="list--table__item__body list--table__item__body--caption">
                 <h3 class="list--table__item__header">
                     <a href="#!{{item.uri}}" class="no_underline"> {{item.name}}</a>
@@ -140,20 +144,12 @@
             <!--  /list-table__item__body -->
         </li>
         <!-- /list- -table__body -->
-        <li ng-if="t3.showToggle" class="list--table__item list--table__footer">
-            <div class="list--table__item__body">
-                <div class="table__actions split">
-                    <a class="table__action split__title link-muted" href="" ng-click="t3.toggleTimeSeries()">
-                        <span ng-if="!t3.allVisible" class="table__action__text">View More</span>
-                        <span ng-if="t3.allVisible" class="table__action__text">View Less</span>
-                    </a>
-                </div>
-                <!-- /table-actions -->
+
+        <li ng-if="t3.showToggle" class="list--table__item list--table__footer" ng-click="t3.toggleTimeSeries()">
+            <div class="table__actions box--inline ">
+                <a href=""><span ng-class="t3.allVisible ? 'icon-up-open-big':'icon-down-open-big'">view more time series </span> </a>
             </div>
-            <!--  /list-table__item__body -->
         </li>
-        <!-- /list- -table__item -->
-        <!-- /list- -table__body -->
     </ol>
     <!-- /list- -table -->
 </section>
