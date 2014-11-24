@@ -14,22 +14,21 @@
 			scope: {
 				chartData: '=',
 				width: '=',
-				height: '='
+				height: '=',
+				headline: '=?'
 			},
 			controller: SparkLineController,
 			controllerAs: 'sparkline',
 			templateUrl: 'app/components/sparkline/sparkline.html'
 		}
 
-		function SparkLineController($scope) {
+		function SparkLineController($scope, $element, $window, $log) {
 			var sparkline = this
 			sparkline.visible = false
-			// sparkline.padding=$scope.padding
 			sparkline.chartConfig = getSparkline($scope.width, $scope.height)
 			watchData()
-			// watchHeight()
-			// watchWidth()
-
+			watchWidth()
+			
 			function watchData() {
 				$scope.$watch('chartData', function() {
 					if ($scope.chartData) {
@@ -41,18 +40,22 @@
 				})
 			}
 
-			function watchHeight() {
-				$scope.$watch('height', function() {
-					console.log("height" + $scope.height)
-					sparkline.chartConfig.options.chart.height = $scope.height
-				})
-			}
-
 			function watchWidth() {
-				$scope.$watch('width', function() {
-					console.log("width" + $scope.width)
-					sparkline.chartConfig.options.chart.width = $scope.width
-				})
+				// support for responsive behaviour for t3 headline data sparkline
+		        if($scope.headline) {
+		          angular.element($window).bind('resize', function() {
+		        	  // due to there being multiple sparklines on t3 then occassionally the resize lifecycle throws a
+		        	  // [Uncaught TypeError: Cannot read property 'chart' of undefined] - this has not resulted in any issues		        	  
+		          	  $log.debug('Resized:' + $window.innerWidth)
+		              if ($window.innerWidth < 900) {
+		            	  sparkline.chartConfig.options.chart.width = 175
+		              } else {
+		            	  sparkline.chartConfig.options.chart.width = 350		            	
+		              }
+		          	  $log.debug('chart width set to: ' + sparkline.chartConfig.options.chart.width)
+		              $scope.$apply()
+		          })
+		        }
 			}
 
 			function buildChart(chartConfig, timeseries, isHeadline) {

@@ -2058,6 +2058,7 @@ a {
   margin-bottom: 2rem; }
 
 .box--inline {
+  text-align: center;
   display: inline-block; }
 
 .box__content > :last-child {
@@ -5399,6 +5400,10 @@ td.datatable-downloads{
   background-size: contain;
   height: 6.5em;
   border: 0px; commented out to remove icons on MJ's request*/
+}
+
+.sparkline_area {
+	width: 100%;
 }
 
 .nav-panel__body.flush{
