@@ -1,6 +1,5 @@
 Theme: Business, Industry and Trade
 Level 2: Business Activity, Size and Location
-Level 3: Activity, Size and Location
 Summary: Tables on local units and enterprises by geography, industry, legal status and employment size band. Additional tables at enterprise level by age of business and turnover size band.
 Headline 1: The number of VAT and/or PAYE businesses is estimated to have risen by 18,000 (0.9%) between March 2012 and March 2013.
 Headline 2: Companies and public corporations represent 64% of total businesses.
