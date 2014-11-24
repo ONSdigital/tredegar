@@ -18,7 +18,6 @@
 
 
 	function GeneralConfiguration($locationProvider, $httpProvider, $logProvider) {
-		console.log("Configuration")
 			//Enable hashbang
 		$locationProvider.html5Mode(false).hashPrefix('!')
 

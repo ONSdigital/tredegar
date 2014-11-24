@@ -123,7 +123,7 @@
                 ctrl.tenYears = tenYears(ctrl.years)
                 ctrl.chartConfig.options.xAxis.tickInterval = tickInterval(ctrl.chartData.length);
                 ctrl.chartConfig.options.title.text = ctrl.timeseries.name
-                ctrl.chartConfig.options.yAxis.title.text = ctrl.timeseries.unit
+                ctrl.chartConfig.options.yAxis.title.text = ctrl.timeseries.preUnit + ' '  + ctrl.timeseries.unit
                 ctrl.chartConfig.options.yAxis.min = ctrl.min;
                 $log.debug("Chart:")
                 $log.debug(ctrl.chartConfig)
@@ -250,7 +250,8 @@
         function initialize() {
             resolveChartTypes(ArrayUtil)
             ctrl.chartConfig.series[0].name = ctrl.timeseries.name
-            ctrl.chartConfig.series[0].id = ctrl.timeseries.unit
+            ctrl.chartConfig.series[0].unit = ctrl.timeseries.unit
+            ctrl.chartConfig.series[0].preUnit = ctrl.timeseries.preUnit ? ctrl.timeseries.preUnit + ' ' : ' '
             prepareData()
 
             function resolveChartTypes(ArrayUtil) {
@@ -543,7 +544,7 @@
 
                         // series names and values
                         $.each(this.points, function(i, val) {
-                            content += '<div class="tiptext"><i>' + val.point.series.chart.series[i].name + "</i><br/><b>Value: " + val.y + " " + val.point.series.chart.series[i].options.id + '</b></div>';
+                            content += '<div class="tiptext"><i>' + val.point.series.chart.series[i].name + "</i><br/><b>Value: " + val.point.series.chart.series[i].options.preUnit + val.y + " " + val.point.series.chart.series[i].options.unit + '</b></div>';
                             // console.log(val)
                         });
                         content += "</div>";
