@@ -5,7 +5,7 @@ deploy:
   provider: heroku
   strategy: api
   api_key:
-    secure: MPemzQ0Ez73iVuSdd2VqZDqSCp9TFJgeKImOETnbX1zduUuvon0Pd9m/xk/JhOQN7b9RsLHFym+yd+Ko2ilAICuMiI1wFm1Bpi3COkE4zOfpix1ZmxgJyE2tYfGiZuIZerUnALKvIQueWpRCJ/wGXBiyMxf8vmY5H/Dk+zrXgeI=
+    secure: fFbMh/6KrdjsSNRgnJqg1b2YHV569lJC8HRMpihP0mhadcw0xYASylG6rP6seMyqCauubQH+1tHw5g5ZmUdVm0jArOnXu8iI648EfUo3H5/TcRcLWyPp5W0D1q4BcXt11iD3c8pT9e9LIaemqjBSc1lHGLrGyOjkTXzWWDKgydg=
   app: tredegar
   on:
     repo: ONSdigital/tredegar
