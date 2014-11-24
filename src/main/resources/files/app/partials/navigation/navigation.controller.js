@@ -9,7 +9,10 @@
 	function NavigationController($scope, $route) {
 		var navigation = this
 		navigation.hideSearch = false
-		navigation.links = $route.current.locals.navigation
+		if ($route.current.locals) {
+			navigation.links = $route.current.locals.navigation
+		}
+
 		watchMenu()
 
 		function toggleSearch() {
