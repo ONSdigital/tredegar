@@ -99,12 +99,8 @@
 <!-- List/Table with data -->
 
 <section id="timeseries" class="panel--large wrapper">
-    <h2 id="related" class="list--table-header panel--pad-small">Time Series Related to {{taxonomy.data.name}}</h2>
-    <ol class="list--table list--table--complex table--striped-light table-light--sectioned lifted">
-        <li class="list--table__item list--table__head">
-            <label class="list--table__item__body list--table__item__body--select-all nojs-hidden">
-            </label>
-        </li>
+    <h2 id="related" class="list--table-header panel--pad">Time Series Related to {{taxonomy.data.name}}</h2>
+    <ol class="list--table list--table--complex table--striped-light table-light--sectioned">
         <!-- /list- -table__head -->
         <li ng-repeat="item in taxonomy.data.items | limitTo:(t3.allVisible?t3.loadedTimseriesCount : t3.timeseriesDefaultLimit)" class="list--table__item list--table__body">
             <div class="list--table__item__body list--table__item__body--caption">
