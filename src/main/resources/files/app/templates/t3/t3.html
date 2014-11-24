@@ -52,15 +52,15 @@
                         <ons-sparkline class="sparkline_area" width="350" height="100" chart-data="taxonomy.data.headline.chartData" headline="true"></ons-sparkline>
                     </div>
                     <!-- /box -->
-                    <dl class="definition mini">
+                    <dl class="definition mini stat__updated">
                         <dt>Last updated:</dt>
                         <dd>
-                            {{taxonomy.data.headline.data.lastUpated}}
+                            {{taxonomy.data.headline.data.lastUpated || '1 JAN 3000'}}
                             <!-- 16 Sep 2014 -->
                         </dd>
                         <dt>Next update:</dt>
                         <dd>
-                            {{taxonomy.data.headline.data.nextUpdate}}
+                            {{taxonomy.data.headline.data.nextUpdate || '1 FEB 3000'}}
                             <!-- 14 Oct 2014 -->
                         </dd>
                     </dl>
@@ -130,9 +130,9 @@
             <div class="list--table__item__body list--table__item__body--update">
                 <dl class="micro definition-list definition-list--inline flush--half--vertical">
                     <dt>Last updated:</dt>
-                    <dd>{{item.data.lastUpated || 'Not Available'}}</dd>
+                    <dd>{{item.data.lastUpated || '1 JAN 3000'}}</dd>
                     <dt>Next update:</dt>
-                    <dd class="red_highlight">{{item.data.nextUpdate || 'Not Available'}}</dd>
+                    <dd class="red_highlight">{{item.data.nextUpdate || '1 FEB 3000'}}</dd>
                 </dl>
             </div>
         </li>
