@@ -6,31 +6,36 @@
   },
   "lede": "Definiebas nam te. Eos viderer albucius conceptam ei, cu vix amet duis indoctum, vim at assum ludus intellegebat. Ex vix fugit discere nominavi, per te tantas exerci elaboraret. Nam ne oblique convenire.Sensibus voluptatibus mei ut, eum sonet nonumy epicurei ne. Sed ea causae ancillae, usu id alia soluta reformidans. Eloquentiam deterruisset mel ut, officiis persecuti cu eos. Pri at nostro veritus facilisi.",
   "more": "Lorem ipsum dolor sit amet",
-  "download": [],
+  "download": [
+    {
+      "title": "Gross value added",
+      "xls": "http://www.ons.gov.uk/ons/rel/naa1-rd/united-kingdom-economic-accounts/q1-2014/rft--reference-table-1--main-aggregates.xls"
+    }
+  ],
   "notes": [
     {
       "data": "These estimates are rounded to the nearest hundred and are different to the unrounded estimates in other published tables."
     }
   ],
-  "summary": "People out of work and not seeking or available to work by reason for the UK",
-  "uri": "/employmentandlabourmarket/unemployment/datasets/inactivitydatacollection",
-  "title": "Inactivity data collection",
+  "summary": "By category of output (reference year 2010) for production and service industries",
+  "uri": "/economy/economicoutputandproductivity/datasets/grossvalueadded",
+  "title": "Gross value added",
   "releaseDate": "19 February 2014",
   "type": "dataset",
-  "name": "Inactivity data collection",
-  "fileName": "inactivitydatacollection",
+  "name": "Gross value added",
+  "fileName": "grossvalueadded",
   "breadcrumb": [
     {
       "index": 0,
       "type": "home",
-      "name": "Employment and Labour Market",
-      "fileName": "employmentandlabourmarket"
+      "name": "Economy",
+      "fileName": "economy"
     },
     {
       "index": 0,
       "type": "home",
-      "name": "Unemployment",
-      "fileName": "unemployment",
+      "name": "Economic Output and Productivity",
+      "fileName": "economicoutputandproductivity",
       "breadcrumb": []
     }
   ]

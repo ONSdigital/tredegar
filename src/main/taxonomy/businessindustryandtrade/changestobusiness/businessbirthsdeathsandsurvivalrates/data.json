@@ -27,7 +27,12 @@
       "uri": "/businessindustryandtrade/changestobusiness/businessbirthsdeathsandsurvivalrates/bulletins/businessdemography"
     }
   ],
-  "datasets": [],
+  "datasets": [
+    {
+      "name": "Business births and deaths",
+      "uri": "/businessindustryandtrade/changestobusiness/businessbirthsdeathsandsurvivalrates/datasets/businessbirthsanddeaths"
+    }
+  ],
   "level": "t3",
   "index": 0,
   "lede": "Business births, deaths and survival rates mainly focuses on changes in the registered business population. Data are produced on births, deaths and survival of businesses. Business births and deaths are presented by industry and geography. In addition, a series on business survival is also presented, with 1 to 5 year survival rates by industry and geography.",

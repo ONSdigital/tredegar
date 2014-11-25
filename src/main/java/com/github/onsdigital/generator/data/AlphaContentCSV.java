@@ -126,7 +126,7 @@ class AlphaContentCSV {
 			timeseries.number = figure;
 			String scaleFactor = row.get(SCALE_FACTOR);
 			if (StringUtils.isNotBlank(scaleFactor)) {
-				timeseries.setScaleFactor(Integer.parseInt(scaleFactor));
+				timeseries.setScaleFactor(Double.parseDouble(scaleFactor));
 			}
 
 			String relatedCdidColumn = row.get(RELATED_CDID);

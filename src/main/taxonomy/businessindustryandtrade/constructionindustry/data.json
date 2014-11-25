@@ -39,7 +39,12 @@
       "uri": "/businessindustryandtrade/constructionindustry/bulletins/outputintheconstructionindustry"
     }
   ],
-  "datasets": [],
+  "datasets": [
+    {
+      "name": "Construction output",
+      "uri": "/businessindustryandtrade/constructionindustry/datasets/constructionoutput"
+    }
+  ],
   "level": "t3",
   "index": 3,
   "lede": "The Construction industry definition includes general construction and allied construction activities for buildings and civil engineering works. It includes new work, repair, additions and alterations, the erection of prefabricated buildings or structures on the site and also construction of a temporary nature. ",
