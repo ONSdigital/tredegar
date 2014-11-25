@@ -39,7 +39,7 @@
 	                            </p>
 	                        </div>
 	                    </div>
-	                    <div class="grid-col desktop-grid-one-third search-sorting-grid">
+<!-- 	                    <div class="grid-col desktop-grid-one-third search-sorting-grid">
 	                        <div class="search-sorting">
 	                            <div class="field field--spaced">
 	                                <form action="#" class="form">Sort by:
@@ -51,7 +51,7 @@
 	                            </div>
 	                        </div>
 	                    </div>
-	
+ -->	
 	                </div>
 	        	</div>
             </div>
@@ -76,7 +76,12 @@
                             <a class="search-link" href="#!{{item.url}}">{{item.title}}</a>
                             <span ng-if="item.type != 'home'" class="lozenge--label" href="">{{item.type === 'bulletin' ? 'Statistical Bulletin' : item.type}}</span>
                         </dt>
-                        <dd class="microcopy">Released</dd>
+                        <dd class="microcopy">
+                        	<span ng-if="item.type === 'home'">
+								{{item.url}}                      	
+                        	</span>
+                        	<span ng-if="item.type != 'home'">Released 1 JAN 3000</span>
+                        </dd>
                         <dd ng-repeat-end class="search-summary">{{item.lede | charLimit:300:'...'}}</dd>
 
                     </dl>
