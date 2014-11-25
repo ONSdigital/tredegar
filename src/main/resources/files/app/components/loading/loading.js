@@ -8,17 +8,17 @@
 	function Loading() {
 		return {
 			restrict: 'E',
-			replace:true,
+			replace: true,
 			scope: {
 				condition: '=?',
 				class: '@'
 			},
 			link: function(scope) {
-				if(typeof scope.condition === 'undefined') {
+				if (typeof scope.condition === 'undefined') {
 					scope.condition = true
 				}
 			},
-			template: '<span ng-class="class" ng-if="condition">Loading...</span>'
+			template: ' <div style="display:flex" ng-class="class" ng-if="condition" ><img style="margin:auto" width="14" height="14" src="/ui/img/loading.gif" width:"32" height="32" alt="Loading..." class="media__img"></div>'
 		}
 	}
 

@@ -39,13 +39,14 @@
                         <dd class="nav-panel__value">
                           <div class="stat">
                             <div class="stat__figure nav_home-stats">
-                              {{item.data.number}} <span class="stat__figure__unit">{{item.data.unit}}</span>
+                            <span class="stat__figure__unit">{{item.data.preUnit}}</span> {{item.data.number}} <span class="stat__figure__unit">{{item.data.unit}}</span>
                               <div class="stat__description-large">{{item.data.date}}</div>
                             </div>
                           </div>
                         </dd>
                       </dl>                    
                     </li>
+                    <ons-loading condition="!item.data" ></ons-loading>
                     <li class="nav-panel__item homeicon_sparkline">
                       <div style="height:30px"></div>
                       <ons-sparkline chart-data="item.chartData" width="120" height="50" ></ons-sparkline>
@@ -72,8 +73,8 @@
     <!-- panel wrapper -->
     <section class="panel wrapper flush--bottom ">
       <header class="actionable-header__title">
-        <h2 class="actionable-header__title table-inline ">News this week view</h2>
-          <a class="hide-small" href="#">new and upcoming releases</a>
+        <h2 class="actionable-header__title table-inline ">New this week</h2>
+          <a class="hide-small actionable-header--asidelink" href="#">View new and upcoming releases</a>
       </header>
       <div class="grid-wrap">
         <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
@@ -220,14 +221,14 @@
             <article class="box--padded--med">
               <header class="box__header">
                 <h3>
-                  <a href="#!/localstats">Local data explained </a>
+                  <a href="#!/localstats">Local Data Explained </a>
                 </h3>
                 <!-- /box__header -->
               </header>
               
               <div class="box__content">
                 <ul class="list--table">
-                  <li class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis. </li>
+                  <li class="">A handy guide to let you know where to find local statistics available to you. </li>
                 </ul>
                 <!-- /box__content -->
               </div>
@@ -240,13 +241,13 @@
             <article class="box--padded--med">
               <header class="box__header">
                 <h3>
-                  <a href="https://www.nomisweb.co.uk/">Labour Market data </a>
+                  <a href="https://www.nomisweb.co.uk/">Official Labour Market Statistics (nomis) </a>
                 </h3>
               </header>
               <!-- /box__header -->
               <div class="box__content">
                 <ul class="list--table">
-                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis. </li>
+                  <li>Access to the most detailed and up-to-date UK labour market statistics from official sources. </li>
                 </ul>
                 <!-- /box__content -->                
               </div>
@@ -258,13 +259,13 @@
              <article class="box--padded--med">
               <header class="box__header">
                 <h3>
-                  <a href="http://www.neighbourhood.statistics.gov.uk/dissemination/">Neighbourhood statistics </a>
+                  <a href="http://www.neighbourhood.statistics.gov.uk/dissemination/">Neighbourhood Statistics (NeSS)</a>
                 </h3>
               </header>
               <!-- /box__header -->
               <div class="box__content">
                 <ul class="list--table">
-                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis. </li>
+                  <li>Datasets that describe the characteristics of a neighbourhood, with a particular focus on deprivation. </li>
                 </ul>
                 <!-- /box__content -->                
               </div>
@@ -277,13 +278,13 @@
              <article class="box--padded--med">
               <header class="box__header">
                 <h3>
-                  <a href=" http://www.ons.gov.uk/ons/data/area-first/">Census 2011 Outputs</a>
+                  <a href=" http://www.ons.gov.uk/ons/data/area-first/">2011 Census Data Explorer (Beta)</a>
                 </h3>
               </header>
               <!-- /box__header -->
               <div class="box__content">
                 <ul class="list--table">
-                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis. </li>
+                  <li>Discover relevant census datasets for your needs and view or download them. </li>
                 </ul>
                 <!-- /box__content -->                
               </div>
@@ -297,7 +298,7 @@
 
     <section class="panel wrapper box box--padded--med ">
       <header class="actionable-header__title">
-        <h2 class="actionable-header__title table-inline ">Other Official Statistics?</h2>
+        <h2 class="actionable-header__title table-inline ">Other Official Statistics</h2>
       </header>
       <div class="grid-wrap">
         <div class="grid-col desktop-grid-one-quarter tablet-grid-one-half">
@@ -311,7 +312,7 @@
               
             <div class="box__content">
               <ul class="list--table">
-                <li class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis. </li>
+                <li class="">Official statistics produced by other government departments. </li>
               </ul>
             </div>
           </article>
@@ -329,7 +330,7 @@
               
             <div class="box__content">
               <ul class="list--table">
-                <li class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis. </li>
+                <li class="">View, manipulate, create and download tables from Welsh data. </li>
               </ul>
             </div>
           </article>
@@ -348,7 +349,7 @@
               
             <div class="box__content">
               <ul class="list--table">
-                <li class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis. </li>
+                <li class="">Scottish Government Statistics Provides an accurate and up-to-date picture of the economy and society in Scotland. </li>
               </ul>
             </div>
           </article>
@@ -367,7 +368,7 @@
             
           <div class="box__content">
             <ul class="list--table">
-              <li class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa mauris, egestas quis odio at, eleifend ultricies felis. </li>
+              <li class="">Principal source of official statistics and social research on Northern Ireland. </li>
             </ul>
           </div>
         </article>

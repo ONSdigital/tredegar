@@ -2,25 +2,18 @@
 
 (function() {
 	angular.module('onsDataLoader', [])
-		.service('DataLoader', ['$http', '$log', '$q', 'DSCacheFactory', '$location', DataLoader])
-
+		.service('DataLoader', ['$rootScope', '$http', '$log', '$q', 'DSCacheFactory', '$location', DataLoader])
 
 	/*
 	Data Loader Service caches each http call to local storage if available, otherwise uses angular cache. see config.js for details
 	*/
-	function DataLoader($http, $log, $q, DSCacheFactory, $location) {
+	function DataLoader($rootScope, $http, $log, $q, DSCacheFactory, $location) {
 		var dataLoader = this
 		var cache = DSCacheFactory.get('dataCache')
 
 		function load(path) {
 			var deferred = $q.defer()
-			var data
-
-			//Quick dirty hack to disable caching on localhost
-			if ($location.host() != 'localhost') {
-				data = loadFromCache(path)
-			}
-
+			var data = loadFromCache(path)
 
 			if (data) { //Cache hit
 				$log.debug('Data Loader : Cached data hit for ', path, ' ', data)
@@ -28,7 +21,7 @@
 			} else { //No cache hit, load
 				$http.get(path).success(function(data) {
 					$log.debug('Data Loader : Successfully loaded data at ', path, ' ', data)
-					cache.put(path, data)
+					storeToCache(path,data)
 					deferred.resolve(data)
 				}).error(function(err) {
 					$log.error('Data Loader : Failed loading data at ' + path)
@@ -40,8 +33,29 @@
 			return deferred.promise
 		}
 
+		function storeToCache(path,data) {
+			//Skip caching if localhost and cache disabled
+			if ($location.host() === 'localhost') {
+				if ($rootScope.onsAlphaConfiguration.disableCacheOnLocal) {
+					return
+				}
+			}
+
+			cache.put(path, data)
+			
+		}
+
 		function loadFromCache(key) {
-			return cache.get(key)
+			var data
+			
+			if ($location.host() === 'localhost') {
+				if ($rootScope.onsAlphaConfiguration.disableCacheOnLocal) {
+					return 
+				}
+			} 
+			
+			data = cache.get(key)
+			return data
 		}
 
 		/* Load data using post request

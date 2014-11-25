@@ -107,7 +107,10 @@
                 }).
                 when('/methodology', {
                     templateUrl: 'app/templates/methodology/methodology.html',
-                    controller: 'MethodologyCtrl'
+                    controller: 'MethodologyCtrl',
+                    resolve: {
+                        navigation: ['DataLoader', getNavigatinLinks]
+                    }
                 }).
                 when('/nationalstats', {
                     templateUrl: 'app/templates/nationalstats/nationalstats.html',

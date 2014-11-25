@@ -76,7 +76,8 @@ public class DatasetContent {
 			Dataset dataset = new Dataset();
 			dataset.name = StringUtils.trim(row.get("Name"));
 			dataset.title = dataset.name;
-			dataset.fileName = dataset.name.toLowerCase();
+			String sanitizedFileName = StringUtils.deleteWhitespace(dataset.name.toLowerCase());
+			dataset.fileName = sanitizedFileName;
 			if (StringUtils.isNotBlank(row.get("Summary"))) {
 				dataset.summary = row.get("Summary");
 			}

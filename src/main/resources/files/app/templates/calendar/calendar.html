@@ -14,15 +14,17 @@
 
 <div class="wrapper panel--bottom-mar">
     <section class="panel wrapper">
-        <header class="actionable-header">
+        <header class="actionable-header--tight panel--mar-small">
             <!-- <h2 class="actionable-header__title">Release Calendar</h2> -->
-            <span class="actionable-header__action hide-med-down icon-inline">Get updates to this calendar</span>
-            <a class="actionable-header__action hide-med-down" href="#">
-                <span class="icon-mail icon-inline">email</span>
-            </a>
-            <a class="actionable-header__action hide-med-down" href="#">
-                <span class="icon-rss icon-inline">RSS</span>
-            </a>
+            <span class="hide-med-down">Get updates to this calendar</span>
+            <div class="actionable-header--tight__action hide-med-down">
+                <a class="actionable-header__action" href="#">
+                    <span class="icon-mail icon-inline">email</span>
+                </a>
+                <a class="actionable-header__action" href="#">
+                    <span class="icon-rss icon-inline">RSS</span>
+                </a>
+            </div>
         </header>
         <!-- <section class="panel--large wrapper">
         <h2 class="">Release Calendar</h2>
@@ -33,11 +35,11 @@
                 <li ons-tab-control="published" role="presentation" class="tab-pane__tab-container">
                     <!-- <a href="" ng-class="{'tab-pane__tab--selected':  selected === 'published' }" class="tab-pane__tab" role="tab" aria-selected="{{selected === 'published' ? true : false}}"> -->
                     <a href="" class="tab-pane__tab--selected tab-pane__tab" role="tab">
-                        <br class="tab-pane__tab__break">Published Releases</a>
+                        <br class="tab-pane__tab__break">Published releases</a>
                 </li>
                 <li ons-tab-control="upcoming" role="presentation" class="tab-pane__tab-container">
                     <a href="" ng-class="{'tab-pane__tab--selected': selected === 'upcoming'}" class="tab-pane__tab" role="tab" aria-selected="{{selected === 'upcoming' ? true : false}}">
-                        <br class="tab-pane__tab__break">Upcoming Releases</a>
+                        <br class="tab-pane__tab__break">Upcoming releases</a>
                 </li>
             </ul>
             <section ons-tab="published" id="published" role="tabpanel" class="tab-pane__panel" aria-hidden="true">
@@ -54,55 +56,24 @@
                                 <label class="chart-area__controls__date__label" for="departments">Topic</label>
                                 <select class="single-row-select" id="topics" name="topics[]">
                                     <option value="all" selected="">All topics</option>
-                                    <option value="business-and-enterprise">Business and enterprise</option>
-                                    <option value="children-and-young-people">Children and young people</option>
-                                    <option value="climate-change">Climate change</option>
-                                    <option value="community-and-society">Community and society</option>
-                                    <option value="employment">Employment</option>
-                                    <option value="equality-rights-and-citizenship">Equality, rights and citizenship</option>
-                                    <option value="financial-services">Financial services</option>
-                                    <option value="food-and-farming">Food and farming</option>
-                                    <option value="foreign-affairs">Foreign affairs</option>
-                                    <option value="government-efficiency-transparency-and-accountability">Government efficiency, transparency and accountability</option>
-                                    <option value="government-spending">Government spending</option>
-                                    <option value="housing">Housing</option>
-                                    <option value="trade-and-investment">Trade and investment</option>
-                                    <option value="uk-economy">UK economy</option>
+                                    <option value="business-and-enterprise">Business, Industry and trade</option>
+                                    <option value="children-and-young-people">Economy</option>
+                                    <option value="employment">Employment and Labour Market</option>
+                                    <option value="equality-rights-and-citizenship">People, Population and Community</option>
                                 </select>
                             </div>
-
-                            <div>
-                                <label class="chart-area__controls__date__label" for="departments">Department</label>
-                                <select class="single-row-select" id="departments" name="departments[]">
-                                    <option value="all" selected="">All departments</option>
-                                    <option value="department-for-business-innovation-skills">Department for Business, Innovation &amp; Skills</option>
-                                    <option value="department-for-communities-and-local-government">Department for Communities and Local Government</option>
-                                    <option value="department-for-culture-media-sport">Department for Culture, Media &amp; Sport</option>
-                                    <option value="department-for-education">Department for Education</option>
-                                    <option value="department-for-environment-food-rural-affairs">Department for Environment, Food &amp; Rural Affairs</option>
-                                    <option value="department-for-transport">Department for Transport</option>
-                                    <option value="department-for-work-pensions">Department for Work and Pensions</option>
-                                    <option value="department-of-health">Department of Health</option>
-                                    <option value="ministry-of-defence">Ministry of Defence</option>
-                                    <option value="ministry-of-justice">Ministry of Justice</option>
-                                    <option value="scotland-office">Scotland Office</option>
-                                    <option value="uk-export-finance">UK Export Finance</option>
-                                </select>
-                            </div>
-
-
-
 
                             <div class="filter date-range-filter">
+                            <div class="div-int">Release date:</div>
                                 <label class="chart-area__controls__date__label" for="from_date">Published after</label>
-                                <input id="from_date" name="from_date" placeholder="e.g. 01/01/2013" type="text">
+                                <input id="from_date" name="from_date" placeholder="01/01/2013" type="text">
                                 <label class="chart-area__controls__date__label" for="to_date">Published before</label>
-                                <input id="to_date" name="to_date" placeholder="e.g. 30/02/2013" type="text">
+                                <input id="to_date" name="to_date" placeholder="30/02/2013" type="text">
                             </div>
                         </fieldset>
                     </div>
                     <div class="grid-col desktop-grid-two-thirds tablet-grid-one-half">
-                        <ol class="list--table list--table--releases">
+                        <ol class="list--table list--table--cushy table--striped-light list--table--releases">
                             <li class="list--table__item list--table__body">
                                 <div class="list--table__item__body list--table__item__body--date">
                                     <div class="list--table__item__body__inner">
@@ -368,11 +339,11 @@
                         </div>
                     </li>
                 </ol>
-                <div class="list--table__item list--table__footer list--table--footer--releases">
+                <!-- <div class="list--table__item list--table__footer list--table--footer--releases">
                     <div class="list--table__item__body">
                         <a href="#" class="link-muted">View all upcoming releases</a>
                     </div>
-                </div>
+                </div> -->
             </section>
 
 
