@@ -4278,10 +4278,16 @@ table actions
 }*/
 
 #search > dl > dt:nth-child(1){
- font-size: 1.35em;
+ font-size: 1.5em;
 /*  background-color: #fafafb ;*/
 /*  padding: 0 0 0 0.3em; Commented out to align collection results*/
 }
+
+#search > dl > dd:nth-child(3){
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
 
 .search-summary{/*border-bottom: 1px solid #d3d3d3 ;*/
                padding: 0 0 3.2em 0;  }
