@@ -51,10 +51,6 @@
                         navigation: ['DataLoader', getNavigatinLinks]
                     }
                 }).
-                when('/article', {
-                    templateUrl: 'app/templates/article/article.html',
-                    controller: 'ArticleCtrl'
-                }).
                 when('/calendar', {
                     templateUrl: 'app/templates/calendar/calendar.html',
                     controller: "CalendarCtlr",
@@ -93,6 +89,13 @@
                 when('/localstats', {
                     templateUrl: 'app/templates/localstats/localstats.html',
                     controller: "LocalStatsCtlr",
+                    resolve: {
+                        navigation: ['DataLoader', getNavigatinLinks]
+                    }
+                }).
+                when('/methodology', {
+                    templateUrl: 'app/templates/methodology/methodology.html',
+                    controller: "MethodologyCtrl",
                     resolve: {
                         navigation: ['DataLoader', getNavigatinLinks]
                     }
