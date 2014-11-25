@@ -257,8 +257,8 @@ public class Download {
 			key: for (TimeseriesValue value : values) {
 				if (value != null) {
 					date = value.date;
+					break key;
 				}
-				break key;
 			}
 
 			// Add this row to the result:
