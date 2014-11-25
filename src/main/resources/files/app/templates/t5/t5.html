@@ -9,11 +9,11 @@
             <h1 class="page-header__title flush--half--bottom">{{chart.timeseries.name}}</h1>
             <div class="grid-wrap">
                 <div class="grid-col desktop-grid-two-thirds">
-                    <a href="#!/nationalstats" ng-if="{{chart.timeseries.nationalStatistic}}"><img src="/ui/img/nslogo.png" class="page-header-image" alt="ONS logo"></a>
+                    <a href="#!/nationalstats" ng-show="{{chart.timeseries.nationalStatistic}}"><img src="/ui/img/nslogo.png" class="page-header-image" alt="ONS logo"></a>
                     <p>
                         <strong>Release date: {{chart.timeseries.lastUpated}}</strong>
                         <span class="page-header-box-link">
-                            <a href="#">
+                            <a href="#!/previous">
                                 <strong>View previous versions</strong>
                             </a>
                         </span>
@@ -187,8 +187,11 @@
             <div class="grid-col desktop-grid-two-thirds tablet-grid-two-thirds">
                 <div class="panel--bottom-mar">
                     <div class="lede">
-                        <p>
+                        <p ng-show="{{chart.timeseries.description}}">
                             {{chart.timeseries.description}}
+                        </p>
+                        <p ng-show="!{{chart.timeseries.description}}">
+                            In the future a short description of this series will be displayed in this area.
                         </p>
                     </div>
                     <div ng-if="chart.timeseries.note1">

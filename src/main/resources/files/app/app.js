@@ -44,6 +44,13 @@
 
 
                 $routeProvider.
+                when('/about', {
+                    templateUrl: 'app/templates/about/about.html',
+                    controller: "AboutCtrl",
+                    resolve: {
+                        navigation: ['DataLoader', getNavigatinLinks]
+                    }
+                }).
                 when('/article', {
                     templateUrl: 'app/templates/article/article.html',
                     controller: 'ArticleCtrl'
@@ -64,7 +71,14 @@
                 }).
                 when('/contactus', {
                     templateUrl: 'app/templates/contact/contactus.html',
-                    controller: "ContactUsController",
+                    controller: "ContactUsCtrl",
+                    resolve: {
+                        navigation: ['DataLoader', getNavigatinLinks]
+                    }
+                }).
+                when('/copyright', {
+                    templateUrl: 'app/templates/copyright/copyright.html',
+                    controller: "CopyrightCtrl",
                     resolve: {
                         navigation: ['DataLoader', getNavigatinLinks]
                     }
@@ -102,6 +116,20 @@
                         navigation: ['DataLoader', getNavigatinLinks]
                     }
                 }).
+                when('/previous', {
+                    templateUrl: 'app/templates/previoustatic/previoustatic.html',
+                    controller: "PreviousCtrl",
+                    resolve: {
+                        navigation: ['DataLoader', getNavigatinLinks]
+                    }
+                }).
+                when('/privacy', {
+                    templateUrl: 'app/templates/privacy/privacy.html',
+                    controller: "PrivacyCtrl",
+                    resolve: {
+                        navigation: ['DataLoader', getNavigatinLinks]
+                    }
+                }).
                 when('/release', {
                     templateUrl: 'app/templates/release/release.html',
                     resolve: {
@@ -111,6 +139,13 @@
                 when('/search', {
                     templateUrl: 'app/templates/search-results/search-results.html',
                     controller: 'SearchController',
+                    resolve: {
+                        navigation: ['DataLoader', getNavigatinLinks]
+                    }
+                }).
+                when('/survey', {
+                    templateUrl: 'app/templates/survey/survey.html',
+                    controller: "SurveyCtrl",
                     resolve: {
                         navigation: ['DataLoader', getNavigatinLinks]
                     }

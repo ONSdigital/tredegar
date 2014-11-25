@@ -1,6 +1,6 @@
 (function() {
     angular.module('onsTemplates')
-        .controller('MethodologyCtrl', ['$scope', MethodologyController])
+        .controller('T4MethodologyCtrl', ['$scope', MethodologyController])
 
     function MethodologyController($scope) {
         $scope.header = "Methodology"
