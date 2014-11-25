@@ -39,7 +39,16 @@
       "uri": "/businessindustryandtrade/internationaltrade/bulletins/uktrade"
     }
   ],
-  "datasets": [],
+  "datasets": [
+    {
+      "name": "Value of UK trade in goods and services",
+      "uri": "/businessindustryandtrade/internationaltrade/datasets/valueofuktradeingoodsandservices"
+    },
+    {
+      "name": "Trade in goods by area",
+      "uri": "/businessindustryandtrade/internationaltrade/datasets/tradeingoodsbyarea"
+    }
+  ],
   "level": "t3",
   "index": 1,
   "lede": "International trade is the exchange of capital, goods, and services across international borders or territories. In most countries, such trade represents a significant share of gross domestic product (GDP).",

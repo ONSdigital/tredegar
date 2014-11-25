@@ -67,7 +67,12 @@
       "uri": "/economy/grossvalueaddedgva/bulletins/regionalgrossvalueaddedincomeapproach"
     }
   ],
-  "datasets": [],
+  "datasets": [
+    {
+      "name": "Regional GVA NUTS1",
+      "uri": "/economy/grossvalueaddedgva/datasets/regionalgvanuts1"
+    }
+  ],
   "level": "t3",
   "index": 5,
   "lede": "Gross Value Added (GVA) measures the contribution to the economy of each individual producer, industry or sector. In the UK it is used in the estimation of Gross Domestic Product (GDP).",
