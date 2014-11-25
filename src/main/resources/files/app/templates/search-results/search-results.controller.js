@@ -114,12 +114,12 @@
         departmentLogo: "ui/img/tis.png"
       },
       wg: {
-        departmentName: "Welsh Government",
+        departmentName: "the Welsh Government",
         departmentLink: "http://wales.gov.uk",
         departmentLogo: "ui/img/wg.png"
       },
       sg: {
-        departmentName: "Scottish Government",
+        departmentName: "the Scottish Government",
         departmentLink: "http://www.scotland.gov.uk/Topics/Statistics",
         departmentLogo: "ui/img/sg.png"
       },
