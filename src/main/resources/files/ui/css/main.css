@@ -3417,11 +3417,11 @@ lesser , applied styles
   background-size: cover; }
 
 .slate--home--hero-banner {
-  background-color: #f4f5dd;
+  /*background-color: #f4f5dd;
  
-  opacity: 15;
-  /*background-image: url("/ui/img/hero-banner.jpg");*/
-  background-position: 50% 50%;
+  opacity: 15;*/
+  background-image: url("/ui/img/whitebackgroundhero.png");
+  /*background-position: 50% 50%;*/
   background-size: cover; }
 
 /*------------------------------------*\
@@ -5645,7 +5645,7 @@ border: 0px;
   padding: 0;}
 
 .navpanel_wrapper_home:hover{
-  background-color: #e9e9e9;
+  background-color: #f4f5dd;
 }
 .nav-panel.nav-panel--stats.sectioned{
   margin-bottom: 0px;
