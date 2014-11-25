@@ -502,9 +502,8 @@ img {
 .icon-down-open-big:before { content: '\e888'; } /* '' */
 .icon-menu:before { content: '\e810'; } /* '' */
 .icon-cancel:before { content: '\e813'; } /* '' */
-.icon-comment:before { content: '\e82e'; } /* ''
- */.icon-help:before { content: '\e817'; } /* '' */
-.icon-help-circled:before { content: '\e81a'; } /* '' */
+.icon-comment:before { content: '\e82e'; } /* '' */
+.icon-help:before { content: '\e817'; } /* '' */
 .icon-right-open:before { content: '\e866'; } /* '' */
 /*Original code from CX*/
 
@@ -706,10 +705,6 @@ img {
 
 .flush--bottom {
   margin-bottom: 0 !important; }
-
-.flush--vertical {
-  margin-bottom: 0 !important;
-  margin-top: 0 !important; }
 
 .flush--half {
   margin: .33em !important; }
@@ -2028,11 +2023,6 @@ a:visited {
       margin-bottom: 35px;
       margin-bottom: 3.5rem; } }
 
-
-.page-header.flush--half--bottom{
-  padding-bottom: 0.5em;
-}
-
 .actionable-header__title {
   margin-bottom: 0; }
 
@@ -2620,9 +2610,7 @@ lesser , applied styles
     width: 45%; }
 
   .list--table__item__body--stat {
-    width: 55%; 
-    margin: 0 auto;
-    text-align: center;} }
+    width: 55%; } }
 @media screen and (min-width: 36em) {
   .list--table-header {
     max-width: 72.5%;
@@ -2690,9 +2678,9 @@ lesser , applied styles
       clear: none; }
 
   .list--table__item__body--stat {
-    margin: 0 auto;
-    text-align: center;
-    width: 30%; }
+    float: left;
+    width: 30%;
+    margin-bottom: -1em; }
 
   .list--table__item__body--caption {
     float: left;
@@ -3584,9 +3572,9 @@ $SPLIT
   font-size: 13.5px;
   font-size: 1.35rem;
   text-align: center;}
-
+  
 .stat__updated {
-  text-align: left; }
+  text-align: left; }  
 
 .stat--headline .stat__figure {
   font-size: 40px;
@@ -4145,7 +4133,9 @@ table actions
 
   a,
   a:visited {
-    text-decoration: underline; }
+    text-decoration: underline;
+    
+      }
 
   a[href]:after {
     content: " (" attr(href) ")"; }
@@ -4207,7 +4197,8 @@ table actions
 }
 
 .aside-logo{
-  height: 6em;
+  height: 5em;
+  width: 9em;
   margin-right: 10em;
   float: left;
   margin-bottom: 0.7em;
@@ -4570,19 +4561,6 @@ ul.simple-pagination {
   text-decoration: none !important;
 }
 
-.list--table--stat_description {
-  display: block;
-  font-weight: normal;
-  font-size: 13.5px;
-  font-size: 1.35rem; }}
-@media screen and (min-width: 42em) {
-  .list--table--stat_description {
-    text-align: center
-  }
-}
-
-
-
 /*.no_underline{
   text-decoration: none !important;
   font-weight: normal !important;
@@ -4680,7 +4658,7 @@ ul.simple-pagination {
 
 
 .box-centred {
-  margin: auto;
+  margin: auto; 
   width: 95%;
   height: 95%;
   margin-top: auto;
@@ -5549,7 +5527,7 @@ td.datatable-downloads{
 
 .callout-header{
   font-size: 2.4rem;
-  padding-top:20px;
+  padding-top:20px;  
 }
 
 
@@ -5568,21 +5546,21 @@ td.datatable-downloads{
   background-position: 0% -70%;
   background-repeat: no-repeat;
   height: 5.5em;
-}
+} 
 
 .homeicon_employmentandlabourmarket{
   background-image: url("/ui/img/Employment.png");
   background-position: 0% -70%;
   background-repeat: no-repeat;
   height: 5.5em;
-  }
+  } 
 
 .homeicon_businessindustryandtrade{
   background-image: url("/ui/img/Trade.png");
   background-position: 0% -70%;
   background-repeat: no-repeat;
   height: 5.5em;
-}
+} 
 
 .homeicon_peoplepopulationandcommunity{
   background-image: url("/ui/img/Population.png");
@@ -5606,17 +5584,17 @@ td.datatable-downloads{
 }
 .nav-panel__item.homeicon_sparkline{
 position: relative;
-left: 29%;
+left: 29%; 
 text-align: center;
 border: 0px;
 }
 }
 
 @media screen and (max-width: 400px){
-.callout-header{
+.callout-header{  
   font-size: 1.6rem;
   padding-top:20px;
-  padding-left: 10px;
+  padding-left: 10px;  
 }
 }
 
@@ -8039,12 +8017,3 @@ textarea {
 .calendar .tab-pane__panel {
   margin-top: 0;
   border-bottom: 0; }
-.calendar .list--table--releases .list--table__item__body{
-    padding: 5px;
-}
-.calendar .list--table--releases .list--table__item__body--release-caption {
-    padding: 0;
-}
-.calendar .div-int {
-    padding: 10px 0 0 0;
-}

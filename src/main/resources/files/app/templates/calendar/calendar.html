@@ -1,0 +1,364 @@
+<ons-header></ons-header>
+<div class="page-header page-header--article page-header--calendar slate--dark-green">
+    <ons-breadcrumb data="breadcrumb"></ons-breadcrumb>
+    <div class="wrapper">
+        <p class="page-header__title page-header--calendar-desc">
+            <strong>Release calendar</strong>
+        </p>
+        <h1 class="page-header__title flush--half--bottom"></h1>
+
+        <social-links></social-links>
+
+    </div>
+</div>
+
+<div class="wrapper panel--bottom-mar">
+    <section class="panel wrapper">
+        <header class="actionable-header--tight panel--mar-small">
+            <!-- <h2 class="actionable-header__title">Release Calendar</h2> -->
+            <span class="hide-med-down">Get updates to this calendar</span>
+            <div class="actionable-header--tight__action hide-med-down">
+                <a class="actionable-header__action" href="#">
+                    <span class="icon-mail icon-inline">email</span>
+                </a>
+                <a class="actionable-header__action" href="#">
+                    <span class="icon-rss icon-inline">RSS</span>
+                </a>
+            </div>
+        </header>
+        <!-- <section class="panel--large wrapper">
+        <h2 class="">Release Calendar</h2>
+      </section> -->
+        <div ons-tabs key-var="selected" class="calendar tab-pane tab-pane--dual">
+
+            <ul role="tablist" class="nav tab-pane__tabs-container">
+                <li ons-tab-control="published" role="presentation" class="tab-pane__tab-container">
+                    <!-- <a href="" ng-class="{'tab-pane__tab--selected':  selected === 'published' }" class="tab-pane__tab" role="tab" aria-selected="{{selected === 'published' ? true : false}}"> -->
+                    <a href="" class="tab-pane__tab--selected tab-pane__tab" role="tab">
+                        <br class="tab-pane__tab__break">Published releases</a>
+                </li>
+                <li ons-tab-control="upcoming" role="presentation" class="tab-pane__tab-container">
+                    <a href="" ng-class="{'tab-pane__tab--selected': selected === 'upcoming'}" class="tab-pane__tab" role="tab" aria-selected="{{selected === 'upcoming' ? true : false}}">
+                        <br class="tab-pane__tab__break">Upcoming releases</a>
+                </li>
+            </ul>
+            <section ons-tab="published" id="published" role="tabpanel" class="tab-pane__panel" aria-hidden="true">
+                <div class="grid-wrap">
+                    <div class="grid-col desktop-grid-one-third tablet-grid-one-half ">
+                        <div class="calendar calendar-wrapper">You can use this filters to show only results that match your interests</div>
+                        <fieldset class='calendar'>
+                            <div>
+                                <label class="chart-area__controls__date__label">Contains</label>
+                                <input name="keywords" placeholder="keywords" type="text" value="">
+                            </div>
+
+                            <div>
+                                <label class="chart-area__controls__date__label" for="departments">Topic</label>
+                                <select class="single-row-select" id="topics" name="topics[]">
+                                    <option value="all" selected="">All topics</option>
+                                    <option value="business-and-enterprise">Business, Industry and trade</option>
+                                    <option value="children-and-young-people">Economy</option>
+                                    <option value="employment">Employment and Labour Market</option>
+                                    <option value="equality-rights-and-citizenship">People, Population and Community</option>
+                                </select>
+                            </div>
+
+                            <div class="filter date-range-filter">
+                            <div class="div-int">Release date:</div>
+                                <label class="chart-area__controls__date__label" for="from_date">Published after</label>
+                                <input id="from_date" name="from_date" placeholder="01/01/2013" type="text">
+                                <label class="chart-area__controls__date__label" for="to_date">Published before</label>
+                                <input id="to_date" name="to_date" placeholder="30/02/2013" type="text">
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="grid-col desktop-grid-two-thirds tablet-grid-one-half">
+                        <ol class="list--table list--table--cushy table--striped-light list--table--releases">
+                            <li class="list--table__item list--table__body">
+                                <div class="list--table__item__body list--table__item__body--date">
+                                    <div class="list--table__item__body__inner">
+                                        <time class="date date--stacked" datetime="2014-08-25">
+                                            <div class="date--stacked__date">25</div>
+                                            <div class="date--stacked__month date--stacked__month--shorthand">Aug</div>
+                                            <div class="date--stacked__year">2014</div>
+                                        </time>
+                                    </div>
+                                </div>
+                                <div class="list--table__item__body list--table__item__body--release-caption">
+                                    <div class="list--table__item__body__inner list--table__item__body__split">
+                                        <!-- <div class="list--table__item__body__three-fifths"> -->
+                                        <div class="list--table__item">
+                                            <h2 class="delta flush--half--bottom">
+                                                        <a href="#" class="no_underline">Retail Sales - August 2014</a>
+                                                        <!-- <span tabindex="0" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin tooltipstered"></span> -->
+                                                    </h2>
+                                        </div>
+                                        <!-- <div class="list--table__item__body__two-fifths">
+                                                  <dl class="definition-list flush micro">
+                                                    <dt></dt>
+                                                    <dd>Inflation and Price Indices</dd>
+                                                  </dl>
+                                                </div> -->
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list--table__item list--table__body">
+                                <div class="list--table__item__body list--table__item__body--date">
+                                    <div class="list--table__item__body__inner">
+                                        <time class="date date--stacked" datetime="2014-08-25">
+                                            <div class="date--stacked__date">25</div>
+                                            <div class="date--stacked__month date--stacked__month--shorthand">Aug</div>
+                                            <div class="date--stacked__year">2014</div>
+                                        </time>
+                                    </div>
+                                </div>
+                                <div class="list--table__item__body list--table__item__body--release-caption">
+                                    <div class="list--table__item__body__inner list--table__item__body__split">
+                                        <!-- <div class="list--table__item__body__three-fifths"> -->
+                                        <div class="list--table__item">
+                                            <h2 class="delta flush--half--bottom">
+                                                        <a href="#" class="no_underline">Index of Private Housing Rental Prices - January to August 2014 results</a>
+                                                        <!-- <span tabindex="0" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin tooltipstered"></span> -->
+                                                    </h2>
+                                        </div>
+                                        <!-- <div class="list--table__item__body__two-fifths">
+                                                <dl class="definition-list flush micro">
+                                                  <dt></dt>
+                                                  <dd>Inflation and Price Indices</dd>
+                                                </dl>
+                                              </div> -->
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list--table__item list--table__body">
+                                <div class="list--table__item__body list--table__item__body--date">
+                                    <div class="list--table__item__body__inner">
+                                        <time class="date date--stacked" datetime="2014-08-29">
+                                            <div class="date--stacked__date">29</div>
+                                            <div class="date--stacked__month date--stacked__month--shorthand">Aug</div>
+                                            <div class="date--stacked__year">2014</div>
+                                        </time>
+                                    </div>
+                                </div>
+                                <div class="list--table__item__body list--table__item__body--release-caption">
+                                    <div class="list--table__item__body__inner list--table__item__body__split">
+                                        <!-- <div class="list--table__item__body__three-fifths"> -->
+                                        <div class="list--table__item">
+                                            <h2 class="delta flush--half--bottom">
+                                                        <a href="#" class="no_underline">Index of Services - August 2014</a>
+                                                        <!-- <span tabindex="0" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin tooltipstered"></span> -->
+                                                    </h2>
+                                        </div>
+                                        <!-- <div class="list--table__item__body__two-fifths">
+                                                <dl class="definition-list flush micro">
+                                                  <dt></dt>
+                                                  <dd>Inflation and Price Indices</dd>
+                                                </dl>
+                                              </div> -->
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list--table__item list--table__body">
+                                <div class="list--table__item__body list--table__item__body--date">
+                                    <div class="list--table__item__body__inner">
+                                        <time class="date date--stacked" datetime="2014-08-30">
+                                            <div class="date--stacked__date">30</div>
+                                            <div class="date--stacked__month date--stacked__month--shorthand">Aug</div>
+                                            <div class="date--stacked__year">2014</div>
+                                        </time>
+                                    </div>
+                                </div>
+                                <div class="list--table__item__body list--table__item__body--release-caption">
+                                    <div class="list--table__item__body__inner list--table__item__body__split">
+                                        <!-- <div class="list--table__item__body__three-fifths"> -->
+                                        <div class="list--table__item">
+                                            <h2 class="delta flush--half--bottom">
+                                                        <a href="#" class="no_underline">Gross Domestic Product: Preliminary Estimate - Q2 2014</a>
+                                                        <!-- <span tabindex="0" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin tooltipstered"></span> -->
+                                                    </h2>
+                                        </div>
+                                        <!-- <div class="list--table__item__body__two-fifths">
+                                                <dl class="definition-list flush micro">
+                                                  <dt></dt>
+                                                  <dd>Inflation and Price Indices</dd>
+                                                </dl>
+                                              </div> -->
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list--table__item list--table__body">
+                                <div class="list--table__item__body list--table__item__body--date">
+                                    <div class="list--table__item__body__inner">
+                                        <time class="date date--stacked" datetime="2014-08-30">
+                                            <div class="date--stacked__date">30</div>
+                                            <div class="date--stacked__month date--stacked__month--shorthand">Aug</div>
+                                            <div class="date--stacked__year">2014</div>
+                                        </time>
+                                    </div>
+                                </div>
+                                <div class="list--table__item__body list--table__item__body--release-caption">
+                                    <div class="list--table__item__body__inner list--table__item__body__split">
+                                        <!-- <div class="list--table__item__body__three-fifths"> -->
+                                        <div class="list--table__item">
+                                            <h2 class="delta flush--half--bottom">
+                                                        <a href="#" class="no_underline">GDP and the Labour Market - Q2 2014, August GDP update</a>
+                                                        <!-- <span tabindex="0" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin tooltipstered"></span> -->
+                                                    </h2>
+                                        </div>
+                                        <!-- <div class="list--table__item__body__two-fifths">
+                                                <dl class="definition-list flush micro">
+                                                  <dt></dt>
+                                                  <dd>Inflation and Price Indices</dd>
+                                                </dl>
+                                              </div> -->
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list--table__item list--table__body">
+                                <div class="list--table__item__body list--table__item__body--date">
+                                    <div class="list--table__item__body__inner">
+                                        <time class="date date--stacked" datetime="2014-08-30">
+                                            <div class="date--stacked__date">30</div>
+                                            <div class="date--stacked__month date--stacked__month--shorthand">Aug</div>
+                                            <div class="date--stacked__year">2014</div>
+                                        </time>
+                                    </div>
+                                </div>
+                                <div class="list--table__item__body list--table__item__body--release-caption">
+                                    <div class="list--table__item__body__inner list--table__item__body__split">
+                                        <!-- <div class="list--table__item__body__three-fifths"> -->
+                                        <div class="list--table__item">
+                                            <h2 class="delta flush--half--bottom">
+                                                        <a href="#" class="no_underline">National Accounts Sector Classification - Classification update, August 2014</a>
+                                                        <!-- <span tabindex="0" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin tooltipstered"></span> -->
+                                                    </h2>
+                                        </div>
+                                        <!-- <div class="list--table__item__body__two-fifths">
+                                                <dl class="definition-list flush micro">
+                                                  <dt></dt>
+                                                  <dd>Inflation and Price Indices</dd>
+                                                </dl>
+                                              </div> -->
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list--table__item list--table__body">
+                                <div class="list--table__item__body list--table__item__body--date">
+                                    <div class="list--table__item__body__inner">
+                                        <time class="date date--stacked" datetime="2014-09-19">
+                                            <div class="date--stacked__date">19</div>
+                                            <div class="date--stacked__month date--stacked__month--shorthand">Sept</div>
+                                            <div class="date--stacked__year">2014</div>
+                                        </time>
+                                    </div>
+                                </div>
+                                <div class="list--table__item__body list--table__item__body--release-caption">
+                                    <div class="list--table__item__body__inner list--table__item__body__split">
+                                        <!-- <div class="list--table__item__body__three-fifths"> -->
+                                        <div class="list--table__item">
+                                            <h2 class="delta flush--half--bottom">
+                                                        <a href="#!/release" class="no_underline">Producer Price Inflation - August 2014</a>
+                                                        <!-- <span tabindex="0" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin tooltipstered"></span> -->
+                                                    </h2>
+                                        </div>
+                                        <!-- <div class="list--table__item__body__two-fifths">
+                                                <dl class="definition-list flush micro">
+                                                  <dt></dt>
+                                                  <dd>Inflation and Price Indices</dd>
+                                                </dl>
+                                              </div> -->
+                                    </div>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- <div class="list--table__item list--table__footer list--table--footer--releases">
+                    <div class="list--table__item__body">
+                        <a href="#" class="link-muted">View all published releases</a>
+                    </div>
+                </div> -->
+            </section>
+
+            <section ons-tab="upcoming" id="upcoming" role="tabpanel" class="tab-pane__panel">
+                <ol class="list--table list--table--cushy table--striped-light list--table--releases">
+                    <li class="list--table__item list--table__body">
+                        <div class="list--table__item__body list--table__item__body--date">
+                            <div class="list--table__item__body__inner">
+                                <time class="date date--stacked" datetime="2014-11-29">
+                                    <div class="date--stacked__date">5</div>
+                                    <div class="date--stacked__month date--stacked__month--shorthand">Nov</div>
+                                    <div class="date--stacked__year">2014</div>
+                                </time>
+                            </div>
+                        </div>
+                        <div class="list--table__item__body list--table__item__body--release-caption">
+                            <div class="list--table__item__body__inner list--table__item__body__split">
+                                <!-- <div class="list--table__item__body__three-fifths"> -->
+                                <div class="list--table__item">
+                                    <h2 class="delta flush--half--bottom">
+                                                National Accounts Sector Classification - Classification update, November 2014
+                                                <!-- <span tabindex="0" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin tooltipstered"></span> -->
+                                            </h2>
+                                </div>
+                                <!-- <div class="list--table__item__body__two-fifths">
+                      <dl class="definition-list flush micro">
+                        <dt></dt>
+                        <dd>Inflation and Price Indices</dd>
+                      </dl>
+                    </div> -->
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list--table__item list--table__body">
+                        <div class="list--table__item__body list--table__item__body--date">
+                            <div class="list--table__item__body__inner">
+                                <time class="date date--stacked" datetime="2014-11-29">
+                                    <div class="date--stacked__date">27</div>
+                                    <div class="date--stacked__month date--stacked__month--shorthand">Nov</div>
+                                    <div class="date--stacked__year">2014</div>
+                                </time>
+                            </div>
+                        </div>
+                        <div class="list--table__item__body list--table__item__body--release-caption">
+                            <div class="list--table__item__body__inner list--table__item__body__split">
+                                <!-- <div class="list--table__item__body__three-fifths"> -->
+                                <div class="list--table__item">
+                                    <h2 class="delta flush--half--bottom">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita ullam, possimus ratione optio dolores.
+                                                <!-- <span tabindex="0" class="tooltip icon-info-circled icon--warm icon--inline icon--left-margin tooltipstered"></span> -->
+                                            </h2>
+                                </div>
+                                <!-- <div class="list--table__item__body__two-fifths">
+                      <dl class="definition-list flush micro">
+                        <dt></dt>
+                        <dd>Inflation and Price Indices</dd>
+                      </dl>
+                    </div> -->
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+                <!-- <div class="list--table__item list--table__footer list--table--footer--releases">
+                    <div class="list--table__item__body">
+                        <a href="#" class="link-muted">View all upcoming releases</a>
+                    </div>
+                </div> -->
+            </section>
+
+
+        </div>
+    </section>
+    <div class="box hide-large hide-large">
+        <span>Get updates to this calendar</span>
+        <a href="#">
+            <span class="action-link icon-mail icon-inline">email</span>
+        </a>
+        <a href="#">
+            <span class="action-link icon-rss icon-inline">RSS</span>
+        </a>
+    </div>
+</div>
+
+
+<ons-footer></ons-footer>
