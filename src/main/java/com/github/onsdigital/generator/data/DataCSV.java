@@ -176,11 +176,15 @@ public class DataCSV {
 			int index = timeseriesValue.value.indexOf('.');
 			decimalPlaces = timeseriesValue.value.substring(index + 1).length();
 		}
-		int m = timeseries.getScaleFactor();
-		do {
+		double m = timeseries.getScaleFactor();
+		while (m > 1) {
 			m /= 10;
 			decimalPlaces++;
-		} while (m > 1);
+		}
+		while (m < 1) {
+			m *= 10;
+			decimalPlaces--;
+		}
 
 		// Build the format string.
 		// It will be of the form: 0.00, which ensures a leading 0 if the final

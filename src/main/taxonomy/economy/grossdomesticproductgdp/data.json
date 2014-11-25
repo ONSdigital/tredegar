@@ -1,31 +1,31 @@
 {
   "headline": {
-    "name": "Gross Domestic Product (CVM)",
+    "name": "Gross Domestic Product (GDP)  - CVM",
     "uri": "/economy/grossdomesticproductgdp/timeseries/abmi"
   },
   "items": [
     {
-      "name": "Gross Domestic Product (CVM)",
+      "name": "Gross Domestic Product (GDP)  - CVM",
       "uri": "/economy/grossdomesticproductgdp/timeseries/abmi"
     },
     {
-      "name": "GDP Quarter on Quarter growth (CVM)",
+      "name": "GDP Quarter on Quarter growth - CVM",
       "uri": "/economy/grossdomesticproductgdp/timeseries/ihyq"
     },
     {
-      "name": "GDP Change on same Quarter a year ago (CVM)",
+      "name": "GDP Change on same Quarter a year ago - CVM",
       "uri": "/economy/grossdomesticproductgdp/timeseries/ihyr"
     },
     {
-      "name": "Gross Domestic Product (CP)",
+      "name": "Gross Domestic Product (GDP)- CP",
       "uri": "/economy/grossdomesticproductgdp/timeseries/ybha"
     },
     {
-      "name": "GDP Quarter on Quarter growth (CP)",
+      "name": "GDP Quarter on Quarter growth - CP",
       "uri": "/economy/grossdomesticproductgdp/timeseries/ihyn"
     },
     {
-      "name": "GDP Change on same Quarter a year ago (CP)",
+      "name": "GDP Change on same Quarter a year ago - CP",
       "uri": "/economy/grossdomesticproductgdp/timeseries/ihyo"
     },
     {
@@ -99,7 +99,12 @@
       "uri": "/economy/grossdomesticproductgdp/bulletins/grossdomesticproductpreliminaryestimate"
     }
   ],
-  "datasets": [],
+  "datasets": [
+    {
+      "name": "Gross Domestic Product data collection",
+      "uri": "/economy/grossdomesticproductgdp/datasets/grossdomesticproductdatacollection"
+    }
+  ],
   "level": "t3",
   "index": 1,
   "lede": "Gross domestic product (GDP) is a measure of economic activity which captures the value of goods and services that a country produces during a given period.",
