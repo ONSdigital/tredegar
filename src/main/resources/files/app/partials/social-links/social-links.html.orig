@@ -1,15 +1,29 @@
 <div class="page-header__icons">
-    <a href="https://twitter.com/share"
-    onclick="return !window.open(this.href, 'Google', 'width=500,height=350')"
-    target="_blank"><span class="icon icon-twitter icon--grey"><span class="visuallyhidden">Share on Twitter</span></span></a><!--squuezed up to fix underline issue!-->
-    
+<<<<<<< HEAD
+    <a href="https://twitter.com/ONS" class="link-complex">
+        <span class="icon icon-twitter icon--grey">
+            <span class="visuallyhidden">Share on Twitter</span>
+        </span>
+    </a>
 <!--     <a href="#" class="link-complex">
         <span class="icon icon-linkedin icon--grey">
             <span class="visuallyhidden">Share on Linkedin</span>
         </span>
     </a> -->
+    <a href="https://www.facebook.com/ONS" class="link-complex">
+=======
+    <a href="https://twitter.com/share"
+    onclick="return !window.open(this.href, 'Google', 'width=500,height=350')"
+    target="_blank"><span class="icon icon-twitter icon--grey"><span class="visuallyhidden">Share on Twitter</span></span></a><!--squuezed up to fix underline issue!-->
+    
+    <a href="#" class="link-complex">
+        <span class="icon icon-linkedin icon--grey">
+            <span class="visuallyhidden">Share on Linkedin</span>
+        </span>
+    </a>
     
     <a href="http://www.facebook.com/sharer/sharer.php?u=#{{getAbsoluteUrl()}}" onclick="return !window.open(this.href, 'Google', 'width=500,height=350')" target="_blank">
+>>>>>>> 2fdbcd76c7032305e88b5b948763799c0b3f4543
         <span class="icon icon-facebook icon--grey">
             <span class="visuallyhidden">Share on Facebook</span>
         </span>

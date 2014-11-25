@@ -502,9 +502,8 @@ img {
 .icon-down-open-big:before { content: '\e888'; } /* '' */
 .icon-menu:before { content: '\e810'; } /* '' */
 .icon-cancel:before { content: '\e813'; } /* '' */
-.icon-comment:before { content: '\e82e'; } /* ''
- */.icon-help:before { content: '\e817'; } /* '' */
-.icon-help-circled:before { content: '\e81a'; } /* '' */
+.icon-comment:before { content: '\e82e'; } /* '' */
+.icon-help:before { content: '\e817'; } /* '' */
 .icon-right-open:before { content: '\e866'; } /* '' */
 /*Original code from CX*/
 
@@ -706,10 +705,6 @@ img {
 
 .flush--bottom {
   margin-bottom: 0 !important; }
-
-.flush--vertical {
-  margin-bottom: 0 !important;
-  margin-top: 0 !important; }
 
 .flush--half {
   margin: .33em !important; }
@@ -1028,16 +1023,16 @@ textarea {
 
 @font-face {
   font-family: 'open-sans-n3';
-  src: url("/ui/fonts/OpenSans-Light.eot");
   src: url("../fonts/OpenSans-Light.ttf") format("truetype");
+  src: url("/ui/fonts/OpenSans-Light.eot");
 
   /*src: url("/ui/fonts/OpenSans-Light.eot?#iefix") format("embedded-opentype"), url("/ui/fonts/OpenSans-Light.woff2") format("woff2"), url("/ui/fonts/OpenSans-Light.woff") format("woff"), url("/ui/fonts/OpenSans-Light.ttf") format("truetype"), url("/ui/fonts/OpenSans-Light.svg#open_sanslight") format("svg");*/
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'open-sans-n4';
-  src: url("/ui/fonts/OpenSans-Regular.eot");
   src: url("../fonts/OpenSans-Regular.ttf") format("truetype");
+  src: url("/ui/fonts/OpenSans-Regular.eot");
 
   /*src: url("/ui/fonts/OpenSans-Regular.eot#iefix") format("embedded-opentype"), url("/ui/fonts/OpenSans-Regular.woff") format("woff"), url("/ui/fonts/OpenSans-Regular.ttf") format("truetype"), url("/ui/fonts/OpenSans-Regular.svg#OpenSans-Regular") format("svg");*/
   font-weight: normal;
@@ -1050,8 +1045,8 @@ textarea {
     /*src: url("/ui/fonts/OpenSans-Regular.svg#OpenSans-Regular") format("svg"); } */}
 @font-face {
   font-family: 'open-sans-n7';
-  src: url("/ui/fonts/OpenSans-Bold.eot");
   src: url("../fonts/OpenSans-Bold.ttf") format("truetype");
+  src: url("/ui/fonts/OpenSans-Bold.eot");
 
   /*src: url("/ui/fonts/OpenSans-Bold.eot#iefix") format("embedded-opentype"), url("/ui/fonts/OpenSans-Bold.woff") format("woff"), url("/ui/fonts/OpenSans-Bold.ttf") format("truetype"), url("/ui/fonts/OpenSans-Bold.svg#OpenSans-Bold") format("svg");*/
   font-weight: normal;
@@ -1064,8 +1059,8 @@ textarea {
     /*src: url("/ui/fonts/OpenSans-Bold.svg#OpenSans-Bold") format("svg"); } */}
 @font-face {
   font-family: 'DaxlinePro';
-  src: url("/ui/fonts/DaxlinePro-Bold.eot");
-  src: url("../fonts/DaxlinePro-Bold.ttf") format("truetype");
+  src: url('../fonts/DaxlinePro-Bold.ttf') format('truetype');
+  src: url('/ui/fonts/DaxlinePro-Bold.eot');
   font-weight: normal;
   font-style: normal;
 
@@ -2028,11 +2023,6 @@ a:visited {
       margin-bottom: 35px;
       margin-bottom: 3.5rem; } }
 
-
-.page-header.flush--half--bottom{
-  padding-bottom: 0.5em;
-}
-
 .actionable-header__title {
   margin-bottom: 0; }
 
@@ -2620,9 +2610,7 @@ lesser , applied styles
     width: 45%; }
 
   .list--table__item__body--stat {
-    width: 55%; 
-    margin: 0 auto;
-    text-align: center;} }
+    width: 55%; } }
 @media screen and (min-width: 36em) {
   .list--table-header {
     max-width: 72.5%;
@@ -2690,9 +2678,9 @@ lesser , applied styles
       clear: none; }
 
   .list--table__item__body--stat {
-    margin: 0 auto;
-    text-align: center;
-    width: 30%; }
+    float: left;
+    width: 30%;
+    margin-bottom: -1em; }
 
   .list--table__item__body--caption {
     float: left;
@@ -2946,7 +2934,7 @@ lesser , applied styles
     /*@media screen and (max-width: 770px) {
       .nav-panel__action:after {
         top: 50% !important;
-         } }*/     
+         } }*/
   .nav-panel__action > a {
     position: relative;
     z-index: 10;
@@ -2983,7 +2971,7 @@ lesser , applied styles
   padding-top: 30px;
   padding-top: 3rem;
   padding-bottom: 10px;
-  padding-bottom: 1rem; 
+  padding-bottom: 1rem;
   font-size: 70%;
   height: 9.5rem }
 
@@ -3000,7 +2988,7 @@ lesser , applied styles
 
 
 
-}  
+}
 
 .nav-panel__title,
 .nav-panel__value {
@@ -3422,18 +3410,18 @@ lesser , applied styles
 
 .slate--hero-banner {
   background-color: #e4e5e3;
- 
+
   opacity: 15;
   /*background-image: url("/ui/img/hero-banner.jpg");*/
   background-position: 50% 50%;
   background-size: cover; }
 
 .slate--home--hero-banner {
-  /*background-color: #f4f5dd;
- 
-  opacity: 15;*/
-  background-image: url("/ui/img/whitebackgroundhero.png");
-  /*background-position: 50% 50%;*/
+  background-color: #f4f5dd;
+
+  opacity: 15;
+  /*background-image: url("/ui/img/hero-banner.jpg");*/
+  background-position: 50% 50%;
   background-size: cover; }
 
 /*------------------------------------*\
@@ -3578,7 +3566,7 @@ $SPLIT
   font-size: 1.2rem; }
 
 .stat__description-large {
-  
+
   display: block;
   font-weight: normal;
   font-size: 13.5px;
@@ -4145,7 +4133,9 @@ table actions
 
   a,
   a:visited {
-    text-decoration: underline; }
+    text-decoration: underline;
+    
+      }
 
   a[href]:after {
     content: " (" attr(href) ")"; }
@@ -4207,7 +4197,8 @@ table actions
 }
 
 .aside-logo{
-  height: 6em;
+  height: 5em;
+  width: 9em;
   margin-right: 10em;
   float: left;
   margin-bottom: 0.7em;
@@ -4569,19 +4560,6 @@ ul.simple-pagination {
   color: #016db9 !important;
   text-decoration: none !important;
 }
-
-.list--table--stat_description {
-  display: block;
-  font-weight: normal;
-  font-size: 13.5px;
-  font-size: 1.35rem; }}
-@media screen and (min-width: 42em) {
-  .list--table--stat_description {
-    text-align: center
-  }
-}
-
-
 
 /*.no_underline{
   text-decoration: none !important;
@@ -5440,21 +5418,21 @@ td.datatable-downloads{
   background-position: 35% -70%;
   background-repeat: no-repeat;
   height: 5.5em;
-} 
+}
 
 .homeicon_employmentandlabourmarket{
   background-image: url("/ui/img/Employment.png");
   background-position: 35% -70%;
   background-repeat: no-repeat;
   height: 5.5em;
-  } 
+  }
 
 .homeicon_businessindustryandtrade{
   background-image: url("/ui/img/Trade.png");
   background-position: 35% -70%;
   background-repeat: no-repeat;
   height: 5.5em;
-} 
+}
 
 .homeicon_peoplepopulationandcommunity{
   background-image: url("/ui/img/Population.png");
@@ -8039,12 +8017,3 @@ textarea {
 .calendar .tab-pane__panel {
   margin-top: 0;
   border-bottom: 0; }
-.calendar .list--table--releases .list--table__item__body{
-    padding: 5px;
-}
-.calendar .list--table--releases .list--table__item__body--release-caption {
-    padding: 0;
-}
-.calendar .div-int {
-    padding: 10px 0 0 0;
-}
