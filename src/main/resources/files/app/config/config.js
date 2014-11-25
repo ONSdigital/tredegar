@@ -1,89 +1,104 @@
 (function() {
 
-	angular.module('onsApp')
-		.config(['$locationProvider', '$httpProvider', '$logProvider', GeneralConfiguration])
-		.run(['$http', 'DSCacheFactory', '$cacheFactory', '$log', RunConfiguration])
+	//Ons alpha global configuration, available throught $rootScope, use $rootScope.onsAlphaConfiguration to read
+	var onsAlphaConfiguration = {
+		//Disable cache on localhost or not
+		disableCacheOnLocal: true,
 
-	function GeneralConfiguration($locationProvider, $httpProvider,$logProvider) {
-		//Enable hashbang
-		$locationProvider.html5Mode(false).hashPrefix('!')
+		//Number of timeseries counts to be loaded by default on t3
+		defaultTimeseriesCountOnT3: 5,
 
-		// Angular http cache is false by default. Configuration made explicit. 
-		//If enabled angular will cache all http get calls. 
-		//Which is not necessary since DataLoader service caches data explicitly
-		$httpProvider.defaults.cache = false
-
-		$logProvider.debugEnabled(false)
+		//Debug logs
+		debugEnabled: false
 	}
 
+	angular.module('onsApp')
+		.config(['$locationProvider', '$httpProvider', '$logProvider', GeneralConfiguration])
+		.run(['$location', '$rootScope', 'DSCacheFactory', '$cacheFactory', '$log', RunConfiguration])
 
-	function RunConfiguration($http, DSCacheFactory, $cacheFactory, $log) {
-		configureCache()
 
-		function configureCache() {
-			$log.info('Configuring data cache')
+	function GeneralConfiguration($locationProvider, $httpProvider, $logProvider) {
+			//Enable hashbang
+		$locationProvider.html5Mode(false).hashPrefix('!')
 
-			var CACHE_NAME = 'dataCache'
-				//Refer to: http://angular-data.pseudobry.com/documentation/guide/angular-cache/storage
+		$logProvider.debugEnabled(onsAlphaConfiguration.debugEnabled)
+	}
 
-			// Conditionally use Angular cache if local storage not supported
-			//TODO: Create a caching design appropriate to 9.30 caching (e.g No caching between 9.30 - 9.31, expire all cache at 9.30) 
-			var options = {
-				maxAge: 1800000, // Items added to this cache expire after 30 minutes.
-				cacheFlushInterval: 10800000, // This cache will clear itself every three hours.
-				deleteOnExpire: 'aggressive', // Items will be deleted from this cache right when they expire.
-				storageMode: 'localStorage' // This cache will sync itself with `localStorage`.
-			};
+	function RunConfiguration($location, $rootScope, DSCacheFactory, $cacheFactory, $log) {
+		$rootScope.onsAlphaConfiguration = onsAlphaConfiguration
 
-			if (!hasLocalStorage()) {
-				$log.warn('Local storage not supported, using angular cache')
-				options.storageImpl = getAngularCache()
+		configureCache(DSCacheFactory, $cacheFactory, $log)
+		configureGoogleAnalytics($rootScope, $location, $log)
+	}
+
+	function configureGoogleAnalytics($rootScope, $location, $log) {
+		$rootScope.$on('$routeChangeSuccess', function() {
+			var path = $location.path()
+			ga('send', 'pageview', path);
+			$log.debug('Google Analytics pageview sent :', path)
+		})
+	}
+
+	function configureCache(DSCacheFactory, $cacheFactory, $log) {
+		$log.info('Configuring data cache')
+
+		var CACHE_NAME = 'dataCache'
+			//Refer to: http://angular-data.pseudobry.com/documentation/guide/angular-cache/storage
+
+		// Conditionally use Angular cache if local storage not supported
+		//TODO: Create a caching design appropriate to 9.30 caching (e.g No caching between 9.30 - 9.31, expire all cache at 9.30) 
+		var options = {
+			maxAge: 1800000, // Items added to this cache expire after 30 minutes.
+			cacheFlushInterval: 10800000, // This cache will clear itself every three hours.
+			deleteOnExpire: 'aggressive', // Items will be deleted from this cache right when they expire.
+			storageMode: 'localStorage' // This cache will sync itself with `localStorage`.
+		};
+
+		if (!hasLocalStorage()) {
+			$log.warn('Local storage not supported, using angular cache')
+			options.storageImpl = getAngularCache()
+		}
+		var dataCache = DSCacheFactory('dataCache', options);
+
+		//Angular cache only uses session storage which is cleared itself when page is refreshed or browser closed
+		function getAngularCache() {
+			var cache = $cacheFactory('dataCache');
+
+			function getItem(key) {
+				// $log.debug('Angular cache getItem(): ', key)
+				return cache.get(key)
 			}
-			var dataCache = DSCacheFactory('dataCache', options);
 
-			//Angular cache only uses session storage which is cleared itself when page is refreshed or browser closed
-			function getAngularCache() {
-				var cache = $cacheFactory('dataCache');
-
-				function getItem(key) {
-					// $log.debug('Angular cache getItem(): ', key)
-					return cache.get(key)
-				}
-
-				function setItem(key, value) {
-					// $log.debug('Angular cache setItem(): ', key, ',', value)
-					return cache.put(key, value)
-				}
-
-				function removeItem(key) {
-					// $log.debug('Angular cache removeItem(): ', key)
-					cache.remove(key)
-				}
-
-				return localStoragePolyfill = {
-					getItem: getItem,
-					setItem: setItem,
-					removeItem: removeItem
-				}
-
+			function setItem(key, value) {
+				// $log.debug('Angular cache setItem(): ', key, ',', value)
+				return cache.put(key, value)
 			}
 
-			function hasLocalStorage() {
-				try { //Checking local storage fails if exlplicitly disable in some browsers (e.g. chrome),
-					if (window.localStorage) {
-						return true
-					}
-				} catch (err) {
-					$log.warn('Failed detecting local storage, disabling local storage cache')
-				}
+			function removeItem(key) {
+				// $log.debug('Angular cache removeItem(): ', key)
+				cache.remove(key)
+			}
 
-				return false
-
+			return localStoragePolyfill = {
+				getItem: getItem,
+				setItem: setItem,
+				removeItem: removeItem
 			}
 
 		}
 
+		function hasLocalStorage() {
+			try { //Checking local storage fails if exlplicitly disable in some browsers (e.g. chrome),
+				if (window.localStorage) {
+					return true
+				}
+			} catch (err) {
+				$log.warn('Failed detecting local storage, disabling local storage cache')
+			}
 
+			return false
+
+		}
 
 	}
 

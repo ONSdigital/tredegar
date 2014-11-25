@@ -28,6 +28,7 @@ public class Timeseries extends DataItem implements Comparable<Timeseries> {
 	public static Pattern quarter = Pattern.compile("\\d{4} \\w[1-4]");
 
 	// Spreadsheet headings
+
 	private String cdid;
 	public String seasonalAdjustment;
 	public String mainMeasure;
@@ -36,57 +37,65 @@ public class Timeseries extends DataItem implements Comparable<Timeseries> {
 	public String note2 = "Fusce pharetra, libero in imperdiet ultricies, ex erat tempor dolor, vitae aliquet magna velit in urna. Duis finibus augue velit, ut consectetur risus imperdiet in. Sed tempus congue ante, ac cursus diam porttitor vitae. Vivamus arcu leo, volutpat in mauris ac, lacinia fermentum velit. Sed dictum tortor justo, aliquet facilisis lorem dictum a.";
 
 	// Additional information
+
 	public String number;
 	public String unit;
-	// A unit that needs to go before the number, e.g. £
+	/** A unit that needs to go before the number, e.g. £. */
 	public String preUnit;
 	public String date;
 	public String lastUpated;
 	public String nextUpdate;
 
-	// e.g. "Not a national statistic" or "2005 = 100. Not seasonally adjusted"
+	/** e.g. "Not a national statistic" or "2005 = 100. Not seasonally adjusted" */
 	public String note;
 
-	// Where a statistic comes from.
-	// Typically "Office for National Statistics"
+	/**
+	 * Where a statistic comes from. Typically "Office for National Statistics"
+	 */
 	public String source = "Office for National Statistics";
 
-	// This value is displayed in the "(i)" tooltips next to timeseries name:
+	/** This value is displayed in the "(i)" tooltips next to timeseries name. */
 	public String keyNote;
 
-	// This value is displayed beneath the timeseries name:
+	/** This value is displayed beneath the timeseries name: */
 	public String additionalText;
 
-	// The nectar, the goodness, the very juice of the fireflower: data.
+	/** Whether this is a National Statistic: */
+	public boolean nationalStatistic;
+
+	/**
+	 * The nectar, the goodness, the very juice of the fireflower: data.
+	 */
 	public Set<TimeseriesValue> years = new TreeSet<>();
 	public Set<TimeseriesValue> quarters = new TreeSet<>();
 	public Set<TimeseriesValue> months = new TreeSet<>();
 
-	// The URI of this timeseries.
-	// This is useful when it is referenced from more than one place in the
-	// taxonomy. It helps the generator to ensure it only gets created in one
-	// place.
+	/**
+	 * The URI of this timeseries. This is useful when it is referenced from
+	 * more than one place in the taxonomy. It helps the generator to ensure it
+	 * only gets created in one place.
+	 */
 	public URI uri;
 
 	public List<URI> relatedBulletins = new ArrayList<>();
 	public List<URI> relatedTimeseries = new ArrayList<>();
 
-	// Enables the raw CSV values to be scaled to match the units defined here.
-	// E.g. this might be 1000 to convert million-scale in the CSV to
-	// billion-scale to match the scale of the headline figure and unit.
-	// It's only needed during parsing, so we don't want it serialised to json:
-	private transient Integer csvValueScaleFactor;
+	/**
+	 * Enables the raw CSV values to be scaled to match the units defined here.
+	 * <p>
+	 * E.g. this might be 1000 to convert million-scale in the CSV to
+	 * billion-scale to match the scale of the headline figure and unit.
+	 * <p>
+	 * It's only needed during parsing, so we don't want it serialised to json:
+	 */
+	private transient Double csvValueScaleFactor;
 
-	public void setScaleFactor(int multiply) {
-		this.csvValueScaleFactor = multiply;
-	}
-
-	public int getScaleFactor() {
-		if (this.csvValueScaleFactor == null) {
-			return 1;
-		}
-		return this.csvValueScaleFactor.intValue();
-	}
+	/**
+	 * This field is here so that Rob can see which datasets have contributed
+	 * values. Please don't rely on it unless and until it has been designed
+	 * into the app with a genuine purpose.
+	 */
+	public List<String> sourceDatasets = new ArrayList<String>();
 
 	public Timeseries() {
 		type = ContentType.timeseries;
@@ -151,6 +160,17 @@ public class Timeseries extends DataItem implements Comparable<Timeseries> {
 		if (StringUtils.isBlank(name)) {
 			name = cdid;
 		}
+	}
+
+	public void setScaleFactor(double multiply) {
+		this.csvValueScaleFactor = multiply;
+	}
+
+	public double getScaleFactor() {
+		if (this.csvValueScaleFactor == null) {
+			return 1;
+		}
+		return this.csvValueScaleFactor.doubleValue();
 	}
 
 	@Override

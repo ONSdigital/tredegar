@@ -102,6 +102,7 @@ class NonCdidCSV {
 							timeseriesValue.date = date;
 							timeseriesValue.value = figure;
 							timeseries.add(timeseriesValue);
+							DataCSV.scale(timeseriesValue, timeseries);
 						}
 					}
 				}

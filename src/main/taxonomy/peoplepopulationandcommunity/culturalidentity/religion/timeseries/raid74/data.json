@@ -2,16 +2,17 @@
   "cdid": "RAID74",
   "note1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quam leo, blandit a turpis non, varius feugiat mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In posuere lectus eu laoreet ultrices. Donec ac sodales libero, eget fermentum arcu.",
   "note2": "Fusce pharetra, libero in imperdiet ultricies, ex erat tempor dolor, vitae aliquet magna velit in urna. Duis finibus augue velit, ut consectetur risus imperdiet in. Sed tempus congue ante, ac cursus diam porttitor vitae. Vivamus arcu leo, volutpat in mauris ac, lacinia fermentum velit. Sed dictum tortor justo, aliquet facilisis lorem dictum a.",
-  "number": "33243175",
-  "unit": "",
+  "number": "33.2",
+  "unit": "m",
   "preUnit": "",
   "date": "2011",
   "source": "Office for National Statistics",
   "keyNote": "England and Wales",
+  "nationalStatistic": true,
   "years": [
     {
       "date": "2011",
-      "value": "33243175",
+      "value": "33.243175",
       "year": "2011"
     }
   ],
@@ -22,6 +23,7 @@
     "/peoplepopulationandcommunity/culturalidentity/religion/bulletins/2011censuskeystatisticsforenglandandwalesmarch2011"
   ],
   "relatedTimeseries": [],
+  "sourceDatasets": [],
   "type": "timeseries",
   "name": "Christian",
   "fileName": "raid74",

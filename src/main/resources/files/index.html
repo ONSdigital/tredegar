@@ -31,6 +31,9 @@
     <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/css/jquery-ui.min.css"> -->
     <link href="/ui/css/lib/loading-bar.css" rel="stylesheet" type="text/css">
 
+    <script type="text/javascript" src="/ui/js/lib/jquery.min.js" defer></script>
+
+
     <!--<![endif]-->
     <!-- endbuild -->
     <!--[if (!IE)|(gt IE 8)]>><!-->
@@ -49,8 +52,37 @@
         document.createElement('ng:view');
       </script>
     <![endif]-->
+    
+    <!-- Google Analytics -->
+    <!-- Angular application(single page) requires page changes sent using javascript. 
+    Configured in config.js, sendpage commented out to prevent pageview duplicate on load -->
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-56892037-2', 'auto');
+    // ga('send', 'pageview');
+    </script>
 
-    <script type="text/javascript" src="/ui/js/lib/jquery.min.js" defer></script>
+    <!-- Bugherd integration script: http://bugherd.com/documentation/installing-the-sidebar/ -->
+    <script type='text/javascript'>
+    (function(d, t) {
+        var bh = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        bh.type = 'text/javascript';
+        bh.src = '//www.bugherd.com/sidebarv2.js?apikey=cwz4globzxvnj84jsovora';
+        s.parentNode.insertBefore(bh, s);
+    })(document, 'script');
+    </script>
+
     <script type="text/javascript" src="/ui/js/lib/angular.js" defer></script>
     <!-- <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js" defer></script> -->
     <script type="text/javascript" src="/ui/js/lib/angular-cache.min.js" defer></script>
@@ -65,24 +97,20 @@
     <script type="text/javascript" src="app/app.js" defer></script>
     <script type="text/javascript" src="app/config/config.js" defer></script>
     <script type="text/javascript" src="app/services/data/dataloader.js" defer></script>
-    <script type="text/javascript" src="app/services/download/downloader.js" defer></script>
-    <script type="text/javascript" src="app/services/taxonomy/taxonomy.js" defer></script>
-    <script type="text/javascript" src="app/templates/article/article.controller.js" defer></script>
-    <script type="text/javascript" src="app/templates/bulletin/bulletin.controller.js" defer></script>
-    <script type="text/javascript" src="app/templates/collection/collection.controller.js" defer></script>
-    <script type="text/javascript" src="app/templates/contact/contact.controller.js" defer></script>
-    <script type="text/javascript" src="app/templates/content/content.controller.js" defer></script>
-    <script type="text/javascript" src="app/templates/dataset/dataset.controller.js" defer></script>
-    <script type="text/javascript" src="app/templates/methodology/methodology.controller.js" defer></script>
-    <script type="text/javascript" src="app/templates/multiseries/multiseries.controller.js" defer></script>
-    <script type="text/javascript" src="app/templates/release/release.controller.js" defer></script>
-    <script type="text/javascript" src="app/templates/search-results/search-results.controller.js" defer></script>
+    <script type="text/javascript" src="app/templates/taxonomy/taxonomy.controller.js" defer></script>
+    <script type="text/javascript" src="app/templates/t1/t1.controller.js" defer></script>
     <script type="text/javascript" src="app/templates/t2/t2.controller.js" defer></script>
     <script type="text/javascript" src="app/templates/t3/t3.controller.js" defer></script>
     <script type="text/javascript" src="app/templates/t5/t5.controller.js" defer></script>
     <script type="text/javascript" src="app/templates/t6/t6.controller.js" defer></script>
-    <script type="text/javascript" src="app/templates/taxonomy/taxonomy.controller.js" defer></script>
-    <script type="text/javascript" src="app/partials/contact-details/contact-details.directive.js" defer></script>
+    <script type="text/javascript" src="app/templates/search-results/search-results.controller.js" defer></script>
+    <script type="text/javascript" src="app/templates/content/content.controller.js" defer></script>
+    <script type="text/javascript" src="app/templates/article/article.controller.js" defer></script>
+    <script type="text/javascript" src="app/templates/bulletin/bulletin.controller.js" defer></script>
+    <script type="text/javascript" src="app/templates/collection/collection.controller.js" defer></script>
+    <script type="text/javascript" src="app/templates/contact/contact.controller.js" defer></script>
+    <script type="text/javascript" src="app/templates/localstats/localstats.controller.js" defer></script>
+    <script type="text/javascript" src="app/partials/header/header.js" defer></script>
     <script type="text/javascript" src="app/partials/footer/footer.js" defer></script>
     <script type="text/javascript" src="app/partials/header/header.js" defer></script>
     <script type="text/javascript" src="app/partials/navigation/navigation.controller.js" defer></script>
@@ -100,14 +128,24 @@
     <script type="text/javascript" src="app/components/navigation/navigation.js" defer></script>
     <script type="text/javascript" src="app/components/paginator/paginator.js" defer></script>
     <script type="text/javascript" src="app/components/tabs/tabs.js" defer></script>
+<<<<<<< HEAD
     <script type="text/javascript" src="app/components/toggler/toggler.js" defer></script>
     <script type="text/javascript" src="app/components/tooltip/tooltip.directive.js" defer></script>
+=======
+    <script type="text/javascript" src="app/components/loading/loading.js" defer></script>
+    <script type="text/javascript" src="app/components/tooltip/tooltip.js" defer></script>
+    <script type="text/javascript" src="app/components/sparkline/sparkline.js" defer></script>
+    <script type="text/javascript" src="app/components/markdown/markdown.directive.js" defer></script>
+    <!-- <script type="text/javascript" src="app/components/charts/charts.js" defer></script> -->
+    <script type="text/javascript" src="app/components/charts/highcharts-ng.js" defer></script>
+>>>>>>> master
     <script type="text/javascript" src="app/helpers/filters.js" defer></script>
     <script type="text/javascript" src="app/helpers/util.js" defer></script>
     <script type="text/javascript" src="/ui/js/lib/highcharts.js" defer></script>
     <script type="text/javascript" src="/ui/js/lib/exporting.js" defer></script>
     <script type="text/javascript" src="/ui/js/lib/loading-bar.js" defer></script>
     <script type="text/javascript" src="/ui/js/lib/smart-table.min.js" defer></script>
+
 
 
     <!-- <script type="text/javascript" src="ui/js/app/nav.js" defer></script>
@@ -128,7 +166,7 @@ markup: false
 <!-- id set to ng-app to make older IE happy with Angular ngInclude directive -->
 <!-- Autoscroll solves the issue mentioned on https://stackoverflow.com/questions/21055952/changing-route-doesnt-scroll-to-top-in-the-new-page -->
 
-<body id="ng-app" ng-controller="MainCtrl" ng-view autoscroll="true"  class="js" >
+<body id="ng-app" ng-controller="MainCtrl" ng-view autoscroll="true" class="js">
 
     <noscript>
         <main id="main" role="main" class="ONS_border">

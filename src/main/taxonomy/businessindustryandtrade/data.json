@@ -1,36 +1,9 @@
 {
   "sections": [
     {
-      "name": "Business Activity, Size and Location",
-      "link": "businessactivitysizeandlocation",
-      "index": 0,
-      "items": [
-        {
-          "name": "UK businesses",
-          "uri": "/businessindustryandtrade/businessactivitysizeandlocation/timeseries/raid1"
-        },
-        {
-          "name": "GB businesses",
-          "uri": "/businessindustryandtrade/businessactivitysizeandlocation/timeseries/raid2"
-        },
-        {
-          "name": "England and Wales businesses",
-          "uri": "/businessindustryandtrade/businessactivitysizeandlocation/timeseries/raid3"
-        },
-        {
-          "name": "England businesses",
-          "uri": "/businessindustryandtrade/businessactivitysizeandlocation/timeseries/raid4"
-        },
-        {
-          "name": "Wales businesses",
-          "uri": "/businessindustryandtrade/businessactivitysizeandlocation/timeseries/raid5"
-        }
-      ]
-    },
-    {
       "name": "Retail Industry",
       "link": "retailindustry",
-      "index": 1,
+      "index": 0,
       "items": [
         {
           "name": "Retail Sales Value including automotive fuel ",
@@ -49,11 +22,11 @@
           "uri": "/businessindustryandtrade/retailindustry/timeseries/j467"
         },
         {
-          "name": "Retail Sales Value including automotive fuel percentage change on same month a year earlier ",
+          "name": "Retail Sales Value including automotive fuel (% change)",
           "uri": "/businessindustryandtrade/retailindustry/timeseries/j5bs"
         },
         {
-          "name": "Retail Sales Volume including automotive fuel percentage change on same month a year earlier ",
+          "name": "Retail Sales Volume including automotive fuel (% change)",
           "uri": "/businessindustryandtrade/retailindustry/timeseries/j5eb"
         }
       ]
@@ -61,7 +34,7 @@
     {
       "name": "International Trade",
       "link": "internationaltrade",
-      "index": 2,
+      "index": 1,
       "items": [
         {
           "name": "Trade in goods and services deficit (or surplus)",
@@ -86,6 +59,29 @@
         {
           "name": "Balance of trade in goods from all Non-EU",
           "uri": "/businessindustryandtrade/internationaltrade/timeseries/l87k"
+        }
+      ]
+    },
+    {
+      "name": "Manufacturing and Production Industry",
+      "link": "manufacturingandproductionindustry",
+      "index": 2,
+      "items": [
+        {
+          "name": "Index of Production",
+          "uri": "/businessindustryandtrade/manufacturingandproductionindustry/timeseries/k27q"
+        },
+        {
+          "name": "Index of Production",
+          "uri": "/businessindustryandtrade/manufacturingandproductionindustry/timeseries/k222"
+        },
+        {
+          "name": "Manufacturing",
+          "uri": "/businessindustryandtrade/manufacturingandproductionindustry/timeseries/k27y"
+        },
+        {
+          "name": "Manufacturing",
+          "uri": "/businessindustryandtrade/manufacturingandproductionindustry/timeseries/k22a"
         }
       ]
     },
@@ -121,9 +117,36 @@
       ]
     },
     {
+      "name": "Business Activity, Size and Location",
+      "link": "businessactivitysizeandlocation",
+      "index": 4,
+      "items": [
+        {
+          "name": "UK businesses",
+          "uri": "/businessindustryandtrade/businessactivitysizeandlocation/timeseries/raid1"
+        },
+        {
+          "name": "GB businesses",
+          "uri": "/businessindustryandtrade/businessactivitysizeandlocation/timeseries/raid2"
+        },
+        {
+          "name": "England and Wales businesses",
+          "uri": "/businessindustryandtrade/businessactivitysizeandlocation/timeseries/raid3"
+        },
+        {
+          "name": "England businesses",
+          "uri": "/businessindustryandtrade/businessactivitysizeandlocation/timeseries/raid4"
+        },
+        {
+          "name": "Wales businesses",
+          "uri": "/businessindustryandtrade/businessactivitysizeandlocation/timeseries/raid5"
+        }
+      ]
+    },
+    {
       "name": "Changes to Business",
       "link": "changestobusiness",
-      "index": 4,
+      "index": 5,
       "items": [
         {
           "name": "Mergers and Acquisitions",
@@ -138,7 +161,7 @@
     {
       "name": "IT and Internet Industry",
       "link": "itandinternetindustry",
-      "index": 5,
+      "index": 6,
       "items": [
         {
           "name": "Total e-commerce sales",
@@ -155,29 +178,6 @@
         {
           "name": "Business with a broadband",
           "uri": "/businessindustryandtrade/itandinternetindustry/timeseries/raid18"
-        }
-      ]
-    },
-    {
-      "name": "Manufacturing and Production Industry",
-      "link": "manufacturingandproductionindustry",
-      "index": 6,
-      "items": [
-        {
-          "name": "Index of Production",
-          "uri": "/businessindustryandtrade/manufacturingandproductionindustry/timeseries/k27q"
-        },
-        {
-          "name": "Index of Production",
-          "uri": "/businessindustryandtrade/manufacturingandproductionindustry/timeseries/k222"
-        },
-        {
-          "name": "Manufacturing",
-          "uri": "/businessindustryandtrade/manufacturingandproductionindustry/timeseries/k27y"
-        },
-        {
-          "name": "Manufacturing",
-          "uri": "/businessindustryandtrade/manufacturingandproductionindustry/timeseries/k22a"
         }
       ]
     },

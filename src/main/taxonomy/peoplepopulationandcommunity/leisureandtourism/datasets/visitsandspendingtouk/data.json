@@ -9,7 +9,16 @@
   "download": [
     {
       "title": "Visits and spending to UK",
-      "xls": "http://www.ons.gov.uk/ons/datasets-and-tables/data-selector.html?dataset\u003dott"
+      "cdids": [
+        "GMAA",
+        "GMAF",
+        "GMAK",
+        "GMAM",
+        "GMAT",
+        "GMAX",
+        "GMAZ",
+        "GMBB"
+      ]
     }
   ],
   "notes": [
@@ -21,7 +30,7 @@
   "releaseDate": "19 February 2014",
   "type": "dataset",
   "name": "Visits and spending to UK",
-  "fileName": "visits and spending to uk",
+  "fileName": "visitsandspendingtouk",
   "breadcrumb": [
     {
       "index": 0,

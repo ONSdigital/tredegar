@@ -38,12 +38,18 @@
 			return $location.$$path
 		}
 
+		function getAbsoluteUrl() {
+			console.log("absurl:" + $location.absUrl())
+			return $location.absUrl()
+		}
+
 		angular.extend(pageUtil, {
 			title: title,
 			setTitle: setTitle,
 			getUrlParam:getUrlParam,
 			getPage:getPage,
-			getPath:getPath
+			getPath:getPath,
+			getAbsoluteUrl:getAbsoluteUrl
 		})
 
 		return pageUtil

@@ -11,7 +11,10 @@
         'onsTabs',
         'highcharts-ng',
         'angularLoadingBar',
-        'onsToggler'
+        'onsToggler',
+        'onsLoading',
+        'onsSparkline',
+	   'onsTooltip'
     ])
 
     //Filters, services and other helpers are to be injected to onsHelpers module
@@ -23,7 +26,6 @@
         'onsDataLoader',
         'angular-data.DSCacheFactory'
     ])
-
     //Template related components are to be registered to onsTemplates module
     var onsTemplates = angular.module('onsTemplates', [])
 
@@ -33,8 +35,7 @@
         'ngSanitize',
         'onsComponents',
         'onsHelpers',
-        'onsTemplates',
-        'smart-table'
+        'onsTemplates'
     ])
 
     onsApp
@@ -43,14 +44,6 @@
 
 
                 $routeProvider.
-                when('/article', {
-                    templateUrl: 'app/templates/article/article.html',
-                    controller: 'ArticleCtrl'
-                }).
-                when('/cdid', {
-                    templateUrl: 'app/templates/multiseries/multiseries.html',
-                    controller: "MultiseriesCtrl"
-                }).
                 when(':collectionPath*\/collection', {
                     templateUrl: 'app/templates/collection/collection.html',
                     controller: "CollectionCtrl",
@@ -65,14 +58,6 @@
                         navigation: ['DataLoader', getNavigatinLinks]
                     }
                 }).
-                when('/dataset', {
-                    templateUrl: 'app/templates/dataset/Dataset_Excelcrosssection.html',
-                    controller: "DatasetCtrl"
-                }).
-                when('/dataset_timeseries', {
-                    templateUrl: 'app/templates/dataset/Dataset_Excel_Time_Series.html',
-                    controller: "DatasetCtrl"
-                }).
                 when('/dataversions', {
                     templateUrl: 'app/templates/dataversions/dataversions.html',
                     controller: "DataversionsCtrl",
@@ -80,9 +65,12 @@
                         navigation: ['DataLoader', getNavigatinLinks]
                     }
                 }).
-                when('/methodology', {
-                    templateUrl: 'app/templates/methodology/methodology.html',
-                    controller: 'MethodologyCtrl'
+                when('/localstats', {
+                    templateUrl: 'app/templates/localstats/localstats.html',
+                    controller: "LocalStatsCtlr",
+                    resolve: {
+                        navigation: ['DataLoader', getNavigatinLinks]
+                    }
                 }).
                 when('/release', {
                     templateUrl: 'app/templates/release/release.html',
