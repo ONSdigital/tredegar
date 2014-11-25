@@ -54,11 +54,24 @@ public class Download {
 
 	private void processRequest(OutputStream output, DownloadRequest downloadRequest) throws IOException {
 
-		// Get the timeseries:
+		// Normally only uriList or cdidList should be present in the request,
+		// but let's be lenient in what we'll accept:
 		List<Timeseries> timeseries = new ArrayList<Timeseries>();
-		for (String uri : downloadRequest.uriList) {
-			try (InputStream input = DataService.getDataStream(uri)) {
-				timeseries.add(Serialiser.deserialise(input, Timeseries.class));
+		
+		// Process URIs
+		if (downloadRequest.uriList != null) {
+			for (String uri : downloadRequest.uriList) {
+				try (InputStream input = DataService.getDataStream(uri)) {
+					timeseries.add(Serialiser.deserialise(input, Timeseries.class));
+				}
+			}
+		}
+
+		// Process CDIDs
+		if (downloadRequest.cdidList != null) {
+			Map<String, Timeseries> timeseriesMap = Cdid.getTimeseries(downloadRequest.cdidList);
+			for (Timeseries timeseries2 : timeseriesMap.values()) {
+				timeseries.add(timeseries2);
 			}
 		}
 
@@ -76,7 +89,7 @@ public class Download {
 		for (Entry<String, TimeseriesValue[]> row : data.entrySet()) {
 			System.out.print(row.getKey());
 			for (TimeseriesValue value : row.getValue()) {
-				System.out.print("\t" + value.value);
+				System.out.print("\t" + (value == null ? "null" : value.value));
 			}
 			System.out.println();
 		}
@@ -181,7 +194,7 @@ public class Download {
 		boolean add = false;
 		for (String key : data.keySet()) {
 			Date date = TimeseriesValue.toDate(key);
-			// Start adding if no from date has been sperified:
+			// Start adding if no from date has been specified:
 			if ((!add && from == null) || date.equals(from)) {
 				System.out.println("Starting range at " + key);
 				add = true;
@@ -244,8 +257,8 @@ public class Download {
 			key: for (TimeseriesValue value : values) {
 				if (value != null) {
 					date = value.date;
+					break key;
 				}
-				break key;
 			}
 
 			// Add this row to the result:

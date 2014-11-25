@@ -1,11 +1,10 @@
 package com.github.onsdigital.generator.data;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -43,22 +42,45 @@ import au.com.bytecode.opencsv.CSVReader;
 public class Csv implements Iterable<Map<String, String>> {
 
 	private Path path;
+	private String encoding = "UTF8";
 	private String[] headings;
 	private List<String[]> rows;
 	private XSSFWorkbook xssfWorkbook;
 	private int sheetIndex;
 	private static Set<String> formatStrings = new TreeSet<>();
 
-	public Csv(Path path) {
+	/**
+	 * 
+	 * @param path
+	 *            The path of the file to be read (.csv or .xlsx)
+	 * @param encoding
+	 *            Optional: for csv, the character encoding to use when reading
+	 *            the file.
+	 */
+	public Csv(Path path, String... encoding) {
 		this.path = path;
+		if (encoding.length > 0) {
+			this.encoding = encoding[0];
+		}
 	}
 
-	public Csv(String resourceName) {
+	/**
+	 * 
+	 * @param path
+	 *            The resource path to the file to be read (.csv or .xlsx)
+	 * @param encoding
+	 *            Optional: for csv, the character encoding to use when reading
+	 *            the file.
+	 */
+	public Csv(String resourceName, String... encoding) {
 		URL resource = Csv.class.getResource(resourceName);
 		try {
 			this.path = Paths.get(resource.toURI());
 		} catch (URISyntaxException e) {
 			throw new IllegalArgumentException(e);
+		}
+		if (encoding.length > 0) {
+			this.encoding = encoding[0];
 		}
 	}
 
@@ -68,7 +90,7 @@ public class Csv implements Iterable<Map<String, String>> {
 
 			String extension = FilenameUtils.getExtension(path.getFileName().toString());
 			if ("csv".equalsIgnoreCase(extension)) {
-				try (CSVReader csvReader = new CSVReader(new BufferedReader(new InputStreamReader(Files.newInputStream(path))))) {
+				try (CSVReader csvReader = new CSVReader(Files.newBufferedReader(path, Charset.forName(encoding)))) {
 					rows = csvReader.readAll();
 				}
 			} else if ("xlsx".equalsIgnoreCase(extension)) {

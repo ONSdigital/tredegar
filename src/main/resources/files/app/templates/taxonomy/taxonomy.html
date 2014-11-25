@@ -34,8 +34,8 @@
     </span>
 
     <!-- Dataset -->
-    <span ng-if="taxonomy.data.type === 'dataset'" ng-controller="DatasetCtrl">
-        <span ng-include="'app/templates/dataset/Dataset_Excelcrosssection.html'"></span>
+    <span ng-if="taxonomy.data.type === 'dataset'" ng-controller="DatasetController as dataset">
+        <span ng-include="'app/templates/dataset/dataset.html'"></span>
     </span>
 </div>
 <ons-footer></ons-footer>

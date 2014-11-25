@@ -36,7 +36,6 @@
         //Listens resize event to switch screen type to mobile or desktop
         function listenResize() {
           angular.element($window).bind('resize', function() {
-          	console.log("Resized:" + $window.innerWidth)
             resolveChartSize()
             $scope.$apply()
           })
