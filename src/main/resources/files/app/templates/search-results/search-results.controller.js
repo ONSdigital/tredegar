@@ -81,6 +81,11 @@
       //Clear page parameter if any
       $location.search('page', null)
       $location.search('type', type)
+      // if the results are generated from an autocorrect suggest then
+      // we need to reset the query parameter to the suggestion
+      if ($scope.searchResponse.suggestionBasedResult) {
+    	  $location.search('q', $scope.searchResponse.suggestion)
+      }
     }
 
     function isActive(type) {

@@ -6,14 +6,6 @@
         <div class="grid-wrap">
 
             <div class="grid-col tablet-wide">
-                <div ng-show="searchResponse.suggestionBasedResult" id="search-results-total" class="search-results-total">
-                    <span class='results-total'>
-                        {{searchResponse.suggestions}}
-                    </span>Sorry, there were no results found for 
-                    <span class='results-search-term'>
-                        '{{searchTermOneTime}}'
-                        </span>
-                </div>                
                 <div ng-show="searchResponse.numberOfResults > 0 && !searchResponse.suggestionBasedResult" id="search-results-total" class="search-results-total">
                     <span class='results-total'>
                         {{searchResponse.numberOfResults}}
@@ -23,12 +15,20 @@
                         </span>
                 </div>
                 <div ng-show="searchResponse.numberOfResults > 0 && searchResponse.suggestionBasedResult" id="search-results-total" class="search-results-total">
-                    Showing <span class='results-total'>
-                        {{searchResponse.numberOfResults}}
-                    </span> results for
+                    <span class='results-total'>
+                        {{searchResponse.suggestions}}
+                    </span>Sorry, there were no results found for 
                     <span class='results-search-term'>
-                        '{{searchResponse.suggestion}}'
-                        </span> instead.
+                        '{{searchTermOneTime}}'
+                        </span>  
+                    <div>
+	                    Showing <span class='results-total'>
+	                        {{searchResponse.numberOfResults}}
+	                    </span> results for
+	                    <span class='results-search-term'>
+	                        '{{searchResponse.suggestion}}'
+	                        </span> instead.
+                    </div>              
                 </div>                
                 <div ng-show="searchResponse.numberOfResults === 0" id="search-results-total" class="search-results-total">
                     Sorry, there were no results found for 
@@ -67,7 +67,6 @@
 	                            </div>
 	                        </div>
 	                    </div>
-	
 	                </div>
 	        	</div>
             </div>
