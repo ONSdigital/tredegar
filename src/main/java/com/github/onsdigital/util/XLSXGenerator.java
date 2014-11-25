@@ -41,7 +41,7 @@ public class XLSXGenerator {
 			Row row = sheet.createRow(rownum++);
 			row.createCell(i++).setCellValue(rowValues.getKey());
 			for (TimeseriesValue timeseriesValue : rowValues.getValue()) {
-				row.createCell(i++).setCellValue(timeseriesValue.value);
+				row.createCell(i++).setCellValue(timeseriesValue == null ? null : timeseriesValue.value);
 			}
 		}
 	}

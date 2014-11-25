@@ -31,8 +31,8 @@ public class Error500 implements Boom {
 		ResourceUtils.classLoaderClass = Error500.class;
 		if (requestHandler != null) {
 			System.out.println("Error in " + requestHandler.endpointClass.getName() + " (" + requestHandler.method.getName() + ")");
-			System.out.println(ExceptionUtils.getStackTrace(t));
 		}
+		System.out.println(ExceptionUtils.getStackTrace(t));
 		try (Reader input = ResourceUtils.getReader("/files/500.html")) {
 			res.setCharacterEncoding("UTF8");
 			IOUtils.copy(input, res.getWriter());
