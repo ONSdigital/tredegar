@@ -4185,8 +4185,7 @@ table actions
 }
 
 .aside-logo{
-  height: 4.3em;
-  width: 7.4em;
+  height: 6em;
   margin-right: 10em;
   float: left;
   margin-bottom: 0.7em;
@@ -4278,10 +4277,16 @@ table actions
 }*/
 
 #search > dl > dt:nth-child(1){
- font-size: 1.35em;
+ font-size: 1.5em;
 /*  background-color: #fafafb ;*/
 /*  padding: 0 0 0 0.3em; Commented out to align collection results*/
 }
+
+#search > dl > dd:nth-child(3){
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
 
 .search-summary{/*border-bottom: 1px solid #d3d3d3 ;*/
                padding: 0 0 3.2em 0;  }
@@ -4646,6 +4651,8 @@ ul.simple-pagination {
   margin-top: auto;
   margin-bottom: auto;
 }
+
+
 
 /*------------------------------------*\
   T1 Classes
@@ -5078,7 +5085,7 @@ ol > li > div.list--table__item__body.list--table__item__body--stat.no_align{
   display: none;
   padding: 0.8rem;
   padding: 8px;
-  margin-top: 0px;
+  margin-top: -7px;
   margin-left: 7px;
   width: 45%;
   max-width:200px;
@@ -7376,6 +7383,12 @@ height: 4em;
     margin-left: 10px;
     margin-left: 1rem;
 }
+
+.actionable-header--asidelink {
+    position: relative;
+    bottom: 4px;
+}
+
 /*! Tablesaw - v0.1.6 - 2014-07-23
 * https://github.com/filamentgroup/tablesaw
 * Copyright (c) 2014 Filament Group; Licensed MIT */
