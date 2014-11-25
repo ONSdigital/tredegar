@@ -11,15 +11,15 @@
                 <div class="grid-col desktop-grid-two-thirds">
                     <img src="/ui/img/nslogo.png" class="page-header-image" alt="ONS logo">
                     <p>
-                        <strong>Release date: {{chart.timeseries.lastUpated}}</strong>
+                        <strong>Release date: {{chart.timeseries.lastUpated || '1 Jan 3000'}}</strong>
                         <span class="page-header-box-link">
                             <a href="#">
                                 <strong>View previous versions</strong>
                             </a>
                         </span>
                     </p>
-                    <p>Next release: {{chart.timeseries.nextUpdate}}</p>
-                    <p>Contact: <a href="mailto:jukesie@hotmail.com">Juksie</a>
+                    <p>Next release: {{chart.timeseries.nextUpdate || '1 Feb 3000'}}</p>
+                    <p>Contact: In the future this will display the statistical contact
                     </p>
                     <p>Source: {{chart.timeseries.source ? chart.timeseries.source : 'Office for National Statistics'}}</p>
                 </div>
