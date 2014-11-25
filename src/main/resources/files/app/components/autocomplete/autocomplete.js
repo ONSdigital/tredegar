@@ -35,6 +35,7 @@
 
 			var contentContainer = angular.element('')
 			var input = scope.input = angular.element('#' + scope.for)
+			var firstTime=true 
 
 			scope.visible = false
 
@@ -55,7 +56,7 @@
 				//Show when input clicked
 				input
 					.bind('click', function(event) {
-						show()
+						search(scope.searchTerm)
 						event.stopPropagation();
 						scope.$apply()
 					});
@@ -97,6 +98,11 @@
 			}
 
 			function search(key) {
+				//Used to fix autocomplete pops up on search results page on first load
+				if(firstTime) {
+					firstTime=false
+					return
+				}
 
 				var url = searchUrl + '?' + searchParam + '=' + key
 					//Attach result data to parent scope with given variable name 
