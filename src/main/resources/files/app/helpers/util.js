@@ -39,17 +39,26 @@
 		}
 
 		function getAbsoluteUrl() {
-			console.log("absurl:" + $location.absUrl())
 			return $location.absUrl()
+		}
+
+		//If replace history is set, latest back history item is replaced with the page to be showed
+		//Particularyly useful to not to break back button redirect
+		function goToPage(path, replaceHistory) {
+			$location.path(path);
+			if (replaceHistory) {
+				$location.replace()
+			}
 		}
 
 		angular.extend(pageUtil, {
 			title: title,
 			setTitle: setTitle,
-			getUrlParam:getUrlParam,
-			getPage:getPage,
-			getPath:getPath,
-			getAbsoluteUrl:getAbsoluteUrl
+			getUrlParam: getUrlParam,
+			getPage: getPage,
+			getPath: getPath,
+			getAbsoluteUrl: getAbsoluteUrl,
+			goToPage: goToPage
 		})
 
 		return pageUtil

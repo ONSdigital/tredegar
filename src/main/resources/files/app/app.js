@@ -14,19 +14,19 @@
         'onsToggler',
         'onsLoading',
         'onsSparkline',
-	   'onsTooltip'
+        'onsTooltip'
     ])
 
     //Filters, services and other helpers are to be injected to onsHelpers module
     var onsHelpers = angular.module('onsHelpers', [
-        'onsFilters',
-        'onsTaxonomy',
-        'onsDownloader',
-        'onsUtils',
-        'onsDataLoader',
-        'angular-data.DSCacheFactory'
-    ])
-    //Template related components are to be registered to onsTemplates module
+            'onsFilters',
+            'onsTaxonomy',
+            'onsDownloader',
+            'onsUtils',
+            'onsDataLoader',
+            'angular-data.DSCacheFactory'
+        ])
+        //Template related components are to be registered to onsTemplates module
     var onsTemplates = angular.module('onsTemplates', [])
 
     /* App Module */
@@ -82,6 +82,7 @@
                     templateUrl: 'app/templates/search-results/search-results.html',
                     controller: 'SearchController',
                     resolve: {
+                        searchResponse: ['PageUtil', 'DataLoader', search],
                         navigation: ['DataLoader', getNavigatinLinks]
                     }
                 }).
@@ -129,7 +130,35 @@
                     }
 
                     return routeConfig
+                }
 
+                function search(PageUtil, DataLoader) {
+                    var searchResponse
+                    var results
+                    var q = PageUtil.getUrlParam('q')
+                    var type = PageUtil.getUrlParam('type')
+                    var pageNumber = PageUtil.getUrlParam('page')
+                    var searchString = "?q=" + q + (type ? "&type=" + type : "") + "&page=" + pageNumber
+                    return DataLoader.load("/search" + searchString)
+                        .then(function(data) {
+                            searchResponse = data
+                            results = data.results
+                            //If cdid search is made go directly to timeseries page for searched cdid
+                            for (var i = 0; i < results.length; i++) {
+                                results[i]
+                                if(results[i].type === 'timeseries' && results[i].title === q.toUpperCase()) {
+                                    PageUtil.goToPage(results[i].url,true)
+                                    return
+                                }
+                            };
+
+                            return data
+                        })
+                }
+
+
+                function getSearchTerm(PageUtil) {
+                    return PageUtil.getUrlParam('q')
                 }
 
                 function getNavigatinLinks(DataLoader) {
@@ -144,7 +173,7 @@
         ])
 
     onsApp
-        .controller('MainCtrl', ['$scope','PageUtil', '$location', '$anchorScroll',
+        .controller('MainCtrl', ['$scope', 'PageUtil', '$location', '$anchorScroll',
             function($scope, PageUtil, $location, $anchorScroll) {
                 var ctrl = this
 
@@ -154,11 +183,11 @@
                     $location.hash(null)
                 }
 
-                $scope.getPath = function(){
+                $scope.getPath = function() {
                     return PageUtil.getPath()
                 }
 
-                $scope.getPage = function(){
+                $scope.getPage = function() {
                     return PageUtil.getPage()
                 }
             }
