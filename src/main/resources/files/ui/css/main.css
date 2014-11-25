@@ -4647,6 +4647,8 @@ ul.simple-pagination {
   margin-bottom: auto;
 }
 
+
+
 /*------------------------------------*\
   T1 Classes
 \*------------------------------------*/
@@ -7374,6 +7376,12 @@ height: 4em;
     margin-left: 10px;
     margin-left: 1rem;
 }
+
+.actionable-header--asidelink {
+    position: relative;
+    bottom: 4px;
+}
+
 /*! Tablesaw - v0.1.6 - 2014-07-23
 * https://github.com/filamentgroup/tablesaw
 * Copyright (c) 2014 Filament Group; Licensed MIT */
