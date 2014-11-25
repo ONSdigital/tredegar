@@ -35,7 +35,7 @@ public class MethodologyMarkdownTest {
 		Path path = Paths.get(classLoader.getResource(resourceName).toURI());
 
 		// When
-		methodology = new MethodologyMarkdown().readMethodology(path);
+		methodology = MethodologyMarkdown.readMethodology(path);
 
 		// Then
 

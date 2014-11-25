@@ -7,6 +7,7 @@
   "preUnit": "£",
   "date": "2012",
   "source": "Office for National Statistics",
+  "nationalStatistic": true,
   "years": [
     {
       "date": "2008",
@@ -41,6 +42,7 @@
     "/businessindustryandtrade/itandinternetindustry/bulletins/ecommerceandictactivity"
   ],
   "relatedTimeseries": [],
+  "sourceDatasets": [],
   "type": "timeseries",
   "name": "Total e-commerce sales",
   "fileName": "raid15",

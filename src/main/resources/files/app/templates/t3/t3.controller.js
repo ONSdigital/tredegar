@@ -1,107 +1,95 @@
+'use strict';
+
 (function() {
 
 	angular.module('onsTemplates')
-		.controller('T3Controller', ['$scope', 'Downloader', T3Controller])
-		.directive('stSelectAll', [SelectAllDirective])
-		.directive('stSelect', [SelectDirective])
+		.controller('T3Controller', ['$rootScope', '$scope', 'Taxonomy', T3Controller])
+
+	function T3Controller($rootScope, $scope, Taxonomy) {
+		var t3 = this
+		var data = $scope.taxonomy.data
+		var timeseriesCount = data.items.length
+		t3.timeseriesDefaultLimit = $rootScope.onsAlphaConfiguration.defaultTimeseriesCountOnT3
+		t3.loadedTimseriesCount = 0
+		t3.allVisible = false
+		t3.showToggle = timeseriesCount > t3.timeseriesDefaultLimit
+		var loadingMore = false //Loading in progress
+
+		initialize()
+
+		function initialize() {
+			loadItem(data.headline) //Load headline
+			t3.loadedTimseriesCount-- //Reset timeseries count after headline
+				loadItem(data.statsBulletinHeadline) //Load stats bulletins related to headline
+			loadItems(data.items, t3.timeseriesDefaultLimit) //Load timeseries
+			loadItems(data.statsBulletins) //Load timeseries
+			loadItems(data.datasets) //Load datasets
+		}
 
 
-	function T3Controller($scope, Downloader) {
-		var ctrl = this
-		var items = $scope.taxonomy.data.items
-		ctrl.allSelected = false
-		ctrl.selectedCount = 0
-
-		function toggleSelectAll() {
-			ctrl.allSelected = !ctrl.allSelected
-			for (var i = 0; i < items.length; i++) {
-				items[i].isSelected = ctrl.allSelected
+		function loadItems(items, limit) {
+			limit = limit || items.length
+				// Load all items if less than limit
+			limit = limit > items.length ? items.length : limit
+			for (var i = 0; i < limit; i++) {
+				loadItem(items[i])
 			};
-
-			ctrl.selectedCount = ctrl.allSelected ? items.length : 0
 		}
 
-		function toggleSelect(row) {
-			row.isSelected = !row.isSelected
-			if (row.isSelected) {
-				ctrl.selectedCount++
+		function loadItem(item) {
+			var promise = Taxonomy.loadItem(item)
+			if (promise) {
+				promise
+					.then(function(data) {
+						if (data.type === "timeseries") {
+							t3.loadedTimseriesCount++
+								if (!hasMore()) {
+									loadingMore = false
+									t3.allVisible = true
+								}
+							item.chartData = Taxonomy.resolveChartData(item)
+
+						}
+					}, handleDataLoadError)
+			}
+
+		}
+
+
+		function handleDataLoadError(err) {
+			//Handle data load error
+		}
+
+		function isLoading() {
+			return loadingMore
+		}
+
+		function hasMore() {
+			return timeseriesCount > t3.loadedTimseriesCount
+		}
+
+		//View more/less timeseries
+		function toggleTimeSeries() {
+			var more = hasMore()
+			if (t3.allVisible) {
+				t3.allVisible = false
+				return
 			} else {
-				ctrl.selectedCount--
-			}
-
-		}
-
-		function downloadXls() {
-			if (ctrl.selectedCount <= 0) {
-				return
-			}
-
-			download('xlsx')
-		}
-
-		function downloadCsv() {
-			if (ctrl.selectedCount <= 0) {
-				return
-			}
-			download('csv')
-		}
-
-		function download(type) {
-			var downloadRequest = {
-				type: type
-			}
-			downloadRequest.uriList = getFileList()
-			var fileName = $scope.getPage() + '.' + downloadRequest.type;
-			Downloader.downloadFile(downloadRequest,fileName)
-		}
-
-		function getFileList() {
-			var uriList = []
-			for (var i = 0; i < items.length; i++) {
-				if (items[i].isSelected) {
-					uriList.push(items[i].uri)
+				t3.allVisible = true
+				if (more) {
+					loadingMore = true
+					loadItems(data.items.slice(t3.loadedTimseriesCount))
 				}
 			}
-			return uriList
 		}
 
-		angular.extend(ctrl, {
-			toggleSelectAll: toggleSelectAll,
-			toggleSelect: toggleSelect,
-			downloadXls: downloadXls,
-			downloadCsv: downloadCsv
+
+
+		//Expose API
+		angular.extend(t3, {
+			isLoading: isLoading,
+			toggleTimeSeries: toggleTimeSeries
 		})
-
-
 	}
-
-	function SelectAllDirective() {
-		return {
-			restrict: 'A',
-			link: function(scope, element, attr) {
-				element.bind('click', function() {
-					scope.$apply(function() {
-						scope.t3.toggleSelectAll()
-					})
-				})
-
-			}
-		}
-	}
-
-	function SelectDirective() {
-		return {
-			restrict: 'A',
-			link: function(scope, element, attr) {
-				element.bind('click', function() {
-					scope.$apply(function() {
-						scope.t3.toggleSelect(scope.item)
-					})
-				})
-
-			}
-		}
-	}
-
 
 })()

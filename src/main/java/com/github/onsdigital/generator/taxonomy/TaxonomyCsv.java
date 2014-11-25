@@ -25,7 +25,7 @@ public class TaxonomyCsv {
 	public static Set<Folder> parse() throws IOException {
 
 		// Read the first worksheet - "Data":
-		csv = new Csv(resourceName);
+		csv = new Csv(resourceName, "cp1252");
 		csv.read();
 		csv.getHeadings();
 

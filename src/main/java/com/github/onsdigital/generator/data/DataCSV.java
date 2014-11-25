@@ -85,7 +85,7 @@ public class DataCSV {
 					timeseries = Data.addTimeseries(header[i]);
 				}
 				dataset.add(timeseries);
-				timeseries.datasets.add(name);
+				timeseries.sourceDatasets.add(name);
 			}
 
 			// Now read the data - each row *may* contain one additional value
@@ -116,6 +116,11 @@ public class DataCSV {
 						timeseriesValue.value = StringUtils.trim(value);
 						timeseriesValue.sourceDataset = name;
 						timeseries.add(timeseriesValue);
+						// if ("404".equals(value)) {
+						// System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 404: "
+						// + cdid + ": " + timeseriesValue + " (" +
+						// timeseries.name + ")");
+						// }
 
 						// Scale values if necessary:
 						if (timeseries.cdid().equalsIgnoreCase("abmi")) {
@@ -171,11 +176,15 @@ public class DataCSV {
 			int index = timeseriesValue.value.indexOf('.');
 			decimalPlaces = timeseriesValue.value.substring(index + 1).length();
 		}
-		int m = timeseries.getScaleFactor();
-		do {
+		double m = timeseries.getScaleFactor();
+		while (m > 1) {
 			m /= 10;
 			decimalPlaces++;
-		} while (m > 1);
+		}
+		while (m < 1) {
+			m *= 10;
+			decimalPlaces--;
+		}
 
 		// Build the format string.
 		// It will be of the form: 0.00, which ensures a leading 0 if the final

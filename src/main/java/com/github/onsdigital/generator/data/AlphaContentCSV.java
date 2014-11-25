@@ -42,6 +42,7 @@ class AlphaContentCSV {
 	static String RELATED_CDID = "Related CDID";
 	static String SOURCE = "Source";
 	static String KEY_NOTE = "key note";
+	static String NATIONAL_STATISTIC = "ns";
 	static String[] columns = { THEME, LEVEL2, LEVEL3, NAME, KEY, PREUNIT, UNITS, FIGURE, SCALE_FACTOR, PERIOD, CDID, RELATED_CDID, SOURCE, KEY_NOTE };
 
 	static Csv sheet;
@@ -125,7 +126,7 @@ class AlphaContentCSV {
 			timeseries.number = figure;
 			String scaleFactor = row.get(SCALE_FACTOR);
 			if (StringUtils.isNotBlank(scaleFactor)) {
-				timeseries.setScaleFactor(Integer.parseInt(scaleFactor));
+				timeseries.setScaleFactor(Double.parseDouble(scaleFactor));
 			}
 
 			String relatedCdidColumn = row.get(RELATED_CDID);
@@ -152,6 +153,9 @@ class AlphaContentCSV {
 			if (StringUtils.isNotBlank(keyNote)) {
 				timeseries.keyNote = keyNote;
 			}
+
+			String nationalStatistic = StringUtils.defaultIfBlank("yes", row.get(NATIONAL_STATISTIC));
+			timeseries.nationalStatistic = BooleanUtils.toBoolean(nationalStatistic);
 
 			String additionalText = row.get(ADDITIONAL_TEXT);
 			if (StringUtils.isNotBlank(additionalText)) {

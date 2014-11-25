@@ -9,7 +9,26 @@
   "download": [
     {
       "title": "Claimant Count data collection",
-      "xls": "http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/july-2014/table-a01.xls"
+      "cdids": [
+        "BCJD",
+        "BCJE",
+        "DPRD",
+        "DPRE",
+        "BCJA",
+        "BCJB",
+        "DPAE",
+        "DPAH",
+        "GDZX",
+        "GEYR",
+        "DPAA",
+        "DPAC",
+        "DPAF",
+        "DPAI",
+        "GEYS",
+        "GEYT",
+        "DPAB",
+        "DPAD"
+      ]
     }
   ],
   "notes": [
@@ -23,7 +42,7 @@
   "releaseDate": "19 February 2014",
   "type": "dataset",
   "name": "Claimant Count data collection",
-  "fileName": "claimant count data collection",
+  "fileName": "claimantcountdatacollection",
   "breadcrumb": [
     {
       "index": 0,

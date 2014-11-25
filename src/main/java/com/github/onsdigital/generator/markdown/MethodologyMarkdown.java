@@ -3,18 +3,19 @@ package com.github.onsdigital.generator.markdown;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.Collection;
+import java.util.Map;
 import java.util.Scanner;
 
 import com.github.onsdigital.generator.Folder;
 import com.github.onsdigital.generator.data.Data;
 import com.github.onsdigital.json.markdown.Methodology;
 
-public class MethodologyMarkdown extends Markdown {
+public class MethodologyMarkdown {
 
 	static final String resourceName = "/methodology";
 
-	public void parse() throws IOException {
-		Collection<Path> files = getFiles(resourceName);
+	public static void parse() throws IOException {
+		Collection<Path> files = Markdown.getFiles(resourceName);
 
 		for (Path file : files) {
 
@@ -27,20 +28,20 @@ public class MethodologyMarkdown extends Markdown {
 		}
 	}
 
-	Methodology readMethodology(Path file) throws IOException {
+	static Methodology readMethodology(Path file) throws IOException {
 
 		// Read the file
 		System.out.println("Processing methodology from: " + file);
-		read(file);
+		Markdown markdown = new Markdown(file);
 
 		// Set up the methodology
 		Methodology methodology = new Methodology();
-		methodology.name = title;
-		methodology.title = title;
-		setProperties(methodology);
-		methodology.sections.addAll(sections);
-		methodology.accordion.addAll(accordion);
-		methodology.fileName = toFilename(methodology.name);
+		methodology.name = markdown.title;
+		methodology.title = markdown.title;
+		setProperties(methodology, markdown);
+		methodology.sections.addAll(markdown.sections);
+		methodology.accordion.addAll(markdown.accordion);
+		methodology.fileName = markdown.toFilename();
 
 		return methodology;
 	}
@@ -60,7 +61,9 @@ public class MethodologyMarkdown extends Markdown {
 	 * @param scanner
 	 *            The {@link Scanner} to read lines from.
 	 */
-	private void setProperties(Methodology methodology) {
+	private static void setProperties(Methodology methodology, Markdown markdown) {
+
+		Map<String, String> properties = markdown.properties;
 
 		// Location
 		methodology.theme = properties.remove("Theme");

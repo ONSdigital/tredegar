@@ -49,15 +49,19 @@ public class Timeseries extends DataItem implements Comparable<Timeseries> {
 	/** e.g. "Not a national statistic" or "2005 = 100. Not seasonally adjusted" */
 	public String note;
 
-	// Where a statistic comes from.
-	// Typically "Office for National Statistics"
+	/**
+	 * Where a statistic comes from. Typically "Office for National Statistics"
+	 */
 	public String source = "Office for National Statistics";
 
-	// This value is displayed in the "(i)" tooltips next to timeseries name:
+	/** This value is displayed in the "(i)" tooltips next to timeseries name. */
 	public String keyNote;
 
-	// This value is displayed beneath the timeseries name:
+	/** This value is displayed beneath the timeseries name: */
 	public String additionalText;
+
+	/** Whether this is a National Statistic: */
+	public boolean nationalStatistic;
 
 	/**
 	 * The nectar, the goodness, the very juice of the fireflower: data.
@@ -84,14 +88,14 @@ public class Timeseries extends DataItem implements Comparable<Timeseries> {
 	 * <p>
 	 * It's only needed during parsing, so we don't want it serialised to json:
 	 */
-	private transient Integer csvValueScaleFactor;
+	private transient Double csvValueScaleFactor;
 
 	/**
 	 * This field is here so that Rob can see which datasets have contributed
 	 * values. Please don't rely on it unless and until it has been designed
 	 * into the app with a genuine purpose.
 	 */
-	public List<String> datasets = new ArrayList<String>();
+	public List<String> sourceDatasets = new ArrayList<String>();
 
 	public Timeseries() {
 		type = ContentType.timeseries;
@@ -158,15 +162,15 @@ public class Timeseries extends DataItem implements Comparable<Timeseries> {
 		}
 	}
 
-	public void setScaleFactor(int multiply) {
+	public void setScaleFactor(double multiply) {
 		this.csvValueScaleFactor = multiply;
 	}
 
-	public int getScaleFactor() {
+	public double getScaleFactor() {
 		if (this.csvValueScaleFactor == null) {
 			return 1;
 		}
-		return this.csvValueScaleFactor.intValue();
+		return this.csvValueScaleFactor.doubleValue();
 	}
 
 	@Override

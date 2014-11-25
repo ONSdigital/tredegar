@@ -7,15 +7,16 @@
   "preUnit": "",
   "date": "2013",
   "source": "Office for National Statistics",
+  "nationalStatistic": true,
   "years": [
     {
       "date": "2012",
-      "value": "46353871",
+      "value": "46.353871",
       "year": "2012"
     },
     {
       "date": "2013",
-      "value": "46139940",
+      "value": "46.139940",
       "year": "2013"
     }
   ],
@@ -28,6 +29,7 @@
   "relatedTimeseries": [
     "/peoplepopulationandcommunity/elections/timeseries/raid88"
   ],
+  "sourceDatasets": [],
   "type": "timeseries",
   "name": "Parliamentary electors",
   "fileName": "raid87",

@@ -8,6 +8,7 @@
   "date": "2013",
   "source": "Office for National Statistics",
   "keyNote": "Number of VAT and/or PAYE based enterprises",
+  "nationalStatistic": true,
   "years": [
     {
       "date": "2009",
@@ -44,6 +45,7 @@
   "relatedTimeseries": [
     "/businessindustryandtrade/businessactivitysizeandlocation/timeseries/raid2"
   ],
+  "sourceDatasets": [],
   "type": "timeseries",
   "name": "UK businesses",
   "fileName": "raid1",
