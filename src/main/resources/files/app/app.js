@@ -14,7 +14,7 @@
         'onsToggler',
         'onsLoading',
         'onsSparkline',
-	   'onsTooltip'
+	    'onsTooltip'
     ])
 
     //Filters, services and other helpers are to be injected to onsHelpers module
@@ -44,6 +44,24 @@
 
 
                 $routeProvider.
+                when('/about', {
+                    templateUrl: 'app/templates/about/about.html',
+                    controller: "AboutCtrl",
+                    resolve: {
+                        navigation: ['DataLoader', getNavigatinLinks]
+                    }
+                }).
+                when('/article', {
+                    templateUrl: 'app/templates/article/article.html',
+                    controller: 'ArticleCtrl'
+                }).
+                when('/calendar', {
+                    templateUrl: 'app/templates/calendar/calendar.html',
+                    controller: "CalendarCtlr",
+                    resolve: {
+                        navigation: ['DataLoader', getNavigatinLinks]
+                    }
+                }).
                 when(':collectionPath*\/collection', {
                     templateUrl: 'app/templates/collection/collection.html',
                     controller: "CollectionCtrl",
@@ -53,10 +71,25 @@
                 }).
                 when('/contactus', {
                     templateUrl: 'app/templates/contact/contactus.html',
-                    controller: "ContactUsController",
+                    controller: "ContactUsCtrl",
                     resolve: {
                         navigation: ['DataLoader', getNavigatinLinks]
                     }
+                }).
+                when('/copyright', {
+                    templateUrl: 'app/templates/copyright/copyright.html',
+                    controller: "CopyrightCtrl",
+                    resolve: {
+                        navigation: ['DataLoader', getNavigatinLinks]
+                    }
+                }).
+                when('/dataset', {
+                    templateUrl: 'app/templates/dataset/Dataset_Excelcrosssection.html',
+                    controller: "DatasetCtrl"
+                }).
+                when('/dataset_timeseries', {
+                    templateUrl: 'app/templates/dataset/Dataset_Excel_Time_Series.html',
+                    controller: "DatasetCtrl"
                 }).
                 when('/dataversions', {
                     templateUrl: 'app/templates/dataversions/dataversions.html',
@@ -72,6 +105,34 @@
                         navigation: ['DataLoader', getNavigatinLinks]
                     }
                 }).
+                when('/methodology', {
+                    templateUrl: 'app/templates/methodology/methodology.html',
+                    controller: 'MethodologyCtrl',
+                    resolve: {
+                        navigation: ['DataLoader', getNavigatinLinks]
+                    }
+                }).
+                when('/nationalstats', {
+                    templateUrl: 'app/templates/nationalstats/nationalstats.html',
+                    controller: "NationalStatsCtlr",
+                    resolve: {
+                        navigation: ['DataLoader', getNavigatinLinks]
+                    }
+                }).
+                when('/previous', {
+                    templateUrl: 'app/templates/previoustatic/previoustatic.html',
+                    controller: "PreviousCtrl",
+                    resolve: {
+                        navigation: ['DataLoader', getNavigatinLinks]
+                    }
+                }).
+                when('/privacy', {
+                    templateUrl: 'app/templates/privacy/privacy.html',
+                    controller: "PrivacyCtrl",
+                    resolve: {
+                        navigation: ['DataLoader', getNavigatinLinks]
+                    }
+                }).
                 when('/release', {
                     templateUrl: 'app/templates/release/release.html',
                     resolve: {
@@ -81,6 +142,13 @@
                 when('/search', {
                     templateUrl: 'app/templates/search-results/search-results.html',
                     controller: 'SearchController',
+                    resolve: {
+                        navigation: ['DataLoader', getNavigatinLinks]
+                    }
+                }).
+                when('/survey', {
+                    templateUrl: 'app/templates/survey/survey.html',
+                    controller: "SurveyCtrl",
                     resolve: {
                         navigation: ['DataLoader', getNavigatinLinks]
                     }
