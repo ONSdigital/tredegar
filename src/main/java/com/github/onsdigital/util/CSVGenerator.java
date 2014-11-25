@@ -51,7 +51,7 @@ public class CSVGenerator {
 			row = new String[size];
 			row[i++] = rowData.getKey();
 			for (TimeseriesValue timeseriesValue : rowData.getValue()) {
-				row[i++] = timeseriesValue.value;
+				row[i++] = (timeseriesValue ==null ? null : timeseriesValue.value);
 			}
 			writer.writeNext(row);
 		}
