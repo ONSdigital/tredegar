@@ -48,96 +48,18 @@ Source: Office for National Statistics
 - Partnerships represented 11.2% of total enterprises, down 0.7 percentage points from 11.9% in 2012
 - General government and non-profit making bodies represented 4% of total enterprises, compared with 4.1% in 2012
 
-
 ## Business counts by broad industry
 In 2013 the professional, scientific and technical sector accounted for the largest number of businesses, with 16.9% of all enterprises registered, overtaking wholesale, retail and repair of motor vehicles, with 16.5% of all enterprises registered. The third largest sector was construction; however, this fell from 12.3% in 2012 to 11.9% in 2013.
 
 The professional, scientific and technical sector had the largest growth between 2012 and 2013, an increase of 14,000 businesses. This was followed by the information and communication sector which increased by 7,000 businesses in 2013. Construction had the largest fall in businesses with a fall of 6,000.
-
-### Table 1: Number of VAT and/or PAYE enterprise by broad industrial grouping
-
-** Count given to the nearest thousand **
-
-|                                                    |  2011 |    % | 2012* |    % |  2013 |    % |
-|----------------------------------------------------|------:|-----:|------:|-----:|------:|-----:|
-| Agriculture, forestry & fishing                    |   139 |  6.7 |   139 |  6.5 |   144 |  6.6 |
-| Production                                         |   131 |  6.3 |   133 |  6.2 |   136 |  6.3 |
-| Mining, quarrying & utilities                      |     8 |  0.4 |     9 |  0.4 |    10 |  0.5 |
-| Manufacturing                                      |   123 |  5.9 |   124 |  5.8 |   126 |  5.8 |
-| Construction                                       |   262 | 12.6 |   264 | 12.3 |   257 | 11.9 |
-| Wholesale and retail; repair of motor vehicles     |   357 | 17.2 |   361 | 16.8 |   358 | 16.5 |
-| Motor trades                                       |    66 |  3.2 |    68 |  3.2 |    68 |  3.1 |
-| Wholesale                                          |   104 |  5.0 |   104 |  4.8 |   1.3 |  4.8 |
-| Retail                                             |   187 |  9.0 |   189 |  8.8 |   188 |  8.7 |
-| Transport & storage (inc. postal)                  |    66 |  3.2 |    67 |  3.1 |    67 |  3.1 |
-| Accommodation & food services                      |   127 |  6.1 |   131 |  6.1 |   129 |  6.0 |
-| Information & communication                        |   147 |  7.1 |   159 |  7.4 |   166 |  7.7 |
-| Finance & insurance                                |    43 |  2.1 |    46 |  2.1 |    46 |  2.1 |
-| Property                                           |    74 |  3.6 |    77 |  3.6 |    80 |  3.7 |
-| Professional, scientific & technical               |   330 | 15.9 |   352 | 16.4 |   366 | 16.9 |
-| Business administration and support services       |   141 |  6.8 |   144 |  6.7 |   143 |  6.6 |
-| Public administration and defence                  |     3 |  0.1 |     4 |  0.2 |     5 |  0.2 |
-| Education                                          |    31 |  1.5 |    33 |  1.6 |    35 |  1.6 |
-| Health                                             |    83 |  4.0 |    88 |  4.1 |    89 |  4.1 |
-| Arts, entertainment, recreation and other services |   145 |  7.0 |   151 |  7.0 |   146 |  6.7 |
-| **TOTAL**                                              | 2,081 |      | 2,149 |      | 2,168 |      |
-***
-Table source: Office for National Statistics
-
-#### Table notes:
-1. *See background note 5
-
-##### Download table: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS") [XLS format](http://www.ons.gov.uk/ons/rel/bus-register/uk-business/2013/prt---table-1.xls "XLS format") (29 Kb)
 
 ## Business counts by UK region
 London accounted for the largest number of businesses in March 2013, with 17.2% of the UK total. The region with the next largest share of businesses was the South East, at 15.7%.
 
 Between 2012 and 2013 all regions except Northern Ireland and Wales saw an increase in the number of businesses with London and the South East experiencing the greatest increase of nearly 13,000 and 2,000 businesses respectively. London grew by 3.5% between 2012 and 2013 and this accounts for around two thirds of the growth in the UK. The number of businesses in Northern Ireland and Wales fell by 800 and 900 businesses respectively.
 
-### Table 2: Number of UK VAT and/or PAYE based enterprises by region
-
-|                          |  2011 |    % | 2012* |    % |  2013 |    % |
-|--------------------------|------:|-----:|------:|-----:|------:|-----:|
-| North East               |    55 |  2.6 |    56 |  2.6 |    56 |  2.6 |
-| North West               |   201 |  9.7 |   206 |  9.6 |   207 |  9.5 |
-| Yorkshire and The Humber |   147 |  7.0 |   150 |  7.0 |   151 |  7.0 |
-| East Midlands            |   141 |  6.8 |   145 |  6.7 |   145 |  6.7 |
-| West Midlands            |   168 |  8.1 |   171 |  8.0 |   172 |  7.9 |
-| East                     |   211 | 10.1 |   217 | 10.1 |   218 | 10.1 |
-| London                   |   334 | 16.1 |   360 | 16.7 |   372 | 17.2 |
-| South East               |   328 | 15.8 |   338 | 15.7 |   340 | 15.7 |
-| South West               |   197 |  9.4 |   201 |  9.3 |   201 |  9.3 |
-| Wales                    |    87 |  4.2 |    89 |  4.1 |    88 |  4.1 |
-| Scotland                 |   145 |  7.0 |   150 |  7.0 |   151 |  7.0 |
-| Northern Ireland         |    68 |  3.3 |    67 |  3.1 |    67 |  3.1 |
-| **TOTAL**                    | 2,081 |      | 2,149 |      | 2,168 |      |
-***
-Table source: Office for National Statistics
-
-#### Table notes:
-1. *See Background note 5
-
-##### Download table:
-
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS") [XLS format](http://www.ons.gov.uk/ons/rel/bus-register/uk-business/2013/prt---table-2.xls "XLS format") (27 Kb)
-
 ## Local unit site information
 Local units are sites that belong to an enterprise. In March 2013 there were 2.63 million local units belonging to VAT and/or PAYE based enterprises, compared with 2.61 million in March 2012 a rise of nearly 15,000 (0.6%). Out of the 2.17 million VAT and/or PAYE enterprises, only 58,000 (2.7%) operate from more than one site. These operated a total 516,000 local units.
-
-### Table 3: Number of VAT and/or PAYE enterprises and their associated local units
-
-** Number of local Units **
-
-|             |         1 |   2 - 4 |  5 - 9 | 10 - 19 | 20 or more |     Total |
-|-------------|----------:|--------:|-------:|--------:|-----------:|----------:|
-| Enterprise  | 2,109,905 |  46,100 |  6,460 |   2,435 |      2,680 | 2,167,580 |
-| Local units | 2,109,905 | 110,250 | 40,855 |  32,245 |    332,235 | 2,625,490 |
-Table source: Office for National Statistics 
-
-#####Download table:
-
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS") [XLS format](http://www.ons.gov.uk/ons/rel/bus-register/uk-business/2013/prt---table-3.xls "XLS format") (31 Kb)
 
 ## Background Notes
 
