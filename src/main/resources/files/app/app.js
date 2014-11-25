@@ -14,7 +14,8 @@
         'onsToggler',
         'onsLoading',
         'onsSparkline',
-	   'onsTooltip'
+	   'onsTooltip',
+       'onsAutocomplete'
     ])
 
     //Filters, services and other helpers are to be injected to onsHelpers module

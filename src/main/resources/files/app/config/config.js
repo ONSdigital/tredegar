@@ -8,26 +8,30 @@
 		//Number of timeseries counts to be loaded by default on t3
 		defaultTimeseriesCountOnT3: 5,
 
+		//Autocomplete items limit
+		autoCompleteLimit:5,
+
 		//Debug logs
 		debugEnabled: false
 	}
 
 	angular.module('onsApp')
 		.config(['$locationProvider', '$httpProvider', '$logProvider', GeneralConfiguration])
-		.run(['$location', '$rootScope', 'DSCacheFactory', '$cacheFactory', '$log', RunConfiguration])
+		.run(['$location', '$http', '$rootScope', 'DSCacheFactory', '$cacheFactory', '$log', RunConfiguration])
 
 
 	function GeneralConfiguration($locationProvider, $httpProvider, $logProvider) {
 			//Enable hashbang
 		$locationProvider.html5Mode(false).hashPrefix('!')
 
+
 		$logProvider.debugEnabled(onsAlphaConfiguration.debugEnabled)
 	}
 
-	function RunConfiguration($location, $rootScope, DSCacheFactory, $cacheFactory, $log) {
+	function RunConfiguration($location, $http, $rootScope, DSCacheFactory, $cacheFactory, $log) {
 		$rootScope.onsAlphaConfiguration = onsAlphaConfiguration
 
-		configureCache(DSCacheFactory, $cacheFactory, $log)
+		configureCache(DSCacheFactory, $http, $cacheFactory, $log)
 		configureGoogleAnalytics($rootScope, $location, $log)
 	}
 
@@ -39,11 +43,12 @@
 		})
 	}
 
-	function configureCache(DSCacheFactory, $cacheFactory, $log) {
+	//Local storage cache, using angular-data.DSCacheFactory
+	//Refer to: http://angular-data.pseudobry.com/documentation/guide/angular-cache/storage
+	function configureCache(DSCacheFactory, $http, $cacheFactory, $log) {
 		$log.info('Configuring data cache')
 
 		var CACHE_NAME = 'dataCache'
-			//Refer to: http://angular-data.pseudobry.com/documentation/guide/angular-cache/storage
 
 		// Conditionally use Angular cache if local storage not supported
 		//TODO: Create a caching design appropriate to 9.30 caching (e.g No caching between 9.30 - 9.31, expire all cache at 9.30) 
@@ -59,6 +64,9 @@
 			options.storageImpl = getAngularCache()
 		}
 		var dataCache = DSCacheFactory('dataCache', options);
+
+		//Set http default cache for all http get calls to be cached
+		$http.defaults.cache = dataCache
 
 		//Angular cache only uses session storage which is cleared itself when page is refreshed or browser closed
 		function getAngularCache() {

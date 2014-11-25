@@ -5780,8 +5780,7 @@ border: 0px;
 
 .nav-search__container {
   padding-right: 45px;
-  padding-right: 4.5rem;
-  display: flex; }
+  padding-right: 4.5rem; }
 
 .nav-search__field {
   width: 100%;
@@ -5855,6 +5854,9 @@ border: 0px;
       padding-bottom: 5px;
       padding-bottom: 0.5rem;
       border-width: 0; }
+    .nav-search__container {
+      padding-right: 53px;
+      padding-right: 5.3rem; }
     .nav-search .btn--nav-search {
       top: 5px;
       top: 0.5rem;
