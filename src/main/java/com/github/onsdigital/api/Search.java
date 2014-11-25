@@ -6,6 +6,9 @@ import javax.ws.rs.GET;
 import javax.ws.rs.core.Context;
 
 import org.apache.commons.lang3.StringUtils;
+import org.elasticsearch.action.suggest.SuggestResponse;
+import org.elasticsearch.search.suggest.Suggest;
+import org.elasticsearch.search.suggest.term.TermSuggestionBuilder;
 
 import com.github.davidcarboni.restolino.framework.Endpoint;
 import com.github.onsdigital.configuration.ElasticSearchProperties;
@@ -46,6 +49,31 @@ public class Search {
 			System.out.println("Attempting search against timeseries type as no results found for: " + query);
 			ONSQueryBuilder timeSeriesQueryBuilder = new ONSQueryBuilder("ons").setType(ContentType.timeseries.name()).setPage(page).setSearchTerm(query).setFields(getTitle(), "path");
 			searchResult = new SearchHelper(ElasticSearchServer.getClient()).search(timeSeriesQueryBuilder);
+
+			// if still no results then use term suggester for autocorrect
+			if (searchResult.getNumberOfResults() == 0) {
+				System.out.println("No results found from timeseries so using suggestions ...");
+				TermSuggestionBuilder termSuggestionBuilder = new TermSuggestionBuilder("autocorrect").field("title").text(query).size(1);
+				SuggestResponse suggestResponse = ElasticSearchServer.getClient().prepareSuggest("ons").addSuggestion(termSuggestionBuilder).execute().actionGet();
+
+				StringBuffer suggestionsBuffer = new StringBuffer();
+				for (Suggest.Suggestion.Entry entry : suggestResponse.getSuggest().getSuggestion("autocorrect").getEntries()) {
+					if (!entry.getOptions().isEmpty()) {
+						Suggest.Suggestion.Entry.Option option = (Suggest.Suggestion.Entry.Option) entry.getOptions().get(0);
+						System.out.println("option.text: " + option.getText());
+						suggestionsBuffer.append(option.getText());
+						suggestionsBuffer.append(" ");
+					}
+				}
+				if (StringUtils.isEmpty(suggestionsBuffer.toString())) {
+					System.out.println("All search steps failed to discover suitable match");
+				} else {
+					ONSQueryBuilder suggestionsQueryBuilder = new ONSQueryBuilder("ons").setType(type).setPage(page).setSearchTerm(suggestionsBuffer.toString()).setFields(getTitle(), "path");
+					searchResult = new SearchHelper(ElasticSearchServer.getClient()).search(suggestionsQueryBuilder);
+					searchResult.setSuggestionBasedResult(true);
+					searchResult.setSuggestion(suggestionsBuffer.toString());
+				}
+			}
 		}
 		return searchResult;
 	}
