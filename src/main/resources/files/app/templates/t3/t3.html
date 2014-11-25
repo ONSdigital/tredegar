@@ -39,29 +39,28 @@
                             <ons-info-tooltip tip="{{taxonomy.data.headline.data.keyNote}}" tip-class="icon--inline--large-text icon--small"></ons-info-tooltip>
                         </h3>
                     </header>
-                    <div class="box box--inline box--padded muted--dark">
+                    <div class="box box--inline box--padded muted--dark headline--stat-centred">
                         <div class="stat stat--headline">
                             <ons-loading condition="!taxonomy.data.headline.data"></ons-loading>
                             <div class="stat__figure">
-                                <span class="stat__figure__unit">{{taxonomy.data.headline.data.preUnit}}</span>
-                                {{taxonomy.data.headline.data.number}}
+                                <span class="stat__figure__unit">{{taxonomy.data.headline.data.preUnit}}</span> {{taxonomy.data.headline.data.number}}
                                 <span class="stat__figure__unit">{{taxonomy.data.headline.data.unit}}</span>
                             </div>
                         </div>
                     </div>
-                    <div class="box box--padded--small">
-                        <ons-sparkline width="170" height="100" chart-data="taxonomy.data.headline.chartData"></ons-sparkline>
+                    <div class="box box--padded--small headline--stat-centred">
+                        <ons-sparkline class="sparkline_area" width="350" height="100" chart-data="taxonomy.data.headline.chartData" headline="true"></ons-sparkline>
                     </div>
                     <!-- /box -->
-                    <dl class="definition mini">
+                    <dl class="definition mini stat__updated">
                         <dt>Last updated:</dt>
                         <dd>
-                            {{taxonomy.data.headline.data.lastUpated}}
+                            {{taxonomy.data.headline.data.lastUpated || '1 JAN 3000'}}
                             <!-- 16 Sep 2014 -->
                         </dd>
                         <dt>Next update:</dt>
                         <dd>
-                            {{taxonomy.data.headline.data.nextUpdate}}
+                            {{taxonomy.data.headline.data.nextUpdate || '1 FEB 3000'}}
                             <!-- 14 Oct 2014 -->
                         </dd>
                     </dl>
@@ -100,14 +99,10 @@
 <!-- List/Table with data -->
 
 <section id="timeseries" class="panel--large wrapper">
-    <h2 id="related" class="list--table-header">Time Series Related to {{taxonomy.data.name}}</h2>
-    <ol class="list--table list--table--complex table--striped-light table-light--sectioned lifted">
-        <li class="list--table__item list--table__head">
-            <label class="list--table__item__body list--table__item__body--select-all nojs-hidden">
-            </label>
-        </li>
+    <h2 id="related" class="list--table-header panel--pad">Time Series Related to {{taxonomy.data.name}}</h2>
+    <ol class="list--table list--table--complex table--striped-light table-light--sectioned">
         <!-- /list- -table__head -->
-        <li ng-repeat="item in taxonomy.data.items | limitTo:t3.loadedTimseriesCount" class="list--table__item list--table__body">
+        <li ng-repeat="item in taxonomy.data.items | limitTo:(t3.allVisible?t3.loadedTimseriesCount : t3.timeseriesDefaultLimit)" class="list--table__item list--table__body">
             <div class="list--table__item__body list--table__item__body--caption">
                 <h3 class="list--table__item__header">
                     <a href="#!{{item.uri}}" class="no_underline"> {{item.name}}</a>
@@ -124,17 +119,16 @@
             <div class="list--table__item__body list--table__item__body--stat">
                 <ons-loading condition="!item.data" class="stat list--table__item__body--centred"></ons-loading>
                 <div class="stat__figure">
-                    <span class="stat__figure__unit">{{item.data.preUnit}}</span>
-                    {{item.data.number}}
+                    <span class="stat__figure__unit">{{item.data.preUnit}}</span> {{item.data.number}}
                     <span class="stat__figure__unit">{{item.data.unit}}</span>
                 </div>
             </div>
             <div class="list--table__item__body list--table__item__body--update">
                 <dl class="micro definition-list definition-list--inline flush--half--vertical">
                     <dt>Last updated:</dt>
-                    <dd>{{item.data.lastUpated || 'Not Available'}}</dd>
+                    <dd>{{item.data.lastUpated || '1 JAN 3000'}}</dd>
                     <dt>Next update:</dt>
-                    <dd class="red_highlight">{{item.data.nextUpdate || 'Not Available'}}</dd>
+                    <dd class="red_highlight">{{item.data.nextUpdate || '1 FEB 3000'}}</dd>
                 </dl>
             </div>
         </li>
@@ -146,24 +140,17 @@
             <!--  /list-table__item__body -->
         </li>
         <!-- /list- -table__body -->
-        <li ng-if="t3.hasMore()"  class="list--table__item list--table__footer">
-            <div class="list--table__item__body">
-                <div class="table__actions split">
-                    <a class="table__action split__title link-muted" href="" ng-click="t3.loadAll()">
-                        <span class="table__action__text">View all {{taxonomy.data.items.length}} time series</span>
-                    </a>
-                </div>
-                <!-- /table-actions -->
+
+        <li ng-if="t3.showToggle" class="list--table__item list--table__footer" ng-click="t3.toggleTimeSeries()">
+            <div class="table__actions box--inline ">
+                <a href=""><span ng-class="t3.allVisible ? 'icon-up-open-big':'icon-down-open-big'">view {{t3.allVisible?'less' : 'more'}} time series </span> </a>
             </div>
-            <!--  /list-table__item__body -->
         </li>
-        <!-- /list- -table__item -->
-        <!-- /list- -table__body -->
     </ol>
     <!-- /list- -table -->
 </section>
 
-<section class="panel wrapper box box--padded--med box--green--separated-left solid border">
+<section class="panel wrapper box box--padded--med panel--bottom-mar box--green--separated-left solid border">
     <header class="actionable-header__title">
         <h2 class="actionable-header__title table-inline ">Datasets</h2>
         <a class="hide-small" href="#!{{getPath()}}/collection?contentType=datasets">View more datasets</a>

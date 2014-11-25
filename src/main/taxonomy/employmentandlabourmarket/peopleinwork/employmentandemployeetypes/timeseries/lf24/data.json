@@ -7,6 +7,7 @@
   "preUnit": "",
   "date": "July 2014",
   "source": "Labour Force Survey",
+  "nationalStatistic": true,
   "years": [
     {
       "date": "1971",
@@ -5141,7 +5142,6 @@
   "relatedTimeseries": [
     "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgrz",
     "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/lf25",
-    "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgrz",
     "/employmentandlabourmarket/unemployment/timeseries/mgsx"
   ],
   "sourceDatasets": [

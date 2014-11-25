@@ -503,6 +503,8 @@ img {
 .icon-menu:before { content: '\e810'; } /* '' */
 .icon-cancel:before { content: '\e813'; } /* '' */
 .icon-comment:before { content: '\e82e'; } /* '' */
+.icon-help:before { content: '\e817'; } /* '' */
+.icon-right-open:before { content: '\e866'; } /* '' */
 /*Original code from CX*/
 
 
@@ -1880,13 +1882,17 @@ h3,
   border-bottom: 1px solid #c5c7c1; }
 
 a {
-  color: #0054aa;
+  color: #005ea5;
   text-decoration: none;
   /*text-decoration: underline;*/ }
-  a:visited {
-    color: #004790; }
-  a:hover, a:focus {
-    color: #007af6; }
+
+a:hover, a:focus {
+    color: #007af6;
+    text-decoration: underline; }
+
+a:visited {
+ color: #4c2c92;
+ text-decoration:none; }
 
 /*.action-link {   Commented out as part of hyperlink rationalisation
   font-family: "open-sans-n7", "open-sans", sans-serif;
@@ -2057,6 +2063,7 @@ a {
   margin-bottom: 2rem; }
 
 .box--inline {
+  text-align: center;
   display: inline-block; }
 
 .box__content > :last-child {
@@ -2913,7 +2920,7 @@ lesser , applied styles
     color: #b4ddf4;
     text-decoration: none !important;
     vertical-align: middle;
-    content: "\e886";
+    content: "\e866";
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%); }
@@ -3283,6 +3290,26 @@ lesser , applied styles
       padding-bottom: 60px;
       padding-bottom: 6rem; } }
 
+.panel--pad-med,
+.panel--top-pad-med {
+  padding-top: 20px;
+  padding-top: 2rem; }
+  @media screen and (min-width: 38em) {
+    .panel--pad-med,
+    .panel--top-pad-med {
+      padding-top: 40px;
+      padding-top: 4rem; } }
+
+.panel--pad-med,
+.panel--bottom-pad-med {
+  padding-bottom: 20px;
+  padding-bottom: 2rem; }
+  @media screen and (min-width: 38em) {
+    .panel--pad-med,
+    .panel--bottom-pad-med {
+      padding-bottom: 40px;
+      padding-bottom: 4rem; } }
+
 .panel--mar-small,
 .panel--top-mar-small {
   margin-top: 7px;
@@ -3534,6 +3561,9 @@ $SPLIT
   font-size: 13.5px;
   font-size: 1.35rem;
   text-align: center;}
+  
+.stat__updated {
+  text-align: left; }  
 
 .stat--headline .stat__figure {
   font-size: 40px;
@@ -3727,10 +3757,10 @@ $SPLIT
 
 .table--striped tbody tr,
 .table--striped .list--table__body {
-  background-color: #dedfdc; }
+  background-color: #edeeee; }
   .table--striped tbody tr:nth-child(even),
   .table--striped .list--table__body:nth-child(even) {
-    background-color: #ebebe9; }
+    background-color: #dedfdc; }
 
 .table--selectable tbody tr:not(.hover-override):hover,
 .table--selectable .list--table__body:not(.hover-override):hover {
@@ -3738,22 +3768,23 @@ $SPLIT
 
 .table--striped-light tbody tr,
 .table--striped-light .list--table__body {
-  background-color: white; }
+  background-color: #edeeee; }
   .table--striped-light tbody tr:nth-child(even),
   .table--striped-light .list--table__body:nth-child(even) {
-    background-color: #f6f6f6; }
+    background-color: #fff; }
 
 .table-light--sectioned > .list--table__body,
 .table-light--sectioned > tr {
   border-color: #dedfdc;
   border-style: solid;
-  border-width: 2px 2px 0; }
+  border-width: 0px 2px 2px 2px; }
   .table-light--sectioned > .list--table__body:first-child,
   .table-light--sectioned > tr:first-child {
-    border-top-width: 0; }
+    border-top-width: 2px; }
 
 .table--child tbody tr:first-child {
   border-top: 0; }
+
 
 /*---------------------
 table actions
@@ -4090,7 +4121,9 @@ table actions
 
   a,
   a:visited {
-    text-decoration: underline; }
+    text-decoration: underline;
+    
+      }
 
   a[href]:after {
     content: " (" attr(href) ")"; }
@@ -4494,17 +4527,14 @@ ul.simple-pagination {
 }
 
 .div_panel_link{
-  top: 170px;
   position: absolute;
+  bottom: 50px;
   right: 30px;
 }
 
 
 /* T3 list--table*/
 
- .table--striped-light .list--table__body:nth-child(even) {
-background-color: #edeeee !important;
-}
 
 .list--table__item__header {
   font-weight: bold;
@@ -4535,10 +4565,6 @@ background-color: #edeeee !important;
   font-size: 1.125em;
   color: #016db9 !important;
   text-decoration: none !important;
-}
-
- .table--striped-light .list--table__body:nth-child(even) {
-background-color: #edeeee !important;/* altered on phil's advice--change this override*/
 }
 
 
@@ -4582,6 +4608,7 @@ background-color: #edeeee !important;/* altered on phil's advice--change this ov
 .arrow_box {
   position: relative;
   border-left: 5px solid #008998;
+  margin: auto 0;
   /*border-top: 2px solid #A8A1A1 ;
   border-right: 2px solid #A8A1A1 ;
   border-bottom: 2px solid #A8A1A1;*/
@@ -4609,6 +4636,15 @@ background-color: #edeeee !important;/* altered on phil's advice--change this ov
   border-right-color: #008998;
   border-width: 26px;
   margin-top: -26px;
+}
+
+
+.box-centred {
+  margin: auto; 
+  width: 95%;
+  height: 95%;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 /*------------------------------------*\
@@ -5387,11 +5423,11 @@ td.datatable-downloads{
   background-repeat: no-repeat;
   background-size: contain;
   height: 6.5em;
-  border: 0px;*/
+  border: 0px; commented out to remove icons on MJ's request*/
 }
-*/
-.nav-panel__body.flush{
-  padding-bottom: 5rem;
+
+.sparkline_area {
+	width: 100%;
 }
 
 .nav-panel__body.graph{
@@ -5404,79 +5440,23 @@ td.datatable-downloads{
   border: 0px !important;
 }
 
-@media screen and (max-width: 800px){
-/*.homeicon_economy{
-  background-image: url("/ui/img/CPI_GDP.png");
-  background-position: 0% -70%;
-  background-repeat: no-repeat;
-  height: 5.5em;
-} 
 
-.homeicon_employmentandlabourmarket{
-  background-image: url("/ui/img/Employment.png");
-  background-position: 0% -70%;
-  background-repeat: no-repeat;
-  height: 5.5em;
-  } 
-
-.homeicon_businessindustryandtrade{
-  background-image: url("/ui/img/Trade.png");
-  background-position: 0% -70%;
-  background-repeat: no-repeat;
-  height: 5.5em;
-} 
-
-.homeicon_peoplepopulationandcommunity{
-  background-image: url("/ui/img/Population.png");
-  background-position: 1% -70%;
-  background-repeat: no-repeat;
-  height: 5.5em;
-}*/
-
-.homeicon_sparkline{
-  /*background-image: url("/ui/img/sparkline.png");
-  background-position: 4% 30%;
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 6.5em;
-  border: 0px;*/
-}
-.nav-panel__body.flush{
-  position: relative;
-  left: 30%;
-}
-.nav-panel__item.homeicon_sparkline{
- position: relative;
-left: 30%; 
-text-align: center;
-border: 0px important;
-}
-}
-
-@media screen and (min-width: 800px){
-  .navpanel_link{
-    text-align: right;
-    margin-right: 35px;
-  }
-  .navpanel_wrapper{
-  height: 17em;
-
-  /*line-height: 1.3;*/
-  overflow: hidden;
-  padding: 0;}
-
-.navpanel_wrapper_home{
-  max-height: 25em;
-  height: 20em;
-  overflow: hidden;
-  padding: 0;}
+.navpanel_wrapper_home__link {
+/* From: http://stackoverflow.com/questions/796087/make-a-div-into-a-link */
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left: 0;
+    z-index: 1;
+    /* Fixes overlap error in IE7/8 */
+    background-image: url('/ui/img/transparent.gif');
 }
 
 
 .nav_home-stats{
   padding-top: 0.5em;
   margin: 0 auto;
-
   text-align: center;
 }
 
@@ -5510,7 +5490,88 @@ border: 0px important;
 }
 
 .home_nav_boxes{
-  height: 25rem;
+  height: 25rem;}
+
+
+.nav-panel--padsmall{
+  padding-right: 1rem !important;
+}
+
+.rem_border{
+  border: 0px;
+}
+
+.callout-header{
+  font-size: 2.4rem;
+  padding-top:20px;  
+}
+
+
+
+.floater-right{
+  float: right;
+}
+
+/*.cta--box__header-pad-left{
+  padding-left: 20px;
+}*/
+
+@media screen and (max-width: 800px){
+/*.homeicon_economy{
+  background-image: url("/ui/img/CPI_GDP.png");
+  background-position: 0% -70%;
+  background-repeat: no-repeat;
+  height: 5.5em;
+} 
+
+.homeicon_employmentandlabourmarket{
+  background-image: url("/ui/img/Employment.png");
+  background-position: 0% -70%;
+  background-repeat: no-repeat;
+  height: 5.5em;
+  } 
+
+.homeicon_businessindustryandtrade{
+  background-image: url("/ui/img/Trade.png");
+  background-position: 0% -70%;
+  background-repeat: no-repeat;
+  height: 5.5em;
+} 
+
+.homeicon_peoplepopulationandcommunity{
+  background-image: url("/ui/img/Population.png");
+  background-position: 1% -70%;
+  background-repeat: no-repeat;
+  height: 5.5em;
+}*/
+
+/*.homeicon_sparkline{
+  /*background-image: url("/ui/img/sparkline.png");
+  background-position: 4% 30%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 6.5em;
+  border: 0px;
+}*/
+
+.nav-panel__body.flush{
+  position: relative;
+  left: 30%;
+}
+.nav-panel__item.homeicon_sparkline{
+position: relative;
+left: 29%; 
+text-align: center;
+border: 0px;
+}
+}
+
+@media screen and (max-width: 400px){
+.callout-header{  
+  font-size: 1.6rem;
+  padding-top:20px;
+  padding-left: 10px;  
+}
 }
 
 @media screen and (min-width: 800px){
@@ -5523,41 +5584,44 @@ border: 0px important;
   background-color: #fff !important;
 }
 
-  .navpanel_wrapper{
+.navpanel_wrapper{
   height: 17em;
   /*line-height: 1.3;*/
   overflow: hidden;
   padding: 0;}
-}
 
-.nav-panel--padsmall{
-  padding-right: 1rem !important;
-}
-
-.rem_border{
-  border: 0px;
-}
 
 .nav-panel__header_home{
   height: 8rem;
-}
-}
-
-
-.callout-header{
-  font-size: 2rem  
+  text-align: center;
 }
 
-@media screen and (max-width: 48em)  {
-.callout-header{
-  font-size: 1.7rem;
-  /*padding-left: 2rem;*/
+.navpanel_link{
+    text-align: right;
+    margin-right: 35px;
   }
+  .navpanel_wrapper{
+  height: 17em;
+
+  /*line-height: 1.3;*/
+  overflow: hidden;
+  padding: 0;}
+
+.navpanel_wrapper_home{
+  max-height: 25em;
+  height: 20em;
+  overflow: hidden;
+  padding: 0;}
+
+.navpanel_wrapper_home:hover{
+  background-color: #e9e9e9;
+}
+.nav-panel.nav-panel--stats.sectioned{
+  margin-bottom: 0px;
 }
 
-.floater-right{
-  float: right;
 }
+
 
 
 /*------------------------------------*\

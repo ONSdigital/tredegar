@@ -3,22 +3,25 @@
 (function() {
 
 	angular.module('onsTemplates')
-		.controller('T3Controller', ['$scope', 'Taxonomy', T3Controller])
+		.controller('T3Controller', ['$rootScope', '$scope', 'Taxonomy', T3Controller])
 
-	function T3Controller($scope, Taxonomy) {
+	function T3Controller($rootScope, $scope, Taxonomy) {
 		var t3 = this
 		var data = $scope.taxonomy.data
 		var timeseriesCount = data.items.length
-		var timeseriesDefaultLimit = 5
+		t3.timeseriesDefaultLimit = $rootScope.onsAlphaConfiguration.defaultTimeseriesCountOnT3
 		t3.loadedTimseriesCount = 0
-		var loadingMore = false
+		t3.allVisible = false
+		t3.showToggle = timeseriesCount > t3.timeseriesDefaultLimit
+		var loadingMore = false //Loading in progress
+
 		initialize()
 
 		function initialize() {
 			loadItem(data.headline) //Load headline
 			t3.loadedTimseriesCount-- //Reset timeseries count after headline
 				loadItem(data.statsBulletinHeadline) //Load stats bulletins related to headline
-			loadItems(data.items, timeseriesDefaultLimit) //Load timeseries
+			loadItems(data.items, t3.timeseriesDefaultLimit) //Load timeseries
 			loadItems(data.statsBulletins) //Load timeseries
 			loadItems(data.datasets) //Load datasets
 		}
@@ -42,6 +45,7 @@
 							t3.loadedTimseriesCount++
 								if (!hasMore()) {
 									loadingMore = false
+									t3.allVisible = true
 								}
 							item.chartData = Taxonomy.resolveChartData(item)
 
@@ -56,7 +60,6 @@
 			//Handle data load error
 		}
 
-
 		function isLoading() {
 			return loadingMore
 		}
@@ -65,15 +68,27 @@
 			return timeseriesCount > t3.loadedTimseriesCount
 		}
 
-		function loadAll() {
-			loadingMore = true
-			loadItems(data.items.slice(t3.loadedTimseriesCount))
+		//View more/less timeseries
+		function toggleTimeSeries() {
+			var more = hasMore()
+			if (t3.allVisible) {
+				t3.allVisible = false
+				return
+			} else {
+				t3.allVisible = true
+				if (more) {
+					loadingMore = true
+					loadItems(data.items.slice(t3.loadedTimseriesCount))
+				}
+			}
 		}
 
+
+
+		//Expose API
 		angular.extend(t3, {
 			isLoading: isLoading,
-			hasMore: hasMore,
-			loadAll: loadAll
+			toggleTimeSeries: toggleTimeSeries
 		})
 	}
 
