@@ -9,7 +9,20 @@
   "download": [
     {
       "title": "Trade in goods by area",
-      "xls": "http://www.ons.gov.uk/ons/rel/uktrade/uk-trade/june-2014/rtd-publication-tables-uk-trade--june-2014.xls"
+      "cdids": [
+        "MHO3",
+        "MHO5",
+        "MHN9",
+        "L87S",
+        "L87U",
+        "L87Q",
+        "L87M",
+        "L8TO",
+        "L87K",
+        "BOKG",
+        "BOKH",
+        "BOKI"
+      ]
     }
   ],
   "notes": [
@@ -17,6 +30,8 @@
       "data": "These estimates are rounded to the nearest hundred and are different to the unrounded estimates in other published tables."
     }
   ],
+  "summary": "Exports, imports and balance for EMU, EU and non-EU",
+  "uri": "/businessindustryandtrade/internationaltrade/datasets/tradeingoodsbyarea",
   "title": "Trade in goods by area",
   "releaseDate": "19 February 2014",
   "type": "dataset",

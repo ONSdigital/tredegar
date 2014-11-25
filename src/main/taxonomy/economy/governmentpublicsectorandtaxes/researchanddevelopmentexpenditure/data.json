@@ -39,7 +39,12 @@
       "uri": "/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/bulletins/ukgrossdomesticexpenditureonresearchanddevelopment"
     }
   ],
-  "datasets": [],
+  "datasets": [
+    {
+      "name": "Expenditure on R\u0026D in the UK",
+      "uri": "/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/datasets/expenditureonrdintheuk"
+    }
+  ],
   "level": "t3",
   "index": 1,
   "lede": "Research and Development Expenditure refers to estimates of R\u0026D performed in and funded by the following four sectors of the economy, as defined in the ‘Frascati Manual’: Business Enterprise (BERD), Higher Education (HERD), Government (GovERD), which includes Research Councils, and Private Non-Profit (PNP) organisations. All these sectors’ R\u0026D data are known collectively as GERD, which represents the gross domestic expenditure on R\u0026D in the UK.",

@@ -9,7 +9,16 @@
   "download": [
     {
       "title": "Mergers and Acquisitions",
-      "xls": "http://www.ons.gov.uk/ons/rel/international-transactions/mergers-and-acquisitions-involving-uk-companies/q1-2014/rft-m-a-tables-q1-2014.xls"
+      "cdids": [
+        "CBAQ",
+        "CBBI",
+        "CBAS",
+        "CBBT",
+        "CBAU",
+        "CBCQ",
+        "CBAW",
+        "CBDB"
+      ]
     }
   ],
   "notes": [
@@ -17,6 +26,8 @@
       "data": "These estimates are rounded to the nearest hundred and are different to the unrounded estimates in other published tables."
     }
   ],
+  "summary": "Cross-Border Mergers, Acquisitions and Disposals",
+  "uri": "/businessindustryandtrade/changestobusiness/mergersandacquisitions/datasets/mergersandacquisitions",
   "title": "Mergers and Acquisitions",
   "releaseDate": "19 February 2014",
   "type": "dataset",

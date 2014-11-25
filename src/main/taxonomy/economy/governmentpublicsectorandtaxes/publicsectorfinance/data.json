@@ -47,7 +47,12 @@
       "uri": "/economy/governmentpublicsectorandtaxes/publicsectorfinance/bulletins/publicsectorfinances"
     }
   ],
-  "datasets": [],
+  "datasets": [
+    {
+      "name": "Public Sector data collection",
+      "uri": "/economy/governmentpublicsectorandtaxes/publicsectorfinance/datasets/publicsectordatacollection"
+    }
+  ],
   "level": "t3",
   "index": 0,
   "lede": "Public Sector Finances (PSF) statistics are a compilation of statistics on the main aspects of the UK public sector‟s finances, which give an indication of the current state of the country’s financial position. The statistics are published jointly by the Office for National Statistics (ONS) and HM Treasury. ",
