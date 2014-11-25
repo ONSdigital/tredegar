@@ -154,7 +154,7 @@ class AlphaContentCSV {
 				timeseries.keyNote = keyNote;
 			}
 
-			String nationalStatistic = StringUtils.defaultIfBlank("yes", row.get(NATIONAL_STATISTIC));
+			String nationalStatistic = StringUtils.defaultIfBlank(row.get(NATIONAL_STATISTIC), "yes");
 			timeseries.nationalStatistic = BooleanUtils.toBoolean(nationalStatistic);
 
 			String additionalText = row.get(ADDITIONAL_TEXT);
