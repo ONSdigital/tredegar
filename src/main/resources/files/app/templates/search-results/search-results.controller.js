@@ -4,10 +4,11 @@
 (function() {
 
   angular.module("onsTemplates")
-    .controller("SearchController", ['$scope', '$location', '$log', 'DataLoader', 'PageUtil', SearchController])
+    .controller("SearchController", ['$scope', '$location', '$log', 'PageUtil','searchResponse', SearchController])
 
 
-  function SearchController($scope, $location, $log, DataLoader, PageUtil) {
+  function SearchController($scope, $location, $log, PageUtil, searchResponse) {
+    console.log(searchResponse)
     var page = PageUtil.getUrlParam("page")
     var searchTerm = $scope.searchTerm = PageUtil.getUrlParam("q")
     var type = $scope.type = PageUtil.getUrlParam("type")
@@ -114,12 +115,12 @@
         departmentLogo: "ui/img/tis.png"
       },
       wg: {
-        departmentName: "Welsh Government",
+        departmentName: "the Welsh Government",
         departmentLink: "http://wales.gov.uk",
         departmentLogo: "ui/img/wg.png"
       },
       sg: {
-        departmentName: "Scottish Government",
+        departmentName: "the Scottish Government",
         departmentLink: "http://www.scotland.gov.uk/Topics/Statistics",
         departmentLogo: "ui/img/sg.png"
       },
@@ -138,21 +139,17 @@
       page = 1
     }
 
-    search(searchTerm, type, page)
+    initialize(searchTerm, type, page)
 
     function isLoading() {
       return ($scope.searchTerm && !$scope.searchResponse)
     }
 
-    function search(q, type, pageNumber) {
-      var searchString = "?q=" + q + (type ? "&type=" + type : "") + "&page=" + pageNumber
-      DataLoader.load("/search" + searchString)
-        .then(function(data) {
-          $scope.searchResponse = data
-          $scope.pageCount = Math.ceil(data.numberOfResults / 10)
+    function initialize(q, type, pageNumber) {
+          $scope.searchResponse = searchResponse
+          $scope.pageCount = Math.ceil(searchResponse.numberOfResults / 10)
           $scope.searchTermOneTime = q
           resolveRelatedDepartment(q)
-        })
     }
 
     function filter(type) {

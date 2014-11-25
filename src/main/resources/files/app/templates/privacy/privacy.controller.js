@@ -4,12 +4,12 @@
 
     //Contact Us Controller
     angular.module('onsTemplates')
-        .controller('MethodologyCtrl', ['$scope', ContactUsController])
+        .controller('PrivacyCtrl', ['$scope', ContactUsController])
 
     function ContactUsController($scope) {
         $scope.breadcrumb = {
             parent: [],
-            current: "Methodology"
+            current: "Cookies and privacy"
         }
     }
 

@@ -4,12 +4,12 @@
 
     //Contact Us Controller
     angular.module('onsTemplates')
-        .controller('MethodologyCtrl', ['$scope', ContactUsController])
+        .controller('AboutCtrl', ['$scope', ContactUsController])
 
     function ContactUsController($scope) {
         $scope.breadcrumb = {
             parent: [],
-            current: "Methodology"
+            current: "About"
         }
     }
 
