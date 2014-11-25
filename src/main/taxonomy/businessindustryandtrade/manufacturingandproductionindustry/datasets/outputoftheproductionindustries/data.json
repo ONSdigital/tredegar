@@ -8,8 +8,20 @@
   "more": "Lorem ipsum dolor sit amet",
   "download": [
     {
-      "title": "Output of the Production Industries",
-      "xls": "http://www.ons.gov.uk/ons/rel/iop/index-of-production/june-2014/rft-iop5-jun-2014.xls"
+      "title": "Output of the production industries",
+      "cdids": [
+        "K222",
+        "K224",
+        "K22A",
+        "K248",
+        "K24C",
+        "K226",
+        "K24Q",
+        "K24R",
+        "K24S",
+        "K24O",
+        "K24T"
+      ]
     }
   ],
   "notes": [
@@ -17,10 +29,12 @@
       "data": "These estimates are rounded to the nearest hundred and are different to the unrounded estimates in other published tables."
     }
   ],
-  "title": "Output of the Production Industries",
+  "summary": "Broad industry groups and main industrial groupings.",
+  "uri": "/businessindustryandtrade/manufacturingandproductionindustry/datasets/outputoftheproductionindustries",
+  "title": "Output of the production industries",
   "releaseDate": "19 February 2014",
   "type": "dataset",
-  "name": "Output of the Production Industries",
+  "name": "Output of the production industries",
   "fileName": "outputoftheproductionindustries",
   "breadcrumb": [
     {

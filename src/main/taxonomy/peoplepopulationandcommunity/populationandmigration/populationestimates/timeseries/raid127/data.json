@@ -322,7 +322,11 @@
     "/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/annualmidyearpopulationestimates",
     "/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/estimatesoftheveryoldincludingcentenarians"
   ],
-  "relatedTimeseries": [],
+  "relatedTimeseries": [
+    "/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/raid124",
+    "/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/raid125",
+    "/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/raid126"
+  ],
   "sourceDatasets": [],
   "type": "timeseries",
   "name": "Northern Ireland population",

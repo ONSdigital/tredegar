@@ -9,7 +9,19 @@
   "download": [
     {
       "title": "Public Sector data collection",
-      "xls": "http://www.ons.gov.uk/ons/rel/psa/public-sector-finances/june-2014/rft---public-sector-finances-tables-1---12.xls"
+      "cdids": [
+        "JW2T",
+        "JW2Z",
+        "J5II",
+        "L65P",
+        "HF6W",
+        "HF6X",
+        "ANMU",
+        "ANNW",
+        "ANNX",
+        "RUTN",
+        "RUTO"
+      ]
     }
   ],
   "notes": [
@@ -17,6 +29,8 @@
       "data": "These estimates are rounded to the nearest hundred and are different to the unrounded estimates in other published tables."
     }
   ],
+  "summary": "Public sector summary excluding financial interventions",
+  "uri": "/economy/governmentpublicsectorandtaxes/publicsectorfinance/datasets/publicsectordatacollection",
   "title": "Public Sector data collection",
   "releaseDate": "19 February 2014",
   "type": "dataset",

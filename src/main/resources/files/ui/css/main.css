@@ -704,6 +704,10 @@ img {
 .flush--bottom {
   margin-bottom: 0 !important; }
 
+.flush--vertical {
+  margin-bottom: 0 !important;
+  margin-top: 0 !important; }
+
 .flush--half {
   margin: .33em !important; }
 
@@ -2021,6 +2025,11 @@ a:visited {
       margin-bottom: 35px;
       margin-bottom: 3.5rem; } }
 
+
+.page-header.flush--half--bottom{
+  padding-bottom: 0.5em;
+}
+
 .actionable-header__title {
   margin-bottom: 0; }
 
@@ -2608,7 +2617,9 @@ lesser , applied styles
     width: 45%; }
 
   .list--table__item__body--stat {
-    width: 55%; } }
+    width: 55%; 
+    margin: 0 auto;
+    text-align: center;} }
 @media screen and (min-width: 36em) {
   .list--table-header {
     max-width: 72.5%;
@@ -2676,9 +2687,9 @@ lesser , applied styles
       clear: none; }
 
   .list--table__item__body--stat {
-    float: left;
-    width: 30%;
-    margin-bottom: -1em; }
+    margin: 0 auto;
+    text-align: center;
+    width: 30%; }
 
   .list--table__item__body--caption {
     float: left;
@@ -4185,8 +4196,7 @@ table actions
 }
 
 .aside-logo{
-  height: 4.3em;
-  width: 7.4em;
+  height: 6em;
   margin-right: 10em;
   float: left;
   margin-bottom: 0.7em;
@@ -4278,10 +4288,16 @@ table actions
 }*/
 
 #search > dl > dt:nth-child(1){
- font-size: 1.35em;
+ font-size: 1.5em;
 /*  background-color: #fafafb ;*/
 /*  padding: 0 0 0 0.3em; Commented out to align collection results*/
 }
+
+#search > dl > dd:nth-child(3){
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
 
 .search-summary{/*border-bottom: 1px solid #d3d3d3 ;*/
                padding: 0 0 3.2em 0;  }
@@ -4543,6 +4559,19 @@ ul.simple-pagination {
   text-decoration: none !important;
 }
 
+.list--table--stat_description {
+  display: block;
+  font-weight: normal;
+  font-size: 13.5px;
+  font-size: 1.35rem; }}
+@media screen and (min-width: 42em) {
+  .list--table--stat_description {
+    text-align: center
+  }
+}
+
+
+
 /*.no_underline{
   text-decoration: none !important;
   font-weight: normal !important;
@@ -4646,6 +4675,8 @@ ul.simple-pagination {
   margin-top: auto;
   margin-bottom: auto;
 }
+
+
 
 /*------------------------------------*\
   T1 Classes
@@ -5078,7 +5109,7 @@ ol > li > div.list--table__item__body.list--table__item__body--stat.no_align{
   display: none;
   padding: 0.8rem;
   padding: 8px;
-  margin-top: 0px;
+  margin-top: -7px;
   margin-left: 7px;
   width: 45%;
   max-width:200px;
@@ -7374,6 +7405,12 @@ height: 4em;
     margin-left: 10px;
     margin-left: 1rem;
 }
+
+.actionable-header--asidelink {
+    position: relative;
+    bottom: 4px;
+}
+
 /*! Tablesaw - v0.1.6 - 2014-07-23
 * https://github.com/filamentgroup/tablesaw
 * Copyright (c) 2014 Filament Group; Licensed MIT */

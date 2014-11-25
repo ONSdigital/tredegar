@@ -42,9 +42,12 @@
                     <div class="box box--inline box--padded muted--dark headline--stat-centred">
                         <div class="stat stat--headline">
                             <ons-loading condition="!taxonomy.data.headline.data"></ons-loading>
-                            <div class="stat__figure">
-                                <span class="stat__figure__unit">{{taxonomy.data.headline.data.preUnit}}</span> {{taxonomy.data.headline.data.number}}
-                                <span class="stat__figure__unit">{{taxonomy.data.headline.data.unit}}</span>
+                            <div class="stat__figure ">
+                                <div>
+                                    <span class="stat__figure__unit">{{taxonomy.data.headline.data.preUnit}}</span> {{taxonomy.data.headline.data.number}}
+                                    <span class="stat__figure__unit">{{taxonomy.data.headline.data.unit}}</span>
+                                </div>
+                                <div class="stat__description-large">{{taxonomy.data.headline.data.date}}</div>
                             </div>
                         </div>
                     </div>
@@ -99,7 +102,7 @@
 <!-- List/Table with data -->
 
 <section id="timeseries" class="panel--large wrapper">
-    <h2 id="related" class="list--table-header panel--pad">Time Series Related to {{taxonomy.data.name}}</h2>
+    <h2 id="related" class="list--table-header panel--pad">Time Series related to {{taxonomy.data.name}}</h2>
     <ol class="list--table list--table--complex table--striped-light table-light--sectioned">
         <!-- /list- -table__head -->
         <li ng-repeat="item in taxonomy.data.items | limitTo:(t3.allVisible?t3.loadedTimseriesCount : t3.timeseriesDefaultLimit)" class="list--table__item list--table__body">
@@ -118,9 +121,12 @@
             </div>
             <div class="list--table__item__body list--table__item__body--stat">
                 <ons-loading condition="!item.data" class="stat list--table__item__body--centred"></ons-loading>
-                <div class="stat__figure">
-                    <span class="stat__figure__unit">{{item.data.preUnit}}</span> {{item.data.number}}
-                    <span class="stat__figure__unit">{{item.data.unit}}</span>
+                <div class="stat__figure list--table__item--stat">
+                    <div>                        
+                        <span class="stat__figure__unit">{{item.data.preUnit}}</span> {{item.data.number}}
+                        <span class="stat__figure__unit">{{item.data.unit}}</span>
+                    </div>
+                    <div class="list--table--stat_description">{{item.data.date}}</div>
                 </div>
             </div>
             <div class="list--table__item__body list--table__item__body--update">
@@ -153,7 +159,7 @@
 <section class="panel wrapper box box--padded--med panel--bottom-mar box--green--separated-left solid border">
     <header class="actionable-header__title">
         <h2 class="actionable-header__title table-inline ">Datasets</h2>
-        <a class="hide-small" href="#!{{getPath()}}/collection?contentType=datasets">View more datasets</a>
+        <a class="hide-small actionable-header--asidelink" href="#!{{getPath()}}/collection?contentType=datasets">View more datasets</a>
     </header>
 
     <!-- Static content for pages with no related datasets -->
@@ -220,7 +226,7 @@
         <!-- /grid-col -->
 
         <div class="grid-col hide-large">
-            <a href="#">View more datasets</a>
+            <a  href="#">View more datasets</a>
         </div>
     </div>
     <!-- /grid-wrap -->

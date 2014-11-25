@@ -88,7 +88,7 @@ public class Timeseries extends DataItem implements Comparable<Timeseries> {
 	 * <p>
 	 * It's only needed during parsing, so we don't want it serialised to json:
 	 */
-	private transient Integer csvValueScaleFactor;
+	private transient Double csvValueScaleFactor;
 
 	/**
 	 * This field is here so that Rob can see which datasets have contributed
@@ -162,15 +162,15 @@ public class Timeseries extends DataItem implements Comparable<Timeseries> {
 		}
 	}
 
-	public void setScaleFactor(int multiply) {
+	public void setScaleFactor(double multiply) {
 		this.csvValueScaleFactor = multiply;
 	}
 
-	public int getScaleFactor() {
+	public double getScaleFactor() {
 		if (this.csvValueScaleFactor == null) {
 			return 1;
 		}
-		return this.csvValueScaleFactor.intValue();
+		return this.csvValueScaleFactor.doubleValue();
 	}
 
 	@Override
