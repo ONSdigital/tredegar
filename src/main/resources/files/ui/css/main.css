@@ -164,7 +164,7 @@ form {
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em; }
+  padding: 0.35em 0.625em 0.75em;}
 
 legend {
   border: 0;
@@ -1022,16 +1022,16 @@ textarea {
 
 @font-face {
   font-family: 'open-sans-n3';
-  src: url("/ui/fonts/OpenSans-Light.eot");
   src: url("../fonts/OpenSans-Light.ttf") format("truetype");
+  src: url("/ui/fonts/OpenSans-Light.eot");
 
   /*src: url("/ui/fonts/OpenSans-Light.eot?#iefix") format("embedded-opentype"), url("/ui/fonts/OpenSans-Light.woff2") format("woff2"), url("/ui/fonts/OpenSans-Light.woff") format("woff"), url("/ui/fonts/OpenSans-Light.ttf") format("truetype"), url("/ui/fonts/OpenSans-Light.svg#open_sanslight") format("svg");*/
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'open-sans-n4';
-  src: url("/ui/fonts/OpenSans-Regular.eot");
   src: url("../fonts/OpenSans-Regular.ttf") format("truetype");
+  src: url("/ui/fonts/OpenSans-Regular.eot");
 
   /*src: url("/ui/fonts/OpenSans-Regular.eot#iefix") format("embedded-opentype"), url("/ui/fonts/OpenSans-Regular.woff") format("woff"), url("/ui/fonts/OpenSans-Regular.ttf") format("truetype"), url("/ui/fonts/OpenSans-Regular.svg#OpenSans-Regular") format("svg");*/
   font-weight: normal;
@@ -1044,8 +1044,8 @@ textarea {
     /*src: url("/ui/fonts/OpenSans-Regular.svg#OpenSans-Regular") format("svg"); } */}
 @font-face {
   font-family: 'open-sans-n7';
-  src: url("/ui/fonts/OpenSans-Bold.eot");
   src: url("../fonts/OpenSans-Bold.ttf") format("truetype");
+  src: url("/ui/fonts/OpenSans-Bold.eot");
 
   /*src: url("/ui/fonts/OpenSans-Bold.eot#iefix") format("embedded-opentype"), url("/ui/fonts/OpenSans-Bold.woff") format("woff"), url("/ui/fonts/OpenSans-Bold.ttf") format("truetype"), url("/ui/fonts/OpenSans-Bold.svg#OpenSans-Bold") format("svg");*/
   font-weight: normal;
@@ -1058,8 +1058,8 @@ textarea {
     /*src: url("/ui/fonts/OpenSans-Bold.svg#OpenSans-Bold") format("svg"); } */}
 @font-face {
   font-family: 'DaxlinePro';
-  src: url("/ui/fonts/DaxlinePro-Bold.eot");
-  src: url("../fonts/DaxlinePro-Bold.ttf") format("truetype");
+  src: url('../fonts/DaxlinePro-Bold.ttf') format('truetype');
+  src: url('/ui/fonts/DaxlinePro-Bold.eot');
   font-weight: normal;
   font-style: normal;
 
@@ -3373,6 +3373,9 @@ lesser , applied styles
 .slate--green {
   background-color: #fafbe7; }
 
+.slate--dark-green {
+  background-color: #f1fffb; }
+
 .slate--orange {
   background-color: #fef5ed; }
 
@@ -3803,7 +3806,8 @@ table actions
   font-size: 16px;
   font-size: 1.6rem;
   letter-spacing: -.31em;
-  word-spacing: -.43em; }
+  word-spacing: -.43em;
+  border-bottom: 2px solid #dedfdc; }
   @media screen and (min-width: 20em) {
     .tab-pane__tabs-container {
       font-size: 21px;
@@ -3844,7 +3848,7 @@ table actions
   border-bottom: 0; }
 
 .tab-pane__tab:focus {
-  border-color: #303030;
+  border-color: #dedfdc;
   outline: none; }
 
 .tab-pane__tab--inactive {
@@ -3852,7 +3856,7 @@ table actions
 
 .tab-pane__panel {
   margin-top: 0;
-  border: 2px solid #dedfdc; }
+  border-bottom: 2px solid #dedfdc; }
   .tab-pane__panel:focus {
     background: #dedfdc;
     outline: thin dotted; }
@@ -5305,6 +5309,9 @@ td.datatable-downloads{
 .page-header--contact-us:after {
   background-color: #a8233e; }
 
+.page-header--calendar:after {
+  background-color: #00543d; }
+
 .page-header--expert-analysis-desc {
   color: #757575; }
 
@@ -5319,6 +5326,9 @@ td.datatable-downloads{
 
 .page-header--error-desc {
   color: #a8233e; }
+
+.page-header--calendar-desc {
+  color: #00543d; }
 
 /*------------------------------------*\
   New Hompage Styles
@@ -5564,7 +5574,7 @@ border: 0px important;
 }
 
 @media screen and (max-width: 400px){
-.callout-header{  
+.callout-header{
   font-size: 1.8rem;
 }
 }
@@ -7285,7 +7295,7 @@ height: 4em;
 }
 .actionable-header__action {
     font-family: "open-sans-n7", "open-sans", sans-serif;
-    color: #f37121;
+    color: #00543d;
 }
 .actionable-header__action:hover {
     color: #f79d6a;
@@ -7890,3 +7900,50 @@ lesser , applied styles
     bottom: 0;
     padding-bottom: 7px;
 }
+
+/**************************************\
+      ***** Release Calendar *****
+\**************************************/
+
+.calendar-wrapper{
+    padding: 15px 0 15px 10px;
+}
+.calendar fieldset {
+    min-width: 0;
+    border: 0 !important;
+   @-moz-document url-prefix() {
+        fieldset {
+            display: table-cell;
+        }
+    }
+}
+.calendar label {
+    padding: 5px 0;
+}
+.calendar input[type="text"],
+input[type="search"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  padding: 5px;
+  padding: .5rem;
+  background: white;
+  /*border-color: #d1d3cf; previous value*/
+  border-color:#5c5c5c;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 3px;
+  /*fix for button alignment right*/
+  margin-right:-6px;
+  margin-right:-0.6rem;
+  width: 100%;
+  /*end fix*/
+  }
+  .calendar select {
+    width: 100%;
+    padding: 5px 0;
+  }
+.calendar .tab-pane__panel {
+  margin-top: 0;
+  border-bottom: 0; }

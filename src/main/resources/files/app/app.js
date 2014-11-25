@@ -48,6 +48,13 @@
                     templateUrl: 'app/templates/article/article.html',
                     controller: 'ArticleCtrl'
                 }).
+                when('/calendar', {
+                    templateUrl: 'app/templates/calendar/calendar.html',
+                    controller: "CalendarCtlr",
+                    resolve: {
+                        navigation: ['DataLoader', getNavigatinLinks]
+                    }
+                }).
                 when(':collectionPath*\/collection', {
                     templateUrl: 'app/templates/collection/collection.html',
                     controller: "CollectionCtrl",
