@@ -19,7 +19,7 @@
 				$log.debug('Data Loader : Cached data hit for ', path, ' ', data)
 				deferred.resolve(data)
 			} else { //No cache hit, load
-				$http.get(path, {cache:false}).success(function(data) {
+				$http.get(path).success(function(data) {
 					$log.debug('Data Loader : Successfully loaded data at ', path, ' ', data)
 					storeToCache(path,data)
 					deferred.resolve(data)
