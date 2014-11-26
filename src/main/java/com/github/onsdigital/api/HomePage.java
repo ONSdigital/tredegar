@@ -24,9 +24,11 @@ public class HomePage implements Home {
 		// reloadable in development:
 		ResourceUtils.classLoaderClass = HomePage.class;
 
-		// Serve up the angular template
+		// Cache for five minutes - helps if someone refreshes the page:
+		response.setHeader("cache-control", "public, max-age=300");
 		response.setCharacterEncoding("UTF8");
 		response.setContentType("text/html");
+		// Serve up the angular template
 		try (Reader index = ResourceUtils.getReader("/files/index.html")) {
 			IOUtils.copy(index, response.getWriter());
 		}
