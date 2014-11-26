@@ -8,7 +8,7 @@ import java.util.concurrent.Future;
 
 import org.elasticsearch.client.Client;
 
-import com.github.onsdigital.api.LoadIndex;
+import com.github.davidcarboni.restolino.framework.Startup;
 
 /**
  * Starts an {@link EmbeddedElasticSearchServer} when a client requested
@@ -16,15 +16,16 @@ import com.github.onsdigital.api.LoadIndex;
  * @author Bren
  *
  */
-public class ElasticSearchServer {
+public class ElasticSearchServer implements Startup {
 
 	static ExecutorService pool = Executors.newSingleThreadExecutor();
 
 	static EmbeddedElasticSearchServer server;
 	static Future<Client> client;
 
-	private ElasticSearchServer() {
-		// Prevent instantiation.
+	@Override
+	public void init() {
+		startEmbeddedServer();
 	}
 
 	public static Client getClient() {
@@ -58,7 +59,7 @@ public class ElasticSearchServer {
 					// Index
 					start = System.currentTimeMillis();
 					System.out.println("Elasticsearch: indexing..");
-					LoadIndex.loadIndex(client);
+					Indexer.loadIndex(client);
 					System.out.println("Elasticsearch: indexing complete (" + (System.currentTimeMillis() - start) + "ms)");
 
 					return client;
