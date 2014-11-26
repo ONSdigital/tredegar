@@ -83,9 +83,10 @@ public class ElasticSearchServer implements Startup {
 		@Override
 		public void run() {
 
+			getClient().close();
+
 			// Once we get the client, the server
 			// is guaranteed to have been created:
-			getClient().close();
 			server.shutdown();
 		}
 	}
