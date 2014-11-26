@@ -506,6 +506,7 @@ img {
  */.icon-help:before { content: '\e817'; } /* '' */
 .icon-help-circled:before { content: '\e81a'; } /* '' */
 .icon-right-open:before { content: '\e866'; } /* '' */
+
 /*Original code from CX*/
 
 
@@ -628,6 +629,10 @@ img {
 
 .icon--large {
   font-size: 150%; }
+  
+.icon--medium {
+	font-size: 115%;
+}
 
 .icon--mega {
   font-size: 200%; }
@@ -648,7 +653,7 @@ img {
 
 .icon--red-dark {
   color: #a8233e; }
-
+  
 .icon--ons-blue {
   color: #00456a; }
 
@@ -3428,6 +3433,7 @@ lesser , applied styles
   background-position: 50% 50%;
   background-size: cover; }
 
+
 .slate--home--hero-banner {
   /*background-color: #f4f5dd;
  
@@ -3435,6 +3441,20 @@ lesser , applied styles
   background-image: url("/ui/img/whitebackgroundhero.png");
   /*background-position: 50% 50%;*/
   background-size: cover; }
+
+@media screen and (max-width: 1020px){
+.slate--home--hero-banner {
+  background-color: #f4f5dd;
+  background-image: none;
+  opacity: 15;
+  background-size: cover; }
+}
+
+
+
+
+
+
 
 /*------------------------------------*\
 $SPLIT
@@ -4649,6 +4669,8 @@ ul.simple-pagination {
   position: relative;
   border-left: 5px solid #008998;
   margin: auto 0;
+ /* top: 50%;
+  transform: translateY(-50%);*/
   /*border-top: 2px solid #A8A1A1 ;
   border-right: 2px solid #A8A1A1 ;
   border-bottom: 2px solid #A8A1A1;*/
@@ -4686,6 +4708,23 @@ ul.simple-pagination {
   margin-top: auto;
   margin-bottom: auto;
 }
+
+
+@media screen and (min-width: 650px){
+.headline--box-container{
+  height: 30em;
+}
+}
+
+
+@media screen and (max-width: 800px){
+
+.headline--box-container-text{
+  font-size: 1.5rem;
+
+}
+}
+
 
 
 
@@ -8047,4 +8086,43 @@ textarea {
 }
 .calendar .div-int {
     padding: 10px 0 0 0;
+}
+
+/* -------- Modal Window ------- */
+
+.icon-cancel-squared:before { content: '\e830'; } /* '' */
+
+.modal {
+	width: 400px;
+	height: 500px;
+	background-color: #fff;
+	margin: 0 auto;
+}
+.modal-header {
+	background-color: #a8233e;
+	color: #fff;
+	height: 2.5em;
+	padding-left: 1.25em;
+	padding-top: 0.4em;
+}
+.message {
+	padding: 30px 10px 0px 0px;
+	;
+}
+.buttons {
+	height: 2.25em;
+}
+.buttons li {
+	display: inline;
+}
+.buttons ul {
+	margin-left: -1.25em;
+}
+.right {
+	float: right;
+	margin-right: 1.15em;
+	margin-top: -0.2em;
+}
+.rightButton {
+	margin-left:10.5em;
 }
