@@ -130,6 +130,11 @@
       },
     }
 
+    if(!searchResponse) {
+      return
+    }
+
+
     if (!searchTerm) {
       return
     }
