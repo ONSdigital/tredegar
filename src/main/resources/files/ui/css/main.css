@@ -4245,7 +4245,9 @@ table actions
  border: solid 1px;
 }
 
-.lozenge-spacer{ margin: 0.8em; }
+.lozenge-spacer{
+ margin: 0.1em 0.7em 0.1em 0.3em;
+}
 
 .open-in-new-window{
  height: 1.5em;
@@ -8049,4 +8051,11 @@ textarea {
 }
 .calendar .div-int {
     padding: 10px 0 0 0;
+}
+
+/* -------- autocomplete on search -------- */
+
+.search-lozenge {
+	float:left;
+	width:150px;
 }
