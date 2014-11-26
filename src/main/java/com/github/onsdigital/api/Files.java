@@ -1,48 +1,73 @@
 package com.github.onsdigital.api;
 
-import java.net.MalformedURLException;
 import java.net.URL;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import com.github.davidcarboni.restolino.framework.Filter;
+import com.github.onsdigital.util.HostHelper;
 
 public class Files implements Filter {
 
+	static final int maxAge = 300;
+
+	/**
+	 * Adds a default {@value #maxAge}s max-age cache header to static content
+	 * requests.
+	 */
 	@Override
 	public boolean filter(HttpServletRequest req, HttpServletResponse res) {
 
-		try {
-			URL url = new URL(req.getRequestURL().toString());
+		if (isStaticContentRequest(req)) {
+
+			URL url = HostHelper.getUrl(req);
 
 			// Add a five-minute cache time to static files to reduce
 			// round-trips to
 			// the server and increase performance whilst still allowing the
 			// system
 			// to be updated quite promptly if necessary:
-			if (!StringUtils.equalsIgnoreCase("localhost", url.getHost())) {
-				res.addHeader("cache-control", "public, max-age=300");
+			if (!HostHelper.isLocalhost(url)) {
+				res.addHeader("cache-control", "public, max-age=" + maxAge);
 			}
 
 			// Allow cross-origin resource sharing for css. js. and img.
 			// subbomains:
 			res.addHeader("Access-Control-Allow-Origin", trimSubdomain(url));
-
-		} catch (MalformedURLException e) {
-
-			// Not much to be done if the request URL somehow turns out to be
-			// invalid:
-			System.out.println("Invalid request URL: " + req.getRequestURL());
-			e.printStackTrace();
 		}
 
 		return true;
 	}
 
+	/**
+	 * A request is considered to be a static content request if there is a file
+	 * extension present.
+	 * 
+	 * @param req
+	 *            The request.
+	 * @return If the result of {@link FilenameUtils#getExtension(String)} is
+	 *         not blank, true.
+	 */
+	private boolean isStaticContentRequest(HttpServletRequest req) {
+		String requestURI = req.getRequestURI();
+		String extension = FilenameUtils.getExtension(requestURI);
+		return StringUtils.isNotBlank(extension);
+	}
+
+	/**
+	 * Removes the first segment of the hostname from the given url if the host
+	 * part has a subdomain of css, js or img.
+	 * 
+	 * @param url
+	 *            The URL to check.
+	 * @return A string containing <code>protocol://host[:port]</code>, suitable
+	 *         for use in an Access-Control-Allow-Origin http header.
+	 */
 	static String trimSubdomain(URL url) {
 
 		String protocol = url.getProtocol();
