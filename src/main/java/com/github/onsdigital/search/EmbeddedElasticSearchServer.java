@@ -1,7 +1,9 @@
 package com.github.onsdigital.search;
 
-import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 import org.apache.commons.io.FileUtils;
 import org.elasticsearch.client.Client;
@@ -12,33 +14,27 @@ import org.elasticsearch.node.NodeBuilder;
 
 public class EmbeddedElasticSearchServer {
 
-	private static final String DEFAULT_DATA_DIRECTORY = System
-			.getProperty("java.io.tmpdir");;
+	private static final String DEFAULT_DATA_DIRECTORY = System.getProperty("java.io.tmpdir");
 	private static final String DEFAULT_CLUSTERNAME = "ONS";
 	private final Node node;
-	private String dataDirectory;
+	private Path dataDirectory;
 
-	public EmbeddedElasticSearchServer(String clusterName) {
+	public EmbeddedElasticSearchServer(String clusterName) throws IOException {
 		this(null, DEFAULT_DATA_DIRECTORY, clusterName);
 	}
 
-	public EmbeddedElasticSearchServer(String dataDirectory, String clusterName) {
+	public EmbeddedElasticSearchServer(String dataDirectory, String clusterName) throws IOException {
 		this(null, dataDirectory, clusterName);
 	}
 
-	public EmbeddedElasticSearchServer(Settings settings, String clusterName) {
+	public EmbeddedElasticSearchServer(Settings settings, String clusterName) throws IOException {
 		this(settings, null, clusterName);
 	}
 
-	public EmbeddedElasticSearchServer(Settings settings, String dataDirectory,
-			String clusterName) {
+	public EmbeddedElasticSearchServer(Settings settings, String dataDirectory, String clusterName) throws IOException {
 
-		this.dataDirectory = (dataDirectory == null) ? DEFAULT_DATA_DIRECTORY
-				: dataDirectory;
-		ImmutableSettings.Builder settingsBuilder = ImmutableSettings
-				.settingsBuilder().put("cluster.name", DEFAULT_CLUSTERNAME)
-				.put("http.enabled", true)
-				.put("path.data", DEFAULT_DATA_DIRECTORY)
+		this.dataDirectory = Files.createTempDirectory("searchindex");
+		ImmutableSettings.Builder settingsBuilder = ImmutableSettings.settingsBuilder().put("cluster.name", DEFAULT_CLUSTERNAME).put("http.enabled", true).put("path.data", dataDirectory)
 				.put("node.data", true);
 
 		if (settings != null) {
@@ -47,15 +43,12 @@ public class EmbeddedElasticSearchServer {
 			// accordingly for cleanup at shutdown
 			String directory = settings.get("path.data");
 			if (directory != null) {
-				this.dataDirectory = directory;
+				this.dataDirectory = Paths.get(directory);
 			}
 		}
 
-		System.out
-				.println("Starting embedded Elastic Search node with settings"
-						+ settingsBuilder.internalMap());
-		node = NodeBuilder.nodeBuilder().local(true)
-				.settings(settingsBuilder.build()).node();
+		System.out.println("Starting embedded Elastic Search node with settings" + settingsBuilder.internalMap());
+		node = NodeBuilder.nodeBuilder().local(true).settings(settingsBuilder.build()).node();
 	}
 
 	public Client getClient() {
@@ -69,11 +62,9 @@ public class EmbeddedElasticSearchServer {
 
 	private void deleteDataDirectory() {
 		try {
-			FileUtils.deleteDirectory(new File(dataDirectory));
+			FileUtils.deleteDirectory(dataDirectory.toFile());
 		} catch (IOException e) {
-			throw new RuntimeException(
-					"Could not delete data directory of embedded elasticsearch server",
-					e);
+			throw new RuntimeException("Could not delete data directory of embedded elasticsearch server", e);
 		}
 	}
 }
