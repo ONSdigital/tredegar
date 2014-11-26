@@ -16,6 +16,7 @@ import org.eclipse.jetty.http.HttpStatus;
 import com.github.davidcarboni.ResourceUtils;
 import com.github.davidcarboni.restolino.framework.Endpoint;
 import com.github.onsdigital.data.DataService;
+import com.github.onsdigital.util.HostHelper;
 import com.github.onsdigital.util.Validator;
 
 @Endpoint
@@ -24,8 +25,7 @@ public class Data {
 	static boolean validated;
 
 	@GET
-	public Map<String, String> getData(@Context HttpServletRequest request,
-			@Context HttpServletResponse response) throws IOException {
+	public Map<String, String> getData(@Context HttpServletRequest request, @Context HttpServletResponse response) throws IOException {
 
 		// Ensures ResourceUtils gets the right classloader when running
 		// reloadable in development:
@@ -36,6 +36,13 @@ public class Data {
 		if (!validated) {
 			Validator.validate();
 			validated = true;
+		}
+
+		// Add a five-minute cache time to static files to reduce round-trips to
+		// the server and increase performance whilst still allowing the system
+		// to be updated quite promptly if necessary:
+		if (!HostHelper.isLocalhost(request)) {
+			response.addHeader("cache-control", "public, max-age=300");
 		}
 
 		// Look for a data file:
@@ -53,8 +60,7 @@ public class Data {
 		} else {
 			response.setStatus(HttpStatus.NOT_FOUND_404);
 			Map<String, String> error404 = new HashMap<>();
-			error404.put("message",
-					"These are not the data you are looking for.");
+			error404.put("message", "These are not the data you are looking for.");
 			error404.put("status", String.valueOf(HttpStatus.NOT_FOUND_404));
 			return error404;
 		}
