@@ -73,13 +73,16 @@
 
             <!-- /box -->
 
-            <div class="grid-col tablet-grid-one-half">
-                <div class="box box--padded solid  arrow_box">
+            <div class="grid-col tablet-grid-one-half headline--box-container">
+            <table style="width: 100%; height: 100%">
+            <tr>
+            <td style="vertical-align: middle;">
+                 <div class="box box--padded solid  arrow_box">
                     <div id="statsBulletinHeadlines">
                         <a href="#!{{taxonomy.data.statsBulletinHeadline.data.uri ? taxonomy.data.statsBulletinHeadline.data.uri : '/economy/inflationandpriceindices/bulletins/consumerpriceinflation'}}">
                             <h3 class="body-type lede flush--bottom navpanel-list-heading">{{taxonomy.data.headline.name}} headlines</h3>
                         </a>
-                        <ul class="list--bullet mini flush--half--top navpanel-list">
+                        <ul class="list--bullet mini flush--half--top navpanel-list headline--box-container-text">
                             <li ng-if="taxonomy.data.statsBulletinHeadline.data.headline1">{{taxonomy.data.statsBulletinHeadline.data.headline1}}</li>
                             <li ng-if="taxonomy.data.statsBulletinHeadline.data.headline1">{{taxonomy.data.statsBulletinHeadline.data.headline2}}</li>
                             <li ng-if="taxonomy.data.statsBulletinHeadline.data.headline1">{{taxonomy.data.statsBulletinHeadline.data.headline3}}</li>
@@ -90,6 +93,9 @@
 
                     </div>
                 </div>
+            </td>
+            </tr>
+            </table>
             </div>
         </div>
 

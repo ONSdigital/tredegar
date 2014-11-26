@@ -4654,6 +4654,8 @@ ul.simple-pagination {
   position: relative;
   border-left: 5px solid #008998;
   margin: auto 0;
+ /* top: 50%;
+  transform: translateY(-50%);*/
   /*border-top: 2px solid #A8A1A1 ;
   border-right: 2px solid #A8A1A1 ;
   border-bottom: 2px solid #A8A1A1;*/
@@ -4691,6 +4693,23 @@ ul.simple-pagination {
   margin-top: auto;
   margin-bottom: auto;
 }
+
+
+@media screen and (min-width: 650px){
+.headline--box-container{
+  height: 30em;
+}
+}
+
+
+@media screen and (max-width: 800px){
+
+.headline--box-container-text{
+  font-size: 1.5rem;
+
+}
+}
+
 
 
 
