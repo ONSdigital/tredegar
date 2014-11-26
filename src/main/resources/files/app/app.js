@@ -163,10 +163,14 @@
                             // Here we ensure that our route has the document fragment (#!), or more specifically that it has #!/ at a minimum.
                             // If accessing the base URL without a trailing '/' in IE7 it will execute the otherwise route instead of the signin
                             // page, so this check will ensure that '#!/' exists and if not redirect accordingly which fixes the URL.
-                            redirectCheck: ['$location',
-                                function($location) {
+                            redirectCheck: ['$location', '$window',
+                                function($location, $window) {
                                     var absoluteLocation = $location.absUrl();
-                                    if (absoluteLocation.indexOf('#!/') === -1) {
+                                    if (absoluteLocation.indexOf('?onsfb') != -1) {
+                                        absoluteLocation = absoluteLocation.replace('?onsfb','#!')
+                                        $window.location.href = absoluteLocation;
+                                    }
+                                    else if (absoluteLocation.indexOf('#!/') === -1) {
                                         $location.path('/');
                                     }
                                 }
