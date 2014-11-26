@@ -28,6 +28,17 @@ public class ElasticSearchServer implements Startup {
 		startEmbeddedServer();
 	}
 
+	/**
+	 * NB caching the client for the entire application to use is safe and
+	 * recommended:
+	 * <p>
+	 * <a href=
+	 * "http://stackoverflow.com/questions/15773476/elasticsearch-client-thread-safety"
+	 * >http://stackoverflow.com/questions/15773476/elasticsearch-client-thread-
+	 * safety</a>
+	 * 
+	 * @return
+	 */
 	public static Client getClient() {
 		try {
 			return client.get();
