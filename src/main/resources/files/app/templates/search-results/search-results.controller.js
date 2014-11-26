@@ -73,6 +73,11 @@
           $scope.searchResponse = data
           $scope.pageCount = Math.ceil(data.numberOfResults / 10)
           $scope.searchTermOneTime = q
+          if (type) {
+        	  $scope.filterOn = true
+          } else {
+        	  $scope.filterOn = false
+          }
           resolveRelatedDepartment(q)
         })
     }
