@@ -62,7 +62,9 @@ public class EmbeddedElasticSearchServer {
 
 	private void deleteDataDirectory() {
 		try {
+			System.out.println("Deleting data directory: " + dataDirectory);
 			FileUtils.deleteDirectory(dataDirectory.toFile());
+			System.out.println("Finished deleting " + dataDirectory);
 		} catch (IOException e) {
 			throw new RuntimeException("Could not delete data directory of embedded elasticsearch server", e);
 		}
