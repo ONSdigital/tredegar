@@ -77,7 +77,7 @@
                 <div class="box box--padded solid  arrow_box">
                     <div id="statsBulletinHeadlines">
                         <a href="#!{{taxonomy.data.statsBulletinHeadline.data.uri ? taxonomy.data.statsBulletinHeadline.data.uri : '/economy/inflationandpriceindices/bulletins/consumerpriceinflation'}}">
-                            <h3 class="body-type lede flush--bottom navpanel-list-heading">{{taxonomy.data.headline.name}} Headlines</h3>
+                            <h3 class="body-type lede flush--bottom navpanel-list-heading">{{taxonomy.data.headline.name}} headlines</h3>
                         </a>
                         <ul class="list--bullet mini flush--half--top navpanel-list">
                             <li ng-if="taxonomy.data.statsBulletinHeadline.data.headline1">{{taxonomy.data.statsBulletinHeadline.data.headline1}}</li>
@@ -122,7 +122,7 @@
             <div class="list--table__item__body list--table__item__body--stat">
                 <ons-loading condition="!item.data" class="stat list--table__item__body--centred"></ons-loading>
                 <div class="stat__figure list--table__item--stat">
-                    <div>                        
+                    <div>
                         <span class="stat__figure__unit">{{item.data.preUnit}}</span> {{item.data.number}}
                         <span class="stat__figure__unit">{{item.data.unit}}</span>
                     </div>

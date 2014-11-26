@@ -10,7 +10,8 @@ angular.module('onsTemplates')
 
         function SocialLinksController($scope,$location) {
         	function getAbsoluteUrl() {
-        		return $location.absUrl()
+        		var absUrl = $location.absUrl().replace('#', '%23');
+                return absUrl;
         	}
 
         	angular.extend($scope, {
