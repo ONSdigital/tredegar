@@ -14,33 +14,6 @@ Next release: 13 August 2014
 ## (i) Summary of latest Labour Market Statistics
 Comparing March to May 2014 with December 2013 to February 2014, the number of people in employment increased by 254,000 (to 30.64 million), the number of unemployed people fell by 121,000 (to 2.12 million) and the number of people out of work but not seeking or available to work (economically inactive) aged from 16 to 64 fell by 67,000 (to 8.78 million).
 
-### Summary of latest Labour Market Statistics for March to May 2014, Seasonally Adjusted
-
-|            | Number (thousands) | Change on quarter | Change on year | Headline Rate (%) | Change on quarter | Change on year |
-|------------|-------------------:|------------------:|---------------:|------------------:|------------------:|---------------:|
-| **Employed**   |             **30,643** |              **+254** |           **+929** |                   |                   |                |
-| Aged 16-64 |             29,533 |              +232 |           +811 |              **73.1** |               **0.5** |            **1.7** |
-| Aged 65+   |              1,110 |               +22 |           +118 |                   |                   |                |
-| **Unemployed** |              **2,122** |              **-121** |           **-383** |               **6.5** |              **-0.4** |           **-1.3** |
-| Aged 16-64 |              2,092 |              -120 |           -392 |                   |                   |                |
-| Aged 65+   |                 30 |                -1 |             +9 |                   |                   |                |
-| **Inactive**   |             18,503 |               -24 |           -117 |                   |                   |                |
-| Aged 16-64 |              **8,779** |               **-67** |           **-258** |              **21.7** |              **-0.2** |           **-0.7** |
-| Aged 65+   |              9,724 |               +44 |           +140 |                   |                   |                |
-
-**Table notes:**
-
-1. **Calculation of headline employment rate:** Number of employed people aged from 16 to 64 divided by the population aged from 16 to 64. Population is the sum of employed plus unemployed plus inactive.
-
-2. **Calculation of headline unemployment rate:** Number of unemployed people aged 16 and over divided by the sum of employed people aged 16 and over plus unemployed people aged 16 and over.
-
-3. **Calculation of headline economic inactivity rate:** Number of economically inactive people aged from 16 to 64 divided by the population aged from 16 to 64. Population is the sum of employed plus unemployed plus inactive.
-
-4. Components may not sum exactly to totals due to rounding.
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS") [XLS format](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/july-2014/presentation-table.xls "XLS format") (26.5 Kb)
-
 ## (ii) Understanding and working with Labour Market Statistics
 ### Where to find explanatory information
 
