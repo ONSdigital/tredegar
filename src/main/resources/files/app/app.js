@@ -166,6 +166,7 @@
                             redirectCheck: ['$location', '$window',
                                 function($location, $window) {
                                     var absoluteLocation = $location.absUrl();
+                                    //This makes FB share work (socialLinks directive)
                                     if (absoluteLocation.indexOf('?onsfb') != -1) {
                                         absoluteLocation = absoluteLocation.replace('?onsfb','#!')
                                         $window.location.href = absoluteLocation;
