@@ -8,7 +8,6 @@
 
 
   function SearchController($scope, $location, $log, PageUtil, searchResponse) {
-    console.log(searchResponse)
     var page = PageUtil.getUrlParam("page")
     var searchTerm = $scope.searchTerm = PageUtil.getUrlParam("q")
     var type = $scope.type = PageUtil.getUrlParam("type")

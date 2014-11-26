@@ -12,7 +12,7 @@
       <div ons-autocomplete for="nav-search" data-var="data">
           <div class="ui-widget ui-widget-content" >
           <dl class="ui-menu">
-              <dt ng-repeat="item in data.results | limitTo:5" class="ui-menu-item">
+              <dt ng-repeat="item in data.results | limitTo:autoCompleteLimit" class="ui-menu-item">
                   <a href="#!{{item.url}}">
                       <div style="float:left;width:100px">
                           <span class="lozenge lozenge-spacer lozenge-grey">{{item.type == 'bulletin' ? 'STATISTICAL BULLETIN' : item.type}}</span>

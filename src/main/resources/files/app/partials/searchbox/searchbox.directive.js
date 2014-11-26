@@ -5,22 +5,27 @@ angular.module('onsTemplates')
 		function($location, $route) {
 			return {
 				restrict: 'E',
-				replace:true,
+				replace: true,
 				templateUrl: 'app/partials/searchbox/searchbox.html',
-				controller: function($scope) {
-					$scope.goToSearch = function(searchTerm) {
-						if (!searchTerm) {
-							return
-						}
-						$location.path('/search')
-						$location.search('q', searchTerm)
+				controller: ['$scope', '$rootScope', SearchBox]
+			}
 
-						//Clear page parameter if any
-						$location.search('page', null)
-						$location.search('type', null)
-						//Re-initializes controllers. Fixes searching on search results page when searching the same term
-						 $route.reload()
+			function SearchBox($scope, $rootScope) {
+				
+				$scope.autoCompleteLimit = $rootScope.onsAlphaConfiguration.autoCompleteLimit
+
+				$scope.goToSearch = function(searchTerm) {
+					if (!searchTerm) {
+						return
 					}
+					$location.path('/search')
+					$location.search('q', searchTerm)
+
+					//Clear page parameter if any
+					$location.search('page', null)
+					$location.search('type', null)
+						//Re-initializes controllers. Fixes searching on search results page when searching the same term
+					$route.reload()
 				}
 			}
 		}
