@@ -1,4 +1,4 @@
-package com.github.onsdigital.api;
+package com.github.onsdigital.api.data;
 
 import java.io.IOException;
 import java.io.InputStream;

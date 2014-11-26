@@ -1,4 +1,4 @@
-package com.github.onsdigital.api.taxonomy;
+package com.github.onsdigital.api;
 
 import java.io.IOException;
 
@@ -22,6 +22,9 @@ public class Static {
 		// Set up the response:
 		response.setContentType("text/html");
 		response.setCharacterEncoding("UTF8");
+		// Cache for an 6 hours. These pages will only be updated daily, so this
+		// should ensure a sensible reload window:
+		response.setHeader("cache-control", "public, max-age=3600");
 
 		if (!PrerenderIo.handle(request, response) && !PreGenerated.handle(request, response)) {
 			response.setStatus(HttpStatus.SC_NOT_FOUND);

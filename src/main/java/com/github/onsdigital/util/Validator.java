@@ -1,4 +1,4 @@
-package com.github.onsdigital.api.taxonomy;
+package com.github.onsdigital.util;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -16,7 +16,7 @@ import com.github.davidcarboni.restolino.json.Serialiser;
 import com.github.onsdigital.configuration.Configuration;
 
 public class Validator implements Runnable {
-	static void validate() {
+	public static void validate() {
 		Validator validator = new Validator();
 		Thread thread = new Thread(validator, "Json validator");
 		thread.setDaemon(true);

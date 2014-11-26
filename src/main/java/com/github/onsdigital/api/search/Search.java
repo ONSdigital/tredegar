@@ -1,4 +1,4 @@
-package com.github.onsdigital.api;
+package com.github.onsdigital.api.search;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
