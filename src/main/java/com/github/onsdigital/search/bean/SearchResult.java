@@ -27,6 +27,8 @@ public class SearchResult {
 	private long took; // milliseconds
 	private long numberOfResults; // total number of hits
 	private List<Map<String, Object>> results; // results
+	private boolean suggestionBasedResult;
+	private String suggestion;
 
 	/**
 	 * Create search results using {@link JsonObject}
@@ -93,4 +95,19 @@ public class SearchResult {
 		this.results = hits;
 	}
 
+	public boolean isSuggestionBasedResult() {
+		return suggestionBasedResult;
+	}
+
+	public void setSuggestionBasedResult(boolean suggestionBasedResult) {
+		this.suggestionBasedResult = suggestionBasedResult;
+	}
+
+	public String getSuggestion() {
+		return suggestion;
+	}
+
+	public void setSuggestion(String suggestion) {
+		this.suggestion = suggestion;
+	}
 }

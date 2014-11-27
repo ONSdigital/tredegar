@@ -39,17 +39,18 @@
           if ($scope.navWidgetVar) {
             $scope.$parent[$scope.navWidgetVar] = navigation
           }
-          watchLocation()
+
         }
 
-        function watchLocation() {
-          $rootScope.$on('$locationChangeSuccess', function(event) {
-              for (var i = 0; i < items.length; i++) {
-                items[i].resolveClass()
-                items[i].expanded = false
-              };
-          })
-        }
+        // function watchLocation() {
+        //   $rootScope.$on('$locationChangeSuccess', function(event) {
+        //       alert("hey")
+        //       for (var i = 0; i < items.length; i++) {
+        //         items[i].resolveClass()
+        //         items[i].expanded = false
+        //       };
+        //   })
+        // }
 
         function toggleMobileMenu() {
           navigation.showOnMobile = !navigation.showOnMobile
@@ -98,13 +99,13 @@
       function NavItemLink(scope, element, attrs, navigation) {
         scope.url = attrs.onsNavItem || ''
         scope.currentPage = false
+        scope.expanded = false
         initialize()
 
         function initialize() {
           navigation.registerItem(scope)
 
           if (scope.expandable) {
-            scope.expanded = false
             bindClick()
           }
 
@@ -120,11 +121,12 @@
         }
 
         function bindClick() {
-          element.bind("click", function(event) {
+          element.bind("click", function(e) {
+            e.stopPropagation();
             if (isMobile()) {
               scope.expanded = !scope.expanded
+              scope.$apply() // Trigger Angular digest cycle to process changed values
             }
-            scope.$apply() // Trigger Angular digest cycle to process changed values
           })
         }
 
@@ -194,8 +196,8 @@
         }
 
         function watchExpand() {
-          scope.$watch(navItem.isExpanded, function() {
-            if (navItem.isExpanded()) {
+          scope.$watch(navItem.isExpanded, function(newValue) {
+            if (newValue) {
               element.addClass(expandClass)
             } else {
               element.removeClass(expandClass)

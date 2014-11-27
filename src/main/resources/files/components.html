@@ -3,6 +3,7 @@
 
 <head>
     <link href="ui/css/main.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/ui/css/jquery-ui.min.css">
     <script type="text/javascript" src="/ui/js/lib/jquery.min.js"></script>
     <script type="text/javascript" src="ui/js/lib/angular.js"></script>
     <script type="text/javascript" src="app/components/charts/highcharts-ng.js"></script>
@@ -26,7 +27,7 @@
     <div class="push"></div>
 
     <div>
-        <h1>Navigation</h1>
+        <h1>Navigation / Autocomplete</h1>
         <nav class="ons-nav" ons-nav nav-active-class="nav--primary__active" nav-widget-var="w_nav">
             <ul ons-nav-mobile nav-active-class="nav--primary__active" class="nav nav--controls">
                 <li class="nav--controls__menu" ng-class="{'menu-is-expanded' : w_nav.showOnMobile}" ng-click="w_nav.toggleMobileMenu()">
@@ -71,22 +72,43 @@
                     <a href="#!">About</a>
                 </li>
             </ul>
+            <form class="nav-search ng-pristine ng-valid" id="searchBar" aria-expanded="false">
+                <div class="nav-search__container">
+                    <label class="visuallyhidden" for="nav-search">Search for keyword or time series ID</label>
+                    <input type="search" class="nav-search__field" id="nav-search" name="nav-search" value="" name="q" ng-model="searchTerm" placeholder="Search for keyword or time series ID">
+                </div>
+                <button type="submit" class="btn btn--primary btn--nav-search" id="nav-search-submit">
+                    <span class="icon-search-1" role="presentational"></span>
+                    <span class="visuallyhidden">Search</span>
+                </button>
+                
+                <div ons-autocomplete for="nav-search" data-var="data">
+                    <div class="ui-widget ui-widget-content" >
+                    <dl class="ui-menu">
+                        <dt ng-repeat="item in data.results | limitTo:5" class="ui-menu-item">
+                            <a href="#!{{item.url}}">
+                                <div style="float:left;width:100px">
+                                    <span class="lozenge lozenge-spacer lozenge-grey">{{item.type == 'bulletin' ? 'STATISTICAL BULLETIN' : item.type}}</span>
+                                </div>
+                                <div style="float:left">{{item.title}}</div>
+                                <div style="clear:both;"></div>
+
+                            </a>
+                        </dt>
+                        <dt class="ui-menu-item">
+                            <a href="#!/search?q={{searchTerm}}">
+                                <div style="float:left;width:100px"></div>
+                                <div style="float:left">{{data.numberOfResults > 0 ? 'See all ' + data.numberOfResults +' results' : 'No results found'}}</div>
+                                <div style="clear:both;"></div>
+                            </a>
+                        </dt>
+                    </dl>
+                    </div>
+                </div>
+
+            </form>
         </nav>
     </div>
-
-    <div class="push"></div>
-
-    <h1>Autocomplete</h1>
-    <form ng-class="hideSearch ? 'nav-search--hidden' : '' " ng-submit="goToSearch(searchTerm)" class="nav-search ng-pristine ng-valid" id="searchBar" aria-expanded="false">
-        <div class="nav-search__container">
-            <label class="visuallyhidden" for="nav-search">Search for keyword or time series ID</label>
-            <input ons-autocomplete type="search" class="nav-search__field" id="nav-search" name="nav-search" value="" name="q" ng-model="searchTerm" placeholder="Search for keyword or time series ID">
-        </div>
-        <button type="submit" class="btn btn--primary btn--nav-search" id="nav-search-submit">
-            <span class="icon-search-1" role="presentational"></span>
-            <span class="visuallyhidden">Search</span>
-        </button>
-    </form>
 
     <div class="push"></div>
 

@@ -2999,6 +2999,12 @@ lesser , applied styles
   font-size: 95%;
   padding: 1.7em;
   }
+
+
+
+
+
+
 }  
 
 .nav-panel__title,
@@ -3426,7 +3432,6 @@ lesser , applied styles
   /*background-image: url("/ui/img/hero-banner.jpg");*/
   background-position: 50% 50%;
   background-size: cover; }
-
 
 .slate--home--hero-banner {
   /*background-color: #f4f5dd;
@@ -4590,6 +4595,8 @@ ul.simple-pagination {
   }
 }
 
+
+
 /*.no_underline{
   text-decoration: none !important;
   font-weight: normal !important;
@@ -4598,6 +4605,7 @@ ul.simple-pagination {
 /*.list--table--complex .list--table__item__body--caption {
   width: 55%;
   }*/
+
 
 #main > section:nth-child(5) > ol > li > div.list--table__item__body.list--table__item__body--update > dl {
   max-width: 70% !important;
@@ -4797,6 +4805,8 @@ ul.simple-pagination {
   max-width: 50%;
   min-width: 30%;
 }
+
+
 
 .link_head{
   /*float: left;
@@ -5339,6 +5349,8 @@ td.datatable-downloads{
 .download_responsive_btn:hover{
   background-color: #0054aa;
 }
+
+
 
 .datatable-row{
   border-top: 2px solid #dedfdc;
@@ -8128,4 +8140,19 @@ textarea {
 }
 .rightButton {
 	margin-left:10.5em;
+}
+
+/* -------- autocomplete on search -------- */
+
+.search-lozenge {
+	float:left;
+	text-align:right;
+	width:150px;
+}
+
+.autocomplete {
+	position:absolute;
+	width; 35.8em;
+	z-index:999;
+	margin-left:0.125em;
 }

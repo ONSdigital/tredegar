@@ -14,7 +14,9 @@
         'onsToggler',
         'onsLoading',
         'onsSparkline',
-        'onsTooltip'
+	   'onsTooltip',
+       'onsAutocomplete',
+       'onsDoubleTap'
     ])
 
     //Filters, services and other helpers are to be injected to onsHelpers module
@@ -199,7 +201,7 @@
                     var q = PageUtil.getUrlParam('q')
                     var type = PageUtil.getUrlParam('type')
                     var pageNumber = PageUtil.getUrlParam('page')
-                    var searchString = "?q=" + q + (type ? "&type=" + type : "") + "&page=" + pageNumber
+                    var searchString = "?q=" + q + (type ? "&type=" + type : "") + (pageNumber ? "&page=" + pageNumber : "")
                     return DataLoader.load("/search" + searchString)
                         .then(function(data) {
                             searchResponse = data

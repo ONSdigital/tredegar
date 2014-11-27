@@ -57,7 +57,7 @@ public class ElasticSearchServer implements Startup {
 						// Server
 						start = System.currentTimeMillis();
 						System.out.println("Elasticsearch: starting embedded server..");
-						EmbeddedElasticSearchServer server = new EmbeddedElasticSearchServer("ONSNode");
+						EmbeddedElasticSearchServer server = new EmbeddedElasticSearchServer();
 						System.out.println("Elasticsearch: embedded server started (" + (System.currentTimeMillis() - start) + "ms)");
 
 						// Client
