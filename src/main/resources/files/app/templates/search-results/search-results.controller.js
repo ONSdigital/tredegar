@@ -153,13 +153,42 @@
           $scope.searchResponse = searchResponse
           $scope.pageCount = Math.ceil(searchResponse.numberOfResults / 10)
           $scope.searchTermOneTime = q
+          if (type) {
+        	  $scope.filterOn = true
+          } else {
+        	  $scope.filterOn = false
+          }
           resolveRelatedDepartment(q)
+          resolveSectionsForDisplay()
+    }
+    
+    function resolveSectionsForDisplay() {
+    	if ((searchResponse.numberOfResults > 0 || (searchResponse.numberOfResults === 0 && $scope.filterOn)) && !searchResponse.suggestionBasedResult) {
+    		$scope.showSearchResults = true;
+    	}
+    	
+    	if ((searchResponse.numberOfResults > 0 || (searchResponse.numberOfResults === 0 && $scope.filterOn)) && searchResponse.suggestionBasedResult) {
+    		$scope.showSuggestedSearchResults = true;
+    	}
+
+    	if (searchResponse.numberOfResults === 0 && !$scope.filterOn) {
+    		$scope.showZeroResultsFound = true;
+    	}
+
+    	if (searchResponse.numberOfResults > 0 || $scope.filterOn) {
+    		$scope.showFilters = true;
+    	}    	
     }
 
     function filter(type) {
       //Clear page parameter if any
       $location.search('page', null)
       $location.search('type', type)
+      // if the results are generated from an autocorrect suggest then
+      // we need to reset the query parameter to the suggestion
+      if ($scope.searchResponse.suggestionBasedResult) {
+    	  $location.search('q', $scope.searchResponse.suggestion)
+      }
     }
 
     function isActive(type) {

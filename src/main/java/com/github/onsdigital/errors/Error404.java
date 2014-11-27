@@ -28,6 +28,7 @@ public class Error404 implements NotFound {
 		// development:
 		ResourceUtils.classLoaderClass = Error404.class;
 		try (Reader input = ResourceUtils.getReader("/files/404.html")) {
+			res.setContentType("text/html");
 			res.setCharacterEncoding("UTF8");
 			IOUtils.copy(input, res.getWriter());
 		}

@@ -20,7 +20,6 @@ public class ElasticSearchServer implements Startup {
 
 	static ExecutorService pool = Executors.newSingleThreadExecutor();
 
-	static EmbeddedElasticSearchServer server;
 	static Future<Client> client;
 
 	@Override
@@ -48,42 +47,53 @@ public class ElasticSearchServer implements Startup {
 	}
 
 	public static void startEmbeddedServer() {
-		if (server == null) {
-			client = pool.submit(new Callable<Client>() {
-				@Override
-				public Client call() throws Exception {
-					long start;
+		synchronized (EmbeddedElasticSearchServer.class) {
+			if (client == null) {
+				client = pool.submit(new Callable<Client>() {
+					@Override
+					public Client call() throws Exception {
+						long start;
 
-					// Server
-					start = System.currentTimeMillis();
-					System.out.println("Elasticsearch: starting embedded server..");
-					server = new EmbeddedElasticSearchServer("ONSNode");
-					Runtime.getRuntime().addShutdownHook(new ShutDownNodeThread());
-					System.out.println("Elasticsearch: embedded server started (" + (System.currentTimeMillis() - start) + "ms)");
+						// Server
+						start = System.currentTimeMillis();
+						System.out.println("Elasticsearch: starting embedded server..");
+						EmbeddedElasticSearchServer server = new EmbeddedElasticSearchServer();
+						System.out.println("Elasticsearch: embedded server started (" + (System.currentTimeMillis() - start) + "ms)");
 
-					// Client
-					start = System.currentTimeMillis();
-					System.out.println("Elasticsearch: creating client..");
-					Client client = server.getClient();
-					System.out.println("Elasticsearch: client set up (" + (System.currentTimeMillis() - start) + "ms)");
+						// Client
+						start = System.currentTimeMillis();
+						System.out.println("Elasticsearch: creating client..");
+						Client client = server.getClient();
+						System.out.println("Elasticsearch: client set up (" + (System.currentTimeMillis() - start) + "ms)");
 
-					// Index
-					start = System.currentTimeMillis();
-					System.out.println("Elasticsearch: indexing..");
-					Indexer.loadIndex(client);
-					System.out.println("Elasticsearch: indexing complete (" + (System.currentTimeMillis() - start) + "ms)");
+						// Index
+						start = System.currentTimeMillis();
+						System.out.println("Elasticsearch: indexing..");
+						Indexer.loadIndex(client);
+						System.out.println("Elasticsearch: indexing complete (" + (System.currentTimeMillis() - start) + "ms)");
 
-					return client;
-				}
-			});
+						Runtime.getRuntime().addShutdownHook(new ShutDownNodeThread(client, server));
+						return client;
+					}
+				});
+			}
 		}
 	}
 
 	static class ShutDownNodeThread extends Thread {
+
+		private Client client;
+		private EmbeddedElasticSearchServer server;
+
+		public ShutDownNodeThread(Client client, EmbeddedElasticSearchServer server) {
+			this.client = client;
+			this.server = server;
+		}
+
 		@Override
 		public void run() {
 
-			getClient().close();
+			client.close();
 
 			// Once we get the client, the server
 			// is guaranteed to have been created:

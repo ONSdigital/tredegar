@@ -34,6 +34,7 @@ public class Error500 implements Boom {
 		}
 		System.out.println(ExceptionUtils.getStackTrace(t));
 		try (Reader input = ResourceUtils.getReader("/files/500.html")) {
+			res.setContentType("text/html");
 			res.setCharacterEncoding("UTF8");
 			IOUtils.copy(input, res.getWriter());
 		} catch (IOException e) {
