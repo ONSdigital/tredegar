@@ -1,5 +1,5 @@
 <div>
-    <div class="page-header slate">
+    <div class="page-header flush--half--bottom slate">
         <ons-breadcrumb data="breadcrumb"></ons-breadcrumb>
         <div class="wrapper">
             <h1 class="page-header__title flush--half--bottom">{{taxonomy.data.name}}</h1>
@@ -21,7 +21,7 @@
 </div>
 <!-- /grid-col -->
 
-<section class="panel panel--pad panel--bottom-mar  wrapper flush--bottom">
+<section class="panel panel--pad-small panel--bottom-mar  wrapper flush--vertical">
     <div class="grid-wrap" ng-repeat="sections in taxonomy.data.sections">
         <div ng-repeat="section in sections" class="grid-col tablet-grid-one-third clearfix">
             <article ng-if="!section.nondata" class="box box--padded-vertical">

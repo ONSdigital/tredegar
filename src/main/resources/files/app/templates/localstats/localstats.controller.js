@@ -7,7 +7,7 @@
     function LocalStatsCtlr($scope) {
         $scope.breadcrumb = {
             parent: [],
-            current: "Local Statistics"
+            current: "Local statistics"
         };
     }
 })();

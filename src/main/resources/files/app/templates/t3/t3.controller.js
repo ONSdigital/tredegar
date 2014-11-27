@@ -73,6 +73,7 @@
 			var more = hasMore()
 			if (t3.allVisible) {
 				t3.allVisible = false
+				$scope.scrollTo('timeseries')
 				return
 			} else {
 				t3.allVisible = true

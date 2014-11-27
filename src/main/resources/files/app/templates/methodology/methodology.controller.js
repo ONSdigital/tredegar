@@ -1,10 +1,16 @@
 (function() {
-    angular.module('onsTemplates')
-        .controller('MethodologyCtrl', ['$scope', MethodologyController])
 
-    function MethodologyController($scope) {
-        $scope.header = "Methodology"
-        $scope.contentType = "methodology"
-        $scope.sidebar = false
+    'use strict';
+
+    //Contact Us Controller
+    angular.module('onsTemplates')
+        .controller('MethodologyCtrl', ['$scope', ContactUsController])
+
+    function ContactUsController($scope) {
+        $scope.breadcrumb = {
+            parent: [],
+            current: "Methodology"
+        }
     }
-})();
+
+})()

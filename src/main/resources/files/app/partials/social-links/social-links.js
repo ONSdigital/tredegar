@@ -8,13 +8,20 @@ angular.module('onsTemplates')
             controller: ['$scope', '$location', SocialLinksController]
         };
 
-        function SocialLinksController($scope,$location) {
+        function SocialLinksController($scope, $location) {
         	function getAbsoluteUrl() {
-        		return $location.absUrl()
-        	}
+        		var absUrl = encodeURIComponent($location.absUrl());
+                return absUrl;
+            }
 
-        	angular.extend($scope, {
-        		getAbsoluteUrl:getAbsoluteUrl
-        	})
+            function getFbAbsoluteUrl() {
+                var fbUrl = $location.absUrl().replace('#!', '?onsfb');
+                return fbUrl;
+            }
+
+            angular.extend($scope, {
+                getAbsoluteUrl:getAbsoluteUrl,
+                getFbAbsoluteUrl:getFbAbsoluteUrl
+            })
         }
     });
