@@ -25,6 +25,7 @@
 					deferred.resolve(data)
 				}).error(function(err) {
 					$log.error('Data Loader : Failed loading data at ' + path)
+					$log.error(err)
 					deferred.reject(err)
 				})
 			}

@@ -1,12 +1,11 @@
 <!--Search filters, sorting and results description, grid col two thirds, left class removes padding and crates space within the div-->
 
-<ons-header></ons-header>
 <div class="page-header slate">
     <div class="wrapper nav-panels">
         <div class="grid-wrap">
 
             <div class="grid-col tablet-wide">
-                <div ng-show="searchResponse.numberOfResults > 0" id="search-results-total" class="search-results-total">
+                <div ng-show="showSearchResults" id="search-results-total" class="search-results-total">
                     <span class='results-total'>
                         {{searchResponse.numberOfResults}}
                     </span>results for
@@ -14,20 +13,36 @@
                         '{{searchTermOneTime}}'
                         </span>
                 </div>
-                <div ng-show="searchResponse.numberOfResults === 0" id="search-results-total" class="search-results-total">
+                <div ng-show="showSuggestedSearchResults" id="search-results-total" class="search-results-total">
+                    <span class='results-total'>
+                        {{searchResponse.suggestions}}
+                    </span>Sorry, there were no results found for 
+                    <span class='results-search-term'>
+                        '{{searchTermOneTime}}'
+                        </span>  
+                    <div>
+	                    Showing <span class='results-total'>
+	                        {{searchResponse.numberOfResults}}
+	                    </span> results for
+	                    <span class='results-search-term'>
+	                        '{{searchResponse.suggestion}}'
+	                        </span> instead.
+                    </div>              
+                </div>          
+                <div ng-show="showZeroResultsFound" id="search-results-total" class="search-results-total">
                     Sorry, there were no results found for 
                     <span class='results-search-term'>
                         '{{searchTermOneTime}}'
                     </span>
                     <p></p>
                     <p>You could try one of the following:</p>
-                    <dl style="text-align: left;">
+                    <dl>
                     	<dt>Check your spelling</dt>
                     	<dt>Use broader searches</dt>
                     	<dt>Try different keywords</dt>
                     </dl>	                    
                 </div>  
-                <div ng-show="searchResponse.numberOfResults > 0">              
+                <div ng-show="showFilters">              
 	                <div class="grid-wrap">
 	                    <div class="grid-col desktop-grid-two-thirds">
 	                        <div class="search-filters">
@@ -102,5 +117,3 @@
     </div>
     <!--End of right col aside, grid col one third-->
 </div>
-
-<ons-footer></ons-footer>

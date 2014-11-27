@@ -29,7 +29,7 @@
     <!--[if gt IE 8]><!-->
     <!-- <link rel="stylesheet" href="ui/css/main.css" /> -->
     <link href="/ui/css/main.css" rel="stylesheet" type="text/css">
-    <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/css/jquery-ui.min.css"> -->
+    <link rel="stylesheet" href="/ui/css/jquery-ui.min.css">
     <link href="/ui/css/lib/loading-bar.css" rel="stylesheet" type="text/css">
 
     <script type="text/javascript" src="/ui/js/lib/jquery.min.js" defer></script>
@@ -71,17 +71,6 @@
     })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
     ga('create', 'UA-56892037-2', 'auto');
     // ga('send', 'pageview');
-    </script>
-
-    <!-- Bugherd integration script: http://bugherd.com/documentation/installing-the-sidebar/ -->
-    <script type='text/javascript'>
-    (function(d, t) {
-        var bh = d.createElement(t),
-            s = d.getElementsByTagName(t)[0];
-        bh.type = 'text/javascript';
-        bh.src = '//www.bugherd.com/sidebarv2.js?apikey=cwz4globzxvnj84jsovora';
-        s.parentNode.insertBefore(bh, s);
-    })(document, 'script');
     </script>
 
     <script type="text/javascript" src="/ui/js/lib/angular.js" defer></script>
@@ -135,12 +124,14 @@
     <script type="text/javascript" src="app/partials/tools-pane/tools-pane.directive.js" defer></script>
     <script type="text/javascript" src="app/components/breadcrumb/breadcrumb.js" defer></script>
     <script type="text/javascript" src="app/components/navigation/navigation.js" defer></script>
+    <script type="text/javascript" src="app/components/autocomplete/autocomplete.js" defer></script>
     <script type="text/javascript" src="app/components/paginator/paginator.js" defer></script>
     <script type="text/javascript" src="app/components/toggler/toggler.js" defer></script>
     <script type="text/javascript" src="app/components/accordion/accordion.js" defer></script>
     <script type="text/javascript" src="app/components/tabs/tabs.js" defer></script>
     <script type="text/javascript" src="app/components/loading/loading.js" defer></script>
     <script type="text/javascript" src="app/components/tooltip/tooltip.js" defer></script>
+    <script type="text/javascript" src="app/components/doubletaptogo/doubletaptogo.js" defer></script>
     <script type="text/javascript" src="app/components/sparkline/sparkline.js" defer></script>
     <script type="text/javascript" src="app/components/markdown/markdown.directive.js" defer></script>
     <!-- <script type="text/javascript" src="app/components/charts/charts.js" defer></script> -->
@@ -151,6 +142,17 @@
     <script type="text/javascript" src="/ui/js/lib/exporting.js" defer></script>
     <script type="text/javascript" src="/ui/js/lib/loading-bar.js" defer></script>
 
+
+    <!-- Bugherd integration script: http://bugherd.com/documentation/installing-the-sidebar/ -->
+    <script type='text/javascript'>
+    (function(d, t) {
+        var bh = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        bh.type = 'text/javascript';
+        bh.src = '//www.bugherd.com/sidebarv2.js?apikey=cwz4globzxvnj84jsovora';
+        s.parentNode.insertBefore(bh, s);
+    })(document, 'script');
+    </script>
 
 
     <!-- <script type="text/javascript" src="ui/js/app/nav.js" defer></script>
@@ -171,31 +173,37 @@ markup: false
 <!-- id set to ng-app to make older IE happy with Angular ngInclude directive -->
 <!-- Autoscroll solves the issue mentioned on https://stackoverflow.com/questions/21055952/changing-route-doesnt-scroll-to-top-in-the-new-page -->
 
-<body id="ng-app" ng-controller="MainCtrl" ng-view autoscroll="true" class="js">
+<body id="ng-app" ng-controller="MainCtrl" class="js">
+    
+    <ons-header></ons-header>
+    <div ng-view autoscroll="true">
 
-    <noscript>
-        <main id="main" role="main" class="ONS_border">
-            <div style="margin: 20px;">
-                <p>
-                    <img class="clearfix" src="/ui/img/ons-logo.svg" alt="Office for National Statistics" width="300" class="media__img">
-                </p>
-            </div>
-            <hr/>
-            <div style="margin: 20px;">
-                <h2>This page needs JavaScript to be displayed.</h2>
-            </div>
-            <div style="padding-left: 20px;">
-                <p>You can either:</p>
-                <ul>
-                    <li>enable Javascript as follows: <a href="http://www.enable-javascript.com/">Enabling JavaScript</a>
-                    </li>
-                    <li>or browse to a <a href="/static">simplified HTML version</a> of the site (this may be up to a day out of date)</li>
-                </ul>
-                <p>If you are having difficulty accessing this site, please send a Tweet to <a href="https://twitter.com/jukesie">@jukesie</a>.</p>
-            </div>
-            <hr/>
-        </main>
-    </noscript>
+
+        <noscript>
+            <main id="main" role="main" class="ONS_border">
+                <div style="margin: 20px;">
+                    <p>
+                        <img class="clearfix" src="/ui/img/ons-logo.svg" alt="Office for National Statistics" width="300" class="media__img">
+                    </p>
+                </div>
+                <hr/>
+                <div style="margin: 20px;">
+                    <h2>This page needs JavaScript to be displayed.</h2>
+                </div>
+                <div style="padding-left: 20px;">
+                    <p>You can either:</p>
+                    <ul>
+                        <li>enable Javascript as follows: <a href="http://www.enable-javascript.com/">Enabling JavaScript</a>
+                        </li>
+                        <li>or browse to a <a href="/static">simplified HTML version</a> of the site (this may be up to a day out of date)</li>
+                    </ul>
+                    <p>If you are having difficulty accessing this site, please send a Tweet to <a href="https://twitter.com/jukesie">@jukesie</a>.</p>
+                </div>
+                <hr/>
+            </main>
+        </noscript>
+    </div>
+    <ons-footer></ons-footer>
 </body>
 
 </html>

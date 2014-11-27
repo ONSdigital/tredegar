@@ -8,5 +8,30 @@
         <span class="icon-search-1" role="presentational"></span>
         <span class="visuallyhidden">Search</span>
       </button>
+      <!-- Autocomplete -->
+      <div ons-autocomplete for="nav-search" data-var="data">
+          <div class="ui-widget ui-widget-content" >
+          <dl class="ui-menu">
+              <dt ng-repeat="item in data.results | limitTo:autoCompleteLimit" class="ui-menu-item">
+                  <a href="#!{{item.url}}">
+                      <div class="search-lozenge">
+                          <span class="lozenge lozenge-spacer lozenge-grey">{{item.type == 'bulletin' ? 'STATISTICAL BULLETIN' : item.type}}</span>
+                      </div>
+                      <div style="float:left">{{item.title}}</div>
+                      <div style="clear:both;"></div>
+
+                  </a>
+              </dt>
+              <dt class="ui-menu-item">
+                  <a ng-click="goToSearch(searchTerm)" href="">
+                      <div style="float:left;width:100px"></div>
+                      <div style="float:left">{{data.numberOfResults > 0 ? 'See all ' + data.numberOfResults +' results' : 'No results found'}}</div>
+                      <div style="clear:both;"></div>
+                  </a>
+              </dt>
+          </dl>
+          </div>
+      </div>
+
     </form>
 </div>

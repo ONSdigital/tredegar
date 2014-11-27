@@ -11,6 +11,7 @@ import java.util.Map;
 
 import org.junit.Test;
 
+import com.github.onsdigital.search.LoadIndexHelper;
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
 
