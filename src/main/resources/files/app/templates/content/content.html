@@ -1,7 +1,7 @@
 <div ng-controller="ContentCtrl">
 
     <!-- title and social icons -->
-    <div class="page-header page-header--article page-header--stat-bulletin slate--blue">
+    <div class="page-header flush--half--bottom  page-header--article page-header--stat-bulletin slate--blue">
         <ons-breadcrumb data="breadcrumb"></ons-breadcrumb>
         <div class="wrapper">
             <p class="page-header__title page-header--stat-bulletin-desc">
@@ -10,32 +10,35 @@
             <h1 class="page-header__title flush--half--bottom">{{content.title}}</h1>
             <div class="grid-wrap" ng-show="{{contentType != 'methodology'}}">
                 <div class="grid-col desktop-grid-two-thirds">
-                    <img src="/ui/img/nslogo.png" class="page-header-image">
+                    <a href="#!/nationalstats"><img src="/ui/img/nslogo.png" class="page-header-image"></a>
                     <p>
                         <strong>Release date: {{content.releaseDate}}</strong>
                         <span class="page-header-box-link">
-                            <a href="#">
+                            <a href="#!/previous">
                                 <strong>View previous releases</strong>
                             </a>
                         </span>
                     </p>
                     <p>Next release: {{content.nextRelease}}</p>
-                    <p>Contact: <a href="mailto:{{content.contact.email}}">{{content.contact.name}}</a>
+                    <p>Contact: In the future this will display the statistical contact
                     </p>
                 </div>
                 <div class="grid-col desktop-grid-one-third">
                     <p>
                         <span class="icon icon-print icon--blue-alt">
-                            <span class="visuallyhidden">Print</span>&nbsp;<a href="#">Print summary</a>
-                        </span>(1 page)</p>
+                            <span class="visuallyhidden">Print</span>&nbsp;Print summary
+                        <ons-help-tooltip tip="This link will not be available on the prototype, however in the future you will be able to print the summary section of the Statistical Bulletin"></ons-help-tooltip>
+                        </span></p>
                     <p>
                         <span class="icon icon-print icon--blue-alt">
-                            <span class="visuallyhidden">Print full report</span>&nbsp;<a href="#">Print full report</a>
-                        </span>(37 Pages)</p>
+                            <span class="visuallyhidden">Print full report</span>&nbsp;Print full report
+                        <ons-help-tooltip tip="This link will not be available on the prototype, however in the future you will be able to print the full report"></ons-help-tooltip>
+                        </span></p>
                     <p>
                         <span class="icon icon-download icon--blue-alt">
-                            <span class="visuallyhidden">Download PDF</span>&nbsp;<a href="#">Download PDF</a>
-                        </span>(95.6kb)</p>
+                            <span class="visuallyhidden">Download PDF</span>&nbsp;Download PDF
+                        <ons-help-tooltip tip="This link will not be available on the prototype, however in the future you will be able to download the Statistical Bulletin as PDF"></ons-help-tooltip>
+                        </span></p>
                 </div>
             </div>
             <social-links></social-links>
@@ -46,14 +49,14 @@
     <div class="wrapper">
         <div class="panel">
             <div class="content-reveal lede">
-                <p>{{content.lede}}
-                    <a href="" toggler="more" toggler-widget-var="w_toggler" class="content-reveal__action">{{w_toggler.isVisible() ? 'Show less' : 'Show more'}}</a>
+                <p>{{content.summary}}</p>
+                    <!-- <a href="" toggler="more" toggler-widget-var="w_toggler" class="content-reveal__action">{{w_toggler.isVisible() ? 'Show less' : 'Show more'}}</a>
                 </p>
                 <div toggleable="more" class="content-reveal__hidden">
                     <p>
                         {{content.more}}
                     </p>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -87,7 +90,7 @@
                         <div markdown link="{{section.markdown}}"></div>
                     </div>
                     <!-- <br></br> -->
-                    <a class="content-section--bottom" ng-click="scrollTo('top')">Back to Table of Contents</a>
+                    <a class="content-section--bottom" ng-click="scrollTo('top')">Back to table of contents</a>
                     <!-- /box__content -->
                 <!-- Not used in static version -->
                     <!-- <footer class="box__footer"></footer> -->
@@ -129,16 +132,14 @@
                         <div class="box__inner border box--padded">
                             <div class="box__section">
                                 <header class="box__header">
-                                    <h2>Related Bulletins</h2>
+                                    <h2>Related bulletins</h2>
                                 </header>
                             </div>
                             <!-- /box__header -->
                             <div class="box__section">
                                 <div class="box__content">
-                                    <p><a href="#">Consumer Price Inflation, August 2014</a>
-                                        <br />The Consumer Price Inflation is a monthly release that contains percentage changes and weights for the CPI, CPIH, RPI and RPIJ.</p>
-                                    <p><a href="#">Retail Sales, August 2014</a>
-                                        <br />A first estimate of retail sales in volume and value terms, seasonally and non seasonally adjusted.</p>
+                                    <p><a href="">Prototype version</a>
+                                        <br />In the future this box will display links to other Statistical Bulletins that are relevant to this bulletin</p>
                                 </div>
                             </div>
                             <!-- /box__content -->
@@ -151,7 +152,7 @@
                     <article class="box box--orange box--orange--separated-left">
                         <div class="box__inner border box--padded">
                             <div class="box__section">
-                                <h3 class="box__section__header"><a href="#!/localstats">Looking for local statistics?</a>
+                                <h3 class="box__section__header"><a href="#!/localstats"><h3>Looking for local statistics?</h3></a>
                                 </h3>
                             </div>
                             <div class="box__section">

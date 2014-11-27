@@ -1,5 +1,5 @@
-Theme: People, Population and Community
-Level 2: Leisure and Tourism
+Theme: Business, Industry and Trade
+Level 2: Tourism Industry
 Contact name: Jukesie
 Contact email: jukesie@gmail.com
 

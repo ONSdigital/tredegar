@@ -1,15 +1,15 @@
 <div class="page-header__icons">
-    <a href="https://twitter.com/share"
+    <a href="https://twitter.com/intent/tweet?text={{getAbsoluteUrl()}}"
     onclick="return !window.open(this.href, 'Google', 'width=500,height=350')"
-    target="_blank"><span class="icon icon-twitter icon--grey"><span class="visuallyhidden">Share on Twitter</span></span></a><!--squuezed up to fix underline issue!-->
-    
-    <a href="#" class="link-complex">
+    target="_blank"><span class="icon icon-twitter icon--grey"><span class="visuallyhidden">Share on Twitter</span></span></a><!--squeezed up to fix underline issue!-->
+
+<!--     <a href="#" class="link-complex">
         <span class="icon icon-linkedin icon--grey">
             <span class="visuallyhidden">Share on Linkedin</span>
         </span>
-    </a>
-    
-    <a href="http://www.facebook.com/sharer/sharer.php?u=#{{getAbsoluteUrl()}}" onclick="return !window.open(this.href, 'Google', 'width=500,height=350')" target="_blank">
+    </a> -->
+
+    <a href="http://facebook.com/sharer/sharer.php?u={{getFbAbsoluteUrl()}}" onclick="return !window.open(this.href, 'Google', 'width=500,height=350')" target="_blank">
         <span class="icon icon-facebook icon--grey">
             <span class="visuallyhidden">Share on Facebook</span>
         </span>

@@ -14,19 +14,19 @@
         'onsToggler',
         'onsLoading',
         'onsSparkline',
-	   'onsTooltip'
+        'onsTooltip'
     ])
 
     //Filters, services and other helpers are to be injected to onsHelpers module
     var onsHelpers = angular.module('onsHelpers', [
-        'onsFilters',
-        'onsTaxonomy',
-        'onsDownloader',
-        'onsUtils',
-        'onsDataLoader',
-        'angular-data.DSCacheFactory'
-    ])
-    //Template related components are to be registered to onsTemplates module
+            'onsFilters',
+            'onsTaxonomy',
+            'onsDownloader',
+            'onsUtils',
+            'onsDataLoader',
+            'angular-data.DSCacheFactory'
+        ])
+        //Template related components are to be registered to onsTemplates module
     var onsTemplates = angular.module('onsTemplates', [])
 
     /* App Module */
@@ -44,9 +44,19 @@
 
 
                 $routeProvider.
-                when('/article', {
-                    templateUrl: 'app/templates/article/article.html',
-                    controller: 'ArticleCtrl'
+                when('/about', {
+                    templateUrl: 'app/templates/about/about.html',
+                    controller: "AboutCtrl",
+                    resolve: {
+                        navigation: ['DataLoader', getNavigatinLinks]
+                    }
+                }).
+                when('/calendar', {
+                    templateUrl: 'app/templates/calendar/calendar.html',
+                    controller: "CalendarCtlr",
+                    resolve: {
+                        navigation: ['DataLoader', getNavigatinLinks]
+                    }
                 }).
                 when(':collectionPath*\/collection', {
                     templateUrl: 'app/templates/collection/collection.html',
@@ -57,18 +67,17 @@
                 }).
                 when('/contactus', {
                     templateUrl: 'app/templates/contact/contactus.html',
-                    controller: "ContactUsController",
+                    controller: "ContactUsCtrl",
                     resolve: {
                         navigation: ['DataLoader', getNavigatinLinks]
                     }
                 }).
-                when('/dataset', {
-                    templateUrl: 'app/templates/dataset/Dataset_Excelcrosssection.html',
-                    controller: "DatasetCtrl"
-                }).
-                when('/dataset_timeseries', {
-                    templateUrl: 'app/templates/dataset/Dataset_Excel_Time_Series.html',
-                    controller: "DatasetCtrl"
+                when('/copyright', {
+                    templateUrl: 'app/templates/copyright/copyright.html',
+                    controller: "CopyrightCtrl",
+                    resolve: {
+                        navigation: ['DataLoader', getNavigatinLinks]
+                    }
                 }).
                 when('/dataversions', {
                     templateUrl: 'app/templates/dataversions/dataversions.html',
@@ -86,7 +95,31 @@
                 }).
                 when('/methodology', {
                     templateUrl: 'app/templates/methodology/methodology.html',
-                    controller: 'MethodologyCtrl'
+                    controller: "MethodologyCtrl",
+                    resolve: {
+                        navigation: ['DataLoader', getNavigatinLinks]
+                    }
+                }).
+                when('/nationalstats', {
+                    templateUrl: 'app/templates/nationalstats/nationalstats.html',
+                    controller: "NationalStatsCtlr",
+                    resolve: {
+                        navigation: ['DataLoader', getNavigatinLinks]
+                    }
+                }).
+                when('/previous', {
+                    templateUrl: 'app/templates/previoustatic/previoustatic.html',
+                    controller: "PreviousCtrl",
+                    resolve: {
+                        navigation: ['DataLoader', getNavigatinLinks]
+                    }
+                }).
+                when('/privacy', {
+                    templateUrl: 'app/templates/privacy/privacy.html',
+                    controller: "PrivacyCtrl",
+                    resolve: {
+                        navigation: ['DataLoader', getNavigatinLinks]
+                    }
                 }).
                 when('/release', {
                     templateUrl: 'app/templates/release/release.html',
@@ -97,6 +130,14 @@
                 when('/search', {
                     templateUrl: 'app/templates/search-results/search-results.html',
                     controller: 'SearchController',
+                    resolve: {
+                        searchResponse: ['PageUtil', 'DataLoader', search],
+                        navigation: ['DataLoader', getNavigatinLinks]
+                    }
+                }).
+                when('/survey', {
+                    templateUrl: 'app/templates/survey/survey.html',
+                    controller: "SurveyCtrl",
                     resolve: {
                         navigation: ['DataLoader', getNavigatinLinks]
                     }
@@ -122,10 +163,15 @@
                             // Here we ensure that our route has the document fragment (#!), or more specifically that it has #!/ at a minimum.
                             // If accessing the base URL without a trailing '/' in IE7 it will execute the otherwise route instead of the signin
                             // page, so this check will ensure that '#!/' exists and if not redirect accordingly which fixes the URL.
-                            redirectCheck: ['$location',
-                                function($location) {
+                            redirectCheck: ['$location', '$window',
+                                function($location, $window) {
                                     var absoluteLocation = $location.absUrl();
-                                    if (absoluteLocation.indexOf('#!/') === -1) {
+                                    //This makes FB share work (socialLinks directive)
+                                    if (absoluteLocation.indexOf('?onsfb') != -1) {
+                                        absoluteLocation = absoluteLocation.replace('?onsfb','#!')
+                                        $window.location.href = absoluteLocation;
+                                    }
+                                    else if (absoluteLocation.indexOf('#!/') === -1) {
                                         $location.path('/');
                                     }
                                 }
@@ -145,7 +191,35 @@
                     }
 
                     return routeConfig
+                }
 
+                function search(PageUtil, DataLoader) {
+                    var searchResponse
+                    var results
+                    var q = PageUtil.getUrlParam('q')
+                    var type = PageUtil.getUrlParam('type')
+                    var pageNumber = PageUtil.getUrlParam('page')
+                    var searchString = "?q=" + q + (type ? "&type=" + type : "") + "&page=" + pageNumber
+                    return DataLoader.load("/search" + searchString)
+                        .then(function(data) {
+                            searchResponse = data
+                            results = data.results
+                            //If cdid search is made go directly to timeseries page for searched cdid
+                            for (var i = 0; i < results.length; i++) {
+                                results[i]
+                                if(results[i].type === 'timeseries' && results[i].title === q.toUpperCase()) {
+                                    PageUtil.goToPage(results[i].url,true)
+                                    return
+                                }
+                            };
+
+                            return data
+                        })
+                }
+
+
+                function getSearchTerm(PageUtil) {
+                    return PageUtil.getUrlParam('q')
                 }
 
                 function getNavigatinLinks(DataLoader) {
@@ -160,7 +234,7 @@
         ])
 
     onsApp
-        .controller('MainCtrl', ['$scope','PageUtil', '$location', '$anchorScroll',
+        .controller('MainCtrl', ['$scope', 'PageUtil', '$location', '$anchorScroll',
             function($scope, PageUtil, $location, $anchorScroll) {
                 var ctrl = this
 
@@ -170,11 +244,11 @@
                     $location.hash(null)
                 }
 
-                $scope.getPath = function(){
+                $scope.getPath = function() {
                     return PageUtil.getPath()
                 }
 
-                $scope.getPage = function(){
+                $scope.getPage = function() {
                     return PageUtil.getPage()
                 }
             }

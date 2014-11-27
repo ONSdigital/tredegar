@@ -12,7 +12,7 @@ import java.util.List;
 
 import org.apache.commons.io.IOUtils;
 
-import com.github.onsdigital.api.taxonomy.Data;
+import com.github.onsdigital.api.data.Data;
 import com.github.onsdigital.configuration.Configuration;
 
 /**

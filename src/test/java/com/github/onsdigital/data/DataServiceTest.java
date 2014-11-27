@@ -6,7 +6,7 @@ import java.net.URI;
 
 import org.junit.Test;
 
-import com.github.onsdigital.api.taxonomy.Data;
+import com.github.onsdigital.api.data.Data;
 import com.github.onsdigital.data.DataService;
 
 public class DataServiceTest {
