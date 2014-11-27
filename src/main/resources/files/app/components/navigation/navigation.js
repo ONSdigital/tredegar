@@ -35,6 +35,7 @@
         function init() {
           resolveScreenType()
           listenResize()
+          watchLocation()
             //Injected to parent scope to be used as a widget.
           if ($scope.navWidgetVar) {
             $scope.$parent[$scope.navWidgetVar] = navigation
@@ -42,15 +43,14 @@
 
         }
 
-        // function watchLocation() {
-        //   $rootScope.$on('$locationChangeSuccess', function(event) {
-        //       alert("hey")
-        //       for (var i = 0; i < items.length; i++) {
-        //         items[i].resolveClass()
-        //         items[i].expanded = false
-        //       };
-        //   })
-        // }
+        function watchLocation() {
+          $rootScope.$on('$locationChangeSuccess', function(event) {
+            for (var i = 0; i < items.length; i++) {
+              items[i].resolveClass()
+              items[i].expanded = false
+            };
+          })
+        }
 
         function toggleMobileMenu() {
           navigation.showOnMobile = !navigation.showOnMobile
@@ -104,11 +104,7 @@
 
         function initialize() {
           navigation.registerItem(scope)
-
-          if (scope.expandable) {
-            bindClick()
-          }
-
+          bindClick()
           resolveClass()
         }
 
@@ -122,10 +118,14 @@
 
         function bindClick() {
           element.bind("click", function(e) {
-            e.stopPropagation();
-            if (isMobile()) {
-              scope.expanded = !scope.expanded
-              scope.$apply() // Trigger Angular digest cycle to process changed values
+            if (!scope.expandable) {
+              //Prevent link clicks propogated to navigation link
+              e.stopPropagation();
+            } else {
+              if (isMobile()) {
+                scope.expanded = !scope.expanded
+                scope.$apply() // Trigger Angular digest cycle to process changed values
+              }
             }
           })
         }
@@ -139,8 +139,8 @@
         }
 
         angular.extend(scope, {
-          resolveClass:resolveClass
-        }) 
+          resolveClass: resolveClass
+        })
       }
 
       function NavItemController($scope) {
@@ -213,8 +213,8 @@
         restrict: 'A',
         require: '^onsNav',
         link: NavMobileLink,
-        transclude:true,
-        template : '<span ng-transclude ng-show="isMobile()"></span>'
+        transclude: true,
+        template: '<span ng-transclude ng-show="isMobile()"></span>'
       }
 
       function NavMobileLink(scope, element, attrs, navigation) {
@@ -236,8 +236,8 @@
         restrict: 'A',
         require: '^onsNav',
         link: NavDesktopLink,
-        transclude:true,
-        template : '<span ng-transclude ng-show="isDesktop()"></span>'
+        transclude: true,
+        template: '<span ng-transclude ng-show="isDesktop()"></span>'
       }
 
       function NavDesktopLink(scope, element, attrs, navigation) {

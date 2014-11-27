@@ -8,7 +8,7 @@
                 <strong>{{header}}</strong>
             </p>
             <h1 class="page-header__title flush--half--bottom">{{content.title}}</h1>
-            <img class="page-header--article__img" src="../ui/img/national-statistics.png" alt="The official National Statistics badge">
+            <a href="#!/nationalstats"><img class="page-header--article__img" src="../ui/img/national-statistics.png" alt="The official National Statistics badge"></a>
 
             <div class="page-header--article__body">
               <div class="page-header--article__split">
@@ -83,7 +83,7 @@
     <!-- Body Sections -->
     <div class="wrapper panel--bottom-mar">
         <div class="grid-wrap">
-            <div class="grid-col {{sidebar ? 'desktop-grid-two-thirds tablet-grid-two-thirds' : ''}}">
+            <div class="grid-col {{sidebar ? 'desktop-grid-two-thirds tablet-grid-full-width' : ''}}">
                 <article class="box border-horizontal-single content-section" ng-repeat="section in content.sections">
                     <header class="box__header">
                         <h2 id="section{{$index + 1}}">{{$index + 1}}. {{section.title}}</h2>
