@@ -17,7 +17,7 @@
 				dataVar: '@' //Varilable name to store returned data from server
 			},
 			link: AutocompleteLink,
-			template: '<div id="onsAutocompleteDiv" ng-style="style" ng-transclude ng-show="visible" style="position:absolute;z-index:999"></div>'
+			template: '<div id="onsAutocompleteDiv" ng-style="style" ng-transclude ng-show="visible" class="autocomplete"></div>'
 		}
 
 		function AutocompleteLink(scope, element, attrs, ctrl, transclude) {

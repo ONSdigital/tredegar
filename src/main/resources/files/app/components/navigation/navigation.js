@@ -121,7 +121,8 @@
         }
 
         function bindClick() {
-          element.bind("click", function(event) {
+          element.bind("click", function(e) {
+            e.stopPropagation();
             if (isMobile()) {
               scope.expanded = !scope.expanded
               scope.$apply() // Trigger Angular digest cycle to process changed values

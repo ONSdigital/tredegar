@@ -14,7 +14,7 @@
           <dl class="ui-menu">
               <dt ng-repeat="item in data.results | limitTo:autoCompleteLimit" class="ui-menu-item">
                   <a href="#!{{item.url}}">
-                      <div style="float:left;width:100px">
+                      <div class="search-lozenge">
                           <span class="lozenge lozenge-spacer lozenge-grey">{{item.type == 'bulletin' ? 'STATISTICAL BULLETIN' : item.type}}</span>
                       </div>
                       <div style="float:left">{{item.title}}</div>
