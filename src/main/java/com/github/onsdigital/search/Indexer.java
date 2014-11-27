@@ -1,4 +1,4 @@
-package com.github.onsdigital.api;
+package com.github.onsdigital.search;
 
 import static org.elasticsearch.common.xcontent.XContentFactory.jsonBuilder;
 
@@ -11,35 +11,16 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.ws.rs.GET;
-import javax.ws.rs.core.Context;
-
 import org.apache.commons.lang3.StringUtils;
 import org.elasticsearch.action.admin.indices.create.CreateIndexRequestBuilder;
 import org.elasticsearch.client.Client;
 import org.elasticsearch.common.settings.ImmutableSettings;
 import org.elasticsearch.common.xcontent.XContentBuilder;
 
-import com.github.davidcarboni.restolino.framework.Endpoint;
 import com.github.onsdigital.configuration.Configuration;
 import com.github.onsdigital.index.LoadIndexHelper;
-import com.github.onsdigital.search.ElasticSearchServer;
 
-/**
- * Loads up indices into the search engine
- */
-@Endpoint
-public class LoadIndex {
-
-	@GET
-	public Object get(@Context HttpServletRequest httpServletRequest, @Context HttpServletResponse httpServletResponse) throws IOException {
-
-			ElasticSearchServer.startEmbeddedServer();
-			ElasticSearchServer.getClient();
-			return "LoadIndex succeeded";
-	}
+public class Indexer {
 
 	public static void loadIndex(Client client) throws IOException {
 		List<String> absoluteFilePaths = LoadIndexHelper.getAbsoluteFilePaths(Configuration.getTaxonomyPath());
@@ -106,7 +87,7 @@ public class LoadIndex {
 		String[] filters = { "lowercase", "ons_synonym_filter" };
 		settingsBuilder.putArray("analysis.analyzer.ons_synonyms.filter", filters);
 
-		InputStream inputStream = LoadIndex.class.getResourceAsStream("/synonym.txt");
+		InputStream inputStream = Indexer.class.getResourceAsStream("/synonym.txt");
 		BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
 		List<String> synonymList = new ArrayList<String>();
 		String contents = null;
@@ -115,5 +96,4 @@ public class LoadIndex {
 		}
 		return synonymList;
 	}
-
 }

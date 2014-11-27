@@ -8,7 +8,7 @@ import java.util.concurrent.Future;
 
 import org.elasticsearch.client.Client;
 
-import com.github.onsdigital.api.LoadIndex;
+import com.github.davidcarboni.restolino.framework.Startup;
 
 /**
  * Starts an {@link EmbeddedElasticSearchServer} when a client requested
@@ -16,17 +16,29 @@ import com.github.onsdigital.api.LoadIndex;
  * @author Bren
  *
  */
-public class ElasticSearchServer {
+public class ElasticSearchServer implements Startup {
 
 	static ExecutorService pool = Executors.newSingleThreadExecutor();
 
 	static EmbeddedElasticSearchServer server;
 	static Future<Client> client;
 
-	private ElasticSearchServer() {
-		// Prevent instantiation.
+	@Override
+	public void init() {
+		startEmbeddedServer();
 	}
 
+	/**
+	 * NB caching the client for the entire application to use is safe and
+	 * recommended:
+	 * <p>
+	 * <a href=
+	 * "http://stackoverflow.com/questions/15773476/elasticsearch-client-thread-safety"
+	 * >http://stackoverflow.com/questions/15773476/elasticsearch-client-thread-
+	 * safety</a>
+	 * 
+	 * @return
+	 */
 	public static Client getClient() {
 		try {
 			return client.get();
@@ -58,7 +70,7 @@ public class ElasticSearchServer {
 					// Index
 					start = System.currentTimeMillis();
 					System.out.println("Elasticsearch: indexing..");
-					LoadIndex.loadIndex(client);
+					Indexer.loadIndex(client);
 					System.out.println("Elasticsearch: indexing complete (" + (System.currentTimeMillis() - start) + "ms)");
 
 					return client;
@@ -71,9 +83,10 @@ public class ElasticSearchServer {
 		@Override
 		public void run() {
 
+			getClient().close();
+
 			// Once we get the client, the server
 			// is guaranteed to have been created:
-			getClient().close();
 			server.shutdown();
 		}
 	}

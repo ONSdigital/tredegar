@@ -5,7 +5,7 @@
 		<div class="wrapper">
 			<h2 class="page-header__title flush--half--bottom">{{releaseData.h2}}</h2>
 			<div class="content-reveal lede">
-				<p>T{{releaseData.lede}}</p>
+				<p>{{releaseData.lede}}</p>
 			</div>
 			<social-links></social-links>
 		</div>
@@ -22,7 +22,7 @@
 				<div
 					class="list--table__item__body list--table__item__body--caption no_align">
 					<h3>
-						<p>Release Date:
+						<p>Release date:
 						<p>
 					</h3>
 				</div>
@@ -30,7 +30,7 @@
 					class="list--table__item__body list--table__item__body--stat no_align">
 					<div class="">
 						<div class="release_dates">
-							<p id="releaseDate">{{releaseData.releaseDate}}</p>
+							<p id="releaseDate">{{releaseData.releaseDate || '1 JAN 3000'}}</p>
 						</div>
 					</div>
 				</div>
@@ -40,7 +40,7 @@
 				<div
 					class="list--table__item__body list--table__item__body--caption no_align">
 					<h3>
-						<p>Next Release:
+						<p>Next release:
 						<p>
 					</h3>
 				</div>
@@ -48,7 +48,7 @@
 					class="list--table__item__body list--table__item__body--stat no_align">
 					<div class="">
 						<div class="release_dates">
-							<p id="nextReleaseDate">{{releaseData.nextReleaseDate}}</p>
+							<p id="nextReleaseDate">{{releaseData.nextReleaseDate || '1 FEB 3000'}}</p>
 
 						</div>
 
@@ -92,7 +92,7 @@
 			<div class="grid-wrap">
 				<div class="grid-col desktop-grid-one-third tablet-grid-full">
 					<article class="box">
-						<h2 class="beta">Statistical Bulletins and Articles</h2>
+						<h2 class="beta">Statistical Bulletins and articles</h2>
 					</article>
 				</div>
 				<!-- /box -->
@@ -139,7 +139,7 @@
 				<!-- /grid-col -->
 				<div class="grid-col hide-large">
 					<p class="box box--padded-top">
-						<a href="#" class="action-link hide-large">View all statistical bulletins</a>
+						<a href="#" class="action-link hide-large">View all Statistical Bulletins</a>
 					</p>
 				</div>
 			</div>
@@ -201,15 +201,15 @@
 		<!-- /grid-wrap -->
 		<div class="box box--padded-top hide-large">
 			<p>
-				<a href="#" class="action-link">View more statistical bulletins
+				<a href="#" class="action-link">View more Statistical Bulletins
 					and articles</a>
 			</p>
 		</div>
 	</section>
 
 	<div class="wrapper panel--bottom-mar">
-		<h3>Important Release Information</h3>
-		<br> <br>
+		<h3>Important release information</h3>
+		<br/>
 
 		<p>The United Kingdom Statistics Authority has designated these
 			statistics as National Statistics, in accordance with the Statistics
@@ -231,7 +231,7 @@
 			to be observed.</p>
 
 		<p>
-			<a href="about:blank">Pre-release access list for this release</a>
+			<a href="">Pre-release access list for this release</a>
 	</div>
 
 </div>
