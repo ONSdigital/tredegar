@@ -3,11 +3,12 @@
 
   //Collection Controller
   angular.module('onsTemplates')
-    .controller('CollectionCtrl', ['$scope', '$location', '$log', 'DataLoader', 'PageUtil', CollectionController])
+    .controller('CollectionCtrl', ['$location', '$log', 'DataLoader', 'PageUtil', CollectionController])
 
-  function CollectionController($scope, $location, $log, DataLoader, PageUtil) {
+  function CollectionController($location, $log, DataLoader, PageUtil) {
     $log.debug('CollectionCtrl invoked')
 
+    var collection = this
     var url = $location.$$path
     var lastIndex = url.lastIndexOf('/');
     var searchTerm = url.substr(0, lastIndex)
@@ -17,7 +18,7 @@
     if (!searchTerm || !contentType) {
       return
     }
-    $scope.contentType = resolveContentType(contentType)
+    collection.contentType = resolveContentType(contentType)
 
     searchCollection(searchTerm, contentType, page)
     loadContent(searchTerm)
@@ -26,7 +27,7 @@
     function loadContent(searchTerm) {
       DataLoader.load('/data' + searchTerm)
         .then(function(data) {
-          $scope.content = data
+          collection.content = data
         })
     }
 
@@ -34,25 +35,27 @@
       $log.debug('Searching for collections from: ' + searchTerm)
       var collectionSearchString = "?loc=" + loc + (contentType ? "&contentType=" + contentType : "") + "&page=" + pageNumber
       DataLoader.load("/collectiontaxonomyfilesystem" + collectionSearchString).then(function(data) {
-        $scope.searchResponse = data
-        $scope.pageCount = Math.ceil(data.numberOfResults / 10)
+        collection.searchResponse = data
+        collection.pageCount = Math.ceil(data.numberOfResults / 10)
       })
     }
 
     function resolveContentType(contentType) {
       switch (contentType) {
         case 'bulletins':
-          return 'Statistical bulletins'
+          return 'statistical bulletins'
         default:
-          //Cpitilize first letter
-          return contentType.substr(0,1).toUpperCase() + contentType.substr(1,contentType.length -1)
+          return contentType
       }
     }
 
-
-    $scope.isLoading = function() {
-      return ($scope.searchTerm && !$scope.searchResponse)
+     function isLoading() {
+      return (collection.searchTerm && collection.searchResponse)
     }
+
+    angular.extend(collection, {
+      isLoading:isLoading
+    })
 
   }
 

@@ -4989,6 +4989,10 @@ ol.toc-columns
 
 }
 
+.collection_content_type {
+  text-transform: capitalize;
+}
+
 .rem_padding_bottom{ padding-bottom: 0rem;}
 
 #collection-list p{color: gray;}

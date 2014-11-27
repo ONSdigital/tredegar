@@ -63,6 +63,7 @@
                 when(':collectionPath*\/collection', {
                     templateUrl: 'app/templates/collection/collection.html',
                     controller: "CollectionCtrl",
+                    controllerAs: "collection",
                     resolve: {
                         navigation: ['DataLoader', getNavigatinLinks]
                     }
