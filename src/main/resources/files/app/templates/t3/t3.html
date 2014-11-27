@@ -124,6 +124,7 @@
                 <p class="list--table__item__description">{{item.data.seasonalAdjustment}}</p>
             </div>
             <div class="list--table__item__body list--table__item__body--update">
+                <span class="list--table--stat_description" ng-if="!item.chartData"> No time series currently available </span>
                 <ons-sparkline width="140" height="50" chart-data="item.chartData"></ons-sparkline>
             </div>
             <div class="list--table__item__body list--table__item__body--stat">
