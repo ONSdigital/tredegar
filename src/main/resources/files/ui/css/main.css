@@ -629,7 +629,7 @@ img {
 
 .icon--large {
   font-size: 150%; }
-  
+
 .icon--medium {
 	font-size: 115%;
 }
@@ -653,7 +653,7 @@ img {
 
 .icon--red-dark {
   color: #a8233e; }
-  
+
 .icon--ons-blue {
   color: #00456a; }
 
@@ -2625,7 +2625,7 @@ lesser , applied styles
     width: 45%; }
 
   .list--table__item__body--stat {
-    width: 55%; 
+    width: 55%;
     margin: 0 auto;
     text-align: center;} }
 @media screen and (min-width: 36em) {
@@ -2951,7 +2951,7 @@ lesser , applied styles
     /*@media screen and (max-width: 770px) {
       .nav-panel__action:after {
         top: 50% !important;
-         } }*/     
+         } }*/
   .nav-panel__action > a {
     position: relative;
     z-index: 10;
@@ -2988,7 +2988,7 @@ lesser , applied styles
   padding-top: 30px;
   padding-top: 3rem;
   padding-bottom: 10px;
-  padding-bottom: 1rem; 
+  padding-bottom: 1rem;
   font-size: 70%;
   height: 9.5rem }
 
@@ -3005,7 +3005,7 @@ lesser , applied styles
 
 
 
-}  
+}
 
 .nav-panel__title,
 .nav-panel__value {
@@ -3427,7 +3427,7 @@ lesser , applied styles
 
 .slate--hero-banner {
   background-color: #e4e5e3;
- 
+
   opacity: 15;
   /*background-image: url("/ui/img/hero-banner.jpg");*/
   background-position: 50% 50%;
@@ -3435,7 +3435,7 @@ lesser , applied styles
 
 .slate--home--hero-banner {
   /*background-color: #f4f5dd;
- 
+
   opacity: 15;*/
   background-image: url("/ui/img/whitebackgroundhero.png");
   /*background-position: 50% 50%;*/
@@ -3592,15 +3592,15 @@ $SPLIT
   font-size: 1.2rem; }
 
 .stat__description-large {
-  
+
   display: block;
   font-weight: normal;
   font-size: 13.5px;
   font-size: 1.35rem;
   text-align: center;}
-  
+
 .stat__updated {
-  text-align: left; }  
+  text-align: left; }
 
 .stat--headline .stat__figure {
   font-size: 40px;
@@ -4659,7 +4659,7 @@ ul.simple-pagination {
 }
 
 .box-centred {
-  margin: auto; 
+  margin: auto;
   width: 95%;
   height: 95%;
   margin-top: auto;
@@ -4716,7 +4716,7 @@ ul.simple-pagination {
 }
 
 .arrow_box:after, .arrow_box:before {
-  
+
   border: none;
   content: "";
   height: 0;
@@ -5657,21 +5657,21 @@ td.datatable-downloads{
   background-position: 35% -70%;
   background-repeat: no-repeat;
   height: 5.5em;
-} 
+}
 
 .homeicon_employmentandlabourmarket{
   background-image: url("/ui/img/Employment.png");
   background-position: 35% -70%;
   background-repeat: no-repeat;
   height: 5.5em;
-  } 
+  }
 
 .homeicon_businessindustryandtrade{
   background-image: url("/ui/img/Trade.png");
   background-position: 35% -70%;
   background-repeat: no-repeat;
   height: 5.5em;
-} 
+}
 
 .homeicon_peoplepopulationandcommunity{
   background-image: url("/ui/img/Population.png");
@@ -5766,7 +5766,7 @@ td.datatable-downloads{
 
 .callout-header{
   font-size: 2.4rem;
-  padding-top:20px;  
+  padding-top:20px;
 }
 
 
@@ -5785,21 +5785,21 @@ td.datatable-downloads{
   background-position: 0% -70%;
   background-repeat: no-repeat;
   height: 5.5em;
-} 
+}
 
 .homeicon_employmentandlabourmarket{
   background-image: url("/ui/img/Employment.png");
   background-position: 0% -70%;
   background-repeat: no-repeat;
   height: 5.5em;
-  } 
+  }
 
 .homeicon_businessindustryandtrade{
   background-image: url("/ui/img/Trade.png");
   background-position: 0% -70%;
   background-repeat: no-repeat;
   height: 5.5em;
-} 
+}
 
 .homeicon_peoplepopulationandcommunity{
   background-image: url("/ui/img/Population.png");
@@ -5823,17 +5823,17 @@ td.datatable-downloads{
 }
 .nav-panel__item.homeicon_sparkline{
 position: relative;
-left: 29%; 
+left: 29%;
 text-align: center;
 border: 0px;
 }
 }
 
 @media screen and (max-width: 400px){
-.callout-header{  
+.callout-header{
   font-size: 1.6rem;
   padding-top:20px;
-  padding-left: 10px;  
+  padding-left: 10px;
 }
 }
 
@@ -7448,6 +7448,10 @@ height: 4em;
     font-size: 24px !important;
     font-size: 2.4rem !important;
     font-family: "DaxlinePro", sans-serif !important;
+}
+.highcharts-subtitle {
+    font-size: 9px;
+    font-size: 0.9rem;
 }
 .chart {
     height: 480px;

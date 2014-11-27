@@ -123,8 +123,9 @@
                 ctrl.tenYears = tenYears(ctrl.years)
                 ctrl.chartConfig.options.xAxis.tickInterval = tickInterval(ctrl.chartData.length);
                 ctrl.chartConfig.options.title.text = ctrl.timeseries.name
-                ctrl.chartConfig.options.yAxis.title.text = ctrl.timeseries.preUnit + ' '  + ctrl.timeseries.unit
+                ctrl.chartConfig.options.yAxis.title.text = ctrl.timeseries.preUnit + ' ' + ctrl.timeseries.unit
                 ctrl.chartConfig.options.yAxis.min = ctrl.min;
+                ctrl.chartConfig.subtitle.text = 'Source: ' + ctrl.timeseries.source;
                 $log.debug("Chart:")
                 $log.debug(ctrl.chartConfig)
                 $log.debug("10y = " + ctrl.tenYears)
@@ -559,7 +560,14 @@
 
                 }
             },
-
+            subtitle: {
+            text: '',
+            floating: true,
+            align: 'right',
+            x: 0,
+            verticalAlign: 'bottom',
+            y: 10
+            },
             series: [{
                 name: "",
                 id: "",
