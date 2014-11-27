@@ -202,7 +202,7 @@
                     var q = PageUtil.getUrlParam('q')
                     var type = PageUtil.getUrlParam('type')
                     var pageNumber = PageUtil.getUrlParam('page')
-                    var searchString = "?q=" + q + (type ? "&type=" + type : "") + (pageNumber ? "&page=" + pageNumber : "")
+                    var searchString = "?q=" + q + getTypeString(type) + (pageNumber ? "&page=" + pageNumber : "")
                     return DataLoader.load("/search" + searchString)
                         .then(function(data) {
                             searchResponse = data
@@ -223,6 +223,21 @@
 
                 function getSearchTerm(PageUtil) {
                     return PageUtil.getUrlParam('q')
+                }
+
+                function getTypeString(type) {
+                    if(!type) {
+                        return ''
+                    }
+                    if(typeof type === 'string') {
+                        return type
+                    }
+
+                    var paramString = ''
+                    for (var i = 0; i < type.length; i++) {
+                        paramString += '&type=' + type[i]
+                    }
+                    return paramString
                 }
 
                 function getNavigatinLinks(DataLoader) {
