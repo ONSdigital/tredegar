@@ -10,9 +10,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import org.apache.commons.lang3.StringUtils;
+import org.elasticsearch.action.ListenableActionFuture;
 import org.elasticsearch.action.admin.indices.create.CreateIndexRequestBuilder;
+import org.elasticsearch.action.index.IndexRequestBuilder;
+import org.elasticsearch.action.index.IndexResponse;
 import org.elasticsearch.client.Client;
 import org.elasticsearch.common.settings.ImmutableSettings;
 import org.elasticsearch.common.xcontent.XContentBuilder;
@@ -43,13 +47,12 @@ public class Indexer {
 		CreateIndexRequestBuilder indexBuilder = client.admin().indices().prepareCreate("ons").setSettings(buildSettings());
 		indexBuilder.execute();
 
-		int idCounter = 0;
+		AtomicInteger idCounter = new AtomicInteger();
 		for (String absoluteFilePath : absoluteFilePaths) {
-			idCounter++;
 
 			Map<String, String> documentMap = LoadIndexHelper.getDocumentMap(absoluteFilePath);
 			if (documentMap != null && StringUtils.isNotEmpty(documentMap.get("title"))) {
-				buildDocument(client, documentMap, idCounter);
+				buildDocument(client, documentMap, idCounter.getAndIncrement());
 			}
 		}
 	}
@@ -58,8 +61,13 @@ public class Indexer {
 
 		XContentBuilder source = jsonBuilder().startObject().field("title", documentMap.get("title")).field("url", documentMap.get("url")).field("path", documentMap.get("tags"))
 				.field("lede", documentMap.get("lede")).endObject();
-		client.prepareIndex(StringUtils.lowerCase("ons"), StringUtils.lowerCase(documentMap.get("type")), String.valueOf(idCounter)).setSource(source).execute().actionGet();
-
+		String name = "ons";
+		String type = StringUtils.lowerCase(documentMap.get("type"));
+		String id = String.valueOf(idCounter);
+		IndexRequestBuilder index = client.prepareIndex(name, type, id);
+		index.setSource(source);
+		ListenableActionFuture<IndexResponse> execution = index.execute();
+		execution.actionGet();
 	}
 
 	private static Map<String, String> buildSettings() throws IOException {
