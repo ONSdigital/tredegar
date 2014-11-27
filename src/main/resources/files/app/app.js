@@ -53,6 +53,13 @@
                         navigation: ['DataLoader', getNavigatinLinks]
                     }
                 }).
+				 when('/alpha', {
+                    templateUrl: 'app/templates/alphapage/alphapage.html',
+                    controller: "AlphaPageCtlr",
+                    resolve: {
+                        navigation: ['DataLoader', getNavigatinLinks]
+                    }
+                }).
                 when('/calendar', {
                     templateUrl: 'app/templates/calendar/calendar.html',
                     controller: "CalendarCtlr",
