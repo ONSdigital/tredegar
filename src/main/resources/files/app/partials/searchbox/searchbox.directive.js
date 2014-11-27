@@ -14,6 +14,14 @@ angular.module('onsTemplates')
 				
 				$scope.autoCompleteLimit = $rootScope.onsAlphaConfiguration.autoCompleteLimit
 
+				clearOnPageChange()
+
+				function clearOnPageChange() {
+				  $rootScope.$on('$locationChangeSuccess', function(event) {
+				    $scope.searchTerm = ''
+				  })
+				}
+
 				$scope.goToSearch = function(searchTerm) {
 					if (!searchTerm) {
 						return

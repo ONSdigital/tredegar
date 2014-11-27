@@ -42,10 +42,14 @@
 			return $location.absUrl()
 		}
 
+		function getUrl() {
+			return $location.url()
+		}
+
 		//If replace history is set, latest back history item is replaced with the page to be showed
 		//Particularyly useful to not to break back button redirect
 		function goToPage(path, replaceHistory) {
-			$location.path(path);
+			$location.url(path); //Clear any search parameters currently available
 			if (replaceHistory) {
 				$location.replace()
 			}
@@ -57,6 +61,7 @@
 			getUrlParam: getUrlParam,
 			getPage: getPage,
 			getPath: getPath,
+			getUrl:getUrl,
 			getAbsoluteUrl: getAbsoluteUrl,
 			goToPage: goToPage
 		})
