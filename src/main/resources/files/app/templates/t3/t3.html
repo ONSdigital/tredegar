@@ -113,8 +113,9 @@
         <!-- /list- -table__head -->
         <li ng-repeat="item in taxonomy.data.items | limitTo:(t3.allVisible?t3.loadedTimseriesCount : t3.timeseriesDefaultLimit)" class="list--table__item list--table__body">
             <div class="list--table__item__body list--table__item__body--caption">
-                <h3 class="list--table__item__header">
-                    <a href="#!{{item.uri}}" class="no_underline"> {{item.name}}</a>
+                 <h3 >
+                    <a ng-if="item.chartData" href="#!{{item.uri}}" class="no_underline"> {{item.name}}</a>
+                    <span ng-if="!item.chartData"> {{item.name}}</span>
                     <a class="information" href="">
                         <ons-info-tooltip tip="{{item.data.keyNote}}"></ons-info-tooltip>
                         <span class="visuallyhidden">More information about {{item.name}}</span>
