@@ -1,10 +1,10 @@
 package com.github.onsdigital.generator.markdown;
 
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.Reader;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.nio.charset.Charset;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -18,6 +18,7 @@ import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeSet;
 
+import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import com.github.onsdigital.generator.data.DataCSV;
@@ -25,6 +26,7 @@ import com.github.onsdigital.json.markdown.Section;
 
 class Markdown {
 
+	private String filename;
 	String title;
 	Map<String, String> properties = new HashMap<>();
 	List<Section> sections = new ArrayList<>();
@@ -32,11 +34,25 @@ class Markdown {
 
 	public Markdown(Path file) throws IOException {
 
-		// Read the markdown
-		try (Reader reader = new InputStreamReader(Files.newInputStream(file))) {
+		filename = file.getFileName().toString();
+
+		// Read the markdown - it may be in UTF8 or in Windows encoding (cp1252)
+		// because these files will be edited on Linux, Mac and Windows
+		// machines.
+		try (Reader reader = Files.newBufferedReader(file, Charset.forName("cp1252"))) {
 			try (Scanner scanner = new Scanner(reader)) {
 				readHeader(scanner);
 				readContent(scanner);
+			}
+		}
+		// It looks like if cp1252 fails we don't get any content, so retry with
+		// Windows encoding:
+		if (properties.size() == 0) {
+			try (Reader reader = Files.newBufferedReader(file, Charset.forName("UTF8"))) {
+				try (Scanner scanner = new Scanner(reader)) {
+					readHeader(scanner);
+					readContent(scanner);
+				}
 			}
 		}
 
@@ -121,6 +137,8 @@ class Markdown {
 
 		}
 
+		// Set a default title if none was found in the markdown:
+		title = StringUtils.defaultIfBlank(title, FilenameUtils.getBaseName(filename));
 	}
 
 	/**

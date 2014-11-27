@@ -42,12 +42,12 @@ public class SearchHelper {
 	 * @return {@link SearchResult}
 	 * @throws Exception
 	 */
-	public SearchResult search(ONSQueryBuilder queryBuilder) throws Exception {
+	public SearchResult search(ONSQueryBuilder queryBuilder) {
 		System.out.println("Searcing For:" + ReflectionToStringBuilder.toString(queryBuilder));
 		return new SearchResult(execute(queryBuilder));
 	}
 
-	private SearchResponse execute(ONSQueryBuilder queryBuilder) throws Exception {
+	private SearchResponse execute(ONSQueryBuilder queryBuilder) {
 		SearchRequestBuilder searchBuilder = buildRequest(queryBuilder);
 		return searchBuilder.get();
 	}

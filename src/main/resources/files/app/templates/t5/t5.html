@@ -1,6 +1,6 @@
 <div id="t5" ng-controller="ChartController as chart">
     <!-- Title and release date -->
-    <div class="page-header page-header--article page-header--time-series slate--green">
+    <div class="page-header flush--half--bottom  page-header--article page-header--time-series slate--green">
         <ons-breadcrumb data="breadcrumb"></ons-breadcrumb>
         <div class="wrapper">
             <p class="page-header__title page-header--time-series-desc">
@@ -9,11 +9,12 @@
             <h1 class="page-header__title flush--half--bottom">{{chart.timeseries.name}}</h1>
             <div class="grid-wrap">
                 <div class="grid-col desktop-grid-two-thirds">
-                    <img src="/ui/img/nslogo.png" class="page-header-image" alt="ONS logo">
+                    <a href="#!/nationalstats" ng-show="{{chart.timeseries.nationalStatistic}}"><img src="/ui/img/nslogo.png" class="page-header-image" alt="ONS logo">
+                    </a>
                     <p>
                         <strong>Release date: {{chart.timeseries.lastUpated || '1 Jan 3000'}}</strong>
                         <span class="page-header-box-link">
-                            <a href="#">
+                            <a href="#!/previous">
                                 <strong>View previous versions</strong>
                             </a>
                         </span>
@@ -27,6 +28,7 @@
                 <div class="grid-col desktop-grid-one-third">
                     <p>
                         <strong>Series ID: {{chart.timeseries.cdid}}</strong>
+                        <ons-help-tooltip tip="This series ID is a unique random identifier for this individual time series. The digits themselves do not have any specific meaning" tip-class="icon--inline--large-text icon--inline"></ons-help-tooltip>
                     </p>
                     <p>
                         <strong>Unit: {{chart.timeseries.preUnit}} {{chart.timeseries.unit}}</strong>
@@ -75,7 +77,7 @@
                         <span class="chart-area__controls__time__label">Time period:</span>
                         <ul class="nav flush--top chart-area__controls__time__ranges">
                             <li>
-                                <a href="" ng-if="chart.timePeriod != 'A'" ng-click="chart.changeTimePeriod('A')" >All</a>
+                                <a href="" ng-if="chart.timePeriod != 'A'" ng-click="chart.changeTimePeriod('A')">All</a>
                                 <div ng-if="chart.timePeriod === 'A'">All</div>
                             </li>
                             <li ng-if="chart.tenYears">
@@ -160,7 +162,7 @@
                 </div>
             </div>
             <!-- Custom downloads -->
-            <div  ng-if="chart.timePeriod != 'A'" class="chart-area__footer">
+            <div ng-if="chart.timePeriod != 'A'" class="chart-area__footer">
                 <span class="chart-area__footer__label">Download custom data</span>
                 <div class="chart-area__footer__actions">
                     <a id="imgExp" ng-click="chart.exportImage()" class="btn btn--primary btn--small" href="">
@@ -186,26 +188,36 @@
             <div class="grid-col desktop-grid-two-thirds tablet-grid-two-thirds">
                 <div class="panel--bottom-mar">
                     <div class="lede">
-                        <p>
+                        <p ng-if='chart.timeseries.description'>
                             {{chart.timeseries.description}}
+                        </p>
+                        <p ng-if="!chart.timeseries.description">
+                            In the future a short description of this series will be displayed in this area.
                         </p>
                     </div>
                     <div ng-if="chart.timeseries.note1">
-                        <h3>Important Notes and Usage Information</h3>
+                        <h3>Important notes and usage information</h3>
                         <ol class="dataset_usage">
                             <li>{{chart.timeseries.note1}}</li>
                             <li>{{chart.timeseries.note2}}</li>
                         </ol>
                     </div>
                     <br></br>
-                    <h3>Related series</h3>
-                    <div class="padded">
-	                    <div ng-repeat="relatedTimeseries in taxonomy.data.relatedTimeseriesData | orderBy:'name'">
-	 						<div>
-					            <a href=#!{{relatedTimeseries.uri}}>{{relatedTimeseries.name}}</a>
-							</div>
-	                    </div>
-	                </div>
+                    <div ng-if="taxonomy.data.relatedTimeseriesData[0]">
+                        <h3>Related series</h3>
+
+                        <div class="padded">
+                            <div ng-repeat="relatedTimeseries in taxonomy.data.relatedTimeseriesData | orderBy:'name'">
+                                <div>
+                                    <a href=#!{{relatedTimeseries.uri}}>{{relatedTimeseries.name}}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div ng-if="!taxonomy.data.relatedTimeseriesData[0]">
+                        <h3>Related series</h3>
+                        <p>In the future some related series will be displayed in this area</p>
+                    </div>
                 </div>
             </div>
             <!-- Sidebar -->
