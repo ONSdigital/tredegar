@@ -21,14 +21,14 @@
 
     //Filters, services and other helpers are to be injected to onsHelpers module
     var onsHelpers = angular.module('onsHelpers', [
-        'onsFilters',
-        'onsTaxonomy',
-        'onsDownloader',
-        'onsUtils',
-        'onsDataLoader',
-        'angular-data.DSCacheFactory'
-    ])
-    //Template related components are to be registered to onsTemplates module
+            'onsFilters',
+            'onsTaxonomy',
+            'onsDownloader',
+            'onsUtils',
+            'onsDataLoader',
+            'angular-data.DSCacheFactory'
+        ])
+        //Template related components are to be registered to onsTemplates module
     var onsTemplates = angular.module('onsTemplates', [])
 
     /* App Module */
@@ -168,6 +168,7 @@
                             redirectCheck: ['$location', '$window',
                                 function($location, $window) {
                                     var absoluteLocation = $location.absUrl();
+                                    //This makes FB share work (socialLinks directive)
                                     if (absoluteLocation.indexOf('?onsfb') != -1) {
                                         absoluteLocation = absoluteLocation.replace('?onsfb','#!')
                                         $window.location.href = absoluteLocation;

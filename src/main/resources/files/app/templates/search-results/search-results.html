@@ -6,7 +6,7 @@
         <div class="grid-wrap">
 
             <div class="grid-col tablet-wide">
-                <div ng-show="searchResponse.numberOfResults > 0" id="search-results-total" class="search-results-total">
+                <div ng-show="showSearchResults" id="search-results-total" class="search-results-total">
                     <span class='results-total'>
                         {{searchResponse.numberOfResults}}
                     </span>results for
@@ -14,20 +14,36 @@
                         '{{searchTermOneTime}}'
                         </span>
                 </div>
-                <div ng-show="searchResponse.numberOfResults === 0" id="search-results-total" class="search-results-total">
+                <div ng-show="showSuggestedSearchResults" id="search-results-total" class="search-results-total">
+                    <span class='results-total'>
+                        {{searchResponse.suggestions}}
+                    </span>Sorry, there were no results found for 
+                    <span class='results-search-term'>
+                        '{{searchTermOneTime}}'
+                        </span>  
+                    <div>
+	                    Showing <span class='results-total'>
+	                        {{searchResponse.numberOfResults}}
+	                    </span> results for
+	                    <span class='results-search-term'>
+	                        '{{searchResponse.suggestion}}'
+	                        </span> instead.
+                    </div>              
+                </div>          
+                <div ng-show="showZeroResultsFound" id="search-results-total" class="search-results-total">
                     Sorry, there were no results found for 
                     <span class='results-search-term'>
                         '{{searchTermOneTime}}'
                     </span>
                     <p></p>
                     <p>You could try one of the following:</p>
-                    <dl style="text-align: left;">
+                    <dl>
                     	<dt>Check your spelling</dt>
                     	<dt>Use broader searches</dt>
                     	<dt>Try different keywords</dt>
                     </dl>	                    
                 </div>  
-                <div ng-show="searchResponse.numberOfResults > 0">              
+                <div ng-show="showFilters">              
 	                <div class="grid-wrap">
 	                    <div class="grid-col desktop-grid-two-thirds">
 	                        <div class="search-filters">
@@ -39,19 +55,6 @@
 	                            </p>
 	                        </div>
 	                    </div>
-	                   <!--  <div class="grid-col desktop-grid-one-third search-sorting-grid">
-	                        <div class="search-sorting">
-	                            <div class="field field--spaced">
-	                                <form action="#" class="form">Sort by:
-	                                    <select class="input input--mini sorting" name="search" id="select1">
-	                                        <option value="" selected>Relevance</option>
-	                                        <option value="">Release Date</option>
-	                                    </select>
-	                                </form>
-	                            </div>
-	                        </div>
-	                    </div> -->
-	
 	                </div>
 	        	</div>
             </div>
@@ -76,7 +79,12 @@
                             <a class="search-link" href="#!{{item.url}}">{{item.title}}</a>
                             <span ng-if="item.type != 'home'" class="lozenge--label" href="">{{item.type === 'bulletin' ? 'Statistical Bulletin' : item.type}}</span>
                         </dt>
-                        <dd class="microcopy">Released</dd>
+                        <dd class="microcopy">
+                        	<span ng-if="item.type === 'home'">
+								{{item.url}}                      	
+                        	</span>
+                        	<span ng-if="item.type != 'home'">Released 1 Jan 3000</span>
+                        </dd>
                         <dd ng-repeat-end class="search-summary">{{item.lede | charLimit:300:'...'}}</dd>
 
                     </dl>

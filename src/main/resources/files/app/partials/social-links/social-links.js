@@ -8,14 +8,15 @@ angular.module('onsTemplates')
             controller: ['$scope', '$location', SocialLinksController]
         };
 
-        function SocialLinksController($scope,$location) {
+        function SocialLinksController($scope, $location) {
         	function getAbsoluteUrl() {
         		var absUrl = encodeURIComponent($location.absUrl());
                 return absUrl;
             }
 
             function getFbAbsoluteUrl() {
-                return $location.absUrl().replace('#!', '?onsfb' )
+                var fbUrl = $location.absUrl().replace('#!', '?onsfb');
+                return fbUrl;
             }
 
             angular.extend($scope, {
