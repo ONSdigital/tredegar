@@ -163,19 +163,19 @@
     }
     
     function resolveSectionsForDisplay() {
-    	if ((searchResponse.numberOfResults > 0 || (searchResponse.numberOfResults === 0 && filterOn)) && !searchResponse.suggestionBasedResult) {
+    	if ((searchResponse.numberOfResults > 0 || (searchResponse.numberOfResults === 0 && $scope.filterOn)) && !searchResponse.suggestionBasedResult) {
     		$scope.showSearchResults = true;
     	}
     	
-    	if ((searchResponse.numberOfResults > 0 || (searchResponse.numberOfResults === 0 && filterOn)) && searchResponse.suggestionBasedResult) {
+    	if ((searchResponse.numberOfResults > 0 || (searchResponse.numberOfResults === 0 && $scope.filterOn)) && searchResponse.suggestionBasedResult) {
     		$scope.showSuggestedSearchResults = true;
     	}
 
-    	if (searchResponse.numberOfResults === 0 && !filterOn) {
+    	if (searchResponse.numberOfResults === 0 && !$scope.filterOn) {
     		$scope.showZeroResultsFound = true;
     	}
 
-    	if (searchResponse.numberOfResults > 0 || filterOn) {
+    	if (searchResponse.numberOfResults > 0 || $scope.filterOn) {
     		$scope.showFilters = true;
     	}    	
     }
