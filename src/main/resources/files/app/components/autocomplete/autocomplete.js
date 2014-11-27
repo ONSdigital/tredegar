@@ -103,6 +103,10 @@
 					firstTime=false
 					return
 				}
+				
+				if (!isMinimumEntered()) { 
+					return
+				}
 
 				var url = searchUrl + '?' + searchParam + '=' + key
 					//Attach result data to parent scope with given variable name 
