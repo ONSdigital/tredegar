@@ -19,7 +19,7 @@
                 <a href="#!/">Home</a>
             </li>
             <li onmouseover="" ons-double-tap ons-nav-item="{{n.url}}" expandable="true" ons-nav-expand-class="js-expandable-active" ng-repeat="n in nav.links" class="nav__expandable js-expandable">
-                <a href="{{w_nav.mobile ? '' : ('#!' + n.url)}}">{{n.name}}</a>
+                <a ng-href="{{w_nav.mobile ? '' : ('#!' + n.url)}}">{{n.name}}</a>
                 <ul class="nav--primary__sub js-expandable__content" ons-nav-collapse-class="js-nav-hidden">
                     <li class="nav__top-level-duplicate" ons-nav-item ons-nav-mobile>
                         <a tabindex="-1" href="#!{{n.url}}">{{n.name}}</a>

@@ -2,17 +2,18 @@
 (function() {
 	'use strict';
 	angular.module('onsTemplates')
-		.controller('NavigationController', ['$scope', '$route',
+		.controller('NavigationController', ['$scope', '$rootScope', '$route',
 			NavigationController
 		])
 
-	function NavigationController($scope, $route) {
+	function NavigationController($scope, $rootScope, $route) {
 		var navigation = this
 		navigation.hideSearch = false
 		if ($route.current.locals) {
 			navigation.links = $route.current.locals.navigation
 		}
 
+		watchLocation()
 		watchMenu()
 
 		function toggleSearch() {
@@ -20,6 +21,13 @@
 			if (!navigation.hideSearch) {
 				hideMenu()
 			}
+		}
+
+		function watchLocation() {
+		  $rootScope.$on('$locationChangeSuccess', function(event) {
+		      hideMenu()
+		      showSearch()
+		  })
 		}
 
 		function isMobileMenuVisible() {
@@ -41,6 +49,11 @@
 		function hideMenu() {
 			$scope.w_nav.showOnMobile = false
 		}
+
+		function showSearch() {
+			navigation.hideSearch = false
+		}
+
 		angular.extend(navigation, {
 			toggleSearch: toggleSearch
 		})

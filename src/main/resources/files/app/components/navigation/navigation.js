@@ -35,6 +35,7 @@
         function init() {
           resolveScreenType()
           listenResize()
+          watchLocation()
             //Injected to parent scope to be used as a widget.
           if ($scope.navWidgetVar) {
             $scope.$parent[$scope.navWidgetVar] = navigation
@@ -42,15 +43,14 @@
 
         }
 
-        // function watchLocation() {
-        //   $rootScope.$on('$locationChangeSuccess', function(event) {
-        //       alert("hey")
-        //       for (var i = 0; i < items.length; i++) {
-        //         items[i].resolveClass()
-        //         items[i].expanded = false
-        //       };
-        //   })
-        // }
+        function watchLocation() {
+          $rootScope.$on('$locationChangeSuccess', function(event) {
+              for (var i = 0; i < items.length; i++) {
+                items[i].resolveClass()
+                items[i].expanded = false
+              };
+          })
+        }
 
         function toggleMobileMenu() {
           navigation.showOnMobile = !navigation.showOnMobile
