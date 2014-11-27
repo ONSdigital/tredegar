@@ -159,6 +159,25 @@
         	  $scope.filterOn = false
           }
           resolveRelatedDepartment(q)
+          resolveSectionsForDisplay()
+    }
+    
+    function resolveSectionsForDisplay() {
+    	if ((searchResponse.numberOfResults > 0 || (searchResponse.numberOfResults === 0 && filterOn)) && !searchResponse.suggestionBasedResult) {
+    		$scope.showSearchResults = true;
+    	}
+    	
+    	if ((searchResponse.numberOfResults > 0 || (searchResponse.numberOfResults === 0 && filterOn)) && searchResponse.suggestionBasedResult) {
+    		$scope.showSuggestedSearchResults = true;
+    	}
+
+    	if (searchResponse.numberOfResults === 0 && !filterOn) {
+    		$scope.showZeroResultsFound = true;
+    	}
+
+    	if (searchResponse.numberOfResults > 0 || filterOn) {
+    		$scope.showFilters = true;
+    	}    	
     }
 
     function filter(type) {
