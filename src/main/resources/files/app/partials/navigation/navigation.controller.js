@@ -9,9 +9,7 @@
 	function NavigationController($scope, $rootScope, $route) {
 		var navigation = this
 		navigation.hideSearch = false
-		if ($route.current.locals) {
-			navigation.links = $route.current.locals.navigation
-		}
+		navigation.links = $route.current.locals.navigation
 
 		watchLocation()
 		watchMenu()
