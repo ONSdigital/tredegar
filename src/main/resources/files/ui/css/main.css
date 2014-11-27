@@ -8057,5 +8057,13 @@ textarea {
 
 .search-lozenge {
 	float:left;
+	text-align:right;
 	width:150px;
+}
+
+.autocomplete {
+	position:absolute;
+	width; 35.8em;
+	z-index:999;
+	margin-left:0.125em;
 }

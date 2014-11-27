@@ -90,7 +90,7 @@
 .ui-menu {
 	list-style: none;
 	padding: 0;
-	margin: 0;
+	margin: 0em 0em 1em 1em ;
 	display: block;
 	outline: none;
 }
@@ -100,11 +100,11 @@
 .ui-menu .ui-menu-item {
 	position: relative;
 	margin: 0;
-	padding: 3px 1em 3px .4em;
+	padding: 0.5em 1em 0em 0.5em;
 	cursor: pointer;
 	min-height: 0; /* support: IE7 */
 	/* support: IE10, see #8844 */
-	list-style-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
+	/*list-style-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");*/
 }
 .ui-menu .ui-menu-divider {
 	margin: 5px 0;
