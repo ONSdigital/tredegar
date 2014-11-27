@@ -8,19 +8,19 @@
       <div class="grid-wrap">
         <div class="grid-col tablet-wide-grid-two-thirds">
            <div class="collection-header"> 
-		      <h2>{{content.h2}}</h2>
-		      <p>Frequency:  <span id="frequency"><strong>{{content.frequency}}</strong></span>
+		      <h2>{{contentType}} related to {{content.name}}</h2>
+		      <!-- <p>Frequency:  <span id="frequency"><strong>{{content.frequency}}</strong></span> -->
 			<div class="content-reveal">
 				<p> 
-            {{content.lede}}
-          <a href="" toggler="more" ng-if="data.more" toggler-widget-var="w_toggler" class="content-reveal__action">
+            This page will not be complete for this prototype, however in the future it will give you access to additional content related to this specific topic.
+          <!-- <a href="" toggler="more" ng-if="data.more" toggler-widget-var="w_toggler" class="content-reveal__action">
             {{w_toggler.isVisible() ? 'Show less' : 'Show more'}}
-          </a> </p>
-				<div toggleable="more"  class="content-reveal__hidden">
+          </a> </p> -->
+				<!-- <div toggleable="more"  class="content-reveal__hidden">
 				    <p>
             {{content.more}}    
             </p>
-				</div>
+				</div> -->
 			</div>
           </div>
         </div>  
