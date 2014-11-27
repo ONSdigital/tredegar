@@ -15,27 +15,25 @@ import org.elasticsearch.node.NodeBuilder;
 public class EmbeddedElasticSearchServer {
 
 	private static final String DEFAULT_DATA_DIRECTORY = System.getProperty("java.io.tmpdir");
-	private static final String DEFAULT_CLUSTERNAME = "ONS";
+	private static final String DEFAULT_CLUSTERNAME = "ONSNode";
 	private final Node node;
 	private Path dataDirectory;
 
-	public EmbeddedElasticSearchServer(String clusterName) throws IOException {
-		this(null, DEFAULT_DATA_DIRECTORY, clusterName);
+	public EmbeddedElasticSearchServer() throws IOException {
+		this(null, DEFAULT_DATA_DIRECTORY, DEFAULT_CLUSTERNAME);
 	}
 
-	public EmbeddedElasticSearchServer(String dataDirectory, String clusterName) throws IOException {
-		this(null, dataDirectory, clusterName);
-	}
-
+	/** Test only. */
 	public EmbeddedElasticSearchServer(Settings settings, String clusterName) throws IOException {
 		this(settings, null, clusterName);
 	}
 
-	public EmbeddedElasticSearchServer(Settings settings, String dataDirectory, String clusterName) throws IOException {
+	EmbeddedElasticSearchServer(Settings settings, String dataDirectory, String clusterName) throws IOException {
 
 		this.dataDirectory = Files.createTempDirectory("searchindex");
-		ImmutableSettings.Builder settingsBuilder = ImmutableSettings.settingsBuilder().put("cluster.name", DEFAULT_CLUSTERNAME).put("http.enabled", true).put("path.data", dataDirectory)
+		ImmutableSettings.Builder settingsBuilder = ImmutableSettings.settingsBuilder().put("cluster.name", clusterName).put("http.enabled", true).put("path.data", dataDirectory)
 				.put("node.data", true);
+		System.out.println("Creating index data in: " + dataDirectory);
 
 		if (settings != null) {
 			settingsBuilder.put(settings);
