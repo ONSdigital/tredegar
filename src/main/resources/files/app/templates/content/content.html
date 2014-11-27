@@ -8,39 +8,45 @@
                 <strong>{{header}}</strong>
             </p>
             <h1 class="page-header__title flush--half--bottom">{{content.title}}</h1>
-            <div class="grid-wrap" ng-show="{{contentType != 'methodology'}}">
-                <div class="grid-col desktop-grid-two-thirds">
-                    <a href="#!/nationalstats"><img src="/ui/img/nslogo.png" class="page-header-image"></a>
-                    <p>
-                        <strong>Release date: {{content.releaseDate}}</strong>
-                        <span class="page-header-box-link">
-                            <a href="#!/previous">
-                                <strong>View previous releases</strong>
-                            </a>
-                        </span>
-                    </p>
-                    <p>Next release: {{content.nextRelease}}</p>
-                    <p>Contact: In the future this will display the statistical contact
-                    </p>
-                </div>
-                <div class="grid-col desktop-grid-one-third">
-                    <p>
-                        <span class="icon icon-print icon--blue-alt">
+            <img class="page-header--article__img" src="../ui/img/national-statistics.png" alt="The official National Statistics badge">
+
+            <div class="page-header--article__body">
+              <div class="page-header--article__split">
+                <dl class="split--fixed page-header--article__split__meta">
+                  <dt class="split--fixed__title definition-emphasis"><strong>Release date:</dt>
+                  <dd>
+                    <span class="definition-emphasis">{{content.releaseDate}}</strong></span> <a href="#!/previous" class="split__multiline-break">View previous releases</a>
+                  </dd>
+                  <dt class="split--fixed__title">Next release:</dt>
+                  <dd>{{content.nextRelease}}</dd>
+                  <dt class="split--fixed__title">Contact:</dt>
+                  <dd>In the future this will display the statistical contact
+                  </dd>
+                </dl>
+                <ul class="list--neutral page-header--article__split__actions">
+                  <li>
+                    <span class="icon icon-print icon--blue-alt">
                             <span class="visuallyhidden">Print</span>&nbsp;Print summary
                         <ons-help-tooltip tip="This link will not be available on the prototype, however in the future you will be able to print the summary section of the Statistical Bulletin"></ons-help-tooltip>
-                        </span></p>
-                    <p>
-                        <span class="icon icon-print icon--blue-alt">
+                        </span>
+                  </li>
+                  <li>
+                    <span class="icon icon-print icon--blue-alt">
                             <span class="visuallyhidden">Print full report</span>&nbsp;Print full report
                         <ons-help-tooltip tip="This link will not be available on the prototype, however in the future you will be able to print the full report"></ons-help-tooltip>
-                        </span></p>
-                    <p>
-                        <span class="icon icon-download icon--blue-alt">
+                        </span>
+                  </li>
+                  <li>
+                    <span class="icon icon-download icon--blue-alt">
                             <span class="visuallyhidden">Download PDF</span>&nbsp;Download PDF
                         <ons-help-tooltip tip="This link will not be available on the prototype, however in the future you will be able to download the Statistical Bulletin as PDF"></ons-help-tooltip>
-                        </span></p>
-                </div>
+                        </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
+
             <social-links></social-links>
         </div>
     </div>

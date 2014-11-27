@@ -4942,6 +4942,141 @@ ol.toc-columns
   font-size: 2.5rem; }
 
 
+.split__multiline-break {
+  display: block; }
+
+  @media screen and (min-width: 53em) {
+  .page-header--stat-bulletin .split__multiline-break, .page-header--expert-analysis .split__multiline-break {
+    display: inline-block;
+    margin-left: 10px;
+    margin-left: 1rem; }
+  .page-header--stat-bulletin .page-header--article__split__meta, .page-header--expert-analysis .page-header--article__split__meta {
+    width: 66%; }
+  .page-header--stat-bulletin .page-header--article__split__actions, .page-header--expert-analysis .page-header--article__split__actions {
+    width: 30%;
+    margin-left: 3%; } }
+
+@media screen and (min-width: 57em) {
+  .page-header--stat-bulletin .page-header--article__img, .page-header--expert-analysis .page-header--article__img {
+    margin-right: 5%; }
+  .page-header--time-series .split__multiline-break {
+    display: inline-block;
+    margin-left: 10px;
+    margin-left: 1rem; }
+  .page-header--time-series .page-header--article__split__meta {
+    width: 66%; }
+  .page-header--time-series .page-header--article__split__meta--narrow {
+    width: 30%;
+    margin-left: 3%; } }
+
+@media screen and (min-width: 28em) {
+  .page-header--article__img {
+    float: left;
+    margin-top: 5px;
+    margin-top: 0.5rem;
+    margin-right: 20px;
+    margin-right: 2rem; }
+  .page-header--article__body {
+    overflow: auto; }
+  .page-header--article__split__meta {
+    margin-top: 0; } }
+
+
+.page-header--article__split__meta > dd, .page-header--article__split__meta--narrow > dd {
+  margin-bottom: 10px;
+  margin-bottom: 1rem; }
+
+.page-header--article__split__actions {
+  font-size: 14px;
+  font-size: 1.4rem; }
+  .page-header--article__split__actions > li {
+    margin-bottom: 7px;
+    margin-bottom: 0.75rem; }
+  .page-header--article__split__actions [class*="icon"] {
+    font-size: 16px;
+    font-size: 1.6rem;
+    vertical-align: middle; }
+  .page-header--article__split__actions .link-complex__target, .page-header--article__split__actions .description {
+    vertical-align: middle; }
+
+@media screen and (min-width: 28em) {
+  .page-header--article__img {
+    float: left;
+    margin-top: 5px;
+    margin-top: 0.5rem;
+    margin-right: 20px;
+    margin-right: 2rem; }
+  .page-header--article__body {
+    overflow: auto; }
+  .page-header--article__split__meta {
+    margin-top: 0; } }
+
+@media screen and (min-width: 44em) {
+  .page-header--article__split__meta, .page-header--article__split__meta--narrow, .page-header--article__split__actions {
+    float: left; }
+  .page-header--article__split__meta {
+    width: 55%; }
+  .page-header--article__split__actions, .page-header--article__split__meta--narrow {
+    width: 42.5%;
+    margin-top: 0;
+    margin-left: 2.5%; }
+  .page-header--article__split__meta--narrow .split--fixed__title {
+    width: 85px;
+    width: 8.5rem; } }
+
+@media screen and (min-width: 50em) {
+  .page-header--article .page-header__icons {
+    top: -17px;
+    top: -1.75rem; } }
+
+@media screen and (min-width: 53em) {
+  .page-header--stat-bulletin .split__multiline-break, .page-header--expert-analysis .split__multiline-break {
+    display: inline-block;
+    margin-left: 10px;
+    margin-left: 1rem; }
+  .page-header--stat-bulletin .page-header--article__split__meta, .page-header--expert-analysis .page-header--article__split__meta {
+    width: 66%; }
+  .page-header--stat-bulletin .page-header--article__split__actions, .page-header--expert-analysis .page-header--article__split__actions {
+    width: 30%;
+    margin-left: 3%; } }
+
+@media screen and (min-width: 57em) {
+  .page-header--stat-bulletin .page-header--article__img, .page-header--expert-analysis .page-header--article__img {
+    margin-right: 5%; }
+  .page-header--time-series .split__multiline-break {
+    display: inline-block;
+    margin-left: 10px;
+    margin-left: 1rem; }
+  .page-header--time-series .page-header--article__split__meta {
+    width: 66%; }
+  .page-header--time-series .page-header--article__split__meta--narrow {
+    width: 30%;
+    margin-left: 3%; } }
+
+
+.split--fixed__title {
+  float: left;
+  width: 130px;
+  width: 13rem;
+  clear: left;
+  text-align: left; }
+
+.split--fixed {
+  text-align: left;
+  list-style: none; }
+  .split--fixed dd {
+    margin-left: 0;
+    overflow: auto; }
+
+.split--fixed__title {
+  float: left;
+  width: 130px;
+  width: 13rem;
+  clear: left;
+  text-align: left; }
+
+
+
 /*------------------------------------*\
   Accordion Styles
 \*------------------------------------*/
@@ -5451,6 +5586,14 @@ td.datatable-downloads{
 
 .page-header--calendar-desc {
   color: #00543d; }
+
+
+.page-header--article__img {
+  display: block;
+  margin: 0 auto 20px;
+  margin: 0 auto 2rem;
+  padding-right: 1rem; }
+
 
 /*------------------------------------*\
   New Hompage Styles
