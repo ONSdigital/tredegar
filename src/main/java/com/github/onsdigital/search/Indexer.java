@@ -22,7 +22,6 @@ import org.elasticsearch.common.settings.ImmutableSettings;
 import org.elasticsearch.common.xcontent.XContentBuilder;
 
 import com.github.onsdigital.configuration.Configuration;
-import com.github.onsdigital.index.LoadIndexHelper;
 
 public class Indexer {
 

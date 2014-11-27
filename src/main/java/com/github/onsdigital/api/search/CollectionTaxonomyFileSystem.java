@@ -17,7 +17,7 @@ import org.apache.commons.lang3.StringUtils;
 
 import com.github.davidcarboni.restolino.framework.Endpoint;
 import com.github.onsdigital.configuration.Configuration;
-import com.github.onsdigital.index.ScanFileSystem;
+import com.github.onsdigital.search.ScanFileSystem;
 import com.github.onsdigital.search.bean.CollectionSearchResult;
 import com.github.onsdigital.util.TaxonomyDateComparator;
 

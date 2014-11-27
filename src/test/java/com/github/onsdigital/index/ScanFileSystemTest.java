@@ -12,6 +12,8 @@ import java.util.List;
 
 import org.junit.Test;
 
+import com.github.onsdigital.search.ScanFileSystem;
+
 /**
  * Exercises scanning the file system
  */
