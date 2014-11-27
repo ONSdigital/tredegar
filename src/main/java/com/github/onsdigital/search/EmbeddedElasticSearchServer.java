@@ -20,20 +20,15 @@ public class EmbeddedElasticSearchServer {
 	private Path dataDirectory;
 
 	public EmbeddedElasticSearchServer() throws IOException {
-		this(null, DEFAULT_DATA_DIRECTORY, DEFAULT_CLUSTERNAME);
+		this(null, DEFAULT_CLUSTERNAME);
 	}
 
-	/** Test only. */
 	public EmbeddedElasticSearchServer(Settings settings, String clusterName) throws IOException {
-		this(settings, null, clusterName);
-	}
-
-	EmbeddedElasticSearchServer(Settings settings, String dataDirectory, String clusterName) throws IOException {
 
 		this.dataDirectory = Files.createTempDirectory("searchindex");
 		ImmutableSettings.Builder settingsBuilder = ImmutableSettings.settingsBuilder().put("cluster.name", clusterName).put("http.enabled", true).put("path.data", dataDirectory)
 				.put("node.data", true);
-		System.out.println("Creating index data in: " + dataDirectory);
+		System.out.println("Creating index data in: " + this.dataDirectory);
 
 		if (settings != null) {
 			settingsBuilder.put(settings);
