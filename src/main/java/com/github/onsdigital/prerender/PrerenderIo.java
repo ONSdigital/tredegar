@@ -43,6 +43,9 @@ public class PrerenderIo {
 			} else {
 				escapedFragment = extractHashBangUrl(url);
 			}
+			if (StringUtils.isEmpty(escapedFragment)) {
+				escapedFragment = "/";
+			}
 			URL escapedFragmetUrl = buildUrl(url, escapedFragment);
 			escapedFragmetUrl = updateForLocalhost(escapedFragmetUrl);
 
