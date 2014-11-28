@@ -35,6 +35,7 @@
     var onsApp = angular.module('onsApp', [
         'ngRoute',
         'ngSanitize',
+        'ipCookie',
         'onsComponents',
         'onsHelpers',
         'onsTemplates',

@@ -3089,6 +3089,7 @@ lesser , applied styles
 .media__body, .media__body >:last-child {
     margin-bottom: 0;
 }
+
 .nav-panel {
     display: table;
     width: 100%;
@@ -3146,6 +3147,9 @@ lesser , applied styles
 
         padding-right: 10px;
         padding-right: 1.0rem;
+    }
+    .nav-panel__roomy--med.centred-small{
+      text-align: center;
     }
 }
 @media screen and (max-width: 450px) {
@@ -8364,9 +8368,25 @@ lesser , applied styles
 .modal {
     width: 400px;
     height: 500px;
+    position: relative;
     background-color: #fff;
-    margin: 0 auto;
+    margin: 15% auto;
 }
+
+.modalDialog {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 99999;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: all;
+}
+
 .modal-header {
     background-color: #a8233e;
     color: #fff;
@@ -8395,6 +8415,12 @@ lesser , applied styles
 .rightButton {
     margin-left:10.5em;
 }
+
+.closeButton {
+    
+}
+
+
 /* -------- autocomplete on search -------- */
 
 .search-lozenge {

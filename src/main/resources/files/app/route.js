@@ -140,7 +140,6 @@
 				})
 		}
 
-		// TODO: add interceptor to capture 404 scenarios, pending confirmation of requirement
 		$httpProvider.responseInterceptors.push('OnsHttpInterceptor')
 
 	}
