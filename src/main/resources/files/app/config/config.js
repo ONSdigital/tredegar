@@ -3,7 +3,7 @@
 	//Ons alpha global configuration, available throught $rootScope, use $rootScope.onsAlphaConfiguration to read
 	var onsAlphaConfiguration = {
 		//Disable cache on localhost or not
-		disableCacheOnLocal: false,
+		disableCacheOnLocal: true,
 
 		//Number of timeseries counts to be loaded by default on t3
 		defaultTimeseriesCountOnT3: 5,
@@ -12,7 +12,7 @@
 		autoCompleteLimit: 5,
 
 		//Debug logs
-		debugEnabled: true
+		debugEnabled: false
 	}
 
 	angular.module('onsAppConfig', [])
