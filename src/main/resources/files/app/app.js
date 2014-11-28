@@ -10,7 +10,7 @@
         'onsPaginator',
         'onsTabs',
         'highcharts-ng',
-        // 'angularLoadingBar',
+        'angularLoadingBar',
         'onsToggler',
         'onsLoading',
         'onsSparkline',

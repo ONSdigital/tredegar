@@ -57,6 +57,7 @@
 
 
 		function handleDataLoadError(item,err) {
+			item.data = []
 			item.failed = true
 		}
 
