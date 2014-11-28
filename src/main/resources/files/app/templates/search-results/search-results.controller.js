@@ -206,7 +206,6 @@
     }
 
     function toggleFilter(type) {
-      console.log("Toggling " + type)
       filters[type] = !filters[type]
       reLoad()
     }
@@ -214,7 +213,6 @@
     function resolveTypes(filters) {
       var activeFilters = []
       for (type in filters) {
-        console.log(type + ':' + filters[type])
         if (filters[type]) {
           activeFilters.push(type)
         }
