@@ -4,13 +4,14 @@
 (function() {
 
   angular.module("onsTemplates")
-    .controller("SearchController", ['$scope', '$location', '$log', 'PageUtil','searchResponse', SearchController])
+    .controller("SearchController", ['$scope', '$location', '$log', 'PageUtil', 'searchResponse', SearchController])
 
 
   function SearchController($scope, $location, $log, PageUtil, searchResponse) {
     var page = PageUtil.getUrlParam("page")
     var searchTerm = $scope.searchTerm = PageUtil.getUrlParam("q")
     var type = $scope.type = PageUtil.getUrlParam("type")
+    var filters = {}
     var departmentHandoff = [
       ["dfe", "education", "gcse", "a level", "degree", "nvq", "school", "college", "university", "national curriculum", "qualification", "teacher training", "pupil absence", "exclusions", "school workforce", "key stage"],
       ["bis", "business", "apprenticeship", "building", "construction", "higher education", "trade union", "enterprise"],
@@ -134,7 +135,6 @@
       return
     }
 
-
     if (!searchTerm) {
       return
     }
@@ -150,49 +150,80 @@
     }
 
     function initialize(q, type, pageNumber) {
-          $scope.searchResponse = searchResponse
-          $scope.pageCount = Math.ceil(searchResponse.numberOfResults / 10)
-          $scope.searchTermOneTime = q
-          if (type) {
-        	  $scope.filterOn = true
-          } else {
-        	  $scope.filterOn = false
-          }
-          resolveRelatedDepartment(q)
-          resolveSectionsForDisplay()
-    }
-    
-    function resolveSectionsForDisplay() {
-    	if ((searchResponse.numberOfResults > 0 || (searchResponse.numberOfResults === 0 && $scope.filterOn)) && !searchResponse.suggestionBasedResult) {
-    		$scope.showSearchResults = true;
-    	}
-    	
-    	if ((searchResponse.numberOfResults > 0 || (searchResponse.numberOfResults === 0 && $scope.filterOn)) && searchResponse.suggestionBasedResult) {
-    		$scope.showSuggestedSearchResults = true;
-    	}
-
-    	if (searchResponse.numberOfResults === 0 && !$scope.filterOn) {
-    		$scope.showZeroResultsFound = true;
-    	}
-
-    	if (searchResponse.numberOfResults > 0 || $scope.filterOn) {
-    		$scope.showFilters = true;
-    	}    	
+      $scope.searchResponse = searchResponse
+      $scope.pageCount = Math.ceil(searchResponse.numberOfResults / 10)
+      resolveFilters(type)
+      $scope.searchTermOneTime = q
+      if (type) {
+        $scope.filterOn = true
+      } else {
+        $scope.filterOn = false
+      }
+      resolveRelatedDepartment(q)
+      resolveSectionsForDisplay()
     }
 
-    function filter(type) {
-      //Clear page parameter if any
-      $location.search('page', null)
-      $location.search('type', type)
-      // if the results are generated from an autocorrect suggest then
-      // we need to reset the query parameter to the suggestion
-      if ($scope.searchResponse.suggestionBasedResult) {
-    	  $location.search('q', $scope.searchResponse.suggestion)
+    function resolveFilters(type) {
+      if (type) {
+        if (typeof type === 'string') {
+          filters[type] = true
+        } else {
+          for (var i = 0; i < type.length; i++) {
+            filters[type[i]] = true
+          };
+        }
       }
     }
 
+    function resolveSectionsForDisplay() {
+      if ((searchResponse.numberOfResults > 0 || (searchResponse.numberOfResults === 0 && $scope.filterOn)) && !searchResponse.suggestionBasedResult) {
+        $scope.showSearchResults = true;
+      }
+
+      if ((searchResponse.numberOfResults > 0 || (searchResponse.numberOfResults === 0 && $scope.filterOn)) && searchResponse.suggestionBasedResult) {
+        $scope.showSuggestedSearchResults = true;
+      }
+
+      if (searchResponse.numberOfResults === 0 && !$scope.filterOn) {
+        $scope.showZeroResultsFound = true;
+      }
+
+      if (searchResponse.numberOfResults > 0 || $scope.filterOn) {
+        $scope.showFilters = true;
+      }
+    }
+
+    function reLoad() {
+      //Clear page parameter if any
+      $location.search('page', null)
+
+      $location.search('type', resolveTypes(filters))
+        // if the results are generated from an autocorrect suggest then
+        // we need to reset the query parameter to the suggestion
+      if ($scope.searchResponse.suggestionBasedResult) {
+        $location.search('q', $scope.searchResponse.suggestion)
+      }
+    }
+
+    function toggleFilter(type) {
+      console.log("Toggling " + type)
+      filters[type] = !filters[type]
+      reLoad()
+    }
+
+    function resolveTypes(filters) {
+      var activeFilters = []
+      for (type in filters) {
+        console.log(type + ':' + filters[type])
+        if (filters[type]) {
+          activeFilters.push(type)
+        }
+      };
+      return activeFilters.length > 0 ? activeFilters : null
+    }
+
     function isActive(type) {
-      var result = PageUtil.getUrlParam("type") === type
+      var result = filters[type]
       return result
     }
 
@@ -216,9 +247,9 @@
 
     //Expose API
     angular.extend($scope, {
-      isLoading:isLoading,
-      filter:filter,
-      isActive:isActive
+      isLoading: isLoading,
+      toggleFilter: toggleFilter,
+      isActive: isActive
     })
   }
 

@@ -3,7 +3,6 @@
 <div class="page-header slate">
     <div class="wrapper nav-panels">
         <div class="grid-wrap">
-
             <div class="grid-col tablet-wide">
                 <div ng-show="showSearchResults" id="search-results-total" class="search-results-total">
                     <span class='results-total'>
@@ -47,10 +46,10 @@
 	                    <div class="grid-col desktop-grid-two-thirds">
 	                        <div class="search-filters">
 	                            <p>Filter by:
-	                                <span ng-click="filter('bulletin')" ng-class="{'lozenge--active' : isActive('bulletin')}" class="lozenge lozenge-spacer lozenge-blue">STATISTICAL BULLETIN</span>
-	                                <span ng-click="filter('dataset')" ng-class="{'lozenge--active' : isActive('dataset')}" class="lozenge lozenge-spacer lozenge-red">DATASET</span>
-	                                <span ng-click="filter('article')" ng-class="{'lozenge--active' : isActive('article')}" class="lozenge lozenge-grey lozenge-spacer">ARTICLE</span>
-	                                <span ng-click="filter('methodology')" ng-class="{'lozenge--active' : isActive('methodology')}"class="lozenge lozenge-spacer lozenge-green">METHODOLOGY</span>
+	                                <span ng-click="toggleFilter('bulletin')" ng-class="{'lozenge--active' : isActive('bulletin')}" class="lozenge lozenge-spacer lozenge-blue">STATISTICAL BULLETIN</span>
+	                                <span ng-click="toggleFilter('dataset')" ng-class="{'lozenge--active' : isActive('dataset')}" class="lozenge lozenge-spacer lozenge-red">DATASET</span>
+	                                <span ng-click="toggleFilter('article')" ng-class="{'lozenge--active' : isActive('article')}" class="lozenge lozenge-grey lozenge-spacer">ARTICLE</span>
+	                                <span ng-click="toggleFilter('methodology')" ng-class="{'lozenge--active' : isActive('methodology')}"class="lozenge lozenge-spacer lozenge-green">METHODOLOGY</span>
 	                            </p>
 	                        </div>
 	                    </div>

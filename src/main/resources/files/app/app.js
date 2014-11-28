@@ -14,9 +14,9 @@
         'onsToggler',
         'onsLoading',
         'onsSparkline',
-	   'onsTooltip',
-       'onsAutocomplete',
-       'onsDoubleTap'
+        'onsTooltip',
+        'onsAutocomplete',
+        'onsDoubleTap'
     ])
 
     //Filters, services and other helpers are to be injected to onsHelpers module
@@ -49,6 +49,13 @@
                 when('/about', {
                     templateUrl: 'app/templates/about/about.html',
                     controller: "AboutCtrl",
+                    resolve: {
+                        navigation: ['DataLoader', getNavigatinLinks]
+                    }
+                }).
+                when('/alpha', {
+                    templateUrl: 'app/templates/alphapage/alphapage.html',
+                    controller: "AlphaPageCtlr",
                     resolve: {
                         navigation: ['DataLoader', getNavigatinLinks]
                     }
@@ -171,10 +178,9 @@
                                     var absoluteLocation = $location.absUrl();
                                     //This makes FB share work (socialLinks directive)
                                     if (absoluteLocation.indexOf('?onsfb') != -1) {
-                                        absoluteLocation = absoluteLocation.replace('?onsfb','#!')
+                                        absoluteLocation = absoluteLocation.replace('?onsfb', '#!')
                                         $window.location.href = absoluteLocation;
-                                    }
-                                    else if (absoluteLocation.indexOf('#!/') === -1) {
+                                    } else if (absoluteLocation.indexOf('#!/') === -1) {
                                         $location.path('/');
                                     }
                                 }
@@ -200,18 +206,19 @@
                     var searchResponse
                     var results
                     var q = PageUtil.getUrlParam('q')
-                    var type = PageUtil.getUrlParam('type')
-                    var pageNumber = PageUtil.getUrlParam('page')
-                    var searchString = "?q=" + q + (type ? "&type=" + type : "") + (pageNumber ? "&page=" + pageNumber : "")
+                        // var type = PageUtil.getUrlParam('type')
+                        // var pageNumber = PageUtil.getUrlParam('page')
+                        // var searchString = "?q=" + q + getTypeString(type) + (pageNumber ? "&page=" + pageNumber : "")
+                    var searchString = PageUtil.getUrl()
                     return DataLoader.load("/search" + searchString)
                         .then(function(data) {
                             searchResponse = data
                             results = data.results
-                            //If cdid search is made go directly to timeseries page for searched cdid
+                                //If cdid search is made go directly to timeseries page for searched cdid
                             for (var i = 0; i < results.length; i++) {
                                 results[i]
-                                if(results[i].type === 'timeseries' && results[i].title === q.toUpperCase()) {
-                                    PageUtil.goToPage(results[i].url,true)
+                                if (results[i].type === 'timeseries' && results[i].title === q.toUpperCase()) {
+                                    PageUtil.goToPage(results[i].url, true)
                                     return
                                 }
                             };
@@ -220,18 +227,13 @@
                         })
                 }
 
-
-                function getSearchTerm(PageUtil) {
-                    return PageUtil.getUrlParam('q')
-                }
-
                 function getNavigatinLinks(DataLoader) {
                     return DataLoader.load('/navigation')
                 }
 
 
                 // TODO: add interceptor to capture 404 scenarios, pending confirmation of requirement
-                //                $httpProvider.responseInterceptors.push('OnsHttpInterceptor')
+                $httpProvider.responseInterceptors.push('OnsHttpInterceptor')
 
             }
         ])

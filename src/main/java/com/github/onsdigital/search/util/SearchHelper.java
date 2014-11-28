@@ -1,6 +1,6 @@
 package com.github.onsdigital.search.util;
 
-import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.elasticsearch.action.search.SearchRequestBuilder;
 import org.elasticsearch.action.search.SearchResponse;
@@ -54,9 +54,9 @@ public class SearchHelper {
 
 	private SearchRequestBuilder buildRequest(ONSQueryBuilder queryBuilder) {
 		SearchRequestBuilder searchBuilder = client.prepareSearch(queryBuilder.getIndex());
-		String type = queryBuilder.getType();
-		if (StringUtils.isNotEmpty(type)) {
-			searchBuilder.setTypes(type);
+		String[] types = queryBuilder.getTypes();
+		if (ArrayUtils.isNotEmpty(types)) {
+			searchBuilder.setTypes(types);
 		} else {
 			searchBuilder.setTypes(ContentType.home.name(), ContentType.article.name(), ContentType.bulletin.name(), ContentType.dataset.name(), ContentType.methodology.name());
 		}
