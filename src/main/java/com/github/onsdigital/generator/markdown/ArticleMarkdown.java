@@ -69,16 +69,16 @@ public class ArticleMarkdown {
 		Map<String, String> properties = markdown.properties;
 
 		// Location
-		article.theme = properties.remove("Theme");
-		article.level2 = properties.remove("Level 2");
-		article.level3 = properties.remove("Level 3");
+		article.theme = properties.remove("theme");
+		article.level2 = properties.remove("level 2");
+		article.level3 = properties.remove("level 3");
 
 		// Additional details
-		article.lede = properties.remove("Lede");
-		article.more = properties.remove("More");
-		article.contact.name = properties.remove("Contact name");
-		article.contact.email = properties.remove("Contact email");
-		article.nextRelease = properties.remove("Next release");
+		article.lede = properties.remove("lede");
+		article.more = properties.remove("more");
+		article.contact.name = properties.remove("contact name");
+		article.contact.email = properties.remove("contact email");
+		article.nextRelease = properties.remove("next release");
 
 		// Note any unexpected information
 		for (String property : properties.keySet()) {
