@@ -29,7 +29,16 @@
       "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/timeseries/raid38"
     }
   ],
-  "statsBulletins": [],
+  "statsBulletinHeadline": {
+    "name": "Deaths Registered in England and Wales, 2013",
+    "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/bulletins/deathsregisteredinenglandandwales2013"
+  },
+  "statsBulletins": [
+    {
+      "name": "Deaths Registered in England and Wales, 2013",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/bulletins/deathsregisteredinenglandandwales2013"
+    }
+  ],
   "datasets": [],
   "level": "t3",
   "index": 1,
