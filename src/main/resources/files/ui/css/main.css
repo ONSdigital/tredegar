@@ -3089,6 +3089,7 @@ lesser , applied styles
 .media__body, .media__body >:last-child {
     margin-bottom: 0;
 }
+
 .nav-panel {
     display: table;
     width: 100%;
@@ -3146,6 +3147,9 @@ lesser , applied styles
 
         padding-right: 10px;
         padding-right: 1.0rem;
+    }
+    .nav-panel__roomy--med.centred-small{
+      text-align: center;
     }
 }
 @media screen and (max-width: 450px) {
@@ -8395,6 +8399,8 @@ lesser , applied styles
 .rightButton {
     margin-left:10.5em;
 }
+
+
 /* -------- autocomplete on search -------- */
 
 .search-lozenge {
