@@ -56,8 +56,8 @@
 		}
 
 
-		function handleDataLoadError(err) {
-			//Handle data load error
+		function handleDataLoadError(item,err) {
+			item.failed = true
 		}
 
 		function isLoading() {

@@ -10,7 +10,7 @@
         'onsPaginator',
         'onsTabs',
         'highcharts-ng',
-        'angularLoadingBar',
+        // 'angularLoadingBar',
         'onsToggler',
         'onsLoading',
         'onsSparkline',
@@ -66,6 +66,8 @@
     function loadNavigation($rootScope, DataLoader) {
         DataLoader.load('/navigation')
             .then(function(data) {
+                console.log("Then")
+                console.log(data)
                 $rootScope.onsNavigation = data
             })
     }
