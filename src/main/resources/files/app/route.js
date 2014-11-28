@@ -6,7 +6,7 @@
 
 	angular.module('onsApp')
 		.config(['$routeProvider', '$locationProvider', '$httpProvider', RotueConfigration])
-		.factory('OnsHttpInterceptor', OnsHttpInterceptor)
+		.factory('OnsHttpInterceptor', ['$q', '$location', OnsHttpInterceptor])
 
 
 	function RotueConfigration($routeProvider, $locationProvider, $httpProvider) {
@@ -76,10 +76,10 @@
 			controller: "SurveyCtrl",
 		}).
 		when('/404', {
-			templateUrl: '/app/partials/error-pages/error404.html',
+			templateUrl: '/app/templates/error-pages/error404.html',
 		}).
 		when('/500', {
-			templateUrl: '/500.html',
+			templateUrl: '/app/templates/error-pages/error500.html',
 		}).
 		otherwise(resolveTaxonomyTemplate())
 
