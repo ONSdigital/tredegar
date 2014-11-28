@@ -2,14 +2,14 @@
 (function() {
 	'use strict';
 	angular.module('onsTemplates')
-		.controller('NavigationController', ['$scope', '$rootScope', '$route',
+		.controller('NavigationController', ['$scope', '$rootScope',
 			NavigationController
 		])
 
-	function NavigationController($scope, $rootScope, $route) {
+	function NavigationController($scope, $rootScope) {
 		var navigation = this
 		navigation.hideSearch = false
-		navigation.links = $route.current.locals.navigation
+		navigation.links = $rootScope.onsNavigation
 
 		watchLocation()
 		watchMenu()
