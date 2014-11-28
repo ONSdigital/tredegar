@@ -11,6 +11,7 @@ public class DownloadRequest {
 	public DateVal to;
 	public List<String> uriList;
 	public List<String> cdidList;
+	public List<String> externalUrlList;
 
 	@Override
 	public String toString() {
@@ -18,6 +19,7 @@ public class DownloadRequest {
 		builder.append("\nType : ").append(type);
 		builder.append(" uriList: ").append(uriList);
 		builder.append(" cdidList: ").append(cdidList);
+		builder.append(" externalUrlList: ").append(externalUrlList);
 		builder.append(" From: ").append(ReflectionToStringBuilder.toString(from));
 		builder.append(" To: ").append(ReflectionToStringBuilder.toString(to));
 		return builder.toString();

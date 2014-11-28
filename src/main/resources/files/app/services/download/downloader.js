@@ -17,7 +17,7 @@
 			$http.post('download', downloadRequest, {
 				responseType: 'arraybuffer'
 			}).success(function(data, status, headers) {
-
+				
 				var octetStreamMime = 'application/octet-stream';
 				var success = false;
 
@@ -77,7 +77,7 @@
 								link.dispatchEvent(event);
 								$log.debug("Download link method with simulated click succeeded");
 								success = true;
-
+								
 							} catch (ex) {
 								$log.error("Download link method with simulated click failed with the following exception:");
 								$log.error(ex);
@@ -116,10 +116,23 @@
 					$log.error("Request failed with status: " + status);
 				});
 		};
+		
+		function getFileSize(path) {
+			console.log('getFileSize path: ' + path)
+			var fileSizePath = path.replace('/data', '/filesize')
+			console.log('getFileSizePath: ' + fileSizePath)
+			
+			$http.get(fileSizePath).success(function(data) {
+//					console.log("File size: " + data)
+			}).error(function(err) {
+				console.log('Failed to get file size for: ' + fileSizePath)
+			})	
+		}
 
 
 		angular.extend(downloader, {
-			downloadFile:downloadFile
+			downloadFile:downloadFile,
+			getFileSize:getFileSize
 		})
 	}
 

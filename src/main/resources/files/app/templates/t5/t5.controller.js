@@ -1,10 +1,10 @@
 (function() {
 
         angular.module('onsTemplates')
-            .controller('T5Controller', ['$scope', '$log', 'Downloader', 'DataLoader', T5Controller])
+            .controller('T5Controller', ['$scope', '$http', '$log', 'Downloader', 'DataLoader', T5Controller])
             .controller('ChartController', ['$scope', '$location', '$log', 'Downloader', 'ArrayUtil', ChartController])
 
-        function T5Controller($scope, $log, Downloader, DataLoader) {
+        function T5Controller($scope, $http, $log, Downloader, DataLoader) {
 
             var t5 = this;
             $scope.header = "Time Series";
@@ -16,14 +16,45 @@
 	        loadRelatedBulletins(data)
 	        data.relatedTimeseriesData = []
 	        loadRelatedTimeseries(data)
+	        
+	        getCsvFileSize()
+	        getXlsFileSize()
 
             function downloadXls() {
                 download('xlsx');
             }
 
             function downloadCsv() {
-                download('csv');
+            	download('csv');
             }
+            
+            function getXlsFileSize() {
+                getFileSize('xlsx');
+            }
+
+            function getCsvFileSize() {
+            	getFileSize('csv');
+            }            
+            
+    		function getFileSize(type) {
+                var downloadRequest = {
+                        type: type
+                };
+                downloadRequest.uriList = [$scope.getPath()];
+                var fileName = $scope.getPage() + '.' + downloadRequest.type;
+    			$http.post('filesize', downloadRequest, {
+    				responseType: 'string'
+    			}).success(function(data, status, headers) {
+    				console.log('fileSize length: ' + data)
+    				if (type === 'csv') {
+    					$scope.taxonomy.data.csvFilesize = data
+    					console.log('data.csvFilesize length: ' + $scope.taxonomy.data.csvFilesize)    					
+    				} else if (type === 'xlsx') {
+    					$scope.taxonomy.data.xlsxFilesize = data
+    					console.log('data.xlsxFilesize length: ' + $scope.taxonomy.data.xlsxFilesize)
+    				}
+    			})  			
+    		}	            
 
             function download(type) {
                 var downloadRequest = {

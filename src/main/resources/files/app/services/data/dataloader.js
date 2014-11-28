@@ -29,8 +29,7 @@
 					deferred.reject(err)
 				})
 			}
-
-
+			
 			return deferred.promise
 		}
 
@@ -76,7 +75,7 @@
 
 			return deferred.promise
 		}
-
+		
 		//Expose API
 		angular.extend(dataLoader, {
 			load: load,

@@ -48,11 +48,11 @@
             <h2 class="actionable-header--tight__title gamma flush--bottom body-type--heavy">Download this entire time series</h2>
             <div class="actionable-header--tight__action actionable-header--tight__action--left">
                 <a class="btn btn--primary btn--small" href="" ng-click="t5.downloadCsv()">
-              .csv
+              .csv {{taxonomy.data.csvFilesize}}
               <span class="icon-download icon--button-inline" role="presentation"></span>
             </a>
                 <a class="btn btn--primary btn--small" href="" ng-click="t5.downloadXls()">
-              .xlsx
+              .xlsx {{taxonomy.data.xlsxFilesize}}
               <span class="icon-download icon--button-inline" role="presentation"></span>
             </a>
             </div>
