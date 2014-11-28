@@ -12,7 +12,6 @@
 
 		function isAccepted() {
 			var accepted = ipCookie('onsAlphaDisclaimer')
-			console.log(accepted)
 			return accepted
 
 		}
