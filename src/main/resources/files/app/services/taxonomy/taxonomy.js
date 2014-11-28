@@ -75,7 +75,7 @@
 		}
 
 
-		//Bulk loads items with a single call and pushes into given array. Overrides array if exists
+		//Bulk loads items with a single http post call
 		function loadItemsBulk(items) {
 			if (ArrayUtil.isEmpty(items)) {
 				return
