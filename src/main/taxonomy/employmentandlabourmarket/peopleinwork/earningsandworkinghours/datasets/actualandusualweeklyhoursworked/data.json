@@ -9,14 +9,36 @@
   "download": [
     {
       "title": "Actual and usual weekly hours worked",
-      "xls": "http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/july-2014/table-a01.xls"
+      "cdids": [
+        "YBUS",
+        "YBUV",
+        "YBUY",
+        "YBVB",
+        "YBVE",
+        "YBUT",
+        "YBUW",
+        "YBUZ",
+        "YBVC",
+        "YBVF",
+        "YBUU",
+        "YBUX",
+        "YBVA",
+        "YBVD",
+        "YBVG"
+      ]
     }
   ],
   "notes": [
     {
-      "data": "These estimates are rounded to the nearest hundred and are different to the unrounded estimates in other published tables."
+      "data": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quam leo, blandit a turpis non, varius feugiat mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In posuere lectus eu laoreet ultrices. Donec ac sodales libero, eget fermentum arcu."
+    },
+    {
+      "data": "Fusce pharetra, libero in imperdiet ultricies, ex erat tempor dolor, vitae aliquet magna velit in urna. Duis finibus augue velit, ut consectetur risus imperdiet in. Sed tempus congue ante, ac cursus diam porttitor vitae. Vivamus arcu leo, volutpat in mauris ac, lacinia fermentum velit. Sed dictum tortor justo, aliquet facilisis lorem dictum a."
     }
   ],
+  "summary": "Brief description of dataset",
+  "uri": "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/datasets/actualandusualweeklyhoursworked",
+  "description": "Comprehensive description of data contained within this dataset.",
   "title": "Actual and usual weekly hours worked",
   "releaseDate": "19 February 2014",
   "type": "dataset",
