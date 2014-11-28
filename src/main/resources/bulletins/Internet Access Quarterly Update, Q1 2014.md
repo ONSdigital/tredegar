@@ -1,6 +1,5 @@
 Theme: People, Population and Community
-Level 2: Household Characteristics
-Level 3: Home Internet and Social Media Usage
+Level 2: Home Internet and Social Media Usage
 Summary: Estimates of adult Internet users and non-users in the UK, by age, sex, disability, region, gross weekly pay, ethnicity and when adults last used the Internet.
 Headline 1: 44.6 million adults (87%) in the UK had used the Internet in Q1 2014, an increase of 1.1 million since Q1 2013.
 Headline 2: 6.4 million adults (13%) had never used the Internet, falling by 659,000 since Q1 2013.

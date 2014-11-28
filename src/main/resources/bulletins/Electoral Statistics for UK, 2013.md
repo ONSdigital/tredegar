@@ -1,6 +1,5 @@
 Theme: People, Population and Community
 Level 2: Elections
-Level 3: Electoral Registration
 Summary: Analysis of the annual counts of the number of people registered to vote in 2013, including comparisons over time and between the UK constituent countries.
 Headline 1: The total number of UK parliamentary electors in 2013 was 46,139,900, a fall of 0.5% from 2012.
 Headline 2: The total number of UK local government electors in 2013 was 47,691,800, a fall of 0.1% from 2012.
