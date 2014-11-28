@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.GET;
 import javax.ws.rs.core.Context;
 
+import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.elasticsearch.action.suggest.SuggestResponse;
 import org.elasticsearch.common.text.Text;
@@ -44,11 +45,11 @@ public class Search {
 		response.setCharacterEncoding("UTF8");
 		response.setContentType("application/json");
 		return search(extractQuery(request), extractPage(request),
-				request.getParameter("type"));
+				extractTypes(request));
 	}
 
-	private Object search(String query, int page, String type) throws Exception {
-		ONSQueryBuilder queryBuilder = new ONSQueryBuilder("ons").setType(type)
+	private Object search(String query, int page, String[] types) throws Exception {
+		ONSQueryBuilder queryBuilder = new ONSQueryBuilder("ons").setTypes(types)
 				.setPage(page).setSearchTerm(query)
 				.setFields(getTitle(), "path");
 
@@ -60,7 +61,7 @@ public class Search {
 		 */
 		SearchResult searchResult = new SearchHelper(
 				ElasticSearchServer.getClient()).search(queryBuilder);
-		if (searchResult.getNumberOfResults() == 0 && type == null) {// If type
+		if (searchResult.getNumberOfResults() == 0 && types == null) {// If type
 																		// is
 																		// set
 																		// don't
@@ -70,7 +71,7 @@ public class Search {
 			searchResult = searchTimeseries(query, page);
 			// if still no results then use term suggester for autocorrect
 			if (searchResult.getNumberOfResults() == 0) {
-				searchResult = searchSuggestions(query, page, type,
+				searchResult = searchSuggestions(query, page, types,
 						searchResult);
 			}
 		}
@@ -84,6 +85,11 @@ public class Search {
 			return pageNumber < 1 ? 1 : pageNumber;
 		}
 		return 1;
+	}
+
+	private String[] extractTypes(HttpServletRequest request) {
+		String[] types = request.getParameterValues("type");
+		return  ArrayUtils.isNotEmpty(types) ? types : null;
 	}
 
 	private String extractQuery(HttpServletRequest request) {
@@ -110,7 +116,7 @@ public class Search {
 		return ElasticSearchFieldUtil.getBoost(TITLE, titleBoost);
 	}
 
-	private SearchResult searchSuggestions(String query, int page, String type,
+	private SearchResult searchSuggestions(String query, int page, String[] types,
 			SearchResult searchResult) throws IOException, Exception {
 		System.out
 				.println("No results found from timeseries so using suggestions for: "
@@ -144,7 +150,7 @@ public class Search {
 					.println("All search steps failed to discover suitable match");
 		} else {
 			ONSQueryBuilder suggestionsQueryBuilder = new ONSQueryBuilder("ons")
-					.setType(type).setPage(page)
+					.setTypes(types).setPage(page)
 					.setSearchTerm(suggestionsBufferAsString)
 					.setFields(getTitle(), "path");
 			searchResult = new SearchHelper(ElasticSearchServer.getClient())

@@ -84,8 +84,9 @@
     <!-- <script type="text/javascript" src="ui/js/lib/modernizr.min.js" defer></script> -->
     <!-- <script type="text/javascript" src="ui/js/lib/jquery-ui.min.js" defer></script> -->
 
-    <script type="text/javascript" src="app/app.js" defer></script>
     <script type="text/javascript" src="app/config/config.js" defer></script>
+    <script type="text/javascript" src="app/app.js" defer></script>
+    <script type="text/javascript" src="app/route.js" defer></script>
     <script type="text/javascript" src="app/services/taxonomy/taxonomy.js" defer></script>
     <script type="text/javascript" src="app/services/download/downloader.js" defer></script>
     <script type="text/javascript" src="app/services/data/dataloader.js" defer></script>
@@ -177,34 +178,32 @@ markup: false
 <body id="ng-app" ng-controller="MainCtrl" class="js">
     
     <ons-header></ons-header>
-    <div ng-view autoscroll="true">
-
-
-        <noscript>
-            <main id="main" role="main" class="ONS_border">
-                <div style="margin: 20px;">
-                    <p>
-                        <img class="clearfix" src="/ui/img/ons-logo.svg" alt="Office for National Statistics" width="300" class="media__img">
-                    </p>
-                </div>
-                <hr/>
-                <div style="margin: 20px;">
-                    <h2>This page needs JavaScript to be displayed.</h2>
-                </div>
-                <div style="padding-left: 20px;">
-                    <p>You can either:</p>
-                    <ul>
-                        <li>enable Javascript as follows: <a href="http://www.enable-javascript.com/">Enabling JavaScript</a>
-                        </li>
-                        <li>or browse to a <a href="/static">simplified HTML version</a> of the site (this may be up to a day out of date)</li>
-                    </ul>
-                    <p>If you are having difficulty accessing this site, please send a Tweet to <a href="https://twitter.com/jukesie">@jukesie</a>.</p>
-                </div>
-                <hr/>
-            </main>
-        </noscript>
-    </div>
-    <ons-footer></ons-footer>
+        <div class="wrap" ng-view autoscroll="true">
+            <noscript>
+                <main id="main" role="main" class="ONS_border">
+                    <div style="margin: 20px;">
+                        <p>
+                            <img class="clearfix" src="/ui/img/ons-logo.svg" alt="Office for National Statistics" width="300" class="media__img">
+                        </p>
+                    </div>
+                    <hr/>
+                    <div style="margin: 20px;">
+                        <h2>This page needs JavaScript to be displayed.</h2>
+                    </div>
+                    <div style="padding-left: 20px;">
+                        <p>You can either:</p>
+                        <ul>
+                            <li>enable Javascript as follows: <a href="http://www.enable-javascript.com/">Enabling JavaScript</a>
+                            </li>
+                            <li>or browse to a <a href="/static">simplified HTML version</a> of the site (this may be up to a day out of date)</li>
+                        </ul>
+                        <p>If you are having difficulty accessing this site, please send a Tweet to <a href="https://twitter.com/jukesie">@jukesie</a>.</p>
+                    </div>
+                    <hr/>
+                </main>
+            </noscript>
+        </div>
+        <ons-footer></ons-footer>
 </body>
 
 </html>

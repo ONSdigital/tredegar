@@ -10,15 +10,11 @@ import org.apache.commons.io.IOUtils;
 
 import com.github.davidcarboni.ResourceUtils;
 import com.github.davidcarboni.restolino.framework.Home;
-import com.github.onsdigital.search.ElasticSearchServer;
 
 public class HomePage implements Home {
 
 	@Override
 	public Object get(HttpServletRequest request, HttpServletResponse response) throws IOException {
-
-		// TODO: run this on server startup:
-		ElasticSearchServer.startEmbeddedServer();
 
 		// Ensures ResourceUtils gets the right classloader when running
 		// reloadable in development:

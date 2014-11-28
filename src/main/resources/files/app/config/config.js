@@ -15,7 +15,7 @@
 		debugEnabled: false
 	}
 
-	angular.module('onsApp')
+	angular.module('onsAppConfig', [])
 		.config(['$locationProvider', '$httpProvider', '$logProvider', GeneralConfiguration])
 		.run(['$location', '$http', '$rootScope', 'DSCacheFactory', '$cacheFactory', '$log', RunConfiguration])
 
