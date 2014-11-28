@@ -118,9 +118,7 @@
 			return routeConfig
 		}
 
-		function search(PageUtil, DataLoader) {
-			var searchResponse
-			var results
+		function search(PageUtil, DataLoader, $log) {
 			var q = PageUtil.getUrlParam('q')
 				// var type = PageUtil.getUrlParam('type')
 				// var pageNumber = PageUtil.getUrlParam('page')
@@ -128,18 +126,17 @@
 			var searchString = PageUtil.getUrl()
 			return DataLoader.load("/search" + searchString)
 				.then(function(data) {
-					searchResponse = data
-					results = data.results
 						//If cdid search is made go directly to timeseries page for searched cdid
-					for (var i = 0; i < results.length; i++) {
-						results[i]
-						if (results[i].type === 'timeseries' && results[i].title === q.toUpperCase()) {
-							PageUtil.goToPage(results[i].url, true)
+					for (var i = 0; i < data.results.length; i++) {
+						if (data.results[i].type === 'timeseries' && data.results[i].title === q.toUpperCase()) {
+							PageUtil.goToPage(data.results[i].url, true)
 							return
 						}
 					};
 
 					return data
+				} , function() {
+					$log.error('Failed loading search results')
 				})
 		}
 
