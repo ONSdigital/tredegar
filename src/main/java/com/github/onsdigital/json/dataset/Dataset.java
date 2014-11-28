@@ -24,6 +24,7 @@ public class Dataset extends CollectionItem {
 	public List<NotesSection> notes = new ArrayList<NotesSection>();
 	public String summary;
 	public URI uri;
+	public String description;
 
 	/**
 	 * Sets up some basic content.
