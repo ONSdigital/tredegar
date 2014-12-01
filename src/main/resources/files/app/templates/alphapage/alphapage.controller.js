@@ -7,7 +7,7 @@
     function AlphaPageCtlr($scope) {
         $scope.breadcrumb = {
             parent: [],
-            current: "Alpha website"
+            current: "Prototype website"
         };
     }
 })();
