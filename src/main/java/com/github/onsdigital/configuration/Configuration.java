@@ -7,25 +7,27 @@ public class Configuration {
 	private static final String DEFAULT_TAXONOMY_ROOT = "target/taxonomy";
 
 	/**
+	 * Mongo is currently only used to provide feedback on the search terms
+	 * users are typing in.
+	 */
+	private static final String DEFAULT_MONGO_URI = "mongodb://localhost:27017/db";
+
+	/**
 	 * David Carboni: This token relates to a Prerender.io accout I set up. If
 	 * necessary this account can be transferred, or a new one set up for ONS.
 	 */
 	private static final String DEFAULT_PRERENDER_TOKEN = "cCc113eXWWV2TbRcnoMV";
 
 	public static String getTaxonomyPath() {
-		String path = getValue("TAXONOMY_DIR");
-		if (StringUtils.isEmpty(path)) {
-			path = DEFAULT_TAXONOMY_ROOT;
-		}
-		return path;
+		return StringUtils.defaultIfBlank(getValue("TAXONOMY_DIR"), DEFAULT_TAXONOMY_ROOT);
 	}
 
 	public static String getPrerenderToken() {
-		String path = getValue("PRERENDER_TOKEN");
-		if (StringUtils.isEmpty(path)) {
-			path = DEFAULT_PRERENDER_TOKEN;
-		}
-		return path;
+		return StringUtils.defaultIfBlank(getValue("PRERENDER_TOKEN"), DEFAULT_PRERENDER_TOKEN);
+	}
+
+	public static String getMongoDbUri() {
+		return StringUtils.defaultIfBlank(getValue("MONGOLAB_URI"), DEFAULT_MONGO_URI);
 	}
 
 	/**
