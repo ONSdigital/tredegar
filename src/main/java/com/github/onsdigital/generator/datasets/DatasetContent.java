@@ -145,6 +145,10 @@ public class DatasetContent {
 				dataset.download.add(downloadSection);
 			}
 
+			if (StringUtils.isNotBlank(row.get(DESCRIPTION))) {
+				dataset.description = row.get(DESCRIPTION);
+			}
+
 			node.addDataset(dataset);
 			DatasetData.datasets.add(dataset);
 		}
