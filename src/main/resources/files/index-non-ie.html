@@ -1,10 +1,4 @@
-<!--[if i]><![endif]-->
 <!DOCTYPE html>
-<html ng-app="onsApp">
-
-<head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title ng-bind="PageUtil.title()"></title>
 <!-- This is the entry point for the Angular application. -->
 <!-- We've used Angular to implement the Alpha because it made the application quick to prototype. -->
 <!-- The Beta phase will probably use less Javascript and more progressive enhancement. -->
@@ -13,7 +7,12 @@
 <!--[if IE 8]><html class="no-js lt-ie9 ie8"><![endif]-->
 <!--[if IE 9]><html class="no-js ie9"><![endif]-->
 <!--[if gt IE 8]><!-->
+<html ng-app="onsApp">
 <!--<![endif]-->
+
+<head>
+    <title ng-bind="PageUtil.title()"></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta charset="UTF-8">
     <meta content="width=device-width,initial-scale=1.0" name="viewport" />
     <meta content="on" http-equiv="cleartype" />
@@ -146,6 +145,16 @@
     <script type="text/javascript" src="/ui/js/lib/loading-bar.js" defer></script>
 
 
+    <!-- Bugherd integration script: http://bugherd.com/documentation/installing-the-sidebar/ -->
+    <script type='text/javascript'>
+    (function(d, t) {
+        var bh = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        bh.type = 'text/javascript';
+        bh.src = '//www.bugherd.com/sidebarv2.js?apikey=cwz4globzxvnj84jsovora';
+        s.parentNode.insertBefore(bh, s);
+    })(document, 'script');
+    </script>
 
 
     <!-- <script type="text/javascript" src="ui/js/app/nav.js" defer></script>
@@ -195,16 +204,6 @@ markup: false
             </noscript>
         </div>
         <ons-footer></ons-footer>
-    <!-- Bugherd integration script: http://bugherd.com/documentation/installing-the-sidebar/ -->
-    <script type='text/javascript'>
-    (function(d, t) {
-        var bh = d.createElement(t),
-            s = d.getElementsByTagName(t)[0];
-        bh.type = 'text/javascript';
-        bh.src = '//www.bugherd.com/sidebarv2.js?apikey=cwz4globzxvnj84jsovora';
-        s.parentNode.insertBefore(bh, s);
-    })(document, 'script');
-    </script>
 </body>
 
 </html>
