@@ -261,9 +261,9 @@
         $scope.paginatorLinks = 6
       } else if ($window.innerWidth < 700) {
         $scope.paginatorLinks = 7
-      } else if ($window.innerWidth < 800) {
+      } else if ($window.innerWidth < 920) {
         $scope.paginatorLinks = 8
-      } else if ($window.innerWidth < 900) {
+      } else if ($window.innerWidth < 980) {
         $scope.paginatorLinks = 9
       } else {
         $scope.paginatorLinks = 10
