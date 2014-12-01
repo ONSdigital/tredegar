@@ -24,6 +24,10 @@ public class Dataset extends CollectionItem {
 	public List<NotesSection> notes = new ArrayList<NotesSection>();
 	public String summary;
 	public URI uri;
+
+	/** Whether this is a National Statistic: */
+	public boolean nationalStatistic;
+
 	public String description;
 
 	/**
@@ -55,6 +59,5 @@ public class Dataset extends CollectionItem {
 		TaxonomyHome extra = new TaxonomyHome(folder);
 		breadcrumb.add(extra);
 	}
-
 
 }

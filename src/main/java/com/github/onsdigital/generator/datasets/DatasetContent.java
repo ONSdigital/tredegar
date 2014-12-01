@@ -8,6 +8,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.apache.commons.lang.ArrayUtils;
+import org.apache.commons.lang.BooleanUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import com.github.onsdigital.generator.Folder;
@@ -144,6 +145,9 @@ public class DatasetContent {
 				downloadSection.xls = row.get("Link (latest)");
 				dataset.download.add(downloadSection);
 			}
+
+			String nationalStatistic = StringUtils.defaultIfBlank(row.get(NATIONAL_STATISTIC), "yes");
+			dataset.nationalStatistic = BooleanUtils.toBoolean(nationalStatistic);
 
 			if (StringUtils.isNotBlank(row.get(DESCRIPTION))) {
 				dataset.description = row.get(DESCRIPTION);
