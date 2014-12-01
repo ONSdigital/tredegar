@@ -5,6 +5,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.elasticsearch.index.query.BaseQueryBuilder;
 import org.elasticsearch.index.query.FilterBuilders;
 import org.elasticsearch.index.query.MatchAllQueryBuilder;
+import org.elasticsearch.index.query.MatchQueryBuilder;
 import org.elasticsearch.index.query.MultiMatchQueryBuilder;
 import org.elasticsearch.index.query.functionscore.FunctionScoreQueryBuilder;
 import org.elasticsearch.index.query.functionscore.ScoreFunctionBuilders;
@@ -163,14 +164,13 @@ public class ONSQueryBuilder {
 		} else {
 			// return documents with fields containing words that start with
 			// given search term
-			MultiMatchQueryBuilder multiMatchQueryBuilder = new MultiMatchQueryBuilder(getSearchTerm(), getFields()).analyzer("ons_synonyms");
+			MultiMatchQueryBuilder multiMatchQueryBuilder = new MultiMatchQueryBuilder(getSearchTerm(), getFields()).type(MatchQueryBuilder.Type.PHRASE_PREFIX).analyzer("ons_synonyms").slop(5);
 			// wrap this up with a function_score capability that allows us to
 			// boost the home pages
 			float homePageBoostFloat = Float.valueOf((String) ElasticSearchProperties.INSTANCE.getProperty("home"));
 			float titleBoostFloat = Float.valueOf((String) ElasticSearchProperties.INSTANCE.getProperty("title"));
 			
 			multiMatchQueryBuilder.field("title", titleBoostFloat);
-			multiMatchQueryBuilder.minimumShouldMatch("2");
 			FunctionScoreQueryBuilder functionScoreQueryBuilder = new FunctionScoreQueryBuilder(multiMatchQueryBuilder);
 			functionScoreQueryBuilder.add(FilterBuilders.termsFilter("_type", "home"), ScoreFunctionBuilders.factorFunction(homePageBoostFloat));
 			builder = functionScoreQueryBuilder;
@@ -183,7 +183,7 @@ public class ONSQueryBuilder {
 		}
 
 		String query = new SearchSourceBuilder().query(builder).highlight(highlightBuilder).from(calculateFrom()).size(getSize()).toString(); 
-		System.out.println("Elastic search query String: " + query);
+		//System.out.println("Elastic search query String: " + query);
 		return query;
 
 	}

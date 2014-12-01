@@ -64,7 +64,11 @@ public class SearchResult {
 			Text[] fragments = entry.getValue().getFragments();
 			if (fragments != null) {
 				for (Text text : fragments) {
-					highlightedFields.put(entry.getKey(), text.toString());
+					if("url".equals(entry.getKey())) {
+						highlightedFields.put("highlighted_url", text.toString());
+					} else {
+						highlightedFields.put(entry.getKey(), text.toString());
+					}
 				}
 			}
 		}
