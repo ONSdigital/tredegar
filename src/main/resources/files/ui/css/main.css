@@ -7357,6 +7357,7 @@ html, body {
 
     background-image: url('/ui/img/transparent.gif');
 }
+
 .alpha-header div {
     /*display: inline;*/
     /*float: left;*/
@@ -7384,6 +7385,14 @@ html, body {
     font-size: 24px;
     font-weight: 100;
 }
+
+.alpha-header span:hover{
+    text-decoration: underline !important;
+    position: relative;
+    cursor: pointer !important;
+    z-index: 10;
+}
+
 .alpha-header a {
     color: #303030;
     /* ONS colors: Black */
