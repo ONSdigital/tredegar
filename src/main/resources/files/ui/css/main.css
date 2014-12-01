@@ -8365,20 +8365,24 @@ lesser , applied styles
 }
 /* '' */
 
-.modal {
+.modalDialog {
     width: 400px;
     height: 500px;
     position: relative;
     background-color: #fff;
     margin: 13% auto;
+    overflow: auto;
+    pointer-events:auto;
 }
 
-.modalDialog {
+.modal {
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+    max-height: 100%;
+    overflow-y:scroll;
     background: rgba(0,0,0,0.8);
     z-index: 99999;
     -webkit-transition: opacity 400ms ease-in;
