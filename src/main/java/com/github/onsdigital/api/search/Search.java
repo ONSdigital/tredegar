@@ -48,10 +48,11 @@ public class Search {
 				extractTypes(request));
 	}
 
-	private Object search(String query, int page, String[] types) throws Exception {
-		ONSQueryBuilder queryBuilder = new ONSQueryBuilder("ons").setTypes(types)
-				.setPage(page).setSearchTerm(query)
-				.setFields(getTitle(), "path");
+	private Object search(String query, int page, String[] types)
+			throws Exception {
+		ONSQueryBuilder queryBuilder = new ONSQueryBuilder("ons")
+				.setTypes(types).setPage(page).setSearchTerm(query)
+				.setFields("title", "url");
 
 		/*
 		 * Search uses a number of steps to discover any appropriates matches:-
@@ -89,7 +90,7 @@ public class Search {
 
 	private String[] extractTypes(HttpServletRequest request) {
 		String[] types = request.getParameterValues("type");
-		return  ArrayUtils.isNotEmpty(types) ? types : null;
+		return ArrayUtils.isNotEmpty(types) ? types : null;
 	}
 
 	private String extractQuery(HttpServletRequest request) {
@@ -116,8 +117,9 @@ public class Search {
 		return ElasticSearchFieldUtil.getBoost(TITLE, titleBoost);
 	}
 
-	private SearchResult searchSuggestions(String query, int page, String[] types,
-			SearchResult searchResult) throws IOException, Exception {
+	private SearchResult searchSuggestions(String query, int page,
+			String[] types, SearchResult searchResult) throws IOException,
+			Exception {
 		System.out
 				.println("No results found from timeseries so using suggestions for: "
 						+ query);
@@ -152,7 +154,7 @@ public class Search {
 			ONSQueryBuilder suggestionsQueryBuilder = new ONSQueryBuilder("ons")
 					.setTypes(types).setPage(page)
 					.setSearchTerm(suggestionsBufferAsString)
-					.setFields(getTitle(), "path");
+					.setFields(getTitle(), "url");
 			searchResult = new SearchHelper(ElasticSearchServer.getClient())
 					.search(suggestionsQueryBuilder);
 			searchResult.setSuggestionBasedResult(true);
@@ -171,7 +173,7 @@ public class Search {
 						+ query);
 		ONSQueryBuilder timeSeriesQueryBuilder = new ONSQueryBuilder("ons")
 				.setType(ContentType.timeseries.name()).setPage(page)
-				.setSearchTerm(query).setFields(getTitle(), "path");
+				.setSearchTerm(query).setFields(getTitle(), "url");
 		SearchResult searchResult = new SearchHelper(
 				ElasticSearchServer.getClient()).search(timeSeriesQueryBuilder);
 		return searchResult;

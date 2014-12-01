@@ -25,7 +25,7 @@ pageCount field is mandatory
       templateUrl: 'app/components/paginator/paginator.html',
       scope: {
         pageCount: '=',
-        maxVisible: '@'
+        maxVisible: '='
       },
       controller: PaginatorController,
       controllerAs: 'paginator'
@@ -41,6 +41,7 @@ pageCount field is mandatory
       paginator.end
       init()
       watchPageCount()
+      watchMaxVisible()
 
       function init() {
         paginator.start = getStart()
@@ -53,6 +54,14 @@ pageCount field is mandatory
             init()
         })
       }
+
+      function watchMaxVisible() {
+        $scope.$watch('maxVisible', function(newValue) {
+            maxVisible = newValue
+            init()
+        })
+      }
+
 
       function getStart() {
         if ($scope.pageCount <= maxVisible) {
