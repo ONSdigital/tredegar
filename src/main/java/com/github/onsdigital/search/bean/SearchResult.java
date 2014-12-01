@@ -66,8 +66,8 @@ public class SearchResult {
 				for (Text text : fragments) {
 					if("url".equals(entry.getKey())) {
 						highlightedFields.put("highlighted_url", text.toString());
-					} else {
-						highlightedFields.put(entry.getKey(), text.toString());
+					} else { //Overwrite field value wiith highlighted field value
+						highlightedFields.put(entry.getKey(), text.toString());						
 					}
 				}
 			}

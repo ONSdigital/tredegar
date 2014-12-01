@@ -5,7 +5,6 @@ import org.apache.commons.lang3.StringUtils;
 import org.elasticsearch.index.query.BaseQueryBuilder;
 import org.elasticsearch.index.query.FilterBuilders;
 import org.elasticsearch.index.query.MatchAllQueryBuilder;
-import org.elasticsearch.index.query.MatchQueryBuilder;
 import org.elasticsearch.index.query.MultiMatchQueryBuilder;
 import org.elasticsearch.index.query.functionscore.FunctionScoreQueryBuilder;
 import org.elasticsearch.index.query.functionscore.ScoreFunctionBuilders;
@@ -183,7 +182,7 @@ public class ONSQueryBuilder {
 		}
 
 		String query = new SearchSourceBuilder().query(builder).highlight(highlightBuilder).from(calculateFrom()).size(getSize()).toString(); 
-		//System.out.println("Elastic search query String: " + query);
+//		System.out.println("Elastic search query String: " + query);
 		return query;
 
 	}
