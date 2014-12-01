@@ -9,7 +9,6 @@
 	function NavigationController($scope, $rootScope) {
 		var navigation = this
 		navigation.hideSearch = false
-		navigation.links = $rootScope.onsNavigation
 
 		watchLocation()
 		watchMenu()
