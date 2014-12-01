@@ -4,10 +4,10 @@
 (function() {
 
   angular.module("onsTemplates")
-    .controller("SearchController", ['$scope', '$location', '$log', 'PageUtil', 'searchResponse', SearchController])
+    .controller("SearchController", ['$scope', '$location', '$window', '$log', 'PageUtil', 'searchResponse', SearchController])
 
 
-  function SearchController($scope, $location, $log, PageUtil, searchResponse) {
+  function SearchController($scope, $location, $window, $log, PageUtil, searchResponse) {
     var page = PageUtil.getUrlParam("page")
     var searchTerm = $scope.searchTerm = PageUtil.getUrlParam("q")
     var type = $scope.type = PageUtil.getUrlParam("type")
@@ -131,7 +131,10 @@
       },
     }
 
-    if(!searchResponse) {
+    resolvePaginatorLinkCount()
+    watchResize()
+
+    if (!searchResponse) {
       return
     }
 
@@ -241,6 +244,30 @@
         }
       }
       $scope.relatedDepartment = undefined
+    }
+
+    function watchResize() {
+      angular.element($window).bind('resize', function() {
+        resolvePaginatorLinkCount()
+        $scope.$apply()
+      })
+    }
+
+    //Resolve max paginator visible link counts depending on screen size
+    function resolvePaginatorLinkCount() {
+      if ($window.innerWidth < 500) {
+        $scope.paginatorLinks = 5
+      } else if ($window.innerWidth < 600) {
+        $scope.paginatorLinks = 6
+      } else if ($window.innerWidth < 700) {
+        $scope.paginatorLinks = 7
+      } else if ($window.innerWidth < 800) {
+        $scope.paginatorLinks = 8
+      } else if ($window.innerWidth < 900) {
+        $scope.paginatorLinks = 9
+      } else {
+        $scope.paginatorLinks = 10
+      }
     }
 
     //Expose API
