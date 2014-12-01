@@ -27,7 +27,7 @@
 
 			var minChars = +(scope.minChars || 3) //default chart number to trigger is 3
 			var searchUrl = scope.searchUrl || 'search'
-			var searchParam = scope.searchParam || 'q'
+			var searchParam = scope.searchParam || 'term'
 
 			//Attach result data to parent scope with given variable name 
 			var dataVar = scope.dataVar || 'data'
