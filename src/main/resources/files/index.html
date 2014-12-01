@@ -14,10 +14,10 @@
 <!--[if IE 9]><html class="no-js ie9"><![endif]-->
 <!--[if gt IE 8]><!-->
 <!--<![endif]-->
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
     <meta content="width=device-width,initial-scale=1.0" name="viewport" />
     <meta content="on" http-equiv="cleartype" />
-    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="telephone=no"/>
     <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
     <!-- http://www.phpied.com/conditional-comments-block-downloads/ -->
     <!--[if IE]><![endif]-->
@@ -38,7 +38,7 @@
 
     <!--<![endif]-->
     <!-- endbuild -->
-    <!--[if (!IE)|(gt IE 8)]>><!-->
+    <!--[if (!IE)|(gt IE 8)]><!-->
     <!-- <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/tooltipster/3.0.5/js/jquery.tooltipster.min.js" defer></script> -->
     <!--<![endif]-->
 
@@ -53,7 +53,7 @@
         document.createElement('ng:pluralize');
         document.createElement('ng:view');
       </script>
-    <![endif]-->    
+    <![endif]-->
 
     <!---
 title: Angular app page
@@ -62,6 +62,8 @@ type: template
 group: Templates
 markup: false
 -->
+    <script type="text/javascript" src="/ui/js/lib/angular.js" defer></script>
+
 </head>
 
 <!-- id set to ng-app to make older IE happy with Angular ngInclude directive -->
@@ -96,7 +98,7 @@ markup: false
             </noscript>
         </div>
         <ons-footer></ons-footer>
-   
+
 </body>
 
  <!-- Google Analytics -->
@@ -118,18 +120,16 @@ markup: false
     // ga('send', 'pageview');
     </script>
 
-    <script type="text/javascript" src="/ui/js/lib/angular.js" defer></script>
     <!-- <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js" defer></script> -->
     <script type="text/javascript" src="/ui/js/lib/angular-route.min.js" defer></script>
     <script type="text/javascript" src="/ui/js/lib/angular-sanitize.min.js" defer></script>
     <script type="text/javascript" src="/ui/js/lib/angular-cookie.min.js" defer></script>
     <script type="text/javascript" src="/ui/js/lib/angular-cache.min.js" defer></script>
-    <script type="text/javascript" src="/ui/js/lib/showdown.min.js"></script>
-
 
     <!-- <script type="text/javascript" src="ui/js/lib/modernizr.min.js" defer></script> -->
     <!-- <script type="text/javascript" src="ui/js/lib/jquery-ui.min.js" defer></script> -->
 
+    <script type="text/javascript" src="/ui/js/lib/showdown.min.js"></script>
     <script type="text/javascript" src="app/config/config.js" defer></script>
     <script type="text/javascript" src="app/app.js" defer></script>
     <script type="text/javascript" src="app/route.js" defer></script>
