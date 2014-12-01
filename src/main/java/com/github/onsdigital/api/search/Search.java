@@ -41,13 +41,18 @@ public class Search {
 
 	@GET
 	public Object get(@Context HttpServletRequest request, @Context HttpServletResponse response) throws Exception {
-		response.setCharacterEncoding("UTF8");
-		response.setContentType("application/json");
+
 		String query = extractQuery(request);
 		int page = extractPage(request);
 		String[] types = extractTypes(request);
 		SearchResult search = search(query, page, types);
-		SearchConsole.save(query, page, types, search);
+
+		if (StringUtils.isNotBlank(request.getParameter("q"))) {
+			// This is a search result page.
+			// Autocomplete requests pass a parameter of "term".
+			SearchConsole.save(query, page, types, search);
+		}
+
 		return search;
 	}
 
