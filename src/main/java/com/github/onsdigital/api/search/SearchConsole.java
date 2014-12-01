@@ -33,16 +33,8 @@ public class SearchConsole {
 	@GET
 	public Map<String, Integer> results(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
-		// synchronized (SearchConsole.class) {
-		// try {
-		// SearchConsole.class.wait(10000);
 		Serialiser.getBuilder().setPrettyPrinting();
 		return query();
-		// } catch (InterruptedException e) {
-		// System.out.println("Interrupted.");
-		// }
-		// }
-		// return "Not implemented yet.";
 	}
 
 	private Map<String, Integer> query() throws Exception {
@@ -127,9 +119,6 @@ public class SearchConsole {
 						client.close();
 					}
 				}
-				// synchronized (SearchConsole.class) {
-				// SearchConsole.class.notifyAll();
-				// }
 
 			}
 		});
