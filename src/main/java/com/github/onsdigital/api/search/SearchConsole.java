@@ -22,7 +22,6 @@ import com.mongodb.DBCursor;
 import com.mongodb.DBObject;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
-import com.mongodb.WriteResult;
 
 @Endpoint
 public class SearchConsole {
@@ -105,10 +104,7 @@ public class SearchConsole {
 					record.append("page", page);
 					record.append("types", types);
 					record.append("results", search.getNumberOfResults());
-					WriteResult insert = searchTerms.insert(record);
-					if (insert.getN() != 1) {
-						System.out.println("Unexpected result: " + insert.getN() + " documents affected.");
-					}
+					searchTerms.insert(record);
 					System.out.println("Total: " + searchTerms.getCount());
 
 				} catch (Exception e) {
