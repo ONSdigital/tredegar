@@ -9,6 +9,7 @@
 	function ModalController(ipCookie) {
 		var modal = this
 		modal.showModal = isAccepted() ? false : true
+		// modal.showModal = true
 
 		function isAccepted() {
 			var accepted = ipCookie('onsAlphaDisclaimer')

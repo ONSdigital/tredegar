@@ -62,6 +62,10 @@
         $scope.getPage = function() {
             return PageUtil.getPage()
         }
+
+        $scope.getUrl = function() {
+            return PageUtil.getUrl()
+        }
     }
 
     function loadNavigation($rootScope, DataLoader) {

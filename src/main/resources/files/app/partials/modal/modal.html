@@ -1,7 +1,11 @@
 <div ng-controller="ModalController as modal">
-    <div class="modalDialog" ng-if="modal.showModal">
-        <div class="modal">
-            <div class="modal-header">Warning
+    
+
+<!-- Modal -->
+<div class="modal" ng-if="modal.showModal" aria-hidden="true">
+      <div class="modalDialog" >        
+
+  <div class="modal-header">Warning
                 <div class="right"><a class="closeButton" href="http://www.ons.gov.uk/"><span class="icon-cancel-squared icon--medium"></span></a> 
                 </div>
             </div>
@@ -25,6 +29,8 @@
                     </li>
                 </ul>
             </div>
-        </div>
-    </div>
+            </div>
 </div>
+<!-- /Modal -->
+</div>
+
