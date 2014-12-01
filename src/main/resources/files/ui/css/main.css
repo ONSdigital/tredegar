@@ -8366,11 +8366,10 @@ lesser , applied styles
 /* '' */
 
 .modalDialog {
-    width: 400px;
-    height: 500px;
-    position: relative;
+    width: 25em;
+    height: 32em;
     background-color: #fff;
-    margin: 13% auto;
+    margin: 15% auto;
     overflow: auto;
     pointer-events:auto;
 }
@@ -8381,8 +8380,7 @@ lesser , applied styles
     right: 0;
     bottom: 0;
     left: 0;
-    max-height: 100%;
-    overflow-y:scroll;
+    height: 100%;
     background: rgba(0,0,0,0.8);
     z-index: 99999;
     -webkit-transition: opacity 400ms ease-in;
@@ -8399,8 +8397,7 @@ lesser , applied styles
     padding-top: 0.4em;
 }
 .message {
-    padding: 30px 10px 0px 0px;
-    ;
+    padding: 1.8em 1em 0em 0em;
 }
 .buttons {
     height: 2.25em;
@@ -8421,9 +8418,11 @@ lesser , applied styles
 }
 
 .closeButton {
-    
+	color: #fff; 
 }
-
+.closeButton :hover {
+	color:#ff8c00;
+}
 
 /* -------- autocomplete on search -------- */
 
@@ -8439,3 +8438,4 @@ lesser , applied styles
     z-index:999;
     margin-left:0.125em;
 }
+
