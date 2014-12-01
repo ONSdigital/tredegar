@@ -44,7 +44,7 @@ class Markdown {
 		try (Reader reader = Files.newBufferedReader(file, Charset.forName("UTF8"))) {
 			try (Scanner scanner = new Scanner(reader)) {
 				readHeader(scanner);
-				System.out.println("UTF8: " + properties);
+				// System.out.println("UTF8: " + properties);
 				readContent(scanner);
 			}
 		}
@@ -54,7 +54,7 @@ class Markdown {
 			try (Reader reader = Files.newBufferedReader(file, Charset.forName("cp1252"))) {
 				try (Scanner scanner = new Scanner(reader)) {
 					readHeader(scanner);
-					System.out.println("cp1252: " + properties);
+					// System.out.println("cp1252: " + properties);
 					readContent(scanner);
 				}
 			}
