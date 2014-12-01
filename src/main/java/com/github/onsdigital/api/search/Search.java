@@ -61,13 +61,8 @@ public class Search {
 		 */
 		SearchResult searchResult = new SearchHelper(
 				ElasticSearchServer.getClient()).search(queryBuilder);
-		if (searchResult.getNumberOfResults() == 0 && types == null) {// If type
-																		// is
-																		// set
-																		// don't
-																		// search
-																		// for
-																		// timeseries
+		// If type is set don't search for timeseries
+		if (searchResult.getNumberOfResults() == 0 && types == null) {
 			searchResult = searchTimeseries(query, page);
 			// if still no results then use term suggester for autocorrect
 			if (searchResult.getNumberOfResults() == 0) {
