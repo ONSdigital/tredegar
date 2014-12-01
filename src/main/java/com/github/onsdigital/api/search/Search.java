@@ -49,7 +49,7 @@ public class Search {
 		String[] types = extractTypes(request);
 		Cookie[] cookies = request.getCookies();
 		SearchResult search = search(query, page, types);
-		SearchConsole.save(query, page, types, search, cookies);
+		SearchConsole.save(query, page, types, search);
 		return search;
 	}
 

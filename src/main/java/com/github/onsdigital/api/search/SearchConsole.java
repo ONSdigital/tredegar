@@ -5,7 +5,6 @@ import java.util.TreeMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.GET;
@@ -88,7 +87,7 @@ public class SearchConsole {
 		}
 	}
 
-	static void save(final String query, final int page, final String[] types, final SearchResult search, final Cookie[] cookies) {
+	static void save(final String query, final int page, final String[] types, final SearchResult search) {
 
 		// Submit to be saved asynchronously.
 		// This minimises response time and we're not too worried about whether
@@ -97,15 +96,6 @@ public class SearchConsole {
 
 			@Override
 			public void run() {
-
-				// Extract the Google Analytics cookie so we can (anonymously)
-				// follow what happened in a single session:
-				Cookie cookie = null;
-				for (Cookie candidate : cookies) {
-					if (candidate.getName().equals("_ga")) {
-						cookie = candidate;
-					}
-				}
 
 				MongoClientURI uri = new MongoClientURI(Configuration.getMongoDbUri());
 				MongoClient client = null;
@@ -123,7 +113,6 @@ public class SearchConsole {
 					record.append("page", page);
 					record.append("types", types);
 					record.append("results", search.getNumberOfResults());
-					record.append("_ga", cookie == null ? "none" : cookie.getValue());
 					WriteResult insert = searchTerms.insert(record);
 					if (insert.getN() != 1) {
 						System.out.println("Unexpected result: " + insert.getN() + " documents affected.");
