@@ -270,11 +270,17 @@
       }
     }
 
+    //If focus css class should be applited to search or not
+    function isFocus(type, index) {
+      return type === 'home' && index === 0
+    }
+
     //Expose API
     angular.extend($scope, {
       isLoading: isLoading,
       toggleFilter: toggleFilter,
-      isActive: isActive
+      isActive: isActive,
+      isFocus:isFocus
     })
   }
 

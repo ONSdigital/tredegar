@@ -67,23 +67,23 @@
         <div class="grid-col tablet-wide-grid-two-thirds">
             <article class="box">
 
-                <div id="search" class="search">
+                <div id="<search></search>" class="search">
                     <ons-loading condition="isLoading()" ></ons-loading>
                     <!-- <span ng-show="isLoading()">Loading ...</span> -->
 
                     <dl>
 
-                        <dt ng-repeat-start="item in searchResponse.results" class="">
-                            <a class="search-link" href="#!{{item.url}}">{{item.title}}</a>
+                        <dt ng-repeat-start="item in searchResponse.results track by $index" ng-class="isFocus(item.type, $index) ? 'search-home-focused' : ''">
+                            <a class="search-link" href="#!{{item.url}}"><span ng-bind-html="item.title"></span></a>
                             <span ng-if="item.type != 'home'" class="lozenge--label" href="">{{item.type === 'bulletin' ? 'Statistical Bulletin' : item.type}}</span>
                         </dt>
                         <dd class="microcopy">
                         	<span ng-if="item.type === 'home'">
-								{{item.url}}                      	
+								<span ng-bind-html="item.url"></span>                      	
                         	</span>
-                        	<span ng-if="item.type != 'home'">Released 1 Jan 3000</span>
+                        	<span ng-if="item.type != 'home'">Release date 1 Jan 3000</span>
                         </dd>
-                        <dd ng-repeat-end class="search-summary">{{item.lede | charLimit:300:'...'}}</dd>
+                        <dd ng-repeat-end class="search-summary" ng-class="isFocus(item.type, $index) ? 'search-home-focused--summary' : ''" >{{item.lede | charLimit:300:'...'}}</dd>
 
                     </dl>
                 </div>
