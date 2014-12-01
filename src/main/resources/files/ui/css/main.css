@@ -3183,7 +3183,7 @@ lesser , applied styles
 }
 .nav-panel__action:after {
     position: absolute;
-    top: 48%;
+    top: 40%;
     right: 15px;
     right: 1.5rem;
     z-index: 9;
@@ -3247,12 +3247,12 @@ lesser , applied styles
     font-size: 200%;
 }
 .nav-panel__footer-home a {
-    padding-top: 30px;
-    padding-top: 3rem;
+    /*padding-top: 30px;
+    padding-top: 3rem;*/
     padding-bottom: 10px;
     padding-bottom: 1rem;
     font-size: 70%;
-    height: 9.5rem
+    height: 8rem
 }
 @media screen and (max-width: 800px) {
     .nav-panel__footer-home .nav-panel__action:after {
@@ -3262,6 +3262,23 @@ lesser , applied styles
         font-size: 95%;
         padding: 1.7em;
     }
+    .nav-panel__action:after {
+    position: absolute;
+    top: 55%;
+    right: 15px;
+    right: 1.5rem;
+    z-index: 9;
+    font-family: "entypo";
+    font-size: 150%;
+    line-height: .85;
+    color: #b4ddf4;
+    text-decoration: none !important;
+    vertical-align: middle;
+    content: "\e866";
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
 }
 .nav-panel__title, .nav-panel__value {
     display: table-cell;
@@ -3715,7 +3732,7 @@ lesser , applied styles
 
     background-image: url("/ui/img/whitebackgroundhero.png");
     /*background-position: 50% 50%;*/
-
+    
     background-size: cover;
 }
 @media screen and (max-width: 1020px) {
