@@ -29,13 +29,17 @@
       "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/timeseries/raid38"
     }
   ],
-  "statsBulletins": [],
-  "datasets": [
+  "statsBulletinHeadline": {
+    "name": "Deaths Registered in England and Wales, 2013",
+    "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/bulletins/deathsregisteredinenglandandwales2013"
+  },
+  "statsBulletins": [
     {
-      "name": "Deaths data collection",
-      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/datasets/deathsdatacollection"
+      "name": "Deaths Registered in England and Wales, 2013",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/bulletins/deathsregisteredinenglandandwales2013"
     }
   ],
+  "datasets": [],
   "level": "t3",
   "index": 1,
   "lede": "Lorem ipsum dolor sit amet, fugit tation percipitur duo at, magna denique ei duo, mazim oratio volumus id mel. Veri discere accusamus sit id, oblique fabulas legimus sit ex. Atqui urbanitas efficiendi ei sea. Voluptua gloriatur vis an, cu eius semper deleniti vel. Aperiri insolens accommodare vel ne, vel id dictas corrumpit urbanitas.",

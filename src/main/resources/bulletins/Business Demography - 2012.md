@@ -26,6 +26,7 @@ The rate of business births once again became higher than the rate of business d
 
 ### Business birth and death rates, 2003 - 2012
 [![Business birth and death rates, 2003 - 2012](http://www.ons.gov.uk/ons/resources/figure1final_tcm77-339591.png)](http://www.ons.gov.uk/ons/resources/figure1final_tcm77-339591.png "Business birth and death rates, 2003 - 2012")
+
 ** Source: Office for National Statistics **
 
 ##### Download chart: 

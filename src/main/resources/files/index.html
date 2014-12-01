@@ -32,9 +32,6 @@
     <link rel="stylesheet" href="/ui/css/jquery-ui.min.css">
     <link href="/ui/css/lib/loading-bar.css" rel="stylesheet" type="text/css">
 
-    <script type="text/javascript" src="/ui/js/lib/jquery.min.js" defer></script>
-
-
     <!--<![endif]-->
     <!-- endbuild -->
     <!--[if (!IE)|(gt IE 8)]>><!-->
@@ -53,6 +50,54 @@
         document.createElement('ng:view');
       </script>
     <![endif]-->
+
+    <!---
+title: Angular app page
+external: true
+type: template
+group: Templates
+markup: false
+-->
+</head>
+
+<!-- id set to ng-app to make older IE happy with Angular ngInclude directive -->
+<!-- Autoscroll solves the issue mentioned on https://stackoverflow.com/questions/21055952/changing-route-doesnt-scroll-to-top-in-the-new-page -->
+
+<body id="ng-app" ng-controller="MainCtrl" class="js">
+    
+    
+    <div ng-include="'app/partials/modal/modal.html'"></div>
+    <ons-header></ons-header>
+        <div class="wrap" ng-view autoscroll="true">
+            <noscript>
+                <main id="main" role="main" class="ONS_border">
+                    <div style="margin: 20px;">
+                        <p>
+                            <img class="clearfix" src="/ui/img/ons-logo.svg" alt="Office for National Statistics" width="300" class="media__img">
+                        </p>
+                    </div>
+                    <hr/>
+                    <div style="margin: 20px;">
+                        <h2>This page needs JavaScript to be displayed.</h2>
+                    </div>
+                    <div style="padding-left: 20px;">
+                        <p>You can either:</p>
+                        <ul>
+                            <li>enable Javascript as follows: <a href="http://www.enable-javascript.com/">Enabling JavaScript</a>
+                            </li>
+                            <li>or browse to a <a href="/static">simplified HTML version</a> of the site (this may be up to a day out of date)</li>
+                        </ul>
+                        <p>If you are having difficulty accessing this site, please send a Tweet to <a href="https://twitter.com/jukesie">@jukesie</a>.</p>
+                    </div>
+                    <hr/>
+                </main>
+            </noscript>
+        </div>
+        <ons-footer></ons-footer>
+</body>
+    
+    <script type="text/javascript" src="/ui/js/lib/jquery.min.js" defer></script>
+
 
     <!-- Google Analytics -->
     <!-- Angular application(single page) requires page changes sent using javascript.
@@ -77,6 +122,7 @@
     <!-- <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js" defer></script> -->
     <script type="text/javascript" src="/ui/js/lib/angular-route.min.js" defer></script>
     <script type="text/javascript" src="/ui/js/lib/angular-sanitize.min.js" defer></script>
+    <script type="text/javascript" src="/ui/js/lib/angular-cookie.min.js" defer></script>
     <script type="text/javascript" src="/ui/js/lib/angular-cache.min.js" defer></script>
     <script type="text/javascript" src="/ui/js/lib/showdown.min.js"></script>
 
@@ -108,12 +154,13 @@
     <script type="text/javascript" src="app/templates/dataset/dataset.controller.js" defer></script>
     <script type="text/javascript" src="app/templates/contact/contact.controller.js" defer></script>
     <script type="text/javascript" src="app/templates/localstats/localstats.controller.js" defer></script>
-        <script type="text/javascript" src="app/templates/alphapage/alphapage.controller.js" defer></script>
+    <script type="text/javascript" src="app/templates/alphapage/alphapage.controller.js" defer></script>
     <script type="text/javascript" src="app/templates/methodology/methodology.controller.js" defer></script>
     <script type="text/javascript" src="app/templates/nationalstats/nationalstats.controller.js" defer></script>
     <script type="text/javascript" src="app/templates/previoustatic/previoustatic.controller.js" defer></script>
     <script type="text/javascript" src="app/templates/privacy/privacy.controller.js" defer></script>
     <script type="text/javascript" src="app/templates/survey/survey.controller.js" defer></script>
+    <script type="text/javascript" src="app/partials/modal/modal.controller.js" defer></script>
     <script type="text/javascript" src="app/partials/header/header.js" defer></script>
     <script type="text/javascript" src="app/partials/footer/footer.js" defer></script>
     <script type="text/javascript" src="app/partials/navigation/navigation.controller.js" defer></script>
@@ -162,48 +209,5 @@
 <script type="text/javascript" src="ui/js/app/tables.js" defer></script>
 <script type="text/javascript" src="ui/js/custom-autocomplete.js" defer></script>
  -->
-
-    <!---
-title: Angular app page
-external: true
-type: template
-group: Templates
-markup: false
--->
-</head>
-
-<!-- id set to ng-app to make older IE happy with Angular ngInclude directive -->
-<!-- Autoscroll solves the issue mentioned on https://stackoverflow.com/questions/21055952/changing-route-doesnt-scroll-to-top-in-the-new-page -->
-
-<body id="ng-app" ng-controller="MainCtrl" class="js">
-    
-    <ons-header></ons-header>
-        <div class="wrap" ng-view autoscroll="true">
-            <noscript>
-                <main id="main" role="main" class="ONS_border">
-                    <div style="margin: 20px;">
-                        <p>
-                            <img class="clearfix" src="/ui/img/ons-logo.svg" alt="Office for National Statistics" width="300" class="media__img">
-                        </p>
-                    </div>
-                    <hr/>
-                    <div style="margin: 20px;">
-                        <h2>This page needs JavaScript to be displayed.</h2>
-                    </div>
-                    <div style="padding-left: 20px;">
-                        <p>You can either:</p>
-                        <ul>
-                            <li>enable Javascript as follows: <a href="http://www.enable-javascript.com/">Enabling JavaScript</a>
-                            </li>
-                            <li>or browse to a <a href="/static">simplified HTML version</a> of the site (this may be up to a day out of date)</li>
-                        </ul>
-                        <p>If you are having difficulty accessing this site, please send a Tweet to <a href="https://twitter.com/jukesie">@jukesie</a>.</p>
-                    </div>
-                    <hr/>
-                </main>
-            </noscript>
-        </div>
-        <ons-footer></ons-footer>
-</body>
 
 </html>

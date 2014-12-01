@@ -66,13 +66,13 @@ public class MethodologyMarkdown {
 		Map<String, String> properties = markdown.properties;
 
 		// Location
-		methodology.theme = properties.remove("Theme");
-		methodology.level2 = properties.remove("Level 2");
-		methodology.level3 = properties.remove("Level 3");
+		methodology.theme = properties.remove("theme");
+		methodology.level2 = properties.remove("level 2");
+		methodology.level3 = properties.remove("level 3");
 
 		// Additional details
-		methodology.lede = properties.remove("Lede");
-		methodology.more = properties.remove("More");
+		methodology.lede = properties.remove("lede");
+		methodology.more = properties.remove("more");
 
 		// Note any unexpected information
 		for (String property : properties.keySet()) {

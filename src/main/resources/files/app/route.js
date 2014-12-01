@@ -126,8 +126,6 @@
 			var searchString = PageUtil.getUrl()
 			return DataLoader.load("/search" + searchString)
 				.then(function(data) {
-					console.log("Search results")
-					console.log(data)
 						//If cdid search is made go directly to timeseries page for searched cdid
 					for (var i = 0; i < data.results.length; i++) {
 						if (data.results[i].type === 'timeseries' && data.results[i].title === q.toUpperCase()) {

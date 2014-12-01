@@ -39,7 +39,9 @@ public class Timeseries extends DataItem implements Comparable<Timeseries> {
 	// Additional information
 
 	public String number;
-	public String unit;
+	// We provide a minimal default for the unit, otherwise hicharts shows
+	// "undefined":
+	public String unit = "";
 	/** A unit that needs to go before the number, e.g. £. */
 	public String preUnit;
 	public String date;

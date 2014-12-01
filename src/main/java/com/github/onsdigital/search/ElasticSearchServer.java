@@ -6,6 +6,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
+import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.elasticsearch.client.Client;
 
 import com.github.davidcarboni.restolino.framework.Startup;
@@ -69,7 +70,13 @@ public class ElasticSearchServer implements Startup {
 						// Index
 						start = System.currentTimeMillis();
 						System.out.println("Elasticsearch: indexing..");
-						Indexer.loadIndex(client);
+						try {
+							Indexer.loadIndex(client);
+						} catch (Exception e) {
+							System.out.println("Indexing error");
+							System.out.println(ExceptionUtils.getStackTrace(e));
+							throw e;
+						}
 						System.out.println("Elasticsearch: indexing complete (" + (System.currentTimeMillis() - start) + "ms)");
 
 						Runtime.getRuntime().addShutdownHook(new ShutDownNodeThread(client, server));
