@@ -35,6 +35,7 @@
     var onsApp = angular.module('onsApp', [
         'ngRoute',
         'ngSanitize',
+        'ipCookie',
         'onsComponents',
         'onsHelpers',
         'onsTemplates',
@@ -61,13 +62,15 @@
         $scope.getPage = function() {
             return PageUtil.getPage()
         }
+
+        $scope.getUrl = function() {
+            return PageUtil.getUrl()
+        }
     }
 
     function loadNavigation($rootScope, DataLoader) {
         DataLoader.load('/navigation')
             .then(function(data) {
-                console.log("Then")
-                console.log(data)
                 $rootScope.onsNavigation = data
             })
     }

@@ -417,15 +417,15 @@ img {
 
 @font-face {
     font-family: 'entypo';
-    src: url("../fonts/icon-font/entypo.eot");
-    src: url("../fonts/icon-font/entypo.eot#iefix") format("embedded-opentype"), url("../fonts/icon-font/entypo.woff") format("woff"), url("../fonts/icon-font/entypo.ttf") format("truetype"), url("../fonts/icon-font/entypo.svg#entypo") format("svg");
+    src: url('/ui/fonts/icon-font/entypo.eot');
+    src: url('/ui/fonts/icon-font/entypo.eot?#iefix') format('embedded-opentype'), url('/ui/fonts/icon-font/entypo.woff') format('woff'), url('/ui/fonts/icon-font/entypo.ttf') format('truetype'), url('/ui/fonts/icon-font/entypo.svg?#entypo') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
     @font-face {
         font-family: 'entypo';
-        src: url("../fonts/icon-font/entypo.svg#entypo") format("svg");
+        src: url('/ui/fonts/icon-font/entypo.svg?#entypo') format('svg');
     }
 }
 [class^="icon-"]:before, [class*=" icon-"]:before {
@@ -977,7 +977,7 @@ textarea {
     display: block;
     margin-bottom: 10px;
     margin-bottom: 1rem;
-    font-family: "DaxlinePro", sans-serif;
+    font-family: DaxlinePro, sans-serif;
     font-weight: 700;
 }
 .field__label + .label__description {
@@ -1190,13 +1190,13 @@ textarea {
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
     @font-face {
         font-family: 'open-sans-n4';
-        src: url("../fonts/OpenSans-Regular.ttf") format("truetype");
+        src: url("/ui/fonts/OpenSans-Regular.ttf") format("truetype");
         src: url("/ui/fonts/OpenSans-Regular.svg#OpenSans-Regular") format("svg");
     }
     @font-face {
         font-family: 'open-sans-n7';
         /*src: url("/ui/fonts/OpenSans-Bold.eot");
-        src: url("../fonts/OpenSans-Bold.ttf") format("truetype");*/
+        src: url("/ui/fonts/OpenSans-Bold.ttf") format("truetype");*/
         src: url("/ui/fonts/OpenSans-Bold.eot#iefix") format("embedded-opentype"), url("/ui/fonts/OpenSans-Bold.woff") format("woff"), url("/ui/fonts/OpenSans-Bold.ttf") format("truetype"), url("/ui/fonts/OpenSans-Bold.svg#OpenSans-Bold") format("svg");
         font-weight: normal;
         font-style: normal;
@@ -1205,26 +1205,26 @@ textarea {
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
     @font-face {
         font-family: 'open-sans-n4';
-        src: url("../fonts/OpenSans-Regular.ttf") format("truetype");
+        src: url("/ui/fonts/OpenSans-Regular.ttf") format("truetype");
         src: url("/ui/fonts/OpenSans-Bold.svg#OpenSans-Bold") format("svg");
     }
     @font-face {
-        font-family: 'DaxlinePro';
-        /*src: url("/ui/fonts/DaxlinePro-Bold.eot");
-        src: url("../fonts/DaxlinePro-Bold.ttf") format("truetype");*/
+        font-family: DaxlinePro;
+        /*src: url('/ui/fonts/DaxlinePro-Bold.eot');
+        src: url('/ui/fonts/DaxlinePro-Bold.ttf') format('truetype');*/
         font-weight: normal;
         font-style: normal;
-        src: url("/ui/fonts/DaxlinePro-Bold.eot");
-        src: url("/ui/fonts/DaxlinePro-Bold.eot#iefix") format("embedded-opentype"), url("/ui/fonts/DaxlinePro-Bold.woff") format("woff"), url("/ui/fonts/DaxlinePro-Bold.ttf") format("truetype"), url("/ui/fonts/DaxlinePro-Bold.svg#DaxlinePro-Bold") format("svg");
+        src: url('/ui/fonts/DaxlinePro-Bold.eot');
+        src: url('/ui/fonts/DaxlinePro-Bold.eot?#iefix') format('embedded-opentype'), url('/ui/fonts/DaxlinePro-Bold.woff') format('woff'), url('/ui/fonts/DaxlinePro-Bold.ttf') format('truetype'), url('/ui/fonts/DaxlinePro-Bold.svg?#DaxlinePro-Bold') format('svg');
         font-weight: normal;
         font-style: normal;
     }
 }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
     @font-face {
-        font-family: 'DaxlinePro';
-        src: url("../fonts/DaxlinePro-Bold.ttf") format("truetype");
-        src: url("/ui/fonts/DaxlinePro-Bold.svg#DaxlinePro-Bold") format("svg");
+        font-family: DaxlinePro;
+        src: url('/ui/fonts/DaxlinePro-Bold.ttf') format('truetype');
+        src: url('/ui/fonts/DaxlinePro-Bold.svg?#DaxlinePro-Bold') format('svg');
     }
 }
 .grid-wrap {
@@ -1962,7 +1962,7 @@ body {
 }
 h1, h2, h3, h4, h5, h6, .alpha, .beta, .delta, .gamma {
     margin-top: 0;
-    font-family: "DaxlinePro", sans-serif;
+    font-family: DaxlinePro, sans-serif;
     font-weight: 100;
 }
 h1, .alpha {
@@ -2010,7 +2010,7 @@ h4, .gamma, .list--table__item__header {
     font-family: "open-sans-n3", "open-sans", sans-serif;
 }
 .headline-type {
-    font-family: "DaxlinePro", sans-serif;
+    font-family: DaxlinePro, sans-serif;
 }
 .description {
     color: #757575;
@@ -3192,7 +3192,7 @@ lesser , applied styles
 }
 .nav-panel__action:after {
     position: absolute;
-    top: 48%;
+    top: 40%;
     right: 15px;
     right: 1.5rem;
     z-index: 9;
@@ -3256,12 +3256,12 @@ lesser , applied styles
     font-size: 200%;
 }
 .nav-panel__footer-home a {
-    padding-top: 30px;
-    padding-top: 3rem;
+    /*padding-top: 30px;
+    padding-top: 3rem;*/
     padding-bottom: 10px;
     padding-bottom: 1rem;
     font-size: 70%;
-    height: 9.5rem
+    height: 8rem
 }
 @media screen and (max-width: 800px) {
     .nav-panel__footer-home .nav-panel__action:after {
@@ -3271,6 +3271,23 @@ lesser , applied styles
         font-size: 95%;
         padding: 1.7em;
     }
+    .nav-panel__action:after {
+    position: absolute;
+    top: 55%;
+    right: 15px;
+    right: 1.5rem;
+    z-index: 9;
+    font-family: "entypo";
+    font-size: 150%;
+    line-height: .85;
+    color: #b4ddf4;
+    text-decoration: none !important;
+    vertical-align: middle;
+    content: "\e866";
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
 }
 .nav-panel__title, .nav-panel__value {
     display: table-cell;
@@ -3724,7 +3741,7 @@ lesser , applied styles
 
     background-image: url("/ui/img/whitebackgroundhero.png");
     /*background-position: 50% 50%;*/
-
+    
     background-size: cover;
 }
 @media screen and (max-width: 1020px) {
@@ -6126,7 +6143,7 @@ td.datatable-downloads {
 }
 .data_version_sub {
     font-size: 2rem;
-    font-family: "DaxlinePro", sans-serif;
+    font-family: DaxlinePro, sans-serif;
     border-bottom: 2px solid #dedfdc;
 }
 .data_version_header {
@@ -7366,6 +7383,7 @@ html, body {
 
     background-image: url('/ui/img/transparent.gif');
 }
+
 .alpha-header div {
     /*display: inline;*/
     /*float: left;*/
@@ -7393,6 +7411,14 @@ html, body {
     font-size: 24px;
     font-weight: 100;
 }
+
+.alpha-header span:hover{
+    text-decoration: underline !important;
+    position: relative;
+    cursor: pointer !important;
+    z-index: 10;
+}
+
 .alpha-header a {
     color: #303030;
     /* ONS colors: Black */
@@ -7570,7 +7596,7 @@ html, body {
 .highcharts-title {
     font-size: 24px !important;
     font-size: 2.4rem !important;
-    font-family: "DaxlinePro", sans-serif !important;
+    font-family: DaxlinePro, sans-serif !important;
 }
 .highcharts-subtitle {
     font-size: 9px;
@@ -8374,12 +8400,30 @@ lesser , applied styles
 }
 /* '' */
 
-.modal {
-    width: 400px;
-    height: 500px;
+.modalDialog {
+    width: 25em;
+    height: 32em;
     background-color: #fff;
-    margin: 0 auto;
+    margin: 15% auto;
+    overflow: auto;
+    pointer-events:auto;
 }
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 99999;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: all;
+}
+
 .modal-header {
     background-color: #a8233e;
     color: #fff;
@@ -8388,8 +8432,7 @@ lesser , applied styles
     padding-top: 0.4em;
 }
 .message {
-    padding: 30px 10px 0px 0px;
-    ;
+    padding: 1.8em 1em 0em 0em;
 }
 .buttons {
     height: 2.25em;
@@ -8409,6 +8452,12 @@ lesser , applied styles
     margin-left:10.5em;
 }
 
+.closeButton {
+	color: #fff; 
+}
+.closeButton :hover {
+	color:#ff8c00;
+}
 
 /* -------- autocomplete on search -------- */
 
@@ -8424,3 +8473,4 @@ lesser , applied styles
     z-index:999;
     margin-left:0.125em;
 }
+

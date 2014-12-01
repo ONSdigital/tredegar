@@ -17,6 +17,7 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeSet;
+import java.util.regex.Pattern;
 
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -26,6 +27,7 @@ import com.github.onsdigital.json.markdown.Section;
 
 class Markdown {
 
+	static Pattern sane = Pattern.compile("[A-Za-z0-9 ]");
 	private String filename;
 	String title;
 	Map<String, String> properties = new HashMap<>();
@@ -39,18 +41,20 @@ class Markdown {
 		// Read the markdown - it may be in UTF8 or in Windows encoding (cp1252)
 		// because these files will be edited on Linux, Mac and Windows
 		// machines.
-		try (Reader reader = Files.newBufferedReader(file, Charset.forName("cp1252"))) {
+		try (Reader reader = Files.newBufferedReader(file, Charset.forName("UTF8"))) {
 			try (Scanner scanner = new Scanner(reader)) {
 				readHeader(scanner);
+				// System.out.println("UTF8: " + properties);
 				readContent(scanner);
 			}
 		}
-		// It looks like if cp1252 fails we don't get any content, so retry with
+		// It looks like if UTF8 fails we don't get any content, so retry with
 		// Windows encoding:
 		if (properties.size() == 0) {
-			try (Reader reader = Files.newBufferedReader(file, Charset.forName("UTF8"))) {
+			try (Reader reader = Files.newBufferedReader(file, Charset.forName("cp1252"))) {
 				try (Scanner scanner = new Scanner(reader)) {
 					readHeader(scanner);
+					// System.out.println("cp1252: " + properties);
 					readContent(scanner);
 				}
 			}
@@ -82,8 +86,31 @@ class Markdown {
 		while (scanner.hasNextLine() && StringUtils.isNotBlank(line = scanner.nextLine())) {
 			// Extract property values:
 			String[] property = readProperty(line);
-			properties.put(property[0], property[1]);
+			String key = StringUtils.lowerCase(StringUtils.trim(property[0]));
+			properties.put(sanitise(key), property[1]);
 		}
+	}
+
+	/**
+	 * This method is a bit of a hardcore string sanitiser.
+	 * <p>
+	 * This became necessary due to some dodgy encoding issues that created a
+	 * non-printing character at the start of the string which wasn't removed by
+	 * trimming.
+	 * 
+	 * @param name
+	 * @return
+	 */
+	private static String sanitise(String name) {
+		StringBuilder result = new StringBuilder();
+		for (char c : name.toCharArray()) {
+			if (sane.matcher(String.valueOf(c)).matches()) {
+				// System.out.println("'" + c + "'");
+				result.append(c);
+			}
+		}
+		// System.out.println();
+		return result.toString();
 	}
 
 	/**

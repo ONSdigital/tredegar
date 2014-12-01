@@ -30,16 +30,21 @@
     }
   ],
   "statsBulletinHeadline": {
-    "name": "House Price Index",
-    "uri": "/peoplepopulationandcommunity/housing/bulletins/housepriceindex"
+    "name": "House Price Index, May 2014",
+    "uri": "/peoplepopulationandcommunity/housing/bulletins/housepriceindexmay2014"
   },
   "statsBulletins": [
     {
-      "name": "House Price Index",
-      "uri": "/peoplepopulationandcommunity/housing/bulletins/housepriceindex"
+      "name": "House Price Index, May 2014",
+      "uri": "/peoplepopulationandcommunity/housing/bulletins/housepriceindexmay2014"
     }
   ],
-  "datasets": [],
+  "datasets": [
+    {
+      "name": "Average house prices",
+      "uri": "/peoplepopulationandcommunity/housing/datasets/averagehouseprices"
+    }
+  ],
   "level": "t3",
   "index": 5,
   "lede": "Lorem ipsum dolor sit amet, fugit tation percipitur duo at, magna denique ei duo, mazim oratio volumus id mel. Veri discere accusamus sit id, oblique fabulas legimus sit ex. Atqui urbanitas efficiendi ei sea. Voluptua gloriatur vis an, cu eius semper deleniti vel. Aperiri insolens accommodare vel ne, vel id dictas corrumpit urbanitas.",

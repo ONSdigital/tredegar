@@ -28,10 +28,8 @@ public class Files implements Filter {
 			URL url = HostHelper.getUrl(req);
 
 			// Add a five-minute cache time to static files to reduce
-			// round-trips to
-			// the server and increase performance whilst still allowing the
-			// system
-			// to be updated quite promptly if necessary:
+			// round-trips to the server and increase performance whilst still
+			// allowing the system to be updated quite promptly if necessary:
 			if (!HostHelper.isLocalhost(url)) {
 				res.addHeader("cache-control", "public, max-age=" + maxAge);
 			}

@@ -19,7 +19,20 @@
       "uri": "/peoplepopulationandcommunity/populationandmigration/populationprojections/bulletins/nationalpopulationprojections2012based"
     }
   ],
-  "datasets": [],
+  "datasets": [
+    {
+      "name": "Principal population projection - UK",
+      "uri": "/peoplepopulationandcommunity/populationandmigration/populationprojections/datasets/principalpopulationprojectionuk"
+    },
+    {
+      "name": "Principal population projection - Great Britain",
+      "uri": "/peoplepopulationandcommunity/populationandmigration/populationprojections/datasets/principalpopulationprojectiongreatbritain"
+    },
+    {
+      "name": "Principal population projection - England and Wales",
+      "uri": "/peoplepopulationandcommunity/populationandmigration/populationprojections/datasets/principalpopulationprojectionenglandandwales"
+    }
+  ],
   "level": "t3",
   "index": 2,
   "lede": "Population projections are based on mid-year population estimates and a set of underlying assumptions regarding future fertility, mortality and migration. They are not forecasts and do not attempt to predict the impact that current and future government policies, changing economic circumstances or other factors might have on demographic behaviour, for example, government policies on immigration, student fees, or local house-building policies.",
