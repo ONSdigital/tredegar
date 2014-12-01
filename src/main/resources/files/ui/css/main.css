@@ -3183,7 +3183,7 @@ lesser , applied styles
 }
 .nav-panel__action:after {
     position: absolute;
-    top: 40%;
+    top: 28%;
     right: 15px;
     right: 1.5rem;
     z-index: 9;
@@ -3214,8 +3214,8 @@ lesser , applied styles
     z-index: 10;
     display: block;
     width: 100%;
-    padding-top: 15px;
-    padding-top: 1.5rem;
+    /*padding-top: 15px;
+    padding-top: 1.5rem;*/
     padding-right: 50px;
     padding-right: 5rem;
     padding-bottom: 15px;
@@ -3252,7 +3252,7 @@ lesser , applied styles
     padding-bottom: 10px;
     padding-bottom: 1rem;
     font-size: 70%;
-    height: 8rem
+    height: 6.5rem
 }
 @media screen and (max-width: 800px) {
     .nav-panel__footer-home .nav-panel__action:after {
