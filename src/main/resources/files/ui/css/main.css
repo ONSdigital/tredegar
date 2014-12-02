@@ -3302,6 +3302,33 @@ lesser , applied styles
     transform: translateY(-50%);
 }
 }
+
+@media screen and (max-width: 480px) {
+    .nav-panel__footer-home a {
+        font-size: 95%;
+        padding: 1.7em;
+        height: 10.5rem;
+    }
+    .nav-panel__action:after {
+    position: absolute;
+    top: 45%;
+    right: 15px;
+    right: 1.5rem;
+    z-index: 9;
+    font-family: "entypo";
+    font-size: 150%;
+    line-height: .85;
+    color: #b4ddf4;
+    text-decoration: none !important;
+    vertical-align: middle;
+    content: "\e866";
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+}
+
+
 .nav-panel__title, .nav-panel__value {
     display: table-cell;
     vertical-align: middle;
@@ -6127,9 +6154,40 @@ td.datatable-downloads {
         padding-top: 15px;
     }
     .nav-panel__roomy--med.right-small{
-    text-align: right;
+        text-align: right;
 }
+    .nav-panel__body.spaced{
+/*        padding-right: 25%;
+*/    }
 }
+
+
+@media screen and (min-width: 470px) and (max-width: 800px) {
+    /*.list--neutral.nav-panel__list.flush{
+        display: -webkit-box;
+    }*/
+    .nav-panel__body.flush {
+        padding-right: 30%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .nav-panel__body.flush {
+        position: relative;
+        left: 2%;
+        padding-right: 2%;
+
+    }
+    .nav-panel__item.homeicon_sparkline {
+        position: relative;
+        left: 10%;
+        text-align: center;
+        border: 0px;
+        padding-top: 15px;
+    }
+}
+
+
 @media screen and (max-width: 400px) {
     .callout-header {
         font-size: 1.6rem;
