@@ -2051,6 +2051,7 @@ h4, .gamma, .list--table__item__header {
 a {
     color: #005ea5;
     text-decoration: none;
+    cursor: pointer !important;
     /*text-decoration: underline;*/
 }
 a:hover, a:focus {
@@ -3168,7 +3169,7 @@ lesser , applied styles
 
         padding-right: 10px;
         padding-right: 1.0rem;
-        padding-bottom: 2em;
+        /*padding-bottom: 2em;*/
     }
 }
 .nav-panel__body {
@@ -3931,14 +3932,14 @@ $SPLIT
 }
 @media screen and (min-width: 55em) {
     .stat--headline .stat__figure {
-        font-size: 65px;
-        font-size: 6.5rem;
+        font-size: 60px;
+        font-size: 6.0rem;
     }
 }
 @media screen and (min-width: 65em) {
     .stat--headline .stat__figure {
-        font-size: 70px;
-        font-size: 7rem;
+        font-size: 65px;
+        font-size: 6.5rem;
     }
 }
 .stat--headline .stat__figure__unit {
@@ -6095,16 +6096,21 @@ td.datatable-downloads {
   height: 6.5em;
   border: 0px;
 }*/
+    
+    .nav-panel__list{
+        display: inline-flex;
+    }
 
     .nav-panel__body.flush {
         position: relative;
-        left: 30%;
+        left: 10%;
     }
     .nav-panel__item.homeicon_sparkline {
         position: relative;
-        left: 29%;
+        left: 45%;
         text-align: center;
         border: 0px;
+        padding-top: 15px;
     }
 }
 @media screen and (max-width: 400px) {
