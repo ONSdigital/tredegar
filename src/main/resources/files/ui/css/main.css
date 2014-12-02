@@ -6137,7 +6137,7 @@ td.datatable-downloads {
   height: 6.5em;
   border: 0px;
 }*/
-    
+
     .nav-panel__list{
         display: inline-flex;
     }
@@ -8291,6 +8291,10 @@ table.tablesaw thead th, table.tablesaw thead td {
     margin-right: 20px;
     margin-right: 2rem;
     font-family: "open-sans-n7", "open-sans", sans-serif;
+}
+.top5 {
+    margin-top:5px;
+    margin-top:0.5em;
 }
 .top10 {
     margin-top:10px;
