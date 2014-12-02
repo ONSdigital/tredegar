@@ -47,9 +47,12 @@ public class Search {
 		String[] types = extractTypes(request);
 		SearchResult search = search(query, page, types);
 
-		if (StringUtils.isNotBlank(request.getParameter("q"))) {
+		// Only record a search if it's an actual search (not autocomplete).
+		// Autocomplete requests pass a parameter of "term" instead of "q".
+		// If the user is paging through results, there will also be a "page",
+		// so ignore a search that includes a page:
+		if (StringUtils.isNotBlank(request.getParameter("q")) && StringUtils.isBlank(request.getParameter("page"))) {
 			// This is a search result page.
-			// Autocomplete requests pass a parameter of "term".
 			SearchConsole.save(query, page, types, search);
 		}
 
