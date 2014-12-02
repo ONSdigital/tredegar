@@ -91,7 +91,7 @@
 
                         <dt ng-repeat-start="item in searchResponse.results track by $index" ng-class="isFocus(item.type, $index) ? 'search-home-focused' : ''">
                             <a class="search-link" href="#!{{item.url}}"><span ng-bind-html="item.highlights.title || item.title"></span></a>
-                            <span ng-if="item.type != 'home'" class="lozenge--label" href="">{{item.type === 'bulletin' ? 'Statistical Bulletin' : item.type}}</span>
+                            <span ng-if="isShowLozenge(item)" class="lozenge--label" href="">{{item.type === 'bulletin' ? 'Statistical Bulletin' : item.type}}</span>
                         </dt>
                         <dd class="microcopy">
                         	<span ng-if="item.type === 'home'">
@@ -110,7 +110,7 @@
                         <!-- /box__header -->
                         <p>In the future we are aiming to bring you a comprehensive time series search tool</p>
                         <p>
-                            Why not <a ng-href="#!/search?q={{searchTerm}}&type=timeseries">see what time series we currently have</a> based on your search criteria.
+                            Why not <a ng-href="#!/search?q={{searchTerm}}&type=timeseries">see what time series</a> we currently have based on your search criteria.
                         </p>
 
                     </article>

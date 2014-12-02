@@ -29,14 +29,16 @@ public class Search {
 	public Object get(@Context HttpServletRequest request, @Context HttpServletResponse response) throws Exception {
 
 		String query = extractQuery(request);
-		int page = extractPage(request);
-		String[] types = extractTypes(request);
-		Object searchResult = search(query, page, types);
-		
+		Object searchResult = null;
 		if (StringUtils.isNotBlank(request.getParameter("q"))) {
+			int page = extractPage(request);
+			String[] types = extractTypes(request);
+			searchResult = search(query, page, types);
 			// This is a search result page.
 			// Autocomplete requests pass a parameter of "term".
 			SearchConsole.save(query, page, types, searchResult);
+		} else if (StringUtils.isNotBlank(request.getParameter("term"))) {
+			searchResult = autoComplete(query);
 		}
 
 		return searchResult;
@@ -67,6 +69,10 @@ public class Search {
 			}
 		}
 		return searchResult;
+	}
+	
+	public Object autoComplete(String query) {
+		return SearchHelper.autocomplete(query);
 	}
 
 	private int extractPage(HttpServletRequest request) {

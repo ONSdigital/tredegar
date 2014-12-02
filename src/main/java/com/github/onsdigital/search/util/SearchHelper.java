@@ -41,6 +41,11 @@ public class SearchHelper {
 			return SearchService.search(buildContentQuery(searchTerm, page, types));
 		}
 	}
+	
+	public static SearchResult autocomplete(String searchTerm) {
+		ONSQueryBuilder builder = buildAutocompleteQuery(searchTerm);
+		return SearchService.search(builder);
+	}
 
 	/**
 	 * Performs timeseries search with given cdid and returns a single result if
@@ -136,5 +141,11 @@ public class SearchHelper {
 		}
 
 		return contentQuery;
+	}
+	
+	private static ONSQueryBuilder buildAutocompleteQuery(String searchTerm) {
+		ONSQueryBuilder autocompleteQuery = new ONSQueryBuilder("ons").setSearchTerm(searchTerm).setFields(TITLE, "url");		
+		autocompleteQuery.setTypes(ContentType.timeseries.toString(), ContentType.bulletin.toString(), ContentType.dataset.toString(), ContentType.methodology.toString(), ContentType.article.toString());
+		return autocompleteQuery;
 	}
 }

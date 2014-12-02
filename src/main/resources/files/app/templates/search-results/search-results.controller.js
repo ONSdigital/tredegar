@@ -279,6 +279,10 @@
       }
     }
 
+    function isShowLozenge(item) {
+      return item.type != 'home' && item.type != 'timeseries'
+    }
+
     //If focus css class should be applited to search or not
     function isFocus(type, index) {
       return type === 'home' && index === 0
@@ -289,7 +293,8 @@
       isLoading: isLoading,
       toggleFilter: toggleFilter,
       isActive: isActive,
-      isFocus:isFocus
+      isFocus:isFocus,
+      isShowLozenge:isShowLozenge
     })
   }
 
