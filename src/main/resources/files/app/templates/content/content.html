@@ -128,7 +128,6 @@
     </div>
 
     <!-- Related Bulletins Section -->
-    <!-- Need new section in json for info here -->
 
     <div class="page-header slate--light" ng-show="{{contentType != 'methodology'}}">
         <div class="wrapper">
@@ -140,13 +139,40 @@
                                 <header class="box__header">
                                     <h2>Related bulletins</h2>
                                 </header>
-                            </div>
-                            <!-- /box__header -->
-                            <div class="box__section">
-                                <div class="box__content">
-                                    <p><a href="">Prototype version</a>
-                                        <br />In the future this box will display links to other Statistical Bulletins that are relevant to this bulletin</p>
-                                </div>
+                                
+                                <!-- Dynamic: -->
+							    <div class="grid-wrap" ng-show="{{content.relatedBulletins && content.relatedBulletins.length > 0}}">
+						            <article class="box--padded" ng-repeat="relatedBulletin in content.relatedBulletins" class="grid-col desktop-grid-one-third tablet-grid-one-half">
+						                <header class="box__header">
+						                    <h3>
+						                        <a href="#!{{relatedBulletin.uri}}">{{relatedBulletin.name}}</a>
+						                    </h3>
+						                </header>
+						                <div class="box__content">
+						                    <ul class="list--table">
+						                    	<!-- TODO: load bulletin data so we can populate this: -->
+						                        <li class="">{{relatedBulletin.summary}}</li>
+						                    </ul>
+						                </div>
+						            </article>
+							    </div>                                
+                                
+                                <!-- or placeholder: -->
+							    <div class="grid-wrap" ng-show="{{!content.relatedBulletins || content.relatedBulletins.length == 0}}">
+						            <article class="box--padded">
+						                <header class="box__header">
+						                    <h3>
+						                        <a href="#!/alpha">Prototype version</a>
+						                    </h3>
+						                </header>
+						                <div class="box__content">
+						                    <ul class="list--table">
+						                        <li class="">In the future this box will display links to other Statistical Bulletins that are relevant to this bulletin.</li>
+						                    </ul>
+						                </div>
+						            </article>
+							    </div>
+							    
                             </div>
                             <!-- /box__content -->
                             <footer class="box__footer"></footer>

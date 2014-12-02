@@ -23,11 +23,13 @@
 <!-- /wrapper -->
 
 <div class="wrapper">
-    <section id="headline" class="box box--padded-vertical box--padded-horizontal box--blue  solid border lifted offset-top border-defined flush--bottom">
+    <section id="headline" class="box box--padded-vertical-med box--padded-horizontal box--blue  solid border lifted offset-top border-defined flush--bottom" style="padding-bottom: 0px;">
         <div class="box__section__header flush">
             <h2 class="beta">
-                {{taxonomy.data.headline.name}}, {{taxonomy.data.headline.data.date}}
-            </h2>
+                {{taxonomy.data.statsBulletinHeadline.name}}</h2>
+            <h2 class="beta" ng-if="!taxonomy.data.statsBulletinHeadline.name">
+                {{taxonomy.data.headline.name}}</h2> 
+            <!-- <h2 class="beta">,{{taxonomy.data.headline.data.date}}</h2> -->
         </div>
         <div class="grid-wrap">
 
@@ -52,10 +54,10 @@
                         </div>
                     </div>
                     <div class="box box--padded--small headline--stat-centred">
-                        <ons-sparkline class="sparkline_area" width="350" height="100" chart-data="taxonomy.data.headline.chartData" headline="true"></ons-sparkline>
+                        <ons-sparkline class="sparkline_area" width="350" height="50" chart-data="taxonomy.data.headline.chartData" headline="true"></ons-sparkline>
                     </div>
                     <!-- /box -->
-                    <dl class="definition mini stat__updated">
+                    <dl class="definition mini stat__updated flush">
                         <dt>Last updated:</dt>
                         <dd>
                             {{taxonomy.data.headline.data.lastUpated || '1 Jan 3000'}}
@@ -80,7 +82,7 @@
                  <div class="box box--padded solid  arrow_box">
                     <div id="statsBulletinHeadlines">
                         <a href="#!{{taxonomy.data.statsBulletinHeadline.data.uri ? taxonomy.data.statsBulletinHeadline.data.uri : '/economy/inflationandpriceindices/bulletins/consumerpriceinflation'}}">
-                            <h3 class="body-type lede flush--bottom navpanel-list-heading">Statistical bulletin headlines</h3>
+                            <h3 class="body-type lede flush--bottom navpanel-list-heading">Statistical Bulletin headlines</h3>
                         </a>
                         <ul class="list--bullet mini flush--half--top navpanel-list headline--box-container-text">
                             <li ng-if="taxonomy.data.statsBulletinHeadline.data.headline1">{{taxonomy.data.statsBulletinHeadline.data.headline1}}</li>
@@ -107,7 +109,7 @@
 
 <!-- List/Table with data -->
 
-<section id="timeseries" class="panel--large wrapper">
+<section id="timeseries" class="panel--large wrapper flush--top">
     <h2 id="related" class="list--table-header panel--pad">Time Series related to {{taxonomy.data.name}}</h2>
     <ol class="list--table list--table--complex table--striped-light table-light--sectioned">
         <!-- /list- -table__head -->
