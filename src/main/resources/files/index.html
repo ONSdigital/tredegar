@@ -70,7 +70,8 @@ markup: false
 <!-- Autoscroll solves the issue mentioned on https://stackoverflow.com/questions/21055952/changing-route-doesnt-scroll-to-top-in-the-new-page -->
 
 <body id="ng-app" ng-controller="MainCtrl" class="js">
-
+    
+    <div ng-include="'app/partials/modal/modal.html'" ></div>
     <ons-header></ons-header>
         <div class="wrap" ng-view autoscroll="true">
             <noscript>
