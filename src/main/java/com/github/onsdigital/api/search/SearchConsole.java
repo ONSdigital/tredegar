@@ -99,7 +99,7 @@ public class SearchConsole {
 			DBCollection searchTerms = db.getCollection("searchTerms");
 
 			// Get the results:
-			BasicDBObject findQuery = new BasicDBObject();
+			BasicDBObject findQuery = new BasicDBObject("results", new BasicDBObject("$gt", 0));
 
 			DBCursor docs = searchTerms.find(findQuery);
 
