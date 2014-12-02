@@ -8,6 +8,7 @@ import com.github.onsdigital.generator.Folder;
 import com.github.onsdigital.json.ContentType;
 import com.github.onsdigital.json.collection.CollectionItem;
 import com.github.onsdigital.json.partial.Email;
+import com.github.onsdigital.json.taxonomy.DataItemLink;
 import com.github.onsdigital.json.taxonomy.TaxonomyHome;
 
 public class Bulletin extends CollectionItem {
@@ -30,6 +31,10 @@ public class Bulletin extends CollectionItem {
 	public String headline2 = "Morbi sed sem at magna";
 	public String headline3 = "Auctor gravida sed non enim";
 	public String summary = "Summary section";
+
+	// Related bulletins - initially this is just other bulletins under the same
+	// t3 node:
+	public List<DataItemLink> relatedBulletins = new ArrayList<>();
 
 	// Used to help place bulletins in the taxonomy
 	public transient String theme;

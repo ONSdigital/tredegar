@@ -7,6 +7,7 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
@@ -332,12 +333,25 @@ public class TaxonomyGenerator {
 		t3.statsBulletins.clear();
 
 		for (Bulletin bulletin : folder.bulletins) {
-			// Summary is used as a trigger to determine whether or not to
-			// add this bulletin to the list of related bulletins. This is a
-			// bit of a workaround for now.
-			if (bulletin.summary != null) {
-				URI bulletinUri = toStatsBulletinUri(folder, bulletin);
-				t3.statsBulletins.add(new DataItemLink(bulletin.name, bulletinUri));
+			if (bulletin.uri == null) {
+				bulletin.uri = toStatsBulletinUri(folder, bulletin);
+			}
+			t3.statsBulletins.add(new DataItemLink(bulletin.name, bulletin.uri));
+		}
+
+		for (Bulletin bulletin : folder.bulletins) {
+
+			// Initially add everything - we'll remove "self-reference"
+			// afterwards:
+			bulletin.relatedBulletins.addAll(t3.statsBulletins);
+
+			// Now remove self-references:
+			Iterator<DataItemLink> iterator = bulletin.relatedBulletins.iterator();
+			while (iterator.hasNext()) {
+				DataItemLink next = iterator.next();
+				if (next.uri.equals(bulletin.uri)) {
+					iterator.remove();
+				}
 			}
 		}
 	}
@@ -345,35 +359,27 @@ public class TaxonomyGenerator {
 	private static void createStatsBulletinHeadline(Folder folder, T3 t3) throws IOException {
 		// Stats bulletin references:
 
-		URI statsBulletinHeadlineUri = toStatsBulletinUri(folder, folder.headlineBulletin);
-		if (statsBulletinHeadlineUri != null) {
+		if (folder.headlineBulletin != null) {
+			URI statsBulletinHeadlineUri = toStatsBulletinUri(folder, folder.headlineBulletin);
 			t3.statsBulletinHeadline = new DataItemLink(folder.headlineBulletin.name, statsBulletinHeadlineUri);
 		}
 	}
 
 	private static URI toStatsBulletinUri(Folder folder, Bulletin bulletin) {
-		URI result = null;
 
-		if (bulletin != null) {
-			if (bulletin.uri == null) {
-				String baseUri = "/" + folder.filename();
-				Folder parent = folder.parent;
-				while (parent != null) {
-					baseUri = "/" + parent.filename() + baseUri;
-					parent = parent.parent;
-				}
-				baseUri += "/bulletins";
-				String bulletinFileName = bulletin.fileName;
-				if (bulletinFileName == null) {
-					System.out.println("No filename for : " + bulletin.name);
-				}
-				String sanitizedBulletinFileName = bulletinFileName.replaceAll("\\W", "");
-				bulletin.uri = URI.create(baseUri + "/" + StringUtils.deleteWhitespace(sanitizedBulletinFileName));
-			}
-			result = bulletin.uri;
+		String baseUri = "/" + folder.filename();
+		Folder parent = folder.parent;
+		while (parent != null) {
+			baseUri = "/" + parent.filename() + baseUri;
+			parent = parent.parent;
 		}
-
-		return result;
+		baseUri += "/bulletins";
+		String bulletinFileName = bulletin.fileName;
+		if (bulletinFileName == null) {
+			System.out.println("No filename for : " + bulletin.name);
+		}
+		String sanitizedBulletinFileName = bulletinFileName.replaceAll("\\W", "");
+		return URI.create(baseUri + "/" + StringUtils.deleteWhitespace(sanitizedBulletinFileName));
 	}
 
 	private static URI toDatasetUri(Folder folder, Dataset dataset) {

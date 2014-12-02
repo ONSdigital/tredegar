@@ -15,4 +15,22 @@ public class DataItemLink {
 		this.name = name;
 		this.uri = uri;
 	}
+
+	@Override
+	public int hashCode() {
+		int result = 0;
+		if (uri != null) {
+			result = uri.hashCode();
+		}
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		boolean result = false;
+		if (uri != null) {
+			result = uri.equals(((DataItemLink) obj).uri);
+		}
+		return result;
+	}
 }
