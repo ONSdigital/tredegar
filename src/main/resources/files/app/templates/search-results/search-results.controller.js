@@ -189,10 +189,19 @@
 
       if (searchResponse.numberOfResults === 0 && !$scope.filterOn) {
         $scope.showZeroResultsFound = true;
+        if(filters['timeseries']) {
+          $scope.showTimeseriesSearchSuggest = false
+        } else {
+          $scope.showTimeseriesSearchSuggest = true
+        }
       }
 
       if (searchResponse.numberOfResults > 0 || $scope.filterOn) {
-        $scope.showFilters = true;
+        if(filters['timeseries']) {
+          $scope.showFilters = false;
+        } else {
+          $scope.showFilters = true;
+        }
       }
     }
 

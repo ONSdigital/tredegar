@@ -126,16 +126,13 @@
 			var searchString = PageUtil.getUrl()
 			return DataLoader.load("/search" + searchString)
 				.then(function(data) {
-						//If cdid search is made go directly to timeseries page for searched cdid
-					for (var i = 0; i < data.results.length; i++) {
-						if (data.results[i].type === 'timeseries' && data.results[i].title === q.toUpperCase()) {
-							PageUtil.goToPage(data.results[i].url, true)
-							return
-						}
-					};
-
+					//If cdid search is made go directly to timeseries page for searched cdid
+					if (data.type && data.type === 'timeseries') {
+						PageUtil.goToPage(data.uri, true)
+						return
+					}
 					return data
-				} , function() {
+				}, function() {
 					$log.error('Failed loading search results')
 				})
 		}
@@ -145,23 +142,23 @@
 	}
 
 	function OnsHttpInterceptor($q, $location) {
-        return function(promise) {
-            // pass success (e.g. response.status === 200) through
-            return promise.then(function(response) {
-                    return response
-                },
-                // otherwise deal with any error scenarios
-                function(response) {
-                    if (response.status === 500) {
-                        $location.url('/500')
-                    }
-                    if (response.status === 404) {
-                        $location.url('/404')
-                    }
-                    return $q.reject(response)
-                });
-        };
-    }
+		return function(promise) {
+			// pass success (e.g. response.status === 200) through
+			return promise.then(function(response) {
+					return response
+				},
+				// otherwise deal with any error scenarios
+				function(response) {
+					if (response.status === 500) {
+						$location.url('/500')
+					}
+					if (response.status === 404) {
+						$location.url('/404')
+					}
+					return $q.reject(response)
+				});
+		};
+	}
 
 
 })()

@@ -24,7 +24,6 @@ import com.google.gson.JsonObject;
  */
 public class SearchResult {
 
-	private long took; // milliseconds
 	private long numberOfResults; // total number of hits
 	private List<Map<String, Object>> results; // results
 	private boolean suggestionBasedResult;
@@ -37,11 +36,10 @@ public class SearchResult {
 	 */
 	public SearchResult(SearchResponse response) {
 		results = new ArrayList<Map<String, Object>>();
-		this.took = response.getTookInMillis();
 		this.numberOfResults = response.getHits().getTotalHits();
 		resolveHits(response);
 	}
-
+	
 	void resolveHits(SearchResponse response) {
 		SearchHit hit;
 		Iterator<SearchHit> iterator = response.getHits().iterator();
@@ -50,7 +48,8 @@ public class SearchResult {
 			Map<String, Object> item = new HashMap<String, Object>(
 					hit.getSource());
 			item.put("type", hit.getType());
-			item.putAll(extractHihglightedFields(hit));
+			item.put("highlights", 
+					extractHihglightedFields(hit));
 			results.add(item);
 		}
 	}
@@ -64,23 +63,11 @@ public class SearchResult {
 			Text[] fragments = entry.getValue().getFragments();
 			if (fragments != null) {
 				for (Text text : fragments) {
-					if("url".equals(entry.getKey())) {
-						highlightedFields.put("highlighted_url", text.toString());
-					} else { //Overwrite field value wiith highlighted field value
-						highlightedFields.put(entry.getKey(), text.toString());						
-					}
+					highlightedFields.put(entry.getKey(), text.toString());
 				}
 			}
 		}
 		return highlightedFields;
-	}
-
-	public long getTook() {
-		return took;
-	}
-
-	public void setTook(long took) {
-		this.took = took;
 	}
 
 	public long getNumberOfResults() {
@@ -114,4 +101,5 @@ public class SearchResult {
 	public void setSuggestion(String suggestion) {
 		this.suggestion = suggestion;
 	}
+
 }

@@ -17,6 +17,7 @@ import org.apache.commons.lang3.exception.ExceptionUtils;
 import com.github.davidcarboni.restolino.framework.Endpoint;
 import com.github.davidcarboni.restolino.json.Serialiser;
 import com.github.onsdigital.configuration.Configuration;
+import com.github.onsdigital.json.timeseries.Timeseries;
 import com.github.onsdigital.search.bean.SearchResult;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
@@ -130,8 +131,16 @@ public class SearchConsole {
 		}
 	}
 
-	static void save(final String query, final int page, final String[] types, final SearchResult search) {
+	static void save(final String query, final int page, final String[] types, final Object searchResult) {
+		
+		if(searchResult instanceof Timeseries) {
+			executeSave(query, page, types, 1);			
+		} else {
+			executeSave(query, page, types, ((SearchResult)searchResult).getNumberOfResults());
+		}
+	}
 
+	private static void executeSave(final String query, final int page, final String[] types, final long numberOfResults) {
 		// Submit to be saved asynchronously.
 		// This minimises response time and we're not too worried about whether
 		// the data get committed - we're mainly after a sample:
@@ -155,7 +164,7 @@ public class SearchConsole {
 					record.append("query", query);
 					record.append("page", page);
 					record.append("types", types);
-					record.append("results", search.getNumberOfResults());
+					record.append("results", numberOfResults);
 					searchTerms.insert(record);
 					System.out.println("Total: " + searchTerms.getCount());
 
