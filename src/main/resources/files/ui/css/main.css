@@ -3742,7 +3742,7 @@ lesser , applied styles
 
     background-image: url("/ui/img/whitebackgroundhero.png");
     /*background-position: 50% 50%;*/
-    
+
     background-size: cover;
 }
 @media screen and (max-width: 1020px) {
@@ -3937,8 +3937,8 @@ $SPLIT
 }
 @media screen and (min-width: 65em) {
     .stat--headline .stat__figure {
-        font-size: 80px;
-        font-size: 8rem;
+        font-size: 70px;
+        font-size: 7rem;
     }
 }
 .stat--headline .stat__figure__unit {
@@ -4159,10 +4159,10 @@ $SPLIT
     background-color: #d8f3f7;
 }
 .table--striped-light tbody tr, .table--striped-light .list--table__body {
-    background-color: #edeeee;
+    background-color: #fff;
 }
 .table--striped-light tbody tr:nth-child(even), .table--striped-light .list--table__body:nth-child(even) {
-    background-color: #fff;
+    background-color: #edeeee;
 }
 .table-light--sectioned > .list--table__body, .table-light--sectioned > tr {
     border-color: #dedfdc;
@@ -5075,7 +5075,7 @@ ul.simple-pagination {
 }
 @media screen and (min-width: 650px) {
     .headline--box-container {
-        height: 30em;
+        height: 28em;
     }
 }
 @media screen and (max-width: 800px) {
@@ -5245,8 +5245,9 @@ ol.toc-columns {
 }
 .accordion_chevron {
     float: right;
-    position: inherit;
-    font-size: 2.5rem;
+    position: relative;
+    top: -10px;
+    font-size: 2.2rem;
 }
 .split__multiline-break {
     display: block;
@@ -5301,6 +5302,11 @@ ol.toc-columns {
     margin-bottom: 10px;
     margin-bottom: 1rem;
 }
+.page-header--time-series .page-header-item {
+    margin-bottom: 10px;
+    margin-bottom: 1rem;
+}
+
 .page-header--article__split__actions {
     font-size: 14px;
     font-size: 1.4rem;
@@ -5314,6 +5320,14 @@ ol.toc-columns {
     font-size: 1.6rem;
     vertical-align: middle;
 }
+
+
+.page-header--time-series .page-header--article__split__actions {
+    font-size: 16px;
+    font-size: 1.6rem;
+    vertical-align: middle;
+}
+
 .page-header--article__split__actions .link-complex__target, .page-header--article__split__actions .description {
     vertical-align: middle;
 }
@@ -5368,10 +5382,17 @@ ol.toc-columns {
         width: 30%;
         margin-left: 3%;
     }
+    .page-header--time-series .page-header--article__split__actions, .page-header--expert-analysis .page-header--article__split__actions {
+        width: 30%;
+        margin-left: 3%;
+    }
 }
 @media screen and (min-width: 57em) {
     .page-header--stat-bulletin .page-header--article__img, .page-header--expert-analysis .page-header--article__img {
         margin-right: 5%;
+    }
+    .page-header--time-series .page-header--article__img, .page-header--expert-analysis .page-header--article__img {
+        margin-right: 4%;
     }
     .page-header--time-series .split__multiline-break {
         display: inline-block;
@@ -8402,7 +8423,7 @@ lesser , applied styles
     border-bottom: 0;
 }
 .calendar .list--table--releases .list--table__item__body {
-    padding: 5px;
+    padding: 8px;
 }
 .calendar .list--table--releases .list--table__item__body--release-caption {
     padding: 0;
@@ -8470,7 +8491,7 @@ lesser , applied styles
 }
 
 .closeButton {
-	color: #fff; 
+	color: #fff;
 }
 .closeButton :hover {
 	color:#ff8c00;
