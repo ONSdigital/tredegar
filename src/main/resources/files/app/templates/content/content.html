@@ -141,8 +141,8 @@
                                 </header>
                                 
                                 <!-- Dynamic: -->
-							    <div class="grid-wrap" ng-show="{{content.relatedBulletins && content.relatedBulletins.length > 0}}">
-						            <article class="box--padded" ng-repeat="relatedBulletin in content.relatedBulletins" class="grid-col desktop-grid-one-third tablet-grid-one-half">
+							    <div class="grid-wrap" ng-show="{{content.hasRelatedBulletins}}">
+						            <article class="box--padded" ng-repeat="relatedBulletin in content.relatedBulletinData" class="grid-col desktop-grid-one-third tablet-grid-one-half">
 						                <header class="box__header">
 						                    <h3>
 						                        <a href="#!{{relatedBulletin.uri}}">{{relatedBulletin.name}}</a>
@@ -158,7 +158,7 @@
 							    </div>                                
                                 
                                 <!-- or placeholder: -->
-							    <div class="grid-wrap" ng-show="{{!content.relatedBulletins || content.relatedBulletins.length == 0}}">
+							    <div class="grid-wrap" ng-show="{{!content.hasRelatedBulletins}}">
 						            <article class="box--padded">
 						                <header class="box__header">
 						                    <h3>
