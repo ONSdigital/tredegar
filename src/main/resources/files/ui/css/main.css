@@ -2272,6 +2272,14 @@ a:visited {
     padding-bottom: 25px;
     padding-bottom: 2.5rem;
 }
+
+.box--padded-vertical-med {
+    padding-top: 15px;
+    padding-top: 1.5rem;
+    padding-bottom: 15px;
+    padding-bottom: 1.5rem;
+}
+
 .box--padded-vertical-small {
     padding-top: 5px;
     padding-top: 0.5rem;
@@ -3921,6 +3929,7 @@ $SPLIT
 }
 .stat__updated {
     text-align: left;
+    display: flex;
 }
 .stat--headline .stat__figure {
     font-size: 40px;
@@ -4946,6 +4955,7 @@ ul.simple-pagination {
     position: absolute;
     bottom: 50px;
     right: 30px;
+    /*width: 180px;*/
 }
 /* T3 list--table*/
 
@@ -8221,6 +8231,10 @@ table.tablesaw thead th, table.tablesaw thead td {
     margin-right: 2rem;
     font-family: "open-sans-n7", "open-sans", sans-serif;
 }
+.top10 {
+    margin-top:10px;
+    margin-top:1em;
+}
 /*
 ============================
 Button styles
@@ -8289,6 +8303,20 @@ lesser , applied styles
     background: #fff;
     /*        background: -webkit-radial-gradient(center, ellipse, #bcbeb7 0%, #afb1a9 100%);
     background: radial-gradient(ellipse at center, #bcbeb7 0%, #afb1a9 100%);*/
+}
+.btn--secondary--inactive {
+    border: 2px solid #bababa;
+    font-family: "open-sans-n7", "open-sans", sans-serif;
+    color: #000;
+    background: #c5c7c1;
+    opacity: 0.4;
+    cursor: not-allowed;
+    /*        background: -webkit-radial-gradient(center, ellipse, #d5d6d2 0%, #c8c9c4 100%);
+    background: radial-gradient(ellipse at center, #d5d6d2 0%, #c8c9c4 100%);*/
+}
+.btn--secondary--inactive:hover, .btn--secondary--inactive:focus {
+    color: #000;
+    background: #c5c7c1;
 }
 .btn--thin {
     padding-top: 0.5em;

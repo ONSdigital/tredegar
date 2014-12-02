@@ -23,10 +23,10 @@
 <!-- /wrapper -->
 
 <div class="wrapper">
-    <section id="headline" class="box box--padded-vertical box--padded-horizontal box--blue  solid border lifted offset-top border-defined flush--bottom">
+    <section id="headline" class="box box--padded-vertical-med box--padded-horizontal box--blue  solid border lifted offset-top border-defined flush--bottom">
         <div class="box__section__header flush">
             <h2 class="beta">
-                {{taxonomy.data.headline.name}}, {{taxonomy.data.headline.data.date}}
+                {{taxonomy.data.statsBulletinHeadline.name}}, {{taxonomy.data.headline.data.date}}
             </h2>
         </div>
         <div class="grid-wrap">
@@ -80,7 +80,7 @@
                  <div class="box box--padded solid  arrow_box">
                     <div id="statsBulletinHeadlines">
                         <a href="#!{{taxonomy.data.statsBulletinHeadline.data.uri ? taxonomy.data.statsBulletinHeadline.data.uri : '/economy/inflationandpriceindices/bulletins/consumerpriceinflation'}}">
-                            <h3 class="body-type lede flush--bottom navpanel-list-heading">Statistical bulletin headlines</h3>
+                            <h3 class="body-type lede flush--bottom navpanel-list-heading">Statistical Bulletin headlines</h3>
                         </a>
                         <ul class="list--bullet mini flush--half--top navpanel-list headline--box-container-text">
                             <li ng-if="taxonomy.data.statsBulletinHeadline.data.headline1">{{taxonomy.data.statsBulletinHeadline.data.headline1}}</li>
