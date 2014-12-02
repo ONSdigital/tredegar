@@ -7,33 +7,41 @@
                 <strong>{{header}}</strong>
             </p>
             <h1 class="page-header__title flush--half--bottom">{{chart.timeseries.name}}</h1>
-            <div class="grid-wrap">
-                <div class="grid-col desktop-grid-two-thirds">
-                    <a href="#!/nationalstats" ng-show="{{chart.timeseries.nationalStatistic}}"><img src="/ui/img/nslogo.png" class="page-header-image" alt="National Statistic logo"></a>
-                    <p>
-                        <strong>Release date: {{chart.timeseries.lastUpated || '1 Jan 3000'}}</strong>
-                        <span class="page-header-box-link">
-                            <a href="#!/previous">
-                                <strong>View previous versions</strong>
-                            </a>
-                        </span>
-                    </p>
-                    <p>Next release: {{chart.timeseries.nextUpdate || '1 Feb 3000'}}</p>
-                    <p>Contact: In the future this will display the statistical contact
-                    </p>
-                    <p>Source: {{chart.timeseries.source ? chart.timeseries.source : 'Office for National Statistics'}}</p>
-                </div>
-                <!-- <div class="grid-col desktop-grid-one-third invisible"></div> -->
-                <div class="grid-col desktop-grid-one-third">
-                    <p>
+            <a href="#!/nationalstats"><img class="page-header--article__img" src="../ui/img/national-statistics.png" alt="The official National Statistics badge"></a>
+
+            <div class="page-header--article__body">
+              <div class="page-header--article__split">
+                <dl class="split--fixed page-header--article__split__meta">
+                  <dt class="split--fixed__title definition-emphasis"><strong>Release date:</dt>
+                  <dd>
+                    <span class="definition-emphasis">{{chart.timeseries.lastUpated || '1 Jan 3000'}}</strong></span> <a href="#!/previous" class="split__multiline-break">View previous releases</a>
+                  </dd>
+                  <dt class="split--fixed__title">Next release:</dt>
+                  <dd>{{chart.timeseries.nextUpdate || '1 Feb 3000'}}</dd>
+                  <dt class="split--fixed__title">Contact:</dt>
+                  <dd>In the future this will display the statistical contact
+                  </dd>
+                  <dt class="split--fixed__title">Source:</dt>
+                  <dd>{{chart.timeseries.source ? chart.timeseries.source : 'Office for National Statistics'}}
+                  </dd>
+                </dl>
+                <ul class="list--neutral page-header--article__split__actions">
+                  <li>
+                    <span class="page-header-item">
                         <strong>Series ID: {{chart.timeseries.cdid}}</strong>
                         <ons-help-tooltip tip="This series ID is a unique random identifier for this individual time series. The digits themselves do not have any specific meaning" tip-class="icon--inline--large-text icon--inline"></ons-help-tooltip>
-                    </p>
-                    <p>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="page-header-item">
                         <strong>Unit: {{chart.timeseries.preUnit}} {{chart.timeseries.unit}}</strong>
-                    </p>
-                    <p>{{chart.timeseries.seasonalAdjustment}}</p>
-                </div>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="page-header-item">{{chart.timeseries.seasonalAdjustment}}</span>
+                  </li>
+                </ul>
+              </div>
             </div>
             <social-links></social-links>
         </div>
