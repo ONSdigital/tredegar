@@ -57,7 +57,7 @@ public class ONSQueryBuilder {
 	 * @return
 	 */
 	public ONSQueryBuilder setSearchTerm(String searchTerm) {
-		this.searchTerm = StringUtils.isEmpty(searchTerm) ? searchTerm : (searchTerm + "*");
+		this.searchTerm = StringUtils.isEmpty(searchTerm) ? searchTerm : (searchTerm);
 		return this;
 	}
 
@@ -80,14 +80,14 @@ public class ONSQueryBuilder {
 		this.types = types;
 		return this;
 	}
-	
+
 	/**
 	 * Set a single type to search
 	 * 
 	 */
 	public ONSQueryBuilder setType(String type) {
 		this.types = new String[1];
-		this.types[0]= type;
+		this.types[0] = type;
 		return this;
 	}
 

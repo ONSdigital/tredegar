@@ -13,10 +13,8 @@ import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import org.apache.commons.lang3.StringUtils;
-import org.elasticsearch.action.ListenableActionFuture;
 import org.elasticsearch.action.admin.indices.create.CreateIndexRequestBuilder;
-import org.elasticsearch.action.index.IndexRequestBuilder;
-import org.elasticsearch.action.index.IndexResponse;
+import org.elasticsearch.action.index.IndexRequest;
 import org.elasticsearch.client.Client;
 import org.elasticsearch.common.settings.ImmutableSettings;
 import org.elasticsearch.common.xcontent.XContentBuilder;
@@ -44,7 +42,24 @@ public class Indexer {
 
 		// Set up the synonyms
 		CreateIndexRequestBuilder indexBuilder = client.admin().indices().prepareCreate("ons").setSettings(buildSettings());
-		indexBuilder.execute();
+		indexBuilder.execute().actionGet();
+		XContentBuilder homeBuilder = jsonBuilder().startObject().startObject("home").startObject("properties").startObject("path").field("type", "string").field("analyzer", "keyword").endObject()
+				.endObject().endObject().endObject();
+		XContentBuilder articleBuilder = jsonBuilder().startObject().startObject("article").startObject("properties").startObject("path").field("type", "string").field("analyzer", "keyword")
+				.endObject().endObject().endObject().endObject();
+		XContentBuilder bulletinBuilder = jsonBuilder().startObject().startObject("bulletin").startObject("properties").startObject("path").field("type", "string").field("analyzer", "keyword")
+				.endObject().endObject().endObject().endObject();
+		XContentBuilder datasetBuilder = jsonBuilder().startObject().startObject("dataset").startObject("properties").startObject("path").field("type", "string").field("analyzer", "keyword")
+				.endObject()
+				.endObject().endObject().endObject();
+		XContentBuilder methodologyBuilder = jsonBuilder().startObject().startObject("methodology").startObject("properties").startObject("path").field("type", "string").field("analyzer", "keyword")
+				.endObject().endObject().endObject().endObject();
+
+		client.admin().indices().preparePutMapping("ons").setType("home").setSource(homeBuilder).execute().actionGet();
+		client.admin().indices().preparePutMapping("ons").setType("article").setSource(articleBuilder).execute().actionGet();
+		client.admin().indices().preparePutMapping("ons").setType("bulletin").setSource(bulletinBuilder).execute().actionGet();
+		client.admin().indices().preparePutMapping("ons").setType("dataset").setSource(datasetBuilder).execute().actionGet();
+		client.admin().indices().preparePutMapping("ons").setType("methodology").setSource(methodologyBuilder).execute().actionGet();
 
 		AtomicInteger idCounter = new AtomicInteger();
 		for (String absoluteFilePath : absoluteFilePaths) {
@@ -58,15 +73,25 @@ public class Indexer {
 
 	private static void buildDocument(Client client, Map<String, String> documentMap, int idCounter) throws IOException {
 
+		// XContentBuilder builder =
+		// jsonBuilder().startObject().startObject("bulletins").startObject("properties").startObject("path").field("type",
+		// "string").field("store", "yes")
+		// .field("analyzer",
+		// "keyword_search").endObject().endObject().endObject().endObject();
+
 		XContentBuilder source = jsonBuilder().startObject().field("title", documentMap.get("title")).field("url", documentMap.get("url")).field("path", documentMap.get("tags"))
 				.field("lede", documentMap.get("lede")).endObject();
+
 		String name = "ons";
 		String type = StringUtils.lowerCase(documentMap.get("type"));
 		String id = String.valueOf(idCounter);
-		IndexRequestBuilder index = client.prepareIndex(name, type, id);
-		index.setSource(source);
-		ListenableActionFuture<IndexResponse> execution = index.execute();
-		execution.actionGet();
+
+		IndexRequest request = new IndexRequest("ons", type).id(id).source(source);
+		client.index(request).actionGet();
+		// IndexRequestBuilder index = client.prepareIndex(name, type, id);
+		// index.setSource(source);
+		// ListenableActionFuture<IndexResponse> execution = request.execute();
+		// execution.actionGet();
 	}
 
 	private static Map<String, String> buildSettings() throws IOException {
@@ -87,6 +112,15 @@ public class Indexer {
 		Map<String, String> settings = new HashMap<>();
 		settings.put("analysis.analyzer.ons_synonyms.tokenizer", "standard");
 		settings.put("analysis.filter.ons_synonym_filter.type", "synonym");
+
+		settings.put("analysis.filter.keyword_search.max_gram", "15");
+		settings.put("analysis.filter.keyword_search.min_gram", "3");
+		settings.put("analysis.analyzer.keyword.tokenizer", "whitespace");
+		settings.put("analysis.filter.keyword_search.type", "ngram");
+		settings.put("analysis.analyzer.keyword.filter.0", "lowercase");
+		settings.put("analysis.analyzer.keyword.filter.1", "keyword_search");
+		settings.put("analysis.analyzer.keyword.type", "custom");
+
 		settingsBuilder.put(settings);
 	}
 
