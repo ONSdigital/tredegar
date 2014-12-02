@@ -3741,7 +3741,7 @@ lesser , applied styles
 
     background-image: url("/ui/img/whitebackgroundhero.png");
     /*background-position: 50% 50%;*/
-    
+
     background-size: cover;
 }
 @media screen and (max-width: 1020px) {
@@ -4158,10 +4158,10 @@ $SPLIT
     background-color: #d8f3f7;
 }
 .table--striped-light tbody tr, .table--striped-light .list--table__body {
-    background-color: #edeeee;
+    background-color: #fff;
 }
 .table--striped-light tbody tr:nth-child(even), .table--striped-light .list--table__body:nth-child(even) {
-    background-color: #fff;
+    background-color: #edeeee;
 }
 .table-light--sectioned > .list--table__body, .table-light--sectioned > tr {
     border-color: #dedfdc;
@@ -5244,8 +5244,9 @@ ol.toc-columns {
 }
 .accordion_chevron {
     float: right;
-    position: inherit;
-    font-size: 2.5rem;
+    position: relative;
+    top: -10px;
+    font-size: 2.2rem;
 }
 .split__multiline-break {
     display: block;
@@ -8401,7 +8402,7 @@ lesser , applied styles
     border-bottom: 0;
 }
 .calendar .list--table--releases .list--table__item__body {
-    padding: 5px;
+    padding: 8px;
 }
 .calendar .list--table--releases .list--table__item__body--release-caption {
     padding: 0;
@@ -8469,7 +8470,7 @@ lesser , applied styles
 }
 
 .closeButton {
-	color: #fff; 
+	color: #fff;
 }
 .closeButton :hover {
 	color:#ff8c00;
