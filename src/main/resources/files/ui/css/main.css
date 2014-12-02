@@ -2272,6 +2272,14 @@ a:visited {
     padding-bottom: 25px;
     padding-bottom: 2.5rem;
 }
+
+.box--padded-vertical-med {
+    padding-top: 15px;
+    padding-top: 1.5rem;
+    padding-bottom: 15px;
+    padding-bottom: 1.5rem;
+}
+
 .box--padded-vertical-small {
     padding-top: 5px;
     padding-top: 0.5rem;
@@ -3921,6 +3929,7 @@ $SPLIT
 }
 .stat__updated {
     text-align: left;
+    display: flex;
 }
 .stat--headline .stat__figure {
     font-size: 40px;
@@ -4946,6 +4955,7 @@ ul.simple-pagination {
     position: absolute;
     bottom: 50px;
     right: 30px;
+    /*width: 180px;*/
 }
 /* T3 list--table*/
 
