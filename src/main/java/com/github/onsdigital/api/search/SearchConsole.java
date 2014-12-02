@@ -1,7 +1,10 @@
 package com.github.onsdigital.api.search;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
-import java.util.TreeMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -30,14 +33,16 @@ public class SearchConsole {
 	static ExecutorService pool = Executors.newCachedThreadPool();
 
 	@GET
-	public Map<String, Integer> results(HttpServletRequest request, HttpServletResponse response) throws Exception {
+	public Map<String, List<Count>> results(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
 		Serialiser.getBuilder().setPrettyPrinting();
-		return query();
+		Map<String, List<Count>> result = new HashMap<>();
+		result.put("No results", queryNoResults());
+		result.put("Most popular", queryPopular());
+		return result;
 	}
 
-	private Map<String, Integer> query() throws Exception {
-		Map<String, Integer> counts = new TreeMap<>();
+	private List<Count> queryNoResults() throws Exception {
 
 		MongoClientURI uri = new MongoClientURI(Configuration.getMongoDbUri());
 		MongoClient client = null;
@@ -51,21 +56,68 @@ public class SearchConsole {
 
 			// Get the results:
 			BasicDBObject findQuery = new BasicDBObject("results", 0);
-			BasicDBObject orderBy = new BasicDBObject("query", 1);
 
-			DBCursor docs = searchTerms.find(findQuery).sort(orderBy);
+			DBCursor docs = searchTerms.find(findQuery);
 
+			Map<String, Count> counts = new HashMap<>();
 			while (docs.hasNext()) {
 				DBObject doc = docs.next();
 				String query = String.valueOf(doc.get("query"));
-				Integer count = counts.get(query);
+				Count count = counts.get(query);
 				if (count == null) {
-					count = Integer.valueOf(0);
+					count = new Count(query);
+					counts.put(query, count);
 				}
-				counts.put(query, Integer.valueOf(count.intValue() + 1));
+				count.count++;
 			}
 
-			return counts;
+			List<Count> result = new ArrayList<>(counts.values());
+			Collections.sort(result);
+			return result;
+
+		} catch (Exception e) {
+			System.out.println("Error connecting to MongoDB at: " + mongoUri);
+			System.out.println(ExceptionUtils.getStackTrace(e));
+			throw e;
+		} finally {
+			if (client != null) {
+				client.close();
+			}
+		}
+	}
+
+	private List<Count> queryPopular() throws Exception {
+
+		MongoClientURI uri = new MongoClientURI(Configuration.getMongoDbUri());
+		MongoClient client = null;
+		try {
+			// Connect to the database:
+			client = new MongoClient(uri);
+			DB db = client.getDB(uri.getDatabase());
+
+			// Get the collection:
+			DBCollection searchTerms = db.getCollection("searchTerms");
+
+			// Get the results:
+			BasicDBObject findQuery = new BasicDBObject();
+
+			DBCursor docs = searchTerms.find(findQuery);
+
+			Map<String, Count> counts = new HashMap<>();
+			while (docs.hasNext()) {
+				DBObject doc = docs.next();
+				String query = String.valueOf(doc.get("query"));
+				Count count = counts.get(query);
+				if (count == null) {
+					count = new Count(query);
+					counts.put(query, count);
+				}
+				count.count++;
+			}
+
+			List<Count> result = new ArrayList<>(counts.values());
+			Collections.sort(result);
+			return result;
 
 		} catch (Exception e) {
 			System.out.println("Error connecting to MongoDB at: " + mongoUri);

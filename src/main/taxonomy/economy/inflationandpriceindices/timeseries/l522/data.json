@@ -10,7 +10,7 @@
   "preUnit": "",
   "date": "September 2014",
   "source": "Office for National Statistics",
-  "additionalText": "Not a National Statistic. Index, 2005\u003d 100",
+  "additionalText": "Not a National Statistic. Index, 2005 \u003d 100",
   "nationalStatistic": false,
   "years": [
     {
@@ -1155,7 +1155,8 @@
     "/economy/inflationandpriceindices/bulletins/consumerpriceinflation"
   ],
   "relatedTimeseries": [
-    "/economy/inflationandpriceindices/timeseries/l55o"
+    "/economy/inflationandpriceindices/timeseries/l55o",
+    "/economy/inflationandpriceindices/timeseries/d7bt"
   ],
   "sourceDatasets": [
     "MM23"
