@@ -3270,6 +3270,7 @@ lesser , applied styles
     .nav-panel__footer-home a {
         font-size: 95%;
         padding: 1.7em;
+        height: 8.5rem;
     }
     .nav-panel__action:after {
     position: absolute;
@@ -3936,8 +3937,8 @@ $SPLIT
 }
 @media screen and (min-width: 65em) {
     .stat--headline .stat__figure {
-        font-size: 80px;
-        font-size: 8rem;
+        font-size: 70px;
+        font-size: 7rem;
     }
 }
 .stat--headline .stat__figure__unit {
@@ -5074,7 +5075,7 @@ ul.simple-pagination {
 }
 @media screen and (min-width: 650px) {
     .headline--box-container {
-        height: 30em;
+        height: 28em;
     }
 }
 @media screen and (max-width: 800px) {
@@ -5301,6 +5302,11 @@ ol.toc-columns {
     margin-bottom: 10px;
     margin-bottom: 1rem;
 }
+.page-header--time-series .page-header-item {
+    margin-bottom: 10px;
+    margin-bottom: 1rem;
+}
+
 .page-header--article__split__actions {
     font-size: 14px;
     font-size: 1.4rem;
@@ -5314,6 +5320,14 @@ ol.toc-columns {
     font-size: 1.6rem;
     vertical-align: middle;
 }
+
+
+.page-header--time-series .page-header--article__split__actions {
+    font-size: 16px;
+    font-size: 1.6rem;
+    vertical-align: middle;
+}
+
 .page-header--article__split__actions .link-complex__target, .page-header--article__split__actions .description {
     vertical-align: middle;
 }
@@ -5368,10 +5382,17 @@ ol.toc-columns {
         width: 30%;
         margin-left: 3%;
     }
+    .page-header--time-series .page-header--article__split__actions, .page-header--expert-analysis .page-header--article__split__actions {
+        width: 30%;
+        margin-left: 3%;
+    }
 }
 @media screen and (min-width: 57em) {
     .page-header--stat-bulletin .page-header--article__img, .page-header--expert-analysis .page-header--article__img {
         margin-right: 5%;
+    }
+    .page-header--time-series .page-header--article__img, .page-header--expert-analysis .page-header--article__img {
+        margin-right: 4%;
     }
     .page-header--time-series .split__multiline-break {
         display: inline-block;
@@ -8475,6 +8496,29 @@ lesser , applied styles
 .closeButton :hover {
 	color:#ff8c00;
 }
+
+
+@media screen and (max-width: 600px){
+.modalDialog {
+    width: 20em;
+    height: 32em;
+    background-color: #fff;
+    margin: 15% auto;
+    overflow: auto;
+    pointer-events:auto;
+}
+
+.modalDialog p{
+    font-size: 80%;
+}
+
+.rightButton {
+    margin-left:8.5em;
+}
+
+}
+
+
 
 /* -------- autocomplete on search -------- */
 

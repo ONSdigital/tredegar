@@ -43,6 +43,13 @@
 			<version>${es.version}</version>
 		</dependency>
 
+		<!-- MongoDB -->
+		<dependency>
+			<groupId>org.mongodb</groupId>
+			<artifactId>mongo-java-driver</artifactId>
+			<version>2.12.4</version>
+		</dependency>
+
 		<!-- Prerender.io -->
 		<dependency>
 			<groupId>com.github.greengerong</groupId>
