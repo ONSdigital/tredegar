@@ -20,11 +20,12 @@ import com.github.davidcarboni.restolino.json.Serialiser;
 import com.github.onsdigital.generator.data.Data;
 import com.github.onsdigital.generator.data.DatasetMappingsCSV;
 import com.github.onsdigital.generator.datasets.DatasetContent;
+import com.github.onsdigital.json.DataItem;
+import com.github.onsdigital.json.Reference;
 import com.github.onsdigital.json.dataset.Dataset;
 import com.github.onsdigital.json.markdown.Article;
 import com.github.onsdigital.json.markdown.Bulletin;
 import com.github.onsdigital.json.markdown.Methodology;
-import com.github.onsdigital.json.taxonomy.DataItemLink;
 import com.github.onsdigital.json.taxonomy.HomeSection;
 import com.github.onsdigital.json.taxonomy.T1;
 import com.github.onsdigital.json.taxonomy.T2;
@@ -198,11 +199,11 @@ public class TaxonomyGenerator {
 			if (child.getChildren().size() > 0) { // t2 page at level below
 				// Add child of sections to t2 page
 				for (Folder grandChild : child.getChildren()) {
-					section.items.add(new DataItemLink(grandChild.name, URI.create(grandChild.filename())));
+					section.items.add(new Reference(grandChild.name, URI.create(grandChild.filename())));
 				}
 			} else { // T3 page at below level
 				for (Timeseries grandChild : child.timeserieses) {
-					section.items.add(new DataItemLink(grandChild.name, grandChild.uri));
+					section.items.add(new Reference(grandChild.name, grandChild.uri));
 
 				}
 			}
@@ -273,12 +274,12 @@ public class TaxonomyGenerator {
 
 		// Timeseries references:
 		if (folder.headline != null && folder.headline.uri != null) {
-			t3.headline = new DataItemLink(folder.headline.name, folder.headline.uri);
+			t3.headline = new Reference(folder.headline);
 		} else {
 			System.out.println("No headline URI set for " + folder.name);
 			if (folder.timeserieses.size() > 0 && folder.timeserieses.get(0).uri != null) {
 				Timeseries headline = folder.timeserieses.get(0);
-				t3.headline = new DataItemLink(headline.name, headline.uri);
+				t3.headline = new Reference(headline);
 				System.out.println("Using the first item from the timeseries list instead: " + t3.headline);
 			}
 		}
@@ -293,7 +294,7 @@ public class TaxonomyGenerator {
 		baseUri += "/timeseries";
 		for (Timeseries timeseries : timeserieses) {
 			if (timeseries.uri != null) {
-				t3.items.add(new DataItemLink(timeseries.name, timeseries.uri));
+				t3.items.add(new Reference(timeseries));
 			} else {
 				System.out.println("No URI set for " + timeseries);
 			}
@@ -322,8 +323,10 @@ public class TaxonomyGenerator {
 		if (datasets != null) {
 			for (Dataset dataset : datasets) {
 				if (dataset.summary != null) {
-					URI datasetUri = toDatasetUri(folder, dataset);
-					t3.datasets.add(new DataItemLink(dataset.name, datasetUri));
+					if (dataset.uri == null) {
+						dataset.uri = toDatasetUri(folder, dataset);
+					}
+					t3.datasets.add(new Reference(dataset));
 				}
 			}
 		}
@@ -336,7 +339,7 @@ public class TaxonomyGenerator {
 			if (bulletin.uri == null) {
 				bulletin.uri = toStatsBulletinUri(folder, bulletin);
 			}
-			t3.statsBulletins.add(new DataItemLink(bulletin.name, bulletin.uri));
+			t3.statsBulletins.add(new Reference(bulletin));
 		}
 
 		for (Bulletin bulletin : folder.bulletins) {
@@ -346,9 +349,12 @@ public class TaxonomyGenerator {
 			bulletin.relatedBulletins.addAll(t3.statsBulletins);
 
 			// Now remove self-references:
-			Iterator<DataItemLink> iterator = bulletin.relatedBulletins.iterator();
+			Iterator<DataItem> iterator = bulletin.relatedBulletins.iterator();
 			while (iterator.hasNext()) {
-				DataItemLink next = iterator.next();
+				DataItem next = iterator.next();
+				if (next == null || next.uri == null || bulletin == null || bulletin.uri == null) {
+					System.out.println("wat?");
+				}
 				if (next.uri.equals(bulletin.uri)) {
 					iterator.remove();
 				}
@@ -360,8 +366,10 @@ public class TaxonomyGenerator {
 		// Stats bulletin references:
 
 		if (folder.headlineBulletin != null) {
-			URI statsBulletinHeadlineUri = toStatsBulletinUri(folder, folder.headlineBulletin);
-			t3.statsBulletinHeadline = new DataItemLink(folder.headlineBulletin.name, statsBulletinHeadlineUri);
+			if (folder.headlineBulletin.uri == null) {
+				folder.headlineBulletin.uri = toStatsBulletinUri(folder, folder.headlineBulletin);
+			}
+			t3.statsBulletinHeadline = new Reference(folder.headlineBulletin);
 		}
 	}
 
@@ -383,25 +391,17 @@ public class TaxonomyGenerator {
 	}
 
 	private static URI toDatasetUri(Folder folder, Dataset dataset) {
-		URI result = null;
 
-		if (dataset != null) {
-			if (dataset.uri == null) {
-				String baseUri = "/" + folder.filename();
-				Folder parent = folder.parent;
-				while (parent != null) {
-					baseUri = "/" + parent.filename() + baseUri;
-					parent = parent.parent;
-				}
-				baseUri += "/datasets";
-				String datasetFileName = dataset.fileName;
-				String sanitizedDatasetFileName = datasetFileName.replaceAll("\\W", "");
-				dataset.uri = URI.create(baseUri + "/" + StringUtils.deleteWhitespace(sanitizedDatasetFileName));
-			}
-			result = dataset.uri;
+		String baseUri = "/" + folder.filename();
+		Folder parent = folder.parent;
+		while (parent != null) {
+			baseUri = "/" + parent.filename() + baseUri;
+			parent = parent.parent;
 		}
-
-		return result;
+		baseUri += "/datasets";
+		String datasetFileName = dataset.fileName;
+		String sanitizedDatasetFileName = datasetFileName.replaceAll("\\W", "");
+		return URI.create(baseUri + "/" + StringUtils.deleteWhitespace(sanitizedDatasetFileName));
 	}
 
 	/**
