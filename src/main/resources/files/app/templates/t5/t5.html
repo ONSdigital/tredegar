@@ -79,9 +79,12 @@
                             <label ons-tab-control="table" class="btn btn--secondary btn--small btn--narrow btn--thin" ng-class="{'btn--secondary--active': selectedKey === 'table'}" ng-click="chart.showTable()">Table</label>
                         </div>
                         <div class="button-group chart-area__controls__timespan">
-                            <label class="btn btn--secondary btn--small btn--narrow btn--thin " ng-if="chart.showMonthly" ng-class="{'btn--secondary--active': chart.isActive('months')}" ng-click="chart.changeChartType('months')">Month</label>
+                            <label class="btn btn--secondary btn--small btn--narrow btn--thin" ng-if="chart.showMonthly" ng-class="{'btn--secondary--active': chart.isActive('months')}" ng-click="chart.changeChartType('months')">Month</label>
+                            <label class="btn btn--secondary btn--small btn--narrow btn--thin" ng-if="!chart.showMonthly" ng-class="'btn--secondary--inactive'" ng-click="chart.changeChartType('months')">Month</label>
                             <label class="btn btn--secondary btn--small btn--narrow btn--thin" ng-if="chart.showQuarterly" ng-class="{'btn--secondary--active': chart.isActive('quarters')}" ng-click="chart.changeChartType('quarters')">Quarter</label>
+                            <label class="btn btn--secondary btn--small btn--narrow btn--thin" ng-if="!chart.showQuarterly" ng-class="'btn--secondary--inactive'" ng-click="chart.changeChartType('quarters')">Quarter</label>
                             <label class="btn btn--secondary btn--small btn--narrow btn--thin" ng-if="chart.showYearly" ng-class="{'btn--secondary--active': chart.isActive('years')}" ng-click="chart.changeChartType('years')">Year</label>
+                            <label class="btn btn--secondary btn--small btn--narrow btn--thin" ng-if="!chart.showYearly" ng-class="'btn--secondary--inactive'" ng-click="chart.changeChartType('years')">Year</label>
                         </div>
                     </div>
                     <div class="button-group chart-area__controls__time">
@@ -173,7 +176,7 @@
                 </div>
             </div>
             <!-- Custom downloads -->
-            <div ng-if="chart.timePeriod != 'A'" class="">
+            <div ng-if="chart.timePeriod != 'A'" class="top10">
                 <table width="100%">
                     <tr>
                         <td style="text-align:right;">
@@ -195,19 +198,20 @@
                 </table>
             </div>
             <div class="button-bar">
+                <!-- Accordion for related timeseries and datasets -->
                 <ons-accordion multiple="true">
-                    <article style="margin-top:18px" class="border-horizontal-single">
+                    <article class="border-horizontal-single" style="margin-top:8px">
                         <ons-accordion-item closed="true" header="Related time series and datasets">
                             <!-- /box__header -->
                             <div class="box__content">
-                                <h4 style="margin-top:10px">Related time series</h4>
+                                <h4 class="top10">Related time series</h4>
                                 <div ng-repeat="relatedTimeseries in taxonomy.data.relatedTimeseriesData | orderBy:'name'">
                                     <div style="margin-left:10px">
                                         <a href=#!{{relatedTimeseries.uri}}>{{relatedTimeseries.name}}</a>
                                     </div>
                                 </div>
-                                <h4 style="margin-top:10px">Datasets that contain {{chart.timeseries.name}} and related time series</h4>
-                                <div style="margin-left:10px">
+                                <h4 class="top10">Datasets that contain {{chart.timeseries.name}} and related time series</h4>
+                                <div style="margin-left:10px; margin-bottom:15px">
                                     <div><a href="">At graecis maluisset pro</a>
                                     </div>
                                     <div><a href="">Per an omnis dicat libris</a>
@@ -224,18 +228,6 @@
         </div>
     </div>
     <p></p>
-
-    <!-- Accordion for related timeseries and datasets -->
-    <!--         <div class="wrapper panel--bottom-mar">
-        <div class="panel wrapper box box--padded--med panel--bottom-mar box--green--separated-left solid border">
-            <div class="grid-wrap">
-                <div class="grid-col">
-                    <div class="panel--bottom-mar">
-                    </div>
-                </div>
-        </div>
-        </div>
-    </div> -->
 
     <!-- Notes and info section -->
     <div class="wrapper panel--bottom-mar">
