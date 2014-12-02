@@ -57,7 +57,7 @@ public class ONSQueryBuilder {
 	 * @return
 	 */
 	public ONSQueryBuilder setSearchTerm(String searchTerm) {
-		this.searchTerm = StringUtils.isEmpty(searchTerm) ? searchTerm : (searchTerm);
+		this.searchTerm = StringUtils.isEmpty(searchTerm) ? searchTerm : (searchTerm + "*");
 		return this;
 	}
 
