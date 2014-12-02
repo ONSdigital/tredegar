@@ -183,7 +183,7 @@ public class ONSQueryBuilder {
 		}
 
 		String query = new SearchSourceBuilder().query(builder).highlight(highlightBuilder).from(calculateFrom()).size(getSize()).toString(); 
-		System.out.println("Elastic search query String: " + query);
+//		System.out.println("Elastic search query String: " + query);
 		return query;
 
 	}
