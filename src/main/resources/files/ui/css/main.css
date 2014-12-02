@@ -3158,7 +3158,7 @@ lesser , applied styles
         padding-right: 10px;
         padding-right: 1.0rem;
     }
-    .nav-panel__roomy--med.centred-small{
+    .nav-panel__roomy--med.centred-med-up{
       text-align: center;
     }
 }
@@ -3172,6 +3172,11 @@ lesser , applied styles
         /*padding-bottom: 2em;*/
     }
 }
+
+.nav-panel__roomy--med.right-small{
+    text-align: right;
+}
+
 .nav-panel__body {
     padding-bottom: 15px;
     padding-bottom: 1.5rem;
