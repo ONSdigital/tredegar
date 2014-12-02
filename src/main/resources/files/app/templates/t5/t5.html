@@ -54,20 +54,24 @@
             <!-- This title will need to be dynamically generated on the server -->
             <h2 class="actionable-header--tight__title gamma flush--bottom body-type--heavy">Download this entire time series</h2>
             <div class="actionable-header--tight__action actionable-header--tight__action--left">
+                <a id="imgExp" style="margin-right:4px" class="btn btn--primary btn--small" href="" ng-click="chart.exportImage()">
+                    Image
+                    <span class="icon-download icon--button-inline" role="presentation"></span>
                 <a class="btn btn--primary btn--small" href="" ng-click="t5.downloadCsv()">
-              .csv
-              <span class="icon-download icon--button-inline" role="presentation"></span>
-            </a>
+                    .csv
+                    <span class="icon-download icon--button-inline" role="presentation"></span>
+                </a>
                 <a class="btn btn--primary btn--small" href="" ng-click="t5.downloadXls()">
-              .xlsx
-              <span class="icon-download icon--button-inline" role="presentation"></span>
-            </a>
+                    .xlsx
+                    <span class="icon-download icon--button-inline" role="presentation"></span>
+                </a>
             </div>
         </div>
 
         <!-- Chart in Highcharts -->
         <div ons-tabs tabs-active-var="selectedKey" class="cf chart-area slate">
-            <div class="chart-area__controls">
+            <div class="chart-area__controls border-horizontal-single">
+                <!-- border-horizontal-single -->
                 <form>
                     <div class="button-bar chart-area__controls__buttons">
                         <div class="button-group chart-area__controls__type">
@@ -169,26 +173,70 @@
                 </div>
             </div>
             <!-- Custom downloads -->
-            <div ng-if="chart.timePeriod != 'A'" class="chart-area__footer">
-                <span class="chart-area__footer__label">Download custom data</span>
-                <div class="chart-area__footer__actions">
-                    <a id="imgExp" ng-click="chart.exportImage()" class="btn btn--primary btn--small" href="">
+            <div ng-if="chart.timePeriod != 'A'" class="">
+                <table width="100%">
+                    <tr>
+                        <td style="text-align:right;">
+                            <span class="chart-area__footer__label">Download custom data</span>
+                            <a id="imgExp" ng-click="chart.exportImage()" class="btn btn--primary btn--small" href="">
                     Image
                     <span class="icon-download icon--button-inline" role="presentation"></span>
                     </a>
-                    <a class="btn btn--primary btn--small" href="" ng-click="chart.downloadCsv()">
+                            <a class="btn btn--primary btn--small" href="" ng-click="chart.downloadCsv()">
                     .csv
                     <span class="icon-download icon--button-inline" role="presentation"></span>
                     </a>
-                    <a class="btn btn--primary btn--small" href="" ng-click="chart.downloadXls()">
+                            <a class="btn btn--primary btn--small" href="" ng-click="chart.downloadXls()">
                     .xlsx
                     <span class="icon-download icon--button-inline" role="presentation"></span>
                     </a>
-                </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="button-bar">
+                <ons-accordion multiple="true">
+                    <article style="margin-top:18px" class="border-horizontal-single">
+                        <ons-accordion-item closed="true" header="Related time series and datasets">
+                            <!-- /box__header -->
+                            <div class="box__content">
+                                <h4 style="margin-top:10px">Related time series</h4>
+                                <div ng-repeat="relatedTimeseries in taxonomy.data.relatedTimeseriesData | orderBy:'name'">
+                                    <div style="margin-left:10px">
+                                        <a href=#!{{relatedTimeseries.uri}}>{{relatedTimeseries.name}}</a>
+                                    </div>
+                                </div>
+                                <h4 style="margin-top:10px">Datasets that contain {{chart.timeseries.name}} and related time series</h4>
+                                <div style="margin-left:10px">
+                                    <div><a href="">At graecis maluisset pro</a>
+                                    </div>
+                                    <div><a href="">Per an omnis dicat libris</a>
+                                    </div>
+                                    <div><a href="">Pro ad case probo nostro</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </ons-accordion-item>
+                    </article>
+                    <!-- /article__content -->
+                </ons-accordion>
             </div>
         </div>
     </div>
     <p></p>
+
+    <!-- Accordion for related timeseries and datasets -->
+    <!--         <div class="wrapper panel--bottom-mar">
+        <div class="panel wrapper box box--padded--med panel--bottom-mar box--green--separated-left solid border">
+            <div class="grid-wrap">
+                <div class="grid-col">
+                    <div class="panel--bottom-mar">
+                    </div>
+                </div>
+        </div>
+        </div>
+    </div> -->
+
     <!-- Notes and info section -->
     <div class="wrapper panel--bottom-mar">
         <div class="grid-wrap">
@@ -210,7 +258,7 @@
                         </ol>
                     </div>
                     <br></br>
-                    <div ng-if="taxonomy.data.relatedTimeseriesData[0]">
+                    <!-- <div ng-if="taxonomy.data.relatedTimeseriesData[0]">
                         <h3>Related series</h3>
 
                         <div class="padded">
@@ -224,7 +272,7 @@
                     <div ng-if="!taxonomy.data.relatedTimeseriesData[0]">
                         <h3>Related series</h3>
                         <p>In the future some related series will be displayed in this area</p>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <!-- Sidebar -->
