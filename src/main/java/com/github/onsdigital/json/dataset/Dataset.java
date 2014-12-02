@@ -1,6 +1,5 @@
 package com.github.onsdigital.json.dataset;
 
-import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,7 +22,6 @@ public class Dataset extends CollectionItem {
 	public List<DownloadSection> download = new ArrayList<DownloadSection>();
 	public List<NotesSection> notes = new ArrayList<NotesSection>();
 	public String summary;
-	public URI uri;
 
 	/** Whether this is a National Statistic: */
 	public boolean nationalStatistic;

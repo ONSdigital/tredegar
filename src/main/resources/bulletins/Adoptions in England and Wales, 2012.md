@@ -28,9 +28,11 @@ The number of adoption orders indicated by ONS and MoJ are similar but do not ma
 ## Number of adoptions
 In 2012, there were 5,206 adoptions entered into the Adopted Children Register (ACR) following court orders made in England and Wales. This was higher than in 2011 (a 9.8% increase), when there were 4,740 adoptions. This represents the largest annual increase in adoptions over the last 15 years, the period for which adoption statistics by date of court order are available (Figure 1).
 
+<div class="chart-container">
 <iframe src="http://onsdigital.github.io/Alpha/bulletins/adoptions1.html"></iframe>
+</div>
 
-** Notes: **
+### Notes: 
 1. Adoption figures by date of court order are only available from 1998.
 
 Wales recorded a 12% increase in adoptions in 2012 with 371 children entered into the Adopted Children Register following court orders made by courts in Wales. In England there was a 9.6% rise in adoptions with 4,835 children entered into the Adopted Children Register following court orders made in England.
@@ -50,16 +52,21 @@ Special Guardianship provided a new permanence option for children, giving a leg
 ## Adoptions by age and sex
 In 2012, 51% of children adopted were male (compared with 49% in 2011) and 49% were female (compared with 51% in 2011). Since 1998, the number of male and female adoptions has been fairly similar (Figure 2).
 
+<div class="chart-container">
 <iframe src="http://onsdigital.github.io/Alpha/bulletins/adoptions2.html"></iframe>
+</div>
 
-** Notes: **
+### Notes:
 1. Adoption figures by date of court order are only available from 1998.
 
 The percentage of adopted children aged 1-4 has increased steadily since 1998. In 2012, 63% of children adopted were aged 1-4, compared with 34% in 1998 (Figure 3). In contrast, the percentage of adopted children who were aged 10-14 has more than halved from 21% in 1998 to 8.4% in 2012.
 
-Smaller decreases have been recorded for other age groups: In 2012, 24% of children adopted were aged 5-9 and 3.2% were aged 15-17, down from 36% and 5.0% respectively in 1998. Adoptions of children aged under 1 decreased overall from 4.6% of all adoptions in 1998 to 1.6% in 2011 before rising slightly to 2.2% in 2012.
+Smaller decreases have been recorded for other age groups: In 2012, 24% of children adopted were aged 5-9 and 3.2% were aged 15-17, down from 36% and 5.0% respectively in 1998. Adnice!
+options of children aged under 1 decreased overall from 4.6% of all adoptions in 1998 to 1.6% in 2011 before rising slightly to 2.2% in 2012.
 
+<div class="chart-container">
 <iframe src="http://onsdigital.github.io/Alpha/bulletins/adoptions3.html"></iframe>
+</div>
 
 ## Adoptions by marital status of biological parents
 In 2012, 85% of children adopted were born outside marriage compared with 68% in 1998. The percentage of adopted children born outside marriage has increased steadily since 1998 and is much higher than the percentage of live births outside marriage, suggesting that children born outside marriage are more likely to be adopted than those born within marriage.
