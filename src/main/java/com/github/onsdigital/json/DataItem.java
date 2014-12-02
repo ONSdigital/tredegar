@@ -46,7 +46,7 @@ public class DataItem {
 			result = uri.equals(((DataItem) obj).uri);
 		} else {
 			// Fall back to instance comparison:
-			return super.equals(obj);
+			result = super.equals(obj);
 		}
 		return result;
 	}
