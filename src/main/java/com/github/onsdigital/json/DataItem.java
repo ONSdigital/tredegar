@@ -44,6 +44,9 @@ public class DataItem {
 		boolean result = false;
 		if (uri != null && obj != null && DataItem.class.isAssignableFrom(obj.getClass())) {
 			result = uri.equals(((DataItem) obj).uri);
+		} else {
+			// Fall back to instance comparison:
+			return super.equals(obj);
 		}
 		return result;
 	}
