@@ -3173,9 +3173,7 @@ lesser , applied styles
     }
 }
 
-.nav-panel__roomy--med.right-small{
-    text-align: right;
-}
+
 
 .nav-panel__body {
     padding-bottom: 15px;
@@ -6118,6 +6116,9 @@ td.datatable-downloads {
         border: 0px;
         padding-top: 15px;
     }
+    .nav-panel__roomy--med.right-small{
+    text-align: right;
+}
 }
 @media screen and (max-width: 400px) {
     .callout-header {
