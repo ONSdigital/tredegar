@@ -52,6 +52,8 @@ public class PrerenderIo {
 			if (StringUtils.isEmpty(escapedFragment)) {
 				escapedFragment = "/";
 			}
+			System.out.println("Original URL: " + request.getRequestURL());
+			System.out.println("Updated URL: " + url);
 			URL escapedFragmetUrl = buildUrl(url, escapedFragment);
 			escapedFragmetUrl = updateForLocalhost(escapedFragmetUrl);
 
