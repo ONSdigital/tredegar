@@ -288,13 +288,18 @@
       return type === 'home' && index === 0
     }
 
+    function isPrerender() {
+      return PageUtil.isPrerender()
+    }
+
     //Expose API
     angular.extend($scope, {
       isLoading: isLoading,
       toggleFilter: toggleFilter,
       isActive: isActive,
       isFocus:isFocus,
-      isShowLozenge:isShowLozenge
+      isShowLozenge:isShowLozenge,
+      isPrerender:isPrerender
     })
   }
 
