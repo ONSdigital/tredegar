@@ -3945,6 +3945,21 @@ $SPLIT
     font-size: 2.2rem;
     vertical-align: baseline;
 }
+
+@media screen and (max-width: 800px){
+.stat__figure__unit {
+    /*---------------------
+    Offset number so it appears visually closer to the stat figure.
+    @TODO: Fix magic number
+  */
+
+    margin-left: -.2rem;
+    font-size: 15px;
+    font-size: 1.5rem;/* fixes responsive wrapping for t1*/
+/*    vertical-align: baseline;
+*/}}
+
+
 .stat__description {
     position: relative;
     display: block;
@@ -6171,22 +6186,12 @@ td.datatable-downloads {
     .nav-panel__roomy--med.right-small{
         text-align: right;
 }
-    .nav-panel__body.spaced{
-/*        padding-right: 25%;
-*/    }
 }
 
 
-@media screen and (min-width: 470px) and (max-width: 800px) {
-    /*.list--neutral.nav-panel__list.flush{
-        display: -webkit-box;
-    }*/
-    .nav-panel__body.flush {
-        padding-right: 30%;
-    }
-}
+/*---T1 responsive layouts----*/
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 470px) {
     .nav-panel__body.flush {
         position: relative;
         left: 2%;
@@ -6202,6 +6207,32 @@ td.datatable-downloads {
     }
 }
 
+@media screen and (min-width: 470px) and (max-width: 600px) {
+    
+    .nav-panel__body.flush {
+        width: 13rem;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 770px) {
+  
+    .nav-panel__body.flush {
+        padding-left: 10%;
+        padding-right: 10%;
+        width: 15rem;
+
+    }
+}
+
+@media screen and (min-width: 770px) and (max-width: 800px) {
+  
+    .nav-panel__body.flush {
+        padding-left: 20%;
+        padding-right: 10%;
+        width: 27rem;
+    }
+}
+
 
 @media screen and (max-width: 400px) {
     .callout-header {
@@ -6210,6 +6241,7 @@ td.datatable-downloads {
         padding-left: 10px;
     }
 }
+
 @media screen and (min-width: 800px) {
     .callout-link {
         position: relative;
