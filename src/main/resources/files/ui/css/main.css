@@ -3457,6 +3457,9 @@ lesser , applied styles
     color: #757575;
     text-decoration: none;
 }
+
+.nav__active.breadcrumb { color: #757575; text-decoration: none;}
+
 .ons-nav {
     position: relative;
     background-color: #333333;
