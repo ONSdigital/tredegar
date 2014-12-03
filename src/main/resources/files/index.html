@@ -35,9 +35,9 @@
 
     <!-- Bugherd integration script: http://bugherd.com/documentation/installing-the-sidebar/ -->
     <script type='text/javascript'>
-    
+
     	var BugHerdConfig = {"feedback":{"hide":true}};
-    
+
         (function(d, t) {
 
             var bh = d.createElement(t),
@@ -46,7 +46,7 @@
             bh.src = '//www.bugherd.com/sidebarv2.js?apikey=cwz4globzxvnj84jsovora';
             s.parentNode.insertBefore(bh, s);
         })(document, 'script');
-        
+
     </script>
 
     <script type="text/javascript" src="/ui/js/lib/jquery.min.js" defer></script>
@@ -86,8 +86,9 @@ markup: false
 <!-- Autoscroll solves the issue mentioned on https://stackoverflow.com/questions/21055952/changing-route-doesnt-scroll-to-top-in-the-new-page -->
 
 <body id="ng-app" class="js">
-    
+
     <div ng-include="'app/partials/modal/modal.html'" ></div>
+    <a id="my_feedback" class="btn btn--survey" onclick="_bugHerd.win.bugherd.applicationView.anonymousbar.toggleOptions()">Send Feedback</a>
     <ons-header></ons-header>
         <div class="wrap" ng-view autoscroll="true">
             <noscript>
@@ -217,7 +218,7 @@ markup: false
 <script type="text/javascript" src="ui/js/app/tables.js" defer></script>
 <script type="text/javascript" src="ui/js/custom-autocomplete.js" defer></script>
  -->
-    
+
   	<!-- Loop11 integration script for benchmark testing: http://www.loop11.com/ -->
     <script type="text/javascript">
         var loop11_key = "ff7a6d631f9491ca61a546031b4fe317d66338c4";
