@@ -4982,8 +4982,19 @@ ul.simple-pagination {
     position: absolute;
     bottom: 50px;
     right: 30px;
-    /*width: 180px;*/
+    width: 180px;
 }
+
+@media screen and (min-width: 740px) and (max-width: 890px)  {
+.div_panel_link {
+    position: absolute;
+    bottom: 50px;
+    right: 30px;
+    width: 300px;
+}
+}
+
+
 /* T3 list--table*/
 
 .list--table__item__header {
