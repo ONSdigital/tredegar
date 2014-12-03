@@ -111,9 +111,9 @@ pageCount field is mandatory
         var url = $location.url()
         if($location.search()['page']) {
           //Page already set, replace
-          target =  $scope.static ? (url.replace(PAGE_PARAM + '=' + currentPage, PAGE_PARAM + '=' + index  )) : ''
+          target =  $scope.static ? ('/static' + url.replace(PAGE_PARAM + '=' + currentPage, PAGE_PARAM + '=' + index  )) : ''
         } else {
-          target = $scope.static ? (url + '&'  + PAGE_PARAM + '=' + index ) : ''
+          target = $scope.static ? ('/static' + url + '&'  + PAGE_PARAM + '=' + index ) : ''
         }
         console.log(target)
         return target
