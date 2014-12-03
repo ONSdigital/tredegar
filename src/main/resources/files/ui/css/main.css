@@ -8343,6 +8343,7 @@ lesser , applied styles
     font-family: "open-sans-n7", "open-sans", sans-serif;
     color: #0054aa;
     background: #c5c7c1;
+    cursor:pointer;
     /*        background: -webkit-radial-gradient(center, ellipse, #d5d6d2 0%, #c8c9c4 100%);
     background: radial-gradient(ellipse at center, #d5d6d2 0%, #c8c9c4 100%);*/
 }
@@ -8353,6 +8354,7 @@ lesser , applied styles
 .btn--secondary--active {
     background-color: #fff;
     color:#303030;
+    cursor:default;
 }
 .btn--secondary--active, .btn--secondary--active:visited, .btn--secondary--active:hover {
     color: #303030;
