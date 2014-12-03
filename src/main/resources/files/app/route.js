@@ -16,6 +16,10 @@
 			templateUrl: 'app/templates/about/about.html',
 			controller: "AboutCtrl",
 		}).
+        when('/accessibility', {
+            templateUrl: 'app/templates/accessibility/accessibility.html',
+            controller: "AccessibilityCtrl",
+        }).
 		when('/alpha', {
 			templateUrl: 'app/templates/alphapage/alphapage.html',
 			controller: "AlphaPageCtlr",
