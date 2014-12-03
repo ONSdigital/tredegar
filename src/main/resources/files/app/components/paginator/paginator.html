@@ -5,7 +5,7 @@
     </li>
     <li ng-repeat="i in [] | range:paginator.start:paginator.end" >
       <span ng-show="paginator.isCurrent(i)" class="current">{{i}}</span>
-      <a ng-href="{{paginator.getLinkTarget(1)}}" ng-click="paginator.selectPage(i)" ng-hide="paginator.isCurrent(i)" class="page-link" >{{i}}</a>
+      <a ng-href="{{paginator.getLinkTarget(i)}}" ng-click="paginator.selectPage(i)" ng-hide="paginator.isCurrent(i)" class="page-link" >{{i}}</a>
     </li>
     <li ng-show="paginator.isNextVisible()">
       <a ng-href="{{paginator.getLinkTarget(currentPage + 1)}}" ng-click="paginator.next()" class="page-link next" >Next</a>

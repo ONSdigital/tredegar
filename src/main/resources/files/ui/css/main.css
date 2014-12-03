@@ -6281,14 +6281,14 @@ td.datatable-downloads {
 }
 
 @media screen and (min-width: 470px) and (max-width: 600px) {
-    
+
     .nav-panel__body.flush {
         width: 13rem;
     }
 }
 
 @media screen and (min-width: 600px) and (max-width: 770px) {
-  
+
     .nav-panel__body.flush {
         padding-left: 10%;
         padding-right: 10%;
@@ -6298,7 +6298,7 @@ td.datatable-downloads {
 }
 
 @media screen and (min-width: 770px) and (max-width: 800px) {
-  
+
     .nav-panel__body.flush {
         padding-left: 20%;
         padding-right: 10%;
@@ -8772,4 +8772,25 @@ lesser , applied styles
     35.8em;
     z-index:999;
     margin-left:0.125em;
+}
+
+/* -------- bugherd feedback button -------- */
+
+.btn--survey {
+    font-family: "DaxlinePro", sans-serif;
+    font-size:18px;
+    color: #f3f3f3;
+    background: #a8233e;
+    padding: 6px 20px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index:1500;
+}
+.btn--survey:visited {
+    color: white;
+}
+.btn--survey:hover, .btn--survey:focus {
+    color: white;
+    background-color: #7e1a2e ;
 }

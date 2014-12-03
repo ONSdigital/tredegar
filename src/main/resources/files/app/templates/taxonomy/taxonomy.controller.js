@@ -19,7 +19,6 @@
 			$scope.breadcrumb.parent = data.breadcrumb
 			$scope.breadcrumb.current = data.name
 		}
-
 	}
 	
 	function T1ChartController($scope, Chart) {

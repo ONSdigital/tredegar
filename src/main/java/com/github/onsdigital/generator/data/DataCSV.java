@@ -71,9 +71,9 @@ public class DataCSV {
 			} else {
 				name = FilenameUtils.getBaseName(file.getFileName().toString());
 			}
-			Set<Timeseries> dataset = Data.dataset(name);
+			Set<Timeseries> dataset = Data.oldDataset(name);
 			if (dataset == null) {
-				dataset = Data.addDataset(name);
+				dataset = Data.addOldDataset(name);
 			}
 
 			// Check all the CDIDs in the header row:

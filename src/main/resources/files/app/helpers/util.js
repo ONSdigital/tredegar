@@ -11,8 +11,7 @@
 		var pageUtil = this
 		var title = 'Office Of National Statistics';
 
-		function title() {
-			alert('Reading title')
+		function getTitle() {
 			return title;
 		}
 
@@ -60,7 +59,7 @@
 		}
 
 		angular.extend(pageUtil, {
-			title: title,
+			getTitle: getTitle,
 			setTitle: setTitle,
 			getUrlParam: getUrlParam,
 			getPage: getPage,

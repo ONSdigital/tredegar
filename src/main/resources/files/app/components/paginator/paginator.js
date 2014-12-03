@@ -115,7 +115,6 @@ pageCount field is mandatory
         } else {
           target = $scope.static ? ('/static' + url + '&'  + PAGE_PARAM + '=' + index ) : ''
         }
-        console.log(target)
         return target
       }
 
