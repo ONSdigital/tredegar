@@ -6,7 +6,12 @@
   },
   "lede": "Definiebas nam te. Eos viderer albucius conceptam ei, cu vix amet duis indoctum, vim at assum ludus intellegebat. Ex vix fugit discere nominavi, per te tantas exerci elaboraret. Nam ne oblique convenire.Sensibus voluptatibus mei ut, eum sonet nonumy epicurei ne. Sed ea causae ancillae, usu id alia soluta reformidans. Eloquentiam deterruisset mel ut, officiis persecuti cu eos. Pri at nostro veritus facilisi.",
   "more": "Lorem ipsum dolor sit amet",
-  "download": [],
+  "download": [
+    {
+      "title": "Latest",
+      "xls": "http://www.ons.gov.uk/ons/rel/rdit2/internet-access-quarterly-update/q1-2014/rft-ia-q1-2014.xls"
+    }
+  ],
   "notes": [
     {
       "data": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quam leo, blandit a turpis non, varius feugiat mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In posuere lectus eu laoreet ultrices. Donec ac sodales libero, eget fermentum arcu."
@@ -15,31 +20,27 @@
       "data": "Fusce pharetra, libero in imperdiet ultricies, ex erat tempor dolor, vitae aliquet magna velit in urna. Duis finibus augue velit, ut consectetur risus imperdiet in. Sed tempus congue ante, ac cursus diam porttitor vitae. Vivamus arcu leo, volutpat in mauris ac, lacinia fermentum velit. Sed dictum tortor justo, aliquet facilisis lorem dictum a."
     }
   ],
+  "summary": "Brief description of dataset",
   "nationalStatistic": true,
   "description": "Comprehensive description of data contained within this dataset.",
-  "title": "",
+  "title": "Internet users and non-users, UK",
   "releaseDate": "19 February 2014",
   "type": "dataset",
-  "name": "",
-  "fileName": "",
+  "name": "Internet users and non-users, UK",
+  "uri": "/peoplepopulationandcommunity/homeinternetandsocialmediausage/datasets/internetusersandnonusersuk",
+  "fileName": "internetusersandnonusersuk",
   "breadcrumb": [
     {
       "index": 0,
       "type": "home",
-      "name": "People, Population and Community",
+      "name": "People, population and community",
       "fileName": "peoplepopulationandcommunity"
     },
     {
       "index": 0,
       "type": "home",
-      "name": "Cultural Identity",
-      "fileName": "culturalidentity"
-    },
-    {
-      "index": 0,
-      "type": "home",
-      "name": "Sexuality",
-      "fileName": "sexuality",
+      "name": "Home internet and social media usage",
+      "fileName": "homeinternetandsocialmediausage",
       "breadcrumb": []
     }
   ]
