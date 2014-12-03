@@ -3,11 +3,11 @@
 (function() {
 	var onsUtils = angular.module('onsUtils', [])
 	onsUtils
-		.factory('PageUtil', ['$location', PageUtil])
+		.factory('PageUtil', ['$location', '$log', PageUtil])
 		.factory('ArrayUtil', ArrayUtil)
 		.factory('StringUtil', StringUtil)
 
-	function PageUtil($location) {
+	function PageUtil($location, $log) {
 		var pageUtil = this
 		var title = 'Office Of National Statistics';
 
@@ -23,6 +23,10 @@
 		function getUrlParam(paramName) {
 			var params = $location.search()
 			return params[paramName]
+		}
+
+		function setUrlParam(key,value) {
+		 	$location.search(key,value)
 		}
 
 		//Returns current page ( section before last slash(/) e.g. economy/inflationpriceindices/cpi would return inflationpriceindices )
@@ -52,6 +56,7 @@
 		//If replace history is set, latest back history item is replaced with the page to be showed
 		//Particularyly useful to not to break back button redirect
 		function goToPage(path, replaceHistory) {
+			$log.debug('PageUtil: Going to page ', path, ' replace history:', replaceHistory)
 			$location.url(path); //Clear any search parameters currently available
 			if (replaceHistory) {
 				$location.replace()
@@ -62,6 +67,7 @@
 			getTitle: getTitle,
 			setTitle: setTitle,
 			getUrlParam: getUrlParam,
+			setUrlParam:setUrlParam,
 			getPage: getPage,
 			getPath: getPath,
 			getUrl:getUrl,

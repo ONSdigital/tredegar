@@ -27,7 +27,6 @@ angular.module('onsTemplates')
                             .then(function(relatedBulletin) {
                                 $log.debug('Loaded related bulletin: ', relatedBulletinPath, ' ', relatedBulletin)
                                 data.relatedBulletinData.push(relatedBulletin)
-                                console.log(relatedBulletin)
                             })
                     }
                 }

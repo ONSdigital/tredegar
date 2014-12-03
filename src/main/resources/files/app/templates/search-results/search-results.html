@@ -84,9 +84,6 @@
             <article class="box">
 
                 <div id="<search></search>" class="search">
-                    <ons-loading condition="isLoading()" ></ons-loading>
-                    <!-- <span ng-show="isLoading()">Loading ...</span> -->
-
                     <dl>
 
                         <dt ng-repeat-start="item in searchResponse.results track by $index" ng-class="isFocus(item.type, $index) ? 'search-home-focused' : ''">
@@ -110,7 +107,7 @@
                         <!-- /box__header -->
                         <p>In the future we are aiming to bring you a comprehensive time series search tool</p>
                         <p>
-                            Why not <a ng-href="#!/search?q={{searchTerm}}&type=timeseries">see what time series</a> we currently have based on your search criteria.
+                            Why not <a ng-href="#!/search/{{searchTerm}}?type=timeseries">see what time series</a> we currently have based on your search criteria.
                         </p>
 
                     </article>

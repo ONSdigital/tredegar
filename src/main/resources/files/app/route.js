@@ -138,16 +138,8 @@
 				}]
 			}
 		}).
-		when('/search', {
-			resolve: {
-				searchResponse: ['PageUtil', 'DataLoader', search],
-				title: ['PageUtil', function(PageUtil) {
-					PageUtil.setTitle('Search Results')
-				}]
-			},
-			templateUrl: 'app/templates/search-results/search-results.html',
-			controller: 'SearchController',
-		}).
+		when('/search/:searchTerm', resolveSearch()).
+		when('/search/:searchTerm/page/:page', resolveSearch()).
 		when('/survey', {
 			templateUrl: 'app/templates/survey/survey.html',
 			controller: "SurveyCtrl",
@@ -198,12 +190,27 @@
 			return routeConfig
 		}
 
-		function search(PageUtil, DataLoader, $log) {
-			var q = PageUtil.getUrlParam('q')
-				// var type = PageUtil.getUrlParam('type')
-				// var pageNumber = PageUtil.getUrlParam('page')
-				// var searchString = "?q=" + q + getTypeString(type) + (pageNumber ? "&page=" + pageNumber : "")
-			var searchString = PageUtil.getUrl()
+		function resolveSearch() {
+			var routeConfig = {
+				resolve: {
+					searchResponse: ['PageUtil', 'DataLoader', '$route', search],
+					title: ['PageUtil', function(PageUtil) {
+						PageUtil.setTitle('Search Results')
+					}]
+				},
+				templateUrl: 'app/templates/search-results/search-results.html',
+				controller: 'SearchController'
+			}
+			return routeConfig
+		}
+
+		function search(PageUtil, DataLoader, $route) {
+			var params = $route.current.params
+			var q = params['searchTerm']
+			var type = params['type']
+			var pageNumber = params['page']
+			var searchString = "?q=" + q + (pageNumber ? "&page=" + pageNumber : "") + getTypesString(type)
+			// var searchString = PageUtil.getUrl()
 			return DataLoader.load("/search" + searchString)
 				.then(function(data) {
 					//If cdid search is made go directly to timeseries page for searched cdid
@@ -213,8 +220,23 @@
 					}
 					return data
 				}, function() {
-					$log.error('Failed loading search results')
+					console.log('Failed loading search results')
 				})
+		}
+
+		function getTypesString(type) {
+			if(!type) {
+				return ''
+			}
+			if(typeof type === 'string') {
+				return '&type=' + type
+			}
+
+			var typeString = ''
+			for (var i = 0; i < type.length; i++) {
+				typeString += '&type=' + type[i]
+			};
+			return typeString
 		}
 
 		function setTitle(title, PageUtil) {
