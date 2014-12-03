@@ -154,7 +154,8 @@
 
     function initialize(q, type, pageNumber) {
       $scope.searchResponse = searchResponse
-      $scope.pageCount = Math.ceil(searchResponse.numberOfResults / 10)
+      //Minus for single home type returning. First page will show 11 elements
+      $scope.pageCount = Math.ceil((searchResponse.numberOfResults - 1) / 10)
       resolveFilters(type)
       $scope.searchTermOneTime = q
       if (type) {
