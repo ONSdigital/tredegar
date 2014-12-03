@@ -72,7 +72,7 @@
         <div ons-tabs tabs-active-var="selectedKey" class="cf chart-area slate">
             <div class="chart-area__controls border-horizontal-single">
                 <!-- border-horizontal-single -->
-                <form>
+                <div>
                     <div class="button-bar chart-area__controls__buttons">
                         <div class="button-group chart-area__controls__type">
                             <label ons-tab-control="chart" class="btn btn--secondary btn--small btn--narrow btn--thin" ng-class="{'btn--secondary--active': selectedKey === 'chart'}" ng-click="chart.showChart()">Chart</label>
@@ -145,7 +145,7 @@
                         </div>
                         <br></br>
                     </div>
-                </form>
+                </div>
 
                 <!-- chart -->
                 <div ons-tab="chart">
