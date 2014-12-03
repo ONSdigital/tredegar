@@ -34,16 +34,16 @@ public class SearchHelper {
 	 * @param types
 	 * @return
 	 */
-	public static SearchResult search(String searchTerm, int page, String... types) {
+	public static SearchResult search(String searchTerm, int page, boolean naturalLanguage, String... types) {
 		if (ArrayUtils.isEmpty(types)) {
-			return searchMultiple(searchTerm, page);
+			return searchMultiple(searchTerm, page, naturalLanguage);
 		} else {
-			return SearchService.search(buildContentQuery(searchTerm, page, types));
+			return SearchService.search(buildContentQuery(searchTerm, page, naturalLanguage, types));
 		}
 	}
 	
-	public static SearchResult autocomplete(String searchTerm) {
-		ONSQueryBuilder builder = buildAutocompleteQuery(searchTerm);
+	public static SearchResult autocomplete(String searchTerm, boolean naturalLanguage) {
+		ONSQueryBuilder builder = buildAutocompleteQuery(searchTerm, naturalLanguage);
 		return SearchService.search(builder);
 	}
 
@@ -76,7 +76,7 @@ public class SearchHelper {
 	}
 
 	public static SearchResult searchSuggestions(String query, int page, String[] types) throws IOException, Exception {
-		TermSuggestionBuilder termSuggestionBuilder = new TermSuggestionBuilder("autocorrect").field("title").text(query).size(1);
+		TermSuggestionBuilder termSuggestionBuilder = new TermSuggestionBuilder("autocorrect").field("title").text(query).size(2);
 		SuggestResponse suggestResponse = ElasticSearchServer.getClient().prepareSuggest("ons").addSuggestion(termSuggestionBuilder).execute().actionGet();
 		SearchResult result = null;
 
@@ -99,7 +99,7 @@ public class SearchHelper {
 		if (StringUtils.isEmpty(suggestionsBufferAsString)) {
 			System.out.println("All search steps failed to discover suitable match");
 		} else {
-			result = search(suggestionsBufferAsString, page, types);
+			result = search(suggestionsBufferAsString, page, false, types);
 			result.setSuggestionBasedResult(true);
 			result.setSuggestion(suggestionsBufferAsString);
 			System.out.println("Failed to find any results for[" + query + "] so will use suggestion of [" + suggestionsBufferAsString + "]");
@@ -107,9 +107,9 @@ public class SearchHelper {
 		return result;
 	}
 
-	private static SearchResult searchMultiple(String searchTerm, int page) {
+	private static SearchResult searchMultiple(String searchTerm, int page, boolean naturalLanguage) {
 		// If no filter and first page, include one home type result at the top
-		List<SearchResult> responses = SearchService.multiSearch(buildHomeQuery(searchTerm, page), buildContentQuery(searchTerm, page));
+		List<SearchResult> responses = SearchService.multiSearch(buildHomeQuery(searchTerm, page, naturalLanguage), buildContentQuery(searchTerm, page, naturalLanguage));
 		Iterator<SearchResult> resultsIterator = responses.iterator();
 		SearchResult homeResult = resultsIterator.next();
 		SearchResult contentResult = resultsIterator.next();
@@ -126,13 +126,15 @@ public class SearchHelper {
 		return contentResult;
 	}
 
-	private static ONSQueryBuilder buildHomeQuery(String searchTerm, int page) {
+	private static ONSQueryBuilder buildHomeQuery(String searchTerm, int page, boolean naturalLanguage) {
 		ONSQueryBuilder homeQuery = new ONSQueryBuilder("ons").setType(ContentType.home.toString()).setPage(page).setSearchTerm(searchTerm).setSize(1).setFields(TITLE, "url");
+		homeQuery.setNaturalLanguage(naturalLanguage);
 		return homeQuery;
 	}
 
-	private static ONSQueryBuilder buildContentQuery(String searchTerm, int page, String... types) {
+	private static ONSQueryBuilder buildContentQuery(String searchTerm, int page, boolean naturalLanguage, String... types) {
 		ONSQueryBuilder contentQuery = new ONSQueryBuilder("ons").setSearchTerm(searchTerm).setFields(TITLE, "url");
+		contentQuery.setNaturalLanguage(naturalLanguage);
 		if (ArrayUtils.isEmpty(types)) {
 			contentQuery.setTypes(ContentType.bulletin.toString(), ContentType.dataset.toString(), ContentType.methodology.toString(), ContentType.article.toString()).setPage(page);
 
@@ -143,8 +145,9 @@ public class SearchHelper {
 		return contentQuery;
 	}
 	
-	private static ONSQueryBuilder buildAutocompleteQuery(String searchTerm) {
-		ONSQueryBuilder autocompleteQuery = new ONSQueryBuilder("ons").setSearchTerm(searchTerm).setFields(TITLE, "url");		
+	private static ONSQueryBuilder buildAutocompleteQuery(String searchTerm, boolean naturalLanguage) {
+		ONSQueryBuilder autocompleteQuery = new ONSQueryBuilder("ons").setSearchTerm(searchTerm).setFields(TITLE, "url");
+		autocompleteQuery.setNaturalLanguage(naturalLanguage);
 		autocompleteQuery.setTypes(ContentType.timeseries.toString(), ContentType.bulletin.toString(), ContentType.dataset.toString(), ContentType.methodology.toString(), ContentType.article.toString());
 		return autocompleteQuery;
 	}

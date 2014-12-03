@@ -4889,20 +4889,23 @@ ul.simple-pagination {
 .simple-pagination ul {
     list-style: none;
     margin: 0 auto;
+    padding: 0px;
+
+
 }
 .simple-pagination li {
     list-style: none;
     padding: 0;
     margin: 0;
-    float: left;
+    display: inline;
 }
 /*------------------------------------*\
   Pagination Styles
 \*------------------------------------*/
 
 .pagination a, .pagination span {
-    float: left;
-    text-decoration: none;
+/*    float: left;
+*/   text-decoration: none;
     color: #016db9;
     font-size: 0.85em;
     line-height: 1.5em;
@@ -4936,8 +4939,9 @@ ul.simple-pagination {
     cursor: default;
 }
 .pagination-centred {
-    max-width: 75%;
-    margin: 0 auto;
+    max-width: 100%;
+/*    margin: 0 auto;
+*/    text-align: center;
 }
 /*------------------------------------*\
   T3 Classes
@@ -8453,6 +8457,9 @@ lesser , applied styles
     cursor: not-allowed;
     /*        background: -webkit-radial-gradient(center, ellipse, #d5d6d2 0%, #c8c9c4 100%);
     background: radial-gradient(ellipse at center, #d5d6d2 0%, #c8c9c4 100%);*/
+}
+.btn-disabled{
+    cursor: not-allowed;
 }
 .btn--secondary--inactive:hover, .btn--secondary--inactive:focus {
     color: #000;

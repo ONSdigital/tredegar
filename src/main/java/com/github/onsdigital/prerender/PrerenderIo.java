@@ -50,7 +50,9 @@ public class PrerenderIo {
 			if (StringUtils.isEmpty(escapedFragment)) {
 				escapedFragment = "/";
 			}
-			URL escapedFragmetUrl = buildUrl(url, escapedFragment);
+			System.out.println("Original URL: " + request.getRequestURL());
+			System.out.println("Updated URL: " + url);
+			URL escapedFragmetUrl = buildUrl(url, escapedFragment, request.getQueryString());
 			escapedFragmetUrl = updateForLocalhost(escapedFragmetUrl);
 
 			System.out.println("URL for Prerender.io is: " + escapedFragmetUrl);
@@ -96,7 +98,7 @@ public class PrerenderIo {
 		return result;
 	}
 
-	private static URL buildUrl(URL url, String escapedFragment) throws MalformedURLException, URISyntaxException {
+	private static URL buildUrl(URL url, String escapedFragment, String query) throws MalformedURLException, URISyntaxException {
 
 		URIBuilder uriBuilder = new URIBuilder();
 
@@ -121,10 +123,15 @@ public class PrerenderIo {
 		// Path
 		uriBuilder.setPath("/");
 
-		// Query
+		// Query - start with existing parameters so that we keep things like
+		// search queries:
 		List<NameValuePair> parameters = new ArrayList<>();
 		parameters.add(new BasicNameValuePair("prerender", "true"));
-		parameters.add(new BasicNameValuePair("_escaped_fragment_", escapedFragment));
+		if (StringUtils.isNotBlank(query)) {
+			parameters.add(new BasicNameValuePair("_escaped_fragment_", escapedFragment + "?" + query));
+		} else {
+			parameters.add(new BasicNameValuePair("_escaped_fragment_", escapedFragment));
+		}
 		uriBuilder.setParameters(parameters);
 
 		return uriBuilder.build().toURL();
