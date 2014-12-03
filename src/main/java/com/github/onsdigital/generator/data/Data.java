@@ -14,10 +14,12 @@ import java.util.TreeMap;
 import org.apache.commons.lang3.StringUtils;
 
 import com.github.onsdigital.generator.Folder;
+import com.github.onsdigital.generator.datasets.DatasetContent;
 import com.github.onsdigital.generator.markdown.ArticleMarkdown;
 import com.github.onsdigital.generator.markdown.BulletinMarkdown;
 import com.github.onsdigital.generator.markdown.MethodologyMarkdown;
 import com.github.onsdigital.generator.taxonomy.TaxonomyCsv;
+import com.github.onsdigital.json.dataset.Dataset;
 import com.github.onsdigital.json.timeseries.Timeseries;
 import com.github.onsdigital.json.timeseries.TimeseriesValue;
 
@@ -43,7 +45,8 @@ public class Data implements Iterable<Timeseries> {
 	public static Map<Timeseries, List<Timeseries>> relatedTimeseries = new HashMap<>();
 
 	private static Set<Folder> folders;
-	private static Map<String, Set<Timeseries>> datasets = new TreeMap<>();
+	private static Set<Dataset> datasets = new HashSet<Dataset>();
+	private static Map<String, Set<Timeseries>> oldDatasets = new TreeMap<>();
 	private static Map<String, Timeseries> timeserieses = new HashMap<>();
 	private static Set<String> mappedDatasets = new HashSet<>();
 
@@ -66,6 +69,7 @@ public class Data implements Iterable<Timeseries> {
 		// Main manually set-up spreadsheet
 		// may overwrite basic data:
 		AlphaContentCSV.parse();
+		DatasetContent.parse();
 
 		// Markdown content:
 		BulletinMarkdown.parse();
@@ -182,9 +186,9 @@ public class Data implements Iterable<Timeseries> {
 	 *            The name of the dataset.
 	 * @return The specified dataset, or null if it is not present.
 	 */
-	public static Set<Timeseries> dataset(String name) {
+	public static Set<Timeseries> oldDataset(String name) {
 
-		return datasets.get(toKey(name));
+		return oldDatasets.get(toKey(name));
 	}
 
 	/**
@@ -231,6 +235,20 @@ public class Data implements Iterable<Timeseries> {
 	 * Adds a new dataset. If the dataset is already present, an
 	 * {@link IllegalArgumentException} is thrown.
 	 * 
+	 * @param dataset
+	 *            The dataset.
+	 */
+	public static void addDataset(Dataset dataset) {
+		if (datasets.contains(dataset)) {
+			throw new IllegalArgumentException("Duplicate dataset: " + dataset);
+		}
+		datasets.add(dataset);
+	}
+
+	/**
+	 * Adds a new dataset. If the dataset is already present, an
+	 * {@link IllegalArgumentException} is thrown.
+	 * 
 	 * @param name
 	 *            The dataset name.
 	 * @param dataset
@@ -240,12 +258,12 @@ public class Data implements Iterable<Timeseries> {
 
 		Set<Timeseries> dataset;
 		if (datasetName != null) {
-			dataset = dataset(datasetName);
+			dataset = oldDataset(datasetName);
 			if (dataset == null) {
 				throw new RuntimeException("There's no dataset called " + datasetName + " to add " + timeseries + " to.");
 			}
 		} else {
-			dataset = (dataset("other") == null) ? addDataset("other") : dataset("other");
+			dataset = (oldDataset("other") == null) ? addOldDataset("other") : oldDataset("other");
 		}
 		dataset.add(timeseries);
 	}
@@ -259,14 +277,11 @@ public class Data implements Iterable<Timeseries> {
 	 * @param dataset
 	 *            The dataset.
 	 */
-	public static void addDataset(String name, Set<Timeseries> dataset) {
-		if (datasets.containsKey(toKey(name))) {
+	public static void addOldDataset(String name, Set<Timeseries> dataset) {
+		if (oldDatasets.containsKey(toKey(name))) {
 			throw new IllegalArgumentException("Duplicate dataset: " + name);
 		}
-		if (name.equalsIgnoreCase("am")) {
-			System.out.println("Adding am as " + dataset);
-		}
-		datasets.put(StringUtils.lowerCase(name), dataset);
+		oldDatasets.put(StringUtils.lowerCase(name), dataset);
 	}
 
 	/**
@@ -277,9 +292,9 @@ public class Data implements Iterable<Timeseries> {
 	 *            The dataset name.
 	 * @return
 	 */
-	public static Set<Timeseries> addDataset(String name) {
+	public static Set<Timeseries> addOldDataset(String name) {
 		Set<Timeseries> dataset = new HashSet<>();
-		addDataset(name, dataset);
+		addOldDataset(name, dataset);
 		return dataset;
 	}
 
@@ -287,8 +302,8 @@ public class Data implements Iterable<Timeseries> {
 		mappedDatasets.add(toKey(name));
 	}
 
-	public static Set<String> unmappedDatasets() {
-		Set<String> result = new HashSet<>(datasets.keySet());
+	public static Set<String> unmappedOldDatasets() {
+		Set<String> result = new HashSet<>(oldDatasets.keySet());
 		for (String mapped : mappedDatasets) {
 			result.remove(toKey(mapped));
 		}
@@ -317,9 +332,9 @@ public class Data implements Iterable<Timeseries> {
 	/**
 	 * @return The total number of timeseries currently held.
 	 */
-	public static int sizeDatasets() {
+	public static int sizeOldDatasets() {
 		Set<String> cdids = new HashSet<>();
-		for (String dataset : datasets.keySet()) {
+		for (String dataset : oldDatasets.keySet()) {
 			cdids.add(dataset);
 		}
 		return timeserieses.size();
@@ -328,8 +343,8 @@ public class Data implements Iterable<Timeseries> {
 	/**
 	 * @return The total number of timeseries currently held.
 	 */
-	public static int sizeDatasetsCount() {
-		return datasets.size();
+	public static int sizeOldDatasetsCount() {
+		return oldDatasets.size();
 	}
 
 	/**

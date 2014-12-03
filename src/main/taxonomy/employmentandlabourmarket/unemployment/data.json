@@ -57,12 +57,12 @@
   ],
   "datasets": [
     {
-      "name": "Unemployment data collection",
-      "uri": "/employmentandlabourmarket/unemployment/datasets/unemploymentdatacollection"
-    },
-    {
       "name": "Claimant Count data collection",
       "uri": "/employmentandlabourmarket/unemployment/datasets/claimantcountdatacollection"
+    },
+    {
+      "name": "Unemployment data collection",
+      "uri": "/employmentandlabourmarket/unemployment/datasets/unemploymentdatacollection"
     }
   ],
   "level": "t3",
@@ -75,7 +75,7 @@
     {
       "index": 0,
       "type": "home",
-      "name": "Employment and Labour Market",
+      "name": "Employment and Labour market",
       "fileName": "employmentandlabourmarket"
     }
   ]

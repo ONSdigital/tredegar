@@ -23,11 +23,15 @@
       "uri": "/peoplepopulationandcommunity/elections/bulletins/electoralstatisticsforuk2013"
     }
   ],
-  "datasets": [],
+  "datasets": [
+    {
+      "name": "Electoral Statistics",
+      "uri": "/peoplepopulationandcommunity/elections/datasets/electoralstatistics"
+    }
+  ],
   "level": "t3",
   "index": 10,
-  "lede": "Lorem ipsum dolor sit amet, fugit tation percipitur duo at, magna denique ei duo, mazim oratio volumus id mel. Veri discere accusamus sit id, oblique fabulas legimus sit ex. Atqui urbanitas efficiendi ei sea. Voluptua gloriatur vis an, cu eius semper deleniti vel. Aperiri insolens accommodare vel ne, vel id dictas corrumpit urbanitas.",
-  "more": "Eam cu alia nostrud. In movet epicuri quo. Decore reprimique vix ei. Ea sit possim albucius, an has mutat lucilius inimicus. Vis et vocibus voluptatum, ne est unum meliore invidunt. Posse nemore vim ei, habeo omnesque ullamcorper usu at, eu eos cetero accusata consulatu.",
+  "lede": "The key statistic in this section is the number of people who are listed on electoral registers. This differs from the number of people who are eligible to vote. These statistics are available for the constituent countries of the UK. ",
   "type": "home",
   "name": "Elections",
   "fileName": "elections",
@@ -35,7 +39,7 @@
     {
       "index": 0,
       "type": "home",
-      "name": "People, Population and Community",
+      "name": "People, population and community",
       "fileName": "peoplepopulationandcommunity"
     }
   ]
