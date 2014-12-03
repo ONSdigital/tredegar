@@ -36,7 +36,7 @@ public class Search {
 			searchResult = search(query, page, types);
 			// This is a search result page.
 			// Autocomplete requests pass a parameter of "term".
-			SearchConsole.save(query, page, types, searchResult);
+			SearchConsole.save(query, page, searchResult);
 		} else if (StringUtils.isNotBlank(request.getParameter("term"))) {
 			searchResult = autoComplete(query);
 		}

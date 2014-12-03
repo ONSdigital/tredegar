@@ -1,5 +1,6 @@
 package com.github.onsdigital.api.search;
 
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -17,6 +18,7 @@ import org.apache.commons.lang3.exception.ExceptionUtils;
 import com.github.davidcarboni.restolino.framework.Endpoint;
 import com.github.davidcarboni.restolino.json.Serialiser;
 import com.github.onsdigital.configuration.Configuration;
+import com.github.onsdigital.json.ContentType;
 import com.github.onsdigital.json.timeseries.Timeseries;
 import com.github.onsdigital.search.bean.SearchResult;
 import com.mongodb.BasicDBObject;
@@ -131,16 +133,51 @@ public class SearchConsole {
 		}
 	}
 
-	static void save(final String query, final int page, final String[] types, final Object searchResult) {
-		
-		if(searchResult instanceof Timeseries) {
-			executeSave(query, page, types, 1);			
+	static void save(final String query, final int page, final Object searchResult) {
+
+		if (Timeseries.class.isAssignableFrom(searchResult.getClass())) {
+			saveTimeseries(query, page, (Timeseries) searchResult);
 		} else {
-			executeSave(query, page, types, ((SearchResult)searchResult).getNumberOfResults());
+			saveSearchResult(query, page, (SearchResult) searchResult);
 		}
 	}
 
-	private static void executeSave(final String query, final int page, final String[] types, final long numberOfResults) {
+	private static void saveTimeseries(String query, int page, Timeseries timeseries) {
+
+		Search search = new Search();
+		search.query = query;
+		search.page = page;
+
+		// Single hit:
+		Result result = new Result();
+		result.name = timeseries.cdid();
+		result.description = timeseries.name;
+		result.type = ContentType.timeseries;
+		result.uri = timeseries.uri;
+		search.hits.add(result);
+
+		save(search);
+	}
+
+	private static void saveSearchResult(String query, int page, SearchResult searchResult) {
+
+		Search search = new Search();
+		search.query = query;
+		search.page = page;
+
+		// Add the hits:
+		for (Map<String, Object> hit : searchResult.getResults()) {
+			Result result = new Result();
+			result.name = hit.get("title").toString();
+			result.description = hit.get("lede").toString();
+			result.type = ContentType.valueOf(hit.get("type").toString());
+			result.uri = URI.create(hit.get("url").toString());
+			search.hits.add(result);
+		}
+		save(search);
+	}
+
+	private static void save(final Search search) {
 		// Submit to be saved asynchronously.
 		// This minimises response time and we're not too worried about whether
 		// the data get committed - we're mainly after a sample:
@@ -160,12 +197,7 @@ public class SearchConsole {
 					DBCollection searchTerms = db.getCollection("searchTerms");
 
 					// Save the record:
-					BasicDBObject record = new BasicDBObject();
-					record.append("query", query);
-					record.append("page", page);
-					record.append("types", types);
-					record.append("results", numberOfResults);
-					searchTerms.insert(record);
+					searchTerms.insert(search.build());
 					System.out.println("Total: " + searchTerms.getCount());
 
 				} catch (Exception e) {
@@ -179,5 +211,40 @@ public class SearchConsole {
 
 			}
 		});
+	}
+
+	static class Search extends BasicDBObject {
+		private static final long serialVersionUID = 2138332036592544966L;
+		String query;
+		int page;
+		long results;
+		// Ordered list of results - enables the ranking to be seen
+		List<Result> hits = new ArrayList<SearchConsole.Result>();
+
+		DBObject build() {
+			append("query", query);
+			append("page", page);
+			append("results", hits.size());
+			for (Result hit : hits) {
+				hit.build();
+				append("hits", hits);
+			}
+			return this;
+		}
+	}
+
+	static class Result extends BasicDBObject {
+		static final long serialVersionUID = 7760752367684896714L;
+		String name;
+		String description;
+		URI uri;
+		ContentType type;
+
+		void build() {
+			append("name", name);
+			append("description", description);
+			append("uri", uri.toString());
+			append("type", type.toString());
+		}
 	}
 }
