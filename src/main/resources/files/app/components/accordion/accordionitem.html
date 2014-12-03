@@ -1,9 +1,9 @@
 <div class="accordionItem">
-    <span class="accordion_chevron" ng-click="toggle(pane)" ng-class="pane.selected ? 'icon-up-open-big':'icon-down-open-big'"></span>
-    <!-- box__header -->
-    <header class="box__header" ng-click="toggle(pane)">
+    <header class="box__header__acc" ng-click="toggle(pane)">
         <h3 class="">{{pane.header}}
         </h3>
+        <span ng-class="pane.selected ? 'icon-up-open-big':'icon-down-open-big'"></span>
+        <!-- box__header -->
     </header>
     <!-- /box__header -->
     <div ng-show="pane.selected" ng-transclude></div>

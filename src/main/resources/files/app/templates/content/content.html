@@ -86,7 +86,7 @@
             <div class="grid-col {{sidebar ? 'desktop-grid-two-thirds tablet-grid-full-width' : ''}}">
                 <article class="box border-horizontal-single content-section" ng-repeat="section in content.sections">
                     <header class="box__header">
-                        <h3 id="section{{$index + 1}}">{{$index + 1}}. {{section.title}}</h3>
+                        <h2 id="section{{$index + 1}}">{{$index + 1}}. {{section.title}}</h2>
                     <!-- Check this in the static version -->
                         <!-- <h2>
                         <a id="Summary"></a>1. Summary</h2> -->
@@ -139,7 +139,7 @@
                                 <header class="box__header">
                                     <h2>Related bulletins</h2>
                                 </header>
-                                
+
                                 <!-- Dynamic: -->
 							    <div class="grid-wrap" ng-show="{{content.hasRelatedBulletins}}">
 						            <article class="box--padded" ng-repeat="relatedBulletin in content.relatedBulletinData" class="grid-col desktop-grid-one-third tablet-grid-one-half">
@@ -155,8 +155,8 @@
 						                    </ul>
 						                </div>
 						            </article>
-							    </div>                                
-                                
+							    </div>
+
                                 <!-- or placeholder: -->
 							    <div class="grid-wrap" ng-show="{{!content.hasRelatedBulletins}}">
 						            <article class="box--padded">
@@ -172,7 +172,7 @@
 						                </div>
 						            </article>
 							    </div>
-							    
+
                             </div>
                             <!-- /box__content -->
                             <footer class="box__footer"></footer>

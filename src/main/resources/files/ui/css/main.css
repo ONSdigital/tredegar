@@ -1008,7 +1008,7 @@ textarea {
     margin-right: 6px;
     margin-right: .6rem;
 }
-.input, .input--mini, .input--small, .input--med, .input--med-large, .input--large, .input--full {
+.input, .input--mini,.input--minute, .input--small, .input--med, .input--med-large, .input--large, .input--full {
     width: 100%;
     margin: 0;
 }
@@ -1021,6 +1021,12 @@ textarea {
 .field--checkbox--reverse label {
     float: left;
 }
+
+.input--minute {
+    max-width: 200px;
+    max-width: 20rem;
+}
+
 .input--mini {
     max-width: 250px;
     max-width: 25rem;
@@ -4800,6 +4806,10 @@ table actions
     z-index: -1;
 }
 
+.search-tooltip{
+    margin: 2px;
+}
+
 .search-home-focused {
     font-size: 1.5em !important;
 }
@@ -4831,6 +4841,11 @@ table actions
     position: relative;
     float: right;
 }
+
+.search-sorting-inline{
+    display:-webkit-inline-box;
+}
+
 .search-sorting-grid {
     padding-left: 10px;
     float: right;
@@ -5317,12 +5332,13 @@ ol.toc-columns {
     text-decoration: none;
     color: black;
 }
-.accordion_chevron {
+/*.accordion_chevron {
     float: right;
     position: relative;
     top: -10px;
     font-size: 2.2rem;
-}
+    color: #a6d1e9;
+}*/
 .split__multiline-break {
     display: block;
 }
@@ -5521,9 +5537,23 @@ ol.toc-columns {
 /*------------------------------------*\
   Accordion Styles
 \*------------------------------------*/
+.box__header__acc{
+        cursor: pointer;
+}
+.box__header__acc h3{
+    line-height: 3;
+}
 
-.accordionItem span:hover {
-    cursor: pointer;
+.accordionItem span {
+    float: right;
+    position: relative;
+    top: -50px;
+    font-size: 2.2rem;
+    color: #a6d1e9;
+}
+.box__header__acc:hover > span, .box__header__acc:focus > span {
+    color: #005ea5;
+    /*background: #e1e1e1;*/
 }
 .accordionItem.hide div {
     display: none;
@@ -6170,7 +6200,7 @@ td.datatable-downloads {
   height: 6.5em;
   border: 0px;
 }*/
-    
+
     .nav-panel__list{
         display: inline-flex;
     }
@@ -8700,4 +8730,3 @@ lesser , applied styles
     z-index:999;
     margin-left:0.125em;
 }
-
