@@ -5295,12 +5295,13 @@ ol.toc-columns {
     text-decoration: none;
     color: black;
 }
-.accordion_chevron {
+/*.accordion_chevron {
     float: right;
     position: relative;
     top: -10px;
     font-size: 2.2rem;
-}
+    color: #a6d1e9;
+}*/
 .split__multiline-break {
     display: block;
 }
@@ -5499,9 +5500,23 @@ ol.toc-columns {
 /*------------------------------------*\
   Accordion Styles
 \*------------------------------------*/
+.box__header__acc{
+        cursor: pointer;
+}
+.box__header__acc h3{
+    line-height: 3;
+}
 
-.accordionItem span:hover {
-    cursor: pointer;
+.accordionItem span {
+    float: right;
+    position: relative;
+    top: -50px;
+    font-size: 2.2rem;
+    color: #a6d1e9;
+}
+.box__header__acc:hover > span, .box__header__acc:focus > span {
+    color: #005ea5;
+    /*background: #e1e1e1;*/
 }
 .accordionItem.hide div {
     display: none;
@@ -6148,7 +6163,7 @@ td.datatable-downloads {
   height: 6.5em;
   border: 0px;
 }*/
-    
+
     .nav-panel__list{
         display: inline-flex;
     }
@@ -8661,4 +8676,3 @@ lesser , applied styles
     z-index:999;
     margin-left:0.125em;
 }
-
