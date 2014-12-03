@@ -19,7 +19,6 @@ import org.apache.commons.lang3.StringUtils;
 import com.github.davidcarboni.restolino.json.Serialiser;
 import com.github.onsdigital.generator.data.Data;
 import com.github.onsdigital.generator.data.DatasetMappingsCSV;
-import com.github.onsdigital.generator.datasets.DatasetContent;
 import com.github.onsdigital.json.DataItem;
 import com.github.onsdigital.json.Reference;
 import com.github.onsdigital.json.dataset.Dataset;
@@ -95,26 +94,26 @@ public class TaxonomyGenerator {
 		// System.out.println(Data.getDateLabels());
 		System.out.println("Timeseries with no data: " + noData + " (" + noData.size() + ")");
 		System.out.println("You have a grand total of " + created.size() + " timeseries, out of a total possible " + Data.size() + " parsed timeseries.");
-		System.out.println("There are a total of " + Data.sizeDatasets() + " CDIDs classified into one or more datasets.");
-		Set<String> unmappedDatasets = Data.unmappedDatasets();
+		System.out.println("There are a total of " + Data.sizeOldDatasets() + " CDIDs classified into one or more datasets.");
+		Set<String> unmappedDatasets = Data.unmappedOldDatasets();
 		if (unmappedDatasets.size() > 0) {
 			System.out.println("To increase this number, please add mappings for the following datasets: " + unmappedDatasets);
 			for (String datasetName : unmappedDatasets) {
 				if (!"other".equals(datasetName)) {
-					System.out.println(" - " + datasetName + " contains " + Data.dataset(datasetName).size());
+					System.out.println(" - " + datasetName + " contains " + Data.oldDataset(datasetName).size());
 				}
 			}
 		}
-		if (Data.dataset("other") != null) {
-			System.out.println("The 'other' dataset contains " + Data.dataset("other").size() + " timeseries.");
+		if (Data.oldDataset("other") != null) {
+			System.out.println("The 'other' dataset contains " + Data.oldDataset("other").size() + " timeseries.");
 		}
 
 		Set<Folder> mapped = new TreeSet<>();
 		for (Folder folder : DatasetMappingsCSV.mappedFolders.values()) {
 			mapped.add(folder);
 		}
-		if (oldDatasetsCreated.size() != mapped.size()) {
-			System.out.println(oldDatasetsCreated.size() + " old datasets have been created, from a total of " + Data.sizeDatasetsCount());
+		if (oldDatasetsCreated.size() > 0 && oldDatasetsCreated.size() != mapped.size()) {
+			System.out.println(oldDatasetsCreated.size() + " old datasets have been created, from a total of " + Data.sizeOldDatasetsCount());
 			Collections.sort(oldDatasetsCreated);
 			for (Folder folder : oldDatasetsCreated) {
 				System.out.println(" - " + folder.path());
@@ -318,16 +317,13 @@ public class TaxonomyGenerator {
 
 	private static void createDatasets(Folder folder, T3 t3) throws IOException {
 		t3.datasets.clear();
-		List<Dataset> datasets = DatasetContent.getDatasets(folder);
 
-		if (datasets != null) {
-			for (Dataset dataset : datasets) {
-				if (dataset.summary != null) {
-					if (dataset.uri == null) {
-						dataset.uri = toDatasetUri(folder, dataset);
-					}
-					t3.datasets.add(new Reference(dataset));
+		for (Dataset dataset : folder.datasets) {
+			if (dataset.summary != null) {
+				if (dataset.uri == null) {
+					dataset.uri = toDatasetUri(folder, dataset);
 				}
+				t3.datasets.add(new Reference(dataset));
 			}
 		}
 	}
@@ -530,12 +526,11 @@ public class TaxonomyGenerator {
 	}
 
 	private static void createDataset(Folder folder, File file, T3 t3) throws IOException {
-		List<Dataset> datasets = DatasetContent.getDatasets(folder);
 
-		if (datasets != null && datasets.size() > 0) {
+		if (folder.datasets.size() > 0) {
 			File datasetsFolder = new File(file, "datasets");
 			datasetsFolder.mkdir();
-			for (Dataset dataset : datasets) {
+			for (Dataset dataset : folder.datasets) {
 				dataset.setBreadcrumb(t3);
 				String datasetFileName = dataset.fileName.replaceAll("\\W", "");
 				File datasetFolder = new File(datasetsFolder, StringUtils.deleteWhitespace(datasetFileName.toLowerCase()));

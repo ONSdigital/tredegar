@@ -15,10 +15,10 @@
                 <div ng-show="showSuggestedSearchResults" id="search-results-total" class="search-results-total">
                     <span class='results-total'>
                         {{searchResponse.suggestions}}
-                    </span>Sorry, there were no results found for 
+                    </span>Sorry, there were no results found for
                     <span class='results-search-term'>
                         '{{searchTermOneTime}}'
-                        </span>  
+                        </span>
                     <div>
 	                    Showing <span class='results-total'>
 	                        {{searchResponse.numberOfResults}}
@@ -26,10 +26,10 @@
 	                    <span class='results-search-term'>
 	                        '{{searchResponse.suggestion}}'
 	                        </span> instead.
-                    </div>              
-                </div>          
+                    </div>
+                </div>
                 <div ng-show="showZeroResultsFound" id="search-results-total" class="search-results-total">
-                    Sorry, there were no results found for 
+                    Sorry, there were no results found for
                     <span class='results-search-term'>
                         '{{searchTermOneTime}}'
                     </span>
@@ -39,9 +39,9 @@
                     	<dt>Check your spelling</dt>
                     	<dt>Use broader searches</dt>
                     	<dt>Try different keywords</dt>
-                    </dl>	                    
-                </div>  
-                <div ng-show="showFilters">              
+                    </dl>
+                </div>
+                <div ng-show="showFilters">
 	                <div class="grid-wrap">
 	                    <div class="grid-col desktop-grid-two-thirds">
 	                        <div class="search-filters">
@@ -80,7 +80,7 @@
 <div class="wrapper nav-panels">
     <div class="grid-wrap">
         <div class="grid-col tablet-wide-grid-two-thirds">
-            
+
             <article class="box">
 
                 <div id="<search></search>" class="search">
@@ -88,11 +88,11 @@
 
                         <dt ng-repeat-start="item in searchResponse.results track by $index" ng-class="isFocus(item.type, $index) ? 'search-home-focused' : ''">
                             <a class="search-link" href="#!{{item.url}}"><span ng-bind-html="item.highlights.title || item.title"></span></a>
-                            <span ng-if="isShowLozenge(item)" class="lozenge--label" href="">{{item.type === 'bulletin' ? 'Statistical Bulletin' : item.type}}</span>
+                            <span ng-if="isShowLozenge(item)" class="lozenge--label" href="">{{item.type === 'bulletin' ? 'Statistical bulletin' : item.type}}</span>
                         </dt>
                         <dd class="microcopy">
                         	<span ng-if="item.type === 'home'">
-								<span ng-bind-html="item.highlights.url || item.url"></span>                      	
+								<span ng-bind-html="item.highlights.url || item.url"></span>
                         	</span>
                         	<span ng-if="item.type != 'home'">Release date 1 Jan 3000</span>
                         </dd>
