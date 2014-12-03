@@ -1,4 +1,4 @@
-Theme: People, Population and Community
+﻿Theme: People, Population and Community
 Level 2: Births, Deaths and Marriages
 Level 3: Adoption
 Summary: Annual adoptions statistics following court orders. Analysed by sex, age and marital status of biological parents.
