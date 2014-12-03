@@ -163,14 +163,13 @@ public class ONSQueryBuilder {
 		} else {
 			// return documents with fields containing words that start with
 			// given search term
-			MultiMatchQueryBuilder multiMatchQueryBuilder = new MultiMatchQueryBuilder(getSearchTerm(), getFields()).analyzer("ons_synonyms");
+			MultiMatchQueryBuilder multiMatchQueryBuilder = new MultiMatchQueryBuilder(getSearchTerm(), getFields()).analyzer("ons_synonyms").slop(5);
 			// wrap this up with a function_score capability that allows us to
 			// boost the home pages
 			float homePageBoostFloat = Float.valueOf((String) ElasticSearchProperties.INSTANCE.getProperty("home"));
 			float titleBoostFloat = Float.valueOf((String) ElasticSearchProperties.INSTANCE.getProperty("title"));
 			
 			multiMatchQueryBuilder.field("title", titleBoostFloat);
-			multiMatchQueryBuilder.minimumShouldMatch("2");
 			FunctionScoreQueryBuilder functionScoreQueryBuilder = new FunctionScoreQueryBuilder(multiMatchQueryBuilder);
 			functionScoreQueryBuilder.add(FilterBuilders.termsFilter("_type", "home"), ScoreFunctionBuilders.factorFunction(homePageBoostFloat));
 			builder = functionScoreQueryBuilder;

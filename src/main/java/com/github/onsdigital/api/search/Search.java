@@ -60,7 +60,7 @@ public class Search {
 	}
 
 	private SearchResult search(String query, int page, String[] types) throws Exception {
-		ONSQueryBuilder queryBuilder = new ONSQueryBuilder("ons").setTypes(types).setPage(page).setSearchTerm(query).setFields("title", "url");
+		ONSQueryBuilder queryBuilder = new ONSQueryBuilder("ons").setTypes(types).setPage(page).setSearchTerm(query).setFields("title", "url", "path");
 
 		/*
 		 * Search uses a number of steps to discover any appropriates matches:-
@@ -69,13 +69,8 @@ public class Search {
 		 * result, then use a 'term' suggestion, that catches possible typos
 		 */
 		SearchResult searchResult = new SearchHelper(ElasticSearchServer.getClient()).search(queryBuilder);
-		if (searchResult.getNumberOfResults() == 0 && types == null) {// If type
-																		// is
-																		// set
-																		// don't
-																		// search
-																		// for
-																		// timeseries
+		// If type is set don't search for timeseries
+		if (searchResult.getNumberOfResults() == 0 && types == null) {
 			searchResult = searchTimeseries(query, page);
 			// if still no results then use term suggester for autocorrect
 			if (searchResult.getNumberOfResults() == 0) {
