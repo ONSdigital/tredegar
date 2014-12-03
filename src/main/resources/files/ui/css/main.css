@@ -1008,7 +1008,7 @@ textarea {
     margin-right: 6px;
     margin-right: .6rem;
 }
-.input, .input--mini, .input--small, .input--med, .input--med-large, .input--large, .input--full {
+.input, .input--mini,.input--minute, .input--small, .input--med, .input--med-large, .input--large, .input--full {
     width: 100%;
     margin: 0;
 }
@@ -1021,6 +1021,12 @@ textarea {
 .field--checkbox--reverse label {
     float: left;
 }
+
+.input--minute {
+    max-width: 200px;
+    max-width: 20rem;
+}
+
 .input--mini {
     max-width: 250px;
     max-width: 25rem;
@@ -4800,6 +4806,10 @@ table actions
     z-index: -1;
 }
 
+.search-tooltip{
+    margin: 2px;
+}
+
 .search-home-focused {
     font-size: 1.5em !important;
 }
@@ -4831,6 +4841,11 @@ table actions
     position: relative;
     float: right;
 }
+
+.search-sorting-inline{
+    display:-webkit-inline-box;
+}
+
 .search-sorting-grid {
     padding-left: 10px;
     float: right;
