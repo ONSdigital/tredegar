@@ -25,7 +25,9 @@ pageCount field is mandatory
       templateUrl: 'app/components/paginator/paginator.html',
       scope: {
         pageCount: '=',
-        maxVisible: '='
+        maxVisible: '=',
+        //if set to true generates static links, to be used with prerender
+        static: '=?' 
       },
       controller: PaginatorController,
       controllerAs: 'paginator'
@@ -35,7 +37,7 @@ pageCount field is mandatory
       var paginator = this
       var PAGE_PARAM = 'page'
       var maxVisible = $scope.maxVisible || 10
-      var currentPage = +$location.search()[PAGE_PARAM] || 1
+      var currentPage = $scope.currentPage = +$location.search()[PAGE_PARAM] || 1
       paginator.show
       paginator.start
       paginator.end
@@ -104,6 +106,19 @@ pageCount field is mandatory
         init()
       }
 
+      function getLinkTarget (index) {
+        var target = ''
+        var url = $location.url()
+        if($location.search()['page']) {
+          //Page already set, replace
+          target =  $scope.static ? (url.replace(PAGE_PARAM + '=' + currentPage, PAGE_PARAM + '=' + index  )) : ''
+        } else {
+          target = $scope.static ? (url + '&'  + PAGE_PARAM + '=' + index ) : ''
+        }
+        console.log(target)
+        return target
+      }
+
       function isCurrent(index) {
         return currentPage === (index)
       }
@@ -124,7 +139,8 @@ pageCount field is mandatory
         isCurrent: isCurrent,
         prev: prev,
         next: next,
-        selectPage: selectPage
+        selectPage: selectPage,
+        getLinkTarget:getLinkTarget
       })
 
     }
