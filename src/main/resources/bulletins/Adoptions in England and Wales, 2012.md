@@ -1,4 +1,4 @@
-Theme: People, Population and Community
+﻿Theme: People, Population and Community
 Level 2: Births, Deaths and Marriages
 Level 3: Adoption
 Summary: Annual adoptions statistics following court orders. Analysed by sex, age and marital status of biological parents.
@@ -28,18 +28,12 @@ The number of adoption orders indicated by ONS and MoJ are similar but do not ma
 ## Number of adoptions
 In 2012, there were 5,206 adoptions entered into the Adopted Children Register (ACR) following court orders made in England and Wales. This was higher than in 2011 (a 9.8% increase), when there were 4,740 adoptions. This represents the largest annual increase in adoptions over the last 15 years, the period for which adoption statistics by date of court order are available (Figure 1).
 
-### Figure 1: Number of Adoptions, 1998-2012
-##### England and Wales
+<div class="chart-container">
+<iframe src="http://onsdigital.github.io/Alpha/bulletins/adoptions1.html"></iframe>
+</div>
 
-[![Figure 1: Number of Adoptions, 1998-2012](http://www.ons.gov.uk/ons/resources/fig1totaladoptions_tcm77-322826.png)](http://www.ons.gov.uk/ons/resources/fig1totaladoptions_tcm77-322826.png "Figure 1: Number of Adoptions, 1998-2012")
-
-Source: Office for National Statistics
-
-** Notes: **
+### Notes: 
 1. Adoption figures by date of court order are only available from 1998.
- 
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/vsob1/adoptions-in-england-and-wales/2012/chd-figure-1.xls) (27.5 Kb)
 
 Wales recorded a 12% increase in adoptions in 2012 with 371 children entered into the Adopted Children Register following court orders made by courts in Wales. In England there was a 9.6% rise in adoptions with 4,835 children entered into the Adopted Children Register following court orders made in England.
 
@@ -58,32 +52,21 @@ Special Guardianship provided a new permanence option for children, giving a leg
 ## Adoptions by age and sex
 In 2012, 51% of children adopted were male (compared with 49% in 2011) and 49% were female (compared with 51% in 2011). Since 1998, the number of male and female adoptions has been fairly similar (Figure 2).
 
-### Figure 2: Number of Adoptions by Sex, 1998-2012
-##### England and Wales
+<div class="chart-container">
+<iframe src="http://onsdigital.github.io/Alpha/bulletins/adoptions2.html"></iframe>
+</div>
 
-[![Figure 2: Number of Adoptions by Sex, 1998-2012](http://www.ons.gov.uk/ons/resources/fig2adoptionsbysexbarnic_tcm77-322840.png)](http://www.ons.gov.uk/ons/resources/fig2adoptionsbysexbarnic_tcm77-322840.png "Figure 2: Number of Adoptions by Sex, 1998-2012")
-
-Source: Office for National Statistics
-
-** Notes: **
+### Notes:
 1. Adoption figures by date of court order are only available from 1998.
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/vsob1/adoptions-in-england-and-wales/2012/chd-figure-2.xls) (19 Kb)
 
 The percentage of adopted children aged 1-4 has increased steadily since 1998. In 2012, 63% of children adopted were aged 1-4, compared with 34% in 1998 (Figure 3). In contrast, the percentage of adopted children who were aged 10-14 has more than halved from 21% in 1998 to 8.4% in 2012.
 
-Smaller decreases have been recorded for other age groups: In 2012, 24% of children adopted were aged 5-9 and 3.2% were aged 15-17, down from 36% and 5.0% respectively in 1998. Adoptions of children aged under 1 decreased overall from 4.6% of all adoptions in 1998 to 1.6% in 2011 before rising slightly to 2.2% in 2012.
+Smaller decreases have been recorded for other age groups: In 2012, 24% of children adopted were aged 5-9 and 3.2% were aged 15-17, down from 36% and 5.0% respectively in 1998. Adnice!
+options of children aged under 1 decreased overall from 4.6% of all adoptions in 1998 to 1.6% in 2011 before rising slightly to 2.2% in 2012.
 
-### Figure 3: Adoptions by Age Group, 1998-2012
-##### England and Wales
-
-[![Figure 3: Adoptions by Age Group, 1998-2012](http://www.ons.gov.uk/ons/resources/fig3adoptionsbyagev2_tcm77-322843.png)](http://www.ons.gov.uk/ons/resources/fig3adoptionsbyagev2_tcm77-322843.png "Figure 3: Adoptions by Age Group, 1998-2012")
-
-Source: Office for National Statistics
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/vsob1/adoptions-in-england-and-wales/2012/chd-figure-3.xls) (29 Kb)
+<div class="chart-container">
+<iframe src="http://onsdigital.github.io/Alpha/bulletins/adoptions3.html"></iframe>
+</div>
 
 ## Adoptions by marital status of biological parents
 In 2012, 85% of children adopted were born outside marriage compared with 68% in 1998. The percentage of adopted children born outside marriage has increased steadily since 1998 and is much higher than the percentage of live births outside marriage, suggesting that children born outside marriage are more likely to be adopted than those born within marriage.
@@ -125,22 +108,8 @@ Statistics on [looked after children](http://www.gov.uk/government/organisations
 
 [Adoption statistics](http://www.ons.gov.uk/ons/external-links/devolved-admins/scottish-government/gro-scotland--vital-events---adoptions.html "GRO Scotland: Vital Events - Adoptions") in Scotland are provided by the National Records of Scotland while statistics on [children looked after](http://www.scotland.gov.uk/Topics/Statistics/Browse/Children/PubChildrenSocialWork "Scottish Government - Children's Social Work Statistics") are available from the Scottish Government. 
 
-## References
-Department for Education (2012a), [Adoption Scorecards](http://www.education.gov.uk/childrenandyoungpeople/families/adoption/a00208817/adoption-scorecards "Adoption Scorecards")
 
-Department for Education (2012b), [An Action Plan for Adoption: Tacking Delay](http://media.education.gov.uk/assets/files/pdf/a/an%20action%20plan%20for%20adoption.pdf "[An Action Plan for Adoption: Tacking Delay")
-
-Department for Education (2012c), [Children looked after in England (including adoption and care leavers) year ending 31 March 2012](http://www.gov.uk/government/uploads/system/uploads/attachment_data/file/219210/sfr20-2012v2.pdf "Children Looked After - Statistical First Release")
-
-Department for Education (2011), [Adoption and special guardianship data pack: Underlying data](http://www.education.gov.uk/b0076713/datapack/adoption-special-guardianship-data-pack "Adoptions and Special Partnership Data Pack")
-
-National Assembly for Wales (2013), [Proposals for Achieving a National Adoption Service in Wales and Development of the Functional Model](http://www.senedd.assemblywales.org/documents/s16595/Paper%204%20Deputy%20Minister%20for%20Social%20Services%20-%20Proposals%20for%20achieving%20a%20National%20Adoption%20Service%20i.pdf "National Assembly for Wales - Adoptions Functional Model")
-
-National Assembly for Wales (2012), [Children and Young People Committee, Inquiry into Adoption](http://www.senedd.assemblywales.org/documents/s11356/Adoption%20Report%20-%20November%202012.pdf "National Assembly for Wales - Inquiry into Adoption")
-
-Office for National Statistics (2013), [Births in England and Wales, 2012](http://www.ons.gov.uk/ons/rel/vsob1/birth-summary-tables--england-and-wales/2012/stb-births-in-england-and-wales-2012.html "STB Births in England and Wales 2012")
-
-## Background notes
+## [accordion] Background notes and methodology
 1. Data on adoptions are derived from the Adopted Children Register (ACR) and are based on adoption orders made in England and Wales. The data here relate to those cases notified by the courts to the Registrar General and entered onto the ACR in a given year. Adoption figures are produced on two definitions: date of entry into the ACR and date of Court Order. The adoption figures in this bulletin are based on the date of court order and do not include foreign adoptions. The court order data are seen as preferable as there may be a time lag between the date of the court order and the subsequent entry into the Register.
 
 2. Children are defined as being under 18 years of age.
@@ -177,3 +146,21 @@ Designation can be broadly interpreted to mean that the statistics:
 - are managed impartially and objectively in the public interest.
 
 Once statistics have been designated as National Statistics it is a statutory requirement that the Code of Practice shall continue to be observed.
+
+## [accordion] References
+Department for Education (2012a), [Adoption Scorecards](http://www.education.gov.uk/childrenandyoungpeople/families/adoption/a00208817/adoption-scorecards "Adoption Scorecards")
+
+Department for Education (2012b), [An Action Plan for Adoption: Tacking Delay](http://media.education.gov.uk/assets/files/pdf/a/an%20action%20plan%20for%20adoption.pdf "[An Action Plan for Adoption: Tacking Delay")
+
+Department for Education (2012c), [Children looked after in England (including adoption and care leavers) year ending 31 March 2012](http://www.gov.uk/government/uploads/system/uploads/attachment_data/file/219210/sfr20-2012v2.pdf "Children Looked After - Statistical First Release")
+
+Department for Education (2011), [Adoption and special guardianship data pack: Underlying data](http://www.education.gov.uk/b0076713/datapack/adoption-special-guardianship-data-pack "Adoptions and Special Partnership Data Pack")
+
+National Assembly for Wales (2013), [Proposals for Achieving a National Adoption Service in Wales and Development of the Functional Model](http://www.senedd.assemblywales.org/documents/s16595/Paper%204%20Deputy%20Minister%20for%20Social%20Services%20-%20Proposals%20for%20achieving%20a%20National%20Adoption%20Service%20i.pdf "National Assembly for Wales - Adoptions Functional Model")
+
+National Assembly for Wales (2012), [Children and Young People Committee, Inquiry into Adoption](http://www.senedd.assemblywales.org/documents/s11356/Adoption%20Report%20-%20November%202012.pdf "National Assembly for Wales - Inquiry into Adoption")
+
+Office for National Statistics (2013), [Births in England and Wales, 2012](http://www.ons.gov.uk/ons/rel/vsob1/birth-summary-tables--england-and-wales/2012/stb-births-in-england-and-wales-2012.html "STB Births in England and Wales 2012")
+
+## [accordion] Footnotes
+This information will not be available in the prototype, however in the future the footnotes related to this statistical bulletin will appear here.

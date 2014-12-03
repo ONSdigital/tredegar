@@ -37,10 +37,13 @@ Accordion component
 
     function addPane(pane) {
       if (accordion.panes.length === 0) {
-        toggle(pane)
+        if(!pane.closed) {
+            //If closed by default dont toggle
+            toggle(pane)
+        }
       }
       accordion.panes.push(pane)
-     
+
     }
 
     function toggle(pane) {
@@ -67,7 +70,8 @@ Accordion component
       restrict: 'E',
       transclude: true,
       scope: {
-        header: '@'
+        header: '@',
+        closed: '=?'
       },
       link: AccordionItemLink,
       templateUrl: 'app/components/accordion/accordionitem.html'

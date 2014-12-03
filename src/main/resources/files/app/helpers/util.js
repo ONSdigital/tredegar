@@ -46,6 +46,10 @@
 			return $location.url()
 		}
 
+		function isPrerender() {
+			return getAbsoluteUrl().indexOf('prerender=true') > -1
+		}
+
 		//If replace history is set, latest back history item is replaced with the page to be showed
 		//Particularyly useful to not to break back button redirect
 		function goToPage(path, replaceHistory) {
@@ -63,7 +67,8 @@
 			getPath: getPath,
 			getUrl:getUrl,
 			getAbsoluteUrl: getAbsoluteUrl,
-			goToPage: goToPage
+			goToPage: goToPage,
+			isPrerender:isPrerender
 		})
 
 		return pageUtil

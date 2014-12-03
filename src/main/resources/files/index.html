@@ -70,7 +70,8 @@ markup: false
 <!-- Autoscroll solves the issue mentioned on https://stackoverflow.com/questions/21055952/changing-route-doesnt-scroll-to-top-in-the-new-page -->
 
 <body id="ng-app" ng-controller="MainCtrl" class="js">
-
+    
+    <div ng-include="'app/partials/modal/modal.html'" ></div>
     <ons-header></ons-header>
         <div class="wrap" ng-view autoscroll="true">
             <noscript>
@@ -200,7 +201,7 @@ markup: false
 <script type="text/javascript" src="ui/js/custom-autocomplete.js" defer></script>
  -->
 
-  <!-- Bugherd integration script: http://bugherd.com/documentation/installing-the-sidebar/ -->
+  	<!-- Bugherd integration script: http://bugherd.com/documentation/installing-the-sidebar/ -->
     <script type='text/javascript'>
     (function(d, t) {
         var bh = d.createElement(t),
@@ -210,5 +211,11 @@ markup: false
         s.parentNode.insertBefore(bh, s);
     })(document, 'script');
     </script>
+    
+  	<!-- Loop11 integration script for benchmark testing: http://www.loop11.com/ -->
+    <script type="text/javascript">
+		var loop11_key = "2acacc1f394cdcba0c0fa809485c9ed9253db59c";
+		document.write(unescape("%3cscript src='//cdn.loop11.com/my/loop11.js' type='text/javascript'%3e%3c/script%3e"));
+	</script>
 
 </html>

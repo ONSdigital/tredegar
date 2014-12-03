@@ -6,6 +6,7 @@ import java.nio.charset.Charset;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -27,7 +28,7 @@ import com.google.gson.JsonSyntaxException;
 public class LoadIndexHelper {
 	private static final String NAME = "name";
 	private static final String CDID = "cdid";
-	// private static final String TAGS = "tags";
+	 private static final String TAGS = "tags";
 	private static final String TITLE = "title";
 	private static final String TYPE = "type";
 	private static final String LEDE = "lede";
@@ -99,7 +100,7 @@ public class LoadIndexHelper {
 		documentMap.put(URL, url);
 		documentMap.put(TYPE, type);
 		documentMap.put(TITLE, title);
-		// documentMap.put(TAGS, Arrays.toString(splitPath));
+		documentMap.put(TAGS, Arrays.toString(splitPath));
 		documentMap.put(LEDE, lede);
 		return documentMap;
 	}
@@ -110,7 +111,7 @@ public class LoadIndexHelper {
 		documentMap.put(URL, url);
 		documentMap.put(TYPE, type);
 		documentMap.put(TITLE, title);
-		// documentMap.put(TAGS, Arrays.toString(splitPath));
+		 documentMap.put(TAGS, Arrays.toString(splitPath));
 		documentMap.put(CDID, cdid);
 		return documentMap;
 	}

@@ -1,4 +1,4 @@
-Theme: People, Population and Community
+﻿Theme: People, Population and Community
 Level 2: Health and Social Care
 Level 3: Drug use, Alcohol and Smoking
 Summary: Deaths related to drug poisoning in England and Wales for the last five years. Data from 1993 are available to download, and are discussed in the commentary to provide context to the latest (2012) data. Figures are presented by cause of death, sex, age, substance(s) involved in the death, country and region.
@@ -66,16 +66,6 @@ ONS drug poisoning data are also used by academic researchers. For example, anal
 ## Number of deaths from drug-related poisoning
 There were 2,597 drug poisoning deaths (involving both legal and illegal drugs) registered in 2012, and as in previous years, the majority (just over two-thirds) of these deaths were in males. There were 1,706 male deaths from drug poisoning in 2012, a decrease of 4% since 2011, and the lowest since 1995. The equivalent number of female deaths rose to 891, an increase of 1% since 2011, and the highest since 2004.
 
-Table source: Office for National Statistics
-
-#### Table notes:
-1. Cause of death was defined using the International Classification of Diseases, Tenth Revision (ICD-10). The underlying cause of death codes used to select deaths related to drug poisoning and drug misuse are shown in Background notes 4 and 5.  
-2. Figures are for deaths registered, rather than deaths occurring in each calendar. Due to the length of time it takes to complete a coroner’s inquest, it can take months or even years for a drug-related death to be registered. More details can be found in the ‘Impact of registration delays on drug-related deaths’ section below.
-3.  Figures for England and Wales include deaths of non-residents.
-
-##### Download table: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/subnational-health3/deaths-related-to-drug-poisoning/2012/prt-1-drugs.xls "XLS format") (60.5 Kb)
-
 ## Number of drug-related deaths by underlying cause
 In January 2011, ONS introduced a new version of ICD-10 (software version 2010), which replaced the version introduced in 2001 (version 2001.2). This means figures for 2011 onwards will not be directly comparable with figures for 2001 to 2010. More information about the impact of this coding change on drug-related deaths statistics can be found in last year’s [statistical bulletin](http://www.ons.gov.uk/ons/rel/subnational-health3/deaths-related-to-drug-poisoning/2011/stb-deaths-related-to-drug-poisoning-2011.html "STB Deaths related to drugs poisoning 2011").
 
@@ -84,28 +74,6 @@ In both males and females the largest proportion of drug-related deaths were fro
 In females just under half of all drug poisoning deaths were suicides (defined as intentional self-poisoning or poisoning of undetermined intent). In 2012, the number of female drug-related suicides increased slightly, from 418 deaths in 2011 to 422 deaths in 2012; this continues the upward trend that has been seen since 2009. In males, 31% of all drug poisoning deaths were suicides. The number of deaths went down from 576 to 525 deaths between 2011 and 2012 – a 9% decrease. This reverses the large increase seen in 2011, and the number of drug-related male suicides in 2012 were similar to the levels seen between 2006 and 2009.
 
 In males the number of deaths where the underlying cause was a mental and behavioural disorder due to drug use declined from 86 deaths in 2011 to 72 in 2012. In females, the equivalent number increased from 17 deaths in 2011 to 29 in 2012. It is not clear what has caused this increase in females, and it may just be a random fluctuation, rather than the start of an upward trend. 
-
-Table source: Office for National Statistics
-
-##### Table notes:
-1. Underlying cause of death was defined using the International Classification of Diseases, Tenth Revision (ICD-10) codes given in Background note 4.
-2. In January 2011 ONS introduced a new version of ICD-10, so figures for 2011 onwards are not directly comparable with figures for 2008–10. More information can be found in last year’s drug-related deaths statistical bulletin.
-3. Figures are for deaths registered, rather than deaths occurring in each calendar year. Due to the length of time it takes to complete a coroner’s inquest, it can take months or even years for a drug-related death to be registered. More details can be found in the ‘Impact of registration delays on drug-related deaths’ section below.
-4. Figures for England and Wales include non-residents.
-
-##### Download table: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/subnational-health3/deaths-related-to-drug-poisoning/2012/prt-2-drugs.xls "XLS format") (61.5 Kb)
-
-Table source: Office for National Statistics
-
-##### Table notes:
-1. Underlying cause of death was defined using the International Classification of Diseases, Tenth Revision (ICD-10) codes given in Background note 4.
-2. In January 2011 ONS introduced a new version of ICD-10, so figures for 2011 onwards are not directly comparable with figures for 2008–10. More information can be found in last year’s drug-related deaths statistical bulletin.
-3. Figures are for deaths registered, rather than deaths occurring in each calendar year. Due to the length of time it takes to complete a coroner’s inquest, it can take months or even years for a drug-related death to be registered. More details can be found in the ‘Impact of registration delays on drug-related deaths’ section below.
-4. Figures for England and Wales include deaths of non-residents.
-
-##### Download table: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/subnational-health3/deaths-related-to-drug-poisoning/2012/prt-3-drugs.xls "XLS format") (60.5 Kb)
 
 ## Number of deaths related to drug misuse
 The definition of this indicator is (a) deaths where the underlying cause is drug abuse or drug dependence or (b) deaths where the underlying cause is drug poisoning and where any of the substances controlled under the [Misuse of Drugs Act 1971](http://www.legislation.gov.uk/ukpga/1971/38/contents "Misuse of Drugs Act 1971") are involved. This definition has been adopted across the UK.
@@ -125,11 +93,9 @@ The male mortality rate from drug misuse has dropped significantly from its peak
 
 Despite some annual fluctuations, the female mortality rate from drug misuse has tended to increase since 1993. The mortality rate peaked in 2008 at 15.5 deaths per million population, then dropped significantly in 2009, but increased slightly again between 2009 and 2010. Since 2010, the female mortality rate from drug misuse has been relatively stable, at 14.1 deaths per million population in 2012. 
 
-#### Figure 1: Age-standardised mortality rates for deaths related to drug poisoning and drug misuse, by sex, deaths registered in 1993–2012
-##### England and Wales
-[![Figure 1: Age-standardised mortality rates for deaths related to drug poisoning and drug misuse, by sex, deaths registered in 1993–2012](http://www.ons.gov.uk/ons/resources/figure1_tcm77-324344.png)](http://www.ons.gov.uk/ons/resources/figure1_tcm77-324344.png "Figure 1: Age-standardised mortality rates for deaths related to drug poisoning and drug misuse, by sex, deaths registered in 1993–2012")
-
-Source: Office for National Statistics
+<div class="chart-container">
+<iframe src="http://onsdigital.github.io/Alpha/bulletins/drug1.html"></iframe>
+</div>
 
 ##### Notes:
 1. Age-standardised mortality rates per 1 million population, standardised to the 1976 European Standard Population. Age-standardised rates are used to allow comparison between populations which may contain different proportions of people of different ages.
@@ -137,9 +103,6 @@ Source: Office for National Statistics
 3. Cause of death was defined using the International Classification of Diseases, Ninth Revision (ICD 9) for the years 1993 to 2000 and Tenth Revision (ICD-10) from 2001 onwards. The underlying cause of death codes used to select 'all drug poisonings' and 'drug misuse' deaths are shown in Background note 4. Drug misuse as defined by the current headline indicator shown in Background note 5. Deaths from drug misuse are included in the figures for all drug poisoning.
 4. Figures are for deaths registered, rather than deaths occurring in each calendar year. Due to the length of time it takes to complete a coroner’s inquest, it can take months or even years for a drug-related death to be registered. More details can be found in the ‘Impact of registration delays on drug-related deaths’ section below.
 5. Deaths in England and Wales include non-residents.
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/subnational-health3/deaths-related-to-drug-poisoning/2012/chd-1-drugs.xls "XLS format") (69 Kb)
 
 ## Age-specific mortality rates for deaths related to drug misuse
 ### Males
@@ -154,11 +117,9 @@ Male mortality rates in the oldest age group (70 and over) have shown no consist
 
 This pattern of drug misuse deaths is broadly in line with treatment figures from the Public Health England (PHE – previously the [National Treatment Agency, 2012](http://www.nta.nhs.uk/uploads/dtie2012v1.pdf "National Treatment Agency, 2012")), which showed that as the drug-dependent population ages, the over 40s have become the largest age group starting treatment. In contrast, the number of 18 to 24-year-olds newly entering treatment for heroin and crack use has halved over the last five years.
 
-#### Figure 2: Age-specific mortality rates for deaths related to drug misuse, males, deaths registered in 2008–2012
-##### England and Wales
-[![igure 2: Age-specific mortality rates for deaths related to drug misuse, males, deaths registered in 2008–2012](http://www.ons.gov.uk/ons/resources/figure2_tcm77-324345.png)](http://www.ons.gov.uk/ons/resources/figure2_tcm77-324345.png "igure 2: Age-specific mortality rates for deaths related to drug misuse, males, deaths registered in 2008–2012")
-
-Source: Office for National Statistics
+<div class="chart-container">
+<iframe src="http://onsdigital.github.io/Alpha/bulletins/drug2.html"></iframe>
+</div>
 
 ##### Notes:
 1. Age-specific mortality rates per one million population. Rates for 2008–11 have been recalculated using revised mid-year population estimates which take account of the 2011 Census and may therefore differ from previously published figures.
@@ -166,8 +127,6 @@ Source: Office for National Statistics
 3. Figures are for deaths registered, rather than deaths occurring in each calendar year. Due to the length of time it takes to complete a coroner’s inquest, it can take months or even years for a drug-related death to be registered. More details can be found in the ‘Impact of registration delays on drug-related deaths’ section below.
 4. Figures for England and Wales include deaths of non-residents.
 
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/subnational-health3/deaths-related-to-drug-poisoning/2012/chd-2-drugs.xls "XLS format") (71 Kb)
 
 ### Females
 
@@ -179,20 +138,15 @@ The opposite trend is seen in females aged 20 to 29, where the mortality rate ha
 
 As with males, the lowest female mortality rates in 2012 were in those aged under 20 (1.2 deaths per million population) and 70 and over (7.9 deaths per million population). 
 
-#### Figure 3: Age-specific mortality rates for deaths related to drug misuse, females, deaths registered in 2008–2012
-##### England and Wales
-[![Figure 3: Age-specific mortality rates for deaths related to drug misuse, females, deaths registered in 2008–2012](http://www.ons.gov.uk/ons/resources/figure3_tcm77-324346.png)](http://www.ons.gov.uk/ons/resources/figure3_tcm77-324346.png "Figure 3: Age-specific mortality rates for deaths related to drug misuse, females, deaths registered in 2008–2012")
-
-Source: Office for National Statistics
+<div class="chart-container">
+<iframe src="http://onsdigital.github.io/Alpha/bulletins/drug3.html"></iframe>
+</div>
 
 ##### Notes:
 1. Age-specific mortality rates per one million population. Rates for 2008–11 have been recalculated using revised mid-year population estimates which take account of the 2011 Census and may therefore differ from previously published figures.
 2. Cause of death was defined using the International Classification of Diseases, Tenth Revision (ICD-10). Deaths were included where the underlying cause was due to drug poisoning and where a drug controlled under the Misuse of Drugs Act 1971 was mentioned on the death certificate. More details on the definition of a death related to drug misuse can be found in Background notes 4 and 5.
 3. Figures are for deaths registered, rather than deaths occurring in each calendar year. Due to the length of time it takes to complete a coroner’s inquest, it can take months or even years for a drug-related death to be registered. More details can be found in the ‘Impact of registration delays on drug-related deaths’ section below.
 4. Figures for England and Wales include deaths of non-residents.
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/subnational-health3/deaths-related-to-drug-poisoning/2012/chd-3-drugs.xls "XLS format") (62 Kb)
 
 ## Drug related deaths involving specific substances
 Figures 4 and 5 give the age-standardised mortality rates where selected substances were mentioned on the death certificate for 2008 to 2012 and Table 4 gives the number of deaths from a wide range of substances. These figures need to be interpreted with caution for the following reasons: 
@@ -207,22 +161,9 @@ Figures 4 and 5 give the age-standardised mortality rates where selected substan
 
 - Approximately 30% of all drug-related poisoning deaths also contain a mention of alcohol or long-term alcohol abuse (for example, cirrhosis) in addition to a drug. 
 
-Table source: Office for National Statistics
-
-##### Table notes:
-1. Underlying cause of death was defined using the International Classification of Diseases, Tenth Revision (ICD-10). The ICD-10 codes used to select deaths related to drug poisoning are shown in Background note 4.
-2. Figures are for deaths registered, rather than deaths occurring in each calendar year. Due to the length of time it takes to complete a coroner’s inquest, it can take months or even years for a drug-related death to be registered. More details can be found in the ‘Impact of registration delays on drug-related deaths’ section below.
-3. Figures for England and Wales include deaths of non-residents.
-4. Dextropropoxyphene is very rarely ingested except in combination with paracetamol, therefore figures include dextropropoxyphene mentioned without paracetamol.
-
-##### Download table: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/subnational-health3/deaths-related-to-drug-poisoning/2012/prt4-drugs.xls "XLS format") (61 Kb)
-
-#### Figure 4: Age-standardised mortality rates for selected substances, males, deaths registered in 2008–2012
-##### England and Wales
-[![Figure 4: Age-standardised mortality rates for selected substances, males, deaths registered in 2008–2012](http://www.ons.gov.uk/ons/resources/figure4_tcm77-324347.png)](http://www.ons.gov.uk/ons/resources/figure4_tcm77-324347.png "Figure 4: Age-standardised mortality rates for selected substances, males, deaths registered in 2008–2012")
-
-Source: Office for National Statistics
+<div class="chart-container">
+<iframe src="http://onsdigital.github.io/Alpha/bulletins/drug4.html"></iframe>
+</div>
 
 ##### Notes:
 1. Age-standardised mortality rates per one million population, standardised to the 1976 European Standard Population. Age-standardised rates are used to allow comparison between populations which may contain different proportions of people of different ages.
@@ -231,14 +172,9 @@ Source: Office for National Statistics
 4. Figures are for deaths registered, rather than deaths occurring in each calendar year. Due to the length of time it takes to complete a coroner’s inquest, it can take months or even years for a drug-related death to be registered. More details can be found in the ‘Impact of registration delays on drug-related deaths’ section below.
 5. Figures for England and Wales include deaths of non-residents.
 
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/subnational-health3/deaths-related-to-drug-poisoning/2012/chd-4-drugs.xls "XLS format") (55 Kb)
-
-#### Figure 5: Age-standardised mortality rates for selected substances, females, deaths registered in 2008–2012
-##### England and Wales
-[![Figure 5: Age-standardised mortality rates for selected substances, females, deaths registered in 2008–2012](http://www.ons.gov.uk/ons/resources/figure5_tcm77-324348.png)](http://www.ons.gov.uk/ons/resources/figure5_tcm77-324348.png "Figure 5: Age-standardised mortality rates for selected substances, females, deaths registered in 2008–2012")
-
-Source: Office for National Statistics
+<div class="chart-container">
+<iframe src="http://onsdigital.github.io/Alpha/bulletins/drug5.html"></iframe>
+</div>
 
 ##### Notes:
 1. Age-standardised mortality rates per one million population, standardised to the 1976 European Standard Population. Age-standardised rates are used to allow comparison between populations which may contain different proportions of people of different ages.
@@ -246,9 +182,6 @@ Source: Office for National Statistics
 3. Cause of death was defined using the International Classification of Diseases, Tenth Revision (ICD-10). The underlying cause of death codes used to select deaths related to drug poisoning are shown in Background note 4.
 4. Figures are for deaths registered, rather than deaths occurring in each calendar year. Due to the length of time it takes to complete a coroner’s inquest, it can take months or even years for a drug-related death to be registered. More details can be found in the ‘Impact of registration delays on drug-related deaths’ section below.
 5. Figures for England and Wales include deaths of non-residents.
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/subnational-health3/deaths-related-to-drug-poisoning/2012/chd-5-drugs.xls "XLS format") (63 Kb)
 
 ## Heroin and Morphine
 Over half (52%) of all deaths related to drug poisoning involved an opiate drug, in fact in men aged 30 to 39, nearly two thirds (63%) of drug-related deaths involved an opiate. In 2012, as in previous years, the most commonly mentioned opiates were heroin and/or morphine, which were involved in 579 deaths (see Background note 8). Although these substances are involved in many drug-related deaths, the mortality rate for males has fallen sharply in recent years, down from 27.7 deaths per million population in 2009 to 15.6 in 2012. This is a 44% fall and the lowest rate since 1997. The female mortality rate for deaths involving heroin/morphine increased slightly between 2011 and 2012 from 4.4 to 5.2 deaths per million population, but was still much lower than the corresponding rate in males.
@@ -303,17 +236,6 @@ In England, the mortality rate for deaths related to drug misuse declined signif
 
 There was considerable regional variation within England. In 2012 the lowest mortality from deaths related to drug misuse was in London (17.2 deaths per million population), where the rates have generally been low over the last five years. The regions with the highest mortality rates over the last five years were the North East and North West. In 2012 mortality rates in the North were more than double that of London (37.4 and 41.0 deaths per million population in the North East and North West respectively). 
 
-Table source: Office for National Statistics
-
-##### Table notes:
-1. Age-standardised mortality rates per one million population, standardised to the 1976 European Standard Population (see Background note 13).
-2. Cause of death was defined using the International Classification of Diseases, Tenth Revision (ICD-10). Deaths were included where the underlying cause was due to drug poisoning and where a drug controlled under the Misuse of Drugs Act 1971 was mentioned on the death certificate (see Background notes 4 and 5).
-3. Deaths are for persons usually resident in each country and region, based on boundaries as of May 2013.
-4. Figures are for deaths registered, rather than deaths occurring in each calendar year. Due to the length of time it takes to complete a coroner’s inquest, it can take months or even years for a drug-related death to be registered. More details can be found in the ‘Impact of registration delays on drug-related deaths’ section below.
-
-##### Download table: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/subnational-health3/deaths-related-to-drug-poisoning/2012/prt5-drugs.xls "XLS format") (55 Kb)
-
 ## Comparisons with the rest of the UK
 Figures on drug-related deaths in Scotland are available from [National Records of Scotland](http://www.gro-scotland.gov.uk/statistics/theme/vital-events/deaths/drug-related/index.html "National Records of Scotland") and the [Information Services Division](http://www.isdscotland.org/Health-Topics/Drugs-and-Alcohol-Misuse/Publications/index.asp "Information Services Division") of NHS Scotland.
 
@@ -330,11 +252,9 @@ In common with most other mortality statistics, figures for drug-related deaths 
 
 Due to the length of time it takes to hold an inquest, this bulletin actually presents information on deaths that may have occurred months or even years ago. Out of the 2,597 drug-related deaths registered in 2012, 1,358 (just over half) occurred in years prior to 2012. This makes it more difficult to evaluate how changes such as the heroin drought or the banning of certain new psychoactive substances have affected drug-related deaths. It also makes it more difficult to compare trends in drug-related deaths between local areas, as registration delays vary considerably across England and Wales. 
 
-#### Figure 6: Average registration delay for all drug poisoning deaths and deaths related to drug misuse, deaths registered in 1993–2012
-#### England and Wales
-[![ Figure 6: Average registration delay for all drug poisoning deaths and deaths related to drug misuse, deaths registered in 1993–2012](http://www.ons.gov.uk/ons/resources/figure6_tcm77-324349.png)](http://www.ons.gov.uk/ons/resources/figure6_tcm77-324349.png " Figure 6: Average registration delay for all drug poisoning deaths and deaths related to drug misuse, deaths registered in 1993–2012")
-
-Source: Office for National Statistics
+<div class="chart-container">
+<iframe src="http://onsdigital.github.io/Alpha/bulletins/drug6.html"></iframe>
+</div>
 
 ##### Notes:
 1. The registration delay is calculated as the difference between the date each death occurred and the date it was registered, measured in days. The average delay is represented using the median. Additional information on the calculation of registration delays is provided Background note 16.
@@ -342,45 +262,7 @@ Source: Office for National Statistics
 3. Figures are for deaths registered, rather than deaths occurring in each calendar year.
 4. Figures for England and Wales include deaths of non-residents.
 
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/subnational-health3/deaths-related-to-drug-poisoning/2012/chd-6-drugs.xls "XLS format") (61 Kb)
-
-## Downloadable reference tables
-A back series of data on deaths related to drug poisoning in England and Wales between 1993 and 2012 are available to download in a Microsoft Excel workbook from the ONS website (303.5 Kb Excel sheet) .
-
-The workbook contains the following tables:
-
-- Table 1: Number of deaths from drug-related poisoning and drug misuse, by sex and country, England and Wales, deaths registered in 1993–2012
-
-- Table 2: Number of deaths from drug-related poisoning by sex and underlying cause, England and Wales, deaths registered in 1993–2012
-
-- Table 3: Number of deaths related to drug misuse by sex and underlying cause, England and Wales, deaths registered in 1993–2012
-
-- Table 4: Number of deaths from drug-related poisoning by sex and age, England and Wales, deaths registered in 1993–2012
-
-- Table 5: Number of deaths related to drug misuse by sex and age, England and Wales, deaths registered in 1993–2012
-
-- Table 6a: Number of drug-related deaths where selected substances were mentioned on the death certificate, England and Wales, deaths registered in 1993–2012
-
-- Table 6b: Number of drug-related deaths where selected substances were mentioned without other drugs, England and Wales, deaths registered in 1993–2012
-
-- Table 6c: Number of drug-related deaths where selected substances were mentioned with alcohol, England and Wales, deaths registered in 1993–2012
-
-- Table 7: Number of deaths and age-standardised mortality rate for deaths related to drug misuse, by country and region, England and Wales, deaths registered in 1993–2012
-
-- Figure 1: Age-standardised mortality rates for deaths related to drug poisoning and drug misuse, by sex, England and Wales, deaths registered in 1993–2012
-
-- Figure 2: Age-specific mortality rates for deaths related to drug misuse, males, England and Wales, deaths registered in 1993–2012
-
-- Figure 3: Age-specific mortality rates for deaths related to drug misuse, females, England and Wales, deaths registered in 1993–2012
-
-- Figure 4: Age-standardised mortality rates for selected substances, males, England and Wales, deaths registered in 1993–2012
-
-- Figure 5: Age-standardised mortality rates for selected substances, females, England and Wales, deaths registered in 1993–2012
-
-- Figure 6: Average registration delay for all drug poisoning deaths and deaths related to drug misuse, England and Wales, deaths registered in 1993–2012
-
-## References
+## [accordion] References
 1. The Advisory Council on the Misuse of Drugs (2000) Reducing drug related deaths, Home Office: London. 
 2. The Advisory Council on the Misuse of Drugs (2013) [‘ACMD consideration of tramadol’](https://www.gov.uk/government/publications/acmd-advice-on-tramadol "ACMD consideration of tramadol") 
 3. British Medical Association and Royal Pharmaceutical Society (2013) [‘British National Formulary 65’](http://www.bnf.org/bnf/ "British National Formulary 65"), BMJ Group and Pharmaceutical Press. 
@@ -408,7 +290,7 @@ The workbook contains the following tables:
 25. Welsh Government (2013) [‘Substance Misuse Delivery Plan 2013 – 2015’](http://wales.gov.uk/topics/housingandcommunity/safety/substancemisuse/publications/dplan/?lang=en "Substance Misuse Delivery Plan 2013 – 2015") 
 26. World Health Organisation – [WHO (2010)](http://apps.who.int/classifications/icd/en/index.html "WHO (2010)") International Statistical Classification of Diseases and Related Health Problems, volumes 1, 2 and 3 (Tenth Revision). WHO: Geneva. 
 
-## Background notes
+## [accordion] Background notes and methodology
 ##### 1. Quality information
 
 Further information about the quality of drug-related deaths data can be found in the Quality and Methodology Information ([QMI](http://www.ons.gov.uk/ons/guide-method/method-quality/quality/quality-information/health-and-social-care/quality-and-methodology-information-for-deaths-related-to-drug-poisoning.pdf "QMI")) paper.
@@ -573,3 +455,6 @@ You may use or re-use this information (not including logos) free of charge in a
 23. Details of the policy governing the release of new data are available by visiting [www.statisticsauthority.gov.uk/assessment/code-of-practice/index.html](http://www.statisticsauthority.gov.uk/assessment/code-of-practice/index.html) or from the Media Relations Office email: <media.relations@ons.gsi.gov.uk>
 
 These National Statistics are produced to high professional standards and released according to the arrangements approved by the UK Statistics Authority.
+
+## [accordion] Footnotes
+This information will not be available in the prototype, however in the future the footnotes related to this statistical bulletin will appear here.

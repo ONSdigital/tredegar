@@ -1,11 +1,11 @@
 package com.github.onsdigital.json.markdown;
 
-import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 
 import com.github.onsdigital.generator.Folder;
 import com.github.onsdigital.json.ContentType;
+import com.github.onsdigital.json.DataItem;
 import com.github.onsdigital.json.collection.CollectionItem;
 import com.github.onsdigital.json.partial.Email;
 import com.github.onsdigital.json.taxonomy.TaxonomyHome;
@@ -25,11 +25,14 @@ public class Bulletin extends CollectionItem {
 	// Table of contents
 	public List<Section> sections = new ArrayList<Section>();
 	public List<Section> accordion = new ArrayList<Section>();
-	public URI uri;
 	public String headline1 = "Duis ut laoreet felis";
 	public String headline2 = "Morbi sed sem at magna";
 	public String headline3 = "Auctor gravida sed non enim";
 	public String summary = "Summary section";
+
+	// Related bulletins - initially this is just other bulletins under the same
+	// t3 node:
+	public List<DataItem> relatedBulletins = new ArrayList<>();
 
 	// Used to help place bulletins in the taxonomy
 	public transient String theme;

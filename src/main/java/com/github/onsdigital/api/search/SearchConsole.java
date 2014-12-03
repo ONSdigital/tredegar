@@ -39,7 +39,7 @@ public class SearchConsole {
 		Serialiser.getBuilder().setPrettyPrinting();
 		Map<String, List<Count>> result = new HashMap<>();
 		result.put("No results", queryNoResults());
-		result.put("Most popular", queryPopular());
+		result.put("Most Searched", querySearches());
 		return result;
 	}
 
@@ -87,7 +87,7 @@ public class SearchConsole {
 		}
 	}
 
-	private List<Count> queryPopular() throws Exception {
+	private List<Count> querySearches() throws Exception {
 
 		MongoClientURI uri = new MongoClientURI(Configuration.getMongoDbUri());
 		MongoClient client = null;
@@ -100,7 +100,7 @@ public class SearchConsole {
 			DBCollection searchTerms = db.getCollection("searchTerms");
 
 			// Get the results:
-			BasicDBObject findQuery = new BasicDBObject();
+			BasicDBObject findQuery = new BasicDBObject("results", new BasicDBObject("$gt", 0));
 
 			DBCursor docs = searchTerms.find(findQuery);
 

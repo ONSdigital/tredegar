@@ -43,7 +43,7 @@
     ])
 
     onsApp
-        .run(['$rootScope', 'DataLoader', loadNavigation])
+        .run(['$rootScope', 'DataLoader', 'PageUtil', run])
         .controller('MainCtrl', ['$scope', 'PageUtil', '$location', '$anchorScroll', MainController])
 
     function MainController($scope, PageUtil, $location, $anchorScroll) {
@@ -67,6 +67,32 @@
             return PageUtil.getUrl()
         }
     }
+
+    function run($rootScope, DataLoader, PageUtil, $window) {
+        redirectCheck(PageUtil, $window)
+        loadNavigation($rootScope, DataLoader)
+    }
+
+
+    //Check if url is properlu hasbanged (#!), or is a facebook reference
+    //If page is static on a js enabled browser, redirect to js enabled site
+    function redirectCheck(PageUtil, $window) {
+        var absoluteLocation = PageUtil.getAbsoluteUrl();
+        //This makes FB share work (socialLinks directive)
+        if (absoluteLocation.indexOf('?onsfb') != -1) {
+            absoluteLocation = absoluteLocation.replace('?onsfb', '#!')
+            $window.location.href = absoluteLocation;
+        }
+        //  else if (absoluteLocation.indexOf('/static') != -1) {
+        //     console.log("Redirecting to javascript site")
+        //     absoluteLocation = absoluteLocation.replace('/static', '#!')
+        //     $window.location.href = absoluteLocation;
+        // }
+         else if (absoluteLocation.indexOf('#!/') === -1) {
+            PageUtil.goToPage('/');
+        }
+    }
+
 
     function loadNavigation($rootScope, DataLoader) {
         DataLoader.load('/navigation')

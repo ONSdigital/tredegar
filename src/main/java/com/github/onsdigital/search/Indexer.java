@@ -63,8 +63,8 @@ public class Indexer {
 		builder.startObject("lede").field("type", "string").field("index", "no").endObject();
 		builder.startObject("title").field("type", "string").field("index", "analyzed").endObject();
 		builder.startObject("url").field("type", "string").field("index", "analyzed").endObject();
+		builder.startObject("path").field("type", "string").field("index", "analyzed").endObject();
 		builder.endObject().endObject().endObject();
-		System.out.println(builder.string() + "\n\n");
 		return builder;
 	}
 
@@ -75,6 +75,7 @@ public class Indexer {
 		builder.startObject("cdid").field("type", "string").field("index", "analyzed").endObject();
 		builder.startObject("title").field("type", "string").field("index", "analyzed").endObject();
 		builder.startObject("url").field("type", "string").field("index", "analyzed").endObject();
+		builder.startObject("path").field("type", "string").field("index", "analyzed").endObject();
 		builder.endObject().endObject().endObject();
 		System.out.println(builder.string() + "\n\n");
 		return builder;
