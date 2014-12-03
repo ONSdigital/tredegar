@@ -3,12 +3,14 @@ package com.github.onsdigital.generator;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
 import org.apache.commons.lang3.StringUtils;
 
+import com.github.onsdigital.json.dataset.Dataset;
 import com.github.onsdigital.json.markdown.Article;
 import com.github.onsdigital.json.markdown.Bulletin;
 import com.github.onsdigital.json.markdown.Methodology;
@@ -29,6 +31,7 @@ public class Folder implements Comparable<Folder> {
 	public List<Bulletin> bulletins = new ArrayList<>();
 	public List<Article> articles = new ArrayList<>();
 	public List<Methodology> methodology = new ArrayList<>();
+	public Set<Dataset> datasets = new HashSet<>();
 
 	/**
 	 * Sanitises folder names to <code>[a-zA-Z0-9]</code>.
