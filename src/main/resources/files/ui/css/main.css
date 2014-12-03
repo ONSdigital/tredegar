@@ -4982,8 +4982,19 @@ ul.simple-pagination {
     position: absolute;
     bottom: 50px;
     right: 30px;
-    /*width: 180px;*/
+    width: 180px;
 }
+
+@media screen and (min-width: 740px) and (max-width: 890px)  {
+.div_panel_link {
+    position: absolute;
+    bottom: 50px;
+    right: 30px;
+    width: 300px;
+}
+}
+
+
 /* T3 list--table*/
 
 .list--table__item__header {
@@ -8615,9 +8626,25 @@ lesser , applied styles
 .rightButton {
     margin-left:8.5em;
 }
-
 }
 
+@media screen and (min-width: 790px) and (max-width: 900px) {
+    .modalDialog {
+    width: 20em;
+    height: 34em;
+    background-color: #fff;
+    margin: 5% auto;
+    overflow: auto;
+    pointer-events:auto;
+}
+.modalDialog p{
+    font-size: 90%;
+}
+
+.rightButton {
+    margin-left:8.5em;
+}
+}
 
 
 /* -------- autocomplete on search -------- */
