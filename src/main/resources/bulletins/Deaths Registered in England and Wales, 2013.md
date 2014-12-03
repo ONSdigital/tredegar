@@ -1,9 +1,9 @@
-Theme: People, Population and Community
+﻿Theme: People, Population and Community
 Level 2: Births, Deaths and Marriages
 Level 3: Deaths
 Summary: Annual data on death registrations. Contains death rates, cause of death data by sex and age and death registrations by area of residence and single year of age.
 Headline 1: There were 506,790 deaths registered in England and Wales in 2013, compared with 499,331 in 2012 (a rise of 1.5%).
-Headline 2: Age-standardised mortality rates (ASMRs) have continued to decrease in 2013. There were 11,583 deaths per million population for males and 8,526 deaths per million population for females.
+Headline 2: Age-standardised mortality rates (ASMRs) have continued to decrease in 2013. 
 Headline 3: The infant mortality rate decreased in 2013 to 4.0 deaths per thousand live births, compared with 4.2 in 2012.
 Contact name: Elizabeth McLaren
 Contact email: vsob@ons.gsi.gov.uk
@@ -33,18 +33,14 @@ For almost all causes of death, the age-standardised mortality rates are higher 
 
 The impact of the change from the 1976 ESP to the 2013 ESP was greatest for conditions commonly associated with older ages (where ASMRs increased) and those almost exclusive to very young ages (where ASMRs decreased). More information about the impact of this change can be found on the [ONS website](http://www.ons.gov.uk/ons/guide-method/user-guidance/health-and-life-events/revised-european-standard-population-2013--2013-esp-/index.html "Revised European Standard Population 2013 (2013 ESP)").
 
-#### Figure 1: Age-Standardised Mortality Rates (ASMRs), 2001–2013
-##### England and Wales
-[![Figure 1: Age-Standardised Mortality Rates (ASMRs), 2001–2013](http://www.ons.gov.uk/ons/resources/asmr_tcm77-370767.png)](http://www.ons.gov.uk/ons/resources/asmr_tcm77-370767.png "Figure 1: Age-Standardised Mortality Rates (ASMRs), 2001–2013")
-
-Source: Office for National Statistics
+<div class="chart-container">
+<iframe src="http://onsdigital.github.io/Alpha/bulletins/death1.html"></iframe>
+</div>
 
 ##### Notes:
 1. Based on deaths registered in each calendar year.
 2. These rates are for all ages and are standardised to the 2013 European Standard Population, expressed per million population (see background note 3).
 
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/vsob1/death-reg-sum-tables/2013/chd-asmr.xls) (28.5 Kb)
 
 Mortality rates calculated using the 2013 ESP have continued the downward trend previously reported using the 1976 ESP, with 11,583 deaths per million population for males and 8,526 deaths per million population for females in 2013 (Figure 1). Since 2001, ASMRs have decreased by 23% for males and 19% for females. The male ASMR has decreased each year since 2001, whereas the female ASMR has decreased with the exception of three small rises in the ASMR, the latest being in 2012.
 
@@ -71,17 +67,9 @@ The perinatal mortality rate (stillbirths and deaths under 7 days) was 6.7 death
 Small fluctuations in the infant mortality rate have occurred over recent years, after a series of larger drops in the early 1980s and again between 1987 and 1991 (Figure 2). Between 1983 and 2013 the infant mortality rate fell by 60%, while the neonatal and postneonatal mortality rates fell by 54% and 72% respectively. Although the overall trend has been one of decreasing rates, the rates of change have not been constant over the period: change in the first decade was nearly twice that in the latter two decades.
 
 
-#### Figure 2: Infant, Neonatal and Postneonatal Mortality Rates, 1983–2013
-##### England and Wales
-[![](http://www.ons.gov.uk/ons/resources/imr_tcm77-370768.png)](http://www.ons.gov.uk/ons/resources/imr_tcm77-370768.png)
-
-Source: Office for National Statistics
-
-##### Notes:
-1. Based on deaths registered in each calendar year.
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/vsob1/death-reg-sum-tables/2013/chd-imr.xls) (27.5 Kb)
+<div class="chart-container">
+<iframe src="http://onsdigital.github.io/Alpha/bulletins/death2.html"></iframe>
+</div>
 
 There are many established risk factors for infant mortality; prematurity, low birthweight and multiplicity are the most significant in terms of strength of association and consistency. Risk factors are known to vary according to age at death. For example, the effect of low birthweight and prematurity is stronger in the neonatal period than the postneonatal period, while socio-economic status is strongly associated with deaths under one year ( [Oakley, et al., 2009 (720.5 Kb Pdf)](http://www.ons.gov.uk/ons/rel/hsq/health-statistics-quarterly/no--42--summer-2009/multivariate-analysis-of-infant-death-in-england-and-wales-in-2005-06--with-focus-on-socio-economic-status-and-deprivation.pdf "Multivariate analysis of infant death in England and Wales in 2005-06, with focus on socio-economic status and deprivation") ).
 
@@ -163,7 +151,7 @@ International comparisons of live death numbers and rates are available in the [
 
 Future changes to mortality outputs are outlined in the [plan for mortality outputs (116 Kb Pdf)](http://www.ons.gov.uk/ons/guide-method/user-guidance/health-and-life-events/plan-for-mortality-statistics.pdf "plan for mortality statistics") available on the ONS website.
 
-## References
+## [accordion] References
 1000 Lives Plus, Transforming Maternity Services - Welsh Initiative for Stillbirth Reduction (WISR) [accessed 01 July 2014], available at: [www.1000livesplus.wales.nhs.uk/maternity-services-stillbirth](http://www.1000livesplus.wales.nhs.uk/maternity-services-stillbirth)
 
 Department for Communities and Local Government (2011) The English Indices of Deprivation 2010, available at: [www.gov.uk/government/uploads/system/uploads/attachment_data/file/6871/1871208.pdf](http://www.gov.uk/government/uploads/system/uploads/attachment_data/file/6871/1871208.pdf)
@@ -189,3 +177,9 @@ Welsh Government Programme for Government [accessed 04 July 2014], available at:
 Welsh Government (2013) Wales NHS Delivery Framework, available at: [http://wales.gov.uk/docs/dhss/publications/130524frameworken.pdf](http://wales.gov.uk/docs/dhss/publications/130524frameworken.pdf)
 
 Welsh Government (2011) Welsh Index of Multiple Deprivation (WIMD), available at: [http://wales.gov.uk/docs/statistics/2011/110831wimd11summaryen.pdf](http://wales.gov.uk/docs/statistics/2011/110831wimd11summaryen.pdf)
+
+## [accordion] Background notes and methodology
+This information will not be available in the prototype, however in the future the background notes related to this statistical bulletin will appear here.
+
+## [accordion] Footnotes
+This information will not be available in the prototype, however in the future the footnotes related to this statistical bulletin will appear here.

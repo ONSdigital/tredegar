@@ -1,4 +1,4 @@
-Theme: People, Population and Community
+﻿Theme: People, Population and Community
 Level 2: Health and Social Care
 Level 3: Conditions and Diseases
 Summary: The number of diagnoses and incidence rates of all types of cancer by age and sex, and by region of residence in England.
@@ -44,16 +44,12 @@ There were 143,406 new cases of cancer registered for males and 137,712 new case
 ## All malignant neoplasms: incidence rates by sex and age group, 2012
 Cancer is predominantly a disease of the elderly. The overall crude rates of cancer registrations (C00–C97 excluding non-melanoma skin cancers (nmsc)) are 545 new cases per 100,000 population for males and 507 new cases per 100,000 population for females.  However, this conceals wide differences between the sexes and across the age groups, as illustrated in Figure A. Following the small decrease in rates after early childhood, rates increased continuously with age for both males and females, but decreased again for females at age group 90 years and over. From the 25 to 29 age group up to the 55 to 59 age group, rates of cancer were higher in females than in males, and in the 40 to 44 and 45 to 49 age groups, the rate in females was more than double that for males. Much of this difference is due to the high incidence of breast cancer among women in these age groups: in 2012 breast cancer accounted for 44% of all malignant cancers (excluding nmsc) among women aged 25-59. Rates of cancer were higher in males than females from the 60 to 64 age group onwards: males were 19% higher in the 60 to 64 age group and 78% higher in the 90 years and over age group.
 
-#### Figure A: All malignant neoplasms: incidence rates by sex and age group, England, 2012
-[![Figure A: All malignant neoplasms: incidence rates by sex and age group, England, 2012](http://www.ons.gov.uk/ons/resources/figurea_tcm77-367664.png)](http://www.ons.gov.uk/ons/resources/figurea_tcm77-367664.png "Figure A: All malignant neoplasms: incidence rates by sex and age group, England, 2012")
-
-Source: Office for National Statistics
+<div class="chart-container">
+<iframe src="">http://onsdigital.github.io/Alpha/bulletins/cancer1.html</iframe>
+</div>
 
 ##### Notes:
 1. Excluding non-melanoma skin cancer (ICD-10 C44)
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/vsob1/cancer-statistics-registrations--england--series-mb1-/no--43--2012/chd---figure-a.xls "XLS format") (27 Kb)
 
 The numbers on which Figure A is based are presented in [Table 2 (1.66 Mb Excel sheet)](http://www.ons.gov.uk/ons/rel/vsob1/cancer-statistics-registrations--england--series-mb1-/no--43--2012/rft-cancer-registration-statistics.xls "RFT Cancer Registration Statistics") of the reference tables associated with this publication. 
 
@@ -62,16 +58,12 @@ Figure B shows the frequency distribution by sex and age group for cancer regist
 
 There was a clear peak in the age group frequency distribution for males and females, with the greatest percentage of cancer registrations being recorded for those aged 65 to 69 years.
 
-#### Figure B: All malignant neoplasms: frequency distribution by sex and age group, England 2012
-[![Figure B: All malignant neoplasms: frequency distribution by sex and age group, England 2012](http://www.ons.gov.uk/ons/resources/figureb_tcm77-367665.png)](http://www.ons.gov.uk/ons/resources/figureb_tcm77-367665.png "Figure B: All malignant neoplasms: frequency distribution by sex and age group, England 2012")
-
-Source: Office for National Statistics
+<div class="chart-container">
+<iframe src="">http://onsdigital.github.io/Alpha/bulletins/cancer2.html</iframe>
+</div>
 
 ##### Notes:
 1. Excluding non-melanoma skin cancer (ICD-10 C44).
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/vsob1/cancer-statistics-registrations--england--series-mb1-/no--43--2012/chd---figure-b.xls "XLS format") (28.5 Kb)
 
 The numbers on which Figure B is based are presented in [Table 1 (1.66 Mb Excel sheet)](http://www.ons.gov.uk/ons/rel/vsob1/cancer-statistics-registrations--england--series-mb1-/no--43--2012/rft-cancer-registration-statistics.xls "RFT Cancer Registration Statistics") of the reference tables associated with this publication. 
 
@@ -82,16 +74,12 @@ Figure C presents SSRs for each region in England, for 2012. This shows that act
 
 SRRs should be interpreted with caution because it is difficult to separate the effect of variation in levels of ascertainment of cases across the different regions of England from genuine geographical differences in incidence. However, it is recognised that there are generally higher levels of deprivation in the north of England than in the south ([Communities and Local Government, 2011](https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/6871/1871208.pdf "Communities and Local Government, 2011")) and increased incidence rates of many cancers has been associated with higher levels of deprivation ([National Cancer Intelligence Network, 2008](http://www.ncin.org.uk/publications/reports/ "National Cancer Intelligence Network"), [Shack, Jordon, Thomson et al, 2008](http://www.biomedcentral.com/content/pdf/1471-2407-8-271.pdf "Shack, Jordon, Thomson et al, 2008")).
 
-#### Figure C: All malignant neoplasms: standardised registration ratios by region, England, 2012
-[![Figure C: All malignant neoplasms: standardised registration ratios by region, England, 2012](http://www.ons.gov.uk/ons/resources/figurec_tcm77-367667.png)](http://www.ons.gov.uk/ons/resources/figurec_tcm77-367667.png "Figure C: All malignant neoplasms: standardised registration ratios by region, England, 2012")
-
-Source: Office for National Statistics
+<div class="chart-container">
+<iframe src="http://onsdigital.github.io/Alpha/bulletins/cancer3.html"></iframe>
+</div>
 
 ##### Notes:
 1. Excluding non-melanoma skin cancer (ICD-10 C44)
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/vsob1/cancer-statistics-registrations--england--series-mb1-/no--43--2012/chd-figure-c.xls "XLS format") (27 Kb)
 
 The numbers on which Figure C is based are presented in [Table 5 (1.66 Mb Excel sheet)](http://www.ons.gov.uk/ons/rel/vsob1/cancer-statistics-registrations--england--series-mb1-/no--43--2012/rft-cancer-registration-statistics.xls "RFT Cancer Registration Statistics") of the reference tables associated with this publication.
 
@@ -100,16 +88,12 @@ Figure D shows the number of registrations for 24 major sites for males and fema
 
 Previous editions of the MB1 release reported on different numbers of 'common cancer' sites.  For the editions 1992 through 1998 the focus was on 20 major sites, increasing to 21 in 1999 when Hodgkin's disease was added to the list.  Whilst year on year consistency is helpful in analysing trends, relative changes in incidence have now warranted the inclusion of additional cancer sites, namely liver (C22), mesothelioma (C45) and thyroid gland (C73).  In addition, the ICD codes used to define some of the other major sites have been adjusted in order to ensure consistency across other outputs.
 
-#### Figure D: Number of registrations by major sites, England, 2012
-[![Figure D: Number of registrations by major sites, England, 2012](http://www.ons.gov.uk/ons/resources/figured_tcm77-367669.png](http://www.ons.gov.uk/ons/resources/figured_tcm77-367669.png "Figure D: Number of registrations by major sites, England, 2012")
-
-Source: Office for National Statistics
+<div class="chart-container">
+<iframe src="http://onsdigital.github.io/Alpha/bulletins/cancer4.html"></iframe>
+</div>
 
 ##### Notes:
 1. Excluding non-melanoma skin cancer (ICD-10 C44)
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/vsob1/cancer-statistics-registrations--england--series-mb1-/no--43--2012/chd---figure-d.xls "XLS format") (28 Kb)
 
 Since 2003, there have been large increases in the number of registrations of liver, oral, uterine and kidney cancers, and malignant melanoma of the skin ( [Table 9 (1.66 Mb Excel sheet)](http://www.ons.gov.uk/ons/rel/vsob1/cancer-statistics-registrations--england--series-mb1-/no--43--2012/rft-cancer-registration-statistics.xls "RFT Cancer Registration Statistics") ). These cancers are strongly linked to lifestyle choices, such as smoking, alcohol consumption and obesity ([Parkin, Boyd and Walker, 2011](http://www.nature.com/bjc/journal/v105/n2s/pdf/bjc2011489a.pdf "Parkin, Boyd and Walker, 2011")).
 
@@ -128,18 +112,14 @@ Registration of cases of cancer is a dynamic process in the sense that the data 
 
 Refreshing the database means that current numbers of registrations are generally greater than the published figures. The balance between ensuring completeness of the data but publishing tables in a timely manner is necessarily a compromise. The gap between the data year and production of tables has varied considerably over time, which results in varying proportions of additional cancer registrations held on the ONS database in comparison with the numbers published in the corresponding annual report (MB1 series), as shown in Figure E. Over the 41-year period reported, differences between published and current numbers of registrations for each year average less than 5%.
 
-#### Figure E: Number of registrations published in the annual report (MB1 series) and currently on the National Cancer Registry database, England, 1971–2011
-[![Figure E: Number of registrations published in the annual report (MB1 series) and currently on the National Cancer Registry database, England, 1971–2011](http://www.ons.gov.uk/ons/resources/figuree_tcm77-367672.png)](http://www.ons.gov.uk/ons/resources/figuree_tcm77-367672.png "Figure E: Number of registrations published in the annual report (MB1 series) and currently on the National Cancer Registry database, England, 1971–2011")
-
-Source: Office for National Statistics
+<div class="chart-container">
+<iframe src="http://onsdigital.github.io/Alpha/bulletins/cancer5.html"></iframe>
+</div>
 
 ##### Notes:
 1. Figures for 1971 to 1989 have been extracted from the 'frozen' historical data set published in 2012, and are therefore the same as those published in this series last year.
 2. The published figures for 1971 to 1978 correspond to all malignancies, not all registrations.
 3. Figures at March 2014.
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/vsob1/cancer-statistics-registrations--england--series-mb1-/no--43--2012/chd---figure-e.xls "XLS format") (28 Kb)
 
 ## Cancer registrations: interpretation and data quality
 It is estimated that the 2012 cancer registrations reported in this publication are around 99% complete (see Background Note 5). It is expected that the remaining 1% of cancer registrations for 2012 will be received over the next few years.
@@ -201,7 +181,7 @@ Further information about statistics on cancer registrations published by the Of
 
 Quality and Methodology Information papers are overview notes which pull together key qualitative information on the various dimensions of the quality of statistics as well as providing a summary of the methods used to compile the output. Information about key users of these statistics is also provided.
 
-## References
+## [accordion] References
 Bosch FX, Ribes J, Díaz M, and Cléries R. (2004). [Primary liver cancer: worldwide incidence and trends](http://www.ncbi.nlm.nih.gov/pubmed/15508102 "Primary liver cancer: worldwide incidence and trends"). Gastroenterology. 127(5 Suppl 1): S5-S16.
 
 Cancer Research UK (2012). [High risk groups for bowel cancer](http://www.cancerresearchuk.org/cancer-help/type/bowel-cancer/about/risks/high-risk-groups-for-bowel-cancer "High risk groups for bowel cancer").
@@ -230,7 +210,7 @@ Quinn M, Babb P, Brock A, Kirby L, and Jones J (2001). [Cancer trends in England
 
 Shack L, Jordan C, Thomson C S, Mak V, and Møller H (2008). [Variation in incidence of breast, lung and cervical cancer and malignant melanoma of skin by socioeconomic group in England](http://www.biomedcentral.com/content/pdf/1471-2407-8-271.pdf "Variation in incidence of breast, lung and cervical cancer and malignant melanoma of skin by socioeconomic group in England"), BMC Cancer, 8, 271.
 
-## Acknowledgements
+## [accordion] Acknowledgements
 The National Cancer Registry at the Office for National Statistics wishes to acknowledge the work of all the staff working in the National Cancer Registration Service, Public Health England, which provided the raw data for these analyses.
 
 More information about the NCRS is available on the [Public Health England website](http://www.gov.uk/phe "Public Health England website").
@@ -283,7 +263,7 @@ Tel: +44 (0) 28 9063 2573
 
 The cancer registries are all members of the [United Kingdom & Ireland Association of Cancer Registries (UKIACR)](http://www.ukacr.org/ "United Kingdom & Ireland Association of Cancer Registries (UKIACR)").
 
-## Background notes
+## [accordion] Background notes and methodology
 1. The age-standardised rates in this release are expressed per 100,000 population and are standardised to the new European Standard Population 2013 (ESP 2013). They are standardised to allow for more robust comparisons between males and females, years and geographical areas. Previously published rates for 1995 to 2011, based on ESP 1976, have been recalculated using the new ESP 2013. Rates will therefore differ from those previously published. For further information, see the [ONS website](http://www.ons.gov.uk/ons/rel/vsob1/cancer-statistics-registrations--england--series-mb1-/index.html "ONS website"). 
 
 2. Cancer incidence rates are based on the latest mid-year population estimates for the reference year at the time of publication.
@@ -331,3 +311,6 @@ Designation can be broadly interpreted to mean that the statistics:
 - are managed impartially and objectively in the public interest.
 
 Once statistics have been designated as National Statistics it is a statutory requirement that the Code of Practice shall continue to be observed.
+
+## [accordion] Footnotes
+This information will not be available in the prototype, however in the future the footnotes related to this statistical bulletin will appear here.

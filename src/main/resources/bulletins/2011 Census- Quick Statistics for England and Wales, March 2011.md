@@ -1,9 +1,9 @@
-Theme: People, Population and Community
+﻿Theme: People, Population and Community
 Level 2: Cultural Identity
 Level 3: Language
 Summary: 2011 Census, Quick Statistics, Household resident, Communal establishment resident, Usual resident, Household composition, Dependent children, Long-term health problem, Lone parent households, Employment, Ethnic group, Ethnicity, Race, English language, Main language, Religion, Health, care, long-term health problem, accommodation type, household spaces, Qualifications,  economic activity, Hours worked, Employment, Industry, Occupation.
-Headline 1: Ninety two per cent (49.8 million) of usual residents aged three years and over spoke English (English or Welsh in Wales) as their main language.
-Headline 2: Of the eight per cent (4.2 million) of usual residents aged three years and over with a main language other than English, 79 per cent (3.3 million) could speak English very well or well.
+Headline 1: 92% (49.8 million) of usual residents aged three years and over spoke English (English or Welsh in Wales) as their main language.
+Headline 2: Of the other 8% (4.2 million), 79% (3.3 million) could speak English very well or well.
 Headline 3: In 2011, less than half a per cent (138,000) of all usual residents aged three years and over could not speak English.
 Contact name: Emma White
 Contact email: census.customerservices@ons.gsi.gov.uk
@@ -50,7 +50,7 @@ More detailed analyses of the census estimates are available for some topics. Th
 
 Interactive [data visualisations](http://www.ons.gov.uk/ons/guide-method/census/2011/census-data/2011-census-interactive-content/index.html "2011 Census Interactive") developed by ONS are also available to aid interpretation of the results. Users can enter postcodes into the interactive maps to focus on specific areas.
 
-## WHO WE ARE
+## Who we are
 Information on the personal characteristics of the usually resident population has already been published and this bulletin builds on the messages in the [11 December 2012](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-for-local-authorities-in-england-and-wales/index.html "Key statistics for local authorities in England and Wales") release which covered age and sex, health, religion, ethnic group, usual residents born outside the UK and household language. This included detailed analyses of [ethnicity](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-for-local-authorities-in-england-and-wales/rpt-ethnicity.html "RPT Ethnicity"), [international migrants](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-for-local-authorities-in-england-and-wales/rpt-international-migrants.html "RPT International Migrants") and [religion](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-for-local-authorities-in-england-and-wales/rpt-religion.html "RPT Religion") estimates.
 
 The 2011 Census was the first to collect information on language1. The information in this section covers main language and proficiency in English as estimated from the 2011 Census for England and Wales. In parallel with this release, additional analysis is being published on [general health](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-and-quick-statistics-for-wards-and-output-areas-in-england-and-wales/rpt-general-health-short-story.html "RPT General Health Short Story") and [disability](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-and-quick-statistics-for-wards-and-output-areas-in-england-and-wales/rpt-disability-short-story.html "RPT Disability Short Story").
@@ -71,7 +71,7 @@ The 2011 Census was the first to collect information on language1. The informati
 
 - The Key Statistics release of 11th December 2012 included information on household language. In 2011, all usual residents in 91 per cent (21.3 million) of households spoke English as a main language. In a further four per cent (868,000) of households at least one adult spoke English as a main language and in one per cent (182,000) of households no adults but at least one child spoke English as a main language. In the remaining four per cent (1.0 million) of households there were no residents who had English as a main language3.
 
-### Notes for WHO WE ARE
+### Notes for Who we are
 
 1. A more detailed analysis of the language tables will be published in the first half of 2013.
 2. English or Welsh in Wales.
@@ -84,43 +84,23 @@ English1 was the main language for 92 per cent (49.8 million) of usual residents
 
 Among the England regions and Wales, the North East (three per cent, 71,000) and Wales (three per cent, 84,000) had the lowest percentage of usual residents reporting a main language other than English1. The highest percentage was in London (22 per cent, 1.7 million), this was three times larger than the second highest percentage; seven per cent (386,000) in the West Midlands.
 
-#### Figure 1: Main Language not English
-##### England regions, Wales, 2011. Usual residents aged three and over
-[![Figure 1: Main Language not English](http://www.ons.gov.uk/ons/resources/fig1small_tcm77-297369.png)](http://www.ons.gov.uk/ons/resources/fig1small_tcm77-297369.png "Figure 1: Main Language not English")
-
-Source: Census - Office for National Statistics
+<div class="chart-container">
+<iframe src="http://onsdigital.github.io/Alpha/bulletins/census1.html"></iframe>
+</div>
 
 ##### Notes:
 1. Main language not English or Welsh in Wales
-
-**[View larger version](http://www.ons.gov.uk/ons/publications/view-larger.html?edition=tcm%3A77-286348&chart=tcm%3A77-297253&contentid=tcm%3A77-297002 "View larger version")**
-
-##### Download chart: 
-![PNG](http://www.ons.gov.uk/ons/resources/iconpng_tcm77-218163.gif "PNG")  [PNG format](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-and-quick-statistics-for-wards-and-output-areas-in-england-and-wales/lct-fig1-e-w.png "PNG format") (28.3 Kb)
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-and-quick-statistics-for-wards-and-output-areas-in-england-and-wales/chd-e-w-fig-1-main-language.xls "XLS format") (32 Kb)
 
 Of the eight per cent (4.2 million) of usual residents aged three and over who reported a main language other than English1, 41 per cent (1.7 million) could speak English very well, 38 per cent (1.6 million) could speak English well, 17 per cent (726,000) could speak English but not well and the remaining three per cent (138,000) could not speak English at all.
 
 Across the England regions and Wales the percentage of those whose main language was not English1 who could speak English very well or well varied from 72 per cent (279,000) in the West Midlands to 84 per cent (404,000) in the South East. The percentage who could not speak English at all varied between two per cent (12,000) in the South East and five per cent (19,000) in the West Midlands.
 
-#### Figure 2: Proficiency in English
-##### England regions, Wales, 2011. Usual residents aged three and over whose main language is not English
-[![Figure 2: Proficiency in English](http://www.ons.gov.uk/ons/resources/fig2sml_tcm77-297396.png)](http://www.ons.gov.uk/ons/resources/fig2sml_tcm77-297396.png "Figure 2: Proficiency in English")
-
-Source: Census - Office for National Statistics
+<div class="chart-container">
+<iframe src="http://onsdigital.github.io/Alpha/bulletins/census2.html"></iframe>
+</div>
 
 ##### Notes:
 1. Main language not English or Welsh in Wales
-
-**[View larger version](http://www.ons.gov.uk/ons/publications/view-larger.html?edition=tcm%3A77-286348&chart=tcm%3A77-297259&contentid=tcm%3A77-297002 "View larger version")**
-
-##### Download chart: 
-![PNG](http://www.ons.gov.uk/ons/resources/iconpng_tcm77-218163.gif "PNG")  [PNG format](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-and-quick-statistics-for-wards-and-output-areas-in-england-and-wales/lct-fig-2-e-w.png "PNG format") (27.5 Kb)
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-and-quick-statistics-for-wards-and-output-areas-in-england-and-wales/chd-e-w-fig-2-english-proficiency.xls "XLS format") (34 Kb)
 
 Information on English language proficiency1 is provided in table [QS205EW (244.5 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-and-quick-statistics-for-wards-and-output-areas-in-england-and-wales/rft-qs205ew.xls "RFT QS205EW") . A more detailed analysis of the language topic will be published later in 2013.
 
@@ -135,33 +115,22 @@ Table 1 shows that of the 20 most reported main languages, five were South Asian
 
 Not all languages are spoken. A small percentage (22,000) of usual residents reported a sign language as their main language; of these usual residents 70 per cent (15,000) used British Sign Language.
 
-##### Download table: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-and-quick-statistics-for-wards-and-output-areas-in-england-and-wales/prt-e-w-table-1-main-lanuagage.xls "XLS format") (33 Kb)
-
 Of the England regions and Wales, the North East had the highest percentage (97 per cent, 2.4 million) of people who reported English as their main language, followed by Wales (97 per cent, 2.9 million) whereas London had the lowest percentage (78 per cent, 6.1 million). London also had the highest percentage of its usually resident population speaking all of the 20 most frequently reported languages in England and Wales except English and Panjabi. Panjabi was the main language of the highest percentage of usual residents aged three and over in the West Midlands (one per cent, 67,000).
 
 The second most widely reported main language for England and Wales was Polish (one per cent, 546,000); it was also the second most widely reported language in all the England regions and Wales. London had the highest percentage (two per cent, 148,000) of people who reported Polish as their main language whereas the North East had the lowest percentage (less than half of one per cent, 8,200).
 
 Panjabi was the third (half of one per cent, 273,000) most reported main language across England and Wales as a whole; however this varied across the England regions and Wales. It was the second most reported language in the West Midlands (one per cent, 67,000) and the twenty-fourth (less than half of one per cent, 2,400) in the South West.
 
-#### Figure 3: Five most reported main langues other than English
-##### England regions, Wales, 2011. Usual residents aged three and over
-[![Figure 3: Five most reported main langues other than English](http://www.ons.gov.uk/ons/resources/fig3sml_tcm77-297401.png)](http://www.ons.gov.uk/ons/resources/fig3sml_tcm77-297401.png "Figure 3: Five most reported main langues other than English")
-
-**[View larger version](http://www.ons.gov.uk/ons/publications/view-larger.html?edition=tcm%3A77-286348&chart=tcm%3A77-297265&contentid=tcm%3A77-297002 "View larger version")**
-
-##### Download chart: 
-![PNG](http://www.ons.gov.uk/ons/resources/iconpng_tcm77-218163.gif "PNG")  [PNG format](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-and-quick-statistics-for-wards-and-output-areas-in-england-and-wales/lct-fig-3-e-w.png "PNG format") (31.8 Kb)
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-and-quick-statistics-for-wards-and-output-areas-in-england-and-wales/chd-e-w-fig-3-five-languages.xls "XLS format") (19.5 Kb)
+<div class="chart-container">
+<iframe src="http://onsdigital.github.io/Alpha/bulletins/census3.html"></iframe>
+</div>
 
 Information on main language is provided in table [QS204EW (1 Mb Excel sheet)](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-and-quick-statistics-for-wards-and-output-areas-in-england-and-wales/rft-qs204ew.xls "RFT QS204EW") . A more detailed analysis of the language topic will be published in the first half of 2013.
 
 #### Notes for Main language
 1. English or Welsh in Wales.
 
-## HOW WE LIVE
+## How we live
 Information on households and communal establishments has already been published and this bulletin builds on the results in the [11 December 2012](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-for-local-authorities-in-england-and-wales/index.html "Key Statistics for local authorities in England and Wales) release which covered accommodation and tenure, rooms, bedrooms and central heating, car or van availability, marital status, household composition and residents in communal establishments. This section presents key findings on household composition.
 
 - This section presents key findings on household composition.  These findings relate to the 98 per cent (55.1 million) of usual residents that live in households. More detailed analysis on households and families has been published with this release1.
@@ -176,7 +145,7 @@ Information on households and communal establishments has already been published
 
 - Less than half of one per cent (0.1 per cent, 70,000) of usual residents in households reported living in a one family civil partnership household2.
 
-#### Notes for HOW WE LIVE
+#### Notes for How we live
 1. A family is defined as a married, civil partnered or cohabiting couple with or without child(ren), or a lone parent with at least one child. Child(ren) may be dependent or non-dependent. If the child has at least one child of their own they are classed as a separate family. Multiple family households are included in ‘other households’.
 2. Where at least one household member was aged under 65.
 
@@ -193,8 +162,6 @@ The percentage of usual residents in households living in one family cohabiting 
 
 Less than half of one per cent (70,000) of usual residents reported living in a one family civil partnership household3 4.
 
-##### Download table: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-and-quick-statistics-for-wards-and-output-areas-in-england-and-wales/prt-e-w-table-2-household-composition.xls "XLS format") (21.5 Kb)
 
 Other households are those consisting of usual residents other than one person or one family; they include those where all members were related (for example siblings living together or households containing more than three generations) and where unrelated students or professionals were living together. Twelve per cent (6.8 million) of usual residents reported living in these types of households, an increase of two percentage points on 2001 (ten per cent, 5.1 million). There was also an increase in the average household size of these other households from 3.5 usual residents per household in 2001 to 3.7 in 2011.
 
@@ -206,7 +173,7 @@ Information on household composition is provided in table [QS112EW (460 Kb Excel
 3. Where at least one household member was aged under 65.
 4. The Civil Partnership Act 2004 came into effect in the UK on 5 December 2005.
 
-## WHAT WE DO
+## What we do
 Information on households and communal establishments has already been published and this bulletin builds on the messages in the [11 December 2012](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-for-local-authorities-in-england-and-wales/index.html "Key statistics for local authorities in England and Wales" release which covered provision of unpaid care, economic activity, qualification, and industry and occupation.
 
 This section presents key findings on students, armed forces and method of travel to work.
@@ -247,19 +214,9 @@ Information on the economic activity of full-time students is provided in table 
 ## Armed forces
 In 2011, less than one per cent (153,000) of the usually resident population of England and Wales, and all the England regions, reported that they were in the armed forces. This is similar to 2001 (161,000).
 
-#### Figure 4: Armed forces
-##### England and Wales, 2011. Usual residents employed in the armed forces
-[![Figure 4: Armed forces](http://www.ons.gov.uk/ons/resources/fig4sml_tcm77-297402.png)](http://www.ons.gov.uk/ons/resources/fig4sml_tcm77-297402.png "Figure 4: Armed forces")
-
-Source: Census - Office for National Statistics
-
-**[View larger version](http://www.ons.gov.uk/ons/publications/view-larger.html?edition=tcm%3A77-286348&chart=tcm%3A77-297269&contentid=tcm%3A77-297002 "View larger version")**
-
-##### Download chart: 
-![PNG](http://www.ons.gov.uk/ons/resources/iconpng_tcm77-218163.gif "PNG")  [PNG format](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-and-quick-statistics-for-wards-and-output-areas-in-england-and-wales/lct-fig-4-e-w.png "PNG format") (24.7 Kb)
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-and-quick-statistics-for-wards-and-output-areas-in-england-and-wales/chd-e-w-fig4-armed-forces.xls "XLS format") (17.5 Kb)
+<div class="chart-container">
+<iframe src="http://onsdigital.github.io/Alpha/bulletins/census4.html"></iframe>
+</div>
 
 The distribution of members of the armed forces differs from that of the usually resident population as a whole. In 2011, 22 per cent of armed forces members lived in the South West (34,000) and a further 22 per cent lived in the South East (33,000). This differs from 2001, when the South East had the largest percentage of the armed forces population (26 per cent, 41,000), followed by the South West (23 per cent, 37,000). The North East had the smallest percentage of the armed forces population (four per cent, 5,700), as it had in 2001 (three per cent, 4,900).
 
@@ -268,37 +225,17 @@ Information on armed forces members is provided in table [QS121EW (253.5 Kb Exce
 ## Method of travel to work
 Method of travel to work1 is the mode of transport used to cover the longest part, by distance, of a journey to work. This information is published by home address for usual residents aged between 16 and 74 years, who were working2 during the week before census day, 27 March 2011.
 
-#### Figure 5: Method of travel to work
-##### England and Wales, 2011. Employed usual residents aged 16 to 74
-[![Figure 5: Method of travel to work](http://www.ons.gov.uk/ons/resources/fig5sml_tcm77-297407.png)](http://www.ons.gov.uk/ons/resources/fig5sml_tcm77-297407.png "Figure 5: Method of travel to work")
-
-Source: Census - Office for National Statistics
-
-**[View larger version](http://www.ons.gov.uk/ons/publications/view-larger.html?edition=tcm%3A77-286348&chart=tcm%3A77-297276&contentid=tcm%3A77-297002 "View larger version")**
-
-##### Download chart: 
-![PNG](http://www.ons.gov.uk/ons/resources/iconpng_tcm77-218163.gif "PNG")  [PNG format](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-and-quick-statistics-for-wards-and-output-areas-in-england-and-wales/lch-fig-5-e-w.png "PNG format") (27.4 Kb)
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-and-quick-statistics-for-wards-and-output-areas-in-england-and-wales/chd-e-w-fig-5-method-of-travel.xls "XLS format") (18.5 Kb)
+<div class="chart-container">
+<iframe src="http://onsdigital.github.io/Alpha/bulletins/census5.html"></iframe>
+</div>
 
 In 2011 the majority of 16 to 74 year olds in employment travelled to work by driving a car or van (58 per cent, 15.3 million). A further five per cent (1.4 million) travelled to work as a passenger in a car or van.
 
 The second most reported method of travel to work for 16 to 74 year olds in employment was by foot (11 per cent, 2.8 million), whilst the third was travel by bus, minibus or coach (seven per cent, 1.9 million).
 
-#### Figure 6: Method of travel to work
-##### England regions, Wales, 2011. Employed usual residents aged 16 to 74
-[![Figure 6: Method of travel to work](http://www.ons.gov.uk/ons/resources/fig6small_tcm77-297408.png)](http://www.ons.gov.uk/ons/resources/fig6small_tcm77-297408.png "Figure 6: Method of travel to work")
-
-Source: Census - Office for National Statistics
-
-**[View larger version](http://www.ons.gov.uk/ons/publications/view-larger.html?edition=tcm%3A77-286348&chart=tcm%3A77-297298&contentid=tcm%3A77-297002 "View larger version")**
-
-##### Download chart: 
-![PNG](http://www.ons.gov.uk/ons/resources/iconpng_tcm77-218163.gif "PNG")  [PNG format](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-and-quick-statistics-for-wards-and-output-areas-in-england-and-wales/lct-fig-6-e-w.png "PNG format") (26.8 Kb)
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-and-quick-statistics-for-wards-and-output-areas-in-england-and-wales/chd-e-w-fig-6.xls "XLS format") (19.5 Kb)
+<div class="chart-container">
+<iframe src="http://onsdigital.github.io/Alpha/bulletins/census6.html"></iframe>
+</div>
 
 Figure 6 shows that the main variation between the England regions and Wales is in the percentages using public transport (including buses, trains and underground trains/light rail/trams), and those using cars, motorcycles and taxis.
 
@@ -314,7 +251,7 @@ Information on travel to work is provided in table [QS701EW (301 Kb Excel sheet)
 1. Due to definitional differences, and because the census questionnaire is self completed by the population of England and Wales, the census estimates of people travelling to work may differ from other sources. In addition, direct comparisons are not possible for mode of travel to work between 2001 and 2011. In 2001, people who recorded their place of work as working mainly at or from home were considered to have their mode of travel to work as working mainly at or from home. In 2011, people working mainly at or from home could record, for example, that they travelled to work as a driver in a car or van, despite being based at home. This extra information is useful for transport planning.
 2. Due to definitional differences, and because the census questionnaire is self completed by the population of England and Wales, the census estimates of people in employment may differ from other sources as, for example, some respondents may include voluntary work when asked about employment. The most authoritative and up to date estimates of the labour market status, including employment and unemployment, are the labour market statistics that ONS publishes monthly. The census is valuable in providing a detailed picture at the time of the census of the characteristics of the economically active population.
 
-## Background notes
+## [accordion] Background notes and methodology
 1. This publication follows [previous releases of census data](http://www.ons.gov.uk/ons/rel/census/2011-census/index.html "previous releases of census data") including household and population totals and local authority level Key Statistics tables. The census provides estimates of the characteristics of all people and households in England and Wales on census day. These are produced for a variety of users including government, local and unitary authorities, business and communities. The census provides population statistics from a national to local level. This bulletin discusses the results at the national and regional level for England and Wales.
 
 2. In making comparisons to 2001, the population estimates (by age and sex) have been compared with the mid-year estimates for 2001, 52.4 million. For other characteristics, comparisons are made with 2001 Census estimates, 52.0 million. Footnotes are provided with tables to identify the data sources used.
@@ -354,3 +291,9 @@ Information on travel to work is provided in table [QS701EW (301 Kb Excel sheet)
 19. Details of the policy governing the release of new data are available by visiting [www.statisticsauthority.gov.uk/assessment/code-of-practice/index.html](http://www.statisticsauthority.gov.uk/assessment/code-of-practice/index.html) or from the Media Relations Office email: <media.relations@ons.gsi.gov.uk>
 
 These National Statistics are produced to high professional standards and released according to the arrangements approved by the UK Statistics Authority.
+
+## [accordion] References
+This information will not be available in the prototype, however in the future all references related to this statistical bulletin will appear here.
+
+## [accordion] Footnotes
+This information will not be available in the prototype, however in the future the footnotes related to this statistical bulletin will appear here.
