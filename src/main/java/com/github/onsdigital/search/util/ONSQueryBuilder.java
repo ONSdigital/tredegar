@@ -75,18 +75,18 @@ public class ONSQueryBuilder {
 	 * @param type
 	 * @return
 	 */
-	public ONSQueryBuilder setTypes(String[] types) {
+	public ONSQueryBuilder setTypes(String... types) {
 		this.types = types;
 		return this;
 	}
-	
+
 	/**
 	 * Set a single type to search
 	 * 
 	 */
 	public ONSQueryBuilder setType(String type) {
 		this.types = new String[1];
-		this.types[0]= type;
+		this.types[0] = type;
 		return this;
 	}
 
@@ -181,8 +181,8 @@ public class ONSQueryBuilder {
 			highlightBuilder.field(field, 0, 0);
 		}
 
-		String query = new SearchSourceBuilder().query(builder).highlight(highlightBuilder).from(calculateFrom()).size(getSize()).toString(); 
-//		System.out.println("Elastic search query String: " + query);
+		String query = new SearchSourceBuilder().query(builder).highlight(highlightBuilder).from(calculateFrom()).size(getSize()).toString();
+		// System.out.println("Elastic search query String: " + query);
 		return query;
 
 	}

@@ -22,6 +22,7 @@ import org.elasticsearch.common.settings.ImmutableSettings;
 import org.elasticsearch.common.xcontent.XContentBuilder;
 
 import com.github.onsdigital.configuration.Configuration;
+import com.github.onsdigital.json.ContentType;
 
 public class Indexer {
 
@@ -30,36 +31,85 @@ public class Indexer {
 		if (absoluteFilePaths.isEmpty()) {
 			throw new IllegalStateException("No items were found for indexing");
 		}
+		createIndex(client, absoluteFilePaths);
 		indexDocuments(client, absoluteFilePaths);
 	}
 
-	private static void indexDocuments(Client client, List<String> absoluteFilePaths) throws IOException {
+	private static void createIndex(Client client, List<String> absoluteFilePaths) throws IOException {
 
-		// System.out.println("Creating index");
-		// // Disable indexing for lede field
-		// XContentBuilder builder = jsonBuilder().startObject("ons")
-		// .startObject("dataset").startObject("properties").startObject("lede")
-		// .field("type", "string").field("index", "no").endObject()
-		// .endObject().endObject().endObject();
+		System.out.println("Creating index ons");
+		// Disable indexing for lede field
 
 		// Set up the synonyms
 		CreateIndexRequestBuilder indexBuilder = client.admin().indices().prepareCreate("ons").setSettings(buildSettings());
-		indexBuilder.execute();
+		System.out.println("Adding document mappings");
 
+		indexBuilder.addMapping(ContentType.dataset.toString(), getMappingProperties(ContentType.dataset.toString()));
+		indexBuilder.addMapping(ContentType.home.toString(), getMappingProperties(ContentType.home.toString()));
+		indexBuilder.addMapping(ContentType.bulletin.toString(), getMappingProperties(ContentType.bulletin.toString()));
+		indexBuilder.addMapping(ContentType.article.toString(), getMappingProperties(ContentType.article.toString()));
+		indexBuilder.addMapping(ContentType.methodology.toString(), getMappingProperties(ContentType.methodology.toString()));
+
+		System.out.println("Adding timeseries mappings");
+		indexBuilder.addMapping(ContentType.timeseries.toString(), getTimeseriesMappingProperties(ContentType.timeseries.toString()));
+
+		indexBuilder.execute();
+	}
+
+	// Mapping for field properties. To decide which field will be indexed
+	private static XContentBuilder getMappingProperties(String type) throws IOException {
+
+		XContentBuilder builder = jsonBuilder().startObject().startObject(type).startObject("properties");
+		builder.startObject("lede").field("type", "string").field("index", "no").endObject();
+		builder.startObject("title").field("type", "string").field("index", "analyzed").endObject();
+		builder.startObject("url").field("type", "string").field("index", "analyzed").endObject();
+		builder.startObject("path").field("type", "string").field("index", "analyzed").endObject();
+		builder.endObject().endObject().endObject();
+		return builder;
+	}
+
+	// Mapping for timeseries field properties.
+	private static XContentBuilder getTimeseriesMappingProperties(String type) throws IOException {
+		XContentBuilder builder = jsonBuilder().startObject().startObject(type).startObject("properties");
+		// cdid not analyzed for exact match
+		builder.startObject("cdid").field("type", "string").field("index", "analyzed").endObject();
+		builder.startObject("title").field("type", "string").field("index", "analyzed").endObject();
+		builder.startObject("url").field("type", "string").field("index", "analyzed").endObject();
+		builder.startObject("path").field("type", "string").field("index", "analyzed").endObject();
+		builder.endObject().endObject().endObject();
+		System.out.println(builder.string() + "\n\n");
+		return builder;
+	}
+
+	private static void indexDocuments(Client client, List<String> absoluteFilePaths) throws IOException {
 		AtomicInteger idCounter = new AtomicInteger();
 		for (String absoluteFilePath : absoluteFilePaths) {
 
 			Map<String, String> documentMap = LoadIndexHelper.getDocumentMap(absoluteFilePath);
 			if (documentMap != null && StringUtils.isNotEmpty(documentMap.get("title"))) {
-				buildDocument(client, documentMap, idCounter.getAndIncrement());
+				if (documentMap.get("type").equals(ContentType.timeseries.toString())) {
+					buildTimeseries(client, documentMap, idCounter.getAndIncrement());
+				} else {
+					buildDocument(client, documentMap, idCounter.getAndIncrement());
+				}
 			}
 		}
+	}
+
+	private static void buildTimeseries(Client client, Map<String, String> documentMap, int idCounter) throws IOException {
+		XContentBuilder source = jsonBuilder().startObject().field("title", documentMap.get("title")).field("url", documentMap.get("url")).field("path", documentMap.get("tags"))
+				.field("cdid", documentMap.get("cdid")).endObject();
+		build(client, documentMap, idCounter, source);
 	}
 
 	private static void buildDocument(Client client, Map<String, String> documentMap, int idCounter) throws IOException {
 
 		XContentBuilder source = jsonBuilder().startObject().field("title", documentMap.get("title")).field("url", documentMap.get("url")).field("path", documentMap.get("tags"))
 				.field("lede", documentMap.get("lede")).endObject();
+		build(client, documentMap, idCounter, source);
+	}
+
+	private static void build(Client client, Map<String, String> documentMap, int idCounter, XContentBuilder source) {
 		String name = "ons";
 		String type = StringUtils.lowerCase(documentMap.get("type"));
 		String id = String.valueOf(idCounter);
