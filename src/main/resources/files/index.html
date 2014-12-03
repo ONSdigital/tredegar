@@ -1,10 +1,10 @@
 <!--[if i]><![endif]-->
 <!DOCTYPE html>
-<html ng-app="onsApp">
+<html ng-app="onsApp" ng-controller="MainCtrl" >
 
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title ng-bind="PageUtil.title()"></title>
+    <title ng-bind="getTitle()"></title>
 <!-- This is the entry point for the Angular application. -->
 <!-- We've used Angular to implement the Alpha because it made the application quick to prototype. -->
 <!-- The Beta phase will probably use less Javascript and more progressive enhancement. -->
@@ -85,7 +85,7 @@ markup: false
 <!-- id set to ng-app to make older IE happy with Angular ngInclude directive -->
 <!-- Autoscroll solves the issue mentioned on https://stackoverflow.com/questions/21055952/changing-route-doesnt-scroll-to-top-in-the-new-page -->
 
-<body id="ng-app" ng-controller="MainCtrl" class="js">
+<body id="ng-app" class="js">
     
     <div ng-include="'app/partials/modal/modal.html'" ></div>
     <ons-header></ons-header>
@@ -161,6 +161,7 @@ markup: false
     <script type="text/javascript" src="app/templates/t6/t6.controller.js" defer></script>
     <script type="text/javascript" src="app/templates/search-results/search-results.controller.js" defer></script>
     <script type="text/javascript" src="app/templates/about/about.controller.js" defer></script>
+    <script type="text/javascript" src="app/templates/accessibility/accessibility.controller.js" defer></script>
     <script type="text/javascript" src="app/templates/article/article.controller.js" defer></script>
     <script type="text/javascript" src="app/templates/bulletin/bulletin.controller.js" defer></script>
     <script type="text/javascript" src="app/templates/calendar/calendar.controller.js" defer></script>
