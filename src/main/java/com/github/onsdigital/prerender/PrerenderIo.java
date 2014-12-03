@@ -4,14 +4,18 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.http.NameValuePair;
 import org.apache.http.client.utils.URIBuilder;
+import org.apache.http.message.BasicNameValuePair;
 
 import com.github.greengerong.PreRenderSEOFilter;
 import com.github.onsdigital.configuration.Configuration;
@@ -118,7 +122,10 @@ public class PrerenderIo {
 		uriBuilder.setPath("/");
 
 		// Query
-		uriBuilder.setParameter("_escaped_fragment_", escapedFragment);
+		List<NameValuePair> parameters = new ArrayList<>();
+		parameters.add(new BasicNameValuePair("prerender", "true"));
+		parameters.add(new BasicNameValuePair("_escaped_fragment_", escapedFragment));
+		uriBuilder.setParameters(parameters);
 
 		return uriBuilder.build().toURL();
 	}

@@ -86,22 +86,6 @@
 		function resolveTaxonomyTemplate() {
 			var routeConfig = {
 				resolve: {
-					// https://stackoverflow.com/questions/15975646/angularjs-routing-to-empty-route-doesnt-work-in-ie7
-					// Here we ensure that our route has the document fragment (#!), or more specifically that it has #!/ at a minimum.
-					// If accessing the base URL without a trailing '/' in IE7 it will execute the otherwise route instead of the signin
-					// page, so this check will ensure that '#!/' exists and if not redirect accordingly which fixes the URL.
-					redirectCheck: ['$location', '$window',
-						function($location, $window) {
-							var absoluteLocation = $location.absUrl();
-							//This makes FB share work (socialLinks directive)
-							if (absoluteLocation.indexOf('?onsfb') != -1) {
-								absoluteLocation = absoluteLocation.replace('?onsfb', '#!')
-								$window.location.href = absoluteLocation;
-							} else if (absoluteLocation.indexOf('#!/') === -1) {
-								$location.path('/');
-							}
-						}
-					],
 					data: ['Taxonomy',
 						function(Taxonomy) {
 							return Taxonomy.loadData()

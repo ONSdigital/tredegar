@@ -3,13 +3,13 @@
 	'use strict';
 
 	angular.module('onsTemplates')
-		.controller('ModalController', ['ipCookie',ModalController] )
+		.controller('ModalController', ['ipCookie' , 'PageUtil',ModalController] )
 
 
-	function ModalController(ipCookie) {
+	function ModalController(ipCookie, PageUtil) {
 		var modal = this
 		modal.showModal = isAccepted() ? false : true
-		// modal.showModal = true
+		modal.showModal = PageUtil.isPrerender() ? false : modal.showModal
 
 		function isAccepted() {
 			var accepted = ipCookie('onsAlphaDisclaimer')
