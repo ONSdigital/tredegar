@@ -12,8 +12,8 @@
 	function RotueConfigration($routeProvider, $locationProvider, $httpProvider) {
 
 		$routeProvider.
-		when('/about', {
-			templateUrl: 'app/templates/about/about.html',
+		when('/aboutus', {
+			templateUrl: 'app/templates/about/aboutus.html',
 			controller: "AboutCtrl",
 		}).
 		when('/alpha', {

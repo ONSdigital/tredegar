@@ -320,6 +320,8 @@ body {
     margin: 0 auto;
     text-align: center;
 }
+
+
 /* ======================================================
    'Helper' utility classes
    includes application of these styles via SASS @extend
@@ -2582,6 +2584,20 @@ lesser , applied styles
     line-height: 3.33;
     vertical-align: top;
 }
+
+.btn--survey {
+    font-family: "open-sans-n7", "open-sans", sans-serif;
+    color: white;
+    background: #a8233e ;
+}
+.btn--survey:visited {
+    color: white;
+}
+.btn--survey:hover, .btn--survey:focus {
+    color: white;
+    background-color: #7e1a2e ;
+}
+
 @media screen and (max-width: 40em) {
     .btn--form {
         display: block;
@@ -5523,6 +5539,7 @@ ol.toc-columns {
     clear: left;
     text-align: left;
 }
+
 .video-container {
     position: relative;
     padding-bottom: 56.25%;
@@ -5538,6 +5555,25 @@ ol.toc-columns {
     height: 100%;
     padding-bottom: 2rem;
 }
+
+.chart-container {
+    position: relative;
+    padding-bottom: 100%;
+/*    padding-top: 35px;
+*/    height: 0;
+    overflow: visible;
+    margin-bottom: 1rem;
+}
+.chart-container iframe, .chart-container object, .chart-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 1rem;
+}
+
+
 /*------------------------------------*\
   Accordion Styles
 \*------------------------------------*/
@@ -6169,6 +6205,25 @@ td.datatable-downloads {
 }*/
 
 @media screen and (max-width: 800px) {
+    .nav-panel__list{
+        display: inline-flex;
+    }
+
+    .nav-panel__body.flush {
+        position: relative;
+        left: 10%;
+    }
+    .nav-panel__item.homeicon_sparkline {
+        position: relative;
+        left: 45%;
+        text-align: center;
+        border: 0px;
+        padding-top: 15px;
+    }
+    .nav-panel__roomy--med.right-small{
+        text-align: right;
+    }
+
     /*.homeicon_economy{
   background-image: url("/ui/img/CPI_GDP.png");
   background-position: 0% -70%;
@@ -6204,25 +6259,6 @@ td.datatable-downloads {
   height: 6.5em;
   border: 0px;
 }*/
-
-    .nav-panel__list{
-        display: inline-flex;
-    }
-
-    .nav-panel__body.flush {
-        position: relative;
-        left: 10%;
-    }
-    .nav-panel__item.homeicon_sparkline {
-        position: relative;
-        left: 45%;
-        text-align: center;
-        border: 0px;
-        padding-top: 15px;
-    }
-    .nav-panel__roomy--med.right-small{
-        text-align: right;
-}
 }
 
 
