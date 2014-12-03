@@ -48,7 +48,6 @@
 
     function MainController($scope, PageUtil, $location, $anchorScroll) {
         var ctrl = this
-
         $scope.scrollTo = function(id) {
             $location.hash(id)
             $anchorScroll()
@@ -65,6 +64,10 @@
 
         $scope.getUrl = function() {
             return PageUtil.getUrl()
+        }
+
+        $scope.getTitle = function() {
+            return PageUtil.getTitle()
         }
     }
 
