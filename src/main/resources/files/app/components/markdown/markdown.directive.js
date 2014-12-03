@@ -24,9 +24,9 @@ angular.module('onsComponents')
                 // element
                 //     .find("ul").addClass("list--neutral box--cyan--separated-left")
                 //     .find("ul").find("li").addClass("big");
-                element
-                    .find("h3")
-                    .addClass("gamma");
+                // element
+                //     .find("h3")
+                //     .addClass("gamma");
             });
         }
     };
