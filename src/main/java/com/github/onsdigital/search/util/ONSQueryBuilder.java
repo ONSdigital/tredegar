@@ -5,6 +5,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.elasticsearch.index.query.BaseQueryBuilder;
 import org.elasticsearch.index.query.FilterBuilders;
 import org.elasticsearch.index.query.MatchAllQueryBuilder;
+import org.elasticsearch.index.query.MatchQueryBuilder;
 import org.elasticsearch.index.query.MultiMatchQueryBuilder;
 import org.elasticsearch.index.query.functionscore.FunctionScoreQueryBuilder;
 import org.elasticsearch.index.query.functionscore.ScoreFunctionBuilders;
@@ -39,6 +40,7 @@ public class ONSQueryBuilder {
 	int page = 1;
 	int size = 10;
 	String[] fields;
+	private boolean naturalLanguage;
 
 	public ONSQueryBuilder(String index) {
 		this.index = index;
@@ -109,6 +111,14 @@ public class ONSQueryBuilder {
 	public int getSize() {
 		return size;
 	}
+	
+	public boolean isNaturalLanguage() {
+		return naturalLanguage;
+	}
+
+	public void setNaturalLanguage(boolean naturalLanguage) {
+		this.naturalLanguage = naturalLanguage;
+	}
 
 	/**
 	 * By default 10 documents are returned from the result set. Set this value
@@ -163,7 +173,12 @@ public class ONSQueryBuilder {
 		} else {
 			// return documents with fields containing words that start with
 			// given search term
-			MultiMatchQueryBuilder multiMatchQueryBuilder = new MultiMatchQueryBuilder(getSearchTerm(), getFields()).analyzer("ons_synonyms").slop(5);
+			MultiMatchQueryBuilder multiMatchQueryBuilder;
+			if (isNaturalLanguage()) {
+				multiMatchQueryBuilder = new MultiMatchQueryBuilder(getSearchTerm(), getFields()).analyzer("ons_synonyms").slop(5);
+			} else {
+				multiMatchQueryBuilder = new MultiMatchQueryBuilder(getSearchTerm(), getFields()).type(MatchQueryBuilder.Type.PHRASE_PREFIX).analyzer("ons_synonyms").slop(5);
+			}
 			// wrap this up with a function_score capability that allows us to
 			// boost the home pages
 			float homePageBoostFloat = Float.valueOf((String) ElasticSearchProperties.INSTANCE.getProperty("home"));
@@ -190,4 +205,6 @@ public class ONSQueryBuilder {
 	private int calculateFrom() {
 		return getSize() * (getPage() - 1);
 	}
+	
+	
 }
