@@ -1,9 +1,9 @@
-Theme: People, Population and Community
+﻿Theme: People, Population and Community
 Level 2: Elections
 Summary: Analysis of the annual counts of the number of people registered to vote in 2013, including comparisons over time and between the UK constituent countries.
 Headline 1: The total number of UK parliamentary electors in 2013 was 46,139,900, a fall of 0.5% from 2012.
 Headline 2: The total number of UK local government electors in 2013 was 47,691,800, a fall of 0.1% from 2012.
-Headline 3: Between 2012 and 2013, the number of both parliamentary and local government electors declined in both England and Northern Ireland, while the number of parliamentary electors declined in Wales. In Scotland, the number of both parliamentary and local government electors grew by approximately the same percentage as seen between 2011 and 2012.
+Headline 3: Between 2012 and 2013, the number of both parliamentary and local government electors declined in both England and Northern Ireland, while the number of parliamentary electors declined in Wales. 
 Contact name: Pete Large
 Contact email: pop.info@ons.gsi.gov.uk
 
@@ -66,23 +66,15 @@ The number of electors in England has grown by an average of 0.4% each year over
 
 The number of electors in both Scotland and Wales has risen on average by 0.7% and 0.3% each year respectively; however both showed a fall between the 2008 and 2009 registers and Wales fell again between 2012 and 2013. Of the four UK constituent countries, Northern Ireland had the highest growth in the number of parliamentary electors every year between 2008 and 2012, but had the largest decline between 2012 and 2013.
 
-#### Figure 1: Annual percentage change in parliamentary electors for UK constituent countries, 2008/09 to 2012/13
-[![Figure 1: Annual percentage change in parliamentary electors for UK constituent countries, 2008/09 to 2012/13](http://www.ons.gov.uk/ons/resources/chart1percentagechangeukparliamentaryelectors_tcm77-362312.png)](http://www.ons.gov.uk/ons/resources/chart1percentagechangeukparliamentaryelectors_tcm77-362312.png "Figure 1: Annual percentage change in parliamentary electors for UK constituent countries, 2008/09 to 2012/13")
-
-Source: Office for National Statistics, National Records of Scotland, Northern Ireland Statistics and Research Agency
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/pop-estimate/electoral-statistics-for-uk/2013/chd---table-1.xls "XLS format") (29.5 Kb)
+<div class="chart-container">
+<iframe src="http://onsdigital.github.io/Alpha/bulletins/electoral1.html"></iframe>
+</div>
 
 Figure 2 however shows that there was large variation between English regions in 2012 to 2013, with the East of England, North West, South East and London showing declines of less than 0.2%, while the West Midlands declined by 1.7%. This is in contrast to the changes recorded last year when all English regions had growth in their number of parliamentary electors. It is possible that differences in administrative practices between local authority areas in different parts of the country are contributing to these regional differences.
 
-#### Figure 2: Percentage change in parliamentary electors for English regions, 2012/13 compared with 2011/12
-[![Figure 2: Percentage change in parliamentary electors for English regions, 2012/13 compared with 2011/12](http://www.ons.gov.uk/ons/resources/chart2percentagechangeenglishregionsparliamentaryelectors_tcm77-362319.png)](http://www.ons.gov.uk/ons/resources/chart2percentagechangeenglishregionsparliamentaryelectors_tcm77-362319.png "Figure 2: Percentage change in parliamentary electors for English regions, 2012/13 compared with 2011/12")
-
-Source: Office for National Statistics
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/pop-estimate/electoral-statistics-for-uk/2013/chd---table-2.xls "XLS format") (37 Kb)
+<div class="chart-container">
+<iframe src="http://onsdigital.github.io/Alpha/bulletins/electoral2.html"></iframe>
+</div>
 
 ### Parliamentary Constituencies
 
@@ -120,23 +112,17 @@ The number of electors in England has grown by an average of 0.6% each year over
 
 The number of electors in Scotland fell between 2008 and 2009, but has since seen average growth of 1.3% per year. In contrast, Northern Ireland had the highest growth of the four UK constituent countries between 2008 and 2012, but recorded a fall of 0.5% in the year to December 2013. However, the number of electors in 2013 (1,241,000) remains higher than the 1,227,100 recorded in 2011. Wales has displayed an annual average growth of 0.4% over the last five years and so has had the lowest growth of all UK constituent countries over that period.
 
-#### Figure 3: Annual percentage change in local government electors for UK constituent countries, 2008/09 to 2012/13
-[![Figure 3: Annual percentage change in local government electors for UK constituent countries, 2008/09 to 2012/13](http://www.ons.gov.uk/ons/resources/chart3percentagechangeuklocalgovernmentelectors_tcm77-362323.png)](http://www.ons.gov.uk/ons/resources/chart3percentagechangeuklocalgovernmentelectors_tcm77-362323.png "Figure 3: Annual percentage change in local government electors for UK constituent countries, 2008/09 to 2012/13")
-
-Source: Office for National Statistics, National Records of Scotland, Northern Ireland Statistics and Research Agency
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/pop-estimate/electoral-statistics-for-uk/2013/chd---table-3.xls "XLS format") (29.5 Kb)
+<div class="chart-container">
+<iframe src="http://onsdigital.github.io/Alpha/bulletins/electoral3.html"></iframe>
+</div>
 
 Figure 4 shows that the -0.3% change in the number of local government electors in England, between 2012 and 2013, hides large variation between different regions. London had an increase of 0.6%, while the East of England, South East and North West had increases of 0.3%, 0.2% and 0.1% respectively. The remaining regions all had sizeable decreases in their local government electorate, with the largest being the change of -1.5% seen in the West Midlands. It is possible that differences in administrative practices between local authority areas in different parts of the country may be contributing to these regional differences.
 
 All regions, with the exception of London, have large differences between the percentage change recorded between 2012 and 2013 and that recorded between 2011 and 2012.
 
-#### Figure 4: Percentage change in local government electors for English regions, 2012/13 compared with 2011/12
-[![Figure 4: Percentage change in local government electors for English regions, 2012/13 compared with 2011/12](http://www.ons.gov.uk/ons/resources/chart4percentagechangeenglishregionslocalgovernmentelectors_tcm77-362325.png)](http://www.ons.gov.uk/ons/resources/chart4percentagechangeenglishregionslocalgovernmentelectors_tcm77-362325.png "Figure 4: Percentage change in local government electors for English regions, 2012/13 compared with 2011/12")
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/pop-estimate/electoral-statistics-for-uk/2013/chd---table-4.xls "XLS format") (36.5 Kb)
+<div class="chart-container">
+<iframe src="http://onsdigital.github.io/Alpha/bulletins/electoral4.html"></iframe>
+</div>
 
 ### Local Government Areas
 
@@ -196,7 +182,7 @@ The data are available from the [electoral statistics section of the NRS](http:/
 ### Northern Ireland
 Electoral statistics for Northern Ireland are produced and published by the Electoral Office for Northern Ireland (EONI). Monthly electoral statistics for both the parliamentary and local government electorate are available at electoral ward level from the [electoral statistics section of the EONI website](http://www.ons.gov.uk/ons/external-links/other/electorate-statistics.html "Electoral Statistics"). 
 
-## Background notes
+## [accordion] Background notes and methodology
 1. National Statistics are produced to high professional standards set out in the Code of Practice for Official Statistics. They undergo regular quality assurance reviews to ensure that they meet customer needs. They are produced free from any political interference.
 
 2. Electoral statistics for 2013 are available from the [electoral statistics section](http://www.ons.gov.uk/ons/external-links/other/elections--local--national-and-european-.html "Elections (Local, National and European)") of the ONS website.
@@ -249,3 +235,9 @@ Designation can be broadly interpreted to mean that the statistics:
 - are managed impartially and objectively in the public interest.
 
 Once statistics have been designated as National Statistics it is a statutory requirement that the Code of Practice shall continue to be observed.
+
+## [accordion] References
+This information will not be available in the prototype, however in the future all references related to this statistical bulletin will appear here.
+
+## [accordion] Footnotes
+This information will not be available in the prototype, however in the future the footnotes related to this statistical bulletin will appear here.

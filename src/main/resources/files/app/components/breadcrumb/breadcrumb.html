@@ -7,8 +7,8 @@
             <li ng-repeat="item in data.parent">
                 <a href="#!{{getParentOf(item.fileName)}}/{{item.fileName}}">{{item.name}}</a>
             </li>
-            <li class="nav__active">
-                <a>{{data.current}}</a>
+            <li class="nav__active breadcrumb">
+                {{data.current}}
             </li>
         </ol>
         <!-- /Wrapper panel -->

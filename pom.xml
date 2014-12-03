@@ -50,6 +50,13 @@
 			<version>2.12.4</version>
 		</dependency>
 
+ 		<!-- Encryption -->
+		<dependency>
+			<groupId>com.github.davidcarboni</groupId>
+			<artifactId>cryptolite</artifactId>
+			<version>1.2.5</version>
+		</dependency>
+
 		<!-- Prerender.io -->
 		<dependency>
 			<groupId>com.github.greengerong</groupId>
@@ -77,18 +84,18 @@
 			<version>1.9.5</version>
 			<scope>test</scope>
 		</dependency>
-<!-- 		<dependency> -->
-<!-- 			<groupId>org.powermock</groupId> -->
-<!-- 			<artifactId>powermock-module-junit4</artifactId> -->
-<!-- 			<version>${powermock.version}</version> -->
-<!-- 			<scope>test</scope> -->
-<!-- 		</dependency> -->
-<!-- 		<dependency> -->
-<!-- 			<groupId>org.powermock</groupId> -->
-<!-- 			<artifactId>powermock-api-mockito</artifactId> -->
-<!-- 			<version>${powermock.version}</version> -->
-<!-- 			<scope>test</scope> -->
-<!-- 		</dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.powermock</groupId> -->
+		<!-- <artifactId>powermock-module-junit4</artifactId> -->
+		<!-- <version>${powermock.version}</version> -->
+		<!-- <scope>test</scope> -->
+		<!-- </dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.powermock</groupId> -->
+		<!-- <artifactId>powermock-api-mockito</artifactId> -->
+		<!-- <version>${powermock.version}</version> -->
+		<!-- <scope>test</scope> -->
+		<!-- </dependency> -->
 
 	</dependencies>
 

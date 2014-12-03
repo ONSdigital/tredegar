@@ -18,6 +18,10 @@ export BONSAI_CLUSTERNAME=elasticsearch
 export BONSAI_HOSTNAME=localhost
 export BONSAI_TRANSPORT_PORT=9300
 
+# Mongodb
+export MONGO_USER=ons
+export MONGO_PASSWORD=uJlVY2FDGI5SFawS/PN+jnZpymKWpU7C
+
 #External Taxonomy
 #export TAXONOMY_DIR=target/taxonomy
 
@@ -30,7 +34,17 @@ java -Xmx2048m -cp "target/classes:target/dependency/*" com.github.onsdigital.ge
 mvn process-resources && \
 
 # Development: reloadable
-java $JAVA_OPTS -Drestolino.username=$USERNAME -Drestolino.password=$PASSWORD -Drestolino.realm=$REALM -Drestolino.files=$RESTOLINO_STATIC -Drestolino.classes=$RESTOLINO_CLASSES -Drestolino.packageprefix=$PACKAGE_PREFIX -cp "target/dependency/*" com.github.davidcarboni.restolino.Main
+java $JAVA_OPTS \
+ -Drestolino.username=$USERNAME \
+ -Drestolino.password=$PASSWORD \
+ -Drestolino.realm=$REALM \
+ -Drestolino.files=$RESTOLINO_STATIC \
+ -Drestolino.classes=$RESTOLINO_CLASSES \
+ -Drestolino.packageprefix=$PACKAGE_PREFIX \
+ -Dmongo.user=$MONGO_USER \
+ -Dmongo.password=$MONGO_PASSWORD \
+ -cp "target/dependency/*" \
+ com.github.davidcarboni.restolino.Main
 
 # Production: non-reloadable
 #java $JAVA_OPTS -jar target/*-jar-with-dependencies.jar
