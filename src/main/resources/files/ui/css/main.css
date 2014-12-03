@@ -5558,11 +5558,11 @@ ol.toc-columns {
 
 .chart-container {
     position: relative;
-    padding-bottom: 100%;
+    padding-bottom: 30em;
 /*    padding-top: 35px;
-*/    height: 0;
-    overflow: visible;
-    margin-bottom: 1rem;
+/*    height: 0;
+*/    overflow: visible;
+    margin-bottom: 2rem;
 }
 .chart-container iframe, .chart-container object, .chart-container embed {
     position: absolute;
