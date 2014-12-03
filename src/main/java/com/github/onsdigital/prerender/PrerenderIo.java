@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URISyntaxException;
 import java.net.URL;
-import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -16,7 +15,6 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.utils.URIBuilder;
-import org.apache.http.client.utils.URLEncodedUtils;
 import org.apache.http.message.BasicNameValuePair;
 
 import com.github.greengerong.PreRenderSEOFilter;
@@ -52,7 +50,9 @@ public class PrerenderIo {
 			if (StringUtils.isEmpty(escapedFragment)) {
 				escapedFragment = "/";
 			}
-			URL escapedFragmetUrl = buildUrl(url, escapedFragment);
+			System.out.println("Original URL: " + request.getRequestURL());
+			System.out.println("Updated URL: " + url);
+			URL escapedFragmetUrl = buildUrl(url, escapedFragment, request.getQueryString());
 			escapedFragmetUrl = updateForLocalhost(escapedFragmetUrl);
 
 			System.out.println("URL for Prerender.io is: " + escapedFragmetUrl);
@@ -98,7 +98,7 @@ public class PrerenderIo {
 		return result;
 	}
 
-	private static URL buildUrl(URL url, String escapedFragment) throws MalformedURLException, URISyntaxException {
+	private static URL buildUrl(URL url, String escapedFragment, String query) throws MalformedURLException, URISyntaxException {
 
 		URIBuilder uriBuilder = new URIBuilder();
 
@@ -126,9 +126,12 @@ public class PrerenderIo {
 		// Query - start with existing parameters so that we keep things like
 		// search queries:
 		List<NameValuePair> parameters = new ArrayList<>();
-		parameters.addAll(URLEncodedUtils.parse(url.getQuery(), Charset.forName("UTF8")));
 		parameters.add(new BasicNameValuePair("prerender", "true"));
-		parameters.add(new BasicNameValuePair("_escaped_fragment_", escapedFragment));
+		if (StringUtils.isNotBlank(query)) {
+			parameters.add(new BasicNameValuePair("_escaped_fragment_", escapedFragment + "?" + query));
+		} else {
+			parameters.add(new BasicNameValuePair("_escaped_fragment_", escapedFragment));
+		}
 		uriBuilder.setParameters(parameters);
 
 		return uriBuilder.build().toURL();
