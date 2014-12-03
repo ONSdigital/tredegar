@@ -4898,8 +4898,7 @@ ul.simple-pagination {
     padding: 0;
     margin: 0;
     display: inline;
-/*    float: left;
-*/}
+}
 /*------------------------------------*\
   Pagination Styles
 \*------------------------------------*/
@@ -8458,6 +8457,9 @@ lesser , applied styles
     cursor: not-allowed;
     /*        background: -webkit-radial-gradient(center, ellipse, #d5d6d2 0%, #c8c9c4 100%);
     background: radial-gradient(ellipse at center, #d5d6d2 0%, #c8c9c4 100%);*/
+}
+.btn-disabled{
+    cursor: not-allowed;
 }
 .btn--secondary--inactive:hover, .btn--secondary--inactive:focus {
     color: #000;
