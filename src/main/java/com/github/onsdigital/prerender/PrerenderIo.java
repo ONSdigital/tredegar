@@ -50,8 +50,6 @@ public class PrerenderIo {
 			if (StringUtils.isEmpty(escapedFragment)) {
 				escapedFragment = "/";
 			}
-			System.out.println("Original URL: " + request.getRequestURL());
-			System.out.println("Updated URL: " + url);
 			URL escapedFragmetUrl = buildUrl(url, escapedFragment, request.getQueryString());
 			escapedFragmetUrl = updateForLocalhost(escapedFragmetUrl);
 
@@ -90,9 +88,7 @@ public class PrerenderIo {
 		URL result = escapedFragmetnUrl;
 
 		if (StringUtils.equals(escapedFragmetnUrl.getHost(), "localhost")) {
-			System.out.println("Updating localhost to tredegar");
 			result = new URIBuilder(escapedFragmetnUrl.toURI()).setUserInfo("stats:titchfield").setHost("tredegar.herokuapp.com").setPort(-1).build().toURL();
-			System.out.println("URL for Prerender.io is now: " + escapedFragmetnUrl);
 		}
 
 		return result;
