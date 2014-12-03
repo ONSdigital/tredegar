@@ -28,9 +28,12 @@ public class Folder implements Comparable<Folder> {
 	public Bulletin headlineBulletin;
 	public List<Timeseries> timeserieses = new ArrayList<>();
 	public List<Set<Timeseries>> oldDataset = new ArrayList<Set<Timeseries>>();
+
+	// Having these as lists preserves the ordering from the spreadsheet.
 	public List<Bulletin> bulletins = new ArrayList<>();
 	public List<Article> articles = new ArrayList<>();
 	public List<Methodology> methodology = new ArrayList<>();
+
 	public Set<Dataset> datasets = new HashSet<>();
 
 	/**
