@@ -75,18 +75,18 @@ public class ONSQueryBuilder {
 	 * @param type
 	 * @return
 	 */
-	public ONSQueryBuilder setTypes(String[] types) {
+	public ONSQueryBuilder setTypes(String... types) {
 		this.types = types;
 		return this;
 	}
-	
+
 	/**
 	 * Set a single type to search
 	 * 
 	 */
 	public ONSQueryBuilder setType(String type) {
 		this.types = new String[1];
-		this.types[0]= type;
+		this.types[0] = type;
 		return this;
 	}
 
@@ -163,14 +163,13 @@ public class ONSQueryBuilder {
 		} else {
 			// return documents with fields containing words that start with
 			// given search term
-			MultiMatchQueryBuilder multiMatchQueryBuilder = new MultiMatchQueryBuilder(getSearchTerm(), getFields()).analyzer("ons_synonyms");
+			MultiMatchQueryBuilder multiMatchQueryBuilder = new MultiMatchQueryBuilder(getSearchTerm(), getFields()).analyzer("ons_synonyms").slop(5);
 			// wrap this up with a function_score capability that allows us to
 			// boost the home pages
 			float homePageBoostFloat = Float.valueOf((String) ElasticSearchProperties.INSTANCE.getProperty("home"));
 			float titleBoostFloat = Float.valueOf((String) ElasticSearchProperties.INSTANCE.getProperty("title"));
 			
 			multiMatchQueryBuilder.field("title", titleBoostFloat);
-			multiMatchQueryBuilder.minimumShouldMatch("2");
 			FunctionScoreQueryBuilder functionScoreQueryBuilder = new FunctionScoreQueryBuilder(multiMatchQueryBuilder);
 			functionScoreQueryBuilder.add(FilterBuilders.termsFilter("_type", "home"), ScoreFunctionBuilders.factorFunction(homePageBoostFloat));
 			builder = functionScoreQueryBuilder;
@@ -182,8 +181,8 @@ public class ONSQueryBuilder {
 			highlightBuilder.field(field, 0, 0);
 		}
 
-		String query = new SearchSourceBuilder().query(builder).highlight(highlightBuilder).from(calculateFrom()).size(getSize()).toString(); 
-//		System.out.println("Elastic search query String: " + query);
+		String query = new SearchSourceBuilder().query(builder).highlight(highlightBuilder).from(calculateFrom()).size(getSize()).toString();
+		// System.out.println("Elastic search query String: " + query);
 		return query;
 
 	}

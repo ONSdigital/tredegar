@@ -63,7 +63,7 @@
                                                                     <!-- <option value="">Release Date</option> -->
                                                             </select>
                                                             </form>
-                                                            <ons-help-tooltip tip="s" style:"flaot:left" tip-class="icon--inline--large-text icon--inline"></ons-help-tooltip>
+                                                            <ons-help-tooltip tip="This option will not be available on the prototype, however in the future you will be able to sort search results by relevance or release date" style:"flaot:left" tip-class="icon--inline--large-text icon--inline"></ons-help-tooltip>
 
                                                         </div>
                                                     </div>
@@ -80,6 +80,7 @@
 <div class="wrapper nav-panels">
     <div class="grid-wrap">
         <div class="grid-col tablet-wide-grid-two-thirds">
+            
             <article class="box">
 
                 <div id="<search></search>" class="search">
@@ -89,18 +90,30 @@
                     <dl>
 
                         <dt ng-repeat-start="item in searchResponse.results track by $index" ng-class="isFocus(item.type, $index) ? 'search-home-focused' : ''">
-                            <a class="search-link" href="#!{{item.url}}"><span ng-bind-html="item.title"></span></a>
-                            <span ng-if="item.type != 'home'" class="lozenge--label" href="">{{item.type === 'bulletin' ? 'Statistical Bulletin' : item.type}}</span>
+                            <a class="search-link" href="#!{{item.url}}"><span ng-bind-html="item.highlights.title || item.title"></span></a>
+                            <span ng-if="isShowLozenge(item)" class="lozenge--label" href="">{{item.type === 'bulletin' ? 'Statistical Bulletin' : item.type}}</span>
                         </dt>
                         <dd class="microcopy">
                         	<span ng-if="item.type === 'home'">
-								<span ng-bind-html="item.url"></span>                      	
+								<span ng-bind-html="item.highlights.url || item.url"></span>                      	
                         	</span>
                         	<span ng-if="item.type != 'home'">Release date 1 Jan 3000</span>
                         </dd>
-                        <dd ng-repeat-end class="search-summary" ng-class="isFocus(item.type, $index) ? 'search-home-focused--summary' : ''" >{{item.lede | charLimit:300:'...'}}</dd>
-
+                        <dd ng-repeat-end class="search-summary" ng-class="isFocus(item.type, $index) ? 'search-home-focused--summary' : ''" >{{(item.lede | charLimit:300:'...') || 'In the future a short description of this series will be displayed in this area' }}</dd>
                     </dl>
+
+                    <article ng-show="showTimeseriesSearchSuggest"  class="box box--padded box--green box--green--separated-left lifted">
+                        <header class="box__header">
+                            <h3>Looking for time series data?</h3>
+                        </header>
+
+                        <!-- /box__header -->
+                        <p>In the future we are aiming to bring you a comprehensive time series search tool</p>
+                        <p>
+                            Why not <a ng-href="#!/search?q={{searchTerm}}&type=timeseries">see what time series</a> we currently have based on your search criteria.
+                        </p>
+
+                    </article>
                 </div>
 
                 <ons-paginator page-count="pageCount" max-visible="paginatorLinks"></ons-paginator>

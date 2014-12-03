@@ -18,7 +18,11 @@ angular.module('onsTemplates')
 
 				function clearOnPageChange() {
 				  $rootScope.$on('$locationChangeSuccess', function(event) {
-				    $scope.searchTerm = ''
+				  	//Clear if not going to search results page
+				  	if($location.$$path != "/search") {
+
+				    	$scope.searchTerm = ''
+				  	}
 				  })
 				}
 
