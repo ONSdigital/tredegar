@@ -151,6 +151,7 @@ public class Indexer {
 		while ((contents = reader.readLine()) != null) {
 			synonymList.add(contents);
 		}
+		reader.close();
 		return synonymList;
 	}
 }
