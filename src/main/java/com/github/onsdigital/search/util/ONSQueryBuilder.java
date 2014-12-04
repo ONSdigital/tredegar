@@ -175,9 +175,9 @@ public class ONSQueryBuilder {
 			// given search term
 			MultiMatchQueryBuilder multiMatchQueryBuilder;
 			if (isNaturalLanguage()) {
-				multiMatchQueryBuilder = new MultiMatchQueryBuilder(getSearchTerm(), getFields()).analyzer("ons_synonyms").slop(5);
+				multiMatchQueryBuilder = new MultiMatchQueryBuilder(getSearchTerm(), getFields()).analyzer("ons_synonyms").slop(5).cutoffFrequency(0.04f);
 			} else {
-				multiMatchQueryBuilder = new MultiMatchQueryBuilder(getSearchTerm(), getFields()).type(MatchQueryBuilder.Type.PHRASE_PREFIX).analyzer("ons_synonyms").slop(5);
+				multiMatchQueryBuilder = new MultiMatchQueryBuilder(getSearchTerm(), getFields()).type(MatchQueryBuilder.Type.PHRASE_PREFIX).analyzer("ons_synonyms").slop(5).cutoffFrequency(0.04f);
 			}
 			// wrap this up with a function_score capability that allows us to
 			// boost the home pages
