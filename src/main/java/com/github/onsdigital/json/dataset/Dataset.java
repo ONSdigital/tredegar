@@ -1,8 +1,9 @@
 package com.github.onsdigital.json.dataset;
 
-import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
+
+import org.apache.commons.lang3.StringUtils;
 
 import com.github.onsdigital.generator.Folder;
 import com.github.onsdigital.json.ContentType;
@@ -23,7 +24,11 @@ public class Dataset extends CollectionItem {
 	public List<DownloadSection> download = new ArrayList<DownloadSection>();
 	public List<NotesSection> notes = new ArrayList<NotesSection>();
 	public String summary;
-	public URI uri;
+
+	/** Whether this is a National Statistic: */
+	public boolean nationalStatistic;
+
+	public String description;
 
 	/**
 	 * Sets up some basic content.
@@ -39,9 +44,12 @@ public class Dataset extends CollectionItem {
 		// downloadSection.csv = "#";
 		// download.add(downloadSection);
 
-		NotesSection notesSection = new NotesSection();
-		notesSection.data = "These estimates are rounded to the nearest hundred and are different to the unrounded estimates in other published tables.";
-		notes.add(notesSection);
+		NotesSection notesSection1 = new NotesSection();
+		notesSection1.data = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quam leo, blandit a turpis non, varius feugiat mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In posuere lectus eu laoreet ultrices. Donec ac sodales libero, eget fermentum arcu.";
+		notes.add(notesSection1);
+		NotesSection notesSection2 = new NotesSection();
+		notesSection2.data = "Fusce pharetra, libero in imperdiet ultricies, ex erat tempor dolor, vitae aliquet magna velit in urna. Duis finibus augue velit, ut consectetur risus imperdiet in. Sed tempus congue ante, ac cursus diam porttitor vitae. Vivamus arcu leo, volutpat in mauris ac, lacinia fermentum velit. Sed dictum tortor justo, aliquet facilisis lorem dictum a.";
+		notes.add(notesSection2);
 	}
 
 	public void setBreadcrumb(TaxonomyHome t3) {
@@ -52,5 +60,22 @@ public class Dataset extends CollectionItem {
 		breadcrumb.add(extra);
 	}
 
+	@Override
+	public int hashCode() {
+		int result = super.hashCode();
+		if (result == 0 && name != null) {
+			result = name.hashCode();
+		}
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		boolean result = false;
+		if (obj != null && Dataset.class.isAssignableFrom(obj.getClass())) {
+			result = StringUtils.equalsIgnoreCase(name, ((Dataset) obj).name);
+		}
+		return super.equals(obj) || result;
+	}
 
 }

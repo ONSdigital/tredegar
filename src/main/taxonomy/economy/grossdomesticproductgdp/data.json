@@ -17,7 +17,7 @@
       "uri": "/economy/grossdomesticproductgdp/timeseries/ihyr"
     },
     {
-      "name": "Gross Domestic Product (GDP)- CP",
+      "name": "Gross Domestic Product (GDP) - CP",
       "uri": "/economy/grossdomesticproductgdp/timeseries/ybha"
     },
     {
@@ -100,6 +100,10 @@
     }
   ],
   "datasets": [
+    {
+      "name": "GDP by category of expenditure",
+      "uri": "/economy/grossdomesticproductgdp/datasets/gdpbycategoryofexpenditure"
+    },
     {
       "name": "Gross Domestic Product data collection",
       "uri": "/economy/grossdomesticproductgdp/datasets/grossdomesticproductdatacollection"

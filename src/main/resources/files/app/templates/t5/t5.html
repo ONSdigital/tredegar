@@ -7,34 +7,41 @@
                 <strong>{{header}}</strong>
             </p>
             <h1 class="page-header__title flush--half--bottom">{{chart.timeseries.name}}</h1>
-            <div class="grid-wrap">
-                <div class="grid-col desktop-grid-two-thirds">
-                    <a href="#!/nationalstats" ng-show="{{chart.timeseries.nationalStatistic}}"><img src="/ui/img/nslogo.png" class="page-header-image" alt="ONS logo">
-                    </a>
-                    <p>
-                        <strong>Release date: {{chart.timeseries.lastUpated || '1 JAN 3000'}}</strong>
-                        <span class="page-header-box-link">
-                            <a href="#!/previous">
-                                <strong>View previous versions</strong>
-                            </a>
-                        </span>
-                    </p>
-                    <p>Next release: {{chart.timeseries.nextUpdate || '1 FEB 3000'}}</p>
-                    <p>Contact: <a href="mailto:jukesie@hotmail.com">Juksie</a>
-                    </p>
-                    <p>Source: {{chart.timeseries.source ? chart.timeseries.source : 'Office for National Statistics'}}</p>
-                </div>
-                <!-- <div class="grid-col desktop-grid-one-third invisible"></div> -->
-                <div class="grid-col desktop-grid-one-third">
-                    <p>
+            <a href="#!/nationalstats"><img class="page-header--article__img" src="../ui/img/national-statistics.png" alt="The official National Statistics badge"></a>
+
+            <div class="page-header--article__body">
+              <div class="page-header--article__split">
+                <dl class="split--fixed page-header--article__split__meta">
+                  <dt class="split--fixed__title definition-emphasis"><strong>Release date:</dt>
+                  <dd>
+                    <span class="definition-emphasis">{{chart.timeseries.lastUpated || '1 Jan 3000'}}</strong></span> <a href="#!/previous" class="split__multiline-break">View previous releases</a>
+                  </dd>
+                  <dt class="split--fixed__title">Next release:</dt>
+                  <dd>{{chart.timeseries.nextUpdate || '1 Feb 3000'}}</dd>
+                  <dt class="split--fixed__title">Contact:</dt>
+                  <dd>In the future this will display the statistical contact
+                  </dd>
+                  <dt class="split--fixed__title">Source:</dt>
+                  <dd>{{chart.timeseries.source ? chart.timeseries.source : 'Office for National Statistics'}}
+                  </dd>
+                </dl>
+                <ul class="list--neutral page-header--article__split__actions">
+                  <li>
+                    <span class="page-header-item">
                         <strong>Series ID: {{chart.timeseries.cdid}}</strong>
                         <ons-help-tooltip tip="This series ID is a unique random identifier for this individual time series. The digits themselves do not have any specific meaning" tip-class="icon--inline--large-text icon--inline"></ons-help-tooltip>
-                    </p>
-                    <p>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="page-header-item">
                         <strong>Unit: {{chart.timeseries.preUnit}} {{chart.timeseries.unit}}</strong>
-                    </p>
-                    <p>{{chart.timeseries.seasonalAdjustment}}</p>
-                </div>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="page-header-item">{{chart.timeseries.seasonalAdjustment}}</span>
+                  </li>
+                </ul>
+              </div>
             </div>
             <social-links></social-links>
         </div>
@@ -47,30 +54,37 @@
             <!-- This title will need to be dynamically generated on the server -->
             <h2 class="actionable-header--tight__title gamma flush--bottom body-type--heavy">Download this entire time series</h2>
             <div class="actionable-header--tight__action actionable-header--tight__action--left">
+                <a id="imgExp" style="margin-right:4px" class="btn btn--primary btn--small" href="" ng-click="chart.exportImage()">
+                    Image
+                    <span class="icon-download icon--button-inline" role="presentation"></span>
                 <a class="btn btn--primary btn--small" href="" ng-click="t5.downloadCsv()">
-              .csv
-              <span class="icon-download icon--button-inline" role="presentation"></span>
-            </a>
+                    .csv
+                    <span class="icon-download icon--button-inline" role="presentation"></span>
+                </a>
                 <a class="btn btn--primary btn--small" href="" ng-click="t5.downloadXls()">
-              .xlsx
-              <span class="icon-download icon--button-inline" role="presentation"></span>
-            </a>
+                    .xlsx
+                    <span class="icon-download icon--button-inline" role="presentation"></span>
+                </a>
             </div>
         </div>
 
         <!-- Chart in Highcharts -->
         <div ons-tabs tabs-active-var="selectedKey" class="cf chart-area slate">
-            <div class="chart-area__controls">
-                <form>
+            <div class="chart-area__controls border-horizontal-single">
+                <!-- border-horizontal-single -->
+                <div>
                     <div class="button-bar chart-area__controls__buttons">
                         <div class="button-group chart-area__controls__type">
                             <label ons-tab-control="chart" class="btn btn--secondary btn--small btn--narrow btn--thin" ng-class="{'btn--secondary--active': selectedKey === 'chart'}" ng-click="chart.showChart()">Chart</label>
                             <label ons-tab-control="table" class="btn btn--secondary btn--small btn--narrow btn--thin" ng-class="{'btn--secondary--active': selectedKey === 'table'}" ng-click="chart.showTable()">Table</label>
                         </div>
                         <div class="button-group chart-area__controls__timespan">
-                            <label class="btn btn--secondary btn--small btn--narrow btn--thin " ng-if="chart.showMonthly" ng-class="{'btn--secondary--active': chart.isActive('months')}" ng-click="chart.changeChartType('months')">Month</label>
+                            <label class="btn btn--secondary btn--small btn--narrow btn--thin" ng-if="chart.showMonthly" ng-class="{'btn--secondary--active': chart.isActive('months')}" ng-click="chart.changeChartType('months')">Month</label>
+                            <label class="btn btn--secondary btn--small btn--narrow btn--thin" ng-if="!chart.showMonthly" ng-class="'btn--secondary--inactive'" ng-click="chart.changeChartType('months')">Month</label>
                             <label class="btn btn--secondary btn--small btn--narrow btn--thin" ng-if="chart.showQuarterly" ng-class="{'btn--secondary--active': chart.isActive('quarters')}" ng-click="chart.changeChartType('quarters')">Quarter</label>
+                            <label class="btn btn--secondary btn--small btn--narrow btn--thin" ng-if="!chart.showQuarterly" ng-class="'btn--secondary--inactive'" ng-click="chart.changeChartType('quarters')">Quarter</label>
                             <label class="btn btn--secondary btn--small btn--narrow btn--thin" ng-if="chart.showYearly" ng-class="{'btn--secondary--active': chart.isActive('years')}" ng-click="chart.changeChartType('years')">Year</label>
+                            <label class="btn btn--secondary btn--small btn--narrow btn--thin" ng-if="!chart.showYearly" ng-class="'btn--secondary--inactive'" ng-click="chart.changeChartType('years')">Year</label>
                         </div>
                     </div>
                     <div class="button-group chart-area__controls__time">
@@ -131,7 +145,7 @@
                         </div>
                         <br></br>
                     </div>
-                </form>
+                </div>
 
                 <!-- chart -->
                 <div ons-tab="chart">
@@ -162,26 +176,59 @@
                 </div>
             </div>
             <!-- Custom downloads -->
-            <div ng-if="chart.timePeriod != 'A'" class="chart-area__footer">
-                <span class="chart-area__footer__label">Download custom data</span>
-                <div class="chart-area__footer__actions">
-                    <a id="imgExp" ng-click="chart.exportImage()" class="btn btn--primary btn--small" href="">
+            <div ng-if="chart.timePeriod != 'A'" class="top5">
+                <table width="100%" class="top10">
+                    <tr>
+                        <td style="text-align:right;">
+                            <span class="chart-area__footer__label">Download custom data</span>
+                            <a id="imgExp" ng-click="chart.exportImage()" class="btn btn--primary btn--small" href="">
                     Image
                     <span class="icon-download icon--button-inline" role="presentation"></span>
                     </a>
-                    <a class="btn btn--primary btn--small" href="" ng-click="chart.downloadCsv()">
+                            <a class="btn btn--primary btn--small" href="" ng-click="chart.downloadCsv()">
                     .csv
                     <span class="icon-download icon--button-inline" role="presentation"></span>
                     </a>
-                    <a class="btn btn--primary btn--small" href="" ng-click="chart.downloadXls()">
+                            <a class="btn btn--primary btn--small" href="" ng-click="chart.downloadXls()">
                     .xlsx
                     <span class="icon-download icon--button-inline" role="presentation"></span>
                     </a>
-                </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="button-bar">
+                <!-- Accordion for related timeseries and datasets -->
+                <ons-accordion multiple="true">
+                    <article class="border-horizontal-single" style="margin-top:8px">
+                        <ons-accordion-item closed="true" header="Related time series and datasets">
+                            <!-- /box__header -->
+                            <div class="box__content">
+                                <h4 class="top10">Related time series</h4>
+                                <div ng-repeat="relatedTimeseries in taxonomy.data.relatedTimeseriesData | orderBy:'name'">
+                                    <div style="margin-left:10px">
+                                        <a href=#!{{relatedTimeseries.uri}}>{{relatedTimeseries.name}}</a>
+                                    </div>
+                                </div>
+                                <h4 class="top10">Datasets that contain {{chart.timeseries.name}} and related time series</h4>
+                                <div style="margin-left:10px; margin-bottom:15px">
+                                    <div><a href="">At graecis maluisset pro</a>
+                                    </div>
+                                    <div><a href="">Per an omnis dicat libris</a>
+                                    </div>
+                                    <div><a href="">Pro ad case probo nostro</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </ons-accordion-item>
+                    </article>
+                    <!-- /article__content -->
+                </ons-accordion>
             </div>
         </div>
     </div>
     <p></p>
+
     <!-- Notes and info section -->
     <div class="wrapper panel--bottom-mar">
         <div class="grid-wrap">
@@ -203,7 +250,7 @@
                         </ol>
                     </div>
                     <br></br>
-                    <div ng-if="taxonomy.data.relatedTimeseriesData[0]">
+                    <!-- <div ng-if="taxonomy.data.relatedTimeseriesData[0]">
                         <h3>Related series</h3>
 
                         <div class="padded">
@@ -217,7 +264,7 @@
                     <div ng-if="!taxonomy.data.relatedTimeseriesData[0]">
                         <h3>Related series</h3>
                         <p>In the future some related series will be displayed in this area</p>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <!-- Sidebar -->

@@ -5,7 +5,7 @@
   "number": "9000",
   "unit": "",
   "preUnit": "",
-  "date": "July 2014",
+  "date": "May to July 2014",
   "source": "Labour Force Survey",
   "nationalStatistic": true,
   "years": [],
@@ -1580,10 +1580,7 @@
       "sourceDataset": "LMS"
     }
   ],
-  "uri": "/employmentandlabourmarket/peopleinwork/workplacedisputesandworkingconditions/timeseries/f8y2",
-  "relatedBulletins": [
-    "/employmentandlabourmarket/peopleinwork/workplacedisputesandworkingconditions/bulletins/uklabourmarketjuly2014"
-  ],
+  "relatedBulletins": [],
   "relatedTimeseries": [
     "/employmentandlabourmarket/peopleinwork/workplacedisputesandworkingconditions/timeseries/bbfw",
     "/employmentandlabourmarket/peopleinwork/workplacedisputesandworkingconditions/timeseries/f8xz",
@@ -1594,24 +1591,25 @@
   ],
   "type": "timeseries",
   "name": "Working days lost in the Private Sector",
+  "uri": "/employmentandlabourmarket/peopleinwork/workplacedisputesandworkingconditions/timeseries/f8y2",
   "fileName": "f8y2",
   "breadcrumb": [
     {
       "index": 0,
       "type": "home",
-      "name": "Employment and Labour Market",
+      "name": "Employment and Labour market",
       "fileName": "employmentandlabourmarket"
     },
     {
       "index": 0,
       "type": "home",
-      "name": "People in Work",
+      "name": "People in work",
       "fileName": "peopleinwork"
     },
     {
       "index": 0,
       "type": "home",
-      "name": "Workplace Disputes and Working Conditions",
+      "name": "Workplace disputes and working conditions",
       "fileName": "workplacedisputesandworkingconditions",
       "breadcrumb": []
     }

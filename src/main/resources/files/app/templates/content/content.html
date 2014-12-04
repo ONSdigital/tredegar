@@ -8,39 +8,45 @@
                 <strong>{{header}}</strong>
             </p>
             <h1 class="page-header__title flush--half--bottom">{{content.title}}</h1>
-            <div class="grid-wrap" ng-show="{{contentType != 'methodology'}}">
-                <div class="grid-col desktop-grid-two-thirds">
-                    <a href="#!/nationalstats"><img src="/ui/img/nslogo.png" class="page-header-image"></a>
-                    <p>
-                        <strong>Release date: {{content.releaseDate}}</strong>
-                        <span class="page-header-box-link">
-                            <a href="#!/previous">
-                                <strong>View previous releases</strong>
-                            </a>
-                        </span>
-                    </p>
-                    <p>Next release: {{content.nextRelease}}</p>
-                    <p>Contact: <a href="mailto:{{content.contact.email}}">{{content.contact.name}}</a>
-                    </p>
-                </div>
-                <div class="grid-col desktop-grid-one-third">
-                    <p>
-                        <span class="icon icon-print icon--blue-alt">
+            <a href="#!/nationalstats"><img class="page-header--article__img" src="../ui/img/national-statistics.png" alt="The official National Statistics badge"></a>
+
+            <div class="page-header--article__body">
+              <div class="page-header--article__split">
+                <dl class="split--fixed page-header--article__split__meta">
+                  <dt class="split--fixed__title definition-emphasis"><strong>Release date:</dt>
+                  <dd>
+                    <span class="definition-emphasis">{{content.releaseDate}}</strong></span> <a href="#!/previous" class="split__multiline-break">View previous releases</a>
+                  </dd>
+                  <dt class="split--fixed__title">Next release:</dt>
+                  <dd>{{content.nextRelease}}</dd>
+                  <dt class="split--fixed__title">Contact:</dt>
+                  <dd>In the future this will display the statistical contact
+                  </dd>
+                </dl>
+                <ul class="list--neutral page-header--article__split__actions">
+                  <li>
+                    <span class="icon icon-print icon--blue-alt">
                             <span class="visuallyhidden">Print</span>&nbsp;Print summary
-                        <ons-help-tooltip tip="This link will not be available on the prototype, however in the future you will be able to print the summary section of the Statistical Bulletin"></ons-help-tooltip>
-                        </span></p>
-                    <p>
-                        <span class="icon icon-print icon--blue-alt">
+                        <ons-help-tooltip tip="This link will not be available on the prototype, however in the future you will be able to print the summary section of the statistical bulletin"></ons-help-tooltip>
+                        </span>
+                  </li>
+                  <li>
+                    <span class="icon icon-print icon--blue-alt">
                             <span class="visuallyhidden">Print full report</span>&nbsp;Print full report
                         <ons-help-tooltip tip="This link will not be available on the prototype, however in the future you will be able to print the full report"></ons-help-tooltip>
-                        </span></p>
-                    <p>
-                        <span class="icon icon-download icon--blue-alt">
+                        </span>
+                  </li>
+                  <li>
+                    <span class="icon icon-download icon--blue-alt">
                             <span class="visuallyhidden">Download PDF</span>&nbsp;Download PDF
-                        <ons-help-tooltip tip="This link will not be available on the prototype, however in the future you will be able to download the Statistical Bulletin as PDF"></ons-help-tooltip>
-                        </span></p>
-                </div>
+                        <ons-help-tooltip tip="This link will not be available on the prototype, however in the future you will be able to download the statistical bulletin as PDF"></ons-help-tooltip>
+                        </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
+
             <social-links></social-links>
         </div>
     </div>
@@ -77,7 +83,7 @@
     <!-- Body Sections -->
     <div class="wrapper panel--bottom-mar">
         <div class="grid-wrap">
-            <div class="grid-col {{sidebar ? 'desktop-grid-two-thirds tablet-grid-two-thirds' : ''}}">
+            <div class="grid-col {{sidebar ? 'desktop-grid-two-thirds tablet-grid-full-width' : ''}}">
                 <article class="box border-horizontal-single content-section" ng-repeat="section in content.sections">
                     <header class="box__header">
                         <h2 id="section{{$index + 1}}">{{$index + 1}}. {{section.title}}</h2>
@@ -122,7 +128,6 @@
     </div>
 
     <!-- Related Bulletins Section -->
-    <!-- Need new section in json for info here -->
 
     <div class="page-header slate--light" ng-show="{{contentType != 'methodology'}}">
         <div class="wrapper">
@@ -134,13 +139,40 @@
                                 <header class="box__header">
                                     <h2>Related bulletins</h2>
                                 </header>
-                            </div>
-                            <!-- /box__header -->
-                            <div class="box__section">
-                                <div class="box__content">
-                                    <p><a href="">Prototype version</a>
-                                        <br />In the future this box will display links to other Statistical Bulletins that are relevant to this bulletin</p>
-                                </div>
+
+                                <!-- Dynamic: -->
+							    <div class="grid-wrap" ng-show="{{content.hasRelatedBulletins}}">
+						            <article class="box--padded" ng-repeat="relatedBulletin in content.relatedBulletinData" class="grid-col desktop-grid-one-third tablet-grid-one-half">
+						                <header class="box__header">
+						                    <h3>
+						                        <a href="#!{{relatedBulletin.uri}}">{{relatedBulletin.name}}</a>
+						                    </h3>
+						                </header>
+						                <div class="box__content">
+						                    <ul class="list--table">
+						                    	<!-- TODO: load bulletin data so we can populate this: -->
+						                        <li class="">{{relatedBulletin.summary}}</li>
+						                    </ul>
+						                </div>
+						            </article>
+							    </div>
+
+                                <!-- or placeholder: -->
+							    <div class="grid-wrap" ng-show="{{!content.hasRelatedBulletins}}">
+						            <article class="box--padded">
+						                <header class="box__header">
+						                    <h3>
+						                        <a href="#!/alpha">Prototype version</a>
+						                    </h3>
+						                </header>
+						                <div class="box__content">
+						                    <ul class="list--table">
+						                        <li class="">In the future this box will display links to other statistical bulletins that are relevant to this bulletin.</li>
+						                    </ul>
+						                </div>
+						            </article>
+							    </div>
+
                             </div>
                             <!-- /box__content -->
                             <footer class="box__footer"></footer>

@@ -5,7 +5,7 @@
   "number": "876000",
   "unit": "",
   "preUnit": "",
-  "date": "July 2014",
+  "date": "May to July 2014",
   "source": "Labour Force Survey",
   "nationalStatistic": true,
   "years": [
@@ -5144,7 +5144,6 @@
       "sourceDataset": "LMS"
     }
   ],
-  "uri": "/employmentandlabourmarket/unemployment/timeseries/mgse",
   "relatedBulletins": [
     "/employmentandlabourmarket/unemployment/bulletins/uklabourmarket",
     "/employmentandlabourmarket/unemployment/bulletins/youngpeoplenotineducationemploymentortrainingneet"
@@ -5159,12 +5158,13 @@
   ],
   "type": "timeseries",
   "name": "Female Unemployment 16+",
+  "uri": "/employmentandlabourmarket/unemployment/timeseries/mgse",
   "fileName": "mgse",
   "breadcrumb": [
     {
       "index": 0,
       "type": "home",
-      "name": "Employment and Labour Market",
+      "name": "Employment and Labour market",
       "fileName": "employmentandlabourmarket"
     },
     {

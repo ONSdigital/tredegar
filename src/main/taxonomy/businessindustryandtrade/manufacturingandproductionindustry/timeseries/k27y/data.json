@@ -4316,7 +4316,6 @@
       "sourceDataset": "DIOP"
     }
   ],
-  "uri": "/businessindustryandtrade/manufacturingandproductionindustry/timeseries/k27y",
   "relatedBulletins": [
     "/businessindustryandtrade/manufacturingandproductionindustry/bulletins/indexofproduction"
   ],
@@ -4328,18 +4327,19 @@
   ],
   "type": "timeseries",
   "name": "Manufacturing",
+  "uri": "/businessindustryandtrade/manufacturingandproductionindustry/timeseries/k27y",
   "fileName": "k27y",
   "breadcrumb": [
     {
       "index": 0,
       "type": "home",
-      "name": "Business, Industry and Trade",
+      "name": "Business, industry and trade",
       "fileName": "businessindustryandtrade"
     },
     {
       "index": 0,
       "type": "home",
-      "name": "Manufacturing and Production Industry",
+      "name": "Manufacturing and production industry",
       "fileName": "manufacturingandproductionindustry",
       "breadcrumb": []
     }

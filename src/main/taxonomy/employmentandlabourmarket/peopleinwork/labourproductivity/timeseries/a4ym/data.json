@@ -606,7 +606,6 @@
     }
   ],
   "months": [],
-  "uri": "/employmentandlabourmarket/peopleinwork/labourproductivity/timeseries/a4ym",
   "relatedBulletins": [
     "/employmentandlabourmarket/peopleinwork/labourproductivity/bulletins/labourproductivityq12014"
   ],
@@ -619,24 +618,25 @@
   ],
   "type": "timeseries",
   "name": "Output per worker",
+  "uri": "/employmentandlabourmarket/peopleinwork/labourproductivity/timeseries/a4ym",
   "fileName": "a4ym",
   "breadcrumb": [
     {
       "index": 0,
       "type": "home",
-      "name": "Employment and Labour Market",
+      "name": "Employment and Labour market",
       "fileName": "employmentandlabourmarket"
     },
     {
       "index": 0,
       "type": "home",
-      "name": "People in Work",
+      "name": "People in work",
       "fileName": "peopleinwork"
     },
     {
       "index": 0,
       "type": "home",
-      "name": "Labour Productivity",
+      "name": "Labour productivity",
       "fileName": "labourproductivity",
       "breadcrumb": []
     }

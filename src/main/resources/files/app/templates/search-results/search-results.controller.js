@@ -4,13 +4,23 @@
 (function() {
 
   angular.module("onsTemplates")
-    .controller("SearchController", ['$scope', '$location', '$log', 'PageUtil','searchResponse', SearchController])
+    .controller("SearchController", ['$scope', '$window', '$log', 'PageUtil', 'searchResponse', '$routeParams', SearchController])
 
 
-  function SearchController($scope, $location, $log, PageUtil, searchResponse) {
-    var page = PageUtil.getUrlParam("page")
-    var searchTerm = $scope.searchTerm = PageUtil.getUrlParam("q")
-    var type = $scope.type = PageUtil.getUrlParam("type")
+  function SearchController($scope, $window, $log, PageUtil, searchResponse, $routeParams) {
+    if (!searchResponse) {
+      return PageUtil.goToPage('404')
+    }
+    var page = $routeParams.page
+    var searchTerm = $scope.searchTerm = $routeParams.searchTerm
+
+    if (!searchTerm) {
+      PageUtil.goToPage('404')
+    }
+
+    $scope.searchResponse = searchResponse
+    var type = $scope.type = $routeParams.type
+    var filters = {}
     var departmentHandoff = [
       ["dfe", "education", "gcse", "a level", "degree", "nvq", "school", "college", "university", "national curriculum", "qualification", "teacher training", "pupil absence", "exclusions", "school workforce", "key stage"],
       ["bis", "business", "apprenticeship", "building", "construction", "higher education", "trade union", "enterprise"],
@@ -130,47 +140,104 @@
       },
     }
 
-    if(!searchResponse) {
-      return
-    }
-
-
-    if (!searchTerm) {
-      return
-    }
-
-    if (!page) {
-      page = 1
-    }
+    resolvePaginatorLinkCount()
+    watchResize()
 
     initialize(searchTerm, type, page)
 
-    function isLoading() {
-      return ($scope.searchTerm && !$scope.searchResponse)
-    }
-
     function initialize(q, type, pageNumber) {
-          $scope.searchResponse = searchResponse
-          $scope.pageCount = Math.ceil(searchResponse.numberOfResults / 10)
-          $scope.searchTermOneTime = q
-          resolveRelatedDepartment(q)
+      //Minus for single home type returning. First page will show 11 elements
+      if(searchResponse.results.length > 10) {
+        $scope.pageCount = Math.ceil((searchResponse.numberOfResults - 1) / 10)
+      } else {
+        $scope.pageCount = Math.ceil((searchResponse.numberOfResults) / 10)
+      }
+      resolveFilters(type)
+      $scope.searchTermOneTime = q
+      if (type) {
+        $scope.filterOn = true
+      } else {
+        $scope.filterOn = false
+      }
+      resolveRelatedDepartment(q)
+      resolveSectionsForDisplay()
     }
 
-    function filter(type) {
-      //Clear page parameter if any
-      $location.search('page', null)
-      $location.search('type', type)
+    function resolveFilters(type) {
+      if (type) {
+        if (typeof type === 'string') {
+          filters[type] = true
+        } else {
+          for (var i = 0; i < type.length; i++) {
+            filters[type[i]] = true
+          };
+        }
+      }
+    }
+
+    function resolveSectionsForDisplay() {
+      if ((searchResponse.numberOfResults > 0 || (searchResponse.numberOfResults === 0 && $scope.filterOn)) && !searchResponse.suggestionBasedResult) {
+        $scope.showSearchResults = true;
+      }
+
+      if ((searchResponse.numberOfResults > 0 || (searchResponse.numberOfResults === 0 && $scope.filterOn)) && searchResponse.suggestionBasedResult) {
+        $scope.showSuggestedSearchResults = true;
+      }
+
+      if (searchResponse.numberOfResults === 0 && !$scope.filterOn) {
+        $scope.showZeroResultsFound = true;
+        if(filters['timeseries'] || isPrerender()) {
+          $scope.showTimeseriesSearchSuggest = false
+        } else {
+          $scope.showTimeseriesSearchSuggest = true
+        }
+      }
+
+      if (searchResponse.numberOfResults > 0 || $scope.filterOn) {
+        if(filters['timeseries'] || isPrerender()) {
+          $scope.showFilters = false;
+        } else {
+          $scope.showFilters = true;
+        }
+      }
+    }
+
+    function reLoad() {
+      PageUtil.goToPage('/search/' + searchTerm)
+      PageUtil.setUrlParam('type', resolveTypes(filters))
+        // if the results are generated from an autocorrect suggest then
+        // we need to reset the query parameter to the suggestion
+      if (searchResponse.suggestionBasedResult) {
+        PageUtil.goToPage('/search/' + searchResponse.suggestion)
+      }
+    }
+
+    function toggleFilter(type) {
+      filters[type] = !filters[type]
+      reLoad()
+    }
+
+    function resolveTypes(filters) {
+      var activeFilters = []
+      for (type in filters) {
+        if (filters[type]) {
+          activeFilters.push(type)
+        }
+      };
+      var result =  activeFilters.length > 0 ? activeFilters : null
+      console.log(result)
+      return result
     }
 
     function isActive(type) {
-      var result = PageUtil.getUrlParam("type") === type
+      var result = filters[type]
       return result
     }
 
     function resolveRelatedDepartment(searchTerm) {
       $log.debug("Resolving related department for " + searchTerm)
       var departmentCode
-      var searchTerm = searchTerm.toLowerCase()
+      searchTerm = searchTerm.toLowerCase()
 
       for (var i = 0; i < departmentHandoff.length; i++) {
         for (var x = 0; x < departmentHandoff[i].length; x++) {
@@ -185,11 +252,50 @@
       $scope.relatedDepartment = undefined
     }
 
+    function watchResize() {
+      angular.element($window).bind('resize', function() {
+        resolvePaginatorLinkCount()
+        $scope.$apply()
+      })
+    }
+
+    //Resolve max paginator visible link counts depending on screen size
+    function resolvePaginatorLinkCount() {
+      if ($window.innerWidth < 500) {
+        $scope.paginatorLinks = 5
+      } else if ($window.innerWidth < 600) {
+        $scope.paginatorLinks = 6
+      } else if ($window.innerWidth < 700) {
+        $scope.paginatorLinks = 7
+      } else if ($window.innerWidth < 920) {
+        $scope.paginatorLinks = 8
+      } else if ($window.innerWidth < 980) {
+        $scope.paginatorLinks = 9
+      } else {
+        $scope.paginatorLinks = 10
+      }
+    }
+
+    function isShowLozenge(item) {
+      return item.type != 'home' && item.type != 'timeseries'
+    }
+
+    //If focus css class should be applited to search or not
+    function isFocus(type, index) {
+      return type === 'home' && index === 0
+    }
+
+    function isPrerender() {
+      return PageUtil.isPrerender()
+    }
+
     //Expose API
     angular.extend($scope, {
-      isLoading:isLoading,
-      filter:filter,
-      isActive:isActive
+      toggleFilter: toggleFilter,
+      isActive: isActive,
+      isFocus:isFocus,
+      isShowLozenge:isShowLozenge,
+      isPrerender:isPrerender
     })
   }
 

@@ -27,11 +27,15 @@
       "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/divorce/bulletins/divorcesinenglandandwales2012"
     }
   ],
-  "datasets": [],
+  "datasets": [
+    {
+      "name": "Number of couples divorcing",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/divorce/datasets/numberofcouplesdivorcing"
+    }
+  ],
   "level": "t3",
   "index": 4,
-  "lede": "Lorem ipsum dolor sit amet, fugit tation percipitur duo at, magna denique ei duo, mazim oratio volumus id mel. Veri discere accusamus sit id, oblique fabulas legimus sit ex. Atqui urbanitas efficiendi ei sea. Voluptua gloriatur vis an, cu eius semper deleniti vel. Aperiri insolens accommodare vel ne, vel id dictas corrumpit urbanitas.",
-  "more": "Eam cu alia nostrud. In movet epicuri quo. Decore reprimique vix ei. Ea sit possim albucius, an has mutat lucilius inimicus. Vis et vocibus voluptatum, ne est unum meliore invidunt. Posse nemore vim ei, habeo omnesque ullamcorper usu at, eu eos cetero accusata consulatu.",
+  "lede": "Statistics on divorces allow us to map changing social attitudes to divorce and give an indication of the number of children growing up with divorced parents. They are available by the age and sex of the divorcees, who divorce was granted to and the areas of the UK divorces are more likely to happen in. ",
   "type": "home",
   "name": "Divorce",
   "fileName": "divorce",
@@ -39,13 +43,13 @@
     {
       "index": 0,
       "type": "home",
-      "name": "People, Population and Community",
+      "name": "People, population and community",
       "fileName": "peoplepopulationandcommunity"
     },
     {
       "index": 0,
       "type": "home",
-      "name": "Births, Deaths and Marriages",
+      "name": "Births, deaths and marriages",
       "fileName": "birthsdeathsandmarriages"
     }
   ]

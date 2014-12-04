@@ -10,7 +10,7 @@
   "preUnit": "",
   "date": "September 2014",
   "source": "Office for National Statistics",
-  "additionalText": "Index, 1987\u003d 100",
+  "additionalText": "Index, 1987 \u003d 100",
   "nationalStatistic": true,
   "years": [
     {
@@ -2074,18 +2074,20 @@
       "sourceDataset": "MM23"
     }
   ],
-  "uri": "/economy/inflationandpriceindices/timeseries/kvr8",
   "relatedBulletins": [
     "/economy/inflationandpriceindices/bulletins/consumerpriceinflation"
   ],
   "relatedTimeseries": [
-    "/economy/inflationandpriceindices/timeseries/kvr9"
+    "/economy/inflationandpriceindices/timeseries/kvr9",
+    "/economy/inflationandpriceindices/timeseries/chaw",
+    "/economy/inflationandpriceindices/timeseries/d7bt"
   ],
   "sourceDatasets": [
     "MM23"
   ],
   "type": "timeseries",
   "name": "RPIJ",
+  "uri": "/economy/inflationandpriceindices/timeseries/kvr8",
   "fileName": "kvr8",
   "breadcrumb": [
     {
@@ -2097,7 +2099,7 @@
     {
       "index": 0,
       "type": "home",
-      "name": "Inflation and Price Indices",
+      "name": "Inflation and price indices",
       "fileName": "inflationandpriceindices",
       "breadcrumb": []
     }

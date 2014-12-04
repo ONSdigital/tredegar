@@ -5,7 +5,7 @@
   "number": "77.9",
   "unit": "%",
   "preUnit": "",
-  "date": "July 2014",
+  "date": "May to July 2014",
   "source": "Labour Force Survey",
   "nationalStatistic": true,
   "years": [
@@ -5144,7 +5144,6 @@
       "sourceDataset": "LMS"
     }
   ],
-  "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgsv",
   "relatedBulletins": [],
   "relatedTimeseries": [
     "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/lf25",
@@ -5156,24 +5155,25 @@
   ],
   "type": "timeseries",
   "name": "Male Employment rate (aged 16-64)",
+  "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgsv",
   "fileName": "mgsv",
   "breadcrumb": [
     {
       "index": 0,
       "type": "home",
-      "name": "Employment and Labour Market",
+      "name": "Employment and Labour market",
       "fileName": "employmentandlabourmarket"
     },
     {
       "index": 0,
       "type": "home",
-      "name": "People in Work",
+      "name": "People in work",
       "fileName": "peopleinwork"
     },
     {
       "index": 0,
       "type": "home",
-      "name": "Employment and Employee Types",
+      "name": "Employment and employee types",
       "fileName": "employmentandemployeetypes",
       "breadcrumb": []
     }

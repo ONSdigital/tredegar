@@ -4174,7 +4174,6 @@
       "sourceDataset": "PUSF"
     }
   ],
-  "uri": "/economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/annx",
   "relatedBulletins": [
     "/economy/governmentpublicsectorandtaxes/publicsectorfinance/bulletins/publicsectorfinances"
   ],
@@ -4184,6 +4183,7 @@
   ],
   "type": "timeseries",
   "name": "Public sector net borrowing excluding financial interventions",
+  "uri": "/economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/annx",
   "fileName": "annx",
   "breadcrumb": [
     {
@@ -4195,13 +4195,13 @@
     {
       "index": 0,
       "type": "home",
-      "name": "Government, Public Sector and Taxes",
+      "name": "Government, public sector and taxes",
       "fileName": "governmentpublicsectorandtaxes"
     },
     {
       "index": 0,
       "type": "home",
-      "name": "Public Sector Finance",
+      "name": "Public sector finance",
       "fileName": "publicsectorfinance",
       "breadcrumb": []
     }

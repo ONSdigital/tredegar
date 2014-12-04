@@ -3817,7 +3817,6 @@
       "sourceDataset": "PUSF"
     }
   ],
-  "uri": "/economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/anmu",
   "relatedBulletins": [
     "/economy/governmentpublicsectorandtaxes/publicsectorfinance/bulletins/publicsectorfinances"
   ],
@@ -3827,6 +3826,7 @@
   ],
   "type": "timeseries",
   "name": "Public Sector current budget",
+  "uri": "/economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/anmu",
   "fileName": "anmu",
   "breadcrumb": [
     {
@@ -3838,13 +3838,13 @@
     {
       "index": 0,
       "type": "home",
-      "name": "Government, Public Sector and Taxes",
+      "name": "Government, public sector and taxes",
       "fileName": "governmentpublicsectorandtaxes"
     },
     {
       "index": 0,
       "type": "home",
-      "name": "Public Sector Finance",
+      "name": "Public sector finance",
       "fileName": "publicsectorfinance",
       "breadcrumb": []
     }

@@ -21,26 +21,39 @@
       "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/livebirths/timeseries/raid56"
     }
   ],
-  "statsBulletins": [],
-  "datasets": [],
+  "statsBulletinHeadline": {
+    "name": "Births in England and Wales, 2013",
+    "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/livebirths/bulletins/birthsinenglandandwales2013"
+  },
+  "statsBulletins": [
+    {
+      "name": "Births in England and Wales, 2013",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/livebirths/bulletins/birthsinenglandandwales2013"
+    }
+  ],
+  "datasets": [
+    {
+      "name": "Births data collection",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/livebirths/datasets/birthsdatacollection"
+    }
+  ],
   "level": "t3",
   "index": 0,
-  "lede": "Lorem ipsum dolor sit amet, fugit tation percipitur duo at, magna denique ei duo, mazim oratio volumus id mel. Veri discere accusamus sit id, oblique fabulas legimus sit ex. Atqui urbanitas efficiendi ei sea. Voluptua gloriatur vis an, cu eius semper deleniti vel. Aperiri insolens accommodare vel ne, vel id dictas corrumpit urbanitas.",
-  "more": "Eam cu alia nostrud. In movet epicuri quo. Decore reprimique vix ei. Ea sit possim albucius, an has mutat lucilius inimicus. Vis et vocibus voluptatum, ne est unum meliore invidunt. Posse nemore vim ei, habeo omnesque ullamcorper usu at, eu eos cetero accusata consulatu.",
+  "lede": "Statistics on live births are a subset of numbers from the data that the ONS obtains from the births and deaths registrations. They are available by sex, month of the year and region of the UK. ",
   "type": "home",
-  "name": "Live Births",
+  "name": "Live births",
   "fileName": "livebirths",
   "breadcrumb": [
     {
       "index": 0,
       "type": "home",
-      "name": "People, Population and Community",
+      "name": "People, population and community",
       "fileName": "peoplepopulationandcommunity"
     },
     {
       "index": 0,
       "type": "home",
-      "name": "Births, Deaths and Marriages",
+      "name": "Births, deaths and marriages",
       "fileName": "birthsdeathsandmarriages"
     }
   ]

@@ -12,48 +12,58 @@
 		var cache = DSCacheFactory.get('dataCache')
 
 		function load(path) {
-			var deferred = $q.defer()
-			var data = loadFromCache(path)
+			var deferred
+			var cachedData = loadFromCache(path)
 
-			if (data) { //Cache hit
-				$log.debug('Data Loader : Cached data hit for ', path, ' ', data)
-				deferred.resolve(data)
+			if (cachedData) { //Cache hit
+				$log.debug('Data Loader : Cached data hit for ', path, ' ', cachedData.data)
+				deferred = $q.defer()
+				deferred.resolve(cachedData.data)
+				return deferred.promise
 			} else { //No cache hit, load
-				$http.get(path).success(function(data) {
-					$log.debug('Data Loader : Successfully loaded data at ', path, ' ', data)
-					storeToCache(path,data)
-					deferred.resolve(data)
-				}).error(function(err) {
-					$log.error('Data Loader : Failed loading data at ' + path)
-					deferred.reject(err)
-				})
+				return $http.get(path, {cache:false})
+					.then(function(data) {
+							$log.debug('Data Loader : Successfully loaded data at ', path, ' ', data.data)
+								/*Store http response rather than actual data, 
+								since http default caching will cache http response and autocomplete uses http service default cache 
+								which is the same cache (dataCache)
+								*/
+							storeToCache(path, data)
+							return data.data
+						},
+						function(err) {
+							$log.error('Data Loader : Failed loading data at ')
+							$log.error(err)
+							throw err
+						})
 			}
-
-
-			return deferred.promise
 		}
 
-		function storeToCache(path,data) {
-			//Skip caching if localhost and cache disabled
+		function storeToCache(path, data) {
+			try {
+				//Skip caching if localhost and cache disabled
+				if ($location.host() === 'localhost') {
+					if ($rootScope.onsAlphaConfiguration.disableCacheOnLocal) {
+						return
+					}
+				}
+
+				cache.put(path, data)
+			} catch (err) {
+				$log.error('Failed storing data to cache: [' + err + ']' );
+			}
+
+		}
+
+		function loadFromCache(key) {
+			var data
+
 			if ($location.host() === 'localhost') {
 				if ($rootScope.onsAlphaConfiguration.disableCacheOnLocal) {
 					return
 				}
 			}
 
-			cache.put(path, data)
-			
-		}
-
-		function loadFromCache(key) {
-			var data
-			
-			if ($location.host() === 'localhost') {
-				if ($rootScope.onsAlphaConfiguration.disableCacheOnLocal) {
-					return 
-				}
-			} 
-			
 			data = cache.get(key)
 			return data
 		}

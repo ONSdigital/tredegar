@@ -2,16 +2,17 @@ package com.github.onsdigital.generator.datasets;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.apache.commons.lang.ArrayUtils;
+import org.apache.commons.lang.BooleanUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import com.github.onsdigital.generator.Folder;
 import com.github.onsdigital.generator.data.Csv;
+import com.github.onsdigital.generator.data.Data;
 import com.github.onsdigital.json.dataset.Dataset;
 import com.github.onsdigital.json.dataset.DownloadSection;
 
@@ -34,39 +35,10 @@ public class DatasetContent {
 	static String[] columns = { THEME, LEVEL2, LEVEL3, NAME, SUMMARY, DATASET_TYPE, DESCRIPTION, SERIES, DOWNLOAD[0], DOWNLOAD[1], DOWNLOAD[2], DOWNLOAD_XLS[0], DOWNLOAD_XLS[1], DOWNLOAD_XLS[2],
 			DOWNLOAD_CSV[0], DOWNLOAD_CSV[1], DOWNLOAD_CSV[2], NATIONAL_STATISTIC };
 
-	public static List<Dataset> getDatasets(Folder folder) throws IOException {
-		List<Dataset> result = null;
-
-		// Parse the data:
+	public static void parse() throws IOException {
 		if (rows == null) {
 			parseCsv();
 		}
-
-		DatasetNode node = getNode(folder);
-		if (node != null) {
-			result = node.datasetList().datasets;
-		}
-
-		return result;
-	}
-
-	private static DatasetNode getNode(Folder folder) {
-		DatasetNode result = null;
-
-		// Recurse up the hierarchy to the root node:
-		DatasetNode parentNode = null;
-		if (folder.parent == null) {
-			parentNode = DatasetData.rootNode;
-		} else {
-			parentNode = getNode(folder.parent);
-		}
-
-		// Get the matching node:
-		if (parentNode != null) {
-			result = parentNode.getChild(folder.name);
-		}
-
-		return result;
 	}
 
 	private static void parseCsv() throws IOException {
@@ -83,19 +55,18 @@ public class DatasetContent {
 
 		for (Map<String, String> row : rows) {
 
+			// Skip empty rows:
+			if (StringUtils.isBlank(row.get(NAME))) {
+				continue;
+			}
+
 			// There are blank rows separating the themes:
 			if (StringUtils.isBlank(row.get(THEME))) {
 				continue;
 			}
 
 			// Get to the folder in question:
-			DatasetNode node = DatasetData.rootNode.getChild(row.get(THEME));
-			if (StringUtils.isNotBlank(row.get(LEVEL2))) {
-				node = node.getChild(row.get(LEVEL2));
-			}
-			if (StringUtils.isNotBlank(row.get(LEVEL3))) {
-				node = node.getChild(row.get(LEVEL3));
-			}
+			Folder folder = Data.getFolder(row.get(THEME), row.get(LEVEL2), row.get(LEVEL3));
 
 			Dataset dataset = new Dataset();
 			dataset.name = StringUtils.trim(row.get(NAME));
@@ -145,10 +116,16 @@ public class DatasetContent {
 				dataset.download.add(downloadSection);
 			}
 
-			node.addDataset(dataset);
-			DatasetData.datasets.add(dataset);
+			String nationalStatistic = StringUtils.defaultIfBlank(row.get(NATIONAL_STATISTIC), "yes");
+			dataset.nationalStatistic = BooleanUtils.toBoolean(nationalStatistic);
+
+			if (StringUtils.isNotBlank(row.get(DESCRIPTION))) {
+				dataset.description = row.get(DESCRIPTION);
+			}
+
+			folder.datasets.add(dataset);
+			Data.addDataset(dataset);
 		}
-		System.out.println(DatasetData.datasets.size());
 	}
 
 	/**

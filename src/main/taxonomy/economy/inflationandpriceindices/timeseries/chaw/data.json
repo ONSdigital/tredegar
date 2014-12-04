@@ -10,7 +10,7 @@
   "preUnit": "",
   "date": "September 2014",
   "source": "Office for National Statistics",
-  "additionalText": "Not a National Statistic. Index, 1987\u003d 100",
+  "additionalText": "Not a National Statistic. Index, 1987 \u003d 100",
   "nationalStatistic": false,
   "years": [
     {
@@ -3274,18 +3274,19 @@
       "sourceDataset": "MM23"
     }
   ],
-  "uri": "/economy/inflationandpriceindices/timeseries/chaw",
   "relatedBulletins": [
     "/economy/inflationandpriceindices/bulletins/consumerpriceinflation"
   ],
   "relatedTimeseries": [
-    "/economy/inflationandpriceindices/timeseries/czbh"
+    "/economy/inflationandpriceindices/timeseries/czbh",
+    "/economy/inflationandpriceindices/timeseries/d7bt"
   ],
   "sourceDatasets": [
     "MM23"
   ],
   "type": "timeseries",
   "name": "RPI: Retail Price Index",
+  "uri": "/economy/inflationandpriceindices/timeseries/chaw",
   "fileName": "chaw",
   "breadcrumb": [
     {
@@ -3297,7 +3298,7 @@
     {
       "index": 0,
       "type": "home",
-      "name": "Inflation and Price Indices",
+      "name": "Inflation and price indices",
       "fileName": "inflationandpriceindices",
       "breadcrumb": []
     }

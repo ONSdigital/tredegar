@@ -25,12 +25,25 @@
       "uri": "/peoplepopulationandcommunity/culturalidentity/ethnicity/timeseries/raid69"
     }
   ],
-  "statsBulletins": [],
-  "datasets": [],
+  "statsBulletinHeadline": {
+    "name": "2011 Census Key Statistics for England and Wales, March 2011",
+    "uri": "/peoplepopulationandcommunity/culturalidentity/ethnicity/bulletins/2011censuskeystatisticsforenglandandwalesmarch2011"
+  },
+  "statsBulletins": [
+    {
+      "name": "2011 Census Key Statistics for England and Wales, March 2011",
+      "uri": "/peoplepopulationandcommunity/culturalidentity/ethnicity/bulletins/2011censuskeystatisticsforenglandandwalesmarch2011"
+    }
+  ],
+  "datasets": [
+    {
+      "name": "Ethnicity",
+      "uri": "/peoplepopulationandcommunity/culturalidentity/ethnicity/datasets/ethnicity"
+    }
+  ],
   "level": "t3",
   "index": 0,
-  "lede": "Lorem ipsum dolor sit amet, fugit tation percipitur duo at, magna denique ei duo, mazim oratio volumus id mel. Veri discere accusamus sit id, oblique fabulas legimus sit ex. Atqui urbanitas efficiendi ei sea. Voluptua gloriatur vis an, cu eius semper deleniti vel. Aperiri insolens accommodare vel ne, vel id dictas corrumpit urbanitas.",
-  "more": "Eam cu alia nostrud. In movet epicuri quo. Decore reprimique vix ei. Ea sit possim albucius, an has mutat lucilius inimicus. Vis et vocibus voluptatum, ne est unum meliore invidunt. Posse nemore vim ei, habeo omnesque ullamcorper usu at, eu eos cetero accusata consulatu.",
+  "lede": "Ethnicity statistics found here focus on the number and proportion of people who state that they identify with a particular ethnic group. Time series data on these figures are also available and these allow us to get a picture of the changing population of the UK.  ",
   "type": "home",
   "name": "Ethnicity",
   "fileName": "ethnicity",
@@ -38,13 +51,13 @@
     {
       "index": 0,
       "type": "home",
-      "name": "People, Population and Community",
+      "name": "People, population and community",
       "fileName": "peoplepopulationandcommunity"
     },
     {
       "index": 0,
       "type": "home",
-      "name": "Cultural Identity",
+      "name": "Cultural identity",
       "fileName": "culturalidentity"
     }
   ]

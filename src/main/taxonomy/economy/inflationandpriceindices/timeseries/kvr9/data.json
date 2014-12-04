@@ -11,7 +11,6 @@
   "date": "September 2014",
   "source": "Office for National Statistics",
   "keyNote": "Percentage change over 12 months",
-  "additionalText": "percentage change over 12 months",
   "nationalStatistic": true,
   "years": [
     {
@@ -1957,18 +1956,20 @@
       "sourceDataset": "MM23"
     }
   ],
-  "uri": "/economy/inflationandpriceindices/timeseries/kvr9",
   "relatedBulletins": [
     "/economy/inflationandpriceindices/bulletins/consumerpriceinflation"
   ],
   "relatedTimeseries": [
-    "/economy/inflationandpriceindices/timeseries/kvr8"
+    "/economy/inflationandpriceindices/timeseries/kvr8",
+    "/economy/inflationandpriceindices/timeseries/czbh",
+    "/economy/inflationandpriceindices/timeseries/d7g7"
   ],
   "sourceDatasets": [
     "MM23"
   ],
   "type": "timeseries",
   "name": "RPIJ (% change)",
+  "uri": "/economy/inflationandpriceindices/timeseries/kvr9",
   "fileName": "kvr9",
   "breadcrumb": [
     {
@@ -1980,7 +1981,7 @@
     {
       "index": 0,
       "type": "home",
-      "name": "Inflation and Price Indices",
+      "name": "Inflation and price indices",
       "fileName": "inflationandpriceindices",
       "breadcrumb": []
     }

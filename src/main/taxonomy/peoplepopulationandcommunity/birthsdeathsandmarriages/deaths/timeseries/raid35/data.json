@@ -11,24 +11,26 @@
   "years": [],
   "quarters": [],
   "months": [],
-  "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/timeseries/raid35",
-  "relatedBulletins": [],
+  "relatedBulletins": [
+    "/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/bulletins/deathsregisteredinenglandandwales2013"
+  ],
   "relatedTimeseries": [],
   "sourceDatasets": [],
   "type": "timeseries",
   "name": "England deaths",
+  "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/timeseries/raid35",
   "fileName": "raid35",
   "breadcrumb": [
     {
       "index": 0,
       "type": "home",
-      "name": "People, Population and Community",
+      "name": "People, population and community",
       "fileName": "peoplepopulationandcommunity"
     },
     {
       "index": 0,
       "type": "home",
-      "name": "Births, Deaths and Marriages",
+      "name": "Births, deaths and marriages",
       "fileName": "birthsdeathsandmarriages"
     },
     {

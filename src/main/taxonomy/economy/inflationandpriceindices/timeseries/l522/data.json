@@ -10,7 +10,7 @@
   "preUnit": "",
   "date": "September 2014",
   "source": "Office for National Statistics",
-  "additionalText": "Not a National Statistic. Index, 2005\u003d 100",
+  "additionalText": "Not a National Statistic. Index, 2005 \u003d 100",
   "nationalStatistic": false,
   "years": [
     {
@@ -1150,18 +1150,19 @@
       "sourceDataset": "MM23"
     }
   ],
-  "uri": "/economy/inflationandpriceindices/timeseries/l522",
   "relatedBulletins": [
     "/economy/inflationandpriceindices/bulletins/consumerpriceinflation"
   ],
   "relatedTimeseries": [
-    "/economy/inflationandpriceindices/timeseries/l55o"
+    "/economy/inflationandpriceindices/timeseries/l55o",
+    "/economy/inflationandpriceindices/timeseries/d7bt"
   ],
   "sourceDatasets": [
     "MM23"
   ],
   "type": "timeseries",
   "name": "CPIH",
+  "uri": "/economy/inflationandpriceindices/timeseries/l522",
   "fileName": "l522",
   "breadcrumb": [
     {
@@ -1173,7 +1174,7 @@
     {
       "index": 0,
       "type": "home",
-      "name": "Inflation and Price Indices",
+      "name": "Inflation and price indices",
       "fileName": "inflationandpriceindices",
       "breadcrumb": []
     }

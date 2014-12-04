@@ -4,14 +4,18 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.http.NameValuePair;
 import org.apache.http.client.utils.URIBuilder;
+import org.apache.http.message.BasicNameValuePair;
 
 import com.github.greengerong.PreRenderSEOFilter;
 import com.github.onsdigital.configuration.Configuration;
@@ -43,7 +47,10 @@ public class PrerenderIo {
 			} else {
 				escapedFragment = extractHashBangUrl(url);
 			}
-			URL escapedFragmetUrl = buildUrl(url, escapedFragment);
+			if (StringUtils.isEmpty(escapedFragment)) {
+				escapedFragment = "/";
+			}
+			URL escapedFragmetUrl = buildUrl(url, escapedFragment, request.getQueryString());
 			escapedFragmetUrl = updateForLocalhost(escapedFragmetUrl);
 
 			System.out.println("URL for Prerender.io is: " + escapedFragmetUrl);
@@ -81,15 +88,13 @@ public class PrerenderIo {
 		URL result = escapedFragmetnUrl;
 
 		if (StringUtils.equals(escapedFragmetnUrl.getHost(), "localhost")) {
-			System.out.println("Updating localhost to tredegar");
 			result = new URIBuilder(escapedFragmetnUrl.toURI()).setUserInfo("stats:titchfield").setHost("tredegar.herokuapp.com").setPort(-1).build().toURL();
-			System.out.println("URL for Prerender.io is now: " + escapedFragmetnUrl);
 		}
 
 		return result;
 	}
 
-	private static URL buildUrl(URL url, String escapedFragment) throws MalformedURLException, URISyntaxException {
+	private static URL buildUrl(URL url, String escapedFragment, String query) throws MalformedURLException, URISyntaxException {
 
 		URIBuilder uriBuilder = new URIBuilder();
 
@@ -114,8 +119,16 @@ public class PrerenderIo {
 		// Path
 		uriBuilder.setPath("/");
 
-		// Query
-		uriBuilder.setParameter("_escaped_fragment_", escapedFragment);
+		// Query - start with existing parameters so that we keep things like
+		// search queries:
+		List<NameValuePair> parameters = new ArrayList<>();
+		parameters.add(new BasicNameValuePair("prerender", "true"));
+		if (StringUtils.isNotBlank(query)) {
+			parameters.add(new BasicNameValuePair("_escaped_fragment_", escapedFragment + "?" + query));
+		} else {
+			parameters.add(new BasicNameValuePair("_escaped_fragment_", escapedFragment));
+		}
+		uriBuilder.setParameters(parameters);
 
 		return uriBuilder.build().toURL();
 	}

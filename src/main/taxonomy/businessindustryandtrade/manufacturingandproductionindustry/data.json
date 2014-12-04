@@ -33,6 +33,10 @@
   ],
   "datasets": [
     {
+      "name": "Output by Manufacturing sub-sectors",
+      "uri": "/businessindustryandtrade/manufacturingandproductionindustry/datasets/outputbymanufacturingsubsectors"
+    },
+    {
       "name": "Output of the production industries",
       "uri": "/businessindustryandtrade/manufacturingandproductionindustry/datasets/outputoftheproductionindustries"
     }
@@ -41,13 +45,13 @@
   "index": 2,
   "lede": "Manufacturing and Production Industry is the branch of manufacture and trade based on the fabrication, processing, or preparation of products from raw materials and commodities. This includes all foods, chemicals, textiles, machines, and equipment.",
   "type": "home",
-  "name": "Manufacturing and Production Industry",
+  "name": "Manufacturing and production industry",
   "fileName": "manufacturingandproductionindustry",
   "breadcrumb": [
     {
       "index": 0,
       "type": "home",
-      "name": "Business, Industry and Trade",
+      "name": "Business, industry and trade",
       "fileName": "businessindustryandtrade"
     }
   ]

@@ -27,24 +27,29 @@
       "uri": "/employmentandlabourmarket/peopleinwork/labourproductivity/bulletins/labourproductivityq12014"
     }
   ],
-  "datasets": [],
+  "datasets": [
+    {
+      "name": "Labour productivity",
+      "uri": "/employmentandlabourmarket/peopleinwork/labourproductivity/datasets/labourproductivity"
+    }
+  ],
   "level": "t3",
   "index": 2,
   "lede": "Labour productivity measures the efficiency of the workforce. It is calculated as output per worker, output per job and output per hour. Labour productivity is an important factor in determining the productive potential of the economy. Countries with strong labour productivity growth tend to benefit from high rates of growth and low inflation. ",
   "type": "home",
-  "name": "Labour Productivity",
+  "name": "Labour productivity",
   "fileName": "labourproductivity",
   "breadcrumb": [
     {
       "index": 0,
       "type": "home",
-      "name": "Employment and Labour Market",
+      "name": "Employment and Labour market",
       "fileName": "employmentandlabourmarket"
     },
     {
       "index": 0,
       "type": "home",
-      "name": "People in Work",
+      "name": "People in work",
       "fileName": "peopleinwork"
     }
   ]

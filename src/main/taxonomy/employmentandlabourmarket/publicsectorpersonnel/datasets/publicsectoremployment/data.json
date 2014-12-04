@@ -21,27 +21,32 @@
   ],
   "notes": [
     {
-      "data": "These estimates are rounded to the nearest hundred and are different to the unrounded estimates in other published tables."
+      "data": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quam leo, blandit a turpis non, varius feugiat mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In posuere lectus eu laoreet ultrices. Donec ac sodales libero, eget fermentum arcu."
+    },
+    {
+      "data": "Fusce pharetra, libero in imperdiet ultricies, ex erat tempor dolor, vitae aliquet magna velit in urna. Duis finibus augue velit, ut consectetur risus imperdiet in. Sed tempus congue ante, ac cursus diam porttitor vitae. Vivamus arcu leo, volutpat in mauris ac, lacinia fermentum velit. Sed dictum tortor justo, aliquet facilisis lorem dictum a."
     }
   ],
   "summary": "Public sector employment by sector classification",
-  "uri": "/employmentandlabourmarket/publicsectorpersonnel/datasets/publicsectoremployment",
+  "nationalStatistic": true,
+  "description": "Public sector employment by sector classification.",
   "title": "Public Sector Employment",
   "releaseDate": "19 February 2014",
   "type": "dataset",
   "name": "Public Sector Employment",
+  "uri": "/employmentandlabourmarket/publicsectorpersonnel/datasets/publicsectoremployment",
   "fileName": "publicsectoremployment",
   "breadcrumb": [
     {
       "index": 0,
       "type": "home",
-      "name": "Employment and Labour Market",
+      "name": "Employment and Labour market",
       "fileName": "employmentandlabourmarket"
     },
     {
       "index": 0,
       "type": "home",
-      "name": "Public Sector Personnel",
+      "name": "Public sector personnel",
       "fileName": "publicsectorpersonnel",
       "breadcrumb": []
     }

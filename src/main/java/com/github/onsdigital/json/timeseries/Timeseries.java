@@ -39,7 +39,9 @@ public class Timeseries extends DataItem implements Comparable<Timeseries> {
 	// Additional information
 
 	public String number;
-	public String unit;
+	// We provide a minimal default for the unit, otherwise hicharts shows
+	// "undefined":
+	public String unit = "";
 	/** A unit that needs to go before the number, e.g. £. */
 	public String preUnit;
 	public String date;
@@ -69,13 +71,6 @@ public class Timeseries extends DataItem implements Comparable<Timeseries> {
 	public Set<TimeseriesValue> years = new TreeSet<>();
 	public Set<TimeseriesValue> quarters = new TreeSet<>();
 	public Set<TimeseriesValue> months = new TreeSet<>();
-
-	/**
-	 * The URI of this timeseries. This is useful when it is referenced from
-	 * more than one place in the taxonomy. It helps the generator to ensure it
-	 * only gets created in one place.
-	 */
-	public URI uri;
 
 	public List<URI> relatedBulletins = new ArrayList<>();
 	public List<URI> relatedTimeseries = new ArrayList<>();

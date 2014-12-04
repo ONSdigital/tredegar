@@ -27,25 +27,37 @@
       "uri": "/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/bulletins/cancerstatisticsregistrationsenglandseriesmb1no432012"
     }
   ],
-  "datasets": [],
+  "datasets": [
+    {
+      "name": "Deaths involving Clostridium difficile",
+      "uri": "/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/datasets/deathsinvolvingclostridiumdifficile"
+    },
+    {
+      "name": "Deaths involving  MRSA",
+      "uri": "/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/datasets/deathsinvolvingmrsa"
+    },
+    {
+      "name": "Cancer registration statistics",
+      "uri": "/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/datasets/cancerregistrationstatistics"
+    }
+  ],
   "level": "t3",
   "index": 2,
-  "lede": "Lorem ipsum dolor sit amet, fugit tation percipitur duo at, magna denique ei duo, mazim oratio volumus id mel. Veri discere accusamus sit id, oblique fabulas legimus sit ex. Atqui urbanitas efficiendi ei sea. Voluptua gloriatur vis an, cu eius semper deleniti vel. Aperiri insolens accommodare vel ne, vel id dictas corrumpit urbanitas.",
-  "more": "Eam cu alia nostrud. In movet epicuri quo. Decore reprimique vix ei. Ea sit possim albucius, an has mutat lucilius inimicus. Vis et vocibus voluptatum, ne est unum meliore invidunt. Posse nemore vim ei, habeo omnesque ullamcorper usu at, eu eos cetero accusata consulatu.",
+  "lede": "We publish statistics on many different health conditions and diseases collected from health bodies across the UK. However, key statistics in this area are on newly diagnosed cancers and deaths related to diseases mainly caught when a person is already in hospital, e.g. MRSA and Clostridium difficile.",
   "type": "home",
-  "name": "Conditions and Diseases",
+  "name": "Conditions and diseases",
   "fileName": "conditionsanddiseases",
   "breadcrumb": [
     {
       "index": 0,
       "type": "home",
-      "name": "People, Population and Community",
+      "name": "People, population and community",
       "fileName": "peoplepopulationandcommunity"
     },
     {
       "index": 0,
       "type": "home",
-      "name": "Health and Social Care",
+      "name": "Health and social care",
       "fileName": "healthandsocialcare"
     }
   ]

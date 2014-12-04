@@ -5,7 +5,7 @@
   "number": "16.4",
   "unit": "m",
   "preUnit": "",
-  "date": "July 2014",
+  "date": "May to July 2014",
   "source": "Labour Force Survey",
   "nationalStatistic": true,
   "years": [
@@ -5144,7 +5144,6 @@
       "sourceDataset": "LMS"
     }
   ],
-  "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgsa",
   "relatedBulletins": [],
   "relatedTimeseries": [
     "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgsb",
@@ -5156,24 +5155,25 @@
   ],
   "type": "timeseries",
   "name": "Male Employment 16+",
+  "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgsa",
   "fileName": "mgsa",
   "breadcrumb": [
     {
       "index": 0,
       "type": "home",
-      "name": "Employment and Labour Market",
+      "name": "Employment and Labour market",
       "fileName": "employmentandlabourmarket"
     },
     {
       "index": 0,
       "type": "home",
-      "name": "People in Work",
+      "name": "People in work",
       "fileName": "peopleinwork"
     },
     {
       "index": 0,
       "type": "home",
-      "name": "Employment and Employee Types",
+      "name": "Employment and employee types",
       "fileName": "employmentandemployeetypes",
       "breadcrumb": []
     }

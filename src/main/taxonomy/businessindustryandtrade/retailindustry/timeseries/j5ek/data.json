@@ -2209,7 +2209,6 @@
       "sourceDataset": "DRSI"
     }
   ],
-  "uri": "/businessindustryandtrade/retailindustry/timeseries/j5ek",
   "relatedBulletins": [
     "/businessindustryandtrade/retailindustry/bulletins/retailsales"
   ],
@@ -2221,18 +2220,19 @@
   ],
   "type": "timeseries",
   "name": "Retail Sales Volume including automotive fuel ",
+  "uri": "/businessindustryandtrade/retailindustry/timeseries/j5ek",
   "fileName": "j5ek",
   "breadcrumb": [
     {
       "index": 0,
       "type": "home",
-      "name": "Business, Industry and Trade",
+      "name": "Business, industry and trade",
       "fileName": "businessindustryandtrade"
     },
     {
       "index": 0,
       "type": "home",
-      "name": "Retail Industry",
+      "name": "Retail industry",
       "fileName": "retailindustry",
       "breadcrumb": []
     }

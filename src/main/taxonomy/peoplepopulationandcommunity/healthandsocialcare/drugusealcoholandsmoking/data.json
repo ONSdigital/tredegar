@@ -23,37 +23,41 @@
   },
   "statsBulletins": [
     {
-      "name": "Alcohol-related deaths in the United Kingdom",
-      "uri": "/peoplepopulationandcommunity/healthandsocialcare/drugusealcoholandsmoking/bulletins/alcoholrelateddeathsintheunitedkingdom"
-    },
-    {
-      "name": "Deaths Registered in England and Wales, 2013",
-      "uri": "/peoplepopulationandcommunity/healthandsocialcare/drugusealcoholandsmoking/bulletins/deathsregisteredinenglandandwales2013"
+      "name": "Alcohol-related deaths in the United Kingdom, registered in 2012",
+      "uri": "/peoplepopulationandcommunity/healthandsocialcare/drugusealcoholandsmoking/bulletins/alcoholrelateddeathsintheunitedkingdomregisteredin2012"
     },
     {
       "name": "Deaths Related to Drug Poisoning in England and Wales, 2012",
       "uri": "/peoplepopulationandcommunity/healthandsocialcare/drugusealcoholandsmoking/bulletins/deathsrelatedtodrugpoisoninginenglandandwales2012"
     }
   ],
-  "datasets": [],
+  "datasets": [
+    {
+      "name": "Deaths from drug-related poisoning and drug misuse, by sex",
+      "uri": "/peoplepopulationandcommunity/healthandsocialcare/drugusealcoholandsmoking/datasets/deathsfromdrugrelatedpoisoninganddrugmisusebysex"
+    },
+    {
+      "name": "Alcohol-related deaths, UK",
+      "uri": "/peoplepopulationandcommunity/healthandsocialcare/drugusealcoholandsmoking/datasets/alcoholrelateddeathsuk"
+    }
+  ],
   "level": "t3",
   "index": 1,
-  "lede": "Lorem ipsum dolor sit amet, fugit tation percipitur duo at, magna denique ei duo, mazim oratio volumus id mel. Veri discere accusamus sit id, oblique fabulas legimus sit ex. Atqui urbanitas efficiendi ei sea. Voluptua gloriatur vis an, cu eius semper deleniti vel. Aperiri insolens accommodare vel ne, vel id dictas corrumpit urbanitas.",
-  "more": "Eam cu alia nostrud. In movet epicuri quo. Decore reprimique vix ei. Ea sit possim albucius, an has mutat lucilius inimicus. Vis et vocibus voluptatum, ne est unum meliore invidunt. Posse nemore vim ei, habeo omnesque ullamcorper usu at, eu eos cetero accusata consulatu.",
+  "lede": "Statistics on drug use, alcohol and smoking focus on deaths and illnesses related to these areas. Deaths related to drugs can be through drug poisoning or drug misuse. It is important to know whether deaths related to these areas are rising or falling overall or rising for some groups and falling for others as this information is key when making decisions on allocating resources and creating policies aimed at reducing these illnesses and deaths.",
   "type": "home",
-  "name": "Drug use, Alcohol and Smoking",
+  "name": "Drug use, alcohol and smoking",
   "fileName": "drugusealcoholandsmoking",
   "breadcrumb": [
     {
       "index": 0,
       "type": "home",
-      "name": "People, Population and Community",
+      "name": "People, population and community",
       "fileName": "peoplepopulationandcommunity"
     },
     {
       "index": 0,
       "type": "home",
-      "name": "Health and Social Care",
+      "name": "Health and social care",
       "fileName": "healthandsocialcare"
     }
   ]

@@ -43,8 +43,8 @@
   },
   "statsBulletins": [
     {
-      "name": "UK Labour Market - July 2014",
-      "uri": "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/uklabourmarketjuly2014"
+      "name": "Labour market statistics",
+      "uri": "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/labourmarketstatistics"
     },
     {
       "name": "Annual Survey of Hours and Earnings, 2013 Provisional Results",
@@ -57,6 +57,10 @@
   ],
   "datasets": [
     {
+      "name": "Actual and usual weekly hours worked",
+      "uri": "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/datasets/actualandusualweeklyhoursworked"
+    },
+    {
       "name": "Average Weekly Earnings (AWE)",
       "uri": "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/datasets/averageweeklyearningsawe"
     }
@@ -65,19 +69,19 @@
   "index": 1,
   "lede": "Earnings are the reward for work and they can be paid on a regular basis or as bonus pay. Total pay combines both regular and bonus pay. The Office for National Statistics reports the level and growth rate of average weekly total, regular and bonus pay. Working hours are given as the average weekly hours worked by full-time and part-time workers.",
   "type": "home",
-  "name": "Earnings and Working Hours",
+  "name": "Earnings and working hours",
   "fileName": "earningsandworkinghours",
   "breadcrumb": [
     {
       "index": 0,
       "type": "home",
-      "name": "Employment and Labour Market",
+      "name": "Employment and Labour market",
       "fileName": "employmentandlabourmarket"
     },
     {
       "index": 0,
       "type": "home",
-      "name": "People in Work",
+      "name": "People in work",
       "fileName": "peopleinwork"
     }
   ]

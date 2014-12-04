@@ -5,15 +5,12 @@ import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.GET;
 import javax.ws.rs.core.Context;
 
+import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import com.github.davidcarboni.restolino.framework.Endpoint;
-import com.github.onsdigital.configuration.ElasticSearchProperties;
-import com.github.onsdigital.json.ContentType;
-import com.github.onsdigital.search.ElasticSearchServer;
+import com.github.onsdigital.json.timeseries.Timeseries;
 import com.github.onsdigital.search.bean.SearchResult;
-import com.github.onsdigital.search.util.ElasticSearchFieldUtil;
-import com.github.onsdigital.search.util.ONSQueryBuilder;
 import com.github.onsdigital.search.util.SearchHelper;
 import com.github.onsdigital.util.ValidatorUtil;
 
@@ -27,26 +24,67 @@ import com.github.onsdigital.util.ValidatorUtil;
 @Endpoint
 public class Search {
 	final static String jsonMime = "application/json";
-	final static String BONSAI_URL = System.getenv("BONSAI_URL");
-	private final static String TITLE = "title";
 
 	@GET
 	public Object get(@Context HttpServletRequest request, @Context HttpServletResponse response) throws Exception {
-		response.setCharacterEncoding("UTF8");
-		response.setContentType("application/json");
-		return search(extractQuery(request), extractPage(request), request.getParameter("type"));
+
+		String query = extractQuery(request);
+		Object searchResult = null;
+		if (StringUtils.isNotBlank(request.getParameter("q"))) {
+			int page = extractPage(request);
+			String[] types = extractTypes(request);
+			searchResult = search(query, page, types);
+			// This is a search result page.
+			// Autocomplete requests pass a parameter of "term".
+			SearchConsole.save(query, page, searchResult);
+		} else if (StringUtils.isNotBlank(request.getParameter("term"))) {
+			searchResult = autoComplete(query);
+		}
+
+		return searchResult;
 	}
 
-	private Object search(String query, int page, String type) throws Exception {
-		ONSQueryBuilder queryBuilder = new ONSQueryBuilder("ons").setType(type).setPage(page).setSearchTerm(query).setFields(getTitle(), "path");
-		SearchResult searchResult = new SearchHelper(ElasticSearchServer.getClient()).search(queryBuilder);
-		if (searchResult.getNumberOfResults() == 0 && type == null) {
-			//If type is set don't search for timeseries
-			System.out.println("Attempting search against timeseries type as no results found for: " + query);
-			ONSQueryBuilder timeSeriesQueryBuilder = new ONSQueryBuilder("ons").setType(ContentType.timeseries.name()).setPage(page).setSearchTerm(query).setFields(getTitle(), "path");
-			searchResult = new SearchHelper(ElasticSearchServer.getClient()).search(timeSeriesQueryBuilder);
+	private Object search(String query, int page, String[] types) throws Exception {
+
+		/*
+		 * Search uses a number of steps to discover any appropriates matches:-
+		 * 1. Search core content types of home pages, bulletins etc. 2. Search
+		 * the same contents but with a more natural language 3. If nothing
+		 * found then, and only then, search for single timeseries for cdid
+		 * search 4. If still no result, then use a 'term' suggestion, that
+		 * catches possible typos
+		 */
+		// don't use naturalLanguage for initial search so we get PHRASE_PREFIX
+		// capability
+		boolean naturalLanguage = false;
+		SearchResult searchResult = SearchHelper.search(query, page, naturalLanguage, types);
+		if (searchResult.getNumberOfResults() == 0 && types == null) {
+			// now try again without PHRASE_PREFIX, thus supporting a more
+			// natural language of 'what is ...'
+			naturalLanguage = true;
+			SearchResult naturalLanguageSearchResult = SearchHelper.search(query, page, naturalLanguage, types);
+			if (naturalLanguageSearchResult != null && naturalLanguageSearchResult.getNumberOfResults() != 0) {
+				return naturalLanguageSearchResult;
+			} else {
+				System.out.println("Attempting search against timeseries as no results found for: " + query);
+				Timeseries timeseries = SearchHelper.searchCdid(query);
+				// if still no results then use term suggester for auto correct
+				if (timeseries == null) {
+					System.out.println("No results found from timeseries so using suggestions for: " + query);
+					SearchResult suggestionResult = SearchHelper.searchSuggestions(query, page, types);
+					if (suggestionResult != null) {
+						return suggestionResult;
+					}
+				} else {
+					return timeseries;
+				}
+			}
 		}
 		return searchResult;
+	}
+	
+	public Object autoComplete(String query) {
+		return SearchHelper.autocomplete(query, false);
 	}
 
 	private int extractPage(HttpServletRequest request) {
@@ -56,6 +94,11 @@ public class Search {
 			return pageNumber < 1 ? 1 : pageNumber;
 		}
 		return 1;
+	}
+
+	private String[] extractTypes(HttpServletRequest request) {
+		String[] types = request.getParameterValues("type");
+		return ArrayUtils.isNotEmpty(types) ? types : null;
 	}
 
 	private String extractQuery(HttpServletRequest request) {
@@ -75,8 +118,4 @@ public class Search {
 		return query;
 	}
 
-	private String getTitle() {
-		String titleBoost = (String) ElasticSearchProperties.INSTANCE.getProperty(TITLE);
-		return ElasticSearchFieldUtil.getBoost(TITLE, titleBoost);
-	}
 }

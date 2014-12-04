@@ -3488,7 +3488,6 @@
       "sourceDataset": "MRET"
     }
   ],
-  "uri": "/businessindustryandtrade/internationaltrade/timeseries/ikbi",
   "relatedBulletins": [
     "/businessindustryandtrade/internationaltrade/bulletins/uktrade"
   ],
@@ -3504,18 +3503,19 @@
   ],
   "type": "timeseries",
   "name": "Total imports of goods and services",
+  "uri": "/businessindustryandtrade/internationaltrade/timeseries/ikbi",
   "fileName": "ikbi",
   "breadcrumb": [
     {
       "index": 0,
       "type": "home",
-      "name": "Business, Industry and Trade",
+      "name": "Business, industry and trade",
       "fileName": "businessindustryandtrade"
     },
     {
       "index": 0,
       "type": "home",
-      "name": "International Trade",
+      "name": "International trade",
       "fileName": "internationaltrade",
       "breadcrumb": []
     }

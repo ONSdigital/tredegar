@@ -1,6 +1,5 @@
 package com.github.onsdigital.json.markdown;
 
-import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,7 +17,6 @@ public class Methodology extends CollectionItem {
 	// Table of contents
 	public List<Section> sections = new ArrayList<Section>();
 	public List<Section> accordion = new ArrayList<Section>();
-	public URI uri;
 
 	// Used to help place methodology items in the taxonomy
 	public transient String theme;

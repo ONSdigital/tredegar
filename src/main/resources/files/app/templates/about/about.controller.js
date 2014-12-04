@@ -9,7 +9,7 @@
     function ContactUsController($scope) {
         $scope.breadcrumb = {
             parent: [],
-            current: "About"
+            current: "About us"
         }
     }
 

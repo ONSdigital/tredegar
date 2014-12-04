@@ -5,7 +5,7 @@
   "number": "0.8",
   "unit": "%",
   "preUnit": "",
-  "date": "July 2014",
+  "date": "May to July 2014",
   "source": "Labour Force Survey",
   "nationalStatistic": true,
   "years": [],
@@ -1146,9 +1146,8 @@
       "sourceDataset": "LMS"
     }
   ],
-  "uri": "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/timeseries/kai9",
   "relatedBulletins": [
-    "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/uklabourmarketjuly2014",
+    "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/labourmarketstatistics",
     "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/annualsurveyofhoursandearnings2013provisionalresults",
     "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/annualsurveyofhoursandearningspensiontables2013provisionalresults"
   ],
@@ -1160,24 +1159,25 @@
   ],
   "type": "timeseries",
   "name": "Average weekly earning growth rate (regular pay)",
+  "uri": "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/timeseries/kai9",
   "fileName": "kai9",
   "breadcrumb": [
     {
       "index": 0,
       "type": "home",
-      "name": "Employment and Labour Market",
+      "name": "Employment and Labour market",
       "fileName": "employmentandlabourmarket"
     },
     {
       "index": 0,
       "type": "home",
-      "name": "People in Work",
+      "name": "People in work",
       "fileName": "peopleinwork"
     },
     {
       "index": 0,
       "type": "home",
-      "name": "Earnings and Working Hours",
+      "name": "Earnings and working hours",
       "fileName": "earningsandworkinghours",
       "breadcrumb": []
     }

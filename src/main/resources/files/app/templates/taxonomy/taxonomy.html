@@ -1,5 +1,4 @@
-<ons-header></ons-header>
-<div class="wrap">
+    <ons-loading condition="!taxonomy.data"></ons-loading>
 
     <!-- T1, T2 , T3 -->
     <span ng-if="taxonomy.data.type === 'home'">
@@ -37,6 +36,3 @@
     <span ng-if="taxonomy.data.type === 'dataset'" ng-controller="DatasetController as dataset">
         <span ng-include="'app/templates/dataset/dataset.html'"></span>
     </span>
-</div>
-<ons-footer></ons-footer>
-

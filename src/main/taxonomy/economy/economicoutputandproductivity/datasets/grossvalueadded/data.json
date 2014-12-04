@@ -65,15 +65,20 @@
   ],
   "notes": [
     {
-      "data": "These estimates are rounded to the nearest hundred and are different to the unrounded estimates in other published tables."
+      "data": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quam leo, blandit a turpis non, varius feugiat mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In posuere lectus eu laoreet ultrices. Donec ac sodales libero, eget fermentum arcu."
+    },
+    {
+      "data": "Fusce pharetra, libero in imperdiet ultricies, ex erat tempor dolor, vitae aliquet magna velit in urna. Duis finibus augue velit, ut consectetur risus imperdiet in. Sed tempus congue ante, ac cursus diam porttitor vitae. Vivamus arcu leo, volutpat in mauris ac, lacinia fermentum velit. Sed dictum tortor justo, aliquet facilisis lorem dictum a."
     }
   ],
   "summary": "By category of output (reference year 2010) for production and service industries",
-  "uri": "/economy/economicoutputandproductivity/datasets/grossvalueadded",
+  "nationalStatistic": true,
+  "description": "Gross value added at chained volume measures basic prices, by category of output (reference year 2010) for production and service industries.",
   "title": "Gross value added",
   "releaseDate": "19 February 2014",
   "type": "dataset",
   "name": "Gross value added",
+  "uri": "/economy/economicoutputandproductivity/datasets/grossvalueadded",
   "fileName": "grossvalueadded",
   "breadcrumb": [
     {
@@ -85,7 +90,7 @@
     {
       "index": 0,
       "type": "home",
-      "name": "Economic Output and Productivity",
+      "name": "Economic output and productivity",
       "fileName": "economicoutputandproductivity",
       "breadcrumb": []
     }

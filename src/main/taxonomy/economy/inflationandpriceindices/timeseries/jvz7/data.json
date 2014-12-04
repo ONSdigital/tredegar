@@ -7,7 +7,7 @@
   "preUnit": "",
   "date": "September 2014",
   "source": "Office for National Statistics",
-  "additionalText": "Index, 2005\u003d 100",
+  "additionalText": "Index, 2005 \u003d 100",
   "nationalStatistic": true,
   "years": [
     {
@@ -2223,12 +2223,12 @@
       "sourceDataset": "MM22"
     }
   ],
-  "uri": "/economy/inflationandpriceindices/timeseries/jvz7",
   "relatedBulletins": [
     "/economy/inflationandpriceindices/bulletins/consumerpriceinflation"
   ],
   "relatedTimeseries": [
-    "/economy/inflationandpriceindices/timeseries/k646"
+    "/economy/inflationandpriceindices/timeseries/k646",
+    "/economy/inflationandpriceindices/timeseries/d7bt"
   ],
   "sourceDatasets": [
     "MM22",
@@ -2236,6 +2236,7 @@
   ],
   "type": "timeseries",
   "name": "Output of manufactured product",
+  "uri": "/economy/inflationandpriceindices/timeseries/jvz7",
   "fileName": "jvz7",
   "breadcrumb": [
     {
@@ -2247,7 +2248,7 @@
     {
       "index": 0,
       "type": "home",
-      "name": "Inflation and Price Indices",
+      "name": "Inflation and price indices",
       "fileName": "inflationandpriceindices",
       "breadcrumb": []
     }

@@ -51,7 +51,7 @@ public class MetadataCSV {
 		readRobsFile();
 
 		// Report on "other":
-		Set<Timeseries> other = Data.dataset("other");
+		Set<Timeseries> other = Data.oldDataset("other");
 		if (other != null) {
 			System.out.println("'other' dataset contains " + other.size() + " CDIDs.");
 		}
@@ -70,10 +70,6 @@ public class MetadataCSV {
 			}
 			timeseries.name = row.get("Name");
 			timeseries.seasonalAdjustment = row.get("Seasonal adjustment");
-			// Slightly counterintuitive, but the values in the "Units" column
-			// are in the :Additional text" column in the Alpha Content
-			// spreadsheet:
-			timeseries.additionalText = row.get("Units");
 			timeseries.mainMeasure = row.get("Main measure");
 			timeseries.description = row.get("Description");
 			timeseries.note1 = StringUtils.defaultIfBlank(row.get("Note 1"), timeseries.note1);
@@ -85,9 +81,9 @@ public class MetadataCSV {
 		try (CSVReader csvReader = new CSVReader(new BufferedReader(new InputStreamReader(Files.newInputStream(file), Charset.forName("UTF8"))))) {
 
 			String datasetName = FilenameUtils.getBaseName(file.getFileName().toString()).replace("_", "");
-			Set<Timeseries> dataset = Data.dataset(datasetName);
+			Set<Timeseries> dataset = Data.oldDataset(datasetName);
 			if (dataset == null) {
-				dataset = Data.addDataset(datasetName);
+				dataset = Data.addOldDataset(datasetName);
 			}
 
 			// There are no header rows in these CSVs.

@@ -5,7 +5,7 @@
   "number": "6",
   "unit": "%",
   "preUnit": "",
-  "date": "July 2014",
+  "date": "May to July 2014",
   "source": "Labour Force Survey",
   "nationalStatistic": true,
   "years": [
@@ -5144,7 +5144,6 @@
       "sourceDataset": "LMS"
     }
   ],
-  "uri": "/employmentandlabourmarket/unemployment/timeseries/mgsx",
   "relatedBulletins": [
     "/employmentandlabourmarket/unemployment/bulletins/uklabourmarket",
     "/employmentandlabourmarket/unemployment/bulletins/youngpeoplenotineducationemploymentortrainingneet"
@@ -5160,12 +5159,13 @@
   ],
   "type": "timeseries",
   "name": "Unemployment rate (aged 16-64)",
+  "uri": "/employmentandlabourmarket/unemployment/timeseries/mgsx",
   "fileName": "mgsx",
   "breadcrumb": [
     {
       "index": 0,
       "type": "home",
-      "name": "Employment and Labour Market",
+      "name": "Employment and Labour market",
       "fileName": "employmentandlabourmarket"
     },
     {

@@ -11,30 +11,32 @@
   "years": [],
   "quarters": [],
   "months": [],
-  "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/livebirths/timeseries/raid55",
-  "relatedBulletins": [],
+  "relatedBulletins": [
+    "/peoplepopulationandcommunity/birthsdeathsandmarriages/livebirths/bulletins/birthsinenglandandwales2013"
+  ],
   "relatedTimeseries": [],
   "sourceDatasets": [],
   "type": "timeseries",
   "name": "Live births outside marriage",
+  "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/livebirths/timeseries/raid55",
   "fileName": "raid55",
   "breadcrumb": [
     {
       "index": 0,
       "type": "home",
-      "name": "People, Population and Community",
+      "name": "People, population and community",
       "fileName": "peoplepopulationandcommunity"
     },
     {
       "index": 0,
       "type": "home",
-      "name": "Births, Deaths and Marriages",
+      "name": "Births, deaths and marriages",
       "fileName": "birthsdeathsandmarriages"
     },
     {
       "index": 0,
       "type": "home",
-      "name": "Live Births",
+      "name": "Live births",
       "fileName": "livebirths",
       "breadcrumb": []
     }

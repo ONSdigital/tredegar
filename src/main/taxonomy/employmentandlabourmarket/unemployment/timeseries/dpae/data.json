@@ -5172,7 +5172,6 @@
       "sourceDataset": "LMS"
     }
   ],
-  "uri": "/employmentandlabourmarket/unemployment/timeseries/dpae",
   "relatedBulletins": [
     "/employmentandlabourmarket/unemployment/bulletins/uklabourmarket",
     "/employmentandlabourmarket/unemployment/bulletins/youngpeoplenotineducationemploymentortrainingneet"
@@ -5187,12 +5186,13 @@
   ],
   "type": "timeseries",
   "name": "Total Claimant Count Male",
+  "uri": "/employmentandlabourmarket/unemployment/timeseries/dpae",
   "fileName": "dpae",
   "breadcrumb": [
     {
       "index": 0,
       "type": "home",
-      "name": "Employment and Labour Market",
+      "name": "Employment and Labour market",
       "fileName": "employmentandlabourmarket"
     },
     {

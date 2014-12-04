@@ -3388,7 +3388,6 @@
       "sourceDataset": "OTT"
     }
   ],
-  "uri": "/businessindustryandtrade/tourismindustry/timeseries/gmax",
   "relatedBulletins": [
     "/businessindustryandtrade/tourismindustry/bulletins/overseastravelandtourismprovisionalresultsformay2014"
   ],
@@ -3400,18 +3399,19 @@
   ],
   "type": "timeseries",
   "name": "UK visits abroad",
+  "uri": "/businessindustryandtrade/tourismindustry/timeseries/gmax",
   "fileName": "gmax",
   "breadcrumb": [
     {
       "index": 0,
       "type": "home",
-      "name": "Business, Industry and Trade",
+      "name": "Business, industry and trade",
       "fileName": "businessindustryandtrade"
     },
     {
       "index": 0,
       "type": "home",
-      "name": "Tourism Industry",
+      "name": "Tourism industry",
       "fileName": "tourismindustry",
       "breadcrumb": []
     }

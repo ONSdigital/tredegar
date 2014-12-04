@@ -18,14 +18,14 @@
             <li class="nav--primary__hide-small-med">
                 <a href="#!/">Home</a>
             </li>
-            <li ons-nav-item="{{n.url}}" expandable="true" ons-nav-expand-class="js-expandable-active" ng-repeat="n in nav.links" class="nav__expandable js-expandable">
+            <li onmouseover="" ons-double-tap ons-nav-item="{{n.url}}" expandable="true" ons-nav-expand-class="js-expandable-active" ng-repeat="n in onsNavigation" class="nav__expandable js-expandable">
                 <a ng-href="{{w_nav.mobile ? '' : ('#!' + n.url)}}">{{n.name}}</a>
                 <ul class="nav--primary__sub js-expandable__content" ons-nav-collapse-class="js-nav-hidden">
-                    <li ons-nav-item ons-nav-mobile>
-                        <a href="#!{{n.url}}">{{n.name}}</a>
+                    <li class="nav__top-level-duplicate" ons-nav-item ons-nav-mobile>
+                        <a tabindex="-1" href="#!{{n.url}}">{{n.name}}</a>
                     </li>
                     <li ons-nav-item="{{c.url}}" ng-repeat="c in n.children">
-                        <a href="#!{{c.url}}">{{c.name}}</a>
+                        <a tabindex="-1" href="#!{{c.url}}">{{c.name}}</a>
                     </li>
                 </ul>
             </li>

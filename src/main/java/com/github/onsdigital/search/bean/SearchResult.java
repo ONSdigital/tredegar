@@ -24,9 +24,10 @@ import com.google.gson.JsonObject;
  */
 public class SearchResult {
 
-	private long took; // milliseconds
 	private long numberOfResults; // total number of hits
 	private List<Map<String, Object>> results; // results
+	private boolean suggestionBasedResult;
+	private String suggestion;
 
 	/**
 	 * Create search results using {@link JsonObject}
@@ -35,11 +36,10 @@ public class SearchResult {
 	 */
 	public SearchResult(SearchResponse response) {
 		results = new ArrayList<Map<String, Object>>();
-		this.took = response.getTookInMillis();
 		this.numberOfResults = response.getHits().getTotalHits();
 		resolveHits(response);
 	}
-
+	
 	void resolveHits(SearchResponse response) {
 		SearchHit hit;
 		Iterator<SearchHit> iterator = response.getHits().iterator();
@@ -48,7 +48,8 @@ public class SearchResult {
 			Map<String, Object> item = new HashMap<String, Object>(
 					hit.getSource());
 			item.put("type", hit.getType());
-			item.putAll(extractHihglightedFields(hit));
+			item.put("highlights", 
+					extractHihglightedFields(hit));
 			results.add(item);
 		}
 	}
@@ -69,14 +70,6 @@ public class SearchResult {
 		return highlightedFields;
 	}
 
-	public long getTook() {
-		return took;
-	}
-
-	public void setTook(long took) {
-		this.took = took;
-	}
-
 	public long getNumberOfResults() {
 		return numberOfResults;
 	}
@@ -91,6 +84,22 @@ public class SearchResult {
 
 	public void setResults(List<Map<String, Object>> hits) {
 		this.results = hits;
+	}
+
+	public boolean isSuggestionBasedResult() {
+		return suggestionBasedResult;
+	}
+
+	public void setSuggestionBasedResult(boolean suggestionBasedResult) {
+		this.suggestionBasedResult = suggestionBasedResult;
+	}
+
+	public String getSuggestion() {
+		return suggestion;
+	}
+
+	public void setSuggestion(String suggestion) {
+		this.suggestion = suggestion;
 	}
 
 }

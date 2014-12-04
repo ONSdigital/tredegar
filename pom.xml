@@ -21,7 +21,7 @@
 		<dependency>
 			<groupId>com.github.davidcarboni</groupId>
 			<artifactId>restolino</artifactId>
-			<version>0.0.22</version>
+			<version>0.0.26</version>
 		</dependency>
 		<dependency>
 			<groupId>com.github.davidcarboni</groupId>
@@ -41,6 +41,20 @@
 			<groupId>org.elasticsearch</groupId>
 			<artifactId>elasticsearch</artifactId>
 			<version>${es.version}</version>
+		</dependency>
+
+		<!-- MongoDB -->
+		<dependency>
+			<groupId>org.mongodb</groupId>
+			<artifactId>mongo-java-driver</artifactId>
+			<version>2.12.4</version>
+		</dependency>
+
+ 		<!-- Encryption -->
+		<dependency>
+			<groupId>com.github.davidcarboni</groupId>
+			<artifactId>cryptolite</artifactId>
+			<version>1.2.5</version>
 		</dependency>
 
 		<!-- Prerender.io -->
@@ -70,18 +84,18 @@
 			<version>1.9.5</version>
 			<scope>test</scope>
 		</dependency>
-<!-- 		<dependency> -->
-<!-- 			<groupId>org.powermock</groupId> -->
-<!-- 			<artifactId>powermock-module-junit4</artifactId> -->
-<!-- 			<version>${powermock.version}</version> -->
-<!-- 			<scope>test</scope> -->
-<!-- 		</dependency> -->
-<!-- 		<dependency> -->
-<!-- 			<groupId>org.powermock</groupId> -->
-<!-- 			<artifactId>powermock-api-mockito</artifactId> -->
-<!-- 			<version>${powermock.version}</version> -->
-<!-- 			<scope>test</scope> -->
-<!-- 		</dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.powermock</groupId> -->
+		<!-- <artifactId>powermock-module-junit4</artifactId> -->
+		<!-- <version>${powermock.version}</version> -->
+		<!-- <scope>test</scope> -->
+		<!-- </dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.powermock</groupId> -->
+		<!-- <artifactId>powermock-api-mockito</artifactId> -->
+		<!-- <version>${powermock.version}</version> -->
+		<!-- <scope>test</scope> -->
+		<!-- </dependency> -->
 
 	</dependencies>
 
