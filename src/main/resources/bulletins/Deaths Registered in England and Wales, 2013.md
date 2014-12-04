@@ -33,7 +33,7 @@ For almost all causes of death, the age-standardised mortality rates are higher 
 
 The impact of the change from the 1976 ESP to the 2013 ESP was greatest for conditions commonly associated with older ages (where ASMRs increased) and those almost exclusive to very young ages (where ASMRs decreased). More information about the impact of this change can be found on the [ONS website](http://www.ons.gov.uk/ons/guide-method/user-guidance/health-and-life-events/revised-european-standard-population-2013--2013-esp-/index.html "Revised European Standard Population 2013 (2013 ESP)").
 
-<div class="chart-container">
+<div frameBorder ="0" scrolling = "no" class="chart-container">
 <iframe src="http://onsdigital.github.io/Alpha/bulletins/death1.html"></iframe>
 </div>
 
@@ -67,7 +67,7 @@ The perinatal mortality rate (stillbirths and deaths under 7 days) was 6.7 death
 Small fluctuations in the infant mortality rate have occurred over recent years, after a series of larger drops in the early 1980s and again between 1987 and 1991 (Figure 2). Between 1983 and 2013 the infant mortality rate fell by 60%, while the neonatal and postneonatal mortality rates fell by 54% and 72% respectively. Although the overall trend has been one of decreasing rates, the rates of change have not been constant over the period: change in the first decade was nearly twice that in the latter two decades.
 
 
-<div class="chart-container">
+<div frameBorder ="0" scrolling = "no" class="chart-container">
 <iframe src="http://onsdigital.github.io/Alpha/bulletins/death2.html"></iframe>
 </div>
 

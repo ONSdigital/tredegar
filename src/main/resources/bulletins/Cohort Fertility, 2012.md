@@ -1,10 +1,10 @@
-Theme: People, Population and Community
+﻿Theme: People, Population and Community
 Level 2: Births, Deaths and Marriages
 Level 3: Conception and Fertility Rates
 Summary: Fertility on year of birth of mother rather than the year of birth of child. Includes average number of live-born children and the proportion of women remaining childless by year of birth.
-Headline 1: The average completed family size for women born in 1967 and reaching age 45 in 2012, was 1.91 children per woman. This compares with their mothers’ generation, represented by women born in 1940, who had on average 2.36 children.
-Headline 2: Two children was the most common family size for women born in both 1940 and 1967.
-Headline 3: The level of childlessness among women born in 1967 (19%) is higher than for women born in 1940 (11%). One in ten women born in 1967 had four or more children, compared with nearly one in five women born in 1940.
+Headline 1: The average completed family size for women born in 1967 and reaching age 45 in 2012, was 1.91 children per woman. 
+Headline 2: This compares with their mothers’ generation, represented by women born in 1940, who had on average 2.36 children.
+Headline 3: Two children was the most common family size for women born in both 1940 and 1967.
 Contact name: Oliver Dormon
 Contact email: oliver.dormon@ons.gsi.gov.uk
 
@@ -30,23 +30,6 @@ Table A shows the average family size and estimated family size distribution for
 
 This comparison of the most recent cohort to have finished their childbearing with their mothers' cohort lets us examine change over time. The completed family size of the 1967 cohort is much smaller than for the 1940 cohort, and the proportion of women remaining childless is substantially higher for the 1967 cohort.
 
-#### Table A: Average family size and estimated family size distribution for women who have completed their families, by year of birth of woman, selected cohorts
-
-|                         | Average completed family size |    |    |    |    |    | Total 3 |
-|-------------------------|-------------------------------|----|----|----|----|----|---------|
-| Year of birth of woman1 |                               | 0  | 1  | 2  | 3  | 4+ | Total   |
-| 1940                    | 2.36                          | 11 | 13 | 36 | 22 | 18 | 100     |
-| 1967                    | 1.91                          | 19 | 15 | 37 | 18 | 10 | 100     |
-
-##### Table notes:
-
-1. The 1967 cohort is the latest group to have reached age 45. The 1940 cohort is assumed to be their mothers' generation because the average age of mothers giving birth in 1967 was 27 years, and women of that age were born in 1940.
-2. Percentage of women who have reached age 45 with 0, 1, 2, 3 or 4+ children. 
-3. Figures may not add exactly due to rounding.
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS") [XLS format](http://www.ons.gov.uk/ons/rel/fertility-analysis/cohort-fertility--england-and-wales/2012/prt-table-a.xls "XLS format") (26 Kb)
-
 ## What is Cohort Fertility ?
 A cohort is a group of women born in the same year. Cohort fertility analyses explore whether current generations of women of childbearing age are reaching, exceeding or falling short of the fertility levels of previous generations. This bulletin contains statistics on changes in average family size and past and present levels of childlessness for different cohorts of women, and the proportions of women having one, two or more children.
 
@@ -62,16 +45,13 @@ Women born in 1982, who have reached age 30 in 2012, are also used as a comparis
 ## Average Family Size
 The average number of live-born children a woman has had by the end of her childbearing years (completed family size) has been falling but has stabilised for recent cohorts (Figure 1). Women born in 1967 had on average 1.91 live-born children, which remains unchanged from the 1966 cohort. This compares with women born in the 1930s and 1940s, who had on average between 2.1 and 2.4 children. Cohorts of women born from 1958 onwards have had on average fewer than two children per woman. This decrease in the average family size is mainly due to rising levels of childlessness, which is discussed further in the next section.
 
-#### Figure 1: Average number of live-born children by age 30 and completed family size, by year of birth of woman
-##### England and Wales
+<div frameBorder ="0" scrolling = "no" class="chart-container">
+<iframe src="http://onsdigital.github.io/Alpha/bulletins/cohort1.html"></iframe>
+</div>
 
-[![Figure 1: Average number of live-born children by age 30 and completed family size, by year of birth of woman](http://www.ons.gov.uk/ons/resources/chsfigure1_tcm77-338456.png)](http://www.ons.gov.uk/ons/resources/chsfigure1_tcm77-338456.png "Figure 1: Average number of live-born children by age 30 and completed family size, by year of birth of woman")
 
 ##### Notes:
 1. Table 1 in the cohort fertility release and Figure 1 measure cumulative fertility. For example, Figure 1 shows that women born in 1981 had given birth to 1.01 children on average up to their 30th birthday (this includes fertility up to and including age 29).
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS") [XLS format](http://www.ons.gov.uk/ons/rel/fertility-analysis/cohort-fertility--england-and-wales/2012/chd-figure-1.xls "XLS format") (58 Kb)
 
 The average number of children women have had up to their 30th birthday can give an indication of more recent trends in family size. Figure 1 shows a slight upturn in average family size by the 30th birthday for the most recent cohorts, from 0.99 children for the 1975 cohort to 1.02 for the 1982 cohort. This is mainly because women born in 1982 had higher fertility rates in their late twenties than those born in 1975. There is no single explanation for this increase, but possible reasons include the changes in support for families introduced by the previous government (such as tax credits and maternity/paternity leave), and the increasing proportion of women aged 25-29 who were born outside the UK (with fertility above the UK born average) (See section note 1). 
 
@@ -90,18 +70,13 @@ The average number of children women have had up to their 30th birthday can give
 ## Childlessness
 Childlessness is estimated as the proportion of women who have not had a live birth by a specific age.
 
-#### Figure 2: Percentage of women remaining childless(1) by their 30th birthday and completion of childbearing, by year of birth of woman
-
-##### England and Wales
-
-[![Figure 2: Percentage of women remaining childless(1) by their 30th birthday and completion of childbearing, by year of birth of woman](http://www.ons.gov.uk/ons/resources/chsfigure2_tcm77-338533.png)](http://www.ons.gov.uk/ons/resources/chsfigure2_tcm77-338533.png "Figure 2: Percentage of women remaining childless(1) by their 30th birthday and completion of childbearing, by year of birth of woman")
+<div frameBorder ="0" scrolling = "no" class="chart-container">
+<iframe src="http://onsdigital.github.io/Alpha/bulletins/cohort2.html"></iframe>
+</div>
 
 ##### Notes:
 1. The percentage of women remaining childless by age 30 and by completion of childbearing is calculated as 1 minus the proportion of women who have had at least one live birth by that age, multiplied by 100.
 2. This calculation takes into account all first live births from a woman's teenage years through to the last day she is 29 (the day before her 30th birthday) or the last day she is 45 (the day before her 46th birthday).
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS") [XLS format](http://www.ons.gov.uk/ons/rel/fertility-analysis/cohort-fertility--england-and-wales/2012/chd-figure-2.xls "XLS format") (54.5 Kb)
 
 Figure 2 shows that the level of childlessness for women reaching age 45 born in 1967, is high at 19%, but slightly lower than for the previous six cohorts, of whom 20% remained childless. Around one in five women born in 1967 (and 1920) remained childless by the end of their childbearing years compared with one in nine women born in 1940. A wide range of explanations relating to circumstances and choices have been put forward for the increasing childlessness seen in recent cohorts. These include the decline in the proportion of women married, changes in the perceived costs and benefits of childrearing versus work and leisure activities, greater social acceptability of the childfree lifestyle and the postponement of decisions about whether to have children until it may be biologically too late (see note 1).
 
@@ -121,16 +96,13 @@ Basten, S (2009). Voluntary childlessness and being Childfree. The Future of Hum
 Berrington, A.M. (2004). Perpetual postponers? Women's, men's and couple's fertility intentions and subsequent fertility behaviour. [Population Trends 117: 9-19. (137.7 Kb Pdf)](http://www.ons.gov.uk/ons/rel/population-trends-rd/population-trends/no--117--autumn-2004/perpetual-postponers--women-s--men-s-and-couple-s-fertility-intentions-and-subsequent-fertility-behaviour.pdf "Population Trends 117: 9-19")
 
 ## Teenage Childbearing
-#### Figure 3: Percentage of women who have had a child by their 20th birthday, by year of birth of woman
 
-##### England and Wales
-[![Figure 3: Percentage of women who have had a child by their 20th birthday, by year of birth of woman](http://www.ons.gov.uk/ons/resources/chsfigure3_tcm77-338544.png)](http://www.ons.gov.uk/ons/resources/chsfigure3_tcm77-338544.png "Figure 3: Percentage of women who have had a child by their 20th birthday, by year of birth of woman")
+<div frameBorder ="0" scrolling = "no" class="chart-container">
+<iframe src="http://onsdigital.github.io/Alpha/bulletins/cohort3.html"></iframe>
+</div>
 
 ##### Notes:
 1. This calculation takes into account all first live births from a woman's teenage years through to the last day she is 19 (the day before her 20th birthday)
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS") [XLS format](http://www.ons.gov.uk/ons/rel/fertility-analysis/cohort-fertility--england-and-wales/2012/chd-figure-3.xls "XLS format") (50 Kb)
 
 Figure 3 shows that the proportion of women who have had a live birth by age 20 has been gradually decreasing for more recent cohorts, from a peak of around two in ten for women born in 1952, to around one in ten women for those born in 1992, the most recent cohort to reach age 20. This shows that the proportion of women becoming teenage mothers is falling, though the level of teenage motherhood remains above that of the cohorts born in the early 1920s where around 7% of women had a child by age 20. This fall in the proportion of teenagers becoming mothers has accompanied recent falls in the annual number of teenage conceptions. 
 
@@ -139,52 +111,21 @@ Conception statistics include all pregnancies of women usually resident in Engla
 ##### Notes for Teenage Childbearing
 1. More details on teenage conceptions can be found in the annual [ONS conceptions release](http://www.ons.gov.uk/ons/rel/vsob1/conception-statistics--england-and-wales/index.html "Conception Statistics, England and Wales index").
 
-## Number of Children
-#### Figure 4: Estimated family size distribution for women born between 1920 and 1967 who are assumed to have completed their childbearing
+<div frameBorder ="0" scrolling = "no" class="chart-container">
+<iframe src="http://onsdigital.github.io/Alpha/bulletins/cohort4.html"></iframe>
+</div>
 
-##### England and Wales
-[![Figure 4: Estimated family size distribution for women born between 1920 and 1967 who are assumed to have completed their childbearing](http://www.ons.gov.uk/ons/resources/chsfigure4_tcm77-338620.png)](http://www.ons.gov.uk/ons/resources/chsfigure4_tcm77-338620.png "Figure 4: Estimated family size distribution for women born between 1920 and 1967 who are assumed to have completed their childbearing")
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS") [XLS format](http://www.ons.gov.uk/ons/rel/fertility-analysis/cohort-fertility--england-and-wales/2012/chd-figure-4.xls "XLS format") (3.29 Mb)
 
 The traditional two-child family remains the most common family type in England and Wales, with 37% of women born in 1967 having two children (Figure 4, Table B). Childlessness is the second most common family size for the 1967 cohort. This is a recent development first encountered among the 1964 cohort, whereas for those born between the late 1930s and early 1960s, three children was the second most common family size. A woman born in 1940 was more likely to have one, three or, ‘four or more’ children than not to have any. Only one in ten women born in 1967 had four or more children, compared with nearly one in five in the 1940 cohort (Table B).
-
-#### Table B: Average family size and estimated family size distribution for women who are assumed to have completed their childbearing, by year of birth of woman, 1920 to 1967
-##### England and Wales
-
-|      |                               |    |    |    |    | Number of live-born children (percentages) 1 | Total |
-|------|------------------------------:|---:|---:|---:|---:|---------------------------------------------:|------:|
-|      | **Average completed family size** |  **0** |  **1** |  **2** |  **3** |                                           **4+** |    |
-| 1920 |                          2.00 | 21 | 21 | 27 | 16 |                                           15 |   100 |
-| 1925 |                          2.12 | 17 | 22 | 28 | 17 |                                           16 |   100 |
-| 1930 |                          2.35 | 13 | 18 | 30 | 19 |                                           20 |   100 |
-| 1935 |                          2.42 | 12 | 15 | 32 | 21 |                                           20 |   100 |
-| 1940 |                          2.36 | 11 | 13 | 36 | 22 |                                           18 |   100 |
-| 1945 |                          2.19 | 10 | 14 | 43 | 21 |                                           12 |   100 |
-| 1950 |                          2.07 | 14 | 13 | 44 | 20 |                                           10 |   100 |
-| 1955 |                          2.02 | 16 | 13 | 41 | 19 |                                           11 |   100 |
-| 1960 |                          1.98 | 19 | 12 | 38 | 20 |                                           11 |   100 |
-| 1965 |                          1.91 | 20 | 13 | 38 | 19 |                                           10 |   100 |
-| 1967 |                          1.91 | 19 | 15 | 37 | 18 |                                              |   100 |
-
-##### Table notes:
-1. Percentage of women with 0, 1, 2, 3 or, 4+ children at age 45
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS") [XLS format](http://www.ons.gov.uk/ons/rel/fertility-analysis/cohort-fertility--england-and-wales/2012/prt-table-b.xls "XLS format") (26.5 Kb)
 
 The proportion of women with a one-child family has shown a slight increase for women born between 1940 and 1967 with 15 per cent of women born in 1967 having a one-child family. The proportion of women with only one child was highest for women born in the 1920s, where around one-fifth had one child – this may be because their marriage and childbearing were delayed or disrupted by World War II.
 
 ## The Changing Age Pattern of Fertility
 Looking at the fertility rates of selected cohorts at particular age milestones highlights how the age distribution of women giving birth has varied over time. As an example, the three vertical lines on Figure 5 allow a comparison of the age profile of fertility in the 1967 cohort, who have completed their childbearing, their mother's generation cohort of 1940 and that of the 1982 cohort to date.
 
-#### Figure 5: Age-specific fertility rates(1) at selected ages, by year of birth of woman, 1935 to 1992
-##### England and Wales
-[![Figure 5: Age-specific fertility rates(1) at selected ages, by year of birth of woman, 1935 to 1992](http://www.ons.gov.uk/ons/resources/chsfigure5_tcm77-338646.png)](http://www.ons.gov.uk/ons/resources/chsfigure5_tcm77-338646.png "Figure 5: Age-specific fertility rates(1) at selected ages, by year of birth of woman, 1935 to 1992")
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS") [XLS format](http://www.ons.gov.uk/ons/rel/fertility-analysis/cohort-fertility--england-and-wales/2012/chd-figure-5.xls "XLS format") (116 Kb)
+<div frameBorder ="0" scrolling = "no" class="chart-container">
+<iframe src="http://onsdigital.github.io/Alpha/bulletins/cohort5.html"></iframe>
+</div>
 
 For the 1967 cohort the highest fertility rate of those shown was at the age of 25, closely followed by age 30. Lower levels of fertility were recorded at the ages of 20 and 35, while the number of live births per 1,000 women at age 40 was lower still. On average the 1967 cohort had 1.91 children per woman. However, fertility levels at age 35 and 40 were higher in the 1967 cohort than in the 1940 cohort.  
   
@@ -253,7 +194,7 @@ This birth order information, both the new complete data, and the older estimate
 
 Changes to the tables previously included within [Live Births by Socio-economic Status of Father](http://www.ons.gov.uk/ons/rel/vsob1/live-births-by-socio-economic-status-of-father--england-and-wales/index.html "Live Births by Socio-economic Status of Father, England and Wales index") are implemented in releases also published today in addition to implementing the combined method for deriving the National Statistics Socio-economic Classification (using the more advantaged NS-SEC of both parents rather than the NS-SEC of the father). An [outline of the changes to outputs for 2012 data](http://www.ons.gov.uk/ons/rel/vsob1/live-births-by-socio-economic-status-of-father--england-and-wales/2011.html "Live births by socio-economic status of father, England and Wales - 2011") was published on the ONS website alongside the release of 2011 data.
 
-## Background notes
+## [accordion] Background notes and methodology
 1. Cohort fertility analysis allows the fertility experience of a group of women sharing the same year of birth (a cohort) to be traced through time and compared with the experience of other cohorts. Statistics relating to the family building of women born in given years shed light on the trends underlying year-to-year changes in fertility and are particularly valuable in helping to formulate models of future fertility. Period measures of fertility, such as the Total Fertility Rate (TFR), provide a timely snapshot of the intensity of childbearing in a particular year. However the TFR should not be interpreted as a measure of family size because it is affected by the timing of childbearing. The TFR is likely to under or overestimate average family size during periods where women are delaying having children or later catching up. Cohort fertility analysis may not be as timely, but provides an accurate measure of trends in family size. The TFR in England and Wales of 1.94 children per woman in 2012 represents the current level of childbearing among women of all childbearing ages. The average family size of 1.91 children is for women who have completed their childbearing in 2012. The two measures should not be directly compared for the reasons noted above. 
 
 2. A woman is assumed to have completed her childbearing by the last day she is aged 45, that is by her 46th birthday (exact age 46). Completed fertility includes fertility rates up to and including age 45. See background note 4 for a more technical explanation.
@@ -293,3 +234,9 @@ E-mail: <fertility@ons.gsi.gov.uk>
 13. Details of the policy governing the release of new data are available by visiting [www.statisticsauthority.gov.uk/assessment/code-of-practice/index.html](http://www.statisticsauthority.gov.uk/assessment/code-of-practice/index.html) or from the Media Relations Office email: <media.relations@ons.gsi.gov.uk>
 
 These National Statistics are produced to high professional standards and released according to the arrangements approved by the UK Statistics Authority.
+
+## [accordion] References
+This information will not be available in the prototype, however in the future all references related to this statistical bulletin will appear here.
+
+## [accordion] Footnotes
+This information will not be available in the prototype, however in the future the footnotes related to this statistical bulletin will appear here.

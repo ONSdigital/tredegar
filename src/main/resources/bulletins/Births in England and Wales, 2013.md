@@ -1,4 +1,4 @@
-Theme: People, Population and Community
+﻿Theme: People, Population and Community
 Level 2: Births, Deaths and Marriages
 Level 3: Live Births
 Summary: Annual data of live births, fertility rates, percentage of births outside marriage, sex ratio, mean age of mother and country of birth of mother and father.
@@ -30,17 +30,12 @@ The total fertility rate for England and Wales (see background note 3) decreased
 
 During the 1990s, the TFR fell from 1.80 in 1992 to a record low of 1.63 by 2001. This was largely due to women delaying childbearing to older ages ( [Jefferies, 2008 (297 Kb Pdf)](http://www.ons.gov.uk/ons/rel/population-trends-rd/population-trends/no--131--spring-2008/fertility-assumptions-for-the-2006-based-national-population-projections.pdf "Fertility assumptions for the 2006-based national population projections") ; [Tromans, et al., 2008 (3.33 Mb Pdf)](http://www.ons.gov.uk/ons/rel/population-trends-rd/population-trends/no--133--autumn-2008/have-national-trends-in-fertility-between-1986-and-2006-occurred-evenly-across-england-and-wales-.pdf "Have national trends in fertility between 1986 and 2006 occurred evenly across England and Wales") ). The TFR rose steadily between 2002 and 2008 to 1.92, then remained relatively stable between 2009 and 2012 (between 1.90 and 1.94). The fall in TFR from 1.94 in 2012 to 1.85 in 2013 was the largest annual decrease in the fertility rate since 1975.
 
-#### Figure 1: Number of Live Births and Total Fertility Rate (TFR), 1943-2013
-##### England and Wales
-[![Figure 1: Number of Live Births and Total Fertility Rate (TFR), 1943-2013](http://www.ons.gov.uk/ons/resources/tfrchart2013v1_tcm77-371076.png)](http://www.ons.gov.uk/ons/resources/tfrchart2013v1_tcm77-371076.png "Figure 1: Number of Live Births and Total Fertility Rate (TFR), 1943-2013")
-
-Source: Office for National Statistics
+<div frameBorder ="0" scrolling = "no" class="chart-container">
+<iframe src="http://onsdigital.github.io/Alpha/bulletins/births1.html"></iframe>
+</div>
 
 ##### Notes:
 1. Based on births occurring in the calendar year.
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/vsob1/birth-summary-tables--england-and-wales/2013/chd-fig1-births-and-tfr.xls) (30 Kb)
 
 Changes in the TFR can result from changes in the timing of childbearing within women’s lives as well as any changes in completed family size.
 
@@ -73,17 +68,13 @@ In most developed countries women have been increasingly delaying childbearing t
 
 In summary, the overall fall in the total fertility rate (TFR) in 2013 was a consequence of larger decreases in fertility for those aged under 25 than in recent years, in addition to decreases in fertility at ages 35 and over, where fertility rates have previously increased for nearly two decades. Reductions in fertility rates for women aged 25-34 have also contributed to the overall decrease, Fertility rates have fluctuated for women in this age range over recent years, despite an overall increasing trend since 2001/2. 
 
-#### Figure 2: Age-Specific Fertility Rates, 1983-2013
-##### England and Wales
-[![Figure 2: Age-Specific Fertility Rates, 1983-2013](http://www.ons.gov.uk/ons/resources/asfrchart2013b_tcm77-371069.png)](http://www.ons.gov.uk/ons/resources/asfrchart2013b_tcm77-371069.png "Figure 2: Age-Specific Fertility Rates, 1983-2013")
-
-Source: Office for National Statistics
+<div frameBorder ="0" scrolling = "no" class="chart-container">
+<iframe src="http://onsdigital.github.io/Alpha/bulletins/births2.html"></iframe>
+</div>
 
 ##### Notes:
 1. Based on births occurring in the calendar year.
 
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/vsob1/birth-summary-tables--england-and-wales/2013/chd-fig2-asfr.xls) (28.5 Kb)
 
 These changes in age-specific fertility rates have resulted in a continued rise to the average age of mothers reaching 30.0 years in 2013, compared with 29.8 years in 2012 (see background note 6). The average age of mothers has been increasing since 1975, with increasing numbers of women delaying childbearing to later ages. This may be due to a number of factors such as increased participation in higher education, increased female participation in the labour force, the increasing importance of a career, the rising opportunity costs of childbearing, labour market uncertainty, housing factors and instability of partnerships (Ní Bhrolcháin, et al., 2012). 
 
@@ -132,13 +123,7 @@ In Scotland the number of births decreased from 58,027 in 2012 to 56,014 in 2013
 During May 2012 changes were made to the Population Statistics Act, which means that information on the number of previous children and whether previously married is now collected from all mothers at birth registration and not just from married women. This will have an impact on a number of tables and [proposals for changes (66.2 Kb Pdf)](http://www.ons.gov.uk/ons/guide-method/user-guidance/health-and-life-events/how-changes-to-population-statistics-act-will-affect-birth-statistics.pdf "How changes to Population Statistics Act will affect birth statistics") to outputs for 2012 and 2013 data were outlined on the ONS website in July 2012. Feedback from users was invited. No feedback was received and so the outlined changes are being implemented.
 
 ## Users and Uses of Birth Statistics
-The Office for National Statistics uses births data to:  
-
-produce population estimates and population projections at both national and subnational level,
-
-quality assure census estimates, and
-
-report on social and demographic trends.
+The Office for National Statistics uses births data to produce population estimates and population projections at both national and subnational level, quality assure census estimates, and report on social and demographic trends.
 
 The Department of Health (DH) is a key user of birth statistics. Data are used, for example, to plan maternity services, inform policy decisions and monitor child mortality. The [Public Health Outcomes Framework](http://www.ons.gov.uk/ons/external-links/other-government-departments/gov-uk/healthy-lives--healthy-people--improving-outcomes.html "Healthy lives, healthy people; Improving outcomes") sets out the desired outcomes for public health and how these are measured. This includes indicators related to births. Similar indicators are also included within the [NHS Outcomes Framework](http://www.ons.gov.uk/ons/external-links/other-government-departments/gov-uk/nhs-outcomes-framework-2013-to-2014.html "NHS Outcomes Framework 2013 to 2014").
 
@@ -161,7 +146,7 @@ For births data for other UK countries please see the [latest birth statistics f
 
 International comparisons of live birth numbers and rates are available in the [Vital Statistics: Population and Health Reference Tables](http://www.ons.gov.uk/ons/rel/vsob1/vital-statistics--population-and-health-reference-tables/index.html "[Vital Statistics: Population and Health Reference Tables index"). 
 
-## References
+## [accordion] References
 1000 Lives Plus, Transforming Maternity Services- Welsh Initiative for Stillbirth Reduction (WISR) [accessed 01 July 2014], available at: [www.1000livesplus.wales.nhs.uk/maternity-services-stillbirth](http://www.1000livesplus.wales.nhs.uk/maternity-services-stillbirth "1000 lives births")
 
 Del Bono E, Weber A, Winter-Ebmer R (2014) Fertility and economic instability: the role of unemployment and job displacement, available at: [www.iser.essex.ac.uk/publications/working-papers/iser/2014-06.pdf](http://www.iser.essex.ac.uk/publications/working-papers/iser/2014-06.pdf "www.iser.essex.ac.uk")
@@ -190,7 +175,7 @@ Stillbirth and Neonatal Death charity (Sands) UK stillbirth and neonatal death c
 
 Tromans N, Natamba E, Jefferies J and Norman P (2008) ‘Have national trends in fertility between 1986 and 2006 occurred evenly across England and Wales?’, Population Trends 133, pp 7–19, autumn 2008, available at: [www.ons.gov.uk/ons/rel/population-trends-rd/population-trends/no--133--autumn-2008/have-national-trends-in-fertility-between-1986-and-2006-occurred-evenly-across-england-and-wales-.pdf](http://www.ons.gov.uk/ons/rel/population-trends-rd/population-trends/no--133--autumn-2008/have-national-trends-in-fertility-between-1986-and-2006-occurred-evenly-across-england-and-wales-.pdf "Have national trends in fertility between 1986 and 2006 occurred evenly across England and Wales?")
 
-## Background notes
+## [accordion] Background notes and methodology
 1. Birth figures are based on births occurring in the data year, but incorporate a small number of late registrations from births occurring in the previous year.
 
 2. There is a large degree of comparability in birth statistics between countries within the UK. However, there are some differences although these are believed to have a negligible impact on the comparability of the statistics. These differences are outlined in [Quality and Methodology Information (275.2 Kb Pdf)](http://www.ons.gov.uk/ons/guide-method/method-quality/quality/quality-information/population/quality-and-methodology-information-for-birth-statistics.pdf "Quality and Methodology Information for Birth Statistics") document for births.
@@ -236,3 +221,6 @@ Designation can be broadly interpreted to mean that the statistics:
 - are managed impartially and objectively in the public interest.
 
 Once statistics have been designated as National Statistics it is a statutory requirement that the Code of Practice shall continue to be observed.
+
+## [accordion] Footnotes
+This information will not be available in the prototype, however in the future the footnotes related to this statistical bulletin will appear here.

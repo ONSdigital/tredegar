@@ -1,4 +1,4 @@
-Theme: People, Population and Community
+﻿Theme: People, Population and Community
 Level 2: Births, Deaths and Marriages
 Level 3: Marriage, Cohabitation and Civil Partnerships
 Summary: Annual data on marriages in England and Wales. Marriages abroad not included. Non-residents are included. Derived as part of civil registration.
@@ -30,19 +30,15 @@ The publication of Marriages in England and Wales (provisional) 2012 is later th
 ## Number of Marriages
 The provisional number of marriages registered in England and Wales rose by 5.3% in 2012 to 262,240, compared with 249,133 in 2011. This increase in the provisional marriage figure for 2012 continues the recent upward trend, following the low recorded for 2009.
 
-#### Figure 1: Number of Marriages and Divorces, 1932–2012
-##### England and Wales
-[![Figure 1: Number of Marriages and Divorces, 1932–2012](http://www.ons.gov.uk/ons/resources/fig1numberofmarriagesanddivorcescasline_tcm77-366501.png)](http://www.ons.gov.uk/ons/resources/fig1numberofmarriagesanddivorcescasline_tcm77-366501.png "Figure 1: Number of Marriages and Divorces, 1932–2012")
+<div frameBorder ="0" scrolling = "no" class="chart-container">
+<iframe src="http://onsdigital.github.io/Alpha/bulletins/marriage1.html"></iframe>
+</div>
 
-Source: Office for National Statistics
 ##### Notes:
 1. Figures for 2012 marriages are provisional.
 2. Divorce Reform Act 1969 came into effect 1 January 1971.
 3. Asylum and Immigration (Treatment of Claimants etc) Act 2004 came into effect 1 February 2005. Any migrant already in the UK and subject to immigration control was required to apply for a Certificate of Approval before they could get married in England and Wales (unless they were getting married within the Anglican Church).
 4. The Certificate of Approval Scheme was abolished on 9 May 2011.
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/vsob1/marriages-in-england-and-wales--provisional-/2012/chd-figure-1-number-of-marriages.xls) (30.5 Kb)
 
 Figure 1 shows the changing trends in the number of marriages and divorces since 1932. The sharp increase in marriages observed around 1940 can be attributed to the start of the Second World War. The number of males aged under 20 and 20 to 24 marrying increased by 77% and 48% respectively between 1938 and 1940. Following this rise, the number of marriages declined during the war period of 1941 to 1943 but began to rise again towards the end of the war; the number of marriages increased by 31% between 1944 and 1945, before remaining relatively stable to 1947.
 
@@ -66,11 +62,9 @@ Changes in the size of the unmarried population are determined by patterns of ma
 
 The provisional male GMR in 2012 was 23.2 men marrying per thousand unmarried men aged 16 and over, compared with 22.1 in 2011 and 27.4 in 2002. The provisional GMR for women in 2012 was 21.0 women marrying per thousand unmarried women aged 16 and over, compared with 19.9 in 2011 and 23.9 in 2002 (Figure 2).
 
-#### Figure 2: General Marriage Rate (GMR), 1932–2012
-##### England and Wales
-[![Figure 2: General Marriage Rate (GMR), 1932–2012](http://www.ons.gov.uk/ons/resources/fig2generalmarriageratecasline_tcm77-366532.png)](http://www.ons.gov.uk/ons/resources/fig2generalmarriageratecasline_tcm77-366532.png "Figure 2: General Marriage Rate (GMR), 1932–2012")
-
-Source: Office for National Statistics
+<div frameBorder ="0" scrolling = "no" class="chart-container">
+<iframe src="http://onsdigital.github.io/Alpha/bulletins/marriage2.html"></iframe>
+</div>
 
 ##### Notes:
 1. Figures for 2012 are provisional.
@@ -78,9 +72,6 @@ Source: Office for National Statistics
 3. Asylum and Immigration (Treatment of Claimants etc) Act 2004 came into effect 1 February 2005. Any migrant already in the UK and subject to immigration control was required to apply for a Certificate of Approval before they could get married in England and Wales (unless they were getting married within the Anglican Church).
 4. The Certificate of Approval Scheme was abolished on 9 May 2011.
 5. Marriage rates for 2002-2010 are calculated using marital status population estimates based on the 2001 Census. Revisions to these estimates to take account of the 2011 Census are not currently planned. Marriage rates for 2011 and 2012 are based on estimated 2011 marital status population estimates which use the mid-2011 population estimates based on the 2011 Census and the marital status distribution from the 2008-based marital status population projections for 2011. Consequently comparisons between rates for 2002-2010 and 2011-2012 should be treated with caution due to the different census bases used. For more information see section titled ‘Availability of Population Estimates by Marital Status and the Calculation of Marriage Rates for 2011 and 2012’.
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/vsob1/marriages-in-england-and-wales--provisional-/2012/chd-figure-2-marriage-rate.xls) (32.5 Kb)
 
 ## Type of Ceremony
 The provisional number of civil ceremonies in 2012 was 184,320, accounting for 70% of all marriages. The proportion of civil ceremonies first exceeded religious ceremonies in 1976.
@@ -98,16 +89,12 @@ Provisional marriage figures for 2012 suggest that Church of England and Church 
 ## Age at Marriage
 Figure 3 shows the age at marriage for men and women in 2012. At younger ages there were more women than men marrying; however, at older ages more men than women married. This pattern reflects that, on average, men tend to form relationships with women younger than themselves. In 2012, the number of marriages was greatest among men and women aged 25 to 29.
 
-#### Figure 3: Age at Marriage for Men and Women, 2012
-##### England and Wales
-[![Figure 3: Age at Marriage for Men and Women, 2012](http://www.ons.gov.uk/ons/resources/fig3ageatmarriageallagebands_tcm77-366533.png)](http://www.ons.gov.uk/ons/resources/fig3ageatmarriageallagebands_tcm77-366533.png "Figure 3: Age at Marriage for Men and Women, 2012")
+<div frameBorder ="0" scrolling = "no" class="chart-container">
+<iframe src="http://onsdigital.github.io/Alpha/bulletins/marriage3.html"></iframe>
+</div>
 
-Source: Office for National Statistics
 ##### Notes:
 1. Figures for 2012 are provisional.
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/vsob1/marriages-in-england-and-wales--provisional-/2012/chd-figure-3-age-at-marriage.xls) (24.5 Kb)
 
 The largest percentage increase in the number of marriages from 2011 to 2012 was for men and women aged 65 to 69, increasing by 25% and 21% respectively. The age groups with the greatest decrease in the numbers of marriages were for men under 20 and women aged 80 and over, decreasing by 9.4% and 18% respectively.
 
@@ -115,18 +102,13 @@ There was a slight increase in the mean age at marriage for both men and women i
   
 Over the period 1972 to 2012, the mean age at marriage for both men and women generally increased (Figure 4). For grooms, the mean age at marriage in 1972 was 28.8 years, compared with 36.5 years in 2012. For brides, the mean age at marriage in 1972 was 26.2 years, compared with 34.0 years in 2012. These increases result from people delaying entering into a first marriage and to a lesser extent increases in the proportion of marriages to divorced men and women where the mean age at marriage has risen (see Tables 6 and 7, [Age at marriage and previous marital status (604 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/vsob1/marriages-in-england-and-wales--provisional-/2012/rtd-age-at-marriage-and-previous-marital-status.xls "RTD Age at marriage and previous marital status") ).
 
-#### Figure 4: Mean age at Marriage for Men and Women, 1972-2012
-##### England and Wales
-[![Figure 4: Mean age at Marriage for Men and Women, 1972-2012](http://www.ons.gov.uk/ons/resources/fig4meanageatmarriage_tcm77-366534.png)](http://www.ons.gov.uk/ons/resources/fig4meanageatmarriage_tcm77-366534.png "Figure 4: Mean age at Marriage for Men and Women, 1972-2012")
-
-Source: Office for National Statistics
+<div frameBorder ="0" scrolling = "no" class="chart-container">
+<iframe src="http://onsdigital.github.io/Alpha/bulletins/marriage4.html"></iframe>
+</div>
 
 ##### Notes:
 1. Figures for 2012 are provisional.
 2. The mean ages shown in this table are not standardised and are therefore affected by changes in structure of the male/female population by age and marital status.
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/vsob1/marriages-in-england-and-wales--provisional-/2012/chd-figure-4-mean-age-at-marriage.xls) (27 Kb)
 
 Since 1972 the mean age at first marriage has increased by almost eight years for both men and women. In 2012 the provisional mean age at marriage for never-married men was 32.4 years, while for never married women it was 30.3 years. This compares with 24.9 years and 22.9 years respectively in 1972.
 
@@ -218,7 +200,7 @@ Further statistics on [divorces](http://www.ons.gov.uk/ons/rel/vsob1/divorces-in
 
 [Population projections by marital status for England and Wales](http://www.ons.gov.uk/ons/rel/npp/marital-status-population-projections-for-england---wales/index.html "Marital Status Populations Projections for England and Wales index") are available on the ONS website. The latest figures are consistent with the 2008-based national principal population projection for England and Wales and cover the 25 years to 2033.
 
-## References
+## [accordion] References
 Beaujouan E and Bhrolcháin M (2011) [Cohabitation and marriage in Britain since the 1970s](http://www.ons.gov.uk/ons/rel/population-trends-rd/population-trends/no--145--autumn-2011/ard-pt145-cohab-marriage-trends.pdf "Cohabitation and marriage in Britain since the 1970s"), Population Trends 145.
 
 ONS (2013) [What percentages of marriage end in divorce?](http://www.ons.gov.uk/ons/rel/vsob1/divorces-in-england-and-wales/2011/sty-what-percentage-of-marriages-end-in-divorce.html "STY What marriages end in divorce")
@@ -227,7 +209,7 @@ Wilson B and Smallwood S (2008) [The proportion of marriages ending in divorce (
 
 Wilson B and Smallwood S (2007) [Understanding recent trends in marriage (562.2 Kb Pdf)](http://www.ons.gov.uk/ons/rel/population-trends-rd/population-trends/no--128--summer-2007/understanding-recent-trends-in-marriage.pdf "Understanding recent trends in marriage") , Population Trends 128.
 
-## Background notes
+## [accordion] Background notes and methodology
 1. With the exception of figures reported in the ‘Marriages in the UK’ section of this bulletin, all figures reported relate only to marriages solemnised in England and Wales. Marriages of England and Wales residents that took place outside England and Wales are not accounted for in this bulletin. Marriages of persons whose usual residence is outside England and Wales, but whose marriage took place in England and Wales are included in the figures.
 
 2. Figures for 2012 are rounded and provisional. Annual marriage statistics are finalised when the majority of returns have been received from register offices and the clergy. In 2011, the number of marriages in England and Wales increased by just over 1,200 (0.5%) between the provisional first release of figures and the finalised statistics. Further information can be found in the [ONS Marriages Metadata (420.6 Kb Pdf)](http://www.ons.gov.uk/ons/guide-method/user-guidance/health-and-life-events/marriages-2011.pdf "Marriages metadata") .
@@ -279,3 +261,6 @@ Designation can be broadly interpreted to mean that the statistics:
 - are managed impartially and objectively in the public interest.
 
 Once statistics have been designated as National Statistics it is a statutory requirement that the Code of Practice shall continue to be observed.
+
+## [accordion] Footnotes
+This information will not be available in the prototype, however in the future the footnotes related to this statistical bulletin will appear here.

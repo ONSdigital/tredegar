@@ -1,4 +1,4 @@
-Theme: People, Population and Community
+﻿Theme: People, Population and Community
 Level 2: Health and Social Care
 Level 3: Drug use, Alcohol and Smoking
 Summary: This bulletin presents the latest figures for alcohol-related deaths in the UK, its four constituent countries and regions of England. Comparisons are made between 2012, the latest year, and previously published data from 2002 onwards.
@@ -9,12 +9,12 @@ Contact name: Olugbenga Olatunde
 Contact email: mortality@ons.gsi.gov.uk
 
 ## Alcohol-related Deaths in the United Kingdom, Registered in 2012
-In 2012 there were 8,367 alcohol-related deaths in the UK, 381 fewer than in 2011 (8,748).
-Males accounted for approximately 65% of all alcohol-related deaths in the UK in 2012.
-Death rates were highest among men aged 60 to 64 years (42.6 deaths per 100,000 population) and women aged 55 to 59 years (22.2 deaths per 100,000).
-Of the four UK constituent countries, only in Scotland were male and female death rates in 2012 significantly lower than in 2002.
-In England and Wales, 63% of all alcohol-related deaths in 2012 were caused by alcoholic liver disease, with 16% of these deaths occurring among those aged 55 to 59 years.
-In England, alcohol-related death rates were highest among regions in the North and lowest among those in the South throughout the period 2002–2012.
+- In 2012 there were 8,367 alcohol-related deaths in the UK, 381 fewer than in 2011 (8,748).
+- Males accounted for approximately 65% of all alcohol-related deaths in the UK in 2012.
+- Death rates were highest among men aged 60 to 64 years (42.6 deaths per 100,000 population) and women aged 55 to 59 years (22.2 deaths per 100,000).
+- Of the four UK constituent countries, only in Scotland were male and female death rates in 2012 significantly lower than in 2002.
+- In England and Wales, 63% of all alcohol-related deaths in 2012 were caused by alcoholic liver disease, with 16% of these deaths occurring among those aged 55 to 59 years.
+- In England, alcohol-related death rates were highest among regions in the North and lowest among those in the South throughout the period 2002–2012.
 
 ## Summary
 This bulletin presents the latest figures for alcohol-related deaths in the UK, its four constituent countries and regions of England. Comparisons are made between 2012, the latest year, and previously published data from 2002 onwards.
@@ -23,11 +23,9 @@ Figures are based on deaths registered in each calendar year rather than those o
 
 ONS recently revised mid-2002 to 2010 population estimates in light of the 2011 Census. Death rates relating to this period have therefore been revised and may differ from previously published figures. In the previous release, [‘Alcohol-related deaths in the United Kingdom, 2011’](http://www.ons.gov.uk/ons/rel/subnational-health4/alcohol-related-deaths-in-the-united-kingdom/2011/alcohol-related-deaths-in-the-uk--2011.html "Alcohol-related deaths in the United Kingdom, 2011") UK rates were based on a combination of the 2011 Census population estimates for England and Wales and rolled forward mid-year population estimates (from the 2001 Census) for Scotland and Northern Ireland. These rates have now been rebased on 2011 Census populations for each UK constituent country.
 
-#### Figure 1: Alcohol-related death rates, United Kingdom, registered in 2002-2012
-##### United Kingdom
-[![Figure 1: Alcohol-related death rates, United Kingdom, registered in 2002-2012](http://www.ons.gov.uk/ons/resources/chart1_tcm77-353047.png)](http://www.ons.gov.uk/ons/resources/chart1_tcm77-353047.png "Figure 1: Alcohol-related death rates, United Kingdom, registered in 2002-2012")
-
-Source: Office for National Statistics, National Records of Scotland, Northern Ireland Statistics and Research Agency
+<div frameBorder ="0" scrolling = "no" class="chart-container">
+<iframe src="http://onsdigital.github.io/Alpha/bulletins/alcohol1.html"></iframe>
+</div>
 
 ##### Notes:
 1. A common definition of alcohol-related death is used across the United Kingdom; see the ‘Definition’ section for further information
@@ -35,9 +33,6 @@ Source: Office for National Statistics, National Records of Scotland, Northern I
 3. Deaths of non-residents are included in figures for the UK
 4. Figures are for deaths registered in each calendar year
 5. In 2012 the average number of days between date of death and death registration in England and Wales was four days for alcohol-related causes.
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/subnational-health4/alcohol-related-deaths-in-the-united-kingdom/2012/chd-figure-1.xls "XLS format") (29.5 Kb)
 
 ## Context
 Alcohol is a potentially addictive psychoactive substance. It is rapidly absorbed into the bloodstream, and its effects on brain function – such as slowed reaction times and loss of inhibition – are felt very quickly. The human body cannot store alcohol; it treats it as a potential poison and detoxifies it in the liver. The speed at which this happens depends on a variety of factors including age and sex ([FPH, 2008](http://www.fph.org.uk/uploads/ps_alcohol.pdf)"FPH, 2008").
@@ -61,20 +56,15 @@ In 2012, age-specific alcohol-related death rates for males rose steadily from 0
 
 For females, the death rate for those aged 20-24 years was similar to that for males in this age group. However, the disparity between male and female death rates become more evident beyond this age group, with rates among males approximately twice those for females in each age group. Female rates rose steadily to a peak of 22.2 per 100,000 among those aged 55-59 years before dropping off gradually to 10.3 per 100,000 among those aged 85 years and over.
 
-#### Figure 2: Age-specific alcohol-related death rates by sex and age, UK, registered in 2012
-##### United Kingdom
-[![Figure 2: Age-specific alcohol-related death rates by sex and age, UK, registered in 2012](http://www.ons.gov.uk/ons/resources/chart2_tcm77-353060.png)](http://www.ons.gov.uk/ons/resources/chart2_tcm77-353060.png "Figure 2: Age-specific alcohol-related death rates by sex and age, UK, registered in 2012")
-
-Source: Office for National Statistics, National Records of Scotland, Northern Ireland Statistics and Research Agency
+<div frameBorder ="0" scrolling = "no" class="chart-container">
+<iframe src="http://onsdigital.github.io/Alpha/bulletins/alcohol2.html"></iframe>
+</div>
 
 ##### Notes:
 1. A common definition of alcohol-related death is used across the United Kingdom; see the ‘Definition’ section for further information
 2. Rates are not calculated for persons aged under 20 due to small number of deaths
 3. Deaths of non-residents are included in figures for the UK
 4. In 2012 the average number of days between date of death and death registration in England and Wales was four days for alcohol-related causes.
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/subnational-health4/alcohol-related-deaths-in-the-united-kingdom/2012/chd-figure-2.xls "XLS format") (29 Kb)
 
 ## Comparison of age-standardised rate trends in the United Kingdom
 For males, age-standardised rates for alcohol-related deaths in 2012 fell significantly on the previous year from 17.1 to 15.9 per 100, 000 population. Over the period 2002 to 2012, there were substantial annual fluctuations in the numbers and age-standardised rates for alcohol-related deaths. On the whole, the number of deaths rose from 5,069 in 2002 to a peak of 5,999 in 2008 before falling to 5,473 in 2012. A similar pattern was observed with rates which increased significantly between 2002 and 2008 before falling significantly in 2009 and most recently in 2012.
@@ -93,11 +83,9 @@ For males aged 15-34 years, rates remained largely stable over the period, with 
 
 For females aged 15-34 years, rates have remained largely stable over the 11 year period. Despite a significant increase in rates in 2009, there was no significant difference between the rates in 2002 and 2012 for this age group. Similarly, despite a significant decrease in the death rate of those aged 35-54 years between 2011 and 2012, the latest rate was not significantly lower than that in 2002. A similar picture was observed for females aged 55-74 with deaths rates in 2002 and 2012 not being significantly different despite the fact that a significant increase was observed in 2006 and 2008. Rates for females aged 75 and over remained relatively stable over the period.
 
-#### Figure 3: Alcohol-related death rates by age group, males, UK, registered in 2002–2012
-##### United Kingdom
-[![Figure 3: Alcohol-related death rates by age group, males, UK, registered in 2002–2012](http://www.ons.gov.uk/ons/resources/chart3_tcm77-353067.png)](http://www.ons.gov.uk/ons/resources/chart3_tcm77-353067.png "Figure 3: Alcohol-related death rates by age group, males, UK, registered in 2002–2012")
-
-Source: Office for National Statistics, National Records of Scotland, Northern Ireland Statistics and Research Agency
+<div frameBorder ="0" scrolling = "no" class="chart-container">
+<iframe src="http://onsdigital.github.io/Alpha/bulletins/alcohol3.html"></iframe>
+</div>
 
 ##### Notes:
 1. A common definition of alcohol-related death is used across the United Kingdom; see the ‘Definition’ section for further information
@@ -107,12 +95,9 @@ Source: Office for National Statistics, National Records of Scotland, Northern I
 5. Figures are for deaths registered in each calendar year
 6. In 2012 the average number of days between date of death and death registration in England and Wales was four days for alcohol-related causes.
 
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/subnational-health4/alcohol-related-deaths-in-the-united-kingdom/2012/chd-figure-3.xls "XLS format") (30 Kb)
-
-#### Figure 4: Alcohol-related death rates by age group, females, UK, registered in 2002–2012
-##### United Kingdom
-[![Figure 4: Alcohol-related death rates by age group, females, UK, registered in 2002–2012](http://www.ons.gov.uk/ons/resources/chart4_tcm77-353068.png)](http://www.ons.gov.uk/ons/resources/chart4_tcm77-353068.png "Figure 4: Alcohol-related death rates by age group, females, UK, registered in 2002–2012")
+<div frameBorder ="0" scrolling = "no" class="chart-container">
+<iframe src="http://onsdigital.github.io/Alpha/bulletins/alcohol4.html"></iframe>
+</div>
 
 ##### Notes:
 1. A common definition of alcohol-related death is used across the United Kingdom; see the ‘Definition’ section for further information
@@ -121,9 +106,6 @@ Source: Office for National Statistics, National Records of Scotland, Northern I
 4. Deaths of non-residents are included in figures for the UK
 5. Figures are for deaths registered in each calendar year
 6. In 2012 the average number of days between date of death and death registration in England and Wales was four days for alcohol-related causes.
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/subnational-health4/alcohol-related-deaths-in-the-united-kingdom/2012/chd-figure-4.xls "XLS format") (20.5 Kb)
 
 ## England
 The trend in the annual number of deaths from alcohol related causes in England was similar to that in the UK. The number of deaths rose from 2002, peaking in 2008 and 2007 for males and females respectively before generally falling to date.
@@ -149,11 +131,9 @@ The regional differences observed in alcohol-related deaths are likely to have l
 
 The geographic variation in alcohol-related deaths rates has been well documented in previous research. For example, [Breakwell et al. (2007) (2.95 Mb Pdf)](http://www.ons.gov.uk/ons/rel/hsq/health-statistics-quarterly/no--33--spring-2007/health-statistics-quarterly.pdf "Breakwell et al. (2007)") reported a strong association in alcohol-related deaths with death rates being higher among those living in the most deprived neighbourhoods in England and Wales. Similarly, [Siegler et al. (2011) (353.9 Kb Pdf)](http://www.ons.gov.uk/ons/rel/hsq/health-statistics-quarterly/no--50--summer-2011/social-inequalities-in-alcohol-related-adult-mortality-by-national-statistics-socio-economic-classification--england-and-wales--2001-03.pdf "Siegler et al. (2011)") demonstrated that alcohol-related deaths varied by socio-economic class with higher death rates in those in the most disadvantaged classes. Erskine et al. (2010) supported these findings and reported a higher risk of alcohol-related deaths in urban areas than rural areas, after accounting for socio-economic status.
 
-#### Figure 5: Alcohol-related death rates, with 95% confidence intervals, by region, registered in 2012
-##### England
-[![Figure 5: Alcohol-related death rates, with 95% confidence intervals, by region, registered in 2012](http://www.ons.gov.uk/ons/resources/chart5_tcm77-353071.png)](http://www.ons.gov.uk/ons/resources/chart5_tcm77-353071.png "Figure 5: Alcohol-related death rates, with 95% confidence intervals, by region, registered in 2012")
-
-Source: Office for National Statistics
+<div frameBorder ="0" scrolling = "no" class="chart-container">
+<iframe src="http://onsdigital.github.io/Alpha/bulletins/alcohol5.html"></iframe>
+</div>
 
 ##### Notes:
 1. A common definition of alcohol-related death is used across the United Kingdom; see the ‘Definition’ section for further information
@@ -162,9 +142,6 @@ Source: Office for National Statistics
 4. Figures are for deaths registered in each calendar year
 5. Confidence intervals give a measure of the statistical precision of an estimate and show the range of uncertainty around the estimated figure. As a general rule, if the confidence interval around one figure overlaps with the interval around another, we cannot say with certainty that there is more than a chance difference between the two figures
 6. In 2012 the average number of days between date of death and death registration in England and Wales was four days for alcohol-related causes.
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/subnational-health4/alcohol-related-deaths-in-the-united-kingdom/2012/chd-figure-5.xls "XLS format") (31 Kb)
 
 ## Wales
 In 2012, alcohol-related death rates were significantly higher in Wales than in England; 18.0 per 100,000 population compared with 14.7 per 100,000 respectively. The rate for males in Wales increased significantly between 2002 and 2007 but has remained stable to date. However, the relatively wide confidence intervals meant that the rate in 2012 was not significantly higher than in 2002.
@@ -182,11 +159,9 @@ For females, death rates were also lowest in England over the period. Although t
 
 Of the four UK constituent countries, only in Scotland were male and female death rates in 2012 significantly lower than in 2002.
 
-#### Figure 6: Alcohol-related death rates, Males, UK constituent country, registered in 2002–2012
-##### England
-[![Figure 6: Alcohol-related death rates, Males, UK constituent country, registered in 2002–2012](http://www.ons.gov.uk/ons/resources/chart6_tcm77-353072.png)](http://www.ons.gov.uk/ons/resources/chart6_tcm77-353072.png "Figure 6: Alcohol-related death rates, Males, UK constituent country, registered in 2002–2012")
-
-Source: Office for National Statistics
+<div frameBorder ="0" scrolling = "no" class="chart-container">
+<iframe src="http://onsdigital.github.io/Alpha/bulletins/alcohol6.html"></iframe>
+</div>
 
 ##### Notes:
 
@@ -196,14 +171,9 @@ Source: Office for National Statistics
 4. Figures are for deaths registered in each calendar year
 5. In 2012 the average number of days between date of death and death registration was four days for alcohol-related causes
 
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/subnational-health4/alcohol-related-deaths-in-the-united-kingdom/2012/chd-figure-6.xls "XLS format") (29.5 Kb)
-
-#### Figure 7: Alcohol-related death rates, females, UK constituent country, registered in 2002–2012
-##### United Kingdom
-[![Figure 7: Alcohol-related death rates, females, UK constituent country, registered in 2002–2012](http://www.ons.gov.uk/ons/resources/chart7_tcm77-353074.png)](http://www.ons.gov.uk/ons/resources/chart7_tcm77-353074.png "Figure 7: Alcohol-related death rates, females, UK constituent country, registered in 2002–2012")
-
-Source: Office for National Statistics, National Records of Scotland, Northern Ireland Statistics and Research Agency
+<div frameBorder ="0" scrolling = "no" class="chart-container">
+<iframe src="http://onsdigital.github.io/Alpha/bulletins/alcohol7.html"></iframe>
+</div>
 
 ##### Notes:
 1. A common definition of alcohol-related death is used across the United Kingdom; see the ‘Definition’ section for further information
@@ -212,70 +182,6 @@ Source: Office for National Statistics, National Records of Scotland, Northern I
 4. Figures are for deaths registered in each calendar year
 5. In 2012 the average number of days between date of death and death registration in England and Wales was four days for alcohol-related causes.
 
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/subnational-health4/alcohol-related-deaths-in-the-united-kingdom/2012/chd-figure-7.xls "XLS format") (28 Kb)
-
-#### Table 1: Male alcohol-related death rates: by UK country and region of England, 2002-2012 (1,2,3,4,5,6)
-##### United Kingdom
-
-Table source: Office for National Statistics
-
-##### Table notes:
-1. A common definition of alcohol-related death is used across the United Kingdom; see the 'Definition' section for further information
-2. Rates per 100,000 population standardised to the 1976 European Standard Population
-3. Deaths of non-residents are included in figures for the UK, but excluded in figures for England, Wales and regions
-4. Figures are for deaths registered in each calendar year
-5. In 2012 the average number of days between date of death and death registration in England and Wales was four days for alcohol-related causes
-6. Figures for 2002 to 2010 are based on mid-year population estimates, revised in light of the 2011 Census
-
-##### Download table: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/subnational-health4/alcohol-related-deaths-in-the-united-kingdom/2012/prt---table-1.xls "XLS format") (30.5 Kb)
-
-#### Table 2: Number of male alcohol-related deaths: by UK country and region of England, registered in 2002-2012 (1,2,3,4)
-##### United Kingdom
-
-Table source: Office for National Statistics
-
-##### Table notes:
-1. A common definition of alcohol-related death is used across the United Kingdom; see the 'Definition' section for further information
-2. Deaths of non-residents are included in figures for the UK, but excluded in figures for England, Wales and regions
-3. Figures are for deaths registered in each calendar year
-4. In 2012 the average number of days between date of death and death registration in England and Wales was four days for alcohol-related causes
-
-##### Download table: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/subnational-health4/alcohol-related-deaths-in-the-united-kingdom/2012/prt---table-2.xls "XLS format") (30 Kb)
-
-#### Table 3: Female alcohol-related death rates: by UK country and region of England, registered in 2002-2012 (1,2,3,4,5,6)
-##### United Kingdom
-
-Table source: Office for National Statistics
-
-##### Table notes:
-1. A common definition of alcohol-related death is used across the United Kingdom; see the 'Definition' section for further information
-2. Rates per 100,000 population standardised to the 1976 European Standard Population
-3. Deaths of non-residents are included in figures for the UK, but excluded in figures for England, Wales and regions
-4. Figures are for deaths registered in each calendar year
-5. In 2012 the average number of days between date of death and death registration in England and Wales was four days for alcohol-related causes
-6. Figures for 2002 to 2010 are based on mid-year population estimates, revised in light of the 2011 Census
-
-##### Download table: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/subnational-health4/alcohol-related-deaths-in-the-united-kingdom/2012/prt---table-3.xls "XLS format") (31 Kb)
-
-#### Table 4: Number of female alcohol-related deaths: by UK country and region of England, registered in 2002–2012 (1,2,3,4)
-##### United Kingdom
-
-Table source: Office for National Statistics
-
-##### Table notes:
-
-1. A common definition of alcohol-related death is used across the United Kingdom; see the 'Definition' section for further information
-2. Deaths of non-residents are included in figures for the UK, but excluded in figures for England, Wales and regions
-3. Figures are for deaths registered in each calendar year
-4. In 2012 the average number of days between date of death and death registration in England and Wales was four days for alcohol-related causes
-
-##### Download table: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/subnational-health4/alcohol-related-deaths-in-the-united-kingdom/2012/prt---table-4.xls "XLS format") (22 Kb)
-
 ## Registration Delays
 The information used to produce mortality statistics is based on the details collected when deaths are certified and registered. In England and Wales, deaths should be registered within five days of the death occurring, but there are some situations which result in the registration of the death being delayed. Deaths considered unexpected, accidental or suspicious will be referred to a coroner who may order a post mortem or carry out a full inquest to ascertain the reasons for the death.
 
@@ -283,28 +189,8 @@ Alcohol-related death statistics are presented based on the number of deaths reg
 
 In 2012, fewer alcohol-related deaths were registered within five days than deaths from all causes (61% compared with approximately 76% respectively). On average, the median registration period for alcohol-related deaths was 4 days, with a range of 0 to 2026 days. The majority (83%) of deaths were registered within one month while a small proportion (4.9%) was delayed by six months or more.
 
-#### Table 5: Registration period for alcohol-related deaths and all-cause mortality, England and Wales, deaths registered in 2012 (1,2,3,4)
-##### England and Wales
-
-Table source: Office for National Statistics
-
-##### Table notes:
-
-1. All cause mortality was extracted based on the underlying cause of death, defined using the International Classification of Diseases, tenth revision (ICD-10)
-2. A common definition of alcohol-related death is used across the United Kingdom; see the ‘Definition’ section for further information
-3. Figures include deaths of non-residents
-4. Deaths where the day and/or month of death are missing have been excluded
-
-##### Download table: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/subnational-health4/alcohol-related-deaths-in-the-united-kingdom/2012/prt---table-5.xls "XLS format") (907.5 Kb)
-
 ## Definition
 The National Statistics definition of alcohol-related deaths only includes those causes regarded as being most directly due to alcohol consumption, as shown in Box 1 below. It does not include other diseases where alcohol has been shown to have some causal relationship, such as cancers of the mouth, oesophagus and liver. The definition includes all deaths from chronic liver disease and cirrhosis (excluding biliary cirrhosis), even when alcohol is not specifically mentioned on the death certificate. Apart from deaths due to poisoning with alcohol (accidental, intentional or undetermined), this definition excludes any other external causes of death, such as road traffic and other accidents. The definition allows for consistent comparisons over time for those deaths most clearly associated with alcohol consumption.
-
-#### National Statistics definition of alcohol-related deaths (ICD-10)
-
-##### Download table: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/subnational-health4/alcohol-related-deaths-in-the-united-kingdom/2012/prt---definition.xls "XLS format") (28 Kb)
 
 ## Results on the Office for National Statistics website
 Figures for alcohol-related deaths for the UK, England, Wales and regions of England can be found in Microsoft Excel workbooks on the Office for National Statistics website at:
@@ -321,7 +207,7 @@ Statistics for Scotland, published by National Records of Scotland and statistic
 
 [Northern Ireland](http://www.ons.gov.uk/ons/rel/subnational-health4/alcohol-related-deaths-in-the-united-kingdom/2012/www.nisra.gov.uk/demography/default.asp30.html "Northern Ireland")
 
-## References
+## [accordion] References
 Breakwell C, Baker A, Griffiths C, Jackson G, Fegan G and Marshall D (2007) [Trends and geographical variations in alcohol-related deaths in the United Kingdom, 1991-2004. Health Statistics Quarterly 33, 6-22. (2.95 Mb Pdf)](http://www.ons.gov.uk/ons/rel/hsq/health-statistics-quarterly/no--33--spring-2007/health-statistics-quarterly.pdf "Health Statistics Quarterly")
 
 Department of Health (2010) [Healthy lives, healthy people: our strategy for public health in England](http://www.ons.gov.uk/ons/external-links/other-government-departments/doh/dh---publications-policy-and-guidance.html "DH Publications Policy and Guidance")
@@ -342,7 +228,7 @@ World Health Organisation (2014a) [Health Topics – Alcohol](http://www.who.int
 
 World Health Organisation (2014b) [Alcohol factsheet](http://www.who.int/mediacentre/factsheets/fs349/en/index.html "Alcohol factsheet")
 
-## Background notes
+## [accordion] Background notes and methodology
 1. Statistics on mortality are derived from the information provided when deaths are certified and registered. Further information about the methods and quality of these statistics can be found in the [Quality and Methodology Report (382.3 Kb Pdf)](http://www.ons.gov.uk/ons/guide-method/method-quality/quality/quality-information/quality-and-methodology-information-reports-by-theme/population/quality-and-methodology-information-for-mortality-statistics-in-england-and-wales.pdf "Quality and Methodology Information for Mortality Statistics in England and Wales") .
 
 2. In England and Wales, deaths should be registered within five days of the death occurring, but there are some situations which result in the registration of the death being delayed, for instance if a death is considered unexpected, accidental or suspicious. In 2012 the average number of days between date of death and death registration was four days for alcohol-related causes. Further information on the [impact of registration delays on data quality](http://www.ons.gov.uk/ons/guide-method/user-guidance/health-and-life-events/impact-of-registration-delays-on-mortality-statistics/index.html "impact of registration delays on mortality statistics 2011") is available.
@@ -383,3 +269,6 @@ The ONS charging policy is available on the ONS website.
 15. Details of the policy governing the release of new data are available by visiting [www.statisticsauthority.gov.uk/assessment/code-of-practice/index.html](http://www.statisticsauthority.gov.uk/assessment/code-of-practice/index.html) or from the Media Relations Office email: <media.relations@ons.gsi.gov.uk>
 
 These National Statistics are produced to high professional standards and released according to the arrangements approved by the UK Statistics Authority.
+
+## [accordion] Footnotes
+This information will not be available in the prototype, however in the future the footnotes related to this statistical bulletin will appear here.

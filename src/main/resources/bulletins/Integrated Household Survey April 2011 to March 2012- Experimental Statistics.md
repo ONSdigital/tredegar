@@ -1,10 +1,10 @@
-Theme: People, Population and Community
+﻿Theme: People, Population and Community
 Level 2: Cultural Identity
 Level 3: Sexuality
 Summary: Findings on health, smoking, sexual identity and other social topics compiled from the UK Integrated Household Survey (IHS) between April 2011 to March 2012.
-Headline 1: 1.5 per cent of adults in the UK identified themselves as Gay, Lesbian or Bisexual.
-Headline 2: 2.7 per cent of 16 to 24 year olds in the UK identified themselves as Gay, Lesbian or Bisexual compared with 0.4 per cent of 65 year olds and over.
-Headline 3: Across the UK, 78 per cent of men and 75 per cent of women reported that they perceived themselves to be ‘in good health’.
+Headline 1: 1.5% of adults in the UK identified themselves as Gay, Lesbian or Bisexual.
+Headline 2: 2.7%t of 16 to 24 year olds in the UK identified themselves as Gay, Lesbian or Bisexual compared with 0.4% of 65 year olds and over.
+Headline 3: Across the UK, 78% of men and 75% of women reported that they perceived themselves to be ‘in good health’.
 Contact name: Dean Fletcher
 Contact email: census.customerservices@ons.gsi.gov.uk
 Next edition: 03 October 2013
@@ -47,29 +47,15 @@ The ‘Other’ option on the question was to address the fact that not all peop
 
 Table 1 highlights that the sexual identity information for the three consecutive years of IHS data shows consistency across all categories and gender. The latest data shows that 93.6 per cent of men and 94.2 per cent of women identified themselves as Heterosexual/Straight and that a larger proportion of men stated they were Gay, at 1.5 per cent, compared with women at 0.7 per cent.
 
-##### Download table: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/integrated-household-survey/integrated-household-survey/april-2011-to-march-2012/prt-1-sexual-identity-by-gender.xls "XLS format") (21.5 Kb)
-
-Table source: Office for National Statistics
-
-##### Table notes:
-1. The total number of eligible responders to the question in 2011/12 was 186,946 of which 178,292 provided a valid response. The question was asked to respondents aged 16 and over and was not asked by proxy.
-2. ONS defines 'no response' as no data provided to the question by an eligible responder.
-3. The 'no response' category includes respondents who were aged 15 in wave 1 of the LFS/APS but are now aged 16 in the April 2011 to March 2012 field period.
-4. Percentages might not add to 100 per cent due to rounding.
-5. Confidence intervals for the latest estimates in the above table can be found in the excel download table.
-
 At the regional level of England and the constituent countries of the UK, IHS data again shows a consistent pattern to previous years. In April 2011 to March 2012:
 
 2.4 per cent of adults who live in London said they were Gay, Lesbian or Bisexual
 
 1.1 per cent of adults who live in the East of England identified themselves as Gay, Lesbian or Bisexual
 
-#### Figure 1
-##### Sexual Identity by Region, April 2011 to March 2012
-[![Sexual Identity by Region, April 2011 to March 2012](http://www.ons.gov.uk/ons/resources/chart1sexualidentitybyregion_tcm77-280442.png)](http://www.ons.gov.uk/ons/resources/chart1sexualidentitybyregion_tcm77-280442.png "Sexual Identity by Region, April 2011 to March 2012")
-
-Source: Integrated Household Survey - Office for National Statistics
+<div frameBorder ="0" scrolling = "no" class="chart-container">
+<iframe src="http://onsdigital.github.io/Alpha/bulletins/expt1.html"></iframe>
+</div>
 
 ##### Notes:
 1. The total number of eligible responders to the question in 2011/12 was 186,946 of which 178,292 provided a valid response. The question was asked to respondents aged 16 and over when they first entered all component IHS surveys, and was not asked by proxy.
@@ -77,9 +63,6 @@ Source: Integrated Household Survey - Office for National Statistics
 3. The 'no response' category includes respondents who were aged 15 in wave 1 of the LFS/APS but are now aged 16 in the April 2011 to March 2012 field period.
 4. Percentages may not add to 100 per cent due to rounding
 5. The whisker bars represent the confidence intervals for each estimate
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/integrated-household-survey/integrated-household-survey/april-2011-to-march-2012/chd-1-sexual-identity-by-region.xls "XLS format") (36 Kb)
 
 ## Perceived general health and smoking prevalence
 The survey asked people about their perception of their health in general. The IHS data show that across the UK in April 2011 to March 2012:
@@ -90,11 +73,9 @@ The survey asked people about their perception of their health in general. The I
 
 - at the regional level the North East of England reported the lowest rate of perceived good health at 72 per cent, with London reporting the highest at 80 per cent.
 
-#### Figure 2
-##### Health by Region, April 2011 to March 2012
-[![Health by Region, April 2011 to March 2012](http://www.ons.gov.uk/ons/resources/chart2perceivedgeneralhealthbyregion_tcm77-280450.png)](http://www.ons.gov.uk/ons/resources/chart2perceivedgeneralhealthbyregion_tcm77-280450.png "Health by Region, April 2011 to March 2012")
-
-Source: Integrated Household Survey - Office for National Statistics
+<div frameBorder ="0" scrolling = "no" class="chart-container">
+<iframe src="http://onsdigital.github.io/Alpha/bulletins/expt2.html"></iframe>
+</div>
 
 ##### Notes:
 1. The total number of eligible responders to the question was 281,795 of which 281,694 provided a valid response. The question was asked to respondents aged 16 and over.
@@ -102,22 +83,16 @@ Source: Integrated Household Survey - Office for National Statistics
 3. Percentages may not add to 100 per cent due to rounding.
 4. Confidence intervals for the latest estimates in the above table can be found in the excel download table.
 
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/integrated-household-survey/integrated-household-survey/april-2011-to-march-2012/chd-2-perceived-general-health-by-region.xls "XLS format") (25 Kb)
-
 Looking at perceived general health by age and gender, the IHS data show that:
 
 - the percentage of men that report that they perceive themselves to be ‘in good health’ are higher in all age groups than reported for women
 
 - people in younger age groups are more likely to report themselves to be ‘in good health’. Men in age group 16-24 reported the highest level of perceived good health at 92.3 per cent, with women in age group 65 and over reported the lowest at 55.8 per cent
 
-## Background notes
+## [accordion] Background notes and methodology
 #### 1. Integrated Household Survey
 
-The Integrated Household Survey is formed from ’core‘ questions on a number of ONS Household Surveys
-
-##### Download table: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/integrated-household-survey/integrated-household-survey/april-2011-to-march-2012/prt-survey-months.xls "XLS format") (26.5 Kb)
+The Integrated Household Survey is formed from ’core‘ questions on a number of ONS Household Surveys.
 
 After April 2011, the number of surveys contributing the IHS dataset fell, as LOS and EHS could not continue asking the core questions.
 
@@ -179,3 +154,9 @@ Emergency on-call: 07867 906553
 Email: <media.relations@ons.gsi.gov.uk>
 
 9. Details of the policy governing the release of new data are available by visiting [www.statisticsauthority.gov.uk/assessment/code-of-practice/index.html](http://www.statisticsauthority.gov.uk/assessment/code-of-practice/index.html) or from the Media Relations Office email: <media.relations@ons.gsi.gov.uk>
+
+## [accordion] References
+This information will not be available in the prototype, however in the future all references related to this statistical bulletin will appear here.
+
+## [accordion] Footnotes
+This information will not be available in the prototype, however in the future the footnotes related to this statistical bulletin will appear here.

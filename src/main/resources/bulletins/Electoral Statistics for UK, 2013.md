@@ -66,13 +66,13 @@ The number of electors in England has grown by an average of 0.4% each year over
 
 The number of electors in both Scotland and Wales has risen on average by 0.7% and 0.3% each year respectively; however both showed a fall between the 2008 and 2009 registers and Wales fell again between 2012 and 2013. Of the four UK constituent countries, Northern Ireland had the highest growth in the number of parliamentary electors every year between 2008 and 2012, but had the largest decline between 2012 and 2013.
 
-<div class="chart-container">
+<div frameBorder ="0" scrolling = "no" class="chart-container">
 <iframe src="http://onsdigital.github.io/Alpha/bulletins/electoral1.html"></iframe>
 </div>
 
 Figure 2 however shows that there was large variation between English regions in 2012 to 2013, with the East of England, North West, South East and London showing declines of less than 0.2%, while the West Midlands declined by 1.7%. This is in contrast to the changes recorded last year when all English regions had growth in their number of parliamentary electors. It is possible that differences in administrative practices between local authority areas in different parts of the country are contributing to these regional differences.
 
-<div class="chart-container">
+<div frameBorder ="0" scrolling = "no" class="chart-container">
 <iframe src="http://onsdigital.github.io/Alpha/bulletins/electoral2.html"></iframe>
 </div>
 
@@ -112,7 +112,7 @@ The number of electors in England has grown by an average of 0.6% each year over
 
 The number of electors in Scotland fell between 2008 and 2009, but has since seen average growth of 1.3% per year. In contrast, Northern Ireland had the highest growth of the four UK constituent countries between 2008 and 2012, but recorded a fall of 0.5% in the year to December 2013. However, the number of electors in 2013 (1,241,000) remains higher than the 1,227,100 recorded in 2011. Wales has displayed an annual average growth of 0.4% over the last five years and so has had the lowest growth of all UK constituent countries over that period.
 
-<div class="chart-container">
+<div frameBorder ="0" scrolling = "no" class="chart-container">
 <iframe src="http://onsdigital.github.io/Alpha/bulletins/electoral3.html"></iframe>
 </div>
 
@@ -120,7 +120,7 @@ Figure 4 shows that the -0.3% change in the number of local government electors 
 
 All regions, with the exception of London, have large differences between the percentage change recorded between 2012 and 2013 and that recorded between 2011 and 2012.
 
-<div class="chart-container">
+<div frameBorder ="0" scrolling = "no" class="chart-container">
 <iframe src="http://onsdigital.github.io/Alpha/bulletins/electoral4.html"></iframe>
 </div>
 

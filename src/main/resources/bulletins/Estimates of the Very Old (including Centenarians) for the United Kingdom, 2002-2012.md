@@ -62,7 +62,7 @@ The 2002–2012 Estimates of the Very Old (including Centenarians) published in 
 ## The ‘Oldest Old’ Population in the UK
 In 2012 there were estimated to be over half a million people aged 90 and over living in the UK. Although they account for only a small percentage of the UK population (0.8 % in 2012) the numbers reaching very old ages continue to increase. Thirty years ago, in 1982, there were 315 people aged 90 and over per 100,000 population; by 1992 this had increased to 457; by 2002 it had reached 648 and the latest figures show there were 806 people aged 90 and over per 100,000 population in the UK (Figure 1).
 
-<div class="chart-container">
+<div frameBorder ="0" scrolling = "no" class="chart-container">
 <iframe src="http://onsdigital.github.io/Alpha/bulletins/old1.html"></iframe>
 </div>
 
@@ -82,38 +82,38 @@ In 1982 only 3% of the population aged 70 and over in the UK were aged 90 or abo
 
 Within the 90 and over population in the UK, four out of five people are aged below 95 (Figure 2). However the profile of the 90 and over population is also ageing.
 
-<div class="chart-container">
+<div frameBorder ="0" scrolling = "no" class="chart-container">
 <iframe src="http://onsdigital.github.io/Alpha/bulletins/old2.html"></iframe>
 </div>
 
 Over the period 1982 to 2012 the proportion of the 90 and over population aged 90-94 decreased from 83% to 79% while the proportion aged 95-99 increased from 16% to 18% and the proportion aged 100 and over increased from 2% to 3% (Figure 3).
 
-<div class="chart-container">
+<div frameBorder ="0" scrolling = "no" class="chart-container">
 <iframe src="http://onsdigital.github.io/Alpha/bulletins/old3.html"></iframe>
 </div>
 
 In 2012 there were estimated to be 13,350 centenarians living in the UK and of these 660 were estimated to be aged 105 or more. Although centenarians account for a very small proportion of the UK  population (0.02%), over the last 30 years there has been almost a five fold increase in their numbers and in the last decade alone the number of centenarians has gone up by over five and a half thousand, a 73% increase (Figure 4).
 
-<div class="chart-container">
+<div frameBorder ="0" scrolling = "no" class="chart-container">
 <iframe src="http://onsdigital.github.io/Alpha/bulletins/old4.html"></iframe>
 </div>
 
 Women outnumber men at older ages because they have higher life expectancy. (According to the latest UK life expectancy figures for 2010-2012, life expectancy at birth is 82.6 years for females compared to 78.7 years for males). In 2012, of the half a million people aged 90 and over in the UK, almost three-quarters (372,290) were female. However there have been larger percentage increases in the number of men in the oldest age groups in the last decade than in the number of women. Between 2002 and 2012 the number of men aged 90 and over rose by 60% compared with a 26% increase in the number of women of this age. Men made greater percentage gains relative to women in each of the older age groups 90-94; 95-99 and age 100 and over (Figure 5).
 
-<div class="chart-container">
+<div frameBorder ="0" scrolling = "no" class="chart-container">
 <iframe src="http://onsdigital.github.io/Alpha/bulletins/old5.html"></iframe>
 </div>
 
 This has resulted in a fall in the sex ratio of women to men at the oldest ages. In the UK in 2002 there were 336 women aged 90 and over for every 100 men of that age; by 2012 this had fallen to 264. The fall in the sex ratio was greater for those aged 100 and over, falling from 828 female centenarians for every 100 male centenarians in 2002 to 588 in 2012 (Figure 6). These falls are due to continued greater improvements in male mortality at older ages relative to female mortality.
 
-<div class="chart-container">
+<div frameBorder ="0" scrolling = "no" class="chart-container">
 <iframe src="http://onsdigital.github.io/Alpha/bulletins/old6.html"></iframe>
 </div>
 
 ## UK Country Comparisons
 Within the UK, at 823, in 2012 England and Wales as a whole had the highest number of people aged 90 and over per 100,000 population. In Scotland there were 695 people aged 90 and over per 100,000 population and in Northern Ireland there were 605 (Figure 7). [These differences reflect higher life expectancy at older ages in England and Wales compared with Scotland and Northern Ireland](http://www.ons.gov.uk/ons/rel/lifetables/national-life-tables/2010---2012/stb-uk-2010-2012.html "STB UK 2010 - 2012).
 
-<div class="chart-container">
+<div frameBorder ="0" scrolling = "no" class="chart-container">
 <iframe src="http://onsdigital.github.io/Alpha/bulletins/old7.html"></iframe>
 </div>
 
@@ -123,7 +123,7 @@ The ratio of women to men at age 90 and over is a little higher in Scotland and 
 
 The age distribution of the 90+ population was very similar for England and Wales, Scotland and Northern Ireland in 2012 (Figure 8).
 
-<div class="chart-container">
+<div frameBorder ="0" scrolling = "no" class="chart-container">
 <iframe src="http://onsdigital.github.io/Alpha/bulletins/old8.html"></iframe>
 </div>
 
@@ -134,7 +134,7 @@ In 2012 there were 806 people aged 90 and over per 100,000 population in the UK.
 
 According to the UN, in 2013 there were 441,000 centenarians in the world1. Even in the most aged countries the population aged 100 and over represents a very small proportion of the overall population. In 2012, people aged 100 and over accounted for only 0.02% of the total UK population, or 21 per 100,000 population. However, in comparison to many other countries, the UK has relatively high numbers of centenarians (Figure 9). The prevalence of centenarians internationally largely mirrors that of the 90 and over population. In 2012, Japan had the highest number of centenarians per 100,000 population in the world at 40 while within Europe, France had the highest number at 30. Eastern European countries have lower rates of centenarians than countries in Western Europe. Russia in particular has a low number of centenarians (4) per 100,000 population, reflecting their relatively low life expectancy among developed nations.
 
-<div class="chart-container">
+<div frameBorder ="0" scrolling = "no" class="chart-container">
 <iframe src="http://onsdigital.github.io/Alpha/bulletins/old9.html"></iframe>
 </div>
 

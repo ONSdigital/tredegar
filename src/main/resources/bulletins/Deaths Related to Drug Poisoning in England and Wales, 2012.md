@@ -93,7 +93,7 @@ The male mortality rate from drug misuse has dropped significantly from its peak
 
 Despite some annual fluctuations, the female mortality rate from drug misuse has tended to increase since 1993. The mortality rate peaked in 2008 at 15.5 deaths per million population, then dropped significantly in 2009, but increased slightly again between 2009 and 2010. Since 2010, the female mortality rate from drug misuse has been relatively stable, at 14.1 deaths per million population in 2012. 
 
-<div class="chart-container">
+<div frameBorder ="0" scrolling = "no" class="chart-container">
 <iframe src="http://onsdigital.github.io/Alpha/bulletins/drug1.html"></iframe>
 </div>
 
@@ -117,7 +117,7 @@ Male mortality rates in the oldest age group (70 and over) have shown no consist
 
 This pattern of drug misuse deaths is broadly in line with treatment figures from the Public Health England (PHE – previously the [National Treatment Agency, 2012](http://www.nta.nhs.uk/uploads/dtie2012v1.pdf "National Treatment Agency, 2012")), which showed that as the drug-dependent population ages, the over 40s have become the largest age group starting treatment. In contrast, the number of 18 to 24-year-olds newly entering treatment for heroin and crack use has halved over the last five years.
 
-<div class="chart-container">
+<div frameBorder ="0" scrolling = "no" class="chart-container">
 <iframe src="http://onsdigital.github.io/Alpha/bulletins/drug2.html"></iframe>
 </div>
 
@@ -138,7 +138,7 @@ The opposite trend is seen in females aged 20 to 29, where the mortality rate ha
 
 As with males, the lowest female mortality rates in 2012 were in those aged under 20 (1.2 deaths per million population) and 70 and over (7.9 deaths per million population). 
 
-<div class="chart-container">
+<div frameBorder ="0" scrolling = "no" class="chart-container">
 <iframe src="http://onsdigital.github.io/Alpha/bulletins/drug3.html"></iframe>
 </div>
 
@@ -161,7 +161,7 @@ Figures 4 and 5 give the age-standardised mortality rates where selected substan
 
 - Approximately 30% of all drug-related poisoning deaths also contain a mention of alcohol or long-term alcohol abuse (for example, cirrhosis) in addition to a drug. 
 
-<div class="chart-container">
+<div frameBorder ="0" scrolling = "no" class="chart-container">
 <iframe src="http://onsdigital.github.io/Alpha/bulletins/drug4.html"></iframe>
 </div>
 
@@ -172,7 +172,7 @@ Figures 4 and 5 give the age-standardised mortality rates where selected substan
 4. Figures are for deaths registered, rather than deaths occurring in each calendar year. Due to the length of time it takes to complete a coroner’s inquest, it can take months or even years for a drug-related death to be registered. More details can be found in the ‘Impact of registration delays on drug-related deaths’ section below.
 5. Figures for England and Wales include deaths of non-residents.
 
-<div class="chart-container">
+<div frameBorder ="0" scrolling = "no" class="chart-container">
 <iframe src="http://onsdigital.github.io/Alpha/bulletins/drug5.html"></iframe>
 </div>
 
@@ -252,7 +252,7 @@ In common with most other mortality statistics, figures for drug-related deaths 
 
 Due to the length of time it takes to hold an inquest, this bulletin actually presents information on deaths that may have occurred months or even years ago. Out of the 2,597 drug-related deaths registered in 2012, 1,358 (just over half) occurred in years prior to 2012. This makes it more difficult to evaluate how changes such as the heroin drought or the banning of certain new psychoactive substances have affected drug-related deaths. It also makes it more difficult to compare trends in drug-related deaths between local areas, as registration delays vary considerably across England and Wales. 
 
-<div class="chart-container">
+<div frameBorder ="0" scrolling = "no" class="chart-container">
 <iframe src="http://onsdigital.github.io/Alpha/bulletins/drug6.html"></iframe>
 </div>
 
