@@ -1,10 +1,10 @@
-Theme: People, Population and Community
+﻿Theme: People, Population and Community
 Level 2: Births, Deaths and Marriages
 Level 3: Families
 Summary: Shows families and children by family type including married couples, cohabiting couples and lone parents. Also shows household size and people living alone.
-Headline 1: In 2013 there were 18.2 million families in the UK. Of these, 12.3 million consisted of a married couple with or without children.
-Headline 2: The number of opposite sex cohabiting couple families has increased significantly, from 2.2 million in 2003 to 2.9 million in 2013. The number of dependent children living in opposite sex cohabiting couple families rose from 1.4 million to 1.9 million over the same period.
-Headline 3: There were nearly 1.9 million lone parents with dependent children in the UK in 2013, a figure which has grown steadily but not significantly from 1.8 million in 2003.
+Headline 1: In 2013 there were 18.2 million families in the UK. 
+Headline 2: Of these, 12.3 million consisted of a married couple with or without children.
+Headline 3: The number of opposite sex cohabiting couple families has increased significantly, from 2.2 million in 2003 to 2.9 million in 2013.
 Contact name: Emily Knipe
 Contact email: families@ons.gsi.gov.uk
 
@@ -274,7 +274,7 @@ The [Overview of Population Statistics](http://www.ons.gov.uk/ons/guide-method/m
 
 Next publication: Autumn 2014
 
-## Background notes
+## Background notes and methodology
 1. The Office for National Statistics would appreciate feedback on the uses made of the statistics and the usefulness of the information provided. Please email <families@ons.gsi.gov.uk> (preferred) or call +44 (0)1329 444677 to provide feedback.
 
 2. A family is a married, civil partnered or cohabiting couple with or without children, or a lone parent with at least one child. Children may be dependent or non-dependent.
@@ -313,3 +313,9 @@ Email <psi@nationalarchives.gsi.gov.uk>
 14. Details of the policy governing the release of new data are available by visiting [www.statisticsauthority.gov.uk/assessment/code-of-practice/index.html](http://www.statisticsauthority.gov.uk/assessment/code-of-practice/index.html) or from the Media Relations Office email: <media.relations@ons.gsi.gov.uk>
 
 These National Statistics are produced to high professional standards and released according to the arrangements approved by the UK Statistics Authority.
+
+## [accordion] References
+This information will not be available in the prototype, however in the future all references related to this statistical bulletin will appear here.
+
+## [accordion] Footnotes
+This information will not be available in the prototype, however in the future the footnotes related to this statistical bulletin will appear here.

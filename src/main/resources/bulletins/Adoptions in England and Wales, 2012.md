@@ -29,7 +29,7 @@ The number of adoption orders indicated by ONS and MoJ are similar but do not ma
 In 2012, there were 5,206 adoptions entered into the Adopted Children Register (ACR) following court orders made in England and Wales. This was higher than in 2011 (a 9.8% increase), when there were 4,740 adoptions. This represents the largest annual increase in adoptions over the last 15 years, the period for which adoption statistics by date of court order are available (Figure 1).
 
 <div frameBorder ="0" scrolling = "no"  class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/adoptions1.html"></iframe>
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/adoptions1.html"></iframe>
 </div>
 
 ### Notes: 
@@ -53,7 +53,7 @@ Special Guardianship provided a new permanence option for children, giving a leg
 In 2012, 51% of children adopted were male (compared with 49% in 2011) and 49% were female (compared with 51% in 2011). Since 1998, the number of male and female adoptions has been fairly similar (Figure 2).
 
 <div frameBorder ="0" scrolling = "no"  class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/adoptions2.html"></iframe>
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/adoptions2.html"></iframe>
 </div>
 
 ### Notes:
@@ -65,7 +65,7 @@ Smaller decreases have been recorded for other age groups: In 2012, 24% of child
 options of children aged under 1 decreased overall from 4.6% of all adoptions in 1998 to 1.6% in 2011 before rising slightly to 2.2% in 2012.
 
 <div frameBorder ="0" scrolling = "no"  class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/adoptions3.html"></iframe>
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/adoptions3.html"></iframe>
 </div>
 
 ## Adoptions by marital status of biological parents
