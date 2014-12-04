@@ -9,28 +9,37 @@
     "organisation": "Business Prices",
     "telephone": "+44 (0)1633 456468"
   },
-  "lede": "Lorem ipsum dolor sit amet, fugit tation percipitur duo at, magna denique ei duo, mazim oratio volumus id mel. Veri discere accusamus sit id, oblique fabulas legimus sit ex. Atqui urbanitas efficiendi ei sea. Voluptua gloriatur vis an, cu eius semper deleniti vel. Aperiri insolens accommodare vel ne, vel id dictas corrumpit urbanitas.",
-  "more": "Eam cu alia nostrud. In movet epicuri quo. Decore reprimique vix ei. Ea sit possim albucius, an has mutat lucilius inimicus. Vis et vocibus voluptatum, ne est unum meliore invidunt. Posse nemore vim ei, habeo omnesque ullamcorper usu at, eu eos cetero accusata consulatu.",
+  "lede": "Statistics on how people live together give us a fuller picture of the changing social landscape of the UK. Data on marriages and civil partnerships comes from registrations, but data on cohabitation comes from various different surveys.",
   "articles": [],
   "bulletins": [
     {
-      "name": "Civil Partnerships in the UK",
-      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/marriagecohabitationandcivilpartnerships/bulletins/civilpartnershipsintheuk"
+      "summary": "Annual statistics on civil partnerships that were formed in the United Kingdom (UK) in 2012, as well as those which were dissolved. Civil partnership statistics are analysed by sex, age, previous marital status and area of occurrence. Figures on formations for Northern Ireland and the UK are provisional and all dissolution data are provisional.",
+      "type": "bulletin",
+      "name": "Civil Partnerships in the UK, 2012",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/marriagecohabitationandcivilpartnerships/bulletins/civilpartnershipsintheuk2012"
     },
     {
-      "name": "Marriages in England and Wales",
-      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/marriagecohabitationandcivilpartnerships/bulletins/marriagesinenglandandwales"
+      "summary": "Annual data on marriages in England and Wales. Marriages abroad not included. Non-residents are included. Derived as part of civil registration.",
+      "type": "bulletin",
+      "name": "Marriages in England and Wales (Provisional), 2012",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/marriagecohabitationandcivilpartnerships/bulletins/marriagesinenglandandwalesprovisional2012"
     }
   ],
   "datasets": [
     {
-      "name": "Marriages data collection"
+      "summary": "Brief description of dataset",
+      "type": "dataset",
+      "name": "Marriages data collection",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/marriagecohabitationandcivilpartnerships/datasets/marriagesdatacollection"
     },
     {
-      "name": "Civil partnerships data collection"
+      "summary": "Brief description of dataset",
+      "type": "dataset",
+      "name": "Civil partnerships data collection",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/marriagecohabitationandcivilpartnerships/datasets/civilpartnershipsdatacollection"
     }
   ],
   "type": "release",
-  "name": "Marriage, Cohabitation and Civil Partnerships",
+  "name": "Marriage, cohabitation and civil partnerships",
   "fileName": "marriagecohabitationandcivilpartnerships"
 }

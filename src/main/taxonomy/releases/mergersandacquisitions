@@ -13,17 +13,33 @@
   "articles": [],
   "bulletins": [
     {
+      "summary": "Summary section",
+      "type": "bulletin",
       "name": "Mergers and Acquisitions Involving UK Companies",
       "uri": "/businessindustryandtrade/changestobusiness/mergersandacquisitions/bulletins/mergersandacquisitionsinvolvingukcompanies"
     }
   ],
   "datasets": [
     {
+      "summary": "Cross-Border Mergers, Acquisitions and Disposals",
+      "type": "dataset",
       "name": "Mergers and Acquisitions",
       "uri": "/businessindustryandtrade/changestobusiness/mergersandacquisitions/datasets/mergersandacquisitions"
+    },
+    {
+      "summary": "Brief description of dataset",
+      "type": "dataset",
+      "name": "Mergers and Acquisitions abroad by UK companies",
+      "uri": "/businessindustryandtrade/changestobusiness/mergersandacquisitions/datasets/mergersandacquisitionsabroadbyukcompanies"
+    },
+    {
+      "summary": "Brief description of dataset",
+      "type": "dataset",
+      "name": "Disposals abroad by UK companies",
+      "uri": "/businessindustryandtrade/changestobusiness/mergersandacquisitions/datasets/disposalsabroadbyukcompanies"
     }
   ],
   "type": "release",
-  "name": "Mergers and Acquisitions",
+  "name": "Mergers and acquisitions",
   "fileName": "mergersandacquisitions"
 }

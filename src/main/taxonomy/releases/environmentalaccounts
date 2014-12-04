@@ -13,17 +13,21 @@
   "articles": [],
   "bulletins": [
     {
+      "summary": "Summary section",
+      "type": "bulletin",
       "name": "UK Environmental Accounts",
       "uri": "/economy/environmentalaccounts/bulletins/ukenvironmentalaccounts"
     }
   ],
   "datasets": [
     {
+      "summary": "By Economic Sector and Gas, United Kingdom",
+      "type": "dataset",
       "name": "Atmospheric Emissions: Greenhouse Gas Emissions",
       "uri": "/economy/environmentalaccounts/datasets/atmosphericemissionsgreenhousegasemissions"
     }
   ],
   "type": "release",
-  "name": "Environmental Accounts",
+  "name": "Environmental accounts",
   "fileName": "environmentalaccounts"
 }

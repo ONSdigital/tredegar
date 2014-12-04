@@ -9,21 +9,22 @@
     "organisation": "Business Prices",
     "telephone": "+44 (0)1633 456468"
   },
-  "lede": "Lorem ipsum dolor sit amet, fugit tation percipitur duo at, magna denique ei duo, mazim oratio volumus id mel. Veri discere accusamus sit id, oblique fabulas legimus sit ex. Atqui urbanitas efficiendi ei sea. Voluptua gloriatur vis an, cu eius semper deleniti vel. Aperiri insolens accommodare vel ne, vel id dictas corrumpit urbanitas.",
-  "more": "Eam cu alia nostrud. In movet epicuri quo. Decore reprimique vix ei. Ea sit possim albucius, an has mutat lucilius inimicus. Vis et vocibus voluptatum, ne est unum meliore invidunt. Posse nemore vim ei, habeo omnesque ullamcorper usu at, eu eos cetero accusata consulatu.",
+  "lede": "Adoption statistics are available from adoption registrations. They are used to inform local and central governments about trends in adoptions and a long run time series is available to make comparisons and observations about the impact of various different government policies. These statistics are available by the age and gender of the children being adopted as well as by whether or not the adopted children were born inside marriage.",
   "articles": [],
   "bulletins": [
     {
+      "summary": "Annual adoptions statistics following court orders. Analysed by sex, age and marital status of biological parents.",
+      "type": "bulletin",
       "name": "Adoptions in England and Wales, 2012",
       "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/adoption/bulletins/adoptionsinenglandandwales2012"
     }
   ],
   "datasets": [
     {
-      "name": "Adoptions data collection"
-    },
-    {
-      "name": "Adoptions by age"
+      "summary": "Adoptions in the Adopted Children Register: sex, and whether the adopted child born within/outside marriage",
+      "type": "dataset",
+      "name": "Adoptions data collection",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/adoption/datasets/adoptionsdatacollection"
     }
   ],
   "type": "release",

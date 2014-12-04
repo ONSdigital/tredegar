@@ -13,17 +13,21 @@
   "articles": [],
   "bulletins": [
     {
+      "summary": "This statistical bulletin contains headline figures and commentary from the Business Demography 2012 publication.",
+      "type": "bulletin",
       "name": "Business Demography - 2012",
       "uri": "/businessindustryandtrade/changestobusiness/businessbirthsdeathsandsurvivalrates/bulletins/businessdemography2012"
     }
   ],
   "datasets": [
     {
+      "summary": "Contains enterprise births, deaths and survivals",
+      "type": "dataset",
       "name": "Business births and deaths",
       "uri": "/businessindustryandtrade/changestobusiness/businessbirthsdeathsandsurvivalrates/datasets/businessbirthsanddeaths"
     }
   ],
   "type": "release",
-  "name": "Business Births, Deaths and Survival Rates",
+  "name": "Business births, deaths and survival rates",
   "fileName": "businessbirthsdeathsandsurvivalrates"
 }

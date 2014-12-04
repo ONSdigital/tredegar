@@ -9,20 +9,25 @@
     "organisation": "Business Prices",
     "telephone": "+44 (0)1633 456468"
   },
-  "lede": "International migration statistics provide estimates of the number of usual residents moving in or out of the UK. This set of statistics is probably the one most quoted when discussing international migration. They include only those intending to change their place of usual residence for 12 months or more, thus long-term immigrants are added to and emigrants are subtracted from the estimate of usual residents of the UK.",
+  "lede": "International migration statistics provide estimates of the number of people moving in and out of the UK. Data on long term migration, short term migration, and visitor data provide a picture of those entering and leaving the UK, covering all lengths of stay. ",
   "articles": [],
   "bulletins": [
     {
+      "summary": "Summary section",
+      "type": "bulletin",
       "name": "Migration Statistics Quarterly Report, May 2014",
       "uri": "/peoplepopulationandcommunity/populationandmigration/internationalmigration/bulletins/migrationstatisticsquarterlyreportmay2014"
     }
   ],
   "datasets": [
     {
-      "name": "Long-Term International Migration"
+      "summary": "Brief description of dataset",
+      "type": "dataset",
+      "name": "Long-Term International Migration",
+      "uri": "/peoplepopulationandcommunity/populationandmigration/internationalmigration/datasets/longterminternationalmigration"
     }
   ],
   "type": "release",
-  "name": "International Migration",
+  "name": "International migration",
   "fileName": "internationalmigration"
 }

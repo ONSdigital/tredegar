@@ -14,13 +14,19 @@
   "bulletins": [],
   "datasets": [
     {
-      "name": "Full-time, part-time \u0026 temporary workers"
+      "summary": "Brief description of dataset",
+      "type": "dataset",
+      "name": "Full-time, part-time \u0026 temporary workers",
+      "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/datasets/fulltimeparttimetemporaryworkers"
     },
     {
-      "name": "Jobs by industry"
+      "summary": "Brief description of dataset",
+      "type": "dataset",
+      "name": "Jobs by industry",
+      "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/datasets/jobsbyindustry"
     }
   ],
   "type": "release",
-  "name": "Employment and Employee Types",
+  "name": "Employment and employee types",
   "fileName": "employmentandemployeetypes"
 }

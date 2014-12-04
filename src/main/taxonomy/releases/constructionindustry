@@ -13,17 +13,27 @@
   "articles": [],
   "bulletins": [
     {
+      "summary": "Summary section",
+      "type": "bulletin",
       "name": "Output in the Construction Industry",
       "uri": "/businessindustryandtrade/constructionindustry/bulletins/outputintheconstructionindustry"
     }
   ],
   "datasets": [
     {
+      "summary": "Brief description of dataset",
+      "type": "dataset",
+      "name": "Construction - All work summary",
+      "uri": "/businessindustryandtrade/constructionindustry/datasets/constructionallworksummary"
+    },
+    {
+      "summary": "Range of construction figures by sector and region",
+      "type": "dataset",
       "name": "Construction output",
       "uri": "/businessindustryandtrade/constructionindustry/datasets/constructionoutput"
     }
   ],
   "type": "release",
-  "name": "Construction Industry",
+  "name": "Construction industry",
   "fileName": "constructionindustry"
 }

@@ -13,17 +13,21 @@
   "articles": [],
   "bulletins": [
     {
+      "summary": "Summary section",
+      "type": "bulletin",
       "name": "Quarterly National Accounts",
       "uri": "/economy/economicoutputandproductivity/bulletins/quarterlynationalaccounts"
     }
   ],
   "datasets": [
     {
+      "summary": "By category of output (reference year 2010) for production and service industries",
+      "type": "dataset",
       "name": "Gross value added",
       "uri": "/economy/economicoutputandproductivity/datasets/grossvalueadded"
     }
   ],
   "type": "release",
-  "name": "Economic Output and Productivity",
+  "name": "Economic output and productivity",
   "fileName": "economicoutputandproductivity"
 }

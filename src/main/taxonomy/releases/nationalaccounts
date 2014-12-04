@@ -13,13 +13,18 @@
   "articles": [],
   "bulletins": [
     {
+      "summary": "Summary section",
+      "type": "bulletin",
       "name": "Balance of Payments",
       "uri": "/economy/nationalaccounts/bulletins/balanceofpayments"
     }
   ],
   "datasets": [
     {
-      "name": "Balance of Payments data collection"
+      "summary": "Brief description of dataset",
+      "type": "dataset",
+      "name": "Balance of Payments data collection",
+      "uri": "/economy/nationalaccounts/datasets/balanceofpaymentsdatacollection"
     }
   ],
   "type": "release",

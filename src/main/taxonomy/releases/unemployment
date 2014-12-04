@@ -13,22 +13,30 @@
   "articles": [],
   "bulletins": [
     {
+      "summary": "Statistics including employment, unemployment and economic inactivity for the United Kingdom",
+      "type": "bulletin",
       "name": "UK Labour Market",
       "uri": "/employmentandlabourmarket/unemployment/bulletins/uklabourmarket"
     },
     {
+      "summary": "Statistics and analysis based on data from the Labour Force Survey",
+      "type": "bulletin",
       "name": "Young People Not in Education, Employment or Training (NEET)",
       "uri": "/employmentandlabourmarket/unemployment/bulletins/youngpeoplenotineducationemploymentortrainingneet"
     }
   ],
   "datasets": [
     {
-      "name": "Unemployment data collection",
-      "uri": "/employmentandlabourmarket/unemployment/datasets/unemploymentdatacollection"
-    },
-    {
+      "summary": "Data on the number of people claiming benefits principally for being unemployed",
+      "type": "dataset",
       "name": "Claimant Count data collection",
       "uri": "/employmentandlabourmarket/unemployment/datasets/claimantcountdatacollection"
+    },
+    {
+      "summary": "People without a job who have been actively seeking work in the UK",
+      "type": "dataset",
+      "name": "Unemployment data collection",
+      "uri": "/employmentandlabourmarket/unemployment/datasets/unemploymentdatacollection"
     }
   ],
   "type": "release",

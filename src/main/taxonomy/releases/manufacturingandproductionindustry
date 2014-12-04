@@ -13,17 +13,27 @@
   "articles": [],
   "bulletins": [
     {
+      "summary": "Summary section",
+      "type": "bulletin",
       "name": "Index of Production",
       "uri": "/businessindustryandtrade/manufacturingandproductionindustry/bulletins/indexofproduction"
     }
   ],
   "datasets": [
     {
+      "summary": "Brief description of dataset",
+      "type": "dataset",
+      "name": "Output by Manufacturing sub-sectors",
+      "uri": "/businessindustryandtrade/manufacturingandproductionindustry/datasets/outputbymanufacturingsubsectors"
+    },
+    {
+      "summary": "Broad industry groups and main industrial groupings.",
+      "type": "dataset",
       "name": "Output of the production industries",
       "uri": "/businessindustryandtrade/manufacturingandproductionindustry/datasets/outputoftheproductionindustries"
     }
   ],
   "type": "release",
-  "name": "Manufacturing and Production Industry",
+  "name": "Manufacturing and production industry",
   "fileName": "manufacturingandproductionindustry"
 }

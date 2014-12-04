@@ -13,16 +13,21 @@
   "articles": [],
   "bulletins": [
     {
+      "summary": "Summary section",
+      "type": "bulletin",
       "name": "Regional Gross Disposable Household Income (GDHI)",
       "uri": "/economy/regionalaccounts/bulletins/regionalgrossdisposablehouseholdincomegdhi"
     }
   ],
   "datasets": [
     {
-      "name": "NUTS1 Regional Gross Disposable Household Income"
+      "summary": "Brief description of dataset",
+      "type": "dataset",
+      "name": "NUTS1 Regional Gross Disposable Household Income",
+      "uri": "/economy/regionalaccounts/datasets/nuts1regionalgrossdisposablehouseholdincome"
     }
   ],
   "type": "release",
-  "name": "Regional Accounts",
+  "name": "Regional accounts",
   "fileName": "regionalaccounts"
 }

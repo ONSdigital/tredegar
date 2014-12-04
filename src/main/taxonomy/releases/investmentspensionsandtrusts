@@ -13,16 +13,21 @@
   "articles": [],
   "bulletins": [
     {
+      "summary": "Summary section",
+      "type": "bulletin",
       "name": "Foreign Direct Investment Involving UK Companies",
       "uri": "/economy/investmentspensionsandtrusts/bulletins/foreigndirectinvestmentinvolvingukcompanies"
     }
   ],
   "datasets": [
     {
-      "name": "Data collection of FDI flows"
+      "summary": "Comprehensive dataset covering Foreign Direct Investment (FDI) Involving UK Companies",
+      "type": "dataset",
+      "name": "Data collection of FDI flows",
+      "uri": "/economy/investmentspensionsandtrusts/datasets/datacollectionoffdiflows"
     }
   ],
   "type": "release",
-  "name": "Investments, Pensions and Trusts",
+  "name": "Investments, pensions and trusts",
   "fileName": "investmentspensionsandtrusts"
 }

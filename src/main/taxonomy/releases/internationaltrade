@@ -13,21 +13,27 @@
   "articles": [],
   "bulletins": [
     {
+      "summary": "Summary section",
+      "type": "bulletin",
       "name": "UK Trade",
       "uri": "/businessindustryandtrade/internationaltrade/bulletins/uktrade"
     }
   ],
   "datasets": [
     {
+      "summary": "Exports, imports and balance including total trade, trade in goods and oil",
+      "type": "dataset",
       "name": "Value of UK trade in goods and services",
       "uri": "/businessindustryandtrade/internationaltrade/datasets/valueofuktradeingoodsandservices"
     },
     {
+      "summary": "Exports, imports and balance for EMU, EU and non-EU",
+      "type": "dataset",
       "name": "Trade in goods by area",
       "uri": "/businessindustryandtrade/internationaltrade/datasets/tradeingoodsbyarea"
     }
   ],
   "type": "release",
-  "name": "International Trade",
+  "name": "International trade",
   "fileName": "internationaltrade"
 }

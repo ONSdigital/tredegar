@@ -13,17 +13,27 @@
   "articles": [],
   "bulletins": [
     {
+      "summary": "Summary section",
+      "type": "bulletin",
       "name": "Retail Sales",
       "uri": "/businessindustryandtrade/retailindustry/bulletins/retailsales"
     }
   ],
   "datasets": [
     {
+      "summary": "Brief description of dataset",
+      "type": "dataset",
+      "name": "Value of retail sales by commodity",
+      "uri": "/businessindustryandtrade/retailindustry/datasets/valueofretailsalesbycommodity"
+    },
+    {
+      "summary": "Value of retail sales index and percentage change",
+      "type": "dataset",
       "name": "Retail sales",
       "uri": "/businessindustryandtrade/retailindustry/datasets/retailsales"
     }
   ],
   "type": "release",
-  "name": "Retail Industry",
+  "name": "Retail industry",
   "fileName": "retailindustry"
 }

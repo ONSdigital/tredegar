@@ -9,25 +9,31 @@
     "organisation": "Business Prices",
     "telephone": "+44 (0)1633 456468"
   },
-  "lede": "Lorem ipsum dolor sit amet, fugit tation percipitur duo at, magna denique ei duo, mazim oratio volumus id mel. Veri discere accusamus sit id, oblique fabulas legimus sit ex. Atqui urbanitas efficiendi ei sea. Voluptua gloriatur vis an, cu eius semper deleniti vel. Aperiri insolens accommodare vel ne, vel id dictas corrumpit urbanitas.",
-  "more": "Eam cu alia nostrud. In movet epicuri quo. Decore reprimique vix ei. Ea sit possim albucius, an has mutat lucilius inimicus. Vis et vocibus voluptatum, ne est unum meliore invidunt. Posse nemore vim ei, habeo omnesque ullamcorper usu at, eu eos cetero accusata consulatu.",
+  "lede": "Conception statistics bring together records of birth registrations and abortion notifications. Fertility analysis adds value to information published on births by reporting statistics on those with no children and fertility among women born inside and outside the UK. Fertility projections are also used in the population projections. ",
   "articles": [],
   "bulletins": [
     {
+      "summary": "Fertility on year of birth of mother rather than the year of birth of child. Includes average number of live-born children and the proportion of women remaining childless by year of birth.",
+      "type": "bulletin",
       "name": "Cohort Fertility, 2012",
       "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/conceptionandfertilityrates/bulletins/cohortfertility2012"
     },
     {
+      "summary": "Estimated numbers of conceptions, conception rates and the percentage of conceptions leading to abortion by age of woman at conception.",
+      "type": "bulletin",
       "name": "Conceptions in England and Wales, 2012",
       "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/conceptionandfertilityrates/bulletins/conceptionsinenglandandwales2012"
     }
   ],
   "datasets": [
     {
-      "name": "Teenage conceptions"
+      "summary": "Brief description of dataset",
+      "type": "dataset",
+      "name": "Teenage conceptions",
+      "uri": "/peoplepopulationandcommunity/birthsdeathsandmarriages/conceptionandfertilityrates/datasets/teenageconceptions"
     }
   ],
   "type": "release",
-  "name": "Conception and Fertility Rates",
+  "name": "Conception and fertility rates",
   "fileName": "conceptionandfertilityrates"
 }

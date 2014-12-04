@@ -13,12 +13,16 @@
   "articles": [],
   "bulletins": [
     {
+      "summary": "Summary section",
+      "type": "bulletin",
       "name": "Regional Gross Value Added (Income Approach)",
       "uri": "/economy/grossvalueaddedgva/bulletins/regionalgrossvalueaddedincomeapproach"
     }
   ],
   "datasets": [
     {
+      "summary": "Economic activity as measured by Gross Value Added (GVA)",
+      "type": "dataset",
       "name": "Regional GVA NUTS1",
       "uri": "/economy/grossvalueaddedgva/datasets/regionalgvanuts1"
     }

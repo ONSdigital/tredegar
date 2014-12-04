@@ -13,17 +13,21 @@
   "articles": [],
   "bulletins": [
     {
+      "summary": "Summary section",
+      "type": "bulletin",
       "name": "Overseas Travel and Tourism, Provisional Results for May 2014",
       "uri": "/businessindustryandtrade/tourismindustry/bulletins/overseastravelandtourismprovisionalresultsformay2014"
     }
   ],
   "datasets": [
     {
+      "summary": "Visits and Spending by UK residents abroad and overseas residents in the UK",
+      "type": "dataset",
       "name": "Overseas travel and tourism",
       "uri": "/businessindustryandtrade/tourismindustry/datasets/overseastravelandtourism"
     }
   ],
   "type": "release",
-  "name": "Tourism Industry",
+  "name": "Tourism industry",
   "fileName": "tourismindustry"
 }

@@ -13,17 +13,21 @@
   "articles": [],
   "bulletins": [
     {
+      "summary": "Summary section",
+      "type": "bulletin",
       "name": "E-Commerce and ICT Activity",
       "uri": "/businessindustryandtrade/itandinternetindustry/bulletins/ecommerceandictactivity"
     }
   ],
   "datasets": [
     {
+      "summary": "Data on e-commerce sales and how businesses are using the internet",
+      "type": "dataset",
       "name": "E-commerce and ICT Activity",
       "uri": "/businessindustryandtrade/itandinternetindustry/datasets/ecommerceandictactivity"
     }
   ],
   "type": "release",
-  "name": "IT and Internet Industry",
+  "name": "IT and internet industry",
   "fileName": "itandinternetindustry"
 }

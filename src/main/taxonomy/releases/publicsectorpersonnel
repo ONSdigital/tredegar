@@ -13,17 +13,21 @@
   "articles": [],
   "bulletins": [
     {
+      "summary": "Summary section",
+      "type": "bulletin",
       "name": "Public Sector Employment, Q1 2014",
       "uri": "/employmentandlabourmarket/publicsectorpersonnel/bulletins/publicsectoremploymentq12014"
     }
   ],
   "datasets": [
     {
+      "summary": "Public sector employment by sector classification",
+      "type": "dataset",
       "name": "Public Sector Employment",
       "uri": "/employmentandlabourmarket/publicsectorpersonnel/datasets/publicsectoremployment"
     }
   ],
   "type": "release",
-  "name": "Public Sector Personnel",
+  "name": "Public sector personnel",
   "fileName": "publicsectorpersonnel"
 }

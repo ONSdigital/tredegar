@@ -13,17 +13,21 @@
   "articles": [],
   "bulletins": [
     {
+      "summary": "Summary section",
+      "type": "bulletin",
       "name": "UK Gross Domestic Expenditure on Research and Development",
       "uri": "/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/bulletins/ukgrossdomesticexpenditureonresearchanddevelopment"
     }
   ],
   "datasets": [
     {
+      "summary": "By performing and funding sectors",
+      "type": "dataset",
       "name": "Expenditure on R\u0026D in the UK",
       "uri": "/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/datasets/expenditureonrdintheuk"
     }
   ],
   "type": "release",
-  "name": "Research and Development Expenditure",
+  "name": "Research and Development expenditure",
   "fileName": "researchanddevelopmentexpenditure"
 }
