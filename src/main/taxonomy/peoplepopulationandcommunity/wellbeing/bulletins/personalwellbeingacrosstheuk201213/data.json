@@ -38,7 +38,13 @@
   "headline2": "Morbi sed sem at magna",
   "headline3": "Auctor gravida sed non enim",
   "summary": "Summary section",
-  "relatedBulletins": [],
+  "relatedBulletins": [
+    {
+      "summary": "This bulletin presents experimental statistics from the second Personal Well-being Annual Population dataset, April 2012 to March 2013.  Overall estimates of personal well-being are provided for each country of the United Kingdom, as well as for lower level geographies in England, Scotland and Wales.",
+      "name": "Personal Well-being Across the UK, 2012-2013",
+      "uri": "/peoplepopulationandcommunity/wellbeing/bulletins/personalwellbeingacrosstheuk20122013"
+    }
+  ],
   "title": "Personal Well-being Across the UK, 2012/13",
   "releaseDate": "19 August 2014",
   "type": "bulletin",

@@ -38,7 +38,13 @@
   "headline2": "Morbi sed sem at magna",
   "headline3": "Auctor gravida sed non enim",
   "summary": "Summary section",
-  "relatedBulletins": [],
+  "relatedBulletins": [
+    {
+      "summary": "A first estimate of retail sales in value and volume terms, seasonally and non-seasonally adjusted.",
+      "name": "Retail Sales, June 2014",
+      "uri": "/businessindustryandtrade/retailindustry/bulletins/retailsalesjune2014"
+    }
+  ],
   "title": "Retail Sales",
   "releaseDate": "19 August 2014",
   "type": "bulletin",

@@ -38,7 +38,13 @@
   "headline2": "Morbi sed sem at magna",
   "headline3": "Auctor gravida sed non enim",
   "summary": "Summary section",
-  "relatedBulletins": [],
+  "relatedBulletins": [
+    {
+      "summary": "This release provides estimates of the values of e-commerce and the adoption and use of Information and Communication Technologies (ICTs) by UK businesses. The source of the information is the E-commerce Survey of UK Businesses.",
+      "name": "E-Commerce and ICT Activity, 2012",
+      "uri": "/businessindustryandtrade/itandinternetindustry/bulletins/ecommerceandictactivity2012"
+    }
+  ],
   "title": "E-Commerce and ICT Activity",
   "releaseDate": "19 August 2014",
   "type": "bulletin",
