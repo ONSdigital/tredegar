@@ -6008,6 +6008,9 @@ td.datatable-downloads {
     height: 5px;
     height: 0.5rem;
     margin: 0 auto;
+    margin-right: auto\9;
+    margin-left: auto\9;
+    width: 80%\9;
     content: "";
     background-color: #757575;
 }

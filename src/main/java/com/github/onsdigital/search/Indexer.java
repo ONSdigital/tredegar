@@ -61,8 +61,8 @@ public class Indexer {
 
 		XContentBuilder builder = jsonBuilder().startObject().startObject(type).startObject("properties");
 		builder.startObject("lede").field("type", "string").field("index", "no").endObject();
-		builder.startObject("title").field("type", "string").field("index", "analyzed").endObject();
-		builder.startObject("url").field("type", "string").field("index", "analyzed").endObject();
+		builder.startObject("title").field("type", "string").field("index", "analyzed").field("analyzer", "ons_synonyms").endObject();
+		builder.startObject("url").field("type", "string").field("index", "analyzed").field("analyzer", "ons_synonyms").endObject();
 		builder.startObject("path").field("type", "string").field("index", "analyzed").endObject();
 		builder.endObject().endObject().endObject();
 		return builder;
