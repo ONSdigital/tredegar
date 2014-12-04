@@ -90,21 +90,25 @@
     }
   ],
   "statsBulletinHeadline": {
+    "summary": "Summary section",
     "name": "Gross Domestic Product Preliminary Estimate",
     "uri": "/economy/grossdomesticproductgdp/bulletins/grossdomesticproductpreliminaryestimate"
   },
   "statsBulletins": [
     {
+      "summary": "Summary section",
       "name": "Gross Domestic Product Preliminary Estimate",
       "uri": "/economy/grossdomesticproductgdp/bulletins/grossdomesticproductpreliminaryestimate"
     }
   ],
   "datasets": [
     {
+      "summary": "Brief description of dataset",
       "name": "GDP by category of expenditure",
       "uri": "/economy/grossdomesticproductgdp/datasets/gdpbycategoryofexpenditure"
     },
     {
+      "summary": "High level overview of the economy",
       "name": "Gross Domestic Product data collection",
       "uri": "/economy/grossdomesticproductgdp/datasets/grossdomesticproductdatacollection"
     }
