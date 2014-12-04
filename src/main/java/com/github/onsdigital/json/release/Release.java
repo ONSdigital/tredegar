@@ -1,11 +1,9 @@
 package com.github.onsdigital.json.release;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 import com.github.onsdigital.generator.Folder;
-import com.github.onsdigital.generator.datasets.DatasetContent;
 import com.github.onsdigital.json.ContentType;
 import com.github.onsdigital.json.DataItem;
 import com.github.onsdigital.json.dataset.Dataset;
@@ -50,15 +48,10 @@ public class Release extends DataItem {
 		for (Bulletin bulletin : folder.bulletins) {
 			bulletins.add(new DataItemLink(bulletin.name, bulletin.uri));
 		}
-		try {
-			List<Dataset> datasetList = DatasetContent.getDatasets(folder);
-			if (datasetList != null) {
-				for (Dataset dataset : datasetList) {
-					datasets.add(new DataItemLink(dataset.name, dataset.uri));
-				}
+		if (folder.datasets != null) {
+			for (Dataset dataset : folder.datasets) {
+				datasets.add(new DataItemLink(dataset.name, dataset.uri));
 			}
-		} catch (IOException e) {
-			throw new RuntimeException("Error getting datasets for " + folder, e);
 		}
 	}
 
