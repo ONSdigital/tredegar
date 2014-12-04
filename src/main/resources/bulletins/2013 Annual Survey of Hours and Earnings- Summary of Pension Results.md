@@ -1,6 +1,5 @@
 Theme: Employment and Labour Market
 Level 2: Unemployment
-Level 3: Workplace Pensions
 Summary: Data on types of workplace pension arrangements for UK employees by age, industry, public/private sector, occupation and size of company.
 Headline 1: In 2013, the proportion of employees who belonged to a workplace pension increased to 50%, the first increase since 2006.
 Headline 2: 85% of public sector employees and 36% of private sector employees had a workplace pension scheme in 2013.

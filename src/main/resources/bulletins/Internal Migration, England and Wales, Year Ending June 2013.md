@@ -1,5 +1,5 @@
 Theme: People, Population and Community
-Level 2: Personal and Household Finances
+Level 2: Population and migration
 Level 3: Migration within the UK
 Summary: Summarised statistics on residential moves between local authorities and regions in England and Wales and the UK.
 Headline 1: There were an estimated 2.71 million residents moving between local authorities in England and Wales between July 2012 and June 2013. This compares with 463,000 international immigrants who arrived in England and Wales and 281,000 international emigrants who left England and Wales during that period.
