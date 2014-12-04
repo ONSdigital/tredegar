@@ -27,6 +27,9 @@
 			sparkline.visible = false
 			sparkline.chartConfig = getSparkline($scope.width, $scope.height)
 			watchData()
+			if($scope.headline) {
+				resolveScreenSize()				
+			}
 			watchWidth()
 			
 			function watchData() {
@@ -44,18 +47,22 @@
 				// support for responsive behaviour for t3 headline data sparkline
 		        if($scope.headline) {
 		          angular.element($window).bind('resize', function() {
-		        	  // due to there being multiple sparklines on t3 then occassionally the resize lifecycle throws a
+		        	$log.debug('Resized:' + $window.innerWidth)
+		        	resolveScreenSize()
+		              $scope.$apply()
+		          })
+		        }
+			}
+
+			function resolveScreenSize() {
+				  // due to there being multiple sparklines on t3 then occassionally the resize lifecycle throws a
 		        	  // [Uncaught TypeError: Cannot read property 'chart' of undefined] - this has not resulted in any issues		        	  
-		          	  $log.debug('Resized:' + $window.innerWidth)
 		              if ($window.innerWidth < 900) {
 		            	  sparkline.chartConfig.options.chart.width = 175
 		              } else {
 		            	  sparkline.chartConfig.options.chart.width = 350		            	
 		              }
 		          	  $log.debug('chart width set to: ' + sparkline.chartConfig.options.chart.width)
-		              $scope.$apply()
-		          })
-		        }
 			}
 
 			function buildChart(chartConfig, timeseries, isHeadline) {
@@ -111,15 +118,6 @@
 
 
 	function getSparkline(width, height) {
-		// var widthValue
-		// var heightValue
-		// if (isHeadline) {
-		// 	widthValue = 170
-		// 	heightValue = 100
-		// } else {
-		// 	widthValue = 140
-		// 	heightValue = 50
-		// }
 
 		var data = {
 			options: {
