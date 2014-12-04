@@ -24,5 +24,6 @@ public class ReleaseReference extends Reference {
 		super(release);
 		releaseDate = release.releaseDate;
 		nextRelease = release.nextRelease;
+		fileName = release.fileName;
 	}
 }
