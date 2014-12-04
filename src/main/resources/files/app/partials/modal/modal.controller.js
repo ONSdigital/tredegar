@@ -10,6 +10,8 @@
 		var modal = this
 		modal.showModal = isAccepted() ? false : true
 		modal.showModal = PageUtil.isPrerender() ? false : modal.showModal
+		// Tweak for Loop11 testing - disable display of the modal:
+		modal.showModal = false
 
 		function isAccepted() {
 			var accepted = ipCookie('onsAlphaDisclaimer')
