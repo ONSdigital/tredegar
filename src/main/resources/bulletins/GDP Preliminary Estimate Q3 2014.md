@@ -7,6 +7,7 @@ Headline 2: GDP was 3.1% higher in Q2 2014 compared with the same quarter a year
 Headline 3: In Q2 2014 GDP was estimated to be 0.2% above the peak in Q1 2008. From peak to trough in 2009, the economy shrank by 7.2%.
 Contact name: Robert Doody
 Contact email: ios.enquiries@ons.gsi.gov.uk
+
 ## Key Information
 Change in GDP is the main indicator of economic growth. Further information on GDP can be found in background note 3. All data in this bulletin are seasonally adjusted estimates and have had the effect of price changes removed (in other words, the data are deflated). Further information on some of the key concepts (including seasonal adjustment and deflation) underlying the estimates can be found in background note 9.
 
