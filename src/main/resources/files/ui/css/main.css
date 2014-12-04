@@ -4827,11 +4827,11 @@ table actions
 }
 
 .search-home-focused {
-    font-size: 1.5em !important;
+    font-size: 1.25em !important;
 }
 .search-home-focused--summary {
-    font-size: 2rem;
-    line-height: 2.5rem;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
 }
 
 /*Highlight terms*/
@@ -6136,7 +6136,7 @@ td.datatable-downloads {
 }
 .sparkline_area {
     width: 100%;
-    position: relative;
+    position: relative;/*fix for t3 sparkline appearance*/
 }
 
 .nav-panel__body.graph {
@@ -6295,7 +6295,7 @@ td.datatable-downloads {
     }
 }
 
-@media screen and (min-width: 600px) and (max-width: 770px) {
+@media screen and (min-width: 600px) and (max-width: 750px) {
 
     .nav-panel__body.flush {
         padding-left: 10%;
@@ -6305,7 +6305,7 @@ td.datatable-downloads {
     }
 }
 
-@media screen and (min-width: 770px) and (max-width: 800px) {
+@media screen and (min-width: 750px) and (max-width: 800px) {
 
     .nav-panel__body.flush {
         padding-left: 20%;
