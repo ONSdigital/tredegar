@@ -4,13 +4,22 @@
 (function() {
 
   angular.module("onsTemplates")
-    .controller("SearchController", ['$scope', '$location', '$window', '$log', 'PageUtil', 'searchResponse', SearchController])
+    .controller("SearchController", ['$scope', '$window', '$log', 'PageUtil', 'searchResponse', '$routeParams', SearchController])
 
 
-  function SearchController($scope, $location, $window, $log, PageUtil, searchResponse) {
-    var page = PageUtil.getUrlParam("page")
-    var searchTerm = $scope.searchTerm = PageUtil.getUrlParam("q")
-    var type = $scope.type = PageUtil.getUrlParam("type")
+  function SearchController($scope, $window, $log, PageUtil, searchResponse, $routeParams) {
+    if (!searchResponse) {
+      return PageUtil.goToPage('404')
+    }
+    var page = $routeParams.page
+    var searchTerm = $scope.searchTerm = $routeParams.searchTerm
+
+    if (!searchTerm) {
+      PageUtil.goToPage('404')
+    }
+
+    $scope.searchResponse = searchResponse
+    var type = $scope.type = $routeParams.type
     var filters = {}
     var departmentHandoff = [
       ["dfe", "education", "gcse", "a level", "degree", "nvq", "school", "college", "university", "national curriculum", "qualification", "teacher training", "pupil absence", "exclusions", "school workforce", "key stage"],
@@ -134,26 +143,9 @@
     resolvePaginatorLinkCount()
     watchResize()
 
-    if (!searchResponse) {
-      return
-    }
-
-    if (!searchTerm) {
-      return
-    }
-
-    if (!page) {
-      page = 1
-    }
-
     initialize(searchTerm, type, page)
 
-    function isLoading() {
-      return ($scope.searchTerm && !$scope.searchResponse)
-    }
-
     function initialize(q, type, pageNumber) {
-      $scope.searchResponse = searchResponse
       //Minus for single home type returning. First page will show 11 elements
       if(searchResponse.results.length > 10) {
         $scope.pageCount = Math.ceil((searchResponse.numberOfResults - 1) / 10)
@@ -194,7 +186,7 @@
 
       if (searchResponse.numberOfResults === 0 && !$scope.filterOn) {
         $scope.showZeroResultsFound = true;
-        if(filters['timeseries']) {
+        if(filters['timeseries'] || isPrerender()) {
           $scope.showTimeseriesSearchSuggest = false
         } else {
           $scope.showTimeseriesSearchSuggest = true
@@ -202,7 +194,7 @@
       }
 
       if (searchResponse.numberOfResults > 0 || $scope.filterOn) {
-        if(filters['timeseries']) {
+        if(filters['timeseries'] || isPrerender()) {
           $scope.showFilters = false;
         } else {
           $scope.showFilters = true;
@@ -211,14 +203,12 @@
     }
 
     function reLoad() {
-      //Clear page parameter if any
-      $location.search('page', null)
-
-      $location.search('type', resolveTypes(filters))
+      PageUtil.goToPage('/search/' + searchTerm)
+      PageUtil.setUrlParam('type', resolveTypes(filters))
         // if the results are generated from an autocorrect suggest then
         // we need to reset the query parameter to the suggestion
-      if ($scope.searchResponse.suggestionBasedResult) {
-        $location.search('q', $scope.searchResponse.suggestion)
+      if (searchResponse.suggestionBasedResult) {
+        PageUtil.goToPage('/search/' + searchResponse.suggestion)
       }
     }
 
@@ -234,7 +224,9 @@
           activeFilters.push(type)
         }
       };
-      return activeFilters.length > 0 ? activeFilters : null
+      var result =  activeFilters.length > 0 ? activeFilters : null
+      console.log(result)
+      return result
     }
 
     function isActive(type) {
@@ -245,7 +237,7 @@
     function resolveRelatedDepartment(searchTerm) {
       $log.debug("Resolving related department for " + searchTerm)
       var departmentCode
-      var searchTerm = searchTerm.toLowerCase()
+      searchTerm = searchTerm.toLowerCase()
 
       for (var i = 0; i < departmentHandoff.length; i++) {
         for (var x = 0; x < departmentHandoff[i].length; x++) {
@@ -299,7 +291,6 @@
 
     //Expose API
     angular.extend($scope, {
-      isLoading: isLoading,
       toggleFilter: toggleFilter,
       isActive: isActive,
       isFocus:isFocus,

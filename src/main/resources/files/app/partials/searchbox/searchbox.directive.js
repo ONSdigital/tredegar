@@ -30,11 +30,7 @@ angular.module('onsTemplates')
 					if (!searchTerm) {
 						return
 					}
-					$location.path('/search')
-					$location.search('q', searchTerm)
-
-					//Clear page parameter if any
-					$location.search('page', null)
+					$location.path('/search/' + searchTerm)
 					$location.search('type', null)
 						//Re-initializes controllers. Fixes searching on search results page when searching the same term
 					$route.reload()

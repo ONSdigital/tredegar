@@ -16,10 +16,10 @@ pageCount field is mandatory
   'use strict';
 
   angular.module('onsPaginator', [])
-    .directive('onsPaginator', ['$location', Paginator])
+    .directive('onsPaginator', ['$location', '$routeParams', Paginator])
     .filter('range', rangeFilter)
 
-  function Paginator($location) {
+  function Paginator($location, $routeParams) {
     return {
       restrict: 'E',
       templateUrl: 'app/components/paginator/paginator.html',
@@ -37,7 +37,7 @@ pageCount field is mandatory
       var paginator = this
       var PAGE_PARAM = 'page'
       var maxVisible = $scope.maxVisible || 10
-      var currentPage = $scope.currentPage = +$location.search()[PAGE_PARAM] || 1
+      var currentPage = $scope.currentPage = +$routeParams[PAGE_PARAM] || 1
       paginator.show
       paginator.start
       paginator.end
@@ -89,33 +89,43 @@ pageCount field is mandatory
       }
 
       function selectPage(index) {
-        currentPage = (index)
-        $location.search(PAGE_PARAM, index)
+        gotoPage(index)
         init()
       }
 
       function next() {
-        var page = currentPage += 1
-        $location.search(PAGE_PARAM, page) //Set page
+        gotoPage(currentPage + 1)
         init()
       }
 
       function prev() {
-        var page = currentPage -= 1
-        $location.search(PAGE_PARAM, page) //Set page
+        gotoPage(currentPage - 1)
         init()
       }
 
       function getLinkTarget (index) {
         var target = ''
-        var url = $location.url()
-        if($location.search()['page']) {
-          //Page already set, replace
-          target =  $scope.static ? ('/static' + url.replace(PAGE_PARAM + '=' + currentPage, PAGE_PARAM + '=' + index  )) : ''
-        } else {
-          target = $scope.static ? ('/static' + url + '&'  + PAGE_PARAM + '=' + index ) : ''
-        }
+        target =  $scope.static ? ('/static' + getPath(index)) : ''
         return target
+      }
+
+      function gotoPage(page) {
+        $location.path(getPath(page))
+        currentPage = page
+      }
+
+      function getPath(page) {
+        var path = $location.path()
+        var newPath = ''
+        console.log('Path:' + path + ' currentPage:' + currentPage)
+        if(path.indexOf('/' + PAGE_PARAM + '/' + currentPage) > -1) {
+          console.log("Page available")
+          newPath =  path.replace(PAGE_PARAM + '/' + currentPage, PAGE_PARAM + '/' + page)
+        } else {
+          newPath =  path + '/'  + PAGE_PARAM + '/' + page
+        }
+        console.log("New path:" + newPath)
+        return newPath
       }
 
       function isCurrent(index) {

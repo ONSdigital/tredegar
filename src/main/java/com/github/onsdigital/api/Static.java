@@ -1,6 +1,7 @@
 package com.github.onsdigital.api;
 
 import java.io.IOException;
+import java.net.URL;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -25,7 +26,16 @@ public class Static {
 		// Cache for an 6 hours. These pages will only be updated daily, so this
 		// should ensure a sensible reload window:
 		response.setHeader("cache-control", "public, max-age=3600");
+		
+		URL url = new URL(request.getRequestURL().toString());
+		//If static search convert get parameter to path parameter and redirect
+		if (url.getPath().equals("/static/search")) {
+			String searchTerm = request.getParameter("q");
+			response.sendRedirect("/static/search/" + searchTerm);
+			return;
+		}
 
+		
 		if (!PrerenderIo.handle(request, response) && !PreGenerated.handle(request, response)) {
 			response.setStatus(HttpStatus.SC_NOT_FOUND);
 			response.getWriter().write("Apologies, for some reason it seems that page can't be generated.");
