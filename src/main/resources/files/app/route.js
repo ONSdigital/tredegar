@@ -117,7 +117,7 @@
 			controller: "PreviousCtrl",
 			resolve: {
 				title: ['PageUtil', function(PageUtil) {
-					PageUtil.setTitle('Previs Versions')
+					PageUtil.setTitle('Previous Versions')
 				}]
 			}
 		}).
