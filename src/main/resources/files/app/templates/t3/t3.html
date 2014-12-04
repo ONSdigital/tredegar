@@ -46,7 +46,7 @@
                             <ons-loading condition="!taxonomy.data.headline.data"></ons-loading>
                             <div class="stat__figure ">
                                 <div>
-                                    <span class="stat__figure__unit">{{taxonomy.data.headline.data.preUnit}}</span> {{taxonomy.data.headline.data.number}}
+                                    <span class="stat__figure__unit">{{taxonomy.data.headline.data.preUnit}}</span> {{taxonomy.data.headline.data.number | number}}
                                     <span class="stat__figure__unit" ng-if="taxonomy.data.headline.data.unit">{{taxonomy.data.headline.data.unit}}</span>
                                 </div>
                                 <div class="stat__description-large">{{taxonomy.data.headline.data.date}}</div>
@@ -133,7 +133,7 @@
                 <ons-loading condition="!item.data" class="stat list--table__item__body--centred"></ons-loading>
                 <div class="stat__figure list--table__item--stat">
                     <div>
-                        <span class="stat__figure__unit">{{item.data.preUnit}}</span> {{item.data.number}}
+                        <span class="stat__figure__unit">{{item.data.preUnit}}</span> {{item.data.number | number}}
                         <span class="stat__figure__unit">{{item.data.unit}}</span>
                     </div>
                     <div class="list--table--stat_description">{{item.data.date}}</div>

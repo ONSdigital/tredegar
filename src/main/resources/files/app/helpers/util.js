@@ -3,11 +3,11 @@
 (function() {
 	var onsUtils = angular.module('onsUtils', [])
 	onsUtils
-		.factory('PageUtil', ['$location', '$log', PageUtil])
+		.factory('PageUtil', ['$location', '$log', '$anchorScroll', PageUtil])
 		.factory('ArrayUtil', ArrayUtil)
 		.factory('StringUtil', StringUtil)
 
-	function PageUtil($location, $log) {
+	function PageUtil($location, $log, $anchorScroll) {
 		var pageUtil = this
 		var title = 'Office Of National Statistics';
 
@@ -25,8 +25,8 @@
 			return params[paramName]
 		}
 
-		function setUrlParam(key,value) {
-		 	$location.search(key,value)
+		function setUrlParam(key, value) {
+			$location.search(key, value)
 		}
 
 		//Returns current page ( section before last slash(/) e.g. economy/inflationpriceindices/cpi would return inflationpriceindices )
@@ -38,7 +38,7 @@
 		}
 
 		function getPath() {
-			return $location.$$path
+			return $location.path()
 		}
 
 		function getAbsoluteUrl() {
@@ -51,6 +51,12 @@
 
 		function isPrerender() {
 			return getAbsoluteUrl().indexOf('prerender=true') > -1
+		}
+
+		function scrollTo(id) {
+			$location.hash(id)
+			$anchorScroll()
+			$location.hash(null)
 		}
 
 		//If replace history is set, latest back history item is replaced with the page to be showed
@@ -67,13 +73,14 @@
 			getTitle: getTitle,
 			setTitle: setTitle,
 			getUrlParam: getUrlParam,
-			setUrlParam:setUrlParam,
+			setUrlParam: setUrlParam,
 			getPage: getPage,
 			getPath: getPath,
-			getUrl:getUrl,
+			getUrl: getUrl,
 			getAbsoluteUrl: getAbsoluteUrl,
 			goToPage: goToPage,
-			isPrerender:isPrerender
+			isPrerender: isPrerender,
+			scrollTo:scrollTo
 		})
 
 		return pageUtil
