@@ -27,7 +27,9 @@
 			sparkline.visible = false
 			sparkline.chartConfig = getSparkline($scope.width, $scope.height)
 			watchData()
-			resolveScreenSize()
+			if($scope.headline) {
+				resolveScreenSize()				
+			}
 			watchWidth()
 			
 			function watchData() {
