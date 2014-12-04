@@ -6134,10 +6134,10 @@ td.datatable-downloads {
   height: 6.5em;
   border: 0px; commented out to remove icons on MJ's request*/
 }
-.sparkline_area {
+/*.sparkline_area {
     width: 100%;
     position: relative;/*fix for t3 sparkline appearance*/
-}
+
 
 .nav-panel__body.graph {
     max-width: 2rem;
