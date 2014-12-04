@@ -6,7 +6,7 @@
 
 	angular.module('onsApp')
 		.config(['$routeProvider', '$locationProvider', '$httpProvider', RotueConfigration])
-		.factory('OnsHttpInterceptor', ['$q', '$location', OnsHttpInterceptor])
+		.factory('OnsHttpInterceptor', ['$q', '$rootScope', OnsHttpInterceptor])
 
 
 	function RotueConfigration($routeProvider, $locationProvider, $httpProvider) {
@@ -210,7 +210,7 @@
 			var type = params['type']
 			var pageNumber = params['page']
 			var searchString = "?q=" + q + (pageNumber ? "&page=" + pageNumber : "") + getTypesString(type)
-			// var searchString = PageUtil.getUrl()
+				// var searchString = PageUtil.getUrl()
 			return DataLoader.load("/search" + searchString)
 				.then(function(data) {
 					//If cdid search is made go directly to timeseries page for searched cdid
@@ -225,10 +225,10 @@
 		}
 
 		function getTypesString(type) {
-			if(!type) {
+			if (!type) {
 				return ''
 			}
-			if(typeof type === 'string') {
+			if (typeof type === 'string') {
 				return '&type=' + type
 			}
 
@@ -247,7 +247,17 @@
 
 	}
 
-	function OnsHttpInterceptor($q, $location) {
+	function OnsHttpInterceptor($q, $rootScope) {
+
+		watchLocation()
+
+		//Delete existing error on succesfull page load
+		function watchLocation() {
+			$rootScope.$on('$locationChangeStart', function(event) {
+				delete $rootScope.error
+			})
+		}
+
 		return function(promise) {
 			// pass success (e.g. response.status === 200) through
 			return promise.then(function(response) {
@@ -256,10 +266,10 @@
 				// otherwise deal with any error scenarios
 				function(response) {
 					if (response.status === 500) {
-						$location.url('/500')
+						$rootScope.error = 500
 					}
 					if (response.status === 404) {
-						$location.url('/404')
+						$rootScope.error = 404
 					}
 					return $q.reject(response)
 				});
