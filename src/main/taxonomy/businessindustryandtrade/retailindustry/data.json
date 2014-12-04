@@ -30,21 +30,25 @@
     }
   ],
   "statsBulletinHeadline": {
+    "summary": "Summary section",
     "name": "Retail Sales",
     "uri": "/businessindustryandtrade/retailindustry/bulletins/retailsales"
   },
   "statsBulletins": [
     {
+      "summary": "Summary section",
       "name": "Retail Sales",
       "uri": "/businessindustryandtrade/retailindustry/bulletins/retailsales"
     }
   ],
   "datasets": [
     {
+      "summary": "Brief description of dataset",
       "name": "Value of retail sales by commodity",
       "uri": "/businessindustryandtrade/retailindustry/datasets/valueofretailsalesbycommodity"
     },
     {
+      "summary": "Value of retail sales index and percentage change",
       "name": "Retail sales",
       "uri": "/businessindustryandtrade/retailindustry/datasets/retailsales"
     }

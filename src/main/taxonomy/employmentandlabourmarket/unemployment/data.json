@@ -42,25 +42,30 @@
     }
   ],
   "statsBulletinHeadline": {
+    "summary": "Statistics and analysis based on data from the Labour Force Survey",
     "name": "Young People Not in Education, Employment or Training (NEET)",
     "uri": "/employmentandlabourmarket/unemployment/bulletins/youngpeoplenotineducationemploymentortrainingneet"
   },
   "statsBulletins": [
     {
+      "summary": "Statistics including employment, unemployment and economic inactivity for the United Kingdom",
       "name": "UK Labour Market",
       "uri": "/employmentandlabourmarket/unemployment/bulletins/uklabourmarket"
     },
     {
+      "summary": "Statistics and analysis based on data from the Labour Force Survey",
       "name": "Young People Not in Education, Employment or Training (NEET)",
       "uri": "/employmentandlabourmarket/unemployment/bulletins/youngpeoplenotineducationemploymentortrainingneet"
     }
   ],
   "datasets": [
     {
+      "summary": "Data on the number of people claiming benefits principally for being unemployed",
       "name": "Claimant Count data collection",
       "uri": "/employmentandlabourmarket/unemployment/datasets/claimantcountdatacollection"
     },
     {
+      "summary": "People without a job who have been actively seeking work in the UK",
       "name": "Unemployment data collection",
       "uri": "/employmentandlabourmarket/unemployment/datasets/unemploymentdatacollection"
     }
