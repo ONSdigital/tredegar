@@ -11,8 +11,6 @@ import com.github.onsdigital.json.markdown.Bulletin;
  */
 public class ReleaseSection extends Reference {
 
-	public ContentType type;
-
 	/**
 	 * Creates an {@link Article} reference.
 	 * 
