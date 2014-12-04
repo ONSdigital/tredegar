@@ -31,6 +31,7 @@ import com.github.onsdigital.json.markdown.Article;
 import com.github.onsdigital.json.markdown.Bulletin;
 import com.github.onsdigital.json.markdown.Methodology;
 import com.github.onsdigital.json.release.Release;
+import com.github.onsdigital.json.release.ReleaseReference;
 import com.github.onsdigital.json.taxonomy.HomeSection;
 import com.github.onsdigital.json.taxonomy.T1;
 import com.github.onsdigital.json.taxonomy.T2;
@@ -166,11 +167,21 @@ public class TaxonomyGenerator {
 
 		File releasesFolder = new File(root, "releases");
 		releasesFolder.mkdir();
+		List<ReleaseReference> releasesList = new ArrayList<>();
 		for (Release release : releases.values()) {
-			File releaseFile = new File(releasesFolder, release.fileName);
+			File releaseFolder = new File(releasesFolder, release.fileName);
+			releaseFolder.mkdir();
+			File releaseFile = new File(releaseFolder, "data.json");
 			try (OutputStream output = new FileOutputStream(releaseFile)) {
 				Serialiser.serialise(output, release);
 			}
+			String path = "/" + releasesFolder.getName() + "/" + releaseFolder.getName();
+			release.uri = URI.create(path);
+			releasesList.add(new ReleaseReference(release));
+		}
+		File releasesFile = new File(releasesFolder, "data.json");
+		try (OutputStream output = new FileOutputStream(releasesFile)) {
+			Serialiser.serialise(output, releasesList);
 		}
 	}
 
