@@ -4,18 +4,21 @@
 (function() {
 
   angular.module("onsTemplates")
-    .controller("SearchController", ['$scope', '$window', '$log', 'PageUtil', 'searchResponse', '$routeParams', SearchController])
+    .controller("SearchController", ['$scope', '$rootScope', '$window', '$log', 'PageUtil', 'searchResponse', '$routeParams', SearchController])
 
 
-  function SearchController($scope, $window, $log, PageUtil, searchResponse, $routeParams) {
-    if (!searchResponse) {
-      return PageUtil.goToPage('404')
+  function SearchController($scope, $rootScope, $window, $log, PageUtil, searchResponse, $routeParams) {
+    if (!searchResponse || !searchResponse.results) {
+      $rootScope.error = 500
+      return
     }
+    
     var page = $routeParams.page
     var searchTerm = $scope.searchTerm = $routeParams.searchTerm
 
     if (!searchTerm) {
-      PageUtil.goToPage('404')
+      $rootScope.error = 404
+      return
     }
 
     $scope.searchResponse = searchResponse

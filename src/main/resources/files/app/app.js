@@ -44,14 +44,12 @@
 
     onsApp
         .run(['$rootScope', 'DataLoader', 'PageUtil', run])
-        .controller('MainCtrl', ['$scope', 'PageUtil', '$location', '$anchorScroll', MainController])
+        .controller('MainCtrl', ['$scope', 'PageUtil', '$rootScope', MainController])
 
-    function MainController($scope, PageUtil, $location, $anchorScroll) {
+    function MainController($scope, PageUtil, $rootScope) {
         var ctrl = this
         $scope.scrollTo = function(id) {
-            $location.hash(id)
-            $anchorScroll()
-            $location.hash(null)
+            PageUtil.scrollTo(id)
         }
 
         $scope.getPath = function() {
@@ -68,6 +66,10 @@
 
         $scope.getTitle = function() {
             return PageUtil.getTitle()
+        }
+
+        $scope.hasErrors = function() {
+            return $rootScope.error ? true : false
         }
     }
 
