@@ -2,12 +2,25 @@
     'use strict';
     //Local Statistics Controller
     angular.module('onsTemplates')
-        .controller('CalendarCtlr', ['$scope', LocalStatsCtlr]);
+        .controller('LoaderCtrl', ['$scope', '$log', 'DataLoader', LoaderCtrl])
+        .controller('CalendarCtlr', ['$scope', '$log', CalendarCtlr]);
 
-    function LocalStatsCtlr($scope) {
+    function LoaderCtrl($scope, $log, DataLoader) {
+        DataLoader.load("/data/releases")
+            .then(function(data) {
+                $log.debug('Loaded data')
+                $scope.calendarData = data;
+            });
+    }
+
+    function CalendarCtlr($scope) {
         $scope.breadcrumb = {
             parent: [],
             current: "Release calendar"
         };
     }
 })();
+
+
+angular.module('onsTemplates')
+

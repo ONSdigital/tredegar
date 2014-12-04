@@ -130,14 +130,15 @@
 				}]
 			}
 		}).
-		when('/release', {
-			templateUrl: 'app/templates/release/release.html',
-			resolve: {
-				title: ['PageUtil', function(PageUtil) {
-					PageUtil.setTitle('Release')
-				}]
-			}
-		}).
+		// when('/releases/', {
+		// 	templateUrl: 'app/templates/release/release.html',
+  //           controller: "ReleaseCtrl",
+		// 	resolve: {
+		// 		title: ['PageUtil', function(PageUtil) {
+		// 			PageUtil.setTitle('Release')
+		// 		}]
+		// 	}
+		// }).
 		when('/search/:searchTerm', resolveSearch()).
 		when('/search/:searchTerm/page/:page', resolveSearch()).
 		when('/survey', {
