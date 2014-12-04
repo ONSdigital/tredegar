@@ -1,0 +1,33 @@
+{
+  "releaseDate": "21 October 2014",
+  "nextRelease": "21 January 2015",
+  "contact": {
+    "email": {
+      "name": "Jukesie",
+      "email": "jukesie@hotmail.com"
+    },
+    "organisation": "Business Prices",
+    "telephone": "+44 (0)1633 456468"
+  },
+  "lede": "UK Business: Activity, Size and Location is an annual publication produced from an extract taken from the Inter-Departmental Business Register (IDBR). This publication, which is a ‘snapshot’ of the IDBR, shows the position of units that have registered for Value Added Tax (VAT) and/or Pay as You Earn (PAYE) as of March of the reference year. It is generally released six months after the reference year period, that is, September or October. ",
+  "articles": [],
+  "bulletins": [
+    {
+      "summary": "Tables on local units and enterprises by geography, industry, legal status and employment size band. Additional tables at enterprise level by age of business and turnover size band.",
+      "type": "bulletin",
+      "name": "UK Business: Activity, Size and Location - 2013",
+      "uri": "/businessindustryandtrade/businessactivitysizeandlocation/bulletins/ukbusinessactivitysizeandlocation2013"
+    }
+  ],
+  "datasets": [
+    {
+      "summary": "Analysis of UK local units and UK VAT and/or PAYE based Enterprises",
+      "type": "dataset",
+      "name": "Number of VAT and/or PAYE enterprises",
+      "uri": "/businessindustryandtrade/businessactivitysizeandlocation/datasets/numberofvatandorpayeenterprises"
+    }
+  ],
+  "type": "release",
+  "name": "Business activity, size and location",
+  "fileName": "businessactivitysizeandlocation"
+}
