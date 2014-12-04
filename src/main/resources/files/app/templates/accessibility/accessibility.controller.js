@@ -7,7 +7,7 @@
     function AccessibilityCtrl($scope) {
         $scope.breadcrumb = {
             parent: [],
-            current: "Accesibility"
+            current: "Accessibility"
         };
     }
 })();
