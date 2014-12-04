@@ -64,8 +64,8 @@ Excluding visitor and transit visas, the number of visas issued increased to 538
 
 ### 1.1 Changes in Net Migration
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/migration1.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/migration1.html"></iframe>
 </div>
 
 ##### Notes:
@@ -80,8 +80,8 @@ Changes to net migration, as shown in Figure 1.1 have been caused by changes in 
 
 Recent patterns in total net migration have been affected by different changes in migration flows between EU citizens and non-EU citizens. Net migration of EU citizens saw a statistically significant increase to 124,000 in the year ending December 2013 from 82,000 in the previous year. Conversely, the estimate of net migration of non-EU citizens has declined over the last few years. Although the recent fall to 146,000 in the year ending December 2013 from 157,000 in the previous year was not a statistically significant change, non-EU net migration remains at a lower level relative to the peaks seen in the mid to late 2000s (Figure 1.2).
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/migration2.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/migration2.html"></iframe>
 </div>
 
 ##### Notes:
@@ -96,8 +96,8 @@ The most commonly stated reason for immigrating to the UK is work-related. This 
 
 Since 2007, around half of immigrants arriving for work have been EU citizens and 25 to 30% have been non-EU citizens. The remainder were British citizens. Prior to EU Accession in 2004, these proportions were reversed. This reflects the increase in the numbers of EU citizens migrating to the UK for work since 2004, combined with a steady decrease in the numbers of non-EU citizens arriving for work over the same period. In 2004, 113,000 non-EU citizens arrived for work with an intention to remain more than 12 months. This has steadily declined and stood at 44,000 in the year ending December 2013 (Figure 1.3).
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/migration3.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/migration3.html"></iframe>
 </div>
 
 ##### Notes:
@@ -175,8 +175,8 @@ Provisional long-term international migration estimates by citizenship show that
 
 The estimated number of British citizens emigrating long-term from the UK in the year ending December 2013 was 134,000, which although lower is statistically at a similar level to the 143,000 in the year ending December 2012 (Figure 2.11). Emigration of British citizens has remained at around the same level since 2010.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/migration4.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/migration4.html"></iframe>
 </div>
 
 ##### Notes:
@@ -191,8 +191,8 @@ The estimated number of EU citizens (excluding British) emigrating from the UK w
 
 Net migration of EU citizens was 124,000 in the year ending December 2013, a statistically significant increase compared to 82,000 in the previous year.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/migration5.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/migration5.html"></iframe>
 </div>
 
 ##### Notes:
@@ -201,8 +201,8 @@ Up to YE Dec 09, data are only available at six month intervals.
 
 The recent increase in EU immigration has been partly driven by a statistically significant increase in the number of EU15 citizens (excluding British) arriving in the UK from 85,000 in the year ending December 2012 to 104,000 in the year ending December 2013. IPS data show that 62,000 arrived for work-related reasons – a statistically significant increase from 49,000 in the year ending December 2012 (Figure 2.22). There was a small, but not a statistically significant, increase in net migration of EU15 citizens to 58,000 in the year ending December 2013 from 44,000 in the previous year.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/migration6.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/migration6.html"></iframe>
 </div>
 
 ##### Notes:
@@ -213,8 +213,8 @@ An estimated 70,000 EU8 citizens immigrated to the UK in the year ending Decembe
 
 It should be noted that from May 2011 transitional controls that applied to EU8 citizens seeking work in other EU countries expired (these were never applied in the Irish Republic, Sweden and the UK). This may have had the effect of diverting some EU8 migration flows to other EU countries, such as Germany, which in 2012 experienced its highest net migration since 1995.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/migration7.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/migration7.html"></iframe>
 </div>
 
 #####Notes:
@@ -233,8 +233,8 @@ Overall, the currently available evidence suggests that the recent increase in e
 
 The estimated number of non-EU citizens immigrating long-term to the UK in the year ending December 2013 was 249,000, a slight but not a statistically significant decrease compared to the estimate of 260,000 in the year ending December 2012. The estimated number of non-EU citizens emigrating from the UK in the year ending December 2013 was 103,000, the same as in the previous year. This has resulted in a slight decrease in net migration of non-EU citizens from an estimated 157,000 in the year ending December 2012 to 146,000 in the year ending December 2013, although this was not a statistically significant change (Figure 2.3). Immigration of non-EU citizens has been declining since the year ending September 2011. 
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/migration8.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/migration8.html"></iframe>
 </div>
 
 ##### Notes:
@@ -245,8 +245,8 @@ The decrease in immigration of non-EU citizens has been largely due to a statist
 
 ### 2.4 Entry Clearance Visas Issued - by World Area
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/migration9.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/migration9.html"></iframe>
 </div>
 
 ##### Notes:
@@ -271,8 +271,8 @@ Provisional LTIM estimates for the year ending December 2013 show that work-rela
 
 The third most common reason for migrating to the UK is to accompany/join. In the year ending December 2013, 71,000 people migrated to the UK to accompany or join others; this figure is statistically similar to the estimate of 62,000 who migrated for this reason in the year previously. (Figure 3.11)
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/migration10.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/migration10.html"></iframe>
 </div>
 
 ##### Notes:
@@ -289,8 +289,8 @@ In the year ending March 2014, there were increases in the numbers of visas issu
   
 Previous falls in the number of visas issued for work, study and family reasons are consistent with changes to the rules governing visas related to these routes of entry which began to come into effect from the end of 2010. They are also broadly consistent with recent downward trends in the LTIM measure of non-EU immigration, though they extend three months beyond the period covered by the latest provisional LTIM estimates. However, in making comparisons, it should be recognised many visas are granted for periods of less than 12 months.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/migration11.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/migration11.html"></iframe>
 </div>
 
 ##### Notes:
@@ -307,8 +307,8 @@ In the year ending March 2014, there were 209,011 sponsored student visa applica
 
 As a consequence, the share of visa applications for the university sector rose from 76% to 80% over the same period, whilst the shares for the Further Education sector fell from 14% to 10%.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/migration12.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/migration12.html"></iframe>
 </div>
 
 ##### Notes:
@@ -326,8 +326,8 @@ The largest number of applications for asylum in the year ending March 2014 were
 
 The 1,101 increase in total applications in the year ending March 2014 was driven by rises from a number of nationalities, in particular from Eritrea (+802), Syria (+559) and Albania (+474). While Eritrea saw the largest increase in applications it remains fifth for overall numbers of asylum applications in the year ending March 2014.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/migration13.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/migration13.html"></iframe>
 </div>
 
 ##### Notes:
@@ -347,8 +347,8 @@ The proportion of NINos allocated to European Union Accession nationals (that is
 
 The number of NINo registrations allocated to adult overseas nationals from outside the EU in the year ending March 2014 was 162,000, a decrease of 8% from the previous year. Following this continued decline, the figure now stands at approximately half the peak of 344,000 in the year ending March 2011 (Figure 3.15).
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/migration14.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/migration14.html"></iframe>
 </div>
 
 ##### Notes:
@@ -366,8 +366,8 @@ In the year ending December 2013, of those 186,000 emigrants leaving for work-re
 
 The numbers of British citizens emigrating was estimated at 134,000 for the year ending December 2013. IPS data show that migration patterns of British citizens have been driven by the number of British citizens leaving the UK for work-related reasons (74,000 in the year ending December 2013), which is just over half (59%) of all British emigrants.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/migration15.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/migration15.html"></iframe>
 </div>
 
 ##### Notes:

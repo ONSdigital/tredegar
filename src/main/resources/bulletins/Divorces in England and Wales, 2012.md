@@ -27,8 +27,8 @@ This is the first time that ONS has released 2012 divorce statistics for England
 ## Number of divorces
 In 2012, the number of divorces in England and Wales increased by 0.5% to 118,140 compared with 117,558 in 2011. The number of divorces declined between 2003 and 2009 from 153,065 to 113,949 followed by a 4.9% increase in 2010. The number of divorces has remained relatively stable since 2010, fluctuating just below the number recorded in 2010. The fall in divorces to 2009 is consistent with a decline in the number of marriages. The decrease in marriages to 2009 may be due to the increasing number of couples choosing to cohabit rather than enter into marriage ([Beaujouan and Bhrolcháin, 2011 (283.5 Kb Pdf)](http://www.ons.gov.uk/ons/rel/population-trends-rd/population-trends/no--145--autumn-2011/ard-pt145-cohab-marriage-trends.pdf "ARD PT145 Cohab Marriage Trends").
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/divorce1.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/divorce1.html"></iframe>
 </div>
 
 ##### Notes:
@@ -39,8 +39,8 @@ Figure 1 shows the changing trend in the number of divorces since 1932, as well 
 ## Divorce rates
 In 2012, 10.8 people divorced per thousand married population, compared with 13.3 in 2002. Similar decreases in the male and female divorce rates have also taken place since 2002 (Figure 2). The male divorce rate decreased to 10.8 divorces per thousand married males, down from 13.4 in 2002. The female divorce rate decreased to 10.9 divorces per thousand married females, down from 13.3 in 2002.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/divorce2.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/divorce2.html"></iframe>
 </div>
 
 ##### Notes:
@@ -59,8 +59,8 @@ It is too early to say whether recent trends in divorce rates represent small fl
 ## Age at divorce
 Figure 3 shows the age at divorce for men and women in 2012. At younger ages there were more women than men divorcing; however, at older ages more men than women divorced. This pattern reflects the differences seen in age at marriage of men and women (the most recent marriage statistics available show that the provisional mean age for men marrying in 2011 was 36.3 years compared with 33.8 for women). In 2012, the number of divorces was highest among men and women aged 40 to 44.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/divorce3.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/divorce3.html"></iframe>
 </div>
 
 Compared with 2002, divorce rates in England and Wales are higher in 2012 for men aged 50 and above and for women aged 45 and above, while divorce rates for men aged below 50 and women aged below 45 are lower (See tables 3a and 3b – [Number of divorces, age at divorce and marital status before marriage (285.5 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/vsob1/divorces-in-england-and-wales/2012/rtd-divorces---number-of-divorces-age-at-divorce-and-marital-status-before-marriage.xls "RTD Divorces - Number of Divorces Age at Divorce and Marital Status Before Marriage") ).
@@ -73,8 +73,8 @@ The average (mean) age at divorce increased slightly for both men and women in 2
 
 The mean age at divorce generally declined for both males and females during the mid to late 1970s and generally remained stable in the early 1980s. Since 1985 the mean ages at divorce for men and women have increased, rising by 7.3 years for both men and women. This trend is consistent with increases in the mean age at marriage. The difference between the mean age of husband and wife at divorce has remained relatively unchanged over the last four decades, with a difference of around 2.5 years except for the years 1974 to 1976 when it was 2.0 years.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/divorce4.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/divorce4.html"></iframe>
 </div>
 
 ## Duration of marriage
@@ -107,8 +107,8 @@ Figure 5 illustrates the percentages of marriages ending in divorce or death, by
 - Therefore 60% of marriages are expected to survive to the 20th anniversary.
 - The average marriage is expected to last for 32 years.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/divorce5.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/divorce5.html"></iframe>
 </div>
 
 Figure 5 shows that the cumulative percentage of marriages ending in divorce increases more rapidly in the first 10 years of marriage than the 10 years after that. Once the 20th wedding anniversary is reached, the cumulative percentage increases less rapidly. Conversely, the cumulative percentage of marriages which end in the death of one partner increases less rapidly in the first 40 years of marriage than the 10 years after that. This is because mortality is greater at older ages, and so has more impact at longer durations of marriage.
@@ -118,8 +118,8 @@ Compared with figures from 2005 ( [Wilson and Smallwood, 2008 (244.2 Kb Pdf)](ht
 - The age at first marriage has been increasing, and previous research has shown that those marrying at older ages have a lower risk of divorce ( [Wilson and Smallwood, 2008 (244.2 Kb Pdf)](http://www.ons.gov.uk/ons/rel/population-trends-rd/population-trends/no--131--spring-2008/the-proportion-of-marriages-ending-in-divorce.pdf "The proportion of marriages ending in divorce") ).
 - Cohabitation has increased in recent years. Cohabitation is often a precursor to marriage and may act to filter out weaker relationships from progressing to marriage ( [Beaujouan and Bhrolcháin, 2011 (283.5 Kb Pdf)](http://www.ons.gov.uk/ons/rel/population-trends-rd/population-trends/no--145--autumn-2011/ard-pt145-cohab-marriage-trends.pdf "ARD PT145 Cohab Marriage Trends") ).
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/divorce6.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/divorce6.html"></iframe>
 </div>
 
 Figure 6 shows that the probability of divorce by the next wedding anniversary rises rapidly in the first five years of marriage, so that between the fourth and eighth wedding anniversaries the probability of divorcing by the next anniversary is over 3%. After the eighth wedding anniversary, the probability of divorcing decreases from this peak, and by the 26th anniversary, the chance of divorcing by the next anniversary is less than 1%.
@@ -282,3 +282,4 @@ Designation can be broadly interpreted to mean that the statistics:
 Once statistics have been designated as National Statistics it is a statutory requirement that the Code of Practice shall continue to be observed.
 
 ## [accordion] Footnotes
+This information will not be available in the prototype, however in the future the footnotes related to this statistical bulletin will appear here.

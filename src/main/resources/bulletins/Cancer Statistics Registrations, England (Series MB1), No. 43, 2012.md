@@ -44,8 +44,8 @@ There were 143,406 new cases of cancer registered for males and 137,712 new case
 ## All malignant neoplasms: incidence rates by sex and age group, 2012
 Cancer is predominantly a disease of the elderly. The overall crude rates of cancer registrations (C00–C97 excluding non-melanoma skin cancers (nmsc)) are 545 new cases per 100,000 population for males and 507 new cases per 100,000 population for females.  However, this conceals wide differences between the sexes and across the age groups, as illustrated in Figure A. Following the small decrease in rates after early childhood, rates increased continuously with age for both males and females, but decreased again for females at age group 90 years and over. From the 25 to 29 age group up to the 55 to 59 age group, rates of cancer were higher in females than in males, and in the 40 to 44 and 45 to 49 age groups, the rate in females was more than double that for males. Much of this difference is due to the high incidence of breast cancer among women in these age groups: in 2012 breast cancer accounted for 44% of all malignant cancers (excluding nmsc) among women aged 25-59. Rates of cancer were higher in males than females from the 60 to 64 age group onwards: males were 19% higher in the 60 to 64 age group and 78% higher in the 90 years and over age group.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="">http://onsdigital.github.io/Alpha/bulletins/cancer1.html</iframe>
+< class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/cancer1.html"></iframe>
 </div>
 
 ##### Notes:
@@ -58,8 +58,8 @@ Figure B shows the frequency distribution by sex and age group for cancer regist
 
 There was a clear peak in the age group frequency distribution for males and females, with the greatest percentage of cancer registrations being recorded for those aged 65 to 69 years.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="">http://onsdigital.github.io/Alpha/bulletins/cancer2.html</iframe>
+< class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/cancer2.html"></iframe>
 </div>
 
 ##### Notes:
@@ -74,8 +74,8 @@ Figure C presents SSRs for each region in England, for 2012. This shows that act
 
 SRRs should be interpreted with caution because it is difficult to separate the effect of variation in levels of ascertainment of cases across the different regions of England from genuine geographical differences in incidence. However, it is recognised that there are generally higher levels of deprivation in the north of England than in the south ([Communities and Local Government, 2011](https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/6871/1871208.pdf "Communities and Local Government, 2011")) and increased incidence rates of many cancers has been associated with higher levels of deprivation ([National Cancer Intelligence Network, 2008](http://www.ncin.org.uk/publications/reports/ "National Cancer Intelligence Network"), [Shack, Jordon, Thomson et al, 2008](http://www.biomedcentral.com/content/pdf/1471-2407-8-271.pdf "Shack, Jordon, Thomson et al, 2008")).
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/cancer3.html"></iframe>
+< class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/cancer3.html"></iframe>
 </div>
 
 ##### Notes:
@@ -88,8 +88,8 @@ Figure D shows the number of registrations for 24 major sites for males and fema
 
 Previous editions of the MB1 release reported on different numbers of 'common cancer' sites.  For the editions 1992 through 1998 the focus was on 20 major sites, increasing to 21 in 1999 when Hodgkin's disease was added to the list.  Whilst year on year consistency is helpful in analysing trends, relative changes in incidence have now warranted the inclusion of additional cancer sites, namely liver (C22), mesothelioma (C45) and thyroid gland (C73).  In addition, the ICD codes used to define some of the other major sites have been adjusted in order to ensure consistency across other outputs.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/cancer4.html"></iframe>
+< class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/cancer4.html"></iframe>
 </div>
 
 ##### Notes:
@@ -112,8 +112,8 @@ Registration of cases of cancer is a dynamic process in the sense that the data 
 
 Refreshing the database means that current numbers of registrations are generally greater than the published figures. The balance between ensuring completeness of the data but publishing tables in a timely manner is necessarily a compromise. The gap between the data year and production of tables has varied considerably over time, which results in varying proportions of additional cancer registrations held on the ONS database in comparison with the numbers published in the corresponding annual report (MB1 series), as shown in Figure E. Over the 41-year period reported, differences between published and current numbers of registrations for each year average less than 5%.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/cancer5.html"></iframe>
+< class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/cancer5.html"></iframe>
 </div>
 
 ##### Notes:

@@ -30,8 +30,8 @@ The publication of Marriages in England and Wales (provisional) 2012 is later th
 ## Number of Marriages
 The provisional number of marriages registered in England and Wales rose by 5.3% in 2012 to 262,240, compared with 249,133 in 2011. This increase in the provisional marriage figure for 2012 continues the recent upward trend, following the low recorded for 2009.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/marriage1.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/marriage1.html"></iframe>
 </div>
 
 ##### Notes:
@@ -62,8 +62,8 @@ Changes in the size of the unmarried population are determined by patterns of ma
 
 The provisional male GMR in 2012 was 23.2 men marrying per thousand unmarried men aged 16 and over, compared with 22.1 in 2011 and 27.4 in 2002. The provisional GMR for women in 2012 was 21.0 women marrying per thousand unmarried women aged 16 and over, compared with 19.9 in 2011 and 23.9 in 2002 (Figure 2).
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/marriage2.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/marriage2.html"></iframe>
 </div>
 
 ##### Notes:
@@ -89,8 +89,8 @@ Provisional marriage figures for 2012 suggest that Church of England and Church 
 ## Age at Marriage
 Figure 3 shows the age at marriage for men and women in 2012. At younger ages there were more women than men marrying; however, at older ages more men than women married. This pattern reflects that, on average, men tend to form relationships with women younger than themselves. In 2012, the number of marriages was greatest among men and women aged 25 to 29.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/marriage3.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/marriage3.html"></iframe>
 </div>
 
 ##### Notes:
@@ -102,8 +102,8 @@ There was a slight increase in the mean age at marriage for both men and women i
   
 Over the period 1972 to 2012, the mean age at marriage for both men and women generally increased (Figure 4). For grooms, the mean age at marriage in 1972 was 28.8 years, compared with 36.5 years in 2012. For brides, the mean age at marriage in 1972 was 26.2 years, compared with 34.0 years in 2012. These increases result from people delaying entering into a first marriage and to a lesser extent increases in the proportion of marriages to divorced men and women where the mean age at marriage has risen (see Tables 6 and 7, [Age at marriage and previous marital status (604 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/vsob1/marriages-in-england-and-wales--provisional-/2012/rtd-age-at-marriage-and-previous-marital-status.xls "RTD Age at marriage and previous marital status") ).
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/marriage4.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/marriage4.html"></iframe>
 </div>
 
 ##### Notes:

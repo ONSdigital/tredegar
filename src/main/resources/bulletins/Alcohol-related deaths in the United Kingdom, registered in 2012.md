@@ -23,8 +23,8 @@ Figures are based on deaths registered in each calendar year rather than those o
 
 ONS recently revised mid-2002 to 2010 population estimates in light of the 2011 Census. Death rates relating to this period have therefore been revised and may differ from previously published figures. In the previous release, [‘Alcohol-related deaths in the United Kingdom, 2011’](http://www.ons.gov.uk/ons/rel/subnational-health4/alcohol-related-deaths-in-the-united-kingdom/2011/alcohol-related-deaths-in-the-uk--2011.html "Alcohol-related deaths in the United Kingdom, 2011") UK rates were based on a combination of the 2011 Census population estimates for England and Wales and rolled forward mid-year population estimates (from the 2001 Census) for Scotland and Northern Ireland. These rates have now been rebased on 2011 Census populations for each UK constituent country.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/alcohol1.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/alcohol1.html"></iframe>
 </div>
 
 ##### Notes:
@@ -56,8 +56,8 @@ In 2012, age-specific alcohol-related death rates for males rose steadily from 0
 
 For females, the death rate for those aged 20-24 years was similar to that for males in this age group. However, the disparity between male and female death rates become more evident beyond this age group, with rates among males approximately twice those for females in each age group. Female rates rose steadily to a peak of 22.2 per 100,000 among those aged 55-59 years before dropping off gradually to 10.3 per 100,000 among those aged 85 years and over.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/alcohol2.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/alcohol2.html"></iframe>
 </div>
 
 ##### Notes:
@@ -83,8 +83,8 @@ For males aged 15-34 years, rates remained largely stable over the period, with 
 
 For females aged 15-34 years, rates have remained largely stable over the 11 year period. Despite a significant increase in rates in 2009, there was no significant difference between the rates in 2002 and 2012 for this age group. Similarly, despite a significant decrease in the death rate of those aged 35-54 years between 2011 and 2012, the latest rate was not significantly lower than that in 2002. A similar picture was observed for females aged 55-74 with deaths rates in 2002 and 2012 not being significantly different despite the fact that a significant increase was observed in 2006 and 2008. Rates for females aged 75 and over remained relatively stable over the period.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/alcohol3.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/alcohol3.html"></iframe>
 </div>
 
 ##### Notes:
@@ -95,8 +95,8 @@ For females aged 15-34 years, rates have remained largely stable over the 11 yea
 5. Figures are for deaths registered in each calendar year
 6. In 2012 the average number of days between date of death and death registration in England and Wales was four days for alcohol-related causes.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/alcohol4.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/alcohol4.html"></iframe>
 </div>
 
 ##### Notes:
@@ -131,8 +131,8 @@ The regional differences observed in alcohol-related deaths are likely to have l
 
 The geographic variation in alcohol-related deaths rates has been well documented in previous research. For example, [Breakwell et al. (2007) (2.95 Mb Pdf)](http://www.ons.gov.uk/ons/rel/hsq/health-statistics-quarterly/no--33--spring-2007/health-statistics-quarterly.pdf "Breakwell et al. (2007)") reported a strong association in alcohol-related deaths with death rates being higher among those living in the most deprived neighbourhoods in England and Wales. Similarly, [Siegler et al. (2011) (353.9 Kb Pdf)](http://www.ons.gov.uk/ons/rel/hsq/health-statistics-quarterly/no--50--summer-2011/social-inequalities-in-alcohol-related-adult-mortality-by-national-statistics-socio-economic-classification--england-and-wales--2001-03.pdf "Siegler et al. (2011)") demonstrated that alcohol-related deaths varied by socio-economic class with higher death rates in those in the most disadvantaged classes. Erskine et al. (2010) supported these findings and reported a higher risk of alcohol-related deaths in urban areas than rural areas, after accounting for socio-economic status.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/alcohol5.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/alcohol5.html"></iframe>
 </div>
 
 ##### Notes:
@@ -159,8 +159,8 @@ For females, death rates were also lowest in England over the period. Although t
 
 Of the four UK constituent countries, only in Scotland were male and female death rates in 2012 significantly lower than in 2002.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/alcohol6.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/alcohol6.html"></iframe>
 </div>
 
 ##### Notes:
@@ -171,8 +171,8 @@ Of the four UK constituent countries, only in Scotland were male and female deat
 4. Figures are for deaths registered in each calendar year
 5. In 2012 the average number of days between date of death and death registration was four days for alcohol-related causes
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/alcohol7.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/alcohol7.html"></iframe>
 </div>
 
 ##### Notes:

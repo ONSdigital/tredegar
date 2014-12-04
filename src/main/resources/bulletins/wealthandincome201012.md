@@ -51,8 +51,8 @@ Comparing estimates for total household wealth with income allows us to understa
 
 Figure 2 looks in more detail at the distribution of total household wealth and income, broken down by selected percentile points. For example, 10% of households will have a lower value and 90% of households will have a higher value than the 10th percentile point.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/wealth2.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/wealth2.html"></iframe>
 </div>
 
 At each percentile point illustrated in figure 2, the value of total household wealth was larger than the value of gross annual income. The difference was least pronounced at the 10th percentile point. In 2010-12, the value of the 10th percentile for total household wealth was 15% - or £1,700 larger than the equivalent for total household income (£13,100 compared with £11,400). Moving up the distribution, the gap between the percentile values shown for total household wealth and income widens. The 90th percentile value for total household wealth was £918,100; about 11 times larger than the 90th percentile value for total household income which stood at £80,700.
@@ -65,8 +65,8 @@ Another widely used measure of inequality is the Gini coefficient. The Gini coef
 
 Differences in inequality between the distributions of total household wealth and income can also be illustrated using Lorenz curves. Lorenz curves provide a graphical representation of the inequality of a distribution; with the diagonal 45 degree line representing a perfectly equal distribution. Figure 3 shows the distribution of total household wealth was more unequal than income, with the Lorenz curve for wealth a further distance away from the line of perfect equality than for income. 
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/wealth3.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/wealth3.html"></iframe>
 </div>
 
 ### Households with higher levels of income tend also to have higher wealth
@@ -75,8 +75,8 @@ Households with high levels of income often have high levels of wealth. Neverthe
 
 Figure 4 is a box plot which graphically presents the distribution of total household wealth, by total household income quintiles. Quintiles here split households into five equally sized groups based upon their total household income. The first quintile represents the fifth of households with the lowest income and the fifth quintile represents the fifth of households with the highest income. The boxes in the graph represent the wealth of the middle 50% of households in each income group; the area covered by the lighter coloured area on the right side of the boxes represents the third quartile and the darker coloured area on the left side of the boxes represents the second quartile for each of the quintiles. The median value for each quintile lies where the lighter and darker shaded areas meet. The horizontal lines on either side of the boxes are known as whiskers, with the end of the whisker to the right representing the 90th percentile and the end of the whisker to the left the 10th percentile.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/wealth4.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/wealth4.html"></iframe>
 </div>
 
 The median value of total household wealth rises as we move through the income groups from lowest to highest (Figure 4). Households in the bottom income group (with total household income less than £15,800) had median total wealth of £63,700. Households in the highest income group (with total household income of £60,100 or more) had median total wealth of £547,100. However, there were households with low levels of income but high wealth, and there were also households with high levels of wealth but low income. The whisker (the 90th percentile) on the far right for the first income group represents a value of total household wealth which is higher than the median total wealth value for all but the top income group (£358,400). Conversely, the whisker (10th percentile) on the far left in the highest income group was £114,900, which is lower than the median total household wealth value for all but the lowest income quintile. Households with low income and high wealth, and those with high income and low wealth are explored further in Figure 5.
@@ -87,8 +87,8 @@ Box plots also tell us something about the distribution of total household wealt
 
 Figure 5 explores the relationship between the income and wealth quintiles that a household belongs to. A higher percentage of households in the top income quintile also found themselves in the top wealth quintile than any other income group (47%). Similarly, a higher percentage of households in the lowest quintile of total household income found themselves in the lowest quintile of total household wealth than any other income group (42%). The distribution of households across the different wealth quintiles was most even for the middle income group.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/wealth5.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/wealth5.html"></iframe>
 </div>
 
 ##### Notes:
@@ -104,8 +104,8 @@ Household heads1 had a median age of 33 amongst those households in the bottom w
 
 Figure 6 shows that more of the total wealth of all households in Great Britain is held by the households who also fall in the top total gross income quintile, with 44% (£4.2 trillion) of all total household wealth being held by households in this top income group in 2010-12. This is twice as much as that held by households in the fourth income quintile (£2.1 trillion). Households in the lowest total gross income quintile held only 7% (£0.7 trillion) of the total wealth of all households in Great Britain.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/wealth6.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/wealth6.html"></iframe>
 </div>
 
 ##### Notes:
@@ -115,8 +115,8 @@ As stated previously, the wealth of a household comprises: net property wealth; 
 
 Figure 7 shows the contribution each wealth component makes to the total wealth held by the five income groups. It shows that for households within the lowest income quintile, net property wealth accounted for over half of the aggregate wealth (51%) of these households, whilst for households within the highest income quintile, net property wealth accounted for about one third of the total aggregate wealth held (33%). Private pension wealth was the dominant asset for the highest income group, accounting for over two-fifths of aggregate wealth (41%). Net financial wealth accounts for a similar proportion of aggregate wealth in the lowest four income quintiles (10%-12%) but accounts for 17% of aggregate wealth of households in the highest income quintile. Physical wealth is most important for households within the lowest income quintile, accounting for 18% of the total aggregate wealth for households within this group. The proportion of aggregate wealth accounted for by physical wealth decreased slowly as income increased, with physical wealth accounting for less than a tenth of the aggregate total wealth of households within the highest income quintile (9%).
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/wealth7.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/wealth7.html"></iframe>
 </div>
 
 ##### Notes:
@@ -126,8 +126,8 @@ Figures 8 to 11 look at the distribution of each type of wealth within the total
 
 Although Figure 7 showed that net property wealth was the dominant asset contributing to the total aggregate wealth of households in the lowest income quintile, Figure 8 shows that over half (55%) of households in this income quintile had no property wealth. However, 7% of households in the lowest income quintile had net property wealth of £250,000 or more (with 1% having net property wealth of £500,000 or more). The proportion of households with no property wealth decreased across the income quintiles, but 8% of households in the top income quintile still had no property wealth. This might include households with high income but who live in rented accomodation.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/wealth8.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/wealth8.html"></iframe>
 </div>
 
 ##### Notes:
@@ -135,8 +135,8 @@ Although Figure 7 showed that net property wealth was the dominant asset contrib
 
 Figure 9 considers the distribution of physical wealth (household goods, collectables and other physical assets such as cars etc.) Whilst there seems to be a relationship between income level and the value of physical assets, it is still interesting to note that 13% of households in the lowest income quintile have £50,000 or more in physical assets, compared to 60% of households in the highest income quintile.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/wealth9.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/wealth9.html"></iframe>
 </div>
 
 ##### Notes:
@@ -146,8 +146,8 @@ Figure 10 shows that negative financial wealth (i.e. households who have more fi
 
 In the lowest income quintile 24% of households had negative financial wealth, and some 16% of households in the highest income quintile still had negative net financial wealth. Low net financial wealth was most prevalent in households in the lowest income quintile and least so in the highest income quintile. The higher values of net financial wealth follow a more expected pattern with a smaller proportion of households in the lower income quintiles having high financial wealth than those households in the higher income quintiles. 
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/wealth10.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/wealth10.html"></iframe>
 </div>
 
 ##### Notes:
@@ -155,8 +155,8 @@ In the lowest income quintile 24% of households had negative financial wealth, a
 
 Figure 11 shows that the distribution of households with no private pension wealth follows the expected pattern that a higher proportion of households in the lower income quintiles have no or little private pension wealth, whilst those in the higher income quintiles have more pension wealth. However, it is worth noting that there are still 5% of households with no private pension wealth in the highest income quintile and 5% of households in the lowest income quintile who have private pension wealth of £150,000 or more.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/wealth11.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/wealth11.html"></iframe>
 </div>
 
 ##### Notes:
@@ -250,8 +250,8 @@ Table C considers the percentage contribution of the different sources of income
 
 Annual gross income for employees were compared between WAS and ASHE. Median gross annual earnings for full-time employees were £19,200 from WAS (Figure D). The ASHE estimate was 9% higher at £21,100. When drawing conclusions from this comparison, consideration needs to be given to the fact that ASHE figures only include employees who have been in the same job for more than a year, whereas WAS figures are based on all employees with gross pay greater than £0, irrespective of the length of their current employment term. We would therefore expect WAS data to include some lower paid employees.  
     
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/wealth12.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/wealth12.html"></iframe>
 </div>
 
 ##### Notes:

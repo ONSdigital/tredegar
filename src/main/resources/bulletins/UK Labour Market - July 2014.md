@@ -1,20 +1,20 @@
-Theme: Employment and Labour Market
+﻿Theme: Employment and Labour Market
 Level 2: People in Work
 Level 3: Earnings and Working Hours
 Summary: Labour market statistics (including employment, unemployment and economic inactivity) for the United Kingdom.
-Headline 1: Comparing the estimates for March to May 2014 with those for December 2013 to February 2014, employment continued to rise and unemployment continued to fall. These changes continue the general direction of movement over the past two years.
+Headline 1: Comparing the estimates for March to May 2014 with those for December 2013 to February 2014, employment continued to rise and unemployment continued to fall. 
 Headline 2: There were 30.64 million people in work, 254,000 more than for December 2013 to February 2014 and 929,000 more than a year earlier.
 Headline 3: The proportion of people aged from 16 to 64 in work (the employment rate) continued to rise, reaching 73.1% for March to May 2014. The employment rate last reached 73.1% in December 2004 to February 2005 and, since records began in 1971, it has never been higher.
 Contact name: Richard Clegg
 Contact email: labour.market@ons.gsi.gov.uk
 Next release: 13 August 2014
 
-# Labour market statistics
+# UK Labour Market, July 2014
 
-## (i) Summary of latest Labour Market Statistics
+## Summary of latest Labour Market Statistics
 Comparing March to May 2014 with December 2013 to February 2014, the number of people in employment increased by 254,000 (to 30.64 million), the number of unemployed people fell by 121,000 (to 2.12 million) and the number of people out of work but not seeking or available to work (economically inactive) aged from 16 to 64 fell by 67,000 (to 8.78 million).
 
-## (ii) Understanding and working with Labour Market Statistics
+## Understanding and working with Labour Market Statistics
 ### Where to find explanatory information
 
 [Explaining the concepts of employment, unemployment and economic inactivity](http://www.ons.gov.uk/ons/rel/lms/labour-market-guidance/interpreting-labour-market-statistics/explaining-employment--unemployment-and-inactivity.html "Explaining the concepts of employment, unemployment and economic inactivity") is available on the website as a short video.
@@ -45,7 +45,7 @@ Further information is available in the **Accuracy of the Statistics: Estimating
 
 All estimates discussed in this Statistical Bulletin are seasonally adjusted except where otherwise stated. Like many economic indicators, the labour market is affected by factors that tend to occur at around the same time every year; for example school leavers entering the labour market in July and whether Easter falls in March or April. In order to compare movements other than annual changes in labour market statistics, such as since the previous quarter or since the previous month, the data are seasonally adjusted to remove the effects of seasonal factors and the arrangement of the calendar.
 
-## (iii) Detailed Commentary
+## Detailed Commentary
 This section of the Statistical Bulletin consists of the following parts.
 
 **People in Work**
@@ -69,7 +69,7 @@ This section of the Statistical Bulletin consists of the following parts.
    14. Vacancies
    15. Key Out of Work Benefits
 
-## 1. Employment
+## Employment
 What is employment ?
 
 [Employment](http://www.ons.gov.uk/ons/rel/lms/labour-market-guidance/guide-to-labour-market-statistics/guide-to-employment.html "Employment") measures the number of people in work and differs from the number of jobs because some people have more than one job. Further information is available at **Notes for Employment** at the end of this section.
@@ -146,7 +146,7 @@ Source: Labour Force Survey - Office for National Statistics
 3. The Government supported training and employment programmes series does not include all people on these programmes; it only includes people engaging in any form of work, work experience or work-related training who are not included in the employees or self-employed series. People on these programmes NOT engaging in any form of work, work experience or work-related training are not included in the employment estimates; they are classified as unemployed or economically inactive.
  
 
-## 2. Public and Private Sector Employment (first published on 11 June 2014)
+## Public and Private Sector Employment (first published on 11 June 2014)
 ### What is public and private sector employment ?
 
 **[Public sector employment](http://www.ons.gov.uk/ons/rel/lms/labour-market-guidance/guide-to-labour-market-statistics/guide-to-public-and-private-sector-employment.html "Public sector employment")** measures the number of people in paid work in the public sector. The public sector comprises central government, local government and public corporations. Estimates of public sector employment are obtained from information provided by public sector organisations.
@@ -195,7 +195,7 @@ Source: Quarterly Public Sector Employment Survey - Office for National Statisti
 
 The number of people employed in the public sector has been falling since March 2010. Quarterly estimates of public and private sector employment are available back to 1999. Comparisons of public and private sector employment over time are complicated by a number of changes to the composition of these sectors over this period with several large employers moving between the public and private sectors. ONS therefore publishes estimates of public and private sector employment excluding the effects of major reclassifications alongside estimates of total public and private sector employment.
 
-## 3. Employment by Nationality and Country of Birth, not seasonally adjusted (first published on 14 May 2014)
+## Employment by Nationality and Country of Birth, not seasonally adjusted (first published on 14 May 2014)
 ### What is employment by nationality and country of birth ?
 
 The estimates of employment by both nationality and country of birth relate to the number of people in employment rather than the number of jobs. Changes in the series therefore show net changes in the number of people in employment, not the proportion of new jobs that have been filled by UK and non-UK workers. The estimates are not seasonally adjusted.
@@ -230,7 +230,7 @@ Source: Labour Force Survey - Office for National Statistics
 
 Estimates of employment by nationality and country of birth are available back to 1997. For January to March 1997 there were 928,000 non-UK nationals working in the UK (3.5% of all people working in the UK). For January to March 2014, there were 2.77 million non-UK nationals working in the UK (9.1% of all people working in the UK). This increase in the number of non-UK nationals working in the UK since 1997 partly reflects the admission of several new member states to the European Union.
 
-## 4. Actual Hours Worked
+## Actual Hours Worked
 ### What is actual hours worked ?
 
 Actual hours worked measures the number of hours worked in the economy. Changes in actual hours worked reflect changes in the number of people in employment and the average hours worked by those people.
@@ -262,7 +262,7 @@ For March to May 2014:
 - People working part-time worked, on average, 16.0 hours per week in their main job.
 - These average hours worked estimates were little changed compared with a year earlier. 
 
-## 5. Workforce Jobs (first published on 11 June 2014)
+## Workforce Jobs (first published on 11 June 2014)
 ### What is Workforce Jobs ?
 
 [Workforce jobs](http://www.ons.gov.uk/ons/rel/lms/labour-market-guidance/guide-to-labour-market-statistics/guide-to-jobs.html "Workforce jobs") measures the number of filled jobs in the economy. The estimates are mainly sourced from employer surveys. Workforce jobs is a different concept from employment, which is sourced from the Labour Force Survey, as employment is an estimate of people and some people have more than one job.
@@ -289,7 +289,7 @@ Since comparable records began in 1978, the number of jobs in the manufacturing 
 
 While comparable estimates for workforce jobs by industry begin in 1978, [some information back to 1841, based on Census data](http://www.ons.gov.uk/ons/rel/census/2011-census-analysis/170-years-of-industry/index.html "some information back to 1841, based on Census data"), are available in a report published by ONS in June 2013.
 
-## 6. Average Weekly Earnings
+## Average Weekly Earnings
 ### What is Average Weekly Earnings ?
 
 [Average Weekly Earnings](http://www.ons.gov.uk/ons/rel/lms/labour-market-guidance/guide-to-labour-market-statistics/guide-to-earnings.html "Average Weekly Earnings") measures money paid to employees in Great Britain in return for work done, before tax and other deductions from pay. The estimates do not include earnings of self-employed people. Estimates are available for both total pay (which includes bonuses) and for regular pay (which excludes bonus payments). Further information is available at **Notes for Earnings** at the end of this section.
@@ -341,7 +341,7 @@ Since comparable records began in 2000, average total pay for employees in Great
 3. Lloyds Banking Group plc is reclassified to the private sector from April 2014 following the sale of some government owned shares to private sector investors. It is classified to the public sector between July 2009 and March 2014. ONS estimates that, if the reclassification had not occurred, the public sector single month growth rate from April 2014 would have been around 0.3 percentage points higher and the corresponding private sector growth rate would have been around 0.1 percentage points lower. 
 4. From June 2012 onwards English Further Education Corporations and Sixth Form College Corporations are classified to the private sector, but for earlier time periods they are classified to the public sector. This affects the public and private sector single month growth rates from June 2012 to May 2013, and the three month average growth rates from April-June 2012 to May-July 2013. ONS estimates that, if the reclassification had not occurred, the public sector single month growth rates between June 2012 and May 2013 would have been between 0.6 and 0.8 percentage points lower and the corresponding private sector growth rates would have been between 0.1 and 0.2 percentage points higher.
 
-## 7. Labour Disputes (not seasonally adjusted)
+## Labour Disputes (not seasonally adjusted)
 The [labour disputes](http://www.ons.gov.uk/ons/rel/lms/labour-market-guidance/guide-to-labour-market-statistics/guide-to-labour-disputes.html "labour disputes") estimates measure strikes connected with terms and conditions of employment.
 
 ### Where to find data about labour disputes
@@ -367,7 +367,7 @@ Source: Labour Disputes Statistics - Office for National Statistics
 
 The highest cumulative 12 month estimate for working days lost since records began in December 1931 was 32.2 million for the 12 months to April 1980. Although the cumulative 12 month estimate for working days lost has been generally increasing for the last year, the latest estimates are at historically low levels when looking at the longer run time series back to the 1930s, available at [data table LABD01 (154 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/july-2014/table-labd01.xls "[data table LABD01").
 
-## 8. Unemployment
+## Unemployment
 ### What is unemployment ?
 
 [Unemployment](http://www.ons.gov.uk/ons/rel/lms/labour-market-guidance/guide-to-labour-market-statistics/guide-to-unemployment.html "Unemployment") measures people without a job who have been actively seeking work within the last four weeks and are available to start work within the next two weeks.
@@ -460,7 +460,7 @@ Source: Labour Force Survey - Office for National Statistics, Eurostat
 ##### Download chart: 
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS") [XLS format](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/july-2014/chart-spreadsheet--international-comparisons-0714.xls "XLS format") (32 Kb)
 
-## 9. Claimant Count
+## Claimant Count
 ### What is the Claimant Count ?
 
 The [Claimant Count](http://www.ons.gov.uk/ons/rel/lms/labour-market-guidance/guide-to-labour-market-statistics/guide-to-claimant-count.html "Claimant Count") measures the number of people claiming benefits principally for the reason of being unemployed. Since October 1996 it has been a count of the number of people claiming Jobseeker’s Allowance (JSA). Claimant Count estimates are available on a comparable basis back to January 1971. The figures from January 1971 to September 1996 are estimates of the number of people who would have claimed unemployment related benefits if JSA had existed.
@@ -519,7 +519,7 @@ Source: Office for National Statistics, Work and Pensions
 1. The Claimant Count does not yet include people claiming Universal Credit - a new benefit which, for the June 2014 Claimant Count date, had been introduced in only ten Jobcentre Plus offices. The absence of Universal Credit claimants is expected to have a small effect on the Claimant Count from May 2013. See Background Notes to this Statistical Bulletin for further details.
 2. The Claimant Count includes people who claim Jobseeker’s Allowance but who do not receive payment. For example some claimants will have had their benefits stopped for a limited period of time by Jobcentre Plus; this is known as “sanctioning”. Some people claim Jobseeker’s Allowance in order to receive National Insurance Credits.
 
-## 10. Comparison between Unemployment and the Claimant Count
+## Comparison between Unemployment and the Claimant Count
 [Unemployment](http://www.ons.gov.uk/ons/rel/lms/labour-market-guidance/guide-to-labour-market-statistics/guide-to-unemployment.html "Unemployment") is measured according to internationally accepted guidelines specified by the International Labour Organisation (ILO). Unemployed people in the UK are:
 
 - without a job, have actively sought work in the last four weeks and are available to start work in the next two weeks, or;
@@ -548,7 +548,7 @@ When three month average estimates for the Claimant Count are compared with unem
 ##### Download chart: 
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS") [XLS format](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/july-2014/chart-spreadsheet--unemployment-cc-comparison.xls "XLS format") (224 Kb)
 
-## 11. Economic Inactivity
+## Economic Inactivity
 ### What is economic inactivity ? 
 
 [Economically inactive](http://www.ons.gov.uk/ons/rel/lms/labour-market-guidance/guide-to-labour-market-statistics/guide-to-economic-inactivity.html "Economically inactive") people are not in employment but do not meet the internationally accepted definition of unemployment because they have not been seeking work within the last four weeks and/or they are unable to start work within the next two weeks.
@@ -615,7 +615,7 @@ Source: Labour Force Survey - Office for National Statistics
 ##### Download chart: 
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS") [XLS format](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/july-2014/chart-spreadsheet--inactivity-by-reason-0714.xls "XLS format") (29.5 Kb)
 
-## 12. Young People in the Labour Market
+## Young People in the Labour Market
 ### Where to find data on young people in the labour market
 
 Estimates for young people in the labour market are available at Table 14 of the pdf version of this Statistical Bulletin and at [data table A06 (2.35 Mb Excel sheet)](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/july-2014/table-a06.xls "data table A06").
@@ -654,7 +654,7 @@ For March to May 2014, the unemployment rate for 16 to 24 year olds was 17.8%. T
 
 Comparisons of youth unemployment over time are complicated by the fact that unemployment rates are calculated as the number of unemployed people divided by the economically active population (which excludes those not seeking or available to work). Since comparable records began in 1992, the proportion of people aged from 16 to 24 in full-time education has increased substantially from 24.3% for March to May 1992 to 42.3% for March to May 2014. Increasing numbers of young people going into full-time education reduces the size of the economically active population and therefore increases the unemployment rate. 
 
-## 13. Redundancies
+## Redundancies
 ### What are redundancies ?
 
 The [redundancies](http://www.ons.gov.uk/ons/rel/lms/labour-market-guidance/guide-to-labour-market-statistics/guide-to-redundancies.html "redundancies") estimates measure the number of people who have been made redundant or have taken voluntary redundancy.
@@ -676,7 +676,7 @@ Source: Labour Force Survey - Office for National Statistics
 ##### Download chart: 
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS") [XLS format](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/july-2014/chart-spreadsheet--redundancies-0714.xls "XLS format") (28 Kb)
 
-## 14. Vacancies
+## Vacancies
 ### What are vacancies ?
 
 [Vacancies](http://www.ons.gov.uk/ons/rel/lms/labour-market-guidance/guide-to-labour-market-statistics/guide-to-vacancies.html "Vacancies") are defined as positions for which employers are actively seeking to recruit outside their business or organisation.
@@ -699,7 +699,7 @@ Source: Vacancy Survey - Office for National Statistics
 ##### Download chart: 
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS") [XLS format](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/july-2014/chart-spreadsheet--vacancies-0714.xls "XLS format") (28.5 Kb)
 
-## 15. Key Out of Work Benefits, not seasonally adjusted (first published on 14 May 2014)
+## Key Out of Work Benefits, not seasonally adjusted (first published on 14 May 2014)
 ### What are key out of work benefits ?
 
 Key out of work benefits includes claimants of Jobseeker’s Allowance and Employment and Support Allowance and other incapacity benefits. It also includes claimants of Income Support and Pension Credit. While most people claiming these benefits are out of work a small number are in employment. These estimates exclude claimants in Northern Ireland.
@@ -730,7 +730,7 @@ Source: Work and Pensions, Office for National Statistics
 ##### Download chart: 
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS") [XLS format](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/may-2014/chart-spreadsheet--benefits-0514.xls "XLS format") (25.5 Kb)
 
-## (iv) Where to find more information about Labour Market Statistics
+## Where to find more information about Labour Market Statistics
 ### Other regularly published labour market releases
 
 - [Regional Labour Market statistics](http://www.ons.gov.uk/ons/rel/subnational-labour/regional-labour-market-statistics/index.html "Regional Labour Market statistics") (*)
@@ -763,12 +763,12 @@ Articles about labour market statistics were published in Labour Market Trends (
 
 [Additional statistical data and analyses for labour market statistics](http://www.ons.gov.uk/ons/about-ons/business-transparency/freedom-of-information/what-can-i-request/published-ad-hoc-data/labour/index.html "Additional statistical data and analyses for labour market statistics") that have not been included in our standard publications are available on the website.
 
-## (v) Revisions
+## Revisions
 Estimates for the most recent time periods are subject to revision due to the receipt of late and corrected responses to business surveys and revisions to seasonal adjustment factors which are re-estimated every month. Estimates are subject to longer run revisions, on an annual basis, resulting from reviews of the seasonal adjustment process. Estimates derived from the Labour Force Survey (a survey of households) are usually only revised once a year. Revisions to estimates derived from other sources are usually minor and are commented on in the Statistical Bulletin if this is not the case. Further information is available in the [Labour Market Statistics Revisions Policy (36.7 Kb Pdf)](http://www.ons.gov.uk/ons/guide-method/revisions/revisions-policies-by-theme/labour-market/labour-market-statistics-revisions-policy.pdf "Labour Market Statistics Revisions Policy").
 
 One indication of the reliability of the key indicators in this Statistical Bulletin can be obtained by monitoring the size of revisions. [Data tables EMP05 (0.99 Mb Excel sheet)](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/july-2014/table-emp05.xls "Data tables EMP05") , [UNEM04 (2.09 Mb Excel sheet)](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/july-2014/table-unem04.xls "UNEM04"), [JOBS06 (374 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/july-2014/table-jobs06.xls "JOBS06") and [CLA04 (1.87 Mb Excel sheet)](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/july-2014/table-cla03.xls "CLA04") record the size and pattern of revisions over the last five years. These indicators only report summary measures for revisions. The revised data itself may be subject to sampling or other sources of error. The ONS standard presentation is to show five years worth of revisions (60 observations for a monthly series, 20 for a quarterly series).
 
-## (vi) Accuracy of the Statistics: Estimating and Reporting Uncertainty
+## Accuracy of the Statistics: Estimating and Reporting Uncertainty
 Most of the figures in this Statistical Bulletin come from surveys of households or businesses. Surveys gather information from a sample rather than from the whole population.  The sample is designed carefully to allow for this, and to be as accurate as possible given practical limitations like time and cost constraints, but results from sample surveys are always estimates, not precise figures. This means that they are subject to some uncertainty. This can have an impact on how changes in the estimates should be interpreted, especially for short-term comparisons.
 
 We can calculate the level of uncertainty (also called “sampling variability”) around a survey estimate by exploring how that estimate would change if we were to draw many survey samples for the same time period instead of just one. This allows us to define a range around the estimate (known as a “confidence interval”) and to state how likely it is in practice that the real value that the survey is trying to measure lies within that range. Confidence intervals are typically set up so that we can be 95% sure that the true value lies within the range – in which case we refer to a “95% confidence interval”.
@@ -797,7 +797,7 @@ The sampling variability of the three month average **vacancies** level is aroun
 
 Sampling variability information for **Average Weekly Earnings** growth rates are available from the “Sampling Variability” worksheets within [data tables EARN01 (478 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/july-2014/table-earn01.xls "data tables EARN01") and [EARN03 (586.5 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/july-2014/table-earn03.xls "EARN03").
 
-## (vii) Other Quality Information
+## Other Quality Information
 [Quality and Methodology Information papers](http://www.ons.gov.uk/ons/guide-method/method-quality/quality/quality-information/labour-market/index.html "Quality and Methodology Information papers") for labour market statistics are available on the website.
 
 Further information about the Labour Force Survey (LFS) is available from:
@@ -805,7 +805,7 @@ Further information about the Labour Force Survey (LFS) is available from:
 - the [LFS User Guide](http://www.ons.gov.uk/ons/guide-method/method-quality/specific/labour-market/labour-market-statistics/index.html "LFS User Guide"), and 
 - [LFS Performance and Quality Monitoring Reports](http://www.ons.gov.uk/ons/guide-method/method-quality/specific/labour-market/labour-force-survey/index.html "LFS Performance and Quality Monitoring Reports").
 
-## Background notes
+## [accordion] Background notes and methodology
 1. **This month’s release**   
 A new data table (Excel spreadsheet) has been introduced providing an indicative representation of the Claimant Count including experimental Universal Credit statistics. See Background Note 4 below for further details.
 
@@ -857,3 +857,10 @@ Designation can be broadly interpreted to mean that the statistics:
 - are managed impartially and objectively in the public interest.
 
 Once statistics have been designated as National Statistics it is a statutory requirement that the Code of Practice shall continue to be observed.
+
+## [accordion] References
+This information will not be available in the prototype, however in the future all references related to this statistical bulletin will appear here.
+
+## [accordion] Footnotes
+This information will not be available in the prototype, however in the future the footnotes related to this statistical bulletin will appear here.
+

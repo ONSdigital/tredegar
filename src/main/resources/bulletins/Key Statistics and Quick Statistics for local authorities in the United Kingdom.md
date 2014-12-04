@@ -84,8 +84,8 @@ Due to question and response category differences in the country specific ethnic
 
 In 2011 the majority of the UK population described themselves as belonging to the White ethnic group (87 per cent or 55 million).  The remaining 13 per cent (8.1 million) belonged to a minority ethnic group, representing one person in eight of the UK population.  The Asian / Asian British (including Chinese) ethnic group accounted for 7 per cent of the UK population (4.4. million people).  The other minority groups were Black / African / Caribbean / Black British (3 per cent), Mixed (2 per cent), and Gypsy / Traveller / Irish Traveller / Other groups (1 per cent).  Figure 1 shows the proportion of each ethnic group for the UK.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/la1.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/la1.html"></iframe>
 </div>
 
 ##### Notes:
@@ -100,8 +100,8 @@ Apart from England, where 85 per cent of residents described themselves as White
 
 Comparing all English regions, Wales, Scotland and Northern Ireland, the most ethnically diverse region was London with 40 per cent of residents identifying themselves as belonging to a minority ethnic group.  Figure 2 shows the usually resident population of the UK by ethnic group and region, excluding the White ethnic group.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/la2.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/la2.html"></iframe>
 </div>
 
 ##### Notes:
@@ -115,8 +115,8 @@ Comparing all English regions, Wales, Scotland and Northern Ireland, the most et
 ### Country of birth
 The top 10 non-UK born countries of birth for the United Kingdom in 2011 are shown in Figure 3. This shows India was the most reported country of birth of non-UK born citizens in 2011. In 2001, 468,000 usual residents (10 per cent of the non-UK born population) reported India as their country of birth, but in 2011 this had increased to 722,000 (9 per cent of the non-UK born population), an increase of 254,000.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/la3.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/la3.html"></iframe>
 </div>
 
 ##### Notes:
@@ -133,8 +133,8 @@ Usual residents in the UK were asked to assess their health on a five point scal
 
 In 2011, over four-fifths (81 per cent, 51.3 million) of the population of the UK described themselves as being in good or very good health, as shown in Figure 4.  A further 13 per cent (8.3 million) described their health as fair, and the remaining 6 per cent described their health as bad or very bad.  Wales had the lowest proportion of the population in good or very good health (78 per cent) and the highest proportion of the population in bad or very bad health (8 per cent).
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/la4.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/la4.html"></iframe>
 </div>
 
 ##### Notes:
@@ -143,8 +143,8 @@ In 2011, over four-fifths (81 per cent, 51.3 million) of the population of the U
 
 Across the English regions, Wales, Scotland and Northern Ireland, Scotland had the highest proportion of usual residents with very good health at 52 per cent (2.8 million); the North East of England had the lowest proportion at 44 per cent (1.1 million).  The South East of England had the lowest proportion reporting bad or very bad health at four per cent (375,000).  Figure 5 shows the general health of the population of the UK by constituent country and English regions.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/la5.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/la5.html"></iframe>
 </div>
 
 ##### Notes:
@@ -171,8 +171,8 @@ Of all the English regions, Wales, Scotland and Northern Ireland, residents of L
 
 In 2011 40 per cent (24.6 million) of usual residents in the UK lived in properties owned with a mortgage or loan.  As can be seen from Figure 6, this ranged from 39 per cent (1.2 million) in Wales up to 43 per cent (765,000) in Northern Ireland.  More than a quarter of usual residents in the UK lived in properties that were owned outright (26 per cent, 15.9 million), ranging from 24 per cent (1.3 million) in Scotland up to 30 per cent (896,000) in Wales.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/la6.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/la6.html"></iframe>
 </div>
 
 ##### Notes:
@@ -186,8 +186,8 @@ The percentage of usual residents renting privately from a landlord or letting a
 
 In 2011, 33 per cent (8.7 million) of households in the UK owned their own property with a mortgage or loan. This ranged from 32 per cent (417,000) in Wales to 35 per cent (245,000) in Northern Ireland.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/la7.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/la7.html"></iframe>
 </div>
 
 ##### Notes:
@@ -199,16 +199,16 @@ Comparing Figure 6 with Figure 7, there is a 7 percentage point difference in th
 
 The total number of cars or vans available to households increased by 4.0 million (14.9 per cent) between from 26.7 million cars or vans 2001 to 30.7 million cars or vans in 2011.  The percentage increase in the number of cars or vans available to households for each country of the UK between 2001 to 2011 is shown in figure 8.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/la8.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/la8.html"></iframe>
 </div>
 
 Figure 8 shows that Northern Ireland experienced the biggest increase (28 per cent, 193,000) in the number of cars or vans between 2001 and 2011, from 692,000 in 2001 to 885,000 in 2011. Scotland had the second highest percentage increase (21 per cent, 431,000) in the number of cars or vans available to households between 2001 and 2011. In 2001, there were 2.0 million cars or vans available in Scotland, but by 2011 this had increased to 2.5 million. The number of cars or vans available in Wales also increased between 2001 and 2011 (by 20 per cent, 269,000). There were 1.3 million cars or vans available to households in Wales in 2001, but this had increased to 1.6 million in 2011. England was the country to have had the smallest percentage increase (14 per cent, 3.1 million). 
 
 Although the number of cars or vans available to household increased across the UK between 2001 and 2011, the distribution of the number of cars or vans per household has changed, as shown in figure 9. There has been a decrease in the proportion of households with no cars or vans available between 2001 and 2011. There has also been a decrease in the percentage of households that have just one car or van available. There has been a large increase however, in the number of households that have two or more cars or vans from 7.0 million in 2001, to 8.4 million in 2011.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/la9.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/la9.html"></iframe>
 </div>
 
 ### Communal establishments

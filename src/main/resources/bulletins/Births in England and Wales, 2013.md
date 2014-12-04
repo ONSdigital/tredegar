@@ -30,8 +30,8 @@ The total fertility rate for England and Wales (see background note 3) decreased
 
 During the 1990s, the TFR fell from 1.80 in 1992 to a record low of 1.63 by 2001. This was largely due to women delaying childbearing to older ages ( [Jefferies, 2008 (297 Kb Pdf)](http://www.ons.gov.uk/ons/rel/population-trends-rd/population-trends/no--131--spring-2008/fertility-assumptions-for-the-2006-based-national-population-projections.pdf "Fertility assumptions for the 2006-based national population projections") ; [Tromans, et al., 2008 (3.33 Mb Pdf)](http://www.ons.gov.uk/ons/rel/population-trends-rd/population-trends/no--133--autumn-2008/have-national-trends-in-fertility-between-1986-and-2006-occurred-evenly-across-england-and-wales-.pdf "Have national trends in fertility between 1986 and 2006 occurred evenly across England and Wales") ). The TFR rose steadily between 2002 and 2008 to 1.92, then remained relatively stable between 2009 and 2012 (between 1.90 and 1.94). The fall in TFR from 1.94 in 2012 to 1.85 in 2013 was the largest annual decrease in the fertility rate since 1975.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/births1.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/births1.html"></iframe>
 </div>
 
 ##### Notes:
@@ -68,8 +68,8 @@ In most developed countries women have been increasingly delaying childbearing t
 
 In summary, the overall fall in the total fertility rate (TFR) in 2013 was a consequence of larger decreases in fertility for those aged under 25 than in recent years, in addition to decreases in fertility at ages 35 and over, where fertility rates have previously increased for nearly two decades. Reductions in fertility rates for women aged 25-34 have also contributed to the overall decrease, Fertility rates have fluctuated for women in this age range over recent years, despite an overall increasing trend since 2001/2. 
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/births2.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/births2.html"></iframe>
 </div>
 
 ##### Notes:

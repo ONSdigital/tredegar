@@ -53,8 +53,8 @@ At the regional level of England and the constituent countries of the UK, IHS da
 
 1.1 per cent of adults who live in the East of England identified themselves as Gay, Lesbian or Bisexual
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/expt1.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/expt1.html"></iframe>
 </div>
 
 ##### Notes:
@@ -73,8 +73,8 @@ The survey asked people about their perception of their health in general. The I
 
 - at the regional level the North East of England reported the lowest rate of perceived good health at 72 per cent, with London reporting the highest at 80 per cent.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/expt2.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/expt2.html"></iframe>
 </div>
 
 ##### Notes:
@@ -90,7 +90,7 @@ Looking at perceived general health by age and gender, the IHS data show that:
 - people in younger age groups are more likely to report themselves to be ‘in good health’. Men in age group 16-24 reported the highest level of perceived good health at 92.3 per cent, with women in age group 65 and over reported the lowest at 55.8 per cent
 
 ## [accordion] Background notes and methodology
-#### 1. Integrated Household Survey
+1. Integrated Household Survey
 
 The Integrated Household Survey is formed from ’core‘ questions on a number of ONS Household Surveys.
 
@@ -102,8 +102,8 @@ ONS is proposing to reduce the number of annual IHS datasets from four to one pe
 
 Further information on the [IHS](http://www.ons.gov.uk/ons/guide-method/method-quality/specific/social-and-welfare-methodology/integrated-household-survey/index.html "Integrated Household Survey") and [APS](http://www.ons.gov.uk/ons/guide-method/method-quality/quality/quality-information/quality-reports-for-social-statistics.html "Quality reports for social statistics") can be found on the ONS website.
 
-#### 2. Notes on the themes
-##### 2.1 Sexual identity
+2. Notes on the themes
+2.1 Sexual identity
 
 While the Equality Act 2010 and relevant legislation in the past refers to sexual orientation, ONS has focused on collecting data on sexual identity. The sexual identity question measures how people see themselves and not how others see them.
 
@@ -111,43 +111,43 @@ The sexual identity question was asked in both face to face and telephone interv
 
 Information regarding the development of the sexual identity question can be found on the ONS website.
 
-##### 2.2 Smoking Prevalence
+2.2 Smoking Prevalence
 
 The [General Lifestlye Survey report](http://www.ons.gov.uk/ons/rel/ghs/general-lifestyle-survey/2010/index.html "2010") presents smoking prevalence information for 2010.
 
-#### 3. Subjective Well-Being
+3. Subjective Well-Being
 
 As part of the [Measuring National Well-being programme](http://www.ons.gov.uk/ons/external-links/devolved-admins/scottish-government/scottish-health-survey-2011.html "Measuring National Well-being programme"), ONS in April 2011 added what is termed 'subjective well-being' questions to the constituent surveys of the IHS. Subjective Well-being concerns people's self-reported assessment of their own well-being. Survey questions of this nature aim to capture an individuals well-being by measuring how people think and feel, for example asking about life satisfaction, meaning and purpose and day-to-day emotions. Used alongside more objective statistics they provide a fuller assessment of National Well-being.
 
 In July 2012, ONS produced the [first annual experimental subjective well-being dataset](http://www.ons.gov.uk/ons/rel/wellbeing/measuring-subjective-wellbeing-in-the-uk/first-annual-ons-experimental-subjective-well-being-results/first-ons-annual-experimental-subjective-well-being-results.html "ART First ONS Annual Experimental Subjective Well-being Results) from the Annual Population Survey, the largest constituent survey of the IHS.
 
-#### 4. Other Sources of Data
+4. Other Sources of Data
 
 Information on mental well-being, self-assessed health, and smoking for Scotland were published on 25 September in the [Scottish Health Survey 2011](http://www.ons.gov.uk/ons/external-links/devolved-admins/scottish-government/scottish-health-survey-2011.html "Scottish Health Survey 2011"). This report and the Scottish Household Survey are recommended for users primarily interested in Scottish data without UK wide comparison. In Scotland the statistical contact for health is Julie Ramsay 0131 244 2368 and for sexual identity, religion and ethnicity is Jon Hunter 0131 244 7571.
 
 The Welsh Government publish data on sexual identity on their [StatsWales website](http://www.ons.gov.uk/ons/external-links/devolved-admins/welsh-assembly-government/statswales.html "StatsWales"). More detailed data on self-assessed general health was published for Wales in the [Welsh Health Survey 2011 report](http://www.ons.gov.uk/ons/external-links/devolved-admins/welsh-assembly-government/welsh-government--welsh-health-survey--2011.html "Welsh Government: Welsh Health Survey, 2011"), and this is recommended for users primarily interested in Welsh data.
 
-#### 5. Access to the Data
+5. Access to the Data
 
 IHS data will be made available through the End User Licence at the UK Data Archive. The End User Licence is an agreement between the user and the University of Essex to provide users with the right to use the data held at the Data Archive .The End User Licence dataset can be accessed on the [UK Data Archive (UKDA)](http://www.ons.gov.uk/ons/external-links/academic/economic-and-social-data-service--esds-/esds--end-user-licence.html "ESDS: End User License).
 
 A more detailed file can be accessed if Approved Researcher Status is sought and agreed. More information on the UK Data Archive and the Approved Researcher process are provided on the About us section of the ONS website.
 
-#### 6. Experimental Statistics
+6. Experimental Statistics
 
 Experimental statistics are those which are in the testing phase, are not yet fully developed and have not been submitted for assessment to the [UK Statistics Authority](http://www.ons.gov.uk/ons/external-links/stats-authority/statistics-authority-s-website.html "UK Statistics Authority website"). The IHS is designated as experimental statistics. Further information on experimental statistics can be found on the ONS website. 
 
-#### 7. Quality
+7. Quality
 
 Detailed information on sampling variability of the IHS can be found on the ONS website, and confidence intervals for the latest estimates described in the Bulletin can be found in the linked excel download tables. 
 
-#### 8. Publication Policy
+8. Publication Policy
 
 Details of the policy governing the release of new data are available from the [Media Relations Office](mailto:media.relations@ons.gsi.gov.uk).
 
 Issued by: Office for National Statistics, Government Buildings, Cardiff Road, Newport NP10 8XG.
 
-##### Media contact:
+Media contact:
 
 Tel: Media Relations Office 0845 6041838 
 Emergency on-call: 07867 906553 
