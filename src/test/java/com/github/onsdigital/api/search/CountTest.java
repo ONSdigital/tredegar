@@ -14,8 +14,8 @@ public class CountTest {
 	public void shouldBeEqual() {
 
 		// Given
-		Count a = new Count("123");
-		Count b = new Count("123");
+		SearchConsole.QueryCount a = new SearchConsole.QueryCount("123");
+		SearchConsole.QueryCount b = new SearchConsole.QueryCount("123");
 
 		// Then
 		assertEquals(a, b);
@@ -25,8 +25,8 @@ public class CountTest {
 	public void shouldNotBeEqual() {
 
 		// Given
-		Count a = new Count("123");
-		Count b = new Count("321");
+		SearchConsole.QueryCount a = new SearchConsole.QueryCount("123");
+		SearchConsole.QueryCount b = new SearchConsole.QueryCount("321");
 
 		// Then
 		assertNotEquals(a, b);
@@ -36,28 +36,28 @@ public class CountTest {
 	public void shouldSort() {
 
 		// Given
-		Count a = new Count("123");
-		Count b = new Count("321");
-		Count c = new Count("456");
+		SearchConsole.QueryCount a = new SearchConsole.QueryCount("123");
+		SearchConsole.QueryCount b = new SearchConsole.QueryCount("321");
+		SearchConsole.QueryCount c = new SearchConsole.QueryCount("456");
 
 		// When
 		a.count = 1;
 		b.count = 3;
 		c.count = 2;
-		Set<Count> set = new TreeSet<>();
+		Set<SearchConsole.QueryCount> set = new TreeSet<>();
 		set.add(a);
 		set.add(b);
 		set.add(c);
 
 		// Then
-		Count[] result = new Count[3];
+		SearchConsole.QueryCount[] result = new SearchConsole.QueryCount[3];
 		int i = 0;
-		for (Count count : set) {
+		for (SearchConsole.QueryCount count : set) {
 			result[i] = count;
 			i++;
 		}
-		assertEquals("321", result[0].value);
-		assertEquals("456", result[1].value);
-		assertEquals("123", result[2].value);
+		assertEquals("321", result[0].query);
+		assertEquals("456", result[1].query);
+		assertEquals("123", result[2].query);
 	}
 }
