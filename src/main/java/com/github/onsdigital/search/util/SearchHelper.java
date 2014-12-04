@@ -34,16 +34,16 @@ public class SearchHelper {
 	 * @param types
 	 * @return
 	 */
-	public static SearchResult search(String searchTerm, int page, boolean naturalLanguage, String... types) {
+	public static SearchResult search(String searchTerm, int page, String... types) {
 		if (ArrayUtils.isEmpty(types)) {
-			return searchMultiple(searchTerm, page, naturalLanguage);
+			return searchMultiple(searchTerm, page);
 		} else {
-			return SearchService.search(buildContentQuery(searchTerm, page, naturalLanguage, types));
+			return SearchService.search(buildContentQuery(searchTerm, page, types));
 		}
 	}
 	
-	public static SearchResult autocomplete(String searchTerm, boolean naturalLanguage) {
-		ONSQueryBuilder builder = buildAutocompleteQuery(searchTerm, naturalLanguage);
+	public static SearchResult autocomplete(String searchTerm) {
+		ONSQueryBuilder builder = buildAutocompleteQuery(searchTerm);
 		return SearchService.search(builder);
 	}
 
@@ -99,7 +99,7 @@ public class SearchHelper {
 		if (StringUtils.isEmpty(suggestionsBufferAsString)) {
 			System.out.println("All search steps failed to discover suitable match");
 		} else {
-			result = search(suggestionsBufferAsString, page, false, types);
+			result = search(suggestionsBufferAsString, page, types);
 			result.setSuggestionBasedResult(true);
 			result.setSuggestion(suggestionsBufferAsString);
 			System.out.println("Failed to find any results for[" + query + "] so will use suggestion of [" + suggestionsBufferAsString + "]");
@@ -107,9 +107,9 @@ public class SearchHelper {
 		return result;
 	}
 
-	private static SearchResult searchMultiple(String searchTerm, int page, boolean naturalLanguage) {
+	private static SearchResult searchMultiple(String searchTerm, int page) {
 		// If no filter and first page, include one home type result at the top
-		List<SearchResult> responses = SearchService.multiSearch(buildHomeQuery(searchTerm, page, naturalLanguage), buildContentQuery(searchTerm, page, naturalLanguage));
+		List<SearchResult> responses = SearchService.multiSearch(buildHomeQuery(searchTerm, page), buildContentQuery(searchTerm, page));
 		Iterator<SearchResult> resultsIterator = responses.iterator();
 		SearchResult homeResult = resultsIterator.next();
 		SearchResult contentResult = resultsIterator.next();
@@ -126,15 +126,13 @@ public class SearchHelper {
 		return contentResult;
 	}
 
-	private static ONSQueryBuilder buildHomeQuery(String searchTerm, int page, boolean naturalLanguage) {
+	private static ONSQueryBuilder buildHomeQuery(String searchTerm, int page) {
 		ONSQueryBuilder homeQuery = new ONSQueryBuilder("ons").setType(ContentType.home.toString()).setPage(page).setSearchTerm(searchTerm).setSize(1).setFields(TITLE, "url");
-		homeQuery.setNaturalLanguage(naturalLanguage);
 		return homeQuery;
 	}
 
-	private static ONSQueryBuilder buildContentQuery(String searchTerm, int page, boolean naturalLanguage, String... types) {
+	private static ONSQueryBuilder buildContentQuery(String searchTerm, int page, String... types) {
 		ONSQueryBuilder contentQuery = new ONSQueryBuilder("ons").setSearchTerm(searchTerm).setFields(TITLE, "url");
-		contentQuery.setNaturalLanguage(naturalLanguage);
 		if (ArrayUtils.isEmpty(types)) {
 			contentQuery.setTypes(ContentType.bulletin.toString(), ContentType.dataset.toString(), ContentType.methodology.toString(), ContentType.article.toString()).setPage(page);
 
@@ -145,9 +143,8 @@ public class SearchHelper {
 		return contentQuery;
 	}
 	
-	private static ONSQueryBuilder buildAutocompleteQuery(String searchTerm, boolean naturalLanguage) {
+	private static ONSQueryBuilder buildAutocompleteQuery(String searchTerm) {
 		ONSQueryBuilder autocompleteQuery = new ONSQueryBuilder("ons").setSearchTerm(searchTerm).setFields(TITLE, "url");
-		autocompleteQuery.setNaturalLanguage(naturalLanguage);
 		autocompleteQuery.setTypes(ContentType.timeseries.toString(), ContentType.bulletin.toString(), ContentType.dataset.toString(), ContentType.methodology.toString(), ContentType.article.toString());
 		return autocompleteQuery;
 	}

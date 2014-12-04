@@ -31,8 +31,12 @@ public class Indexer {
 		if (absoluteFilePaths.isEmpty()) {
 			throw new IllegalStateException("No items were found for indexing");
 		}
-		createIndex(client, absoluteFilePaths);
-		indexDocuments(client, absoluteFilePaths);
+		try {
+			createIndex(client, absoluteFilePaths);
+			indexDocuments(client, absoluteFilePaths);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	private static void createIndex(Client client, List<String> absoluteFilePaths) throws IOException {
@@ -61,8 +65,8 @@ public class Indexer {
 
 		XContentBuilder builder = jsonBuilder().startObject().startObject(type).startObject("properties");
 		builder.startObject("lede").field("type", "string").field("index", "no").endObject();
-		builder.startObject("title").field("type", "string").field("index", "analyzed").field("analyzer", "ons_synonyms").endObject();
-		builder.startObject("url").field("type", "string").field("index", "analyzed").field("analyzer", "ons_synonyms").endObject();
+		builder.startObject("title").field("type", "string").field("index", "analyzed").endObject();
+		builder.startObject("url").field("type", "string").field("index", "analyzed").endObject();
 		builder.startObject("path").field("type", "string").field("index", "analyzed").endObject();
 		builder.endObject().endObject().endObject();
 		return builder;
@@ -135,8 +139,20 @@ public class Indexer {
 		settingsBuilder.putArray("analysis.filter.ons_synonym_filter.synonyms", synonyms);
 
 		Map<String, String> settings = new HashMap<>();
+		// default analyzer
+		settings.put("analysis.analyzer.default_index.tokenizer", "ons_search_tokenizer");
+		settings.put("analysis.analyzer.default_index.filter", "lowercase");
 		settings.put("analysis.analyzer.ons_synonyms.tokenizer", "standard");
 		settings.put("analysis.filter.ons_synonym_filter.type", "synonym");
+
+		
+		// edgeNGram tokenizer
+		settings.put("analysis.tokenizer.ons_search_tokenizer.type", "edgeNGram");
+		settings.put("analysis.tokenizer.ons_search_tokenizer.max_gram", "15");
+		settings.put("analysis.tokenizer.ons_search_tokenizer.min_gram", "2");
+		String[] tokenChars = { "letter", "digit" };
+		settingsBuilder.putArray("analysis.tokenizer.ons_search_tokenizer.token_chars", tokenChars);
+
 		settingsBuilder.put(settings);
 	}
 
