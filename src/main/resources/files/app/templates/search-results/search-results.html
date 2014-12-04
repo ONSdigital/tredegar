@@ -91,9 +91,6 @@
                             <span ng-if="isShowLozenge(item)" class="lozenge--label" href="">{{item.type === 'bulletin' ? 'Statistical bulletin' : item.type}}</span>
                         </dt>
                         <dd class="microcopy">
-                        	<span ng-if="item.type === 'home'">
-								<span ng-bind-html="item.highlights.url || item.url"></span>
-                        	</span>
                         	<span ng-if="item.type != 'home'">Release date 1 Jan 3000</span>
                         </dd>
                         <dd ng-repeat-end class="search-summary" ng-class="isFocus(item.type, $index) ? 'search-home-focused--summary' : ''" >{{(item.lede | charLimit:300:'...') || 'In the future a short description of this series will be displayed in this area' }}</dd>
