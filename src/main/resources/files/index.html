@@ -90,7 +90,12 @@ markup: false
     <div ng-include="'app/partials/modal/modal.html'" ></div>
     <a id="my_feedback" class="btn btn--survey" onclick="_bugHerd.win.bugherd.applicationView.anonymousbar.toggleOptions()">Send Feedback</a>
     <ons-header></ons-header>
-        <div class="wrap" ng-view autoscroll="true">
+        <div class="wrap"  ng-if="hasErrors()">
+            <span ng-if="error === 404" ng-include="'app/templates/error-pages/error404.html'"></span>
+            <span ng-if="error === 500" ng-include="'app/templates/error-pages/error500.html'"></span>
+        </span>
+        </div>
+        <div class="wrap" ng-if="!hasErrors()" ng-view autoscroll="true">
             <noscript>
                 <main id="main" role="main" class="ONS_border">
                     <div style="margin: 20px;">
