@@ -169,7 +169,9 @@ public class SearchConsole {
 		for (Map<String, Object> hit : searchResult.getResults()) {
 			Result result = new Result();
 			result.name = hit.get("title").toString();
-			result.description = hit.get("lede").toString();
+			Object lede = hit.get("lede");
+			//Timeseries results does not have lede
+			result.description = lede == null ? "" : lede.toString();
 			result.type = ContentType.valueOf(hit.get("type").toString());
 			result.uri = URI.create(hit.get("url").toString());
 			search.hits.add(result);
