@@ -9,7 +9,7 @@
                 </div>
                 <div ng-show="showSearchResults" id="search-results-total" class="search-results-total">
                     <span class='results-total'>
-                        {{searchResponse.numberOfResults}}
+                        {{totalCount}}
                     </span>results for
                     <span class='results-search-term'>
                         '{{searchTermOneTime}}'
@@ -24,7 +24,7 @@
                         </span>
                     <div>
 	                    Showing <span class='results-total'>
-	                        {{searchResponse.numberOfResults}}
+	                        {{totalCount}}
 	                    </span> results for
 	                    <span class='results-search-term'>
 	                        '{{searchResponse.suggestion}}'
@@ -87,16 +87,22 @@
             <article class="box">
 
                 <div id="<search></search>" class="search">
-                    <dl>
-
-                        <dt ng-repeat-start="item in searchResponse.results track by $index" ng-class="isFocus(item.type, $index) ? 'search-home-focused' : ''">
+                    <dl ng-init="homeResult = searchResponse.homeSearchResult.results[0]">
+                        <!-- Single home type result -->
+                        <dt class="search-home-focused">
+                            <a class="search-link" ng-href="{{link(homeResult.url)}}"><span ng-bind-html="homeResult.highlights.title || homeResult.title"></span></a>
+                        </dt>
+                        <dd class="search-summary search-home-focused--summary" >{{homeResult.lede | charLimit:300}}</dd>
+                        
+                        <!-- Content search results -->
+                        <dt ng-repeat-start="item in searchResponse.contentSearchResult.results track by $index">
                             <a class="search-link" ng-href="{{link(item.url)}}"><span ng-bind-html="item.highlights.title || item.title"></span></a>
                             <span ng-if="isShowLozenge(item)" class="lozenge--label" href="">{{item.type === 'bulletin' ? 'Statistical bulletin' : item.type}}</span>
                         </dt>
                         <dd class="microcopy">
                         	<span ng-if="item.type != 'home'">Release date 1 Jan 3000</span>
                         </dd>
-                        <dd ng-repeat-end class="search-summary" ng-class="isFocus(item.type, $index) ? 'search-home-focused--summary' : ''" >{{(item.lede | charLimit:300:'...') || 'In the future a short description of this series will be displayed in this area' }}</dd>
+                        <dd ng-repeat-end class="search-summary">{{(item.lede | charLimit:300:'...') || 'In the future a short description of this series will be displayed in this area' }}</dd>
                     </dl>
 
                     <article ng-show="showTimeseriesSearchSuggest"  class="box box--padded box--green box--green--separated-left lifted">
