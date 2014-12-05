@@ -26,7 +26,7 @@ import com.github.davidcarboni.restolino.json.Serialiser;
 import com.github.onsdigital.configuration.Configuration;
 import com.github.onsdigital.json.ContentType;
 import com.github.onsdigital.json.timeseries.Timeseries;
-import com.github.onsdigital.search.bean.SearchResult;
+import com.github.onsdigital.search.bean.AggregatedSearchResult;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
@@ -61,7 +61,7 @@ public class SearchConsole {
 		if (Timeseries.class.isAssignableFrom(searchResult.getClass())) {
 			saveTimeseries(query, page, (Timeseries) searchResult);
 		} else {
-			saveSearchResult(query, page, (SearchResult) searchResult);
+			saveSearchResult(query, page, (AggregatedSearchResult) searchResult);
 		}
 	}
 
@@ -251,14 +251,14 @@ public class SearchConsole {
 		save(search);
 	}
 
-	private static void saveSearchResult(String query, int page, SearchResult searchResult) {
+	private static void saveSearchResult(String query, int page, AggregatedSearchResult searchResult) {
 
 		Search search = new Search();
 		search.query = query;
 		search.page = page;
 
 		// Add the hits:
-		for (Map<String, Object> hit : searchResult.getResults()) {
+		for (Map<String, Object> hit : searchResult.getAllResults()) {
 			Result result = new Result();
 			result.name = hit.get("title").toString();
 			Object lede = hit.get("lede");
@@ -308,10 +308,10 @@ public class SearchConsole {
 		});
 	}
 
-	private static void updateNoResults(String query, SearchResult searchResult) {
+	private static void updateNoResults(String query, AggregatedSearchResult searchResult) {
 		try {
-			if (searchResult.getResults().size() == 0 && StringUtils.equals(StringUtils.trim(StringUtils.lowerCase(query)), "newport explorers")) {
-				searchResult.setNumberOfResults(1);
+			if (searchResult.getNumberOfResults() == 0 && StringUtils.equals(StringUtils.trim(StringUtils.lowerCase(query)), "newport explorers")) {
+				searchResult.contentSearchResult.setNumberOfResults(1);;
 				searchResult.setSuggestion("The guys at Fields House");
 				searchResult.setSuggestionBasedResult(true);
 
@@ -321,7 +321,7 @@ public class SearchConsole {
 						+ "to make this happen - and it's been great. Here's a bit more about the guys..");
 				result.put("type", ContentType.unknown);
 				result.put("url", "http://davidcarboni.github.io/newport-explorers/");
-				searchResult.getResults().add(result);
+				searchResult.contentSearchResult.getResults().add(result);
 			}
 		} catch (Throwable t) {
 			// We don't want any exceptions propagated.

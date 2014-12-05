@@ -109,7 +109,7 @@ public class ONSQueryBuilder {
 	public int getSize() {
 		return size;
 	}
-	
+
 	/**
 	 * By default 10 documents are returned from the result set. Set this value
 	 * to increase or decrease the number of results fetched
@@ -153,6 +153,27 @@ public class ONSQueryBuilder {
 	 * 
 	 * @return query
 	 */
+	public BaseQueryBuilder buildCountQuery() {
+
+		BaseQueryBuilder builder = null;
+
+		// Return all documents
+		if (StringUtils.isEmpty(getSearchTerm())) {
+			builder = new MatchAllQueryBuilder();
+		} else {
+			// return documents with fields containing words that start with
+			// given search term
+			builder = new MultiMatchQueryBuilder(getSearchTerm(), getFields()).analyzer("ons_synonyms").cutoffFrequency(0.04f);
+		}
+		return builder;
+	}
+
+	/**
+	 * Builds query with set index, type and query information highlighting all
+	 * given fields with html strong tag
+	 * 
+	 * @return query
+	 */
 	public String buildQuery() {
 
 		BaseQueryBuilder builder;
@@ -168,7 +189,7 @@ public class ONSQueryBuilder {
 			// boost the home pages
 			float homePageBoostFloat = Float.valueOf((String) ElasticSearchProperties.INSTANCE.getProperty("home"));
 			float titleBoostFloat = Float.valueOf((String) ElasticSearchProperties.INSTANCE.getProperty("title"));
-			
+
 			multiMatchQueryBuilder.field("title", titleBoostFloat);
 			FunctionScoreQueryBuilder functionScoreQueryBuilder = new FunctionScoreQueryBuilder(multiMatchQueryBuilder);
 			functionScoreQueryBuilder.add(FilterBuilders.termsFilter("_type", "home"), ScoreFunctionBuilders.factorFunction(homePageBoostFloat));
@@ -181,15 +202,13 @@ public class ONSQueryBuilder {
 			highlightBuilder.field(field, 0, 0);
 		}
 
-		String query = new SearchSourceBuilder().query(builder).highlight(highlightBuilder).from(calculateFrom()).size(getSize()).toString();
-		// System.out.println("Elastic search query String: " + query);
-		return query;
+		return new SearchSourceBuilder().query(builder).highlight(highlightBuilder).from(calculateFrom()).size(getSize()).toString();
+		
 
 	}
 
 	private int calculateFrom() {
 		return getSize() * (getPage() - 1);
 	}
-	
-	
+
 }

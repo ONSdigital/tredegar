@@ -1,8 +1,8 @@
 Theme: Business, Industry and Trade
 Level 2: Construction Industry
 Summary: Construction output at current price and chained volume measures seasonally adjusted by public and private sector.
-Headline 1: This statistical bulletin provides users with the latest estimates of output in the construction industry for June 2014. Output is defined as the amount charged by construction companies to customers for value of work, excluding VAT and payments to sub-contractors.
-Headline 2: In Q2 2014 there was estimated to be no growth in construction output when compared with Q1 2014. However, the annual growth between Q2 2014 and Q2 2013 was estimated to have increased by 4.8%.
+Headline 1: In Q2 2014 there was estimated to be no growth in construction output when compared with Q1 2014.
+Headline 2: However, the annual growth between Q2 2014 and Q2 2013 was estimated to have increased by 4.8%.
 Headline 3: The monthly estimates for construction output for June 2014 increased by 1.2% when compared with May 2014, with new work increasing by 0.9% and repair & maintenance increasing by 1.6%.
 Contact name: Jacqui Jones
 Contact email: construction.statistics@ons.gsi.gov.uk
@@ -20,7 +20,7 @@ Next edition: 12 September 2014
 ## Introduction
 Construction output estimates are a short term indicator of construction output by the private sector and public corporations within Great Britain and are produced from a monthly survey of 8,000 businesses in Great Britain. The estimates are produced and published at current prices (including inflationary price effects) and at chained volume estimates (with inflationary effects removed) both seasonally adjusted and non-seasonally adjusted.
 
-These statistics are used to inform economic policy surrounding the construction industry, provide a comparison across European countries and for economic forecasting by government departments and trade associations. 
+These statistics are used to inform economic policy surrounding the construction industry, provide a comparison across European countries and for economic forecasting by government departments and trade associations.
 
 These estimates cover Great Britain only and to determine the performance of the construction industry across the UK users should note that estimates of the construction industry in Northern Ireland are available through the [Northern Ireland Statistics and Research Agency](http://www.csu.nisra.gov.uk/survey.asp84.htm "Northern Ireland Statistics and Research Agency").
 
@@ -53,7 +53,7 @@ In June 2014 output in the construction industry was estimated to have increased
 - 1.2% compared with May 2014
 - 5.3% compared with June 2013 (estimate amended, due to a typographical error, from original publication at 9.50am on 8 August 2014)
 
-The quarterly estimate for Q2 has been revised, from a fall of 0.5% in the preliminary estimate of GDP (published 25 July 2014) to 0.0%. This revision does not change the GDP estimate of 0.8% to one decimal place. 
+The quarterly estimate for Q2 has been revised, from a fall of 0.5% in the preliminary estimate of GDP (published 25 July 2014) to 0.0%. This revision does not change the GDP estimate of 0.8% to one decimal place.
 
 Using these growth rates in isolation does not give the full picture of the performance of output in the construction industry. Figure 1 provides a pictorial view of how all construction work has fared over the last 10 years; also provided is the time series for the main components in the construction industry, all new work and repair and maintenance.
 
@@ -62,7 +62,7 @@ Using these growth rates in isolation does not give the full picture of the perf
 
 Source: Construction: Output & Employment - Office for National Statistics
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/construction/output-in-the-construction-industry/june-and-q2-2014/chd-all-work-monthly-june---q2-2014.xls "XLS format") (20.5 Kb)
 
 The quarterly output in the construction industry all work series has steadily increased since Q1 2013 and in Q2 2014 was estimated to be 6.7% higher than in Q1 2013. Despite this increase, all work remains 4.1% below its post economic downturn peak in Q2 2011 and 10.3% below its pre economic downturn peak in Q1 2008.
@@ -84,14 +84,14 @@ The types of work that make up all new work are shown in figure 2.
 
 Source: Construction: Output & Employment - Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/construction/output-in-the-construction-industry/june-and-q2-2014/chd-figure-2.xls "XLS format") (20.5 Kb)
 
 In recent releases of Output in the Construction Industry, new housing has provided the main contribution to growth in all new work and the increase in new housing work is clearly seen in figure 1; however, the fall in other new work and its weight in all new work, approximately 47%, has negated the rise in new housing.
 
 Infrastructure has performed differently to both new housing and other new work. During the economic downturn, infrastructure work increased and peaked in 2011 Q2, while it has fallen back from this point it remains fairly constant in its level.
 
-### New housing 
+### New housing
 Looking now in detail at new housing, in June 2014 all new housing increased by:
 - 1.9% compared with May 2014
 - 17.9% compared with June 2013
@@ -109,7 +109,7 @@ Table source: Office for National Statistics
 ##### Table notes:
 1. Monthly time series data for these components begins in January 2010
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/construction/output-in-the-construction-industry/june-and-q2-2014/prt-component-comparison-june---q2-2014.xls "XLS format") (29 Kb)
 
 ### Summary of growth rates for all work types
@@ -124,7 +124,7 @@ Table 2 provides a summary of all growth rates across the different types of con
 
 Table source: Office for National Statistics
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/construction/output-in-the-construction-industry/june-and-q2-2014/prt-table-2-output-summary-june---q2-2014.xls "XLS format") (36 Kb)
 
 ### International Perspective
@@ -138,7 +138,7 @@ The latest release of production in construction shows that construction output 
 
 Source: Construction: Output & Employment - Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/construction/output-in-the-construction-industry/june-and-q2-2014/chd-monthly-indices-for-production-in-construction.xls "XLS format") (19.5 Kb)
 
 Outside of the EU, the US Census Bureau release [Value of construction put in place](http://www.census.gov/construction/c30/c30index.html "Value of construction put in place") shows that provisional estimates of construction output decreased by 1.8% in June 2014 compared with May 2014 and by 5.5% compared with June 2013.
@@ -156,25 +156,25 @@ Source: Construction: Output & Employment - Office for National Statistics
 ##### Notes:
 1. Components may not sum due to rounding.
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/construction/output-in-the-construction-industry/june-and-q2-2014/figure-4.xls "XLS format") (30.5 Kb)
 
-To determine the effect each component has on GDP, multiply the component growth by its weight in GDP. 
-An example using Q2 2013 data: 
-Construction growth  = 1.9 
-Weight in GDP  = 0.063 (63/1000) 
+To determine the effect each component has on GDP, multiply the component growth by its weight in GDP.
+An example using Q2 2013 data:
+Construction growth  = 1.9
+Weight in GDP  = 0.063 (63/1000)
 Effect on GDP  = 1.9 * 0.063 = 0.1197 or 0.1 to 1 decimal place (dp).
 
 Revisions to components and the effect on GDP can be calculated using the same process. As a general rule there are no revisions to GDP when the component revisions are:
 
-IoP = between 0.3 and -0.3 
-Construction = between 0.7 and -0.7 
+IoP = between 0.3 and -0.3
+Construction = between 0.7 and -0.7
 IoS = 0.0 (all values above or below 0.0 effect GDP due to the high weight of IoS in GDP).
 
 Because;
 
-IoP =    0.152*0.4 = 0.0608 or 0.1 to 1 dp  
-Construction =  0.063*0.8 = 0.0504 or 0.1 to 1 dp 
+IoP =    0.152*0.4 = 0.0608 or 0.1 to 1 dp
+Construction =  0.063*0.8 = 0.0504 or 0.1 to 1 dp
 IoS =    0.778*0.1 = 0.0778 or 0.1 to 1 dp
 
 Table 3 shows the latest quarterly output figures that fed into the preliminary estimate of GDP release for Q2 2014 published on 25 July 2014.
@@ -184,9 +184,9 @@ Table 3 shows the latest quarterly output figures that fed into the preliminary 
 Table source: Office for National Statistics
 
 ##### Table notes:
-1. †This indicates that new data has been published since the preliminary estimate of GDP. 
+1. †This indicates that new data has been published since the preliminary estimate of GDP.
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/construction/output-in-the-construction-industry/june-and-q2-2014/prt-table-3--gdp-table--june---q2-2014.xls "XLS format") (33 Kb)
 
 ## [accordion] Background notes
@@ -293,23 +293,23 @@ Output is defined as the amount chargeable to customers for building and civil e
 
 In all returns, work done by sub-contractors is excluded to avoid double counting, since sub-contractors are also sampled. Output does not include payments made to architects or consultants from other firms – this would also cover engineers and surveyors. It would include wages paid to such people if they were directly employed by the business.
 
-**Current price (value) (CP)** 
+**Current price (value) (CP)**
 Current prices are the actual or estimated recorded monetary value over a defined period. They show the value for each item expressed in terms of the prices of that period.
 
-**Constant price (volume) (KP)** 
+**Constant price (volume) (KP)**
 A constant price or volume measure is a series of economic data from successive years expressed in real terms by computing the production volume for each year in the prices of a reference year. The resultant time-series of production figures has the effects of price changes removed (that is, monetary inflation or deflation). In other words, from the raw data a series is obtained which reflects only production volume. See the ‘Deflation’ section. Constant price series in this bulletin are based on the reference year 2005.
 
 **Chained volume measures (CVM)**
 A chained volume series is a series of data from successive years, put in constant price terms by computing the production volume for each year in the prices of the preceding year, and then chain-linking the data together to obtain a time-series of production figures from which the effects of price changes (i.e. monetary inflation or deflation) have been removed. Further information on chain-linking can be found in the methodological article ‘Annual chain-linking’.
 
-**Seasonal adjustment (SA)** 
+**Seasonal adjustment (SA)**
 Seasonal adjustment aids interpretation by removing effects associated with the time of the year or the arrangement of the calendar, which could obscure movements of interest.
 
-**Deflation** 
+**Deflation**
 It is common for the value of a group of financial transactions to be measured in several time periods. The values measured will include both the change in the volume sold and the effect of the change of prices over that year. Deflation is the process whereby the effect of price change is removed from a set of values. The current reference year is 2010 for CVM data.
 
-**Sectors** 
-Institutional sectors are defined in the [System of National Accounts (SNA)](https://unstats.un.org/unsd/nationalaccount/glossary.asp?letter=I "System of National Accounts (SNA)") as; 
+**Sectors**
+Institutional sectors are defined in the [System of National Accounts (SNA)](https://unstats.un.org/unsd/nationalaccount/glossary.asp?letter=I "System of National Accounts (SNA)") as;
 Units that are grouped together to form institutional sectors on the basis of their principal functions, behaviour, and objectives.
 
 The resident institutional units that make up the total economy are grouped into five mutually exclusive sectors:
@@ -329,24 +329,24 @@ GDP is often referred to as one of the main 'summary indicators' of economic act
 
 Construction estimates are a component of GDP from the output or production approach (GDP(O)) which measures the sum of the value added created through the production of goods and services within the economy (our production or output as an economy). This approach provides the first estimate of GDP and can be used to show how much different industries (for example, agriculture) contribute within the economy.
 
-**Housing** 
+**Housing**
 Housing is generally defined as ‘all buildings that are constructed for residential use’. Within the public sector this classification includes construction items such as local authority housing schemes, hostels (except youth hostels), married quarters for the services and police; old peoples' homes; orphanages and children’s remand homes; and the provision within housing sites of roads and services for gases, water, electricity, sewage and drainage.
 
 Private sector housing includes all privately owned buildings for residential use, such as houses, flats and maisonettes, bungalows, cottages, vicarages, and the provision of services to new developments.
 
-**Infrastructure** 
+**Infrastructure**
 Infrastructure is the generic term for the basic physical and organisational structures and facilities needed for the operation of a society or enterprise. These construction items include buildings, roads, power supplies, etc.
 
-**Other new work** 
+**Other new work**
 Other new work excludes the housing and infrastructure sectors. This classification includes construction items such as factories, warehouses, schools and offices, etc.
 
-**Non-housing** 
+**Non-housing**
 Within the public sector, non-housing is classified as the construction of building such as schools and colleges, hospitals, universities, fire stations, prisons and museums. Private sector non-housing is comprised of the private /industrial and private/commercial classifications. Private - industrial is the economic activity concerned with the processing of raw materials and manufacture of goods in factories and includes construction items such as factories and shipyards while private – commercial includes all items not included in the previous categories such as embassies, theatres, retail units, warehouses and garages, etc.
 
-**Repair and maintenance** 
+**Repair and maintenance**
 The repair and maintenance heading in the construction estimates comprises of housing, infrastructure and other new work. This concerns work which is either repairing something that is broken, or maintaining it to an existing standard.  For housing output this includes repairs, maintenance, improvements, house/flat conversions, extensions, alterations and redecoration, etc. on existing housing. For non-housing this includes repairs, maintenance, redecoration, etc. on existing buildings/structures, which are not housing, for examples schools, offices, roads, shops.
 
-Table 2 of this bulletin aggregates infrastructure and other new work into non-housing. 
+Table 2 of this bulletin aggregates infrastructure and other new work into non-housing.
 
 ** 13. Code of Practice for Official Statistics**
 
@@ -360,29 +360,29 @@ Details of the policy governing the release of new data are available from the M
 
 The Output in the Construction Industry statistical bulletin and relevant time series datasets are available to download free from the [Office for National Statistics](http://www.ons.gov.uk/ons/external-links/other-ns-online/ons-home-page.html "ONS Homepage") website at 9.30 am on the day of publication.
 
-ONS allows a list of agreed officials to have access to data 24 hours before publication, which is available on the [Output in the Construction Industry: Pre-Release Access list](http://www.ons.gov.uk/ons/rel/construction/output-in-the-construction-industry/june-and-q2-2014/pra-con-web-june-2014.html "PRA Con Web June & Q2"). 
+ONS allows a list of agreed officials to have access to data 24 hours before publication, which is available on the [Output in the Construction Industry: Pre-Release Access list](http://www.ons.gov.uk/ons/rel/construction/output-in-the-construction-industry/june-and-q2-2014/pra-con-web-june-2014.html "PRA Con Web June & Q2").
 
 ** 16. Further information and user feedback**
 
-As a user of our statistics, we would welcome feedback on this release, in particular on the content, format and structure. For further information about this release, or to send feedback on our publications, please contact us using the following information. 
+As a user of our statistics, we would welcome feedback on this release, in particular on the content, format and structure. For further information about this release, or to send feedback on our publications, please contact us using the following information.
 
 **Contacts:**
 
-**Media contact:** 
-- Tel Media Relations Office    +44 (0)845 6041858 
-- Emergency on-call    +44 (0)7867 906553 
+**Media contact:**
+- Tel Media Relations Office    +44 (0)845 6041858
+- Emergency on-call    +44 (0)7867 906553
 - Email  <press.office@ons.gsi.gov.uk>
 
-**Statistical contact:** 
-- Name Jacqui Jones  
-- Tel +44 (0)1633 455617 
+**Statistical contact:**
+- Name Jacqui Jones
+- Tel +44 (0)1633 455617
 - Email <construction.statistics@ons.gsi.gov.uk>
 
-**Contact us:** 
-- Tel  +44 (0)845 601 3034 
-- Email  <info@ons.gov.uk> 
+**Contact us:**
+- Tel  +44 (0)845 601 3034
+- Email  <info@ons.gov.uk>
 - Website  [www.statistics.gov.uk](http://www.statistics.gov.uk/)
-- Twitter  [www.twitter.com/statisticsONS](http://www.twitter.com/statisticsONS "Twitter") 
+- Twitter  [www.twitter.com/statisticsONS](http://www.twitter.com/statisticsONS "Twitter")
 
 **17.** Details of the policy governing the release of new data are available by visiting [www.statisticsauthority.gov.uk/assessment/code-of-practice/index.html](http://www.statisticsauthority.gov.uk/assessment/code-of-practice/index.html) or from the Media Relations Office email: <media.relations@ons.gsi.gov.uk>
 

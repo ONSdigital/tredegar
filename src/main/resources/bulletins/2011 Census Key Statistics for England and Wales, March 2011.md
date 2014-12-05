@@ -1,16 +1,17 @@
-﻿Theme: People, Population and Community
+Theme: People, Population and Community
 Level 2: Cultural Identity
 Level 3: Ethnicity
 Summary: This bulletin, 2011 Census Key Statistics for England and Wales examines the defining characteristics of the population, who we are, how we live and what we do. The 2001 Census statistics covered are unique because the census is the only information source that measures these characteristics together across the whole population.
 Headline 1: The resident population of England and Wales on 27 March 2011 was 56.1 million, a 7% increase since 2001.
 Headline 2: Most residents of England and Wales belonged to the White ethnic group (86%, 48.2 million) in 2011.
 Headline 3: 12% (2.0 million) of households with at least two people had partners or household members of different ethnic groups in 2011.
-
 Contact name: Emma White
 Contact email: census.customerservices@ons.gsi.gov.uk
 
+# 2011 Census Key Statistics for England and Wales, March 2011
+
 ## Key points
-- The resident population of England and Wales on 27 March 2011 was 56.1 million, a seven per cent (3.7 million) increase since 2001 with 
+- The resident population of England and Wales on 27 March 2011 was 56.1 million, a seven per cent (3.7 million) increase since 2001 with
 - 55 per cent (2.1 million) of this increase being due to migration. One in six people were aged 65 or over (16 per cent, 9.2 million).
 - In 2011, four out of every five (81 per cent, 45.5 million) residents of England and Wales described themselves as being in good or very good health.
 - Ten per cent (5.8 million) of residents of England and Wales provided unpaid care for someone with an illness or disability. This was the same percentage as in 2001 (10 per cent, 5.2 million). Over a third (37 per cent, 2.1 million) of these people were giving 20 or more hours care a week, an increase of five percentage points (473,000) on 2001 (32 per cent, 1.7 million).
@@ -52,7 +53,7 @@ In making comparisons to 2001, the population estimates (by age and sex) have be
 
 More detailed analyses of the census estimates are available for some topics via ONS “short stories”. Four of these are published in parallel with this bulletin on the ONS website. Three present analyses of international migration, ethnicity and national identity, and religion. The fourth is a report on how the census labour market statistics differ from those estimated from the [Labour Force Survey](http://www.ons.gov.uk/ons/external-links/ons---search-definition-results/labour-force-survey.html "Labour Force Survey") at the national, regional and local and unitary authority level.
 
-Key and Quick Statistics tables for lower levels of the output area (OA) statistical geography hierarchy and for the ward geography hierarchy will be published on 30 January 2013. Further short stories will be published alongside this release and subsequently, covering families, general health and disability, unpaid care, language, occupation and industry, qualifications and economic activity. 
+Key and Quick Statistics tables for lower levels of the output area (OA) statistical geography hierarchy and for the ward geography hierarchy will be published on 30 January 2013. Further short stories will be published alongside this release and subsequently, covering families, general health and disability, unpaid care, language, occupation and industry, qualifications and economic activity.
 ## Who we are
 The information in this section is about the personal characteristics of the usually resident population as estimated by the 2011 Census for England and Wales. It covers our general health, whether we had an illness or disability that limited our day to day activities, our religious beliefs, our ethnicity, our national identity, whether or not we were born in the UK and when we arrived, what passports we held and our language skills.
 
@@ -223,7 +224,7 @@ Subsequent releases from 2011 Census will include cross tabulations of passports
 
 The highest reported levels of passports held were in London, with 92 per cent (7.5 million) of usual residents holding at least one passport. This compares to Wales where 78 per cent (2.4 million) of usual residents held at least one passport. London was also the region with the highest percentage holding a non-UK passport (24 per cent, 2.0 million).
 
-Information on passports held is provided in table [KS205EW (357.5 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-for-local-authorities-in-england-and-wales/rft-table-ks205ew.xls "RFT Table KS205EW") . 
+Information on passports held is provided in table [KS205EW (357.5 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-for-local-authorities-in-england-and-wales/rft-table-ks205ew.xls "RFT Table KS205EW") .
 
 ##### Notes for Usual residents born outside the UK
 1. The 2011 Census asked individuals to state the date of most recent arrival as some usual residents may have migrated to the UK more than once.
@@ -252,7 +253,7 @@ Information on household language is provided in table KS206EW (268 Kb Excel she
 ## How we live
 This section covers the usually resident population that lived in households, and presents the type of accommodation we lived in and whether it was owned or rented, how many rooms we had, whether we had central heating and the number of cars and vans that we had access to. It then covers who we lived with within households and what our marital status was. Finally it presents summary estimates of the proportion of the population that lived in a communal establishment.
 
-- Sixty four per cent (14.9 million) of households owned their own home in 2011, either with a mortgage or loan, or outright. Home ownership decreased four percentage points since 2001, but more people owned their home outright, an increase of two percentage points from 29 per cent (6.0 million) to 31 per cent (7.2 million). The proportion that rented from a private landlord or letting agency increased by six percentage points  from nine per cent (1.8 million) to 15 per cent (3.6 million).  
+- Sixty four per cent (14.9 million) of households owned their own home in 2011, either with a mortgage or loan, or outright. Home ownership decreased four percentage points since 2001, but more people owned their home outright, an increase of two percentage points from 29 per cent (6.0 million) to 31 per cent (7.2 million). The proportion that rented from a private landlord or letting agency increased by six percentage points  from nine per cent (1.8 million) to 15 per cent (3.6 million).
 - London was the only region where the number of cars and vans was lower than the number of households.
 - Married, civil partnered, and one person households accounted for 63 per cent (14.8 million) of all households.
 - Nearly two per cent (1.0 million) of residents of England and Wales lived in communal establishments.

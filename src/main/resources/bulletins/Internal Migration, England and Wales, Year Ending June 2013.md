@@ -2,7 +2,7 @@ Theme: People, Population and Community
 Level 2: Population and migration
 Level 3: Migration within the UK
 Summary: Summarised statistics on residential moves between local authorities and regions in England and Wales and the UK.
-Headline 1: There were an estimated 2.71 million residents moving between local authorities in England and Wales between July 2012 and June 2013. This compares with 463,000 international immigrants who arrived in England and Wales and 281,000 international emigrants who left England and Wales during that period.
+Headline 1: There were an estimated 2.71 million residents moving between local authorities in England and Wales between July 2012 and June 2013.
 Headline 2: 53,200 people moved from England and Wales to Northern Ireland and Scotland; 46,800 moved from Northern Ireland and Scotland to England and Wales. This means there was a net internal migration loss for England and Wales of 6,400 people.
 Headline 3: The age with the highest proportion of movers was 19. Of all the 19 year olds resident in England and Wales as at mid-2013, approximately 1 in 5 had moved within the UK during the previous 12 months.
 Contact name: Andrew Nash
@@ -20,7 +20,7 @@ This is the first time that the Office for National Statistics (ONS) has publish
 
 These statistics are based on a combination of administrative data and represent the best available source of information on internal migration. They have a wide range of uses across central and local government, as well as academia and business. This is discussed in more detail in the ‘Users and Uses of Internal Migration Statistics’ section of this bulletin. Further information on the data sources and methods, and their limitations, is available via the [internal migration methodology webpage](http://www.ons.gov.uk/ons/guide-method/method-quality/specific/population-and-migration/internal-migration-methodology/index.html "Internal Migration Methodology").
 
-This bulletin summarises the statistics in a range of ways including total moves, moves by age, moves by sex and moves by area. However, users wishing to do their own analysis are referred to the tables accompanying this release. These are described in more detail in the ‘Further Information’ section of this bulletin. 
+This bulletin summarises the statistics in a range of ways including total moves, moves by age, moves by sex and moves by area. However, users wishing to do their own analysis are referred to the tables accompanying this release. These are described in more detail in the ‘Further Information’ section of this bulletin.
 ## Total Moves
 ### Moves between local authorities in England and Wales
 
@@ -36,7 +36,7 @@ Source: Office for National Statistics
 ##### Notes:
 1. The black dotted lines indicate methods changes. The impact of these is discussed in the following paragraphs.
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/migration1/internal-migration-by-local-authorities-in-england-and-wales/year-ending-june-2013/chd-figure-1.xls "XLS format") (56 Kb)
 
 The year ending June 2002 was selected as the first year in the series because that is the earliest year for which an adjustment was made to take better account of study-related moves. However, the statistics have two further breaks in consistency:
@@ -55,7 +55,7 @@ A cross-border move is defined as a move, in either direction, between England a
 
 Source: Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/migration1/internal-migration-by-local-authorities-in-england-and-wales/year-ending-june-2013/chd-figure-2.xls "XLS format") (58.5 Kb)
 
 In the year ending June 2013 the net number of cross-border moves out of England and Wales was 6,400, which was the highest net outflow since the year ending June 2008. However, it is considerably lower than the typical net outflows of 10,000 or more which were occurring in the middle part of the last decade.
@@ -87,7 +87,7 @@ Source: Office for National Statistics
 ##### Notes:
 1. Age is age at mid-2013
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/migration1/internal-migration-by-local-authorities-in-england-and-wales/year-ending-june-2013/chd-figure-3.xls "XLS format") (61.5 Kb)
 
 Figure 3 shows a comparatively high likelihood of moving for very young children. Part of this may be simply because their parents are at an age where moving is still common. However, the addition of children to a family may directly necessitate a move to more spacious accommodation, or to an area perceived as preferable for children to be raised. But it is also evident that once the children are at school moves are much less common, potentially because of the disruption it would cause the children as well as the parents.
@@ -121,7 +121,7 @@ Source: Office for National Statistics
 1. Ages of 90 and above are combined into a single ‘90’ category.
 2. Age is age at mid-2013.
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/migration1/internal-migration-by-local-authorities-in-england-and-wales/year-ending-june-2013/chd-figure-4.xls "XLS format") (170 Kb)
 
 The pyramids in Figure 4 show that despite the differences identified above, the internal migrant age distributions were broadly similar for both sexes, as were the general population age distributions. Young adults are disproportionately likely to have moved but at other ages apart from young children the number of movers is disproportionately low. However, the comparative increase in moves at much older ages is also visible, with the distance between the outlines of the two pyramids becoming smaller.
@@ -137,7 +137,7 @@ Table 1 shows the number of internal migration moves into and out of the regions
 ##### Table notes:
 1. Because of rounding, totals may not sum.
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/migration1/internal-migration-by-local-authorities-in-england-and-wales/year-ending-june-2013/prt-table-1.xls "XLS format") (47 Kb)
 
 The two regions with the highest numbers of moves in and moves out are London and the South East; these are also the regions with the largest net change. However, they are also the regions with the largest population.
@@ -155,21 +155,21 @@ Map 1 shows net flows per 1,000 mid-2012 population for each of the 348 local au
 #### Map 1: Net flows of internal migrants by local authority, year ending June 2013, per 1,000 mid-2012 population, local authorities in England and Wales
 [![Map 1: Net flows of internal migrants by local authority, year ending June 2013, per 1,000 mid-2012 population, local authorities in England and Wales](http://www.ons.gov.uk/ons/resources/map1internalmigrationjune2013smallinlineimageminustitle_tcm77-368297.png)](http://www.ons.gov.uk/ons/resources/map1internalmigrationjune2013smallinlineimageminustitle_tcm77-368297.png "Map 1: Net flows of internal migrants by local authority, year ending June 2013, per 1,000 mid-2012 population, local authorities in England and Wales")
 
-##### Download map: 
+##### Download map:
 ![PNG](http://www.ons.gov.uk/ons/resources/iconpng_tcm77-218163.gif "PNG")  [PNG](http://www.ons.gov.uk/ons/rel/migration1/internal-migration-by-local-authorities-in-england-and-wales/year-ending-june-2013/map-dwnld.png "PNG") (430.2 Kb)
 
 [Download Map Data (68.5 Kb Excel sheet)](http://www.ons.gov.uk/ons/about-ons/business-transparency/freedom-of-information/what-can-i-request/published-ad-hoc-data/pop/july-2014/net-internal-migration-moves-for-local-authorities.xls "Net internal migration moves for local authorities")
 
 In total there were 212 local authorities with more people moving in than out, of which 93 had a net inflow of more than 5 per 1,000 population (mid-2012). Most of those are in regions that also had a net inflow: South West, South East, East and East Midlands. However, some local authorities in all of these regions experienced a net outflow, demonstrating that there is considerable within-region variation.
 
-Conversely there were 136 local authorities with more people moving out than in, of which 47 had a net outflow of more than 5 per 1,000 population (mid-2012). A particular concentration of local authorities with high net outflow was in London, driving the high net outflow for the London region. This will partly reflect the fact that London is the most common region of first residence for international migrants to the UK ( [ONS, 2013b (398 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/migration1/long-term-international-migration/2012/table-3-07.xls ""Table 3.07") ), many of whom may later move on to other regions. 
+Conversely there were 136 local authorities with more people moving out than in, of which 47 had a net outflow of more than 5 per 1,000 population (mid-2012). A particular concentration of local authorities with high net outflow was in London, driving the high net outflow for the London region. This will partly reflect the fact that London is the most common region of first residence for international migrants to the UK ( [ONS, 2013b (398 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/migration1/long-term-international-migration/2012/table-3-07.xls ""Table 3.07") ), many of whom may later move on to other regions.
 
 ## International Comparisons
-Making international comparisons of internal migration statistics is not straightforward. Complications include: 
+Making international comparisons of internal migration statistics is not straightforward. Complications include:
 
-- Different data sources for creating internal migration statistics, which may also have different levels of quality. 
-- Different frequencies of production: within the UK statistics are available on an annual basis, but this is not true for all countries. 
-- Different definitions of what constitutes internal migration. 
+- Different data sources for creating internal migration statistics, which may also have different levels of quality.
+- Different frequencies of production: within the UK statistics are available on an annual basis, but this is not true for all countries.
+- Different definitions of what constitutes internal migration.
 - Different geographic structures and sizes of geographic areas. In theory two countries could have the same number of people changing address but have differing internal migration totals because one country has larger regions or local authorities than the other.
 
 However, a recent comparison was made by the United Nations ([UN, 2013](http://www.un.org/en/development/desa/population/publications/pdf/technical/TP2013-1.pdf "UN 2013")). The UN’s analysis did not include the UK and focussed on migration of individuals over a longer time period (5 years, or a whole lifetime). It did, however, use a technique to take account of differing geographic structures and area sizes. The conclusion was that internal migration levels were highest in Australia, Canada, New Zealand and the United States of America, and lowest in Asia. Levels in Europe, Latin America and Africa were intermediate, but also showed considerable differences between individual countries.
@@ -177,42 +177,42 @@ However, a recent comparison was made by the United Nations ([UN, 2013](http://w
 ## Users and Uses of Internal Migration Statistics
  Internal migration statistics have a range of uses across the public sector and beyond. For example:
 
-The Office for National Statistics uses them in population estimates and projections. 
+The Office for National Statistics uses them in population estimates and projections.
 
-Central government uses them to inform policy-making and resource allocation to local authorities, who in turn use the statistics to help estimate the demands on their services – for example, the number of school places required. 
+Central government uses them to inform policy-making and resource allocation to local authorities, who in turn use the statistics to help estimate the demands on their services – for example, the number of school places required.
 
-Clinical commissioning groups use them to help forecast requirements for health services, particularly for maternity and geriatric services. 
+Clinical commissioning groups use them to help forecast requirements for health services, particularly for maternity and geriatric services.
 
-Various universities do research into internal migration: for example the University of Leeds, the University of Manchester and Newcastle University. 
+Various universities do research into internal migration: for example the University of Leeds, the University of Manchester and Newcastle University.
 
-Providers of service across the public and private sectors: for example, housing associations, developers and utility companies may use internal migration statistics to predict demand for their respective services in their area. 
+Providers of service across the public and private sectors: for example, housing associations, developers and utility companies may use internal migration statistics to predict demand for their respective services in their area.
 
-The media may use them to inform articles and debate on migration and related topics. 
+The media may use them to inform articles and debate on migration and related topics.
 
 ## Further Information
 This statistical bulletin is part of the ONS release [Internal Migration by Local Authorities in England and Wales, Year Ending June 2013](http://www.ons.gov.uk/ons/rel/migration1/internal-migration-by-local-authorities-in-england-and-wales/year-ending-june-2013/index.html "Year Ending June 2013"). The release includes:
 
-- Detailed internal migration moves dataset. This provides information on moves between every pair of local authorities by age and sex, allowing users to do their own detailed analysis. 
-- Square matrices showing the total number of moves between (i) each region and (ii) each local authority. As well as the nine English regions, the regional matrix includes the other three UK countries: Northern Ireland, Scotland and Wales. 
-- Tables of total inflows, outflows and netflows for each region and local authority. Total flows for the country of Wales are included in the regional table. 
-- Table of inflows and outflows for each region and local authority by sex and five-year age group. Flows for the country of Wales are included in the regional table. 
-- Table of all moves by age and sex. 
-- A geography lookup containing local authority and region codes and names. 
+- Detailed internal migration moves dataset. This provides information on moves between every pair of local authorities by age and sex, allowing users to do their own detailed analysis.
+- Square matrices showing the total number of moves between (i) each region and (ii) each local authority. As well as the nine English regions, the regional matrix includes the other three UK countries: Northern Ireland, Scotland and Wales.
+- Tables of total inflows, outflows and netflows for each region and local authority. Total flows for the country of Wales are included in the regional table.
+- Table of inflows and outflows for each region and local authority by sex and five-year age group. Flows for the country of Wales are included in the regional table.
+- Table of all moves by age and sex.
+- A geography lookup containing local authority and region codes and names.
 - [A ‘Q&A’ document (255.6 Kb Pdf)](http://www.ons.gov.uk/ons/guide-method/method-quality/specific/population-and-migration/internal-migration-methodology/internal-migration-question---answers--2013.pdf "Internal Migration Questions and Andswers 2013") .
-- [An interactive flows map](http://www.neighbourhood.statistics.gov.uk/HTMLDocs/dvc25/#00AC,nat,to "An interactive flows map"). Click on a local authority and choose to see either where people are migrating from, or where they’re migrating to! 
-- [A guide to the methods](http://www.ons.gov.uk/ons/guide-method/method-quality/specific/population-and-migration/internal-migration-methodology/index.html "Internal Migration Metholodgy") used to create these internal migration statistics. 
-- [A quality and methodology information (QMI)](http://www.ons.gov.uk/ons/guide-method/method-quality/quality/quality-information/population/index.html "Population") document – overview notes summarising the quality of internal migration releases. 
+- [An interactive flows map](http://www.neighbourhood.statistics.gov.uk/HTMLDocs/dvc25/#00AC,nat,to "An interactive flows map"). Click on a local authority and choose to see either where people are migrating from, or where they’re migrating to!
+- [A guide to the methods](http://www.ons.gov.uk/ons/guide-method/method-quality/specific/population-and-migration/internal-migration-methodology/index.html "Internal Migration Metholodgy") used to create these internal migration statistics.
+- [A quality and methodology information (QMI)](http://www.ons.gov.uk/ons/guide-method/method-quality/quality/quality-information/population/index.html "Population") document – overview notes summarising the quality of internal migration releases.
 - [A summary of the minor corrections](http://www.ons.gov.uk/ons/rel/migration1/internal-migration-by-local-authorities-in-england-and-wales/year-ending-june-2012/corrections-to-internal-migration-estimates--year-ending-june-2012---guidance-note.html "Corrections to Internal Migration Estimates, Year Ending 2012 Estimates Note ") made to the release for the year ending June 2012. Please create link to this when available.
 
-The [mid-2013 population estimates](http://www.ons.gov.uk/ons/rel/pop-estimate/population-estimates-for-uk--england-and-wales--scotland-and-northern-ireland/index.html "Population Estimates for UK, England and Wales, Scotland and Northern Ireland index") publication contains an analysis tool which includes internal migration inflows, outflows and netflows for each local authority, broken down by sex and single year of age up to 90+. The publication also contains country, region, county and local authority internal migration inflows, outflows and netflows: these are available in table MYE3. 
+The [mid-2013 population estimates](http://www.ons.gov.uk/ons/rel/pop-estimate/population-estimates-for-uk--england-and-wales--scotland-and-northern-ireland/index.html "Population Estimates for UK, England and Wales, Scotland and Northern Ireland index") publication contains an analysis tool which includes internal migration inflows, outflows and netflows for each local authority, broken down by sex and single year of age up to 90+. The publication also contains country, region, county and local authority internal migration inflows, outflows and netflows: these are available in table MYE3.
 
 ## Future Developments
 The statistics in this release are the best available source of information on internal migration moves affecting England and Wales. However, over time data sources change and new data sources become available. ONS is therefore part way through a project researching how internal migration statistics can be improved. The earliest date at which any resulting improvements may be included in official estimates will be in 2016, at the time of the release of the estimates for the year ending June 2015.
 
-Another development is that later in 2014 ONS intends to publish internal migration statistics for the years ending June 2012 and June 2013 in a new ‘Data Explorer’. This will contain all the records in the detailed flows file, but will make it much easier for users to select and export just those records they want. 
+Another development is that later in 2014 ONS intends to publish internal migration statistics for the years ending June 2012 and June 2013 in a new ‘Data Explorer’. This will contain all the records in the detailed flows file, but will make it much easier for users to select and export just those records they want.
 
 ## Tell Us What You Think!
-This release is intended to meet the needs of users and provide an interesting summary of the key messages in the data. But are we achieving this? If you have any comments on what you like, what you don’t like, or what we could do differently, please let us know. Contact details are available in the ‘Statistical Contacts’ section of this bulletin. 
+This release is intended to meet the needs of users and provide an interesting summary of the key messages in the data. But are we achieving this? If you have any comments on what you like, what you don’t like, or what we could do differently, please let us know. Contact details are available in the ‘Statistical Contacts’ section of this bulletin.
 
 ## References
 Berrington A, Stone J, Falkingham J (2009): [The changing living arrangements of young adults in the UK (412.7 Kb Pdf)](http://www.ons.gov.uk/ons/rel/population-trends-rd/population-trends/no--138--winter-2009/the-changing-living-arrangements-of-young-adults-in-the-uk-.pdf "The changing living arrangements of young adults in the UK"). University of Southampton. Article published in ONS (2009): Population Trends 138, Winter 2009.

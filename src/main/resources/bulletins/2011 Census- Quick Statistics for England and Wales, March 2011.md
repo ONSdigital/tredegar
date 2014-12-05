@@ -1,4 +1,4 @@
-﻿Theme: People, Population and Community
+Theme: People, Population and Community
 Level 2: Cultural Identity
 Level 3: Language
 Summary: 2011 Census, Quick Statistics, Household resident, Communal establishment resident, Usual resident, Household composition, Dependent children, Long-term health problem, Lone parent households, Employment, Ethnic group, Ethnicity, Race, English language, Main language, Religion, Health, care, long-term health problem, accommodation type, household spaces, Qualifications,  economic activity, Hours worked, Employment, Industry, Occupation.
@@ -7,6 +7,8 @@ Headline 2: Of the other 8% (4.2 million), 79% (3.3 million) could speak English
 Headline 3: In 2011, less than half a per cent (138,000) of all usual residents aged three years and over could not speak English.
 Contact name: Emma White
 Contact email: census.customerservices@ons.gsi.gov.uk
+
+# 2011 Census - Quick Statistics for England and Wales, March 2011
 
 ## Key Figures
 - Ninety two per cent (49.8 million) of usual residents aged three years and over spoke English (English or Welsh in Wales) as their main language.
@@ -165,7 +167,7 @@ Less than half of one per cent (70,000) of usual residents reported living in a 
 
 Other households are those consisting of usual residents other than one person or one family; they include those where all members were related (for example siblings living together or households containing more than three generations) and where unrelated students or professionals were living together. Twelve per cent (6.8 million) of usual residents reported living in these types of households, an increase of two percentage points on 2001 (ten per cent, 5.1 million). There was also an increase in the average household size of these other households from 3.5 usual residents per household in 2001 to 3.7 in 2011.
 
-Information on household composition is provided in table [QS112EW (460 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-and-quick-statistics-for-wards-and-output-areas-in-england-and-wales/rft-qs112ew.xls "RFT QS112EW")  and [QS113EW (459.5 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-and-quick-statistics-for-wards-and-output-areas-in-england-and-wales/rft-qs113ew.xls "RFT QS113EW") . More detailed analysis on [households and families](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-and-quick-statistics-for-wards-and-output-areas-in-england-and-wales/rft-families-short-story.html "RPT Families Short Stories") has been published with this release. 
+Information on household composition is provided in table [QS112EW (460 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-and-quick-statistics-for-wards-and-output-areas-in-england-and-wales/rft-qs112ew.xls "RFT QS112EW")  and [QS113EW (459.5 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-and-quick-statistics-for-wards-and-output-areas-in-england-and-wales/rft-qs113ew.xls "RFT QS113EW") . More detailed analysis on [households and families](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-and-quick-statistics-for-wards-and-output-areas-in-england-and-wales/rft-families-short-story.html "RPT Families Short Stories") has been published with this release.
 
 ##### Notes for Household composition
 1. A comparison with 2001 Census data on people living alone is available in [‘Families and Households in England and Wales’](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-and-quick-statistics-for-wards-and-output-areas-in-england-and-wales/rft-families-short-story.html "RPT Families Short Stories").
@@ -245,7 +247,7 @@ Outside London, the percentage of workers mainly using public transport ranged f
 
 Although the South West had the lowest percentage of journeys to work by public transport, it had the highest percentage of workers travelling on foot or using a bicycle (17 per cent, 439,000), together with the highest percentage of people working from home (seven per cent, 178,000). In other areas the percentage using foot or bicycle varied from 12 per cent (302,000) in the West Midlands to 14 per cent (348,000) in Yorkshire and the Humber.
 
-Information on travel to work is provided in table [QS701EW (301 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-and-quick-statistics-for-wards-and-output-areas-in-england-and-wales/rft-qs701ew.xls "RFT QS701EW") . A more detailed analysis of this data will be published later in 2013. 
+Information on travel to work is provided in table [QS701EW (301 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-and-quick-statistics-for-wards-and-output-areas-in-england-and-wales/rft-qs701ew.xls "RFT QS701EW") . A more detailed analysis of this data will be published later in 2013.
 
 ##### Notes for Method of travel to work
 1. Due to definitional differences, and because the census questionnaire is self completed by the population of England and Wales, the census estimates of people travelling to work may differ from other sources. In addition, direct comparisons are not possible for mode of travel to work between 2001 and 2011. In 2001, people who recorded their place of work as working mainly at or from home were considered to have their mode of travel to work as working mainly at or from home. In 2011, people working mainly at or from home could record, for example, that they travelled to work as a driver in a car or van, despite being based at home. This extra information is useful for transport planning.

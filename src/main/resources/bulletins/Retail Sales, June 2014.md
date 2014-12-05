@@ -1,9 +1,9 @@
 Theme: Business, Industry and Trade
 Level 2: Retail Industry
 Summary: A first estimate of retail sales in value and volume terms, seasonally and non-seasonally adjusted.
-Headline 1: In June 2014, the quantity bought in the retail industry increased by 3.6% compared with June 2013 and by 0.1% compared with May 2014. The quantity bought also increased in Q2 2014 compared with Q2 2013, by 4.5%.
+Headline 1: In June 2014, the quantity bought in the retail industry increased by 3.6% compared with June 2013 and by 0.1% compared with May 2014.
 Headline 2: In June 2014, all retail sectors showed estimated increases in the quantity bought year-on-year. The last time this was seen was in March 2012.
-Headline 3: The three-month on previous three-month movement in the quantity bought showed continued growth for the sixteenth consecutive period increasing by 1.6%. This is the highest calendar quarter since March 2004 (1.9%) and has been the longest period of sustained growth since November 2007.
+Headline 3: The three-month on previous three-month movement in the quantity bought showed continued growth for the sixteenth consecutive period increasing by 1.6%.
 Contact name: Kate Davies
 Contact email: retail.sales.enquiries@ons.gsi.gov.uk
 Next edition: 21 August 2014
@@ -20,16 +20,16 @@ Next edition: 21 August 2014
 ## Additional Information
 This bulletin presents estimates of the quantity bought (volume) and amount spent (value) in the retail industry for the period 1 June 2014 to 5 July 2014. Unless otherwise stated, the estimates in this release are seasonally adjusted.
 
-Users are reminded that the figures contained within this release are estimates based on a monthly survey of 5,000 retailers, including all large retailers employing 100 people or more. The timeliness of these retail sales estimates, which are published just three weeks after the end of each month, makes them an important early economic indicator. The industry as a whole is used as an indicator of how the wider economy is performing and the strength of consumer spending. 
+Users are reminded that the figures contained within this release are estimates based on a monthly survey of 5,000 retailers, including all large retailers employing 100 people or more. The timeliness of these retail sales estimates, which are published just three weeks after the end of each month, makes them an important early economic indicator. The industry as a whole is used as an indicator of how the wider economy is performing and the strength of consumer spending.
 
 ## Key Figures
 #### Table 1: All Retailing, June 2014 (seasonally adjusted percentage change)
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/rsi/retail-sales/june-2014/prt-rsi-key-figures-june-2014.xls "XLS format") (24 Kb)
 
 ## At a Glance
-In June 2014, the quantity bought in the retail industry (volume) increased by 3.6% compared with June 2013. 
+In June 2014, the quantity bought in the retail industry (volume) increased by 3.6% compared with June 2013.
 
 The amount spent (value) increased by 3.5%.  In June 2014, non-seasonally adjusted data showed that the prices of goods sold in the retail industry (as measured by the implied price deflator) were unchanged.
 
@@ -42,7 +42,7 @@ To enable a comparison of change, Figure 1 shows the quantity of goods bought in
 [![Figure 1: All retailing seasonally adjusted sales volumes and values](http://www.ons.gov.uk/ons/resources/pngrsitime2_tcm77-372331.png)](http://www.ons.gov.uk/ons/resources/pngrsitime2_tcm77-372331.png "Figure 1: All retailing seasonally adjusted sales volumes and values")
 
 Source: Monthly Business Survey - Retail Sales Inquiry - Office for National Statistics
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/rsi/retail-sales/june-2014/chd-figure-1.xls "XLS format") (37.5 Kb)
 
 Prior to the 2008/09 downturn, both the quantity and the value of retail sales grew steadily. Between January 2005 and January 2008, retail sales were supported by growing real household incomes. Over the same period [average weekly earnings (AWE)](http://http//www.ons.gov.uk/ons/rel/lms/labour-market-statistics/july-2014/index.html "average weekly earnings (AWE)") increased more rapidly than the [CPI](http://http//www.ons.gov.uk/ons/rel/cpi/consumer-price-indices/june-2014/stb---consumer-price-indices---june-2014.html "CPI") resulting in households having the ability to consume more retail goods – the quantity of retail sales (including fuel) growing by 7.8%. At the same time the value of retail sales increased by 11.7%, reflecting price increases over this period.
@@ -53,14 +53,14 @@ Further analysis on the recent trend of real wages and potential causes, can be 
 
 However, since the start of 2013 growth in volume terms has increased noticeably.  While year-on-year growth slowed from 3.7% in May 2014 to 3.6% in June 2014, the series is now 6.2% higher than December 2012.
 
-Similarly the recent growth of retail sales has also been reflected in the strong performance of household spending. After a long period of stagnating volumes between 2009 and 2012, household final consumption expenditure increased by 0.8% in Q1 2014. This was the series’ tenth successive quarter-on-quarter increase and, as a result, [household spending](http://www.ons.gov.uk/ons/rel/naa2/quarterly-national-accounts/q1-2014/stb-quarterly-national-accounts--q1-2014.html "household spending") has exceeded its pre-downturn level. 
+Similarly the recent growth of retail sales has also been reflected in the strong performance of household spending. After a long period of stagnating volumes between 2009 and 2012, household final consumption expenditure increased by 0.8% in Q1 2014. This was the series’ tenth successive quarter-on-quarter increase and, as a result, [household spending](http://www.ons.gov.uk/ons/rel/naa2/quarterly-national-accounts/q1-2014/stb-quarterly-national-accounts--q1-2014.html "household spending") has exceeded its pre-downturn level.
 
 ## Contributions to Growth
 The retail industry is divided into four retail sectors:
 
 - Predominantly food stores (e.g. supermarkets, specialist food stores and sales of alcoholic drinks and tobacco);
 - Predominantly non-food stores (e.g. non-specialised stores, such as department stores, textiles, clothing & footwear, household goods and other stores);
-- Non-store retailing (e.g. mail order, catalogues and market stalls); and 
+- Non-store retailing (e.g. mail order, catalogues and market stalls); and
 Stores selling automotive fuel (petrol stations).
 
 In June 2014, for every pound spent in the retail industry:
@@ -79,7 +79,7 @@ Figures 2 and 3 show the contribution of each sector to the quantity bought (vol
 
 Source: Monthly Business Survey - Retail Sales Inquiry - Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/rsi/retail-sales/june-2014/chd-figure-2.xls "XLS format") (29 Kb)
 
 In June 2014, three out of the four main retail sectors (non-store retailing, non-food stores and food stores) saw an increase in the quantity bought (volume).  The largest contribution came from the non-food stores sector.
@@ -89,7 +89,7 @@ In June 2014, three out of the four main retail sectors (non-store retailing, no
 
 Source: Monthly Business Survey - Retail Sales Inquiry - Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/rsi/retail-sales/june-2014/chd-figure-3.xls "XLS format") (34.5 Kb)
 
 In June 2014, three out of the four main sectors (non-store retailing, non-food stores and food stores) contributed to the increase in amount spent (value).  The largest contribution came from the non-food stores sector.
@@ -107,7 +107,7 @@ Figure 4 shows that the quantity bought in both the euro area and EU28 have not 
 
 Source: Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/rsi/retail-sales/june-2014/chd-figure-4.xls "XLS format") (22.5 Kb)
 
 ### Analysis of clothing stores
@@ -116,17 +116,17 @@ Textile, clothing and footwear stores consists of three store types; these store
 
 #### Table 2: Summary of the textile, clothing and footwear retail industry
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/rsi/retail-sales/june-2014/prt-rsi-summary-of-the-textile--clothing-and-footwear-retail-industry.xls "XLS format") (26.5 Kb)
 
-Clothing stores provide the largest contribution to this sector and Figure 5 shows the long term time series for the quantity of goods bought and the amount spent in clothing stores as indices referenced to 2010.  Also shown is store price inflation (as estimated by the implied deflator) within this store type. 
+Clothing stores provide the largest contribution to this sector and Figure 5 shows the long term time series for the quantity of goods bought and the amount spent in clothing stores as indices referenced to 2010.  Also shown is store price inflation (as estimated by the implied deflator) within this store type.
 
 #### Figure 5: Clothing stores seasonally adjusted sales volumes, values and store price inflation.
 [![Figure 5: Clothing stores seasonally adjusted sales volumes, values and store price inflation.](http://www.ons.gov.uk/ons/resources/figure5_tcm77-372415.png)](http://www.ons.gov.uk/ons/resources/figure5_tcm77-372415.png "Figure 5: Clothing stores seasonally adjusted sales volumes, values and store price inflation.")
 
 Source: Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/rsi/retail-sales/june-2014/chd-figure-5.xls "XLS format") (28 Kb)
 
 Looking at the short term picture, compared with May 2014, in June 2014 the:
@@ -139,14 +139,14 @@ The month-on-month fall in both the quantity bought and amount spent seems surpr
 
 Figure 5 shows that as expected store price inflation (as measured by the implied deflator derived from non-seasonally adjusted data) has a seasonal pattern where prices generally fall in the months of January, June, July and December of each year.  The month-on-month change in June in store price inflation bucked the seasonal pattern, figure 6, illustrates this and shows that the last time this was seen was in June 2007.
 
-Feedback from several retailers suggests one possible explanation for this in that sales in clothing stores have been delayed as consumers have continued to buy clothing from the summer ranges as the good weather continues. This is consistent with the reasons given in the CPI statistical bulletin, published on 15 July 2014, for the rise in the price of clothing. 
+Feedback from several retailers suggests one possible explanation for this in that sales in clothing stores have been delayed as consumers have continued to buy clothing from the summer ranges as the good weather continues. This is consistent with the reasons given in the CPI statistical bulletin, published on 15 July 2014, for the rise in the price of clothing.
 
 #### Figure 6: Average store price in clothing stores month on month (June compared with May 1987-2014)
 [![Figure 6: Average store price in clothing stores month on month (June compared with May 1987-2014)](http://www.ons.gov.uk/ons/resources/figure6_tcm77-372418.png)](http://www.ons.gov.uk/ons/resources/figure6_tcm77-372418.png "Figure 6: Average store price in clothing stores month on month (June compared with May 1987-2014)")
 
 Source: Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/rsi/retail-sales/june-2014/chd-figure-6.xls "XLS format") (29.5 Kb)
 
 ## Distribution Analysis
@@ -154,7 +154,7 @@ Table 3 illustrates the mix of experiences among different sized retailers. It s
 
 #### Table 3: Changes in reported retail sales values between June 2013 and June 2014 standard reporting periods (by size of business)
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/rsi/retail-sales/june-2014/prt-rsi-distribution-analysis-june-2014.xls "XLS format") (30 Kb)
 
 More information on the performance of the retail industry by store type and size can be found in the reference table, Business Analysis, which shows the extent to which individual businesses reported actual changes in their sales between June 2013 and June 2014. The table contains information only from businesses that reported in June 2013 and June 2014. Cells with values less than 10 are suppressed for some classification categories; this is denoted by c. Note that ‘large’ businesses are defined as those with 100+ employees and 10–99 employees with annual turnover of more than £60 million, while ‘small and medium’ is defined as 0–99 employees.
@@ -179,7 +179,7 @@ This equates to an average weekly spend of £7.1 billion in June 2014, £6.9 bil
 - Non-specialised stores, textiles, clothing &  footwear, household goods and other stores.
 - Department stores.
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/rsi/retail-sales/june-2014/prt-rsi-sector-summary-june-2014.xls "XLS format") (27 Kb)
 
 ## Internet Sales in Detail
@@ -196,11 +196,11 @@ Internet sales are estimates of how much was spent online through retailers acro
 - The amount spent online accounted for 11.3% of all retail spending excluding automotive fuel, compared to 10.4% in June 2013.
 - The online spend in department stores increased by 10.3% year-on-year, this is the lowest spend online in this store type since November 2011 (9.5%).
 
-Table 5 shows the year-on-year growth rates for total Internet sales by sector and the proportion of sales made online in each retail sector.  
+Table 5 shows the year-on-year growth rates for total Internet sales by sector and the proportion of sales made online in each retail sector.
 
 ##### Table 5: Summary of Internet Statistics for June 2014 (seasonally adjusted)
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/rsi/retail-sales/june-2014/prt-rsi-summary-of-internet-statistics-june-2014.xls "XLS format") (26 Kb)
 
 ## [accordion] Background Notes
@@ -215,7 +215,7 @@ The [RSI Workplan (135.9 Kb Pdf)](http://www.ons.gov.uk/ons/guide-method/method-
 
 ONS article ‘ [Why is the retail sales revisions policy different from the National Accounts revisions policy (53.9 Kb Pdf)](http://www.ons.gov.uk/ons/guide-method/method-quality/specific/economy/retail-sales/differences-between-rsi---national-accounts-revisions-policy.pdf "Differences between RSI & National Accounts Revisions Policy") ’ has been published on the Retail Sales Guidance & Methodology page of the ONS website.
 
-An [RSI Quality and Methodology Information paper (245.6 Kb Pdf)](http://www.ons.gov.uk/ons/guide-method/method-quality/quality/quality-information/economy/quality-and-methodology-information-for-retail-sales-index.pdf "Quality and Methodology Information for Retail Sales Index")  has been published on 18 July 2014 on the Quality and Methodology reports page of the ONS website.    
+An [RSI Quality and Methodology Information paper (245.6 Kb Pdf)](http://www.ons.gov.uk/ons/guide-method/method-quality/quality/quality-information/economy/quality-and-methodology-information-for-retail-sales-index.pdf "Quality and Methodology Information for Retail Sales Index")  has been published on 18 July 2014 on the Quality and Methodology reports page of the ONS website.
 
 ###** 3. Relevant links**
 
@@ -255,7 +255,7 @@ The value and volume measures of retail sales estimates are widely used in priva
 
 The Retail Sales Index feeds into estimates of gross domestic product (GDP) in two ways.  Firstly it feeds into the services industries when GDP is measured from the output approach.  Secondly it is a data source used to measure household final consumption expenditure which feeds into GDP estimates when measured from the expenditure approach.
 
-The data feed into the [first (or preliminary) estimate of GDP](http://http//www.ons.gov.uk/ons/rel/gva/gross-domestic-product--preliminary-estimate/q1-2014/index.html "first (or preliminary) estimate of GDP"); the [second estimate of GDP](http://http//www.ons.gov.uk/ons/rel/naa2/second-estimate-of-gdp/q1-2014/stb-second-estimate-of-gdp-q1-2014.html "second estimate of GDP") and the third estimate which is published in the [Quarterly National Accounts](http://http//www.ons.gov.uk/ons/rel/naa2/quarterly-national-accounts/q1-2014/index.html "Quarterly National Accounts"). 
+The data feed into the [first (or preliminary) estimate of GDP](http://http//www.ons.gov.uk/ons/rel/gva/gross-domestic-product--preliminary-estimate/q1-2014/index.html "first (or preliminary) estimate of GDP"); the [second estimate of GDP](http://http//www.ons.gov.uk/ons/rel/naa2/second-estimate-of-gdp/q1-2014/stb-second-estimate-of-gdp-q1-2014.html "second estimate of GDP") and the third estimate which is published in the [Quarterly National Accounts](http://http//www.ons.gov.uk/ons/rel/naa2/quarterly-national-accounts/q1-2014/index.html "Quarterly National Accounts").
   
 ###** 5. 4. Methods**
 - Information on [retail sales methodology](http://www.ons.gov.uk/ons/guide-method/method-quality/specific/economy/retail-sales/index.html "retail sales methodology") is available.
@@ -266,7 +266,7 @@ Estimates in this statistical bulletin are based on financial data collected thr
 
 #### Table 6: Overall Response Rates
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/rsi/retail-sales/june-2014/prt-rsi-response-rates-june-2014.xls "XLS format") (24 Kb)
 
 ##### 2. Seasonal adjustment
@@ -288,7 +288,7 @@ The calculation of the RSI has an adjustment to compensate for calendar effects 
 
 #### Table 7: Retail Sales, Calendar Effects
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/rsi/retail-sales/june-2014/prt-rsi-calendar-effects-june-2014.xls "XLS format") (24.5 Kb)
 
 ###**6. 5. Quality**
@@ -302,7 +302,7 @@ The calculation of the RSI has an adjustment to compensate for calendar effects 
 
 Standard errors of non-seasonally adjusted chained volume index movements have been developed for RSI to determine the spread of possible movements and a means of assessing the accuracy of the non-seasonally adjusted month-on-month and year-on-year estimates of all retail sales volumes.  The lower the standard error, the more confident one can be that the estimate is close to the true value for the retail population.
 
-- The standard error for year-on-year growth in all retail sales (non-seasonally adjusted) volumes is 0.9%. This means that the year-on-year growth rate for all retail sales volumes (non-seasonally adjusted) falls within the range 3.5 ± 1.8 percentage points with a probability of 95%. 
+- The standard error for year-on-year growth in all retail sales (non-seasonally adjusted) volumes is 0.9%. This means that the year-on-year growth rate for all retail sales volumes (non-seasonally adjusted) falls within the range 3.5 ± 1.8 percentage points with a probability of 95%.
 - The standard error for month-on-month growth in all retail sales (non-seasonally adjusted) volumes is 0.5%. This means that the month-on-month growth rate for all retail sales volumes (non-seasonally adjusted) falls within the range 1.5 ± 1.0 percentage points with a probability of 95%.
 
 The papers ‘ [Measuring the accuracy of the Retail Sales Index’ (1.04 Mb Pdf)](http://www.ons.gov.uk/ons/guide-method/method-quality/specific/economy/retail-sales/measuring-the-accuracy-of-the-retail-sales-index.pdf "Measuring the accuracy of the Retail Sales Index") , Winton, J and Ralph, J (2011) and ‘ [Updated accuracy measures for the Retail Sales Index (29.6 Kb Pdf)](http://www.ons.gov.uk/ons/guide-method/method-quality/specific/economy/retail-sales/updated-accuracy-measures-for-the-retail-sales-index.pdf "Updated accuracy measures for the Retail Sales Index") ’ Sanderson, R (2013) report on the calculation of standard errors for month-on-month and year-on-year growth rates in the RSI as well as providing an overview of standard errors and how they can be interpreted.
@@ -319,14 +319,14 @@ Revisions to data provide one indication of the reliability of key indicators. T
 
 #### Table 8: All Retailing, Volume Seasonally Adjusted, Revisions Triangles Summary Statistics, June 2014
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/rsi/retail-sales/june-2014/prt-rsi-revisions-triangles-june-2014.xls "XLS format") (24.5 Kb)
 
-A spreadsheet giving these estimates and the calculations behind the averages in the table is available on the ONS website.   
+A spreadsheet giving these estimates and the calculations behind the averages in the table is available on the ONS website.
 
 ###** 7. Publication Policy**
 
-Details of the policy governing the release of new data are available from the Media Relations Office. Also available is a list of the organisations given pre-publication access to the contents of this bulletin. 
+Details of the policy governing the release of new data are available from the Media Relations Office. Also available is a list of the organisations given pre-publication access to the contents of this bulletin.
 
 ##### Accessing data
 
@@ -338,20 +338,20 @@ Alternatively, for low-cost tailored data call 0845 601 3034 or email <info@ons.
 
 **Issued by**: Office for National Statistics, Government Buildings, Cardiff Road, Newport NP10 8XG
 
-**Media contact**: 
-- Tel Media Relations Office 0845 6041858 
-- Emergency on-call 07867 906553 
+**Media contact**:
+- Tel Media Relations Office 0845 6041858
+- Emergency on-call 07867 906553
 - Email  <media.relations@ons.gsi.gov.uk>
 
-**Statistical contact**: 
-- Tel Kate Davies 01633 455602 
+**Statistical contact**:
+- Tel Kate Davies 01633 455602
 - Email <retail.sales.enquiries@ons.gsi.gov.uk>
 
-**Contact us**: 
-- Tel 0845 601 3034 
-- Email <info@ons.gsi.gov.uk> 
+**Contact us**:
+- Tel 0845 601 3034
+- Email <info@ons.gsi.gov.uk>
 - Website [www.ons.gov.uk](http://www.ons.gov.uk/)
-- [Twitter](http://www.ons.gov.uk/ons/external-links/social-media/ons-twitter.html "Twitter")     
+- [Twitter](http://www.ons.gov.uk/ons/external-links/social-media/ons-twitter.html "Twitter")
 
 Details of the policy governing the release of new data are available by visiting [www.statisticsauthority.gov.uk/assessment/code-of-practice/index.html](http://www.statisticsauthority.gov.uk/assessment/code-of-practice/index.html) or from the Media Relations Office email: <media.relations@ons.gsi.gov.uk>
 
