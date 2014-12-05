@@ -413,6 +413,14 @@ public class TaxonomyGenerator {
 	private static void createStatsBulletinHeadline(Folder folder, T3 t3) throws IOException {
 		// Stats bulletin references:
 
+		if (folder.headlineBulletin == null) {
+			if (folder.bulletins.size() > 0) {
+				folder.headlineBulletin = folder.bulletins.get(0);
+			} else if (folder.additonalBulletin != null) {
+				folder.headlineBulletin = folder.additonalBulletin;
+			}
+		}
+
 		if (folder.headlineBulletin != null) {
 			if (folder.headlineBulletin.uri == null) {
 				folder.headlineBulletin.uri = toStatsBulletinUri(folder, folder.headlineBulletin);
