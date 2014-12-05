@@ -4,6 +4,7 @@ import java.net.URI;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -39,10 +40,10 @@ public class SearchConsole {
 
 	static String mongoUri = Configuration.getMongoDbUri();
 	static ExecutorService pool = Executors.newCachedThreadPool();
-	static String never = "Never any results";
-	static String noneNow = "Currently returning no results";
-	static String someNow = "Currently returning results";
-	static String always = "Always returns results";
+	static String neverHadResults = "neverHadResults";
+	static String currentlyNoResults = "currentlyNoResults";
+	static String currentlySomeResults = "currentlySomeResults";
+	static String alwaysHadResults = "alwaysHadResults";
 
 	@GET
 	public Object results(HttpServletRequest request, HttpServletResponse response) throws Exception {
@@ -66,19 +67,19 @@ public class SearchConsole {
 
 	static class JsonResult {
 
-		int never;
-		int always;
-		int noneNow;
-		int someNow;
+		int neverHadResults;
+		int currentlyNoResults;
+		int currentlySomeResults;
+		int alwaysHadResults;
 		Map<String, List<QueryCount>> categories;
 
 		JsonResult() {
 			// Ordered Map for the sake of human-readability:
 			categories = new LinkedHashMap<>();
-			categories.put(SearchConsole.never, new ArrayList<SearchConsole.QueryCount>());
-			categories.put(SearchConsole.noneNow, new ArrayList<SearchConsole.QueryCount>());
-			categories.put(SearchConsole.someNow, new ArrayList<SearchConsole.QueryCount>());
-			categories.put(SearchConsole.always, new ArrayList<SearchConsole.QueryCount>());
+			categories.put(SearchConsole.neverHadResults, new ArrayList<SearchConsole.QueryCount>());
+			categories.put(SearchConsole.currentlyNoResults, new ArrayList<SearchConsole.QueryCount>());
+			categories.put(SearchConsole.currentlySomeResults, new ArrayList<SearchConsole.QueryCount>());
+			categories.put(SearchConsole.alwaysHadResults, new ArrayList<SearchConsole.QueryCount>());
 		}
 
 	}
@@ -122,7 +123,7 @@ public class SearchConsole {
 		for (DBObject doc : queryDocuments) {
 
 			// Get the count for this query, creating it if necessary:
-			String query = doc.get("query").toString();
+			String query = (String) doc.get("query");
 			if (StringUtils.equals("inf", query)) {
 				System.out.println("inf");
 			}
@@ -147,7 +148,8 @@ public class SearchConsole {
 				if (resultDate != null) {
 					date = (Date) resultDate;
 				} else {
-					date = toDate(nullDate);
+					nullDate = toDate(nullDate);
+					date = nullDate;
 				}
 				if (resultCount instanceof Integer) {
 					count.results.put(date, Long.valueOf(resultCount.toString()));
@@ -178,7 +180,7 @@ public class SearchConsole {
 				} else {
 					some = true;
 				}
-				if (mostRecent == null || queryDate.before(mostRecent)) {
+				if (mostRecent == null || queryDate.after(mostRecent)) {
 					mostRecent = queryDate;
 				}
 			}
@@ -187,19 +189,24 @@ public class SearchConsole {
 				// for this query?
 				long latestResultCount = queryCount.results.get(mostRecent);
 				if (latestResultCount == 0) {
-					result.noneNow++;
-					result.categories.get(noneNow).add(queryCount);
+					result.currentlyNoResults++;
+					result.categories.get(currentlyNoResults).add(queryCount);
 				} else {
-					result.someNow++;
-					result.categories.get(someNow).add(queryCount);
+					result.currentlySomeResults++;
+					result.categories.get(currentlySomeResults).add(queryCount);
 				}
 			} else if (none) {
-				result.never++;
-				result.categories.get(never).add(queryCount);
+				result.neverHadResults++;
+				result.categories.get(neverHadResults).add(queryCount);
 			} else if (some) {
-				result.always++;
-				result.categories.get(always).add(queryCount);
+				result.alwaysHadResults++;
+				result.categories.get(alwaysHadResults).add(queryCount);
 			}
+		}
+
+		// Sort the lists according to the number of searches:
+		for (List<QueryCount> list : result.categories.values()) {
+			Collections.sort(list);
 		}
 
 	}
@@ -305,13 +312,13 @@ public class SearchConsole {
 		try {
 			if (searchResult.getResults().size() == 0 && StringUtils.equals(StringUtils.trim(StringUtils.lowerCase(query)), "newport explorers")) {
 				searchResult.setNumberOfResults(1);
-				searchResult.setSuggestion("Alpha Team");
+				searchResult.setSuggestion("The guys at Fields House");
 				searchResult.setSuggestionBasedResult(true);
 
 				Map<String, Object> result = new HashMap<>();
 				result.put("title", "The Newport Explorers");
-				result.put("lede", "This prototype (\"Alpha\") ONS website was brobugt to you by, amongst others, a band of brothers who left kin and country "
-						+ "to make this happen - and it's been great. Here's a bit more about the team..");
+				result.put("lede", "This prototype (\"Alpha\") ONS website was brobugt to you by, amongst many other heroes, a band of brothers who left kin and country "
+						+ "to make this happen - and it's been great. Here's a bit more about the guys..");
 				result.put("type", ContentType.unknown);
 				result.put("url", "http://davidcarboni.github.io/newport-explorers/");
 				searchResult.getResults().add(result);
@@ -365,8 +372,8 @@ public class SearchConsole {
 		Map<Date, Long> results = new TreeMap<>();
 		Date date;
 
-		QueryCount(String value) {
-			this.query = value;
+		QueryCount(String query) {
+			this.query = query;
 		}
 
 		@Override
@@ -376,7 +383,11 @@ public class SearchConsole {
 
 		@Override
 		public int hashCode() {
-			return query.hashCode();
+			int result = 0;
+			if (query != null) {
+				result = query.hashCode();
+			}
+			return result;
 		}
 
 		/**
@@ -384,7 +395,7 @@ public class SearchConsole {
 		 */
 		@Override
 		public boolean equals(Object obj) {
-			return query.equals(((QueryCount) obj).query);
+			return StringUtils.equals(query, ((QueryCount) obj).query);
 		}
 
 		@Override

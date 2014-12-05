@@ -3,6 +3,7 @@ package com.github.onsdigital.json;
 import java.net.URI;
 
 import com.github.onsdigital.json.dataset.Dataset;
+import com.github.onsdigital.json.markdown.Article;
 import com.github.onsdigital.json.markdown.Bulletin;
 
 /**
@@ -51,6 +52,19 @@ public class Reference extends DataItem {
 		this.name = dataset.name;
 		this.uri = dataset.uri;
 		this.summary = dataset.summary;
+	}
+
+	/**
+	 * Creates a "link" item. This is useful for referencing an item, e.g. in a
+	 * list of "related" items.
+	 * 
+	 * @param article
+	 *            The item to be referenced.
+	 */
+	public Reference(Article article) {
+		this.name = article.name;
+		this.uri = article.uri;
+		this.summary = article.title;
 	}
 
 	/**

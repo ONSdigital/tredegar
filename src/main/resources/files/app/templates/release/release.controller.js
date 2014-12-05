@@ -1,10 +1,7 @@
 angular.module('onsTemplates')
-	.controller('ReleaseCtrl', ['$scope', '$log', 'DataLoader',
-		function($scope, $log, DataLoader) {
-			DataLoader.load("/release.json")
-				.then(function(data) {
-					$scope.releaseData = data
-				})
-		}
-
+	.controller('ReleaseCtrl', ['$scope', '$log', 'Taxonomy', '$location',
+		function($scope, $log, Taxonomy, $location) {
+					$scope.releaseData = $scope.taxonomy.data;
+                    console.log($scope.releaseData)
+				}
 	])

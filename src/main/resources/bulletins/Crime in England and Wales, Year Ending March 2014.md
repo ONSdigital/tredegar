@@ -3,7 +3,7 @@ Level 2: Crime and Justice
 Summary: Crime statistics from the Crime Survey for England and Wales and police recorded crime.
 Headline 1: Latest figures from the CSEW show there were an estimated 7.3 million incidents of crime against households and resident adults in England and Wales for the year ending March 2014.
 Headline 2: Decreases were evident for most major crime types compared with the previous year.
-Headline 3: In contrast, police recorded crime shows no overall change from the previous year, with 3.7 million offences recorded in the year ending March 2014.
+Headline 3: In contrast, police recorded crime shows no overall change from the previous year, with 3.7 million offences recorded.
 Contact name: John Flatley
 Contact email: crimestatistics@ons.gsi.gov.uk
 Next edition: 16 October 2014

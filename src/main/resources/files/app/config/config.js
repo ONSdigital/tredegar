@@ -48,7 +48,7 @@
 			var CACHE_NAME = 'dataCache'
 
 			// Conditionally use Angular cache if local storage not supported
-			//TODO: Create a caching design appropriate to 9.30 caching (e.g No caching between 9.30 - 9.31, expire all cache at 9.30) 
+			//TODO: Create a caching design appropriate to 9.30 caching (e.g No caching between 9.30 - 9.31, expire all cache at 9.30)
 			var options = {
 				maxAge: 1800000, // Items added to this cache expire after 30 minutes.
 				cacheFlushInterval: 10800000, // This cache will clear itself every three hours.

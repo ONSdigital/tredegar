@@ -130,15 +130,7 @@
 				}]
 			}
 		}).
-		when('/release', {
-			templateUrl: 'app/templates/release/release.html',
-			resolve: {
-				title: ['PageUtil', function(PageUtil) {
-					PageUtil.setTitle('Release')
-				}]
-			}
-		}).
-		when('/search/:searchTerm?', resolveSearch()).
+		when('/search/:searchTerm', resolveSearch()).
 		when('/search/:searchTerm/page/:page', resolveSearch()).
 		when('/survey', {
 			templateUrl: 'app/templates/survey/survey.html',

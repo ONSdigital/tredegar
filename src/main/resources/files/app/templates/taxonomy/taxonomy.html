@@ -36,3 +36,8 @@
     <span ng-if="taxonomy.data.type === 'dataset'" ng-controller="DatasetController as dataset">
         <span ng-include="'app/templates/dataset/dataset.html'"></span>
     </span>
+
+        <!-- Release -->
+    <span ng-if="taxonomy.data.type === 'release'" ng-controller="ReleaseCtrl as release">
+        <span ng-include="'app/templates/release/release.html'"></span>
+    </span>

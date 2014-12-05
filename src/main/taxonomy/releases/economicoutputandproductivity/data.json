@@ -1,0 +1,33 @@
+{
+  "releaseDate": "21 October 2014",
+  "nextRelease": "21 January 2015",
+  "contact": {
+    "email": {
+      "name": "Jukesie",
+      "email": "jukesie@hotmail.com"
+    },
+    "organisation": "Business Prices",
+    "telephone": "+44 (0)1633 456468"
+  },
+  "lede": "Economic output is the total value of goods and/or services produced in a process. Statistics on economic output include indices on manufacturing, production and services. Productivity is a measure of efficiency. It can be expressed as a ratio of output to input over a given period of time, for example output per person per hour. ",
+  "articles": [],
+  "bulletins": [
+    {
+      "summary": "Summary section",
+      "type": "bulletin",
+      "name": "Quarterly National Accounts",
+      "uri": "/economy/economicoutputandproductivity/bulletins/quarterlynationalaccounts"
+    }
+  ],
+  "datasets": [
+    {
+      "summary": "By category of output (reference year 2010) for production and service industries",
+      "type": "dataset",
+      "name": "Gross value added",
+      "uri": "/economy/economicoutputandproductivity/datasets/grossvalueadded"
+    }
+  ],
+  "type": "release",
+  "name": "Economic output and productivity",
+  "fileName": "economicoutputandproductivity"
+}
