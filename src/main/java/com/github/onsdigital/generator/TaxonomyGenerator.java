@@ -181,7 +181,15 @@ public class TaxonomyGenerator {
 		}
 		File releasesFile = new File(releasesFolder, "data.json");
 		try (OutputStream output = new FileOutputStream(releasesFile)) {
-			Serialiser.serialise(output, releasesList);
+			Serialiser.serialise(output, new ReleasesList(releasesList));
+		}
+	}
+
+	static class ReleasesList {
+		List<ReleaseReference> releases;
+
+		ReleasesList(List<ReleaseReference> releases) {
+			this.releases = releases;
 		}
 	}
 
