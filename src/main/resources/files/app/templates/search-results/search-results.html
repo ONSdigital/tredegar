@@ -90,7 +90,7 @@
                     <dl>
 
                         <dt ng-repeat-start="item in searchResponse.results track by $index" ng-class="isFocus(item.type, $index) ? 'search-home-focused' : ''">
-                            <a class="search-link" href="#!{{item.url}}"><span ng-bind-html="item.highlights.title || item.title"></span></a>
+                            <a class="search-link" ng-href="{{link(item.url)}}"><span ng-bind-html="item.highlights.title || item.title"></span></a>
                             <span ng-if="isShowLozenge(item)" class="lozenge--label" href="">{{item.type === 'bulletin' ? 'Statistical bulletin' : item.type}}</span>
                         </dt>
                         <dd class="microcopy">
