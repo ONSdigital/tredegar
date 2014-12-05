@@ -1,31 +1,31 @@
 {
   "headline": {
-    "name": "Unemployment rate (aged 16-64)",
+    "name": "Unemployment rate (aged 16 to 64)",
     "uri": "/employmentandlabourmarket/unemployment/timeseries/mgsx"
   },
   "items": [
     {
-      "name": "Unemployment rate (aged 16-64)",
+      "name": "Unemployment rate (aged 16 to 64)",
       "uri": "/employmentandlabourmarket/unemployment/timeseries/mgsx"
     },
     {
-      "name": "Female Unemployment Rate (aged 16-64)",
+      "name": "Female unemployment rate (aged 16 to 64)",
       "uri": "/employmentandlabourmarket/unemployment/timeseries/mgsz"
     },
     {
-      "name": "Male Unemployment Rate (aged 16-64)",
+      "name": "Male unemployment rate (aged 16 to 64)",
       "uri": "/employmentandlabourmarket/unemployment/timeseries/mgsy"
     },
     {
-      "name": "Unemployment 16+",
+      "name": "Unemployment 16 and over",
       "uri": "/employmentandlabourmarket/unemployment/timeseries/mgsc"
     },
     {
-      "name": "Female Unemployment 16+",
+      "name": "Female unemployment 16 and over",
       "uri": "/employmentandlabourmarket/unemployment/timeseries/mgse"
     },
     {
-      "name": "Male Unemployment 16+",
+      "name": "Male unemployment 16 and over",
       "uri": "/employmentandlabourmarket/unemployment/timeseries/mgsd"
     },
     {
@@ -41,16 +41,11 @@
       "uri": "/employmentandlabourmarket/unemployment/timeseries/dpae"
     }
   ],
-  "statsBulletinHeadline": {
-    "summary": "Data on types of workplace pension arrangements for UK employees by age, industry, public/private sector, occupation and size of company.",
-    "name": "2013 Annual Survey of Hours and Earnings- Summary of Pension Results",
-    "uri": "/employmentandlabourmarket/unemployment/bulletins/2013annualsurveyofhoursandearningssummaryofpensionresults"
-  },
   "statsBulletins": [
     {
-      "summary": "Data on types of workplace pension arrangements for UK employees by age, industry, public/private sector, occupation and size of company.",
-      "name": "2013 Annual Survey of Hours and Earnings- Summary of Pension Results",
-      "uri": "/employmentandlabourmarket/unemployment/bulletins/2013annualsurveyofhoursandearningssummaryofpensionresults"
+      "summary": "Labour market statistics (including employment, unemployment and economic inactivity) for the United Kingdom.",
+      "name": "UK Labour Market, July 2014",
+      "uri": "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/uklabourmarketjuly2014"
     }
   ],
   "datasets": [

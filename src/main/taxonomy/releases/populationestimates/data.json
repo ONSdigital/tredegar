@@ -21,16 +21,16 @@
   ],
   "datasets": [
     {
-      "summary": "Population estimates data by sex and single year of age for countries, regions and smaller geographic breakdowns",
-      "type": "dataset",
-      "name": "Population by Age and Sex",
-      "uri": "/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationbyageandsex"
-    },
-    {
       "summary": "Components of population change for countries; regions, counties and smaller geographic breakdowns",
       "type": "dataset",
       "name": "Population for Local Authorities",
       "uri": "/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationforlocalauthorities"
+    },
+    {
+      "summary": "Population estimates data by sex and single year of age for countries, regions and smaller geographic breakdowns",
+      "type": "dataset",
+      "name": "Population by age and sex",
+      "uri": "/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationbyageandsex"
     },
     {
       "summary": "Population estimates data overview by age group for the United Kingdom, England and Wales, and Great Britain",
