@@ -19,25 +19,17 @@ angular.module('onsComponents')
 					return $location.$$path
 				}
 				
-				$scope.getParentOf = function(p) {
+				$scope.getParentOf = function(index) {
 				  var path = $location.$$path
-				  // look for all occurrences ("g") of this char sequence
-				  var pathFilter = new RegExp(p, "g")
-				  // cater for no match ([])
-				  var countP = (path.match(pathFilter) || []).length;
-
-				  var indexPoint
-				  if (countP > 1) {
-					  // if the char sequence occurs twice then make educated guess that we should go for first occurrence
-					  indexPoint = path.indexOf(p)
-				  } else {
-					  // otherwise go to the last occurrence
-					  indexPoint = path.lastIndexOf(p)
-				  }
-
-				  var parentPath = path.substring(0, indexPoint -1 )
-				  return parentPath
+				  var uri = ''
+					for (var i = 0; i < index; i++) {
+						uri += '/' + $scope.data.parent[i].fileName
+					}
+					return uri
+					console.log(index + uri)
+				  
 				}
+
 			},
 			templateUrl: 'app/components/breadcrumb/breadcrumb.html'
 		}
