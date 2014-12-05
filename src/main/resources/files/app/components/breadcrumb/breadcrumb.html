@@ -4,8 +4,8 @@
             <li>
                 <a href="#!/">Home</a>
             </li>
-            <li ng-repeat="item in data.parent">
-                <a href="#!{{getParentOf(item.fileName)}}/{{item.fileName}}">{{item.name}}</a>
+            <li ng-repeat="item in data.parent track by $index">
+                <a ng-href="#!{{getParentOf($index)}}/{{item.fileName}}">{{item.name}}</a>
             </li>
             <li class="nav__active breadcrumb">
                 {{data.current}}
