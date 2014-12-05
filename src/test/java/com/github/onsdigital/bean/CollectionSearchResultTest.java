@@ -27,10 +27,13 @@ public class CollectionSearchResultTest {
 		assertEquals("Collection should have some results", 1, files.size(), collectionSearchResult.getNumberOfResults());
 		List<Map<String, String>> results = collectionSearchResult.getResults();
 		Map<String, String> bulletin = results.get(0);
-		assertEquals("title should be available from map", "Consumer Price Inflation", bulletin.get("title"));
-		assertEquals("release date should be available from map", "19 August 2014", bulletin.get("releaseDate"));
-		assertEquals("url should be available from map", "/economy/inflationandpriceindices/bulletins/consumerpriceinflation/", bulletin.get("url"));
+		assertEquals("title should be available from map", "Consumer Price Inflation, June 2014", bulletin.get("title"));
+        assertEquals("release date should be available from map", "19 August 2014", bulletin.get("releaseDate"));
+        assertEquals("url should be available from map", "/economy/inflationandpriceindices/bulletins/consumerpriceinflationjune2014/", bulletin.get("url"));
 		assertEquals("only one item in list and on page 1, so should be the latest", "latest", bulletin.get("indexNumber"));
+		
+		
+		
 	}
 
 	@Test
@@ -59,7 +62,7 @@ public class CollectionSearchResultTest {
 	private List<File> setUpFiles(String fileName) {
 		File file;
 		if (StringUtils.isEmpty(fileName)) {
-			file = new File("target/taxonomy/economy/inflationandpriceindices/bulletins/consumerpriceinflation/data.json");
+			file = new File("target/taxonomy/economy/inflationandpriceindices/bulletins/consumerpriceinflationjune2014/data.json");
 		} else {
 			file = new File(fileName);
 		}
