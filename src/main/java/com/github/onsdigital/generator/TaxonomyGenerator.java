@@ -372,7 +372,16 @@ public class TaxonomyGenerator {
 			}
 			t3.statsBulletins.add(new Reference(bulletin));
 		}
+		if (folder.additonalBulletin != null) {
+			if (folder.additonalBulletin.uri == null) {
+				throw new RuntimeException("No URI yet - this is a design issue.");
+			}
+			t3.statsBulletins.add(new Reference(folder.additonalBulletin));
+		}
 
+		// All bulletins at this node, plus the additional bulletin (if any) are
+		// considered to be related.
+		// This is "good enough" for now:
 		for (Bulletin bulletin : folder.bulletins) {
 
 			// Initially add everything - we'll remove "self-reference"

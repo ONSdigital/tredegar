@@ -26,6 +26,7 @@ public class Folder implements Comparable<Folder> {
 	public String more;
 	public Timeseries headline;
 	public Bulletin headlineBulletin;
+	public Bulletin additonalBulletin;
 	public List<Timeseries> timeserieses = new ArrayList<>();
 	public List<Set<Timeseries>> oldDataset = new ArrayList<Set<Timeseries>>();
 
