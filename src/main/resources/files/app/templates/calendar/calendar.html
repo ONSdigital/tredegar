@@ -75,7 +75,7 @@
                         </div>
                         <div class="grid-col desktop-grid-two-thirds tablet-grid-one-half">
                             <ol class="list--table list--table--cushy list--table--releases" >
-                                <li class="list--table__item list--table__body" ng-repeat="item in calendarData | filter:query" ng-class="{'table--striped-light_coloured': $index %2 != 0}">
+                                <li class="list--table__item list--table__body" ng-repeat="item in calendarData.releases | filter:query" ng-class="{'table--striped-light_coloured': $index %2 != 0}">
                                     <div class="list--table__item__body list--table__item__body--date">
                                         <div class="list--table__item__body__inner">
                                             <time class="date date--stacked" datetime="{{item.releaseDate}}">
