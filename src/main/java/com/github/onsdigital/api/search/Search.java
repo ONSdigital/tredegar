@@ -10,7 +10,7 @@ import org.apache.commons.lang3.StringUtils;
 
 import com.github.davidcarboni.restolino.framework.Endpoint;
 import com.github.onsdigital.json.timeseries.Timeseries;
-import com.github.onsdigital.search.bean.SearchResult;
+import com.github.onsdigital.search.bean.AggregatedSearchResult;
 import com.github.onsdigital.search.util.SearchHelper;
 import com.github.onsdigital.util.ValidatorUtil;
 
@@ -55,14 +55,14 @@ public class Search {
 		 */
 		// don't use naturalLanguage for initial search so we get PHRASE_PREFIX
 		// capability
-		SearchResult searchResult = SearchHelper.search(query, page, types);
+		AggregatedSearchResult searchResult = SearchHelper.search(query, page, types);
 		if (searchResult.getNumberOfResults() == 0 && types == null) {
 			System.out.println("Attempting search against timeseries as no results found for: " + query);
 			Timeseries timeseries = SearchHelper.searchCdid(query);
 			// if still no results then use term suggester for auto correct
 			if (timeseries == null) {
 				System.out.println("No results found from timeseries so using suggestions for: " + query);
-				SearchResult suggestionResult = SearchHelper.searchSuggestions(query, page, types);
+				AggregatedSearchResult suggestionResult = SearchHelper.searchSuggestions(query, page, types);
 				if (suggestionResult != null) {
 					return suggestionResult;
 				}
