@@ -12,7 +12,6 @@ import com.github.davidcarboni.restolino.framework.Endpoint;
 import com.github.onsdigital.json.timeseries.Timeseries;
 import com.github.onsdigital.search.bean.AggregatedSearchResult;
 import com.github.onsdigital.search.util.SearchHelper;
-import com.github.onsdigital.util.ValidatorUtil;
 
 /**
  * 
@@ -101,10 +100,9 @@ public class Search {
 				throw new RuntimeException("No search query provided");
 			}
 		}
-		if (ValidatorUtil.isIllegalCharacter(query)) {
-			throw new RuntimeException("Search query can only contain alphanumeric characters");
+		if (query.length() > 100) {
+			throw new RuntimeException("Search query contains too many characters");
 		}
-
 		return query;
 	}
 

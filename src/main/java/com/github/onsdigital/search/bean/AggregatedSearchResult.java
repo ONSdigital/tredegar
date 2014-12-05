@@ -39,7 +39,7 @@ public class AggregatedSearchResult {
 	public long getNumberOfResults() {
 		long numberOfResults = contentSearchResult.getNumberOfResults();
 		if(homeSearchResult != null) {
-			return homeSearchResult.getNumberOfResults();	
+			return numberOfResults += homeSearchResult.getNumberOfResults();
 		}
 		return numberOfResults;
 		 
