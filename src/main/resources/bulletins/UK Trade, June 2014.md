@@ -3,7 +3,7 @@ Level 2: International Trade
 Summary: UK Trade shows the extent of import and export activity and is a key contributor to the overall economic growth in the UK.
 Headline 1: UK Trade shows the extent of import and export activity and is a key contributor to the overall economic growth in the UK.
 Headline 2: Seasonally adjusted, the UK's deficit on trade in goods and services was estimated to have been £2.5 billion in June 2014, compared with £2.4 billion in May 2014.
-Headline 3: In June 2014 there was a deficit of £9.4 billion on goods, partly offset by an estimated surplus of £7.0 billion on services. The trade in goods deficit widened by £0.3 billion compared with May 2014.
+Headline 3: In June 2014 there was a deficit of £9.4 billion on goods, partly offset by an estimated surplus of £7.0 billion on services.
 Contact name: Katherine Kent
 Contact email: m&a@ons.gsi.gov.uk
 Next edition: 09 September 2014
@@ -28,7 +28,7 @@ Corrected expenditure estimates for UK residents’ visits abroad and overseas r
 
 Table source: Office for National Statistics
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/uktrade/uk-trade/june-2014/ptl-table-1--balance-of-uk-trade-in-goods-and-services--june-2014.xls "XLS format") (25 Kb)
 
 #### Figure 1: Balance of UK Trade
@@ -36,7 +36,7 @@ Table source: Office for National Statistics
 
 Source: Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/uktrade/uk-trade/june-2014/cdl-figure-1--balance-of-uk-trade.xls "XLS format") (40 Kb)
 
 #### Figure 2: Balance of UK Trade in Goods
@@ -44,7 +44,7 @@ Source: Office for National Statistics
 
 Source: Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/uktrade/uk-trade/june-2014/cdl-figure-2--balance-of-uk-trade-in-goods.xls "XLS format") (38 Kb)
 
 ## Summary
@@ -64,13 +64,13 @@ The deficit of trade in goods and services for Q2 2014 was £6.9 billion compare
 
 The deficit on trade in goods between Q1 2014 and Q2 2014 widened by £0.9 billion to £27.4 billion.  Exports of goods decreased by £0.5 billion to £71.3 billion in Q2 2014, reflecting a decrease in exports of fuels; specifically oil exports which fell by £0.7 billion. Exports of semi-manufactured goods fell by £0.4 billion, within which both chemical manufactures and material manufactures fell by £0.2 billion. Imports of goods increased by £0.4 billion to £98.7 billion in Q2 2014. Imports of manufactured goods rose by £1.0 billion over the quarter, reflecting increases in the import of ships, cars and medicinal & pharmaceutical products. These increases were partially offset by oil imports falling £0.3 billion from the previous quarter.
 
-Exports to EU countries increased 1.5% between Q1 2014 and Q2 2014, whereas exports to countries outside of the EU decreased 2.9% for the same period.  Conversely, imports from EU countries decreased 0.3% whereas imports from countries outside of the EU increased 1.2% between Q1 2014 and Q2 2014. 
+Exports to EU countries increased 1.5% between Q1 2014 and Q2 2014, whereas exports to countries outside of the EU decreased 2.9% for the same period.  Conversely, imports from EU countries decreased 0.3% whereas imports from countries outside of the EU increased 1.2% between Q1 2014 and Q2 2014.
 
-Exports to Germany, one of the UK's biggest trading partners, stood at £7.7 billion in Q2 2014, an increase of £0.6 billion compared with Q1 2014.  However, imports from Germany rose £0.6 billion over the same period to £14.3 billion. 
+Exports to Germany, one of the UK's biggest trading partners, stood at £7.7 billion in Q2 2014, an increase of £0.6 billion compared with Q1 2014.  However, imports from Germany rose £0.6 billion over the same period to £14.3 billion.
 
-For both EU countries and countries outside of the EU imports fell between Q2 2013 and Q2 2014 but exports have fallen more.  The biggest change is a £4.7 billion (11.9%) decrease in exports to non-EU countries including the USA, India and Canada.  Exports to Russia fell by £0.2 billion on the year.  In terms of commodities, exports of erratics such as silver, precious stones and aircraft to countries outside of the EU fell on the year. 
+For both EU countries and countries outside of the EU imports fell between Q2 2013 and Q2 2014 but exports have fallen more.  The biggest change is a £4.7 billion (11.9%) decrease in exports to non-EU countries including the USA, India and Canada.  Exports to Russia fell by £0.2 billion on the year.  In terms of commodities, exports of erratics such as silver, precious stones and aircraft to countries outside of the EU fell on the year.
 
-This bulletin also reports on trade in services. However, the information on trade in services is mainly obtained from quarterly surveys, in some cases underpinned by larger annual surveys. That means that the data for the latest months are inevitably uncertain. 
+This bulletin also reports on trade in services. However, the information on trade in services is mainly obtained from quarterly surveys, in some cases underpinned by larger annual surveys. That means that the data for the latest months are inevitably uncertain.
 
 The surplus on trade in services for Q2 2014 was estimated at £20.5 billion compared with £21.0 billion in Q1 2014.  Both exports and imports fell over the quarter.
 
@@ -93,10 +93,10 @@ Table source: Office for National Statistics
 ##### Table notes:
 1. Monthly commodity movements for Aircraft are only detailed where they equal or exceed £200m.
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/uktrade/uk-trade/june-2014/ptl-table-2--change-in-key-commodity-value--june-2014-compared-with-may-2014.xls "XLS format") (24.5 Kb)
 
-In Q2 2014, the deficit on trade in goods was £27.4 billion, widening by £0.9 billion from Q1 2014. 
+In Q2 2014, the deficit on trade in goods was £27.4 billion, widening by £0.9 billion from Q1 2014.
 
 Total exports decreased by £0.5 billion (0.7%) to £71.3 billion and total imports increased by £0.4 billion (0.4%) to £98.7 billion.  At the commodity level the data are shown in the following table.
 
@@ -107,7 +107,7 @@ Table source: Office for National Statistics
 ##### Table notes:
 1. Quarterly commodity movements for Ships are only detailed where they equal or exceed £400m.
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/uktrade/uk-trade/june-2014/ptl-table-3--change-in-key-commodity-value--q2-2014-compared-with-q1-2014.xls "XLS format") (24.5 Kb)
 
 #### Figure 3: Value of UK Trade in Goods
@@ -115,7 +115,7 @@ Table source: Office for National Statistics
 
 Source: Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/uktrade/uk-trade/june-2014/cdl-figure-3--value-of-uk-trade-in-goods.xls "XLS format") (27 Kb)
 
 #### Figure 4: Value of UK Trade in Goods Excluding Oil
@@ -123,7 +123,7 @@ Source: Office for National Statistics
 
 Source: Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/uktrade/uk-trade/june-2014/cdl-figure-4--value-of-uk-trade-in-goods-excluding-oil.xls "XLS format") (40.5 Kb)
 
 ## Trade in Goods - EU Analysis
@@ -138,10 +138,10 @@ Table source: Office for National Statistics
 ##### Table notes:
 1. Monthly commodity movements for Aircraft are only detailed where they equal or exceed £200m
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/uktrade/uk-trade/june-2014/ptl-table-4--change-in-key-commodity-value--eu---june-2014-compared-with-may.xls "XLS format") (24.5 Kb)
 
-In Q2 2014, the deficit on trade in goods with EU countries was £15.6 billion, narrowing by £0.7 billion from a £16.3 billion deficit in Q1 2014.    
+In Q2 2014, the deficit on trade in goods with EU countries was £15.6 billion, narrowing by £0.7 billion from a £16.3 billion deficit in Q1 2014.
 
 Exports to the EU increased by £0.6 billion (1.5%) to £36.2 billion and imports from the EU decreased by £0.1 billion (0.3%) to £51.8 billion.  At the commodity level the data are shown in the following table.
 
@@ -149,7 +149,7 @@ Exports to the EU increased by £0.6 billion (1.5%) to £36.2 billion and import
 
 Table source: Office for National Statistics
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/uktrade/uk-trade/june-2014/ptl-table-5--change-in-key-commodity-value--eu---q2-compared-with-q1-2014.xls "XLS format") (24 Kb)
 
 #### Figure 5: Balance of Trade in Goods - EU Countries
@@ -157,7 +157,7 @@ Table source: Office for National Statistics
 
 Source: Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/uktrade/uk-trade/june-2014/cdl-figure-5--balance-of-trade-in-goods---eu-countries.xls "XLS format") (37.5 Kb)
 
 ## Trade in Goods - Non-EU Analysis
@@ -172,7 +172,7 @@ Table source: Office for National Statistics
 #####Table notes:
 1. Monthly commodity movements for Aircraft are only detailed where they equal or exceed £200m.
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/uktrade/uk-trade/june-2014/ptl-table-6--change-in-key-commodity-value--non-eu---june-2014-compared-with-may-2014.xls "XLS format") (24 Kb)
 
 In Q2 2014, the deficit on trade in goods with non-EU countries was £11.8 billion, widening by £1.6 billion from a £10.2 billion deficit in Q1 2014.
@@ -183,7 +183,7 @@ Exports to non-EU countries decreased by £1.0 billion (2.9%) to £35.1 billion 
 
 Table source: Office for National Statistics
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/uktrade/uk-trade/june-2014/ptl-table-7--change-in-key-commodity-value--non-eu---q2-2014-compared-with-q1-2014.xls "XLS format") (24.5 Kb)
 
 #### Figure 6: Balance of Trade in Goods - Non-EU Countries
@@ -191,7 +191,7 @@ Table source: Office for National Statistics
 
 Source: Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/uktrade/uk-trade/june-2014/ptl-table-7--change-in-key-commodity-value--non-eu---q2-2014-compared-with-q1-2014.xls "XLS format") (38 Kb)
 
 ## Trade in Goods - One-Month Geographical Analysis
@@ -212,7 +212,7 @@ Table source: Office for National Statistics
 2. USA includes Puerto Rico.
 3. United Arab Emirates includes Dubai.
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/uktrade/uk-trade/june-2014/ptl-table-8--change-in-monthly-trade-with-significant-partner-countries--june-2014-compared-with-may-2014.xls "XLS format") (26.5 Kb)
 
 #### Figure 7: Significant Partner Countries, One-Month Balances, June 2014
@@ -220,7 +220,7 @@ Table source: Office for National Statistics
 
 Source: Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/uktrade/uk-trade/june-2014/cdl-figure-7--significant-partner-countries--one-month-balances--june-2014.xls "XLS format") (45 Kb)
 
 ## Trade in Goods - Quarterly Geographical Analysis
@@ -241,7 +241,7 @@ Table source: Office for National Statistics
 2. USA includes Puerto Rico.
 3. United Arab Emirates includes Dubai.
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/uktrade/uk-trade/june-2014/ptl-table-9--change-in-three-monthly-trade-with-significant-partner-countries--q2-2014-compared-with-q1-2014.xls "XLS format") (27 Kb)
 
 #### Figure 8: Significant Partner Countries, Quarterly Balances, Q2 2014
@@ -249,7 +249,7 @@ Table source: Office for National Statistics
 
 Source: Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/uktrade/uk-trade/june-2014/cdl-figure-8--significant-partner-countries--quarterly--q1-2014.xls "XLS format") (45 Kb)
 
 ## Volume of Total Trade in Goods, Excluding Oil and Erratics
@@ -259,7 +259,7 @@ Between June 2014 and May 2014, the total volume of exports decreased by 0.3% an
 
 Table source: Office for National Statistics
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/uktrade/uk-trade/june-2014/ptl-table-10--change-in-key-commodity-volume--june-2014-compared-with-may-2014.xls "XLS format") (25.5 Kb)
 
 In Q2 2014, the volume of exports increased by 0.3% and the volume of imports increased by 0.8%, when compared with Q1 2014.  At the commodity level the data are shown in the following table.
@@ -268,7 +268,7 @@ In Q2 2014, the volume of exports increased by 0.3% and the volume of imports in
 
 Table source: Office for National Statistics
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/uktrade/uk-trade/june-2014/ptl-table-11--change-in-key-commodity-volume--q2-2014-compared-with-q1-2014.xls "XLS format") (24.5 Kb)
 
 #### Figure 9: Volume of Exports of Goods (Finished Manufactures), Q2 2014 Compared with Q1 2014
@@ -276,7 +276,7 @@ Table source: Office for National Statistics
 
 Source: Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/uktrade/uk-trade/june-2014/figure-9--volume-of-exports-of-goods--finished-manufactures---q2-2014-compared-with-q1-2014.xls "XLS format") (52.5 Kb)
 
 #### Figure 10: Volume of Imports of Goods (Finished Manufactures), Q2 2014 Compared with Q1 2014
@@ -284,13 +284,13 @@ Source: Office for National Statistics
 
 Source: Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/uktrade/uk-trade/june-2014/figure-10--volume-of-imports-of-goods--finished-manufactures---q2-2014-compared-with-q1-2014.xls "XLS format") (39.5 Kb)
 
 ## Export and Import Prices for Trade in Goods (Not Seasonally Adjusted)
 In June 2014, compared with May 2014, export prices decreased by 0.8% and import prices increased by 0.2%.  Excluding the oil price effect, export prices decreased by 1.1% and import prices increased by 0.1%.
 
-In Q2 2014, when compared with Q1 2014, export prices decreased by 0.7% and import prices decreased by 0.9%.  Excluding the oil price effect, export prices decreased by 0.7% and import prices decreased by 0.9%. 
+In Q2 2014, when compared with Q1 2014, export prices decreased by 0.7% and import prices decreased by 0.9%.  Excluding the oil price effect, export prices decreased by 0.7% and import prices decreased by 0.9%.
 
 ## Trade in Oil
 In June 2014, the balance on trade in oil was in deficit by £0.8 billion, compared with a deficit of £1.1 billion in May 2014.  Oil exports decreased by £0.1 billion to £2.4 billion and oil imports decreased by £0.3 billion to £3.3 billion.
@@ -302,7 +302,7 @@ In Q2 2014, the balance on trade in oil was in deficit by £2.7 billion, compare
 
 Source: Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/uktrade/uk-trade/june-2014/figure-11--balance-on-trade-in-oil.xls "XLS format") (25 Kb)
 
 ## Trade in Services
@@ -319,7 +319,7 @@ Total exports were £50.4 billion and total imports were £29.9 billion.
 
 Source: Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/uktrade/uk-trade/june-2014/figure-12--value-of-uk-trade-in-services.xls "XLS format") (40.5 Kb)
 
 ##### Revisions
@@ -333,7 +333,7 @@ The UK Trade record information for June 2014 can be accessed at the  [RTD UK Tr
 
 **Article on changes to the measurement of trade**
 
-On 10 June 2014, ONS published an article ' [Methodological changes to the measurement of Trade due to the introduction of new international standards](http://www.ons.gov.uk/ons/rel/naa1-rd/national-accounts-articles/impact-of-esa2010-and-bpm6-on-trade/index.html "Methodological changes to the measurement of Trade due to the introduction of new international standards") ' describing changes that will be implemented from September 2014 to how trade will be measured in the National Accounts, in order to comply with European statistical guidelines. 
+On 10 June 2014, ONS published an article ' [Methodological changes to the measurement of Trade due to the introduction of new international standards](http://www.ons.gov.uk/ons/rel/naa1-rd/national-accounts-articles/impact-of-esa2010-and-bpm6-on-trade/index.html "Methodological changes to the measurement of Trade due to the introduction of new international standards") ' describing changes that will be implemented from September 2014 to how trade will be measured in the National Accounts, in order to comply with European statistical guidelines.
 
 **Revisions**
 
@@ -345,7 +345,7 @@ As of 1 January 2014, Latvia joined the European Monetary Union (EMU). Therefore
 
 **2. Missing Trader Intra-Community (MTIC) Fraud**
 
-Users should also be aware that for some data prior to April 2012, the monthly data does not sum precisely to the quarters for the MTIC series due to rounding. 
+Users should also be aware that for some data prior to April 2012, the monthly data does not sum precisely to the quarters for the MTIC series due to rounding.
 
 **3. Special Events**
 
@@ -353,7 +353,7 @@ An article outlining the [ONS policy on special events](http://www.ons.gov.uk/on
 
 **4. Code of Practice for Official Statistics**
 
-National Statistics are produced to high professional standards set out in the [Code of Practice for Official Statistics](http://www.ons.gov.uk/ons/guide-method/the-national-statistics-standard/code-of-practice/index.html "Code of Practise - G&M"). They undergo regular quality assurance reviews to ensure that they meet customer needs. They are produced free from any political interference. © Crown copyright 2014. 
+National Statistics are produced to high professional standards set out in the [Code of Practice for Official Statistics](http://www.ons.gov.uk/ons/guide-method/the-national-statistics-standard/code-of-practice/index.html "Code of Practise - G&M"). They undergo regular quality assurance reviews to ensure that they meet customer needs. They are produced free from any political interference. © Crown copyright 2014.
 
 **5. Short Guide to UK Trade**
 
@@ -371,7 +371,7 @@ Monthly country movements are only detailed in this statistical bulletin where t
 
 In months where quarterly and three-monthly ending percentage changes for index data coincide, there may be small differences between the data for methodological reasons. Quarterly data are the indexed form of an underlying constant price (for volume indices) or consistent quantity (for price indices) series. Three-month ending data are the average of the index data in that period.
 
-**VAT Missing Trader Intra Community (MTIC) fraud** 
+**VAT Missing Trader Intra Community (MTIC) fraud**
 
 Import figures for trade in goods include adjustments to allow for the impact of VAT MTIC fraud.
 
@@ -381,7 +381,7 @@ Changes to the pattern of trading associated with MTIC fraud can make it difficu
 
 International convention determines that the treatment of the impact is to adjust imports upwards by the relevant amounts of missing declarations (non-response). However, users may wish to interpret short term movements in imports excluding that part of the fraudulent activity that is not included in the import estimates.  For this purpose an analysis of the import figures with the VAT MTIC adjustments excluded is shown in Table 13.
 
-**Definitions and explanations** 
+**Definitions and explanations**
   
 A glossary of terms is published in the [UK Balance of Payments - The Pink Book, 2013](http://www.ons.gov.uk/ons/rel/bop/united-kingdom-balance-of-payments/2013/index.html "UK Balance of Payments - The Pink Book, 2013").
 
@@ -393,12 +393,12 @@ In addition, it is a major component of two other key economic statistics: UK gr
 
 **Notes on tables**
 
-Rounding: 
+Rounding:
 The sum of constituent items in tables does not always agree exactly with the totals shown due to rounding.
 
-Symbols: 
-- ..Not applicable 
-- -Nil or less than half the final digit shown. 
+Symbols:
+- ..Not applicable
+- -Nil or less than half the final digit shown.
 
 **6. Methods**
 **Composition of the data**
@@ -417,7 +417,7 @@ Chain-linked indices (chained volume measures) which are indexed to form the vol
 
 The implied price deflators derived by comparing current price data to chained volume measures data are not the same as the price indices published in this statistical bulletin because the former are current weighted while the latter are base (2010) weighted.
 
-Changes in trade associated with VAT MTIC fraud mean that comparisons of volume and prices (both including and excluding trade associated with VAT MTIC fraud) should be treated with a great deal of caution.   
+Changes in trade associated with VAT MTIC fraud mean that comparisons of volume and prices (both including and excluding trade associated with VAT MTIC fraud) should be treated with a great deal of caution.
    
 A [paper (384.4 Kb Pdf)](http://www.ons.gov.uk/ons/guide-method/method-quality/specific/gss-methodology-series/gss-methodology-series--36--statistics-on-trade-in-goods.pdf "GSS Methodology Series #36 - Statistics on Trade in Goods") , Statistics on Trade in Goods (GSS Methodological Series No. 36) describing the adjustments that need to be applied to conform to IMF definitions for Balance of Payments and the division of responsibility between ONS and HMRC is available on the ONS website.
 
@@ -436,10 +436,10 @@ Trade in services estimates have been derived from a number of monthly and quart
 
 Table source: Office for National Statistics
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/uktrade/uk-trade/june-2014/ptl-table-12--revisions-analysis--uk-trade--june-2014.xls "XLS format") (30.5 Kb)
 
-The table covers estimates of UK trade first published from September 2009 (for July 2009) to August 2013 (for May 2013). [Revision spreadsheets](http://wasppreview/ons/publications/re-reference-tables.html?edition=tcm%3A77-347847 "Revision spreadsheets May 2014") giving these estimates and the calculations behind the averages in the table are available on the ONS website.   
+The table covers estimates of UK trade first published from September 2009 (for July 2009) to August 2013 (for May 2013). [Revision spreadsheets](http://wasppreview/ons/publications/re-reference-tables.html?edition=tcm%3A77-347847 "Revision spreadsheets May 2014") giving these estimates and the calculations behind the averages in the table are available on the ONS website.
   
 An [article (2.33 Mb Pdf)](http://www.ons.gov.uk/ons/rel/elmr/economic-and-labour-market-review/no--5--may-2007/economic---labour-market-review.pdf "Economic and Labour Review") analysing past revisions to quarterly balance of payments current account data was published in the May 2007 edition of Economic & Labour Market Review. It is available on the ONS website.
 
@@ -451,17 +451,17 @@ Data have been combined for the United States & Puerto Rico and for Dubai, Abu D
 
 **9. Summary quality report**
 
-A [Summary Quality Report (91.3 Kb Pdf)](http://www.ons.gov.uk/ons/guide-method/method-quality/quality/quality-information/economy/summary-quality-report-for-uk-trade.pdf "Summary Quality Report for UK Trade") for this statistical bulletin and associated data can be found on the ONS website. 
+A [Summary Quality Report (91.3 Kb Pdf)](http://www.ons.gov.uk/ons/guide-method/method-quality/quality/quality-information/economy/summary-quality-report-for-uk-trade.pdf "Summary Quality Report for UK Trade") for this statistical bulletin and associated data can be found on the ONS website.
 
 **10. National Accounts revisions policy**
 
-[National Accounts revision policy (27.8 Kb Pdf)](http://www.ons.gov.uk/ons/guide-method/revisions/revisions-policies-by-theme/economy/national-accounts-revisions-policy.pdf "National Accounts revision policy") can be found on the ONS website. 
+[National Accounts revision policy (27.8 Kb Pdf)](http://www.ons.gov.uk/ons/guide-method/revisions/revisions-policies-by-theme/economy/national-accounts-revisions-policy.pdf "National Accounts revision policy") can be found on the ONS website.
 
 **11. Revisions**
 
 Revisions Table 17R shows revisions to the main aggregates since the last Trade Statistical Bulletin of 10 July 2014. The revisions to trade in goods from April 2014 reflect revised data from Her Majesty’s Revenue and Customs and other data suppliers, revised estimates of trading associated with VAT MTIC fraud, later survey data on trade prices and a re-assessment of seasonal factors.
 
-There are no revisions to trade in services.   
+There are no revisions to trade in services.
 
 **12. Publication policy**
 
@@ -471,7 +471,7 @@ A list of the organisations given [pre-publication access](http://www.ons.gov.uk
 
 Supplementary quarterly data analysed by industry according to the Classification of Product by Activity 08 ( [UK Trade in Goods Analysed in Terms of Industries](http://www.ons.gov.uk/ons/rel/uktrade/uk-trade-in-goods-analysed-in-terms-of-industry/q1-2014/stb--uk-trade-in-goods-by-classification-of-product-by-activity-cpa--08---quarter-1-2014.html "UK Trade in Goods Analysed in Terms of Industries") ) are also available.
 
-The complete run of data in the tables of this statistical bulletin are also available to view and download in other electronic formats free of charge using the [ONS Time Series](http://www.ons.gov.uk/ons/rel/uktrade/uk-trade/june-2014/tsd-time-series-data--trade-in-goods-mrets--june-2014.html "ONS Time Series") Data website service. Users can download the complete statistical bulletin in a choice of zipped formats, or view and download their own selections of individual series. 
+The complete run of data in the tables of this statistical bulletin are also available to view and download in other electronic formats free of charge using the [ONS Time Series](http://www.ons.gov.uk/ons/rel/uktrade/uk-trade/june-2014/tsd-time-series-data--trade-in-goods-mrets--june-2014.html "ONS Time Series") Data website service. Users can download the complete statistical bulletin in a choice of zipped formats, or view and download their own selections of individual series.
 
 
 **14.** Follow ONS on [Twitter](http://www.ons.gov.uk/ons/external-links/social-media/twitter.html "Twitter") and receive up to date information about our statistical releases.
@@ -484,8 +484,8 @@ The complete run of data in the tables of this statistical bulletin are also ava
 
 Issued by: Office for National Statistics, Government Buildings, Cardiff Road, Newport, NP10 8XG
 
-Contact us: 
-Tel  0845 601 3034 
+Contact us:
+Tel  0845 601 3034
 Email  <info@ons.gsi.gov.uk>
 
 [ONS Homepage](http://www.ons.gov.uk/ "ONS Homepage")
