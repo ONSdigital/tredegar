@@ -47,9 +47,11 @@
                             <fieldset class='calendar'>
                                 <div>
                                     <label class="chart-area__controls__date__label">Contains</label>
-                                    <input name="keywords" placeholder="keywords" type="text" value="">
+                                    <input placeholder="keywords" ng-model="query">
                                 </div>
                                 <div>
+                                    <ons-help-tooltip tip="This function will not be available on the prototype, however in the future you will be able to select from here"></ons-help-tooltip>
+                                    </span>
                                     <label class="chart-area__controls__date__label" for="departments">Topic</label>
                                     <select class="single-row-select" id="topics" name="topics[]">
                                         <option value="all" selected="">All topics</option>
@@ -60,16 +62,18 @@
                                     </select>
                                 </div>
                                 <div class="filter date-range-filter">
-                                    <div class="div-int">Release date:</div>
+                                    <div class="div-int">Release date:
+                                        <ons-help-tooltip tip="This function will not be available on the prototype, however in the future you will be able to filter from here"></ons-help-tooltip>
+                                    </div>
                                     <label class="chart-area__controls__date__label" for="from_date">Published after</label>
-                                    <input id="from_date" name="from_date" placeholder="01/01/2013" type="text">
+                                    <input id="from_date" name="from_date" placeholder="01/01/2014" type="text">
                                     <label class="chart-area__controls__date__label" for="to_date">Published before</label>
-                                    <input id="to_date" name="to_date" placeholder="30/02/2013" type="text">
+                                    <input id="to_date" name="to_date" placeholder="30/02/2014" type="text">
                                 </div>
                             </fieldset>
                         </div>
                         <div class="grid-col desktop-grid-two-thirds tablet-grid-one-half">
-                            <ol class="list--table list--table--cushy table--striped-light list--table--releases" ng-repeat="item in calendarData">
+                            <ol class="list--table list--table--cushy table--striped-light list--table--releases" ng-repeat="item in calendarData | filter:query">
                                 <li class="list--table__item list--table__body">
                                     <div class="list--table__item__body list--table__item__body--date">
                                         <div class="list--table__item__body__inner">
@@ -103,10 +107,13 @@
                             <div class="calendar calendar-wrapper">You can use this filters to show only results that match your interests</div>
                             <fieldset class='calendar'>
                                 <div>
+                                    <ons-help-tooltip tip="This function will not be available on the prototype, however in the future you will be able to filter from here"></ons-help-tooltip>
                                     <label class="chart-area__controls__date__label">Contains</label>
-                                    <input name="keywords" placeholder="keywords" type="text" value="">
+                                    <input placeholder="keywords" ng-model="query">
                                 </div>
                                 <div>
+                                    <ons-help-tooltip tip="This function will not be available on the prototype, however in the future you will be able to select from here"></ons-help-tooltip>
+                                    </span>
                                     <label class="chart-area__controls__date__label" for="departments">Topic</label>
                                     <select class="single-row-select" id="topics" name="topics[]">
                                         <option value="all" selected="">All topics</option>
@@ -117,11 +124,13 @@
                                     </select>
                                 </div>
                                 <div class="filter date-range-filter">
-                                    <div class="div-int">Release date:</div>
+                                    <div class="div-int">Release date:
+                                        <ons-help-tooltip tip="This function will not be available on the prototype, however in the future you will be able to filter from here"></ons-help-tooltip>
+                                    </div>
                                     <label class="chart-area__controls__date__label" for="from_date">Published after</label>
-                                    <input id="from_date" name="from_date" placeholder="01/01/2013" type="text">
+                                    <input id="from_date" name="from_date" placeholder="01/01/2014" type="text">
                                     <label class="chart-area__controls__date__label" for="to_date">Published before</label>
-                                    <input id="to_date" name="to_date" placeholder="30/02/2013" type="text">
+                                    <input id="to_date" name="to_date" placeholder="30/02/2014" type="text">
                                 </div>
                             </fieldset>
                         </div>
