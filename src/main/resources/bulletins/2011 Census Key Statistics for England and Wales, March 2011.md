@@ -84,8 +84,8 @@ Usual residents were asked to assess their general state of health on a five poi
 
 This was not a new question in 2011 but its structure has changed. In 2001 it was based on a three point scale: good, fairly good or not good. The findings are therefore not directly comparable. For example, some people recording their health as ‘fair’ in 2011 might have said ‘fairly good’ using a 2001 scale but some might have said ‘not good’. An analysis of estimates relating to health and care will be published on 30 January 2013. This story will compare general health data with 2001 by [applying weights to the response categories (275.3 Kb Pdf)](http://www.ons.gov.uk/ons/rel/hsq/health-statistics-quarterly/no--41--spring-2009/an-investigation-into-the-impact-of-question-change-on-estimates-of-general-health-status-and-healthy-life-expectancy.pdf "An investigation into the impact of question change on estimates of General Health Status and Healthy Life Expenctancy").
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/ethnicity1.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/ethnicity1.html"></iframe>
 </div>
 
 Regionally London had the highest percentage of usual residents describing their health as very good; 50 per cent (4.1 million). The North East had the lowest figures; 44 per cent (1.1 million).
@@ -125,8 +125,8 @@ London also had the highest percentage of usual residents who did not state a re
 
 Figure 2 shows that the percentage of residents reporting no religion has increased since 2001 for all England regions and Wales. In Wales, nearly a third (32 per cent, 983,000) of residents stated they had no religion, higher than the England regions and a 14 percentage point increase on 2001.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/ethnicity2.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/ethnicity2.html"></iframe>
 </div>
 
 Information on religion is provided in tables [KS209EW (269.5 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-for-local-authorities-in-england-and-wales/rft-table-ks209ew.xls "RFT Table KS209EW") and [QS210EW (628.5 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-for-local-authorities-in-england-and-wales/rft-table-qs210ew.xls "RFT Table QS210EW") .
@@ -136,14 +136,14 @@ Further discussion of estimates relating to the religions of usual residents in 
 ## Ethnic group
 Most usual residents of England and Wales belonged to the White ethnic group (86 per cent, 48.2 million) in 2011, a decrease of five percentage points since 2001 (91 per cent, 47.5 million). The majority of these belonged to the White British group (80 per cent of the total population, 45.1 million).
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/ethnicity3.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/ethnicity3.html"></iframe>
 </div>
 
 Figure 4 shows that Wales had the largest percentage of people of White ethnic group in 2011, 96 per cent (2.9 million). In London in 2011, 45 per cent (3.7 million) out of 8.2 million usual residents were White British.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/ethnicity4.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/ethnicity4.html"></iframe>
 </div>
 
 Information on ethnic group is provided in tables [KS201EW (335 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-for-local-authorities-in-england-and-wales/rft-table-ks201ew.xls "RFT Table KS201EW")  and  [QS202EW (242.5 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-for-local-authorities-in-england-and-wales/rft-table-qs202ew.xls "RFT Table QS202EW") .
@@ -158,8 +158,8 @@ In England and Wales in 2011, 12 per cent (2.0 million) of all households with a
 
 This varies by region as can be seen in Figure 5.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/ethnicity5.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/ethnicity5.html"></iframe>
 </div>
 
 Changes between 2001 and 2011 could be a result of migration, either within or from outside the UK, including young adults attending university, and mortality.
@@ -181,8 +181,8 @@ In 2011, 13 per cent (7.5 million) of usual residents reported a country of birt
 
 At the regional level, Figure 6 shows that the percentage of the usually resident population of all England regions and Wales that was foreign born rose between 2001 and 2011, and that the relative distributions across the regions remained the same. In both 2001 and 2011 London had the largest percentage of foreign born residents; increasing 10 percentage points from 27 per cent (1.9 million) of usual residents being foreign born in 2001 to 37 per cent (3.0 million) in 2011. Hence in London in 2011, more than one in three usual residents was non-UK born, whereas in the North East, where the smallest percentage (five per cent, 129,000) of the population was foreign born, the ratio was one in 20.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/ethnicity6.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/ethnicity6.html"></iframe>
 </div>
 
 ### Age and year of arrival
@@ -191,8 +191,8 @@ The 2011 Census was the first to ask for information on the age and year of most
 
 Of the 13 per cent (7.5 million) of residents in England and Wales in 2011 who were not born in the UK, just over half (3.8 million) arrived between 2001 and 2011, as can be seen in Figure 7. This relates to higher levels of migration seen over the last decade due in part due to the accession of 10 countries into the EU in 2004. Between 2004 and 2006, 15 per cent (1.2 million) of non UK born usual residents arrived in England and Wales, and 16 per cent (1.2 million) arrived between 2007 and 2009. This compares with 17 per cent (1.2 million) in the decade 1991 to 2000. Foreign born usual residents who arrived prior to 2001 will have decreased as a proportion of the total, due to mortality, onward migration or return to country of origin.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/ethnicity7.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/ethnicity7.html"></iframe>
 </div>
 
 Information on age and year of arrival is provided in tables [QS802EW (331 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-for-local-authorities-in-england-and-wales/rft-table-qs802ew.xls "RFT Tables QS802EW") and [QS801EW (295.5 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-for-local-authorities-in-england-and-wales/rft-table-qs801ew.xls "RFT Table QS801EW") .
@@ -217,8 +217,8 @@ The number of residents who held a passport that was not a UK passport was nearl
 
 Subsequent releases from 2011 Census will include cross tabulations of passports held and country of birth, which together are a more complete indicator of migration status since, for example, British citizens can be born abroad and other people living in the UK who were born abroad can acquire British citizenship.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/ethnicity8.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/ethnicity8.html"></iframe>
 </div>
 
 The highest reported levels of passports held were in London, with 92 per cent (7.5 million) of usual residents holding at least one passport. This compares to Wales where 78 per cent (2.4 million) of usual residents held at least one passport. London was also the region with the highest percentage holding a non-UK passport (24 per cent, 2.0 million).
@@ -240,8 +240,8 @@ Subsequent releases from 2011 Census will include cross tabulations of main lang
 
 Households where one or more usual residents do not speak English as a main language are not evenly distributed across the regions, as shown in Figure 9. London had the highest percentage; 26 per cent (848,000) of households contained a usual resident whose main language was not English. The North East had the lowest percentage; three per cent (36,000) of households containing a usual resident whose main language was not English. This distribution is similar to that seen for foreign born usual residents.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/ethnicity9.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/ethnicity9.html"></iframe>
 </div>
 
 Information on household language is provided in table KS206EW (268 Kb Excel sheet) .
@@ -262,14 +262,14 @@ This section covers the usually resident population that lived in households, an
 
 In general, as can be seen in Figure 10, the relative proportions of accommodation types remained the same between 2001 and 2011 although the percentage of households living in purpose-built flats, maisonettes or apartments in a block of flats or tenements rose by two percentage points from 14 per cent (3.1 million) households in 2001 to 16 per cent (4.0 million) in 2011.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/ethnicity10.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/ethnicity10.html"></iframe>
 </div>
 
 The England regions and Wales showed similar percentages of households residing in the different types of accommodation, with the exception of London which had the smallest percentage (48 per cent, 1.6 million) of households residing in whole houses or bungalows. The percentage of households residing in terraced houses varies from 21 per cent (407,000) in the East Midlands to 30 per cent (359,000) in the North East. Accommodation type in the England regions and Wales is shown in Figure 11.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/ethnicity11.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/ethnicity11.html"></iframe>
 </div>
 
 ### Tenure
@@ -317,14 +317,14 @@ In London there was a decrease of 0.1 cars or vans available per household. The 
 
 Figure 12 shows that London was the only region in 2011 with fewer cars and vans (2.7 million) than households (3.3 million); in 2001 the North East also had fewer cars and vans than households.  The lower numbers of cars and vans in London may be related to factors such as high population densities and extensive public transport facilities.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/ethnicity12.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/ethnicity12.html"></iframe>
 </div>
 
 Figure 13 shows that the percentage of households with access to two, three, or four or more cars or vans increased whilst the number with none or one decreased. This is expected given the overall increase in cars and vans per household. 2011 Census cross tabulations that are being published subsequently, may help to explain the increase in cars or vans available to households, eg people in households by age, will be published in 2013.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/ethnicity13.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/ethnicity13.html"></iframe>
 </div>
 
 ## Marital status
@@ -382,8 +382,8 @@ Figure 14 shows that a higher percentage (12 per cent, 370,000) of usual residen
 
 A lower percentage of London residents (eight per cent, 690,000) provided unpaid care than in any other England region.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/ethnicity14.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/ethnicity14.html"></iframe>
 </div>
 
 Information on provision of unpaid care is provided in table [KS301EW (403.5 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-for-local-authorities-in-england-and-wales/rft-table-ks301ew.xls "RFT Table KS301EW").
@@ -399,8 +399,8 @@ Economic activity is categorised into various groups2 as shown in Figure 15.
 
 Figure 15 also highlights the differences in male and female employment types amongst 16 to 74 year olds. In 2011 almost four times as many women (33 per cent, 4.4 million) were part-time employees compared to men (eight per cent, 1.2 million).
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/ethnicity15.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/ethnicity15.html"></iframe>
 </div>
 
 Information on economic activity is provided in tables [KS601EW (360.5 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-for-local-authorities-in-england-and-wales/rft-table-ks603ew.xls "RFT Table KS601EW") , [KS602EW (361 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-for-local-authorities-in-england-and-wales/rft-table-ks602ew.xls "RFT Table KS602EW") and [KS603EW (358.5 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-for-local-authorities-in-england-and-wales/rft-table-ks603ew.xls "RFT Table KS603EW") .
@@ -411,8 +411,8 @@ The number of hours worked1 by employed usual residents aged 16 to 74 decreased 
 
 Figure 16 shows the clear difference between males and females in the numbers of hours worked.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/ethnicity16.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/ethnicity16.html"></iframe>
 </div>
 
 Information on hours worked is provided in table KS604EW (382.5 Kb Excel sheet) .
@@ -425,8 +425,8 @@ Economic activity as collected by 2011 Census is not directly comparable with 20
 
 The level of unemployment varied between the regions from eight per cent (103,000) in the North East to five per cent (126,000) in the South West, as can be seen in Figure 17.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/ethnicity17.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/ethnicity17.html"></iframe>
 </div>
 
 Information on unemployment as collected by the census is provided in tables [KS601EW (360.5 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-for-local-authorities-in-england-and-wales/rft-table-ks601ew.xls "RFT Table KS601EW") , [KS602EW (361 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-for-local-authorities-in-england-and-wales/rft-table-ks602ew.xls "RFT Table KS602EW") and [KS603EW (358.5 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-for-local-authorities-in-england-and-wales/rft-table-ks603ew.xls "RFT Table KS603EW") .
@@ -448,16 +448,16 @@ The qualifications classification enables estimates to be produced of the percen
 
 In England and Wales 27 per cent (12.4 million) of usual residents aged 16 and over had achieved Level 4 or above qualifications in 2011. As shown in Figure 18, this was a higher percentage than those that had no qualifications; 23 per cent (10.3 million). The group who reported no qualifications includes those aged 16 and over who were still studying ie some respondents had not completed their education.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/ethnicity18.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/ethnicity18.html"></iframe>
 </div>
 
 Of the England regions and Wales, London reported the highest levels of qualifications held; 38 per cent (2.5 million) of usual residents had Level 4 or above qualifications and 18 per cent (1.2 million) of usual residents had no qualifications.
 
 Excluding London, the highest percentage of Level 4 or above attainment was 30 per cent (2.1 million) in the South East, with the lowest percentage of Level 4 or above attainment in the North East at 22 per cent (473,000), a difference of eight percentage points. When London is included, this range doubles to a difference of 16 percentage points, seen between London and the North East. The percentage of the usually resident population in London and surrounding regions with Level 4 or above qualifications may be related to increased levels of graduate employment opportunities in these areas.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/ethnicity19.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/ethnicity19.html"></iframe>
 </div>
 
 Information on qualifications is provided in table [KS501EW (307 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-for-local-authorities-in-england-and-wales/rft-table-ks501ew.xls "RFT Table KS501EW").

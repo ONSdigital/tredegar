@@ -45,8 +45,8 @@ Women born in 1982, who have reached age 30 in 2012, are also used as a comparis
 ## Average Family Size
 The average number of live-born children a woman has had by the end of her childbearing years (completed family size) has been falling but has stabilised for recent cohorts (Figure 1). Women born in 1967 had on average 1.91 live-born children, which remains unchanged from the 1966 cohort. This compares with women born in the 1930s and 1940s, who had on average between 2.1 and 2.4 children. Cohorts of women born from 1958 onwards have had on average fewer than two children per woman. This decrease in the average family size is mainly due to rising levels of childlessness, which is discussed further in the next section.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/cohort1.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/cohort1.html"></iframe>
 </div>
 
 
@@ -70,8 +70,8 @@ The average number of children women have had up to their 30th birthday can give
 ## Childlessness
 Childlessness is estimated as the proportion of women who have not had a live birth by a specific age.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/cohort2.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/cohort2.html"></iframe>
 </div>
 
 ##### Notes:
@@ -97,8 +97,8 @@ Berrington, A.M. (2004). Perpetual postponers? Women's, men's and couple's ferti
 
 ## Teenage Childbearing
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/cohort3.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/cohort3.html"></iframe>
 </div>
 
 ##### Notes:
@@ -111,8 +111,8 @@ Conception statistics include all pregnancies of women usually resident in Engla
 ##### Notes for Teenage Childbearing
 1. More details on teenage conceptions can be found in the annual [ONS conceptions release](http://www.ons.gov.uk/ons/rel/vsob1/conception-statistics--england-and-wales/index.html "Conception Statistics, England and Wales index").
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/cohort4.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/cohort4.html"></iframe>
 </div>
 
 
@@ -123,8 +123,8 @@ The proportion of women with a one-child family has shown a slight increase for 
 ## The Changing Age Pattern of Fertility
 Looking at the fertility rates of selected cohorts at particular age milestones highlights how the age distribution of women giving birth has varied over time. As an example, the three vertical lines on Figure 5 allow a comparison of the age profile of fertility in the 1967 cohort, who have completed their childbearing, their mother's generation cohort of 1940 and that of the 1982 cohort to date.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/cohort5.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/cohort5.html"></iframe>
 </div>
 
 For the 1967 cohort the highest fertility rate of those shown was at the age of 25, closely followed by age 30. Lower levels of fertility were recorded at the ages of 20 and 35, while the number of live births per 1,000 women at age 40 was lower still. On average the 1967 cohort had 1.91 children per woman. However, fertility levels at age 35 and 40 were higher in the 1967 cohort than in the 1940 cohort.  

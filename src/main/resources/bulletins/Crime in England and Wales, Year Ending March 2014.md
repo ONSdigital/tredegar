@@ -28,8 +28,8 @@ In accordance with the Statistics and Registration Service Act 2007, statistics 
 
 Latest figures from the Crime Survey for England and Wales (CSEW) show there were an estimated 7.3 million incidents of crime against households and resident adults (aged 16 and over) in England and Wales for the year ending March 2014 (Table 1). This represents a 14% decrease compared with the previous year’s survey and continues the long downward trend seen since the mid 1990s. The latest estimate is the lowest since the survey began in 1981. The total number of CSEW incidents is estimated to be 29% lower than the 2008/09 survey, and 62% lower than its peak level in 19951 (Figure 1).
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/crime1.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/crime1.html"></iframe>
 </div>
 
 ##### Notes:
@@ -85,8 +85,8 @@ CSEW estimates for robbery and theft from the person were not significantly diff
 
 Figure 2 shows selected police recorded crime offences and focuses on those categories with notable changes in the year ending March 2014 compared with the previous year.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/crime2.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/crime2.html"></iframe>
 </div>
 
 ##### Notes:
@@ -291,8 +291,8 @@ Figure 3 shows the time-series for both the CSEW and police recorded offences. C
 
 Police recorded crime also increased during most of the 1980s, reaching a peak in 1992, and then fell each year until 1998/99 when the expanded coverage and changes in the HOCR resulted in an increase in recorded offences; see Chapter 3 of the User Guide for more information. This was followed by the introduction of the NCRS in April 2002 which led to a further rise in recording in 2002/03 and 2003/04. Following the bedding in of these changes, the direction of trends for police recorded crime and the CSEW have generally tracked each other well since 2003/04, with both data series showing declines in crime over this period, with the exception of some short term divergences in recent years. However, for the most recent year this pattern has changed with the recorded crime series showing smaller reductions than the survey.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/crime3.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/crime3.html"></iframe>
 </div>
 
 ##### Notes:
@@ -317,14 +317,12 @@ The CSEW showed a 20% fall in its estimate of the levels of violence based on in
 
 While the low estimates for the quarters July to September and October to December 2013 are driving the decrease in violence for 2013/14, as these two quarters become part of the comparison year for 2014/15 it is likely in future bulletins that the CSEW will report an increase in violence. As the low quarterly estimates have impacted considerably on short term comparison, when interpreting the figures it is important to look at the longer term trend in violence.
 
-#### Figure 4: Quarterly estimates in CSEW violent crime, April 2011 to March 2014
-[![Figure 4: Quarterly estimates in CSEW violent crime, April 2011 to March 2014](http://www.ons.gov.uk/ons/resources/figure4_tcm77-371245.png)](http://www.ons.gov.uk/ons/resources/figure4_tcm77-371245.png "Figure 4: Quarterly estimates in CSEW violent crime, April 2011 to March 2014")
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/crime4.html"></iframe>
+</div>
 
 ##### Notes:
 1. Source: Crime Survey for England and Wales, Office for National Statistics
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/crime-stats/crime-statistics/period-ending-march-2014/chd-figure-4.xls) (75 Kb)
 
 Latest CSEW estimates show there were 1.3 million violent incidents in England and Wales, which is the lowest number recorded since the survey began in 1981 (Figure 5). Violent incidents constitute 18% of all CSEW crime in the latest survey, making them an important driver of overall CSEW trends.
 
@@ -332,8 +330,8 @@ With regard to the latest estimate, the number of violent incidents has fallen 2
 
 The reduction in violent crime as shown by the CSEW is supported by evidence from several health data sources, for example, research conducted by the Violence and Society Research Group at Cardiff University ([Sivarajasingam et al., 2014](http://www.cardiff.ac.uk/news/resource/12846.35244.file.eng.pdf "Sivarajasingam et al., 2014"). Findings from their annual survey, covering a sample of hospital emergency departments and walk-in centres in England and Wales, showed an overall decrease of 12% in serious violence-related attendances in 2013 compared with 2012. In addition, the most recent National Health Service (NHS) data on assault admissions to hospitals in England show that for the 12 months to the end of March 2013 there were 32,979 hospital admissions for assault, a reduction of 15% compared with figures for the preceding 12 months3.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/crime5.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/crime5.html"></iframe>
 </div>
 
 ##### Notes:
@@ -372,8 +370,8 @@ Robbery is an offence in which force or the threat of force is used either durin
 
 The number of robberies recorded by the police provides a more robust indication of trends than the CSEW, although not all robberies will be reported to the police. Robbery is a relatively low volume offence accounting for less than 2% of all police recorded crime in the year ending March 2014. These offences are concentrated in a small number of metropolitan forces with around half of all offences recorded in London, and a further 19% in the Greater Manchester, West Midlands and West Yorkshire police force areas combined ( [Table P1 (257.5 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/crime-stats/crime-statistics/period-ending-march-2014/rft-table-5.xls "RFT Table 5") ).
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/crime6.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/crime6.html"></iframe>
 </div>
 
 ##### Notes:
@@ -415,8 +413,8 @@ The rise in rapes and other sexual offences may in part be due to increases in r
 
 Similar increases are reflected in a media release by the National Society for the Prevention of Cruelty to Children (NSPCC), which reported that police recorded offences relating to sexual abuse on children under the age of 11 increased 16% in the 2012/13 financial year when compared with the previous year2. The NSPCC attributed some of this increase to the Yewtree effect. The NSPCC have also recently released the findings of a [focus group exploration](http://www.nspcc.org.uk/news-and-views/media-centre/press-releases/2014/savile-victim-report/savile-victim-barriers-reporting-sexual-abuse_wdn101493.html "focus group exploration") into the underreporting of crimes by Jimmy Savile; in particular, attributing the media coverage of the crimes as a key reason as to why victims had felt able to come forward and report their abuse to the police.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/crime7.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/crime7.html"></iframe>
 </div>
 
 ##### Notes:
@@ -442,8 +440,8 @@ Figure 8 illustrates that the increase in sexual offences across forces for whic
 - 37% in historic offences occurring more than 20 years ago, accounting for 16% of the increase in volume of overall sexual offences; and
 - 29% in offences occurring between 1 and 20 years ago, accounting for 24% of the increase in volume of overall sexual offences.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/crime8.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/crime8.html"></iframe>
 </div>
 
 ##### Notes:
@@ -499,8 +497,8 @@ Figures for the year ending March 2014 show 4,843 offences involving firearms we
 
 Figure 9 shows the trend from 2002/03 and demonstrates that since 2005/06 there has been a substantial decrease in the number of offences involving firearms recorded by the police. The volume of such offences has fallen by nearly half (41%) since 2008/09 (Table 11b). This reduction in offences involving firearms is, in percentage terms, a larger reduction than that seen in overall violent crime.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/crime9.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/crime9.html"></iframe>
 </div>
 
 ##### Notes:
@@ -522,8 +520,8 @@ The long-term trend in CSEW theft reflects the long-term trend in total CSEW cri
 
 As theft offences make up half of all police recorded crime, it is an important driver of the overall trend. Since 2002/03, the number of theft offences has shown year on year decreases and is 43% lower in the year ending March 2014 than in 2003/04 (Figure 10). The latest figures show a 3% decrease compared with the previous year ( [Appendix table A4 (417.5 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/crime-stats/crime-statistics/period-ending-march-2014/rft-table-2.xls "RFT Table 2") ).
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/crime10.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/crime10.html"></iframe>
 </div>
 
 ##### Notes:
@@ -542,8 +540,8 @@ In this bulletin there have been some minor reclassifications of the Crime Surve
 
 Despite some fluctuations from year to year, the underlying trend in domestic burglary remained fairly flat in the CSEW between 2004/05 and 2011/12 (Figure 11). Since then estimates have fallen and incidents of domestic burglary for the year ending March 2014 are 12% lower than the previous year (Table 12b).
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/crime11.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/crime11.html"></iframe>
 </div>
 
 ##### Notes:
@@ -565,8 +563,8 @@ The Crime Survey for England and Wales (CSEW) covers offences against vehicles o
 
 Over the longer term, the CSEW indicates a consistent downward trend in levels of vehicle-related theft, with the latest estimates being 35% lower than those observed in the 2008/09 survey, and 55% lower than the 2003/04 survey. As shown in Figure 12, the rate of reduction in vehicle offences since the mid-1990s has been striking, and as previously reported, a widely accepted theory is that this is in-part due to improvements in vehicle security2 . The latest estimates indicate that a vehicle-owning household was around five times less likely to become a victim of vehicle-related theft in the year ending March 2014 survey than in 1995, with around 4 in 100 vehicle-owning households being victims in the year ending March 2014 survey compared with around 20 in 100 households in the 1995 survey (Table 14a). There were an estimated 934,000 vehicle-related thefts in 2013/14, which is the lowest number recorded since the survey began in 1981.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/crime12.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/crime12.html"></iframe>
 </div>
 
 ##### Notes:
@@ -609,8 +607,8 @@ The CSEW showed a 24% fall in other household theft based on interviews in the y
 
 The large majority of other household thefts are accounted for by theft from outside a dwelling (90%). Generally these incidents involve theft of garden furniture or household items/furniture taken from outside people’s homes3, and are largely opportunistic in nature. Theft from outside a dwelling has seen a similar fall, compared with the previous year, to theft from a dwelling (23% and 26%, respectively). The latest estimate for theft from a dwelling is 67% lower than the 1995 survey estimate ( [Appendix table A1 (417.5 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/crime-stats/crime-statistics/period-ending-march-2014/rft-table-2.xls "RFT Table 2") ).
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/crime13.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/crime13.html"></iframe>
 </div>
 
 ##### Notes:
@@ -659,8 +657,8 @@ The offence ‘Making off without payment’ has been moved from within fraud (w
 
 In the year ending March 2014 the police recorded 51,639 making off without payment offences, which was a 2% increase compared with the previous year. The numbers provided by police forces as part of the back series show a steep decline in this particular offence, with the latest numbers 61% lower than those in 2003/04 (132,624 offences) ( [Appendix table A4 (417.5 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/crime-stats/crime-statistics/period-ending-march-2014/rft-table-2.xls "RFT Table 2") ).
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/crime14.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/crime14.html"></iframe>
 </div>
 
 ##### Notes:
@@ -680,8 +678,8 @@ As well as theft of unattended items, the police recorded ‘Other theft’ sub-
 ## Criminal Damage
 As part of the reclassification process, vandalism is now referred to as criminal damage. This is only a change in name and the types of offences included in this category have not changed. Based on Crime Survey for England and Wales (CSEW) interviews in the year ending March 2014, there were around 1.5 million incidents of criminal damage of personal and household property; this was a decrease of 17% from the previous year (Tables 18a and 18b). Figure 15 shows the long-term trend for criminal damage, which has followed a slightly different pattern compared with most other CSEW crime groups. Criminal damage peaked in 1993 with 3.4 million incidents followed by a series of modest falls (when compared with other CSEW offence types) until the 2003/04 survey (2.4 million offences). There was then a short upward trend until the 2006/07 CSEW (2.9 million offences), after which there were falls to its current level, the lowest since the survey began.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/crime15.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/crime15.html"></iframe>
 </div>
 
 ##### Notes:
@@ -710,8 +708,8 @@ Other crimes against society showed a decrease of 1% compared with the previous 
 
 Since 2003/04, the number of other crimes against society increased year on year until it peaked in 2007/08 (542,656 offences). Since 2007/08 the number of offences against society recorded has decreased year on year, mainly driven by the decreases in public order offences. The marked increases in the recording of these offences between 2004/05 and 2008/09 coincide with the priority placed on increasing the numbers of offences brought to justice associated with the previous Government’s 2005-2008 Public Service Agreement targets. This is particularly reflected in the trend for drug offences and public order offences (see relevant sections below for further details).
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/crime16.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/crime16.html"></iframe>
 </div>
 
 ##### Notes:
@@ -813,8 +811,8 @@ Separate figures are available from Financial Fraud Action UK (FFA UK) who repor
 
 The industry suggests that a combination of the use of fraud screening detection tools by retailers, banks and the cards industry, the introduction of chip and pin technology, enhanced user and industry awareness and improved prevention and detection initiatives have led to the decrease in plastic card fraud. More detailed information including a breakdown of plastic card fraud by type in the UK and abroad, is available from the [UK Cards Association](http://www.theukcardsassociation.org.uk/plastic_fraud_figures/index.asp "UK Cards Association").
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/crime17.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/crime17.html"></iframe>
 </div>
 
 ##### Notes:
@@ -872,8 +870,8 @@ Furthermore, data on ASB incidents before and after 2011/12 are not directly com
 
 Figures for the period 2007/08 to 2013/14 also show declines in the number of ASB incidents recorded by the police consistent with recent trends in total police recorded crime.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/crime18.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/crime18.html"></iframe>
 </div>
 
 #### Notes:
@@ -892,8 +890,8 @@ All forces adopted these new definitions, though in the HMIC report it was found
 
 In the year ending March 2014, 66% of the ASB incidents categorised by the police were identified as ‘Nuisance’; 28% as ‘Personal’; and 6% as ‘Environmental’ (Figure 19). This distribution may reflect propensity of reporting rather than the actual distribution of ASB by type.
 
-<div frameBorder ="0" scrolling = "no" class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/crime19.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/crime19.html"></iframe>
 </div>
 
 #### Notes:

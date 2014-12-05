@@ -40,7 +40,8 @@ public class Error500 implements Boom {
 //			// occurred, or it may not be possible to access the 500 content.
 //			System.out.println("Error sending error page to response.");
 //		}
-		res.sendRedirect("/#!/500");
+//		res.sendRedirect("/#!/500");
+		res.setStatus(500);
 		return null;
 	}
 

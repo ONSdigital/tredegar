@@ -4,6 +4,9 @@
     <div class="wrapper nav-panels">
         <div class="grid-wrap">
             <div class="grid-col tablet-wide">
+                <div ng-if="noSearchTerm" id="search-results-total" class="search-results-total">
+                        Plese enter search term
+                </div>
                 <div ng-show="showSearchResults" id="search-results-total" class="search-results-total">
                     <span class='results-total'>
                         {{searchResponse.numberOfResults}}
@@ -77,7 +80,7 @@
 
 
 <!--Search Results List, grid col two thirds-->
-<div class="wrapper nav-panels">
+<div class="wrapper nav-panels" ng-if="!noSearchTerm">
     <div class="grid-wrap">
         <div class="grid-col tablet-wide-grid-two-thirds">
 

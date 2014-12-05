@@ -32,19 +32,20 @@ public class ScanFileSystem {
 					"List of fileNames and Path dir cannot be null");
 		}
 
-		DirectoryStream<Path> stream = Files.newDirectoryStream(dir);
-		for (Path path : stream) {
-			if (path.toFile().isDirectory())
-				getFileNames(fileNames, path);
-			else {
-				String fileName = path.toAbsolutePath().toString();
+		// java 7 try-with-resources automatically closes streams after use
+		try (DirectoryStream<Path> stream = Files.newDirectoryStream(dir)) {
+			for (Path path : stream) {
+				if (path.toFile().isDirectory())
+					getFileNames(fileNames, path);
+				else {
+					String fileName = path.toAbsolutePath().toString();
 
-				if (isRequiredForIndex(fileName)) {
-					fileNames.add(fileName);
+					if (isRequiredForIndex(fileName)) {
+						fileNames.add(fileName);
+					}
 				}
 			}
 		}
-		stream.close();
 
 		return fileNames;
 	}
@@ -66,18 +67,19 @@ public class ScanFileSystem {
 					"List of fileNames and Path dir cannot be null");
 		}
 
-		DirectoryStream<Path> stream = Files.newDirectoryStream(dir);
-		for (Path path : stream) {
-			if (path.toFile().isDirectory()) {
-				getFiles(files, path, type);
-			} else {
-				File file = path.toFile();
-				if (isCollectionItem(file.getAbsolutePath(), type)) {
-					files.add(file);
+		// java 7 try-with-resources automatically closes streams after use
+		try (DirectoryStream<Path> stream = Files.newDirectoryStream(dir)) {
+			for (Path path : stream) {
+				if (path.toFile().isDirectory()) {
+					getFiles(files, path, type);
+				} else {
+					File file = path.toFile();
+					if (isCollectionItem(file.getAbsolutePath(), type)) {
+						files.add(file);
+					}
 				}
 			}
 		}
-		stream.close();
 
 		return files;
 	}

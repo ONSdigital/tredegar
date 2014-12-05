@@ -117,7 +117,7 @@
 			controller: "PreviousCtrl",
 			resolve: {
 				title: ['PageUtil', function(PageUtil) {
-					PageUtil.setTitle('Previs Versions')
+					PageUtil.setTitle('Previous Versions')
 				}]
 			}
 		}).
@@ -138,7 +138,7 @@
 				}]
 			}
 		}).
-		when('/search/:searchTerm', resolveSearch()).
+		when('/search/:searchTerm?', resolveSearch()).
 		when('/search/:searchTerm/page/:page', resolveSearch()).
 		when('/survey', {
 			templateUrl: 'app/templates/survey/survey.html',

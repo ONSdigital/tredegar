@@ -1,11 +1,15 @@
 package com.github.onsdigital.api.search;
 
 import java.net.URI;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Date;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -13,6 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.GET;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.exception.ExceptionUtils;
 
 import com.github.davidcarboni.restolino.framework.Endpoint;
@@ -34,103 +39,20 @@ public class SearchConsole {
 
 	static String mongoUri = Configuration.getMongoDbUri();
 	static ExecutorService pool = Executors.newCachedThreadPool();
+	static String never = "Never any results";
+	static String noneNow = "Currently returning no results";
+	static String someNow = "Currently returning results";
+	static String always = "Always returns results";
 
 	@GET
-	public Map<String, List<Count>> results(HttpServletRequest request, HttpServletResponse response) throws Exception {
+	public Object results(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
 		Serialiser.getBuilder().setPrettyPrinting();
-		Map<String, List<Count>> result = new HashMap<>();
-		result.put("No results", queryNoResults());
-		result.put("Most Searched", querySearches());
+		List<DBObject> queryDocuments = getQueryDocuments();
+		List<QueryCount> queryCounts = countQueries(queryDocuments);
+		JsonResult result = new JsonResult();
+		sortQueries(queryCounts, result);
 		return result;
-	}
-
-	private List<Count> queryNoResults() throws Exception {
-
-		MongoClientURI uri = new MongoClientURI(Configuration.getMongoDbUri());
-		MongoClient client = null;
-		try {
-			// Connect to the database:
-			client = new MongoClient(uri);
-			DB db = client.getDB(uri.getDatabase());
-
-			// Get the collection:
-			DBCollection searchTerms = db.getCollection("searchTerms");
-
-			// Get the results:
-			BasicDBObject findQuery = new BasicDBObject("results", 0);
-
-			DBCursor docs = searchTerms.find(findQuery);
-
-			Map<String, Count> counts = new HashMap<>();
-			while (docs.hasNext()) {
-				DBObject doc = docs.next();
-				String query = String.valueOf(doc.get("query"));
-				Count count = counts.get(query);
-				if (count == null) {
-					count = new Count(query);
-					counts.put(query, count);
-				}
-				count.count++;
-			}
-
-			List<Count> result = new ArrayList<>(counts.values());
-			Collections.sort(result);
-			return result;
-
-		} catch (Exception e) {
-			System.out.println("Error connecting to MongoDB at: " + mongoUri);
-			System.out.println(ExceptionUtils.getStackTrace(e));
-			throw e;
-		} finally {
-			if (client != null) {
-				client.close();
-			}
-		}
-	}
-
-	private List<Count> querySearches() throws Exception {
-
-		MongoClientURI uri = new MongoClientURI(Configuration.getMongoDbUri());
-		MongoClient client = null;
-		try {
-			// Connect to the database:
-			client = new MongoClient(uri);
-			DB db = client.getDB(uri.getDatabase());
-
-			// Get the collection:
-			DBCollection searchTerms = db.getCollection("searchTerms");
-
-			// Get the results:
-			BasicDBObject findQuery = new BasicDBObject("results", new BasicDBObject("$gt", 0));
-
-			DBCursor docs = searchTerms.find(findQuery);
-
-			Map<String, Count> counts = new HashMap<>();
-			while (docs.hasNext()) {
-				DBObject doc = docs.next();
-				String query = String.valueOf(doc.get("query"));
-				Count count = counts.get(query);
-				if (count == null) {
-					count = new Count(query);
-					counts.put(query, count);
-				}
-				count.count++;
-			}
-
-			List<Count> result = new ArrayList<>(counts.values());
-			Collections.sort(result);
-			return result;
-
-		} catch (Exception e) {
-			System.out.println("Error connecting to MongoDB at: " + mongoUri);
-			System.out.println(ExceptionUtils.getStackTrace(e));
-			throw e;
-		} finally {
-			if (client != null) {
-				client.close();
-			}
-		}
 	}
 
 	static void save(final String query, final int page, final Object searchResult) {
@@ -140,6 +62,169 @@ public class SearchConsole {
 		} else {
 			saveSearchResult(query, page, (SearchResult) searchResult);
 		}
+	}
+
+	static class JsonResult {
+
+		int never;
+		int always;
+		int noneNow;
+		int someNow;
+		Map<String, List<QueryCount>> categories;
+
+		JsonResult() {
+			// Ordered Map for the sake of human-readability:
+			categories = new LinkedHashMap<>();
+			categories.put(SearchConsole.never, new ArrayList<SearchConsole.QueryCount>());
+			categories.put(SearchConsole.noneNow, new ArrayList<SearchConsole.QueryCount>());
+			categories.put(SearchConsole.someNow, new ArrayList<SearchConsole.QueryCount>());
+			categories.put(SearchConsole.always, new ArrayList<SearchConsole.QueryCount>());
+		}
+
+	}
+
+	private List<DBObject> getQueryDocuments() throws Exception {
+		List<DBObject> result = new ArrayList<>();
+
+		MongoClientURI uri = new MongoClientURI(Configuration.getMongoDbUri());
+		MongoClient client = null;
+		try {
+			// Connect to the database:
+			client = new MongoClient(uri);
+			DB db = client.getDB(uri.getDatabase());
+
+			// Get the collection:
+			DBCollection searchTerms = db.getCollection("searchTerms");
+
+			DBCursor docs = searchTerms.find();
+
+			while (docs.hasNext()) {
+				result.add(docs.next());
+			}
+
+		} catch (Exception e) {
+			System.out.println("Error connecting to MongoDB at: " + mongoUri);
+			System.out.println(ExceptionUtils.getStackTrace(e));
+			throw e;
+		} finally {
+			if (client != null) {
+				client.close();
+			}
+		}
+
+		return result;
+	}
+
+	private List<QueryCount> countQueries(List<DBObject> queryDocuments) {
+
+		// Start with a map to collate queries that are the same:
+		Map<String, QueryCount> queryCounts = new HashMap<>();
+		for (DBObject doc : queryDocuments) {
+
+			// Get the count for this query, creating it if necessary:
+			String query = doc.get("query").toString();
+			if (StringUtils.equals("inf", query)) {
+				System.out.println("inf");
+			}
+			System.out.println();
+			QueryCount count = queryCounts.get(query);
+			if (count == null) {
+				count = new QueryCount(query);
+				queryCounts.put(query, count);
+			}
+
+			// Increment the times this query has been seen:
+			count.count++;
+
+			// Record the number of results returned by the query on that
+			// occasion. Records with no date are the oldest, so we use a
+			// default date value:
+			Object resultCount = doc.get("results");
+			Object resultDate = doc.get("date");
+			Date nullDate = null;
+			if (resultCount != null) {
+				Date date = null;
+				if (resultDate != null) {
+					date = (Date) resultDate;
+				} else {
+					date = toDate(nullDate);
+				}
+				if (resultCount instanceof Integer) {
+					count.results.put(date, Long.valueOf(resultCount.toString()));
+				} else {
+					count.results.put(date, (Long) resultCount);
+				}
+			}
+		}
+
+		return new ArrayList<SearchConsole.QueryCount>(queryCounts.values());
+	}
+
+	private void sortQueries(List<QueryCount> queryCounts, JsonResult result) {
+
+		// Sort into "never any results", "always results",
+		// "currently some results" and "currently no results":
+		for (QueryCount queryCount : queryCounts) {
+
+			// Work out if this query has never/always/sometimes returned
+			// results:
+			boolean none = false;
+			boolean some = false;
+			Date mostRecent = null;
+			for (Date queryDate : queryCount.results.keySet()) {
+				long numberOfResults = queryCount.results.get(queryDate);
+				if (numberOfResults == 0) {
+					none = true;
+				} else {
+					some = true;
+				}
+				if (mostRecent == null || queryDate.before(mostRecent)) {
+					mostRecent = queryDate;
+				}
+			}
+			if (none && some) {
+				// Are we currently getting some results or no results
+				// for this query?
+				long latestResultCount = queryCount.results.get(mostRecent);
+				if (latestResultCount == 0) {
+					result.noneNow++;
+					result.categories.get(noneNow).add(queryCount);
+				} else {
+					result.someNow++;
+					result.categories.get(someNow).add(queryCount);
+				}
+			} else if (none) {
+				result.never++;
+				result.categories.get(never).add(queryCount);
+			} else if (some) {
+				result.always++;
+				result.categories.get(always).add(queryCount);
+			}
+		}
+
+	}
+
+	/**
+	 * Generates an approximation of when a record with a null date was created.
+	 * The earliest iteration of this feature didn't include a date.
+	 * 
+	 * @param nullDate
+	 *            Pass in the last result of this method to generate the next
+	 *            date in the sequence.
+	 * @return A date, on or after 2014-12-03
+	 */
+	private Date toDate(Date nullDate) {
+		Date result;
+		if (nullDate == null) {
+			try {
+				result = new SimpleDateFormat("yyyy-MM-dd").parse("2014-12-03");
+			} catch (ParseException e) {
+				throw new RuntimeException("If you see this, something amazing just happened.");
+			}
+		} else {
+			result = new Date(nullDate.getTime() + 1000);
+		}
+		return result;
 	}
 
 	private static void saveTimeseries(String query, int page, Timeseries timeseries) {
@@ -169,7 +254,9 @@ public class SearchConsole {
 		for (Map<String, Object> hit : searchResult.getResults()) {
 			Result result = new Result();
 			result.name = hit.get("title").toString();
-			result.description = hit.get("lede").toString();
+			Object lede = hit.get("lede");
+			//Timeseries results does not have lede
+			result.description = lede == null ? "" : lede.toString();
 			result.type = ContentType.valueOf(hit.get("type").toString());
 			result.uri = URI.create(hit.get("url").toString());
 			search.hits.add(result);
@@ -225,6 +312,7 @@ public class SearchConsole {
 			append("query", query);
 			append("page", page);
 			append("results", hits.size());
+			append("date", new Date());
 			for (Result hit : hits) {
 				hit.build();
 				append("hits", hits);
@@ -245,6 +333,41 @@ public class SearchConsole {
 			append("description", description);
 			append("uri", uri.toString());
 			append("type", type.toString());
+		}
+	}
+
+	static class QueryCount implements Comparable<QueryCount> {
+
+		int count;
+		String query;
+		Map<Date, Long> results = new TreeMap<>();
+		Date date;
+
+		QueryCount(String value) {
+			this.query = value;
+		}
+
+		@Override
+		public int compareTo(QueryCount o) {
+			return o.count - count;
+		}
+
+		@Override
+		public int hashCode() {
+			return query.hashCode();
+		}
+
+		/**
+		 * Ignoring null and incompatible types - not going to happen.
+		 */
+		@Override
+		public boolean equals(Object obj) {
+			return query.equals(((QueryCount) obj).query);
+		}
+
+		@Override
+		public String toString() {
+			return query + ":" + count;
 		}
 	}
 }

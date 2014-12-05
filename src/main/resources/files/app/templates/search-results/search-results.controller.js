@@ -8,19 +8,18 @@
 
 
   function SearchController($scope, $rootScope, $window, $log, PageUtil, searchResponse, $routeParams) {
+    var searchTerm = $scope.searchTerm = $routeParams.searchTerm
+    var page = $routeParams.page
+    if (!searchTerm) {
+      $scope.noSearchTerm=true
+      return
+    }
+
     if (!searchResponse || !searchResponse.results) {
       $rootScope.error = 500
       return
     }
     
-    var page = $routeParams.page
-    var searchTerm = $scope.searchTerm = $routeParams.searchTerm
-
-    if (!searchTerm) {
-      $rootScope.error = 404
-      return
-    }
-
     $scope.searchResponse = searchResponse
     var type = $scope.type = $routeParams.type
     var filters = {}
