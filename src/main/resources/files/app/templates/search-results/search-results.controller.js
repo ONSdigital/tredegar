@@ -150,8 +150,8 @@
     function initialize(q, type, pageNumber) {
       $scope.pageCount = Math.ceil((searchResponse.contentSearchResult.numberOfResults) / 10)
       $scope.totalCount = searchResponse.contentSearchResult.numberOfResults
-      if ($scope.homeSearchResult) {
-        $scope.totalCount += searchResponse.homeSearchResult.numberOfResults
+      if (searchResponse.homeSearchResult) {
+        $scope.totalCount += searchResponse.homeSearchResult.results.length
       }
       resolveFilters(type)
       $scope.searchTermOneTime = q
