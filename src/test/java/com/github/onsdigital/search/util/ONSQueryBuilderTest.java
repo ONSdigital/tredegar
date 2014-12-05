@@ -105,7 +105,7 @@ public class ONSQueryBuilderTest {
 
 	}
 
-	@Test
+	//	@Test
 	public void testHihglighFields() {
 		ONSQueryBuilder builder = new ONSQueryBuilder(SEARCH_INDEX)
 				.setSearchTerm(SEARCH_TERM).setFields("myfield");
