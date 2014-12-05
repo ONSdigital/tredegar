@@ -38,25 +38,30 @@
     }
   ],
   "statsBulletinHeadline": {
-    "name": "Annual Mid-year Population Estimates",
-    "uri": "/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/annualmidyearpopulationestimates"
+    "summary": "Estimates of the usual resident population in the United Kingdom and its constituent countries as at 30 June 2013.",
+    "name": "Annual Mid-year Population Estimates, 2013",
+    "uri": "/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/annualmidyearpopulationestimates2013"
   },
   "statsBulletins": [
     {
-      "name": "Annual Mid-year Population Estimates",
-      "uri": "/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/annualmidyearpopulationestimates"
+      "summary": "Estimates of the usual resident population in the United Kingdom and its constituent countries as at 30 June 2013.",
+      "name": "Annual Mid-year Population Estimates, 2013",
+      "uri": "/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/annualmidyearpopulationestimates2013"
     }
   ],
   "datasets": [
     {
-      "name": "Population by Age and Sex",
-      "uri": "/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationbyageandsex"
-    },
-    {
+      "summary": "Components of population change for countries; regions, counties and smaller geographic breakdowns",
       "name": "Population for Local Authorities",
       "uri": "/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationforlocalauthorities"
     },
     {
+      "summary": "Population estimates data by sex and single year of age for countries, regions and smaller geographic breakdowns",
+      "name": "Population by age and sex",
+      "uri": "/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationbyageandsex"
+    },
+    {
+      "summary": "Population estimates data overview by age group for the United Kingdom, England and Wales, and Great Britain",
       "name": "Population data collection",
       "uri": "/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationdatacollection"
     }

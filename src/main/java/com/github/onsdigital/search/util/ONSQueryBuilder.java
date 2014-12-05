@@ -5,12 +5,10 @@ import org.apache.commons.lang3.StringUtils;
 import org.elasticsearch.index.query.BaseQueryBuilder;
 import org.elasticsearch.index.query.FilterBuilders;
 import org.elasticsearch.index.query.MatchAllQueryBuilder;
-import org.elasticsearch.index.query.MatchQueryBuilder;
 import org.elasticsearch.index.query.MultiMatchQueryBuilder;
 import org.elasticsearch.index.query.functionscore.FunctionScoreQueryBuilder;
 import org.elasticsearch.index.query.functionscore.ScoreFunctionBuilders;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
-import org.elasticsearch.search.highlight.HighlightBuilder;
 
 import com.github.onsdigital.configuration.ElasticSearchProperties;
 
@@ -40,7 +38,6 @@ public class ONSQueryBuilder {
 	int page = 1;
 	int size = 10;
 	String[] fields;
-	private boolean naturalLanguage;
 
 	public ONSQueryBuilder(String index) {
 		this.index = index;
@@ -111,14 +108,6 @@ public class ONSQueryBuilder {
 	public int getSize() {
 		return size;
 	}
-	
-	public boolean isNaturalLanguage() {
-		return naturalLanguage;
-	}
-
-	public void setNaturalLanguage(boolean naturalLanguage) {
-		this.naturalLanguage = naturalLanguage;
-	}
 
 	/**
 	 * By default 10 documents are returned from the result set. Set this value
@@ -163,9 +152,9 @@ public class ONSQueryBuilder {
 	 * 
 	 * @return query
 	 */
-	public String buildQuery() {
+	public BaseQueryBuilder buildCountQuery() {
 
-		BaseQueryBuilder builder;
+		BaseQueryBuilder builder = null;
 
 		// Return all documents
 		if (StringUtils.isEmpty(getSearchTerm())) {
@@ -173,38 +162,46 @@ public class ONSQueryBuilder {
 		} else {
 			// return documents with fields containing words that start with
 			// given search term
-			MultiMatchQueryBuilder multiMatchQueryBuilder;
-			if (isNaturalLanguage()) {
-				multiMatchQueryBuilder = new MultiMatchQueryBuilder(getSearchTerm(), getFields()).analyzer("ons_synonyms").slop(5).cutoffFrequency(0.04f);
-			} else {
-				multiMatchQueryBuilder = new MultiMatchQueryBuilder(getSearchTerm(), getFields()).type(MatchQueryBuilder.Type.PHRASE_PREFIX).analyzer("ons_synonyms").slop(5).cutoffFrequency(0.04f);
-			}
+			builder = new MultiMatchQueryBuilder(getSearchTerm(), getFields()).analyzer("ons_synonyms").cutoffFrequency(0.04f);
+		}
+		return builder;
+	}
+
+	/**
+	 * Builds query with set index, type and query information highlighting all
+	 * given fields with html strong tag
+	 * 
+	 * @return query
+	 */
+	public String buildQuery() {
+		BaseQueryBuilder builder = getBuilder();
+
+		String query = new SearchSourceBuilder().query(builder).from(calculateFrom()).size(getSize()).toString();
+		return query;
+
+	}
+
+	private BaseQueryBuilder getBuilder() {
+		// Return all documents
+		if (StringUtils.isEmpty(getSearchTerm())) {
+			return new MatchAllQueryBuilder();
+		} else {
+			// return documents with fields containing words that start with
+			// given search term
+			MultiMatchQueryBuilder multiMatchQueryBuilder = new MultiMatchQueryBuilder(getSearchTerm(), getFields()).analyzer("ons_synonyms").cutoffFrequency(0.04f);
 			// wrap this up with a function_score capability that allows us to
 			// boost the home pages
 			float homePageBoostFloat = Float.valueOf((String) ElasticSearchProperties.INSTANCE.getProperty("home"));
 			float titleBoostFloat = Float.valueOf((String) ElasticSearchProperties.INSTANCE.getProperty("title"));
-			
+
 			multiMatchQueryBuilder.field("title", titleBoostFloat);
 			FunctionScoreQueryBuilder functionScoreQueryBuilder = new FunctionScoreQueryBuilder(multiMatchQueryBuilder);
 			functionScoreQueryBuilder.add(FilterBuilders.termsFilter("_type", "home"), ScoreFunctionBuilders.factorFunction(homePageBoostFloat));
-			builder = functionScoreQueryBuilder;
-
+			return functionScoreQueryBuilder;
 		}
-		HighlightBuilder highlightBuilder = new HighlightBuilder();
-		highlightBuilder.preTags(PRE_TAG).postTags(POST_TAG);
-		for (String field : getFields()) {
-			highlightBuilder.field(field, 0, 0);
-		}
-
-		String query = new SearchSourceBuilder().query(builder).highlight(highlightBuilder).from(calculateFrom()).size(getSize()).toString();
-		// System.out.println("Elastic search query String: " + query);
-		return query;
-
 	}
 
 	private int calculateFrom() {
 		return getSize() * (getPage() - 1);
 	}
-	
-	
 }

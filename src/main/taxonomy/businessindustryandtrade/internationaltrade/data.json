@@ -30,28 +30,32 @@
     }
   ],
   "statsBulletinHeadline": {
-    "name": "UK Trade",
-    "uri": "/businessindustryandtrade/internationaltrade/bulletins/uktrade"
+    "summary": "UK Trade shows the extent of import and export activity and is a key contributor to the overall economic growth in the UK.",
+    "name": "UK Trade, June 2014",
+    "uri": "/businessindustryandtrade/internationaltrade/bulletins/uktradejune2014"
   },
   "statsBulletins": [
     {
-      "name": "UK Trade",
-      "uri": "/businessindustryandtrade/internationaltrade/bulletins/uktrade"
+      "summary": "UK Trade shows the extent of import and export activity and is a key contributor to the overall economic growth in the UK.",
+      "name": "UK Trade, June 2014",
+      "uri": "/businessindustryandtrade/internationaltrade/bulletins/uktradejune2014"
     }
   ],
   "datasets": [
     {
+      "summary": "Exports, imports and balance including total trade, trade in goods and oil",
       "name": "Value of UK trade in goods and services",
       "uri": "/businessindustryandtrade/internationaltrade/datasets/valueofuktradeingoodsandservices"
     },
     {
+      "summary": "Exports, imports and balance for EMU, EU and non-EU",
       "name": "Trade in goods by area",
       "uri": "/businessindustryandtrade/internationaltrade/datasets/tradeingoodsbyarea"
     }
   ],
   "level": "t3",
   "index": 1,
-  "lede": "International trade is the exchange of capital, goods, and services across international borders or territories. In most countries, such trade represents a significant share of gross domestic product (GDP).",
+  "lede": "International trade is the exchange of goods and services across international borders. Here, you can find statistics on the types of goods traded internationally and the general trends in international trade. A key statistic is the balance on international trade, in recent times the UK has generally had a deficit on its trade in goods and a surplus on its trade in services which has led to an overall deficit in the UK\u0027s balance of international trade. ",
   "type": "home",
   "name": "International trade",
   "fileName": "internationaltrade",

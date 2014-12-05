@@ -9,11 +9,11 @@
       "uri": "/employmentandlabourmarket/peopleinwork/workplacedisputesandworkingconditions/timeseries/bbfw"
     },
     {
-      "name": "Working days lost in the Public Sector",
+      "name": "Working days lost in the public sector",
       "uri": "/employmentandlabourmarket/peopleinwork/workplacedisputesandworkingconditions/timeseries/f8xz"
     },
     {
-      "name": "Working days lost in the Private Sector",
+      "name": "Working days lost in the private sector",
       "uri": "/employmentandlabourmarket/peopleinwork/workplacedisputesandworkingconditions/timeseries/f8y2"
     },
     {
@@ -21,9 +21,21 @@
       "uri": "/employmentandlabourmarket/peopleinwork/workplacedisputesandworkingconditions/timeseries/bluu"
     }
   ],
-  "statsBulletins": [],
+  "statsBulletinHeadline": {
+    "summary": "Labour market statistics (including employment, unemployment and economic inactivity) for the United Kingdom.",
+    "name": "UK Labour Market, July 2014",
+    "uri": "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/uklabourmarketjuly2014"
+  },
+  "statsBulletins": [
+    {
+      "summary": "Labour market statistics (including employment, unemployment and economic inactivity) for the United Kingdom.",
+      "name": "UK Labour Market, July 2014",
+      "uri": "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/uklabourmarketjuly2014"
+    }
+  ],
   "datasets": [
     {
+      "summary": "Estimates measuring strikes connected with terms and conditions of employment",
       "name": "Labour disputes",
       "uri": "/employmentandlabourmarket/peopleinwork/workplacedisputesandworkingconditions/datasets/labourdisputes"
     }

@@ -10,9 +10,8 @@ import org.apache.commons.lang3.StringUtils;
 
 import com.github.davidcarboni.restolino.framework.Endpoint;
 import com.github.onsdigital.json.timeseries.Timeseries;
-import com.github.onsdigital.search.bean.SearchResult;
+import com.github.onsdigital.search.bean.AggregatedSearchResult;
 import com.github.onsdigital.search.util.SearchHelper;
-import com.github.onsdigital.util.ValidatorUtil;
 
 /**
  * 
@@ -48,43 +47,33 @@ public class Search {
 
 		/*
 		 * Search uses a number of steps to discover any appropriates matches:-
-		 * 1. Search core content types of home pages, bulletins etc. 2. Search
-		 * the same contents but with a more natural language 3. If nothing
-		 * found then, and only then, search for single timeseries for cdid
-		 * search 4. If still no result, then use a 'term' suggestion, that
+		 * 1. Search core content types of home pages, bulletins etc. 2. If
+		 * nothing found then, and only then, search for single timeseries for
+		 * cdid search 3. If still no result, then use a 'term' suggestion, that
 		 * catches possible typos
 		 */
 		// don't use naturalLanguage for initial search so we get PHRASE_PREFIX
 		// capability
-		boolean naturalLanguage = false;
-		SearchResult searchResult = SearchHelper.search(query, page, naturalLanguage, types);
+		AggregatedSearchResult searchResult = SearchHelper.search(query, page, types);
 		if (searchResult.getNumberOfResults() == 0 && types == null) {
-			// now try again without PHRASE_PREFIX, thus supporting a more
-			// natural language of 'what is ...'
-			naturalLanguage = true;
-			SearchResult naturalLanguageSearchResult = SearchHelper.search(query, page, naturalLanguage, types);
-			if (naturalLanguageSearchResult != null && naturalLanguageSearchResult.getNumberOfResults() != 0) {
-				return naturalLanguageSearchResult;
-			} else {
-				System.out.println("Attempting search against timeseries as no results found for: " + query);
-				Timeseries timeseries = SearchHelper.searchCdid(query);
-				// if still no results then use term suggester for auto correct
-				if (timeseries == null) {
-					System.out.println("No results found from timeseries so using suggestions for: " + query);
-					SearchResult suggestionResult = SearchHelper.searchSuggestions(query, page, types);
-					if (suggestionResult != null) {
-						return suggestionResult;
-					}
-				} else {
-					return timeseries;
+			System.out.println("Attempting search against timeseries as no results found for: " + query);
+			Timeseries timeseries = SearchHelper.searchCdid(query);
+			// if still no results then use term suggester for auto correct
+			if (timeseries == null) {
+				System.out.println("No results found from timeseries so using suggestions for: " + query);
+				AggregatedSearchResult suggestionResult = SearchHelper.searchSuggestions(query, page, types);
+				if (suggestionResult != null) {
+					return suggestionResult;
 				}
+			} else {
+				return timeseries;
 			}
 		}
 		return searchResult;
 	}
 	
 	public Object autoComplete(String query) {
-		return SearchHelper.autocomplete(query, false);
+		return SearchHelper.autocomplete(query);
 	}
 
 	private int extractPage(HttpServletRequest request) {
@@ -111,10 +100,9 @@ public class Search {
 				throw new RuntimeException("No search query provided");
 			}
 		}
-		if (ValidatorUtil.isIllegalCharacter(query)) {
-			throw new RuntimeException("Search query can only contain alphanumeric characters");
+		if (query.length() > 100) {
+			throw new RuntimeException("Search query contains too many characters");
 		}
-
 		return query;
 	}
 

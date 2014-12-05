@@ -93,8 +93,8 @@ The male mortality rate from drug misuse has dropped significantly from its peak
 
 Despite some annual fluctuations, the female mortality rate from drug misuse has tended to increase since 1993. The mortality rate peaked in 2008 at 15.5 deaths per million population, then dropped significantly in 2009, but increased slightly again between 2009 and 2010. Since 2010, the female mortality rate from drug misuse has been relatively stable, at 14.1 deaths per million population in 2012. 
 
-<div class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/drug1.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/drug1.html"></iframe>
 </div>
 
 ##### Notes:
@@ -117,8 +117,8 @@ Male mortality rates in the oldest age group (70 and over) have shown no consist
 
 This pattern of drug misuse deaths is broadly in line with treatment figures from the Public Health England (PHE – previously the [National Treatment Agency, 2012](http://www.nta.nhs.uk/uploads/dtie2012v1.pdf "National Treatment Agency, 2012")), which showed that as the drug-dependent population ages, the over 40s have become the largest age group starting treatment. In contrast, the number of 18 to 24-year-olds newly entering treatment for heroin and crack use has halved over the last five years.
 
-<div class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/drug2.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/drug2.html"></iframe>
 </div>
 
 ##### Notes:
@@ -138,8 +138,8 @@ The opposite trend is seen in females aged 20 to 29, where the mortality rate ha
 
 As with males, the lowest female mortality rates in 2012 were in those aged under 20 (1.2 deaths per million population) and 70 and over (7.9 deaths per million population). 
 
-<div class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/drug3.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/drug3.html"></iframe>
 </div>
 
 ##### Notes:
@@ -161,8 +161,8 @@ Figures 4 and 5 give the age-standardised mortality rates where selected substan
 
 - Approximately 30% of all drug-related poisoning deaths also contain a mention of alcohol or long-term alcohol abuse (for example, cirrhosis) in addition to a drug. 
 
-<div class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/drug4.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/drug4.html"></iframe>
 </div>
 
 ##### Notes:
@@ -172,8 +172,8 @@ Figures 4 and 5 give the age-standardised mortality rates where selected substan
 4. Figures are for deaths registered, rather than deaths occurring in each calendar year. Due to the length of time it takes to complete a coroner’s inquest, it can take months or even years for a drug-related death to be registered. More details can be found in the ‘Impact of registration delays on drug-related deaths’ section below.
 5. Figures for England and Wales include deaths of non-residents.
 
-<div class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/drug5.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/drug5.html"></iframe>
 </div>
 
 ##### Notes:
@@ -252,8 +252,8 @@ In common with most other mortality statistics, figures for drug-related deaths 
 
 Due to the length of time it takes to hold an inquest, this bulletin actually presents information on deaths that may have occurred months or even years ago. Out of the 2,597 drug-related deaths registered in 2012, 1,358 (just over half) occurred in years prior to 2012. This makes it more difficult to evaluate how changes such as the heroin drought or the banning of certain new psychoactive substances have affected drug-related deaths. It also makes it more difficult to compare trends in drug-related deaths between local areas, as registration delays vary considerably across England and Wales. 
 
-<div class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/drug6.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/drug6.html"></iframe>
 </div>
 
 ##### Notes:
@@ -291,15 +291,15 @@ Due to the length of time it takes to hold an inquest, this bulletin actually pr
 26. World Health Organisation – [WHO (2010)](http://apps.who.int/classifications/icd/en/index.html "WHO (2010)") International Statistical Classification of Diseases and Related Health Problems, volumes 1, 2 and 3 (Tenth Revision). WHO: Geneva. 
 
 ## [accordion] Background notes and methodology
-##### 1. Quality information
+1. Quality information
 
 Further information about the quality of drug-related deaths data can be found in the Quality and Methodology Information ([QMI](http://www.ons.gov.uk/ons/guide-method/method-quality/quality/quality-information/health-and-social-care/quality-and-methodology-information-for-deaths-related-to-drug-poisoning.pdf "QMI")) paper.
 
-##### 2. Mortality metadata
+2. Mortality metadata
 
 Information about the underlying mortality data, including details on how the data is collected and coded are available in the [mortality metadata](http://www.ons.gov.uk/ons/guide-method/user-guidance/health-and-life-events/mortality-metadata.pdf "mortality metadata").
 
-##### 3. Drug poisoning database
+3. Drug poisoning database
 
 The figures presented in this bulletin have been produced using a special database of deaths related to drug poisoning, which has been developed to facilitate research into these deaths and to aid the identification of specific substances involved. The database is extracted from the national mortality database for England and Wales. Deaths are included if the underlying cause of death is regarded as drug-related, according to the National Statistics definition. More information on this definition and issues relating to the interpretation of drug-related deaths data can be found in [Christophersen et al (1998)](http://www.ons.gov.uk/ons/rel/population-trends-rd/population-trends/no--93--autumn-1998/drug-related-mortality.pdf "Christophersen et al (1998)").
 
@@ -310,13 +310,10 @@ Almost all deaths on the drug poisoning database had a coroner’s inquest. For 
 - An indicator to show if alcohol is mentioned – this includes a wide variety of scenarios ranging from evidence of alcohol consumption around the time of death (for example an empty vodka bottle found at the scene or alcohol found after toxicology tests) to long-term alcohol abuse and cirrhosis of the liver.
 - Other information recorded at death registration such as age, sex, marital status, occupation and place of usual residence. 
 
-##### 4. Definition of a drug-related death
-###### International Classification of Diseases, Ninth Revision (ICD-9) and Tenth Revision (ICD-10) codes used to define deaths related to drug poisoning
+4. Definition of a drug-related death
+International Classification of Diseases, Ninth Revision (ICD-9) and Tenth Revision (ICD-10) codes used to define deaths related to drug poisoning
 
-##### Download table: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/subnational-health3/deaths-related-to-drug-poisoning/2012/prt-icd-codes.xls "XLS format") (17.5 Kb)
-
-##### 5. Definition of a death related to drug misuse
+5. Definition of a death related to drug misuse
 
 In 2000 the Advisory Council on the Misuse of Drugs published a report called ‘Reducing Drug Related Deaths’. In response to this report’s recommendations on improving the present system for collecting data on drug-related deaths, a technical working group was set up. This group, consisting of experts across government, the devolved administrations, coroners, toxicologists and drugs agencies, proposed a headline indicator for drug misuse deaths as part of the government’s action plan ([Department of Health, 2001](http://webarchive.nationalarchives.gov.uk/20130107105354/http://www.dh.gov.uk/en/Publicationsandstatistics/Publications/PublicationsPolicyAndGuidance/DH_4015217 "Department of Health, 2001")) to reduce the number of these deaths. This indicator also takes into account the information needs of the European Monitoring Centre for Drugs and Drug Addiction. The baseline year for monitoring deaths related to drug misuse was set as 1999. The definition of the headline indicator using ICD-10 is shown below. The definition using ICD-9 was published in a previous annual report ([Office for National Statistics, 2002](http://www.ons.gov.uk/ons/rel/hsq/health-statistics-quarterly/no--13--spring-2002/index.html "Office for National Statistics, 2002")).
 
@@ -342,26 +339,26 @@ b) Deaths where the underlying cause of death has been coded to one of the follo
 
 Specific rules were adopted for dealing with compound analgesics which contain relatively small quantities of drugs listed under the Misuse of Drugs Act, the major ones being dextropropoxyphene, dihydrocodeine and codeine. Where these drugs are mentioned on a death record, they have been excluded from the drug misuse indicator if they are part of a compound analgesic (such as co-proxamol, co-dydramol or co-codamol) or cold remedy. Dextropropoxyphene has been excluded on all occasions, whether or not paracetamol or a compound analgesic was mentioned. This is because dextropropoxyphene is rarely, if ever, available other than as part of a paracetamol compound. However, codeine or dihydrocodeine mentioned without paracetamol or ibuprofen were included in the indicator. This is because they are routinely available and known to be abused in this form. This approach is the same as that taken by National Records of Scotland (NRS). Drugs controlled under the Misuse of Drugs Act 1971 include class A, B and C drugs. 
 
-##### 6. Revisions to drug misuse
+6. Revisions to drug misuse
 
 A small number of revisions were made to the to the drug misuse indicator in 2013 and the full back series from 1993 has been revised. Several new psychoactive substances which have been controlled under the [Misuse of Drugs Act 1971](http://www.legislation.gov.uk/ukpga/1971/38/contents "Misuse of Drugs Act 1971") in the last few years have been added, and alkyl nitrites have been removed as they were incorrectly being classed as controlled substances. These changes affect no more than two deaths a year. 
 
-##### 7. Deaths among people in their 20s and 30s
+7. Deaths among people in their 20s and 30s
 
 Nearly one in eight deaths among people in their 20s and 30s were drug-related. This figure has been calculated from the number of deaths from all drug poisonings of people aged 20 to 39, (1,021 deaths) and the number of deaths from all causes in this age group (8,265 deaths) for England and Wales in 2012. The number of deaths from all causes, by sex and age is available on the [ONS website](http://www.ons.gov.uk/ons/rel/vsob1/death-reg-sum-tables/index.html "ONS website"). 
 
-##### 8. Heroin and morphine
+8. Heroin and morphine
 
 Heroin (diamorphine) breaks down in the body into morphine, so either heroin and/or morphine may be detected at post mortem and recorded on the death certificate. Therefore a combined figure for deaths where heroin or morphine was mentioned on the death certificate is included in Table 4. 
 
-##### 9. Cocaine
+9. Cocaine
 
 The figure for cocaine in Table 4 includes deaths where cocaine was taken in the form of crack cocaine. It is not possible to separately identify crack cocaine from other forms of cocaine at post mortem. Other evidence to distinguish the form of cocaine taken is rarely provided on death certificates. 
 
-##### 10. GHB and GB
+10. GHB and GB
 
 The figure for GHB (gamma-hydroxybutyrate) in Reference Table 6a includes deaths where GBL (gamma-butyrolactone) was taken. It is not possible to separately identify GBL and GHB at post mortem as GBL is rapidly converted to GHB when ingested into the human body.  
-##### 11. List of drugs included as new psychoactive substances
+11. List of drugs included as new psychoactive substances
 
 There is no official definition new psychoactive substances. The following substances have been included in this group in this bulletin:
 
@@ -389,29 +386,29 @@ There is no official definition new psychoactive substances. The following subst
 
 It is likely that this list will be revised in future as new substances emerge.
 
-##### 12 Helium
+12 Helium
 
 The number of deaths mentioning helium reported in this statistical bulletin before 2011 are likely to be an underestimate, as some deaths involving helium were assigned an underlying cause of death of hanging, strangulation and suffocation (ICD-10 codes X70 and Y20), and were not included in the drug poisoning database. From 2011 onwards, we have tried to ensure that all deaths mentioning helium are coded to the appropriate poisoning code and not as a suffocation. 
 
-##### 13. Calculation of mortality rates
+13. Calculation of mortality rates
 
 Mortality rates are presented as deaths per one million population. The mortality rates in Figures 2 and 3 are age-specific rates; and those in Figures 1, 4 and 5 and Table  5 are directly age-standardised to the 1976 European standard population. Age-standardised rates are used to allow comparison between populations which may contain different proportions of people of different ages, including comparisons between males and females and over time. Eurostat, the statistical institute of the European Union, has decided to update the European Standard Population, which is used in the calculation of age-standardised rates. ONS will publish details of the impact of this change on age-standardised rates, and, following user engagement in Summer 2013, the timetable for implementation of the new standard population in relevant publications. ONS is [consulting](http://www.ons.gov.uk/ons/about-ons/user-engagement/consultations-and-surveys/consultations/implementation-of-the-2013-european-standard-population/index.html "consulting") on the implementation of the new European Standard Population between 09 August and 03 October 2013.
 
 Mortality rates are calculated using mid-year population estimates. Rates for 2002–11 have been recalculated using revised mid-year population estimates which take account of the 2011 Census and therefore differ from previously published figures. Analysis shows that rates have been consistently revised down, but these changes were small. The differences tended to be larger at the end of the revision period (2011), than at the beginning (2002) and the biggest change was seen for female drug poisoning deaths in 2010, with rates decreasing from 29.2 to 28.9 deaths per million population (a 1.0% reduction).
 
-##### 14. Confidence intervals
+14. Confidence intervals
 
 Excel workbooks containing the data used to produce Figures 1 to 6 and Tables 1 to 5 are available to download from the [ONS website (303.5 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/subnational-health3/deaths-related-to-drug-poisoning/2012/drugs-reference-tables.xls "Drugs reference tables") . These tables contain both the mortality rate and the upper and lower confidence limits. These limits form a confidence interval, which is a measure of the statistical precision of an estimate and shows the range of uncertainty around the estimated figure. Calculations based on small numbers of events are often subject to random fluctuations. As a general rule, if the confidence interval around one figure overlaps with the interval around another, we cannot say with certainty that there is more than a chance difference between the two figures. Within this statistical bulletin, a difference which is described as ‘significant’, means ‘statistically significant’, assessed by examining the confidence intervals. 
 
-##### 15. Revisions
+15. Revisions
 
 The ONS revisions policy is available on our [website](http://www.ons.gov.uk/ons/guide-method/revisions/revisions-and-corrections-policy/index.html "website").
 
-##### 16. Calculation of registration delays
+16. Calculation of registration delays
 
 Figure 6 presents data on the length of time taken to register a death (also known as the registration delay) for drug-related deaths. This is calculated as the difference between the date each death occurred and the date it was registered, measured in days. Data where the exact date of death was unknown or where either the date of death or date of registration was clearly recorded incorrectly (that is, the death appeared to have been registered before it occurred) were excluded from this analysis. Approximately 0.2% of the data were excluded for these reasons. Analysis showed that the data were positively skewed, and contains some deaths with very long registration delays (for example, more than eight years). Therefore the average registration delay has been presented using the median value, as this is not influenced by extreme values. The median is defined as the value that is halfway through the ordered data set, below and above which there lies an equal number of data values. 
 
-##### 17. Special extracts of data
+17. Special extracts of data
 
 Special extracts and tabulations of drug poisoning deaths data are available to order (subject to legal frameworks, disclosure control and agreement of costs, where appropriate). Such requests or enquiries should be made to:
 
@@ -423,20 +420,19 @@ Newport NP10 8XG
 Tel: +44 (0)1633 455341 
 Email: mortality@ons.gsi.gov.uk 
 The [ONS charging policy](http://www.ons.gov.uk/ons/about-ons/who-we-are/services/charging-policy/index.html "ONS charging policy") is available on our website. 
-
-##### 18. Feedback
+18. Feedback
 
 We would welcome feedback on the content, format and relevance of this release. Please send feedback to the postal or email address above. 
 
-##### 19. Plan for mortality outputs
+19. Plan for mortality outputs
 
 Future changes to mortality outputs are outlined in the plan for mortality outputs available on the [ONS website](http://www.ons.gov.uk/ons/guide-method/user-guidance/health-and-life-events/plan-for-mortality-statistics-2012-13.pdf "ONS website").
 
-##### 20. Pre-release access
+20. Pre-release access
 
 A list of the names of those given pre-publication access to the statistics and written commentary is available in this [pre-release access list](http://www.ons.gov.uk/ons/rel/subnational-health3/deaths-related-to-drug-poisoning/2012/pra-drug-related-deaths-2012.html "pre-release access list") for deaths related to drug poisoning in England and Wales in 2012. The rules and principles which govern pre-release access are featured within the [Pre-release Access to Official Statistics Order 2008](http://www.legislation.gov.uk/uksi/2008/2998/schedule/made "Pre-release Access to Official Statistics Order 2008"). 
 
-##### 21. National Statistics
+21. National Statistics
 
 The [UK Statistics Authority](http://www.statisticsauthority.gov.uk/assessment/assessment/assessment-reports/index.html "UK Statistics Authority") has designated these statistics as National Statistics, in accordance with the [Statistics and Registration Service Act](http://www.ons.gov.uk/ons/guide-method/ons-independence/the-statistics-act/index.html "Statistics and Registration Service Act") 2007 and signifying compliance with the [Code of Practice for Official Statistics](http://www.ons.gov.uk/ons/guide-method/the-national-statistics-standard/code-of-practice/index.html "Code of Practice for Official Statistics"). 
 Designation can be broadly interpreted to mean that the statistics:
@@ -448,7 +444,7 @@ Designation can be broadly interpreted to mean that the statistics:
 
 Once statistics have been designated as National Statistics it is a statutory requirement that the Code of Practice shall continue to be observed. 
 
-##### 22. Terms and conditions
+22. Terms and conditions
 
 You may use or re-use this information (not including logos) free of charge in any format or medium, under the terms of the [Open Government Licence](http://www.ons.gov.uk/ons/external-links/other-government-departments/national-archives/index.html). To view this licence, visit the National Archives website, write to: The Information Policy Team, The National Archives, Kew, London TW9 4DU, or email: <psi@nationalarchives.gsi.gov.uk>.
 

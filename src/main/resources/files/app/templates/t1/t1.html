@@ -1,225 +1,386 @@
-<div>
-    <section class="hero-banner">
-        <div class="panel--pad slate--hero-banner">
-          <div class="wrapper">
-          <h2 class="hero-banner__headline">Latest release</h2>
-          <div class="grid-wrap">
-            <div class="grid-col tablet-grid-two-thirds">
-              <h2 class="hero-banner__main-title">CPI Annual Rate Percentage Change over 12 months</h2>
-              <br><br>
-              <a href="#!/economy/inflationandpriceindices/bulletins/consumerpriceinflationjune2014/">View the statistical bulletin</a>
-            </div>
-            <div class="grid-col tablet-grid-one-third">
-              <div class="stat--headline stat--hero">
-                <div class="stat__figure largestat_margin">
-                  <strong> 1.5% </strong>
-                    <span class="stat__figure__unit"></span>
-                </div>
-              <p class="callout__stat__description mini">
-                Last Updated: 16 September 2014
-              </p>
-              <p class="callout__stat__description mini">
-                Next Update: 14 October 2014
-              </p>
+<!--New homepage starts here!-->
 
-            </div>
-          </div>
+
+
+<div class="wrapper panel">
+    <article class="box flush">
+        <header class="box__header">
+            <h2>
+            Welcome to the Office for National Statistics
+            </h2>
+        </header>
+        <!-- /box__header -->
+
+        <div class="box__content">
+            <p>The UK's largest independent producer of official statistics and the recognised national statistical institute of the UK.</p>
+            <!--  /list-bullet -->
         </div>
-      </div>
-    </div>
-
-    </section>
-
-      <div class="wrapper offset-top panel--bottom-mar nav-panels">
-        <div ng-repeat="item in taxonomy.data.children track by $index" class="grid-wrap">
-          <div ng-repeat="section in item" class="grid-col tablet-wide-grid-one-half">
-            <article class="nav-panel nav-panel--stats sectioned lifted border-defined">
-              <header class="nav-panel__header nav-panel__roomy">
-                <h2>{{section.name}}</h2>
-              </header>
-              <section  class="nav-panel__roomy">
-                <ul class="list--neutral">
-                  <li ng-repeat="child in section.data.children | limitTo:4" class="nav-panel__item">
-                    <dl>
-                      <dt class="nav-panel__title">
-                        <h3 class="nav-panel__heading">
-                          <a href="#!/{{section.fileName}}/{{child.fileName}}">
-                            {{child.name}}
-                      </a>
-                          <span tabindex="0" title="" class="tooltip icon-info-circled icon--warm  icon--inline icon--left-margin"></span>
-                        </h3>
-                      </dt>
-                      <dd class="nav-panel__value">
-                        <div class="stat stat--small">
-                          <div class="stat__figure">
-                            £936.3
-                            <span class="stat__figure__unit">bn</span>
-                          </div>
-                          <div class="stat__description">
-                            2nd Quarter 2014
-                          </div>
-                        </div>
-                      </dd>
-                    </dl>
-                  </li>
-                </ul>
-              </section>
-              <footer class="nav-panel__footer nav-panel__item">
-                <div class="nav-panel__action">
-                  <a class="nav-panel__roomy " href="#!/{{section.fileName}}">View all {{section.name}}</a>
-                </div>
-              </footer>
-            </article>
-            <!-- /nav-panel -->
-          </div>
-          <!-- /grid-col -->
-          <!-- /grid-col -->
-        </div>
-      </div>
-      <!-- /wrapper -->
-
-      <release-pane></release-pane>
+        <!-- /box__content -->
+    </article>
+</div>
+<div class="wrapper panel--top-mar-small">
+    <header>
+        <h2>Statistical highlights</h2>
+    </header>
+</div>
 
 
-      <div class="wrapper panel--top-pad panel--bottom-mar">
+<!-- panel -->
+<div class="panel slate--home--hero-banner flush--top">
+    <div class="wrapper nav-panels">
         <div class="grid-wrap">
-          <div class="grid-col desktop-grid-one-third  tablet-grid-one-half">
-            <article class="box box--orange box--orange--separated-left lifted">
-              <div class="box__inner border box--padded">
-                <div class="media">
-                  <img class="media__img icon--warm" src="/ui/img/census.png" width="80" alt=" ">
-                  <div class="media__body">
+            <div ng-repeat="section in taxonomy.data.sections" class="grid-col tablet-wide-grid-one-fifth">
+                <article ng-repeat="item in section.items" class="nav-panel nav-panel--stats sectioned">
+                    <div class="navpanel_wrapper_home">
+                        <a href="#!{{item.uri}}"><span class="navpanel_wrapper_home__link"></span></a>
+                        <header class="nav-panel__header nav-panel__header_home nav-panel__roomy--med">
+                            <h2 class="delta">{{item.name}}</h2>
+                        </header>
+                        <div class="nav-panel__roomy box flush">
+                            <ul class="list--neutral nav-panel__list flush">
+                                <li class="nav-panel__body flush spaced">
+                                    <dl class="homeicon_{{section.link}} flush--bottom">
+                                        <dd class="nav-panel__value">
+                                            <div class="stat">
+                                                <div class="stat__figure nav_home-stats">
+                                                    <span class="stat__figure__unit">{{item.data.preUnit}}</span> {{item.data.number}} <span class="stat__figure__unit">{{item.data.unit}}</span>
+                                                    <div class="stat__description-large">{{item.data.date}}</div>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <ons-loading condition="!item.data"></ons-loading>
+                                <li class="nav-panel__item homeicon_sparkline">
+                                    <div style="height:30px"></div>
+                                    <ons-sparkline chart-data="item.chartData" width="120" height="50"></ons-sparkline>
+                                </li>
+                            </ul>
+                            <!-- /nav-panel__roomy -->
+                        </div>
+                        <!-- /navpanel_wrapper_home -->
+                    </div>
+                    <footer class="nav-panel__footer-home">
+                        <div class="nav-panel__action background_neutral ">
+                            <a class="nav-panel__roomy--med right-small centred-med-up" href="#!{{getPath()}}{{section.link}}">Explore {{section.name}}</a>
+                        </div>
+                    </footer>
+                </article>
+            </div>
+            <!-- /grid-wrap -->
+        </div>
+        <!-- /wrapper -->
+    </div>
+    <!-- /panel-->
+</div>
+
+<!-- panel wrapper -->
+<section class="panel wrapper flush--bottom ">
+    <header class="actionable-header__title">
+        <h2 class="actionable-header__title table-inline ">New this week</h2>
+        <a class="hide-med-down actionable-header--asidelink" href="#!/calendar">View new and upcoming releases</a>
+    </header>
+    <div class="grid-wrap">
+        <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
+            <article class="box--padded-vertical">
+                <header class="box__header">
+                    <h3>
+               <a href="#!/releases/populationestimates">Population Estimates</a>
+             </h3>
+                    <!-- /box__header -->
+                </header>
+
+                <div class="box__content">
+                    <ul class="list--table">
+                        <li class="">Annual estimates of the size of the UK “usually resident population” are calculated at the mid-year point (30 June).</li>
+                    </ul>
+                    <!-- /box__content -->
+                </div>
+                <!-- /box- -padded-vertical -->
+            </article>
+            <!-- /grid-col -->
+        </div>
+
+        <!-- grid-col -->
+        <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
+            <article class="box--padded-vertical">
+                <header class="box__header">
+                    <h3>
+               <a href="#!/releases/inflationandpriceindices">Inflation and Price Indices</a>
+             </h3>
+                    <!-- /box__header -->
+                </header>
+
+                <div class="box__content">
+                    <ul class="list--table">
+                        <li class="">Inflation measures the rate of increase in prices for goods and services using price indices.
+                        </li>
+                    </ul>
+                    <!-- /box__content -->
+                </div>
+                <!-- /box- -padded-vertical -->
+            </article>
+            <!-- /grid-col -->
+        </div>
+
+        <div class="grid-col desktop-grid-one-third tablet-grid-one-half tablet-grid-clear">
+            <article class="box--padded-vertical">
+                <header class="box__header">
+                    <h3>
+               <a href="#!/releases/drugusealcoholandsmoking">Drug Use, Alcohol and Smoking</a>
+             </h3>
+                    <!-- /box__header -->
+                </header>
+
+                <div class="box__content">
+                    <ul class="list--table">
+                        <li class="">Statistics on drug use, alcohol and smoking focus on deaths and illnesses related to these areas.
+                        </li>
+                    </ul>
+                    <!-- /box__content -->
+                </div>
+                <!-- /box- -padded-vertical -->
+            </article>
+            <!-- /grid-col -->
+        </div>
+        <div class="grid-col hide-large">
+            <a href="#">View new and upcoming releases</a>
+        </div>
+        <!-- /grid-wrap -->
+    </div>
+    <!-- /section -->
+</section>
+
+
+<div class="wrapper panel flush--top">
+    <div class="grid-wrap">
+        <div class="grid-col desktop-grid-one-half tablet-grid-full-width">
+            <article class="box border home_callout homeicon_census">
+                <div class="box__inner box--padded">
+                    <div class="grid-wrap">
+                        <div class="grid-col grid-one-half ">
+
+                        </div>
+                        <div class="grid-col grid-one-half floater-right ">
+                            <div class="media__body">
+                                <header class="box__header pad_regional_header">
+                                    <h2 class="callout-header">
+                          <ul class="list--neutral">
+                            <li>Who we are.</li>
+                            <li>How we live.</li>
+                            <li>What we do.</li>
+                          </ul>
+                        </h2>
+                                    <!-- /box__header -->
+                                </header>
+                            </div>
+                        </div>
+                        <div class="box__content list--table__item__body--icon div_panel_link">
+                            <a class="" href="http://www.ons.gov.uk/ons/data/area-first/">2011 Census <span class="icon-right-open-big"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <!-- /grid-col -->
+        </div>
+
+
+        <div class="grid-col desktop-grid-one-half tablet-grid-full-width">
+            <article class="box border home_callout homeicon_datavis">
+                <div class="box__inner box--padded ">
+                    <div class="grid-wrap">
+                        <div class="grid-col grid-one-half floater-right">
+                            <div class="media__body">
+                                <header class="box__header pad_regional_header">
+                                    <h2 class="callout-header">
+                          <ul class="list--neutral">
+                            <li>Introducing Visual.ONS</li>
+                          </ul>
+                        </h2>
+                                    <!-- /box__header -->
+                                </header>
+                            </div>
+                        </div>
+                        <div class="media__body">
+                            <div class="box__content list--table__item__body--icon  div_panel_link">
+                                <span class="callout--link_inactive">Coming soon</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <!-- /grid-wrap-->
+    </div>
+    <!-- /wrapper-->
+</div>
+
+
+
+<section class="panel wrapper">
+    <div class="box box--padded--med box--orange--separated-left solid border">
+        <header class="actionable-header__title">
+            <h2 class="actionable-header__title table-inline ">Looking for local statistics?</h2>
+        </header>
+        <div class="grid-wrap">
+            <div class="grid-col desktop-grid-one-quarter tablet-grid-one-half">
+                <article class="box--padded--med">
                     <header class="box__header">
-                      <h2 class="gamma">
-                        <a class="no_underline" href="#">
-                      View the 2011 Census
-                    </a>
-                      </h2>
+                        <h3>
+                  <a href="#!/localstats">Local data explained </a>
+                </h3>
+                        <!-- /box__header -->
+                    </header>
+
+                    <div class="box__content">
+                        <ul class="list--table">
+                            <li class="">A handy guide to let you know where to find local statistics.</li>
+                        </ul>
+                        <!-- /box__content -->
+                    </div>
+                    <!-- /article box- -padded- -med" -->
+                </article>
+                <!-- /box -->
+            </div>
+            <!-- /grid-col -->
+            <div class="grid-col desktop-grid-one-quarter tablet-grid-one-half">
+                <article class="box--padded--med">
+                    <header class="box__header">
+                        <h3>
+                  <a href="https://www.nomisweb.co.uk/">Official Labour Market Statistics (nomis) </a>
+                </h3>
                     </header>
                     <!-- /box__header -->
                     <div class="box__content">
-                      <p>
-                        Census data and information for England and Wales
-                      </p>
+                        <ul class="list--table">
+                            <li>Access to the most detailed and up-to-date UK labour market statistics from official sources. </li>
+                        </ul>
+                        <!-- /box__content -->
                     </div>
-                    <!-- /box__content -->
-                  </div>
-                </div>
-                <!-- /media -->
-              </div>
-              <!-- /box__inner -->
-            </article>
-            <!-- /box -->
-          </div>
-          <!-- /grid-col -->
-          <div class="grid-col desktop-grid-one-third  tablet-grid-one-half">
-            <article class="box box--blue box--ons-blue--separated-left lifted">
-              <div class="box__inner border box--padded">
-              <div class="media">
-                  <span class="icon-users icon--warm icon--giga media__img"></span>
-                  <div class="media__body">
-                <header class="box__header">
-                  <h2 class="gamma">
-                    <a class="no_underline" href="#">
-                  Calling all respondents
-                </a>
-                  </h2>
-                </header>
-                <!-- /box__header -->
-                <div class="box__content">
-                  <p>
-                    If you've been asked to take part in a survey then go here
-                  </p>
-                </div>
-                <!-- /box__content -->
-              </div>
-              </div>
+                </article>
+                <!-- /box -->
             </div>
-              <!-- /box__inner -->
-            </article>
-            <!-- /box -->
-          </div>
-          <!-- /grid-col -->
-          <div class="grid-col desktop-grid-one-third  tablet-grid-one-half tablet-grid-clear">
-            <article class="box box--orange box--orange--separated-left lifted">
-              <div class="box__inner border box--padded">
-              <div class="media">
-                  <span class="icon-cog icon--warm icon--giga media__img"></span>
-                  <div class="media__body">
-                <header class="box__header">
-                  <h2 class="gamma">
-                    <a class="no_underline" href="#">
-                  Interactive content
-                </a>
-                  </h2>
-                </header>
-                <!-- /box__header -->
-                <div class="box__content">
-                  <p>
-                    See our data in a new light
-                  </p>
-                </div>
-                <!-- /box__content -->
-              </div>
+            <!-- /grid-col -->
+            <div class="grid-col desktop-grid-one-quarter tablet-grid-one-half tablet-grid-clear">
+                <article class="box--padded--med">
+                    <header class="box__header">
+                        <h3>
+                  <a href="http://www.neighbourhood.statistics.gov.uk/dissemination/">Neighbourhood Statistics (NeSS)</a>
+                </h3>
+                    </header>
+                    <!-- /box__header -->
+                    <div class="box__content">
+                        <ul class="list--table">
+                            <li>Datasets that describe the characteristics of a neighbourhood, with a particular focus on deprivation. </li>
+                        </ul>
+                        <!-- /box__content -->
+                    </div>
+                </article>
+                <!-- /box -->
             </div>
+
+
+            <div class="grid-col desktop-grid-one-quarter tablet-grid-one-half">
+                <article class="box--padded--med">
+                    <header class="box__header">
+                        <h3>
+                  <a href=" http://www.ons.gov.uk/ons/data/area-first/">2011 Census Data Explorer (Beta)</a>
+                </h3>
+                    </header>
+                    <!-- /box__header -->
+                    <div class="box__content">
+                        <ul class="list--table">
+                            <li>Discover relevant census datasets for your needs and view or download them. </li>
+                        </ul>
+                        <!-- /box__content -->
+                    </div>
+                </article>
+                <!-- /grid-col -->
             </div>
-            </article>
-            <!-- /box -->
-          </div>
+            <!-- /grid-wrap -->
         </div>
-      </div>
-      <div class="wrapper">
-        <div class="panel--top-pad panel--bottom-mar-large panel--separated--top--large">
-          <div class="grid-wrap">
-            <div class="grid-col desktop-grid-one-third">
-              <h2 class="beta">More on ons.gov.uk</h2>
-            </div>
-            <div class="grid-col desktop-grid-two-thirds">
-              <div class="grid-wrap">
-                <div class="grid-col tablet-grid-one-half">
-                  <ul class="list--neutral list--spaced list--heavy flush--top">
-                    <li><a class="no_underline" href="#">Our methodology</a>
-                    </li>
-                    <li><a class="no_underline" href="#">Regional data</a>
-                    </li>
-                    <li><a class="no_underline" href="#">Neighbourhood statistics</a>
-                    </li>
-                    <li><a class="no_underline" href="#">The ONS blog</a>
-                    </li>
-                    <li><a class="no_underline" href="#">European statistics</a>
-                    </li>
-                    <li><a class="no_underline" href="#">UK Statistics Authority</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="grid-col tablet-grid-one-half">
-                 <article class="box box--blue box--ons-blue--separated-left lifted">
-              <div class="box__inner border box--padded">
-              <div class="media">
-                  <span class="icon-mail icon--warm icon--giga media__img"></span>
-                  <div class="media__body">
+        <!-- /panel wrapper -->
+</section>
+
+<section class="panel wrapper box box--padded--med ">
+    <header class="actionable-header__title">
+        <h2 class="actionable-header__title table-inline ">Other official statistics</h2>
+    </header>
+    <div class="grid-wrap">
+        <div class="grid-col desktop-grid-one-quarter tablet-grid-one-half">
+            <article class="box--padded-vertical">
                 <header class="box__header">
-                  <h2 class="gamma">
-                    <a class="no_underline" href="#">
-                  Sign up for email alerts
-                </a>
-                  </h2>
+                    <h3 class="beta">
+                <a href="https://www.gov.uk/government/statistics">GOV.UK</a>
+              </h3>
+                    <!-- /box__header -->
                 </header>
-                <!-- /box__header -->
+
                 <div class="box__content">
-                  <p>
-                    Stay up-to-date with our latest releases
-                  </p>
+                    <ul class="list--table">
+                        <li class="">Official statistics produced by other government departments. </li>
+                    </ul>
                 </div>
-                <!-- /box__content -->
-              </div>
-            </div>
-            </div>
             </article>
-                </div>
-              </div>
-            </div>
-          </div>
+            <!-- /grid-col -->
         </div>
-      </div>
-</div>
+
+        <div class="grid-col desktop-grid-one-quarter tablet-grid-one-half">
+            <article class="box--padded-vertical">
+                <header class="box__header">
+                    <h3 class="beta">
+                <a href="https://statswales.wales.gov.uk/Catalogue">StatsWales</a>
+              </h3>
+                    <!-- /box__header -->
+                </header>
+
+                <div class="box__content">
+                    <ul class="list--table">
+                        <li class="">View, manipulate, create and download tables from Welsh data. </li>
+                    </ul>
+                </div>
+            </article>
+            <!-- /grid-col -->
+        </div>
+
+
+        <div class="grid-col desktop-grid-one-quarter tablet-grid-one-half">
+            <article class="box--padded-vertical">
+                <header class="box__header">
+                    <h3 class="beta">
+                <a href="http://www.scotland.gov.uk/Topics/Statistics">ScotStat</a>
+              </h3>
+                    <!-- /box__header -->
+                </header>
+
+                <div class="box__content">
+                    <ul class="list--table">
+                        <li class="">Scottish Government Statistics provides an accurate and up-to-date picture of the economy and society in Scotland. </li>
+                    </ul>
+                </div>
+            </article>
+            <!-- /grid-col -->
+        </div>
+
+
+        <div class="grid-col desktop-grid-one-quarter tablet-grid-one-half">
+            <article class="box--padded-vertical">
+                <header class="box__header">
+                    <h3 class="beta">
+              <a href="http://www.nisra.gov.uk/">NISRA</a>
+            </h3>
+                    <!-- /box__header -->
+                </header>
+
+                <div class="box__content">
+                    <ul class="list--table">
+                        <li class="">Principal source of official statistics and social research on Northern Ireland. </li>
+                    </ul>
+                </div>
+            </article>
+            <!-- /grid-col -->
+        </div>
+
+    </div>
+    <!-- /grid-wrap -->
+</section>

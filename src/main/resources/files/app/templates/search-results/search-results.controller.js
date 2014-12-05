@@ -4,18 +4,20 @@
 (function() {
 
   angular.module("onsTemplates")
-    .controller("SearchController", ['$scope', '$window', '$log', 'PageUtil', 'searchResponse', '$routeParams', SearchController])
+    .controller("SearchController", ['$scope', '$rootScope', '$window', '$log', 'PageUtil', 'StringUtil', 'searchResponse', '$routeParams', SearchController])
 
 
-  function SearchController($scope, $window, $log, PageUtil, searchResponse, $routeParams) {
-    if (!searchResponse) {
-      return PageUtil.goToPage('404')
-    }
-    var page = $routeParams.page
+  function SearchController($scope, $rootScope, $window, $log, PageUtil, StringUtil, searchResponse, $routeParams) {
     var searchTerm = $scope.searchTerm = $routeParams.searchTerm
-
+    var page = $routeParams.page
     if (!searchTerm) {
-      PageUtil.goToPage('404')
+      $scope.noSearchTerm = true
+      return
+    }
+
+    if (!searchResponse || !searchResponse.contentSearchResult.results) {
+      $rootScope.error = 500
+      return
     }
 
     $scope.searchResponse = searchResponse
@@ -146,11 +148,10 @@
     initialize(searchTerm, type, page)
 
     function initialize(q, type, pageNumber) {
-      //Minus for single home type returning. First page will show 11 elements
-      if(searchResponse.results.length > 10) {
-        $scope.pageCount = Math.ceil((searchResponse.numberOfResults - 1) / 10)
-      } else {
-        $scope.pageCount = Math.ceil((searchResponse.numberOfResults) / 10)
+      $scope.pageCount = Math.ceil((searchResponse.contentSearchResult.numberOfResults) / 10)
+      $scope.totalCount = searchResponse.contentSearchResult.numberOfResults
+      if (searchResponse.homeSearchResult) {
+        $scope.totalCount += searchResponse.homeSearchResult.results.length
       }
       resolveFilters(type)
       $scope.searchTermOneTime = q
@@ -176,25 +177,21 @@
     }
 
     function resolveSectionsForDisplay() {
-      if ((searchResponse.numberOfResults > 0 || (searchResponse.numberOfResults === 0 && $scope.filterOn)) && !searchResponse.suggestionBasedResult) {
+      if (($scope.totalCount > 0 || ($scope.totalCount === 0 && $scope.filterOn)) && !searchResponse.suggestionBasedResult) {
         $scope.showSearchResults = true;
       }
 
-      if ((searchResponse.numberOfResults > 0 || (searchResponse.numberOfResults === 0 && $scope.filterOn)) && searchResponse.suggestionBasedResult) {
+      if (($scope.totalCount > 0 || ($scope.totalCount === 0 && $scope.filterOn)) && searchResponse.suggestionBasedResult) {
         $scope.showSuggestedSearchResults = true;
       }
 
-      if (searchResponse.numberOfResults === 0 && !$scope.filterOn) {
+      if ($scope.totalCount === 0 && !$scope.filterOn) {
         $scope.showZeroResultsFound = true;
-        if(filters['timeseries'] || isPrerender()) {
-          $scope.showTimeseriesSearchSuggest = false
-        } else {
-          $scope.showTimeseriesSearchSuggest = true
-        }
+        $scope.showTimeseriesSearchSuggest = resolveTimeseriesSuggestion()
       }
 
-      if (searchResponse.numberOfResults > 0 || $scope.filterOn) {
-        if(filters['timeseries'] || isPrerender()) {
+      if ($scope.totalCount > 0 || $scope.filterOn) {
+        if (filters['timeseries'] || isPrerender()) {
           $scope.showFilters = false;
         } else {
           $scope.showFilters = true;
@@ -202,14 +199,27 @@
       }
     }
 
+    //Decides timeseries serach should be suggested or not
+    function resolveTimeseriesSuggestion() {
+      if (filters['timeseries'] || isPrerender()) {
+        return false
+      } else {
+        if (searchResponse.timeseriesCount > 0) {
+          return true
+        }
+        return false
+      }
+    }
+
     function reLoad() {
-      PageUtil.goToPage('/search/' + searchTerm)
-      PageUtil.setUrlParam('type', resolveTypes(filters))
-        // if the results are generated from an autocorrect suggest then
-        // we need to reset the query parameter to the suggestion
+      // if the results are generated from an autocorrect suggest then
+      // we need to reset the query parameter to the suggestion
       if (searchResponse.suggestionBasedResult) {
         PageUtil.goToPage('/search/' + searchResponse.suggestion)
+      } else {
+        PageUtil.goToPage('/search/' + searchTerm)
       }
+      PageUtil.setUrlParam('type', resolveTypes(filters))
     }
 
     function toggleFilter(type) {
@@ -224,7 +234,7 @@
           activeFilters.push(type)
         }
       };
-      var result =  activeFilters.length > 0 ? activeFilters : null
+      var result = activeFilters.length > 0 ? activeFilters : null
       console.log(result)
       return result
     }
@@ -280,22 +290,25 @@
       return item.type != 'home' && item.type != 'timeseries'
     }
 
-    //If focus css class should be applited to search or not
-    function isFocus(type, index) {
-      return type === 'home' && index === 0
-    }
-
     function isPrerender() {
       return PageUtil.isPrerender()
+    }
+
+    function link(url) {
+      if (StringUtil.startsWith(url, '/')) {
+        return '#!' + url
+      } else {
+        return url
+      }
     }
 
     //Expose API
     angular.extend($scope, {
       toggleFilter: toggleFilter,
       isActive: isActive,
-      isFocus:isFocus,
-      isShowLozenge:isShowLozenge,
-      isPrerender:isPrerender
+      isShowLozenge: isShowLozenge,
+      isPrerender: isPrerender,
+      link: link
     })
   }
 

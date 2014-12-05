@@ -1,42 +1,45 @@
 {
   "headline": {
-    "name": "Output Measure: Production",
+    "name": "Output measure: Production",
     "uri": "/economy/grossdomesticproductgdp/timeseries/l2kq"
   },
   "items": [
     {
-      "name": "Output Measure: Production",
+      "name": "Output measure: Production",
       "uri": "/economy/grossdomesticproductgdp/timeseries/l2kq"
     },
     {
-      "name": "Output Measure: Manufacturing",
+      "name": "Output measure: Manufacturing",
       "uri": "/economy/grossdomesticproductgdp/timeseries/l2kx"
     },
     {
-      "name": "Output Measure: Agriculture, Forestry and Fishing",
+      "name": "Output measure: Agriculture, forestry and fishing",
       "uri": "/economy/grossdomesticproductgdp/timeseries/l2kl"
     },
     {
-      "name": "Output Measure: Construction",
+      "name": "Output measure: Construction",
       "uri": "/economy/grossdomesticproductgdp/timeseries/l2n8"
     },
     {
-      "name": "Output Measure: Services",
+      "name": "Output measure: Services",
       "uri": "/economy/grossdomesticproductgdp/timeseries/l2nc"
     }
   ],
   "statsBulletinHeadline": {
-    "name": "Quarterly National Accounts",
-    "uri": "/economy/economicoutputandproductivity/bulletins/quarterlynationalaccounts"
+    "summary": "Estimates of the key components of GDP from the output, income and expenditure approaches. Gross Domestic Product measures the chained volume index movements of the UK. The services sector accounts for more than three quarters of total gross domestic product. Figures are adjusted for seasonal variations unless otherwise stated and the reference year is 2010\u003d100.",
+    "name": "Quarterly National Accounts, Q1 2014",
+    "uri": "/economy/economicoutputandproductivity/bulletins/quarterlynationalaccountsq12014"
   },
   "statsBulletins": [
     {
-      "name": "Quarterly National Accounts",
-      "uri": "/economy/economicoutputandproductivity/bulletins/quarterlynationalaccounts"
+      "summary": "Estimates of the key components of GDP from the output, income and expenditure approaches. Gross Domestic Product measures the chained volume index movements of the UK. The services sector accounts for more than three quarters of total gross domestic product. Figures are adjusted for seasonal variations unless otherwise stated and the reference year is 2010\u003d100.",
+      "name": "Quarterly National Accounts, Q1 2014",
+      "uri": "/economy/economicoutputandproductivity/bulletins/quarterlynationalaccountsq12014"
     }
   ],
   "datasets": [
     {
+      "summary": "By category of output (reference year 2010) for production and service industries",
       "name": "Gross value added",
       "uri": "/economy/economicoutputandproductivity/datasets/grossvalueadded"
     }

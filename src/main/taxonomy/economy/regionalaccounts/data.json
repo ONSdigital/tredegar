@@ -1,11 +1,11 @@
 {
   "headline": {
-    "name": "United Kingdom Gross Disposable Household Income",
+    "name": "UK Gross Disposable Household Income",
     "uri": "/economy/regionalaccounts/timeseries/qwnd"
   },
   "items": [
     {
-      "name": "United Kingdom Gross Disposable Household Income",
+      "name": "UK Gross Disposable Household Income",
       "uri": "/economy/regionalaccounts/timeseries/qwnd"
     },
     {
@@ -62,17 +62,20 @@
     }
   ],
   "statsBulletinHeadline": {
-    "name": "Regional Gross Disposable Household Income (GDHI)",
-    "uri": "/economy/regionalaccounts/bulletins/regionalgrossdisposablehouseholdincomegdhi"
+    "summary": "This bulletin presents the latest estimates of Gross Disposable Household Income (GDHI) for regions (see Table 1), sub-regions and local areas of the UK.",
+    "name": "Regional Gross Disposable Household Income (GDHI), 2012",
+    "uri": "/economy/regionalaccounts/bulletins/regionalgrossdisposablehouseholdincomegdhi2012"
   },
   "statsBulletins": [
     {
-      "name": "Regional Gross Disposable Household Income (GDHI)",
-      "uri": "/economy/regionalaccounts/bulletins/regionalgrossdisposablehouseholdincomegdhi"
+      "summary": "This bulletin presents the latest estimates of Gross Disposable Household Income (GDHI) for regions (see Table 1), sub-regions and local areas of the UK.",
+      "name": "Regional Gross Disposable Household Income (GDHI), 2012",
+      "uri": "/economy/regionalaccounts/bulletins/regionalgrossdisposablehouseholdincomegdhi2012"
     }
   ],
   "datasets": [
     {
+      "summary": "Brief description of dataset",
       "name": "NUTS1 Regional Gross Disposable Household Income",
       "uri": "/economy/regionalaccounts/datasets/nuts1regionalgrossdisposablehouseholdincome"
     }

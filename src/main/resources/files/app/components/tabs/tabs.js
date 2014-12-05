@@ -30,7 +30,7 @@
 
 
       function select(key) {
-        for (var p in panes) { //Hide all panes  
+        for (var p in panes) { //Hide all panes
           if (panes.hasOwnProperty(p)) {
             panes[p].selected = false;
           }
@@ -38,13 +38,14 @@
 
         var selectedPane = panes[key]
         selectedPane.selected = true; //Show selected pane
-        
+
         if ($scope.tabsActiveVar) {
           $scope.$parent[$scope.tabsActiveVar] = selectedPane.key
         }
       }
 
       function isSelected(key) {
+        alert (key)
         var pane = panes[key]
         if (pane) {
           return pane.selected

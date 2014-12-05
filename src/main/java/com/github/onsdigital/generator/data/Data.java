@@ -15,9 +15,9 @@ import org.apache.commons.lang3.StringUtils;
 
 import com.github.onsdigital.generator.Folder;
 import com.github.onsdigital.generator.datasets.DatasetContent;
+import com.github.onsdigital.generator.markdown.AdditionalBulletins;
 import com.github.onsdigital.generator.markdown.ArticleMarkdown;
 import com.github.onsdigital.generator.markdown.BulletinMarkdown;
-import com.github.onsdigital.generator.markdown.MethodologyMarkdown;
 import com.github.onsdigital.generator.taxonomy.TaxonomyCsv;
 import com.github.onsdigital.json.dataset.Dataset;
 import com.github.onsdigital.json.timeseries.Timeseries;
@@ -74,7 +74,8 @@ public class Data implements Iterable<Timeseries> {
 		// Markdown content:
 		BulletinMarkdown.parse();
 		ArticleMarkdown.parse();
-		MethodologyMarkdown.parse();
+		// MethodologyMarkdown.parse();
+		AdditionalBulletins.parse();
 
 		// Data
 		NonCdidCSV.parse();

@@ -1,31 +1,31 @@
 {
   "headline": {
-    "name": "Employment rate (aged 16-64)",
+    "name": "Employment rate (aged 16 to 64)",
     "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/lf24"
   },
   "items": [
     {
-      "name": "Employment rate (aged 16-64)",
+      "name": "Employment rate (aged 16 to 64)",
       "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/lf24"
     },
     {
-      "name": "Female Employment rate (aged 16-64)",
+      "name": "Female employment rate (aged 16 to 64)",
       "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/lf25"
     },
     {
-      "name": "Male Employment rate (aged 16-64)",
+      "name": "Male employment rate (aged 16 to 64)",
       "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgsv"
     },
     {
-      "name": "Employment 16+",
+      "name": "Employment 16 and over",
       "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgrz"
     },
     {
-      "name": "Female Employment 16+",
+      "name": "Female employment 16 and over",
       "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgsb"
     },
     {
-      "name": "Male Employment 16+",
+      "name": "Male employment 16 and over",
       "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgsa"
     },
     {
@@ -33,13 +33,26 @@
       "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/ap2y"
     }
   ],
-  "statsBulletins": [],
+  "statsBulletinHeadline": {
+    "summary": "Labour market statistics (including employment, unemployment and economic inactivity) for the United Kingdom.",
+    "name": "UK Labour Market, July 2014",
+    "uri": "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/uklabourmarketjuly2014"
+  },
+  "statsBulletins": [
+    {
+      "summary": "Labour market statistics (including employment, unemployment and economic inactivity) for the United Kingdom.",
+      "name": "UK Labour Market, July 2014",
+      "uri": "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/uklabourmarketjuly2014"
+    }
+  ],
   "datasets": [
     {
+      "summary": "Brief description of dataset",
       "name": "Full-time, part-time \u0026 temporary workers",
       "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/datasets/fulltimeparttimetemporaryworkers"
     },
     {
+      "summary": "Brief description of dataset",
       "name": "Jobs by industry",
       "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/datasets/jobsbyindustry"
     }

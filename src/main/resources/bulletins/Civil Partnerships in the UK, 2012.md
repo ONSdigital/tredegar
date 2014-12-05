@@ -31,8 +31,8 @@ In 2012, the number of civil partnerships formed in the UK by same sex couples w
 
 The number of civil partnership formations increased in all four constituent countries in 2012, with an increase of 3.4% in England (6,103 partnerships), 3.6% in Scotland (574 partnerships), 2.8% in Wales (259 partnerships) and 13% in Northern Ireland (101 partnerships).
 
-<div class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/civil1.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/civil1.html"></iframe>
 </div>
 
 ##### Notes:
@@ -49,8 +49,8 @@ In 2012, there were slightly more female civil partnerships (51%) in the UK than
 
 In 2012, the proportions of male and female civil partnerships in England and Northern Ireland were equal. There were lower proportions of male civil partnerships in Scotland (45%) and Wales (37%).
 
-<div class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/civil2.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/civil2.html"></iframe>
 </div>
 
 ##### Notes:
@@ -61,8 +61,8 @@ In 2012, the proportions of male and female civil partnerships in England and No
 ## Civil partnerships by age
 The mean (average) age at formation of civil partnership in the UK fell slightly from 40.1 years in 2011 to 40.0 in 2012 for men, and for women from 38.3 years in 2011 to 37.6 in 2012. The average age at formation has been decreasing year on year as older couples who had waited for the introduction of the legislation took the opportunity to form a civil partnership early on (Figure 3).
 
-<div class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/civil3.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/civil3.html"></iframe>
 </div>
 
 ##### Notes
@@ -71,8 +71,8 @@ The mean (average) age at formation of civil partnership in the UK fell slightly
 
 The average age at civil partnership formation for all partners in 2012 was highest in England (38.9 years) and lowest in Northern Ireland (35.4 years).  The average age in Wales was 37.9 years, while in Scotland it was 38.4 years. The average age at formation of female civil partnerships was highest in Scotland (38.2 years) and lowest in Northern Ireland (35.5 years), while the average age at formation of male civil partnerships was highest in Wales (40.2 years) and lowest in Northern Ireland (35.3 years).
 
-<div class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/civil4.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/civil4.html"></iframe>
 </div>
 
 ##### Notes:
@@ -97,8 +97,8 @@ To obtain a civil partnership dissolution in the UK, a couple must have been in 
 
 By the end of 2012, 3.2% of male civil partnerships in the England and Wales had ended in dissolution, while 6.1% of all female partnerships in England and Wales had ended in dissolution (see background note 8).
 
-<div class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/civil5.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/civil5.html"></iframe>
 </div>
 
 ##### Notes:
@@ -111,8 +111,8 @@ The mean (average) age at dissolution of civil partnership in England and Wales 
 
 The average age of all partners dissolving a civil partnership in 2012 was higher in Northern Ireland (40.3 years) than in England and Wales (38.6 years).
 
-<div class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/civil6.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/civil6.html"></iframe>
 </div>
 
 ##### Notes:

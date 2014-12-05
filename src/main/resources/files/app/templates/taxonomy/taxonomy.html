@@ -6,7 +6,7 @@
             <span ng-include="'app/templates/t2/t2.html'"></span>
         </span>
         <span ng-if="taxonomy.data.level === 't1'" ng-controller="T1Controller as t1">
-            <span ng-include="'app/templates/t1new/t1new.html'"></span>
+            <span ng-include="'app/templates/t1/t1.html'"></span>
         </span>
         <span ng-if="taxonomy.data.level === 't3'" ng-controller="T3Controller as t3">
             <span ng-include="'app/templates/t3/t3.html'"></span>
@@ -35,4 +35,9 @@
     <!-- Dataset -->
     <span ng-if="taxonomy.data.type === 'dataset'" ng-controller="DatasetController as dataset">
         <span ng-include="'app/templates/dataset/dataset.html'"></span>
+    </span>
+
+        <!-- Release -->
+    <span ng-if="taxonomy.data.type === 'release'" ng-controller="ReleaseCtrl as release">
+        <span ng-include="'app/templates/release/release.html'"></span>
     </span>

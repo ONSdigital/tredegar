@@ -8,8 +8,10 @@ import java.util.Map;
 
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.elasticsearch.action.search.SearchRequestBuilder;
 import org.elasticsearch.action.suggest.SuggestResponse;
 import org.elasticsearch.common.text.Text;
+import org.elasticsearch.index.query.TermFilterBuilder;
 import org.elasticsearch.search.suggest.Suggest.Suggestion.Entry;
 import org.elasticsearch.search.suggest.Suggest.Suggestion.Entry.Option;
 import org.elasticsearch.search.suggest.term.TermSuggestionBuilder;
@@ -18,6 +20,7 @@ import com.github.onsdigital.json.ContentType;
 import com.github.onsdigital.json.timeseries.Timeseries;
 import com.github.onsdigital.search.ElasticSearchServer;
 import com.github.onsdigital.search.SearchService;
+import com.github.onsdigital.search.bean.AggregatedSearchResult;
 import com.github.onsdigital.search.bean.SearchResult;
 
 public class SearchHelper {
@@ -34,16 +37,16 @@ public class SearchHelper {
 	 * @param types
 	 * @return
 	 */
-	public static SearchResult search(String searchTerm, int page, boolean naturalLanguage, String... types) {
-		if (ArrayUtils.isEmpty(types)) {
-			return searchMultiple(searchTerm, page, naturalLanguage);
+	public static AggregatedSearchResult search(String searchTerm, int page, String... types) {
+		if (ArrayUtils.isEmpty(types) && page < 2) {
+			return searchMultiple(searchTerm, page);
 		} else {
-			return SearchService.search(buildContentQuery(searchTerm, page, naturalLanguage, types));
+			return doSearch(searchTerm, page, types);
 		}
 	}
-	
-	public static SearchResult autocomplete(String searchTerm, boolean naturalLanguage) {
-		ONSQueryBuilder builder = buildAutocompleteQuery(searchTerm, naturalLanguage);
+
+	public static SearchResult autocomplete(String searchTerm) {
+		ONSQueryBuilder builder = buildAutocompleteQuery(searchTerm);
 		return SearchService.search(builder);
 	}
 
@@ -53,32 +56,32 @@ public class SearchHelper {
 	 * 
 	 */
 	public static Timeseries searchCdid(String cdid) {
-		ONSQueryBuilder cdidQuery = new ONSQueryBuilder("ons").setSearchTerm(cdid).setFields(CDID).setType(ContentType.timeseries.toString());
-		SearchResult result =  SearchService.search(cdidQuery);
-		
-		if(result.getNumberOfResults() == 0 ) {
+
+		cdid = cdid.toUpperCase();
+
+		TermFilterBuilder termFilterBuilder = new TermFilterBuilder(CDID, cdid);
+
+		SearchRequestBuilder searchRequestBuilder = (ElasticSearchServer.getClient().prepareSearch("ons")).setQuery(termFilterBuilder.buildAsBytes());
+
+		SearchResult result = new SearchResult(searchRequestBuilder.get());
+
+		if (result.getNumberOfResults() == 0) {
 			return null;
 		}
-		
-		for (Map<String, Object> timeSeriesProperties  : result.getResults()) {
-			//If cdic is not exact match consider it no match
-			if(!timeSeriesProperties.get("cdid").toString().toLowerCase().equals(cdid.toLowerCase())) {
-				continue;
-			}
-			Timeseries timeseries = new Timeseries();
-			timeseries.setCdid((String) timeSeriesProperties.get("cdid"));
-			timeseries.name = (String) timeSeriesProperties.get("name");
-			timeseries.uri = URI.create((String) timeSeriesProperties.get("url"));
-			return timeseries;
-		}
-		
-		return null;
+
+		Map<String, Object> timeSeriesProperties = result.getResults().iterator().next();
+		Timeseries timeseries = new Timeseries();
+		timeseries.setCdid((String) timeSeriesProperties.get("cdid"));
+		timeseries.name = (String) timeSeriesProperties.get("name");
+		timeseries.uri = URI.create((String) timeSeriesProperties.get("url"));
+		return timeseries;
+
 	}
 
-	public static SearchResult searchSuggestions(String query, int page, String[] types) throws IOException, Exception {
+	public static AggregatedSearchResult searchSuggestions(String query, int page, String[] types) throws IOException, Exception {
 		TermSuggestionBuilder termSuggestionBuilder = new TermSuggestionBuilder("autocorrect").field("title").text(query).size(2);
 		SuggestResponse suggestResponse = ElasticSearchServer.getClient().prepareSuggest("ons").addSuggestion(termSuggestionBuilder).execute().actionGet();
-		SearchResult result = null;
+		AggregatedSearchResult result = null;
 
 		StringBuffer suggestionsBuffer = new StringBuffer();
 		Iterator<? extends Entry<? extends Option>> iterator = suggestResponse.getSuggest().getSuggestion("autocorrect").getEntries().iterator();
@@ -99,7 +102,7 @@ public class SearchHelper {
 		if (StringUtils.isEmpty(suggestionsBufferAsString)) {
 			System.out.println("All search steps failed to discover suitable match");
 		} else {
-			result = search(suggestionsBufferAsString, page, false, types);
+			result = search(suggestionsBufferAsString, page, types);
 			result.setSuggestionBasedResult(true);
 			result.setSuggestion(suggestionsBufferAsString);
 			System.out.println("Failed to find any results for[" + query + "] so will use suggestion of [" + suggestionsBufferAsString + "]");
@@ -107,34 +110,39 @@ public class SearchHelper {
 		return result;
 	}
 
-	private static SearchResult searchMultiple(String searchTerm, int page, boolean naturalLanguage) {
-		// If no filter and first page, include one home type result at the top
-		List<SearchResult> responses = SearchService.multiSearch(buildHomeQuery(searchTerm, page, naturalLanguage), buildContentQuery(searchTerm, page, naturalLanguage));
-		Iterator<SearchResult> resultsIterator = responses.iterator();
-		SearchResult homeResult = resultsIterator.next();
-		SearchResult contentResult = resultsIterator.next();
-		if(homeResult.getNumberOfResults() > 0) {
-			//Add content results to home result and return
-			if(page > 1) {
-				homeResult.setResults(contentResult.getResults());
-			} else {
-				homeResult.getResults().addAll(contentResult.getResults());
-			}
-			homeResult.setNumberOfResults(1 + contentResult.getNumberOfResults());
-			return homeResult;
-		}
-		return contentResult;
+	private static AggregatedSearchResult doSearch(String searchTerm, int page, String... types) {
+		SearchResult searchResult = SearchService.search(buildContentQuery(searchTerm, page, types));
+
+		AggregatedSearchResult result = new AggregatedSearchResult();
+		result.contentSearchResult = searchResult;
+		return result;
 	}
 
-	private static ONSQueryBuilder buildHomeQuery(String searchTerm, int page, boolean naturalLanguage) {
+	
+	private static AggregatedSearchResult searchMultiple(String searchTerm, int page) {
+		// If no filter and first page, include one home type result at the top
+		List<SearchResult> responses = SearchService.multiSearch(buildHomeQuery(searchTerm, page), buildContentQuery(searchTerm, page));
+		long timeseriesCount = SearchService.count(buildTimeseriesCountQuery(searchTerm));
+		Iterator<SearchResult> resultsIterator = responses.iterator();
+		AggregatedSearchResult result = new AggregatedSearchResult();
+		result.homeSearchResult = resultsIterator.next();
+		result.contentSearchResult =  resultsIterator.next();
+		result.timeseriesCount = timeseriesCount;
+		return result;
+	}
+
+	private static ONSQueryBuilder buildHomeQuery(String searchTerm, int page) {
 		ONSQueryBuilder homeQuery = new ONSQueryBuilder("ons").setType(ContentType.home.toString()).setPage(page).setSearchTerm(searchTerm).setSize(1).setFields(TITLE, "url");
-		homeQuery.setNaturalLanguage(naturalLanguage);
 		return homeQuery;
 	}
+	
+	private static ONSQueryBuilder buildTimeseriesCountQuery(String searchTerm) {
+		ONSQueryBuilder timeseriesCountQuery = new ONSQueryBuilder("ons").setType(ContentType.timeseries.toString()).setSearchTerm(searchTerm).setFields(TITLE, "url");
+		return timeseriesCountQuery;
+	}
 
-	private static ONSQueryBuilder buildContentQuery(String searchTerm, int page, boolean naturalLanguage, String... types) {
+	private static ONSQueryBuilder buildContentQuery(String searchTerm, int page, String... types) {
 		ONSQueryBuilder contentQuery = new ONSQueryBuilder("ons").setSearchTerm(searchTerm).setFields(TITLE, "url");
-		contentQuery.setNaturalLanguage(naturalLanguage);
 		if (ArrayUtils.isEmpty(types)) {
 			contentQuery.setTypes(ContentType.bulletin.toString(), ContentType.dataset.toString(), ContentType.methodology.toString(), ContentType.article.toString()).setPage(page);
 
@@ -144,11 +152,11 @@ public class SearchHelper {
 
 		return contentQuery;
 	}
-	
-	private static ONSQueryBuilder buildAutocompleteQuery(String searchTerm, boolean naturalLanguage) {
+
+	private static ONSQueryBuilder buildAutocompleteQuery(String searchTerm) {
 		ONSQueryBuilder autocompleteQuery = new ONSQueryBuilder("ons").setSearchTerm(searchTerm).setFields(TITLE, "url");
-		autocompleteQuery.setNaturalLanguage(naturalLanguage);
-		autocompleteQuery.setTypes(ContentType.timeseries.toString(), ContentType.bulletin.toString(), ContentType.dataset.toString(), ContentType.methodology.toString(), ContentType.article.toString());
+		autocompleteQuery.setTypes(ContentType.timeseries.toString(), ContentType.bulletin.toString(), ContentType.dataset.toString(), ContentType.methodology.toString(),
+				ContentType.article.toString());
 		return autocompleteQuery;
 	}
 }

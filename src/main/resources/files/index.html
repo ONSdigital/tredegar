@@ -87,33 +87,39 @@ markup: false
 
 <body id="ng-app" class="js">
 
+    <noscript>
+        <main id="main" role="main" class="ONS_border">
+            <div style="margin: 20px;">
+                <p>
+                    <img class="clearfix" src="/ui/img/ons-logo.svg" alt="Office for National Statistics" width="300" class="media__img">
+                </p>
+            </div>
+            <hr/>
+            <div style="margin: 20px;">
+                <h2>This page needs JavaScript to be displayed.</h2>
+            </div>
+            <div style="padding-left: 20px;">
+                <p>You can either:</p>
+                <ul>
+                    <li>enable Javascript as follows: <a href="http://www.enable-javascript.com/">Enabling JavaScript</a>
+                    </li>
+                    <li>or browse to a <a href="/static">simplified HTML version</a> of the site (this may be up to a day out of date)</li>
+                </ul>
+                <p>If you are having difficulty accessing this site, please send a Tweet to <a href="https://twitter.com/jukesie">@jukesie</a>.</p>
+            </div>
+            <hr/>
+        </main>
+    </noscript>
+
     <div ng-include="'app/partials/modal/modal.html'" ></div>
     <!-- <a id="my_feedback" class="btn btn--survey" onclick="_bugHerd.win.bugherd.applicationView.anonymousbar.toggleOptions()">Send Feedback</a>  -->
     <ons-header></ons-header>
-        <div class="wrap" ng-view autoscroll="true">
-            <noscript>
-                <main id="main" role="main" class="ONS_border">
-                    <div style="margin: 20px;">
-                        <p>
-                            <img class="clearfix" src="/ui/img/ons-logo.svg" alt="Office for National Statistics" width="300" class="media__img">
-                        </p>
-                    </div>
-                    <hr/>
-                    <div style="margin: 20px;">
-                        <h2>This page needs JavaScript to be displayed.</h2>
-                    </div>
-                    <div style="padding-left: 20px;">
-                        <p>You can either:</p>
-                        <ul>
-                            <li>enable Javascript as follows: <a href="http://www.enable-javascript.com/">Enabling JavaScript</a>
-                            </li>
-                            <li>or browse to a <a href="/static">simplified HTML version</a> of the site (this may be up to a day out of date)</li>
-                        </ul>
-                        <p>If you are having difficulty accessing this site, please send a Tweet to <a href="https://twitter.com/jukesie">@jukesie</a>.</p>
-                    </div>
-                    <hr/>
-                </main>
-            </noscript>
+        <div class="wrap"  ng-if="hasErrors()">
+            <span ng-if="error === 404" ng-include="'app/templates/error-pages/error404.html'"></span>
+            <span ng-if="error === 500" ng-include="'app/templates/error-pages/error500.html'"></span>
+        </span>
+        </div>
+        <div class="wrap" ng-if="!hasErrors()" ng-view autoscroll="true">
         </div>
         <ons-footer></ons-footer>
 
@@ -185,7 +191,6 @@ markup: false
     <script type="text/javascript" src="app/partials/navigation/navigation.controller.js" defer></script>
     <script type="text/javascript" src="app/partials/searchbox/searchbox.directive.js" defer></script>
     <script type="text/javascript" src="app/partials/latest-bulletins/latest-bulletins.directive.js" defer></script>
-    <script type="text/javascript" src="app/partials/release-pane/release-pane.directive.js" defer></script>
     <script type="text/javascript" src="app/partials/related-articles/related-articles.directive.js" defer></script>
     <script type="text/javascript" src="app/partials/contact-details/contact-details.directive.js" defer></script>
     <script type="text/javascript" src="app/partials/social-links/social-links.js" defer></script>

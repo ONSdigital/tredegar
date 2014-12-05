@@ -30,17 +30,20 @@
     }
   ],
   "statsBulletinHeadline": {
-    "name": "Balance of Payments",
-    "uri": "/economy/nationalaccounts/bulletins/balanceofpayments"
+    "summary": "Contains summary of balance of payments accounts and detailed statistics for the current account including - trade in goods and services, income, current and capital transfers, transactions in UK external assets and liabilities, and levels of identified assets and liabilities.",
+    "name": "Balance of Payments, Q1 2014",
+    "uri": "/economy/nationalaccounts/bulletins/balanceofpaymentsq12014"
   },
   "statsBulletins": [
     {
-      "name": "Balance of Payments",
-      "uri": "/economy/nationalaccounts/bulletins/balanceofpayments"
+      "summary": "Contains summary of balance of payments accounts and detailed statistics for the current account including - trade in goods and services, income, current and capital transfers, transactions in UK external assets and liabilities, and levels of identified assets and liabilities.",
+      "name": "Balance of Payments, Q1 2014",
+      "uri": "/economy/nationalaccounts/bulletins/balanceofpaymentsq12014"
     }
   ],
   "datasets": [
     {
+      "summary": "Brief description of dataset",
       "name": "Balance of Payments data collection",
       "uri": "/economy/nationalaccounts/datasets/balanceofpaymentsdatacollection"
     }

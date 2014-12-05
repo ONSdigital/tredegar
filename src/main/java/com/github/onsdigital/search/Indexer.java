@@ -31,8 +31,12 @@ public class Indexer {
 		if (absoluteFilePaths.isEmpty()) {
 			throw new IllegalStateException("No items were found for indexing");
 		}
-		createIndex(client, absoluteFilePaths);
-		indexDocuments(client, absoluteFilePaths);
+		try {
+			createIndex(client, absoluteFilePaths);
+			indexDocuments(client, absoluteFilePaths);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	private static void createIndex(Client client, List<String> absoluteFilePaths) throws IOException {
@@ -60,25 +64,37 @@ public class Indexer {
 	private static XContentBuilder getMappingProperties(String type) throws IOException {
 
 		XContentBuilder builder = jsonBuilder().startObject().startObject(type).startObject("properties");
-		builder.startObject("lede").field("type", "string").field("index", "no").endObject();
-		builder.startObject("title").field("type", "string").field("index", "analyzed").endObject();
-		builder.startObject("url").field("type", "string").field("index", "analyzed").endObject();
-		builder.startObject("path").field("type", "string").field("index", "analyzed").endObject();
-		builder.endObject().endObject().endObject();
-		return builder;
+		try {
+			builder.startObject("lede").field("type", "string").field("index", "no").endObject();
+			builder.startObject("title").field("type", "string").field("index", "analyzed").endObject();
+			builder.startObject("url").field("type", "string").field("index", "analyzed").endObject();
+			builder.startObject("path").field("type", "string").field("index", "analyzed").endObject();
+			builder.endObject().endObject().endObject();
+			return builder;
+		} finally {
+			if (builder != null) {
+				builder.close();
+			}
+		}
 	}
 
 	// Mapping for timeseries field properties.
 	private static XContentBuilder getTimeseriesMappingProperties(String type) throws IOException {
 		XContentBuilder builder = jsonBuilder().startObject().startObject(type).startObject("properties");
-		// cdid not analyzed for exact match
-		builder.startObject("cdid").field("type", "string").field("index", "analyzed").endObject();
-		builder.startObject("title").field("type", "string").field("index", "analyzed").endObject();
-		builder.startObject("url").field("type", "string").field("index", "analyzed").endObject();
-		builder.startObject("path").field("type", "string").field("index", "analyzed").endObject();
-		builder.endObject().endObject().endObject();
-		System.out.println(builder.string() + "\n\n");
-		return builder;
+		try {
+			// cdid not analyzed for exact match
+			builder.startObject("cdid").field("type", "string").field("index", "not_analyzed").endObject();
+			builder.startObject("title").field("type", "string").field("index", "analyzed").endObject();
+			builder.startObject("url").field("type", "string").field("index", "analyzed").endObject();
+			builder.startObject("path").field("type", "string").field("index", "analyzed").endObject();
+			builder.endObject().endObject().endObject();
+			System.out.println(builder.string() + "\n\n");
+			return builder;
+		} finally {
+			if (builder != null) {
+				builder.close();
+			}
+		}
 	}
 
 	private static void indexDocuments(Client client, List<String> absoluteFilePaths) throws IOException {
@@ -99,14 +115,26 @@ public class Indexer {
 	private static void buildTimeseries(Client client, Map<String, String> documentMap, int idCounter) throws IOException {
 		XContentBuilder source = jsonBuilder().startObject().field("title", documentMap.get("title")).field("url", documentMap.get("url")).field("path", documentMap.get("tags"))
 				.field("cdid", documentMap.get("cdid")).endObject();
-		build(client, documentMap, idCounter, source);
+		try {
+			build(client, documentMap, idCounter, source);
+		} finally {
+			if (source != null) {
+				source.close();
+			}
+		}
 	}
 
 	private static void buildDocument(Client client, Map<String, String> documentMap, int idCounter) throws IOException {
 
 		XContentBuilder source = jsonBuilder().startObject().field("title", documentMap.get("title")).field("url", documentMap.get("url")).field("path", documentMap.get("tags"))
 				.field("lede", documentMap.get("lede")).endObject();
-		build(client, documentMap, idCounter, source);
+		try {
+			build(client, documentMap, idCounter, source);
+		} finally {
+			if (source != null) {
+				source.close();
+			}
+		}
 	}
 
 	private static void build(Client client, Map<String, String> documentMap, int idCounter, XContentBuilder source) {
@@ -135,8 +163,20 @@ public class Indexer {
 		settingsBuilder.putArray("analysis.filter.ons_synonym_filter.synonyms", synonyms);
 
 		Map<String, String> settings = new HashMap<>();
+		// default analyzer
+		settings.put("analysis.analyzer.default_index.tokenizer", "ons_search_tokenizer");
+		settings.put("analysis.analyzer.default_index.filter", "lowercase");
 		settings.put("analysis.analyzer.ons_synonyms.tokenizer", "standard");
 		settings.put("analysis.filter.ons_synonym_filter.type", "synonym");
+
+		
+		// edgeNGram tokenizer
+		settings.put("analysis.tokenizer.ons_search_tokenizer.type", "edgeNGram");
+		settings.put("analysis.tokenizer.ons_search_tokenizer.max_gram", "15");
+		settings.put("analysis.tokenizer.ons_search_tokenizer.min_gram", "2");
+		String[] tokenChars = { "letter", "digit" };
+		settingsBuilder.putArray("analysis.tokenizer.ons_search_tokenizer.token_chars", tokenChars);
+
 		settingsBuilder.put(settings);
 	}
 
@@ -144,14 +184,16 @@ public class Indexer {
 		String[] filters = { "lowercase", "ons_synonym_filter" };
 		settingsBuilder.putArray("analysis.analyzer.ons_synonyms.filter", filters);
 
-		InputStream inputStream = Indexer.class.getResourceAsStream("/synonym.txt");
-		BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
-		List<String> synonymList = new ArrayList<String>();
-		String contents = null;
-		while ((contents = reader.readLine()) != null) {
-			synonymList.add(contents);
+		// java 7 try-with-resources automatically closes streams after use
+		try (InputStream inputStream = Indexer.class.getResourceAsStream("/synonym.txt");
+				BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream))) {
+
+				List<String> synonymList = new ArrayList<String>();
+				String contents = null;
+				while ((contents = reader.readLine()) != null) {
+					synonymList.add(contents);
+				}
+				return synonymList;
 		}
-		reader.close();
-		return synonymList;
 	}
 }

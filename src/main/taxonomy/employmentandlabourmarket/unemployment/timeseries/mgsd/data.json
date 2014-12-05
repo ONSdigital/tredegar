@@ -5144,10 +5144,7 @@
       "sourceDataset": "LMS"
     }
   ],
-  "relatedBulletins": [
-    "/employmentandlabourmarket/unemployment/bulletins/uklabourmarket",
-    "/employmentandlabourmarket/unemployment/bulletins/youngpeoplenotineducationemploymentortrainingneet"
-  ],
+  "relatedBulletins": [],
   "relatedTimeseries": [
     "/employmentandlabourmarket/unemployment/timeseries/mgse",
     "/employmentandlabourmarket/unemployment/timeseries/mgsc",
@@ -5157,7 +5154,7 @@
     "LMS"
   ],
   "type": "timeseries",
-  "name": "Male Unemployment 16+",
+  "name": "Male unemployment 16 and over",
   "uri": "/employmentandlabourmarket/unemployment/timeseries/mgsd",
   "fileName": "mgsd",
   "breadcrumb": [

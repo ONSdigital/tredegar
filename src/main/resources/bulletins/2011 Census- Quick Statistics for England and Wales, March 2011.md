@@ -1,4 +1,4 @@
-﻿Theme: People, Population and Community
+Theme: People, Population and Community
 Level 2: Cultural Identity
 Level 3: Language
 Summary: 2011 Census, Quick Statistics, Household resident, Communal establishment resident, Usual resident, Household composition, Dependent children, Long-term health problem, Lone parent households, Employment, Ethnic group, Ethnicity, Race, English language, Main language, Religion, Health, care, long-term health problem, accommodation type, household spaces, Qualifications,  economic activity, Hours worked, Employment, Industry, Occupation.
@@ -7,6 +7,8 @@ Headline 2: Of the other 8% (4.2 million), 79% (3.3 million) could speak English
 Headline 3: In 2011, less than half a per cent (138,000) of all usual residents aged three years and over could not speak English.
 Contact name: Emma White
 Contact email: census.customerservices@ons.gsi.gov.uk
+
+# 2011 Census - Quick Statistics for England and Wales, March 2011
 
 ## Key Figures
 - Ninety two per cent (49.8 million) of usual residents aged three years and over spoke English (English or Welsh in Wales) as their main language.
@@ -84,8 +86,8 @@ English1 was the main language for 92 per cent (49.8 million) of usual residents
 
 Among the England regions and Wales, the North East (three per cent, 71,000) and Wales (three per cent, 84,000) had the lowest percentage of usual residents reporting a main language other than English1. The highest percentage was in London (22 per cent, 1.7 million), this was three times larger than the second highest percentage; seven per cent (386,000) in the West Midlands.
 
-<div class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/census1.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/census1.html"></iframe>
 </div>
 
 ##### Notes:
@@ -95,8 +97,8 @@ Of the eight per cent (4.2 million) of usual residents aged three and over who r
 
 Across the England regions and Wales the percentage of those whose main language was not English1 who could speak English very well or well varied from 72 per cent (279,000) in the West Midlands to 84 per cent (404,000) in the South East. The percentage who could not speak English at all varied between two per cent (12,000) in the South East and five per cent (19,000) in the West Midlands.
 
-<div class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/census2.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/census2.html"></iframe>
 </div>
 
 ##### Notes:
@@ -121,8 +123,8 @@ The second most widely reported main language for England and Wales was Polish (
 
 Panjabi was the third (half of one per cent, 273,000) most reported main language across England and Wales as a whole; however this varied across the England regions and Wales. It was the second most reported language in the West Midlands (one per cent, 67,000) and the twenty-fourth (less than half of one per cent, 2,400) in the South West.
 
-<div class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/census3.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/census3.html"></iframe>
 </div>
 
 Information on main language is provided in table [QS204EW (1 Mb Excel sheet)](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-and-quick-statistics-for-wards-and-output-areas-in-england-and-wales/rft-qs204ew.xls "RFT QS204EW") . A more detailed analysis of the language topic will be published in the first half of 2013.
@@ -165,7 +167,7 @@ Less than half of one per cent (70,000) of usual residents reported living in a 
 
 Other households are those consisting of usual residents other than one person or one family; they include those where all members were related (for example siblings living together or households containing more than three generations) and where unrelated students or professionals were living together. Twelve per cent (6.8 million) of usual residents reported living in these types of households, an increase of two percentage points on 2001 (ten per cent, 5.1 million). There was also an increase in the average household size of these other households from 3.5 usual residents per household in 2001 to 3.7 in 2011.
 
-Information on household composition is provided in table [QS112EW (460 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-and-quick-statistics-for-wards-and-output-areas-in-england-and-wales/rft-qs112ew.xls "RFT QS112EW")  and [QS113EW (459.5 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-and-quick-statistics-for-wards-and-output-areas-in-england-and-wales/rft-qs113ew.xls "RFT QS113EW") . More detailed analysis on [households and families](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-and-quick-statistics-for-wards-and-output-areas-in-england-and-wales/rft-families-short-story.html "RPT Families Short Stories") has been published with this release. 
+Information on household composition is provided in table [QS112EW (460 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-and-quick-statistics-for-wards-and-output-areas-in-england-and-wales/rft-qs112ew.xls "RFT QS112EW")  and [QS113EW (459.5 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-and-quick-statistics-for-wards-and-output-areas-in-england-and-wales/rft-qs113ew.xls "RFT QS113EW") . More detailed analysis on [households and families](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-and-quick-statistics-for-wards-and-output-areas-in-england-and-wales/rft-families-short-story.html "RPT Families Short Stories") has been published with this release.
 
 ##### Notes for Household composition
 1. A comparison with 2001 Census data on people living alone is available in [‘Families and Households in England and Wales’](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-and-quick-statistics-for-wards-and-output-areas-in-england-and-wales/rft-families-short-story.html "RPT Families Short Stories").
@@ -214,8 +216,8 @@ Information on the economic activity of full-time students is provided in table 
 ## Armed forces
 In 2011, less than one per cent (153,000) of the usually resident population of England and Wales, and all the England regions, reported that they were in the armed forces. This is similar to 2001 (161,000).
 
-<div class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/census4.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/census4.html"></iframe>
 </div>
 
 The distribution of members of the armed forces differs from that of the usually resident population as a whole. In 2011, 22 per cent of armed forces members lived in the South West (34,000) and a further 22 per cent lived in the South East (33,000). This differs from 2001, when the South East had the largest percentage of the armed forces population (26 per cent, 41,000), followed by the South West (23 per cent, 37,000). The North East had the smallest percentage of the armed forces population (four per cent, 5,700), as it had in 2001 (three per cent, 4,900).
@@ -225,16 +227,16 @@ Information on armed forces members is provided in table [QS121EW (253.5 Kb Exce
 ## Method of travel to work
 Method of travel to work1 is the mode of transport used to cover the longest part, by distance, of a journey to work. This information is published by home address for usual residents aged between 16 and 74 years, who were working2 during the week before census day, 27 March 2011.
 
-<div class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/census5.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/census5.html"></iframe>
 </div>
 
 In 2011 the majority of 16 to 74 year olds in employment travelled to work by driving a car or van (58 per cent, 15.3 million). A further five per cent (1.4 million) travelled to work as a passenger in a car or van.
 
 The second most reported method of travel to work for 16 to 74 year olds in employment was by foot (11 per cent, 2.8 million), whilst the third was travel by bus, minibus or coach (seven per cent, 1.9 million).
 
-<div class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/census6.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/census6.html"></iframe>
 </div>
 
 Figure 6 shows that the main variation between the England regions and Wales is in the percentages using public transport (including buses, trains and underground trains/light rail/trams), and those using cars, motorcycles and taxis.
@@ -245,7 +247,7 @@ Outside London, the percentage of workers mainly using public transport ranged f
 
 Although the South West had the lowest percentage of journeys to work by public transport, it had the highest percentage of workers travelling on foot or using a bicycle (17 per cent, 439,000), together with the highest percentage of people working from home (seven per cent, 178,000). In other areas the percentage using foot or bicycle varied from 12 per cent (302,000) in the West Midlands to 14 per cent (348,000) in Yorkshire and the Humber.
 
-Information on travel to work is provided in table [QS701EW (301 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-and-quick-statistics-for-wards-and-output-areas-in-england-and-wales/rft-qs701ew.xls "RFT QS701EW") . A more detailed analysis of this data will be published later in 2013. 
+Information on travel to work is provided in table [QS701EW (301 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-and-quick-statistics-for-wards-and-output-areas-in-england-and-wales/rft-qs701ew.xls "RFT QS701EW") . A more detailed analysis of this data will be published later in 2013.
 
 ##### Notes for Method of travel to work
 1. Due to definitional differences, and because the census questionnaire is self completed by the population of England and Wales, the census estimates of people travelling to work may differ from other sources. In addition, direct comparisons are not possible for mode of travel to work between 2001 and 2011. In 2001, people who recorded their place of work as working mainly at or from home were considered to have their mode of travel to work as working mainly at or from home. In 2011, people working mainly at or from home could record, for example, that they travelled to work as a driver in a car or van, despite being based at home. This extra information is useful for transport planning.

@@ -46,25 +46,30 @@
     }
   ],
   "statsBulletinHeadline": {
-    "name": "Consumer Price Inflation",
-    "uri": "/economy/inflationandpriceindices/bulletins/consumerpriceinflation"
+    "summary": "CPI, CPIH, RPI and RPIJ inflation price indices for June 2014 - brief description and analysis",
+    "name": "Consumer Price Inflation, June 2014",
+    "uri": "/economy/inflationandpriceindices/bulletins/consumerpriceinflationjune2014"
   },
   "statsBulletins": [
     {
-      "name": "Consumer Price Inflation",
-      "uri": "/economy/inflationandpriceindices/bulletins/consumerpriceinflation"
+      "summary": "CPI, CPIH, RPI and RPIJ inflation price indices for June 2014 - brief description and analysis",
+      "name": "Consumer Price Inflation, June 2014",
+      "uri": "/economy/inflationandpriceindices/bulletins/consumerpriceinflationjune2014"
     }
   ],
   "datasets": [
     {
+      "summary": "Measures of inflation data, including CPI, RPI, CPIH and RPIJ",
       "name": "Inflation data collection",
       "uri": "/economy/inflationandpriceindices/datasets/inflationdatacollection"
     },
     {
+      "summary": "Complete dataset covering all RPI statistics. Not a National Statistic.",
       "name": "Retail Prices Index",
       "uri": "/economy/inflationandpriceindices/datasets/retailpricesindex"
     },
     {
+      "summary": "Comprehensive dataset covering input and output index series",
       "name": "Producer Prices Inflation",
       "uri": "/economy/inflationandpriceindices/datasets/producerpricesinflation"
     }

@@ -1,31 +1,31 @@
 {
   "headline": {
-    "name": "Average weekly earning (total pay)",
+    "name": "Average weekly earnings (total pay)",
     "uri": "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/timeseries/kab9"
   },
   "items": [
     {
-      "name": "Average weekly earning (total pay)",
+      "name": "Average weekly earnings (total pay)",
       "uri": "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/timeseries/kab9"
     },
     {
-      "name": "Average weekly earning (regular pay)",
+      "name": "Average weekly earnings (regular pay)",
       "uri": "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/timeseries/kai7"
     },
     {
-      "name": "Average weekly earning (bonus pay)",
+      "name": "Average weekly earnings (bonus pay)",
       "uri": "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/timeseries/kaf4"
     },
     {
-      "name": "Average weekly earning growth rate (bonus pay)",
+      "name": "Average weekly earnings growth rate (bonus pay)",
       "uri": "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/timeseries/kaf6"
     },
     {
-      "name": "Average weekly earning growth rate (regular pay)",
+      "name": "Average weekly earnings growth rate (regular pay)",
       "uri": "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/timeseries/kai9"
     },
     {
-      "name": "Average weekly earning growth rate (bonus pay)",
+      "name": "Average weekly earnings growth rate (bonus pay)",
       "uri": "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/timeseries/kaf6"
     },
     {
@@ -38,31 +38,32 @@
     }
   ],
   "statsBulletinHeadline": {
-    "name": "Annual Survey of Hours and Earnings Pension Tables, 2013 Provisional Results",
-    "uri": "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/annualsurveyofhoursandearningspensiontables2013provisionalresults"
+    "summary": "Labour market statistics (including employment, unemployment and economic inactivity) for the United Kingdom.",
+    "name": "UK Labour Market, July 2014",
+    "uri": "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/uklabourmarketjuly2014"
   },
   "statsBulletins": [
     {
-      "name": "Labour market statistics",
-      "uri": "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/labourmarketstatistics"
-    },
-    {
+      "summary": "The Annual Survey of Hours and Earnings (ASHE) is based on a 1% sample of employee jobs. This is drawn from HM Revenue and Customs Pay As You Earn (PAYE) records. This bulletin contains provisional results from the 2013 survey and revised results from the 2012 survey.",
       "name": "Annual Survey of Hours and Earnings, 2013 Provisional Results",
       "uri": "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/annualsurveyofhoursandearnings2013provisionalresults"
     },
     {
-      "name": "Annual Survey of Hours and Earnings Pension Tables, 2013 Provisional Results",
-      "uri": "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/annualsurveyofhoursandearningspensiontables2013provisionalresults"
+      "summary": "Labour market statistics (including employment, unemployment and economic inactivity) for the United Kingdom.",
+      "name": "UK Labour Market, July 2014",
+      "uri": "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/uklabourmarketjuly2014"
     }
   ],
   "datasets": [
     {
+      "summary": "Brief description of dataset",
       "name": "Actual and usual weekly hours worked",
       "uri": "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/datasets/actualandusualweeklyhoursworked"
     },
     {
-      "name": "Average Weekly Earnings (AWE)",
-      "uri": "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/datasets/averageweeklyearningsawe"
+      "summary": "Covering total pay, bonus pay and regular pay",
+      "name": "Average Weekly Earnings",
+      "uri": "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/datasets/averageweeklyearnings"
     }
   ],
   "level": "t3",

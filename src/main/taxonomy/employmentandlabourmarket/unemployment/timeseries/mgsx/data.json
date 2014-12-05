@@ -5144,10 +5144,7 @@
       "sourceDataset": "LMS"
     }
   ],
-  "relatedBulletins": [
-    "/employmentandlabourmarket/unemployment/bulletins/uklabourmarket",
-    "/employmentandlabourmarket/unemployment/bulletins/youngpeoplenotineducationemploymentortrainingneet"
-  ],
+  "relatedBulletins": [],
   "relatedTimeseries": [
     "/employmentandlabourmarket/unemployment/timeseries/mgsz",
     "/employmentandlabourmarket/unemployment/timeseries/mgsy",
@@ -5158,7 +5155,7 @@
     "LMS"
   ],
   "type": "timeseries",
-  "name": "Unemployment rate (aged 16-64)",
+  "name": "Unemployment rate (aged 16 to 64)",
   "uri": "/employmentandlabourmarket/unemployment/timeseries/mgsx",
   "fileName": "mgsx",
   "breadcrumb": [

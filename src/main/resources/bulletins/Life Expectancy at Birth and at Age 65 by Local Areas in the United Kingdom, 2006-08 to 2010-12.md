@@ -3,8 +3,8 @@ Level 2: Births, Deaths and Marriages
 Level 3: Life Expectancies
 Summary: 2010-12 male and female period life expectancy at birth and at age 65 for the UK and local areas within the four constituent countries.
 Headline 1: The inequality in life expectancy between the local areas with the highest and lowest figures decreased for only males at birth between 2000–02 and 2010–12.
-Headline 2: The majority of local areas in Scotland (72%) were in the fifth of local areas in the UK with the lowest male and female life expectancy at birth in 2010–12. Conversely, only 15% of local areas in England were in this group.
-Headline 3: None of the local areas in Scotland and Wales and only one in Northern Ireland were in the fifth of areas with the highest male and female life expectancy at birth in UK. In contrast, a quarter of local areas in England were in this group.
+Headline 2: The majority of local areas in Scotland (72%) were in the fifth of local areas in the UK with the lowest male and female life expectancy at birth in 2010–12.
+Headline 3: None of the local areas in Scotland and Wales and only one in Northern Ireland were in the fifth of areas with the highest male and female life expectancy at birth.
 Contact name: Olugbenga Olatunde
 Contact email: mortality@ons.gsi.gov.uk
 
@@ -84,7 +84,7 @@ Table source: Office for National Statistics
 2. Figures for England and Wales include deaths of non-residents. Figures for England and Wales separately exclude deaths of non-residents.
 3. Figures for 2002 to 2010 are based on mid-year population estimates, revised in light of the 2011 Census.
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/subnational-health4/life-expec-at-birth-age-65/2006-08-to-2010-12/prt-table-1.xls) (28 Kb)
 
 #### Life Expectancy at Age 65
@@ -125,7 +125,7 @@ Table source: Office for National Statistics
 2. Figures for England and Wales include deaths of non-residents. Figures for England and Wales separately exclude deaths of non-residents.
 3. Figures for 2002 to 2010 are based on mid-year population estimates, revised in light of the 2011 Census.
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/subnational-health4/life-expec-at-birth-age-65/2006-08-to-2010-12/prt-table-2.xls) (29.5 Kb)
 
 ## Regional Life Expectancy
@@ -182,7 +182,7 @@ Table source: Office for National Statistics
 2. Figures exclude deaths of non-residents.
 3. Figures for 2002 to 2010 are based on mid-year population estimates, revised in light of the 2011 Census.
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/subnational-health4/life-expec-at-birth-age-65/2006-08-to-2010-12/prt-table-3.xls) (30.5 Kb)
 
 #### Life Expectancy at Age 65
@@ -227,7 +227,7 @@ Table source: Office for National Statistics
 2. Figures exclude deaths of non-residents.
 3. Figures for 2002 to 2010 are based on mid-year population estimates, revised in light of the 2011 Census.
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/subnational-health4/life-expec-at-birth-age-65/2006-08-to-2010-12/prt-table-4.xls) (30.5 Kb)
 
 ## Local Area Life Expectancy
@@ -258,7 +258,7 @@ Source: Office for National Statistics
 2. Each quintile comprises 81 LADs with the exception of the quintile with the lowest life expectancy, which has 80.
 3. Life expectancy figures are not available for City of London or Isles of Scilly because of small numbers of deaths and populations.
 
-##### Download map: 
+##### Download map:
 ![PNG](http://www.ons.gov.uk/ons/resources/iconpng_tcm77-218163.gif "PNG")  [XLS format](http://www.ons.gov.uk/ons/rel/subnational-health4/life-expec-at-birth-age-65/2006-08-to-2010-12/mpd---map-1.png) (547.5 Kb)
 
 #### Map 2: Life expectancy (LE) for females at birth by local authority district, United Kingdom, 2010–12
@@ -271,7 +271,7 @@ Source: Office for National Statistics
 2. Each quintile comprises 81 LADs with the exception of the quintile with the lowest life expectancy, which has 80.
 3. Life expectancy figures are not available for City of London or Isles of Scilly because of small numbers of deaths and populations.
 
-##### Download map: 
+##### Download map:
 ![PNG](http://www.ons.gov.uk/ons/resources/iconpng_tcm77-218163.gif "PNG")  [XLS format](http://www.ons.gov.uk/ons/rel/subnational-health4/life-expec-at-birth-age-65/2006-08-to-2010-12/mpd---map-2.png) (547.9 Kb)
 
 ##### Life Expectancy at Age 65
@@ -296,7 +296,7 @@ Source: Office for National Statistics
 2. Each quintile comprises 81 LADs with the exception of the quintile with the lowest life expectancy, which has 80.
 3. Life expectancy figures are not available for City of London or Isles of Scilly because of small numbers of deaths and populations.
 
-##### Download map: 
+##### Download map:
 ![PNG](http://www.ons.gov.uk/ons/resources/iconpng_tcm77-218163.gif "PNG")  [XLS format](http://www.ons.gov.uk/ons/rel/subnational-health4/life-expec-at-birth-age-65/2006-08-to-2010-12/mpd---map-3.png) (550.4 Kb)
 
 #### Map 4: Life expectancy (LE) for females at age 65 by local authority district, United Kingdom, 2010–12
@@ -307,7 +307,7 @@ Source: Office for National Statistics
 2. Each quintile comprises 81 LADs with the exception of the quintile with the lowest life expectancy, which has 80.
 3. Life expectancy figures are not available for City of London or Isles of Scilly because of small numbers of deaths and populations.
 
-##### Download map: 
+##### Download map:
 ![PNG](http://www.ons.gov.uk/ons/resources/iconpng_tcm77-218163.gif "PNG")  [XLS format](http://www.ons.gov.uk/ons/rel/subnational-health4/life-expec-at-birth-age-65/2006-08-to-2010-12/mpd---map-4.png) (547.3 Kb)
 
 ## Animated Maps and Reference Tables
@@ -315,8 +315,8 @@ Life expectancy at birth and at age results for 2000–02 to 2010–12 have been
 
 The life expectancy results presented in this bulletin and additional results from 1991–93 can be found – presented with 95 per cent confidence intervals – in the following reference tables:
 
-- Reference table 1 – life expectancy at birth and at age 65 for the UK and local areas in England and Wales 
-- Reference table 2 – life expectancy at birth and at age 65 for the UK and local areas in Scotland 
+- Reference table 1 – life expectancy at birth and at age 65 for the UK and local areas in England and Wales
+- Reference table 2 – life expectancy at birth and at age 65 for the UK and local areas in Scotland
 - Reference table 3 – life expectancy at birth and at age 65 for the UK and local areas in Northern Ireland
 - Reference table 4 – life expectancy at birth and at age 65 for the UK and constituent countries
 - Reference table 5 – top and bottom ten ranked local areas by life expectancy at birth and at age 65

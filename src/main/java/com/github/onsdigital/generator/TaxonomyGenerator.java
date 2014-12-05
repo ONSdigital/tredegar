@@ -1,15 +1,20 @@
 package com.github.onsdigital.generator;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.net.URI;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -25,6 +30,8 @@ import com.github.onsdigital.json.dataset.Dataset;
 import com.github.onsdigital.json.markdown.Article;
 import com.github.onsdigital.json.markdown.Bulletin;
 import com.github.onsdigital.json.markdown.Methodology;
+import com.github.onsdigital.json.release.Release;
+import com.github.onsdigital.json.release.ReleaseReference;
 import com.github.onsdigital.json.taxonomy.HomeSection;
 import com.github.onsdigital.json.taxonomy.T1;
 import com.github.onsdigital.json.taxonomy.T2;
@@ -37,6 +44,7 @@ public class TaxonomyGenerator {
 	static Set<Timeseries> created = new HashSet<>();
 	static List<Folder> oldDatasetsCreated = new ArrayList<>();
 	static Set<Timeseries> noData = new TreeSet<>();
+	static Map<T3, Release> releases = new HashMap<>();
 
 	/**
 	 * Parses the taxonomy CSV file and generates a file structure..
@@ -87,6 +95,9 @@ public class TaxonomyGenerator {
 				}
 			}
 		}
+
+		// Releases:
+		createReleases();
 
 		// Print out metrics and warnings that provide information on whether
 		// the process is working as expected:
@@ -149,6 +160,36 @@ public class TaxonomyGenerator {
 		}
 		if (missing > 0) {
 			System.out.println(missing + " timeseries have no URI set (suggesting they can't be written to the taxonomy)");
+		}
+	}
+
+	private static void createReleases() throws FileNotFoundException, IOException {
+
+		File releasesFolder = new File(root, "releases");
+		releasesFolder.mkdir();
+		List<ReleaseReference> releasesList = new ArrayList<>();
+		for (Release release : releases.values()) {
+			File releaseFolder = new File(releasesFolder, release.fileName);
+			releaseFolder.mkdir();
+			File releaseFile = new File(releaseFolder, "data.json");
+			try (OutputStream output = new FileOutputStream(releaseFile)) {
+				Serialiser.serialise(output, release);
+			}
+			String path = "/" + releasesFolder.getName() + "/" + releaseFolder.getName();
+			release.uri = URI.create(path);
+			releasesList.add(new ReleaseReference(release));
+		}
+		File releasesFile = new File(releasesFolder, "data.json");
+		try (OutputStream output = new FileOutputStream(releasesFile)) {
+			Serialiser.serialise(output, new ReleasesList(releasesList));
+		}
+	}
+
+	static class ReleasesList {
+		List<ReleaseReference> releases;
+
+		ReleasesList(List<ReleaseReference> releases) {
+			this.releases = releases;
 		}
 	}
 
@@ -313,6 +354,8 @@ public class TaxonomyGenerator {
 		createMethodology(folder, file, t3);
 		createDataset(folder, file, t3);
 		createTimeseries(folder, file, t3);
+
+		releases.put(t3, new Release(t3, folder));
 	}
 
 	private static void createDatasets(Folder folder, T3 t3) throws IOException {
@@ -337,7 +380,16 @@ public class TaxonomyGenerator {
 			}
 			t3.statsBulletins.add(new Reference(bulletin));
 		}
+		if (folder.additonalBulletin != null) {
+			if (folder.additonalBulletin.uri == null) {
+				throw new RuntimeException("No URI yet - this is a design issue.");
+			}
+			t3.statsBulletins.add(new Reference(folder.additonalBulletin));
+		}
 
+		// All bulletins at this node, plus the additional bulletin (if any) are
+		// considered to be related.
+		// This is "good enough" for now:
 		for (Bulletin bulletin : folder.bulletins) {
 
 			// Initially add everything - we'll remove "self-reference"
@@ -360,6 +412,14 @@ public class TaxonomyGenerator {
 
 	private static void createStatsBulletinHeadline(Folder folder, T3 t3) throws IOException {
 		// Stats bulletin references:
+
+		if (folder.headlineBulletin == null) {
+			if (folder.bulletins.size() > 0) {
+				folder.headlineBulletin = folder.bulletins.get(0);
+			} else if (folder.additonalBulletin != null) {
+				folder.headlineBulletin = folder.additonalBulletin;
+			}
+		}
 
 		if (folder.headlineBulletin != null) {
 			if (folder.headlineBulletin.uri == null) {

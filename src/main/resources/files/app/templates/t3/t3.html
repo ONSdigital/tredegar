@@ -23,7 +23,7 @@
 <!-- /wrapper -->
 
 <div class="wrapper">
-    <section id="headline" class="box box--padded-vertical-med box--padded-horizontal box--blue  solid border lifted offset-top border-defined flush--bottom" style="padding-bottom: 10px;">
+    <section id="headline" class="box box--padded-vertical-med box--padded-horizontal box--blue  solid border lifted offset-top border-defined flush--bottom" style="padding-bottom: 10px; overflow:hidden;">
         <div class="box__section__header flush">
             <h2 class="beta">
                 {{taxonomy.data.statsBulletinHeadline.name}}</h2>
@@ -34,7 +34,7 @@
         <div class="grid-wrap">
 
             <div class="grid-col tablet-grid-one-half">
-                <div class="box box--padded--med box--green--separated-left box--inline flush">
+                <div class="box box--padded--med box--green--separated-left box--inline flush sparkline_area">
                     <header class="box___section">
                         <h3 class="navpanel-list-heading lede box--padded-bottom-small">
                             <a href="#!{{taxonomy.data.headline.uri}}">{{taxonomy.data.headline.name}}</a>
@@ -46,7 +46,7 @@
                             <ons-loading condition="!taxonomy.data.headline.data"></ons-loading>
                             <div class="stat__figure ">
                                 <div>
-                                    <span class="stat__figure__unit">{{taxonomy.data.headline.data.preUnit}}</span> {{taxonomy.data.headline.data.number}}
+                                    <span class="stat__figure__unit">{{taxonomy.data.headline.data.preUnit}}</span> {{taxonomy.data.headline.data.number | number}}
                                     <span class="stat__figure__unit" ng-if="taxonomy.data.headline.data.unit">{{taxonomy.data.headline.data.unit}}</span>
                                 </div>
                                 <div class="stat__description-large">{{taxonomy.data.headline.data.date}}</div>
@@ -54,7 +54,7 @@
                         </div>
                     </div>
                     <div class="box box--padded--small headline--stat-centred">
-                        <ons-sparkline class="sparkline_area" width="350" height="50" chart-data="taxonomy.data.headline.chartData" headline="true"></ons-sparkline>
+                        <ons-sparkline class="sparkline_area" height="50" chart-data="taxonomy.data.headline.chartData" headline="true"></ons-sparkline>
                     </div>
                     <!-- /box -->
                     <dl class="definition mini stat__updated flush">
@@ -81,16 +81,14 @@
             <td style="vertical-align: middle;">
                  <div class="box box--padded solid  arrow_box">
                     <div id="statsBulletinHeadlines">
-                        <a href="#!{{taxonomy.data.statsBulletinHeadline.data.uri ? taxonomy.data.statsBulletinHeadline.data.uri : '/economy/inflationandpriceindices/bulletins/consumerpriceinflation'}}">
+                        <a href="#!{{taxonomy.data.statsBulletinHeadline.data.uri ? taxonomy.data.statsBulletinHeadline.data.uri : '/economy/inflationandpriceindices/bulletins/consumerpriceinflationjune2014'}}">
                             <h3 class="lede flush--bottom navpanel-list-heading">Statistical bulletin headlines</h3>
                         </a>
                         <ul class="list--bullet mini flush--half--top navpanel-list headline--box-container-text">
                             <li ng-if="taxonomy.data.statsBulletinHeadline.data.headline1">{{taxonomy.data.statsBulletinHeadline.data.headline1}}</li>
                             <li ng-if="taxonomy.data.statsBulletinHeadline.data.headline1">{{taxonomy.data.statsBulletinHeadline.data.headline2}}</li>
                             <li ng-if="taxonomy.data.statsBulletinHeadline.data.headline1">{{taxonomy.data.statsBulletinHeadline.data.headline3}}</li>
-                            <li ng-if="!taxonomy.data.statsBulletinHeadline.data">Lorem ipsum dolor sit amet, vel oporteat percipitur ex, quando persecuti id mea, pri at nihil essent aliquid.</li>
-                            <li ng-if="!taxonomy.data.statsBulletinHeadline.data">Lorem ipsum dolor sit amet, vel oporteat percipitur ex, quando persecuti id mea, pri at nihil essent aliquid.</li>
-                            <li ng-if="!taxonomy.data.statsBulletinHeadline.data">Lorem ipsum dolor sit amet, vel oporteat percipitur ex, quando persecuti id mea, pri at nihil essent aliquid.</li>
+                            <li ng-if="!taxonomy.data.statsBulletinHeadline.data">This content is not available in the prototype but in future will include statistical bulletins.</li>
                         </ul>
 
                     </div>
@@ -133,7 +131,7 @@
                 <ons-loading condition="!item.data" class="stat list--table__item__body--centred"></ons-loading>
                 <div class="stat__figure list--table__item--stat">
                     <div>
-                        <span class="stat__figure__unit">{{item.data.preUnit}}</span> {{item.data.number}}
+                        <span class="stat__figure__unit">{{item.data.preUnit}}</span> {{item.data.number | number}}
                         <span class="stat__figure__unit">{{item.data.unit}}</span>
                     </div>
                     <div class="list--table--stat_description">{{item.data.date}}</div>
@@ -159,7 +157,7 @@
 
         <li ng-if="t3.showToggle" class="list--table__item list--table__footer" ng-click="t3.toggleTimeSeries()">
             <div class="table__actions box--inline ">
-                <a href=""><span ng-class="t3.allVisible ? 'icon-up-open-big':'icon-down-open-big'">view {{t3.allVisible?'fewer' : 'more'}} time series </span> </a>
+                <a href=""><span ng-class="t3.allVisible ? 'icon-up-open-big':'icon-down-open-big'">View {{t3.allVisible?'fewer' : 'more'}} time series </span> </a>
             </div>
         </li>
     </ol>
@@ -176,15 +174,10 @@
     <div ng-if="(taxonomy.data.datasets).length == 0" class="grid-wrap">
         <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
             <article class="box box--padded">
-                <header class="box__header">
-                    <h3>
-                        <a href="#">Lorem ipsum</a>
-                    </h3>
-                </header>
                 <!-- /box__header -->
                 <div class="box__content">
                     <ul class="list--table">
-                        <li class="">Quisque eget magna nec erat laoreet sodales. Suspendisse at risus non libero.</li>
+                        <li class="">This content is not available in the prototype but in future will include related datasets.</li>
                         <!-- <li>Between 1997 and 2011 the contribution of building to total GVA decreased in each of the NUTS1 regions.</li> -->
                     </ul>
                     <!-- /list- -bullet -->
@@ -194,47 +187,7 @@
             <!-- /box -->
         </div>
         <!-- /grid-col -->
-        <div class="grid-col desktop-grid-one-third tablet-grid-one-half">
-            <article class="box box--padded">
-                <header class="box__header">
-                    <h3>
-                        <a href="#">Vestibulum ligula tortor </a>
-                    </h3>
-                </header>
-                <!-- /box__header -->
-                <div class="box__content">
-                    <ul class="list--table">
-                        <li>Nunc in nunc dictum, sollicitudin ligula vitae, pulvinar nulla.</li>
-                        <!-- <li>Falls in transport services costs, notably air fares</li> -->
-                    </ul>
-                    <!-- /list- -bullet -->
-                </div>
-                <!-- /box__content -->
-            </article>
-            <!-- /box -->
-        </div>
-        <!-- /grid-col -->
-        <div class="grid-col desktop-grid-one-third tablet-grid-one-half tablet-grid-clear">
-            <article class="box box--padded">
-                <header class="box__header">
-                    <h3>
-                        <a href="#">Lorem ipsum</a>
-                    </h3>
-                </header>
-                <!-- /box__header -->
-                <div class="box__content">
-                    <ul class="list--table">
-                        <li class="">Quisque eget magna nec erat laoreet sodales. Suspendisse at risus non libero.</li>
-                        <!-- <li>Between 1997 and 2011 the contribution of building to total GVA decreased in each of the NUTS1 regions.</li> -->
-                    </ul>
-                    <!-- /list- -bullet -->
-                </div>
-                <!-- /box__content -->
-            </article>
-            <!-- /box -->
-        </div>
-        <!-- /grid-col -->
-
+        
         <div class="grid-col hide-large">
             <a  href="#">View more datasets</a>
         </div>

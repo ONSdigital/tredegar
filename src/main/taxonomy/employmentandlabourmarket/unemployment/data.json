@@ -1,31 +1,31 @@
 {
   "headline": {
-    "name": "Unemployment rate (aged 16-64)",
+    "name": "Unemployment rate (aged 16 to 64)",
     "uri": "/employmentandlabourmarket/unemployment/timeseries/mgsx"
   },
   "items": [
     {
-      "name": "Unemployment rate (aged 16-64)",
+      "name": "Unemployment rate (aged 16 to 64)",
       "uri": "/employmentandlabourmarket/unemployment/timeseries/mgsx"
     },
     {
-      "name": "Female Unemployment Rate (aged 16-64)",
+      "name": "Female unemployment rate (aged 16 to 64)",
       "uri": "/employmentandlabourmarket/unemployment/timeseries/mgsz"
     },
     {
-      "name": "Male Unemployment Rate (aged 16-64)",
+      "name": "Male unemployment rate (aged 16 to 64)",
       "uri": "/employmentandlabourmarket/unemployment/timeseries/mgsy"
     },
     {
-      "name": "Unemployment 16+",
+      "name": "Unemployment 16 and over",
       "uri": "/employmentandlabourmarket/unemployment/timeseries/mgsc"
     },
     {
-      "name": "Female Unemployment 16+",
+      "name": "Female unemployment 16 and over",
       "uri": "/employmentandlabourmarket/unemployment/timeseries/mgse"
     },
     {
-      "name": "Male Unemployment 16+",
+      "name": "Male unemployment 16 and over",
       "uri": "/employmentandlabourmarket/unemployment/timeseries/mgsd"
     },
     {
@@ -42,25 +42,25 @@
     }
   ],
   "statsBulletinHeadline": {
-    "name": "Young People Not in Education, Employment or Training (NEET)",
-    "uri": "/employmentandlabourmarket/unemployment/bulletins/youngpeoplenotineducationemploymentortrainingneet"
+    "summary": "Labour market statistics (including employment, unemployment and economic inactivity) for the United Kingdom.",
+    "name": "UK Labour Market, July 2014",
+    "uri": "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/uklabourmarketjuly2014"
   },
   "statsBulletins": [
     {
-      "name": "UK Labour Market",
-      "uri": "/employmentandlabourmarket/unemployment/bulletins/uklabourmarket"
-    },
-    {
-      "name": "Young People Not in Education, Employment or Training (NEET)",
-      "uri": "/employmentandlabourmarket/unemployment/bulletins/youngpeoplenotineducationemploymentortrainingneet"
+      "summary": "Labour market statistics (including employment, unemployment and economic inactivity) for the United Kingdom.",
+      "name": "UK Labour Market, July 2014",
+      "uri": "/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/uklabourmarketjuly2014"
     }
   ],
   "datasets": [
     {
+      "summary": "Data on the number of people claiming benefits principally for being unemployed",
       "name": "Claimant Count data collection",
       "uri": "/employmentandlabourmarket/unemployment/datasets/claimantcountdatacollection"
     },
     {
+      "summary": "People without a job who have been actively seeking work in the UK",
       "name": "Unemployment data collection",
       "uri": "/employmentandlabourmarket/unemployment/datasets/unemploymentdatacollection"
     }
