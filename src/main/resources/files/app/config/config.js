@@ -37,7 +37,7 @@
 				var path = $location.path()
 				var searchTerm = $routeParams.searchTerm
 				if(searchTerm) {
-					//I a search is made attach it as a get parameter to the url so that google can grab search terms
+					//If a search is made attach it as a get parameter to the url so that google can grab search terms
 					path += '?q=' +searchTerm 
 				}
 				ga('send', 'pageview', path);
