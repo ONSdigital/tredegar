@@ -84,8 +84,8 @@ English1 was the main language for 92 per cent (49.8 million) of usual residents
 
 Among the England regions and Wales, the North East (three per cent, 71,000) and Wales (three per cent, 84,000) had the lowest percentage of usual residents reporting a main language other than English1. The highest percentage was in London (22 per cent, 1.7 million), this was three times larger than the second highest percentage; seven per cent (386,000) in the West Midlands.
 
-<div class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/census1.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/census1.html"></iframe>
 </div>
 
 ##### Notes:
@@ -95,8 +95,8 @@ Of the eight per cent (4.2 million) of usual residents aged three and over who r
 
 Across the England regions and Wales the percentage of those whose main language was not English1 who could speak English very well or well varied from 72 per cent (279,000) in the West Midlands to 84 per cent (404,000) in the South East. The percentage who could not speak English at all varied between two per cent (12,000) in the South East and five per cent (19,000) in the West Midlands.
 
-<div class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/census2.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/census2.html"></iframe>
 </div>
 
 ##### Notes:
@@ -121,8 +121,8 @@ The second most widely reported main language for England and Wales was Polish (
 
 Panjabi was the third (half of one per cent, 273,000) most reported main language across England and Wales as a whole; however this varied across the England regions and Wales. It was the second most reported language in the West Midlands (one per cent, 67,000) and the twenty-fourth (less than half of one per cent, 2,400) in the South West.
 
-<div class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/census3.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/census3.html"></iframe>
 </div>
 
 Information on main language is provided in table [QS204EW (1 Mb Excel sheet)](http://www.ons.gov.uk/ons/rel/census/2011-census/key-statistics-and-quick-statistics-for-wards-and-output-areas-in-england-and-wales/rft-qs204ew.xls "RFT QS204EW") . A more detailed analysis of the language topic will be published in the first half of 2013.
@@ -214,8 +214,8 @@ Information on the economic activity of full-time students is provided in table 
 ## Armed forces
 In 2011, less than one per cent (153,000) of the usually resident population of England and Wales, and all the England regions, reported that they were in the armed forces. This is similar to 2001 (161,000).
 
-<div class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/census4.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/census4.html"></iframe>
 </div>
 
 The distribution of members of the armed forces differs from that of the usually resident population as a whole. In 2011, 22 per cent of armed forces members lived in the South West (34,000) and a further 22 per cent lived in the South East (33,000). This differs from 2001, when the South East had the largest percentage of the armed forces population (26 per cent, 41,000), followed by the South West (23 per cent, 37,000). The North East had the smallest percentage of the armed forces population (four per cent, 5,700), as it had in 2001 (three per cent, 4,900).
@@ -225,16 +225,16 @@ Information on armed forces members is provided in table [QS121EW (253.5 Kb Exce
 ## Method of travel to work
 Method of travel to work1 is the mode of transport used to cover the longest part, by distance, of a journey to work. This information is published by home address for usual residents aged between 16 and 74 years, who were working2 during the week before census day, 27 March 2011.
 
-<div class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/census5.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/census5.html"></iframe>
 </div>
 
 In 2011 the majority of 16 to 74 year olds in employment travelled to work by driving a car or van (58 per cent, 15.3 million). A further five per cent (1.4 million) travelled to work as a passenger in a car or van.
 
 The second most reported method of travel to work for 16 to 74 year olds in employment was by foot (11 per cent, 2.8 million), whilst the third was travel by bus, minibus or coach (seven per cent, 1.9 million).
 
-<div class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/census6.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/census6.html"></iframe>
 </div>
 
 Figure 6 shows that the main variation between the England regions and Wales is in the percentages using public transport (including buses, trains and underground trains/light rail/trams), and those using cars, motorcycles and taxis.

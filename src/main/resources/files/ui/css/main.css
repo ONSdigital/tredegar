@@ -3955,8 +3955,8 @@ $SPLIT
 }
 .stat__figure {
     font-family: "open-sans-n7", "open-sans", sans-serif;
-    font-size: 39px;
-    font-size: 3.9rem;
+    font-size: 29px;
+    font-size: 2.9rem;
 }
 .stat__figure__unit {
     /*---------------------
@@ -4009,20 +4009,20 @@ $SPLIT
 }
 @media screen and (min-width: 20em) {
     .stat--headline .stat__figure {
-        font-size: 50px;
-        font-size: 5rem;
+        font-size: 45px;
+        font-size: 4rem;
     }
 }
 @media screen and (min-width: 55em) {
     .stat--headline .stat__figure {
-        font-size: 60px;
-        font-size: 6.0rem;
+        font-size: 40px;
+        font-size: 4.5rem;
     }
 }
 @media screen and (min-width: 65em) {
     .stat--headline .stat__figure {
-        font-size: 65px;
-        font-size: 6.5rem;
+        font-size: 50px;
+        font-size: 5rem;
     }
 }
 .stat--headline .stat__figure__unit {
@@ -4827,11 +4827,11 @@ table actions
 }
 
 .search-home-focused {
-    font-size: 1.5em !important;
+    font-size: 1.25em !important;
 }
 .search-home-focused--summary {
-    font-size: 2rem;
-    line-height: 2.5rem;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
 }
 
 /*Highlight terms*/
@@ -5184,7 +5184,7 @@ ul.simple-pagination {
 }
 @media screen and (min-width: 650px) {
     .headline--box-container {
-        height: 23em;
+        height: 24em;
     }
 }
 @media screen and (max-width: 800px) {
@@ -6134,9 +6134,11 @@ td.datatable-downloads {
   height: 6.5em;
   border: 0px; commented out to remove icons on MJ's request*/
 }
-.sparkline_area {
+/*.sparkline_area {
     width: 100%;
-}
+    position: relative;/*fix for t3 sparkline appearance*/
+
+
 .nav-panel__body.graph {
     max-width: 2rem;
     text-align: center;
@@ -6293,7 +6295,7 @@ td.datatable-downloads {
     }
 }
 
-@media screen and (min-width: 600px) and (max-width: 770px) {
+@media screen and (min-width: 600px) and (max-width: 750px) {
 
     .nav-panel__body.flush {
         padding-left: 10%;
@@ -6303,7 +6305,7 @@ td.datatable-downloads {
     }
 }
 
-@media screen and (min-width: 770px) and (max-width: 800px) {
+@media screen and (min-width: 750px) and (max-width: 800px) {
 
     .nav-panel__body.flush {
         padding-left: 20%;
@@ -8764,6 +8766,18 @@ lesser , applied styles
 }
 }
 
+@media screen and (max-height: 800px) {
+    .modalDialog {
+   /* width: 20em;*/
+    height: 34em;
+    background-color: #fff;
+    margin: 5% auto;
+    overflow: auto;
+    pointer-events:auto;
+}
+}
+
+
 
 /* -------- autocomplete on search -------- */
 
@@ -8774,9 +8788,8 @@ lesser , applied styles
 }
 .autocomplete {
     position:absolute;
-    width;
-    35.8em;
-    z-index:999;
+/*    width: 35.8em;
+*/    z-index:999;
     margin-left:0.125em;
 }
 

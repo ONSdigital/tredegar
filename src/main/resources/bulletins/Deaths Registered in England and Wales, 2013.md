@@ -33,8 +33,8 @@ For almost all causes of death, the age-standardised mortality rates are higher 
 
 The impact of the change from the 1976 ESP to the 2013 ESP was greatest for conditions commonly associated with older ages (where ASMRs increased) and those almost exclusive to very young ages (where ASMRs decreased). More information about the impact of this change can be found on the [ONS website](http://www.ons.gov.uk/ons/guide-method/user-guidance/health-and-life-events/revised-european-standard-population-2013--2013-esp-/index.html "Revised European Standard Population 2013 (2013 ESP)").
 
-<div class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/death1.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/death1.html"></iframe>
 </div>
 
 ##### Notes:
@@ -67,8 +67,8 @@ The perinatal mortality rate (stillbirths and deaths under 7 days) was 6.7 death
 Small fluctuations in the infant mortality rate have occurred over recent years, after a series of larger drops in the early 1980s and again between 1987 and 1991 (Figure 2). Between 1983 and 2013 the infant mortality rate fell by 60%, while the neonatal and postneonatal mortality rates fell by 54% and 72% respectively. Although the overall trend has been one of decreasing rates, the rates of change have not been constant over the period: change in the first decade was nearly twice that in the latter two decades.
 
 
-<div class="chart-container">
-<iframe src="http://onsdigital.github.io/Alpha/bulletins/death2.html"></iframe>
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/death2.html"></iframe>
 </div>
 
 There are many established risk factors for infant mortality; prematurity, low birthweight and multiplicity are the most significant in terms of strength of association and consistency. Risk factors are known to vary according to age at death. For example, the effect of low birthweight and prematurity is stronger in the neonatal period than the postneonatal period, while socio-economic status is strongly associated with deaths under one year ( [Oakley, et al., 2009 (720.5 Kb Pdf)](http://www.ons.gov.uk/ons/rel/hsq/health-statistics-quarterly/no--42--summer-2009/multivariate-analysis-of-infant-death-in-england-and-wales-in-2005-06--with-focus-on-socio-economic-status-and-deprivation.pdf "Multivariate analysis of infant death in England and Wales in 2005-06, with focus on socio-economic status and deprivation") ).

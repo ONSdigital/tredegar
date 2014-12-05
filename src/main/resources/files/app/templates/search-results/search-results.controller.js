@@ -4,23 +4,22 @@
 (function() {
 
   angular.module("onsTemplates")
-    .controller("SearchController", ['$scope', '$rootScope', '$window', '$log', 'PageUtil', 'searchResponse', '$routeParams', SearchController])
+    .controller("SearchController", ['$scope', '$rootScope', '$window', '$log', 'PageUtil', 'StringUtil', 'searchResponse', '$routeParams', SearchController])
 
 
-  function SearchController($scope, $rootScope, $window, $log, PageUtil, searchResponse, $routeParams) {
+  function SearchController($scope, $rootScope, $window, $log, PageUtil, StringUtil, searchResponse, $routeParams) {
+    var searchTerm = $scope.searchTerm = $routeParams.searchTerm
+    var page = $routeParams.page
+    if (!searchTerm) {
+      $scope.noSearchTerm=true
+      return
+    }
+
     if (!searchResponse || !searchResponse.results) {
       $rootScope.error = 500
       return
     }
     
-    var page = $routeParams.page
-    var searchTerm = $scope.searchTerm = $routeParams.searchTerm
-
-    if (!searchTerm) {
-      $rootScope.error = 404
-      return
-    }
-
     $scope.searchResponse = searchResponse
     var type = $scope.type = $routeParams.type
     var filters = {}
@@ -291,6 +290,14 @@
     function isPrerender() {
       return PageUtil.isPrerender()
     }
+    
+    function link(url) {
+    	if (StringUtil.startsWith(url, '/')) {
+    		return '#!' + url
+    	} else {
+    		return url
+    	}
+    }
 
     //Expose API
     angular.extend($scope, {
@@ -298,7 +305,8 @@
       isActive: isActive,
       isFocus:isFocus,
       isShowLozenge:isShowLozenge,
-      isPrerender:isPrerender
+      isPrerender:isPrerender,
+      link:link
     })
   }
 

@@ -4,6 +4,9 @@
     <div class="wrapper nav-panels">
         <div class="grid-wrap">
             <div class="grid-col tablet-wide">
+                <div ng-if="noSearchTerm" id="search-results-total" class="search-results-total">
+                        Plese enter search term
+                </div>
                 <div ng-show="showSearchResults" id="search-results-total" class="search-results-total">
                     <span class='results-total'>
                         {{searchResponse.numberOfResults}}
@@ -77,7 +80,7 @@
 
 
 <!--Search Results List, grid col two thirds-->
-<div class="wrapper nav-panels">
+<div class="wrapper nav-panels" ng-if="!noSearchTerm">
     <div class="grid-wrap">
         <div class="grid-col tablet-wide-grid-two-thirds">
 
@@ -87,13 +90,10 @@
                     <dl>
 
                         <dt ng-repeat-start="item in searchResponse.results track by $index" ng-class="isFocus(item.type, $index) ? 'search-home-focused' : ''">
-                            <a class="search-link" href="#!{{item.url}}"><span ng-bind-html="item.highlights.title || item.title"></span></a>
+                            <a class="search-link" ng-href="{{link(item.url)}}"><span ng-bind-html="item.highlights.title || item.title"></span></a>
                             <span ng-if="isShowLozenge(item)" class="lozenge--label" href="">{{item.type === 'bulletin' ? 'Statistical bulletin' : item.type}}</span>
                         </dt>
                         <dd class="microcopy">
-                        	<span ng-if="item.type === 'home'">
-								<span ng-bind-html="item.highlights.url || item.url"></span>
-                        	</span>
                         	<span ng-if="item.type != 'home'">Release date 1 Jan 3000</span>
                         </dd>
                         <dd ng-repeat-end class="search-summary" ng-class="isFocus(item.type, $index) ? 'search-home-focused--summary' : ''" >{{(item.lede | charLimit:300:'...') || 'In the future a short description of this series will be displayed in this area' }}</dd>

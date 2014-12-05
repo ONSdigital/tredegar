@@ -117,7 +117,7 @@
 			controller: "PreviousCtrl",
 			resolve: {
 				title: ['PageUtil', function(PageUtil) {
-					PageUtil.setTitle('Previs Versions')
+					PageUtil.setTitle('Previous Versions')
 				}]
 			}
 		}).
@@ -130,15 +130,6 @@
 				}]
 			}
 		}).
-		// when('/releases/', {
-		// 	templateUrl: 'app/templates/release/release.html',
-  //           controller: "ReleaseCtrl",
-		// 	resolve: {
-		// 		title: ['PageUtil', function(PageUtil) {
-		// 			PageUtil.setTitle('Release')
-		// 		}]
-		// 	}
-		// }).
 		when('/search/:searchTerm', resolveSearch()).
 		when('/search/:searchTerm/page/:page', resolveSearch()).
 		when('/survey', {

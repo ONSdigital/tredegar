@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('onsTemplates')
-	.directive('searchBox', ['$location', '$route', 'PageUtil',
-		function($location, $route, PageUtil) {
+	.directive('searchBox', ['$location', '$route', 'PageUtil', 'StringUtil',
+		function($location, $route, PageUtil, StringUtil) {
 			return {
 				restrict: 'E',
 				replace: true,
@@ -19,8 +19,7 @@ angular.module('onsTemplates')
 				function clearOnPageChange() {
 				  $rootScope.$on('$locationChangeSuccess', function(event) {
 				  	//Clear if not going to search results page
-				  	if($location.$$path != "/search") {
-
+				  	if(!StringUtil.startsWith($location.path(),"/search")) {
 				    	$scope.searchTerm = ''
 				  	}
 				  })
