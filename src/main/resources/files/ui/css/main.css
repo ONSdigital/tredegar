@@ -4245,6 +4245,9 @@ $SPLIT
 .table--striped-light tbody tr, .table--striped-light .list--table__body {
     background-color: #fff;
 }
+.table--striped-light_coloured {
+    background-color: #edeeee;
+}
 .table--striped-light tbody tr:nth-child(even), .table--striped-light .list--table__body:nth-child(even) {
     background-color: #edeeee;
 }
