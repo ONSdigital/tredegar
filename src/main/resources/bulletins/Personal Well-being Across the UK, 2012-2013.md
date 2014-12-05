@@ -1,8 +1,8 @@
 Theme: People, Population and Community
 Level 2: Well-being
 Summary: This bulletin presents experimental statistics from the second Personal Well-being Annual Population dataset, April 2012 to March 2013.  Overall estimates of personal well-being are provided for each country of the United Kingdom, as well as for lower level geographies in England, Scotland and Wales.
-Headline 1: Personal well-being improved in the UK between 2011/12 and 2012/13. Ratings for life satisfaction and feeling that the things we do in life are worthwhile increased on average, whilst anxiety levels fell.
-Headline 2: The proportions rating their personal well-being as very high or very low fell between 2011/12 and 2012/13 in the UK, while the proportion rating their well-being around 7 or 8 out of 10 increased.
+Headline 1: Personal well-being improved in the UK between 2011/12 and 2012/13.
+Headline 2: Ratings for life satisfaction and feeling that the things we do in life are worthwhile increased on average, whilst anxiety levels fell.
 Headline 3: Among the countries of the UK, Northern Ireland had the highest average ratings for life satisfaction, worthwhile and happiness in 2012/13.
 Contact name: Dawn Snape
 Contact email: dawn.snape@ons.gsi.gov.
