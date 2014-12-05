@@ -1,10 +1,10 @@
-Theme: People, Population and Community
+﻿Theme: People, Population and Community
 Level 2: Population and Migration
 Level 3: International Migration
 Summary: The latest summary of provisional Long-term International migration data. A coordinated release between the ONS, Home Office and DWP.
-Headline 1: Net long-term migration to the UK was estimated to be 212,000 in the year ending December 2013, not a statistically significant (see glossary) increase from 177,000 the previous year and unchanged from the net migration figure previously reported for the year ending September 2013.
-Headline 2: Recent patterns of net migration over the last two years show an increase since the lowest estimate of 154,000 (year ending September 2012). However, net migration has continued to be lower than the general level of net migration since 2004.
-Headline 3: 526,000 people immigrated to the UK in the year ending December 2013, not a statistically significant difference from 498,000 the previous year. 43,000 more EU citizens and 11,000 fewer non-EU citizens immigrated to the UK than in the previous year.
+Headline 1: Net long-term migration to the UK was estimated to be 212,000 in the year ending December 2013.
+Headline 2: Recent patterns of net migration over the last two years show an increase since the lowest estimate of 154,000 (year ending September 2012). 
+Headline 3: 526,000 people immigrated to the UK in the year ending December 2013.
 Contact name: Sarah Crofts
 Contact email: migstatsunit@ons.gsi.gov.uk
 Next edition: 28 August 2014
@@ -36,16 +36,6 @@ ONS will be reviewing the structure and content of the MSQR following this publi
 
 In April 2014, ONS published a report examining the quality of international migration statistics between 2001 and 2011, using the results of the 2011 Census. Within this report, ONS has published a revised set of net migration estimates for the UK. Since the 2001 and 2011 Censuses provide a population count at two points in time, the difference between these populations can be used together with births and deaths records to estimate total net migration over the ten year period. This showed that over the ten year period, previously estimated annual net migration estimates were 346,000 lower than the total net migration implied by the 2011 Census. The revised annual net migration figures were produced using additional data sources to distribute the total net migration across the decade to individual years. Table 1 shows these revised net migration estimates compared with previously published estimates.
 
-#### Table 1: Net International Migration Estimates for United Kingdom
-
-Table source: Office for National Statistics
-
-##### Table notes:
-1. ONS Source: Provisional Estimates of Long-Term International Migration, YE Dec 2013.
-
-##### Download table: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/migration1/migration-statistics-quarterly-report/may-2014/table-1-ltim.xls "XLS format") (28.5 Kb)
-
 The report, a [summary](http://www.ons.gov.uk/ons/rel/migration1/long-term-international-migration/quality-of-long-term-international-migration-estimates-from-2001-to-2011.html "Long-Term Internaitonal Migration - Quality of Long-Term Internaitonal Migration Estimates from 2001 to 2011") and [guidance (55.9 Kb Pdf)](http://www.ons.gov.uk/ons/guide-method/method-quality/specific/population-and-migration/international-migration-methodology/guidance-note-for-net-international-migration-revisions.pdf "guidance note for net international migration revisions") on how to use these revised figures are available here. [Published tables](http://www.ons.gov.uk/ons/rel/migration1/long-term-international-migration/2012/index.html "2012") have been updated on the ONS website to include the revised estimates.
 
 ## 1. What do these Latest Figures Show about International Migration over Time?
@@ -74,17 +64,13 @@ Excluding visitor and transit visas, the number of visas issued increased to 538
 
 ### 1.1 Changes in Net Migration
 
-#### Figure 1.1 Long Term International Migration, 1970 to 2013
-[![Figure 1.1 Long Term International Migration, 1970 to 2013](http://www.ons.gov.uk/ons/resources/11ltim_tcm77-363382.png)](http://www.ons.gov.uk/ons/resources/11ltim_tcm77-363382.png "Figure 1.1 Long Term International Migration, 1970 to 2013")
-
-Source: Long-term International Migration - Office for National Statistics
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/migration1.html"></iframe>
+</div>
 
 ##### Notes:
 1. Figures for 2013 are provisional. All other figures are final calendar year estimates of LTIM. Provisional rolling quarterly estimates are denoted by a cross.
 2. Net migration estimates for the period 2001 to 2011 have been revised in light of the 2011 Census.
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/migration1/migration-statistics-quarterly-report/may-2014/chdltim1-1.xls "XLS format") (30.5 Kb)
 
 A [summary](http://www.ons.gov.uk/ons/rel/migration1/long-term-international-migration/quality-of-long-term-international-migration-estimates-from-2001-to-2011.html "Long-Term Internaitonal Migration - Quality of Long-Term Internaitonal Migration Estimates from 2001 to 2011") and [guidance (55.9 Kb Pdf)](http://www.ons.gov.uk/ons/guide-method/method-quality/specific/population-and-migration/international-migration-methodology/guidance-note-for-net-international-migration-revisions.pdf "guidance note for net international migration revisions") on how to use the revised net migration estimates are available.
 
@@ -94,17 +80,13 @@ Changes to net migration, as shown in Figure 1.1 have been caused by changes in 
 
 Recent patterns in total net migration have been affected by different changes in migration flows between EU citizens and non-EU citizens. Net migration of EU citizens saw a statistically significant increase to 124,000 in the year ending December 2013 from 82,000 in the previous year. Conversely, the estimate of net migration of non-EU citizens has declined over the last few years. Although the recent fall to 146,000 in the year ending December 2013 from 157,000 in the previous year was not a statistically significant change, non-EU net migration remains at a lower level relative to the peaks seen in the mid to late 2000s (Figure 1.2).
 
-#### Figure 1.2 Long Term International Net Migration by Citizenship, 1975 to 2013
-[![Figure 1.2 Long Term International Net Migration by Citizenship, 1975 to 2013](http://www.ons.gov.uk/ons/resources/12netltimeunoneubrit75latest_tcm77-363385.png)](http://www.ons.gov.uk/ons/resources/12netltimeunoneubrit75latest_tcm77-363385.png "Figure 1.2 Long Term International Net Migration by Citizenship, 1975 to 2013")
-
-Source: Long-term International Migration - Office for National Statistics
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/migration2.html"></iframe>
+</div>
 
 ##### Notes:
 1. Figures for 2013 are provisional. All other figures are final calendar year estimates of LTIM. Provisional rolling quarterly estimates are denoted by a cross
 2. This chart is not consistent with the total revised net migration estimates as shown in Figure 1.1. Please see guidance note for further information
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/migration1/migration-statistics-quarterly-report/may-2014/chdltim1-2.xls "XLS format") (38 Kb)
 
 Three quarters of immigration and two thirds of emigration to and from the UK are people migrating to work or study. Changes in flows of people migrating for these reasons affect the overall flows to and from the UK. Different changes in migration patterns are seen between EU and non-EU citizens, driven by the different rights to immigrate to the UK and the impact of government policy. Most of the 538,219 visas issued in the year ending March 2014 were for study (219,053, excluding student visitors) or for work (156,378). In addition, 79,456 student visitor and 35,872 family–related visas were issued (Figure 3.12).
 
@@ -114,16 +96,12 @@ The most commonly stated reason for immigrating to the UK is work-related. This 
 
 Since 2007, around half of immigrants arriving for work have been EU citizens and 25 to 30% have been non-EU citizens. The remainder were British citizens. Prior to EU Accession in 2004, these proportions were reversed. This reflects the increase in the numbers of EU citizens migrating to the UK for work since 2004, combined with a steady decrease in the numbers of non-EU citizens arriving for work over the same period. In 2004, 113,000 non-EU citizens arrived for work with an intention to remain more than 12 months. This has steadily declined and stood at 44,000 in the year ending December 2013 (Figure 1.3).
 
-#### Figure 1.3 Immigration to the UK for Work-Related Reasons by Citizenship, 2004 to YE Dec 2013
-[![Figure 1.3 Immigration to the UK for Work-Related Reasons by Citizenship, 2004 to YE Dec 2013](http://www.ons.gov.uk/ons/resources/13ipsimmcitxrfmwr_tcm77-363390.png)](http://www.ons.gov.uk/ons/resources/13ipsimmcitxrfmwr_tcm77-363390.png "Figure 1.3 Immigration to the UK for Work-Related Reasons by Citizenship, 2004 to YE Dec 2013")
-
-Source: International Passenger Survey (IPS) - Office for National Statistics
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/migration3.html"></iframe>
+</div>
 
 ##### Notes:
 1. This chart is not consistent with the total revised net migration estimates as shown in Figure 1.1. Please see guidance note for further information
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/migration1/migration-statistics-quarterly-report/may-2014/chdips1-3.xls "XLS format") (30.5 Kb)
 
 Increases in work related immigration seen in LTIM are also reflected across other related data sources including National Insurance Number registrations, Labour Market statistics and work visas issued.
 
@@ -197,17 +175,13 @@ Provisional long-term international migration estimates by citizenship show that
 
 The estimated number of British citizens emigrating long-term from the UK in the year ending December 2013 was 134,000, which although lower is statistically at a similar level to the 143,000 in the year ending December 2012 (Figure 2.11). Emigration of British citizens has remained at around the same level since 2010.
 
-#### Figure 2.11: Long-Term International Migration Estimates of British Citizens, UK, 2004–2013 (Year Ending December 2013)
-[![Figure 2.11: Long-Term International Migration Estimates of British Citizens, UK, 2004–2013 (Year Ending December 2013)](http://www.ons.gov.uk/ons/resources/211ltimbritcit_tcm77-363401.png)](http://www.ons.gov.uk/ons/resources/211ltimbritcit_tcm77-363401.png "Figure 2.11: Long-Term International Migration Estimates of British Citizens, UK, 2004–2013 (Year Ending December 2013)")
-
-Source: Long-term International Migration - Office for National Statistics
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/migration4.html"></iframe>
+</div>
 
 ##### Notes:
 1. Figures for 2013 are provisional
 Up to YE Dec 09, data are only available at six month intervals
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/migration1/migration-statistics-quarterly-report/may-2014/chdltim2-11.xls "XLS format") (34 Kb)
 
 ### 2.2 EU Citizens
 
@@ -217,47 +191,35 @@ The estimated number of EU citizens (excluding British) emigrating from the UK w
 
 Net migration of EU citizens was 124,000 in the year ending December 2013, a statistically significant increase compared to 82,000 in the previous year.
 
-#### Figure 2.21 Long-Term International Migration Estimates of EU Citizens (Excluding British) UK, 2004–2013 (Year Ending December 2013)
-[![Figure 2.21 Long-Term International Migration Estimates of EU Citizens (Excluding British) UK, 2004–2013 (Year Ending December 2013)](http://www.ons.gov.uk/ons/resources/221ltimeucit_tcm77-363412.png)](http://www.ons.gov.uk/ons/resources/221ltimeucit_tcm77-363412.png "Figure 2.21 Long-Term International Migration Estimates of EU Citizens (Excluding British) UK, 2004–2013 (Year Ending December 2013)")
-
-Source: Long-term International Migration - Office for National Statistics
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/migration5.html"></iframe>
+</div>
 
 ##### Notes:
 1. Figures for 20 13 are provisional.
 Up to YE Dec 09, data are only available at six month intervals.
 
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/migration1/migration-statistics-quarterly-report/may-2014/chdltim2-21.xls "XLS format") (34 Kb)
-
 The recent increase in EU immigration has been partly driven by a statistically significant increase in the number of EU15 citizens (excluding British) arriving in the UK from 85,000 in the year ending December 2012 to 104,000 in the year ending December 2013. IPS data show that 62,000 arrived for work-related reasons – a statistically significant increase from 49,000 in the year ending December 2012 (Figure 2.22). There was a small, but not a statistically significant, increase in net migration of EU15 citizens to 58,000 in the year ending December 2013 from 44,000 in the previous year.
 
-#### Figure 2.22 Long-Term International Migration Estimates of EU15 Citizens (Excluding British) UK, 2004–2013 (Year Ending December 2013)
-[![Figure 2.22 Long-Term International Migration Estimates of EU15 Citizens (Excluding British) UK, 2004–2013 (Year Ending December 2013)](http://www.ons.gov.uk/ons/resources/222ltimeu15cit_tcm77-363419.png)](http://www.ons.gov.uk/ons/resources/222ltimeu15cit_tcm77-363419.png "Figure 2.22 Long-Term International Migration Estimates of EU15 Citizens (Excluding British) UK, 2004–2013 (Year Ending December 2013)")
-
-Source: Long-term International Migration - Office for National Statistics
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/migration6.html"></iframe>
+</div>
 
 ##### Notes:
 1. Figures for 20 13 are provisional.
 2. Up to YE Dec 09, data are only available at six month intervals.
 
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/migration1/migration-statistics-quarterly-report/may-2014/chdltim2-22.xls "XLS format") (41.5 Kb)
-
 An estimated 70,000 EU8 citizens immigrated to the UK in the year ending December 2013 compared to 60,000 in the previous year. Over the same period 26,000 EU8 citizens emigrated, which is similar to the 30,000 people who emigrated in the previous year (Figure 2.23). Overall net migration for EU8 citizens was 44,000, not a statistically significant increase compared to the 30,000 in the previous year.
 
 It should be noted that from May 2011 transitional controls that applied to EU8 citizens seeking work in other EU countries expired (these were never applied in the Irish Republic, Sweden and the UK). This may have had the effect of diverting some EU8 migration flows to other EU countries, such as Germany, which in 2012 experienced its highest net migration since 1995.
 
-#### Figure 2.23: Long-Term International Migration Estimates of EU8 Citizens, UK, 2004–2013 (Year Ending December 2013)
-[![Figure 2.23: Long-Term International Migration Estimates of EU8 Citizens, UK, 2004–2013 (Year Ending December 2013)](http://www.ons.gov.uk/ons/resources/223ltimeu8cit_tcm77-363421.png)](http://www.ons.gov.uk/ons/resources/223ltimeu8cit_tcm77-363421.png "Figure 2.23: Long-Term International Migration Estimates of EU8 Citizens, UK, 2004–2013 (Year Ending December 2013)")
-
-Source: Long-term International Migration - Office for National Statistics
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/migration7.html"></iframe>
+</div>
 
 #####Notes:
 1. Figures for 2013 are provisional.
 2. Up to YE Dec 09, data are only available at six month intervals.
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/migration1/migration-statistics-quarterly-report/may-2014/chdltim2-23.xls "XLS format") (34.5 Kb)
 
 Bulgaria and Romania joined the European Union (EU) on 1 January 2007. Since then, migrants from Bulgaria and Romania (collectively known as the EU2) coming to the UK were subject to transitional employment restrictions, which placed limits on the kind of employment they could undertake. These restrictions ended on 1 January 2014. Further information on the latest figures and when data on Bulgarian and Romanian migration to the UK since 1 January 2014 will be available can be found here: [Bulgarian and Romanian migration to the UK in 2014](http://www.ons.gov.uk/ons/rel/migration1/migration-statistics-quarterly-report/may-2014/sty-bulgaria-and-romania.html "Bulgarian and Romanian migration 2014").
 
@@ -271,36 +233,26 @@ Overall, the currently available evidence suggests that the recent increase in e
 
 The estimated number of non-EU citizens immigrating long-term to the UK in the year ending December 2013 was 249,000, a slight but not a statistically significant decrease compared to the estimate of 260,000 in the year ending December 2012. The estimated number of non-EU citizens emigrating from the UK in the year ending December 2013 was 103,000, the same as in the previous year. This has resulted in a slight decrease in net migration of non-EU citizens from an estimated 157,000 in the year ending December 2012 to 146,000 in the year ending December 2013, although this was not a statistically significant change (Figure 2.3). Immigration of non-EU citizens has been declining since the year ending September 2011. 
 
-#### Figure 2.3: Long-Term International Migration Estimates of Non-EU Citizens, UK, 2004–2013 (Year Ending December 2013)
-[![Figure 2.3: Long-Term International Migration Estimates of Non-EU Citizens, UK, 2004–2013 (Year Ending December 2013)](http://www.ons.gov.uk/ons/resources/23ltimnoneucit_tcm77-363397.png)](http://www.ons.gov.uk/ons/resources/23ltimnoneucit_tcm77-363397.png "Figure 2.3: Long-Term International Migration Estimates of Non-EU Citizens, UK, 2004–2013 (Year Ending December 2013)")
-
-Source: Long-term International Migration - Office for National Statistics
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/migration8.html"></iframe>
+</div>
 
 ##### Notes:
 1. Figures for YE 2013 are provisional
 2. Up to YE Dec 09, data are only available at six month intervals
 
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/migration1/migration-statistics-quarterly-report/may-2014/chdltim2-3.xls "XLS format") (34.5 Kb)
-
 The decrease in immigration of non-EU citizens has been largely due to a statistically significant decrease in immigration of New Commonwealth citizens (from 98,000 in the year ending December 2012 to 78,000 in the year ending December 2013), in particular for the purposes of study. An estimated 35,000 New Commonwealth citizens arrived for study in the year ending December 2013, which is a statistically significant difference from than the estimate of 51,000 who arrived in the year ending December 2012. Inflows of New Commonwealth citizens for study are still around their lowest level since 2002. These changes are likely to be related to changes seen in the visa data, reflecting the sharp decline in sponsored study applications in the Further Education sector.  Immigration of other foreign citizens (the main other non-EU citizenship group, which includes China) for study remained at the same level in the year ending December 2013 (85,000) compared to the previous year.
 
 ### 2.4 Entry Clearance Visas Issued - by World Area
 
-#### Figure 2.4: Entry Clearance Visas Issued (Excluding Visitor and Transit Visas), by World Area, UK, 2005–2014
-[![Figure 2.4: Entry Clearance Visas Issued (Excluding Visitor and Transit Visas), by World Area, UK, 2005–2014](http://www.ons.gov.uk/ons/resources/24howorldarea_tcm77-363398.png)](http://www.ons.gov.uk/ons/resources/24howorldarea_tcm77-363398.png "Figure 2.4: Entry Clearance Visas Issued (Excluding Visitor and Transit Visas), by World Area, UK, 2005–2014")
-
-Source: Home Office
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/migration9.html"></iframe>
+</div>
 
 ##### Notes:
 1. A small number (one to two thousand per year excluding visitor and transit visas) of Home Office visas cannot be ascribed to a world area and are categorised as ‘Other’. This category does not appear in the above chart.
 2. European Economic Area (EEA) nationals do not require a visa to enter the UK. However some EEA nationals do apply for, and are issued with, visas.
 3. See the Glossary for discussion of world regions and differences between Home Office and DWP definitions.
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/migration1/migration-statistics-quarterly-report/may-2014/chdho2-4.xls "XLS format") (32 Kb)
-
-Source: [Home Office](http://www.gov.uk/government/publications/immigration-statistics-january-to-march-2014 "Home Office Statistics")
 
 Figure 2.4 shows trends in visas issued (excluding visitor and transit visas) by world area since 2005. From the year ending September 2009 onwards those with an Asian nationality have accounted for the majority of visas and have driven the recent fluctuations in visa numbers. Asian nationals accounted for 279,663 (52%) of the 538,219 visas issued in the year ending March 2014, with India and China each accounting for 15% of the total.
 
@@ -319,19 +271,15 @@ Provisional LTIM estimates for the year ending December 2013 show that work-rela
 
 The third most common reason for migrating to the UK is to accompany/join. In the year ending December 2013, 71,000 people migrated to the UK to accompany or join others; this figure is statistically similar to the estimate of 62,000 who migrated for this reason in the year previously. (Figure 3.11)
 
-#### Figure 3.11: Long-Term International Migration Estimates of Immigration to the UK, by Main Reason for Migration, 2004–2013 (Year Ending December 2013)
-[![Figure 3.11: Long-Term International Migration Estimates of Immigration to the UK, by Main Reason for Migration, 2004–2013 (Year Ending December 2013)](http://www.ons.gov.uk/ons/resources/311ltiminflowrfm_tcm77-363440.png)](http://www.ons.gov.uk/ons/resources/311ltiminflowrfm_tcm77-363440.png "Figure 3.11: Long-Term International Migration Estimates of Immigration to the UK, by Main Reason for Migration, 2004–2013 (Year Ending December 2013)")
-
-Source: Long-term International Migration - Office for National Statistics
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/migration10.html"></iframe>
+</div>
 
 ##### Notes:
 
 1. Figures for 2013 are provisional.
 2. Up to YE Dec 09, data are only available annually.
 3. Acc/Join means accompanying or joining.
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/migration1/migration-statistics-quarterly-report/may-2014/chdltim3-11.xls "XLS format") (30.5 Kb)
 
 ### Entry Clearance Visas Issued by Reason
 
@@ -341,19 +289,13 @@ In the year ending March 2014, there were increases in the numbers of visas issu
   
 Previous falls in the number of visas issued for work, study and family reasons are consistent with changes to the rules governing visas related to these routes of entry which began to come into effect from the end of 2010. They are also broadly consistent with recent downward trends in the LTIM measure of non-EU immigration, though they extend three months beyond the period covered by the latest provisional LTIM estimates. However, in making comparisons, it should be recognised many visas are granted for periods of less than 12 months.
 
-#### Figure 3.12: UK Entry Clearance Visas Issued, Including Dependants, by Reason (Excluding Visitor and Transit Visas), 2005–2014
-[![Figure 3.12: UK Entry Clearance Visas Issued, Including Dependants, by Reason (Excluding Visitor and Transit Visas), 2005–2014](http://www.ons.gov.uk/ons/resources/312hoecv_tcm77-363442.png)](http://www.ons.gov.uk/ons/resources/312hoecv_tcm77-363442.png "Figure 3.12: UK Entry Clearance Visas Issued, Including Dependants, by Reason (Excluding Visitor and Transit Visas), 2005–2014")
-
-Source: Home Office
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/migration11.html"></iframe>
+</div>
 
 ##### Notes:
 1. Excludes student visitors who are allowed to come to the UK for 6 months (or 11 months if they will be studying an English Language course) and cannot extend their stay.
 2. The Student visitor category provides for persons who wish to come to the UK as a visitor and undertake a short period of study that will be completed within the period of their leave. It includes those who applied on the 'Short-term student' endorsement prior to the introduction of the ‘Student visitor’ endorsement in September 2007.
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/migration1/migration-statistics-quarterly-report/may-2014/chdho3-12.xls "XLS format") (40 Kb)
-
-Source: [Home Office](http://www.gov.uk/government/publications/immigration-statistics-january-to-march-2014 "Home Office Statistics")
 
 In the year ending December 2005, a total of 191,584 visas were issued for the purposes of study (excluding student visitors). This figure increased gradually at first, but then increased sharply, peaking at 320,183 in the year ending June 2010, a rise of 41% on the previous year. Following this peak there has been a fall in the number of visas issued for the purposes of study (excluding student visitors) to 204,469 in the year ending June 2013. The figure has now risen to 219,053 for the year ending March 2014, a 6% increase compared with the year ending March 2013 (206,762, see Figure 3.12).
 
@@ -365,20 +307,14 @@ In the year ending March 2014, there were 209,011 sponsored student visa applica
 
 As a consequence, the share of visa applications for the university sector rose from 76% to 80% over the same period, whilst the shares for the Further Education sector fell from 14% to 10%.
 
-#### Figure 3.13: Study-Related Sponsored Visa Applications by Sector, 2010-2014
-[![Figure 3.13: Study-Related Sponsored Visa Applications by Sector, 2010-2014](http://www.ons.gov.uk/ons/resources/313hostudyvisa_tcm77-363444.png)](http://www.ons.gov.uk/ons/resources/313hostudyvisa_tcm77-363444.png "Figure 3.13: Study-Related Sponsored Visa Applications by Sector, 2010-2014")
-
-Source: Home Office
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/migration12.html"></iframe>
+</div>
 
 ##### Notes:
 1. The numbers show the use of a Certificate of Acceptance for Study (CAS) in a study visa application.
 2. Universities are 'recognised bodies' (meaning that it has its own UK degree-awarding powers), or bodies in receipt of public funding as a Higher Education Institute (HEI). Institutions (including Further Education colleges) which receive some public funding to deliver higher education courses do not fall within this definition of an HEI. They are UK-based. Further Education contains the remainder of sponsors who described themselves as ‘University and tertiary’, plus those who described themselves as ‘Private Institution of Further or Higher Education’ or whose self-description included ‘Further Education’ or ‘Higher Education’. Includes a small number of foreign based universities but these account for very small numbers of CAS used.
 3. The chart excludes sponsored visa applications from a small number of other sponsors.
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/migration1/migration-statistics-quarterly-report/may-2014/chdho3-13.xls "XLS format") (38 Kb)
-
-Source: [Home Office](http://www.gov.uk/government/publications/immigration-statistics-January-to-March-2014 "Home Office Statistics")
 
 The highest 12-monthly total for work-related visas issued was 249,634 in the calendar year 2006 (note that the data series starts at the year ending December 2005). This figure then declined gradually to 141,772 for the year ending March 2013. It has increased to 156,378 in the year ending March 2014 (up 10%). In the year ending March 2014 the highest numbers of work-related visas were issued to Indian (35%), Australian (10%) and United States (9%) nationals.
 
@@ -390,15 +326,12 @@ The largest number of applications for asylum in the year ending March 2014 were
 
 The 1,101 increase in total applications in the year ending March 2014 was driven by rises from a number of nationalities, in particular from Eritrea (+802), Syria (+559) and Albania (+474). While Eritrea saw the largest increase in applications it remains fifth for overall numbers of asylum applications in the year ending March 2014.
 
-#### Figure 3.14: Applications for Asylum in the UK, Excluding Dependants, 2001-2014
-[![Figure 3.14: Applications for Asylum in the UK, Excluding Dependants, 2001-2014](http://www.ons.gov.uk/ons/resources/314hoasyapprollingyear_tcm77-363445.png)](http://www.ons.gov.uk/ons/resources/314hoasyapprollingyear_tcm77-363445.png "Figure 3.14: Applications for Asylum in the UK, Excluding Dependants, 2001-2014")
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/migration13.html"></iframe>
+</div>
 
-Source: Home Office
 ##### Notes:
 1. Figures from 2012 onwards are provisional and subject to change.
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/migration1/migration-statistics-quarterly-report/may-2014/chdho3-14.xls "XLS format") (32.5 Kb)
 
 Source: Home Office, [Immigration Statistics January – March 2014](http://www.homeoffice.gov.uk/publications/science-research-statistics/research-statistics/immigration-asylum-research/immigration-q1-2014/asylum1-q1-2014 "Home Office Statistics")
 
@@ -414,32 +347,14 @@ The proportion of NINos allocated to European Union Accession nationals (that is
 
 The number of NINo registrations allocated to adult overseas nationals from outside the EU in the year ending March 2014 was 162,000, a decrease of 8% from the previous year. Following this continued decline, the figure now stands at approximately half the peak of 344,000 in the year ending March 2011 (Figure 3.15).
 
-#### Figure 3.15: National Insurance Number Allocations to Adult Overseas Nationals by World Area of Origin, UK, 2004–2014
-[![Figure 3.15: National Insurance Number Allocations to Adult Overseas Nationals by World Area of Origin, UK, 2004–2014](http://www.ons.gov.uk/ons/resources/315dwpnino_tcm77-363446.png)](http://www.ons.gov.uk/ons/resources/315dwpnino_tcm77-363446.png "Figure 3.15: National Insurance Number Allocations to Adult Overseas Nationals by World Area of Origin, UK, 2004–2014")
-
-Source: Work and Pensions
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/migration14.html"></iframe>
+</div>
 
 ##### Notes:
 1. EU Accession countries here refers to the EU8, the EU2, Cyprus, Malta and Croatia (see Glossary). This definition applies to the full time series.
 
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/migration1/migration-statistics-quarterly-report/may-2014/chddwp3-15.xls "XLS format") (30.5 Kb)
-
 Table 2 shows the top 20 nationalities for National Insurance number (NINo) allocations to adult overseas nationals for 2012 and 2013. There have been noticeable increases in NINo allocations to citizens of Romania, Poland, Italy and Bulgaria. Polish citizens were allocated the largest number of NINos in the year to March 2014 at 102,000, a 12% increase on the number allocated in the year to March 2013.
-
-#### Table 2: New National Insurance Number Registrations to Adult Overseas Nationals Entering the UK - Top 20 Registrations Year Ending March 2014
-
-Table source: Work and Pensions
-
-##### Table notes:
-
-1. The figures are based on recorded registration date on the National Insurance Recording and Pay as you Earn System, i.e. after the NINo application process has been completed. This may be a number of weeks or months (and in some cases years) after arriving in the UK.
-2. The number of new registrations of NINos to non-UK nationals over a given period is not the same as the total number of non-UK nationals who hold a NINo.
-3. The total number of non-UK nationals who have been allocated a NINo is not the same as the number of non-UK nationals working in the UK. This is because people who have been allocated NINos may subsequently have left the UK, or they may still be in the UK but have ceased to be in employment.
-4. Some people arriving into the UK may already hold a NINo from a previous stay in the UK. Once a person has been allocated a NINo, they do not need to reapply in order to work in the UK.
-
-##### Download table: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/migration1/migration-statistics-quarterly-report/may-2014/table-2-dwp.xls "XLS format") (29 Kb)
 
 ### 3.2 People Emigrating from the UK
 
@@ -451,19 +366,15 @@ In the year ending December 2013, of those 186,000 emigrants leaving for work-re
 
 The numbers of British citizens emigrating was estimated at 134,000 for the year ending December 2013. IPS data show that migration patterns of British citizens have been driven by the number of British citizens leaving the UK for work-related reasons (74,000 in the year ending December 2013), which is just over half (59%) of all British emigrants.
 
-#### Figure 3.2: Long-Term International Migration Estimates of Emigration from the UK, by Main Reason, 2004–2013 (Year Ending December 2013)
-[![Figure 3.2: Long-Term International Migration Estimates of Emigration from the UK, by Main Reason, 2004–2013 (Year Ending December 2013)](http://www.ons.gov.uk/ons/resources/32ltimoutflowrfm_tcm77-363438.png)](http://www.ons.gov.uk/ons/resources/32ltimoutflowrfm_tcm77-363438.png "Figure 3.2: Long-Term International Migration Estimates of Emigration from the UK, by Main Reason, 2004–2013 (Year Ending December 2013)")
-
-Source: Long-term International Migration - Office for National Statistics
+<class="chart-container">
+<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/migration15.html"></iframe>
+</div>
 
 ##### Notes:
 1. Figures for 2013 are provisional.
 2. Up to YE Dec 09, data are only available annually.
 3. It should be noted that reasons for emigration will not necessarily match reasons for intended immigration. For example, someone arriving for study may then leave the UK after their course for work-related reasons.
 4. Acc/Join means accompanying or joining.
-
-##### Download chart: 
-![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/migration1/migration-statistics-quarterly-report/may-2014/chdltim3-2.xls "XLS format") (31.5 Kb)
 
 [Home Office Research Report 68](http://www.gov.uk/government/uploads/system/uploads/attachment_data/file/116025/horr68-report.pdf "Home Office Research Report 68"), published in November 2012, presents information from academic research and surveys drawn together to present key aspects of long-term emigration from the United Kingdom. This includes recent outward migration and some trends over the last twenty years, separately for British, European Union (EU) and non-EU citizens.
 
@@ -597,7 +508,7 @@ The International Passenger Survey interviews a sample of passengers passing thr
 
 The student visitor category provides for those people who wish to come to the UK as a visitor and undertake a short period of study which will be completed within the period of their leave (maximum six months unless applying under the concession for English language courses – 11 months). Short-term students (i.e. those studying on courses of six months duration or less) who do not intend to work part-time or undertake a paid or unpaid work placement as part of their course can also apply within this category.
 
-## Background notes
+## [accordion] Background notes and methodology
 1. The Migration Statistics Quarterly Report is produced in partnership with the Home Office and the Department for Work and Pensions (DWP).
 2. Terms and conditions
 
@@ -618,3 +529,9 @@ Once statistics have been designated as National Statistics it is a statutory re
 4. Details of the policy governing the release of new data are available by visiting [www.statisticsauthority.gov.uk/assessment/code-of-practice/index.html](http://www.statisticsauthority.gov.uk/assessment/code-of-practice/index.html) or from the Media Relations Office email: <media.relations@ons.gsi.gov.uk>
 
 These National Statistics are produced to high professional standards and released according to the arrangements approved by the UK Statistics Authority.
+
+## [accordion] References
+This information will not be available in the prototype, however in the future all references related to this statistical bulletin will appear here.
+
+## [accordion] Footnotes
+This information will not be available in the prototype, however in the future the footnotes related to this statistical bulletin will appear here.

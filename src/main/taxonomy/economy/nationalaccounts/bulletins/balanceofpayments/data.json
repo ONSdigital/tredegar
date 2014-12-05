@@ -38,7 +38,13 @@
   "headline2": "Morbi sed sem at magna",
   "headline3": "Auctor gravida sed non enim",
   "summary": "Summary section",
-  "relatedBulletins": [],
+  "relatedBulletins": [
+    {
+      "summary": "Contains summary of balance of payments accounts and detailed statistics for the current account including - trade in goods and services, income, current and capital transfers, transactions in UK external assets and liabilities, and levels of identified assets and liabilities.",
+      "name": "Balance of Payments, Q1 2014",
+      "uri": "/economy/nationalaccounts/bulletins/balanceofpaymentsq12014"
+    }
+  ],
   "title": "Balance of Payments",
   "releaseDate": "19 August 2014",
   "type": "bulletin",
