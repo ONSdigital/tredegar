@@ -33,8 +33,8 @@ public class Timeseries extends DataItem implements Comparable<Timeseries> {
 	public String seasonalAdjustment;
 	public String mainMeasure;
 	public String description;
-	public String note1 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quam leo, blandit a turpis non, varius feugiat mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In posuere lectus eu laoreet ultrices. Donec ac sodales libero, eget fermentum arcu.";
-	public String note2 = "Fusce pharetra, libero in imperdiet ultricies, ex erat tempor dolor, vitae aliquet magna velit in urna. Duis finibus augue velit, ut consectetur risus imperdiet in. Sed tempus congue ante, ac cursus diam porttitor vitae. Vivamus arcu leo, volutpat in mauris ac, lacinia fermentum velit. Sed dictum tortor justo, aliquet facilisis lorem dictum a.";
+	public String note1 = "This content is not available in the prototype but in future will provide a note about this timeseries.";
+	public String note2 = "This content is not available in the prototype but in future will provide a note about this timeseries.";
 
 	// Additional information
 
