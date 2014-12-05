@@ -5054,6 +5054,14 @@ ul.simple-pagination {
 }
 }
 
+.callout--link_inactive{
+    padding-right: 3rem;
+}
+@media screen and (max-width: 400px) {
+.callout--link_inactive{
+    padding-right: 2rem;
+}
+}
 
 /* T3 list--table*/
 
