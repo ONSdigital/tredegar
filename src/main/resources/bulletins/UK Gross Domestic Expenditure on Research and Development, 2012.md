@@ -8,6 +8,13 @@ Headline 3: International comparisons show that UK R&D expenditure in 2012 was b
 Contact name: David Matthews
 Contact email: RandD@ons.gsi.gov.uk
 
+## Key points
+- In 2012, the UK’s gross domestic expenditure on research and development (GERD), in current prices, decreased by 2% to £27.0 billion compared with 2011. Adjusted for inflation, in constant prices, research and development (R&D) expenditure decreased by 3%.
+- In constant prices, R&D expenditure has increased by 56% from the 1985 estimate of £17.3 billion. Expenditure peaked in 2011 at £27.9 billion.
+- The business sector performed 63% of UK R&D expenditure in 2012. Expenditure by this sector decreased by 2%, in current prices, to £17.1 billion in 2012, compared with 2011.
+- Total R&D expenditure in the UK in 2012 represented 1.72% of Gross Domestic Product (GDP), a decrease from 1.77% in 2011.
+- International comparisons show that UK R&D expenditure in 2012 was below the EU-28 provisional estimate of 2.06% of GDP.
+
 ## Overview
 This statistical bulletin provides estimates of R&D performed in and funded by the following four sectors of the economy, as defined in the ‘Frascati Manual’:
 

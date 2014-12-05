@@ -2,9 +2,9 @@ Theme: Business, Industry and Trade
 Level 2: Changes to Business
 Level 3: Mergers and Acquisitions
 Summary: Estimates of the value and numbers of mergers, acquisitions and disposals involving UK companies with values of £1.0 million or more. The information provided reflects solely the change in majority ownership (ordinary shares) and therefore only transactions which result in a change of ultimate control of the target company are included.
-Headline 1: Domestic acquisitions (UK companies acquiring other UK companies) involving a change in majority ownership fell sharply to 26 transactions in Q1 2014, from 59 transactions in Q4 2013. This is the lowest level of domestic M&A activity reported since ONS first began publishing these data in 1969.
-Headline 2: There were 20 acquisitions in the UK by foreign companies in Q1 2014, which is one of the lowest levels on record. The only periods where the level has been lower are in Q1 2013 (19) and Q2 1987 (11).
-Headline 3: The number of acquisitions abroad by UK companies, however, increased to 26 in Q1 2014 from 11 in Q4 2013. This level of activity, though, remains low compared with historical standards.
+Headline 1: Domestic acquisitions (UK companies acquiring other UK companies) involving a change in majority ownership fell sharply to 26 transactions in Q1 2014, from 59 transactions in Q4 2013.
+Headline 2: There were 20 acquisitions in the UK by foreign companies in Q1 2014, which is one of the lowest levels on record.
+Headline 3: The number of acquisitions abroad by UK companies, however, increased to 26 in Q1 2014 from 11 in Q4 2013.
 Contact name: Hannah Finselbach
 Contact email: m&a@ons.gsi.gov.uk
 
@@ -17,12 +17,12 @@ Contact email: m&a@ons.gsi.gov.uk
 ## Overview
 This statistical bulletin provides estimates of the value and numbers of mergers, acquisitions and disposals involving UK companies with values of £1 million or more. The information provided reflects solely the change in majority ownership (ordinary shares) and therefore only transactions which result in a change of ultimate control of the target company are included. See note 5 of the Background Notes for more detail.
 
-Figures relating to mergers are included within acquisitions and those relating to demergers are contained within disposals. The values of transactions involving UK companies within this publication are on a ‘current price basis’, which are prices as they were at the time of measurement and not adjusted for inflation. 
+Figures relating to mergers are included within acquisitions and those relating to demergers are contained within disposals. The values of transactions involving UK companies within this publication are on a ‘current price basis’, which are prices as they were at the time of measurement and not adjusted for inflation.
 
 ## Your Views Matter
 We are constantly aiming to improve this release and its associated commentary. We would welcome any feedback you might have and would be particularly interested in knowing how you make use of these data to inform our work.  For further information please contact us via email:  <m&a@ons.gsi.gov.uk>  or  telephone  Hannah Finselbach on +44 (0)1633 455635.
 
-We want to find out what you like about our outputs, what you don't like about them, and how you think we can improve them. We would really appreciate it if you will take around ten minutes to complete our [Online Survey](https://www.surveymonkey.com/s/7M63FDL ""Online Survey") to enable us to improve our outputs for you. 
+We want to find out what you like about our outputs, what you don't like about them, and how you think we can improve them. We would really appreciate it if you will take around ten minutes to complete our [Online Survey](https://www.surveymonkey.com/s/7M63FDL ""Online Survey") to enable us to improve our outputs for you.
 
 ## Summary
 #### Figure 1: Number of acquisitions involving UK companies 1987 - 2014
@@ -30,14 +30,14 @@ We want to find out what you like about our outputs, what you don't like about t
 
 Source: Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/international-transactions/mergers-and-acquisitions-involving-uk-companies/q1-2014/chd-m-a-fig-1.xls "XLS format") (36 Kb)
 
 ### Domestic and Cross Border Mergers and Acquisitions
 
 The total number of mergers and acquisitions involving UK companies remained well below the levels of investment that were recorded before the 2008/2009 economic downturn. There were 72 domestic and cross border acquisitions involving UK companies in Q1 2014. This total includes domestic acquisitions (26), outward acquisitions (26), and inward acquisitions (20). The number of total mergers and acquisitions (M&A) in Q1 2014 represents a 28% decrease on Q4 2013 (100) and also a 15% decrease on the number recorded in Q1 2013 (85).
 
-The numbers and values of M&A activity are volatile from quarter to quarter as the data relates to ‘one time’ only transactions. Every M&A transaction is unique and has no set formula to follow in the M&A process. Therefore between quarters both the value and numbers of M&A estimates can change.   
+The numbers and values of M&A activity are volatile from quarter to quarter as the data relates to ‘one time’ only transactions. Every M&A transaction is unique and has no set formula to follow in the M&A process. Therefore between quarters both the value and numbers of M&A estimates can change.
 
 Global merger, acquisitions and disposals activity is often driven by the availability of credit and company profits as well as a sense of confidence in the economic outlook. The majority of large M&A transactions involve some element of borrowing or leveraging. Therefore, when credit conditions deteriorate as happened in the economic downturn M&A activity reduced. On the other hand, the process of completing an M&A transaction takes time and sometimes there may be a lag between improving economic conditions and any quarter-on-quarter increase in M&A activity
 
@@ -51,7 +51,7 @@ For example:
 - The Office for Budget Responsibility stated in its Economic and Fiscal outlook -  [March 2014 report](http://cdn.budgetresponsibility.org.uk/37839-OBR-Cm-8820-accessible-web-v2.pdf "March 2014 report"), that lending to small businesses remained weak with credit availability slower to improve than for mid-sized and large corporates.
 - In its [Inflation Report](http://www.bankofengland.co.uk/publications/Pages/inflationreport/2014/ir1402.aspx "Inflation Report"), the Bank of England (BoE) notes that lending to Private Non-Financial Corporations fell by 7.6% in Q1 2014 despite previous forecasts of growth.
 - Allen & Overy, an international legal practice reported in its [M&A Index Q1 2014](http://www.allenovery.com/SiteCollectionDocuments/ma%20index%20q1%202014.pdf "M&A Index Q1 2014") that deal numbers and values continued to decline in the financial sector, reflecting the time it is taking financial institutions to restructure their operations in the wake of the financial crisis. Some transactions are taking place, but they are taking much longer to complete.
-- Allen & Overy also [reported](http://www.bankofengland.co.uk/publications/Pages/agentssummary/2014/agsum14mar.aspx "reported") that although deal volumes in the UK during Q1 2014 were not significant there was a noticeable increase in confidence among companies partially due to the booming IPO market. 
+- Allen & Overy also [reported](http://www.bankofengland.co.uk/publications/Pages/agentssummary/2014/agsum14mar.aspx "reported") that although deal volumes in the UK during Q1 2014 were not significant there was a noticeable increase in confidence among companies partially due to the booming IPO market.
 
 ## Transactions in the UK by Other UK Companies
 In Q1 2014 the number of domestic mergers and acquisitions (UK companies acquiring other UK companies) involving a change of majority ownership, was the lowest reported since ONS first began publishing these data in 1969.  Despite quarter-on-quarter volatility the number of domestic acquisitions remained below levels seen prior to the 2008/2009 economic downturn.
@@ -65,7 +65,7 @@ Source: Office for National Statistics
 1. At Q1 2010 the deal identification threshold for the mergers and acquisitions surveys was raised from £0.1million to £1.0million. There is therefore a discontinuity in the number of transactions reported as illustrated above.
 2. All values are at current prices (see Background Notes for definition).
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/international-transactions/mergers-and-acquisitions-involving-uk-companies/q1-2014/chd-m-a-fig-2.xls "XLS format") (28.5 Kb)
 
 The number of acquisitions and mergers of UK companies by other UK companies (domestic M&A) in Q1 2014 decreased sharply when compared with the previous quarter. There were 26 transactions reported during Q1 2014 compared with 59 in Q4 2013.  This fall in Q1 activity compared with Q4 reflects a regular pattern seen within these data for the past 40 years.
@@ -74,14 +74,14 @@ In Q1 2014 the value of domestic M&A transactions was £0.7 billion, its lowest 
 
 The decline in domestic M&A may be due to UK companies continuing to postpone any real commitment to capital spending and investment until they feel more certain that the domestic economic recovery can be sustained. Economic theory suggests that during periods of economic recovery companies often look to address their balance sheets and then utilise any spare capacity before embarking on investment opportunities.
 
-In addition, it was reported in Allen & Overy’s M&A Index Q1 2014, that the domestic M&A market had been affected by an increase in the number of Initial Public Offerings as a number of companies such as Poundland and Circassia considered the option of floatation, rather than actively pursuing M&A. 
+In addition, it was reported in Allen & Overy’s M&A Index Q1 2014, that the domestic M&A market had been affected by an increase in the number of Initial Public Offerings as a number of companies such as Poundland and Circassia considered the option of floatation, rather than actively pursuing M&A.
 
 #### Figure 3: Summary of mergers and acquistions in the UK by UK companies
 [![](http://www.ons.gov.uk/ons/resources/chtmafig3_tcm77-364864.png)](http://www.ons.gov.uk/ons/resources/chtmafig3_tcm77-364864.png)
 
 Source: Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/international-transactions/mergers-and-acquisitions-involving-uk-companies/q1-2014/chd-m-a-fig-3.xls "XLS format") (33.5 Kb)
 
 It is possible to split out the total number of domestic mergers and acquisitions into those made by independently controlled companies and those which are subsidiaries. The acquisition of an independent company means the purchase of a company in its entirety, whereas the acquisition of a subsidiary means the purchase of part of a company.
@@ -93,7 +93,7 @@ The estimates for the number of domestic mergers and acquisitions continue to be
 (Significant transactions are categorised as deals valued £100 million or more)
 
 - [Rentokil Initial Plc](http://www.theconstructionindex.co.uk/news/view/interserve-completes-initial-facilities-takeover "Rentokil Initial Plc") of the UK acquired Initial Facilities of the UK.
-- [Oxford Instruments Plc](http://www.investegate.co.uk/oxford-instruments--oxig-/rns/offer-declared-wholly-unconditional/201401220759012049Y/ "Oxford Instruments Plc") of the UK acquired Andor Technology Plc of the UK. 
+- [Oxford Instruments Plc](http://www.investegate.co.uk/oxford-instruments--oxig-/rns/offer-declared-wholly-unconditional/201401220759012049Y/ "Oxford Instruments Plc") of the UK acquired Andor Technology Plc of the UK.
 
 ## Transactions in the UK by Foreign Companies
 In Q1 2014 the number of inward acquisitions and mergers of UK companies by foreign companies (20 inward acquisitions) involving a change of majority ownership remained similar to the number recorded in Q1 2013 (19).  Despite quarter-on-quarter volatility the number of inward acquisitions remained below levels seen prior to the 2008/2009 economic downturn.
@@ -107,7 +107,7 @@ Source: Office for National Statistics
 1. At Q1 2010 the deal identification threshold for the mergers and acquisitions surveys was raised from £0.1million to £1.0million There is therefore a discontinuity in the number of transactions reported as illustrated above.
 2. All values are at current prices (see Background Notes for definition).
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/international-transactions/mergers-and-acquisitions-involving-uk-companies/q1-2014/chd-m-a-fig-4.xls "XLS format") (34.5 Kb)
 
 The number of acquisitions of UK companies by foreign companies fell during the economic downturn in 2008/2009 after reporting a peak of 86 completed acquisitions in Q1 2008. Despite a rise in the number of inward acquisitions from Q2 2009 to Q3 2011 the number fell to19 transactions in Q1 2013. Following a peak of 59 transactions in Q3 2013, the number of inward acquisitions has fallen again.
@@ -119,7 +119,7 @@ The estimate for the value of inward acquisitions increased sizeably from £2.0 
 While the value of inward cross border transactions increased, the number of these transactions remained relatively low in Q1 2014. This may be due to the political instability abroad and a continued lack of confidence in the global M&A markets because of slow foreign economic growth. However, if economic environments abroad improve and investor confidence grows then cross border M&A activity may begin to show more definitive signs of improvement and recovery during 2014.
 
 
-##### The following significant transactions took place in the UK by foreign companies during Q1 2014. 
+##### The following significant transactions took place in the UK by foreign companies during Q1 2014.
 
 (Significant transactions are categorised as deals valued £100 million or more)
 
@@ -132,7 +132,7 @@ While the value of inward cross border transactions increased, the number of the
 - [Zynga Inc](http://techcrunch.com/2014/01/30/zynga-naturalmotion/ "Zynga Inc") of the USA acquired Naturalmotion  Ltd of the UK.
 - [Markel Corporation](http://www.investegate.co.uk/abbey-protection-plc--abb-/rns/scheme-of-arrangement-effective/201401171423479745X/ "Markel Corporation") of the USA acquired Abbey Protection Plc of the UK.
 
-The estimates of the number and value of disposals in the UK by foreign companies during Q1 2014 have been suppressed in this bulletin in order to avoid the potential disclosure of companies involved in this type of M&A activity. 
+The estimates of the number and value of disposals in the UK by foreign companies during Q1 2014 have been suppressed in this bulletin in order to avoid the potential disclosure of companies involved in this type of M&A activity.
 
 ## Transactions Abroad by UK Companies
 In Q1 2014 the estimates for the number of acquisitions and mergers made by UK companies abroad (outward acquisitions) was 26, a sizeable increase compared with Q4 2013 when there were 11 completed acquisitions. Similar to inward and domestic acquisitions, despite some quarter-on-quarter volatility, the number of outward acquisitions remained below levels seen immediately prior to the 2008/2009 economic downturn.
@@ -147,14 +147,14 @@ Source: Office for National Statistics
 2. All values are at current prices (see Background Notes for definition).
 3. * Denotes disclosive figures.
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/international-transactions/mergers-and-acquisitions-involving-uk-companies/q1-2014/chd-m-a-fig-5.xls "XLS format") (29 Kb)
 
 There were 91 outward acquisitions involving UK companies in Q2 2008, the highest number of transactions recorded since Q3 2007 (141), before the start of the economic downturn. Then from Q2 2008 onwards the number of outward acquisitions involving a change of majority ownership fell to 17 in Q1 2009. From Q1 2009 outward acquisitions increased to 77 in Q3 2011 but fell again to seven in Q3 2013.
 
 In Q1 2014 the number of outward acquisitions made by UK companies abroad increased by 15 transactions when compared with the previous quarter (Q4 2013). There were 26 completed outward acquisitions in Q1 2014 valued at £2.3 billion compared with 11 outward acquisitions at Q4 2013. However, year-on-year comparison show that the number of outward acquisitions involving a change of majority ownership in Q1 2014 (26) are at a similar level to the number of outward acquisitions reported in Q1 2013 (27).
 
-The rise in the number of outward cross border acquisitions seen in Q1 2014 may be partially due to the reported increase in corporate credit availability within the UK, especially targeted for larger corporates and medium-sized companies.  UK companies, given the reported improved economic outlook in the UK, may have felt more confident to proceed with M&A investments abroad.    
+The rise in the number of outward cross border acquisitions seen in Q1 2014 may be partially due to the reported increase in corporate credit availability within the UK, especially targeted for larger corporates and medium-sized companies.  UK companies, given the reported improved economic outlook in the UK, may have felt more confident to proceed with M&A investments abroad.
 
 ##### The following significant transactions took place abroad by UK companies in Q1 2014:
 
@@ -176,7 +176,7 @@ During Q1 2014, [Vodafone Group Plc](http://www.vodafone.com/content/index/media
 
 [Vodafone Group Plc](http://www.vodafone.com/content/index/media/vodafone-group-releases/2014/ono.html "Vodafone Group Plc") also announced it was to acquire full control of Spain’s largest cable operator, Groupo Corporativo Ono, S.A. However the transaction is subject to customary terms and conditions and is not expected to complete until Q3 2014.
 
-The estimates for the value of disposals abroad by UK companies during Q1 2014 have been suppressed in this bulletin in order to avoid the potential disclosure of companies involved in this type of M&A activity. 
+The estimates for the value of disposals abroad by UK companies during Q1 2014 have been suppressed in this bulletin in order to avoid the potential disclosure of companies involved in this type of M&A activity.
 
 ## [accordion] Background Notes
 ##### 1. Overview of Mergers and Acquisitions:
@@ -190,11 +190,11 @@ Within ONS, M&A data are essential for producing the National Accounts. The surv
 
 We are constantly aiming to improve this release and its associated commentary. We would welcome any feedback you might have and would be particularly interested in knowing how you make use of these data to inform our work. Please contact us via email:  <m&a@ons.gsi.gov.uk>  or telephone  Hannah Finselbach on +44 (0)1633 455635.
 
-This bulletin has been produced by the International Trade branch in ONS. We want to find out what you like about our outputs, what you don't like about them, and how you think we can improve them. We would really appreciate it if you will take around 10 minutes to complete our Online Survey to enable us to improve our outputs for you. 
+This bulletin has been produced by the International Trade branch in ONS. We want to find out what you like about our outputs, what you don't like about them, and how you think we can improve them. We would really appreciate it if you will take around 10 minutes to complete our Online Survey to enable us to improve our outputs for you.
 
 ##### 3. Basic Quality Information
 
-The Quality and Methodology Information for Mergers and Acquisitions(M&A) surveys report describes in detail the intended uses of the statistics presented in this publication, their general quality and the methods used to produce them. 
+The Quality and Methodology Information for Mergers and Acquisitions(M&A) surveys report describes in detail the intended uses of the statistics presented in this publication, their general quality and the methods used to produce them.
 
 ##### 4. Relevance to Users
 
@@ -202,13 +202,13 @@ The degree to which the statistical outputs meet users’ needs.
 
 Within ONS, the mergers and acquisitions data are considered to be essential for producing Balance of Payments and economic accounts statistics. The survey results form important components of the UK Balance of Payments and Financial Accounts and are vital in the measurement of the financial and non-financial business sector accounts.
 
-The Cross-Borders Acquisitions and Mergers survey (M&A) data are used in the compilation of the estimates of Foreign Direct Investment (FDI). These data meet the needs of FDI by collecting data on all acquisitions which lead to a holding in excess of 10% of the issued share capital. These estimates then feed into the UK Balance of Payments and the 'Rest of the World' sector of the financial accounts in the National Accounts, for which there is an EU legal requirement. Individual transaction information is also used to estimate the counterpart in 'portfolio' investment flows for monthly Balance of Payments. 
+The Cross-Borders Acquisitions and Mergers survey (M&A) data are used in the compilation of the estimates of Foreign Direct Investment (FDI). These data meet the needs of FDI by collecting data on all acquisitions which lead to a holding in excess of 10% of the issued share capital. These estimates then feed into the UK Balance of Payments and the 'Rest of the World' sector of the financial accounts in the National Accounts, for which there is an EU legal requirement. Individual transaction information is also used to estimate the counterpart in 'portfolio' investment flows for monthly Balance of Payments.
   
 The data collected are also used in updating business structures and country of ownership codes on the Inter-Departmental Business Register (IDBR).The IDBR is a comprehensive list of UK businesses that is used by government for statistical purposes.
 
-Elsewhere in government, examples of departments who use the data include: 
-- HM Treasury, Economic Analysis Division, where the data are used in preparing briefing and forecasting; 
-- Department for Business, Innovation and Skills, where direct investment data are required for ministerial briefing, parliamentary questions and in formulating trade policy; 
+Elsewhere in government, examples of departments who use the data include:
+- HM Treasury, Economic Analysis Division, where the data are used in preparing briefing and forecasting;
+- Department for Business, Innovation and Skills, where direct investment data are required for ministerial briefing, parliamentary questions and in formulating trade policy;
 - UK Trade & Investment, where the information is used for briefing on the extent to which the UK is successful in attracting inward investment;
 - HM Revenue and Customs, where the data are used to help in forecasting company taxation..
 
@@ -220,7 +220,7 @@ Non-government users include:
 
 Feedback from users has indicated that the information received from the M&A survey has a high degree of relevance across the above user groups, meets the vast majority of user needs, and all information currently collected and published is used.
 
-##### Source of data: 
+##### Source of data:
 The information collected is based on reports in the financial press, specialist magazines, company and financial websites supplemented by special surveys to businesses to determine the form, value and timing of each transaction.
 
 If the information is not yet in the public domain, such transactions may not be reflected in the analysis. Where full information has not yet been received on the details of the acquisition or disposal, the value of the transaction indicated in the public domain is used as an interim estimate.
@@ -233,7 +233,7 @@ ONS makes every effort to provide informative commentary on the data in this rel
 
 ONS are aware that a number of users make use of these data for modelling or forecasting purposes. In doing so, it is important that users make note of our revisions policy (see note 7 in the background notes) and that all time series are on a ‘current price’ basis, which means that the values are as they were at the time of measurement and not adjusted for inflation. Acquisitions and disposal activity can be affected by UK and global economic and political issues and therefore quarterly estimates can be volatile.
 
-One question often asked of the M&A release is ‘why is there a time delay between the announcement of M&A transactions in the press and the inclusion of these transactions within ONS M&A figures?’ The difference is that ONS figures record when a transactions legally completes as opposed to when the transaction has been announced in the press. The complexities surrounding the acquisitions/disposals taking place often incurs a time lag, which can vary between quarters. 
+One question often asked of the M&A release is ‘why is there a time delay between the announcement of M&A transactions in the press and the inclusion of these transactions within ONS M&A figures?’ The difference is that ONS figures record when a transactions legally completes as opposed to when the transaction has been announced in the press. The complexities surrounding the acquisitions/disposals taking place often incurs a time lag, which can vary between quarters.
 
 ##### 5. Significant Transactions
 
@@ -251,7 +251,7 @@ Press reported figures for M&A transactions often differ to some extent from tho
 
 **Acquisitions** are transactions which involve one company purchasing the ordinary shares of a second company (‘target  company’). A target company is usually of a smaller size than the company undertaking the purchase.
 
-**Disposal** is a term used to describe the action when a company or organisation sells or liquidates an asset or business. 
+**Disposal** is a term used to describe the action when a company or organisation sells or liquidates an asset or business.
 
 **Cross-border** acquisitions denote transactions where a company in one country acquires, either directly or indirectly, a controlling interest in a company in another country.
 
@@ -289,21 +289,21 @@ Also, a transaction may be funded by more than one method.
 
 Table source: Office for National Statistics
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/international-transactions/mergers-and-acquisitions-involving-uk-companies/q1-2014/prt-m-a-a.xls "XLS format") (33 Kb)
 
 ##### 9. Revisions
 
-Data for all quarters of 2013 have been revised in the light of new information, and so revisions to the data for Q1, Q2, Q3 and Q4 2013 have been published in this statistical bulletin. No further revisions to data prior to Q1 2013 have been made. Therefore time series data for all quarters of 2012 and any previous historic quarterly and annual periods remain unchanged. 
-Annual data tables for 2013 are produced in conjunction with the Q4 2013 data.  Revisions  to the 2013 quarterly and annual figures are recalculated  at Q1 2014 only. No revisions to annual data prior to 2013 have been made. Therefore time series data for previous historic annual periods remains unchanged. 
+Data for all quarters of 2013 have been revised in the light of new information, and so revisions to the data for Q1, Q2, Q3 and Q4 2013 have been published in this statistical bulletin. No further revisions to data prior to Q1 2013 have been made. Therefore time series data for all quarters of 2012 and any previous historic quarterly and annual periods remain unchanged.
+Annual data tables for 2013 are produced in conjunction with the Q4 2013 data.  Revisions  to the 2013 quarterly and annual figures are recalculated  at Q1 2014 only. No revisions to annual data prior to 2013 have been made. Therefore time series data for previous historic annual periods remains unchanged.
 
 Revisions to the aggregates used in M&A principally occur for the following reasons:
 
-- **Completion of transactions**: On announcement of a proposed transaction an expected completion date is usually given. The publicly reported values will be allocated to the quarter of expected completion. If the transaction is ultimately completed in an earlier or later quarter, the recorded values will be reallocated to the new quarter. 
-- **Publicly reported values**: Publicly reported values are initially used to compile the aggregates. These can vary considerably from the values ultimately supplied by the respondents, frequently because the assumption of debt has been included in the publicly reported value. A nominal value is applied if no publicly reported value is available. The final values used to create the aggregates are those supplied by the respondent. 
-- **Non-completion of transactions**: On announcement of a proposed transaction the publicly reported value of the transaction is recorded. If the transaction does not subsequently take place the recorded value will be deleted. 
-- **Non-share transactions**: On announcement of a proposed transaction it may appear that there will be transactions in the share capital of the companies involved and the publicly reported values will be recorded. If subsequent information contradicts this the recorded values will be amended or deleted. 
-- **Control**: On announcement of a proposed transaction it may appear that the transaction will give the purchasing company control of the purchased company, that is, a share ownership of greater than 50%. If subsequent information contradicts this the recorded values will be amended or deleted. 
+- **Completion of transactions**: On announcement of a proposed transaction an expected completion date is usually given. The publicly reported values will be allocated to the quarter of expected completion. If the transaction is ultimately completed in an earlier or later quarter, the recorded values will be reallocated to the new quarter.
+- **Publicly reported values**: Publicly reported values are initially used to compile the aggregates. These can vary considerably from the values ultimately supplied by the respondents, frequently because the assumption of debt has been included in the publicly reported value. A nominal value is applied if no publicly reported value is available. The final values used to create the aggregates are those supplied by the respondent.
+- **Non-completion of transactions**: On announcement of a proposed transaction the publicly reported value of the transaction is recorded. If the transaction does not subsequently take place the recorded value will be deleted.
+- **Non-share transactions**: On announcement of a proposed transaction it may appear that there will be transactions in the share capital of the companies involved and the publicly reported values will be recorded. If subsequent information contradicts this the recorded values will be amended or deleted.
+- **Control**: On announcement of a proposed transaction it may appear that the transaction will give the purchasing company control of the purchased company, that is, a share ownership of greater than 50%. If subsequent information contradicts this the recorded values will be amended or deleted.
 - **Revisions from respondents**: Very occasionally respondents revise the values that they have previously supplied to ONS. The revised values are those used to create the aggregates.
 
 #### Table B: Average Revisions Over the Previous Five Quarters
@@ -315,7 +315,7 @@ Table source: Office for National Statistics
 2. ..  Data suppressed.
 3. *Significant revision.
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/international-transactions/mergers-and-acquisitions-involving-uk-companies/q1-2014/prt-m-a-b.xls "XLS format") (31 Kb)
 
 #### Table C: Average Revisions Over the Previous Five Quarters
@@ -326,10 +326,10 @@ Table source: Office for National Statistics
 1. ..  Data suppressed.
 2. *Significant revision.
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/international-transactions/mergers-and-acquisitions-involving-uk-companies/q1-2014/prt-m-a-c.xls "XLS format") (30 Kb)
 
-Analysing average revisions between provisional and final estimates can provide an indication of reliability in an initial statistic. Provisional statistics may be based on less information than is available for final statistics as they have been processed more quickly to meet the demand of customers. By looking at these average revisions it can help us determine whether revisions are being made consistently in one direction i.e. if early estimates are consistently under or overestimating the later figures. A test is subsequently performed on these average revisions to determine if they are statistically different from zero. Revisions that are not statistically significant imply that an average revision might be non-zero simply through random effects. 
+Analysing average revisions between provisional and final estimates can provide an indication of reliability in an initial statistic. Provisional statistics may be based on less information than is available for final statistics as they have been processed more quickly to meet the demand of customers. By looking at these average revisions it can help us determine whether revisions are being made consistently in one direction i.e. if early estimates are consistently under or overestimating the later figures. A test is subsequently performed on these average revisions to determine if they are statistically different from zero. Revisions that are not statistically significant imply that an average revision might be non-zero simply through random effects.
 
 ##### 10. Response Rates
 
@@ -337,22 +337,22 @@ Analysing average revisions between provisional and final estimates can provide 
 
 Table source: Office for National Statistics
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/international-transactions/mergers-and-acquisitions-involving-uk-companies/q1-2014/prt-m-a-d.xls "XLS format") (30 Kb)
 
 ##### 11. Notes to Tables
 
-The deal identification threshold was increased at Q1 2010  to a value of £1.0 million from a previous value of £0.1 million. As a consequence there is a discontinuity in the value and number of deals reported from Q1 2010 onwards compared with previous periods. 
+The deal identification threshold was increased at Q1 2010  to a value of £1.0 million from a previous value of £0.1 million. As a consequence there is a discontinuity in the value and number of deals reported from Q1 2010 onwards compared with previous periods.
 Symbols used in the tables are:
 
-- .. Figure suppressed to avoid disclosure of information relating to individual enterprises. 
+- .. Figure suppressed to avoid disclosure of information relating to individual enterprises.
 - – Nil or less than half the final digit shown.
 
-The sum of constituent items in tables may not always agree exactly with the totals shown due to rounding. 
+The sum of constituent items in tables may not always agree exactly with the totals shown due to rounding.
 
 ##### 12. Disclosure
 
-It is sometimes necessary to suppress figures for certain items in order to avoid disclosing information about an individual business. Further information on why data are suppressed is available in the [ONS Disclosure Control Policy](http://www.ons.gov.uk/ons/guide-method/method-quality/general-methodology/statistical-disclosure-control/index.html "Statistical Disclosure Control"). 
+It is sometimes necessary to suppress figures for certain items in order to avoid disclosing information about an individual business. Further information on why data are suppressed is available in the [ONS Disclosure Control Policy](http://www.ons.gov.uk/ons/guide-method/method-quality/general-methodology/statistical-disclosure-control/index.html "Statistical Disclosure Control").
 
 ##### 13. Office for National Statistics
 
@@ -377,7 +377,7 @@ Once statistics have been designated as National Statistics it is a statutory re
 
 ##### 15. The Government Statistical Service (GSS)
 
-The Government Statistical Service is a network of professional statisticians and their staff operating both within the Office for National Statistics and across more than 30 other government departments and agencies. 
+The Government Statistical Service is a network of professional statisticians and their staff operating both within the Office for National Statistics and across more than 30 other government departments and agencies.
 
 ##### 16. Government Statistical Service (GSS) business statistics
 To find out about other official business statistics, and choose the right data for your needs, use the [GSS Business Statistics Interactive User Guide](http://www.ons.gov.uk/ons/guide-method/understanding-ons-statistics/business-statistics---interactive-user-guide/index.html "GSS Business Statistics Interactive User Guide"). By selecting your topics of interest, the tool will pinpoint publications that should be of interest to you, and provide you with links to more detailed information and the relevant statistical releases. It also offers guidance on which statistics are appropriate for different uses.

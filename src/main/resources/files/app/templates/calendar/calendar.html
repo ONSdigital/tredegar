@@ -25,6 +25,7 @@
                                 <span class="icon-rss icon-inline">RSS</span>
                             </a>
                             </span>
+                            <ons-help-tooltip tip="This function will not be available on the prototype, however in the future you will be able to get the updates"></ons-help-tooltip>
                         </td>
                     </tr>
                 </table>
@@ -73,8 +74,8 @@
                             </fieldset>
                         </div>
                         <div class="grid-col desktop-grid-two-thirds tablet-grid-one-half">
-                            <ol class="list--table list--table--cushy table--striped-light list--table--releases" ng-repeat="item in calendarData | filter:query">
-                                <li class="list--table__item list--table__body">
+                            <ol class="list--table list--table--cushy list--table--releases" >
+                                <li class="list--table__item list--table__body" ng-repeat="item in calendarData | filter:query" ng-class="{'table--striped-light_coloured': $index %2 != 0}">
                                     <div class="list--table__item__body list--table__item__body--date">
                                         <div class="list--table__item__body__inner">
                                             <time class="date date--stacked" datetime="{{item.releaseDate}}">

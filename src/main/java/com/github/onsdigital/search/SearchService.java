@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+import org.elasticsearch.action.count.CountRequestBuilder;
+import org.elasticsearch.action.count.CountResponse;
 import org.elasticsearch.action.search.MultiSearchRequestBuilder;
 import org.elasticsearch.action.search.MultiSearchResponse;
 import org.elasticsearch.action.search.MultiSearchResponse.Item;
@@ -39,6 +41,11 @@ public class SearchService {
 		System.out.println("Searcing For:" + ReflectionToStringBuilder.toString(queryBuilder));
 		return new SearchResult(execute(queryBuilder));
 	}
+	
+	public static long count(ONSQueryBuilder queryBuilder) {
+		System.out.println("Counting:" + ReflectionToStringBuilder.toString(queryBuilder));
+		return executeCount(queryBuilder).getCount();
+	}
 
 	/**
 	 * Performs multi search and returns results
@@ -61,7 +68,6 @@ public class SearchService {
 		}
 		
 		return results;
-
 	}
 
 	private static String getQueries(ONSQueryBuilder... querybuilders) {
@@ -75,6 +81,12 @@ public class SearchService {
 	private static SearchResponse execute(ONSQueryBuilder queryBuilder) {
 		return buildRequest(queryBuilder).get();
 	}
+	
+	private static CountResponse executeCount(ONSQueryBuilder queryBuilder) {
+		return buildCountRequest(queryBuilder).get();
+	}
+	
+	
 
 	private static MultiSearchResponse execute(ONSQueryBuilder... queryBuilders) {
 		return buildMultiSearchRequest(queryBuilders).get();
@@ -86,6 +98,14 @@ public class SearchService {
 		searchBuilder.setTypes(types);
 		searchBuilder.setExtraSource(queryBuilder.buildQuery());
 		return searchBuilder;
+	}
+	
+	private static CountRequestBuilder buildCountRequest(ONSQueryBuilder queryBuilder) {
+		CountRequestBuilder countBuilder = getClient().prepareCount(queryBuilder.getIndex());
+		String[] types = queryBuilder.getTypes();
+		countBuilder.setTypes(types);
+		countBuilder.setQuery(queryBuilder.buildCountQuery());
+		return countBuilder;
 	}
 
 	private static MultiSearchRequestBuilder buildMultiSearchRequest(ONSQueryBuilder... builders) {

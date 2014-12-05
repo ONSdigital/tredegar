@@ -617,90 +617,7 @@ img {
 .icon-right-open:before {
     content: '\e866';
 }
-/* '' */
-/*Original code from CX*/
-/*.icon-info-circled:before {
-  content: '\e800'; }
-*/
-/* '' */
-/*.icon-record:before {
-  content: '\e801'; }*/
-/* '' */
-/*.icon-facebook:before {
-  content: '\e802'; }*/
-/* '' */
-/*.icon-twitter:before {
-  content: '\e803'; }
-*/
-/* '' */
-/*.icon-phone:before {
-  content: '\e804'; }
-*/
-/* '' */
-/*.icon-mail:before {
-  content: '\e805'; }
-*/
-/* '' */
-/*.icon-gplus:before {
-  content: '\e806'; }
-*/
-/* '' */
-/*.icon-search:before {
-  content: '\e807'; }
-*/
-/* '' */
-/*.icon-download:before {
-  content: '\e808'; }
-*/
-/* '' */
-/*.icon-print:before {
-  content: '\e809'; }
-*/
-/* '' */
-/*.icon-book:before {
-  content: '\e80a'; }
-*/
-/* '' */
-/*.icon-down-open-big:before {
-  content: '\e80b'; }
-*/
-/* '' */
-/*.icon-right-open-big:before {
-  content: '\e80c'; }
-*/
-/* '' */
-/*.icon-up-open-big:before {
-  content: '\e80d'; }
-*/
-/* '' */
-/*.icon-cog:before {
-  content: '\e80e'; }
-*/
-/* '' */
-/*.icon-check:before {
-  content: '\e80f'; }
-*/
-/* '' */
-/*.icon-search-1:before {
-  content: '\e810'; }
-*/
-/* '' */
-/*.icon-popup:before {
-  content: '\e811'; }
-*/
-/* '' */
-/*.icon-up-bold:before {
-  content: '\e812'; }
-*/
-/* '' */
-/*.icon-down-bold:before {
-  content: '\e813'; }
 
-/* '?' */
-/*.icon-users:before {
-  content: '\e814'; }
-
-/* '?' */
 /*------------------------------
   Temporary wrapping classes
 
@@ -3196,7 +3113,7 @@ lesser , applied styles
       text-align: center;
     }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 28.125em) {
     .nav-panel__roomy--med {
         /*padding-left: 14px;
       padding-left: 1.4rem;*/
@@ -3301,7 +3218,7 @@ lesser , applied styles
     font-size: 70%;
     height: 6.5rem
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 50em) {
     .nav-panel__footer-home .nav-panel__action:after {
         font-size: 200%;
     }
@@ -3329,7 +3246,7 @@ lesser , applied styles
 }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 30em) {
     .nav-panel__footer-home a {
         font-size: 95%;
         padding: 1.7em;
@@ -3813,7 +3730,7 @@ lesser , applied styles
 
     background-size: cover;
 }
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 63.75em) {
     .slate--home--hero-banner {
         background-color: #f4f5dd;
         background-image: none;
@@ -3971,7 +3888,7 @@ $SPLIT
     vertical-align: baseline;
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 50em){
 .stat__figure__unit {
     /*---------------------
     Offset number so it appears visually closer to the stat figure.
@@ -4244,6 +4161,9 @@ $SPLIT
 }
 .table--striped-light tbody tr, .table--striped-light .list--table__body {
     background-color: #fff;
+}
+.table--striped-light_coloured {
+    background-color: #edeeee;
 }
 .table--striped-light tbody tr:nth-child(even), .table--striped-light .list--table__body:nth-child(even) {
     background-color: #edeeee;
@@ -4841,7 +4761,7 @@ table actions
 }
 
 
-@media screen and (min-width: 920px) {
+@media screen and (min-width: 57.5em) {
     .search-filters {
         width: 100%;
     }
@@ -5042,7 +4962,7 @@ ul.simple-pagination {
     width: 180px;
 }
 
-@media screen and (min-width: 740px) and (max-width: 890px)  {
+@media screen and (min-width: 46.25em) and (max-width: 55.625em) {
 .div_panel_link {
     position: absolute;
     bottom: 50px;
@@ -5051,6 +4971,14 @@ ul.simple-pagination {
 }
 }
 
+.callout--link_inactive{
+    padding-right: 3rem;
+}
+@media screen and (max-width: 25em) {
+.callout--link_inactive{
+    padding-right: 2rem;
+}
+}
 
 /* T3 list--table*/
 
@@ -5161,7 +5089,7 @@ ul.simple-pagination {
     border-width: 26px;
     margin-top: -26px;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 37.5em) {
     .arrow_box {
         position: relative;
         border-left: 5px solid #008998;
@@ -5182,12 +5110,12 @@ ul.simple-pagination {
         pointer-events: none;
     }
 }
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 40.625em) {
     .headline--box-container {
         height: 24em;
     }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 50em) {
     .headline--box-container-text {
         font-size: 1.5rem;
     }
@@ -5720,7 +5648,7 @@ table {
 .resp-table td:after {
     padding-left: 0.6em;
 }
-@media (min-width: 750px) {
+@media (min-width: 46.875em) {
     .resp-table td:before {
         display: none;
     }
@@ -5728,7 +5656,7 @@ table {
 .resp-table th, .resp-table td {
     text-align: left;
 }
-@media (min-width: 750px) {
+@media (min-width: 46.875em) {
     .resp-table th, .resp-table td {
         display: table-cell;
         padding: .25em .5em;
@@ -5750,7 +5678,7 @@ table {
 .resp-table th, .resp-table td {
     margin: .5em 1em;
 }
-@media (min-width: 750px) {
+@media (min-width: 46.875em) {
     .resp-table th, .resp-table td {
         padding: 1em !important;
     }
@@ -5895,7 +5823,7 @@ article > table.dataset-table > tbody > tr > td {
 div.grid-col.desktop-grid-two-thirds.tablet-grid-two-thirds > div > ol > li {
     margin-bottom: 1.5rem;
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 46.875em) {
     article > table.dataset-table > tbody > tr > td::before {
         display: none;
     }
@@ -5965,7 +5893,7 @@ td.datatable-downloads {
 .data-table th, .data-table td {
     padding: 1em !important;
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 46.875em) {
     #Datatable > tbody > tr > td > div.micro {
         display: none;
     }
@@ -5985,7 +5913,7 @@ td.datatable-downloads {
         width: 80%;
     }
 }
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 46.875em) {
     #Datatable > tbody > tr > td> div > div.micro {
         display: none;
     }
@@ -6209,7 +6137,7 @@ td.datatable-downloads {
   padding-left: 20px;
 }*/
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 50em) {
     .nav-panel__list{
         display: inline-flex;
         display: -webkit-inline-flex;
@@ -6272,7 +6200,7 @@ td.datatable-downloads {
 
 /*---T1 responsive layouts----*/
 
-@media screen and (max-width: 470px) {
+@media screen and (max-width: 29.375em) {
     .nav-panel__body.flush {
         position: relative;
         left: 2%;
@@ -6288,14 +6216,14 @@ td.datatable-downloads {
     }
 }
 
-@media screen and (min-width: 470px) and (max-width: 600px) {
+@media screen and (min-width: 29.375em) and (max-width: 37.5em) {
 
     .nav-panel__body.flush {
         width: 13rem;
     }
 }
 
-@media screen and (min-width: 600px) and (max-width: 750px) {
+@media screen and (min-width: 37.5em) and (max-width: 46.875em) {
 
     .nav-panel__body.flush {
         padding-left: 10%;
@@ -6305,7 +6233,7 @@ td.datatable-downloads {
     }
 }
 
-@media screen and (min-width: 750px) and (max-width: 800px) {
+@media screen and (min-width: 46.875em) and (max-width: 50em) {
 
     .nav-panel__body.flush {
         padding-left: 20%;
@@ -6315,7 +6243,7 @@ td.datatable-downloads {
 }
 
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 25em) {
     .callout-header {
         font-size: 1.6rem;
         padding-top:20px;
@@ -6323,7 +6251,7 @@ td.datatable-downloads {
     }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 50em) {
     .callout-link {
         position: relative;
         padding-left: 20%;
@@ -8671,7 +8599,7 @@ lesser , applied styles
 
 .modalDialog {
     width: 25em;
-    height: 32em;
+    height: 30em;
     background-color: #fff;
     margin: 15% auto;
     overflow: auto;
@@ -8729,10 +8657,10 @@ lesser , applied styles
 }
 
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 38em){
 .modalDialog {
     width: 20em;
-    height: 32em;
+    height: 30em;
     background-color: #fff;
     margin: 15% auto;
     overflow: auto;
@@ -8748,10 +8676,10 @@ lesser , applied styles
 }
 }
 
-@media screen and (min-width: 790px) and (max-width: 900px) {
+@media screen and (min-width: 38.125em) and (max-width: 56.25em) {
     .modalDialog {
     width: 20em;
-    height: 34em;
+    height: 32.5em;
     background-color: #fff;
     margin: 5% auto;
     overflow: auto;
@@ -8766,17 +8694,27 @@ lesser , applied styles
 }
 }
 
-@media screen and (max-height: 800px) {
+/*@media screen and (max-height: 800px) {
     .modalDialog {
-   /* width: 20em;*/
+    width: 20em;
     height: 34em;
     background-color: #fff;
     margin: 5% auto;
     overflow: auto;
     pointer-events:auto;
 }
-}
+}*/
 
+@media screen and (min-width: 62.5em) and (max-width: 85.375em) {
+    .modalDialog {
+    width: 25em;
+    height: 30em;
+    background-color: #fff;
+    margin: 5% auto;
+    overflow: auto;
+    pointer-events:auto;
+}
+}
 
 
 /* -------- autocomplete on search -------- */

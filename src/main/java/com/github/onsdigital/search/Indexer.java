@@ -83,7 +83,7 @@ public class Indexer {
 		XContentBuilder builder = jsonBuilder().startObject().startObject(type).startObject("properties");
 		try {
 			// cdid not analyzed for exact match
-			builder.startObject("cdid").field("type", "string").field("index", "analyzed").endObject();
+			builder.startObject("cdid").field("type", "string").field("index", "not_analyzed").endObject();
 			builder.startObject("title").field("type", "string").field("index", "analyzed").endObject();
 			builder.startObject("url").field("type", "string").field("index", "analyzed").endObject();
 			builder.startObject("path").field("type", "string").field("index", "analyzed").endObject();

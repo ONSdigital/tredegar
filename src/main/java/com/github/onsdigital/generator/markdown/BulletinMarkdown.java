@@ -1,8 +1,10 @@
 package com.github.onsdigital.generator.markdown;
 
 import java.io.IOException;
+import java.net.URI;
 import java.nio.file.Path;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -15,6 +17,7 @@ import com.github.onsdigital.json.markdown.Bulletin;
 public class BulletinMarkdown {
 
 	static final String resourceName = "/bulletins";
+	public static Map<String, Bulletin> bulletins = new HashMap<>();
 
 	public static void parse() throws IOException {
 		Collection<Path> files = Markdown.getFiles(resourceName);
@@ -24,9 +27,15 @@ public class BulletinMarkdown {
 			// Read the bulletin:
 			Bulletin bulletin = readBulletin(file);
 
-			// Add it to the taxonomy:
+			// Set the URI if necessary:
 			Folder folder = Data.getFolder(bulletin.theme, bulletin.level2, bulletin.level3);
+			if (bulletin.uri == null) {
+				bulletin.uri = toUri(folder, bulletin);
+			}
+
+			// Add it to the taxonomy:
 			folder.bulletins.add(bulletin);
+			bulletins.put(bulletin.name, bulletin);
 			if (StringUtils.isNotBlank(bulletin.headline1)) {
 				folder.headlineBulletin = bulletin;
 			}
@@ -99,5 +108,25 @@ public class BulletinMarkdown {
 			System.out.println("Bulletin key not recognised: '" + property + "' (length " + property.length() + " for value '" + properties.get(property) + "')");
 		}
 
+	}
+
+	static URI toUri(Folder folder, Bulletin bulletin) {
+		URI result = null;
+
+		if (bulletin != null) {
+			if (bulletin.uri == null) {
+				String baseUri = "/" + folder.filename();
+				Folder parent = folder.parent;
+				while (parent != null) {
+					baseUri = "/" + parent.filename() + baseUri;
+					parent = parent.parent;
+				}
+				baseUri += "/bulletins";
+				bulletin.uri = URI.create(baseUri + "/" + StringUtils.trim(bulletin.fileName));
+			}
+			result = bulletin.uri;
+		}
+
+		return result;
 	}
 }

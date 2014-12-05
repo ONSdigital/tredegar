@@ -8,6 +8,13 @@ Headline 3: In Q2 2014 GDP was estimated to be 0.2% above the peak in Q1 2008. F
 Contact name: Robert Doody
 Contact email: ios.enquiries@ons.gsi.gov.uk
 
+## Key Points
+- Change in gross domestic product (GDP) is the main indicator of economic growth. GDP increased by 0.8% in Q2 2014, the second consecutive quarter on quarter increase of 0.8%.
+- Output increased in two of the four main industrial groupings within the economy in Q2 2014 compared with Q1 2014. In order of their contribution, output increased by 1.0% in services and by 0.4% in production. However, output decreased by 0.5% in construction and by 0.2% in agriculture.
+- In Q2 2014 GDP was estimated to be 0.2% above the peak in Q1 2008. From peak to trough in 2009, the economy shrank by 7.2%.
+- GDP was 3.1% higher in Q2 2014 compared with the same quarter a year ago.
+- The preliminary estimate of GDP is produced using the output approach to measuring GDP. At this stage, data content is less than half of the total required for the final output estimate. The estimate is subject to revision as more data become available, but these are typically small between the preliminary and third estimates of GDP. All figures in this release are seasonally adjusted.
+
 ## Key Information
 Change in GDP is the main indicator of economic growth. Further information on GDP can be found in background note 3. All data in this bulletin are seasonally adjusted estimates and have had the effect of price changes removed (in other words, the data are deflated). Further information on some of the key concepts (including seasonal adjustment and deflation) underlying the estimates can be found in background note 9.
 

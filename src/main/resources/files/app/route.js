@@ -130,7 +130,7 @@
 				}]
 			}
 		}).
-		when('/search/:searchTerm', resolveSearch()).
+		when('/search/:searchTerm?', resolveSearch()).
 		when('/search/:searchTerm/page/:page', resolveSearch()).
 		when('/survey', {
 			templateUrl: 'app/templates/survey/survey.html',

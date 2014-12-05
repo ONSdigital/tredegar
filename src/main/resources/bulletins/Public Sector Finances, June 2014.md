@@ -8,6 +8,15 @@ Headline 3: During 2013/14, £31.1 billion was transferred from the APF to HM Tr
 Contact name: Gareth Clancy
 Contact email: psa@ons.gsi.gov.uk
 
+## Latest figures
+- This is the first estimate of the June 2014 public sector finances (financial year 2014/15). Financial year 2013/14 data have also been updated. These estimates will continue to be revised as more data become available.
+- Public sector net borrowing excluding financial interventions (PSNB ex) was £11.4 billion in June 2014. This was £3.8 billion higher than last June. There was no transfer from the Bank of England Asset Purchase Facility Fund (APF) in June 2014; however there was a £3.9 billion APF transfer in June 2013. When APF transfers are excluded from net borrowing, last June was £11.5 billion (similar to June 2014).
+- For the financial year 2013/14, PSNB ex was £93.7 billion. This was £13.0 billion higher than the same period in 2012/13.
+- When the transfers of the Royal Mail Pension Plan and APF are removed, PSNB ex for 2013/14 was £105.8 billion. This was £9.3 billion lower than 2012/13 (£115.1 billion).
+- During 2013/14, £31.1 billion was transferred from the APF to HM Treasury. Of this amount, £12.2 billion impacted on net borrowing.
+- At the end of June 2014, public sector net debt excluding financial interventions (PSND ex) was £1,304.6 billion, equivalent to 77.3% of gross domestic product (GDP).
+- The central government net cash requirement (CGNCR) for the financial year 2013/14 was £75.4 billion, £29.6 billion lower than the same period in 2012/13 (£105.0 billion).
+
 ## Summary of Net Debt and Net Borrowing
 This statistical bulletin provides important information on the UK government fiscal position. It enables government, the public, economists, financial analysts and political parties to monitor public sector expenditure, receipts and investments. By comparing these data with forecasts from The Office for Budget Responsibility (OBR) the current UK fiscal position can be evaluated.
 
