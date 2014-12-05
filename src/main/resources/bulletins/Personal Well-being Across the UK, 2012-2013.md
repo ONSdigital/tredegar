@@ -3,7 +3,7 @@ Level 2: Well-being
 Summary: This bulletin presents experimental statistics from the second Personal Well-being Annual Population dataset, April 2012 to March 2013.  Overall estimates of personal well-being are provided for each country of the United Kingdom, as well as for lower level geographies in England, Scotland and Wales.
 Headline 1: Personal well-being improved in the UK between 2011/12 and 2012/13. Ratings for life satisfaction and feeling that the things we do in life are worthwhile increased on average, whilst anxiety levels fell.
 Headline 2: The proportions rating their personal well-being as very high or very low fell between 2011/12 and 2012/13 in the UK, while the proportion rating their well-being around 7 or 8 out of 10 increased.
-Headline 3: Among the countries of the UK, Northern Ireland had the highest average ratings for life satisfaction, worthwhile and happiness in 2012/13. A greater proportion of people in Northern Ireland rated their life satisfaction, worthwhile and happiness as very high (9 or 10 out of 10) than in any other country.
+Headline 3: Among the countries of the UK, Northern Ireland had the highest average ratings for life satisfaction, worthwhile and happiness in 2012/13.
 Contact name: Dawn Snape
 Contact email: dawn.snape@ons.gsi.gov.
 
@@ -17,7 +17,7 @@ Contact email: dawn.snape@ons.gsi.gov.
 ## Background
 This is the first statistical bulletin from ONS exploring how personal well-being varies across the countries, regions and more local areas of the UK. The estimates in this bulletin are based on data from the Annual Population Survey (APS) from April 2012 to March 2013 which includes responses from around 165,000 people.  This provides a large representative sample of adults aged 16 and over who live in residential households in the UK.
 
-A separate bulletin published by ONS in July 2013 provided estimates of personal well-being for the UK as a whole, broken down by sex, age, ethnicity, relationship status, health, disability and employment status. 
+A separate bulletin published by ONS in July 2013 provided estimates of personal well-being for the UK as a whole, broken down by sex, age, ethnicity, relationship status, health, disability and employment status.
 
 The four questions which are used to monitor personal well-being in the UK are:
 
@@ -28,10 +28,10 @@ The four questions which are used to monitor personal well-being in the UK are:
 
 The findings reported here are based on people’s responses to these four questions.  People are asked to give their answers on a scale of 0 to 10 where 0 is 'not at all' and 10 is 'completely'. These questions allow people to make an assessment of their life overall, as well as providing an indication of their day-to-day emotions. Although 'yesterday' may not be a typical day for any one individual, the large sample means that these differences 'average out' and provide a reliable assessment of the anxiety and happiness of the adult population in the UK over the year.
 
-In response to user demand, the data released with this bulletin are available for the first time at a range of different geographical levels.  Please see [Methodology](http://www.ons.gov.uk/ons/rel/wellbeing/measuring-national-well-being/personal-well-being-across-the-uk--2012-13/sb---personal-well-being-across-the-uk--2012-13.html#tab-Methodology "Methodology") section for full details.  
+In response to user demand, the data released with this bulletin are available for the first time at a range of different geographical levels.  Please see [Methodology](http://www.ons.gov.uk/ons/rel/wellbeing/measuring-national-well-being/personal-well-being-across-the-uk--2012-13/sb---personal-well-being-across-the-uk--2012-13.html#tab-Methodology "Methodology") section for full details.
 
 ## Definitions
-Two different methods are used to help explain the findings. 
+Two different methods are used to help explain the findings.
 
 - **Averages** based on ratings for each aspect of personal well-being on the 0 to 10 point scale.  This provides another summary measure that allows comparisons using a single number for each aspect of personal well-being.
 - **Distributions** focusing particularly on the proportions of people rating each aspect of their well-being at the highest and lowest levels.
@@ -42,10 +42,10 @@ The lowest levels of life satisfaction, worthwhile and happiness include ratings
 
 It should  be noted that ‘highest’ and ‘lowest’ well-being are more narrowly defined here than in the release of data in July (ONS, 2013a).  This will  help highlight more clearly the differences between areas.  The [reference tables](http://www.ons.gov.uk/ons/rel/wellbeing/measuring-national-well-being/personal-well-being-across-the-uk--2012-13/index.html "Personal Well-being across the UK, 2012/13") provide the data for both 2011/12 and 2012/13, broken down by the same thresholds to allow consistent comparisons.
 
-Throughout the bulletin, only findings that are statistically significant are commented upon. Two methods of determining statistical significance have been used in this bulletin:  p-values for change over time and non-overlapping confidence intervals for cross-sectional comparisons between an area estimate and the UK estimate.  The [reference tables](http://www.ons.gov.uk/ons/rel/wellbeing/measuring-national-well-being/personal-well-being-across-the-uk--2012-13/index.html "Personal Well-being across the UK, 2012/13") contain full details of each. 
+Throughout the bulletin, only findings that are statistically significant are commented upon. Two methods of determining statistical significance have been used in this bulletin:  p-values for change over time and non-overlapping confidence intervals for cross-sectional comparisons between an area estimate and the UK estimate.  The [reference tables](http://www.ons.gov.uk/ons/rel/wellbeing/measuring-national-well-being/personal-well-being-across-the-uk--2012-13/index.html "Personal Well-being across the UK, 2012/13") contain full details of each.
 
 ## Personal well-being in the UK, 2012/13
-Figure 1 shows how people in the UK rated each aspect of their personal well-being out of 10 in 2011/12 and 2012/13. 
+Figure 1 shows how people in the UK rated each aspect of their personal well-being out of 10 in 2011/12 and 2012/13.
 
 #### Figure 1: Distribution of responses for personal well-being, 2011/12 & 2012/13
 ##### United Kingdom
@@ -55,7 +55,7 @@ Source: Annual Population Survey (APS) - Office for National Statistics
  ##### Notes:
 1. Adults aged 16 and over were asked 'Overall, how satisfied are you with your life nowadays?', 'Overall, to what extent do you feel the things you do in your life are worthwhile?', 'Overall, how happy did you feel yesterday?' and 'Overall, how anxious did you feel yesterday?' where 0 is 'not at all' and 10 is 'completely'.
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/wellbeing/measuring-national-well-being/personal-well-being-across-the-uk--2012-13/chd-figure-1.xls "XLS format") (30 Kb)
 
 You can explore the data further using interactive graphs showing [different levels of personal well-being](http://www.ons.gov.uk/ons/external-links/about-statistics/wellbeing/personal-well-being-interactive-bar-chart.html "Personal well-being interactive bar chart") and [overall averages](http://www.ons.gov.uk/ons/external-links/about-statistics/wellbeing/average-personal-well-being-interactive-bar-chart.html "Average well-being interactive bar chart").
@@ -87,13 +87,13 @@ Table source: Office for National Statistics
 1. *Indicates significant at the 0.05 level.
 2. Final percentage point change rounded to 2 decimal places.
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/wellbeing/measuring-national-well-being/personal-well-being-across-the-uk--2012-13/prt-table-1.xls "XLS format") (30.5 Kb)
 
 ## Personal well-being in the UK countries, 2012/13
 This section provides average ratings for each measure of personal well-being across the countries of the UK in 2012/13.  It also considers the proportions of people rating each aspect of well-being at the highest and lowest levels and changes between 2011/12 and 2012/13.
 
-Maps 1 and 2  show the differences in personal well-being across the countries of the UK. You can explore the data further using interactive maps showing personal well-being findings across the UK. 
+Maps 1 and 2  show the differences in personal well-being across the countries of the UK. You can explore the data further using interactive maps showing personal well-being findings across the UK.
 
 #### Map 1: Percentages of high personal well-being, by country, 2012/13
 ##### United Kingdom
@@ -101,7 +101,7 @@ Maps 1 and 2  show the differences in personal well-being across the countries o
 
 Source: Annual Population Survey (APS) - Office for National Statistics
 
-##### Download map: 
+##### Download map:
 ![PNG](http://www.ons.gov.uk/ons/resources/iconpng_tcm77-218163.gif "PNG")  [PNG](http://www.ons.gov.uk/ons/rel/wellbeing/measuring-national-well-being/personal-well-being-across-the-uk--2012-13/map-highwellbeing-download.png "PNG") (358.4 Kb)
 
 #### Map 2: Percentages of low personal well-being, by country, 2012/13
@@ -110,7 +110,7 @@ Source: Annual Population Survey (APS) - Office for National Statistics
 
 Source: Annual Population Survey (APS) - Office for National Statistics
 
-##### Download map: 
+##### Download map:
 ![PNG](http://www.ons.gov.uk/ons/resources/iconpng_tcm77-218163.gif "PNG")  [PNG](http://www.ons.gov.uk/ons/rel/wellbeing/measuring-national-well-being/personal-well-being-across-the-uk--2012-13/map-lowwellbeing-download.png "PNG") (350.8 Kb)
 
 ### The personal well-being picture in 2012/13:  UK countries
@@ -127,9 +127,9 @@ Key points to note about personal well-being in the UK countries in 2012/13 (see
 
 This section considers how findings based on people’s own ratings of their personal well-being relate to circumstances in the areas in which they live.  It shows that traditional measures of social progress such as unemployment rates, gross value added per head and life expectancy may sometimes present a different picture to that presented by personal well-being estimates. For example:
 
-- During the period from February to April 2013, Wales had the highest unemployment rate among the countries of the UK at 8.4% (ONS, 2013c).  In 2012/13, a greater proportion of people in Wales rated their life satisfaction and worthwhile as very low, compared with other countries in the UK and the UK as a whole.   
+- During the period from February to April 2013, Wales had the highest unemployment rate among the countries of the UK at 8.4% (ONS, 2013c).  In 2012/13, a greater proportion of people in Wales rated their life satisfaction and worthwhile as very low, compared with other countries in the UK and the UK as a whole.
 - Gross value added (GVA) per head is an economic indicator that divides total economic output in the area by the population of the area.  It is a measure of the economic competitiveness of an area and is also related to deprivation.
-- In 2011, England had the highest GVA per head (£21,349) among the UK countries, but was among the countries with the lowest average personal well-being ratings. In the same year, Northern Ireland had the third lowest GVA per head (£16,531) but the highest personal well-being average rating (ONS, 2012a). The two countries with the lowest life expectancy rates at birth (Northern Ireland and Scotland) had the highest average personal well-being ratings (ONS, 2011a). 
+- In 2011, England had the highest GVA per head (£21,349) among the UK countries, but was among the countries with the lowest average personal well-being ratings. In the same year, Northern Ireland had the third lowest GVA per head (£16,531) but the highest personal well-being average rating (ONS, 2012a). The two countries with the lowest life expectancy rates at birth (Northern Ireland and Scotland) had the highest average personal well-being ratings (ONS, 2011a).
 
 Table 2 summarises the average ratings out of 10 for each country and the UK in 2012/13 and shows the change in each measure since 2011/12.
 
@@ -143,7 +143,7 @@ Table source: Office for National Statistics
 2. +Indicates significantly different to the UK estimate for 2012/13.
 3. Final point change rounded to 2 decimal places.
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/wellbeing/measuring-national-well-being/personal-well-being-across-the-uk--2012-13/prt-table-2.xls "XLS format") (29.5 Kb)
 
 Table 3 summarises how the UK countries compared in terms of highest personal well-being in 2012/13.  The change in each measure since 2011/12 is also provided.
@@ -159,7 +159,7 @@ Table source: Office for National Statistics
 2. +Indicates significantly different to the UK estimate for 2012/13.
 3. Final percentage point change rounded to 2 decimal places.
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/wellbeing/measuring-national-well-being/personal-well-being-across-the-uk--2012-13/prt-table-3.xls "XLS format") (32 Kb)
 
 Table 4 summarises how the UK countries compared in terms of lowest personal well-being in 2012/13.  The proportionate change in each measure since 2011/12 is also provided.
@@ -175,26 +175,26 @@ Table source: Office for National Statistics
 2. +Indicates significantly different to the UK estimate for 2012/13.
 3. Final percentage point change rounded to 2 decimal places.
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/wellbeing/measuring-national-well-being/personal-well-being-across-the-uk--2012-13/prt-table-4.xls "XLS format") (30 Kb)
 
 ## Personal well-being in the English regions, 2012/13
-This section looks at personal well-being in the English regions in 2012/13, focusing on the average ratings of personal well-being and the proportions of people in each region rating their well-being at the highest and lowest levels.  Changes in personal well-being between 2011/12 and 2012/13 for each region are also discussed. 
+This section looks at personal well-being in the English regions in 2012/13, focusing on the average ratings of personal well-being and the proportions of people in each region rating their well-being at the highest and lowest levels.  Changes in personal well-being between 2011/12 and 2012/13 for each region are also discussed.
 
 You can explore the data further using interactive graphs comparing all the regions, for [different levels of personal well-being](http://www.ons.gov.uk/ons/external-links/about-statistics/wellbeing/personal-well-being-interactive-bar-chart.html "Personal well-bing interactive bar chart") and [overall averages](http://www.ons.gov.uk/ons/external-links/about-statistics/wellbeing/average-personal-well-being-interactive-bar-chart.html "Average well-bing interactive bar chart").  [Interactive maps](http://www.ons.gov.uk/ons/external-links/about-statistics/wellbeing/personal-well-being-across-the-uk-interactive-map.html "Personal well-bing interactive bar chart") are also available.
 
 ### The personal well-being picture in 2012/13:  English regions
 
-The findings show that in 2012/13, the South West region had the highest personal well-being ratings and the North East the worst.  The West Midlands had the biggest improvement in personal well-being between 2011/12 and 2012/13. 
+The findings show that in 2012/13, the South West region had the highest personal well-being ratings and the North East the worst.  The West Midlands had the biggest improvement in personal well-being between 2011/12 and 2012/13.
 
 Other key points to note about personal well-being in the English regions have been taken from Tables 5 – 7 and include:
 
 - English regions with some of the highest average personal well-being ratings were the South West and the South East. Average life satisfaction and worthwhile were higher in these two regions than the averages for the UK as a whole.
-- The South West had the highest proportions of people giving the highest ratings of 9 or 10 out of 10 for life satisfaction and worthwhile, and both were higher than the UK figures. 
+- The South West had the highest proportions of people giving the highest ratings of 9 or 10 out of 10 for life satisfaction and worthwhile, and both were higher than the UK figures.
 - London had the lowest average rating for life satisfaction and the highest average rating for anxiety, both higher than the UK average.
 - In the North East proportionately more people rated their life satisfaction, worthwhile and happiness as 4 or less out of 10, more than in any other region. Additionally, proportionately more people rated their anxiety levels at a high level than in any other region, indicating lower well-being.
 - The region with the biggest change between 2011/12 and 2012/13 for the average ratings was the West Midlands. Life satisfaction and worthwhile increased significantly in 2012/13 and anxiety levels fell.
-- The West Midlands also had the largest fall in the proportions of people giving a low rating of 4 or less for life satisfaction, worthwhile and happiness.  
+- The West Midlands also had the largest fall in the proportions of people giving a low rating of 4 or less for life satisfaction, worthwhile and happiness.
 
 ### The findings in context
 
@@ -202,7 +202,7 @@ Research into why well-being varies across different regional areas is ongoing. 
 
 - The South West had the lowest unemployment rate among the English regions at 6.2% in the period from February to April 2013 (ONS, 2013c).
 - The South West has a higher proportion of older people than any other English region. Previous ONS research has found that overall older people have higher than average personal well-being (ONS, 2012b).
-- Among the English regions, the South West had the second highest life expectancy rates at birth for both males and females in 2009-2011 (ONS, 2013d). 
+- Among the English regions, the South West had the second highest life expectancy rates at birth for both males and females in 2009-2011 (ONS, 2013d).
 - The South West has the lowest population density across the English regions (ONS, 2012b).
 
 Characteristics which may explain why the North East had the lowest average personal well-being among the English regions include:
@@ -210,7 +210,7 @@ Characteristics which may explain why the North East had the lowest average pers
 The North East had the highest unemployment rate among the English regions at 10.1% in the period from February to April 2013 (ONS, 2013c).
 
 - Looking at economic and financial measures, the North East ranked last among the nine English regions on GVA per head (ONS, 2012a). Gross disposable household income is also lower in the North East  than in any other region (ONS, 2013e).
-- Among the English regions, the North East and the North West fared least well on life expectancy, both at birth and at age 65 (ONS, 2013d).  
+- Among the English regions, the North East and the North West fared least well on life expectancy, both at birth and at age 65 (ONS, 2013d).
 - Among the regions, healthy life expectancy was lowest in the North East for both males and females compared to all other regions (ONS, 2013f).
 
 London also had low average personal well-being ratings, but different issues may explain the well-being picture here including:
@@ -231,7 +231,7 @@ Table source: Office for National Statistics
 2. +Indicates significantly different to the UK estimate for 2012/13.
 3. Final percentage point change rounded to 2 decimal places.
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/wellbeing/measuring-national-well-being/personal-well-being-across-the-uk--2012-13/prt-table-5.xls "XLS format") (31 Kb)
 
 Table 6 summarises how the English regions compared in terms of highest personal well-being in 2012/13. The proportionate change in each measure since 2011/12 is also provided.
@@ -245,7 +245,7 @@ Table source: Office for National Statistics
 2. +Indicates significantly different to the UK estimate for 2012/13.
 3. Final percentage point change rounded to 2 decimal places.
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/wellbeing/measuring-national-well-being/personal-well-being-across-the-uk--2012-13/prt-table-6.xls "XLS format") (31.5 Kb)
 
 Table 7 shows how the English regions compared in terms of lowest personal well-being in 2012/13.  The change in each measure since 2011/12 is also provided.
@@ -259,7 +259,7 @@ Table source: Office for National Statistics
 2. +Indicates significantly different to the UK estimate for 2012/13.
 3. Final percentage point change rounded to 2 decimal places.
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/wellbeing/measuring-national-well-being/personal-well-being-across-the-uk--2012-13/prt-table-7.xls "XLS format") (31 Kb)
 
 ## Personal well-being in English UA/County areas, 2012/13
@@ -271,10 +271,10 @@ Hampshire and Cornwall had some of the highest levels of personal well-being amo
 
 Key points to note about the English UA/County areas with the **highest** personal well-being include the following :
 
-- Hampshire had some of the highest average levels of personal well-being across all four personal well-being questions. Additionally, Hampshire had the second highest proportion of people reporting their anxiety levels as 1 or less out of 10. 
+- Hampshire had some of the highest average levels of personal well-being across all four personal well-being questions. Additionally, Hampshire had the second highest proportion of people reporting their anxiety levels as 1 or less out of 10.
 - Cornwall was among the highest for average life satisfaction, worthwhile and happiness. Additionally, when we look at the proportions of people giving the highest ratings of 9 or 10 out of 10 Cornwall was among the highest for life satisfaction and happiness.
 - Rutland had some of the highest average ratings for life satisfaction and worthwhile.
-- Bath and North East Somerset had among the highest average life satisfaction and happiness. 
+- Bath and North East Somerset had among the highest average life satisfaction and happiness.
 
 Key points to note about the English UA/County areas with the **lowest** personal well-being include the following :
 
@@ -291,13 +291,13 @@ This section examines how circumstances in each area relate to how people rate t
 
 Many areas of higher personal well-being also have comparatively low unemployment rates.  For example, in the period from February to April 2013, Dorset, Cornwall, Bath and North East Somerset all had low unemployment rates ranging from 4.3% in Dorset to 5.9% in Cornwall and all had very high personal well-being ratings (ONS, 2013c).
 
-This can be compared with some of the areas identified as having particularly low personal well-being which have very high unemployment rates such as Stoke-on-Trent and Blackburn with Darwen.  In these areas, unemployment over the same period ranged from 8.5% in Stoke-on-Trent to 10.1% in Blackburn with Darwen (ONS, 2013c).   
+This can be compared with some of the areas identified as having particularly low personal well-being which have very high unemployment rates such as Stoke-on-Trent and Blackburn with Darwen.  In these areas, unemployment over the same period ranged from 8.5% in Stoke-on-Trent to 10.1% in Blackburn with Darwen (ONS, 2013c).
 
-Looking at how life expectancy relates to the personal well-being findings among the UA/ Counties in England, areas with higher personal well-being ratings also have some of the highest average life expectancy rates.  These include Dorset, Cornwall, and Bath and North East Somerset (ONS, 2013d).  
+Looking at how life expectancy relates to the personal well-being findings among the UA/ Counties in England, areas with higher personal well-being ratings also have some of the highest average life expectancy rates.  These include Dorset, Cornwall, and Bath and North East Somerset (ONS, 2013d).
 
 This can be compared to much lower life expectancy at birth in some of the areas with some of the lowest personal well-being ratings such as Stoke-on-Trent, Blackburn with Darwen (ONS, 2013d).
 
-As noted in relation to the London region, the well-being picture for London looks different to many other areas.  Inner London had some of the lowest average ratings of life satisfaction and high anxiety, but also has the highest disposable household income per head among the English UA/ county area (ONS, 2012d). 
+As noted in relation to the London region, the well-being picture for London looks different to many other areas.  Inner London had some of the lowest average ratings of life satisfaction and high anxiety, but also has the highest disposable household income per head among the English UA/ county area (ONS, 2012d).
 
 Within Inner London there are large variations in local characteristics.  For example, average life expectancy rates at birth ranged from 78.8 years in Tower Hamlets to 84.0 years in Kensington and Chelsea (ONS, 2013d).
 
@@ -308,7 +308,7 @@ Table source: Office for National Statistics
 ##### Table notes:
 1. +Indicates significantly different to the UK estimate for 2012/13.
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/wellbeing/measuring-national-well-being/personal-well-being-across-the-uk--2012-13/prt-table-8.xls "XLS format") (28 Kb)
 
 #### Table 9: High Personal Well-being, by English Unitary Authorities/Counties, 2012/13
@@ -318,7 +318,7 @@ Table source: Office for National Statistics
 ##### Table notes:
 1. +Indicates significantly different to the UK estimate for 2012/13.
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/wellbeing/measuring-national-well-being/personal-well-being-across-the-uk--2012-13/prt-table-10.xls "XLS format") (29 Kb)
 
 #### Table 10: Lowest Average Personal Well-being, by English Unitary Authorities/Counties, 2012/13
@@ -328,7 +328,7 @@ Table source: Office for National Statistics
 ##### Table notes:
 1. +Indicates significantly different to the UK estimate for 2012/13.
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/wellbeing/measuring-national-well-being/personal-well-being-across-the-uk--2012-13/prt-table-9.xls "XLS format") (28 Kb)
 
 #### Table 11: Low Personal Well-being, by English Unitary Authorities/Counties, 2012/13
@@ -338,7 +338,7 @@ Table source: Office for National Statistics
 ##### Table notes:
 1. +Indicates significantly different to the UK estimate for 2012/13.
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/wellbeing/measuring-national-well-being/personal-well-being-across-the-uk--2012-13/prt-table-11.xls "XLS format") (43 Kb)
 
 ## Personal well-being in Welsh Unitary Authorities, 2012/13
@@ -352,7 +352,7 @@ Key points to note about the UAs in Wales with the **highest** personal well-bei
 
 - Gwynedd had some of the highest average ratings of personal well-being across all four questions.
 - The Isle of Anglesey and Gwynedd were among the areas with the highest average life satisfaction, worthwhile and happiness. The Isle of Anglesey and Gwynedd  also had high proportions of people rating life satisfaction as 9 or 10 out of 10.
-- Pembrokeshire had the lowest average anxiety and Carmarthenshire had the highest proportion of people rating their anxiety level as 1 or less out of 10. 
+- Pembrokeshire had the lowest average anxiety and Carmarthenshire had the highest proportion of people rating their anxiety level as 1 or less out of 10.
 Key points to note about the UAs in Wales with the lowest personal well-being include the following:
 
 Newport was among the areas that had **lowest** average ratings of life satisfaction and worthwhile.
@@ -376,7 +376,7 @@ Table source: Office for National Statistics
 #####Table notes:
 1. + Indicates significantly different to the UK estimate for 2012/13.
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/wellbeing/measuring-national-well-being/personal-well-being-across-the-uk--2012-13/prt-table-12.xls "XLS format") (27.5 Kb)
 
 #### Table 13: High Personal Well-being, by Welsh Unitary Authorities, 2012/13
@@ -386,7 +386,7 @@ Table source: Office for National Statistics
 #####Table notes:
 1. +Indicates significantly different to the UK estimate for 2012/13.
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/wellbeing/measuring-national-well-being/personal-well-being-across-the-uk--2012-13/prt-table-13.xls "XLS format") (27.5 Kb)
 
 #### Table 14: Lowest Average Personal Well-being, by Welsh Unitary Authorities, 2012/13
@@ -396,7 +396,7 @@ Table source: Office for National Statistics
 #####Table notes:
 1. +Indicates significantly different to the UK estimate for 2012/13.
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/wellbeing/measuring-national-well-being/personal-well-being-across-the-uk--2012-13/prt-table-14.xls "XLS format") (27.5 Kb)
 
 #### Table 15: Low Personal Well-being, by Welsh Unitary Authorities, 2012/13
@@ -406,7 +406,7 @@ Table source: Office for National Statistics
 #####Table notes:
 1. +Indicates significantly different to the UK estimate for 2012/13.
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/wellbeing/measuring-national-well-being/personal-well-being-across-the-uk--2012-13/prt-table-15.xls "XLS format") (30.5 Kb)
 
 ## Personal well-being in Scottish Local Authorities, 2012/13
@@ -433,7 +433,7 @@ The section considers how the personal well-being for Local Authorities in Scotl
 
 - In 2012, some of the areas with the highest unemployment rates in Scotland also had some of the lowest levels of personal well-being.  This included: North Ayrshire with an unemployment rate of 12.2% (ONS, 2013c).
 - Areas with some of the lowest unemployment rates during the same period had some of the highest levels of personal well-being in Scotland including Shetland Islands (3.7%), Orkney Islands (3.5%) and Highland (5.2%).
-- Some of the lowest average life expectancy rates at birth in Scotland  were in areas with the lowest average personal well-being ratings.  This included Dundee City with an average life expectancy at birth of 76.55 years and West Dunbartonshire (75.95 years) (ONS, 2011a). 
+- Some of the lowest average life expectancy rates at birth in Scotland  were in areas with the lowest average personal well-being ratings.  This included Dundee City with an average life expectancy at birth of 76.55 years and West Dunbartonshire (75.95 years) (ONS, 2011a).
 - Some of the highest average life expectancy rates in Scotland were in areas with the highest average personal well-being ratings including the Orkney Islands (79.35 years).
 
 #### Table 16: Highest Average Personal Well-being, by Scottish Local Authority, 2012/13
@@ -443,7 +443,7 @@ Table source: Office for National Statistics
 ##### Table notes:
 1. +Indicates significantly different to the UK estimate for 2012/13.
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/wellbeing/measuring-national-well-being/personal-well-being-across-the-uk--2012-13/prt-table-16.xls "XLS format") (29 Kb)
 
 #### Table 17: High Personal Well-being, by Scottish Local Authority, 2012/13
@@ -453,7 +453,7 @@ Table source: Office for National Statistics
 ##### Table notes:
 1. +Indicates significantly different to the UK estimate for 2012/13.
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/wellbeing/measuring-national-well-being/personal-well-being-across-the-uk--2012-13/prt-table-17.xls "XLS format") (29.5 Kb)
 
 #### Table 18: Lowest Average Personal Well-being, by Scottish Local Authority, 2012/13
@@ -463,7 +463,7 @@ Table source: Office for National Statistics
 ##### Table notes:
 1. +Indicates significantly different to the UK estimate for 2012/13.
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/wellbeing/measuring-national-well-being/personal-well-being-across-the-uk--2012-13/prt-table-18.xls "XLS format") (27.5 Kb)
 
 #### Table 19: Low Personal Well-being, by Scottish Local Authority, 2012/13
@@ -473,7 +473,7 @@ Table source: Office for National Statistics
 ##### Table notes:
 1. +Indicates significantly different to the UK estimate for 2012/13.
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/wellbeing/measuring-national-well-being/personal-well-being-across-the-uk--2012-13/prt-table-19.xls "XLS format") (29 Kb)
 
 ## Methodology
@@ -511,7 +511,7 @@ Higher average ratings for the life satisfaction, worthwhile, happy yesterday qu
 #### Table 20: Average personal well-being, by mode of interview, 2012/13
 ##### United Kingdom
 Table source: Office for National Statistics
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/wellbeing/measuring-national-well-being/personal-well-being-across-the-uk--2012-13/prt-table-20.xls "XLS format") (28.5 Kb)
 
 This issue is particularly important for the APS as all interviews in Scotland north of the Caledonian Canal are administered by telephone only, rather than through a combination of telephone and face-to-face interviews, as is the case in other areas of the UK.
@@ -523,7 +523,7 @@ There are a number of other methodological issues which have been or are being t
 - **Response scales** - different response scales for personal well-being questions have been used on different surveys. Differences in scaling and labeling of scale points require careful consideration as they are likely to affect how people respond. Additionally the use of different scales in different surveys means that it is more difficult to compare across different sources of data. It appears that the way the scales are labelled can also have an impact on these estimates and that is something that needs further investigation. ONS decided that an 11 point scale from 0–10 where 0 is ‘not at all’ and 10 is an absolute value such as ‘completely’ should be used for all the APS personal well-being questions. The reason for this decision was to ensure that the scales between the questions are consistent in order to help respondents answer the questions more easily and also to aid analysis across the separate questions. Further to this, 11 point scales are commonly used across other similar surveys, particularly internationally, and using the same type of scale will aid comparisons with these estimates.
 - **Question wording** - it is not only response scales that differ from survey to survey but also question wording, including the use of time frames. ONS has used both cognitive testing techniques and split trial testing of data collected on the Opinions Survey to ascertain the impact these differences have on estimates.  This is especially important with respect to issues such as harmonisation of question wording across surveys in order to gain comparable results.
 
-This work is ongoing but the results of the most recent split trial testing can be found [here (519.1 Kb Pdf)](http://www.ons.gov.uk/ons/guide-method/user-guidance/well-being/about-the-programme/advisory-groups/well-being-technical-advisory-group/testing-of-experimental-subjective-well-being-questions---3-december-2012.pdf "Testing of experimental subjective well-being questions - 3rd December 2012 ") .   
+This work is ongoing but the results of the most recent split trial testing can be found [here (519.1 Kb Pdf)](http://www.ons.gov.uk/ons/guide-method/user-guidance/well-being/about-the-programme/advisory-groups/well-being-technical-advisory-group/testing-of-experimental-subjective-well-being-questions---3-december-2012.pdf "Testing of experimental subjective well-being questions - 3rd December 2012 ") .
 
 ### Interpreting personal well-being estimates
 
@@ -555,7 +555,7 @@ Standard errors, coefficients of variation and confidence intervals are provided
 - Data with a coefficient of variation (CV) of 20% or above have been suppressed in the tables for quality purposes.
 - The data in the reference tables are colour coded to reflect the relative quality of the estimates according to the size of the CV. A key to the colour coding is provided in the reference tables. The size bands used to rank the CVs are as follows:
 
-     -       CV <= 5% - Precise 
+     -       CV <= 5% - Precise
 
      -       5% < CV <= 10% - Reasonably precise
 
@@ -563,11 +563,11 @@ Standard errors, coefficients of variation and confidence intervals are provided
 
      -       20% < CV - Unreliable (these estimates are not published, being considered too unreliable for practical purposes)
 
-- Confidentiality is maintained by applying standard ONS criteria that require estimates to have a minimum of three respondents contributing to it. Estimates that fail to meet this standard are also suppressed.  
+- Confidentiality is maintained by applying standard ONS criteria that require estimates to have a minimum of three respondents contributing to it. Estimates that fail to meet this standard are also suppressed.
 
 ##### Notes for Methodology
 
-1. Evidence from a previous ONS regression study (ONS, 2013b) suggests it is some of these other factors, namely personal characteristics such as health, employment and relationship status, that were most strongly associated with the well-being ratings provided by an individual. The region in which an individual lived was only found to be weakly associated with personal well-being in the regression study. 
+1. Evidence from a previous ONS regression study (ONS, 2013b) suggests it is some of these other factors, namely personal characteristics such as health, employment and relationship status, that were most strongly associated with the well-being ratings provided by an individual. The region in which an individual lived was only found to be weakly associated with personal well-being in the regression study.
 
 Local area effects such as the characteristics of the local built up area or of neighbours were not considered in this initial regression study.  Therefore, to investigate the extent to which the local area may directly impact on personal well-being, a follow up ONS regression study examining this issue will be published later in the year.
 
@@ -576,7 +576,7 @@ Local area effects such as the characteristics of the local built up area or of 
 
 This statistical bulletin is published as part of the ONS Measuring National Well-being Programme.
 
-The programme aims to produce accepted and trusted measures of the well-being of the nation - how the UK as a whole is doing. 
+The programme aims to produce accepted and trusted measures of the well-being of the nation - how the UK as a whole is doing.
 Measuring National Well-being is about looking at 'GDP and beyond'. It includes headline indicators in areas such as health, relationships, job satisfaction, economic security, education, environmental conditions and measures of personal well-being (individuals' assessment of their own well-being).
 
 Find out more on the [Measuring National Well-being](http://www.ons.gov.uk/ons/guide-method/user-guidance/well-being/index.html "National Well-being") website pages.
@@ -608,13 +608,13 @@ Office for National Statistics (2013d) [Life expectancy at birth and at age 65 f
 
 Office for National Statistics (2013e) [Regional and Country Profiles: Key Statistics Tables](http://www.ons.gov.uk/ons/rel/regional-trends/region-and-country-profiles/region-and-country-profiles---key-statistics-and-profiles--october-2013/index.html "Regional and Country Profiles: Key Statistics Tables"), October 2013
 
-Office for National Statistics (2013f) [Healthy Life Expectancy at birth for Upper Tier Local Authorities](http://www.ons.gov.uk/ons/rel/disability-and-health-measurement/healthy-life-expectancy-at-birth-for-upper-tier-local-authorities--england/2009-11/index.html "Healthy Life Expectancy at birth for Upper Tier Local Authorities"): England 2009-11 
+Office for National Statistics (2013f) [Healthy Life Expectancy at birth for Upper Tier Local Authorities](http://www.ons.gov.uk/ons/rel/disability-and-health-measurement/healthy-life-expectancy-at-birth-for-upper-tier-local-authorities--england/2009-11/index.html "Healthy Life Expectancy at birth for Upper Tier Local Authorities"): England 2009-11
 
 ## Background notes
 1. These statistics are experimental in nature and published at an early stage to gain feedback from users. Should users have comments on the ONS approach to the measurement of personal well-being and or the presentation of the personal well-being questions they can email ONS at <nationalwell-being@ons.gov.uk>. It is the role of the UK Statistics Authority to designate these statistics as National Statistics and one of the aspirations of the National Well-being programme is to see these statistics gain National Statistics status.
 2. Data analysed in this report relates to APS data from April 2012 to March 2013 unless stated otherwise.
 3. The data analysed in this report was collected from the Annual Population Survey (APS) which is the largest constituent survey of the Integrated Household Survey. The sample size of the 12 month APS dataset is 165,000 adults aged 16 and over and living in residential accommodation in the UK (England, Scotland, Wales and Northern Ireland). Data used are weighted to be representative of the population, unless otherwise stated.
 4. Details of the policy governing the release of new data are available by visiting the [UK Statistics Authority](http://www.ons.gov.uk/ons/external-links/stats-authority/statistics-authority-s-website.html "UK Statistics Authority") or from the [Media Relations Office](mailto:media.relations@ons.gsi.gov.uk).
-5. © Crown copyright 2013 
-You may use or re-use this information (not including logos) free of charge in any format or medium, under the terms of the [Open Government Licence](http://www.ons.gov.uk/ons/external-links/other-government-departments/national-archives/index.html "Open Government Licence"), write to the Information Policy Team, The National Archives, Kew, London TW9 4DU, or email: <psi@nationalarchives.gsi.gov.uk>. 
+5. © Crown copyright 2013
+You may use or re-use this information (not including logos) free of charge in any format or medium, under the terms of the [Open Government Licence](http://www.ons.gov.uk/ons/external-links/other-government-departments/national-archives/index.html "Open Government Licence"), write to the Information Policy Team, The National Archives, Kew, London TW9 4DU, or email: <psi@nationalarchives.gsi.gov.uk>.
 6. Details of the policy governing the release of new data are available by visiting [www.statisticsauthority.gov.uk/assessment/code-of-practice/index.html](http://www.statisticsauthority.gov.uk/assessment/code-of-practice/index.html) or from the Media Relations Office email: <media.relations@ons.gsi.gov.uk>

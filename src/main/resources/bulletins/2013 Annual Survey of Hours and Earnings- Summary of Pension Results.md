@@ -7,6 +7,8 @@ Headline 3: In the private sector, 51% of employees within large employers (5000
 Contact name: James Tucker
 Contact email: earnings@ons.gsi.gov.uk
 
+# 2013 Annual Survey of Hours and Earnings- Summary of Pension Results
+
 ## Key points
 - In 2013, the proportion of employees who belonged to a workplace pension increased to 50%, the first increase since 2006.
 - 85% of public sector employees and 36% of private sector employees had a workplace pension scheme in 2013.
@@ -59,7 +61,7 @@ The overall increase in proportion of employees with a workplace pension between
 1. Results for 2005 onwards are based on a new questionnaire and may not be comparable with earlier results.
 2. ASHE estimates for 2011 onwards are based on a Standard Occupational Classification (SOC) 2010 basis.
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/ashe/annual-survey-of-hours-and-earnings-pension-tables/2013-provisional-results/chd-figure-1.xls "XLS format") (70 Kb)
 
 Figure 2 shows the proportion of employees with a workplace pension in 2013 by type of pension. Although membership of all types of workplace pension has increased since 2012, the largest category of workplace pensions in 2013 was still defined benefit occupational pensions: 59% of employees with a workplace pension had this type of pension.
@@ -67,7 +69,7 @@ Figure 2 shows the proportion of employees with a workplace pension in 2013 by t
 #### Figure 2: Proportion of employee jobs with workplace pensions by type of pension, 2013
 [![Figure 2: Proportion of employee jobs with workplace pensions by type of pension, 2013](http://www.ons.gov.uk/ons/resources/figure2_tcm77-355252.png)](http://www.ons.gov.uk/ons/resources/figure2_tcm77-355252.png "Figure 2: Proportion of employee jobs with workplace pensions by type of pension, 2013")
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/ashe/annual-survey-of-hours-and-earnings-pension-tables/2013-provisional-results/chd-figure-2.xls "XLS format") (83.5 Kb)
 
 Workplace pension participation differs between the public and private sectors. Table 3 shows that in 2013, 95% of public sector employees with workplace pensions had a defined benefit occupational pension, but in the private sector only 24% of employees with workplace pensions were in a defined benefit scheme. Conversely, defined contribution pensions (whether occupational, group personal or group stakeholder), were more common in the private sector than in the public sector.
@@ -78,13 +80,13 @@ Workplace pension participation differs between the public and private sectors. 
 1. The public and private sectors are classified using the legal status from the Inter-Departmental Business Register (see Definitions). ‘All employees’ includes employees from the public and private sectors plus employees working for organisations classified as non-profit bodies.
 2. Percentages may not sum to 100 due to rounding.
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/ashe/annual-survey-of-hours-and-earnings-pension-tables/2013-provisional-results/prt-figure-3.xls "XLS format") (30.5 Kb)
 
 ##### Notes for Workplace pension scheme membership
 1. The data was collected in April 2013, after the implementation of automatic enrolment, which began in October 2012 (see the section Workplace pension reforms).
 2. ASHE collects information from employers on employee jobs, although they are referred to in this bulletin as ‘employees’. Individual employees may hold more than one job.
-3. Data for Group self invested personal pensions (GSIPP) is included within the category Group personal pensions (GPP) throughout this bulletin. 
+3. Data for Group self invested personal pensions (GSIPP) is included within the category Group personal pensions (GPP) throughout this bulletin.
 
 ## Membership by age, working pattern, gender and earnings
 Age is a key factor affecting workplace pension scheme membership. Figure 4 shows the proportion of employees1 with workplace pensions by age group in 20132:
@@ -95,7 +97,7 @@ Age is a key factor affecting workplace pension scheme membership. Figure 4 show
 #### Figure 4: Proportion of employees with workplace pensions by age band and type of pension, 2013
 [![Figure 4: Proportion of employees with workplace pensions by age band and type of pension, 2013](http://www.ons.gov.uk/ons/resources/figure4_tcm77-355257.png)](http://www.ons.gov.uk/ons/resources/figure4_tcm77-355257.png "Figure 4: Proportion of employees with workplace pensions by age band and type of pension, 2013")
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/ashe/annual-survey-of-hours-and-earnings-pension-tables/2013-provisional-results/chd-figure-4.xls "XLS format") (87.5 Kb)
 
 Despite the increase in membership of all types of workplace pensions in 2013, the pattern of membership by age has not changed significantly since 1997. In 2013:
@@ -103,7 +105,7 @@ Despite the increase in membership of all types of workplace pensions in 2013, t
 - 47% of members in the 22 to 29 age band were in defined benefit schemes, compared with 66% in the 55 to 59 age band;
 - 26% of members in the 22 to 29 age band were in group personal or group stakeholder pensions, compared with 20% in the 55 to 59 age band.
 
-Nevertheless, there are some notable differences in pension membership by age since the **Workplace pension reforms**:  
+Nevertheless, there are some notable differences in pension membership by age since the **Workplace pension reforms**:
 
 - 37% of 22 to 29 year olds were members of workplace pensions in 2013, compared to 31% in 2012. This six percentage point increase is larger than for any other age band.
 - This increase is driven by an increase in membership of occupational defined contribution, group personal and group stakeholder schemes. In 2013, 9% of members in the 22 to 29 age band were in defined contribution schemes, compared with 6% in 2012. Similarly, 10% of members in the 22 to 29 age band were in group personal or group stakeholder schemes in 2013, compared with 8% in 2012.
@@ -116,7 +118,7 @@ Workplace pension participation also varies by working pattern (full-time or par
 ##### Notes:
 1. The public and private sectors are classified using the legal status from the Inter-Departmental Business Register (see Definitions).
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/ashe/annual-survey-of-hours-and-earnings-pension-tables/2013-provisional-results/chd-figure-5.xls "XLS format") (62.5 Kb)
 
 Figure 5 shows that for full-time employees:
@@ -126,7 +128,7 @@ Figure 5 shows that for full-time employees:
 
 For part-time employees, the gap between male and female participation is greater, with a higher proportion of women than men belonging to a workplace pension in both sectors:
 
-- in the public sector 75% of part-time female employees were members in 2013 compared with 62% of part-time male employees; 
+- in the public sector 75% of part-time female employees were members in 2013 compared with 62% of part-time male employees;
 - in the private sector 20% of part-time female employees were members in 2013 compared with 12% of part-time male employees.
 
 Compared to 2012, growth in proportions of employees with workplace pensions was highest in the private sector and amongst part time workers. In the private sector, 17% of part time employees were members in 2013, compared with 13% in 2012.
@@ -139,7 +141,7 @@ Figure 6 shows the proportion of full-time employees with a pension by gross wee
 ##### Notes:
 1. The public and private sectors are classified using the legal status from the Inter-Departmental Business Register (see Definitions).
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/ashe/annual-survey-of-hours-and-earnings-pension-tables/2013-provisional-results/chd-figure-6.xls "XLS format") (50 Kb)
 
 The general increase in membership of workplace pensions in 2013 is evident amongst lower paid employees. The proportion of full-time employees in the public sector earning £100-200 per week and who are members of a workplace pension, has increased from 59% in 2012 to 75% in 2013. The proportion of full-time employees in the private sector earning £100-200 per week and who are members of a workplace pension, has increased from 8% in 2012 to 12% in 2013.
@@ -161,7 +163,7 @@ Membership of a workplace pension is also related to the employee’s occupation
 ##### Notes:
 1. Occupations as defined by the Standard Occupational Classification (SOC) 2010.
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/ashe/annual-survey-of-hours-and-earnings-pension-tables/2013-provisional-results/chd-figure-7.xls "XLS format") (54.5 Kb)
 
 Figure 8 shows the proportion of employees with a pension by size of employer (measured by number of employees) in 2013. In general, the larger the employer, the higher the proportion of employees with workplace pensions.
@@ -178,7 +180,7 @@ As may have been expected due to the staged nature of automatic enrolment (see t
 1. The public and private sectors are classified using the legal status from the Inter-Departmental Business Register (see Definitions).
 2. The proportion of public sector employees where employer size is between 1 and 12 employees has been suppressed on quality grounds.
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/ashe/annual-survey-of-hours-and-earnings-pension-tables/2013-provisional-results/chd-figure-8.xls "XLS format") (74 Kb)
 
 There is a weak relationship between the region where the employer is located and the proportion of employees with a workplace pension (Figure 9). However, in the private sector there are some differences:
@@ -192,7 +194,7 @@ There is a weak relationship between the region where the employer is located an
 ##### Notes:
 1. The public and private sectors are classified using the legal status from the Inter-Departmental Business Register (see Definitions).
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/ashe/annual-survey-of-hours-and-earnings-pension-tables/2013-provisional-results/chd-figure-9.xls "XLS format") (66.5 Kb)
 
 ##### Notes for Membership by occupation, size of employer and region
@@ -219,7 +221,7 @@ Figure 10 shows the proportion of employees1 in each employee contribution rate 
 ##### Notes:
 1. The public and private sectors are classified using the legal status from the Inter-Departmental Business Register (see Definitions).
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/ashe/annual-survey-of-hours-and-earnings-pension-tables/2013-provisional-results/chd-figure-10.xls "XLS format") (80.5 Kb)
 
 Figure 11 shows the proportion of employees in each employer contribution rate band for all employees with workplace pensions in the public and private sectors in 2013:
@@ -235,10 +237,10 @@ Figure 11 shows the proportion of employees in each employer contribution rate b
 ##### Notes:
 1. The public and private sectors are classified using the legal status from the Inter-Departmental Business Register (see Definitions).
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/ashe/annual-survey-of-hours-and-earnings-pension-tables/2013-provisional-results/chd-figure-11.xls "XLS format") (69.5 Kb)
 
-Figure 12 shows the proportion of employees in each employee contribution rate band, for employees with workplace pensions by pension type, in 2013:  
+Figure 12 shows the proportion of employees in each employee contribution rate band, for employees with workplace pensions by pension type, in 2013:
 
 - 84% of employees in occupational defined benefit schemes contributed over 5% of their pensionable earnings, compared with 31% of those in defined contribution schemes and 28% of those with group personal and stakeholder pensions;
 - 13% of those employees with defined contribution pensions did not contribute to their pension in 2013, compared to 20% in 2012;
@@ -250,7 +252,7 @@ Figure 12 shows the proportion of employees in each employee contribution rate b
 ##### Notes:
 1. The public and private sectors are classified using the legal status from the Inter-Departmental Business Register (see Definitions).
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/ashe/annual-survey-of-hours-and-earnings-pension-tables/2013-provisional-results/chd-figure-12.xls "XLS format") (82.5 Kb)
 
 Figure 13 shows the proportion of employees in each employer contribution rate band, for all employees with workplace pensions, by pension type. In 2013:
@@ -265,7 +267,7 @@ Figure 13 shows the proportion of employees in each employer contribution rate b
 ##### Notes:
 1. The public and private sectors are classified using the legal status from the Inter-Departmental Business Register (see Definitions).
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/ashe/annual-survey-of-hours-and-earnings-pension-tables/2013-provisional-results/chd-figure-13.xls "XLS format") (91.5 Kb)
 
 ##### Notes for Contributions to workplace pensions
@@ -295,7 +297,7 @@ Figure 13 shows the proportion of employees in each employer contribution rate b
 
 **Pension scheme**: A legal arrangement offering benefits to members upon retirement. Schemes are provided by employers and are differentiated by a wide range of rules governing membership eligibility, contributions, benefits and taxation. Pension schemes in the private sector have trustees. Personal pensions and stakeholder pensions offered by insurance companies may also be referred to as schemes, but technically they are individual accounts rather than schemes.
 
-**Personal pension**: An arrangement where the contract to provide contributions in return for retirement benefits is between an individual and an insurance company. Such plans may be taken out by individuals on their own initiative - for example, to provide a primary source of retirement income for the self-employed, or to provide a secondary income to employees who are members of occupational schemes. These would not be covered in the Annual Survey of Hours and Earnings (ASHE) results. Alternatively they may be facilitated by an employer. These pensions are covered by ASHE and include group personal pensions and group stakeholder pensions. Personal pensions are a form of defined contribution pension.  
+**Personal pension**: An arrangement where the contract to provide contributions in return for retirement benefits is between an individual and an insurance company. Such plans may be taken out by individuals on their own initiative - for example, to provide a primary source of retirement income for the self-employed, or to provide a secondary income to employees who are members of occupational schemes. These would not be covered in the Annual Survey of Hours and Earnings (ASHE) results. Alternatively they may be facilitated by an employer. These pensions are covered by ASHE and include group personal pensions and group stakeholder pensions. Personal pensions are a form of defined contribution pension.
   
 **Private sector schemes**: Schemes covering the part of the economy consisting of individuals, firms and other institutions. In ASHE the public and private sectors are classified using the legal status from the Inter-Departmental Business Register. ‘All employees’ categories include employees from the public and private sectors plus employees working for organisations classified as non-profit bodies.
 

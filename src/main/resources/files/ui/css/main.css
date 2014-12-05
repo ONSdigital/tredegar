@@ -8682,7 +8682,7 @@ lesser , applied styles
 
 .modalDialog {
     width: 25em;
-    height: 32em;
+    height: 30em;
     background-color: #fff;
     margin: 15% auto;
     overflow: auto;
@@ -8740,10 +8740,10 @@ lesser , applied styles
 }
 
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 609px){
 .modalDialog {
     width: 20em;
-    height: 32em;
+    height: 30em;
     background-color: #fff;
     margin: 15% auto;
     overflow: auto;
@@ -8759,10 +8759,10 @@ lesser , applied styles
 }
 }
 
-@media screen and (min-width: 790px) and (max-width: 900px) {
+@media screen and (min-width: 610px) and (max-width: 900px) {
     .modalDialog {
     width: 20em;
-    height: 34em;
+    height: 32.5em;
     background-color: #fff;
     margin: 5% auto;
     overflow: auto;
@@ -8777,17 +8777,27 @@ lesser , applied styles
 }
 }
 
-@media screen and (max-height: 800px) {
+/*@media screen and (max-height: 800px) {
     .modalDialog {
-   /* width: 20em;*/
+    width: 20em;
     height: 34em;
     background-color: #fff;
     margin: 5% auto;
     overflow: auto;
     pointer-events:auto;
 }
-}
+}*/
 
+@media screen and (min-width: 1000px) and (max-width: 1366px) {
+    .modalDialog {
+    width: 25em;
+    height: 30em;
+    background-color: #fff;
+    margin: 5% auto;
+    overflow: auto;
+    pointer-events:auto;
+}
+}
 
 
 /* -------- autocomplete on search -------- */

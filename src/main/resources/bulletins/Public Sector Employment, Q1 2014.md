@@ -1,9 +1,9 @@
 Theme: Employment and Labour Market
 Level 2: Public Sector Personnel
 Summary: This bulletin contains detailed estimates of public sector employment, updated with the latest estimates for the first quarter of 2014.
-Headline 1: total UK public sector employment decreased by 103,000 from Q4 2013 to 5.409 million - the fall largely explained by the reclassification from the public sector to the private sector of Lloyds Banking Group.
+Headline 1: Total UK public sector employment decreased by 103,000 from Q4 2013 to 5.409 million - the fall largely explained by the reclassification from the public sector to the private sector of Lloyds Banking Group.
 Headline 2: UK public sector employment is at its lowest level, on a headcount basis, since the start of the series in 1999.
-Headline 3: employment in UK local government, at 2.370 million, is 27,000 lower than at Q4 2013.
+Headline 3: Employment in UK local government, at 2.370 million, is 27,000 lower than at Q4 2013.
 Contact name: Mark Williams
 Contact email: pse@ons.gsi.gov.uk
 Next edition: 17 September 2014
@@ -30,10 +30,10 @@ As part of this release, revisions have been made to the series in line with the
 The main uses of these statistics are in monitoring changes in the number of people employed in the public and private sector in the UK. They are the official measure of UK public sector employment.
 
 ## Main stories
-Total employment in the public sector decreased during Q1 2014, with employment in the private sector continuing to rise. There were 5.4 million people employed in the public sector at Q1 2014, 14.7% lower than the peak level seen in Q3 2009. The main reason for this fall is the reclassification, from the public sector to the private sector, of further education and sixth form colleges in England in April 2012, of the Royal Mail in October 2013, and of Lloyds Banking Group in March 2014. 
+Total employment in the public sector decreased during Q1 2014, with employment in the private sector continuing to rise. There were 5.4 million people employed in the public sector at Q1 2014, 14.7% lower than the peak level seen in Q3 2009. The main reason for this fall is the reclassification, from the public sector to the private sector, of further education and sixth form colleges in England in April 2012, of the Royal Mail in October 2013, and of Lloyds Banking Group in March 2014.
 The number of people employed in the private sector in Q1 2014 is estimated to be 25.1 million.  Around four in five people who are working are employed in the private sector.
 
-There was a fall in employment in local government and increase in central government employment, which can still be attributed to schools in England continuing to become academies. Employment in public corporations decreased due to the reclassification of Lloyds Banking Group from the public sector to the private sector. Employment in the Civil Service in Great Britain decreased mainly due to reductions in employment in the Department for Work and Pensions and Her Majesty’s Revenue & Customs. 
+There was a fall in employment in local government and increase in central government employment, which can still be attributed to schools in England continuing to become academies. Employment in public corporations decreased due to the reclassification of Lloyds Banking Group from the public sector to the private sector. Employment in the Civil Service in Great Britain decreased mainly due to reductions in employment in the Department for Work and Pensions and Her Majesty’s Revenue & Customs.
 
 ## Public Sector Employment by Sector Classification
 ### Total UK Public Sector Employment
@@ -48,7 +48,7 @@ Source: Quarterly Public Sector Employment Survey - Office for National Statisti
 2. English further education colleges and English sixth form college corporations classified to public sector from 1993 to 31 March 2012. They are therefore included in public sector estimates from 1993 to Q1 2012, but not in subsequent quarters. See background note 8.
 3. Royal Mail plc was reclassified from the public sector to the private sector from October 2013.
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/pse/public-sector-employment/q1-2014/chd-pse-fig-1.xls "XLS format") (33.5 Kb)
 
 At Q1 2014, total UK public sector employment (PSE) was 5.409 million on a headcount basis, and 4.424 million on a full-time equivalent (FTE) basis.
@@ -61,7 +61,7 @@ Without the effects of the major reclassifications, public sector employment wou
 
 Figure 1 shows how total UK PSE has fallen each quarter from 2009 Q3 except for a flat movement into 2013 Q3.
 
-In Q2 2012, English further education colleges and sixth form college corporations were reclassified from the public sector to the private sector (see background note 8 for further details). This resulted in the movement, from the public sector to the private sector, of an estimated employment (on a headcount basis) of 196,000.   
+In Q2 2012, English further education colleges and sixth form college corporations were reclassified from the public sector to the private sector (see background note 8 for further details). This resulted in the movement, from the public sector to the private sector, of an estimated employment (on a headcount basis) of 196,000.
 #### Figure 2: UK Public Sector Employment in Civil Service and Public Corporations, Q1 1999 to Q1 2014, seasonally adjusted
 [![Figure 2: UK Public Sector Employment in Civil Service and Public Corporations, Q1 1999 to Q1 2014, seasonally adjusted](http://www.ons.gov.uk/ons/resources/fig2pcsandcs_tcm77-361719.png)](http://www.ons.gov.uk/ons/resources/fig2pcsandcs_tcm77-361719.png "Figure 2: UK Public Sector Employment in Civil Service and Public Corporations, Q1 1999 to Q1 2014, seasonally adjusted")
 
@@ -71,7 +71,7 @@ Source: Quarterly Public Sector Employment Survey - Office for National Statisti
 1. Royal Bank of Scotland Group plc is classified to the public sector from 13 October 2008. It is therefore included in the public sector estimates from 2008 Q4 onwards but not earlier periods. Lloyds Banking Group plc and its subsidiaries are classified to the public sector from 13 October 2008 to 25 March 2014. They are therefore included in public sector estimates from Q4 2008 to Q4 2013 but not in earlier or subsequent periods.
 2. Royal Mail plc was reclassified from the public sector to the private sector from October 2013.
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/pse/public-sector-employment/q1-2014/chd-pse-fig-2.xls "XLS format") (33 Kb)
 
 ### UK Public Corporations
@@ -80,13 +80,13 @@ At Q1 2014, employment in UK public corporations decreased by 90,000 (31.9%) on 
 
 In the year to Q1 2014, the headcount in UK public corporations fell by 273,000 (58.7%) and the FTE by 249,000 (57.9%).
 
-The Q1 2014 levels of headcount (192,000) and FTE (181,000) are at their lowest recorded values (measurement has been carried out on a consistent basis since 1999). Figure 2 charts the profile of UK public corporations employment from the start of 1999 to Q1 2014. 
+The Q1 2014 levels of headcount (192,000) and FTE (181,000) are at their lowest recorded values (measurement has been carried out on a consistent basis since 1999). Figure 2 charts the profile of UK public corporations employment from the start of 1999 to Q1 2014.
 
 ### Civil Service
 
 At Q1 2014, Civil Service employment was 439,000 on a headcount basis and 405,000 on a FTE basis. This is down by 6,000 (1.3%) on headcount and 6,000 (1.5%) on a FTE basis compared with Q4 2013.
 
-In the year to Q1 2014, employment in the Civil Service has fallen by 10,000 (2.2%) on a headcount basis, and by 9,000 (2.2%) on a FTE basis. Figure 2 shows the downward trend in Civil Service employment since Q2 2005, when it was at its highest level of 571,000 on a headcount basis. 
+In the year to Q1 2014, employment in the Civil Service has fallen by 10,000 (2.2%) on a headcount basis, and by 9,000 (2.2%) on a FTE basis. Figure 2 shows the downward trend in Civil Service employment since Q2 2005, when it was at its highest level of 571,000 on a headcount basis.
 
 ### Factors Affecting Employment in Local and Central Government
 
@@ -106,7 +106,7 @@ Source: Quarterly Public Sector Employment Survey - Office for National Statisti
 2. English further education colleges classified to central government from 1993 to 31 March 2012. They are therefore included in central government estimates from 1993 to Q1 2012, but not in subsequent quarters. See background note 8.
 3. English sixth form college corporations classified to local government from 1993 to 31 March 2012. They are therefore included in local government estimates from 1993 to Q1 2012, but not in subsequent quarters. See background note 8.
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/pse/public-sector-employment/q1-2014/chd-pse-fig-3.xls "XLS format") (33.5 Kb)
 
 ### Local Government
@@ -115,7 +115,7 @@ At Q1 2014, employment in local government fell when compared with Q4 2013, by 2
 
 In the year to Q1 2014 employment in local government fell on a headcount basis by 98,000 (4.0%) and on a FTE basis by 75,000 (4.0%). This can mostly be accounted for by academy conversions during the year, and the abolition of the regional Scottish police and fire service bodies.
 
-The decreasing trend in local government employment since Q2 2010 can be seen in Figure 3. 
+The decreasing trend in local government employment since Q2 2010 can be seen in Figure 3.
 
 ### Central Government
 
@@ -123,7 +123,7 @@ At Q1 2014, employment in central government increased when compared with Q4 201
 
 The Q1 2014 central government headcount estimate was 91,000 (3.3%) higher, and the FTE estimate 75,000 (3.1%) higher, than the respective estimates at Q1 2013. This can again be mainly explained by academy conversions during the period, and the establishment of the central Scottish police and fire service bodies.
 
-Figure 3 shows how employment in central government has steadily risen following the passing of the Academies Act 2010, once the temporary effects of the reclassification of English further education colleges and sixth form college corporations in Q2 2012 have been removed. 
+Figure 3 shows how employment in central government has steadily risen following the passing of the Academies Act 2010, once the temporary effects of the reclassification of English further education colleges and sixth form college corporations in Q2 2012 have been removed.
 
 ## Public Sector Employment by Industry
 For nearly two years, the NHS has employed the largest number of public sector workers. At Q1 2014 the NHS accounted for around 29.2% of all public sector employment. Prior to Q2 2012 public sector education employed the largest number of public sector workers. Following the reclassification of English further education colleges and sixth form college corporations from the public to the private sector in Q2 2012, the public sector education headcount reduced by approximately 196,000, and full-time equivalent (FTE) by approximately 142,000. Figure 4 shows the impact of this reclassification on the public sector education series, and how, at that time, it brought the level of public sector education employment below the NHS level.
@@ -138,7 +138,7 @@ Source: Quarterly Public Sector Employment Survey - Office for National Statisti
 2. English further education colleges and English sixth form college corporations classified to public sector from 1993 to 31 March 2012. They are therefore included in public sector estimates from 1993 to Q1 2012, but not in subsequent quarters. See background note 8.
 3. Royal Mail plc was reclassified from the public sector to the private sector from October 2013.
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/pse/public-sector-employment/q1-2014/chd-pse-fig-4.xls "XLS format") (34 Kb)
 
 ### NHS
@@ -153,7 +153,7 @@ Employment in public sector education decreased between Q4 2013 and Q1 2014, by 
 
 On a headcount basis the Q1 2014 estimate of employment in public sector education was higher than the Q1 2013 estimate, by 40,000 (2.7%). On a FTE basis the Q1 2014 estimate was 32,000 (3.0%) higher than the Q1 2013 estimate.
 
-Figure 4 shows the significant fall in public sector education in Q2 2012, as a result of the reclassification of English further education colleges and sixth form college corporations. 
+Figure 4 shows the significant fall in public sector education in Q2 2012, as a result of the reclassification of English further education colleges and sixth form college corporations.
 
 ### Public Administration
 
@@ -163,7 +163,7 @@ Employment in public administration decreased between Q4 2013 and Q1 2014, by 2,
 
 In the year to Q1 2014, employment in public administration decreased by 13,000 (1.2%) on a headcount basis, and decreased by 11,000 (1.2%) on a FTE basis.
 
-Figure 4 shows the general downward trend in employment in public administration since Q3 2009. The headcount fell by 159,000 between Q3 2009 and Q1 2014. 
+Figure 4 shows the general downward trend in employment in public administration since Q3 2009. The headcount fell by 159,000 between Q3 2009 and Q1 2014.
 
 ### Other Public Sector
 
@@ -171,12 +171,12 @@ The category 'other public sector' covers all industries that have not been spec
 
 Between Q4 2013 and Q1 2014, employment in the category 'other public sector' decreased by 94,000 (15.6%) on a headcount basis, and 84,000 (16.3%) on a FTE basis. This large decrease is explained by the reclassification into the private sector of Lloyds Banking Group in March 2014.
 
-In the year to Q1 2014, employment in the category 'other public sector' fell by 284,000 (35.8%) on a headcount basis, and by 256,000 (37.3%) on a FTE basis. This was the largest decrease seen in any industry over the period. 
+In the year to Q1 2014, employment in the category 'other public sector' fell by 284,000 (35.8%) on a headcount basis, and by 256,000 (37.3%) on a FTE basis. This was the largest decrease seen in any industry over the period.
 
 #### Figure 5: UK Public Sector Employment by Industry, seasonally adjusted
 [![Figure 5: UK Public Sector Employment by Industry, seasonally adjusted](http://www.ons.gov.uk/ons/resources/fig5industry2_tcm77-361734.png)](http://www.ons.gov.uk/ons/resources/fig5industry2_tcm77-361734.png "Figure 5: UK Public Sector Employment by Industry, seasonally adjusted")
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/pse/public-sector-employment/q1-2014/chd-pse-fig-5.xls "XLS format") (32.5 Kb)
 
 ### Other Health and Social Work
@@ -199,7 +199,7 @@ Between Q4 2013 and Q1 2014, employment in HM Forces fell by 1,000 (0.6%) on bot
 
 At Q1 2014, employment in public sector construction remained the same when compared with Q4 2013. It fell by 1,000 (2.4%) in the year to Q1 2014.
 
-Figure 5 shows the downward trend in employment in public sector construction from the beginning of the series in Q1 1999, to Q4 2011. Since then the level has remained relatively stable.  
+Figure 5 shows the downward trend in employment in public sector construction from the beginning of the series in Q1 1999, to Q4 2011. Since then the level has remained relatively stable.
 
 ## Public and Private Sector Employment
 Private sector employment estimates are derived as the difference between total UK employment estimates sourced from the Labour Force Survey and the public sector employment estimates collected from public sector organisations.
@@ -218,7 +218,7 @@ Source: Quarterly Public Sector Employment Survey - Office for National Statisti
 2. English further education colleges and English sixth form college corporations classified to public sector from 1993 to 31 March 2012. They are therefore included in public sector estimates from 1993 to Q1 2012, and in private sector estimates in subsequent quarters. See background note 8.
 3. Royal Mail plc reclassified from the public sector to the private sector from October 2013.
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/pse/public-sector-employment/q1-2014/chd-pse-fig-6.xls "XLS format") (33 Kb)
 
 In Q1 2014, total UK private sector employment had increased by 447,000 (1.8%) compared with Q4 2013. Total UK public sector employment decreased by 103,000 (1.9%) over the same period.
@@ -239,10 +239,10 @@ Seasonally adjusted series are not available when public and private sector empl
 
 Source: Quarterly Public Sector Employment Survey - Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/pse/public-sector-employment/q1-2014/chd-pse-fig-7.xls "XLS format") (28 Kb)
 
-All of the Q1 2014 regional public sector employment headcount estimates, with the exception of Northern Ireland, are lower than the corresponding Q1 2013 estimates, as shown in Figure 7. 
+All of the Q1 2014 regional public sector employment headcount estimates, with the exception of Northern Ireland, are lower than the corresponding Q1 2013 estimates, as shown in Figure 7.
 
 The North West (39,000; 6.0%), South East (37,000; 5.5%) and Yorkshire and The Humber (36,000; 7.0%) showed the largest falls in public sector employment in the year to Q1 2014.
 
@@ -254,7 +254,7 @@ In the year to Q1 2014, public sector employment only increased in Northern Irel
 
 Source: Quarterly Public Sector Employment Survey - Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/pse/public-sector-employment/q1-2014/chd-pse-fig-8.xls "XLS format") (27.5 Kb)
 
 In the year to Q1 2014, private sector employment increased in all of the 12 regions, as seen in Figure 8. The largest increase in private sector employment in the year to Q1 2014 was in London (185,000; 5.0%). The next largest increases in private sector employment over this period were seen in the South East (164,000; 5.0%) and the East of England (156,000; 7.3%).
@@ -265,7 +265,7 @@ In the year to Q1 2014, private sector employment increased in all of the 12 reg
 
 Source: Quarterly Public Sector Employment Survey - Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/pse/public-sector-employment/q1-2014/chd-pse-fig-9.xls "XLS format") (27 Kb)
 
 Figure 9 shows the proportion of all those in employment employed in the public sector for each UK region at Q1 2014. Northern Ireland (27.6%), Wales (24.0%) and Scotland (21.2%) had the highest proportions of all in employment employed in the public sector.
@@ -347,7 +347,7 @@ PSE statistics are compiled from a range of sources. The primary source is the Q
 
 Table source: Office for National Statistics
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/pse/public-sector-employment/q1-2014/chd-pse-fig-9.xls "XLS format") (27 Kb)
 
 Data for non-responders are imputed based on previous returns and known annual changes in seasonality. It is extremely rare for a local authority, public body or Civil Service department to non-respond for two consecutive quarters. The data collection is statutory for local authorities and public bodies (Statistics of Trade Act 1947) and positive action is taken to address non-response issues as and when they occur.
@@ -358,7 +358,7 @@ So that estimates of total public sector employment can be made, it is necessary
 
 Table source: Office for National Statistics
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/pse/public-sector-employment/q1-2014/prt-pse-tab--2-.xls "XLS format") (28 Kb)
 
 ONS is now able to produce regional estimates of PSE based on returns from public sector organisations (Table 6). These supersede those produced using the Labour Force Survey (LFS) which previously had been used in conjunction with national PSE estimates to produce estimates by region.
@@ -383,7 +383,7 @@ Sector classification and machinery of government changes in the period since 31
 
 Table source: Office for National Statistics
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/pse/public-sector-employment/q1-2014/prt-pse-tab--3-.xls "XLS format") (27.5 Kb)
 
 ###** 8. Further Education Colleges**

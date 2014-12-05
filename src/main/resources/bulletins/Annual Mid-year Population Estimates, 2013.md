@@ -2,9 +2,9 @@ Theme: People, Population and Community
 Level 2: Population and Migration
 Level 3: Population Estimates
 Summary: Estimates of the usual resident population in the United Kingdom and its constituent countries as at 30 June 2013.
-Headline 1: The population of the UK grew to 64.1 million in mid-2013, representing a gain of 400,600 (0.63%) over the previous year mid-2012. This growth is slightly below the average since 2003.
+Headline 1: The population of the UK grew to 64.1 million in mid-2013, representing a gain of 400,600 (0.63%) over the previous year mid-2012.
 Headline 2: This means that the UK’s population has increased by around 5 million since 2001, and by more than 10 million since 1964.
-Headline 3: Natural change (births minus deaths) contributed slightly more than net international migration to the population gain in the year. There were 212,100 more births than deaths (53% of the increase) and 183,400 more immigrants arriving than emigrants leaving (46% of the increase).
+Headline 3: Natural change (births minus deaths) contributed slightly more than net international migration to the population gain in the year.
 Contact name: Pete Large
 Contact email: pop.info@ons.gsi.gov.uk
 Next edition: 25 June 2015 (provisional date)
@@ -43,7 +43,7 @@ The population of the UK surpassed 64 million for the first time in mid-2013 wit
 
 Source: Office for National Statistics, National Records of Scotland, Northern Ireland Statistics and Research Agency
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/pop-estimate/population-estimates-for-uk--england-and-wales--scotland-and-northern-ireland/2013/chd---chart-1.xls "XLS format") (51 Kb)
 
 Comparing the latest population estimates for mid-2013 with the mid-2012 estimates shows that:
@@ -70,7 +70,7 @@ More detail on births and fertility is available in the [Births in England and W
 
 Source: Office for National Statistics, National Records of Scotland, Northern Ireland Statistics and Research Agency
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/pop-estimate/population-estimates-for-uk--england-and-wales--scotland-and-northern-ireland/2013/chd---chart-2.xls "XLS format") (64 Kb)
 
 During the late 1990s and first decade of the 21st century, net international migration (the difference between the numbers immigrating to the UK and the numbers emigrating from the UK) started to contribute more to population change. At its peak in the year to mid-2005, net inward migration accounted for around 69% of population growth. Detailed international migration data for the UK is available in the [Migration Statistics Quarterly Report](http://www.ons.gov.uk/ons/rel/migration1/migration-statistics-quarterly-report/index.html "Migration Statistics Quarterly Report index") series produced by ONS.
@@ -82,7 +82,7 @@ The years since mid-2002 have also seen a marked increase in the number of birth
 
 Source: Office for National Statistics, National Records of Scotland, Northern Ireland Statistics and Research Agency
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/pop-estimate/population-estimates-for-uk--england-and-wales--scotland-and-northern-ireland/2013/chd---chart-3.xls "XLS format") (65.5 Kb)
 
 ### Population change in the year to mid-2013
@@ -101,7 +101,7 @@ Compared to the last decade, the population change for the year to mid-2013 has 
 2. Figures may not add exactly due to rounding
 3. Other Changes comprises changes to the size of armed forces stationed in the UK and other special population adjustments.
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/pop-estimate/population-estimates-for-uk--england-and-wales--scotland-and-northern-ireland/2013/prt---table-1.xls "XLS format") (27.5 Kb)
 
 ### Countries of the UK and regions of England
@@ -116,7 +116,7 @@ The lowest regional population increases in the year were seen in Scotland, Wale
 1. Source: Office for National Statistics, National Records of Scotland, Northern Ireland Statistics and Research Agency
 2. Figures may not add exactly due to rounding
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/pop-estimate/population-estimates-for-uk--england-and-wales--scotland-and-northern-ireland/2013/prt---table-2.xls "XLS format") (28 Kb)
 
 Detailed data on population change at local authority level for this release is available in the [data section of this publication](http://www.ons.gov.uk/ons/rel/pop-estimate/population-estimates-for-uk--england-and-wales--scotland-and-northern-ireland/2013/index.html "Mid-2013"). ONS also produces population estimates for other [geographies](http://www.ons.gov.uk/ons/rel/sape/soa-mid-year-pop-est-engl-wales-exp/index.html "Super Output area mid-year populations estimates for England and Wales") such as [parliamentary constituencies](http://www.ons.gov.uk/ons/rel/sape/parliament-constituency-pop-est/index.html "Parlimentary Consituency Population Estimates (experimental) index"), [national parks](http://www.ons.gov.uk/ons/rel/sape/parliament-constituency-pop-est/index.html "National Park Population Estimates (experimental) statistics"), [wards](http://www.ons.gov.uk/ons/rel/sape/ward-mid-year-pop-est-eng-wales-exp/index.html "Ward Level Mid-year population estimates for England and Wales (experimental) index"), and [health areas](http://www.ons.gov.uk/ons/rel/sape/health-geography-population-estimates/index.html "Health Geography Populations Estimates index") for England and Wales. Population estimates for special areas in Scotland are produced by NRS, and NISRA produces subnational population estimates for Northern Ireland.
@@ -139,7 +139,7 @@ Detailed data on population change is available as part of the [population estim
 3. Net within UK Migration is the balance of in and out moves between each region and other regions in the rest of the UK.
 4. Other Changes comprises changes to the size of armed forces stationed in the UK and other special population adjustments.
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/pop-estimate/population-estimates-for-uk--england-and-wales--scotland-and-northern-ireland/2013/prt---table-3.xls "XLS format") (28.5 Kb)
 
 Natural change contributed slightly more than net international migration to population change for the UK in the year to mid-2013. Predictably England showed the same pattern to that of the UK. Internal migration moves from other parts of the UK contributed to more than half (56%) of the growth in Scotland’s population in the year, with international migration and natural change combined accounting for around just a fifth (21%) of the gain.
@@ -153,7 +153,7 @@ In mid-2013, the population of the UK consisted of 31,532,900 males (49.19%) and
 #### Figure 4: Population pyramid for the UK, mid-2013
 [![Figure 4: Population pyramid for the UK, mid-2013](http://www.ons.gov.uk/ons/resources/fig4_tcm77-367996.png)](http://www.ons.gov.uk/ons/resources/fig4_tcm77-367996.png "Figure 4: Population pyramid for the UK, mid-2013")
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/pop-estimate/population-estimates-for-uk--england-and-wales--scotland-and-northern-ireland/2013/chd---chart-5.xls "XLS format") (74 Kb)
 
 The pyramid stops at age 89, causing the top of the pyramid to be flat. Although estimates of older people (those aged 90 and over) are included in the mid-2013 UK population estimates,  more detailed estimates by single year of age are available in the [Estimates of the Very Old (including Centenarians) for the United Kingdom](http://www.ons.gov.uk/ons/rel/mortality-ageing/estimates-of-the-very-old--including-centenarians-/2002---2012--united-kingdom/stb-2002-2012-uk.html "STB 2002-2012 UK") release covering mid-2012.
@@ -173,7 +173,7 @@ The population of the UK grew by more than any other EU member state in the year
 
 #### Table 4: EU states with largest absolute population growth, mid-2013
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/pop-estimate/population-estimates-for-uk--england-and-wales--scotland-and-northern-ireland/2013/prt---table-4.xls "XLS format") (27 Kb)
 
 Source: Office for National Statistics, National Records of Scotland, Northern Ireland Statistics and Research Agency, Eurostat
@@ -185,12 +185,12 @@ The population of the UK had the highest rate of growth of the four most populou
 #### Figure 5: Change in population of the most populous EU states, last ten years
 [![Figure 5: Change in population of the most populous EU states, last ten years](http://www.ons.gov.uk/ons/resources/fig5_tcm77-367997.png)](http://www.ons.gov.uk/ons/resources/fig5_tcm77-367997.png "Figure 5: Change in population of the most populous EU states, last ten years")
 
-##### Download table: 
+##### Download table:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/pop-estimate/population-estimates-for-uk--england-and-wales--scotland-and-northern-ireland/2013/chd---chart-6.xls "XLS format") (50.5 Kb)
 
 EU estimates have reference date of 1 Jan as compared to the UK reference date of 30 Jun of each year. Population estimates for EU member states obtained from [Eurostat](http://www.ons.gov.uk/ons/external-links/other/eurostat/index.html "Eurostat") and are the latest available at the time of publication. Owing to population rebasing of Germany’s estimate for the year 2012 the average change for EU (28 Countries) and Germany omits this year. EU (28 countries) includes data for Croatia which joined the EU on 1 Jul 2013.
 
-Source: Office for National Statistics, National Records of Scotland, Northern Ireland Statistics and Research Agency, Eurostat  
+Source: Office for National Statistics, National Records of Scotland, Northern Ireland Statistics and Research Agency, Eurostat
 
 ## Other Population Estimate Releases and User Engagement
 This release of population estimates for the UK is the seventh ONS population estimates product to be published based on the results of the 2011 Census. Corresponding estimates for Super Output Areas, wards, Parliamentary Constituencies, Health Areas and National Parks will be released later in 2014.
@@ -221,33 +221,33 @@ More information is provided in the [Quality Management Information](http://www.
 11. A list of those people that have pre-release access can be found on the [ONS website](http://www.ons.gov.uk/ons/rel/pop-estimate/population-estimates-for-uk--england-and-wales--scotland-and-northern-ireland/2013/pra---mid-2013-uk-population-estimates.html "PRA - Mid-2013 UK Population Estimates").
 12. Details of the policy governing the release of new data are available from the Media Relations Office.
 
-© Crown copyright 2014. 
+© Crown copyright 2014.
 You may re-use this information (not including logos) free of charge in any format or medium, under the terms of the Open Government Licence.
 
-To view this licence, go to: 
-[Open Government Licence](http://www.ons.gov.uk/ons/external-links/other-government-departments/national-archives/index.html "Open Government Licence") or write to the Information Policy Team, The National Archives, Kew, London TW9 4DU 
+To view this licence, go to:
+[Open Government Licence](http://www.ons.gov.uk/ons/external-links/other-government-departments/national-archives/index.html "Open Government Licence") or write to the Information Policy Team, The National Archives, Kew, London TW9 4DU
 Email:  <psi@nationalarchives.gsi.gov.uk>
 
 …………………………………………………………………………………………………………
 
 Release number: MYE7BL2: This replaces MYE7BL1 published on 26 June 2014 to provide appropriate explanatory metadata about an error in the distribution of foreign armed forces in Forest Heath and other local authorities. Background note (2) above refers.
 
-Next publication:  
+Next publication:
 June 2015
 
-Issued by: 
+Issued by:
 Office for National Statistics, Government Buildings, Cardiff Road, Newport NP10 8XG
 
-Media contact: 
-Tel:    Media Relations Office    0845 6041858 
-          Emergency on-call    07867 906553 
+Media contact:
+Tel:    Media Relations Office    0845 6041858
+          Emergency on-call    07867 906553
 Email: <media.relations@ons.gsi.gov.uk>
 
-Statistical contact: 
-Tel:  Pete Large    01329 444661 
+Statistical contact:
+Tel:  Pete Large    01329 444661
 Email:  <pop.info@ons.gsi.gov.uk>
 
-Website:  [www.ons.gov.uk](http://www.ons.gov.uk/ "www.ons.gov.uk") 
+Website:  [www.ons.gov.uk](http://www.ons.gov.uk/ "www.ons.gov.uk")
 
 13. Details of the policy governing the release of new data are available by visiting www.statisticsauthority.gov.uk/assessment/code-of-practice/index.html or from the Media Relations Office email: <media.relations@ons.gsi.gov.uk>
 
