@@ -122,7 +122,7 @@ public class SearchConsole {
 		for (DBObject doc : queryDocuments) {
 
 			// Get the count for this query, creating it if necessary:
-			String query = doc.get("query").toString();
+			String query = (String) doc.get("query");
 			if (StringUtils.equals("inf", query)) {
 				System.out.println("inf");
 			}
@@ -365,8 +365,8 @@ public class SearchConsole {
 		Map<Date, Long> results = new TreeMap<>();
 		Date date;
 
-		QueryCount(String value) {
-			this.query = value;
+		QueryCount(String query) {
+			this.query = query;
 		}
 
 		@Override
@@ -376,7 +376,11 @@ public class SearchConsole {
 
 		@Override
 		public int hashCode() {
-			return query.hashCode();
+			int result = 0;
+			if (query != null) {
+				result = query.hashCode();
+			}
+			return result;
 		}
 
 		/**
@@ -384,7 +388,7 @@ public class SearchConsole {
 		 */
 		@Override
 		public boolean equals(Object obj) {
-			return query.equals(((QueryCount) obj).query);
+			return StringUtils.equals(query, ((QueryCount) obj).query);
 		}
 
 		@Override
