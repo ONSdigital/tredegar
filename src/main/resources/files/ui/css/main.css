@@ -2480,6 +2480,16 @@ lesser , applied styles
     font-size: 12px;
     font-size: 1.2rem;
 }
+
+.btn--mini{
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 5px;
+    font-size: 0.5rem;
+}
+
 .btn--narrow {
     padding-right: 1em;
     padding-left: 1em;
@@ -2488,12 +2498,25 @@ lesser , applied styles
     padding-top: 0.5em;
     padding-bottom: 0.5em;
 }
+
+@media screen and (max-width: 25em){
+.btn--mini-resp{
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 5px;
+    font-size: 0.5rem;
+}
+}
+
 /* from CX new css*/
 
 .btn--wide {
     padding-right: 3em;
     padding-left: 3em;
 }
+
 .btn--form {
     padding-top: 0;
     padding-bottom: 0;

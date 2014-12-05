@@ -33,10 +33,10 @@ public class LoadIndexHelperTest {
 
 	@Test
 	public void testGetDocumentMapForContentType() throws JsonIOException, JsonSyntaxException, IOException {
-		Map<String, String> documentMap = LoadIndexHelper.getDocumentMap("target/taxonomy/economy/inflationandpriceindices/bulletins/consumerpriceinflation/data.json");
-		assertEquals("url should math file structure", "/economy/inflationandpriceindices/bulletins/consumerpriceinflation/", documentMap.get("url"));
+		Map<String, String> documentMap = LoadIndexHelper.getDocumentMap("target/taxonomy/economy/inflationandpriceindices/bulletins/consumerpriceinflationjune2014/data.json");
+		assertEquals("url should math file structure", "/economy/inflationandpriceindices/bulletins/consumerpriceinflationjune2014/", documentMap.get("url"));
 		assertEquals("type should be bulletins", "bulletin", documentMap.get("type"));
-		assertEquals("title should be data.json", "Consumer Price Inflation", documentMap.get("title"));
+		assertEquals("title should be data.json", "Consumer Price Inflation, June 2014", documentMap.get("title"));
 		assertTrue("tags should contain subdirs", documentMap.get("tags").contains("inflation"));
 	}
 

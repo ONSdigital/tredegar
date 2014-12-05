@@ -9,7 +9,6 @@ import org.elasticsearch.index.query.MultiMatchQueryBuilder;
 import org.elasticsearch.index.query.functionscore.FunctionScoreQueryBuilder;
 import org.elasticsearch.index.query.functionscore.ScoreFunctionBuilders;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
-import org.elasticsearch.search.highlight.HighlightBuilder;
 
 import com.github.onsdigital.configuration.ElasticSearchProperties;
 
@@ -175,12 +174,17 @@ public class ONSQueryBuilder {
 	 * @return query
 	 */
 	public String buildQuery() {
+		BaseQueryBuilder builder = getBuilder();
 
-		BaseQueryBuilder builder;
+		String query = new SearchSourceBuilder().query(builder).from(calculateFrom()).size(getSize()).toString();
+		return query;
 
+	}
+
+	private BaseQueryBuilder getBuilder() {
 		// Return all documents
 		if (StringUtils.isEmpty(getSearchTerm())) {
-			builder = new MatchAllQueryBuilder();
+			return new MatchAllQueryBuilder();
 		} else {
 			// return documents with fields containing words that start with
 			// given search term
@@ -193,22 +197,11 @@ public class ONSQueryBuilder {
 			multiMatchQueryBuilder.field("title", titleBoostFloat);
 			FunctionScoreQueryBuilder functionScoreQueryBuilder = new FunctionScoreQueryBuilder(multiMatchQueryBuilder);
 			functionScoreQueryBuilder.add(FilterBuilders.termsFilter("_type", "home"), ScoreFunctionBuilders.factorFunction(homePageBoostFloat));
-			builder = functionScoreQueryBuilder;
-
+			return functionScoreQueryBuilder;
 		}
-		HighlightBuilder highlightBuilder = new HighlightBuilder();
-		highlightBuilder.preTags(PRE_TAG).postTags(POST_TAG);
-		for (String field : getFields()) {
-			highlightBuilder.field(field, 0, 0);
-		}
-
-		return new SearchSourceBuilder().query(builder).highlight(highlightBuilder).from(calculateFrom()).size(getSize()).toString();
-		
-
 	}
 
 	private int calculateFrom() {
 		return getSize() * (getPage() - 1);
 	}
-
 }
