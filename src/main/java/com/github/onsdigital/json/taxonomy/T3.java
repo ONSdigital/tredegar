@@ -34,8 +34,8 @@ public class T3 extends TaxonomyHome {
 		//
 		// // statsBulletinHeadline =
 		// //
-		// URI.create("/economy/inflationandpriceindices/bulletins/consumerpriceinflation");
-		// statsBulletins.add(URI.create("/economy/inflationandpriceindices/bulletins/consumerpriceinflation"));
+		// URI.create("/economy/inflationandpriceindices/bulletins/consumerpriceinflationjune2014");
+		// statsBulletins.add(URI.create("/economy/inflationandpriceindices/bulletins/consumerpriceinflationjune2014"));
 		// statsBulletins.add(URI.create("/economy/inflationandpriceindices/bulletins/housepriceindex"));
 		//
 		// datasets.add(URI.create("/economy/inflationandpriceindices/datasets/inflationsummary"));
