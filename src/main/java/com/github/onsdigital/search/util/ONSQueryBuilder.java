@@ -5,7 +5,6 @@ import org.apache.commons.lang3.StringUtils;
 import org.elasticsearch.index.query.BaseQueryBuilder;
 import org.elasticsearch.index.query.FilterBuilders;
 import org.elasticsearch.index.query.MatchAllQueryBuilder;
-import org.elasticsearch.index.query.MatchQueryBuilder;
 import org.elasticsearch.index.query.MultiMatchQueryBuilder;
 import org.elasticsearch.index.query.functionscore.FunctionScoreQueryBuilder;
 import org.elasticsearch.index.query.functionscore.ScoreFunctionBuilders;
@@ -40,7 +39,6 @@ public class ONSQueryBuilder {
 	int page = 1;
 	int size = 10;
 	String[] fields;
-	private boolean naturalLanguage;
 
 	public ONSQueryBuilder(String index) {
 		this.index = index;
@@ -112,14 +110,6 @@ public class ONSQueryBuilder {
 		return size;
 	}
 	
-	public boolean isNaturalLanguage() {
-		return naturalLanguage;
-	}
-
-	public void setNaturalLanguage(boolean naturalLanguage) {
-		this.naturalLanguage = naturalLanguage;
-	}
-
 	/**
 	 * By default 10 documents are returned from the result set. Set this value
 	 * to increase or decrease the number of results fetched
@@ -173,12 +163,7 @@ public class ONSQueryBuilder {
 		} else {
 			// return documents with fields containing words that start with
 			// given search term
-			MultiMatchQueryBuilder multiMatchQueryBuilder;
-			if (isNaturalLanguage()) {
-				multiMatchQueryBuilder = new MultiMatchQueryBuilder(getSearchTerm(), getFields()).analyzer("ons_synonyms").slop(5).cutoffFrequency(0.04f);
-			} else {
-				multiMatchQueryBuilder = new MultiMatchQueryBuilder(getSearchTerm(), getFields()).type(MatchQueryBuilder.Type.PHRASE_PREFIX).analyzer("ons_synonyms").slop(5).cutoffFrequency(0.04f);
-			}
+			MultiMatchQueryBuilder multiMatchQueryBuilder = new MultiMatchQueryBuilder(getSearchTerm(), getFields()).analyzer("ons_synonyms").cutoffFrequency(0.04f);
 			// wrap this up with a function_score capability that allows us to
 			// boost the home pages
 			float homePageBoostFloat = Float.valueOf((String) ElasticSearchProperties.INSTANCE.getProperty("home"));
