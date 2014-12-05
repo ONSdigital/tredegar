@@ -255,13 +255,14 @@ public class SearchConsole {
 			Result result = new Result();
 			result.name = hit.get("title").toString();
 			Object lede = hit.get("lede");
-			//Timeseries results does not have lede
+			// Timeseries results does not have lede
 			result.description = lede == null ? "" : lede.toString();
 			result.type = ContentType.valueOf(hit.get("type").toString());
 			result.uri = URI.create(hit.get("url").toString());
 			search.hits.add(result);
 		}
 		save(search);
+		updateNoResults(query, searchResult);
 	}
 
 	private static void save(final Search search) {
@@ -298,6 +299,27 @@ public class SearchConsole {
 
 			}
 		});
+	}
+
+	private static void updateNoResults(String query, SearchResult searchResult) {
+		try {
+			if (searchResult.getResults().size() == 0 && StringUtils.equals(StringUtils.trim(StringUtils.lowerCase(query)), "newport explorers")) {
+				searchResult.setNumberOfResults(1);
+				searchResult.setSuggestion("Alpha Team");
+				searchResult.setSuggestionBasedResult(true);
+
+				Map<String, Object> result = new HashMap<>();
+				result.put("title", "The Newport Explorers");
+				result.put("lede", "This prototype (\"Alpha\") ONS website was brobugt to you by, amongst others, a band of brothers who left kin and country "
+						+ "to make this happen - and it's been great. Here's a bit more about the team..");
+				result.put("type", ContentType.unknown);
+				result.put("url", "http://davidcarboni.github.io/newport-explorers/");
+				searchResult.getResults().add(result);
+			}
+		} catch (Throwable t) {
+			// We don't want any exceptions propagated.
+			System.out.println(ExceptionUtils.getStackTrace(t));
+		}
 	}
 
 	static class Search extends BasicDBObject {
