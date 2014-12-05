@@ -2,9 +2,9 @@
 Level 2: People in Work
 Level 3: Earnings and Working Hours
 Summary: Labour market statistics (including employment, unemployment and economic inactivity) for the United Kingdom.
-Headline 1: Comparing the estimates for March to May 2014 with those for December 2013 to February 2014, employment continued to rise and unemployment continued to fall. 
+Headline 1: Comparing the estimates for March to May 2014 with those for December 2013 to February 2014, employment continued to rise and unemployment continued to fall.
 Headline 2: There were 30.64 million people in work, 254,000 more than for December 2013 to February 2014 and 929,000 more than a year earlier.
-Headline 3: The proportion of people aged from 16 to 64 in work (the employment rate) continued to rise, reaching 73.1% for March to May 2014. The employment rate last reached 73.1% in December 2004 to February 2005 and, since records began in 1971, it has never been higher.
+Headline 3: The proportion of people aged from 16 to 64 in work (the employment rate) continued to rise, reaching 73.1% for March to May 2014.
 Contact name: Richard Clegg
 Contact email: labour.market@ons.gsi.gov.uk
 Next release: 13 August 2014
@@ -92,7 +92,7 @@ The proportion of people aged from 16 to 64 in work is known as the employment r
 
 Source: Labour Force Survey - Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS") [XLS format](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/july-2014/chart-spreadsheet--employment-rate-since-1971-0614.xls "XLS format") (58 Kb)
 
 Chart 1.2 looks in more detail at the employment rate for the last five years.
@@ -102,7 +102,7 @@ Chart 1.2 looks in more detail at the employment rate for the last five years.
 [![Chart 1.2 Employment rate (aged 16 to 64), seasonally adjusted](http://www.ons.gov.uk/ons/resources/employmentratechart_tcm77-367257.png)](http://www.ons.gov.uk/ons/resources/employmentratechart_tcm77-367257.png "Chart 1.2 Employment rate (aged 16 to 64), seasonally adjusted")
 Source: Labour Force Survey - Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS") [XLS format](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/july-2014/chart-spreadsheet--emoployment-rate-0714.xls "XLS format") (32.5 Kb)
 
 73.1% of people aged from 16 to 64 were in work for March to May 2014. This was:
@@ -113,7 +113,7 @@ Source: Labour Force Survey - Office for National Statistics
 
 The employment rate last reached 73.1% in December 2004 to February 2005 and, since comparable records began in 1971, it has never been higher.
 
-For March to May 2014, 78.1% of men and 68.1% of women aged from 16 to 64 were in work. These employment rates for men and women were higher than those for December 2013 to February 2014 and for a year earlier. The employment rate for men was lower than before the 2008-09 downturn, when it peaked at 79.0% in early 2008. However the employment rate for women was the highest since comparable records began in 1971. 
+For March to May 2014, 78.1% of men and 68.1% of women aged from 16 to 64 were in work. These employment rates for men and women were higher than those for December 2013 to February 2014 and for a year earlier. The employment rate for men was lower than before the 2008-09 downturn, when it peaked at 79.0% in early 2008. However the employment rate for women was the highest since comparable records began in 1971.
 
 There were 30.64 million people aged 16 and over in work for March to May 2014, up by 254,000 from December 2013 to February 2014 and up by 929,000 on a year earlier.
 
@@ -136,7 +136,7 @@ Looking at **men and women working full-time and part-time**, between March to M
 [![Chart 1.3 Changes in people in employment between March to May 2013 and March to May 2014, seasonally adjusted](http://www.ons.gov.uk/ons/resources/employmentmalefemalechart_tcm77-367258.png)](http://www.ons.gov.uk/ons/resources/employmentmalefemalechart_tcm77-367258.png "Chart 1.3 Changes in people in employment between March to May 2013 and March to May 2014, seasonally adjusted")
 Source: Labour Force Survey - Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS") [XLS format](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/july-2014/chart-spreadsheet--male-and-female-employment-changes-0714.xls "XLS format") (25 Kb)
 
 #### Notes for Employment
@@ -151,7 +151,7 @@ Source: Labour Force Survey - Office for National Statistics
 
 **[Public sector employment](http://www.ons.gov.uk/ons/rel/lms/labour-market-guidance/guide-to-labour-market-statistics/guide-to-public-and-private-sector-employment.html "Public sector employment")** measures the number of people in paid work in the public sector. The public sector comprises central government, local government and public corporations. Estimates of public sector employment are obtained from information provided by public sector organisations.
 
-**[Private sector employment](http://www.ons.gov.uk/ons/rel/lms/labour-market-guidance/guide-to-labour-market-statistics/guide-to-public-and-private-sector-employment.html "Private sector employment")** is estimated as the difference between total employment, sourced from the Labour Force Survey, and public sector employment. 
+**[Private sector employment](http://www.ons.gov.uk/ons/rel/lms/labour-market-guidance/guide-to-labour-market-statistics/guide-to-public-and-private-sector-employment.html "Private sector employment")** is estimated as the difference between total employment, sourced from the Labour Force Survey, and public sector employment.
 
 ### Where to find data about public and private sector employment ?
 
@@ -175,7 +175,7 @@ Chart 2.1 shows public sector employment as a percentage of all people in employ
 [![Chart 2:1 Public sector employment as a percentage of total employment, seasonally adjusted](http://www.ons.gov.uk/ons/resources/publicsectorpercentage_tcm77-367314.png)](http://www.ons.gov.uk/ons/resources/publicsectorpercentage_tcm77-367314.png "Chart 2:1 Public sector employment as a percentage of total employment, seasonally adjusted")
 Source: Quarterly Public Sector Employment Survey - Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS") [XLS format](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/june-2014/chart-spreadsheet--public-sector-employment-0614.xls "XLS format") (27 Kb)
 
 For March 2014 within the public sector, as shown in Chart 2.2:
@@ -190,7 +190,7 @@ For March 2014 within the public sector, as shown in Chart 2.2:
 
 Source: Quarterly Public Sector Employment Survey - Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS") [XLS format](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/june-2014/chart-spreadsheet--pse-by-industry.xls "XLS format") (29.5 Kb)
 
 The number of people employed in the public sector has been falling since March 2010. Quarterly estimates of public and private sector employment are available back to 1999. Comparisons of public and private sector employment over time are complicated by a number of changes to the composition of these sectors over this period with several large employers moving between the public and private sectors. ONS therefore publishes estimates of public and private sector employment excluding the effects of major reclassifications alongside estimates of total public and private sector employment.
@@ -225,7 +225,7 @@ Source: Labour Force Survey - Office for National Statistics
 1. Between January-March 2013 and January-March 2014, the total number of people in employment increased by 741,000.
 2. Changes in the UK and non-UK estimates may not sum exactly to changes in the total number of people in employment because some people do not state their country of birth or nationality in their Labour Force Survey interviews.
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS") [XLS format](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/may-2014/chart-spreadsheet--employment-by-cob-0514.xls "XLS format") (25.5 Kb)
 
 Estimates of employment by nationality and country of birth are available back to 1997. For January to March 1997 there were 928,000 non-UK nationals working in the UK (3.5% of all people working in the UK). For January to March 2014, there were 2.77 million non-UK nationals working in the UK (9.1% of all people working in the UK). This increase in the number of non-UK nationals working in the UK since 1997 partly reflects the admission of several new member states to the European Union.
@@ -253,14 +253,14 @@ Chart 4.1 shows total hours worked for the last five years.
 [![Chart 4.1 Total hours worked per week, seasonally adjusted](http://www.ons.gov.uk/ons/resources/hoursworkedchart_tcm77-367332.png)](http://www.ons.gov.uk/ons/resources/hoursworkedchart_tcm77-367332.png "Chart 4.1 Total hours worked per week, seasonally adjusted")
 Source: Labour Force Survey - Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS") [XLS format](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/july-2014/chart-spreadsheet--hours-worked-0714.xls "XLS format") (28.5 Kb)
 
 For March to May 2014:
 
 - People working full-time worked, on average, 37.6 hours per week in their main job.
 - People working part-time worked, on average, 16.0 hours per week in their main job.
-- These average hours worked estimates were little changed compared with a year earlier. 
+- These average hours worked estimates were little changed compared with a year earlier.
 
 ## Workforce Jobs (first published on 11 June 2014)
 ### What is Workforce Jobs ?
@@ -282,7 +282,7 @@ There were 33.05 million workforce jobs in March 2014, up 380,000 from December 
 [![Chart 5.1 Workforce jobs changes between March 2013 and March 2014, seasonally adjusted](http://www.ons.gov.uk/ons/resources/workforcejobschart_tcm77-367333.png)](http://www.ons.gov.uk/ons/resources/workforcejobschart_tcm77-367333.png "Chart 5.1 Workforce jobs changes between March 2013 and March 2014, seasonally adjusted")
 Source: Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS") [XLS format](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/june-2014/chart-spreadsheet--workforce-jobs.xls "XLS format") (26 Kb)
 
 Since comparable records began in 1978, the number of jobs in the manufacturing and mining and quarrying sectors has declined, but jobs in the service sectors have increased substantially. In June 1978, the manufacturing and mining and quarrying sectors accounted for 26.4% of all jobs. In March 2014 these sectors accounted for 8.0% of all jobs. In June 1978, 63.2% of all jobs were in the services sector; by March 2014 this proportion had increased to 83.2%.
@@ -329,16 +329,16 @@ Source: Office for National Statistics
 2. The CPI series is for the United Kingdom and is compiled from prices data based on a large and representative selection of individual goods and services. The AWE series are for Great Britain and are sourced from the Monthly Wages and Salaries Survey.
 3. The AWE series are seasonally adjusted. The CPI series is not seasonally adjusted.
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS") [XLS format](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/july-2014/chart-spreadsheet--earnings-0714.xls "XLS format") (30.5 Kb)
 
-Since comparable records began in 2000, average total pay for employees in Great Britain has increased from £311 a week in January 2000 to £478 a week in May 2014; an increase of 53.7%. Between January 2000 and May 2014, the Consumer Prices Index increased by 39.0%. While comparable records start in 2000, modelled estimates back to 1963 (which do not have National Statistics status) are available at [data table EARN02 (527 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/july-2014/table-earn02.xls "data table EARN02"). 
+Since comparable records began in 2000, average total pay for employees in Great Britain has increased from £311 a week in January 2000 to £478 a week in May 2014; an increase of 53.7%. Between January 2000 and May 2014, the Consumer Prices Index increased by 39.0%. While comparable records start in 2000, modelled estimates back to 1963 (which do not have National Statistics status) are available at [data table EARN02 (527 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/july-2014/table-earn02.xls "data table EARN02").
 
 #### Notes for Earnings
 
-1. The estimates are in current prices; this means that they are not adjusted for price inflation. The estimates relate to Great Britain and include salaries but not unearned income, benefits in kind or arrears of pay. 
-2. As well as pay settlements, the estimates reflect bonuses, changes in the number of paid hours worked and the impact of employees paid at different rates joining and leaving individual businesses. The estimates also reflect changes in the overall structure of the workforce; for example, fewer low paid jobs in the economy would have an upward effect on the earnings growth rate. 
-3. Lloyds Banking Group plc is reclassified to the private sector from April 2014 following the sale of some government owned shares to private sector investors. It is classified to the public sector between July 2009 and March 2014. ONS estimates that, if the reclassification had not occurred, the public sector single month growth rate from April 2014 would have been around 0.3 percentage points higher and the corresponding private sector growth rate would have been around 0.1 percentage points lower. 
+1. The estimates are in current prices; this means that they are not adjusted for price inflation. The estimates relate to Great Britain and include salaries but not unearned income, benefits in kind or arrears of pay.
+2. As well as pay settlements, the estimates reflect bonuses, changes in the number of paid hours worked and the impact of employees paid at different rates joining and leaving individual businesses. The estimates also reflect changes in the overall structure of the workforce; for example, fewer low paid jobs in the economy would have an upward effect on the earnings growth rate.
+3. Lloyds Banking Group plc is reclassified to the private sector from April 2014 following the sale of some government owned shares to private sector investors. It is classified to the public sector between July 2009 and March 2014. ONS estimates that, if the reclassification had not occurred, the public sector single month growth rate from April 2014 would have been around 0.3 percentage points higher and the corresponding private sector growth rate would have been around 0.1 percentage points lower.
 4. From June 2012 onwards English Further Education Corporations and Sixth Form College Corporations are classified to the private sector, but for earlier time periods they are classified to the public sector. This affects the public and private sector single month growth rates from June 2012 to May 2013, and the three month average growth rates from April-June 2012 to May-July 2013. ONS estimates that, if the reclassification had not occurred, the public sector single month growth rates between June 2012 and May 2013 would have been between 0.6 and 0.8 percentage points lower and the corresponding private sector growth rates would have been between 0.1 and 0.2 percentage points higher.
 
 ## Labour Disputes (not seasonally adjusted)
@@ -362,7 +362,7 @@ Source: Labour Disputes Statistics - Office for National Statistics
 1. The cumulative 12 month totals from November 2011 to October 2012 are affected by a one day strike on 30 November 2011 called by several trade unions in connection with a dispute over proposed changes to pension schemes for some public sector workers.
 2. There was a further one day strike on 30 May 2012 in connection with a dispute over proposed changes to pension schemes for some public sector workers which affected the cumulative 12 month totals from May 2012 to April 2013.
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS") [XLS format](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/july-2014/chart-spreadsheet--labour-disputes-0714.xls "XLS format") (27 Kb)
 
 The highest cumulative 12 month estimate for working days lost since records began in December 1931 was 32.2 million for the 12 months to April 1980. Although the cumulative 12 month estimate for working days lost has been generally increasing for the last year, the latest estimates are at historically low levels when looking at the longer run time series back to the 1930s, available at [data table LABD01 (154 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/july-2014/table-labd01.xls "[data table LABD01").
@@ -380,7 +380,7 @@ Unemployment estimates for the UK are available at Table 9 of the pdf version of
 
 International comparisons of unemployment rates are available at Table 19 of the pdf version of this Statistical Bulletin and at [data table A10 (268 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/july-2014/table-a10.xls "data table A10").
 
-European Union (EU) unemployment rates were published in a [Eurostat News Release on 1 July 2014](http://epp.eurostat.ec.europa.eu/cache/ITY_PUBLIC/3-01072014-AP/EN/3-01072014-AP-EN.PDF "Eurostat News Release on 1 July 2014"). 
+European Union (EU) unemployment rates were published in a [Eurostat News Release on 1 July 2014](http://epp.eurostat.ec.europa.eu/cache/ITY_PUBLIC/3-01072014-AP/EN/3-01072014-AP-EN.PDF "Eurostat News Release on 1 July 2014").
 
 #### Commentary
 
@@ -393,7 +393,7 @@ Chart 8.1 shows the unemployment rate for people aged 16 and over since comparab
 [![Chart 8.1 Unemployment rate (aged 16 and over) from January-March 1971 to March-May 2014, seasonally adjusted](http://www.ons.gov.uk/ons/resources/unemploymentratesince1971chart_tcm77-367252.png)](http://www.ons.gov.uk/ons/resources/unemploymentratesince1971chart_tcm77-367252.png "Chart 8.1 Unemployment rate (aged 16 and over) from January-March 1971 to March-May 2014, seasonally adjusted")
 Source: Labour Force Survey - Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS") [XLS format](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/july-2014/chart-spreadsheet--unemployment-rate-since-1971-0614.xls "XLS format") (58 Kb)
 
 Chart 8.2 looks in more detail at the unemployment rate for the last five years.
@@ -404,7 +404,7 @@ Chart 8.2 looks in more detail at the unemployment rate for the last five years.
 
 Source: Labour Force Survey - Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS") [XLS format](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/july-2014/chart-spreadsheet--unemployment-rate-0714.xls "XLS format") (28.5 Kb)
 
 As shown in Charts 8.1 and 8.2, the unemployment rate for those aged 16 and over for March to May 2014 was 6.5%. This was:
@@ -422,9 +422,9 @@ Looking at unemployment for men and women, for March to May 2014:
 Looking in more detail at changes in the number of unemployed men and women by age group, between March to May 2013 and March to May 2014, as shown in Chart 8.3:
 
 - The number of unemployed **men aged from 16 to 24** fell by 73,000 (13.2%) to reach 477,000.
-- The number of unemployed **women aged from 16 to 24** fell by 69,000 (16.8%) to reach 340,000. 
+- The number of unemployed **women aged from 16 to 24** fell by 69,000 (16.8%) to reach 340,000.
 - The number of unemployed **men aged from 25 to 49** fell by 147,000 (23.8%) to reach 471,000.
-- The number of unemployed **women aged from 25 to 49** fell by 54,000 (10.5%) to reach 458,000. 
+- The number of unemployed **women aged from 25 to 49** fell by 54,000 (10.5%) to reach 458,000.
 - The number of unemployed **men aged 50 and over** fell by 43,000 (16.6%) to reach 218,000.
 - There were 158,000 unemployed **women aged 50 and over** for March to May 2014, little changed on a year earlier.
 
@@ -433,7 +433,7 @@ Looking in more detail at changes in the number of unemployed men and women by a
 [![Chart 8.3 Changes in number of unemployed people between March-May 2013 and March-May 2014, seasonally adjusted](http://www.ons.gov.uk/ons/resources/unemploymentbyagesexbarchart_tcm77-367352.png)](http://www.ons.gov.uk/ons/resources/unemploymentbyagesexbarchart_tcm77-367352.png "Chart 8.3 Changes in number of unemployed people between March-May 2013 and March-May 2014, seasonally adjusted")
 Source: Labour Force Survey - Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS") [XLS format](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/july-2014/chart-spreadsheet--unemployment-changes-by-age-and-sex-0714.xls "XLS format") (24 Kb)
 
 Looking at **unemployment by duration** (how long people have been unemployed) for March to May 2014:
@@ -457,7 +457,7 @@ Source: Labour Force Survey - Office for National Statistics, Eurostat
 1. The unemployment rates for the UK and the United States are for those aged 16 and over. The unemployment rate for the EU is for those aged from 15 to 74.
 2. This chart shows monthly estimates for the EU and for the United States from May 2009 to May 2014 and three month average estimates for the UK from March-May 2009 to March-May 2014.
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS") [XLS format](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/july-2014/chart-spreadsheet--international-comparisons-0714.xls "XLS format") (32 Kb)
 
 ## Claimant Count
@@ -467,7 +467,7 @@ The [Claimant Count](http://www.ons.gov.uk/ons/rel/lms/labour-market-guidance/gu
 
 While comparable records start in 1971, some data back to 1881 (which do not have National Statistics status) are available from the “Historic Data” worksheet within [data table CLA01 (395.5 Kb Excel sheet)] .
 
-See Notes for Claimant Count at the end of this section for further details. 
+See Notes for Claimant Count at the end of this section for further details.
 
 ### Where to find data about the Claimant Count
 
@@ -481,7 +481,7 @@ Chart 9.1 shows the Claimant Count since comparable records began in 1971. The c
 [![Chart 9.1 Claimant Count from January 1971 to June 2014, seasonally adjusted](http://www.ons.gov.uk/ons/resources/claimantcountsince1971chart_tcm77-367417.png)](http://www.ons.gov.uk/ons/resources/claimantcountsince1971chart_tcm77-367417.png "Chart 9.1 Claimant Count from January 1971 to June 2014, seasonally adjusted")
 Source: Office for National Statistics, Work and Pensions
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS") [XLS format](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/july-2014/chart-spreadsheet--claimant-count-since-1971-0614.xls "XLS format") (60.5 Kb)
 
 Looking in more detail at the most recent five years, Chart 9.2 shows the Claimant Count from June 2009 to June 2014.
@@ -491,7 +491,7 @@ Looking in more detail at the most recent five years, Chart 9.2 shows the Claima
 [![Chart 9.2 Claimant Count, seasonally adjusted](http://www.ons.gov.uk/ons/resources/claimantcountchart_tcm77-367422.png)](http://www.ons.gov.uk/ons/resources/claimantcountchart_tcm77-367422.png "Chart 9.2 Claimant Count, seasonally adjusted")
 Source: Office for National Statistics, Work and Pensions
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS") [XLS format](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/july-2014/chart-spreadsheet--claimant-count-0714.xls "XLS format") (31.5 Kb)
 
 As shown at Charts 9.1 and 9.2, for June 2014 there were 1.04 million people claiming JSA. The number of JSA claimants has fallen for 20 consecutive months and it is:
@@ -511,7 +511,7 @@ Chart 9.3 shows that, for June 2014, excluding a small number of clerically proc
 [![Chart 9.3 JSA claimants (excluding clerical claims) by age and sex for June 2014, seasonally adjusted](http://www.ons.gov.uk/ons/resources/claimantcountbyageandsex_tcm77-367423.png)](http://www.ons.gov.uk/ons/resources/claimantcountbyageandsex_tcm77-367423.png "Chart 9.3 JSA claimants (excluding clerical claims) by age and sex for June 2014, seasonally adjusted")
 Source: Office for National Statistics, Work and Pensions
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS") [XLS format](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/july-2014/chart-spreadsheet--claimant-count-by-age-and-sex-0714.xls "XLS format") (30 Kb)
 
 ** Notes for Claimant Count **
@@ -545,11 +545,11 @@ When three month average estimates for the Claimant Count are compared with unem
 1. Unemployment estimates are sourced from the Labour Force Survey (a survey of households). The unemployment figures in this chart, and the associated spreadsheet, exclude unemployed people aged from 18 to 24 in full-time education.
 2. Claimant Count estimates are sourced from administrative data from Jobcentre Plus (part of the Department for Work and Pensions).
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS") [XLS format](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/july-2014/chart-spreadsheet--unemployment-cc-comparison.xls "XLS format") (224 Kb)
 
 ## Economic Inactivity
-### What is economic inactivity ? 
+### What is economic inactivity ?
 
 [Economically inactive](http://www.ons.gov.uk/ons/rel/lms/labour-market-guidance/guide-to-labour-market-statistics/guide-to-economic-inactivity.html "Economically inactive") people are not in employment but do not meet the internationally accepted definition of unemployment because they have not been seeking work within the last four weeks and/or they are unable to start work within the next two weeks.
 
@@ -570,7 +570,7 @@ Chart 11.1 shows that the economic inactivity rate increased during the downturn
 [![Chart 11.1 Economic Inactivity rate (aged 16 to 64) from January-March 1971 to March-May 2014, seasonally adjusted](http://www.ons.gov.uk/ons/resources/inactivityratesince1971chart_tcm77-367251.png)](http://www.ons.gov.uk/ons/resources/inactivityratesince1971chart_tcm77-367251.png "Chart 11.1 Economic Inactivity rate (aged 16 to 64) from January-March 1971 to March-May 2014, seasonally adjusted")
 Source: Labour Force Survey - Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS") [XLS format](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/july-2014/chart-spreadsheet--inactivity-rate-since-1971-0614.xls "XLS format") (58 Kb)
 
 Since comparable records began in 1971, the economic inactivity rate for men has been gradually rising while the rate for women has been gradually falling. The latest economic inactivity rate for women of 27.2%, for March to May 2014, is the lowest figure on record.
@@ -582,7 +582,7 @@ Chart 11.2 looks in more detail at the economic inactivity rate for the last fiv
 [![Chart 11.2 Economic inactivity rate (aged 16 to 64), seasonally adjusted](http://www.ons.gov.uk/ons/resources/inactivityratechart_tcm77-367485.png)](http://www.ons.gov.uk/ons/resources/inactivityratechart_tcm77-367485.png "Chart 11.2 Economic inactivity rate (aged 16 to 64), seasonally adjusted")
 Source: Labour Force Survey - Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS") [XLS format](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/july-2014/chart-spreadsheet--economic-inactivity-rate-0714.xls "XLS format") (32.5 Kb)
 
 As shown in Charts 11.1 and 11.2, the economic inactivity rate for those aged from 16 to 64 for March to May 2014 was 21.7%. This was:
@@ -612,7 +612,7 @@ The annual fall in the number of economically inactive people who had retired be
 [![Chart 11.3 Economic inactivity by reason (aged 16 to 64) for March to May 2014, seasonally adjusted](http://www.ons.gov.uk/ons/resources/inactivitybyreason_tcm77-367486.png)](http://www.ons.gov.uk/ons/resources/inactivitybyreason_tcm77-367486.png "Chart 11.3 Economic inactivity by reason (aged 16 to 64) for March to May 2014, seasonally adjusted")
 Source: Labour Force Survey - Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS") [XLS format](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/july-2014/chart-spreadsheet--inactivity-by-reason-0714.xls "XLS format") (29.5 Kb)
 
 ## Young People in the Labour Market
@@ -635,14 +635,14 @@ For March to May 2014, there were 3.04 million people aged from 16 to 24 in full
 [![Chart 12.1 Young people (aged 16 to 24) in the labour market for March to May 2014, seasonally adjusted](http://www.ons.gov.uk/ons/resources/youngpeoplebarchart_tcm77-367487.png)](http://www.ons.gov.uk/ons/resources/youngpeoplebarchart_tcm77-367487.png "Chart 12.1 Young people (aged 16 to 24) in the labour market for March to May 2014, seasonally adjusted")
 Source: Labour Force Survey - Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS") [XLS format](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/july-2014/chart-spreadsheet--young-people.xls "XLS format") (30 Kb)
 
 For March to May 2014, for people aged from 16 to 24, there were:
 
 - 3.77 million people in work (including 829,000 full-time students with part-time jobs),
 - 817,000 unemployed people (including 283,000 full-time students looking for part-time work), and
-- 2.60 million economically inactive people, most of whom (1.93 million) were full-time students. 
+- 2.60 million economically inactive people, most of whom (1.93 million) were full-time students.
 
 It is a common misconception that all people in full-time education are classified as economically inactive. This is not the case as people in full-time education are included in the employment estimates if they have a part-time job and are included in the unemployment estimates if they are seeking part-time work.
 
@@ -652,7 +652,7 @@ For March to May 2014, the unemployment rate for 16 to 24 year olds was 17.8%. T
 - **down** from 20.9% for a year earlier, but
 - **higher** than the pre-downturn trough of 13.8% for December 2007 to February 2008.
 
-Comparisons of youth unemployment over time are complicated by the fact that unemployment rates are calculated as the number of unemployed people divided by the economically active population (which excludes those not seeking or available to work). Since comparable records began in 1992, the proportion of people aged from 16 to 24 in full-time education has increased substantially from 24.3% for March to May 1992 to 42.3% for March to May 2014. Increasing numbers of young people going into full-time education reduces the size of the economically active population and therefore increases the unemployment rate. 
+Comparisons of youth unemployment over time are complicated by the fact that unemployment rates are calculated as the number of unemployed people divided by the economically active population (which excludes those not seeking or available to work). Since comparable records began in 1992, the proportion of people aged from 16 to 24 in full-time education has increased substantially from 24.3% for March to May 1992 to 42.3% for March to May 2014. Increasing numbers of young people going into full-time education reduces the size of the economically active population and therefore increases the unemployment rate.
 
 ## Redundancies
 ### What are redundancies ?
@@ -673,7 +673,7 @@ Chart 13.1 shows the number of people made redundant (including voluntary redund
 [![Chart 13.1 Redundancies, seasonally adjusted](http://www.ons.gov.uk/ons/resources/redundancieschart_tcm77-367488.png)](http://www.ons.gov.uk/ons/resources/redundancieschart_tcm77-367488.png "Chart 13.1 Redundancies, seasonally adjusted")
 Source: Labour Force Survey - Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS") [XLS format](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/july-2014/chart-spreadsheet--redundancies-0714.xls "XLS format") (28 Kb)
 
 ## Vacancies
@@ -696,7 +696,7 @@ There were 648,000 job vacancies for April to June 2014. This was:
 [![Chart 14.1 Vacancies, seasonally adjusted](http://www.ons.gov.uk/ons/resources/vacancieschart_tcm77-367489.png)](http://www.ons.gov.uk/ons/resources/vacancieschart_tcm77-367489.png "Chart 14.1 Vacancies, seasonally adjusted")
 Source: Vacancy Survey - Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS") [XLS format](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/july-2014/chart-spreadsheet--vacancies-0714.xls "XLS format") (28.5 Kb)
 
 ## Key Out of Work Benefits, not seasonally adjusted (first published on 14 May 2014)
@@ -727,7 +727,7 @@ Chart 15.1 shows, for the last five years, the proportion of the population aged
 [![Chart 15.1 Proportion of population (aged 16 to 64) claiming key out of work benefits, not seasonally adjusted](http://www.ons.gov.uk/ons/resources/outofworkbenefits_tcm77-367490.png)](http://www.ons.gov.uk/ons/resources/outofworkbenefits_tcm77-367490.png "Chart 15.1 Proportion of population (aged 16 to 64) claiming key out of work benefits, not seasonally adjusted")
 Source: Work and Pensions, Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS") [XLS format](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/may-2014/chart-spreadsheet--benefits-0514.xls "XLS format") (25.5 Kb)
 
 ## Where to find more information about Labour Market Statistics
@@ -753,13 +753,13 @@ Source: Work and Pensions, Office for National Statistics
 - [Moving Between Unemployment and Employment (7 November 2013)](http://www.ons.gov.uk/ons/rel/lmac/moving-between-unemployment-and-employment/2013/index.html "Moving Between Unemployment and Employment (7 November 2013)")
 - [Women in the Labour Market (25 September 2013)](http://www.ons.gov.uk/ons/rel/lmac/women-in-the-labour-market/2013/index.html "Women in the Labour Market (25 September 2013)")
 - [Working and workless households (28 August 2013)](http://www.ons.gov.uk/ons/rel/lmac/working-and-workless-households/2013/index.html "Working and workless households (28 August 2013)")
-- [Bonus payments in Great Britain (20 August 2013)](http://www.ons.gov.uk/ons/rel/awe/average-weekly-earnings/bonus-payments-in-great-britain--2012-2013/index.html "Bonus payments in Great Britain (20 August 2013)") 
+- [Bonus payments in Great Britain (20 August 2013)](http://www.ons.gov.uk/ons/rel/awe/average-weekly-earnings/bonus-payments-in-great-britain--2012-2013/index.html "Bonus payments in Great Britain (20 August 2013)")
 
 ### Historic articles published in Economic & Labour Market Review and Labour Market Trends
 
 Articles about labour market statistics were published in Labour Market Trends (up until 2006) and in Economic and Labour Market Review (from 2007 to 2011). Editions of [Labour Market Trends](http://www.ons.gov.uk/ons/rel/lms/labour-market-trends--discontinued-/index.html "Labour Market Trends") are available on the website from July 2001 until December 2006 when the publication was discontinued. It was replaced by [Economic and Labour Market Review](http://www.ons.gov.uk/ons/rel/elmr/economic-and-labour-market-review/index.html "Economic and Labour Market Review"), which also included articles about labour market statistics. Editions of [Economic and Labour Market Review](http://www.ons.gov.uk/ons/rel/elmr/economic-and-labour-market-review/index.html "Economic and Labour Market Review") are available on the website from the first edition, published in January 2007, up until the last edition published in May 2011.
 
-### Published ad hoc data and analysis 
+### Published ad hoc data and analysis
 
 [Additional statistical data and analyses for labour market statistics](http://www.ons.gov.uk/ons/about-ons/business-transparency/freedom-of-information/what-can-i-request/published-ad-hoc-data/labour/index.html "Additional statistical data and analyses for labour market statistics") that have not been included in our standard publications are available on the website.
 
@@ -777,13 +777,13 @@ For example, the unemployment rate for March to May 2014 was estimated to be 6.5
 
 The number of people unemployed for the same period was estimated at 2,122,000, with a stated 95% confidence interval of +/- 77,000.  This means that we can be 95% sure that the true number of unemployed people was between 2,045,000 and 2,199,000.  Again, the best estimate from the survey was that the number of unemployed people was 2,122,000.
 
-As well as calculating precision measures around the numbers and rates obtained from the survey, we can also calculate them for changes in the numbers.  For example, for March to May 2014, the estimated change in the number of unemployed people since December 2013 to February 2014 was a fall of 121,000, with a 95% confidence interval of +/- 84,000.  This means that we can be 95% certain the actual change in unemployment was somewhere between a fall of 37,000 and a fall of 205,000, with the best estimate being a fall of 121,000. As the estimated fall in unemployment of 121,000 is greater than the confidence interval of 84,000, the estimated fall in unemployment is said to be “statistically significant”; we can be confident that there has been a fall in unemployment. 
+As well as calculating precision measures around the numbers and rates obtained from the survey, we can also calculate them for changes in the numbers.  For example, for March to May 2014, the estimated change in the number of unemployed people since December 2013 to February 2014 was a fall of 121,000, with a 95% confidence interval of +/- 84,000.  This means that we can be 95% certain the actual change in unemployment was somewhere between a fall of 37,000 and a fall of 205,000, with the best estimate being a fall of 121,000. As the estimated fall in unemployment of 121,000 is greater than the confidence interval of 84,000, the estimated fall in unemployment is said to be “statistically significant”; we can be confident that there has been a fall in unemployment.
 
 ### Working with uncertain estimates
 
 In general, changes in the numbers (and especially the rates) reported in this Statistical Bulletin between three month periods are small, and are not usually greater than the level that is explainable by sampling variability. In practice, this means that small, short-term movements in reported rates (for example within +/- 0.3 percentage points) should be treated as indicative, and considered alongside medium and long-term patterns in the series and corresponding movements in administrative sources, where available, to give a fuller picture.
 
-### Seasonal adjustment and uncertainty 
+### Seasonal adjustment and uncertainty
 
 Like many economic indicators, the labour market is affected by factors that tend to occur at around the same time every year; for example school leavers entering the labour market in July and whether Easter falls in March or April. In order to compare movements other than annual changes in labour market statistics, such as since the previous quarter or since the previous month, the data are seasonally adjusted to remove the effects of seasonal factors and the arrangement of the calendar. All estimates discussed in this Statistical Bulletin are seasonally adjusted except where otherwise stated. While seasonal adjustment is essential to allow for robust comparisons through time, it is not possible to estimate uncertainty measures for the seasonally adjusted series.
 
@@ -802,20 +802,20 @@ Sampling variability information for **Average Weekly Earnings** growth rates ar
 
 Further information about the Labour Force Survey (LFS) is available from:
 
-- the [LFS User Guide](http://www.ons.gov.uk/ons/guide-method/method-quality/specific/labour-market/labour-market-statistics/index.html "LFS User Guide"), and 
+- the [LFS User Guide](http://www.ons.gov.uk/ons/guide-method/method-quality/specific/labour-market/labour-market-statistics/index.html "LFS User Guide"), and
 - [LFS Performance and Quality Monitoring Reports](http://www.ons.gov.uk/ons/guide-method/method-quality/specific/labour-market/labour-force-survey/index.html "LFS Performance and Quality Monitoring Reports").
 
 ## [accordion] Background notes and methodology
-1. **This month’s release**   
+1. **This month’s release**
 A new data table (Excel spreadsheet) has been introduced providing an indicative representation of the Claimant Count including experimental Universal Credit statistics. See Background Note 4 below for further details.
 
-2. **Next month’s release**     
+2. **Next month’s release**
 There will be revisions to estimates of the proportion of the population (aged from 16 to 64) claiming key out of work benefits for 2013, published at Table 25 of the pdf version of this Statistical Bulletin and at [data table BEN01 (59 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/july-2014/table-ben01.xls "data table BEN01"). These revisions will result from taking on board the latest population estimates.
 
-3. **Revisions to Labour Force Survey estimates planned for October 2014**     
+3. **Revisions to Labour Force Survey estimates planned for October 2014**
 ONS currently plans to revise estimates derived from the Labour Force Survey (including estimates of employment, unemployment and economic inactivity), in the October 2014 edition of this Statistical Bulletin, as a result of taking on board population estimates from the 2011 Census. Estimates will be revised back to June to August 2001. ONS plans to publish an article in late September 2014 which will include details of the back revisions to the headline estimates of employment, unemployment and economic inactivity.
 
-4. **Introduction of Universal Credit**  
+4. **Introduction of Universal Credit**
 The Pathfinder for Universal Credit started on 29 April 2013 with the introduction of this new benefit in one Jobcentre Plus office (**Ashton under Lyne**). The pathfinder was extended to a second Jobcentre Plus office (**Wigan**) on 1 July 2013 and two further offices (**Oldham** and **Warrington**) joined the pathfinder on 29 July 2013.
 
 The progressive national roll out of Universal Credit across the rest of the UK commenced with **Hammersmith** Jobcentre Plus office on 28 October 2013 and was followed by:
@@ -840,7 +840,7 @@ In this release, ONS is publishing a new spreadsheet, [data table CLA03 (66.5 Kb
 
 The absence of Universal Credit claimants is expected to have a small effect on the Claimant Count from May 2013. This assessment reflects the information published at [data table CLA03 (66.5 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/july-2014/table-prod01.xls "data table CLA03").
 
-5. **Publication policy** 
+5. **Publication policy**
 Publication dates up to the end of 2015 are available in the Background Notes to the [June 2014 edition of this Statistical Bulletin](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/june-2014/statistical-bulletin.html "June 2014 edition of this Statistical Bulletin").
 
 A list of the job titles of those given [pre-publication access](http://www.ons.gov.uk/ons/rel/lms/labour-market-statistics/july-2014/pre-release-list.html "pre-publication access") to the contents of this Statistical Bulletin is available on the website.
@@ -858,9 +858,8 @@ Designation can be broadly interpreted to mean that the statistics:
 
 Once statistics have been designated as National Statistics it is a statutory requirement that the Code of Practice shall continue to be observed.
 
-## [accordion] References
+## [accordion] References 
 This information will not be available in the prototype, however in the future all references related to this statistical bulletin will appear here.
 
 ## [accordion] Footnotes
 This information will not be available in the prototype, however in the future the footnotes related to this statistical bulletin will appear here.
-

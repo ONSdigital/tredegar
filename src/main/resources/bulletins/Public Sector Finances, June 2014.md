@@ -1,8 +1,8 @@
-﻿Theme: Economy
+Theme: Economy
 Level 2: Government, Public Sector and Taxes
 Level 3: Public Sector Finance
 Summary: A presentational framework for the headline measures of Public Sector Finance Statistics (net borrowing, net cash requirement and net debt) is explained in this release. This includes the reasons for changes in net borrowing (deficit) and debt.
-Headline 1: This is the first estimate of the June 2014 public sector finances (financial year 2014/15). Financial year 2013/14 data have also been updated. These estimates will continue to be revised as more data become available.
+Headline 1: This is the first estimate of the June 2014 public sector finances (financial year 2014/15). Financial year 2013/14 data have also been updated.
 Headline 2: For the financial year 2013/14, PSNB ex was £93.7 billion. This was £13.0 billion higher than the same period in 2012/13.
 Headline 3: During 2013/14, £31.1 billion was transferred from the APF to HM Treasury. Of this amount, £12.2 billion impacted on net borrowing.
 Contact name: Gareth Clancy
@@ -52,7 +52,7 @@ The net cash requirement is a measure of how much money the government (or publi
 Feedback on the content of the bulletin is welcome and should be sent to psa@ons.gsi.gov.uk
 ### Diagram 1: Net Borrowing and Net Debt Transactions (excluding public sector banks) (£ billion) April 2014 - June 2014 (financial year-to-date)
 [![Net Borrowing and Net Debt Transactions (excluding public sector banks) (£ billion) April 2014 - June 2014 (financial year-to-date)](http://www.ons.gov.uk/ons/resources/transactionsdiagramjul14v1_tcm77-371084.png)](http://www.ons.gov.uk/ons/resources/transactionsdiagramjul14v1_tcm77-371084.png "Net Borrowing and Net Debt Transactions (excluding public sector banks) (£ billion) April 2014 - June 2014 (financial year-to-date)")
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/psa/public-sector-finances/june-2014/chd---transactions-table.xls "XLS format") (287.5 Kb)
 
 ## Net debt and borrowing outturn compared with OBR forecast
@@ -69,7 +69,7 @@ Caution should be taken when comparing outturn public finances data with OBR for
 [![Cumulative public sector net borrowing by month)](http://www.ons.gov.uk/ons/resources/psnetborrowing1a_tcm77-371922.png)](http://www.ons.gov.uk/ons/resources/psnetborrowing1a_tcm77-371922.png "Cumulative public sector net borrowing by month")
 
 Source: Office for National Statistics
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/psa/public-sector-finances/june-2014/chd---transaction-table.xls "XLS format") (492 Kb)
 
 Figure 1b shows PSNB ex but with the effects of the transfer from the Royal Mail Pension Plan (April 2012) and the transfers from the APF removed. Again the OBR forecast for this measure is presented for the year end position.
@@ -82,7 +82,7 @@ Source: Office for National Statistics
 ##### Notes:
 1. RM = Royal Mail Pension Plan; APF = Bank of England Asset Purchase Facility Fund
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/psa/public-sector-finances/june-2014/chd---transaction-table.xls "XLS format") (492 Kb)
 
 It is important to remember that initial outturn estimates early in the financial year are provisional and can be subject to sizeable revisions in later months. In year timing effects also mean caution is needed when using year-to-date estimates for series such as net borrowing to predict year end positions.
@@ -100,7 +100,7 @@ Source: Office for National Statistics
 ##### Notes:
 1. RM = Royal Mail Pension Plan; APF = Bank of England Asset Purchase Facility Fund
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/psa/public-sector-finances/june-2014/chd---transaction-table.xls "XLS format") (492 Kb)
 
 PSNB ex peaked in 2009/10 but has reduced since then. However, in 2013/14 net borrowing remained higher than before 2007/08 and the financial shock.
@@ -144,7 +144,7 @@ In the financial year 2012/13  the following events reduced CGNCR:
 - the 4G Spectrum sale, and
 - the transfers between the APF and government.
 
-Although the central government net cash requirement is the largest part of the general government net cash requirement, the public sector net cash requirement can be very different. The reason is that the public sector net cash requirement includes the net cash requirement of the public sector banking groups. In recent years, the public sector banking groups have recorded large cash surpluses which, have had a substantial impact on the public sector net cash requirement. 
+Although the central government net cash requirement is the largest part of the general government net cash requirement, the public sector net cash requirement can be very different. The reason is that the public sector net cash requirement includes the net cash requirement of the public sector banking groups. In recent years, the public sector banking groups have recorded large cash surpluses which, have had a substantial impact on the public sector net cash requirement.
 ## Public sector net debt
 Figure 3 shows public sector net debt excluding financial interventions (PSND ex) increased by close to £400 billion between 2008/09 and 2010/11 as changes in the economic environment had an impact on public sector net borrowing excluding financial interventions (PSNB ex). Since then it has continued to increase but at a slower rate.
 
@@ -158,7 +158,7 @@ At the end of 2013/14 PSND ex was £1,273.4 billion, an increase of £88.0 billi
 [![Public sector net debt, financial year)](http://www.ons.gov.uk/ons/resources/psnetdebthistory_tcm77-371959.png)](http://www.ons.gov.uk/ons/resources/psnetdebthistory_tcm77-371959.png "Public sector net debt, financial year")
 Source: Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/psa/public-sector-finances/june-2014/chd---transaction-table.xls "XLS format") (492 Kb)
 
 Net debt, for the purposes of UK fiscal policy, is defined as total gross financial liabilities less liquid financial assets, where liquid assets are cash and short-term assets which can be realised for cash at short notice and without significant loss. These liquid assets mainly comprise foreign exchange reserves and bank deposits. The net debt is a cash measure which is priced at nominal value (ie.  the cost to the issuer at redemption) and consolidated (ie. intra-sector holdings of liabilities/assets are removed.
@@ -172,7 +172,7 @@ Source: Office for National Statistics
 ##### Notes:
 1. Current budget is receipts minus expenditure but also includes the effects of depreciation
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/psa/public-sector-finances/june-2014/chd---transaction-table.xls "XLS format") (492 Kb)
 
 In June 2014, the central government current budget (CGCB) was in deficit (expenditure was greater than receipts) by £10.5 billion. In recent years the current budget has been in deficit in most months. January and July tend to be surplus months as these are the two months with the highest receipts.
@@ -185,7 +185,7 @@ In June 2014, accrued current receipts were £44.1 billion, £1.9 billion lower 
 
 Source: Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/psa/public-sector-finances/june-2014/chd---transaction-table.xls "XLS format") (492 Kb)
 
 The main changes on the receipts side compared with last year were:
@@ -202,7 +202,7 @@ For the financial year 2013/14, central government accrued current receipts were
 
 Dividends from the APF increased current receipts by £12.2 billion in the financial year 2013/14.  In the financial year 2012/13 the current receipts were also increased by dividend payments, in this case £2.3 billion of dividends from the Special Liquidity Scheme (SLS) and a £6.4 billion APF transfer.
 
-Without these payments 2013/14 central government accrued current receipts were £564.7 billion. This is £22.6 billion, higher than the previous financial year. 
+Without these payments 2013/14 central government accrued current receipts were £564.7 billion. This is £22.6 billion, higher than the previous financial year.
 ### Current expenditure
 
 In June 2014, central government accrued current expenditure was £53.9 billion, £2.0 billion higher than June 2013.
@@ -218,7 +218,7 @@ From the start of 2013/14 local authorities retained half of the business rates 
 
 Source: Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/psa/public-sector-finances/june-2014/chd---transaction-table.xls "XLS format") (492 Kb)
 
 Changes in debt interest payments can impact central government current expenditure trends, so it can be informative to consider the total central government current expenditure excluding debt interest payments.
@@ -234,27 +234,27 @@ The increase in year-on-year spending on net social benefits is mainly due to th
 
 In June 2014, central government net investment was £2.1 billion, which was £0.7 billion higher than in June 2013. Central government net investment is difficult to predict in terms of its monthly profile as it includes some large capital grants (such as those to local authorities and education institutions), and can include some large capital acquisitions or disposals, all of which vary from year to year. One observable trend shown by Figure 7 is that net investment in the last quarter of the financial year is usually markedly higher than that in the previous three quarters.
 
-In the financial year 2013/14 central government net investment was £27.2 billion, which was £30.7 billion higher than the same period the previous year. 
+In the financial year 2013/14 central government net investment was £27.2 billion, which was £30.7 billion higher than the same period the previous year.
 ### Figure 7: Central government net investment by month
 ##### All data excluding the temporary effects of financial interventions
 [![Central government net investment by month)](http://www.ons.gov.uk/ons/resources/cgnetinvestment_tcm77-371937.png)](http://www.ons.gov.uk/ons/resources/cgnetinvestment_tcm77-371937.png "Central government net investment by month")
 
 Source: Office for National Statistics
 
-##### Download chart: 
+##### Download chart:
 ![XLS](http://www.ons.gov.uk/ons/resources/iconxls_tcm77-30132.gif "XLS")  [XLS format](http://www.ons.gov.uk/ons/rel/psa/public-sector-finances/june-2014/chd---transaction-table.xls "XLS format") (492 Kb)
 
 Central government net investment includes the direct acquisition minus disposal of capital assets (such as buildings, vehicles, computing infrastructure) by central government. It also includes capital grants to and from the private sector and other parts of the public sector. Capital grants are varied in nature and cover payments made to assist in the acquisition of a capital asset, payments made as a result of the disposal of a capital asset, transfers in ownership of a capital asset and the unreciprocated cancellation of a liability.
 ## Recent events and methodological changes
 ### Sovereign Sukuk
-In June 2014 the UK government sold £200 million Sovereign Sukuk, maturing in July 2019. Their classification and treatment in the public sector finances is currently being considered. 
+In June 2014 the UK government sold £200 million Sovereign Sukuk, maturing in July 2019. Their classification and treatment in the public sector finances is currently being considered.
 
 ### Bank of England Asset Purchase Facility Fund
 The Chancellor announced on 9 November 2012 that it had been agreed with the Bank of England to transfer the excess cash in the Asset Purchase Facility Fund to the Exchequer.
 
 In June 2014, no cash was transferred from the Bank of England Asset Purchase Facility Fund to HM Treasury. The Bank of England entrepreneurial income for 2013/14 was calculated as £12.8 billion. This is the total amount of dividend transfers that can impact on net borrowing in 2014/15.
 
-The PSF review consultation concluded that transfers between the Asset Purchase Facility Fund and government would be within the PNSB ex measure boundary. This means the APF transfers to central government will not impact on PSNB ex following implementation of the PSF review in September 2014.  
+The PSF review consultation concluded that transfers between the Asset Purchase Facility Fund and government would be within the PNSB ex measure boundary. This means the APF transfers to central government will not impact on PSNB ex following implementation of the PSF review in September 2014.
 
 In 2012/13, there were £11.3 billion of transfers from the Asset Purchase Facility to HM Treasury. Of these, £6.4 billion affected PSNB ex.
 
@@ -267,7 +267,7 @@ On 17 September 2013 the UK Government began selling part of its shareholding in
 
 The first sale (17 September 2013) of a 6% stake (at 75p a share) raised £3.2 billion cash. The second sale (25/26 March 2014) of a 7.5% stake raised £4.2 billion in cash. These amounts were recorded as reductions in the central government net cash requirement for the relevant months.
 
-The public sector excluding financial interventions measures take account of the necessary transactions related to the Lloyds share sales. Implementation of changes to the public sector “including financial interventions” estimates are planned for August 2014. The classification decision of Lloyds following the share sales was published on 30 April 2014. 
+The public sector excluding financial interventions measures take account of the necessary transactions related to the Lloyds share sales. Implementation of changes to the public sector “including financial interventions” estimates are planned for August 2014. The classification decision of Lloyds following the share sales was published on 30 April 2014.
 
 ### Revenue Support Grant
 As happened last year, the bulk of the 2014/15 Revenue Support Grant has been paid by central government to local government in April, with the remaining balance due to be paid in February and March. This makes comparisons between 2014/15 and 2013/14 more informative, and avoids the issues of comparing monthly growths between 2013/14 and 2012/13 (when equivalent grants had a much flatter profile).
@@ -304,7 +304,7 @@ Revisions to public sector net borrowing (excluding the temporary effects of fin
 
 ### Central Government
 
-Revisions to central government net borrowing (CGNB) are confined to the financial year 2013/14 and the year-to-date 2014/15 (April to May 2014). 
+Revisions to central government net borrowing (CGNB) are confined to the financial year 2013/14 and the year-to-date 2014/15 (April to May 2014).
 
 In the financial year 2013/14, CGNB was revised down by £1.1 billion, while in the period April to May 2014 CGNB was revised up by £0.5 billion.
 
@@ -335,7 +335,7 @@ The Review of Public Sector Finance Statistics proposed improvements to the pres
 - new ‘ex-measures’ that only exclude the debt and borrowing of the public sector banks,
 - introducing consistent treatment of shares within the Public Sector Finance statistics. In particular, the Government’s shares in Royal Bank of Scotland and Lloyds Banking Group would no longer be treated as liquid assets.
 
-Both the PSF review and ESA10 will lead to changes in public sector finance estimates in September 2014. These changes are being implemented at the same time to avoid unhelpful multiple revisions. 
+Both the PSF review and ESA10 will lead to changes in public sector finance estimates in September 2014. These changes are being implemented at the same time to avoid unhelpful multiple revisions.
 
 To help users manage this change, this publication includes Table 5 which shows the estimated impact of the ESA 2010 changes and the PSF Review on key measures in the public sector finances. Time series data from 1997 onwards, on a quarterly and monthly basis, are available in the reference tables published with this bulletin.
 
@@ -395,7 +395,7 @@ Tax receipts data published in this bulletin are presented in terms of broad tax
 In-year quarterly data are also published by HM Treasury. The data are accessible from HM Treasury's website.
 OSCAR - Online System for Central Accounting and Reporting
 
-In June 2010, HM Treasury published as part of the Government transparency agenda, raw data from the COINS database (the predecessor to OSCAR) for the years 2005/06 to 2009/10. From September 2012 onwards the data releases have been made from OSCAR the new accounting system. 
+In June 2010, HM Treasury published as part of the Government transparency agenda, raw data from the COINS database (the predecessor to OSCAR) for the years 2005/06 to 2009/10. From September 2012 onwards the data releases have been made from OSCAR the new accounting system.
 
 Accuracy
 
@@ -425,7 +425,7 @@ National Non-Domestic Rates (business rates)
 
 In the financial year 2013/14 there was a change in the way national non-domestic rates were collected and re-distributed to local government.  However, because the transactions take place between central and local government the impact on the overall public sector finances was, and will continue to be neutral.
 
-The profile of the payments from central government to local government was previously relatively stable across the financial year. Under the new method some of the money is now transferred at the beginning and end of the financial year. 
+The profile of the payments from central government to local government was previously relatively stable across the financial year. Under the new method some of the money is now transferred at the beginning and end of the financial year.
 A further recent development which is expected to reduce the size of local government data revisions and improve the reliability of in-year local government data is the introduction of the Quarterly Revenue Outturn data collection by the Department for Communities and Local Government. These data, first collected during 2011/12, provide quarterly updates for the main aspects of local government accrued current expenditure. The Public Sector Finances bulletin has used these data in its estimates of in-year local government net borrowing since January 2012.
 
 One indication of the reliability of the key indicators in this bulletin can be obtained by monitoring the size of revisions. Previously, analyses of revisions to the wider measures of public sector current budget, net borrowing, and net debt that include the impacts of financial interventions were presented in this bulletin. The sizeable revisions resulting from the replacement of imputed data by hard data for the public sector banking groups has meant that these revisions have become more prone to be statistically significant when tested. Given that the primary focus of users is on the ex-measures, it would be preferable to analyse and present revisions of these in the bulletin. As yet sufficiently long monthly time series are not available for the ex-measures to enable standard revisions analysis to be conducted on them.
@@ -444,11 +444,11 @@ These National Statistics are produced to high professional standards and releas
 
 Special arrangements apply to the Public Sector Finances, which is produced jointly with HM Treasury. A list of ministers and officials with pre-publication access to the contents of this bulletin is available on request. In addition some members of the Treasury’s Fiscal Statistics and Policy (FSP) team will have access to them at all stages, because they are involved in the compilation or quality assurance of the data, and some members of the Treasury’s Communications team will see the bulletin, but only within the 24 hour pre-release period, because they place the data on the website.
 The United Kingdom Statistics Authority has designated these statistics as National Statistics, in accordance with the Statistics and Registration Service Act 2007 and signifying compliance with the Code of Practice for Official Statistics.
-Designation can be broadly interpreted to mean that the statistics: 
-- meet identified user needs; 
-- are well explained and readily accessible; 
-- are produced according to sound methods; and 
-- are managed impartially and objectively in the public interest. 
+Designation can be broadly interpreted to mean that the statistics:
+- meet identified user needs;
+- are well explained and readily accessible;
+- are produced according to sound methods; and
+- are managed impartially and objectively in the public interest.
 
 Once statistics have been designated as National Statistics it is a statutory requirement that the Code of Practice shall continue to be observed.
 

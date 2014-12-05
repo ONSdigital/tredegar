@@ -4,7 +4,7 @@ Level 3: Life Expectancies
 Summary: 2010-12 male and female period life expectancy at birth and at age 65 for the UK and local areas within the four constituent countries.
 Headline 1: The inequality in life expectancy between the local areas with the highest and lowest figures decreased for only males at birth between 2000–02 and 2010–12.
 Headline 2: The majority of local areas in Scotland (72%) were in the fifth of local areas in the UK with the lowest male and female life expectancy at birth in 2010–12.
-Headline 3: None of the local areas in Scotland and Wales and only one in Northern Ireland were in the fifth of areas with the highest male and female life expectancy at birth in UK.
+Headline 3: None of the local areas in Scotland and Wales and only one in Northern Ireland were in the fifth of areas with the highest male and female life expectancy at birth.
 Contact name: Olugbenga Olatunde
 Contact email: mortality@ons.gsi.gov.uk
 

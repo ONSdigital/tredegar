@@ -3,7 +3,7 @@ Level 2: Population and migration
 Level 3: Migration within the UK
 Summary: Summarised statistics on residential moves between local authorities and regions in England and Wales and the UK.
 Headline 1: There were an estimated 2.71 million residents moving between local authorities in England and Wales between July 2012 and June 2013.
-Headline 2: 53,200 people moved from England and Wales to Northern Ireland and Scotland; 46,800 moved from Northern Ireland and Scotland to England and Wales. This means there was a net internal migration loss for England and Wales of 6,400 people.
+Headline 2: 53,200 people moved from England and Wales to Northern Ireland and Scotland; 46,800 moved from Northern Ireland and Scotland to England and Wales.
 Headline 3: The age with the highest proportion of movers was 19. Of all the 19 year olds resident in England and Wales as at mid-2013, approximately 1 in 5 had moved within the UK during the previous 12 months.
 Contact name: Andrew Nash
 Contact email: migstatsunit@ons.gsi.gov.uk
