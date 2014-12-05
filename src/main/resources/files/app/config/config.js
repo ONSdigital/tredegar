@@ -17,7 +17,7 @@
 
 	angular.module('onsAppConfig', [])
 		.config(['$locationProvider', '$httpProvider', '$logProvider', GeneralConfiguration])
-		.run(['$location', '$http', '$rootScope', 'DSCacheFactory', '$cacheFactory', '$log', RunConfiguration])
+		.run(['$location', '$http', '$rootScope', '$routeParams', 'DSCacheFactory', '$cacheFactory', '$log', RunConfiguration])
 
 
 	function GeneralConfiguration($locationProvider, $httpProvider, $logProvider) {
@@ -26,7 +26,7 @@
 		$logProvider.debugEnabled(onsAlphaConfiguration.debugEnabled)
 	}
 
-	function RunConfiguration($location, $http, $rootScope, DSCacheFactory, $cacheFactory, $log) {
+	function RunConfiguration($location, $http, $rootScope, $routeParams, DSCacheFactory, $cacheFactory, $log) {
 		$rootScope.onsAlphaConfiguration = onsAlphaConfiguration
 
 		configureCache()
@@ -35,6 +35,11 @@
 		function configureGoogleAnalytics() {
 			$rootScope.$on('$routeChangeSuccess', function() {
 				var path = $location.path()
+				var searchTerm = $routeParams.searchTerm
+				if(searchTerm) {
+					//I a search is made attach it as a get parameter to the url so that google can grab search terms
+					path += '?q=' +searchTerm 
+				}
 				ga('send', 'pageview', path);
 				$log.debug('Google Analytics pageview sent :', path)
 			})
