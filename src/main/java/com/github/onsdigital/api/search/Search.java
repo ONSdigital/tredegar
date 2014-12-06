@@ -45,15 +45,6 @@ public class Search {
 
 	private Object search(String query, int page, String[] types) throws Exception {
 
-		/*
-		 * Search uses a number of steps to discover any appropriates matches:-
-		 * 1. Search core content types of home pages, bulletins etc. 2. If
-		 * nothing found then, and only then, search for single timeseries for
-		 * cdid search 3. If still no result, then use a 'term' suggestion, that
-		 * catches possible typos
-		 */
-		// don't use naturalLanguage for initial search so we get PHRASE_PREFIX
-		// capability
 		AggregatedSearchResult searchResult = SearchHelper.search(query, page, types);
 		if (searchResult.getNumberOfResults() == 0 && types == null) {
 			System.out.println("Attempting search against timeseries as no results found for: " + query);
@@ -103,7 +94,9 @@ public class Search {
 		if (query.length() > 100) {
 			throw new RuntimeException("Search query contains too many characters");
 		}
-		return query;
+		String sanitizedQuery = query.replaceAll("[^a-zA-Z0-9 ]+", "");
+
+		return sanitizedQuery;
 	}
 
 }
