@@ -159,7 +159,7 @@
 			</plugin>
 
 			<!-- An assembly that includes all dependencies for deployment: -->
-			<plugin>
+			<!-- <plugin>
 				<artifactId>maven-assembly-plugin</artifactId>
 				<version>2.4.1</version>
 				<configuration>
@@ -183,7 +183,7 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin>
+			</plugin> -->
 
 			<!-- A folder of dependencies is used in development when reloading classes: -->
 			<plugin>
