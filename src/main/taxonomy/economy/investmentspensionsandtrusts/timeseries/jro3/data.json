@@ -1,0 +1,116 @@
+{
+  "cdid": "JRO3",
+  "note1": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "note2": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "unit": "",
+  "source": "Office for National Statistics",
+  "nationalStatistic": false,
+  "years": [
+    {
+      "date": "2000",
+      "value": "2598",
+      "year": "2000",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2001",
+      "value": "3050",
+      "year": "2001",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2002",
+      "value": "1775",
+      "year": "2002",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2003",
+      "value": "3089",
+      "year": "2003",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2004",
+      "value": "10235",
+      "year": "2004",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2005",
+      "value": "22157",
+      "year": "2005",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2006",
+      "value": "24357",
+      "year": "2006",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2007",
+      "value": "29789",
+      "year": "2007",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2008",
+      "value": "35194",
+      "year": "2008",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2009",
+      "value": "61862",
+      "year": "2009",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2010",
+      "value": "99420",
+      "year": "2010",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2011",
+      "value": "170170",
+      "year": "2011",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2012",
+      "value": "186184",
+      "year": "2012",
+      "sourceDataset": "MQ5"
+    }
+  ],
+  "quarters": [],
+  "months": [],
+  "relatedBulletins": [
+    "/economy/investmentspensionsandtrusts/bulletins/foreigndirectinvestmentinvolvingukcompanies2012ma4"
+  ],
+  "relatedTimeseries": [],
+  "sourceDatasets": [
+    "MQ5"
+  ],
+  "type": "timeseries",
+  "name": "PEN: BAL: Derivative assets: UK counterparties",
+  "uri": "/economy/investmentspensionsandtrusts/timeseries/jro3",
+  "fileName": "jro3",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Investments, pensions and trusts",
+      "fileName": "investmentspensionsandtrusts",
+      "breadcrumb": []
+    }
+  ]
+}

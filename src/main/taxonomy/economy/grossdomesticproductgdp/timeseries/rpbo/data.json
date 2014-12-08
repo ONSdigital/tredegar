@@ -1,0 +1,632 @@
+{
+  "cdid": "RPBO",
+  "note1": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "note2": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "unit": "",
+  "source": "Office for National Statistics",
+  "nationalStatistic": false,
+  "years": [
+    {
+      "date": "1997",
+      "value": "140792",
+      "year": "1997",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "1998",
+      "value": "138543",
+      "year": "1998",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "1999",
+      "value": "129411",
+      "year": "1999",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2000",
+      "value": "141619",
+      "year": "2000",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2001",
+      "value": "132047",
+      "year": "2001",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2002",
+      "value": "158808",
+      "year": "2002",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2003",
+      "value": "172258",
+      "year": "2003",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2004",
+      "value": "181997",
+      "year": "2004",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2005",
+      "value": "193776",
+      "year": "2005",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2006",
+      "value": "193937",
+      "year": "2006",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2007",
+      "value": "201896",
+      "year": "2007",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2008",
+      "value": "212001",
+      "year": "2008",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2009",
+      "value": "188894",
+      "year": "2009",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2010",
+      "value": "217044",
+      "year": "2010",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2011",
+      "value": "236823",
+      "year": "2011",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2012",
+      "value": "209911",
+      "year": "2012",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2013",
+      "value": "205003",
+      "year": "2013",
+      "sourceDataset": "QNA"
+    }
+  ],
+  "quarters": [
+    {
+      "date": "1997 Q1",
+      "value": "34873",
+      "year": "1997",
+      "quarter": "Q1",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "1997 Q2",
+      "value": "35223",
+      "year": "1997",
+      "quarter": "Q2",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "1997 Q3",
+      "value": "36070",
+      "year": "1997",
+      "quarter": "Q3",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "1997 Q4",
+      "value": "34626",
+      "year": "1997",
+      "quarter": "Q4",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "1998 Q1",
+      "value": "33103",
+      "year": "1998",
+      "quarter": "Q1",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "1998 Q2",
+      "value": "35991",
+      "year": "1998",
+      "quarter": "Q2",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "1998 Q3",
+      "value": "31727",
+      "year": "1998",
+      "quarter": "Q3",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "1998 Q4",
+      "value": "37722",
+      "year": "1998",
+      "quarter": "Q4",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "1999 Q1",
+      "value": "38980",
+      "year": "1999",
+      "quarter": "Q1",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "1999 Q2",
+      "value": "26689",
+      "year": "1999",
+      "quarter": "Q2",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "1999 Q3",
+      "value": "29851",
+      "year": "1999",
+      "quarter": "Q3",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "1999 Q4",
+      "value": "33891",
+      "year": "1999",
+      "quarter": "Q4",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2000 Q1",
+      "value": "33538",
+      "year": "2000",
+      "quarter": "Q1",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2000 Q2",
+      "value": "37607",
+      "year": "2000",
+      "quarter": "Q2",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2000 Q3",
+      "value": "36471",
+      "year": "2000",
+      "quarter": "Q3",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2000 Q4",
+      "value": "34003",
+      "year": "2000",
+      "quarter": "Q4",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2001 Q1",
+      "value": "29401",
+      "year": "2001",
+      "quarter": "Q1",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2001 Q2",
+      "value": "35335",
+      "year": "2001",
+      "quarter": "Q2",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2001 Q3",
+      "value": "33929",
+      "year": "2001",
+      "quarter": "Q3",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2001 Q4",
+      "value": "33382",
+      "year": "2001",
+      "quarter": "Q4",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2002 Q1",
+      "value": "37034",
+      "year": "2002",
+      "quarter": "Q1",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2002 Q2",
+      "value": "38037",
+      "year": "2002",
+      "quarter": "Q2",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2002 Q3",
+      "value": "40159",
+      "year": "2002",
+      "quarter": "Q3",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2002 Q4",
+      "value": "43578",
+      "year": "2002",
+      "quarter": "Q4",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2003 Q1",
+      "value": "40640",
+      "year": "2003",
+      "quarter": "Q1",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2003 Q2",
+      "value": "41904",
+      "year": "2003",
+      "quarter": "Q2",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2003 Q3",
+      "value": "42091",
+      "year": "2003",
+      "quarter": "Q3",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2003 Q4",
+      "value": "47623",
+      "year": "2003",
+      "quarter": "Q4",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2004 Q1",
+      "value": "46257",
+      "year": "2004",
+      "quarter": "Q1",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2004 Q2",
+      "value": "47890",
+      "year": "2004",
+      "quarter": "Q2",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2004 Q3",
+      "value": "42390",
+      "year": "2004",
+      "quarter": "Q3",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2004 Q4",
+      "value": "45460",
+      "year": "2004",
+      "quarter": "Q4",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2005 Q1",
+      "value": "44854",
+      "year": "2005",
+      "quarter": "Q1",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2005 Q2",
+      "value": "51626",
+      "year": "2005",
+      "quarter": "Q2",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2005 Q3",
+      "value": "49299",
+      "year": "2005",
+      "quarter": "Q3",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2005 Q4",
+      "value": "47997",
+      "year": "2005",
+      "quarter": "Q4",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2006 Q1",
+      "value": "52783",
+      "year": "2006",
+      "quarter": "Q1",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2006 Q2",
+      "value": "47382",
+      "year": "2006",
+      "quarter": "Q2",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2006 Q3",
+      "value": "46468",
+      "year": "2006",
+      "quarter": "Q3",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2006 Q4",
+      "value": "47304",
+      "year": "2006",
+      "quarter": "Q4",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2007 Q1",
+      "value": "51279",
+      "year": "2007",
+      "quarter": "Q1",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2007 Q2",
+      "value": "48081",
+      "year": "2007",
+      "quarter": "Q2",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2007 Q3",
+      "value": "51749",
+      "year": "2007",
+      "quarter": "Q3",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2007 Q4",
+      "value": "50787",
+      "year": "2007",
+      "quarter": "Q4",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2008 Q1",
+      "value": "60682",
+      "year": "2008",
+      "quarter": "Q1",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2008 Q2",
+      "value": "54663",
+      "year": "2008",
+      "quarter": "Q2",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2008 Q3",
+      "value": "55847",
+      "year": "2008",
+      "quarter": "Q3",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2008 Q4",
+      "value": "40809",
+      "year": "2008",
+      "quarter": "Q4",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2009 Q1",
+      "value": "50013",
+      "year": "2009",
+      "quarter": "Q1",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2009 Q2",
+      "value": "41268",
+      "year": "2009",
+      "quarter": "Q2",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2009 Q3",
+      "value": "48527",
+      "year": "2009",
+      "quarter": "Q3",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2009 Q4",
+      "value": "49086",
+      "year": "2009",
+      "quarter": "Q4",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2010 Q1",
+      "value": "52902",
+      "year": "2010",
+      "quarter": "Q1",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2010 Q2",
+      "value": "51904",
+      "year": "2010",
+      "quarter": "Q2",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2010 Q3",
+      "value": "53271",
+      "year": "2010",
+      "quarter": "Q3",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2010 Q4",
+      "value": "58967",
+      "year": "2010",
+      "quarter": "Q4",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2011 Q1",
+      "value": "59998",
+      "year": "2011",
+      "quarter": "Q1",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2011 Q2",
+      "value": "58437",
+      "year": "2011",
+      "quarter": "Q2",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2011 Q3",
+      "value": "56981",
+      "year": "2011",
+      "quarter": "Q3",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2011 Q4",
+      "value": "61407",
+      "year": "2011",
+      "quarter": "Q4",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2012 Q1",
+      "value": "55228",
+      "year": "2012",
+      "quarter": "Q1",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2012 Q2",
+      "value": "50435",
+      "year": "2012",
+      "quarter": "Q2",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2012 Q3",
+      "value": "52276",
+      "year": "2012",
+      "quarter": "Q3",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2012 Q4",
+      "value": "51972",
+      "year": "2012",
+      "quarter": "Q4",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2013 Q1",
+      "value": "52055",
+      "year": "2013",
+      "quarter": "Q1",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2013 Q2",
+      "value": "58263",
+      "year": "2013",
+      "quarter": "Q2",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2013 Q3",
+      "value": "48104",
+      "year": "2013",
+      "quarter": "Q3",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2013 Q4",
+      "value": "46581",
+      "year": "2013",
+      "quarter": "Q4",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2014 Q1",
+      "value": "49267",
+      "year": "2014",
+      "quarter": "Q1",
+      "sourceDataset": "QNA"
+    },
+    {
+      "date": "2014 Q2",
+      "value": "51806",
+      "year": "2014",
+      "quarter": "Q2",
+      "sourceDataset": "QNA"
+    }
+  ],
+  "months": [],
+  "relatedBulletins": [
+    "/economy/grossdomesticproductgdp/bulletins/gdppreliminaryestimateq32014"
+  ],
+  "relatedTimeseries": [],
+  "sourceDatasets": [
+    "QNA",
+    "UKEA"
+  ],
+  "type": "timeseries",
+  "name": "PR: Uses: Balance Gross Prim Inc: B.5g: CP: SA £m",
+  "uri": "/economy/grossdomesticproductgdp/timeseries/rpbo",
+  "fileName": "rpbo",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Gross Domestic Product (GDP)",
+      "fileName": "grossdomesticproductgdp",
+      "breadcrumb": []
+    }
+  ]
+}

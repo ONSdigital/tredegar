@@ -1,0 +1,109 @@
+{
+  "cdid": "JVL8",
+  "note1": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "note2": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "unit": "",
+  "source": "Office for National Statistics",
+  "nationalStatistic": false,
+  "years": [],
+  "quarters": [
+    {
+      "date": "2014 Q2",
+      "value": "100",
+      "year": "2014",
+      "quarter": "Q2",
+      "sourceDataset": "MM22"
+    },
+    {
+      "date": "2014 Q3",
+      "value": "100",
+      "year": "2014",
+      "quarter": "Q3",
+      "sourceDataset": "MM22"
+    }
+  ],
+  "months": [
+    {
+      "date": "2014 FEB",
+      "value": "100.3",
+      "year": "2014",
+      "month": "February",
+      "sourceDataset": "MM22"
+    },
+    {
+      "date": "2014 MAR",
+      "value": "100.2",
+      "year": "2014",
+      "month": "March",
+      "sourceDataset": "MM22"
+    },
+    {
+      "date": "2014 APR",
+      "value": "100.1",
+      "year": "2014",
+      "month": "April",
+      "sourceDataset": "MM22"
+    },
+    {
+      "date": "2014 MAY",
+      "value": "100",
+      "year": "2014",
+      "month": "May",
+      "sourceDataset": "MM22"
+    },
+    {
+      "date": "2014 JUN",
+      "value": "99.9",
+      "year": "2014",
+      "month": "June",
+      "sourceDataset": "MM22"
+    },
+    {
+      "date": "2014 JUL",
+      "value": "99.8",
+      "year": "2014",
+      "month": "July",
+      "sourceDataset": "MM22"
+    },
+    {
+      "date": "2014 AUG",
+      "value": "100.1",
+      "year": "2014",
+      "month": "August",
+      "sourceDataset": "MM22"
+    },
+    {
+      "date": "2014 SEP",
+      "value": "100.2",
+      "year": "2014",
+      "month": "September",
+      "sourceDataset": "MM22"
+    }
+  ],
+  "relatedBulletins": [
+    "/economy/inflationandpriceindices/bulletins/consumerpriceinflationjune2014"
+  ],
+  "relatedTimeseries": [],
+  "sourceDatasets": [
+    "MM22"
+  ],
+  "type": "timeseries",
+  "name": "3091000000: Motorcycles",
+  "uri": "/economy/inflationandpriceindices/timeseries/jvl8",
+  "fileName": "jvl8",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Inflation and price indices",
+      "fileName": "inflationandpriceindices",
+      "breadcrumb": []
+    }
+  ]
+}

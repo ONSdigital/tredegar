@@ -1,0 +1,128 @@
+{
+  "cdid": "LDIL",
+  "note1": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "note2": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "unit": "",
+  "source": "Office for National Statistics",
+  "nationalStatistic": false,
+  "years": [
+    {
+      "date": "1994",
+      "value": "334",
+      "year": "1994",
+      "sourceDataset": "BERD"
+    },
+    {
+      "date": "1996",
+      "value": "296",
+      "year": "1996",
+      "sourceDataset": "BERD"
+    },
+    {
+      "date": "1997",
+      "value": "295",
+      "year": "1997",
+      "sourceDataset": "BERD"
+    },
+    {
+      "date": "1998",
+      "value": "322",
+      "year": "1998",
+      "sourceDataset": "BERD"
+    },
+    {
+      "date": "1999",
+      "value": "335",
+      "year": "1999",
+      "sourceDataset": "BERD"
+    },
+    {
+      "date": "2000",
+      "value": "374",
+      "year": "2000",
+      "sourceDataset": "BERD"
+    },
+    {
+      "date": "2001",
+      "value": "232",
+      "year": "2001",
+      "sourceDataset": "BERD"
+    },
+    {
+      "date": "2002",
+      "value": "273",
+      "year": "2002",
+      "sourceDataset": "BERD"
+    },
+    {
+      "date": "2005",
+      "value": "225",
+      "year": "2005",
+      "sourceDataset": "BERD"
+    },
+    {
+      "date": "2006",
+      "value": "185",
+      "year": "2006",
+      "sourceDataset": "BERD"
+    },
+    {
+      "date": "2007",
+      "value": "205",
+      "year": "2007",
+      "sourceDataset": "BERD"
+    },
+    {
+      "date": "2008",
+      "value": "238",
+      "year": "2008",
+      "sourceDataset": "BERD"
+    },
+    {
+      "date": "2009",
+      "value": "350",
+      "year": "2009",
+      "sourceDataset": "BERD"
+    },
+    {
+      "date": "2011",
+      "value": "426",
+      "year": "2011",
+      "sourceDataset": "BERD"
+    }
+  ],
+  "quarters": [],
+  "months": [],
+  "relatedBulletins": [
+    "/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/bulletins/ukgrossdomesticexpenditureonresearchanddevelopment2012"
+  ],
+  "relatedTimeseries": [],
+  "sourceDatasets": [
+    "BERD"
+  ],
+  "type": "timeseries",
+  "name": "R\u0026D BUS: Total intramural R\u0026D - civil - Other: Total",
+  "uri": "/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/timeseries/ldil",
+  "fileName": "ldil",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Government, public sector and taxes",
+      "fileName": "governmentpublicsectorandtaxes"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Research and Development expenditure",
+      "fileName": "researchanddevelopmentexpenditure",
+      "breadcrumb": []
+    }
+  ]
+}

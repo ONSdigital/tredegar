@@ -1,0 +1,101 @@
+{
+  "cdid": "L5OK",
+  "seasonalAdjustment": "Not seasonally adjusted",
+  "mainMeasure": "Consumer Prices Index including owner occupiers\u0027 housing costs (CPIH)",
+  "description": "Consumer price indices are important indicators of how the UK economy is performing.\n\nThe indices are used in many ways by the government, businesses, and society in general. They can affect interest rates, tax allowances, wages, state benefits, pensions, maintenance, contracts and many other payments. They also show the impact of inflation on family budgets and affect the value of the pound in your pocket.",
+  "note1": "The National Statistics status of CPIH has been discontinued pending work by ONS to investigate and improve the method for measuring owner occupiers\u0027 housing costs in this index\n",
+  "note2": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "unit": "",
+  "source": "Office for National Statistics",
+  "nationalStatistic": false,
+  "years": [
+    {
+      "date": "2005",
+      "value": "58",
+      "year": "2005",
+      "sourceDataset": "MM23"
+    },
+    {
+      "date": "2006",
+      "value": "58",
+      "year": "2006",
+      "sourceDataset": "MM23"
+    },
+    {
+      "date": "2007",
+      "value": "56",
+      "year": "2007",
+      "sourceDataset": "MM23"
+    },
+    {
+      "date": "2008",
+      "value": "56",
+      "year": "2008",
+      "sourceDataset": "MM23"
+    },
+    {
+      "date": "2009",
+      "value": "55",
+      "year": "2009",
+      "sourceDataset": "MM23"
+    },
+    {
+      "date": "2010",
+      "value": "58",
+      "year": "2010",
+      "sourceDataset": "MM23"
+    },
+    {
+      "date": "2011",
+      "value": "58",
+      "year": "2011",
+      "sourceDataset": "MM23"
+    },
+    {
+      "date": "2012",
+      "value": "53",
+      "year": "2012",
+      "sourceDataset": "MM23"
+    },
+    {
+      "date": "2013",
+      "value": "49",
+      "year": "2013",
+      "sourceDataset": "MM23"
+    },
+    {
+      "date": "2014",
+      "value": "50",
+      "year": "2014",
+      "sourceDataset": "MM23"
+    }
+  ],
+  "quarters": [],
+  "months": [],
+  "relatedBulletins": [
+    "/economy/inflationandpriceindices/bulletins/consumerpriceinflationjune2014"
+  ],
+  "relatedTimeseries": [],
+  "sourceDatasets": [
+    "MM23"
+  ],
+  "type": "timeseries",
+  "name": "CPIH : Weights (Parts Per 1000): Other Recreational Goods",
+  "uri": "/economy/inflationandpriceindices/timeseries/l5ok",
+  "fileName": "l5ok",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Inflation and price indices",
+      "fileName": "inflationandpriceindices",
+      "breadcrumb": []
+    }
+  ]
+}

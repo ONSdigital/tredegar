@@ -1,0 +1,92 @@
+{
+  "cdid": "B29C",
+  "note1": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "note2": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "unit": "",
+  "source": "Office for National Statistics",
+  "nationalStatistic": false,
+  "years": [
+    {
+      "date": "2004",
+      "value": "5259",
+      "year": "2004",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2005",
+      "value": "6112",
+      "year": "2005",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2006",
+      "value": "6549",
+      "year": "2006",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2007",
+      "value": "8577",
+      "year": "2007",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2008",
+      "value": "19691",
+      "year": "2008",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2009",
+      "value": "9935",
+      "year": "2009",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2010",
+      "value": "14629",
+      "year": "2010",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2011",
+      "value": "17357",
+      "year": "2011",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2012",
+      "value": "18296",
+      "year": "2012",
+      "sourceDataset": "PB"
+    }
+  ],
+  "quarters": [],
+  "months": [],
+  "relatedBulletins": [
+    "/economy/nationalaccounts/bulletins/balanceofpaymentsq12014"
+  ],
+  "relatedTimeseries": [],
+  "sourceDatasets": [
+    "PB"
+  ],
+  "type": "timeseries",
+  "name": "BoP IIP geog derivs liabilities HONG KONG NSA £m",
+  "uri": "/economy/nationalaccounts/timeseries/b29c",
+  "fileName": "b29c",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "National Accounts",
+      "fileName": "nationalaccounts",
+      "breadcrumb": []
+    }
+  ]
+}

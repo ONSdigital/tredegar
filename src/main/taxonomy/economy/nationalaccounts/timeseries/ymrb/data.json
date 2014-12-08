@@ -1,0 +1,104 @@
+{
+  "cdid": "YMRB",
+  "note1": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "note2": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "unit": "",
+  "source": "Office for National Statistics",
+  "nationalStatistic": false,
+  "years": [
+    {
+      "date": "2001",
+      "value": "13362",
+      "year": "2001",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2002",
+      "value": "15566",
+      "year": "2002",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2003",
+      "value": "15405",
+      "year": "2003",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2004",
+      "value": "16166",
+      "year": "2004",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2005",
+      "value": "19841",
+      "year": "2005",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2006",
+      "value": "17765",
+      "year": "2006",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2007",
+      "value": "32159",
+      "year": "2007",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2008",
+      "value": "28482",
+      "year": "2008",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2009",
+      "value": "35565",
+      "year": "2009",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2010",
+      "value": "31657",
+      "year": "2010",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2011",
+      "value": "44631",
+      "year": "2011",
+      "sourceDataset": "PB"
+    }
+  ],
+  "quarters": [],
+  "months": [],
+  "relatedBulletins": [
+    "/economy/nationalaccounts/bulletins/balanceofpaymentsq12014"
+  ],
+  "relatedTimeseries": [],
+  "sourceDatasets": [
+    "PB"
+  ],
+  "type": "timeseries",
+  "name": "BoP:IIP:Liabilities:Tot Portfolio Investment: Singapore",
+  "uri": "/economy/nationalaccounts/timeseries/ymrb",
+  "fileName": "ymrb",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "National Accounts",
+      "fileName": "nationalaccounts",
+      "breadcrumb": []
+    }
+  ]
+}

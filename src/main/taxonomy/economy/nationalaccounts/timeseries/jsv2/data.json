@@ -1,0 +1,216 @@
+{
+  "cdid": "JSV2",
+  "note1": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "note2": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "unit": "",
+  "source": "Office for National Statistics",
+  "nationalStatistic": false,
+  "years": [
+    {
+      "date": "2007",
+      "value": "646",
+      "year": "2007",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2008",
+      "value": "1373",
+      "year": "2008",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2009",
+      "value": "697",
+      "year": "2009",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2010",
+      "value": "864",
+      "year": "2010",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2011",
+      "value": "724",
+      "year": "2011",
+      "sourceDataset": "SDQ7"
+    }
+  ],
+  "quarters": [
+    {
+      "date": "2007 Q1",
+      "value": "133",
+      "year": "2007",
+      "quarter": "Q1",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2007 Q2",
+      "value": "111",
+      "year": "2007",
+      "quarter": "Q2",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2007 Q3",
+      "value": "87",
+      "year": "2007",
+      "quarter": "Q3",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2007 Q4",
+      "value": "315",
+      "year": "2007",
+      "quarter": "Q4",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2008 Q1",
+      "value": "464",
+      "year": "2008",
+      "quarter": "Q1",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2008 Q2",
+      "value": "344",
+      "year": "2008",
+      "quarter": "Q2",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2008 Q3",
+      "value": "208",
+      "year": "2008",
+      "quarter": "Q3",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2008 Q4",
+      "value": "357",
+      "year": "2008",
+      "quarter": "Q4",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2009 Q1",
+      "value": "136",
+      "year": "2009",
+      "quarter": "Q1",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2009 Q2",
+      "value": "244",
+      "year": "2009",
+      "quarter": "Q2",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2009 Q3",
+      "value": "132",
+      "year": "2009",
+      "quarter": "Q3",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2009 Q4",
+      "value": "185",
+      "year": "2009",
+      "quarter": "Q4",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2010 Q1",
+      "value": "165",
+      "year": "2010",
+      "quarter": "Q1",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2010 Q2",
+      "value": "244",
+      "year": "2010",
+      "quarter": "Q2",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2010 Q3",
+      "value": "234",
+      "year": "2010",
+      "quarter": "Q3",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2010 Q4",
+      "value": "221",
+      "year": "2010",
+      "quarter": "Q4",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2011 Q1",
+      "value": "162",
+      "year": "2011",
+      "quarter": "Q1",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2011 Q2",
+      "value": "200",
+      "year": "2011",
+      "quarter": "Q2",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2011 Q3",
+      "value": "170",
+      "year": "2011",
+      "quarter": "Q3",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2011 Q4",
+      "value": "192",
+      "year": "2011",
+      "quarter": "Q4",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2012 Q1",
+      "value": "197",
+      "year": "2012",
+      "quarter": "Q1",
+      "sourceDataset": "SDQ7"
+    }
+  ],
+  "months": [],
+  "relatedBulletins": [
+    "/economy/nationalaccounts/bulletins/balanceofpaymentsq12014"
+  ],
+  "relatedTimeseries": [],
+  "sourceDatasets": [
+    "SDQ7"
+  ],
+  "type": "timeseries",
+  "name": "Other capital expen net",
+  "uri": "/economy/nationalaccounts/timeseries/jsv2",
+  "fileName": "jsv2",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "National Accounts",
+      "fileName": "nationalaccounts",
+      "breadcrumb": []
+    }
+  ]
+}

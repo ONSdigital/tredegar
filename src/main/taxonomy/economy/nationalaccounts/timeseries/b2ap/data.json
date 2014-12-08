@@ -1,0 +1,92 @@
+{
+  "cdid": "B2AP",
+  "note1": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "note2": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "unit": "",
+  "source": "Office for National Statistics",
+  "nationalStatistic": false,
+  "years": [
+    {
+      "date": "2004",
+      "value": "225195",
+      "year": "2004",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2005",
+      "value": "261751",
+      "year": "2005",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2006",
+      "value": "280455",
+      "year": "2006",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2007",
+      "value": "474201",
+      "year": "2007",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2008",
+      "value": "1622151",
+      "year": "2008",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2009",
+      "value": "872840",
+      "year": "2009",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2010",
+      "value": "1183304",
+      "year": "2010",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2011",
+      "value": "1508671",
+      "year": "2011",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2012",
+      "value": "1197742",
+      "year": "2012",
+      "sourceDataset": "PB"
+    }
+  ],
+  "quarters": [],
+  "months": [],
+  "relatedBulletins": [
+    "/economy/nationalaccounts/bulletins/balanceofpaymentsq12014"
+  ],
+  "relatedTimeseries": [],
+  "sourceDatasets": [
+    "PB"
+  ],
+  "type": "timeseries",
+  "name": "BoP IIP geog derivs liabilities UNITED STATES NSA £m",
+  "uri": "/economy/nationalaccounts/timeseries/b2ap",
+  "fileName": "b2ap",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "National Accounts",
+      "fileName": "nationalaccounts",
+      "breadcrumb": []
+    }
+  ]
+}

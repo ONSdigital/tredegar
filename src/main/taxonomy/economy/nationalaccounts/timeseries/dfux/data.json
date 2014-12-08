@@ -1,0 +1,104 @@
+{
+  "cdid": "DFUX",
+  "note1": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "note2": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "unit": "",
+  "source": "Office for National Statistics",
+  "nationalStatistic": false,
+  "years": [
+    {
+      "date": "1998",
+      "value": "4.3",
+      "year": "1998",
+      "sourceDataset": "SRS"
+    },
+    {
+      "date": "1999",
+      "value": "11",
+      "year": "1999",
+      "sourceDataset": "SRS"
+    },
+    {
+      "date": "2000",
+      "value": "14.7",
+      "year": "2000",
+      "sourceDataset": "SRS"
+    },
+    {
+      "date": "2001",
+      "value": "11.1",
+      "year": "2001",
+      "sourceDataset": "SRS"
+    },
+    {
+      "date": "2002",
+      "value": "13.9",
+      "year": "2002",
+      "sourceDataset": "SRS"
+    },
+    {
+      "date": "2003",
+      "value": "16.5",
+      "year": "2003",
+      "sourceDataset": "SRS"
+    },
+    {
+      "date": "2004",
+      "value": "23",
+      "year": "2004",
+      "sourceDataset": "SRS"
+    },
+    {
+      "date": "2006",
+      "value": "35.4",
+      "year": "2006",
+      "sourceDataset": "SRS"
+    },
+    {
+      "date": "2008",
+      "value": "21.6",
+      "year": "2008",
+      "sourceDataset": "SRS"
+    },
+    {
+      "date": "2010",
+      "value": "26.9",
+      "year": "2010",
+      "sourceDataset": "SRS"
+    },
+    {
+      "date": "2012",
+      "value": "18.5",
+      "year": "2012",
+      "sourceDataset": "SRS"
+    }
+  ],
+  "quarters": [],
+  "months": [],
+  "relatedBulletins": [
+    "/economy/nationalaccounts/bulletins/balanceofpaymentsq12014"
+  ],
+  "relatedTimeseries": [],
+  "sourceDatasets": [
+    "SRS"
+  ],
+  "type": "timeseries",
+  "name": "SRS: Grossed: Non-Manufacturing shares owned by:Banks",
+  "uri": "/economy/nationalaccounts/timeseries/dfux",
+  "fileName": "dfux",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "National Accounts",
+      "fileName": "nationalaccounts",
+      "breadcrumb": []
+    }
+  ]
+}

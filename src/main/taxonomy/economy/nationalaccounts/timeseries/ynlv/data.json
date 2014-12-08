@@ -1,0 +1,110 @@
+{
+  "cdid": "YNLV",
+  "note1": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "note2": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "unit": "",
+  "source": "Office for National Statistics",
+  "nationalStatistic": false,
+  "years": [
+    {
+      "date": "2001",
+      "value": "32168",
+      "year": "2001",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2002",
+      "value": "31172",
+      "year": "2002",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2003",
+      "value": "34351",
+      "year": "2003",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2004",
+      "value": "38325",
+      "year": "2004",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2005",
+      "value": "53438",
+      "year": "2005",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2006",
+      "value": "64649",
+      "year": "2006",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2007",
+      "value": "69854",
+      "year": "2007",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2008",
+      "value": "74441",
+      "year": "2008",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2009",
+      "value": "59536",
+      "year": "2009",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2010",
+      "value": "65465",
+      "year": "2010",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2011",
+      "value": "62035",
+      "year": "2011",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2012",
+      "value": "64643",
+      "year": "2012",
+      "sourceDataset": "PB"
+    }
+  ],
+  "quarters": [],
+  "months": [],
+  "relatedBulletins": [
+    "/economy/nationalaccounts/bulletins/balanceofpaymentsq12014"
+  ],
+  "relatedTimeseries": [],
+  "sourceDatasets": [
+    "PB"
+  ],
+  "type": "timeseries",
+  "name": "BoP:IIP:Liabilities: Tot Oth Investment: Total Africa",
+  "uri": "/economy/nationalaccounts/timeseries/ynlv",
+  "fileName": "ynlv",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "National Accounts",
+      "fileName": "nationalaccounts",
+      "breadcrumb": []
+    }
+  ]
+}

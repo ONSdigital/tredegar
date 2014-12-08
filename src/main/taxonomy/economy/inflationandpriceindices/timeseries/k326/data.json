@@ -1,0 +1,74 @@
+{
+  "cdid": "K326",
+  "note1": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "note2": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "unit": "",
+  "source": "Office for National Statistics",
+  "nationalStatistic": false,
+  "years": [],
+  "quarters": [
+    {
+      "date": "2014 Q3",
+      "value": "100.5",
+      "year": "2014",
+      "quarter": "Q3",
+      "sourceDataset": "MM22"
+    }
+  ],
+  "months": [
+    {
+      "date": "2014 JUN",
+      "value": "100.5",
+      "year": "2014",
+      "month": "June",
+      "sourceDataset": "MM22"
+    },
+    {
+      "date": "2014 JUL",
+      "value": "100.5",
+      "year": "2014",
+      "month": "July",
+      "sourceDataset": "MM22"
+    },
+    {
+      "date": "2014 AUG",
+      "value": "100.5",
+      "year": "2014",
+      "month": "August",
+      "sourceDataset": "MM22"
+    },
+    {
+      "date": "2014 SEP",
+      "value": "100.5",
+      "year": "2014",
+      "month": "September",
+      "sourceDataset": "MM22"
+    }
+  ],
+  "relatedBulletins": [
+    "/economy/inflationandpriceindices/bulletins/consumerpriceinflationjune2014"
+  ],
+  "relatedTimeseries": [],
+  "sourceDatasets": [
+    "MM22"
+  ],
+  "type": "timeseries",
+  "name": "PPI:2660110000:Apparatus based on the use of X-rays or of alpha, beta or gamma r",
+  "uri": "/economy/inflationandpriceindices/timeseries/k326",
+  "fileName": "k326",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Inflation and price indices",
+      "fileName": "inflationandpriceindices",
+      "breadcrumb": []
+    }
+  ]
+}

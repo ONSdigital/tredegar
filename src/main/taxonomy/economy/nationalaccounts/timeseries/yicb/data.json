@@ -1,0 +1,104 @@
+{
+  "cdid": "YICB",
+  "note1": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "note2": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "unit": "",
+  "source": "Office for National Statistics",
+  "nationalStatistic": false,
+  "years": [
+    {
+      "date": "2001",
+      "value": "51968",
+      "year": "2001",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2002",
+      "value": "49219",
+      "year": "2002",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2003",
+      "value": "59945",
+      "year": "2003",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2004",
+      "value": "64660",
+      "year": "2004",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2005",
+      "value": "88412",
+      "year": "2005",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2006",
+      "value": "82218",
+      "year": "2006",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2007",
+      "value": "78222",
+      "year": "2007",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2008",
+      "value": "86495",
+      "year": "2008",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2009",
+      "value": "101590",
+      "year": "2009",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2010",
+      "value": "116157",
+      "year": "2010",
+      "sourceDataset": "PB"
+    },
+    {
+      "date": "2011",
+      "value": "116883",
+      "year": "2011",
+      "sourceDataset": "PB"
+    }
+  ],
+  "quarters": [],
+  "months": [],
+  "relatedBulletins": [
+    "/economy/nationalaccounts/bulletins/balanceofpaymentsq12014"
+  ],
+  "relatedTimeseries": [],
+  "sourceDatasets": [
+    "PB"
+  ],
+  "type": "timeseries",
+  "name": "BoP:IIP:Assets: Tot Portfolio Investment: Netherlands",
+  "uri": "/economy/nationalaccounts/timeseries/yicb",
+  "fileName": "yicb",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "National Accounts",
+      "fileName": "nationalaccounts",
+      "breadcrumb": []
+    }
+  ]
+}

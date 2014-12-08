@@ -1,0 +1,818 @@
+{
+  "cdid": "KPC4",
+  "note1": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "note2": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "unit": "",
+  "source": "Office for National Statistics",
+  "nationalStatistic": false,
+  "years": [
+    {
+      "date": "2008",
+      "value": "64.9",
+      "year": "2008",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2009",
+      "value": "83.6",
+      "year": "2009",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2010",
+      "value": "100",
+      "year": "2010",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2011",
+      "value": "118.1",
+      "year": "2011",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2012",
+      "value": "136.2",
+      "year": "2012",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2013",
+      "value": "157.2",
+      "year": "2013",
+      "sourceDataset": "DRSI"
+    }
+  ],
+  "quarters": [
+    {
+      "date": "2008 Q1",
+      "value": "56.7",
+      "year": "2008",
+      "quarter": "Q1",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2008 Q2",
+      "value": "63.3",
+      "year": "2008",
+      "quarter": "Q2",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2008 Q3",
+      "value": "68.1",
+      "year": "2008",
+      "quarter": "Q3",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2008 Q4",
+      "value": "72.1",
+      "year": "2008",
+      "quarter": "Q4",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2009 Q1",
+      "value": "76.5",
+      "year": "2009",
+      "quarter": "Q1",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2009 Q2",
+      "value": "80",
+      "year": "2009",
+      "quarter": "Q2",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2009 Q3",
+      "value": "85.8",
+      "year": "2009",
+      "quarter": "Q3",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2009 Q4",
+      "value": "91.9",
+      "year": "2009",
+      "quarter": "Q4",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2010 Q1",
+      "value": "90.4",
+      "year": "2010",
+      "quarter": "Q1",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2010 Q2",
+      "value": "94.8",
+      "year": "2010",
+      "quarter": "Q2",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2010 Q3",
+      "value": "104.1",
+      "year": "2010",
+      "quarter": "Q3",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2010 Q4",
+      "value": "110.7",
+      "year": "2010",
+      "quarter": "Q4",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2011 Q1",
+      "value": "112",
+      "year": "2011",
+      "quarter": "Q1",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2011 Q2",
+      "value": "112.6",
+      "year": "2011",
+      "quarter": "Q2",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2011 Q3",
+      "value": "120.6",
+      "year": "2011",
+      "quarter": "Q3",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2011 Q4",
+      "value": "127.2",
+      "year": "2011",
+      "quarter": "Q4",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2012 Q1",
+      "value": "130.6",
+      "year": "2012",
+      "quarter": "Q1",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2012 Q2",
+      "value": "134.8",
+      "year": "2012",
+      "quarter": "Q2",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2012 Q3",
+      "value": "136.7",
+      "year": "2012",
+      "quarter": "Q3",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2012 Q4",
+      "value": "142.6",
+      "year": "2012",
+      "quarter": "Q4",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2013 Q1",
+      "value": "150.4",
+      "year": "2013",
+      "quarter": "Q1",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2013 Q2",
+      "value": "154.2",
+      "year": "2013",
+      "quarter": "Q2",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2013 Q3",
+      "value": "159.4",
+      "year": "2013",
+      "quarter": "Q3",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2013 Q4",
+      "value": "164.8",
+      "year": "2013",
+      "quarter": "Q4",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2014 Q1",
+      "value": "166.2",
+      "year": "2014",
+      "quarter": "Q1",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2014 Q2",
+      "value": "176.4",
+      "year": "2014",
+      "quarter": "Q2",
+      "sourceDataset": "DRSI"
+    }
+  ],
+  "months": [
+    {
+      "date": "2008 JAN",
+      "value": "54.6",
+      "year": "2008",
+      "month": "January",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2008 FEB",
+      "value": "57.3",
+      "year": "2008",
+      "month": "February",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2008 MAR",
+      "value": "58.3",
+      "year": "2008",
+      "month": "March",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2008 APR",
+      "value": "61.8",
+      "year": "2008",
+      "month": "April",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2008 MAY",
+      "value": "62.3",
+      "year": "2008",
+      "month": "May",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2008 JUN",
+      "value": "65.4",
+      "year": "2008",
+      "month": "June",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2008 JUL",
+      "value": "65.4",
+      "year": "2008",
+      "month": "July",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2008 AUG",
+      "value": "68.3",
+      "year": "2008",
+      "month": "August",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2008 SEP",
+      "value": "70",
+      "year": "2008",
+      "month": "September",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2008 OCT",
+      "value": "69.4",
+      "year": "2008",
+      "month": "October",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2008 NOV",
+      "value": "71.2",
+      "year": "2008",
+      "month": "November",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2008 DEC",
+      "value": "75.1",
+      "year": "2008",
+      "month": "December",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2009 JAN",
+      "value": "76.2",
+      "year": "2009",
+      "month": "January",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2009 FEB",
+      "value": "76.6",
+      "year": "2009",
+      "month": "February",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2009 MAR",
+      "value": "76.8",
+      "year": "2009",
+      "month": "March",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2009 APR",
+      "value": "79.1",
+      "year": "2009",
+      "month": "April",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2009 MAY",
+      "value": "79.8",
+      "year": "2009",
+      "month": "May",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2009 JUN",
+      "value": "80.9",
+      "year": "2009",
+      "month": "June",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2009 JUL",
+      "value": "85.8",
+      "year": "2009",
+      "month": "July",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2009 AUG",
+      "value": "86.1",
+      "year": "2009",
+      "month": "August",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2009 SEP",
+      "value": "85.7",
+      "year": "2009",
+      "month": "September",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2009 OCT",
+      "value": "91.8",
+      "year": "2009",
+      "month": "October",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2009 NOV",
+      "value": "95.9",
+      "year": "2009",
+      "month": "November",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2009 DEC",
+      "value": "88.9",
+      "year": "2009",
+      "month": "December",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2010 JAN",
+      "value": "89.2",
+      "year": "2010",
+      "month": "January",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2010 FEB",
+      "value": "90.9",
+      "year": "2010",
+      "month": "February",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2010 MAR",
+      "value": "90.9",
+      "year": "2010",
+      "month": "March",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2010 APR",
+      "value": "93.5",
+      "year": "2010",
+      "month": "April",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2010 MAY",
+      "value": "95.6",
+      "year": "2010",
+      "month": "May",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2010 JUN",
+      "value": "95.3",
+      "year": "2010",
+      "month": "June",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2010 JUL",
+      "value": "100.2",
+      "year": "2010",
+      "month": "July",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2010 AUG",
+      "value": "106",
+      "year": "2010",
+      "month": "August",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2010 SEP",
+      "value": "105.7",
+      "year": "2010",
+      "month": "September",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2010 OCT",
+      "value": "110.3",
+      "year": "2010",
+      "month": "October",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2010 NOV",
+      "value": "112.3",
+      "year": "2010",
+      "month": "November",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2010 DEC",
+      "value": "109.8",
+      "year": "2010",
+      "month": "December",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2011 JAN",
+      "value": "116.4",
+      "year": "2011",
+      "month": "January",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2011 FEB",
+      "value": "109.7",
+      "year": "2011",
+      "month": "February",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2011 MAR",
+      "value": "110.2",
+      "year": "2011",
+      "month": "March",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2011 APR",
+      "value": "109.9",
+      "year": "2011",
+      "month": "April",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2011 MAY",
+      "value": "111.5",
+      "year": "2011",
+      "month": "May",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2011 JUN",
+      "value": "115.7",
+      "year": "2011",
+      "month": "June",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2011 JUL",
+      "value": "118.3",
+      "year": "2011",
+      "month": "July",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2011 AUG",
+      "value": "119.7",
+      "year": "2011",
+      "month": "August",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2011 SEP",
+      "value": "123.3",
+      "year": "2011",
+      "month": "September",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2011 OCT",
+      "value": "123.4",
+      "year": "2011",
+      "month": "October",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2011 NOV",
+      "value": "130.4",
+      "year": "2011",
+      "month": "November",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2011 DEC",
+      "value": "127.7",
+      "year": "2011",
+      "month": "December",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2012 JAN",
+      "value": "129.7",
+      "year": "2012",
+      "month": "January",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2012 FEB",
+      "value": "131.2",
+      "year": "2012",
+      "month": "February",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2012 MAR",
+      "value": "130.9",
+      "year": "2012",
+      "month": "March",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2012 APR",
+      "value": "133.5",
+      "year": "2012",
+      "month": "April",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2012 MAY",
+      "value": "138.9",
+      "year": "2012",
+      "month": "May",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2012 JUN",
+      "value": "132.6",
+      "year": "2012",
+      "month": "June",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2012 JUL",
+      "value": "140.8",
+      "year": "2012",
+      "month": "July",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2012 AUG",
+      "value": "131.2",
+      "year": "2012",
+      "month": "August",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2012 SEP",
+      "value": "137.7",
+      "year": "2012",
+      "month": "September",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2012 OCT",
+      "value": "137.7",
+      "year": "2012",
+      "month": "October",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2012 NOV",
+      "value": "139.7",
+      "year": "2012",
+      "month": "November",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2012 DEC",
+      "value": "148.9",
+      "year": "2012",
+      "month": "December",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2013 JAN",
+      "value": "146.3",
+      "year": "2013",
+      "month": "January",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2013 FEB",
+      "value": "148.4",
+      "year": "2013",
+      "month": "February",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2013 MAR",
+      "value": "155.3",
+      "year": "2013",
+      "month": "March",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2013 APR",
+      "value": "152.1",
+      "year": "2013",
+      "month": "April",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2013 MAY",
+      "value": "154.1",
+      "year": "2013",
+      "month": "May",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2013 JUN",
+      "value": "155.8",
+      "year": "2013",
+      "month": "June",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2013 JUL",
+      "value": "155.4",
+      "year": "2013",
+      "month": "July",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2013 AUG",
+      "value": "159.8",
+      "year": "2013",
+      "month": "August",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2013 SEP",
+      "value": "162.2",
+      "year": "2013",
+      "month": "September",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2013 OCT",
+      "value": "162.9",
+      "year": "2013",
+      "month": "October",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2013 NOV",
+      "value": "164",
+      "year": "2013",
+      "month": "November",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2013 DEC",
+      "value": "167",
+      "year": "2013",
+      "month": "December",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2014 JAN",
+      "value": "163.2",
+      "year": "2014",
+      "month": "January",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2014 FEB",
+      "value": "166.2",
+      "year": "2014",
+      "month": "February",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2014 MAR",
+      "value": "169.3",
+      "year": "2014",
+      "month": "March",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2014 APR",
+      "value": "173.6",
+      "year": "2014",
+      "month": "April",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2014 MAY",
+      "value": "177.7",
+      "year": "2014",
+      "month": "May",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2014 JUN",
+      "value": "177.7",
+      "year": "2014",
+      "month": "June",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2014 JUL",
+      "value": "175.4",
+      "year": "2014",
+      "month": "July",
+      "sourceDataset": "DRSI"
+    },
+    {
+      "date": "2014 AUG",
+      "value": "173.1",
+      "year": "2014",
+      "month": "August",
+      "sourceDataset": "DRSI"
+    }
+  ],
+  "relatedBulletins": [
+    "/businessindustryandtrade/retailindustry/bulletins/retailsalesjune2014"
+  ],
+  "relatedTimeseries": [],
+  "sourceDatasets": [
+    "DRSI"
+  ],
+  "type": "timeseries",
+  "name": "RSI:Internet: Val SA:All Retailers ex fuel:All Business Index",
+  "uri": "/businessindustryandtrade/retailindustry/timeseries/kpc4",
+  "fileName": "kpc4",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Business, industry and trade",
+      "fileName": "businessindustryandtrade"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Retail industry",
+      "fileName": "retailindustry",
+      "breadcrumb": []
+    }
+  ]
+}

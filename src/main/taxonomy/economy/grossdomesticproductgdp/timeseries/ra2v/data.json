@@ -1,0 +1,134 @@
+{
+  "cdid": "RA2V",
+  "note1": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "note2": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "unit": "",
+  "source": "Office for National Statistics",
+  "nationalStatistic": false,
+  "years": [
+    {
+      "date": "1997",
+      "value": "-1961",
+      "year": "1997",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "1998",
+      "value": "-3257",
+      "year": "1998",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "1999",
+      "value": "-3939",
+      "year": "1999",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2000",
+      "value": "-3976",
+      "year": "2000",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2001",
+      "value": "-4173",
+      "year": "2001",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2002",
+      "value": "-3803",
+      "year": "2002",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2003",
+      "value": "-4133",
+      "year": "2003",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2004",
+      "value": "-5312",
+      "year": "2004",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2005",
+      "value": "-6306",
+      "year": "2005",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2006",
+      "value": "-6156",
+      "year": "2006",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2007",
+      "value": "-7092",
+      "year": "2007",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2008",
+      "value": "-5876",
+      "year": "2008",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2009",
+      "value": "-1942",
+      "year": "2009",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2010",
+      "value": "-1813",
+      "year": "2010",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2011",
+      "value": "-1688",
+      "year": "2011",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2012",
+      "value": "121",
+      "year": "2012",
+      "sourceDataset": "RGHI"
+    }
+  ],
+  "quarters": [],
+  "months": [],
+  "relatedBulletins": [
+    "/economy/grossdomesticproductgdp/bulletins/gdppreliminaryestimateq32014"
+  ],
+  "relatedTimeseries": [],
+  "sourceDatasets": [
+    "RGHI"
+  ],
+  "type": "timeseries",
+  "name": "GDHI UKD North West raw Balance of Secondary Income £m",
+  "uri": "/economy/grossdomesticproductgdp/timeseries/ra2v",
+  "fileName": "ra2v",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Gross Domestic Product (GDP)",
+      "fileName": "grossdomesticproductgdp",
+      "breadcrumb": []
+    }
+  ]
+}

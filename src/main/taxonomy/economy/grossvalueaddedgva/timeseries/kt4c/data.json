@@ -1,0 +1,134 @@
+{
+  "cdid": "KT4C",
+  "note1": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "note2": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "unit": "",
+  "source": "Office for National Statistics",
+  "nationalStatistic": false,
+  "years": [
+    {
+      "date": "1997",
+      "value": "1707",
+      "year": "1997",
+      "sourceDataset": "RAGV"
+    },
+    {
+      "date": "1998",
+      "value": "1826",
+      "year": "1998",
+      "sourceDataset": "RAGV"
+    },
+    {
+      "date": "1999",
+      "value": "1836",
+      "year": "1999",
+      "sourceDataset": "RAGV"
+    },
+    {
+      "date": "2000",
+      "value": "1962",
+      "year": "2000",
+      "sourceDataset": "RAGV"
+    },
+    {
+      "date": "2001",
+      "value": "2014",
+      "year": "2001",
+      "sourceDataset": "RAGV"
+    },
+    {
+      "date": "2002",
+      "value": "2208",
+      "year": "2002",
+      "sourceDataset": "RAGV"
+    },
+    {
+      "date": "2003",
+      "value": "2400",
+      "year": "2003",
+      "sourceDataset": "RAGV"
+    },
+    {
+      "date": "2004",
+      "value": "2531",
+      "year": "2004",
+      "sourceDataset": "RAGV"
+    },
+    {
+      "date": "2005",
+      "value": "2658",
+      "year": "2005",
+      "sourceDataset": "RAGV"
+    },
+    {
+      "date": "2006",
+      "value": "2655",
+      "year": "2006",
+      "sourceDataset": "RAGV"
+    },
+    {
+      "date": "2007",
+      "value": "2844",
+      "year": "2007",
+      "sourceDataset": "RAGV"
+    },
+    {
+      "date": "2008",
+      "value": "2825",
+      "year": "2008",
+      "sourceDataset": "RAGV"
+    },
+    {
+      "date": "2009",
+      "value": "2944",
+      "year": "2009",
+      "sourceDataset": "RAGV"
+    },
+    {
+      "date": "2010",
+      "value": "3000",
+      "year": "2010",
+      "sourceDataset": "RAGV"
+    },
+    {
+      "date": "2011",
+      "value": "3201",
+      "year": "2011",
+      "sourceDataset": "RAGV"
+    },
+    {
+      "date": "2012",
+      "value": "3215",
+      "year": "2012",
+      "sourceDataset": "RAGV"
+    }
+  ],
+  "quarters": [],
+  "months": [],
+  "relatedBulletins": [
+    "/economy/grossvalueaddedgva/bulletins/regionalgrossvalueaddedincomeapproachdecember2013"
+  ],
+  "relatedTimeseries": [],
+  "sourceDatasets": [
+    "RAGV"
+  ],
+  "type": "timeseries",
+  "name": "People not in Work",
+  "uri": "/economy/grossvalueaddedgva/timeseries/kt4c",
+  "fileName": "kt4c",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Gross Value Added (GVA)",
+      "fileName": "grossvalueaddedgva",
+      "breadcrumb": []
+    }
+  ]
+}

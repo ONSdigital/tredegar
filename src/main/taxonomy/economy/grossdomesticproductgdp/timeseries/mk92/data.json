@@ -1,0 +1,134 @@
+{
+  "cdid": "MK92",
+  "note1": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "note2": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "unit": "",
+  "source": "Office for National Statistics",
+  "nationalStatistic": false,
+  "years": [
+    {
+      "date": "1997",
+      "value": "27.3",
+      "year": "1997",
+      "sourceDataset": "CAPSTK"
+    },
+    {
+      "date": "1998",
+      "value": "27.6",
+      "year": "1998",
+      "sourceDataset": "CAPSTK"
+    },
+    {
+      "date": "1999",
+      "value": "28.1",
+      "year": "1999",
+      "sourceDataset": "CAPSTK"
+    },
+    {
+      "date": "2000",
+      "value": "28.4",
+      "year": "2000",
+      "sourceDataset": "CAPSTK"
+    },
+    {
+      "date": "2001",
+      "value": "28.2",
+      "year": "2001",
+      "sourceDataset": "CAPSTK"
+    },
+    {
+      "date": "2002",
+      "value": "28.3",
+      "year": "2002",
+      "sourceDataset": "CAPSTK"
+    },
+    {
+      "date": "2003",
+      "value": "28.6",
+      "year": "2003",
+      "sourceDataset": "CAPSTK"
+    },
+    {
+      "date": "2004",
+      "value": "28.9",
+      "year": "2004",
+      "sourceDataset": "CAPSTK"
+    },
+    {
+      "date": "2005",
+      "value": "29",
+      "year": "2005",
+      "sourceDataset": "CAPSTK"
+    },
+    {
+      "date": "2006",
+      "value": "29.2",
+      "year": "2006",
+      "sourceDataset": "CAPSTK"
+    },
+    {
+      "date": "2007",
+      "value": "29.8",
+      "year": "2007",
+      "sourceDataset": "CAPSTK"
+    },
+    {
+      "date": "2008",
+      "value": "30.6",
+      "year": "2008",
+      "sourceDataset": "CAPSTK"
+    },
+    {
+      "date": "2009",
+      "value": "30.9",
+      "year": "2009",
+      "sourceDataset": "CAPSTK"
+    },
+    {
+      "date": "2010",
+      "value": "30.9",
+      "year": "2010",
+      "sourceDataset": "CAPSTK"
+    },
+    {
+      "date": "2011",
+      "value": "31",
+      "year": "2011",
+      "sourceDataset": "CAPSTK"
+    },
+    {
+      "date": "2012",
+      "value": "31.2",
+      "year": "2012",
+      "sourceDataset": "CAPSTK"
+    }
+  ],
+  "quarters": [],
+  "months": [],
+  "relatedBulletins": [
+    "/economy/grossdomesticproductgdp/bulletins/gdppreliminaryestimateq32014"
+  ],
+  "relatedTimeseries": [],
+  "sourceDatasets": [
+    "CAPSTK"
+  ],
+  "type": "timeseries",
+  "name": "People not in Work",
+  "uri": "/economy/grossdomesticproductgdp/timeseries/mk92",
+  "fileName": "mk92",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Gross Domestic Product (GDP)",
+      "fileName": "grossdomesticproductgdp",
+      "breadcrumb": []
+    }
+  ]
+}

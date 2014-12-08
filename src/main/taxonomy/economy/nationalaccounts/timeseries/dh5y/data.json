@@ -1,0 +1,237 @@
+{
+  "cdid": "DH5Y",
+  "note1": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "note2": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "unit": "",
+  "source": "Office for National Statistics",
+  "nationalStatistic": false,
+  "years": [
+    {
+      "date": "2007",
+      "value": "3662",
+      "year": "2007",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2008",
+      "value": "5393",
+      "year": "2008",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2009",
+      "value": "3810",
+      "year": "2009",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2010",
+      "value": "4549",
+      "year": "2010",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2011",
+      "value": "5932",
+      "year": "2011",
+      "sourceDataset": "SDQ7"
+    }
+  ],
+  "quarters": [
+    {
+      "date": "2006 Q2",
+      "value": "445",
+      "year": "2006",
+      "quarter": "Q2",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2006 Q3",
+      "value": "680",
+      "year": "2006",
+      "quarter": "Q3",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2006 Q4",
+      "value": "758",
+      "year": "2006",
+      "quarter": "Q4",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2007 Q1",
+      "value": "662",
+      "year": "2007",
+      "quarter": "Q1",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2007 Q2",
+      "value": "858",
+      "year": "2007",
+      "quarter": "Q2",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2007 Q3",
+      "value": "942",
+      "year": "2007",
+      "quarter": "Q3",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2007 Q4",
+      "value": "1200",
+      "year": "2007",
+      "quarter": "Q4",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2008 Q1",
+      "value": "1452",
+      "year": "2008",
+      "quarter": "Q1",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2008 Q2",
+      "value": "1249",
+      "year": "2008",
+      "quarter": "Q2",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2008 Q3",
+      "value": "1606",
+      "year": "2008",
+      "quarter": "Q3",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2008 Q4",
+      "value": "1086",
+      "year": "2008",
+      "quarter": "Q4",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2009 Q1",
+      "value": "903",
+      "year": "2009",
+      "quarter": "Q1",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2009 Q2",
+      "value": "959",
+      "year": "2009",
+      "quarter": "Q2",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2009 Q3",
+      "value": "1055",
+      "year": "2009",
+      "quarter": "Q3",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2009 Q4",
+      "value": "893",
+      "year": "2009",
+      "quarter": "Q4",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2010 Q1",
+      "value": "1137",
+      "year": "2010",
+      "quarter": "Q1",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2010 Q2",
+      "value": "1189",
+      "year": "2010",
+      "quarter": "Q2",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2010 Q3",
+      "value": "1180",
+      "year": "2010",
+      "quarter": "Q3",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2010 Q4",
+      "value": "1043",
+      "year": "2010",
+      "quarter": "Q4",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2011 Q1",
+      "value": "688",
+      "year": "2011",
+      "quarter": "Q1",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2011 Q2",
+      "value": "1639",
+      "year": "2011",
+      "quarter": "Q2",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2011 Q3",
+      "value": "1882",
+      "year": "2011",
+      "quarter": "Q3",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2011 Q4",
+      "value": "1723",
+      "year": "2011",
+      "quarter": "Q4",
+      "sourceDataset": "SDQ7"
+    },
+    {
+      "date": "2012 Q1",
+      "value": "1957",
+      "year": "2012",
+      "quarter": "Q1",
+      "sourceDataset": "SDQ7"
+    }
+  ],
+  "months": [],
+  "relatedBulletins": [
+    "/economy/nationalaccounts/bulletins/balanceofpaymentsq12014"
+  ],
+  "relatedTimeseries": [],
+  "sourceDatasets": [
+    "SDQ7"
+  ],
+  "type": "timeseries",
+  "name": "AF: QTRANS: NETINV: UK vehicles",
+  "uri": "/economy/nationalaccounts/timeseries/dh5y",
+  "fileName": "dh5y",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "National Accounts",
+      "fileName": "nationalaccounts",
+      "breadcrumb": []
+    }
+  ]
+}

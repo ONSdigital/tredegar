@@ -1,0 +1,134 @@
+{
+  "cdid": "COM7",
+  "note1": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "note2": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "unit": "",
+  "source": "Office for National Statistics",
+  "nationalStatistic": false,
+  "years": [
+    {
+      "date": "1997",
+      "value": "16218",
+      "year": "1997",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "1998",
+      "value": "16824",
+      "year": "1998",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "1999",
+      "value": "17677",
+      "year": "1999",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2000",
+      "value": "18611",
+      "year": "2000",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2001",
+      "value": "19715",
+      "year": "2001",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2002",
+      "value": "20422",
+      "year": "2002",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2003",
+      "value": "21981",
+      "year": "2003",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2004",
+      "value": "23238",
+      "year": "2004",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2005",
+      "value": "24391",
+      "year": "2005",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2006",
+      "value": "25567",
+      "year": "2006",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2007",
+      "value": "27068",
+      "year": "2007",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2008",
+      "value": "26991",
+      "year": "2008",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2009",
+      "value": "26531",
+      "year": "2009",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2010",
+      "value": "27776",
+      "year": "2010",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2011",
+      "value": "28991",
+      "year": "2011",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2012",
+      "value": "29580",
+      "year": "2012",
+      "sourceDataset": "RGHI"
+    }
+  ],
+  "quarters": [],
+  "months": [],
+  "relatedBulletins": [
+    "/economy/grossdomesticproductgdp/bulletins/gdppreliminaryestimateq32014"
+  ],
+  "relatedTimeseries": [],
+  "sourceDatasets": [
+    "RGHI"
+  ],
+  "type": "timeseries",
+  "name": "GDHI UKF2 Leics, Rutland \u0026 Northants raw Balance of Primary Income £m",
+  "uri": "/economy/grossdomesticproductgdp/timeseries/com7",
+  "fileName": "com7",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Gross Domestic Product (GDP)",
+      "fileName": "grossdomesticproductgdp",
+      "breadcrumb": []
+    }
+  ]
+}

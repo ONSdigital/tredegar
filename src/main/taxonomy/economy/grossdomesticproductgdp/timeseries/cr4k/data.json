@@ -1,0 +1,134 @@
+{
+  "cdid": "CR4K",
+  "note1": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "note2": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "unit": "",
+  "source": "Office for National Statistics",
+  "nationalStatistic": false,
+  "years": [
+    {
+      "date": "1997",
+      "value": "3212",
+      "year": "1997",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "1998",
+      "value": "3410",
+      "year": "1998",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "1999",
+      "value": "3437",
+      "year": "1999",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2000",
+      "value": "3677",
+      "year": "2000",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2001",
+      "value": "3810",
+      "year": "2001",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2002",
+      "value": "4013",
+      "year": "2002",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2003",
+      "value": "4315",
+      "year": "2003",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2004",
+      "value": "4520",
+      "year": "2004",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2005",
+      "value": "4849",
+      "year": "2005",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2006",
+      "value": "5269",
+      "year": "2006",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2007",
+      "value": "5639",
+      "year": "2007",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2008",
+      "value": "5761",
+      "year": "2008",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2009",
+      "value": "5840",
+      "year": "2009",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2010",
+      "value": "6076",
+      "year": "2010",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2011",
+      "value": "6212",
+      "year": "2011",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2012",
+      "value": "6433",
+      "year": "2012",
+      "sourceDataset": "RGHI"
+    }
+  ],
+  "quarters": [],
+  "months": [],
+  "relatedBulletins": [
+    "/economy/grossdomesticproductgdp/bulletins/gdppreliminaryestimateq32014"
+  ],
+  "relatedTimeseries": [],
+  "sourceDatasets": [
+    "RGHI"
+  ],
+  "type": "timeseries",
+  "name": "GDHI UKN03 East of Northern Ireland raw total £m",
+  "uri": "/economy/grossdomesticproductgdp/timeseries/cr4k",
+  "fileName": "cr4k",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Gross Domestic Product (GDP)",
+      "fileName": "grossdomesticproductgdp",
+      "breadcrumb": []
+    }
+  ]
+}

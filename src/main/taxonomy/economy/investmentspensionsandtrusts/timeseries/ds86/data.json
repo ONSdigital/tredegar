@@ -1,0 +1,631 @@
+{
+  "cdid": "DS86",
+  "note1": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "note2": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "unit": "",
+  "source": "Office for National Statistics",
+  "nationalStatistic": false,
+  "years": [
+    {
+      "date": "1997",
+      "value": "3621",
+      "year": "1997",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "1998",
+      "value": "4744",
+      "year": "1998",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "1999",
+      "value": "5474",
+      "year": "1999",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2000",
+      "value": "4770",
+      "year": "2000",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2001",
+      "value": "3777",
+      "year": "2001",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2002",
+      "value": "3361",
+      "year": "2002",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2003",
+      "value": "3149",
+      "year": "2003",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2004",
+      "value": "3122",
+      "year": "2004",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2005",
+      "value": "2659",
+      "year": "2005",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2006",
+      "value": "2717",
+      "year": "2006",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2007",
+      "value": "4115",
+      "year": "2007",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2008",
+      "value": "4354",
+      "year": "2008",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2009",
+      "value": "3391",
+      "year": "2009",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2010",
+      "value": "3090",
+      "year": "2010",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2011",
+      "value": "3259",
+      "year": "2011",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2012",
+      "value": "3336",
+      "year": "2012",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2013",
+      "value": "3295",
+      "year": "2013",
+      "sourceDataset": "CXNV"
+    }
+  ],
+  "quarters": [
+    {
+      "date": "1997 Q1",
+      "value": "755",
+      "year": "1997",
+      "quarter": "Q1",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "1997 Q2",
+      "value": "770",
+      "year": "1997",
+      "quarter": "Q2",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "1997 Q3",
+      "value": "832",
+      "year": "1997",
+      "quarter": "Q3",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "1997 Q4",
+      "value": "1264",
+      "year": "1997",
+      "quarter": "Q4",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "1998 Q1",
+      "value": "1100",
+      "year": "1998",
+      "quarter": "Q1",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "1998 Q2",
+      "value": "1136",
+      "year": "1998",
+      "quarter": "Q2",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "1998 Q3",
+      "value": "1189",
+      "year": "1998",
+      "quarter": "Q3",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "1998 Q4",
+      "value": "1319",
+      "year": "1998",
+      "quarter": "Q4",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "1999 Q1",
+      "value": "1328",
+      "year": "1999",
+      "quarter": "Q1",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "1999 Q2",
+      "value": "1365",
+      "year": "1999",
+      "quarter": "Q2",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "1999 Q3",
+      "value": "1408",
+      "year": "1999",
+      "quarter": "Q3",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "1999 Q4",
+      "value": "1373",
+      "year": "1999",
+      "quarter": "Q4",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2000 Q1",
+      "value": "1341",
+      "year": "2000",
+      "quarter": "Q1",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2000 Q2",
+      "value": "1262",
+      "year": "2000",
+      "quarter": "Q2",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2000 Q3",
+      "value": "1135",
+      "year": "2000",
+      "quarter": "Q3",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2000 Q4",
+      "value": "1032",
+      "year": "2000",
+      "quarter": "Q4",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2001 Q1",
+      "value": "999",
+      "year": "2001",
+      "quarter": "Q1",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2001 Q2",
+      "value": "910",
+      "year": "2001",
+      "quarter": "Q2",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2001 Q3",
+      "value": "910",
+      "year": "2001",
+      "quarter": "Q3",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2001 Q4",
+      "value": "958",
+      "year": "2001",
+      "quarter": "Q4",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2002 Q1",
+      "value": "719",
+      "year": "2002",
+      "quarter": "Q1",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2002 Q2",
+      "value": "868",
+      "year": "2002",
+      "quarter": "Q2",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2002 Q3",
+      "value": "893",
+      "year": "2002",
+      "quarter": "Q3",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2002 Q4",
+      "value": "881",
+      "year": "2002",
+      "quarter": "Q4",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2003 Q1",
+      "value": "860",
+      "year": "2003",
+      "quarter": "Q1",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2003 Q2",
+      "value": "799",
+      "year": "2003",
+      "quarter": "Q2",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2003 Q3",
+      "value": "758",
+      "year": "2003",
+      "quarter": "Q3",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2003 Q4",
+      "value": "732",
+      "year": "2003",
+      "quarter": "Q4",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2004 Q1",
+      "value": "755",
+      "year": "2004",
+      "quarter": "Q1",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2004 Q2",
+      "value": "865",
+      "year": "2004",
+      "quarter": "Q2",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2004 Q3",
+      "value": "761",
+      "year": "2004",
+      "quarter": "Q3",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2004 Q4",
+      "value": "741",
+      "year": "2004",
+      "quarter": "Q4",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2005 Q1",
+      "value": "684",
+      "year": "2005",
+      "quarter": "Q1",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2005 Q2",
+      "value": "618",
+      "year": "2005",
+      "quarter": "Q2",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2005 Q3",
+      "value": "683",
+      "year": "2005",
+      "quarter": "Q3",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2005 Q4",
+      "value": "674",
+      "year": "2005",
+      "quarter": "Q4",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2006 Q1",
+      "value": "708",
+      "year": "2006",
+      "quarter": "Q1",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2006 Q2",
+      "value": "718",
+      "year": "2006",
+      "quarter": "Q2",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2006 Q3",
+      "value": "640",
+      "year": "2006",
+      "quarter": "Q3",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2006 Q4",
+      "value": "651",
+      "year": "2006",
+      "quarter": "Q4",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2007 Q1",
+      "value": "1036",
+      "year": "2007",
+      "quarter": "Q1",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2007 Q2",
+      "value": "934",
+      "year": "2007",
+      "quarter": "Q2",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2007 Q3",
+      "value": "1089",
+      "year": "2007",
+      "quarter": "Q3",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2007 Q4",
+      "value": "1056",
+      "year": "2007",
+      "quarter": "Q4",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2008 Q1",
+      "value": "1096",
+      "year": "2008",
+      "quarter": "Q1",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2008 Q2",
+      "value": "1143",
+      "year": "2008",
+      "quarter": "Q2",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2008 Q3",
+      "value": "1069",
+      "year": "2008",
+      "quarter": "Q3",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2008 Q4",
+      "value": "1046",
+      "year": "2008",
+      "quarter": "Q4",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2009 Q1",
+      "value": "931",
+      "year": "2009",
+      "quarter": "Q1",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2009 Q2",
+      "value": "882",
+      "year": "2009",
+      "quarter": "Q2",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2009 Q3",
+      "value": "791",
+      "year": "2009",
+      "quarter": "Q3",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2009 Q4",
+      "value": "787",
+      "year": "2009",
+      "quarter": "Q4",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2010 Q1",
+      "value": "776",
+      "year": "2010",
+      "quarter": "Q1",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2010 Q2",
+      "value": "777",
+      "year": "2010",
+      "quarter": "Q2",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2010 Q3",
+      "value": "792",
+      "year": "2010",
+      "quarter": "Q3",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2010 Q4",
+      "value": "745",
+      "year": "2010",
+      "quarter": "Q4",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2011 Q1",
+      "value": "731",
+      "year": "2011",
+      "quarter": "Q1",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2011 Q2",
+      "value": "788",
+      "year": "2011",
+      "quarter": "Q2",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2011 Q3",
+      "value": "902",
+      "year": "2011",
+      "quarter": "Q3",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2011 Q4",
+      "value": "838",
+      "year": "2011",
+      "quarter": "Q4",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2012 Q1",
+      "value": "983",
+      "year": "2012",
+      "quarter": "Q1",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2012 Q2",
+      "value": "827",
+      "year": "2012",
+      "quarter": "Q2",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2012 Q3",
+      "value": "732",
+      "year": "2012",
+      "quarter": "Q3",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2012 Q4",
+      "value": "794",
+      "year": "2012",
+      "quarter": "Q4",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2013 Q1",
+      "value": "714",
+      "year": "2013",
+      "quarter": "Q1",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2013 Q2",
+      "value": "783",
+      "year": "2013",
+      "quarter": "Q2",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2013 Q3",
+      "value": "866",
+      "year": "2013",
+      "quarter": "Q3",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2013 Q4",
+      "value": "932",
+      "year": "2013",
+      "quarter": "Q4",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2014 Q1",
+      "value": "1041",
+      "year": "2014",
+      "quarter": "Q1",
+      "sourceDataset": "CXNV"
+    },
+    {
+      "date": "2014 Q2",
+      "value": "1032",
+      "year": "2014",
+      "quarter": "Q2",
+      "sourceDataset": "CXNV"
+    }
+  ],
+  "months": [],
+  "relatedBulletins": [
+    "/economy/investmentspensionsandtrusts/bulletins/foreigndirectinvestmentinvolvingukcompanies2012ma4"
+  ],
+  "relatedTimeseries": [],
+  "sourceDatasets": [
+    "CXNV"
+  ],
+  "type": "timeseries",
+  "name": "Priv Sect: Accommodation and food serv.activities: Total Asset: £m: CVM: SA",
+  "uri": "/economy/investmentspensionsandtrusts/timeseries/ds86",
+  "fileName": "ds86",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Investments, pensions and trusts",
+      "fileName": "investmentspensionsandtrusts",
+      "breadcrumb": []
+    }
+  ]
+}

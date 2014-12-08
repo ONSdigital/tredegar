@@ -1,0 +1,92 @@
+{
+  "cdid": "SFUA",
+  "note1": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "note2": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "unit": "",
+  "source": "Office for National Statistics",
+  "nationalStatistic": false,
+  "years": [
+    {
+      "date": "2004",
+      "value": "3782",
+      "year": "2004",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2005",
+      "value": "4247",
+      "year": "2005",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2006",
+      "value": "6600",
+      "year": "2006",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2007",
+      "value": "2432",
+      "year": "2007",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2008",
+      "value": "62",
+      "year": "2008",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2009",
+      "value": "35",
+      "year": "2009",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2010",
+      "value": "31",
+      "year": "2010",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2011",
+      "value": "24",
+      "year": "2011",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2012",
+      "value": "23",
+      "year": "2012",
+      "sourceDataset": "MQ5"
+    }
+  ],
+  "quarters": [],
+  "months": [],
+  "relatedBulletins": [
+    "/economy/investmentspensionsandtrusts/bulletins/foreigndirectinvestmentinvolvingukcompanies2012ma4"
+  ],
+  "relatedTimeseries": [],
+  "sourceDatasets": [
+    "MQ5"
+  ],
+  "type": "timeseries",
+  "name": "INS: LT: INC: Premiums earned: Occupational pensions: Hybrid: Total",
+  "uri": "/economy/investmentspensionsandtrusts/timeseries/sfua",
+  "fileName": "sfua",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Investments, pensions and trusts",
+      "fileName": "investmentspensionsandtrusts",
+      "breadcrumb": []
+    }
+  ]
+}

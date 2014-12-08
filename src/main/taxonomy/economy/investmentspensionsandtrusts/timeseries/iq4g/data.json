@@ -1,0 +1,223 @@
+{
+  "cdid": "IQ4G",
+  "note1": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "note2": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "unit": "",
+  "source": "Office for National Statistics",
+  "nationalStatistic": false,
+  "years": [
+    {
+      "date": "2009",
+      "value": "9719",
+      "year": "2009",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2010",
+      "value": "15908",
+      "year": "2010",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2011",
+      "value": "15593",
+      "year": "2011",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2012",
+      "value": "17562",
+      "year": "2012",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2013",
+      "value": "16319",
+      "year": "2013",
+      "sourceDataset": "MQ5"
+    }
+  ],
+  "quarters": [
+    {
+      "date": "2009 Q1",
+      "value": "2608",
+      "year": "2009",
+      "quarter": "Q1",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2009 Q2",
+      "value": "1385",
+      "year": "2009",
+      "quarter": "Q2",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2009 Q3",
+      "value": "1350",
+      "year": "2009",
+      "quarter": "Q3",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2009 Q4",
+      "value": "4376",
+      "year": "2009",
+      "quarter": "Q4",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2010 Q1",
+      "value": "3812",
+      "year": "2010",
+      "quarter": "Q1",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2010 Q2",
+      "value": "4658",
+      "year": "2010",
+      "quarter": "Q2",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2010 Q3",
+      "value": "2767",
+      "year": "2010",
+      "quarter": "Q3",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2010 Q4",
+      "value": "4671",
+      "year": "2010",
+      "quarter": "Q4",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2011 Q1",
+      "value": "4629",
+      "year": "2011",
+      "quarter": "Q1",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2011 Q2",
+      "value": "3151",
+      "year": "2011",
+      "quarter": "Q2",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2011 Q3",
+      "value": "2925",
+      "year": "2011",
+      "quarter": "Q3",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2011 Q4",
+      "value": "4888",
+      "year": "2011",
+      "quarter": "Q4",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2012 Q1",
+      "value": "8007",
+      "year": "2012",
+      "quarter": "Q1",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2012 Q2",
+      "value": "3002",
+      "year": "2012",
+      "quarter": "Q2",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2012 Q3",
+      "value": "2942",
+      "year": "2012",
+      "quarter": "Q3",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2012 Q4",
+      "value": "3611",
+      "year": "2012",
+      "quarter": "Q4",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2013 Q1",
+      "value": "7431",
+      "year": "2013",
+      "quarter": "Q1",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2013 Q2",
+      "value": "3085",
+      "year": "2013",
+      "quarter": "Q2",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2013 Q3",
+      "value": "2906",
+      "year": "2013",
+      "quarter": "Q3",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2013 Q4",
+      "value": "2897",
+      "year": "2013",
+      "quarter": "Q4",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2014 Q1",
+      "value": "4400",
+      "year": "2014",
+      "quarter": "Q1",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2014 Q2",
+      "value": "2819",
+      "year": "2014",
+      "quarter": "Q2",
+      "sourceDataset": "MQ5"
+    }
+  ],
+  "months": [],
+  "relatedBulletins": [
+    "/economy/investmentspensionsandtrusts/bulletins/foreigndirectinvestmentinvolvingukcompanies2012ma4"
+  ],
+  "relatedTimeseries": [],
+  "sourceDatasets": [
+    "MQ5"
+  ],
+  "type": "timeseries",
+  "name": "PEN: INC: Employers special contributions: Defined benefit",
+  "uri": "/economy/investmentspensionsandtrusts/timeseries/iq4g",
+  "fileName": "iq4g",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Investments, pensions and trusts",
+      "fileName": "investmentspensionsandtrusts",
+      "breadcrumb": []
+    }
+  ]
+}

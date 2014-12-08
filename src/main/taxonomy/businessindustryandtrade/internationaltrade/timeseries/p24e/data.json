@@ -1,0 +1,597 @@
+{
+  "cdid": "P24E",
+  "note1": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "note2": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "unit": "",
+  "source": "Office for National Statistics",
+  "nationalStatistic": false,
+  "years": [
+    {
+      "date": "1998",
+      "value": "2267",
+      "year": "1998",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "1999",
+      "value": "2356",
+      "year": "1999",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2000",
+      "value": "2674",
+      "year": "2000",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2001",
+      "value": "2601",
+      "year": "2001",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2002",
+      "value": "2953",
+      "year": "2002",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2003",
+      "value": "2977",
+      "year": "2003",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2004",
+      "value": "2998",
+      "year": "2004",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2005",
+      "value": "3180",
+      "year": "2005",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2006",
+      "value": "3139",
+      "year": "2006",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2007",
+      "value": "3248",
+      "year": "2007",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2008",
+      "value": "4128",
+      "year": "2008",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2009",
+      "value": "4059",
+      "year": "2009",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2010",
+      "value": "4584",
+      "year": "2010",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2011",
+      "value": "4974",
+      "year": "2011",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2012",
+      "value": "4661",
+      "year": "2012",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2013",
+      "value": "4984",
+      "year": "2013",
+      "sourceDataset": "MQ10"
+    }
+  ],
+  "quarters": [
+    {
+      "date": "1998 Q1",
+      "value": "561",
+      "year": "1998",
+      "quarter": "Q1",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "1998 Q2",
+      "value": "568",
+      "year": "1998",
+      "quarter": "Q2",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "1998 Q3",
+      "value": "594",
+      "year": "1998",
+      "quarter": "Q3",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "1998 Q4",
+      "value": "544",
+      "year": "1998",
+      "quarter": "Q4",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "1999 Q1",
+      "value": "535",
+      "year": "1999",
+      "quarter": "Q1",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "1999 Q2",
+      "value": "582",
+      "year": "1999",
+      "quarter": "Q2",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "1999 Q3",
+      "value": "616",
+      "year": "1999",
+      "quarter": "Q3",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "1999 Q4",
+      "value": "623",
+      "year": "1999",
+      "quarter": "Q4",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2000 Q1",
+      "value": "639",
+      "year": "2000",
+      "quarter": "Q1",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2000 Q2",
+      "value": "690",
+      "year": "2000",
+      "quarter": "Q2",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2000 Q3",
+      "value": "714",
+      "year": "2000",
+      "quarter": "Q3",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2000 Q4",
+      "value": "631",
+      "year": "2000",
+      "quarter": "Q4",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2001 Q1",
+      "value": "634",
+      "year": "2001",
+      "quarter": "Q1",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2001 Q2",
+      "value": "688",
+      "year": "2001",
+      "quarter": "Q2",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2001 Q3",
+      "value": "676",
+      "year": "2001",
+      "quarter": "Q3",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2001 Q4",
+      "value": "603",
+      "year": "2001",
+      "quarter": "Q4",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2002 Q1",
+      "value": "689",
+      "year": "2002",
+      "quarter": "Q1",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2002 Q2",
+      "value": "783",
+      "year": "2002",
+      "quarter": "Q2",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2002 Q3",
+      "value": "752",
+      "year": "2002",
+      "quarter": "Q3",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2002 Q4",
+      "value": "729",
+      "year": "2002",
+      "quarter": "Q4",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2003 Q1",
+      "value": "705",
+      "year": "2003",
+      "quarter": "Q1",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2003 Q2",
+      "value": "770",
+      "year": "2003",
+      "quarter": "Q2",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2003 Q3",
+      "value": "788",
+      "year": "2003",
+      "quarter": "Q3",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2003 Q4",
+      "value": "714",
+      "year": "2003",
+      "quarter": "Q4",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2004 Q1",
+      "value": "713",
+      "year": "2004",
+      "quarter": "Q1",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2004 Q2",
+      "value": "773",
+      "year": "2004",
+      "quarter": "Q2",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2004 Q3",
+      "value": "773",
+      "year": "2004",
+      "quarter": "Q3",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2004 Q4",
+      "value": "739",
+      "year": "2004",
+      "quarter": "Q4",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2005 Q1",
+      "value": "711",
+      "year": "2005",
+      "quarter": "Q1",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2005 Q2",
+      "value": "839",
+      "year": "2005",
+      "quarter": "Q2",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2005 Q3",
+      "value": "829",
+      "year": "2005",
+      "quarter": "Q3",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2005 Q4",
+      "value": "801",
+      "year": "2005",
+      "quarter": "Q4",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2006 Q1",
+      "value": "769",
+      "year": "2006",
+      "quarter": "Q1",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2006 Q2",
+      "value": "774",
+      "year": "2006",
+      "quarter": "Q2",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2006 Q3",
+      "value": "782",
+      "year": "2006",
+      "quarter": "Q3",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2006 Q4",
+      "value": "814",
+      "year": "2006",
+      "quarter": "Q4",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2007 Q1",
+      "value": "798",
+      "year": "2007",
+      "quarter": "Q1",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2007 Q2",
+      "value": "817",
+      "year": "2007",
+      "quarter": "Q2",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2007 Q3",
+      "value": "815",
+      "year": "2007",
+      "quarter": "Q3",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2007 Q4",
+      "value": "818",
+      "year": "2007",
+      "quarter": "Q4",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2008 Q1",
+      "value": "867",
+      "year": "2008",
+      "quarter": "Q1",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2008 Q2",
+      "value": "1089",
+      "year": "2008",
+      "quarter": "Q2",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2008 Q3",
+      "value": "1126",
+      "year": "2008",
+      "quarter": "Q3",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2008 Q4",
+      "value": "1046",
+      "year": "2008",
+      "quarter": "Q4",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2009 Q1",
+      "value": "989",
+      "year": "2009",
+      "quarter": "Q1",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2009 Q2",
+      "value": "1001",
+      "year": "2009",
+      "quarter": "Q2",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2009 Q3",
+      "value": "1035",
+      "year": "2009",
+      "quarter": "Q3",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2009 Q4",
+      "value": "1034",
+      "year": "2009",
+      "quarter": "Q4",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2010 Q1",
+      "value": "1060",
+      "year": "2010",
+      "quarter": "Q1",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2010 Q2",
+      "value": "1162",
+      "year": "2010",
+      "quarter": "Q2",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2010 Q3",
+      "value": "1178",
+      "year": "2010",
+      "quarter": "Q3",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2010 Q4",
+      "value": "1184",
+      "year": "2010",
+      "quarter": "Q4",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2011 Q1",
+      "value": "1169",
+      "year": "2011",
+      "quarter": "Q1",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2011 Q2",
+      "value": "1275",
+      "year": "2011",
+      "quarter": "Q2",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2011 Q3",
+      "value": "1282",
+      "year": "2011",
+      "quarter": "Q3",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2011 Q4",
+      "value": "1248",
+      "year": "2011",
+      "quarter": "Q4",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2012 Q1",
+      "value": "1263",
+      "year": "2012",
+      "quarter": "Q1",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2012 Q2",
+      "value": "1203",
+      "year": "2012",
+      "quarter": "Q2",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2012 Q3",
+      "value": "1103",
+      "year": "2012",
+      "quarter": "Q3",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2012 Q4",
+      "value": "1092",
+      "year": "2012",
+      "quarter": "Q4",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2013 Q1",
+      "value": "1197",
+      "year": "2013",
+      "quarter": "Q1",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2013 Q2",
+      "value": "1226",
+      "year": "2013",
+      "quarter": "Q2",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2013 Q3",
+      "value": "1283",
+      "year": "2013",
+      "quarter": "Q3",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2013 Q4",
+      "value": "1278",
+      "year": "2013",
+      "quarter": "Q4",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2014 Q1",
+      "value": "1168",
+      "year": "2014",
+      "quarter": "Q1",
+      "sourceDataset": "MQ10"
+    },
+    {
+      "date": "2014 Q2",
+      "value": "1140",
+      "year": "2014",
+      "quarter": "Q2",
+      "sourceDataset": "MQ10"
+    }
+  ],
+  "months": [],
+  "relatedBulletins": [
+    "/businessindustryandtrade/internationaltrade/bulletins/uktradejune2014"
+  ],
+  "relatedTimeseries": [],
+  "sourceDatasets": [
+    "MQ10"
+  ],
+  "type": "timeseries",
+  "name": "CPA 08:WW:IM:CP:BOP:NSA: 20.5. Other chemical products",
+  "uri": "/businessindustryandtrade/internationaltrade/timeseries/p24e",
+  "fileName": "p24e",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Business, industry and trade",
+      "fileName": "businessindustryandtrade"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "International trade",
+      "fileName": "internationaltrade",
+      "breadcrumb": []
+    }
+  ]
+}

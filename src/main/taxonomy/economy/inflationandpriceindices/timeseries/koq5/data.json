@@ -1,0 +1,155 @@
+{
+  "cdid": "KOQ5",
+  "note1": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "note2": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "unit": "",
+  "source": "Office for National Statistics",
+  "nationalStatistic": false,
+  "years": [
+    {
+      "date": "2011",
+      "value": "103",
+      "year": "2011",
+      "sourceDataset": "SPPI"
+    },
+    {
+      "date": "2012",
+      "value": "99.7",
+      "year": "2012",
+      "sourceDataset": "SPPI"
+    },
+    {
+      "date": "2013",
+      "value": "100.9",
+      "year": "2013",
+      "sourceDataset": "SPPI"
+    }
+  ],
+  "quarters": [
+    {
+      "date": "2011 Q1",
+      "value": "100.6",
+      "year": "2011",
+      "quarter": "Q1",
+      "sourceDataset": "SPPI"
+    },
+    {
+      "date": "2011 Q2",
+      "value": "103.7",
+      "year": "2011",
+      "quarter": "Q2",
+      "sourceDataset": "SPPI"
+    },
+    {
+      "date": "2011 Q3",
+      "value": "102.7",
+      "year": "2011",
+      "quarter": "Q3",
+      "sourceDataset": "SPPI"
+    },
+    {
+      "date": "2011 Q4",
+      "value": "105",
+      "year": "2011",
+      "quarter": "Q4",
+      "sourceDataset": "SPPI"
+    },
+    {
+      "date": "2012 Q1",
+      "value": "98.2",
+      "year": "2012",
+      "quarter": "Q1",
+      "sourceDataset": "SPPI"
+    },
+    {
+      "date": "2012 Q2",
+      "value": "98.6",
+      "year": "2012",
+      "quarter": "Q2",
+      "sourceDataset": "SPPI"
+    },
+    {
+      "date": "2012 Q3",
+      "value": "99.7",
+      "year": "2012",
+      "quarter": "Q3",
+      "sourceDataset": "SPPI"
+    },
+    {
+      "date": "2012 Q4",
+      "value": "102.2",
+      "year": "2012",
+      "quarter": "Q4",
+      "sourceDataset": "SPPI"
+    },
+    {
+      "date": "2013 Q1",
+      "value": "97",
+      "year": "2013",
+      "quarter": "Q1",
+      "sourceDataset": "SPPI"
+    },
+    {
+      "date": "2013 Q2",
+      "value": "99.3",
+      "year": "2013",
+      "quarter": "Q2",
+      "sourceDataset": "SPPI"
+    },
+    {
+      "date": "2013 Q3",
+      "value": "101.5",
+      "year": "2013",
+      "quarter": "Q3",
+      "sourceDataset": "SPPI"
+    },
+    {
+      "date": "2013 Q4",
+      "value": "105.8",
+      "year": "2013",
+      "quarter": "Q4",
+      "sourceDataset": "SPPI"
+    },
+    {
+      "date": "2014 Q1",
+      "value": "105.2",
+      "year": "2014",
+      "quarter": "Q1",
+      "sourceDataset": "SPPI"
+    },
+    {
+      "date": "2014 Q2",
+      "value": "106.1",
+      "year": "2014",
+      "quarter": "Q2",
+      "sourceDataset": "SPPI"
+    }
+  ],
+  "months": [],
+  "relatedBulletins": [
+    "/economy/inflationandpriceindices/bulletins/consumerpriceinflationjune2014"
+  ],
+  "relatedTimeseries": [],
+  "sourceDatasets": [
+    "SPPI"
+  ],
+  "type": "timeseries",
+  "name": "SPPI: 7312000000: Advertising Services,",
+  "uri": "/economy/inflationandpriceindices/timeseries/koq5",
+  "fileName": "koq5",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Inflation and price indices",
+      "fileName": "inflationandpriceindices",
+      "breadcrumb": []
+    }
+  ]
+}

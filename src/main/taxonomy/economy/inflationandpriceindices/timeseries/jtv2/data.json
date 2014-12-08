@@ -1,0 +1,109 @@
+{
+  "cdid": "JTV2",
+  "note1": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "note2": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "unit": "",
+  "source": "Office for National Statistics",
+  "nationalStatistic": false,
+  "years": [],
+  "quarters": [
+    {
+      "date": "2014 Q2",
+      "value": "95.9",
+      "year": "2014",
+      "quarter": "Q2",
+      "sourceDataset": "MM22"
+    },
+    {
+      "date": "2014 Q3",
+      "value": "96.7",
+      "year": "2014",
+      "quarter": "Q3",
+      "sourceDataset": "MM22"
+    }
+  ],
+  "months": [
+    {
+      "date": "2014 FEB",
+      "value": "95.1",
+      "year": "2014",
+      "month": "February",
+      "sourceDataset": "MM22"
+    },
+    {
+      "date": "2014 MAR",
+      "value": "95",
+      "year": "2014",
+      "month": "March",
+      "sourceDataset": "MM22"
+    },
+    {
+      "date": "2014 APR",
+      "value": "95",
+      "year": "2014",
+      "month": "April",
+      "sourceDataset": "MM22"
+    },
+    {
+      "date": "2014 MAY",
+      "value": "96.3",
+      "year": "2014",
+      "month": "May",
+      "sourceDataset": "MM22"
+    },
+    {
+      "date": "2014 JUN",
+      "value": "96.4",
+      "year": "2014",
+      "month": "June",
+      "sourceDataset": "MM22"
+    },
+    {
+      "date": "2014 JUL",
+      "value": "96.3",
+      "year": "2014",
+      "month": "July",
+      "sourceDataset": "MM22"
+    },
+    {
+      "date": "2014 AUG",
+      "value": "96.5",
+      "year": "2014",
+      "month": "August",
+      "sourceDataset": "MM22"
+    },
+    {
+      "date": "2014 SEP",
+      "value": "97.2",
+      "year": "2014",
+      "month": "September",
+      "sourceDataset": "MM22"
+    }
+  ],
+  "relatedBulletins": [
+    "/economy/inflationandpriceindices/bulletins/consumerpriceinflationjune2014"
+  ],
+  "relatedTimeseries": [],
+  "sourceDatasets": [
+    "MM22"
+  ],
+  "type": "timeseries",
+  "name": "0811110000: Marble \u0026 Other Calcareous Ornamental or Building Stone",
+  "uri": "/economy/inflationandpriceindices/timeseries/jtv2",
+  "fileName": "jtv2",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Inflation and price indices",
+      "fileName": "inflationandpriceindices",
+      "breadcrumb": []
+    }
+  ]
+}

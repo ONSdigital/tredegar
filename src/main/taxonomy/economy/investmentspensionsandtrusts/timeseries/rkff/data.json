@@ -1,0 +1,837 @@
+{
+  "cdid": "RKFF",
+  "note1": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "note2": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "unit": "",
+  "source": "Office for National Statistics",
+  "nationalStatistic": false,
+  "years": [
+    {
+      "date": "1986",
+      "value": "18658",
+      "year": "1986",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "1987",
+      "value": "22269",
+      "year": "1987",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "1988",
+      "value": "22902",
+      "year": "1988",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "1989",
+      "value": "26268",
+      "year": "1989",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "1990",
+      "value": "30992",
+      "year": "1990",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "1991",
+      "value": "35701",
+      "year": "1991",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "1992",
+      "value": "39631",
+      "year": "1992",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "1993",
+      "value": "43805",
+      "year": "1993",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "1994",
+      "value": "42877",
+      "year": "1994",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "1995",
+      "value": "48170",
+      "year": "1995",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "1996",
+      "value": "58746",
+      "year": "1996",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "1997",
+      "value": "74716",
+      "year": "1997",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "1998",
+      "value": "85480",
+      "year": "1998",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "1999",
+      "value": "102116",
+      "year": "1999",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2000",
+      "value": "87637",
+      "year": "2000",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2001",
+      "value": "105076",
+      "year": "2001",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2002",
+      "value": "98915",
+      "year": "2002",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2003",
+      "value": "133246",
+      "year": "2003",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2004",
+      "value": "116424",
+      "year": "2004",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2005",
+      "value": "153330",
+      "year": "2005",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2006",
+      "value": "163070",
+      "year": "2006",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2007",
+      "value": "183183",
+      "year": "2007",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2008",
+      "value": "157798",
+      "year": "2008",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2009",
+      "value": "253797",
+      "year": "2009",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2010",
+      "value": "235631",
+      "year": "2010",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2011",
+      "value": "155706",
+      "year": "2011",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2012",
+      "value": "232611",
+      "year": "2012",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2013",
+      "value": "217678",
+      "year": "2013",
+      "sourceDataset": "MQ5"
+    }
+  ],
+  "quarters": [
+    {
+      "date": "1992 Q1",
+      "value": "8900",
+      "year": "1992",
+      "quarter": "Q1",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "1992 Q2",
+      "value": "9806",
+      "year": "1992",
+      "quarter": "Q2",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "1992 Q3",
+      "value": "9539",
+      "year": "1992",
+      "quarter": "Q3",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "1992 Q4",
+      "value": "11386",
+      "year": "1992",
+      "quarter": "Q4",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "1993 Q1",
+      "value": "10125",
+      "year": "1993",
+      "quarter": "Q1",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "1993 Q2",
+      "value": "11143",
+      "year": "1993",
+      "quarter": "Q2",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "1993 Q3",
+      "value": "10750",
+      "year": "1993",
+      "quarter": "Q3",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "1993 Q4",
+      "value": "11787",
+      "year": "1993",
+      "quarter": "Q4",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "1994 Q1",
+      "value": "11755",
+      "year": "1994",
+      "quarter": "Q1",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "1994 Q2",
+      "value": "10488",
+      "year": "1994",
+      "quarter": "Q2",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "1994 Q3",
+      "value": "10083",
+      "year": "1994",
+      "quarter": "Q3",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "1994 Q4",
+      "value": "10551",
+      "year": "1994",
+      "quarter": "Q4",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "1995 Q1",
+      "value": "10571",
+      "year": "1995",
+      "quarter": "Q1",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "1995 Q2",
+      "value": "11407",
+      "year": "1995",
+      "quarter": "Q2",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "1995 Q3",
+      "value": "11840",
+      "year": "1995",
+      "quarter": "Q3",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "1995 Q4",
+      "value": "14352",
+      "year": "1995",
+      "quarter": "Q4",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "1996 Q1",
+      "value": "13139",
+      "year": "1996",
+      "quarter": "Q1",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "1996 Q2",
+      "value": "14236",
+      "year": "1996",
+      "quarter": "Q2",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "1996 Q3",
+      "value": "13764",
+      "year": "1996",
+      "quarter": "Q3",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "1996 Q4",
+      "value": "17607",
+      "year": "1996",
+      "quarter": "Q4",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "1997 Q1",
+      "value": "16713",
+      "year": "1997",
+      "quarter": "Q1",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "1997 Q2",
+      "value": "17488",
+      "year": "1997",
+      "quarter": "Q2",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "1997 Q3",
+      "value": "18822",
+      "year": "1997",
+      "quarter": "Q3",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "1997 Q4",
+      "value": "21693",
+      "year": "1997",
+      "quarter": "Q4",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "1998 Q1",
+      "value": "20192",
+      "year": "1998",
+      "quarter": "Q1",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "1998 Q2",
+      "value": "21343",
+      "year": "1998",
+      "quarter": "Q2",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "1998 Q3",
+      "value": "20886",
+      "year": "1998",
+      "quarter": "Q3",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "1998 Q4",
+      "value": "23059",
+      "year": "1998",
+      "quarter": "Q4",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "1999 Q1",
+      "value": "24522",
+      "year": "1999",
+      "quarter": "Q1",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "1999 Q2",
+      "value": "24648",
+      "year": "1999",
+      "quarter": "Q2",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "1999 Q3",
+      "value": "24189",
+      "year": "1999",
+      "quarter": "Q3",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "1999 Q4",
+      "value": "28757",
+      "year": "1999",
+      "quarter": "Q4",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2000 Q1",
+      "value": "20754",
+      "year": "2000",
+      "quarter": "Q1",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2000 Q2",
+      "value": "22586",
+      "year": "2000",
+      "quarter": "Q2",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2000 Q3",
+      "value": "26845",
+      "year": "2000",
+      "quarter": "Q3",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2000 Q4",
+      "value": "17452",
+      "year": "2000",
+      "quarter": "Q4",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2001 Q1",
+      "value": "18565",
+      "year": "2001",
+      "quarter": "Q1",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2001 Q2",
+      "value": "25437",
+      "year": "2001",
+      "quarter": "Q2",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2001 Q3",
+      "value": "10185",
+      "year": "2001",
+      "quarter": "Q3",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2001 Q4",
+      "value": "50889",
+      "year": "2001",
+      "quarter": "Q4",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2002 Q1",
+      "value": "27074",
+      "year": "2002",
+      "quarter": "Q1",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2002 Q2",
+      "value": "19479",
+      "year": "2002",
+      "quarter": "Q2",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2002 Q3",
+      "value": "21302",
+      "year": "2002",
+      "quarter": "Q3",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2002 Q4",
+      "value": "31060",
+      "year": "2002",
+      "quarter": "Q4",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2003 Q1",
+      "value": "32564",
+      "year": "2003",
+      "quarter": "Q1",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2003 Q2",
+      "value": "34660",
+      "year": "2003",
+      "quarter": "Q2",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2003 Q3",
+      "value": "30349",
+      "year": "2003",
+      "quarter": "Q3",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2003 Q4",
+      "value": "35673",
+      "year": "2003",
+      "quarter": "Q4",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2004 Q1",
+      "value": "27285",
+      "year": "2004",
+      "quarter": "Q1",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2004 Q2",
+      "value": "23947",
+      "year": "2004",
+      "quarter": "Q2",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2004 Q3",
+      "value": "31816",
+      "year": "2004",
+      "quarter": "Q3",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2004 Q4",
+      "value": "33376",
+      "year": "2004",
+      "quarter": "Q4",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2005 Q1",
+      "value": "29966",
+      "year": "2005",
+      "quarter": "Q1",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2005 Q2",
+      "value": "40242",
+      "year": "2005",
+      "quarter": "Q2",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2005 Q3",
+      "value": "35939",
+      "year": "2005",
+      "quarter": "Q3",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2005 Q4",
+      "value": "47183",
+      "year": "2005",
+      "quarter": "Q4",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2006 Q1",
+      "value": "42501",
+      "year": "2006",
+      "quarter": "Q1",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2006 Q2",
+      "value": "32636",
+      "year": "2006",
+      "quarter": "Q2",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2006 Q3",
+      "value": "51096",
+      "year": "2006",
+      "quarter": "Q3",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2006 Q4",
+      "value": "36837",
+      "year": "2006",
+      "quarter": "Q4",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2007 Q1",
+      "value": "47706",
+      "year": "2007",
+      "quarter": "Q1",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2007 Q2",
+      "value": "45200",
+      "year": "2007",
+      "quarter": "Q2",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2007 Q3",
+      "value": "43935",
+      "year": "2007",
+      "quarter": "Q3",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2007 Q4",
+      "value": "46342",
+      "year": "2007",
+      "quarter": "Q4",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2008 Q1",
+      "value": "30709",
+      "year": "2008",
+      "quarter": "Q1",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2008 Q2",
+      "value": "44896",
+      "year": "2008",
+      "quarter": "Q2",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2008 Q3",
+      "value": "55017",
+      "year": "2008",
+      "quarter": "Q3",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2008 Q4",
+      "value": "27176",
+      "year": "2008",
+      "quarter": "Q4",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2009 Q1",
+      "value": "-28513",
+      "year": "2009",
+      "quarter": "Q1",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2009 Q2",
+      "value": "74987",
+      "year": "2009",
+      "quarter": "Q2",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2009 Q3",
+      "value": "145053",
+      "year": "2009",
+      "quarter": "Q3",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2009 Q4",
+      "value": "62270",
+      "year": "2009",
+      "quarter": "Q4",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2010 Q1",
+      "value": "77504",
+      "year": "2010",
+      "quarter": "Q1",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2010 Q2",
+      "value": "1779",
+      "year": "2010",
+      "quarter": "Q2",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2010 Q3",
+      "value": "87030",
+      "year": "2010",
+      "quarter": "Q3",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2010 Q4",
+      "value": "69318",
+      "year": "2010",
+      "quarter": "Q4",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2011 Q1",
+      "value": "37724",
+      "year": "2011",
+      "quarter": "Q1",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2011 Q2",
+      "value": "48512",
+      "year": "2011",
+      "quarter": "Q2",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2011 Q3",
+      "value": "-14572",
+      "year": "2011",
+      "quarter": "Q3",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2011 Q4",
+      "value": "84042",
+      "year": "2011",
+      "quarter": "Q4",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2012 Q1",
+      "value": "69200",
+      "year": "2012",
+      "quarter": "Q1",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2012 Q2",
+      "value": "30559",
+      "year": "2012",
+      "quarter": "Q2",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2012 Q3",
+      "value": "68038",
+      "year": "2012",
+      "quarter": "Q3",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2012 Q4",
+      "value": "64814",
+      "year": "2012",
+      "quarter": "Q4",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2013 Q1",
+      "value": "95853",
+      "year": "2013",
+      "quarter": "Q1",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2013 Q2",
+      "value": "9548",
+      "year": "2013",
+      "quarter": "Q2",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2013 Q3",
+      "value": "59276",
+      "year": "2013",
+      "quarter": "Q3",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2013 Q4",
+      "value": "53001",
+      "year": "2013",
+      "quarter": "Q4",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2014 Q1",
+      "value": "49499",
+      "year": "2014",
+      "quarter": "Q1",
+      "sourceDataset": "MQ5"
+    },
+    {
+      "date": "2014 Q2",
+      "value": "56967",
+      "year": "2014",
+      "quarter": "Q2",
+      "sourceDataset": "MQ5"
+    }
+  ],
+  "months": [],
+  "relatedBulletins": [
+    "/economy/investmentspensionsandtrusts/bulletins/foreigndirectinvestmentinvolvingukcompanies2012ma4"
+  ],
+  "relatedTimeseries": [],
+  "sourceDatasets": [
+    "MQ5"
+  ],
+  "type": "timeseries",
+  "name": "INS: LT: EXP: Total expenditure",
+  "uri": "/economy/investmentspensionsandtrusts/timeseries/rkff",
+  "fileName": "rkff",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Investments, pensions and trusts",
+      "fileName": "investmentspensionsandtrusts",
+      "breadcrumb": []
+    }
+  ]
+}

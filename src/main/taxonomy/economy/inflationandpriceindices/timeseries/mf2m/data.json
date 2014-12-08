@@ -1,0 +1,230 @@
+{
+  "cdid": "MF2M",
+  "note1": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "note2": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "unit": "",
+  "source": "Office for National Statistics",
+  "nationalStatistic": false,
+  "years": [
+    {
+      "date": "2009",
+      "value": "101.8",
+      "year": "2009",
+      "sourceDataset": "SPPI"
+    },
+    {
+      "date": "2010",
+      "value": "100",
+      "year": "2010",
+      "sourceDataset": "SPPI"
+    },
+    {
+      "date": "2011",
+      "value": "99",
+      "year": "2011",
+      "sourceDataset": "SPPI"
+    },
+    {
+      "date": "2012",
+      "value": "98.4",
+      "year": "2012",
+      "sourceDataset": "SPPI"
+    },
+    {
+      "date": "2013",
+      "value": "98.9",
+      "year": "2013",
+      "sourceDataset": "SPPI"
+    }
+  ],
+  "quarters": [
+    {
+      "date": "2008 Q4",
+      "value": "102.7",
+      "year": "2008",
+      "quarter": "Q4",
+      "sourceDataset": "SPPI"
+    },
+    {
+      "date": "2009 Q1",
+      "value": "102.2",
+      "year": "2009",
+      "quarter": "Q1",
+      "sourceDataset": "SPPI"
+    },
+    {
+      "date": "2009 Q2",
+      "value": "102.2",
+      "year": "2009",
+      "quarter": "Q2",
+      "sourceDataset": "SPPI"
+    },
+    {
+      "date": "2009 Q3",
+      "value": "101.9",
+      "year": "2009",
+      "quarter": "Q3",
+      "sourceDataset": "SPPI"
+    },
+    {
+      "date": "2009 Q4",
+      "value": "100.9",
+      "year": "2009",
+      "quarter": "Q4",
+      "sourceDataset": "SPPI"
+    },
+    {
+      "date": "2010 Q1",
+      "value": "100.1",
+      "year": "2010",
+      "quarter": "Q1",
+      "sourceDataset": "SPPI"
+    },
+    {
+      "date": "2010 Q2",
+      "value": "100.5",
+      "year": "2010",
+      "quarter": "Q2",
+      "sourceDataset": "SPPI"
+    },
+    {
+      "date": "2010 Q3",
+      "value": "99.8",
+      "year": "2010",
+      "quarter": "Q3",
+      "sourceDataset": "SPPI"
+    },
+    {
+      "date": "2010 Q4",
+      "value": "99.6",
+      "year": "2010",
+      "quarter": "Q4",
+      "sourceDataset": "SPPI"
+    },
+    {
+      "date": "2011 Q1",
+      "value": "99.4",
+      "year": "2011",
+      "quarter": "Q1",
+      "sourceDataset": "SPPI"
+    },
+    {
+      "date": "2011 Q2",
+      "value": "99.2",
+      "year": "2011",
+      "quarter": "Q2",
+      "sourceDataset": "SPPI"
+    },
+    {
+      "date": "2011 Q3",
+      "value": "98.5",
+      "year": "2011",
+      "quarter": "Q3",
+      "sourceDataset": "SPPI"
+    },
+    {
+      "date": "2011 Q4",
+      "value": "99",
+      "year": "2011",
+      "quarter": "Q4",
+      "sourceDataset": "SPPI"
+    },
+    {
+      "date": "2012 Q1",
+      "value": "98.2",
+      "year": "2012",
+      "quarter": "Q1",
+      "sourceDataset": "SPPI"
+    },
+    {
+      "date": "2012 Q2",
+      "value": "98.3",
+      "year": "2012",
+      "quarter": "Q2",
+      "sourceDataset": "SPPI"
+    },
+    {
+      "date": "2012 Q3",
+      "value": "98.7",
+      "year": "2012",
+      "quarter": "Q3",
+      "sourceDataset": "SPPI"
+    },
+    {
+      "date": "2012 Q4",
+      "value": "98.3",
+      "year": "2012",
+      "quarter": "Q4",
+      "sourceDataset": "SPPI"
+    },
+    {
+      "date": "2013 Q1",
+      "value": "99",
+      "year": "2013",
+      "quarter": "Q1",
+      "sourceDataset": "SPPI"
+    },
+    {
+      "date": "2013 Q2",
+      "value": "98.5",
+      "year": "2013",
+      "quarter": "Q2",
+      "sourceDataset": "SPPI"
+    },
+    {
+      "date": "2013 Q3",
+      "value": "98.2",
+      "year": "2013",
+      "quarter": "Q3",
+      "sourceDataset": "SPPI"
+    },
+    {
+      "date": "2013 Q4",
+      "value": "99.8",
+      "year": "2013",
+      "quarter": "Q4",
+      "sourceDataset": "SPPI"
+    },
+    {
+      "date": "2014 Q1",
+      "value": "98.6",
+      "year": "2014",
+      "quarter": "Q1",
+      "sourceDataset": "SPPI"
+    },
+    {
+      "date": "2014 Q2",
+      "value": "98.9",
+      "year": "2014",
+      "quarter": "Q2",
+      "sourceDataset": "SPPI"
+    }
+  ],
+  "months": [],
+  "relatedBulletins": [
+    "/economy/inflationandpriceindices/bulletins/consumerpriceinflationjune2014"
+  ],
+  "relatedTimeseries": [],
+  "sourceDatasets": [
+    "SPPI"
+  ],
+  "type": "timeseries",
+  "name": "SPPI: 9907106000: SECTION J - INFORMATION AND COMMUNICATION",
+  "uri": "/economy/inflationandpriceindices/timeseries/mf2m",
+  "fileName": "mf2m",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Inflation and price indices",
+      "fileName": "inflationandpriceindices",
+      "breadcrumb": []
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "cdid": "L5HI",
+  "seasonalAdjustment": "Not seasonally adjusted",
+  "mainMeasure": "Consumer Prices Index including owner occupiers\u0027 housing costs (CPIH)",
+  "description": "Consumer price indices are important indicators of how the UK economy is performing.\n\nThe indices are used in many ways by the government, businesses, and society in general. They can affect interest rates, tax allowances, wages, state benefits, pensions, maintenance, contracts and many other payments. They also show the impact of inflation on family budgets and affect the value of the pound in your pocket.",
+  "note1": "The National Statistics status of CPIH has been discontinued pending work by ONS to investigate and improve the method for measuring owner occupiers\u0027 housing costs in this index\n",
+  "note2": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "unit": "",
+  "source": "Office for National Statistics",
+  "nationalStatistic": false,
+  "years": [],
+  "quarters": [],
+  "months": [
+    {
+      "date": "2013 JAN",
+      "value": "0.09",
+      "year": "2013",
+      "month": "January",
+      "sourceDataset": "MM23"
+    },
+    {
+      "date": "2013 FEB",
+      "value": "-0.06",
+      "year": "2013",
+      "month": "February",
+      "sourceDataset": "MM23"
+    },
+    {
+      "date": "2013 MAR",
+      "value": "-0.03",
+      "year": "2013",
+      "month": "March",
+      "sourceDataset": "MM23"
+    },
+    {
+      "date": "2013 APR",
+      "value": "-0.02",
+      "year": "2013",
+      "month": "April",
+      "sourceDataset": "MM23"
+    },
+    {
+      "date": "2013 MAY",
+      "value": "0.02",
+      "year": "2013",
+      "month": "May",
+      "sourceDataset": "MM23"
+    },
+    {
+      "date": "2013 JUN",
+      "value": "0.01",
+      "year": "2013",
+      "month": "June",
+      "sourceDataset": "MM23"
+    },
+    {
+      "date": "2013 JUL",
+      "value": "0",
+      "year": "2013",
+      "month": "July",
+      "sourceDataset": "MM23"
+    },
+    {
+      "date": "2013 AUG",
+      "value": "-0.01",
+      "year": "2013",
+      "month": "August",
+      "sourceDataset": "MM23"
+    },
+    {
+      "date": "2013 SEP",
+      "value": "-0.02",
+      "year": "2013",
+      "month": "September",
+      "sourceDataset": "MM23"
+    },
+    {
+      "date": "2013 OCT",
+      "value": "0",
+      "year": "2013",
+      "month": "October",
+      "sourceDataset": "MM23"
+    },
+    {
+      "date": "2013 NOV",
+      "value": "0.02",
+      "year": "2013",
+      "month": "November",
+      "sourceDataset": "MM23"
+    },
+    {
+      "date": "2013 DEC",
+      "value": "0",
+      "year": "2013",
+      "month": "December",
+      "sourceDataset": "MM23"
+    },
+    {
+      "date": "2014 JAN",
+      "value": "-0.04",
+      "year": "2014",
+      "month": "January",
+      "sourceDataset": "MM23"
+    },
+    {
+      "date": "2014 FEB",
+      "value": "-0.02",
+      "year": "2014",
+      "month": "February",
+      "sourceDataset": "MM23"
+    },
+    {
+      "date": "2014 MAR",
+      "value": "0.03",
+      "year": "2014",
+      "month": "March",
+      "sourceDataset": "MM23"
+    },
+    {
+      "date": "2014 APR",
+      "value": "-0.06",
+      "year": "2014",
+      "month": "April",
+      "sourceDataset": "MM23"
+    },
+    {
+      "date": "2014 MAY",
+      "value": "0.04",
+      "year": "2014",
+      "month": "May",
+      "sourceDataset": "MM23"
+    },
+    {
+      "date": "2014 JUN",
+      "value": "0.02",
+      "year": "2014",
+      "month": "June",
+      "sourceDataset": "MM23"
+    },
+    {
+      "date": "2014 JUL",
+      "value": "-0.05",
+      "year": "2014",
+      "month": "July",
+      "sourceDataset": "MM23"
+    },
+    {
+      "date": "2014 AUG",
+      "value": "0.04",
+      "year": "2014",
+      "month": "August",
+      "sourceDataset": "MM23"
+    }
+  ],
+  "relatedBulletins": [
+    "/economy/inflationandpriceindices/bulletins/consumerpriceinflationjune2014"
+  ],
+  "relatedTimeseries": [],
+  "sourceDatasets": [
+    "MM23"
+  ],
+  "type": "timeseries",
+  "name": "CPIH : Percentage Points Change Over Previous Month (12 Month Rate): Alcohol and Tobacco",
+  "uri": "/economy/inflationandpriceindices/timeseries/l5hi",
+  "fileName": "l5hi",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Inflation and price indices",
+      "fileName": "inflationandpriceindices",
+      "breadcrumb": []
+    }
+  ]
+}

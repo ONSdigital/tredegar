@@ -1,0 +1,109 @@
+{
+  "cdid": "JV8Y",
+  "note1": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "note2": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "unit": "",
+  "source": "Office for National Statistics",
+  "nationalStatistic": false,
+  "years": [],
+  "quarters": [
+    {
+      "date": "2012 Q1",
+      "value": "102.3",
+      "year": "2012",
+      "quarter": "Q1",
+      "sourceDataset": "MM22"
+    },
+    {
+      "date": "2014 Q3",
+      "value": "105.7",
+      "year": "2014",
+      "quarter": "Q3",
+      "sourceDataset": "MM22"
+    }
+  ],
+  "months": [
+    {
+      "date": "2012 JAN",
+      "value": "102.4",
+      "year": "2012",
+      "month": "January",
+      "sourceDataset": "MM22"
+    },
+    {
+      "date": "2012 FEB",
+      "value": "102.2",
+      "year": "2012",
+      "month": "February",
+      "sourceDataset": "MM22"
+    },
+    {
+      "date": "2012 MAR",
+      "value": "102.2",
+      "year": "2012",
+      "month": "March",
+      "sourceDataset": "MM22"
+    },
+    {
+      "date": "2012 APR",
+      "value": "102.2",
+      "year": "2012",
+      "month": "April",
+      "sourceDataset": "MM22"
+    },
+    {
+      "date": "2014 JUN",
+      "value": "106.2",
+      "year": "2014",
+      "month": "June",
+      "sourceDataset": "MM22"
+    },
+    {
+      "date": "2014 JUL",
+      "value": "106.2",
+      "year": "2014",
+      "month": "July",
+      "sourceDataset": "MM22"
+    },
+    {
+      "date": "2014 AUG",
+      "value": "105.5",
+      "year": "2014",
+      "month": "August",
+      "sourceDataset": "MM22"
+    },
+    {
+      "date": "2014 SEP",
+      "value": "105.5",
+      "year": "2014",
+      "month": "September",
+      "sourceDataset": "MM22"
+    }
+  ],
+  "relatedBulletins": [
+    "/economy/inflationandpriceindices/bulletins/consumerpriceinflationjune2014"
+  ],
+  "relatedTimeseries": [],
+  "sourceDatasets": [
+    "MM22"
+  ],
+  "type": "timeseries",
+  "name": "PPI:2813320000:Parts of air or vacuum pumps, of air or gas compressors, of fans,",
+  "uri": "/economy/inflationandpriceindices/timeseries/jv8y",
+  "fileName": "jv8y",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Inflation and price indices",
+      "fileName": "inflationandpriceindices",
+      "breadcrumb": []
+    }
+  ]
+}

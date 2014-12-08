@@ -1,0 +1,134 @@
+{
+  "cdid": "CP25",
+  "note1": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "note2": "This content is not available in the prototype but in future will provide a note about this timeseries.",
+  "unit": "",
+  "source": "Office for National Statistics",
+  "nationalStatistic": false,
+  "years": [
+    {
+      "date": "1997",
+      "value": "3340",
+      "year": "1997",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "1998",
+      "value": "3494",
+      "year": "1998",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "1999",
+      "value": "3807",
+      "year": "1999",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2000",
+      "value": "3985",
+      "year": "2000",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2001",
+      "value": "4197",
+      "year": "2001",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2002",
+      "value": "4491",
+      "year": "2002",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2003",
+      "value": "4848",
+      "year": "2003",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2004",
+      "value": "5103",
+      "year": "2004",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2005",
+      "value": "5626",
+      "year": "2005",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2006",
+      "value": "5933",
+      "year": "2006",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2007",
+      "value": "5964",
+      "year": "2007",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2008",
+      "value": "6284",
+      "year": "2008",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2009",
+      "value": "6423",
+      "year": "2009",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2010",
+      "value": "6680",
+      "year": "2010",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2011",
+      "value": "6897",
+      "year": "2011",
+      "sourceDataset": "RGHI"
+    },
+    {
+      "date": "2012",
+      "value": "7079",
+      "year": "2012",
+      "sourceDataset": "RGHI"
+    }
+  ],
+  "quarters": [],
+  "months": [],
+  "relatedBulletins": [
+    "/economy/grossdomesticproductgdp/bulletins/gdppreliminaryestimateq32014"
+  ],
+  "relatedTimeseries": [],
+  "sourceDatasets": [
+    "RGHI"
+  ],
+  "type": "timeseries",
+  "name": "GDHI UKH3 Essex raw Social Contributions Paid £m",
+  "uri": "/economy/grossdomesticproductgdp/timeseries/cp25",
+  "fileName": "cp25",
+  "breadcrumb": [
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Economy",
+      "fileName": "economy"
+    },
+    {
+      "index": 0,
+      "type": "home",
+      "name": "Gross Domestic Product (GDP)",
+      "fileName": "grossdomesticproductgdp",
+      "breadcrumb": []
+    }
+  ]
+}
