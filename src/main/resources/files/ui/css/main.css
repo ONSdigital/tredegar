@@ -8692,7 +8692,8 @@ lesser , applied styles
     height: 30em;
     background-color: #fff;
     margin: 15% auto;
-    overflow: auto;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
     pointer-events:auto;
 }
 
