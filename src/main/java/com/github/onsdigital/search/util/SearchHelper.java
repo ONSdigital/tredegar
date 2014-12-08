@@ -112,6 +112,9 @@ public class SearchHelper {
 
 	private static AggregatedSearchResult doSearch(String searchTerm, int page, String... types) {
 		SearchResult searchResult = SearchService.search(buildContentQuery(searchTerm, page, types));
+
+		// only do home search in order to determine whether we need to
+		// increment the results count by 1
 		SearchResult homeResult = SearchService.search(buildHomeQuery(searchTerm, page));
 		if (types == null && homeResult != null && homeResult.getNumberOfResults() != 0) {
 			long numberOfResults = searchResult.getNumberOfResults();
