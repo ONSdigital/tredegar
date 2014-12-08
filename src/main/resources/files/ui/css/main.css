@@ -3024,6 +3024,19 @@ lesser , applied styles
     /*Commented out as part of Lozenge redesign*/
     /*background-color: #adafa7;*/
 }
+.home--lozenge {
+    display: inline-block;
+    padding: 3px 5px;
+    padding: .3rem .5rem;
+    font-size: 10px;
+    font-size: 1rem;
+    letter-spacing: .1em;
+    color: #888;
+    text-transform: uppercase;
+    cursor: pointer;
+    /*Commented out as part of Lozenge redesign*/
+    /*background-color: #adafa7;*/
+}
 .lozenge--label {
     display: inline-block;
     padding: 3px 5px;
@@ -4767,7 +4780,7 @@ table actions
     font-weight: bold;
     font-size: 1.125em;
     color: #016db9;
-    margin-right: 1.25em;
+/*     margin-right: 1.25em; */
 }
 .search dt:not(:first-child) {
     padding-top: 1.25em;
@@ -4782,9 +4795,11 @@ table actions
 }
 
 .search-home-focused {
+	background-color: #e5e5e5;
     font-size: 1.25em !important;
 }
 .search-home-focused--summary {
+	background-color: #e5e5e5;
     font-size: 1.8rem;
     line-height: 2.7rem;
 }
