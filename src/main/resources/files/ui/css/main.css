@@ -8681,6 +8681,11 @@ lesser , applied styles
 .closeButton {
 	color: #fff;
 }
+
+.closeButton:visited {
+    color: #fff;
+}
+
 .closeButton :hover {
 	color:#ff8c00;
 }
