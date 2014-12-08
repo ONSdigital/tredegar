@@ -8689,11 +8689,10 @@ lesser , applied styles
 @media screen and (max-width: 38em){
 .modalDialog {
     width: 20em;
-    height: 30em;
+    height: 20em;
     background-color: #fff;
-    margin: 15% auto;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
+    margin: 5% auto;
+    overflow: auto;
     pointer-events:auto;
 }
 
