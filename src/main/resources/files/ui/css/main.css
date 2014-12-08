@@ -1108,6 +1108,12 @@ textarea {
     font-style: normal;
 }
 @font-face {
+    font-family: 'open-sans-n7';
+    src: url("/ui/fonts/OpenSans-Bold.eot#iefix") format("embedded-opentype"), url("/ui/fonts/OpenSans-Bold.woff") format("woff"), url("/ui/fonts/OpenSans-Bold.ttf") format("truetype"), url("/ui/fonts/OpenSans-Bold.svg#OpenSans-Bold") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    }
+@font-face {
         font-family: 'DaxlinePro';
         /*src: url("/ui/fonts/DaxlinePro-Bold.eot");
         src: url("../fonts/DaxlinePro-Bold.ttf") format("truetype");*/
