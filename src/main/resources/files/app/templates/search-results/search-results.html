@@ -105,7 +105,7 @@
                         <dd class="microcopy">
                         	<span ng-if="item.type != 'home'">Release date 1 Jan 3000</span>
                         </dd>
-                        <dd ng-repeat-end class="search-summary">{{(item.summary | charLimit:300:'...') || 'In the future a short description of this item will be displayed in this area' }}</dd>
+                        <dd ng-repeat-end class="search-summary">{{(item.lede | charLimit:300:'...') || 'In the future a short description of this item will be displayed in this area' }}</dd>
                     </dl>
 
                     <article ng-show="showTimeseriesSearchSuggest"  class="box box--padded box--green box--green--separated-left lifted">
