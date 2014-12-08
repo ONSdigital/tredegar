@@ -29,10 +29,16 @@ angular.module('onsTemplates')
 					if (!searchTerm) {
 						return
 					}
-					$location.path('/search/' + searchTerm)
-					$location.search('type', null)
-						//Re-initializes controllers. Fixes searching on search results page when searching the same term
-					$route.reload()
+					var currentPath = $location.url()
+					if(currentPath === ('/search/' +searchTerm)) {
+						// Searching the same term when on search results page will not change the url. 
+						// That means search is not triggered.Reload ensure search is performed again
+						$route.reload()						
+					} else {
+						$location.path('/search/' + searchTerm)
+						$location.search('type', null)
+					}
+
 				}
 
 				$scope.getStaticFormAction = function() {
