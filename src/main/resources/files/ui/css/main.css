@@ -3026,8 +3026,8 @@ lesser , applied styles
 }
 .home--lozenge {
     display: inline-block;
-    padding: 3px 5px;
-    padding: .3rem .5rem;
+/*    padding: 3px 5px;
+    padding: .3rem .5rem;*/
     font-size: 10px;
     font-size: 1rem;
     letter-spacing: .1em;
@@ -4797,11 +4797,15 @@ table actions
 .search-home-focused {
 	background-color: #e5e5e5;
     font-size: 1.25em !important;
+    padding-left: 1rem;
 }
+
 .search-home-focused--summary {
 	background-color: #e5e5e5;
     font-size: 1.8rem;
     line-height: 2.7rem;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
 }
 
 /*Highlight terms*/
