@@ -3,7 +3,7 @@ Level 2: Elections
 Summary: Analysis of the annual counts of the number of people registered to vote in 2013, including comparisons over time and between the UK constituent countries.
 Headline 1: The total number of UK parliamentary electors in 2013 was 46,139,900, a fall of 0.5% from 2012.
 Headline 2: The total number of UK local government electors in 2013 was 47,691,800, a fall of 0.1% from 2012.
-Headline 3: Between 2012 and 2013, the number of both parliamentary and local government electors declined in both England and Northern Ireland, while the number of parliamentary electors declined in Wales. 
+Headline 3: Between 2012 and 2013, the number of both parliamentary and local government electors declined in both England and Northern Ireland, while the number of parliamentary electors declined in Wales.
 Contact name: Pete Large
 Contact email: pop.info@ons.gsi.gov.uk
 
@@ -45,7 +45,7 @@ More information is available from our [Electoral Statistics Information page](h
 
 Electoral statistics are gathered and published by ONS. They are used by Boundary Commissions, the Electoral Commission, and central government to help with the improvement of electoral policies and for statutory reviews of parliamentary constituency boundaries. The statistics are also of interest to Members of Parliament and the general public.
 
-Electoral statistics represent the most accurate count possible of the number of people on electoral registers each year. They are subject to full quality assurance procedures and are reliable and comparable across the UK constituent countries. Information on the quality of these statistics is provided in a Quality and Methodology Information paper available from our [Quality Reports for Government Statistics page](http://www.ons.gov.uk/ons/guide-method/method-quality/quality/quality-information/government/index.html "Quality Reports for Government Statistics page"). 
+Electoral statistics represent the most accurate count possible of the number of people on electoral registers each year. They are subject to full quality assurance procedures and are reliable and comparable across the UK constituent countries. Information on the quality of these statistics is provided in a Quality and Methodology Information paper available from our [Quality Reports for Government Statistics page](http://www.ons.gov.uk/ons/guide-method/method-quality/quality/quality-information/government/index.html "Quality Reports for Government Statistics page").
 
 ##### Notes for Introduction
 1. To be entitled to vote in European elections in the UK, European Union (EU) citizens are required to request the right to vote in this country rather than their home country. Those persons who do not make this request will not be included in the European Parliament electorate.
@@ -66,14 +66,14 @@ The number of electors in England has grown by an average of 0.4% each year over
 
 The number of electors in both Scotland and Wales has risen on average by 0.7% and 0.3% each year respectively; however both showed a fall between the 2008 and 2009 registers and Wales fell again between 2012 and 2013. Of the four UK constituent countries, Northern Ireland had the highest growth in the number of parliamentary electors every year between 2008 and 2012, but had the largest decline between 2012 and 2013.
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/electoral1.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/electoral1.html"></iframe>
 </div>
 
 Figure 2 however shows that there was large variation between English regions in 2012 to 2013, with the East of England, North West, South East and London showing declines of less than 0.2%, while the West Midlands declined by 1.7%. This is in contrast to the changes recorded last year when all English regions had growth in their number of parliamentary electors. It is possible that differences in administrative practices between local authority areas in different parts of the country are contributing to these regional differences.
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/electoral2.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/electoral2.html"></iframe>
 </div>
 
 ### Parliamentary Constituencies
@@ -112,16 +112,16 @@ The number of electors in England has grown by an average of 0.6% each year over
 
 The number of electors in Scotland fell between 2008 and 2009, but has since seen average growth of 1.3% per year. In contrast, Northern Ireland had the highest growth of the four UK constituent countries between 2008 and 2012, but recorded a fall of 0.5% in the year to December 2013. However, the number of electors in 2013 (1,241,000) remains higher than the 1,227,100 recorded in 2011. Wales has displayed an annual average growth of 0.4% over the last five years and so has had the lowest growth of all UK constituent countries over that period.
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/electoral3.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/electoral3.html"></iframe>
 </div>
 
 Figure 4 shows that the -0.3% change in the number of local government electors in England, between 2012 and 2013, hides large variation between different regions. London had an increase of 0.6%, while the East of England, South East and North West had increases of 0.3%, 0.2% and 0.1% respectively. The remaining regions all had sizeable decreases in their local government electorate, with the largest being the change of -1.5% seen in the West Midlands. It is possible that differences in administrative practices between local authority areas in different parts of the country may be contributing to these regional differences.
 
 All regions, with the exception of London, have large differences between the percentage change recorded between 2012 and 2013 and that recorded between 2011 and 2012.
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/electoral4.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/electoral4.html"></iframe>
 </div>
 
 ### Local Government Areas
@@ -180,7 +180,7 @@ Electoral statistics for Scotland are produced and published by National Records
 The data are available from the [electoral statistics section of the NRS](http://www.ons.gov.uk/ons/external-links/devolved-admins/national-records-of-scotland/national-records-of-scotland--electoral-statistics.html "National Records of Scotland: Electoral Statistics").
 
 ### Northern Ireland
-Electoral statistics for Northern Ireland are produced and published by the Electoral Office for Northern Ireland (EONI). Monthly electoral statistics for both the parliamentary and local government electorate are available at electoral ward level from the [electoral statistics section of the EONI website](http://www.ons.gov.uk/ons/external-links/other/electorate-statistics.html "Electoral Statistics"). 
+Electoral statistics for Northern Ireland are produced and published by the Electoral Office for Northern Ireland (EONI). Monthly electoral statistics for both the parliamentary and local government electorate are available at electoral ward level from the [electoral statistics section of the EONI website](http://www.ons.gov.uk/ons/external-links/other/electorate-statistics.html "Electoral Statistics").
 
 ## [accordion] Background notes and methodology
 1. National Statistics are produced to high professional standards set out in the Code of Practice for Official Statistics. They undergo regular quality assurance reviews to ensure that they meet customer needs. They are produced free from any political interference.
@@ -199,28 +199,28 @@ Electoral statistics for Northern Ireland are produced and published by the Elec
 
 8. Release code: ELEC1BL1
 
-9. **Next publication:** 
+9. **Next publication:**
 2015
 
-**Issued by:** 
+**Issued by:**
 Office for National Statistics, Government Buildings, Cardiff Road, Newport NP10 8XG
 
-**Media contact:** 
-Tel:  Media Relations Office    0845 6041858  
-        Emergency on-call    07867 906553 
-Email: <media.relations@ons.gsi.gov.uk> 
+**Media contact:**
+Tel:  Media Relations Office    0845 6041858
+        Emergency on-call    07867 906553
+Email: <media.relations@ons.gsi.gov.uk>
 
 **Statistical contact:**
-Tel:  Pete Large    01329 444661 
+Tel:  Pete Large    01329 444661
 Email: <pop.info@ons.gov.uk>
 
 © Crown copyright 2014.
 
-You may re-use this information (not including logos) free of charge in any format or medium, under the terms of the [Open Government Licence](http://www.ons.gov.uk/ons/external-links/other-government-departments/national-archives/index.html "Open Government Licence") or write to the Information Policy Team, The National Archives, Kew, London TW9 4DU 
+You may re-use this information (not including logos) free of charge in any format or medium, under the terms of the [Open Government Licence](http://www.ons.gov.uk/ons/external-links/other-government-departments/national-archives/index.html "Open Government Licence") or write to the Information Policy Team, The National Archives, Kew, London TW9 4DU
 Email:  <psi@nationalarchives.gsi.gov.uk>
 
 
-Produced in partnership with National Records of Scotland and Electoral Office for Northern Ireland 
+Produced in partnership with National Records of Scotland and Electoral Office for Northern Ireland
 
 11. Details of the policy governing the release of new data are available by visiting [www.statisticsauthority.gov.uk/assessment/code-of-practice/index.html](http://www.statisticsauthority.gov.uk/assessment/code-of-practice/index.html) or from the Media Relations Office email: <media.relations@ons.gsi.gov.uk>
 

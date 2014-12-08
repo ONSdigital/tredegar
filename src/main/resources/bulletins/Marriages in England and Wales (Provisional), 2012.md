@@ -25,13 +25,13 @@ Marriage statistics for 2012 are rounded and provisional. Figures for 2012 will 
 
 This is the first time that ONS has published final 2011 and provisional 2012 marriage statistics for England and Wales.
 
-The publication of Marriages in England and Wales (provisional) 2012 is later than originally planned. Changes in data collection methodology (see background note 3) required more time to be spent on detailed quality assurance. Once the new data collection processes are well established, ONS hope to bring forward the release of final annual marriage statistics to around 15 months after the end of the data year. This would mean that final annual figures would be released around the time that provisional figures are currently published, and the provisional publication would be discontinued. ONS will monitor the receipt of marriage registrations over the next year to determine whether such a change is possible. 
+The publication of Marriages in England and Wales (provisional) 2012 is later than originally planned. Changes in data collection methodology (see background note 3) required more time to be spent on detailed quality assurance. Once the new data collection processes are well established, ONS hope to bring forward the release of final annual marriage statistics to around 15 months after the end of the data year. This would mean that final annual figures would be released around the time that provisional figures are currently published, and the provisional publication would be discontinued. ONS will monitor the receipt of marriage registrations over the next year to determine whether such a change is possible.
 
 ## Number of Marriages
 The provisional number of marriages registered in England and Wales rose by 5.3% in 2012 to 262,240, compared with 249,133 in 2011. This increase in the provisional marriage figure for 2012 continues the recent upward trend, following the low recorded for 2009.
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/marriage1.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/marriage1.html"></iframe>
 </div>
 
 ##### Notes:
@@ -48,10 +48,10 @@ Over the past 20 years, there has been a rise in the number of cohabiting adults
 
 It is not possible to determine at this stage whether the rising number of marriages between 2009 and 2012 is indicative of an end to the long term decline between 1972 and 2009. Possible factors which may have influenced the increasing number of marriages in England and Wales in recent years include:
 
-- Changes in the number of residents of England and Wales marrying abroad. Estimates derived from the International Passenger Survey suggest there was a fall in the number of UK residents marrying abroad from 92,000 in 2009 to 55,000 in 2011. Marriages that would otherwise have occurred abroad may have taken place in England and Wales instead. In 2012 however, marriages abroad were estimated to have risen back up to 89,000. These estimates are based on a very small number of interviews and so the standard errors on the estimates are correspondingly high. 
+- Changes in the number of residents of England and Wales marrying abroad. Estimates derived from the International Passenger Survey suggest there was a fall in the number of UK residents marrying abroad from 92,000 in 2009 to 55,000 in 2011. Marriages that would otherwise have occurred abroad may have taken place in England and Wales instead. In 2012 however, marriages abroad were estimated to have risen back up to 89,000. These estimates are based on a very small number of interviews and so the standard errors on the estimates are correspondingly high.
 - The Certificate of Approval Scheme was abolished in May 2011. This will have made it easier for legitimate marriages involving persons subject to immigration controls to take place.
 - The economic downturn in 2008/9 which may have delayed marriages due to financial constraints, changes in employment and related lifestyle changes.
-- Marriages to an increasing number of couples who decided to cohabit as a precursor to marriage. Research suggests that around 40% of cohabiting couples are estimated to marry within 5 years (based on cohabiting unions which started between 2000 and 2004) ([Beaujouan and Bhrolcháin, 2011](http://www.ons.gov.uk/ons/rel/population-trends-rd/population-trends/no--145--autumn-2011/ard-pt145-cohab-marriage-trends.pdf "Beaujouan and Bhrolcháin, 2011")). 
+- Marriages to an increasing number of couples who decided to cohabit as a precursor to marriage. Research suggests that around 40% of cohabiting couples are estimated to marry within 5 years (based on cohabiting unions which started between 2000 and 2004) ([Beaujouan and Bhrolcháin, 2011](http://www.ons.gov.uk/ons/rel/population-trends-rd/population-trends/no--145--autumn-2011/ard-pt145-cohab-marriage-trends.pdf "Beaujouan and Bhrolcháin, 2011")).
 
 The largest percentage decline in the number of marriages since 1972 was recorded between 2004 and 2005, when the number of marriages fell by 9.3%. This could be related to the introduction of the Certificate of Approval Scheme included in the Asylum and Immigration (Treatment of Claimants, etc.) Act 2004, which was introduced on 1 February 2005 to prevent the use of marriage to circumvent UK immigration control (‘sham marriages’). The scheme made it increasingly difficult for a sham marriage to take place and could therefore have reduced the number of such marriages. In addition there may have been people marrying legitimately who were either deterred from marrying or whose marriage was delayed by the legislation. These measures were abolished in May 2011. Entering into a sham marriage does not entitle migrants to any right to remain in the UK. The Home Office continues to investigate suspected abuse with assistance from Registrars and members of the clergy, disrupting marriages where possible, before they take place. See background note 7 for more information on these changes to marriage legislation.
 
@@ -62,8 +62,8 @@ Changes in the size of the unmarried population are determined by patterns of ma
 
 The provisional male GMR in 2012 was 23.2 men marrying per thousand unmarried men aged 16 and over, compared with 22.1 in 2011 and 27.4 in 2002. The provisional GMR for women in 2012 was 21.0 women marrying per thousand unmarried women aged 16 and over, compared with 19.9 in 2011 and 23.9 in 2002 (Figure 2).
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/marriage2.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/marriage2.html"></iframe>
 </div>
 
 ##### Notes:
@@ -89,8 +89,8 @@ Provisional marriage figures for 2012 suggest that Church of England and Church 
 ## Age at Marriage
 Figure 3 shows the age at marriage for men and women in 2012. At younger ages there were more women than men marrying; however, at older ages more men than women married. This pattern reflects that, on average, men tend to form relationships with women younger than themselves. In 2012, the number of marriages was greatest among men and women aged 25 to 29.
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/marriage3.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/marriage3.html"></iframe>
 </div>
 
 ##### Notes:
@@ -98,12 +98,12 @@ Figure 3 shows the age at marriage for men and women in 2012. At younger ages th
 
 The largest percentage increase in the number of marriages from 2011 to 2012 was for men and women aged 65 to 69, increasing by 25% and 21% respectively. The age groups with the greatest decrease in the numbers of marriages were for men under 20 and women aged 80 and over, decreasing by 9.4% and 18% respectively.
 
-There was a slight increase in the mean age at marriage for both men and women in 2012. The provisional mean age for men marrying in 2012 was 36.5 years, an increase from 36.3 years in 2011. The provisional mean age for women marrying in 2012 was 34.0 years, an increase from 33.8 years in 2011. 
-  
+There was a slight increase in the mean age at marriage for both men and women in 2012. The provisional mean age for men marrying in 2012 was 36.5 years, an increase from 36.3 years in 2011. The provisional mean age for women marrying in 2012 was 34.0 years, an increase from 33.8 years in 2011.
+
 Over the period 1972 to 2012, the mean age at marriage for both men and women generally increased (Figure 4). For grooms, the mean age at marriage in 1972 was 28.8 years, compared with 36.5 years in 2012. For brides, the mean age at marriage in 1972 was 26.2 years, compared with 34.0 years in 2012. These increases result from people delaying entering into a first marriage and to a lesser extent increases in the proportion of marriages to divorced men and women where the mean age at marriage has risen (see Tables 6 and 7, [Age at marriage and previous marital status (604 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/vsob1/marriages-in-england-and-wales--provisional-/2012/rtd-age-at-marriage-and-previous-marital-status.xls "RTD Age at marriage and previous marital status") ).
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/marriage4.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/marriage4.html"></iframe>
 </div>
 
 ##### Notes:
@@ -113,8 +113,8 @@ Over the period 1972 to 2012, the mean age at marriage for both men and women ge
 Since 1972 the mean age at first marriage has increased by almost eight years for both men and women. In 2012 the provisional mean age at marriage for never-married men was 32.4 years, while for never married women it was 30.3 years. This compares with 24.9 years and 22.9 years respectively in 1972.
 
 ## Marital Status Before Marriage
-Provisional figures show that in 2012, 175,040 marriages in England and Wales were first marriages for both partners. This accounted for 67% of all marriages. This number peaked in 1940 at 426,100 when 91% of all marriages were the first for both partners. 
-  
+Provisional figures show that in 2012, 175,040 marriages in England and Wales were first marriages for both partners. This accounted for 67% of all marriages. This number peaked in 1940 at 426,100 when 91% of all marriages were the first for both partners.
+
 Remarriages for both parties accounted for 15% of all marriages in 2012. The remaining 19% of marriages were to couples where only one partner had been married previously. The proportion of marriages that were the first for both parties has gradually increased since 1996 (rise of 9.1 percentage points), while remarriages for one or both parties have decreased over the same period (fall of 4.6 percentage points for both).
 
 ## Proportion of Men and Women Who Have Ever Married
@@ -182,8 +182,8 @@ Lawyers, solicitors and those involved in family law, as well as academics and r
 Those involved in the 'marriage business', for example hotels and catering businesses, bridal shops and wedding planners, often wish to see marriage statistics. The clergy and in particular the Church of England are also interested in marriage statistics by area, and the number of religious marriages taking place each year.
 
 ## Further Information
-More data on [Marriages in England and Wales](http://www.ons.gov.uk/ons/rel/vsob1/marriages-in-england-and-wales--provisional-/index.html "Marriages in England and Wales (provisional) index") in 2012 are available on the Office for National Statistics (ONS) website.  
-  
+More data on [Marriages in England and Wales](http://www.ons.gov.uk/ons/rel/vsob1/marriages-in-england-and-wales--provisional-/index.html "Marriages in England and Wales (provisional) index") in 2012 are available on the Office for National Statistics (ONS) website.
+
 [ONS Marriages Metadata (420.6 Kb Pdf)](http://www.ons.gov.uk/ons/guide-method/user-guidance/health-and-life-events/marriages-2011.pdf "Marriages metadata") provides further information on data quality, legislation and procedures relating to marriages.
 
 [ONS Marriages Quality and Methodology Information (214.1 Kb Pdf)](http://www.ons.gov.uk/ons/guide-method/method-quality/quality/quality-information/social-statistics/quality-and-methodology-information-for-marriages-in-england-and-wales.pdf "Quality and Methodology Information for Marriages in England and Wales") provides overview notes which pull together key qualitative information on the various dimensions of quality as well as providing a summary of methods used to compile the output.
@@ -232,20 +232,20 @@ The median and mean ages do not coincide here as the age distribution is not sym
 
 8. Special extracts and tabulations of marriage data for England and Wales are available to order (subject to legal frameworks, disclosure control, resources and agreement of costs, where appropriate). Enquiries should be made to:
 
-Vital Statistics Output Branch 
-Life Events and Population Sources Division 
-Office for National Statistics 
-Segensworth Road 
-Titchfield 
-Fareham 
+Vital Statistics Output Branch
+Life Events and Population Sources Division
+Office for National Statistics
+Segensworth Road
+Titchfield
+Fareham
 Hampshire PO15 5RR
 
-Tel: +44 (0)1329 444110 
+Tel: +44 (0)1329 444110
 Email: <vsob@ons.gsi.gov.uk>
 
 The [ONS charging policy](http://www.ons.gov.uk/ons/about-ons/business-transparency/freedom-of-information/ons-charging-policy/index.html "ONS charging policy") is available on the ONS website.
 
-9. We welcome feedback from users on the content, format and relevance of this release. Please send feedback to the postal or email address above. 
+9. We welcome feedback from users on the content, format and relevance of this release. Please send feedback to the postal or email address above.
 
 10. Follow ONS on [Twitter](http://www.ons.gov.uk/ons/external-links/social-media/twitter.html "Twitter") and [Facebook](http://www.ons.gov.uk/ons/external-links/social-media/index.html "Facebook")
 

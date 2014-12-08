@@ -113,6 +113,15 @@ public class SearchHelper {
 	private static AggregatedSearchResult doSearch(String searchTerm, int page, String... types) {
 		SearchResult searchResult = SearchService.search(buildContentQuery(searchTerm, page, types));
 
+		// only do home search in order to determine whether we need to
+		// increment the results count by 1
+		SearchResult homeResult = SearchService.search(buildHomeQuery(searchTerm, page));
+		if (types == null && homeResult != null && homeResult.getNumberOfResults() != 0) {
+			long numberOfResults = searchResult.getNumberOfResults();
+			++numberOfResults;
+			searchResult.setNumberOfResults(numberOfResults);
+		}
+
 		AggregatedSearchResult result = new AggregatedSearchResult();
 		result.contentSearchResult = searchResult;
 		return result;
@@ -147,7 +156,7 @@ public class SearchHelper {
 			contentQuery.setTypes(ContentType.bulletin.toString(), ContentType.dataset.toString(), ContentType.methodology.toString(), ContentType.article.toString()).setPage(page);
 
 		} else {
-			contentQuery.setTypes(types);
+			contentQuery.setTypes(types).setPage(page);
 		}
 
 		return contentQuery;
