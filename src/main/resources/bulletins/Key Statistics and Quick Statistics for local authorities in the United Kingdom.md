@@ -47,16 +47,16 @@ Statistics published in this release are based on the currently available output
 
 ##### Further results
 
-This release represents part one of the second release of census results for the UK.  Further key results on the topics of education, the labour market and living arrangements are planned to be made available when all constituent country data have been published. 
+This release represents part one of the second release of census results for the UK.  Further key results on the topics of education, the labour market and living arrangements are planned to be made available when all constituent country data have been published.
 
 Information on plans for publishing future UK results is available in the [2011 Census outputs prospectus for England and Wales](http://www.ons.gov.uk/ons/guide-method/census/2011/census-data/2011-census-prospectus/index.html "2011 Census prospectus").
 
 ## Population
 ### Age and sex
 
-On 17 December 2012 the first 2011 Census population estimates for the United Kingdom were published.  These showed that on census day, 27 March 2011, the estimated population of the UK was 63.2 million, the largest it has ever been.  There were more females (32.2 million) than males (31.0 million).  The estimated population of England was 53.0 million, 5.3 million people in Scotland, 3.1 million people in Wales and 1.8 million people in Northern Ireland. 
+On 17 December 2012 the first 2011 Census population estimates for the United Kingdom were published.  These showed that on census day, 27 March 2011, the estimated population of the UK was 63.2 million, the largest it has ever been.  There were more females (32.2 million) than males (31.0 million).  The estimated population of England was 53.0 million, 5.3 million people in Scotland, 3.1 million people in Wales and 1.8 million people in Northern Ireland.
 
-The number of people aged 65 and over in the UK was 10.4 million (16 per cent of the total population) in 2011, an increase of one million since 2001 from 9.4 million (16 per cent).  During this period the total population of the UK has increased by nearly seven per cent (4.1 million). 
+The number of people aged 65 and over in the UK was 10.4 million (16 per cent of the total population) in 2011, an increase of one million since 2001 from 9.4 million (16 per cent).  During this period the total population of the UK has increased by nearly seven per cent (4.1 million).
 
 Further information about the 2011 Census UK population estimates can be found on the ONS website.
 
@@ -65,7 +65,7 @@ Further information about the 2011 Census UK population estimates can be found o
 A further release of UK census statistics on 21 March 2013 showed that:
 
 - There were 26.4 million households in the UK in 2011.  There were 22.1 million in England, 2.4 million in Scotland, 1.3 million in Wales and 0.7 million in Northern Ireland.
-- The average household size in the UK was 2.3 people per household, compared with 2.4 in 2001.  While the number of people living in households in the UK increased by 7.5 per cent since 2001, the number of households has increased by 8 per cent resulting in a small decrease in average household size for the UK. 
+- The average household size in the UK was 2.3 people per household, compared with 2.4 in 2001.  While the number of people living in households in the UK increased by 7.5 per cent since 2001, the number of households has increased by 8 per cent resulting in a small decrease in average household size for the UK.
 
 ### Marital and civil partnership status
 
@@ -84,8 +84,8 @@ Due to question and response category differences in the country specific ethnic
 
 In 2011 the majority of the UK population described themselves as belonging to the White ethnic group (87 per cent or 55 million).  The remaining 13 per cent (8.1 million) belonged to a minority ethnic group, representing one person in eight of the UK population.  The Asian / Asian British (including Chinese) ethnic group accounted for 7 per cent of the UK population (4.4. million people).  The other minority groups were Black / African / Caribbean / Black British (3 per cent), Mixed (2 per cent), and Gypsy / Traveller / Irish Traveller / Other groups (1 per cent).  Figure 1 shows the proportion of each ethnic group for the UK.
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/la1.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/la1.html"></iframe>
 </div>
 
 ##### Notes:
@@ -100,8 +100,8 @@ Apart from England, where 85 per cent of residents described themselves as White
 
 Comparing all English regions, Wales, Scotland and Northern Ireland, the most ethnically diverse region was London with 40 per cent of residents identifying themselves as belonging to a minority ethnic group.  Figure 2 shows the usually resident population of the UK by ethnic group and region, excluding the White ethnic group.
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/la2.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/la2.html"></iframe>
 </div>
 
 ##### Notes:
@@ -115,8 +115,8 @@ Comparing all English regions, Wales, Scotland and Northern Ireland, the most et
 ### Country of birth
 The top 10 non-UK born countries of birth for the United Kingdom in 2011 are shown in Figure 3. This shows India was the most reported country of birth of non-UK born citizens in 2011. In 2001, 468,000 usual residents (10 per cent of the non-UK born population) reported India as their country of birth, but in 2011 this had increased to 722,000 (9 per cent of the non-UK born population), an increase of 254,000.
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/la3.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/la3.html"></iframe>
 </div>
 
 ##### Notes:
@@ -133,8 +133,8 @@ Usual residents in the UK were asked to assess their health on a five point scal
 
 In 2011, over four-fifths (81 per cent, 51.3 million) of the population of the UK described themselves as being in good or very good health, as shown in Figure 4.  A further 13 per cent (8.3 million) described their health as fair, and the remaining 6 per cent described their health as bad or very bad.  Wales had the lowest proportion of the population in good or very good health (78 per cent) and the highest proportion of the population in bad or very bad health (8 per cent).
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/la4.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/la4.html"></iframe>
 </div>
 
 ##### Notes:
@@ -143,8 +143,8 @@ In 2011, over four-fifths (81 per cent, 51.3 million) of the population of the U
 
 Across the English regions, Wales, Scotland and Northern Ireland, Scotland had the highest proportion of usual residents with very good health at 52 per cent (2.8 million); the North East of England had the lowest proportion at 44 per cent (1.1 million).  The South East of England had the lowest proportion reporting bad or very bad health at four per cent (375,000).  Figure 5 shows the general health of the population of the UK by constituent country and English regions.
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/la5.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/la5.html"></iframe>
 </div>
 
 ##### Notes:
@@ -171,8 +171,8 @@ Of all the English regions, Wales, Scotland and Northern Ireland, residents of L
 
 In 2011 40 per cent (24.6 million) of usual residents in the UK lived in properties owned with a mortgage or loan.  As can be seen from Figure 6, this ranged from 39 per cent (1.2 million) in Wales up to 43 per cent (765,000) in Northern Ireland.  More than a quarter of usual residents in the UK lived in properties that were owned outright (26 per cent, 15.9 million), ranging from 24 per cent (1.3 million) in Scotland up to 30 per cent (896,000) in Wales.
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/la6.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/la6.html"></iframe>
 </div>
 
 ##### Notes:
@@ -186,8 +186,8 @@ The percentage of usual residents renting privately from a landlord or letting a
 
 In 2011, 33 per cent (8.7 million) of households in the UK owned their own property with a mortgage or loan. This ranged from 32 per cent (417,000) in Wales to 35 per cent (245,000) in Northern Ireland.
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/la7.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/la7.html"></iframe>
 </div>
 
 ##### Notes:
@@ -199,16 +199,16 @@ Comparing Figure 6 with Figure 7, there is a 7 percentage point difference in th
 
 The total number of cars or vans available to households increased by 4.0 million (14.9 per cent) between from 26.7 million cars or vans 2001 to 30.7 million cars or vans in 2011.  The percentage increase in the number of cars or vans available to households for each country of the UK between 2001 to 2011 is shown in figure 8.
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/la8.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/la8.html"></iframe>
 </div>
 
-Figure 8 shows that Northern Ireland experienced the biggest increase (28 per cent, 193,000) in the number of cars or vans between 2001 and 2011, from 692,000 in 2001 to 885,000 in 2011. Scotland had the second highest percentage increase (21 per cent, 431,000) in the number of cars or vans available to households between 2001 and 2011. In 2001, there were 2.0 million cars or vans available in Scotland, but by 2011 this had increased to 2.5 million. The number of cars or vans available in Wales also increased between 2001 and 2011 (by 20 per cent, 269,000). There were 1.3 million cars or vans available to households in Wales in 2001, but this had increased to 1.6 million in 2011. England was the country to have had the smallest percentage increase (14 per cent, 3.1 million). 
+Figure 8 shows that Northern Ireland experienced the biggest increase (28 per cent, 193,000) in the number of cars or vans between 2001 and 2011, from 692,000 in 2001 to 885,000 in 2011. Scotland had the second highest percentage increase (21 per cent, 431,000) in the number of cars or vans available to households between 2001 and 2011. In 2001, there were 2.0 million cars or vans available in Scotland, but by 2011 this had increased to 2.5 million. The number of cars or vans available in Wales also increased between 2001 and 2011 (by 20 per cent, 269,000). There were 1.3 million cars or vans available to households in Wales in 2001, but this had increased to 1.6 million in 2011. England was the country to have had the smallest percentage increase (14 per cent, 3.1 million).
 
 Although the number of cars or vans available to household increased across the UK between 2001 and 2011, the distribution of the number of cars or vans per household has changed, as shown in figure 9. There has been a decrease in the proportion of households with no cars or vans available between 2001 and 2011. There has also been a decrease in the percentage of households that have just one car or van available. There has been a large increase however, in the number of households that have two or more cars or vans from 7.0 million in 2001, to 8.4 million in 2011.
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/la9.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/la9.html"></iframe>
 </div>
 
 ### Communal establishments
@@ -217,7 +217,7 @@ Communal establishments provide managed residential accommodation such as shelte
 
 It was estimated that only 2 per cent (1.1 million) of usual residents of the UK lived in communal establishments and 98 per cent lived in households (62.1 million).  This is similar to the proportion of usual residents of the UK living in communal establishments in 2001.   Of all people living in communal establishments, 7 per cent (76,800) were staff or owners of the establishment, or their partners and family members.
 
-In 2011, 42 per cent (477,000) of communal establishment residents in the UK resided in medical and care establishments including 38 per cent (428,000) living in care homes.  The remaining communal establishment residents resided in non-medical and care establishments such as educational establishments (38 per cent) including student halls of residences and prisons (5 per cent). 
+In 2011, 42 per cent (477,000) of communal establishment residents in the UK resided in medical and care establishments including 38 per cent (428,000) living in care homes.  The remaining communal establishment residents resided in non-medical and care establishments such as educational establishments (38 per cent) including student halls of residences and prisons (5 per cent).
 
 ## [accordion] Background notes and methodology
 1. ONS is responsible for carrying out the census in England and Wales. Simultaneous but separate censuses took place in Scotland and Northern Ireland. These were run by the National Records of Scotland (NRS) and the Northern Ireland Statistics and Research Agency (NISRA).
@@ -238,12 +238,12 @@ In 2011, 42 per cent (477,000) of communal establishment residents in the UK res
 
 9. From the reported results for Scotland, it appeared there was confusion when completing the Tenure question, as many believed they were renting from their council when they were actually renting from housing associations or private landlords following the transfer of housing stock in some council areas. This issue was particularly clear in six council areas – Glasgow City, Argyll & Bute, Eilean Siar, Inverclyde, Scottish Borders and Dumfries & Galloway – where no council house stock was retained by the local authority, yet initial census counts showed many households recording their tenure type as rented from the council. In these council areas, the responses for ‘Rented: Council’ were changed to ‘Rented: other social’. Other council areas had partial housing stock transfers, however, it was not possible to ascertain from the reported results those who answered the tenure question incorrectly. The numbers of incorrect answers in these council areas was believed to be much lower as only partial transfers had taken place, hence only the council areas seeing full stock transfers had their data amended. Further details on the analysis described above are available in a paper on the [Scottish Government website](http://www.scotland.gov.uk/Topics/Built-Environment/Housing/supply-demand/chma/marketcontextmaterials/Censusqualityassurance "Scottish Government website").
 
-10. The ethnic group classification presented in this chart / table is the recommended framework from the 'Harmonised Concepts and Questions for Social Data Sources Primary Standards' for presentation of UK outputs on ethnic group.  
-       
-The ‘White’ category could include Polish responses from the country specific question for Scotland which would have been outputted to ‘Other White’ and then included under ‘White’ for UK ‘White Africans’ may also have been recorded under ‘Other White’ and then included under ‘White’ for UK.  
-         
-There are differences in data collection across the UK for ‘Gypsy, Traveller or Irish Traveller’, which make it difficult to produce a UK estimate. Gypsy, Traveller or Irish Traveller is collected in England and Wales and ‘Gypsy/Traveller’ is collected in Scotland and they are both output under ‘White’. Northern Ireland's framework for monitoring minority ethnic and migrant people' published by the Office of the First Minister and deputy First Minister in July 2011 recommends that Roma is categorised under 'Other' ethnic group. This is because there is a distinct category for Irish Travellers, who by law (Race Relations Order) are categorised as an ethnic group in their own right. Roma is not a subset of the Irish Traveller group and the need is to have accurate data on both Roma and on Irish Travellers).       
-     
+10. The ethnic group classification presented in this chart / table is the recommended framework from the 'Harmonised Concepts and Questions for Social Data Sources Primary Standards' for presentation of UK outputs on ethnic group.
+
+The ‘White’ category could include Polish responses from the country specific question for Scotland which would have been outputted to ‘Other White’ and then included under ‘White’ for UK ‘White Africans’ may also have been recorded under ‘Other White’ and then included under ‘White’ for UK.
+
+There are differences in data collection across the UK for ‘Gypsy, Traveller or Irish Traveller’, which make it difficult to produce a UK estimate. Gypsy, Traveller or Irish Traveller is collected in England and Wales and ‘Gypsy/Traveller’ is collected in Scotland and they are both output under ‘White’. Northern Ireland's framework for monitoring minority ethnic and migrant people' published by the Office of the First Minister and deputy First Minister in July 2011 recommends that Roma is categorised under 'Other' ethnic group. This is because there is a distinct category for Irish Travellers, who by law (Race Relations Order) are categorised as an ethnic group in their own right. Roma is not a subset of the Irish Traveller group and the need is to have accurate data on both Roma and on Irish Travellers).
+
 Differences in the terminology and data collection of the country specific Scotland question make these categories difficult to compare. The ‘African’ category in the Scottish question is presented in a separate section to the ‘Caribbean’ or ‘Black’ category, however, under the harmonised output these two categories are output as part of Black/African/Caribbean/Black British’. The African categories used in Scotland could potentially capture ‘White/Asian/Other African’ in addition to ‘Black’ identities.
 
 11. Further information on the methodology and quality assurance processes used to produce 2011 Census estimates is available from the ONS, NRS and NISRA websites for their respective countries.

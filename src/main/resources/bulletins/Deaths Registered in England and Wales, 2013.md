@@ -3,7 +3,7 @@ Level 2: Births, Deaths and Marriages
 Level 3: Deaths
 Summary: Annual data on death registrations. Contains death rates, cause of death data by sex and age and death registrations by area of residence and single year of age.
 Headline 1: There were 506,790 deaths registered in England and Wales in 2013, compared with 499,331 in 2012 (a rise of 1.5%).
-Headline 2: Age-standardised mortality rates (ASMRs) have continued to decrease in 2013. 
+Headline 2: Age-standardised mortality rates (ASMRs) have continued to decrease in 2013.
 Headline 3: The infant mortality rate decreased in 2013 to 4.0 deaths per thousand live births, compared with 4.2 in 2012.
 Contact name: Elizabeth McLaren
 Contact email: vsob@ons.gsi.gov.uk
@@ -33,8 +33,8 @@ For almost all causes of death, the age-standardised mortality rates are higher 
 
 The impact of the change from the 1976 ESP to the 2013 ESP was greatest for conditions commonly associated with older ages (where ASMRs increased) and those almost exclusive to very young ages (where ASMRs decreased). More information about the impact of this change can be found on the [ONS website](http://www.ons.gov.uk/ons/guide-method/user-guidance/health-and-life-events/revised-european-standard-population-2013--2013-esp-/index.html "Revised European Standard Population 2013 (2013 ESP)").
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/death1.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/death1.html"></iframe>
 </div>
 
 ##### Notes:
@@ -44,7 +44,7 @@ The impact of the change from the 1976 ESP to the 2013 ESP was greatest for cond
 
 Mortality rates calculated using the 2013 ESP have continued the downward trend previously reported using the 1976 ESP, with 11,583 deaths per million population for males and 8,526 deaths per million population for females in 2013 (Figure 1). Since 2001, ASMRs have decreased by 23% for males and 19% for females. The male ASMR has decreased each year since 2001, whereas the female ASMR has decreased with the exception of three small rises in the ASMR, the latest being in 2012.
 
-Mortality rates are generally falling, as people are tending to live longer as a result of medical advances in the treatment of many illnesses and diseases. This is illustrated by the reduction in ASMRs for many causes of death. Since 2003, age-specific mortality rates across all five year age groups by sex have either decreased or remained unchanged ( [see Table 1 (286.5 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/vsob1/death-reg-sum-tables/2013/rft-deaths-summary-tables-2013.xls "RFT Death Summary Tables 2013") ). While there has been a small increase in the number of deaths, due to the increased population at older ages, mortality rates for males and females in 2013 have continued to decline. 
+Mortality rates are generally falling, as people are tending to live longer as a result of medical advances in the treatment of many illnesses and diseases. This is illustrated by the reduction in ASMRs for many causes of death. Since 2003, age-specific mortality rates across all five year age groups by sex have either decreased or remained unchanged ( [see Table 1 (286.5 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/vsob1/death-reg-sum-tables/2013/rft-deaths-summary-tables-2013.xls "RFT Death Summary Tables 2013") ). While there has been a small increase in the number of deaths, due to the increased population at older ages, mortality rates for males and females in 2013 have continued to decline.
 
 ## Stillbirths
 The number of stillbirths in England and Wales decreased to 3,284 in 2013 compared with 3,558 in 2012 (a fall of 7.7%). In comparison, the total number of births (both live births and stillbirths) decreased by just 4.3% in 2013. Stillbirths in England decreased by 7.6% while stillbirths in Wales decreased by 15.5%.
@@ -67,8 +67,8 @@ The perinatal mortality rate (stillbirths and deaths under 7 days) was 6.7 death
 Small fluctuations in the infant mortality rate have occurred over recent years, after a series of larger drops in the early 1980s and again between 1987 and 1991 (Figure 2). Between 1983 and 2013 the infant mortality rate fell by 60%, while the neonatal and postneonatal mortality rates fell by 54% and 72% respectively. Although the overall trend has been one of decreasing rates, the rates of change have not been constant over the period: change in the first decade was nearly twice that in the latter two decades.
 
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/death2.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/death2.html"></iframe>
 </div>
 
 There are many established risk factors for infant mortality; prematurity, low birthweight and multiplicity are the most significant in terms of strength of association and consistency. Risk factors are known to vary according to age at death. For example, the effect of low birthweight and prematurity is stronger in the neonatal period than the postneonatal period, while socio-economic status is strongly associated with deaths under one year ( [Oakley, et al., 2009 (720.5 Kb Pdf)](http://www.ons.gov.uk/ons/rel/hsq/health-statistics-quarterly/no--42--summer-2009/multivariate-analysis-of-infant-death-in-england-and-wales-in-2005-06--with-focus-on-socio-economic-status-and-deprivation.pdf "Multivariate analysis of infant death in England and Wales in 2005-06, with focus on socio-economic status and deprivation") ).
@@ -112,9 +112,9 @@ ONS uses mortality data for the following purposes:
 
 - producing population estimates and population projections at both national and subnational level,
 - reporting on social and demographic trends,
-- carrying out further analysis, for example on life expectancy, health expectancy and by cause of death (including avoidable mortality, drug-related deaths and suicides), 
+- carrying out further analysis, for example on life expectancy, health expectancy and by cause of death (including avoidable mortality, drug-related deaths and suicides),
 - further analysing infant mortality where infant deaths are linked to their corresponding birth record to enable more detailed analyses on characteristics such as age of parents, birthweight, gestational age, ethnicity and whether the child was born as part of a multiple birth,
-- quality assuring Census estimates. 
+- quality assuring Census estimates.
 
 The Department of Health (DH) is a key user of mortality statistics. The [Public Health Outcomes Framework](http://www.ons.gov.uk/ons/external-links/other-government-departments/gov-uk/healthy-lives--healthy-people--improving-outcomes.html "Healthy lives, healthy people: Improvising outcomes") sets out the desired outcomes for public health and how these will be measured. Data are used, for example, to inform policy decisions and to reduce premature mortality from the major causes of death under an [NHS outcomes framework](http://www.ons.gov.uk/ons/external-links/other-government-departments/gov-uk/nhs-outcomes-framework-2013-to-2014.html "NHS outcomes framework 2013 to 2014").
 

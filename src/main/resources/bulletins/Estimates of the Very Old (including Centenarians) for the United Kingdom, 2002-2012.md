@@ -31,7 +31,7 @@ Until 2006 the Government Actuary’s Department calculated population estimates
 
 In 2007, in recognition of increased user demand for population estimates at the oldest ages by single year of age, ONS began to publish estimates of the 90 and over age group by single year of age for people aged 90 to 104 and for the 105 and over age group for England and Wales as experimental statistics. Since 2010 ONS has also published these estimates for the UK.
 
-In 2011 the estimates were assessed by the UK Statistics Authority and have since been published as National Statistics. 
+In 2011 the estimates were assessed by the UK Statistics Authority and have since been published as National Statistics.
 
 ### Notes for Background
 1. Estimates of the 90 and over population by single year of age have been produced since 1981 for internal purposes on a consistent basis.
@@ -56,14 +56,14 @@ Estimates of the very old (including centenarians) for the UK are produced by ag
 
 Each year as more recent deaths data become available to inform the age distribution profiles, estimates for the back years are recalculated and become more accurate. For this reason Estimates of the Very Old (including Centenarians) are always published as ‘provisional’.
 
-The estimates for the current year and the recalculated back years are constrained to sum to the 90 and over totals in the Mid Year Estimates (MYE) for males and females separately for the current year and the previous years. 
+The estimates for the current year and the recalculated back years are constrained to sum to the 90 and over totals in the Mid Year Estimates (MYE) for males and females separately for the current year and the previous years.
 The 2002–2012 Estimates of the Very Old (including Centenarians) published in this release take account of the revisions made to the 2002–2010 MYE as a result of the 2011 Census.
 
 ## The ‘Oldest Old’ Population in the UK
 In 2012 there were estimated to be over half a million people aged 90 and over living in the UK. Although they account for only a small percentage of the UK population (0.8 % in 2012) the numbers reaching very old ages continue to increase. Thirty years ago, in 1982, there were 315 people aged 90 and over per 100,000 population; by 1992 this had increased to 457; by 2002 it had reached 648 and the latest figures show there were 806 people aged 90 and over per 100,000 population in the UK (Figure 1).
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/old1.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/old1.html"></iframe>
 </div>
 
 [The chance of surviving to older ages has increased for both males and females over recent decades](http://www.ons.gov.uk/ons/rel/lifetables/interim-life-tables/2010-2012/stbilt2012.html#tab-Surviving-to-Older-Ages "The chance of surviving to older ages has increased for both males and females over recent decades"), contributing to the rising number of those aged 90 and over in the population. Mortality rates at older ages have improved due to a combination of factors such as improved medical treatments, housing and living standards, nutrition and changes in the population’s smoking habits
@@ -82,39 +82,39 @@ In 1982 only 3% of the population aged 70 and over in the UK were aged 90 or abo
 
 Within the 90 and over population in the UK, four out of five people are aged below 95 (Figure 2). However the profile of the 90 and over population is also ageing.
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/old2.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/old2.html"></iframe>
 </div>
 
 Over the period 1982 to 2012 the proportion of the 90 and over population aged 90-94 decreased from 83% to 79% while the proportion aged 95-99 increased from 16% to 18% and the proportion aged 100 and over increased from 2% to 3% (Figure 3).
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/old3.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/old3.html"></iframe>
 </div>
 
 In 2012 there were estimated to be 13,350 centenarians living in the UK and of these 660 were estimated to be aged 105 or more. Although centenarians account for a very small proportion of the UK  population (0.02%), over the last 30 years there has been almost a five fold increase in their numbers and in the last decade alone the number of centenarians has gone up by over five and a half thousand, a 73% increase (Figure 4).
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/old4.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/old4.html"></iframe>
 </div>
 
 Women outnumber men at older ages because they have higher life expectancy. (According to the latest UK life expectancy figures for 2010-2012, life expectancy at birth is 82.6 years for females compared to 78.7 years for males). In 2012, of the half a million people aged 90 and over in the UK, almost three-quarters (372,290) were female. However there have been larger percentage increases in the number of men in the oldest age groups in the last decade than in the number of women. Between 2002 and 2012 the number of men aged 90 and over rose by 60% compared with a 26% increase in the number of women of this age. Men made greater percentage gains relative to women in each of the older age groups 90-94; 95-99 and age 100 and over (Figure 5).
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/old5.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/old5.html"></iframe>
 </div>
 
 This has resulted in a fall in the sex ratio of women to men at the oldest ages. In the UK in 2002 there were 336 women aged 90 and over for every 100 men of that age; by 2012 this had fallen to 264. The fall in the sex ratio was greater for those aged 100 and over, falling from 828 female centenarians for every 100 male centenarians in 2002 to 588 in 2012 (Figure 6). These falls are due to continued greater improvements in male mortality at older ages relative to female mortality.
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/old6.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/old6.html"></iframe>
 </div>
 
 ## UK Country Comparisons
 Within the UK, at 823, in 2012 England and Wales as a whole had the highest number of people aged 90 and over per 100,000 population. In Scotland there were 695 people aged 90 and over per 100,000 population and in Northern Ireland there were 605 (Figure 7). [These differences reflect higher life expectancy at older ages in England and Wales compared with Scotland and Northern Ireland](http://www.ons.gov.uk/ons/rel/lifetables/national-life-tables/2010---2012/stb-uk-2010-2012.html "STB UK 2010 - 2012).
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/old7.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/old7.html"></iframe>
 </div>
 
 Over the last 30 years, the numbers of those aged 90 and over per 100,000 population has increased in all UK countries with the largest increase occurring in England and Wales, with an increased of 501 people per 100,000 over the period, compared to increases of 429 in Scotland and 347 in Northern Ireland.
@@ -123,8 +123,8 @@ The ratio of women to men at age 90 and over is a little higher in Scotland and 
 
 The age distribution of the 90+ population was very similar for England and Wales, Scotland and Northern Ireland in 2012 (Figure 8).
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/old8.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/old8.html"></iframe>
 </div>
 
 Although centenarians account for a very small proportion of the age 90 and over population, over the last 30 years their numbers have more than quadrupled in England and Wales as a whole and in Scotland and have increased six fold in Northern Ireland (Table 1). Again, the number of centenarians per 100,000 population is highest in England and Wales (22) followed by Scotland (15) and Northern Ireland (13).
@@ -134,8 +134,8 @@ In 2012 there were 806 people aged 90 and over per 100,000 population in the UK.
 
 According to the UN, in 2013 there were 441,000 centenarians in the world1. Even in the most aged countries the population aged 100 and over represents a very small proportion of the overall population. In 2012, people aged 100 and over accounted for only 0.02% of the total UK population, or 21 per 100,000 population. However, in comparison to many other countries, the UK has relatively high numbers of centenarians (Figure 9). The prevalence of centenarians internationally largely mirrors that of the 90 and over population. In 2012, Japan had the highest number of centenarians per 100,000 population in the world at 40 while within Europe, France had the highest number at 30. Eastern European countries have lower rates of centenarians than countries in Western Europe. Russia in particular has a low number of centenarians (4) per 100,000 population, reflecting their relatively low life expectancy among developed nations.
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/old9.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/old9.html"></iframe>
 </div>
 
 ##### Notes:
@@ -159,7 +159,7 @@ The methodology used to produce the Estimates of the Very Old (including Centena
 
 Estimates of the Very Old for the UK are aggregates of the single year estimates of the 90 and over population produced for England and Wales, Scotland and Northern Ireland (see Methodology section). It would be possible to produce these estimates for the UK by applying the KT methodology to an aggregation of population and deaths data for England and Wales, Scotland and Northern Ireland. The review will include an assessment of this alternative method.
 
-Initial results from the review indicate that the 2012 MYE 90+ totals that the KT estimates are constrained to are in line with comparable data for this age group available from administrative sources held by the Department of Work and Pensions (DWP) and Department of Health (DH). 
+Initial results from the review indicate that the 2012 MYE 90+ totals that the KT estimates are constrained to are in line with comparable data for this age group available from administrative sources held by the Department of Work and Pensions (DWP) and Department of Health (DH).
 
 ##### Notes for Quality and Methodological Review
 

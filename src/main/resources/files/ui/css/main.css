@@ -30,8 +30,14 @@ audio:not([controls]) {
 
 html {
     font-size: 100%;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
+/*    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;*/
+    -webkit-text-size-adjust:none;
+    -moz-text-size-adjust:none;
+    -ms-text-size-adjust:none;
+    -webkit-text-size-adjust:100%;
+    -moz-text-size-adjust:100%;
+    -ms-text-size-adjust:100%;
 }
 html, button, input, select, textarea {
     font-family: sans-serif;
@@ -1101,6 +1107,12 @@ textarea {
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'open-sans-n7';
+    src: url("/ui/fonts/OpenSans-Bold.eot#iefix") format("embedded-opentype"), url("/ui/fonts/OpenSans-Bold.woff") format("woff"), url("/ui/fonts/OpenSans-Bold.ttf") format("truetype"), url("/ui/fonts/OpenSans-Bold.svg#OpenSans-Bold") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    }
 @font-face {
         font-family: 'DaxlinePro';
         /*src: url("/ui/fonts/DaxlinePro-Bold.eot");
@@ -3012,6 +3024,20 @@ lesser , applied styles
     /*Commented out as part of Lozenge redesign*/
     /*background-color: #adafa7;*/
 }
+.home--lozenge {
+    display: inline-block;
+/*    padding: 3px 5px;
+    padding: .3rem .5rem;*/
+    font-size: 10px;
+    font-size: 1rem;
+    letter-spacing: .1em;
+    color: black;
+    font-weight: bolder;
+    text-transform: uppercase;
+    cursor: pointer;
+    /*Commented out as part of Lozenge redesign*/
+    /*background-color: #adafa7;*/
+}
 .lozenge--label {
     display: inline-block;
     padding: 3px 5px;
@@ -4755,7 +4781,7 @@ table actions
     font-weight: bold;
     font-size: 1.125em;
     color: #016db9;
-    margin-right: 1.25em;
+/*     margin-right: 1.25em; */
 }
 .search dt:not(:first-child) {
     padding-top: 1.25em;
@@ -4770,11 +4796,17 @@ table actions
 }
 
 .search-home-focused {
+	background-color: #e5e5e5;
     font-size: 1.25em !important;
+    padding-left: 1rem;
 }
+
 .search-home-focused--summary {
+	background-color: #e5e5e5;
     font-size: 1.8rem;
     line-height: 2.7rem;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
 }
 
 /*Highlight terms*/
@@ -8675,6 +8707,11 @@ lesser , applied styles
 .closeButton {
 	color: #fff;
 }
+
+.closeButton:visited {
+    color: #fff;
+}
+
 .closeButton :hover {
 	color:#ff8c00;
 }
@@ -8683,9 +8720,9 @@ lesser , applied styles
 @media screen and (max-width: 38em){
 .modalDialog {
     width: 20em;
-    height: 30em;
+    height: 20em;
     background-color: #fff;
-    margin: 15% auto;
+    margin: 5% auto;
     overflow: auto;
     pointer-events:auto;
 }
