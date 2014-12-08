@@ -43,14 +43,14 @@ Drug use and drug dependence are known causes of premature mortality, with drug 
 
 This bulletin covers accidents and suicides involving drug poisonings, as well as deaths from drug abuse and drug dependence, but not other adverse effects of drugs (for example anaphylactic shock). Drug poisoning deaths involve a broad spectrum of substances, including legal and illegal drugs, prescription drugs (either prescribed to the deceased or obtained by other means) and over-the-counter medications. Some of these deaths may also be the result of complications of drug abuse, such as deep vein thrombosis or septicaemia resulting from intravenous drug use, rather than an acute drug overdose.
 
-The figures presented in this bulletin are for deaths registered each year, rather than deaths occurring each year. Almost all drug-related deaths are certified by a coroner, and due to the length of time it takes to hold an inquest, just over half of drug-related deaths registered in 2012 will have actually occurred prior to 2012 – see the ‘Impact of registration delays on drug-related deaths’ section below for more information. 
+The figures presented in this bulletin are for deaths registered each year, rather than deaths occurring each year. Almost all drug-related deaths are certified by a coroner, and due to the length of time it takes to hold an inquest, just over half of drug-related deaths registered in 2012 will have actually occurred prior to 2012 – see the ‘Impact of registration delays on drug-related deaths’ section below for more information.
 
 ## Policy context
 In December 2010 the Coalition Government launched a new drug strategy entitled 'Reducing demand, restricting supply, building recovery: supporting people to live a drug-free life' ([Home Office, 2010](http://www.gov.uk/government/uploads/system/uploads/attachment_data/file/98026/drug-strategy-2010.pdf "Home Office, 2010")). This strategy highlights preventing drug-related deaths as one of the key outcomes that recovery-oriented services should be focused on. In 2011 a new initiative was launched in eight pilot areas in England, trialling payment by results for providers of treatment services for people with drug and/or alcohol problems. The Department of Health is funding a three year [independent evaluation](http://recoverypbr.dh.gov.uk/ "independent evaluation") of these pilots, which is being led by the University of Manchester.
 
 Patterns of drug use change over time. For instance, in recent years people have been taking new psychoactive substances, including so-called ‘legal highs’. In response to this, the Government’s 2010 drug strategy outlined the introduction of a system of temporary 12-month bans on newly emerging substances. The Advisory Council on the Misuse of Drugs ([ACMD](https://www.gov.uk/government/organisations/advisory-council-on-the-misuse-of-drugs "ACMD")) can then evaluate the harm caused by the substance and advise whether there should be a permanent ban.
 
-In February 2013, the Welsh Government published the Substance Misuse Delivery Plan 2013–2015 ([Welsh Government, 2013](http://wales.gov.uk/topics/housingandcommunity/safety/substancemisuse/publications/dplan/?lang=en "Welsh Government, 2013")), which included the specific target of ‘reducing the number of substance misuse related deaths and non-fatal overdoses / alcohol poisonings in Wales’. To support this, new proposals to undertake rapid case reviews for both fatal and non-fatal poisonings have been developed and will be formally consulted on next month. 
+In February 2013, the Welsh Government published the Substance Misuse Delivery Plan 2013–2015 ([Welsh Government, 2013](http://wales.gov.uk/topics/housingandcommunity/safety/substancemisuse/publications/dplan/?lang=en "Welsh Government, 2013")), which included the specific target of ‘reducing the number of substance misuse related deaths and non-fatal overdoses / alcohol poisonings in Wales’. To support this, new proposals to undertake rapid case reviews for both fatal and non-fatal poisonings have been developed and will be formally consulted on next month.
 
 ## Uses made of this data
 The figures contained in this statistical bulletin are used by a range of public bodies, such as Public Health England (PHE), the Department of Health (DH) and the Welsh Government to evaluate the effectiveness of various drug strategies.
@@ -61,7 +61,7 @@ The Welsh Government and Public Health Wales are linking ONS data to information
 
 The European Monitoring Centre for Drugs and Drug Addiction (EMCDDA) combines data for England and Wales from the ONS drug poisoning database with data from Scotland and Northern Ireland to publish UK figures, allowing comparisons to be made with other European countries. The latest EMCDDA report shows that the drug-related mortality rate in the UK was the fourth highest in Europe ([EMCDDA, 2013](http://www.emcdda.europa.eu/stats13#drd:displayTables "EMCDDA, 2013")). However, caution should be applied when making international comparisons, because of differences in definitions and the quality of reporting.
 
-ONS drug poisoning data are also used by academic researchers. For example, analysis of this data by the Centre for Suicide Research at the University of Oxford revealed that there was a major reduction in deaths involving co-proxamol following its withdrawal in 2005, with no evidence of an increase in deaths involving other analgesics, apart from oxycodone ([Hawton et al, 2012](http://www.plosmedicine.org/article/info%3Adoi%2F10.1371%2Fjournal.pmed.1001213 "Hawton et al, 2012")). Updated data on deaths involving co-proxamol and other analgesics are shown in Reference Table 6a. 
+ONS drug poisoning data are also used by academic researchers. For example, analysis of this data by the Centre for Suicide Research at the University of Oxford revealed that there was a major reduction in deaths involving co-proxamol following its withdrawal in 2005, with no evidence of an increase in deaths involving other analgesics, apart from oxycodone ([Hawton et al, 2012](http://www.plosmedicine.org/article/info%3Adoi%2F10.1371%2Fjournal.pmed.1001213 "Hawton et al, 2012")). Updated data on deaths involving co-proxamol and other analgesics are shown in Reference Table 6a.
 
 ## Number of deaths from drug-related poisoning
 There were 2,597 drug poisoning deaths (involving both legal and illegal drugs) registered in 2012, and as in previous years, the majority (just over two-thirds) of these deaths were in males. There were 1,706 male deaths from drug poisoning in 2012, a decrease of 4% since 2011, and the lowest since 1995. The equivalent number of female deaths rose to 891, an increase of 1% since 2011, and the highest since 2004.
@@ -73,14 +73,14 @@ In both males and females the largest proportion of drug-related deaths were fro
 
 In females just under half of all drug poisoning deaths were suicides (defined as intentional self-poisoning or poisoning of undetermined intent). In 2012, the number of female drug-related suicides increased slightly, from 418 deaths in 2011 to 422 deaths in 2012; this continues the upward trend that has been seen since 2009. In males, 31% of all drug poisoning deaths were suicides. The number of deaths went down from 576 to 525 deaths between 2011 and 2012 – a 9% decrease. This reverses the large increase seen in 2011, and the number of drug-related male suicides in 2012 were similar to the levels seen between 2006 and 2009.
 
-In males the number of deaths where the underlying cause was a mental and behavioural disorder due to drug use declined from 86 deaths in 2011 to 72 in 2012. In females, the equivalent number increased from 17 deaths in 2011 to 29 in 2012. It is not clear what has caused this increase in females, and it may just be a random fluctuation, rather than the start of an upward trend. 
+In males the number of deaths where the underlying cause was a mental and behavioural disorder due to drug use declined from 86 deaths in 2011 to 72 in 2012. In females, the equivalent number increased from 17 deaths in 2011 to 29 in 2012. It is not clear what has caused this increase in females, and it may just be a random fluctuation, rather than the start of an upward trend.
 
 ## Number of deaths related to drug misuse
 The definition of this indicator is (a) deaths where the underlying cause is drug abuse or drug dependence or (b) deaths where the underlying cause is drug poisoning and where any of the substances controlled under the [Misuse of Drugs Act 1971](http://www.legislation.gov.uk/ukpga/1971/38/contents "Misuse of Drugs Act 1971") are involved. This definition has been adopted across the UK.
 
 In 2012 there were 1,496 drug misuse deaths. The number of male deaths decreased by 9% from 1,192 in 2011 to 1,086 in 2012. Over the same period the number of female deaths fell by 1% from 413 to 410 (Table 1).
 
-Since 1993 there has been an upward trend in the proportion of drug poisoning deaths that were related to drug misuse for both males and females. In males this proportion peaked in 2010 at 73%, but went down to 64% in 2012. In females, this proportion peaked in 2008 at 51%, but has since dropped slightly to 46%. 
+Since 1993 there has been an upward trend in the proportion of drug poisoning deaths that were related to drug misuse for both males and females. In males this proportion peaked in 2010 at 73%, but went down to 64% in 2012. In females, this proportion peaked in 2008 at 51%, but has since dropped slightly to 46%.
 
 ## Mortality rates for all drug-related poisonings and drug misuse
 In 2012, as in previous years, mortality rates from all drug poisonings and drug misuse were significantly higher in males than in females. The Crime Survey for England and Wales (formerly the British Crime Survey, [Home Office, 2012](https://www.gov.uk/government/publications/drug-misuse-declared-findings-from-the-2011-12-crime-survey-for-england-and-wales--2 "Home Office, 2012")) showed that men were more than twice as likely as women to have used illicit drugs in the last year which partly explains the higher mortality rate from drug misuse in males. However, this cannot be the only explanation, as more than 40% of drug poisoning deaths are not related to drug misuse.
@@ -91,10 +91,10 @@ In contrast, between 1993 and 2004 trends in female mortality rates from drug po
 
 The male mortality rate from drug misuse has dropped significantly from its peak of 55.7 deaths per million population in 2001. Over the period 2001 to 2010 drug misuse rates were subject to fluctuations. Between 2001 and 2003 the rate decreased significantly from 55.7 in 2001 to 42.8 per million population in 2003. Between 2003 and 2009 the rate generally increased reaching 55.4 deaths per million population in 2009. From 2010 onwards the mortality rate has steadily decreased, dropping to 39.2 deaths per million population in 2012, the lowest rate since 1996.
 
-Despite some annual fluctuations, the female mortality rate from drug misuse has tended to increase since 1993. The mortality rate peaked in 2008 at 15.5 deaths per million population, then dropped significantly in 2009, but increased slightly again between 2009 and 2010. Since 2010, the female mortality rate from drug misuse has been relatively stable, at 14.1 deaths per million population in 2012. 
+Despite some annual fluctuations, the female mortality rate from drug misuse has tended to increase since 1993. The mortality rate peaked in 2008 at 15.5 deaths per million population, then dropped significantly in 2009, but increased slightly again between 2009 and 2010. Since 2010, the female mortality rate from drug misuse has been relatively stable, at 14.1 deaths per million population in 2012.
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/drug1.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/drug1.html"></iframe>
 </div>
 
 ##### Notes:
@@ -117,8 +117,8 @@ Male mortality rates in the oldest age group (70 and over) have shown no consist
 
 This pattern of drug misuse deaths is broadly in line with treatment figures from the Public Health England (PHE – previously the [National Treatment Agency, 2012](http://www.nta.nhs.uk/uploads/dtie2012v1.pdf "National Treatment Agency, 2012")), which showed that as the drug-dependent population ages, the over 40s have become the largest age group starting treatment. In contrast, the number of 18 to 24-year-olds newly entering treatment for heroin and crack use has halved over the last five years.
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/drug2.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/drug2.html"></iframe>
 </div>
 
 ##### Notes:
@@ -136,10 +136,10 @@ The female mortality rate for 50 to 69-year-olds has increased steadily over the
 
 The opposite trend is seen in females aged 20 to 29, where the mortality rate has decreased significantly from 18.9 deaths per million population in 2008 to 10.7 per million in 2012. These trends mean that the female mortality rate in 20 to 29-year-olds is now slightly lower than the rate in 50 to 69-year-olds.
 
-As with males, the lowest female mortality rates in 2012 were in those aged under 20 (1.2 deaths per million population) and 70 and over (7.9 deaths per million population). 
+As with males, the lowest female mortality rates in 2012 were in those aged under 20 (1.2 deaths per million population) and 70 and over (7.9 deaths per million population).
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/drug3.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/drug3.html"></iframe>
 </div>
 
 ##### Notes:
@@ -149,7 +149,7 @@ As with males, the lowest female mortality rates in 2012 were in those aged unde
 4. Figures for England and Wales include deaths of non-residents.
 
 ## Drug related deaths involving specific substances
-Figures 4 and 5 give the age-standardised mortality rates where selected substances were mentioned on the death certificate for 2008 to 2012 and Table 4 gives the number of deaths from a wide range of substances. These figures need to be interpreted with caution for the following reasons: 
+Figures 4 and 5 give the age-standardised mortality rates where selected substances were mentioned on the death certificate for 2008 to 2012 and Table 4 gives the number of deaths from a wide range of substances. These figures need to be interpreted with caution for the following reasons:
 
 - These figures are based only on information reported on the coroner’s death certificate, and may not include every substance involved in the death.
 
@@ -159,10 +159,10 @@ Figures 4 and 5 give the age-standardised mortality rates where selected substan
 
 - Where more than one drug is mentioned on a death certificate the death will be counted in more than one category in Table 4. For example, if both heroin and methadone are mentioned, the death will be recorded once under heroin and once under methadone. Therefore the numbers for different substances cannot be added together to give the total number of deaths.
 
-- Approximately 30% of all drug-related poisoning deaths also contain a mention of alcohol or long-term alcohol abuse (for example, cirrhosis) in addition to a drug. 
+- Approximately 30% of all drug-related poisoning deaths also contain a mention of alcohol or long-term alcohol abuse (for example, cirrhosis) in addition to a drug.
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/drug4.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/drug4.html"></iframe>
 </div>
 
 ##### Notes:
@@ -172,8 +172,8 @@ Figures 4 and 5 give the age-standardised mortality rates where selected substan
 4. Figures are for deaths registered, rather than deaths occurring in each calendar year. Due to the length of time it takes to complete a coroner’s inquest, it can take months or even years for a drug-related death to be registered. More details can be found in the ‘Impact of registration delays on drug-related deaths’ section below.
 5. Figures for England and Wales include deaths of non-residents.
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/drug5.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/drug5.html"></iframe>
 </div>
 
 ##### Notes:
@@ -190,7 +190,7 @@ Evidence suggests that in 2010/11 there was a ‘heroin drought’ in the UK, wi
 
 [Public Health England (2013)](http://www.nta.nhs.uk/uploads/prevalence-commentary.pdf "Public Health England (2013)") report that the number of people starting treatment for heroin and/or crack addiction (including those returning to treatment) fell from 64,288 in 2005-06 to 47,210 in 2011-12. They suggest this is because treatment has helped to shrink the pool of heroin and crack addicts in England. However, evidence from the Crime Survey for England and Wales ([Home Office, 2012](https://www.gov.uk/government/publications/drug-misuse-declared-findings-from-the-2011-12-crime-survey-for-england-and-wales--2 "Home Office, 2012")) suggests generally there has been little variation in heroin use year on year since their measurement began.
 
-A combination of these factors may explain the decline in deaths involving heroin/morphine that has been seen over the last few years. 
+A combination of these factors may explain the decline in deaths involving heroin/morphine that has been seen over the last few years.
 
 ## Methadone
 In 2012 there were 414 deaths involving methadone (an opiate substance used to treat heroin addiction, which is sometimes abused). The male mortality rate for deaths involving methadone decreased by 16% from 13.4 deaths per million population in 2011 to 11.3 in 2012. The equivalent rate for females decreased by 9% between 2011 and 2012 (from 4.2 to 3.8 to deaths per million population). Despite this fall, the female mortality rate for deaths involving methadone is still the second highest on record.
@@ -204,12 +204,12 @@ The number of deaths involving amphetamines increased from 62 deaths in 2011 to 
 ## New psychoactive substances (including ‘legal highs’)
 Over the past few years a number of new drugs have been controlled under the [Misuse of Drugs Act (1971)](http://www.legislation.gov.uk/ukpga/1971/38/contents "Misuse of Drugs Act (1971)"), including synthetic cannabinoid receptor agonists (for example, ‘spice’), gamma-hydroxybutyrate (GHB) and its precursor gamma-butyrolactone (GBL), piperazines (benzylpiperazine – BZP and trifluoromethylphenylpiperazine – TFMPP), cathinones such as mephedrone, and pipradrols such as desoxypipradrol. This group of substances are sometimes called legal highs, but most are now controlled under the [Misuse of Drugs Act (1971)](http://www.legislation.gov.uk/ukpga/1971/38/contents "[Misuse of Drugs Act (1971)"), so will be referred to as new psychoactive substances (NPS) in this report. There is no official definition of NPS, and the drugs included in this category in this bulletin are listed in Background note 11. This grouping may be revised in future years.
 
-Although the number of deaths involving NPS are low compared with the number of deaths from heroin/morphine poisoning, NPS deaths increased sharply in the last year from 29 deaths in 2011 to 52 deaths in 2012 (see Background note 11). In particular, death involving cathinones tripled from six deaths in 2011 to 18 deaths in 2012. This was despite evidence from the Crime Survey for England and Wales suggesting that the proportion of 16 to 59-year-olds using mephedrone in the last year has declined since 2010/11 ([Home Office, 2013](https://www.gov.uk/government/publications/drug-misuse-findings-from-the-2012-to-2013-csew "Home Office, 2013")). 
+Although the number of deaths involving NPS are low compared with the number of deaths from heroin/morphine poisoning, NPS deaths increased sharply in the last year from 29 deaths in 2011 to 52 deaths in 2012 (see Background note 11). In particular, death involving cathinones tripled from six deaths in 2011 to 18 deaths in 2012. This was despite evidence from the Crime Survey for England and Wales suggesting that the proportion of 16 to 59-year-olds using mephedrone in the last year has declined since 2010/11 ([Home Office, 2013](https://www.gov.uk/government/publications/drug-misuse-findings-from-the-2012-to-2013-csew "Home Office, 2013")).
 
 ## Benzodiazepines
 There were 284 drug poisoning deaths involving benzodiazepines in 2012. Mortality rates in males increased significantly from an all-time low of 4.5 deaths per million population in 2006 to an all-time high of 7.9 deaths per million population in 2011, but fell slightly to 7.3 deaths per million in 2012. Equivalent mortality rates in females were significantly lower than in males at 2.8 deaths per million population in 2012, but have risen slightly since 2011. Diazepam was the most common type of benzodiazepine mentioned on deaths certificates in 2012, and was involved in 207 deaths, the highest number on record.
 
-The increase in deaths involving diazepam is consistent with a recent survey suggesting that there has been a continued increase in the use and availability of illicit benzodiazepines, such as diazepam ([Daly, 2012](http://www.drugscope.org.uk/Resources/Drugscope/Documents/PDF/Publications/StreetDrugTrendsSurvey.pdf "Daly, 2012")). However, the role of diazepam and other benzodiazepines in drug-related deaths is unclear, as more than 9 out of 10 deaths involving benzodiazepines also mentioned another drug. 
+The increase in deaths involving diazepam is consistent with a recent survey suggesting that there has been a continued increase in the use and availability of illicit benzodiazepines, such as diazepam ([Daly, 2012](http://www.drugscope.org.uk/Resources/Drugscope/Documents/PDF/Publications/StreetDrugTrendsSurvey.pdf "Daly, 2012")). However, the role of diazepam and other benzodiazepines in drug-related deaths is unclear, as more than 9 out of 10 deaths involving benzodiazepines also mentioned another drug.
 
 ## Antidepressants
 There were 468 deaths involving antidepressants in 2012, up from 393 in 2011. This increase was seen across all classes of antidepressants. Mortality rates were similar in males and females in 2011 (7.8 and 8.5 deaths per million population respectively), and both rose slightly between 2011 and 2012. The female mortality rate was the highest since 1999.
@@ -220,7 +220,7 @@ Deaths involving Selective Serotonin Re-uptake Inhibitors (SSRIs) have been stea
 
 In 2012 deaths involving other types of antidepressants reached a record high, at 104 deaths. Reference Table 6a shows that in 2012 the majority of these deaths involved venlafaxine or mirtazapine ([British National Formulary](http://www.bnf.org/bnf/ "British National Formulary") section 4.3.4, British Medical Association and Royal Pharmaceutical Society, 2013) with only one death involving a Monoamine-Oxidase Inhibitor – MAOI (BNF section 4.3.2). National Institute for Health and Clinical Excellence guidelines ([NICE, 2009](http://www.nice.org.uk/nicemedia/live/12329/45890/45890.pdf "NICE, 2009")) suggest that these drugs should not be used as a first-line treatment for depression, and should only be prescribed to people who have not responded to SSRIs. Venlafaxine in particular is associated with a greater risk of death from overdose.
 
-Prescriptions for ‘other antidepressant drugs’ like venlafaxine and mirtazapine (BNF section 4.3.4) accounted for only 17% of all antidepressant prescriptions in 2012. However, prescriptions for this type of antidepressant increased by 60% between 2008 and 2012 (HSCIC, [2009](http://www.hscic.gov.uk/pubs/prescostanalysis2008 "2009") and [2013](http://www.hscic.gov.uk/catalogue/PUB10610 "2013")), which may partly explain the increase in deaths. 
+Prescriptions for ‘other antidepressant drugs’ like venlafaxine and mirtazapine (BNF section 4.3.4) accounted for only 17% of all antidepressant prescriptions in 2012. However, prescriptions for this type of antidepressant increased by 60% between 2008 and 2012 (HSCIC, [2009](http://www.hscic.gov.uk/pubs/prescostanalysis2008 "2009") and [2013](http://www.hscic.gov.uk/catalogue/PUB10610 "2013")), which may partly explain the increase in deaths.
 
 ## Paracetamol and other analgesics
 There were 182 deaths involving paracetamol and its compounds in 2012. The mortality rates for males and females were similar, and both decreased slightly between 2011 and 2012. During this period the male mortality rate decreased from 3.0 to 2.7 deaths per million population (the lowest rate since records began). In females, the equivalent rate went down from 3.6 to 3.2 deaths per million population, but has largely remained stable since 2007.
@@ -234,7 +234,7 @@ There were 58 deaths mentioning helium in 2012, almost five times higher than th
 ## Geographical variations in deaths related to drug misuse
 In England, the mortality rate for deaths related to drug misuse declined significantly between 2008 and 2012 (from 34.7 to 25.4 deaths per million population). The equivalent mortality rate in Wales peaked at 53.4 deaths per million population in 2010 (though due to registration delays, the exact timing of this peak may have been in 2009, see the ‘Impact of registration delays’ section below for more details). Mortality rates in Wales have since fallen slightly to 45.8 deaths per million in 2012, but were still significantly higher than the England average between 2009 and 2012.
 
-There was considerable regional variation within England. In 2012 the lowest mortality from deaths related to drug misuse was in London (17.2 deaths per million population), where the rates have generally been low over the last five years. The regions with the highest mortality rates over the last five years were the North East and North West. In 2012 mortality rates in the North were more than double that of London (37.4 and 41.0 deaths per million population in the North East and North West respectively). 
+There was considerable regional variation within England. In 2012 the lowest mortality from deaths related to drug misuse was in London (17.2 deaths per million population), where the rates have generally been low over the last five years. The regions with the highest mortality rates over the last five years were the North East and North West. In 2012 mortality rates in the North were more than double that of London (37.4 and 41.0 deaths per million population in the North East and North West respectively).
 
 ## Comparisons with the rest of the UK
 Figures on drug-related deaths in Scotland are available from [National Records of Scotland](http://www.gro-scotland.gov.uk/statistics/theme/vital-events/deaths/drug-related/index.html "National Records of Scotland") and the [Information Services Division](http://www.isdscotland.org/Health-Topics/Drugs-and-Alcohol-Misuse/Publications/index.asp "Information Services Division") of NHS Scotland.
@@ -250,10 +250,10 @@ In England and Wales almost all drug-related deaths are certified by a coroner f
 
 In common with most other mortality statistics, figures for drug-related deaths are presented for deaths registered in a particular calendar year, which enables figures to be published in a timely manner. The alternative would be to publish statistics based on the year in which the death occurred. However, if ONS were to do this the publication would be delayed by at least six months to allow enough time for the majority of the deaths that occurred in a given year to be registered. If it was produced any earlier the data would be incomplete, and hence inaccurate.
 
-Due to the length of time it takes to hold an inquest, this bulletin actually presents information on deaths that may have occurred months or even years ago. Out of the 2,597 drug-related deaths registered in 2012, 1,358 (just over half) occurred in years prior to 2012. This makes it more difficult to evaluate how changes such as the heroin drought or the banning of certain new psychoactive substances have affected drug-related deaths. It also makes it more difficult to compare trends in drug-related deaths between local areas, as registration delays vary considerably across England and Wales. 
+Due to the length of time it takes to hold an inquest, this bulletin actually presents information on deaths that may have occurred months or even years ago. Out of the 2,597 drug-related deaths registered in 2012, 1,358 (just over half) occurred in years prior to 2012. This makes it more difficult to evaluate how changes such as the heroin drought or the banning of certain new psychoactive substances have affected drug-related deaths. It also makes it more difficult to compare trends in drug-related deaths between local areas, as registration delays vary considerably across England and Wales.
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/drug6.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/drug6.html"></iframe>
 </div>
 
 ##### Notes:
@@ -263,32 +263,32 @@ Due to the length of time it takes to hold an inquest, this bulletin actually pr
 4. Figures for England and Wales include deaths of non-residents.
 
 ## [accordion] References
-1. The Advisory Council on the Misuse of Drugs (2000) Reducing drug related deaths, Home Office: London. 
-2. The Advisory Council on the Misuse of Drugs (2013) [‘ACMD consideration of tramadol’](https://www.gov.uk/government/publications/acmd-advice-on-tramadol "ACMD consideration of tramadol") 
-3. British Medical Association and Royal Pharmaceutical Society (2013) [‘British National Formulary 65’](http://www.bnf.org/bnf/ "British National Formulary 65"), BMJ Group and Pharmaceutical Press. 
-4. Christophersen O, Rooney C and Kelly S (1998) [‘Drug related deaths: methods and trends’](http://www.ons.gov.uk/ons/rel/population-trends-rd/population-trends/no--93--autumn-1998/drug-related-mortality.pdf "Drug related deaths: methods and trends"), Population Trends 93, 29–37. 
-5. Daly (2012) [‘2012 Street Drug Trends Survey’](http://www.drugscope.org.uk/Resources/Drugscope/Documents/PDF/Publications/StreetDrugTrendsSurvey.pdf "‘2012 Street Drug Trends Survey") Druglink November/December 2012 
-6. Department of Health (2001) [‘The Government Response to the Advisory Council on the Misuse of Drugs Report into Drug Related Deaths’](http://webarchive.nationalarchives.gov.uk/20130107105354/http://www.dh.gov.uk/en/Publicationsandstatistics/Publications/PublicationsPolicyAndGuidance/DH_4015217 "The Government Response to the Advisory Council on the Misuse of Drugs Report into Drug Related Deaths"). 
+1. The Advisory Council on the Misuse of Drugs (2000) Reducing drug related deaths, Home Office: London.
+2. The Advisory Council on the Misuse of Drugs (2013) [‘ACMD consideration of tramadol’](https://www.gov.uk/government/publications/acmd-advice-on-tramadol "ACMD consideration of tramadol")
+3. British Medical Association and Royal Pharmaceutical Society (2013) [‘British National Formulary 65’](http://www.bnf.org/bnf/ "British National Formulary 65"), BMJ Group and Pharmaceutical Press.
+4. Christophersen O, Rooney C and Kelly S (1998) [‘Drug related deaths: methods and trends’](http://www.ons.gov.uk/ons/rel/population-trends-rd/population-trends/no--93--autumn-1998/drug-related-mortality.pdf "Drug related deaths: methods and trends"), Population Trends 93, 29–37.
+5. Daly (2012) [‘2012 Street Drug Trends Survey’](http://www.drugscope.org.uk/Resources/Drugscope/Documents/PDF/Publications/StreetDrugTrendsSurvey.pdf "‘2012 Street Drug Trends Survey") Druglink November/December 2012
+6. Department of Health (2001) [‘The Government Response to the Advisory Council on the Misuse of Drugs Report into Drug Related Deaths’](http://webarchive.nationalarchives.gov.uk/20130107105354/http://www.dh.gov.uk/en/Publicationsandstatistics/Publications/PublicationsPolicyAndGuidance/DH_4015217 "The Government Response to the Advisory Council on the Misuse of Drugs Report into Drug Related Deaths").
 7. The European Monitoring Centre for Drugs and Drug Addiction (2013) [‘Statistical Bulletin 2013: Drug-related deaths and mortality’](http://www.emcdda.europa.eu/stats13#drd:displayTables "Statistical Bulletin 2013: Drug-related deaths and mortality")
 8. Frank (2013) [‘What is PMA’](http://www.talktofrank.com/news/what-pma "What is PMA")
-9. Hawton K, Bergen H, Simkin S, Cooper J, Waters K, Gunnell D and N Kapur (2010) [‘Toxicity of antidepressants: rates of suicide relative to prescribing and non-fatal overdose’](http://bjp.rcpsych.org/content/196/5/354.full.pdf "Toxicity of antidepressants: rates of suicide relative to prescribing and non-fatal overdose"), The British Journal of Psychiatry 196, 354-358. 
-10. Hawton K, Bergen H, Simkin S, Wells C, Kapur N and Gunnell D (2012) ‘Six-Year Follow-Up of Impact of Co-proxamol Withdrawal in England and Wales on Prescribing and Deaths: Time-Series Study’, [PLOS Medicine](http://www.plosmedicine.org/article/info%3Adoi%2F10.1371%2Fjournal.pmed.1001213 "PLOS Medicine"). 
-11. Health and Social Care Information Centre (2009) [‘Prescription Cost Analysis: England 2008’](http://www.hscic.gov.uk/pubs/prescostanalysis2008 "Prescription Cost Analysis: England 2008"). 
-12. Health and Social Care Information Centre (2013) [‘Prescription Cost Analysis: England 2012’](http://www.hscic.gov.uk/catalogue/PUB10610 "Prescription Cost Analysis: England 2012"). 
-13. Home Office (2010) [‘Drug Strategy 2010 – Reducing demand, restricting supply, building recovery: supporting people to live a drug-free life'](http://www.gov.uk/government/uploads/system/uploads/attachment_data/file/98026/drug-strategy-2010.pdf "Drug Strategy 2010 – Reducing demand, restricting supply, building recovery: supporting people to live a drug-free life"). 
-14. Home Office (2012) ['Drug misuse declared: findings from the 2011 to 2012 Crime Survey for England and Wales'](https://www.gov.uk/government/publications/drug-misuse-declared-findings-from-the-2011-12-crime-survey-for-england-and-wales--2 "Drug misuse declared: findings from the 2011 to 2012 Crime Survey for England and Wales"). 
-15. Home Office (2013) ['Drug misuse: findings from the 2012 to 2013 Crime Survey for England and Wales (CSEW)'](https://www.gov.uk/government/publications/drug-misuse-findings-from-the-2012-to-2013-csew "Drug misuse: findings from the 2012 to 2013 Crime Survey for England and Wales (CSEW)"). 
-16. [The Misuse of Drugs Act (1971)](http://www.legislation.gov.uk/ukpga/1971/38/contents "The Misuse of Drugs Act (1971)") The Stationery Office Ltd. 
-17. National Institute for Health and Clinical Excellence – NICE (2009) [‘Quick reference guide: Depression’](http://www.nice.org.uk/nicemedia/live/12329/45890/45890.pdf "Quick reference guide: Depression"). 
-18. National Treatment Agency (2012) [‘Drug treatment in England: the road to recovery’](http://www.nta.nhs.uk/uploads/dtie2012v1.pdf "Drug treatment in England: the road to recovery"). 
-19. Office for National Statistics (2002) ‘Report: Deaths related to drug poisoning: results for England and Wales, 1993 to 2000’, [Health Statistics Quarterly 13](http://www.ons.gov.uk/ons/rel/hsq/health-statistics-quarterly/no--13--spring-2002/index.html "Health Statistics Quarterly 13"), 76–82. 
-20. Office for National Statistics (2011) [‘Results of the ICD-10 v2010 bridge coding study, England and Wales, 2009’](http://www.ons.gov.uk/ons/rel/subnational-health3/results-of-the-icd-10-v2010-bridge-coding-study--england-and-wales--2009/2009/index.html "Results of the ICD-10 v2010 bridge coding study, England and Wales, 2009"). 
-21. Public Health England (2013) [‘Falling drug use: the impact of treatment’](http://www.nta.nhs.uk/uploads/prevalence-commentary.pdf "Falling drug use: the impact of treatment") 
-22. SOCA (2011) [‘Serious Organised Crime Agency Annual Report and Accounts 2010/11’](http://www.soca.gov.uk/about-soca/library/doc_download/301-annual-report-2010-11.pdf "Serious Organised Crime Agency Annual Report and Accounts 2010/11") 
-23. SOCA (2012) [‘Serious Organised Crime Agency Annual Report and Accounts 2011/12’](http://www.soca.gov.uk/about-soca/library/doc_download/392-soca-annual-report-and-accounts-201112.pdf "Serious Organised Crime Agency Annual Report and Accounts 2011/12") 
-24. SOCA (2013) [‘Serious Organised Crime Agency Annual Report and Accounts 2012/13’](http://www.soca.gov.uk/about-soca/library/doc_download/506-annual-report-201213.pdf "Serious Organised Crime Agency Annual Report and Accounts 2012/13") 
-25. Welsh Government (2013) [‘Substance Misuse Delivery Plan 2013 – 2015’](http://wales.gov.uk/topics/housingandcommunity/safety/substancemisuse/publications/dplan/?lang=en "Substance Misuse Delivery Plan 2013 – 2015") 
-26. World Health Organisation – [WHO (2010)](http://apps.who.int/classifications/icd/en/index.html "WHO (2010)") International Statistical Classification of Diseases and Related Health Problems, volumes 1, 2 and 3 (Tenth Revision). WHO: Geneva. 
+9. Hawton K, Bergen H, Simkin S, Cooper J, Waters K, Gunnell D and N Kapur (2010) [‘Toxicity of antidepressants: rates of suicide relative to prescribing and non-fatal overdose’](http://bjp.rcpsych.org/content/196/5/354.full.pdf "Toxicity of antidepressants: rates of suicide relative to prescribing and non-fatal overdose"), The British Journal of Psychiatry 196, 354-358.
+10. Hawton K, Bergen H, Simkin S, Wells C, Kapur N and Gunnell D (2012) ‘Six-Year Follow-Up of Impact of Co-proxamol Withdrawal in England and Wales on Prescribing and Deaths: Time-Series Study’, [PLOS Medicine](http://www.plosmedicine.org/article/info%3Adoi%2F10.1371%2Fjournal.pmed.1001213 "PLOS Medicine").
+11. Health and Social Care Information Centre (2009) [‘Prescription Cost Analysis: England 2008’](http://www.hscic.gov.uk/pubs/prescostanalysis2008 "Prescription Cost Analysis: England 2008").
+12. Health and Social Care Information Centre (2013) [‘Prescription Cost Analysis: England 2012’](http://www.hscic.gov.uk/catalogue/PUB10610 "Prescription Cost Analysis: England 2012").
+13. Home Office (2010) [‘Drug Strategy 2010 – Reducing demand, restricting supply, building recovery: supporting people to live a drug-free life'](http://www.gov.uk/government/uploads/system/uploads/attachment_data/file/98026/drug-strategy-2010.pdf "Drug Strategy 2010 – Reducing demand, restricting supply, building recovery: supporting people to live a drug-free life").
+14. Home Office (2012) ['Drug misuse declared: findings from the 2011 to 2012 Crime Survey for England and Wales'](https://www.gov.uk/government/publications/drug-misuse-declared-findings-from-the-2011-12-crime-survey-for-england-and-wales--2 "Drug misuse declared: findings from the 2011 to 2012 Crime Survey for England and Wales").
+15. Home Office (2013) ['Drug misuse: findings from the 2012 to 2013 Crime Survey for England and Wales (CSEW)'](https://www.gov.uk/government/publications/drug-misuse-findings-from-the-2012-to-2013-csew "Drug misuse: findings from the 2012 to 2013 Crime Survey for England and Wales (CSEW)").
+16. [The Misuse of Drugs Act (1971)](http://www.legislation.gov.uk/ukpga/1971/38/contents "The Misuse of Drugs Act (1971)") The Stationery Office Ltd.
+17. National Institute for Health and Clinical Excellence – NICE (2009) [‘Quick reference guide: Depression’](http://www.nice.org.uk/nicemedia/live/12329/45890/45890.pdf "Quick reference guide: Depression").
+18. National Treatment Agency (2012) [‘Drug treatment in England: the road to recovery’](http://www.nta.nhs.uk/uploads/dtie2012v1.pdf "Drug treatment in England: the road to recovery").
+19. Office for National Statistics (2002) ‘Report: Deaths related to drug poisoning: results for England and Wales, 1993 to 2000’, [Health Statistics Quarterly 13](http://www.ons.gov.uk/ons/rel/hsq/health-statistics-quarterly/no--13--spring-2002/index.html "Health Statistics Quarterly 13"), 76–82.
+20. Office for National Statistics (2011) [‘Results of the ICD-10 v2010 bridge coding study, England and Wales, 2009’](http://www.ons.gov.uk/ons/rel/subnational-health3/results-of-the-icd-10-v2010-bridge-coding-study--england-and-wales--2009/2009/index.html "Results of the ICD-10 v2010 bridge coding study, England and Wales, 2009").
+21. Public Health England (2013) [‘Falling drug use: the impact of treatment’](http://www.nta.nhs.uk/uploads/prevalence-commentary.pdf "Falling drug use: the impact of treatment")
+22. SOCA (2011) [‘Serious Organised Crime Agency Annual Report and Accounts 2010/11’](http://www.soca.gov.uk/about-soca/library/doc_download/301-annual-report-2010-11.pdf "Serious Organised Crime Agency Annual Report and Accounts 2010/11")
+23. SOCA (2012) [‘Serious Organised Crime Agency Annual Report and Accounts 2011/12’](http://www.soca.gov.uk/about-soca/library/doc_download/392-soca-annual-report-and-accounts-201112.pdf "Serious Organised Crime Agency Annual Report and Accounts 2011/12")
+24. SOCA (2013) [‘Serious Organised Crime Agency Annual Report and Accounts 2012/13’](http://www.soca.gov.uk/about-soca/library/doc_download/506-annual-report-201213.pdf "Serious Organised Crime Agency Annual Report and Accounts 2012/13")
+25. Welsh Government (2013) [‘Substance Misuse Delivery Plan 2013 – 2015’](http://wales.gov.uk/topics/housingandcommunity/safety/substancemisuse/publications/dplan/?lang=en "Substance Misuse Delivery Plan 2013 – 2015")
+26. World Health Organisation – [WHO (2010)](http://apps.who.int/classifications/icd/en/index.html "WHO (2010)") International Statistical Classification of Diseases and Related Health Problems, volumes 1, 2 and 3 (Tenth Revision). WHO: Geneva.
 
 ## [accordion] Background notes and methodology
 1. Quality information
@@ -308,7 +308,7 @@ Almost all deaths on the drug poisoning database had a coroner’s inquest. For 
 - The ICD codes for underlying cause of death and other causes mentioned on the death certificate.
 - Every mention of a substance recorded by the coroner in the cause of death section or elsewhere on the coroner's certificate after inquest (up to seven substances).
 - An indicator to show if alcohol is mentioned – this includes a wide variety of scenarios ranging from evidence of alcohol consumption around the time of death (for example an empty vodka bottle found at the scene or alcohol found after toxicology tests) to long-term alcohol abuse and cirrhosis of the liver.
-- Other information recorded at death registration such as age, sex, marital status, occupation and place of usual residence. 
+- Other information recorded at death registration such as age, sex, marital status, occupation and place of usual residence.
 
 4. Definition of a drug-related death
 International Classification of Diseases, Ninth Revision (ICD-9) and Tenth Revision (ICD-10) codes used to define deaths related to drug poisoning
@@ -317,7 +317,7 @@ International Classification of Diseases, Ninth Revision (ICD-9) and Tenth Revis
 
 In 2000 the Advisory Council on the Misuse of Drugs published a report called ‘Reducing Drug Related Deaths’. In response to this report’s recommendations on improving the present system for collecting data on drug-related deaths, a technical working group was set up. This group, consisting of experts across government, the devolved administrations, coroners, toxicologists and drugs agencies, proposed a headline indicator for drug misuse deaths as part of the government’s action plan ([Department of Health, 2001](http://webarchive.nationalarchives.gov.uk/20130107105354/http://www.dh.gov.uk/en/Publicationsandstatistics/Publications/PublicationsPolicyAndGuidance/DH_4015217 "Department of Health, 2001")) to reduce the number of these deaths. This indicator also takes into account the information needs of the European Monitoring Centre for Drugs and Drug Addiction. The baseline year for monitoring deaths related to drug misuse was set as 1999. The definition of the headline indicator using ICD-10 is shown below. The definition using ICD-9 was published in a previous annual report ([Office for National Statistics, 2002](http://www.ons.gov.uk/ons/rel/hsq/health-statistics-quarterly/no--13--spring-2002/index.html "Office for National Statistics, 2002")).
 
-Cause of death categories included in the headline indicator of drug misuse deaths (the relevant ICD-10 codes are given in brackets): 
+Cause of death categories included in the headline indicator of drug misuse deaths (the relevant ICD-10 codes are given in brackets):
 
 a) Deaths where the underlying cause of death has been coded to one of the following categories of mental and behavioural disorders due to psychoactive substance use (excluding alcohol, tobacco and volatile solvents):
 
@@ -337,27 +337,27 @@ b) Deaths where the underlying cause of death has been coded to one of the follo
 - Assault by drugs, medicaments and biological substances (X85)
 - Mental and behavioural disorders due to use of volatile solvents (F18)
 
-Specific rules were adopted for dealing with compound analgesics which contain relatively small quantities of drugs listed under the Misuse of Drugs Act, the major ones being dextropropoxyphene, dihydrocodeine and codeine. Where these drugs are mentioned on a death record, they have been excluded from the drug misuse indicator if they are part of a compound analgesic (such as co-proxamol, co-dydramol or co-codamol) or cold remedy. Dextropropoxyphene has been excluded on all occasions, whether or not paracetamol or a compound analgesic was mentioned. This is because dextropropoxyphene is rarely, if ever, available other than as part of a paracetamol compound. However, codeine or dihydrocodeine mentioned without paracetamol or ibuprofen were included in the indicator. This is because they are routinely available and known to be abused in this form. This approach is the same as that taken by National Records of Scotland (NRS). Drugs controlled under the Misuse of Drugs Act 1971 include class A, B and C drugs. 
+Specific rules were adopted for dealing with compound analgesics which contain relatively small quantities of drugs listed under the Misuse of Drugs Act, the major ones being dextropropoxyphene, dihydrocodeine and codeine. Where these drugs are mentioned on a death record, they have been excluded from the drug misuse indicator if they are part of a compound analgesic (such as co-proxamol, co-dydramol or co-codamol) or cold remedy. Dextropropoxyphene has been excluded on all occasions, whether or not paracetamol or a compound analgesic was mentioned. This is because dextropropoxyphene is rarely, if ever, available other than as part of a paracetamol compound. However, codeine or dihydrocodeine mentioned without paracetamol or ibuprofen were included in the indicator. This is because they are routinely available and known to be abused in this form. This approach is the same as that taken by National Records of Scotland (NRS). Drugs controlled under the Misuse of Drugs Act 1971 include class A, B and C drugs.
 
 6. Revisions to drug misuse
 
-A small number of revisions were made to the to the drug misuse indicator in 2013 and the full back series from 1993 has been revised. Several new psychoactive substances which have been controlled under the [Misuse of Drugs Act 1971](http://www.legislation.gov.uk/ukpga/1971/38/contents "Misuse of Drugs Act 1971") in the last few years have been added, and alkyl nitrites have been removed as they were incorrectly being classed as controlled substances. These changes affect no more than two deaths a year. 
+A small number of revisions were made to the to the drug misuse indicator in 2013 and the full back series from 1993 has been revised. Several new psychoactive substances which have been controlled under the [Misuse of Drugs Act 1971](http://www.legislation.gov.uk/ukpga/1971/38/contents "Misuse of Drugs Act 1971") in the last few years have been added, and alkyl nitrites have been removed as they were incorrectly being classed as controlled substances. These changes affect no more than two deaths a year.
 
 7. Deaths among people in their 20s and 30s
 
-Nearly one in eight deaths among people in their 20s and 30s were drug-related. This figure has been calculated from the number of deaths from all drug poisonings of people aged 20 to 39, (1,021 deaths) and the number of deaths from all causes in this age group (8,265 deaths) for England and Wales in 2012. The number of deaths from all causes, by sex and age is available on the [ONS website](http://www.ons.gov.uk/ons/rel/vsob1/death-reg-sum-tables/index.html "ONS website"). 
+Nearly one in eight deaths among people in their 20s and 30s were drug-related. This figure has been calculated from the number of deaths from all drug poisonings of people aged 20 to 39, (1,021 deaths) and the number of deaths from all causes in this age group (8,265 deaths) for England and Wales in 2012. The number of deaths from all causes, by sex and age is available on the [ONS website](http://www.ons.gov.uk/ons/rel/vsob1/death-reg-sum-tables/index.html "ONS website").
 
 8. Heroin and morphine
 
-Heroin (diamorphine) breaks down in the body into morphine, so either heroin and/or morphine may be detected at post mortem and recorded on the death certificate. Therefore a combined figure for deaths where heroin or morphine was mentioned on the death certificate is included in Table 4. 
+Heroin (diamorphine) breaks down in the body into morphine, so either heroin and/or morphine may be detected at post mortem and recorded on the death certificate. Therefore a combined figure for deaths where heroin or morphine was mentioned on the death certificate is included in Table 4.
 
 9. Cocaine
 
-The figure for cocaine in Table 4 includes deaths where cocaine was taken in the form of crack cocaine. It is not possible to separately identify crack cocaine from other forms of cocaine at post mortem. Other evidence to distinguish the form of cocaine taken is rarely provided on death certificates. 
+The figure for cocaine in Table 4 includes deaths where cocaine was taken in the form of crack cocaine. It is not possible to separately identify crack cocaine from other forms of cocaine at post mortem. Other evidence to distinguish the form of cocaine taken is rarely provided on death certificates.
 
 10. GHB and GB
 
-The figure for GHB (gamma-hydroxybutyrate) in Reference Table 6a includes deaths where GBL (gamma-butyrolactone) was taken. It is not possible to separately identify GBL and GHB at post mortem as GBL is rapidly converted to GHB when ingested into the human body.  
+The figure for GHB (gamma-hydroxybutyrate) in Reference Table 6a includes deaths where GBL (gamma-butyrolactone) was taken. It is not possible to separately identify GBL and GHB at post mortem as GBL is rapidly converted to GHB when ingested into the human body.
 11. List of drugs included as new psychoactive substances
 
 There is no official definition new psychoactive substances. The following substances have been included in this group in this bulletin:
@@ -388,7 +388,7 @@ It is likely that this list will be revised in future as new substances emerge.
 
 12 Helium
 
-The number of deaths mentioning helium reported in this statistical bulletin before 2011 are likely to be an underestimate, as some deaths involving helium were assigned an underlying cause of death of hanging, strangulation and suffocation (ICD-10 codes X70 and Y20), and were not included in the drug poisoning database. From 2011 onwards, we have tried to ensure that all deaths mentioning helium are coded to the appropriate poisoning code and not as a suffocation. 
+The number of deaths mentioning helium reported in this statistical bulletin before 2011 are likely to be an underestimate, as some deaths involving helium were assigned an underlying cause of death of hanging, strangulation and suffocation (ICD-10 codes X70 and Y20), and were not included in the drug poisoning database. From 2011 onwards, we have tried to ensure that all deaths mentioning helium are coded to the appropriate poisoning code and not as a suffocation.
 
 13. Calculation of mortality rates
 
@@ -398,7 +398,7 @@ Mortality rates are calculated using mid-year population estimates. Rates for 20
 
 14. Confidence intervals
 
-Excel workbooks containing the data used to produce Figures 1 to 6 and Tables 1 to 5 are available to download from the [ONS website (303.5 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/subnational-health3/deaths-related-to-drug-poisoning/2012/drugs-reference-tables.xls "Drugs reference tables") . These tables contain both the mortality rate and the upper and lower confidence limits. These limits form a confidence interval, which is a measure of the statistical precision of an estimate and shows the range of uncertainty around the estimated figure. Calculations based on small numbers of events are often subject to random fluctuations. As a general rule, if the confidence interval around one figure overlaps with the interval around another, we cannot say with certainty that there is more than a chance difference between the two figures. Within this statistical bulletin, a difference which is described as ‘significant’, means ‘statistically significant’, assessed by examining the confidence intervals. 
+Excel workbooks containing the data used to produce Figures 1 to 6 and Tables 1 to 5 are available to download from the [ONS website (303.5 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/subnational-health3/deaths-related-to-drug-poisoning/2012/drugs-reference-tables.xls "Drugs reference tables") . These tables contain both the mortality rate and the upper and lower confidence limits. These limits form a confidence interval, which is a measure of the statistical precision of an estimate and shows the range of uncertainty around the estimated figure. Calculations based on small numbers of events are often subject to random fluctuations. As a general rule, if the confidence interval around one figure overlaps with the interval around another, we cannot say with certainty that there is more than a chance difference between the two figures. Within this statistical bulletin, a difference which is described as ‘significant’, means ‘statistically significant’, assessed by examining the confidence intervals.
 
 15. Revisions
 
@@ -406,23 +406,23 @@ The ONS revisions policy is available on our [website](http://www.ons.gov.uk/ons
 
 16. Calculation of registration delays
 
-Figure 6 presents data on the length of time taken to register a death (also known as the registration delay) for drug-related deaths. This is calculated as the difference between the date each death occurred and the date it was registered, measured in days. Data where the exact date of death was unknown or where either the date of death or date of registration was clearly recorded incorrectly (that is, the death appeared to have been registered before it occurred) were excluded from this analysis. Approximately 0.2% of the data were excluded for these reasons. Analysis showed that the data were positively skewed, and contains some deaths with very long registration delays (for example, more than eight years). Therefore the average registration delay has been presented using the median value, as this is not influenced by extreme values. The median is defined as the value that is halfway through the ordered data set, below and above which there lies an equal number of data values. 
+Figure 6 presents data on the length of time taken to register a death (also known as the registration delay) for drug-related deaths. This is calculated as the difference between the date each death occurred and the date it was registered, measured in days. Data where the exact date of death was unknown or where either the date of death or date of registration was clearly recorded incorrectly (that is, the death appeared to have been registered before it occurred) were excluded from this analysis. Approximately 0.2% of the data were excluded for these reasons. Analysis showed that the data were positively skewed, and contains some deaths with very long registration delays (for example, more than eight years). Therefore the average registration delay has been presented using the median value, as this is not influenced by extreme values. The median is defined as the value that is halfway through the ordered data set, below and above which there lies an equal number of data values.
 
 17. Special extracts of data
 
 Special extracts and tabulations of drug poisoning deaths data are available to order (subject to legal frameworks, disclosure control and agreement of costs, where appropriate). Such requests or enquiries should be made to:
 
-Mortality Analysis Team, Life Events and Population Sources Division 
-Office for National Statistics 
-Government Buildings 
-Cardiff Road 
-Newport NP10 8XG 
-Tel: +44 (0)1633 455341 
-Email: mortality@ons.gsi.gov.uk 
-The [ONS charging policy](http://www.ons.gov.uk/ons/about-ons/who-we-are/services/charging-policy/index.html "ONS charging policy") is available on our website. 
+Mortality Analysis Team, Life Events and Population Sources Division
+Office for National Statistics
+Government Buildings
+Cardiff Road
+Newport NP10 8XG
+Tel: +44 (0)1633 455341
+Email: mortality@ons.gsi.gov.uk
+The [ONS charging policy](http://www.ons.gov.uk/ons/about-ons/who-we-are/services/charging-policy/index.html "ONS charging policy") is available on our website.
 18. Feedback
 
-We would welcome feedback on the content, format and relevance of this release. Please send feedback to the postal or email address above. 
+We would welcome feedback on the content, format and relevance of this release. Please send feedback to the postal or email address above.
 
 19. Plan for mortality outputs
 
@@ -430,11 +430,11 @@ Future changes to mortality outputs are outlined in the plan for mortality outpu
 
 20. Pre-release access
 
-A list of the names of those given pre-publication access to the statistics and written commentary is available in this [pre-release access list](http://www.ons.gov.uk/ons/rel/subnational-health3/deaths-related-to-drug-poisoning/2012/pra-drug-related-deaths-2012.html "pre-release access list") for deaths related to drug poisoning in England and Wales in 2012. The rules and principles which govern pre-release access are featured within the [Pre-release Access to Official Statistics Order 2008](http://www.legislation.gov.uk/uksi/2008/2998/schedule/made "Pre-release Access to Official Statistics Order 2008"). 
+A list of the names of those given pre-publication access to the statistics and written commentary is available in this [pre-release access list](http://www.ons.gov.uk/ons/rel/subnational-health3/deaths-related-to-drug-poisoning/2012/pra-drug-related-deaths-2012.html "pre-release access list") for deaths related to drug poisoning in England and Wales in 2012. The rules and principles which govern pre-release access are featured within the [Pre-release Access to Official Statistics Order 2008](http://www.legislation.gov.uk/uksi/2008/2998/schedule/made "Pre-release Access to Official Statistics Order 2008").
 
 21. National Statistics
 
-The [UK Statistics Authority](http://www.statisticsauthority.gov.uk/assessment/assessment/assessment-reports/index.html "UK Statistics Authority") has designated these statistics as National Statistics, in accordance with the [Statistics and Registration Service Act](http://www.ons.gov.uk/ons/guide-method/ons-independence/the-statistics-act/index.html "Statistics and Registration Service Act") 2007 and signifying compliance with the [Code of Practice for Official Statistics](http://www.ons.gov.uk/ons/guide-method/the-national-statistics-standard/code-of-practice/index.html "Code of Practice for Official Statistics"). 
+The [UK Statistics Authority](http://www.statisticsauthority.gov.uk/assessment/assessment/assessment-reports/index.html "UK Statistics Authority") has designated these statistics as National Statistics, in accordance with the [Statistics and Registration Service Act](http://www.ons.gov.uk/ons/guide-method/ons-independence/the-statistics-act/index.html "Statistics and Registration Service Act") 2007 and signifying compliance with the [Code of Practice for Official Statistics](http://www.ons.gov.uk/ons/guide-method/the-national-statistics-standard/code-of-practice/index.html "Code of Practice for Official Statistics").
 Designation can be broadly interpreted to mean that the statistics:
 
 - meet identified user needs
@@ -442,7 +442,7 @@ Designation can be broadly interpreted to mean that the statistics:
 - are produced according to sound methods
 - are managed impartially and objectively in the public interest.
 
-Once statistics have been designated as National Statistics it is a statutory requirement that the Code of Practice shall continue to be observed. 
+Once statistics have been designated as National Statistics it is a statutory requirement that the Code of Practice shall continue to be observed.
 
 22. Terms and conditions
 

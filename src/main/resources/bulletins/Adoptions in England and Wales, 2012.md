@@ -28,11 +28,11 @@ The number of adoption orders indicated by ONS and MoJ are similar but do not ma
 ## Number of adoptions
 In 2012, there were 5,206 adoptions entered into the Adopted Children Register (ACR) following court orders made in England and Wales. This was higher than in 2011 (a 9.8% increase), when there were 4,740 adoptions. This represents the largest annual increase in adoptions over the last 15 years, the period for which adoption statistics by date of court order are available (Figure 1).
 
-<div frameBorder ="0" scrolling = "no"  class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/adoptions1.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/adoptions1.html"></iframe>
 </div>
 
-### Notes: 
+### Notes:
 1. Adoption figures by date of court order are only available from 1998.
 
 Wales recorded a 12% increase in adoptions in 2012 with 371 children entered into the Adopted Children Register following court orders made by courts in Wales. In England there was a 9.6% rise in adoptions with 4,835 children entered into the Adopted Children Register following court orders made in England.
@@ -52,8 +52,8 @@ Special Guardianship provided a new permanence option for children, giving a leg
 ## Adoptions by age and sex
 In 2012, 51% of children adopted were male (compared with 49% in 2011) and 49% were female (compared with 51% in 2011). Since 1998, the number of male and female adoptions has been fairly similar (Figure 2).
 
-<div frameBorder ="0" scrolling = "no"  class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/adoptions2.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/adoptions2.html"></iframe>
 </div>
 
 ### Notes:
@@ -64,8 +64,8 @@ The percentage of adopted children aged 1-4 has increased steadily since 1998. I
 Smaller decreases have been recorded for other age groups: In 2012, 24% of children adopted were aged 5-9 and 3.2% were aged 15-17, down from 36% and 5.0% respectively in 1998. Adnice!
 options of children aged under 1 decreased overall from 4.6% of all adoptions in 1998 to 1.6% in 2011 before rising slightly to 2.2% in 2012.
 
-<div frameBorder ="0" scrolling = "no"  class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/adoptions3.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/adoptions3.html"></iframe>
 </div>
 
 ## Adoptions by marital status of biological parents
@@ -85,13 +85,13 @@ In 2012, there were 4,835 children entered into the Adopted Children Register (A
 ## Users and uses of adoption statistics
 The Department for Education has the policy lead for adoptions in England while the Welsh Government has the policy lead in Wales.
 
-Both the [Department for Education](http://www.gov.uk/government/organisations/department-for-education/series/statistics-looked-after-children "Department for Education Statistics - Looked After Children") and the [Welsh Government](http://wales.gov.uk/topics/statistics/about/data-collection/social/child/lookedafter/?lang=en "Welsh Government - Looked After Children") publish data on adoption outcomes for children looked after by local authorities. However this does not cover the adoption of children outside of the care system (for example step-parents adopting their partner’s child) which are included in ONS statistics. 
+Both the [Department for Education](http://www.gov.uk/government/organisations/department-for-education/series/statistics-looked-after-children "Department for Education Statistics - Looked After Children") and the [Welsh Government](http://wales.gov.uk/topics/statistics/about/data-collection/social/child/lookedafter/?lang=en "Welsh Government - Looked After Children") publish data on adoption outcomes for children looked after by local authorities. However this does not cover the adoption of children outside of the care system (for example step-parents adopting their partner’s child) which are included in ONS statistics.
 
 The Ministry of Justice (MoJ) produces statistics to monitor the type and volume of cases that are received and processed through the court system of England and Wales. In 2013, MoJ resumed the publication of adoption statistics which they discontinued in 2005 due to concerns about accuracy. [Court Statistics (Quarterly)](http://www.gov.uk/government/publications/court-statistics-quarterly-jan-mar-2013 "Court Statistics (Quarterly)") provides information on the volume and timeliness of adoption cases dealt with in courts. MoJ statistics are derived directly from the court administrative system FamilyMan. The number of adoption orders indicated by ONS and MoJ are similar but do not match exactly. A [published statement on the differences](http://www.ons.gov.uk/ons/media-centre/statements/statement-on-the-differences-between-office-for-national-statistics-and-ministry-of-justice-figures-on-adoptions/index.html "published statement on the differences") provides more information. Both ONS and MoJ compare the number of adoption orders recorded in the Adopted Children Register and Familyman to monitor differences and ensure data are as accurate as possible.
 
 Organisations in the voluntary sector (for example, the British Association for Adoption and Fostering) use ONS adoption statistics for comparison purposes and also to support campaigns.
 
-The general public also has an interest in adoption statistics, especially those who are or have been involved in the adoption process. 
+The general public also has an interest in adoption statistics, especially those who are or have been involved in the adoption process.
 
 ## Further information
 More [data on adoptions](http://www.ons.gov.uk/ons/rel/vsob1/adoptions-in-england-and-wales/index.html "Adoptions in England and Wales Index") in England and Wales are available on the ONS website.
@@ -106,7 +106,7 @@ Statistics on [looked after children](http://www.gov.uk/government/organisations
 
 [Adoption statistics](http://www.ons.gov.uk/ons/external-links/devolved-admins/nisra/nisra---adoption-statistics.html "NISRA - Adoption Statistics") in Northern Ireland are provided by the Northern Ireland Statistics and Research Agency while statistics on the [adoption of looked after children](http://www.ons.gov.uk/ons/external-links/devolved-admins/nisra/adoption-of-looked-after-children.html "adoption of looked after children") are available from the Department of Health, Social Services and Public Safety.
 
-[Adoption statistics](http://www.ons.gov.uk/ons/external-links/devolved-admins/scottish-government/gro-scotland--vital-events---adoptions.html "GRO Scotland: Vital Events - Adoptions") in Scotland are provided by the National Records of Scotland while statistics on [children looked after](http://www.scotland.gov.uk/Topics/Statistics/Browse/Children/PubChildrenSocialWork "Scottish Government - Children's Social Work Statistics") are available from the Scottish Government. 
+[Adoption statistics](http://www.ons.gov.uk/ons/external-links/devolved-admins/scottish-government/gro-scotland--vital-events---adoptions.html "GRO Scotland: Vital Events - Adoptions") in Scotland are provided by the National Records of Scotland while statistics on [children looked after](http://www.scotland.gov.uk/Topics/Statistics/Browse/Children/PubChildrenSocialWork "Scottish Government - Children's Social Work Statistics") are available from the Scottish Government.
 
 
 ## [accordion] Background notes and methodology
@@ -114,21 +114,21 @@ Statistics on [looked after children](http://www.gov.uk/government/organisations
 
 2. Children are defined as being under 18 years of age.
 
-3. On 30 December 2005 the [Adoption and Children Act 2002](http://www.ons.gov.uk/ons/external-links/other/adoption-and-children-act-2002.html "Adoption and Children Act 2002") was fully implemented. It replaced the Adoption Act 1976 and modernised the legal framework for adoption in England and Wales. The Act provides for an adoption order to be made in favour of single people, married couples and, for the first time, civil partners, same-sex couples and unmarried couples. The Act also introduced Special Guardianship as a new permanence option for children. Further information on [Special Guardianship](http://www.ons.gov.uk/ons/external-links/other/education---children-and-young-people--special-guardianship-regulations-2005.html "Education - Children and young people, Special guardianship regulations 2005) is available on the Department for Education website. 
+3. On 30 December 2005 the [Adoption and Children Act 2002](http://www.ons.gov.uk/ons/external-links/other/adoption-and-children-act-2002.html "Adoption and Children Act 2002") was fully implemented. It replaced the Adoption Act 1976 and modernised the legal framework for adoption in England and Wales. The Act provides for an adoption order to be made in favour of single people, married couples and, for the first time, civil partners, same-sex couples and unmarried couples. The Act also introduced Special Guardianship as a new permanence option for children. Further information on [Special Guardianship](http://www.ons.gov.uk/ons/external-links/other/education---children-and-young-people--special-guardianship-regulations-2005.html "Education - Children and young people, Special guardianship regulations 2005) is available on the Department for Education website.
 
 4. Special extracts and tabulations of adoption data for England and Wales are available to order (subject to legal frameworks, disclosure control, resources and agreements of costs, where appropriate). Such enquiries should be made to:
 
-Vital Statistics Outputs Branch 
-Office for National Statistics 
-Segensworth Road 
-Titchfield 
-Fareham 
-Hampshire 
-PO15 5RR 
-Tel: +44 (0)1329 444 110 
+Vital Statistics Outputs Branch
+Office for National Statistics
+Segensworth Road
+Titchfield
+Fareham
+Hampshire
+PO15 5RR
+Tel: +44 (0)1329 444 110
 E-mail: <vsob@ons.gsi.gov.uk>
 
-The ONS charging policy is available on the ONS website.  
+The ONS charging policy is available on the ONS website.
 
 5. We would welcome feedback on the content, format and relevance of this release. Please send feedback to the postal or email address above.
 

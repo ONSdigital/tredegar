@@ -7,7 +7,7 @@ Headline 3: Almost all (99%) 16 to 24 year olds had used the Internet, compared 
 Contact name: Cecil Prescott
 Contact email: esociety@ons.gsi.gov.uk
 
-## Key Findings 
+## Key Findings
 - UK house prices increased by 10.5% in the year to May 2014, up from 9.9% in the year to April 2014.
 - House price annual inflation was 11.0% in England, 6.5% in Wales, 3.6% in Scotland and -0.7% in Northern Ireland.
 - House prices are increasing strongly across most parts of the UK, with prices in London again showing the highest growth.
@@ -28,8 +28,8 @@ The figures published in this release are not seasonally adjusted unless otherwi
 ## House Price Index UK Summary
 UK average house prices increased by 10.5% over the year to May 2014, up from an increase of 9.9% in the year to April 2014. This follows the moderate house price increases the UK has experienced since April 2012 (Figure 1) and is driven in large part by increases in London. This is the highest annual increase in UK house prices since May 2010 (when prices increased by 10.6%). The average UK mix-adjusted house price in May 2014 was £262,000.
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/housing1.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/housing1.html"></iframe>
 </div>
 
 ##### Notes:
@@ -38,8 +38,8 @@ UK average house prices increased by 10.5% over the year to May 2014, up from an
 
 In May 2014, the UK mix-adjusted House Price Index reached a record level of 199.0 (Figure 2). This is 0.8% higher than April 2014, when the index reached 197.5 and 7.3% higher than the pre-financial crisis peak of 185.5 in January 2008.
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/housing2.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/housing2.html"></iframe>
 </div>
 
 ##### Notes:
@@ -51,8 +51,8 @@ On a seasonally adjusted basis, average house prices increased by 0.8% between A
 ## House Price Index by Country
 During the year to May 2014, average house prices increased 11.0% in England, 6.5% in Wales and 3.6% in Scotland but fell 0.7% in Northern Ireland (Figure 3). This is the highest annual increase in English prices since May 2010, when prices increased by 11.3%.
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/housing3.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/housing3.html"></iframe>
 </div>
 
 ##### Notes:
@@ -63,8 +63,8 @@ England is the only UK country where property prices are now higher than the pre
 
 The England index reached 196.9 in May 2014. This is 8.9% higher than the peak in January 2008 of 180.8. The index for Northern Ireland (144.4) in May 2014 is 48.7% below the peak of August 2007 (281.5). The index for Scotland (220.7) in May 2014 is 4.3% below the peak of June 2008 (230.6). The index for Wales (213.9) in May 2014 is 3.7% below the peak of January 2008 (222.1).
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/housing4.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/housing4.html"></iframe>
 </div>
 
 ##### Notes:
@@ -74,8 +74,8 @@ The England index reached 196.9 in May 2014. This is 8.9% higher than the peak i
 ## House Price Index by Region
 Average house prices increased in all nine English regions over the year to May 2014 (Figure 5). The largest increase was again in London at 20.1% followed by the South East (9.6%) and the East (8.6%). This is the largest annual increase in London prices since comparable records began in 2002. Excluding London and the South East, UK house prices increased by 6.4% over the year to May 2014.
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/housing5.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/housing5.html"></iframe>
 </div>
 
 ##### Notes:
@@ -84,8 +84,8 @@ Average house prices increased in all nine English regions over the year to May 
 
 The indices for three out of the nine English regions are higher than at their pre-financial crisis peak in 2008. The index for London (233.3) is 33.7% higher than the pre-financial crisis peak in January 2008 (174.5). The South East is 7.3% above the peak of January 2008 (166.5) with an index of 178.7 in May 2014. The East is 6.2% above the January 2008 peak (168.4) with an index of 178.8 (Figure 6).
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/housing6.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/housing6.html"></iframe>
 </div>
 
 ##### Notes:
@@ -97,8 +97,8 @@ Average mix-adjusted house prices in May 2014 stood at £274,000 in England, £1
 
 Excluding London and the South East, the average UK mix-adjusted house price was £200,000.
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/housing7.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/housing7.html"></iframe>
 </div>
 
 ##### Notes:
@@ -110,8 +110,8 @@ The average price for properties bought by first-time buyers increased by 11.3% 
 
 The average price for properties bought by former owner-occupiers (existing owners) increased by 10.1% in the year to May 2014, up from an increase of 9.5% in April 2014. In May 2014, the average price paid for a house by a former owner-occupier was £301,000.
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/housing8.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/housing8.html"></iframe>
 </div>
 
 ##### Notes:
@@ -123,8 +123,8 @@ During the year to May 2014 prices paid for new dwellings increased by 6.9% on a
 
 During the year to May 2014 prices paid for pre-owned dwellings increased by 10.7% on average, compared with an increase of 10.4% in the year to April 2014. The average UK house price for pre-owned dwellings in May 2014 was £263,000.
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/housing9.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/housing9.html"></iframe>
 </div>
 
 ##### Notes:
@@ -162,7 +162,7 @@ In [July 2013](http://www.ons.gov.uk/ons/media-centre/statements/development-of-
 
 Since July, work has focused on assessing the current sources of data used in the production of official house price statistics and the feasibility of combining these sources to produce a single, definitive HPI. Whilst good progress has been made, further work is now required to investigate sources of property attributes data that would be required to supplement the current data and to begin assessing the different methodologies that could potentially be used to produce a definitive index. This additional analysis will take place during the next few months with the aim of identifying a suitable methodology and comprehensive source of property attributes data that could be used to produce the definitive HPI. Details regarding this analysis and any further development will be made available in the first half of 2014.
 
-If you have any questions regarding the proposed development and the analysis taking place, please use the following email address to contact us: <hpi@ons.gsi.gov.uk> 
+If you have any questions regarding the proposed development and the analysis taking place, please use the following email address to contact us: <hpi@ons.gsi.gov.uk>
 
 This update was first published in October 2013.
 
@@ -176,7 +176,7 @@ The ONS HPI is also an important input into the housing cost component of RPIJ a
 
 At the end of every quarter, as well as releasing final figures for the latest month, ONS revises the figures from the previous two months. This is done because some mortgage lenders, which account for 1 to 2% of all records, provide their data on a quarterly rather than monthly basis. Additionally, data will be revised for the previous month if more than 1,000 additional cases are received in a subsequent month.
 
-In July 2013 the methodology used to seasonally adjust the HPI was updated following a review and brings the HPI in line with ONS best practice for seasonal adjustment. Seasonal factors are now estimated on a monthly basis and therefore may result in small revisions to the previous 12 months data. This updated process improves the accuracy of the seasonally adjusted figures. 
+In July 2013 the methodology used to seasonally adjust the HPI was updated following a review and brings the HPI in line with ONS best practice for seasonal adjustment. Seasonal factors are now estimated on a monthly basis and therefore may result in small revisions to the previous 12 months data. This updated process improves the accuracy of the seasonally adjusted figures.
 
 Other revisions to historical data (other than those currently due for revision) will be made only if the revision is substantial.
 
@@ -192,7 +192,7 @@ The number of transactions received from the RMS is affected by the total number
 
 Price methodology
 
-The ONS HPI is mix-adjusted to allow for differences between houses sold (for example type, number of rooms, location) in different months within a year. House prices are modelled using a combination of characteristics to produce a model containing around 100,000 cells (one such cell could be first-time buyer, old dwelling, one bedroom flat purchased in London). Each month estimated prices for all cells are produced by the model and then combined with their appropriate weight to produce mix-adjusted average prices. The index values are based on growth rates in the mix-adjusted average house prices and are annually chain linked. More information on the model used is available via the [hedonic model methodology paper (246.4 Kb Pdf)](http://www.ons.gov.uk/ons/guide-method/user-guidance/prices/hpi/hedonic-model.pdf "Hedonic Model") published on the [HPI User Guidance webpage](http://www.ons.gov.uk/ons/guide-method/user-guidance/prices/hpi/index.html "House Price Index (HPI) User Guidance and Metholodgy"). 
+The ONS HPI is mix-adjusted to allow for differences between houses sold (for example type, number of rooms, location) in different months within a year. House prices are modelled using a combination of characteristics to produce a model containing around 100,000 cells (one such cell could be first-time buyer, old dwelling, one bedroom flat purchased in London). Each month estimated prices for all cells are produced by the model and then combined with their appropriate weight to produce mix-adjusted average prices. The index values are based on growth rates in the mix-adjusted average house prices and are annually chain linked. More information on the model used is available via the [hedonic model methodology paper (246.4 Kb Pdf)](http://www.ons.gov.uk/ons/guide-method/user-guidance/prices/hpi/hedonic-model.pdf "Hedonic Model") published on the [HPI User Guidance webpage](http://www.ons.gov.uk/ons/guide-method/user-guidance/prices/hpi/index.html "House Price Index (HPI) User Guidance and Metholodgy").
 
 Re-weighting
 
@@ -244,8 +244,8 @@ This bulletin includes the May 2014 data. Future publication dates for this stat
 
 Details of the policy governing the release of new data are available from the Media Relations Office. Also available is a list of the names of those given [pre-release access](http://www.ons.gov.uk/ons/rel/hpi/house-price-index/may-2014/pre-release-list.html "pre-release list") to the contents of this release.
 
-Follow us on [Twitter](http://www.ons.gov.uk/ons/external-links/social-media/twitter.html "Twitter") or join us at [Facebook](http://www.ons.gov.uk/ons/external-links/social-media/index.html "Facebook") 
-View the latest podcasts in [Youtube](http://www.ons.gov.uk/ons/external-links/social-media/youtube.html "YouTube") 
+Follow us on [Twitter](http://www.ons.gov.uk/ons/external-links/social-media/twitter.html "Twitter") or join us at [Facebook](http://www.ons.gov.uk/ons/external-links/social-media/index.html "Facebook")
+View the latest podcasts in [Youtube](http://www.ons.gov.uk/ons/external-links/social-media/youtube.html "YouTube")
 
 Details of the policy governing the release of new data are available by visiting [www.statisticsauthority.gov.uk/assessment/code-of-practice/index.html](http://www.statisticsauthority.gov.uk/assessment/code-of-practice/index.html) or from the Media Relations Office email: <media.relations@ons.gsi.gov.uk>
 

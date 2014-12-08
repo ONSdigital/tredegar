@@ -53,8 +53,8 @@ At the regional level of England and the constituent countries of the UK, IHS da
 
 1.1 per cent of adults who live in the East of England identified themselves as Gay, Lesbian or Bisexual
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/expt1.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/expt1.html"></iframe>
 </div>
 
 ##### Notes:
@@ -73,8 +73,8 @@ The survey asked people about their perception of their health in general. The I
 
 - at the regional level the North East of England reported the lowest rate of perceived good health at 72 per cent, with London reporting the highest at 80 per cent.
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/expt2.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/expt2.html"></iframe>
 </div>
 
 ##### Notes:
@@ -135,11 +135,11 @@ A more detailed file can be accessed if Approved Researcher Status is sought and
 
 6. Experimental Statistics
 
-Experimental statistics are those which are in the testing phase, are not yet fully developed and have not been submitted for assessment to the [UK Statistics Authority](http://www.ons.gov.uk/ons/external-links/stats-authority/statistics-authority-s-website.html "UK Statistics Authority website"). The IHS is designated as experimental statistics. Further information on experimental statistics can be found on the ONS website. 
+Experimental statistics are those which are in the testing phase, are not yet fully developed and have not been submitted for assessment to the [UK Statistics Authority](http://www.ons.gov.uk/ons/external-links/stats-authority/statistics-authority-s-website.html "UK Statistics Authority website"). The IHS is designated as experimental statistics. Further information on experimental statistics can be found on the ONS website.
 
 7. Quality
 
-Detailed information on sampling variability of the IHS can be found on the ONS website, and confidence intervals for the latest estimates described in the Bulletin can be found in the linked excel download tables. 
+Detailed information on sampling variability of the IHS can be found on the ONS website, and confidence intervals for the latest estimates described in the Bulletin can be found in the linked excel download tables.
 
 8. Publication Policy
 
@@ -149,8 +149,8 @@ Issued by: Office for National Statistics, Government Buildings, Cardiff Road, N
 
 Media contact:
 
-Tel: Media Relations Office 0845 6041838 
-Emergency on-call: 07867 906553 
+Tel: Media Relations Office 0845 6041838
+Emergency on-call: 07867 906553
 Email: <media.relations@ons.gsi.gov.uk>
 
 9. Details of the policy governing the release of new data are available by visiting [www.statisticsauthority.gov.uk/assessment/code-of-practice/index.html](http://www.statisticsauthority.gov.uk/assessment/code-of-practice/index.html) or from the Media Relations Office email: <media.relations@ons.gsi.gov.uk>

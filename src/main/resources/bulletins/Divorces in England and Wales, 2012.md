@@ -27,8 +27,8 @@ This is the first time that ONS has released 2012 divorce statistics for England
 ## Number of divorces
 In 2012, the number of divorces in England and Wales increased by 0.5% to 118,140 compared with 117,558 in 2011. The number of divorces declined between 2003 and 2009 from 153,065 to 113,949 followed by a 4.9% increase in 2010. The number of divorces has remained relatively stable since 2010, fluctuating just below the number recorded in 2010. The fall in divorces to 2009 is consistent with a decline in the number of marriages. The decrease in marriages to 2009 may be due to the increasing number of couples choosing to cohabit rather than enter into marriage ([Beaujouan and Bhrolcháin, 2011 (283.5 Kb Pdf)](http://www.ons.gov.uk/ons/rel/population-trends-rd/population-trends/no--145--autumn-2011/ard-pt145-cohab-marriage-trends.pdf "ARD PT145 Cohab Marriage Trends").
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/divorce1.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/divorce1.html"></iframe>
 </div>
 
 ##### Notes:
@@ -39,28 +39,28 @@ Figure 1 shows the changing trend in the number of divorces since 1932, as well 
 ## Divorce rates
 In 2012, 10.8 people divorced per thousand married population, compared with 13.3 in 2002. Similar decreases in the male and female divorce rates have also taken place since 2002 (Figure 2). The male divorce rate decreased to 10.8 divorces per thousand married males, down from 13.4 in 2002. The female divorce rate decreased to 10.9 divorces per thousand married females, down from 13.3 in 2002.
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/divorce2.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/divorce2.html"></iframe>
 </div>
 
 ##### Notes:
 1. Divorce rates for 2002-2010 are calculated using marital status population estimates based on the 2001 Census. Revisions to these estimates to take account of the 2011 Census are not currently planned. Divorce rates for 2011 and 2012 are based on estimated 2011 marital status population estimates which use the mid-2011 population estimates based on the 2011 Census and the marital status distribution from the 2008-based marital status population projections for 2011. Consequently comparisons between rates for 2002-2010 and 2011-2012 should be treated with caution due to the different census bases used. For more information see section titled ‘Availability of Population Estimates by Marital Status and the Calculation of Divorce Rates for 2011 and 2012’.
 
-Changes in the size of the adult population who are married, and therefore able to divorce, will affect both the number of divorces and the divorce rate. Divorce rates in 2012 remained similar to 2011 due to only a slight increase in the number of divorces and no change in the adult married population. Marital status estimates for 2011 and 2012 are not currently available; therefore divorce rates for 2012 have been calculated using estimated 2011 marital status population estimates. Whilst the actual number of males and females getting married or divorced in a particular year is equal, the number of unmarried males and females in the population will differ, hence the different rates (see background note 4). 
+Changes in the size of the adult population who are married, and therefore able to divorce, will affect both the number of divorces and the divorce rate. Divorce rates in 2012 remained similar to 2011 due to only a slight increase in the number of divorces and no change in the adult married population. Marital status estimates for 2011 and 2012 are not currently available; therefore divorce rates for 2012 have been calculated using estimated 2011 marital status population estimates. Whilst the actual number of males and females getting married or divorced in a particular year is equal, the number of unmarried males and females in the population will differ, hence the different rates (see background note 4).
 
-Divorce rates calculated using marital status estimates based on the 2001 Census suggest that both the male and female divorce rates have generally decreased since 2004 with the exception of 2010 and 2012 for females where rates increased. The increase in 2010 could have been associated with the economic climate following the 2008-09 recession. Two competing theories exist relating to the effect of an economic downturn on the number of partnerships dissolving. 
+Divorce rates calculated using marital status estimates based on the 2001 Census suggest that both the male and female divorce rates have generally decreased since 2004 with the exception of 2010 and 2012 for females where rates increased. The increase in 2010 could have been associated with the economic climate following the 2008-09 recession. Two competing theories exist relating to the effect of an economic downturn on the number of partnerships dissolving.
 
-One theory suggests that recession could contribute to a rise in partnership break-ups because of increased financial strain, changes in employment and related lifestyle changes. Social research in Britain has shown that unemployment and downturns in the housing market may be associated with family instability (Vaitilingam, 2011). In addition some individuals may believe they will get a more favourable divorce settlement if their income is currently low. 
+One theory suggests that recession could contribute to a rise in partnership break-ups because of increased financial strain, changes in employment and related lifestyle changes. Social research in Britain has shown that unemployment and downturns in the housing market may be associated with family instability (Vaitilingam, 2011). In addition some individuals may believe they will get a more favourable divorce settlement if their income is currently low.
 
-In contrast, an alternative theory suggests that partnerships would be less likely to dissolve in an unfavourable economic climate because of an increase in family solidarity during difficult times and the need to postpone marital break-ups until the economy, and the value of their home improves (Bradford Wilcox, 2011). Any impact of the recession on divorce is likely to vary across different sectors of society (Chowdhury, 2013). 
+In contrast, an alternative theory suggests that partnerships would be less likely to dissolve in an unfavourable economic climate because of an increase in family solidarity during difficult times and the need to postpone marital break-ups until the economy, and the value of their home improves (Bradford Wilcox, 2011). Any impact of the recession on divorce is likely to vary across different sectors of society (Chowdhury, 2013).
 
 It is too early to say whether recent trends in divorce rates represent small fluctuations resulting from rates nearing some form of stabilisation. Recent trends could be consistent with the theory that recession is associated with an increased risk of divorce, but with a delayed impact (Bradford Wilcox, 2011). This perhaps reflects a couple’s wait for an economic recovery to lift the value of their assets or the time lag between separation and obtaining a decree absolute. A similar trend can be seen during the previous recession in 1990-92, where divorce rates increased more markedly in 1993 than during the recession itself.
 
 ## Age at divorce
 Figure 3 shows the age at divorce for men and women in 2012. At younger ages there were more women than men divorcing; however, at older ages more men than women divorced. This pattern reflects the differences seen in age at marriage of men and women (the most recent marriage statistics available show that the provisional mean age for men marrying in 2011 was 36.3 years compared with 33.8 for women). In 2012, the number of divorces was highest among men and women aged 40 to 44.
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/divorce3.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/divorce3.html"></iframe>
 </div>
 
 Compared with 2002, divorce rates in England and Wales are higher in 2012 for men aged 50 and above and for women aged 45 and above, while divorce rates for men aged below 50 and women aged below 45 are lower (See tables 3a and 3b – [Number of divorces, age at divorce and marital status before marriage (285.5 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/vsob1/divorces-in-england-and-wales/2012/rtd-divorces---number-of-divorces-age-at-divorce-and-marital-status-before-marriage.xls "RTD Divorces - Number of Divorces Age at Divorce and Marital Status Before Marriage") ).
@@ -73,14 +73,14 @@ The average (mean) age at divorce increased slightly for both men and women in 2
 
 The mean age at divorce generally declined for both males and females during the mid to late 1970s and generally remained stable in the early 1980s. Since 1985 the mean ages at divorce for men and women have increased, rising by 7.3 years for both men and women. This trend is consistent with increases in the mean age at marriage. The difference between the mean age of husband and wife at divorce has remained relatively unchanged over the last four decades, with a difference of around 2.5 years except for the years 1974 to 1976 when it was 2.0 years.
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/divorce4.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/divorce4.html"></iframe>
 </div>
 
 ## Duration of marriage
 The median duration of marriage (the median is the mid point of the distribution – see background note 7) for divorces granted in 2012 was 11.5 years, which was the same as in 2011. This is an increase from 11.1 years in 2002 (see table 4 – [Age at marriage, duration of marriage and cohort analyses (486 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/vsob1/divorces-in-england-and-wales/2012/rtd-divorces---age-at-marriage-duration-of-marriage-and-cohort-analyses.xls "RTD Divorces - Age at Marriage Duration of Marriage and Cohort Analyses") ).
 
-The Matrimonial and Family Proceedings Act 1984 came into effect in England and Wales on 12 October 1984. The Act replaced the discretionary time bar (minimum time interval between the date of marriage and being able to file a petition for divorce) of three years by an absolute time bar of one year. No petition can now be filed within the first year of marriage. The median duration of marriage for divorces granted in 1984 was 10.1 years. Following the change in legislation the median duration of marriage fell to 8.9 years for divorces granted in 1985. Since this change, the median duration between marriage and divorce increased steadily up to 2005 but has remained relatively stable since. 
+The Matrimonial and Family Proceedings Act 1984 came into effect in England and Wales on 12 October 1984. The Act replaced the discretionary time bar (minimum time interval between the date of marriage and being able to file a petition for divorce) of three years by an absolute time bar of one year. No petition can now be filed within the first year of marriage. The median duration of marriage for divorces granted in 1984 was 10.1 years. Following the change in legislation the median duration of marriage fell to 8.9 years for divorces granted in 1985. Since this change, the median duration between marriage and divorce increased steadily up to 2005 but has remained relatively stable since.
 
 ## Marital status before marriage
 In 2012, 19% of men and women divorcing had their previous marriage end in divorce. These proportions have almost doubled since 1980 when the comparable figures were 10% (see table 7 – [Number of divorces, age at divorce and marital status before marriage (285.5 Kb Excel sheet)](http://www.ons.gov.uk/ons/rel/vsob1/divorces-in-england-and-wales/2012/rtd-divorces---number-of-divorces-age-at-divorce-and-marital-status-before-marriage.xls "RTD Divorces - Number of Divorces Age at Divorce and Marital Status Before Marriage") ).
@@ -107,8 +107,8 @@ Figure 5 illustrates the percentages of marriages ending in divorce or death, by
 - Therefore 60% of marriages are expected to survive to the 20th anniversary.
 - The average marriage is expected to last for 32 years.
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/divorce5.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/divorce5.html"></iframe>
 </div>
 
 Figure 5 shows that the cumulative percentage of marriages ending in divorce increases more rapidly in the first 10 years of marriage than the 10 years after that. Once the 20th wedding anniversary is reached, the cumulative percentage increases less rapidly. Conversely, the cumulative percentage of marriages which end in the death of one partner increases less rapidly in the first 40 years of marriage than the 10 years after that. This is because mortality is greater at older ages, and so has more impact at longer durations of marriage.
@@ -118,8 +118,8 @@ Compared with figures from 2005 ( [Wilson and Smallwood, 2008 (244.2 Kb Pdf)](ht
 - The age at first marriage has been increasing, and previous research has shown that those marrying at older ages have a lower risk of divorce ( [Wilson and Smallwood, 2008 (244.2 Kb Pdf)](http://www.ons.gov.uk/ons/rel/population-trends-rd/population-trends/no--131--spring-2008/the-proportion-of-marriages-ending-in-divorce.pdf "The proportion of marriages ending in divorce") ).
 - Cohabitation has increased in recent years. Cohabitation is often a precursor to marriage and may act to filter out weaker relationships from progressing to marriage ( [Beaujouan and Bhrolcháin, 2011 (283.5 Kb Pdf)](http://www.ons.gov.uk/ons/rel/population-trends-rd/population-trends/no--145--autumn-2011/ard-pt145-cohab-marriage-trends.pdf "ARD PT145 Cohab Marriage Trends") ).
 
-<class="chart-container">
-<iframe div frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/divorce6.html"></iframe>
+<div class="chart-container">
+<iframe frameBorder ="0" scrolling = "no" src="http://onsdigital.github.io/Alpha/bulletins/divorce6.html"></iframe>
 </div>
 
 Figure 6 shows that the probability of divorce by the next wedding anniversary rises rapidly in the first five years of marriage, so that between the fourth and eighth wedding anniversaries the probability of divorcing by the next anniversary is over 3%. After the eighth wedding anniversary, the probability of divorcing decreases from this peak, and by the 26th anniversary, the chance of divorcing by the next anniversary is less than 1%.
@@ -132,11 +132,11 @@ Annual divorce figures for the UK and constituent countries can be found in the 
 ## Civil partnership dissolutions
 Similarly to the increase in divorces, the number of civil partnership dissolutions also increased in 2012. However, this is part of an upward trend given that this type of partnership is relatively new and therefore the number of people in civil partnerships is increasing.
 
-Comparisons between civil partnership dissolutions and divorce statistics can be found in the article: [Civil Partnerships five years on (190.1 Kb Pdf)](http://www.ons.gov.uk/ons/rel/population-trends-rd/population-trends/no--145--autumn-2011/ard-pt145-civil-partnerships.pdf "ARD PT145 Civil Partnerships") , which was published in Population Trends (Autumn 2011). 
+Comparisons between civil partnership dissolutions and divorce statistics can be found in the article: [Civil Partnerships five years on (190.1 Kb Pdf)](http://www.ons.gov.uk/ons/rel/population-trends-rd/population-trends/no--145--autumn-2011/ard-pt145-civil-partnerships.pdf "ARD PT145 Civil Partnerships") , which was published in Population Trends (Autumn 2011).
 Further statistics on [civil partnership dissolutions](http://www.ons.gov.uk/ons/rel/vsob2/civil-partnership-statistics--united-kingdom/index.html "Civil Partnership Statistics, United Kingdom index") can be found on the ONS website.
 
 ## Availability of population estimates by marital status and the calculation of divorce rates for 2011 and 2012:
-Marital status estimates for 2011 and 2012 are not currently available. ONS are considering the future need for population estimates by marital status in their present form. Estimates of the population by marital status, age and sex from the 2011 Census are being used to benchmark current methods and evaluate alternative sources of data on partnership status. 
+Marital status estimates for 2011 and 2012 are not currently available. ONS are considering the future need for population estimates by marital status in their present form. Estimates of the population by marital status, age and sex from the 2011 Census are being used to benchmark current methods and evaluate alternative sources of data on partnership status.
 
 Divorce rates for 2011 and 2012 are therefore based on estimated 2011 marital status population estimates. These use the mid-2011 population estimates based on the 2011 Census and the marital status distribution from the 2008-based marital status population projections for 2011. Analyses comparing the marital status distribution in the marital status estimates for mid-2008-2010 and the 2008-based marital status projections for 2008-2012 have shown that these estimates provide:
 
@@ -149,7 +149,7 @@ Population estimates for mid-2002 to mid-2010 have been revised to take account 
 Revisions to population estimates by marital status for mid-2002 to mid-2010 are not currently planned. The marital status estimates used to calculate divorce rates for 2002-2010 are therefore not consistent with the latest mid-year population estimates. Consequently, any comparisons between rates for 2002-2010 and 2011-2012 should be treated with caution due to the different census bases used.
 
 ## Users of divorce statistics
-ONS uses divorce statistics to: 
+ONS uses divorce statistics to:
 
 - Report on social and demographic trends.
 - Perform further analyses, for example comparing trends in divorce with civil partnership dissolutions.
@@ -184,16 +184,16 @@ Annual divorce figures for the UK and constituent countries can be found in the 
 
 [Northern Ireland Statistics and Research Agency](http://www.ons.gov.uk/ons/external-links/devolved-admins/nisra/nisra-divorces.html "NISRA divorces") provide divorce statistics for Northern Ireland.
 
-Divorce statistics are also available from the Ministry of Justice in [Court Statistics Quarterly](https://www.gov.uk/government/publications/court-statistics-quarterly-july-to-september-2013 "Court Statistics Quarterly"). 
+Divorce statistics are also available from the Ministry of Justice in [Court Statistics Quarterly](https://www.gov.uk/government/publications/court-statistics-quarterly-july-to-september-2013 "Court Statistics Quarterly").
 
-Further statistics on [marriages](http://www.ons.gov.uk/ons/rel/vsob1/marriages-in-england-and-wales--provisional-/index.html "Marriages in England and Wales (provisional) index"), [civil partnership and civil partnership dissolutions](http://www.ons.gov.uk/ons/rel/vsob2/civil-partnership-statistics--united-kingdom/index.html "Civil Partnership Statistics, United Kingdom index") are available on the ONS website, as are data on [families and households](http://www.ons.gov.uk/ons/rel/family-demography/families-and-households/index.html "Families and Households index") which presents recent estimates of the number of families by type, people in families by type, and children in families by type. 
+Further statistics on [marriages](http://www.ons.gov.uk/ons/rel/vsob1/marriages-in-england-and-wales--provisional-/index.html "Marriages in England and Wales (provisional) index"), [civil partnership and civil partnership dissolutions](http://www.ons.gov.uk/ons/rel/vsob2/civil-partnership-statistics--united-kingdom/index.html "Civil Partnership Statistics, United Kingdom index") are available on the ONS website, as are data on [families and households](http://www.ons.gov.uk/ons/rel/family-demography/families-and-households/index.html "Families and Households index") which presents recent estimates of the number of families by type, people in families by type, and children in families by type.
 
 [Population estimates by marital status](http://www.ons.gov.uk/ons/rel/pop-estimate/population-estimates-by-marital-status/index.html "Population Estimates by Marital Status index") provide the estimated resident population by single year of age, sex and marital status (single, married, divorced, and widowed) for England and Wales.
 
 ## [accordion] References
 Beaujouan, E. and Bhrolcháin, M. (2011) [Cohabitation and marriage in Britain since the 1970s (283.5 Kb Pdf)](http://www.ons.gov.uk/ons/rel/population-trends-rd/population-trends/no--145--autumn-2011/ard-pt145-cohab-marriage-trends.pdf "ARD PT145 Cohab Marriage Trends") , Population Trends 145.
 
-Bradford Wilcox, W. (2011) [The State of Our Unions, Marriage in America 2009](http://www.ons.gov.uk/ons/external-links/articles-and-summaries/articles/the-state-of-our-unions--marriage-in-america-2009--money-and-marriage.html "The State of Our Unions, Marriage in America 2009, Money and Marriage"), Money and Marriage, University of Virginia, The National Marriage Project. 
+Bradford Wilcox, W. (2011) [The State of Our Unions, Marriage in America 2009](http://www.ons.gov.uk/ons/external-links/articles-and-summaries/articles/the-state-of-our-unions--marriage-in-america-2009--money-and-marriage.html "The State of Our Unions, Marriage in America 2009, Money and Marriage"), Money and Marriage, University of Virginia, The National Marriage Project.
 
 Chowdhury, A (2013) ‘[Til recession do us part: booms, busts and divorce in the United States](http://www.tandfonline.com/doi/full/10.1080/13504851.2012.689104#preview "Til recession do us part: booms, busts and divorce in the United States"), Applied Economic Letters 20: 255-261.
 
@@ -220,7 +220,7 @@ Vaitilingham, R. (2011) [Recession Britain](http://www.ons.gov.uk/ons/external-l
 
 ONS and MoJ worked closely together to reconcile the two sets of statistics as far as possible. A [statement on the difference](http://www.ons.gov.uk/ons/media-centre/statements/moj-and-ons/index.html "Statement of differences between the Office for National Statistics and Ministry of Justice figures on divorces") between ONS and MoJ divorce statistics is available on the ONS website.
 
-From the 2013 data year, ONS will be compiling divorce statistics from electronic extracts of divorces taken directly from the Familyman system used by the courts which will help to minimise the difference between the two sets of statistics. 
+From the 2013 data year, ONS will be compiling divorce statistics from electronic extracts of divorces taken directly from the Familyman system used by the courts which will help to minimise the difference between the two sets of statistics.
 
 3. Scottish Government took over sole responsibility for the publication of statistics on divorces in Scotland at the end of 2012. Divorce figures for the year ending March 2013 will be published in Civil Law Statistics in Scotland in February 2014. Statistics for the 2012 calendar year are not available until this time. Consequently, it is not possible to provide 2012 divorce statistics for Scotland or the UK at this time.
 
@@ -252,17 +252,17 @@ These figures have been produced using marriage statistics, divorce and mortalit
 
 12. Follow ONS on [Twitter](http://www.ons.gov.uk/ons/external-links/social-media/ons-twitter.html "Twitter") and [Facebook](http://www.ons.gov.uk/ons/external-links/social-media/index.html "Facebook")
 
-13. Special extracts and tabulations of divorce data for England and Wales are available to order (subject to legal frameworks, disclosure control, resources and agreement of costs, where appropriate). Enquiries should be made to: 
+13. Special extracts and tabulations of divorce data for England and Wales are available to order (subject to legal frameworks, disclosure control, resources and agreement of costs, where appropriate). Enquiries should be made to:
 
-Vital Statistics Output Branch 
-Life Events and Population Sources Division 
-Office for National Statistics 
-Segensworth Road 
-Titchfield 
-Fareham 
-Hampshire PO15 5RR 
-Tel: +44 (0) 1329 444110 
-Email: <vsob@ons.gsi.gov.uk> 
+Vital Statistics Output Branch
+Life Events and Population Sources Division
+Office for National Statistics
+Segensworth Road
+Titchfield
+Fareham
+Hampshire PO15 5RR
+Tel: +44 (0) 1329 444110
+Email: <vsob@ons.gsi.gov.uk>
 
 The [ONS charging policy](http://www.ons.gov.uk/ons/about-ons/business-transparency/freedom-of-information/ons-charging-policy/index.html "charging policy") is available on the ONS website.
 
