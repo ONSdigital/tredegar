@@ -487,25 +487,23 @@ public class TaxonomyGenerator {
 
 		// TODO: Other timeseries mappings are commented out to minimise volume
 		// of files for now:
-		// // Write out timeseries mapped according to the "old dataset"
-		// // taxonomy map:
-		// Set<Timeseries> total = new HashSet<Timeseries>(timeserieses);
-		// if (folder.oldDataset.size() > 0) {
-		// oldDatasetsCreated.add(folder);
-		// for (Set<Timeseries> dataset : folder.oldDataset) {
-		// for (Timeseries timeseries : dataset) {
-		//
-		// if (createTimeseries(timeseries, t3)) {
-		// created++;
-		// }
-		// }
-		// total.addAll(dataset);
-		// }
-		//
-		// System.out.println("Referenced CDIDs vs. total CDIDs at this node: "
-		// + timeserieses.size() + "/" + total.size() + " (" + created +
-		// " created)");
-		// }
+		// Write out timeseries mapped according to the "old dataset"
+		// taxonomy map:
+		Set<Timeseries> total = new HashSet<Timeseries>(timeserieses);
+		if (folder.oldDataset.size() > 0) {
+			oldDatasetsCreated.add(folder);
+			for (Set<Timeseries> dataset : folder.oldDataset) {
+				for (Timeseries timeseries : dataset) {
+
+					if (createTimeseries(timeseries, folder, t3)) {
+						created++;
+					}
+				}
+				total.addAll(dataset);
+			}
+
+			System.out.println("Referenced CDIDs vs. total CDIDs at this node: " + timeserieses.size() + "/" + total.size() + " (" + created + " created)");
+		}
 	}
 
 	private static boolean createTimeseries(Timeseries timeseries, Folder folder, T3 t3) throws IOException {
