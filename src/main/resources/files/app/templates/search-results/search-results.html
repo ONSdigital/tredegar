@@ -95,7 +95,7 @@
                         	</div>
                             <a class="search-link" ng-href="{{link(homeResult.url)}}"><span ng-bind-html="homeResult.highlights.title || homeResult.title"></span></a>
                         </dt>
-                        <dd ng-show="searchResponse.homeSearchResult.numberOfResults > 0" class="search-summary search-home-focused--summary" >{{homeResult.lede | charLimit:300}}</dd>
+                        <dd ng-show="searchResponse.homeSearchResult.numberOfResults > 0" class="search-summary search-home-focused--summary" >{{homeResult.lede | charLimit:300:'...'}}</dd>
                         
                         <!-- Content search results -->
                         <dt ng-repeat-start="item in searchResponse.contentSearchResult.results track by $index">
@@ -105,7 +105,11 @@
                         <dd class="microcopy">
                         	<span ng-if="item.type != 'home'">Release date 1 Jan 3000</span>
                         </dd>
-                        <dd ng-repeat-end class="search-summary">{{(item.summary | charLimit:300:'...') || 'In the future a short description of this item will be displayed in this area' }}</dd>
+                        <dd ng-repeat-end class="search-summary">
+                        	<span ng-show="item.type === 'bulletin'">{{(item.summary | charLimit:300:'...') || 'In the future a short description of this item will be displayed in this area' }}</span>
+							<span ng-show="item.type === 'dataset' && item.summary != 'Brief description of dataset'">{{(item.summary | charLimit:300:'...') || 'In the future a short description of this item will be displayed in this area' }}</span>                        	
+                        	<span ng-show="item.type === 'dataset' && item.summary === 'Brief description of dataset'">In the future a short description of this item will be displayed in this area</span>
+                        </dd>
                     </dl>
 
                     <article ng-show="showTimeseriesSearchSuggest"  class="box box--padded box--green box--green--separated-left lifted">

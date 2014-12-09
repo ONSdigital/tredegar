@@ -8,7 +8,6 @@ import java.util.Date;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.TreeMap;
 
 import javax.servlet.http.HttpServletRequest;
@@ -57,7 +56,7 @@ public class Download {
 		// Normally only uriList or cdidList should be present in the request,
 		// but let's be lenient in what we'll accept:
 		List<Timeseries> timeseries = new ArrayList<Timeseries>();
-		
+
 		// Process URIs
 		if (downloadRequest.uriList != null) {
 			for (String uri : downloadRequest.uriList) {
@@ -84,16 +83,16 @@ public class Download {
 		data = applyRange(data, from, to);
 
 		// Debug:
-		System.out.println("Data grid:");
-		System.out.println("---");
-		for (Entry<String, TimeseriesValue[]> row : data.entrySet()) {
-			System.out.print(row.getKey());
-			for (TimeseriesValue value : row.getValue()) {
-				System.out.print("\t" + (value == null ? "null" : value.value));
-			}
-			System.out.println();
-		}
-		System.out.println("---");
+		// System.out.println("Data grid:");
+		// System.out.println("---");
+		// for (Entry<String, TimeseriesValue[]> row : data.entrySet()) {
+		// System.out.print(row.getKey());
+		// for (TimeseriesValue value : row.getValue()) {
+		// System.out.print("\t" + (value == null ? "null" : value.value));
+		// }
+		// System.out.println();
+		// }
+		// System.out.println("---");
 
 		switch (downloadRequest.type) {
 		case "xlsx":

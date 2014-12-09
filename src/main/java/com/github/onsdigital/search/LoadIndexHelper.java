@@ -34,6 +34,7 @@ public class LoadIndexHelper {
 	private static final String LEDE = "lede";
 	private static final String URL = "url";
 	private static final String DELIMITTER = "/";
+	private static final String SUMMARY = "summary";
 
 	/**
 	 * Loads up the file names from a system scan
@@ -62,56 +63,61 @@ public class LoadIndexHelper {
 	public static Map<String, String> getDocumentMap(String absoluteFilePath) throws JsonIOException, JsonSyntaxException, IOException {
 		String url = absoluteFilePath.substring(absoluteFilePath.indexOf(Configuration.getTaxonomyPath()) + Configuration.getTaxonomyPath().length());
 		String[] splitPath = url.split(DELIMITTER);
-		int splitPathLength = splitPath.length;
-		int fileNameTokenIndex = splitPathLength - 1;
+
+		List<String> splitPathAsList = new ArrayList<String>(Arrays.asList(splitPath));
+		// remove first index which is just a space
+		splitPathAsList.remove(0);
+		// remove last index which is the data.json
+		splitPathAsList.remove(splitPathAsList.size() - 1);
 
 		JsonObject jsonObject = getJsonObject(absoluteFilePath);
 		String type = getField(jsonObject, TYPE);
-		String fileName = splitPath[fileNameTokenIndex];
 
 		Map<String, String> documentMap = null;
 		ContentType contentType = ContentType.valueOf(type);
-		String splitUrl = url.substring(0, url.indexOf(fileName));
+		String splitUrl = url.substring(0, url.indexOf("data.json"));
 		String title = getField(jsonObject, TITLE);
-		String lede = getField(jsonObject, LEDE);
+		String summary = getField(jsonObject, SUMMARY);
 		String name = getField(jsonObject, NAME);
+		String lede = getField(jsonObject, LEDE);
 		switch (contentType) {
 		case home:
-			documentMap = buildDocumentMap(splitUrl, splitPath, type, name, lede);
+			documentMap = buildDocumentMap(splitUrl, splitPathAsList, type, name, lede, summary);
 			break;
 		case timeseries:
 			String cdid = getField(jsonObject, CDID);
-			documentMap = buildTimeseriesMap(splitUrl, splitPath, type, name, cdid);
+			documentMap = buildTimeseriesMap(splitUrl, splitPathAsList, type, name, cdid);
 			break;
 		case unknown:
 			System.out.println("json file: " + absoluteFilePath + "has unknown content type: " + contentType);
 			break;
 		default:
-			documentMap = buildDocumentMap(splitUrl, splitPath, type, title, lede);
+			documentMap = buildDocumentMap(splitUrl, splitPathAsList, type, title, lede, summary);
 			break;
 		}
 
 		return documentMap;
 	}
 
-	private static Map<String, String> buildDocumentMap(String url, String[] splitPath, String type, String title, String lede) {
+	private static Map<String, String> buildDocumentMap(String url, List<String> pathTokens, String type, String title, String lede, String summary) {
 
 		Map<String, String> documentMap = new HashMap<String, String>();
 		documentMap.put(URL, url);
 		documentMap.put(TYPE, type);
 		documentMap.put(TITLE, title);
-		documentMap.put(TAGS, Arrays.toString(splitPath));
+		documentMap.put(TAGS, pathTokens.toString());
 		documentMap.put(LEDE, lede);
+		documentMap.put(SUMMARY, summary);
 		return documentMap;
 	}
 
-	private static Map<String, String> buildTimeseriesMap(String url, String[] splitPath, String type, String title, String cdid) {
+	private static Map<String, String> buildTimeseriesMap(String url, List<String> pathTokens, String type, String title, String cdid) {
 
 		Map<String, String> documentMap = new HashMap<String, String>();
 		documentMap.put(URL, url);
 		documentMap.put(TYPE, type);
 		documentMap.put(TITLE, title);
-		 documentMap.put(TAGS, Arrays.toString(splitPath));
+		documentMap.put(TAGS, pathTokens.toString());
 		documentMap.put(CDID, cdid);
 		return documentMap;
 	}
