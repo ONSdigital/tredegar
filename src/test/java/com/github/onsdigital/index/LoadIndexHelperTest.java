@@ -43,7 +43,7 @@ public class LoadIndexHelperTest {
 	@Test
 	public void testGetDocumentMapForHomePage() throws JsonIOException, JsonSyntaxException, IOException {
 		Map<String, String> documentMap = LoadIndexHelper.getDocumentMap("target/taxonomy/economy/data.json");
-		assertEquals("url should math file structure", "/economy/", documentMap.get("url"));
+		assertEquals("url should match file structure", "/economy/", documentMap.get("url"));
 		assertEquals("type should be bulletins", "home", documentMap.get("type"));
 		assertEquals("title should be uksectoraccounts", "Economy", documentMap.get("title"));
 		assertFalse("tags should not contain content type subdir", documentMap.get("tags").contains("CONTENT_TYPE"));
