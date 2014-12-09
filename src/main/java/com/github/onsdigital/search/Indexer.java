@@ -170,7 +170,6 @@ public class Indexer {
 		settings.put("analysis.analyzer.ons_synonyms.tokenizer", "standard");
 		settings.put("analysis.filter.ons_synonym_filter.type", "synonym");
 
-		
 		// edgeNGram tokenizer
 		settings.put("analysis.tokenizer.ons_search_tokenizer.type", "edgeNGram");
 		settings.put("analysis.tokenizer.ons_search_tokenizer.max_gram", "15");
@@ -186,15 +185,16 @@ public class Indexer {
 		settingsBuilder.putArray("analysis.analyzer.ons_synonyms.filter", filters);
 
 		// java 7 try-with-resources automatically closes streams after use
-		try (InputStream inputStream = Indexer.class.getResourceAsStream("/synonym.txt");
-				BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream))) {
+		try (InputStream inputStream = Indexer.class.getResourceAsStream("/synonym.txt"); BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream))) {
 
-				List<String> synonymList = new ArrayList<String>();
-				String contents = null;
-				while ((contents = reader.readLine()) != null) {
+			List<String> synonymList = new ArrayList<String>();
+			String contents = null;
+			while ((contents = reader.readLine()) != null) {
+				if (!contents.startsWith("#")) {
 					synonymList.add(contents);
 				}
-				return synonymList;
+			}
+			return synonymList;
 		}
 	}
 }
