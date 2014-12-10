@@ -1,6 +1,6 @@
-'use strict';
-
 (function() {
+
+'use strict';
 
 	angular.module('onsChart', [])
 		.service('Chart', ['$http', '$log', '$location', 'ArrayUtil',
@@ -611,4 +611,4 @@
 
 	}
 
-})()
+})();

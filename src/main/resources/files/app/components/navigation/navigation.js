@@ -1,6 +1,7 @@
+  (function() {
+
   'use strict';
 
-  (function() {
 
     angular.module('onsNavigation', [])
       .directive('onsNav', ['$window', '$rootScope', Nav])
@@ -252,4 +253,4 @@
       }
     }
 
-  })()
+  })();

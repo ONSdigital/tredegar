@@ -1,6 +1,6 @@
-'use strict';
-
 (function() {
+
+'use strict';
 	var onsUtils = angular.module('onsUtils', [])
 	onsUtils
 		.factory('PageUtil', ['$location', '$log', '$anchorScroll', PageUtil])
@@ -166,4 +166,4 @@
 		return stringUtil
 	}
 
-})()
+})();
