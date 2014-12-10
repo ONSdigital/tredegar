@@ -1,6 +1,6 @@
-'use strict';
-
 (function() {
+
+'use strict';
 	var onsUtils = angular.module('onsUtils', [])
 	onsUtils
 		.factory('PageUtil', ['$location', '$log', '$anchorScroll', PageUtil])
@@ -9,7 +9,7 @@
 
 	function PageUtil($location, $log, $anchorScroll) {
 		var pageUtil = this
-		var title = 'Office Of National Statistics';
+		var title = 'Office For National Statistics';
 
 		function getTitle() {
 			return title;
@@ -166,4 +166,4 @@
 		return stringUtil
 	}
 
-})()
+})();

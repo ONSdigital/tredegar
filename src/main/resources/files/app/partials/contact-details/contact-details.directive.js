@@ -1,7 +1,6 @@
-'use strict';
-
-
 (function() {
+
+	'use strict';
 	angular.module('onsTemplates')
 		.directive('contactDetails', ContactDetails)
 
@@ -12,4 +11,4 @@
 			templateUrl: 'app/partials/contact-details/contactdetails.html'
 		}
 	}
-})()
+})();

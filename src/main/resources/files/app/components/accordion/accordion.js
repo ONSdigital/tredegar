@@ -98,4 +98,4 @@ Accordion component
   }
 
 
-})()
+})();

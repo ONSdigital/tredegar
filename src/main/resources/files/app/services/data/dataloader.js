@@ -1,6 +1,6 @@
-'use strict';
-
 (function() {
+
+'use strict';
 	angular.module('onsDataLoader', [])
 		.service('DataLoader', ['$rootScope', '$http', '$log', '$q', 'DSCacheFactory', '$location', DataLoader])
 
@@ -96,4 +96,4 @@
 
 
 
-})()
+})();

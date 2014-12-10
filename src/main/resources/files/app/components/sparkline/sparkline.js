@@ -1,6 +1,6 @@
-'use strict';
-
 (function() {
+
+'use strict';
 
 	angular.module('onsSparkline', ['highcharts-ng'])
 		.directive('onsSparkline', ['$log',
@@ -225,4 +225,4 @@
 		return data;
 	}
 
-})()
+})();

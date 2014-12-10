@@ -26,4 +26,4 @@
              template: '<span ng-if="tip" tabindex="0" ng-class="tipClass" class="tooltips icon-help-circled icon--blue-alt icon--inline tooltipstered"><span ng-bind-html="tip" class=""></span></span>'
          }
      }
- })()
+ })();

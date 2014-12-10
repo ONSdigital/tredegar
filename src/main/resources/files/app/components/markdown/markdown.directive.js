@@ -1,3 +1,5 @@
+(function() {
+
 'use strict';
 
 angular.module('onsComponents')
@@ -31,3 +33,6 @@ angular.module('onsComponents')
         }
     };
 });
+
+
+})();

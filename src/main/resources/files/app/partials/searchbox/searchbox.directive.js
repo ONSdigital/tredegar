@@ -1,3 +1,5 @@
+(function() {
+
 'use strict';
 
 angular.module('onsTemplates')
@@ -48,3 +50,5 @@ angular.module('onsTemplates')
 			}
 		}
 	])
+
+})();
