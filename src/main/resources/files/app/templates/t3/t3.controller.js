@@ -1,6 +1,6 @@
-'use strict';
-
 (function() {
+
+'use strict';
 
 	angular.module('onsTemplates')
 		.controller('T3Controller', ['$rootScope', '$scope', 'Taxonomy', T3Controller])
@@ -94,4 +94,4 @@
 		})
 	}
 
-})()
+})();

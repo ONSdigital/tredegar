@@ -1,11 +1,11 @@
-'use strict';
-
 /*
 Toggler
 
 @author Brn
  */
 (function() {
+
+'use strict';
 
   angular.module('onsToggler', [])
     .service('toggleService', ToggleService)
@@ -89,4 +89,4 @@ Toggler
   }
 
 
-})()
+})();

@@ -1,7 +1,7 @@
 //Search ctrl, used for search results page
-"use strict";
-
 (function() {
+
+"use strict";
 
   angular.module("onsTemplates")
     .controller("SearchController", ['$scope', '$rootScope', '$window', '$log', 'PageUtil', 'StringUtil', 'searchResponse', '$routeParams', SearchController])
@@ -312,4 +312,4 @@
     })
   }
 
-})()
+})();

@@ -1,3 +1,5 @@
+(function() {
+
 'use strict';
 
 angular.module('onsTemplates')
@@ -7,3 +9,5 @@ angular.module('onsTemplates')
 			templateUrl: 'app/partials/tools-pane/tools-pane.html'
 		}
 	})
+
+})();

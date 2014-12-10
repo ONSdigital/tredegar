@@ -1,7 +1,7 @@
 //Main ons application code
-'use strict';
-
 (function() {
+
+'use strict';
 
     // Components are to be injected to onsComponents module
     var onsComponents = angular.module('onsComponents', [
@@ -107,4 +107,4 @@
     }
 
 
-})()
+})();

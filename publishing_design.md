@@ -35,3 +35,33 @@ To round out this overview of the publishing design, here are some specific tech
  * **URL referencing.** Part of the design objective of the Alpha was to demonstrate where possible the value of ensuring that each item of information on the website should exist in a single location and be referenceable by a unique, predictable and readable URL. The aim for Beta is to maintain this approach, enabling additional items such as charts to be referenced and embedded, whether in statistical bulletins, or in articles publisheb by third-party websites.
  * **Page types.** Because the new website will have clear page types, the publishing tool can be developed to specifically allow population of relevant data for those pages. This means there's no need to have functionality to build web page templates. Providing users are able to enter (or select via URL reference) the correct data, there should be no need for a full-featured web CMS approach. For content which requires more free input, such as statistical bulletins, articles and methodology, the aim is to make use of a combination of Markdown and the [Sir Trevor](http://madebymany.github.io/sir-trevor-js/) approach to constraining content.
 
+### 9:30 publishing
+Some of the largest releases are up to 150M. Given modern infrastructure and network connectivity, transferring this volume of data should not be an issue. The bottleneck with the current publishing solution is not so much bandwidth as the amount and complexity of processing needed once the data arrive.
+
+This suggests that directly transferring Json documents from a MongoDB database for the secure instance to a MongoDB instance for the public site should be feasible, because the processing requirement to complete publishing is substantially less than for the current solution. Where there is a need to transfer files as well, although the data size is likely to be larger, network speed should mean this is also not an issue. 
+
+If an encryption solution is required, this would add some complexity, but has the benefit that data can be transferred and staged well ahead of publishing time, so ensuring that everything is in place, but unreadable, on the public server. At 9:30, decryption key(s) would be transferred to the server in order to decrypt the data (it would be relatively simple to generate a unique, random encryption key for every published item, reducing the impact of any compromise).
+
+In terms of security, encrypted data can be safely transmitted in the clear (as with HTTPS over the Web) so storing encrypted data on the public server adds no additional security burden to the solution (it's considered IL0 in traditional parlance). AES encryption is fast (as compared to, say RSA) and it should therefore be no problem to decrypt and load even large volumes of data within the publishing window. On a multi-core server, this can be carried out concurrently, enabling parallel decryption of multiple items.
+
+### Content as data
+With Json established as a defacto standard for representing structured information and Markdown in widespread use by non-technical bloggers, the opportunity to store document content as data with simple, declarative formatting becomes a natural choice.
+
+The content for each page can be represented as a Json file that describes title, any URL-referenced items such as statistical bulletins, timeseries and datasets as well as blocks of Markdown for pages such as Articles, Methodology and Bulletins.
+
+This makes page content natural to store in Mongo and work with in Javascript (and other languages). It also provides the option of building a structured content editing interface to view and update the values stored in the Json. The great thing is that there's no need to store HTML, or work with templates in the database - the front-end can focus on presentation and the back-end can focus on data.
+
+### URL Referencing
+One of the key foundations of the Web is URL addressability of resources. The Alpha was built as a single-page web application for expediency of development, but it's clear that fundamentally the website isn't actually a single-page web application, it's actually a collection of addressable resources, including timeseries pages, charts, bulletins, etc.
+
+The Alpha made a point of ensuring that everythng has a unique location and can be cross-referenced within the site using links. For example, some timeseries will appear on more than one T3 "Product" page and, if you click through, you will see the breadcrumb change to reflect the actual location of that timeseries within the taxonomy.
+
+Although the front end uses /#!/ URLs, the data behind each page is addressable. If you edit the url, substituting /data/ instead, you can view the Json that provides the content of any given page.
+
+The aim for Beta will be to build on this by enabling additional items, such as individual charts, to be addressable. This would enable, for example, news websites to directly embed a chart, at a point in time, into an article.
+
+### Page types
+The Alpha has shown that, for what ONS needs to achieve, having a defined set of page types provides clarity and structure. This means that a dozen or so templates are sufficient, so providing ONS content publishers with a user-friendly way to edit Json values and Markdown content should be sufficient to support the functionality needed on the site.
+
+It should therefore be simpler to develop a straightforward publishing tool to provide simple forms that correspond to the Json data structures than to customise a full-featured CMS to provide this functionality.
+

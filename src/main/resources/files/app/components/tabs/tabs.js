@@ -1,6 +1,6 @@
-'use strict';
-
 (function() {
+
+'use strict';
 
   /*
   Tabs component
@@ -116,4 +116,4 @@
     }
   }
 
-})()
+})();

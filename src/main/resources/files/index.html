@@ -21,16 +21,13 @@
     <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
     <!-- http://www.phpied.com/conditional-comments-block-downloads/ -->
     <!--[if IE]><![endif]-->
-    <!-- build:css /ui/css/oldie.css-->
     <!--[if lte IE 8]>
   <link rel="stylesheet" href="../ui/css/oldie.css" />
 <![endif]-->
-    <!-- endbuild -->
-    <!-- build:css ui/css/main.css-->
     <!--[if gt IE 8]><!-->
     <!-- <link rel="stylesheet" href="ui/css/main.css" /> -->
     <link href="/ui/css/main.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="/ui/css/jquery-ui.min.css">
+    <!-- <link rel="stylesheet" href="/ui/css/jquery-ui.min.css"> -->
     <link href="/ui/css/lib/loading-bar.css" rel="stylesheet" type="text/css">
 
     <!-- Bugherd integration script: http://bugherd.com/documentation/installing-the-sidebar/ -->
@@ -49,11 +46,7 @@
 
     </script> -->
 
-    <script type="text/javascript" src="/ui/js/lib/jquery.min.js" defer></script>
-
-
     <!--<![endif]-->
-    <!-- endbuild -->
     <!--[if (!IE)|(gt IE 8)]><!-->
     <!-- <script type="text/javascript" src="/ui/js/lib/jquery.tooltipster.min.js" defer></script> -->
     <!--<![endif]-->
@@ -78,7 +71,8 @@ type: template
 group: Templates
 markup: false
 -->
-    <script type="text/javascript" src="/ui/js/lib/angular.js" defer></script>
+    <script type="text/javascript" src="/ui/js/lib/jquery.min.js" defer></script>
+    <script type="text/javascript" src="/ui/js/lib/angular.min.js" defer></script>
 
 </head>
 
@@ -144,78 +138,9 @@ markup: false
     // ga('send', 'pageview');
     </script>
 
-    <!-- <script type="text/javascript" src="/ui/js/lib/angular.min.js" defer></script> -->
-    <script type="text/javascript" src="/ui/js/lib/angular-route.min.js" defer></script>
-    <script type="text/javascript" src="/ui/js/lib/angular-sanitize.min.js" defer></script>
-    <script type="text/javascript" src="/ui/js/lib/angular-cookie.min.js" defer></script>
-    <script type="text/javascript" src="/ui/js/lib/angular-cache.min.js" defer></script>
+    <script type="text/javascript" src="/dist/js/ons-lib.min.js" defer></script>
 
-    <!-- <script type="text/javascript" src="ui/js/lib/modernizr.min.js" defer></script> -->
-    <!-- <script type="text/javascript" src="ui/js/lib/jquery-ui.min.js" defer></script> -->
-
-    <script type="text/javascript" src="/ui/js/lib/showdown.min.js"></script>
-    <script type="text/javascript" src="app/config/config.js" defer></script>
-    <script type="text/javascript" src="app/app.js" defer></script>
-    <script type="text/javascript" src="app/route.js" defer></script>
-    <script type="text/javascript" src="app/services/taxonomy/taxonomy.js" defer></script>
-    <script type="text/javascript" src="app/services/download/downloader.js" defer></script>
-    <script type="text/javascript" src="app/services/data/dataloader.js" defer></script>
-    <script type="text/javascript" src="app/templates/taxonomy/taxonomy.controller.js" defer></script>
-    <script type="text/javascript" src="app/templates/t1/t1.controller.js" defer></script>
-    <script type="text/javascript" src="app/templates/t2/t2.controller.js" defer></script>
-    <script type="text/javascript" src="app/templates/t3/t3.controller.js" defer></script>
-    <script type="text/javascript" src="app/templates/t5/t5.controller.js" defer></script>
-    <script type="text/javascript" src="app/templates/t6/t6.controller.js" defer></script>
-    <script type="text/javascript" src="app/templates/search-results/search-results.controller.js" defer></script>
-    <script type="text/javascript" src="app/templates/about/about.controller.js" defer></script>
-    <script type="text/javascript" src="app/templates/accessibility/accessibility.controller.js" defer></script>
-    <script type="text/javascript" src="app/templates/article/article.controller.js" defer></script>
-    <script type="text/javascript" src="app/templates/bulletin/bulletin.controller.js" defer></script>
-    <script type="text/javascript" src="app/templates/calendar/calendar.controller.js" defer></script>
-    <script type="text/javascript" src="app/templates/collection/collection.controller.js" defer></script>
-    <script type="text/javascript" src="app/templates/content/content.controller.js" defer></script>
-    <script type="text/javascript" src="app/templates/copyright/copyright.controller.js" defer></script>
-    <script type="text/javascript" src="app/templates/release/release.controller.js" defer></script>
-    <script type="text/javascript" src="app/templates/dataset/dataset.controller.js" defer></script>
-    <script type="text/javascript" src="app/templates/contact/contact.controller.js" defer></script>
-    <script type="text/javascript" src="app/templates/localstats/localstats.controller.js" defer></script>
-    <script type="text/javascript" src="app/templates/alphapage/alphapage.controller.js" defer></script>
-    <script type="text/javascript" src="app/templates/methodology/methodology.controller.js" defer></script>
-    <script type="text/javascript" src="app/templates/nationalstats/nationalstats.controller.js" defer></script>
-    <script type="text/javascript" src="app/templates/previoustatic/previoustatic.controller.js" defer></script>
-    <script type="text/javascript" src="app/templates/privacy/privacy.controller.js" defer></script>
-    <script type="text/javascript" src="app/templates/survey/survey.controller.js" defer></script>
-    <script type="text/javascript" src="app/partials/modal/modal.controller.js" defer></script>
-    <script type="text/javascript" src="app/partials/header/header.js" defer></script>
-    <script type="text/javascript" src="app/partials/footer/footer.js" defer></script>
-    <script type="text/javascript" src="app/partials/navigation/navigation.controller.js" defer></script>
-    <script type="text/javascript" src="app/partials/searchbox/searchbox.directive.js" defer></script>
-    <script type="text/javascript" src="app/partials/latest-bulletins/latest-bulletins.directive.js" defer></script>
-    <script type="text/javascript" src="app/partials/related-articles/related-articles.directive.js" defer></script>
-    <script type="text/javascript" src="app/partials/contact-details/contact-details.directive.js" defer></script>
-    <script type="text/javascript" src="app/partials/social-links/social-links.js" defer></script>
-    <script type="text/javascript" src="app/partials/tools-pane/tools-pane.directive.js" defer></script>
-    <script type="text/javascript" src="app/components/breadcrumb/breadcrumb.js" defer></script>
-    <script type="text/javascript" src="app/components/navigation/navigation.js" defer></script>
-    <script type="text/javascript" src="app/components/autocomplete/autocomplete.js" defer></script>
-    <script type="text/javascript" src="app/components/paginator/paginator.js" defer></script>
-    <script type="text/javascript" src="app/components/toggler/toggler.js" defer></script>
-    <script type="text/javascript" src="app/components/accordion/accordion.js" defer></script>
-    <script type="text/javascript" src="app/components/tabs/tabs.js" defer></script>
-    <script type="text/javascript" src="app/components/loading/loading.js" defer></script>
-    <script type="text/javascript" src="app/components/tooltip/tooltip.js" defer></script>
-    <script type="text/javascript" src="app/components/doubletaptogo/doubletaptogo.js" defer></script>
-    <script type="text/javascript" src="app/components/sparkline/sparkline.js" defer></script>
-    <script type="text/javascript" src="app/components/markdown/markdown.directive.js" defer></script>
-    <!-- <script type="text/javascript" src="app/components/charts/charts.js" defer></script> -->
-    <script type="text/javascript" src="app/components/charts/highcharts-ng.js" defer></script>
-    <script type="text/javascript" src="app/helpers/filters.js" defer></script>
-    <script type="text/javascript" src="app/helpers/util.js" defer></script>
-    <script type="text/javascript" src="/ui/js/lib/highcharts.js" defer></script>
-    <script type="text/javascript" src="/ui/js/lib/exporting.js" defer></script>
-    <script type="text/javascript" src="/ui/js/lib/loading-bar.js" defer></script>
-
-
+    <script type="text/javascript" src="/dist/js/ons-alpha.min.js" defer></script>
 
 
     <!-- <script type="text/javascript" src="ui/js/app/nav.js" defer></script>

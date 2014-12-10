@@ -20,7 +20,3 @@
         };
     }
 })();
-
-
-angular.module('onsTemplates')
-

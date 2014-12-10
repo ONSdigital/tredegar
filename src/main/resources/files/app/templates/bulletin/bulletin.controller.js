@@ -11,4 +11,4 @@
     $scope.sidebarUrl = "app/templates/content/contentsidebar.html"
 
   }
-})()
+})();

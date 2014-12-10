@@ -1,0 +1,23 @@
+{
+  "name": "onsAlpha",
+  "version": "0.0.0",
+  "description": "Ons Alpha prototype Angular based web client application",
+  "keywords": [
+    "ons",
+    "statistics"
+  ],
+  "author": "",
+  "license": "ogl",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-contrib-cssmin": "0.10.0",
+    "grunt-usemin": "~2.0.2",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-rev": "~0.1.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-ng-annotate": "^0.4.0",
+    "matchdep": "~0.3.0"
+  }
+}

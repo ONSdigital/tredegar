@@ -319,29 +319,29 @@
         function monthVal(mon) {
             switch (mon.slice(0, 3).toUpperCase()) {
                 case 'JAN':
-                    return 01
+                    return '01'
                 case 'FEB':
-                    return 02
+                    return '02'
                 case 'MAR':
-                    return 03
+                    return '03'
                 case 'APR':
-                    return 04
+                    return '04'
                 case 'MAY':
-                    return 05
+                    return '05'
                 case 'JUN':
-                    return 06
+                    return '06'
                 case 'JUL':
-                    return 07
+                    return '07'
                 case 'AUG':
-                    return 08
+                    return '08'
                 case 'SEP':
-                    return 09
+                    return '09'
                 case 'OCT':
-                    return 10
+                    return '10'
                 case 'NOV':
-                    return 11
+                    return '11'
                 case 'DEC':
-                    return 12
+                    return '12'
                 default:
                     throw 'Invalid Month:' + mon
 
