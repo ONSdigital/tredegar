@@ -8602,11 +8602,11 @@ lesser , applied styles
 .calendar fieldset {
     min-width: 0;
     border: 0 !important;
-    @-moz-document url-prefix() {
+/*    @-moz-document url-prefix() {
         fieldset {
             display: table-cell;
         }
-    }
+    }*/
 }
 .calendar label {
     padding: 5px 0;
