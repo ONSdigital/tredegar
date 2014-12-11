@@ -20,10 +20,9 @@
     <meta name="format-detection" content="telephone=no"/>
     <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
     <!-- http://www.phpied.com/conditional-comments-block-downloads/ -->
-    <!--[if IE]><![endif]-->
     <!--[if lte IE 8]>
-  <link rel="stylesheet" href="../ui/css/oldie.css" />
-<![endif]-->
+	  <link rel="stylesheet" href="../ui/css/oldie.css" />
+	<![endif]-->
     <!--[if gt IE 8]><!-->
     
         <link href="/dist/css/main.min.css" rel="stylesheet" type="text/css">
@@ -31,7 +30,7 @@
 
 
     <!-- Bugherd integration script: http://bugherd.com/documentation/installing-the-sidebar/ -->
-    <script type='text/javascript'>
+	<!-- <script type='text/javascript'>
 
     	var BugHerdConfig = {"feedback":{"hide":true}};
 
@@ -44,7 +43,7 @@
             s.parentNode.insertBefore(bh, s);
         })(document, 'script');
 
-    </script>
+    </script> -->
 
     <!--<![endif]-->
     <!--[if (!IE)|(gt IE 8)]><!-->
@@ -106,7 +105,7 @@ markup: false
     </noscript>
 
     <div ng-include="'app/partials/modal/modal.html'" ></div>
-    <a id="my_feedback" class="btn btn--survey" onclick="_bugHerd.win.bugherd.applicationView.anonymousbar.toggleOptions()">Send Feedback</a>
+    <!-- <a id="my_feedback" class="btn btn--survey" onclick="_bugHerd.win.bugherd.applicationView.anonymousbar.toggleOptions()">Send Feedback</a>  -->
     <ons-header></ons-header>
         <div class="wrap"  ng-if="hasErrors()">
             <span ng-if="error === 404" ng-include="'app/templates/error-pages/error404.html'"></span>
