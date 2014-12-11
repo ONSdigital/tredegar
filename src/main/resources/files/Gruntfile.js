@@ -9,19 +9,19 @@ module.exports = function (grunt) {
             main: {
                 expand: true,
                 cwd: 'app/',
-                src: ['app/**/*.js', 'ui/js/lib/*.js' ],
+                src: ['app/**/*.js', 'ui/js/lib/*.js', 'ui/**/*.css' ],
                 dest: 'dist/'
             }
         },
  
         rev: {
             files: {
-                src: ['dist/**/*.{js}']
+                src: ['dist/**/*.{js, css}']
             }
         },
- 
+		
         useminPrepare: {
-            html: 'index.html'
+            html: 'index-dev.html'
         },
  
         usemin: {
@@ -53,6 +53,6 @@ module.exports = function (grunt) {
  
     // Tell Grunt what to do when we type "grunt" into the terminal
     grunt.registerTask('default', [
-        'copy' , 'useminPrepare', 'concat', 'ngAnnotate', 'uglify', 'usemin'
+        'copy' , 'useminPrepare', 'concat', 'ngAnnotate', 'uglify', 'cssmin', 'usemin'
     ]);
 };
