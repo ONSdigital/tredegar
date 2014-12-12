@@ -118,6 +118,20 @@ markup: false
 
 </body>
 
+    <script type="text/javascript">
+    (function(e){function t(){var t;if(e.referrer.test(document.referrer)){t=e.key.exec(document.referrer)&&e.key.exec(document.referrer)[1];
+    if(t){var n=(new Date(Date.now()+e.cookie.lifetime)).toUTCString();document.cookie=e.cookie.name+"="+t+"; path=/; domain="+e.cookie.domain;r("defaultActive",true)}}
+    else{var i=decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*"+encodeURIComponent(e.cookie.name).replace(/[\-\.\+\*]/g,"\\$&")+"\\s*\\=\\s*([^;]*).*$)|^.*$"),"$1"));
+    if(i){t=i;r("defaultActive",false)}}return t}function n(t,n){var r=new XMLHttpRequest;r.onload=function(){if(this.status===200){n(this.responseText)}};
+    r.open("GET",e.uiAddr+"?id="+t+"&url="+encodeURIComponent(window.location.href),true);r.send()}function r(t,n){if(!window.hasOwnProperty(e.globalKey))
+    {window[e.globalKey]={}}window[e.globalKey][t]=n}var i=t();if(i){n(i,function(e){var t=document.createElement("DIV");t.innerHTML=e;t=t.firstElementChild;
+    while(t.firstChild){if(t.firstChild.tagName==="SCRIPT"){var n=btoa(t.firstChild.innerHTML);var r=document.createElement("SCRIPT");r.type="text/javascript";
+    r.src="data:text/javascript;base64,"+n;document.body.appendChild(r);t.removeChild(t.firstChild)}else{document.body.appendChild(t.firstChild)}}})}r("cookieName",e.cookie.name)})
+    ({referrer:/\/common\/webtesting\/faces\/tracking.xhtml/,key:/(?:id=)([0-9]+)$/,cookie:{name:"__utc-webtesting__",
+    domain:window.location.host
+    },uiAddr:"http://usabilitytools.com/common/webtesting/faces/ui.xhtml",globalKey:"__utc-webtesting__"})
+ </script>
+
  <!-- Google Analytics -->
     <!-- Angular application(single page) requires page changes sent using javascript.
     Configured in config.js, sendpage commented out to prevent pageview duplicate on load -->
