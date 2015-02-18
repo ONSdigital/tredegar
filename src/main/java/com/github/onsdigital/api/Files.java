@@ -21,24 +21,26 @@ public class Files implements Filter {
 	 * requests.
 	 */
 	@Override
-	public boolean filter(HttpServletRequest req, HttpServletResponse res) {
+    public boolean filter(HttpServletRequest req, HttpServletResponse res) {
 
-        URL url = HostHelper.getUrl(req);
-		if (isStaticContentRequest(req)) {
+        if (isStaticContentRequest(req)) {
 
-			// Add a five-minute cache time to static files to reduce
-			// round-trips to the server and increase performance whilst still
-			// allowing the system to be updated quite promptly if necessary:
-			if (!HostHelper.isLocalhost(url)) {
-				res.addHeader("cache-control", "public, max-age=" + maxAge);
-			}
-		}
+            URL url = HostHelper.getUrl(req);
 
-        // Allow cross-origin resource sharing
-        res.addHeader("Access-Control-Allow-Origin", "*");
+            // Add a five-minute cache time to static files to reduce
+            // round-trips to the server and increase performance whilst still
+            // allowing the system to be updated quite promptly if necessary:
+            if (!HostHelper.isLocalhost(url)) {
+                res.addHeader("cache-control", "public, max-age=" + maxAge);
+            }
 
-		return true;
-	}
+            // Allow cross-origin resource sharing for css. js. and img.
+            // subbomains:
+            res.addHeader("Access-Control-Allow-Origin", trimSubdomain(url));
+        }
+
+        return true;
+    }
 
 	/**
 	 * A request is considered to be a static content request if there is a file
