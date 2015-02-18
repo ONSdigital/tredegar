@@ -23,9 +23,8 @@ public class Files implements Filter {
 	@Override
 	public boolean filter(HttpServletRequest req, HttpServletResponse res) {
 
+        URL url = HostHelper.getUrl(req);
 		if (isStaticContentRequest(req)) {
-
-			URL url = HostHelper.getUrl(req);
 
 			// Add a five-minute cache time to static files to reduce
 			// round-trips to the server and increase performance whilst still
@@ -33,11 +32,10 @@ public class Files implements Filter {
 			if (!HostHelper.isLocalhost(url)) {
 				res.addHeader("cache-control", "public, max-age=" + maxAge);
 			}
-
-			// Allow cross-origin resource sharing for css. js. and img.
-			// subbomains:
-			res.addHeader("Access-Control-Allow-Origin", trimSubdomain(url));
 		}
+
+        // Allow cross-origin resource sharing
+        res.addHeader("Access-Control-Allow-Origin", "*");
 
 		return true;
 	}
