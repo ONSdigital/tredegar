@@ -38,7 +38,10 @@ public class Search {
 			SearchConsole.save(query, page, searchResult);
 		} else if (StringUtils.isNotBlank(request.getParameter("term"))) {
 			searchResult = autoComplete(query);
-		}
+		} else if (StringUtils.isNotBlank(request.getParameter("cdid"))) {
+            Timeseries timeseries = SearchHelper.searchCdid(query);
+            return timeseries == null ? "" : timeseries.uri;
+        }
 
 		return searchResult;
 	}
@@ -82,13 +85,16 @@ public class Search {
 	}
 
 	private String extractQuery(HttpServletRequest request) {
-		String query = request.getParameter("q");
+        String query = request.getParameter("q");
 
 		if (StringUtils.isEmpty(query)) {
 			// check to see if this is part of search's autocomplete
 			query = request.getParameter("term");
-			if (StringUtils.isEmpty(query)) {
-				throw new RuntimeException("No search query provided");
+            if (StringUtils.isEmpty(query)) {
+                query = request.getParameter("cdid");
+                if (StringUtils.isEmpty(query)) {
+                    throw new RuntimeException("No search query provided");
+                }
 			}
 		}
 		if (query.length() > 100) {
