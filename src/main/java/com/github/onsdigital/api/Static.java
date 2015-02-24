@@ -1,13 +1,17 @@
 package com.github.onsdigital.api;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.nio.charset.Charset;
+import java.nio.file.Path;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.GET;
 import javax.ws.rs.core.Context;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.http.HttpStatus;
 
 import com.github.davidcarboni.restolino.framework.Endpoint;
@@ -35,10 +39,25 @@ public class Static {
 			return;
 		}
 
-		
-		if (!PrerenderIo.handle(request, response) && !PreGenerated.handle(request, response)) {
-			response.setStatus(HttpStatus.SC_NOT_FOUND);
-			response.getWriter().write("Apologies, for some reason it seems that page can't be generated.");
-		}
+
+        if (!PreGenerated.handle(request, response)) {
+
+            String content = PrerenderIo.handle(request, response);
+            if (content == null) {
+                response.setStatus(HttpStatus.SC_NOT_FOUND);
+                response.getWriter().write("Apologies, for some reason it seems that page can't be generated.");
+            }
+            else {
+                System.out.println("Content prerendered. Saving to file ... " + request.getRequestURL().toString());
+
+//                File file = new File(PreGenerated.createStaticFilePath(request));
+//                file.getParentFile().mkdirs();
+//                FileUtils.writeStringToFile(file, content, Charset.forName("utf8"));
+            }
+        }
+        else
+            System.out.println("Found static pre-generated copy of " + request.getRequestURL().toString());
+
+
 	}
 }
