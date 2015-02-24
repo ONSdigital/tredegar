@@ -107,7 +107,8 @@
 		angular.extend(service, {
 			loadData: loadData,
 			loadItem: loadItem,
-			resolveChartData: resolveChartData
+			resolveChartData: resolveChartData,
+            resolvePath: resolvePath
 		})
 
 	}
