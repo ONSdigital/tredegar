@@ -94,7 +94,7 @@ public class PrerenderIoService {
 	private boolean handlePrerender(HttpServletRequest servletRequest, HttpServletResponse servletResponse, URL url) throws URISyntaxException, IOException {
 		if (shouldShowPrerenderedPage(servletRequest, url)) {
 			this.preRenderEventHandler = prerenderConfig.getEventHandler();
-			if (beforeRender(servletRequest, servletResponse) || proxyPrerenderedPageResponse(servletRequest, servletResponse, url)) {
+			if (beforeRender(servletRequest, servletResponse) || proxyPrerenderedPageResponse(servletRequest, servletResponse, url) != null) {
 				return true;
 			}
 		}
@@ -322,7 +322,7 @@ public class PrerenderIoService {
 		return false;
 	}
 
-	/* private */boolean proxyPrerenderedPageResponse(HttpServletRequest request, HttpServletResponse response, URL escapedFragmetnUrl) throws IOException, URISyntaxException {
+	public String proxyPrerenderedPageResponse(HttpServletRequest request, HttpServletResponse response, URL escapedFragmetnUrl) throws IOException, URISyntaxException {
 		// final String apiUrl = getApiUrl(getFullUrl(request));
 		final String apiUrl = getApiUrl(escapedFragmetnUrl.toExternalForm());
 		log.trace(String.format("Prerender proxy will send request to:%s", apiUrl));
@@ -337,7 +337,7 @@ public class PrerenderIoService {
 			copyResponseHeaders(proxyResponse, response);
 			final String html = copyResponseEntity(proxyResponse, response);
 			afterRender(request, proxyResponse, html);
-			return true;
+			return html;
 		} finally {
 			closeQuietly(proxyResponse);
 		}

@@ -33,8 +33,8 @@ import com.github.onsdigital.configuration.Configuration;
  */
 public class PrerenderIo {
 
-	public static boolean handle(HttpServletRequest request, HttpServletResponse response) {
-		boolean result;
+	public static String handle(HttpServletRequest request, HttpServletResponse response) {
+		String result = null;
 
 		try {
 
@@ -58,6 +58,7 @@ public class PrerenderIo {
 			Map<String, String> config = new HashMap<String, String>();
 			config.put("prerenderToken", Configuration.getPrerenderToken());
 			PrerenderIoService prerenderSeoService = new PrerenderIoService(config);
+
 			try {
 				// return prerenderSeoService.prerenderIfEligible(request,
 				// response);
@@ -70,7 +71,6 @@ public class PrerenderIo {
 
 		} catch (URISyntaxException | IOException e) {
 			e.printStackTrace();
-			result = false;
 		}
 
 		return result;
