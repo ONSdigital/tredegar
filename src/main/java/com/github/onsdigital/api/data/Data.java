@@ -62,7 +62,7 @@ public class Data {
 
         System.out.println(request.getRequestURI());
 
-        String path = request.getRequestURI().replace("data", "taxonomy");
+        String path = request.getRequestURI().replace("/data/", "/taxonomy/");
         if (!path.endsWith("/"))
         {
             path += "/";
