@@ -2,7 +2,9 @@ package com.github.onsdigital.api.data;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.StringReader;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -11,6 +13,11 @@ import javax.ws.rs.GET;
 import javax.ws.rs.core.Context;
 
 import org.apache.commons.io.IOUtils;
+import org.eclipse.egit.github.core.Repository;
+import org.eclipse.egit.github.core.RepositoryContents;
+import org.eclipse.egit.github.core.client.GitHubClient;
+import org.eclipse.egit.github.core.service.ContentsService;
+import org.eclipse.egit.github.core.service.RepositoryService;
 import org.eclipse.jetty.http.HttpStatus;
 
 import com.github.davidcarboni.ResourceUtils;
@@ -18,6 +25,7 @@ import com.github.davidcarboni.restolino.framework.Endpoint;
 import com.github.onsdigital.data.DataService;
 import com.github.onsdigital.util.HostHelper;
 import com.github.onsdigital.util.Validator;
+import sun.misc.BASE64Decoder;
 
 @Endpoint
 public class Data {
@@ -46,16 +54,23 @@ public class Data {
 		}
 
 		// Look for a data file:
-		InputStream data = DataService.getDataStream(request.getRequestURI());
+        GitHubClient client = new GitHubClient();
+        client.setCredentials("carlhuk", "thisisatemp1");
+        RepositoryService service = new RepositoryService();
+        Repository repository = service.getRepository("ONSDigital", "nightingale");
+        ContentsService contentsService = new ContentsService();
+        List<RepositoryContents> contents = contentsService.getContents(repository, request.getRequestURI().replace("data", "taxonomy") + "data.json"); //"/taxonomy/data.json");
+        BASE64Decoder decoder = new BASE64Decoder();
+        byte[] decodedBytes = decoder.decodeBuffer(contents.get(0).getContent());
+        String json = new String(decodedBytes);
+        StringReader data = new StringReader(json);  //DataService.getDataStream(request.getRequestURI());
 
 		// Output directly to the response
 		// (rather than deserialise and re-serialise)
 		response.setCharacterEncoding("UTF8");
 		response.setContentType("application/json");
 		if (data != null) {
-			try (InputStream input = data) {
-				IOUtils.copy(input, response.getOutputStream());
-			}
+				IOUtils.copy(data, response.getOutputStream());
 			return null;
 		} else {
 			response.setStatus(HttpStatus.NOT_FOUND_404);
