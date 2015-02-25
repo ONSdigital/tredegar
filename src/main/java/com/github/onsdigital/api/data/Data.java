@@ -56,10 +56,20 @@ public class Data {
 		// Look for a data file:
         GitHubClient client = new GitHubClient();
         client.setCredentials("carlhuk", "thisisatemp1");
-        RepositoryService service = new RepositoryService();
+        RepositoryService service = new RepositoryService(client);
         Repository repository = service.getRepository("ONSDigital", "nightingale");
-        ContentsService contentsService = new ContentsService();
-        List<RepositoryContents> contents = contentsService.getContents(repository, request.getRequestURI().replace("data", "taxonomy") + "data.json"); //"/taxonomy/data.json");
+        ContentsService contentsService = new ContentsService(client);
+
+        System.out.println(request.getRequestURI());
+
+        String path = request.getRequestURI().replace("data", "taxonomy");
+        if (!path.endsWith("/"))
+        {
+            path += "/";
+        }
+
+        List<RepositoryContents> contents = contentsService.getContents(
+                repository, path + "data.json"); //"/taxonomy/data.json");
         BASE64Decoder decoder = new BASE64Decoder();
         byte[] decodedBytes = decoder.decodeBuffer(contents.get(0).getContent());
         String json = new String(decodedBytes);
