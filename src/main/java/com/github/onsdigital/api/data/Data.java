@@ -1,31 +1,22 @@
 package com.github.onsdigital.api.data;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.StringReader;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import com.github.davidcarboni.ResourceUtils;
+import com.github.davidcarboni.restolino.framework.Endpoint;
+import com.github.onsdigital.util.HostHelper;
+import com.github.onsdigital.util.Validator;
+import org.apache.commons.io.IOUtils;
+import org.eclipse.jetty.http.HttpStatus;
+import org.kohsuke.github.GHRepository;
+import org.kohsuke.github.GitHub;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.GET;
 import javax.ws.rs.core.Context;
-
-import org.apache.commons.io.IOUtils;
-import org.eclipse.egit.github.core.Repository;
-import org.eclipse.egit.github.core.RepositoryContents;
-import org.eclipse.egit.github.core.client.GitHubClient;
-import org.eclipse.egit.github.core.service.ContentsService;
-import org.eclipse.egit.github.core.service.RepositoryService;
-import org.eclipse.jetty.http.HttpStatus;
-
-import com.github.davidcarboni.ResourceUtils;
-import com.github.davidcarboni.restolino.framework.Endpoint;
-import com.github.onsdigital.data.DataService;
-import com.github.onsdigital.util.HostHelper;
-import com.github.onsdigital.util.Validator;
-import sun.misc.BASE64Decoder;
+import java.io.IOException;
+import java.io.StringReader;
+import java.util.HashMap;
+import java.util.Map;
 
 @Endpoint
 public class Data {
@@ -53,12 +44,8 @@ public class Data {
 			response.addHeader("cache-control", "public, max-age=300");
 		}
 
-		// Look for a data file:
-        GitHubClient client = new GitHubClient();
-        client.setCredentials("carlhuk", "x");
-        RepositoryService service = new RepositoryService(client);
-        Repository repository = service.getRepository("ONSDigital", "nightingale");
-        ContentsService contentsService = new ContentsService(client);
+        GitHub github = GitHub.connectUsingPassword("user", "pass");
+        GHRepository repo = github.getRepository("ONSDigital/nightingale");
 
         System.out.println(request.getRequestURI());
 
@@ -69,12 +56,8 @@ public class Data {
         }
         path = path.replace("/data/", "/taxonomy/");
 
+        String json = repo.getFileContent(path + "data.json").getContent();
 
-        List<RepositoryContents> contents = contentsService.getContents(
-                repository, path + "data.json"); //"/taxonomy/data.json");
-        BASE64Decoder decoder = new BASE64Decoder();
-        byte[] decodedBytes = decoder.decodeBuffer(contents.get(0).getContent());
-        String json = new String(decodedBytes);
         StringReader data = new StringReader(json);  //DataService.getDataStream(request.getRequestURI());
 
 		// Output directly to the response
