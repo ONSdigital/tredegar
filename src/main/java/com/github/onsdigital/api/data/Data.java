@@ -58,7 +58,7 @@ public class Data {
                 release = cookie.getValue();
         }
 
-        GitHub github = GitHub.connectUsingPassword("carlhuk", "temptemp1");
+        GitHub github = GitHub.connectUsingPassword("", "");
         GHRepository repo = github.getRepository(owner + "/nightingale");
 
         System.out.println(request.getRequestURI());
