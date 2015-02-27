@@ -9,13 +9,16 @@ import org.eclipse.jetty.http.HttpStatus;
 import org.kohsuke.github.GHRepository;
 import org.kohsuke.github.GitHub;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.GET;
 import javax.ws.rs.core.Context;
 import java.io.IOException;
 import java.io.StringReader;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Endpoint
@@ -42,10 +45,21 @@ public class Data {
 		// to be updated quite promptly if necessary:
 		if (!HostHelper.isLocalhost(request)) {
 			response.addHeader("cache-control", "public, max-age=300");
-		}
+        }
 
-        GitHub github = GitHub.connectUsingPassword("user", "pass");
-        GHRepository repo = github.getRepository("ONSDigital/nightingale");
+        String owner = "ONSDigital"; // aka fork
+        String release = "master"; // aka branch
+
+        for (Cookie cookie : request.getCookies()) {
+            if (cookie.getName().equals("owner"))
+                owner = cookie.getValue();
+
+            if (cookie.getName().equals("release"))
+                release = cookie.getValue();
+        }
+
+        GitHub github = GitHub.connectUsingPassword("carlhuk", "temptemp1");
+        GHRepository repo = github.getRepository(owner + "/nightingale");
 
         System.out.println(request.getRequestURI());
 
@@ -56,7 +70,7 @@ public class Data {
         }
         path = path.replace("/data/", "/taxonomy/");
 
-        String json = repo.getFileContent(path + "data.json").getContent();
+        String json = repo.getFileContent(path + "data.json", release).getContent();
 
         StringReader data = new StringReader(json);  //DataService.getDataStream(request.getRequestURI());
 
