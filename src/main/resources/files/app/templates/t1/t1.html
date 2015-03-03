@@ -24,16 +24,30 @@
     </header>
 </div>
 
+<!--extra panel for edition-->
+<section class="panel slate--home--hero-banner flush--top">
+    <div class="wrapper nav-panels">
+        <form ng-submit="submit()" class="grid-wrap" novalidate>
+            <div ng-repeat="section in original.sections" class="grid-col tablet-wide-grid-one-fifth">
+                <div ng-repeat="item in section.items" class="nav-panel nav-panel--stats sectioned">
+                    <input type="text" class="delta" ng-model="item.uri"/>
+                </div>
+            </div>
+        <button class="btn">Submit</button>
+        </form>
+    </div>
+</section>
 
 <!-- panel -->
 <div class="panel slate--home--hero-banner flush--top">
     <div class="wrapper nav-panels">
         <div class="grid-wrap">
             <div ng-repeat="section in taxonomy.data.sections" class="grid-col tablet-wide-grid-one-fifth">
-                <article ng-repeat="item in section.items" class="nav-panel nav-panel--stats sectioned">
+                <div ng-repeat="item in section.items" class="nav-panel nav-panel--stats sectioned">
                     <div class="navpanel_wrapper_home">
-                        <a href="#!{{item.uri}}"><span class="navpanel_wrapper_home__link"></span></a>
+                        <a href="#!{{item.uri}}"><span class="navpanel_wrapper_home__link">
                         <header class="nav-panel__header nav-panel__header_home nav-panel__roomy--med">
+                        </span></a>
                             <h2 class="delta">{{item.name}}</h2>
                         </header>
                         <div class="nav-panel__roomy box flush">
@@ -65,7 +79,7 @@
                             <a class="nav-panel__roomy--med right-small centred-med-up" href="#!{{getPath()}}{{section.link}}">Explore {{section.name}}</a>
                         </div>
                     </footer>
-                </article>
+                </div>
             </div>
             <!-- /grid-wrap -->
         </div>
