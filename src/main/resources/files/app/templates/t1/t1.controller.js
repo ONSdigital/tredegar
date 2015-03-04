@@ -7,13 +7,10 @@
 	function T1Controller($scope, $window, Taxonomy) {
 		var t1 = this
 		var sections = $scope.taxonomy.data.sections
-        var origina1 = angular.toJson($scope.taxonomy.data);
-        var original = angular.fromJson(origina1);
-        $scope.original = original;
 		t1.sparklineHeight = 50
 		t1.sparklineWidth = 120
 		initialize()
-		
+
 		// listenResize()
 
 
@@ -64,30 +61,6 @@
 		function handleDataLoadError(err) {
 
 		}
-
-        $scope.submit = function(){
-            //$.ajax({
-            //    url: "http://localhost:8080/data",
-            //    xhrFields: {
-            //        withCredentials: true
-            //    },
-            //    type: "POST",
-            //    data: JSON.stringify({
-            //        json: JSON.stringify(data),
-            //        id: parser.pathname
-            //    }),
-            //    contentType: "application/json; charset=utf-8",
-            //    dataType: "text"
-            //}).done(function() {
-            //    console.log("Done!");
-            //    location.reload();
-            //}).fail(function(jqXHR, textStatus) {
-            //    alert(textStatus);
-            //})
-
-            console.log(angular.toJson($scope.original));
-            //console.log(JSON.stringify($scope.taxonomy.data));
-        }
 
 	}
 
