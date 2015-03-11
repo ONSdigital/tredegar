@@ -83,18 +83,18 @@ public class DataService {
 		// but it doesn't have the manipulation methods we need
 		String result = uri.getPath();
 
+        // Remove endpoint name:
+        String endpointName = "/" + Data.class.getSimpleName().toLowerCase();
+        if (result.startsWith(endpointName)) {
+            result = result.substring(endpointName.length());
+        }
+
 		// Remove slashes:
 		if (result.startsWith("/")) {
 			result = result.substring(1);
 		}
 		if (result.endsWith("/")) {
 			result = result.substring(0, result.length() - 1);
-		}
-
-		// Remove endpoint name:
-		String endpointName = Data.class.getSimpleName().toLowerCase() + "/";
-		if (result.startsWith(endpointName)) {
-			result = result.substring(endpointName.length());
 		}
 
 		// Lowercase
