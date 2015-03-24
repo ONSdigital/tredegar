@@ -56,9 +56,11 @@ public class Data {
 
         String collection = null;
 
-        for (Cookie cookie : request.getCookies()) {
-            if (cookie.getName().equals("collection"))
-                collection = cookie.getValue();
+        if (request.getCookies() != null) {
+            for (Cookie cookie : request.getCookies()) {
+                if (cookie.getName().equals("collection"))
+                    collection = cookie.getValue();
+            }
         }
 
         InputStream data;
