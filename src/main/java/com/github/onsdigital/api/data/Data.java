@@ -2,11 +2,9 @@ package com.github.onsdigital.api.data;
 
 import com.github.davidcarboni.ResourceUtils;
 import com.github.davidcarboni.restolino.framework.Endpoint;
-import com.github.onsdigital.configuration.Configuration;
 import com.github.onsdigital.data.DataService;
 import com.github.onsdigital.util.HostHelper;
 import com.github.onsdigital.util.Validator;
-import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -20,9 +18,6 @@ import javax.ws.rs.core.Context;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URI;
-import java.nio.file.FileSystems;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -54,12 +49,16 @@ public class Data {
             response.addHeader("cache-control", "public, max-age=300");
         }
 
-        String collection = null;
+        String collection = "";
+        String authenticationToken = "";
+        final String authenticationHeader = "X-Florence-Token";
 
         if (request.getCookies() != null) {
             for (Cookie cookie : request.getCookies()) {
                 if (cookie.getName().equals("collection"))
                     collection = cookie.getValue();
+                if (cookie.getName().equals("access_token"))
+                    authenticationToken = cookie.getValue();
             }
         }
 
@@ -82,6 +81,7 @@ public class Data {
             try {
 
                 String dataString =  get("http://localhost:8082/content/" + collection)
+                        .header(authenticationHeader, authenticationToken)
                         .queryString("uri", uriPath).asString().getBody();
                 data = IOUtils.toInputStream(dataString);
 
