@@ -54,12 +54,18 @@ public class Data {
         String authenticationToken = "";
         final String authenticationHeader = "X-Florence-Token";
 
+        System.out.println("Checking cookies...");
+
         if (request.getCookies() != null) {
             for (Cookie cookie : request.getCookies()) {
-                if (cookie.getName().equals("collection"))
+                if (cookie.getName().equals("collection")) {
+                    System.out.println("Found collection cookie: " + cookie.getValue());
                     collection = cookie.getValue();
-                if (cookie.getName().equals("access_token"))
+                }
+                if (cookie.getName().equals("access_token")) {
+                    System.out.println("Found access_token cookie: " + cookie.getValue());
                     authenticationToken = cookie.getValue();
+                }
             }
         }
 
