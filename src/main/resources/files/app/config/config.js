@@ -74,6 +74,8 @@
 				}
 			}
 
+      return
+
 			//Set http default cache for all http get calls to be cached
 			$http.defaults.cache = dataCache
 
