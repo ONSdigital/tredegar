@@ -1,20 +1,16 @@
 package com.github.onsdigital.configuration;
 
-import java.security.InvalidKeyException;
-
-import javax.crypto.SecretKey;
-
+import com.github.davidcarboni.cryptolite.*;
 import org.apache.commons.lang3.StringUtils;
 
-import com.github.davidcarboni.cryptolite.ByteArray;
-import com.github.davidcarboni.cryptolite.Crypto;
-import com.github.davidcarboni.cryptolite.KeyWrapper;
-import com.github.davidcarboni.cryptolite.Keys;
-import com.github.davidcarboni.cryptolite.Random;
+import javax.crypto.SecretKey;
+import java.security.InvalidKeyException;
 
 public class Configuration {
 
 	private static final String DEFAULT_TAXONOMY_ROOT = "target/taxonomy";
+
+    private static final String DEFAULT_ZEBEDEE_URL = "http://localhost:8082";
 
 	/**
 	 * Mongo is currently only used to provide feedback on the search terms
@@ -28,7 +24,11 @@ public class Configuration {
 	 */
 	private static final String DEFAULT_PRERENDER_TOKEN = "cCc113eXWWV2TbRcnoMV";
 
-	public static String getTaxonomyPath() {
+    public static String getZebedeeUrl() {
+        return StringUtils.defaultIfBlank(getValue("ZEBEDEE_URL"), DEFAULT_ZEBEDEE_URL);
+    }
+
+    public static String getTaxonomyPath() {
 		return StringUtils.defaultIfBlank(getValue("TAXONOMY_DIR"), DEFAULT_TAXONOMY_ROOT);
 	}
 

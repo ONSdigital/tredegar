@@ -2,6 +2,7 @@ package com.github.onsdigital.api.data;
 
 import com.github.davidcarboni.ResourceUtils;
 import com.github.davidcarboni.restolino.framework.Endpoint;
+import com.github.onsdigital.configuration.Configuration;
 import com.github.onsdigital.data.DataService;
 import com.github.onsdigital.util.HostHelper;
 import com.github.onsdigital.util.Validator;
@@ -80,7 +81,8 @@ public class Data {
 
             try {
 
-                String dataString =  get("http://localhost:8082/content/" + collection)
+                System.out.println("Calling zebedee: ");
+                String dataString =  get(Configuration.getZebedeeUrl() + "/content/" + collection)
                         .header(authenticationHeader, authenticationToken)
                         .queryString("uri", uriPath).asString().getBody();
                 data = IOUtils.toInputStream(dataString);
