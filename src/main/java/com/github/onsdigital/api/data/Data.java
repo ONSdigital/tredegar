@@ -4,7 +4,6 @@ import com.github.davidcarboni.ResourceUtils;
 import com.github.davidcarboni.restolino.framework.Endpoint;
 import com.github.onsdigital.configuration.Configuration;
 import com.github.onsdigital.data.DataService;
-import com.github.onsdigital.util.HostHelper;
 import com.github.onsdigital.util.Validator;
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.exceptions.UnirestException;
@@ -47,9 +46,9 @@ public class Data {
         // Add a five-minute cache time to static files to reduce round-trips to
         // the server and increase performance whilst still allowing the system
         // to be updated quite promptly if necessary:
-        if (!HostHelper.isLocalhost(request)) {
-            response.addHeader("cache-control", "public, max-age=300");
-        }
+//        if (!HostHelper.isLocalhost(request)) {
+//            response.addHeader("cache-control", "public, max-age=300");
+//        }
 
         String collection = "";
         String authenticationToken = "";
