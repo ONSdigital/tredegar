@@ -29,7 +29,7 @@ public class Files implements Filter {
             // round-trips to the server and increase performance whilst still
             // allowing the system to be updated quite promptly if necessary:
             if (!HostHelper.isLocalhost(url)) {
-                //res.addHeader("cache-control", "public, max-age=" + maxAge);
+                res.addHeader("cache-control", "public, max-age=" + maxAge);
             }
 
             // Allow cross-origin resource sharing for css. js. and img.
