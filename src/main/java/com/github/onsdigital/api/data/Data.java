@@ -6,6 +6,7 @@ import com.github.onsdigital.configuration.Configuration;
 import com.github.onsdigital.data.DataService;
 import com.github.onsdigital.util.HostHelper;
 import com.github.onsdigital.util.Validator;
+import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.exceptions.UnirestException;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -86,10 +87,15 @@ public class Data {
             try {
                 String url = Configuration.getZebedeeUrl() + "/content/" + collection;
 
-                System.out.println("Calling zebedee: " + url + "for path " + uriPath + " with token: " + authenticationToken);
-                String dataString =  get(Configuration.getZebedeeUrl() + "/content/" + collection)
+                System.out.println("Calling zebedee: " + url + " for path " + uriPath + " with token: " + authenticationToken);
+
+                HttpResponse<String> zebedeeResponse = get(Configuration.getZebedeeUrl() + "/content/" + collection)
                         .header(authenticationHeader, authenticationToken)
-                        .queryString("uri", uriPath).asString().getBody();
+                        .queryString("uri", uriPath).asString();
+
+                System.out.println("Response: " + zebedeeResponse.getStatus());
+
+                String dataString =  zebedeeResponse.getBody();
                 data = IOUtils.toInputStream(dataString);
 
             } catch (UnirestException e) {
