@@ -54,8 +54,6 @@ public class Data {
         String authenticationToken = "";
         final String authenticationHeader = "X-Florence-Token";
 
-        System.out.println("Checking cookies...");
-
         if (request.getCookies() != null) {
             for (Cookie cookie : request.getCookies()) {
                 if (cookie.getName().equals("collection")) {
@@ -96,6 +94,8 @@ public class Data {
 
             } catch (UnirestException e) {
                 // Look for a data file:
+                System.out.println("Exception calling zebedee: " + e.getMessage());
+                e.printStackTrace();
                 data = DataService.getDataStream(request.getRequestURI());
             }
         }
