@@ -1,16 +1,14 @@
 package com.github.onsdigital.api;
 
-import java.net.URL;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
+import com.github.davidcarboni.restolino.framework.Filter;
+import com.github.onsdigital.util.HostHelper;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 
-import com.github.davidcarboni.restolino.framework.Filter;
-import com.github.onsdigital.util.HostHelper;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.net.URL;
 
 public class Files implements Filter {
 
@@ -31,7 +29,7 @@ public class Files implements Filter {
             // round-trips to the server and increase performance whilst still
             // allowing the system to be updated quite promptly if necessary:
             if (!HostHelper.isLocalhost(url)) {
-                res.addHeader("cache-control", "public, max-age=" + maxAge);
+                //res.addHeader("cache-control", "public, max-age=" + maxAge);
             }
 
             // Allow cross-origin resource sharing for css. js. and img.
