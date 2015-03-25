@@ -80,8 +80,9 @@ public class Data {
             uriPath += "data.json";
 
             try {
+                String url = Configuration.getZebedeeUrl() + "/content/" + collection;
 
-                System.out.println("Calling zebedee: ");
+                System.out.println("Calling zebedee: " + url + "for path " + uriPath + " with token: " + authenticationToken);
                 String dataString =  get(Configuration.getZebedeeUrl() + "/content/" + collection)
                         .header(authenticationHeader, authenticationToken)
                         .queryString("uri", uriPath).asString().getBody();
