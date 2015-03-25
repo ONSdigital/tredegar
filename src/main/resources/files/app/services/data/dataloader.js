@@ -13,7 +13,7 @@
 
 		function load(path) {
 			var deferred
-			var cachedData = loadFromCache(path)
+			var cachedData; // = loadFromCache(path)
 
 			if (cachedData) { //Cache hit
 				$log.debug('Data Loader : Cached data hit for ', path, ' ', cachedData.data)
