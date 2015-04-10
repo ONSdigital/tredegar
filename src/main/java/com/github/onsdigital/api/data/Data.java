@@ -5,10 +5,13 @@ import com.github.davidcarboni.restolino.framework.Endpoint;
 import com.github.onsdigital.configuration.Configuration;
 import com.github.onsdigital.data.DataService;
 import com.github.onsdigital.util.Validator;
-import com.mashape.unirest.http.HttpResponse;
-import com.mashape.unirest.http.exceptions.UnirestException;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.http.HttpEntity;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
 import org.eclipse.jetty.http.HttpStatus;
 
 import javax.servlet.http.Cookie;
@@ -21,8 +24,6 @@ import java.io.InputStream;
 import java.net.URI;
 import java.util.HashMap;
 import java.util.Map;
-
-import static com.mashape.unirest.http.Unirest.get;
 
 @Endpoint
 public class Data {
@@ -67,17 +68,14 @@ public class Data {
             }
         }
 
-        InputStream data;
-        if (StringUtils.isEmpty(collection))
-        {
+        InputStream data = null;
+        if (StringUtils.isEmpty(collection)) {
             data = DataService.getDataStream(request.getRequestURI());
-        }
-        else {
+        } else {
             URI uri = URI.create(request.getRequestURI());
             String uriPath = DataService.cleanPath(uri);
 
-            if (uriPath.length() > 0)
-            {
+            if (uriPath.length() > 0) {
                 uriPath += "/";
             }
 
@@ -88,23 +86,48 @@ public class Data {
 
                 System.out.println("Calling zebedee: " + url + " for path " + uriPath + " with token: " + authenticationToken);
 
-                HttpResponse<String> zebedeeResponse = get(Configuration.getZebedeeUrl() + "/content/" + collection)
-                        .header(authenticationHeader, authenticationToken)
-                        .queryString("uri", uriPath).asString();
+                HttpGet httpGet = new HttpGet(Configuration.getZebedeeUrl() + "/content/" + collection + "?uri=" + uriPath);
+                httpGet.addHeader(authenticationHeader, authenticationToken);
 
-                System.out.println("Response: " + zebedeeResponse.getStatus());
+                CloseableHttpClient httpClient = HttpClients.createDefault();
+                CloseableHttpResponse httpResponse = httpClient.execute(httpGet);
 
-                String dataString =  zebedeeResponse.getBody();
-                data = IOUtils.toInputStream(dataString);
+                try {
+                    HttpEntity responseEntity = httpResponse.getEntity();
 
-            } catch (UnirestException e) {
+                    //String responseText = "";
+
+                    if (responseEntity != null && responseEntity.getContent() != null) {
+                        //responseText = IOUtils.toString(responseEntity.getContent());
+                        //data = IOUtils.toInputStream(responseText);
+                        data = responseEntity.getContent();
+                    }
+
+                    System.out.println("Response: " + httpResponse.getStatusLine());
+
+                    return processResponse(response, data);
+                    //EntityUtils.consume(responseEntity);
+
+                } catch (IOException e) {
+                    System.out.println("IOException " + e.getMessage());
+                    e.printStackTrace();
+                } finally {
+                    httpResponse.close();
+                }
+
+            } catch (Exception e) {
                 // Look for a data file:
                 System.out.println("Exception calling zebedee: " + e.getMessage());
                 e.printStackTrace();
                 data = DataService.getDataStream(request.getRequestURI());
             }
         }
+        return processResponse(response, data);
 
+
+    }
+
+    private Map<String, String> processResponse(@Context HttpServletResponse response, InputStream data) throws IOException {
         // Output directly to the response
         // (rather than deserialise and re-serialise)
         response.setCharacterEncoding("UTF8");
@@ -122,5 +145,6 @@ public class Data {
             return error404;
         }
     }
+
 
 }
