@@ -33,7 +33,7 @@ public class Bulletin extends CollectionItem {
 	// Additional fields for migration:
 	public String phone;
 	public String[] searchKeywords;
-	public String nationalStatistic;
+	public boolean nationalStatistic;
 	public String language;
 
 	// Related bulletins - initially this is just other bulletins under the same
