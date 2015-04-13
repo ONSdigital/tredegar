@@ -27,16 +27,16 @@
       "uri": "/economy/inflationandpriceindices/datasets/inflationdatacollection"
     },
     {
-      "summary": "Complete dataset covering all RPI statistics. Not a National Statistic.",
-      "type": "dataset",
-      "name": "Retail Prices Index",
-      "uri": "/economy/inflationandpriceindices/datasets/retailpricesindex"
-    },
-    {
       "summary": "Comprehensive dataset covering input and output index series",
       "type": "dataset",
       "name": "Producer Prices Inflation",
       "uri": "/economy/inflationandpriceindices/datasets/producerpricesinflation"
+    },
+    {
+      "summary": "Complete dataset covering all RPI statistics. Not a National Statistic.",
+      "type": "dataset",
+      "name": "Retail Prices Index",
+      "uri": "/economy/inflationandpriceindices/datasets/retailpricesindex"
     }
   ],
   "type": "release",

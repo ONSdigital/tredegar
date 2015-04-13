@@ -103,14 +103,14 @@
   ],
   "datasets": [
     {
-      "summary": "Brief description of dataset",
-      "name": "GDP by category of expenditure",
-      "uri": "/economy/grossdomesticproductgdp/datasets/gdpbycategoryofexpenditure"
-    },
-    {
       "summary": "High level overview of the economy",
       "name": "Gross Domestic Product data collection",
       "uri": "/economy/grossdomesticproductgdp/datasets/grossdomesticproductdatacollection"
+    },
+    {
+      "summary": "Brief description of dataset",
+      "name": "GDP by category of expenditure",
+      "uri": "/economy/grossdomesticproductgdp/datasets/gdpbycategoryofexpenditure"
     }
   ],
   "level": "t3",
