@@ -1,14 +1,13 @@
 package com.github.onsdigital.api;
 
-import java.io.IOException;
+import com.github.davidcarboni.restolino.framework.Api;
+import com.github.onsdigital.util.NavigationUtil;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.GET;
 import javax.ws.rs.core.Context;
-
-import com.github.davidcarboni.restolino.framework.Endpoint;
-import com.github.onsdigital.util.NavigationUtil;
+import java.io.IOException;
 
 /**
  * Navigation end point that returns taxonomy leves
@@ -16,7 +15,7 @@ import com.github.onsdigital.util.NavigationUtil;
  * @author Bren
  */
 
-@Endpoint
+@Api
 public class Navigation {
 
 	@GET

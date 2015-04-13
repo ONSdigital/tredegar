@@ -1,7 +1,7 @@
 package com.github.onsdigital.api.data;
 
 import com.github.davidcarboni.ResourceUtils;
-import com.github.davidcarboni.restolino.framework.Endpoint;
+import com.github.davidcarboni.restolino.framework.Api;
 import com.github.onsdigital.configuration.Configuration;
 import com.github.onsdigital.data.DataService;
 import com.github.onsdigital.util.Validator;
@@ -25,7 +25,7 @@ import java.net.URI;
 import java.util.HashMap;
 import java.util.Map;
 
-@Endpoint
+@Api
 public class Data {
 
     static boolean validated;

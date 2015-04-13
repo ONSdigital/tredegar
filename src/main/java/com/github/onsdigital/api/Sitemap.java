@@ -1,18 +1,14 @@
 package com.github.onsdigital.api;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.PrintWriter;
-import java.net.MalformedURLException;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.net.URL;
-import java.nio.file.DirectoryStream;
-import java.nio.file.FileSystems;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.List;
+import com.github.davidcarboni.restolino.framework.Api;
+import com.github.davidcarboni.restolino.json.Serialiser;
+import com.github.onsdigital.configuration.Configuration;
+import com.github.onsdigital.json.ContentType;
+import com.github.onsdigital.json.taxonomy.TaxonomyHome;
+import org.apache.commons.lang3.StringUtils;
+import org.w3c.dom.DOMException;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -27,17 +23,19 @@ import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
-
-import org.apache.commons.lang3.StringUtils;
-import org.w3c.dom.DOMException;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-
-import com.github.davidcarboni.restolino.framework.Endpoint;
-import com.github.davidcarboni.restolino.json.Serialiser;
-import com.github.onsdigital.configuration.Configuration;
-import com.github.onsdigital.json.ContentType;
-import com.github.onsdigital.json.taxonomy.TaxonomyHome;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.PrintWriter;
+import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.nio.file.DirectoryStream;
+import java.nio.file.FileSystems;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Sitemap endpoint that reflects the taxonomy structure:
@@ -45,7 +43,7 @@ import com.github.onsdigital.json.taxonomy.TaxonomyHome;
  * @author David Carboni
  *
  */
-@Endpoint
+@Api
 public class Sitemap {
 
 	static String encoding = "UTF8";

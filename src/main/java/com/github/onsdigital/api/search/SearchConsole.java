@@ -1,41 +1,26 @@
 package com.github.onsdigital.api.search;
 
-import java.net.URI;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.ws.rs.GET;
-
-import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.lang3.exception.ExceptionUtils;
-
-import com.github.davidcarboni.restolino.framework.Endpoint;
+import com.github.davidcarboni.restolino.framework.Api;
 import com.github.davidcarboni.restolino.json.Serialiser;
 import com.github.onsdigital.configuration.Configuration;
 import com.github.onsdigital.json.ContentType;
 import com.github.onsdigital.json.timeseries.Timeseries;
 import com.github.onsdigital.search.bean.AggregatedSearchResult;
-import com.mongodb.BasicDBObject;
-import com.mongodb.DB;
-import com.mongodb.DBCollection;
-import com.mongodb.DBCursor;
-import com.mongodb.DBObject;
-import com.mongodb.MongoClient;
-import com.mongodb.MongoClientURI;
+import com.mongodb.*;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.exception.ExceptionUtils;
 
-@Endpoint
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.ws.rs.GET;
+import java.net.URI;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.*;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+@Api
 public class SearchConsole {
 
 	static String mongoUri = Configuration.getMongoDbUri();

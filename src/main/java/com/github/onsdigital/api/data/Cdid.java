@@ -1,13 +1,20 @@
 package com.github.onsdigital.api.data;
 
+import com.github.davidcarboni.restolino.framework.Api;
+import com.github.davidcarboni.restolino.json.Serialiser;
+import com.github.onsdigital.bean.CdidRequest;
+import com.github.onsdigital.configuration.Configuration;
+import com.github.onsdigital.json.timeseries.Timeseries;
+import org.apache.commons.io.FilenameUtils;
+import org.apache.commons.lang3.StringUtils;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.ws.rs.POST;
+import javax.ws.rs.core.Context;
 import java.io.IOException;
 import java.io.InputStream;
-import java.nio.file.FileSystems;
-import java.nio.file.FileVisitResult;
-import java.nio.file.FileVisitor;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.SimpleFileVisitor;
+import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -15,24 +22,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.ws.rs.POST;
-import javax.ws.rs.core.Context;
-
-import org.apache.commons.io.FilenameUtils;
-import org.apache.commons.lang3.StringUtils;
-
 /**
- * 
  * Serves data files in xls or csv format
- * 
  */
-import com.github.davidcarboni.restolino.framework.Endpoint;
-import com.github.davidcarboni.restolino.json.Serialiser;
-import com.github.onsdigital.bean.CdidRequest;
-import com.github.onsdigital.configuration.Configuration;
-import com.github.onsdigital.json.timeseries.Timeseries;
 
 /**
  * Provides the ability to request the json for one or more CDIDs.
@@ -40,7 +32,7 @@ import com.github.onsdigital.json.timeseries.Timeseries;
  * @author david
  *
  */
-@Endpoint
+@Api
 public class Cdid {
 
 	static Map<String, Timeseries> cache = new ConcurrentHashMap<String, Timeseries>();

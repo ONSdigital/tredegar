@@ -1,20 +1,18 @@
 package com.github.onsdigital.errors;
 
-import java.io.IOException;
+import com.github.davidcarboni.ResourceUtils;
+import com.github.davidcarboni.restolino.api.RequestHandler;
+import com.github.davidcarboni.restolino.framework.Api;
+import com.github.davidcarboni.restolino.framework.ServerError;
+import org.apache.commons.lang3.exception.ExceptionUtils;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.GET;
+import java.io.IOException;
 
-import org.apache.commons.lang3.exception.ExceptionUtils;
-
-import com.github.davidcarboni.ResourceUtils;
-import com.github.davidcarboni.restolino.api.RequestHandler;
-import com.github.davidcarboni.restolino.framework.Boom;
-import com.github.davidcarboni.restolino.framework.Endpoint;
-
-@Endpoint
-public class Error500 implements Boom {
+@Api
+public class Error500 implements ServerError {
 
 	@GET
 	public void demo(HttpServletRequest req, HttpServletResponse res) throws IOException {

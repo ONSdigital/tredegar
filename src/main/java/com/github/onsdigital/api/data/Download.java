@@ -1,29 +1,6 @@
 package com.github.onsdigital.api.data;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.ws.rs.POST;
-import javax.ws.rs.core.Context;
-
-import org.apache.commons.lang.StringUtils;
-import org.eclipse.jetty.http.HttpStatus;
-
-/**
- * 
- * Serves data files in xls or csv format
- * 
- */
-import com.github.davidcarboni.restolino.framework.Endpoint;
+import com.github.davidcarboni.restolino.framework.Api;
 import com.github.davidcarboni.restolino.json.Serialiser;
 import com.github.onsdigital.bean.DateVal;
 import com.github.onsdigital.bean.DownloadRequest;
@@ -32,8 +9,23 @@ import com.github.onsdigital.json.timeseries.Timeseries;
 import com.github.onsdigital.json.timeseries.TimeseriesValue;
 import com.github.onsdigital.util.CSVGenerator;
 import com.github.onsdigital.util.XLSXGenerator;
+import org.apache.commons.lang.StringUtils;
+import org.eclipse.jetty.http.HttpStatus;
 
-@Endpoint
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.ws.rs.POST;
+import javax.ws.rs.core.Context;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.util.*;
+
+/**
+ * Serves data files in xls or csv format
+ */
+
+@Api
 public class Download {
 
 	@POST

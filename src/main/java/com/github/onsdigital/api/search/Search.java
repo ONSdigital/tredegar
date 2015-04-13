@@ -1,17 +1,16 @@
 package com.github.onsdigital.api.search;
 
+import com.github.davidcarboni.restolino.framework.Api;
+import com.github.onsdigital.json.timeseries.Timeseries;
+import com.github.onsdigital.search.bean.AggregatedSearchResult;
+import com.github.onsdigital.search.util.SearchHelper;
+import org.apache.commons.lang3.ArrayUtils;
+import org.apache.commons.lang3.StringUtils;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.GET;
 import javax.ws.rs.core.Context;
-
-import org.apache.commons.lang3.ArrayUtils;
-import org.apache.commons.lang3.StringUtils;
-
-import com.github.davidcarboni.restolino.framework.Endpoint;
-import com.github.onsdigital.json.timeseries.Timeseries;
-import com.github.onsdigital.search.bean.AggregatedSearchResult;
-import com.github.onsdigital.search.util.SearchHelper;
 
 /**
  * 
@@ -20,7 +19,7 @@ import com.github.onsdigital.search.util.SearchHelper;
  * @author Bren
  *
  */
-@Endpoint
+@Api
 public class Search {
 	final static String jsonMime = "application/json";
 

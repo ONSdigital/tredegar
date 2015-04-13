@@ -1,19 +1,17 @@
 package com.github.onsdigital.api.data;
 
-import java.io.IOException;
-import java.util.ArrayList;
+import com.github.davidcarboni.restolino.framework.Api;
+import com.github.davidcarboni.restolino.json.Serialiser;
+import com.github.onsdigital.bean.DataListRequest;
+import com.github.onsdigital.data.DataService;
+import org.eclipse.jetty.http.HttpStatus;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.POST;
 import javax.ws.rs.core.Context;
-
-import org.eclipse.jetty.http.HttpStatus;
-
-import com.github.davidcarboni.restolino.framework.Endpoint;
-import com.github.davidcarboni.restolino.json.Serialiser;
-import com.github.onsdigital.bean.DataListRequest;
-import com.github.onsdigital.data.DataService;
+import java.io.IOException;
+import java.util.ArrayList;
 
 /**
  * 
@@ -22,7 +20,7 @@ import com.github.onsdigital.data.DataService;
  * @author brn
  *
  */
-@Endpoint
+@Api
 public class DataList {
 
 	@POST

@@ -1,18 +1,16 @@
 package com.github.onsdigital.api;
 
-import java.io.IOException;
-import java.io.StringReader;
+import com.github.davidcarboni.restolino.framework.Api;
+import org.apache.commons.io.IOUtils;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.GET;
 import javax.ws.rs.core.Context;
+import java.io.IOException;
+import java.io.StringReader;
 
-import org.apache.commons.io.IOUtils;
-
-import com.github.davidcarboni.restolino.framework.Endpoint;
-
-@Endpoint
+@Api
 public class ReleaseCalendar {
 	private final static String CALENDAR_EVENT = "BEGIN:VCALENDAR\n"
 			+ "PRODID:-//bobbin v0.1//NONSGML iCal Writer//EN\n"

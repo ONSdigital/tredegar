@@ -1,5 +1,16 @@
 package com.github.onsdigital.api.search;
 
+import com.github.davidcarboni.restolino.framework.Api;
+import com.github.onsdigital.configuration.Configuration;
+import com.github.onsdigital.search.ScanFileSystem;
+import com.github.onsdigital.search.bean.CollectionSearchResult;
+import com.github.onsdigital.util.TaxonomyDateComparator;
+import org.apache.commons.lang3.StringUtils;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.ws.rs.GET;
+import javax.ws.rs.core.Context;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
@@ -8,20 +19,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.ws.rs.GET;
-import javax.ws.rs.core.Context;
-
-import org.apache.commons.lang3.StringUtils;
-
-import com.github.davidcarboni.restolino.framework.Endpoint;
-import com.github.onsdigital.configuration.Configuration;
-import com.github.onsdigital.search.ScanFileSystem;
-import com.github.onsdigital.search.bean.CollectionSearchResult;
-import com.github.onsdigital.util.TaxonomyDateComparator;
-
-@Endpoint
+@Api
 public class CollectionTaxonomyFileSystem {
 	private static int multiplierIndex = 10;
 

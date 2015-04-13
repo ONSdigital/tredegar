@@ -1,16 +1,15 @@
 package com.github.onsdigital.errors;
 
-import java.io.IOException;
+import com.github.davidcarboni.ResourceUtils;
+import com.github.davidcarboni.restolino.framework.Api;
+import com.github.davidcarboni.restolino.framework.NotFound;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.GET;
+import java.io.IOException;
 
-import com.github.davidcarboni.ResourceUtils;
-import com.github.davidcarboni.restolino.framework.Endpoint;
-import com.github.davidcarboni.restolino.framework.NotFound;
-
-@Endpoint
+@Api
 public class Error404 implements NotFound {
 
 	@GET

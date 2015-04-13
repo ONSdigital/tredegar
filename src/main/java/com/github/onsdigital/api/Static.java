@@ -1,20 +1,18 @@
 package com.github.onsdigital.api;
 
-import java.io.IOException;
-import java.net.URL;
+import com.github.davidcarboni.restolino.framework.Api;
+import com.github.onsdigital.prerender.PreGenerated;
+import com.github.onsdigital.prerender.PrerenderIo;
+import org.apache.http.HttpStatus;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.GET;
 import javax.ws.rs.core.Context;
+import java.io.IOException;
+import java.net.URL;
 
-import org.apache.http.HttpStatus;
-
-import com.github.davidcarboni.restolino.framework.Endpoint;
-import com.github.onsdigital.prerender.PreGenerated;
-import com.github.onsdigital.prerender.PrerenderIo;
-
-@Endpoint
+@Api
 public class Static {
 
 	@GET
