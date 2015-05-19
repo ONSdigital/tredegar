@@ -20,7 +20,7 @@ angular.module('onsComponents')
 
                         //var output = '<div class="chart-container"><iframe frameBorder ="0" scrolling = "no" src="http://localhost:8081/florence/chart.html?path=' + path + '.json"></iframe></div>';
 
-                        var output = '<div id="' + path + '"></div><script>new pym.Parent("' + path + '", "http://localhost:8081/florence/chart.html?path=' + path + '.json", {})</script>';
+                        var output = '<div id="' + path + '"></div><script>new pym.Parent("' + path + '", "/florence/chart.html?path=' + path + '.json", {})</script>';
 
                         //console.log(output);
                         return output; //'[chart path="' + path + '" ]';
