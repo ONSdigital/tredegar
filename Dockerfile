@@ -54,7 +54,7 @@ RUN echo "java $JAVA_OPTS \
            -Drestolino.packageprefix=$PACKAGE_PREFIX \
            -Dmongo.user=$MONGO_USER \
            -Dmongo.password=$MONGO_PASSWORD \
-           -cp "target/dependency/*" \
+           -cp \"target/dependency/*\" \
            com.github.davidcarboni.restolino.Main" >> container.sh
 RUN chmod u+x container.sh
 RUN cat container.sh
