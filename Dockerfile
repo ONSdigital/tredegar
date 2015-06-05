@@ -57,5 +57,6 @@ RUN echo "java $JAVA_OPTS \
            -cp "target/dependency/*" \
            com.github.davidcarboni.restolino.Main" >> container.sh
 RUN chmod u+x container.sh
+RUN cat container.sh
 
 ENTRYPOINT ["./container.sh"]
