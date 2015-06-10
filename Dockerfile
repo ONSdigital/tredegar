@@ -30,10 +30,6 @@ RUN mvn process-resources
 # Expose port
 EXPOSE 8080
 
-# Build the entry point script
-
-ENV ZEBEDEE_URL http://zebedee:8080
-
 # Restolino configuration
 ENV RESTOLINO_STATIC="src/main/resources/files"
 ENV RESTOLINO_CLASSES="target/classes"
